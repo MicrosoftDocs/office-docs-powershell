@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/new-emailaddresspolicy
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-EmailAddressPolicy
 schema: 2.0.0
@@ -16,13 +17,13 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-EmailAddressPolicy cmdlet to create email address policies. In Exchange Online, email address policies are only available for Office 365 groups.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### AllTemplatesWithPrecannedFilter
 ```
-New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection> -IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>
+New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection> -IncludedRecipients <WellKnownRecipientType>
  [-ConditionalCompany <MultiValuedProperty>]
  [-ConditionalCustomAttribute1 <MultiValuedProperty>]
  [-ConditionalCustomAttribute10 <MultiValuedProperty>]
@@ -62,7 +63,7 @@ New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddr
 
 ### SMTPTemplateWithPrecannedFilter
 ```
-New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String> -IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>
+New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String> -IncludedRecipients <WellKnownRecipientType>
  [-ConditionalCompany <MultiValuedProperty>]
  [-ConditionalCustomAttribute1 <MultiValuedProperty>]
  [-ConditionalCustomAttribute10 <MultiValuedProperty>]
@@ -93,7 +94,7 @@ New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <Stri
 New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String> -RecipientFilter <String>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Priority <EmailAddressPolicyPriority>] 
+ [-Priority <EmailAddressPolicyPriority>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -133,12 +134,12 @@ The Conditional parameters that are used with the IncludedRecipients parameter a
 
 To create flexible filters that use any available recipient property and that aren't subject to these limitations, you can use the RecipientFilter parameter to create an OPath filter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-EmailAddressPolicy -Name "Southeast Offices" -IncludedRecipients MailboxUsers -ConditionalStateorProvince "GA","AL","LA" -EnabledEmailAddressTemplates "SMTP:%s%2g@southeast.contoso.com","smtp:%s%2g@southeast.contoso.net"
 ```
 
@@ -154,9 +155,9 @@ This example creates an email address policy in an on-premises Exchange organiza
 
 - Priority:N+1, where N is the number of manually created email address policies that already exist (we didn't use the Priority parameter, and the default value is N+1).
 
-### -------------------------- Example 2 --------------------------
-```
-New-EmailAddressPolicy -Name "Northwest Executives" -RecipientFilter {(RecipientType -eq 'UserMailbox') -and (Title -like '*Director*' -or Title -like '*Manager*') -and (StateOrProvince -eq 'WA' -or StateOrProvince -eq 'OR' -or StateOrProvince -eq 'ID')} -EnabledEmailAddressTemplates "SMTP:%2g%s@contoso.com" -Priority 2
+### Example 2
+```powershell
+New-EmailAddressPolicy -Name "Northwest Executives" -RecipientFilter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Director*' -or Title -like '*Manager*') -and (StateOrProvince -eq 'WA' -or StateOrProvince -eq 'OR' -or StateOrProvince -eq 'ID')" -EnabledEmailAddressTemplates "SMTP:%2g%s@contoso.com" -Priority 2
 ```
 
 This example creates an email address policy in an on-premises Exchange organization that uses a custom recipient filter:
@@ -181,6 +182,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -193,9 +195,9 @@ The EnabledEmailAddressTemplates parameter specifies the rules in the email addr
 
 Valid syntax for this parameter is \<Type\>:\<AddressFormat\>:
 
-- \<Type\>: A valid email address type as described in "Address types" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example, SMTP for the primary email address, and smtp for proxy addresses.
+- \<Type\>: A valid email address type as described in "Address types" section in [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies). For example, SMTP for the primary email address, and smtp for proxy addresses.
 
-- \<AddressFormat\>: For SMTP email addresses, a domain or subdomain that's configured as accepted domain (authoritative or internal relay), and valid variables and ASCII text characters as described in the "Address formats" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example: \<alias\>@contoso.com requires the value %m@contoso.com, and \<firstname\>.\<lastname\>@contoso.com requires the value %g.%s@contoso.com.
+- \<AddressFormat\>: For SMTP email addresses, a domain or subdomain that's configured as accepted domain (authoritative or internal relay), and valid variables and ASCII text characters as described in the "Address formats" section in [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies). For example: \<alias\>@contoso.com requires the value %m@contoso.com, and \<firstname\>.\<lastname\>@contoso.com requires the value %g.%s@contoso.com.
 
 This parameter requires at least one template with the \<Type\> value SMTP (to define the primary SMTP email address). After that, if you don't include a \<Type\> prefix for a template, the value smtp (an SMTP proxy address) is assumed.
 
@@ -210,6 +212,7 @@ Type: ProxyAddressTemplateCollection
 Parameter Sets: AllTemplatesWithPrecannedFilter, AllTemplatesWithCustomFilter, AllTemplatesForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -220,7 +223,7 @@ Accept wildcard characters: False
 ### -EnabledPrimarySMTPAddressTemplate
 The EnabledPrimarySMTPAddressTemplate parameter specifies the specifies the rule in the email address policy that's used to generate the primary SMTP email addresses for recipients. You can use this parameter instead of the EnabledEmailAddressTemplates if the policy only applies the primary email address and no additional proxy addresses.
 
-Valid syntax for this parameter is a domain or subdomain that's configured as an authoritative accepted domain, and valid variables and ASCII text characters as described in the "Address format" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example: \<alias\>@contoso.com requires the value %m@contoso.com, and \<firstname\>.\<lastname\>@contoso.com requires the value %g.%s@contoso.com.
+Valid syntax for this parameter is a domain or subdomain that's configured as an authoritative accepted domain, and valid variables and ASCII text characters as described in the "Address format" section in [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies). For example: \<alias\>@contoso.com requires the value %m@contoso.com, and \<firstname\>.\<lastname\>@contoso.com requires the value %g.%s@contoso.com.
 
 You can't use this parameter with the EnabledEmailAddressTemplates parameter.
 
@@ -231,6 +234,7 @@ Type: String
 Parameter Sets: SMTPTemplateWithPrecannedFilter, SMTPTemplateWithCustomFilter, SMTPTemplateForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -260,10 +264,11 @@ You can specify multiple values separated by commas. When you use multiple value
 You need to use this parameter when you use any Conditional parameters as part of a precanned filter. You can't use this parameter in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
-Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
+Type: WellKnownRecipientType
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -281,6 +286,7 @@ Type: SwitchParameter
 Parameter Sets: AllTemplatesForUnifiedGroupRecipientsFilter, SMTPTemplateForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -291,17 +297,21 @@ Accept wildcard characters: False
 ### -RecipientFilter
 This parameter is available only in on-premises Exchange.
 
-The RecipientFilter parameter specifies a custom OPath filter that's based on the value of any available recipient property. You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. When you use this parameter, remember the following OPath filter rules:
+The RecipientFilter parameter specifies a custom OPath filter that's based on the value of any available recipient property. You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
-- Use braces { } around the whole OPath syntax string.
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 
-- Include a hyphen before all operators.
+- Property is a filterable property. For filterable properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipientfilter-properties).
 
-- In cloud-based environments, you can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
-- In on-premises Exchange, wildcards are valid only as the first or last character. For example, Sales\* or \*Sales are allowed, but Sa\*les isn't allowed.
+- Value is the property value to filter on. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
-For more information, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
+- In cloud-based environments, you can't use a wildcard as the first character. For example, `'Sales*'` is allowed, but `'*Sales'` isn't allowed.
+
+- In on-premises Exchange, wildcards are valid only as the first or last character. For example, `'Sales*'` or `'*Sales'` are allowed, but `'Sa*les'` isn't allowed.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 You can't use this parameter in combination with the IncludedRecipients parameter or any Conditional parameters (which are used to create precanned filters).
 
@@ -310,6 +320,7 @@ Type: String
 Parameter Sets: AllTemplatesWithCustomFilter, SMTPTemplateWithCustomFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -331,6 +342,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -352,6 +364,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -373,6 +386,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -394,6 +408,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -415,6 +430,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -436,6 +452,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -457,6 +474,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -478,6 +496,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -499,6 +518,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -520,6 +540,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -541,6 +562,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -562,6 +584,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -583,6 +606,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -604,6 +628,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -625,6 +650,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -646,6 +672,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -667,6 +694,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -688,6 +716,7 @@ Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -707,6 +736,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -721,9 +751,9 @@ The DisabledEmailAddressTemplates parameter specifies the proxy email addresses 
 
 Valid syntax for this parameter is \<Type\>:\<AddressFormat\>:
 
-- \<Type\>: A valid email address type as described in the "Address types" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example, smtp or X400. Note that you can't use SMTP to specify a disabled primary SMTP email address.
+- \<Type\>: A valid email address type as described in the "Address types" section in [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies). For example, smtp or X400. Note that you can't use SMTP to specify a disabled primary SMTP email address.
 
-- \<AddressFormat\>: For SMTP email addresses, a domain or subdomain that's configured as accepted domain (authoritative or internal relay), and valid variables and ASCII text characters as described in the "Address formats" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example: \<alias\>@contoso.com requires the value %m@contoso.com, and \<firstname\>.\<lastname\>@contoso.com requires the value %g.%s@contoso.com.
+- \<AddressFormat\>: For SMTP email addresses, a domain or subdomain that's configured as accepted domain (authoritative or internal relay), and valid variables and ASCII text characters as described in the "Address formats" section in [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies). For example: \<alias\>@contoso.com requires the value %m@contoso.com, and \<firstname\>.\<lastname\>@contoso.com requires the value %g.%s@contoso.com.
 
 You can specify multiple disabled email address templates separated by commas: "[\<Type1\>]:\<EmailAddress1\>","[\<Type2\>]:\<EmailAddress2\>",..."[\<TypeN\>]:\<EmailAddressN\>".
 
@@ -732,6 +762,7 @@ Type: ProxyAddressTemplateCollection
 Parameter Sets: AllTemplatesWithPrecannedFilter, AllTemplatesWithCustomFilter, AllTemplatesForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -749,6 +780,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -761,17 +793,21 @@ This parameter is available only in the cloud-based service.
 
 The ManagedByFilter parameter specifies the email address policies to apply to Office 365 groups based on the properties of the users who create the Office 365 groups.
 
-This parameter is an OPath filter that's based on the value of any available recipient property (for example, {Department -eq 'Sales'}). You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. When you use this parameter, remember the following OPath filter rules:
+This parameter is an OPath filter that's based on the value of any available recipient property (for example, `"Department -eq 'Sales'"`). You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
-- Use braces { } around the whole OPath syntax string.
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 
-- Include a hyphen before all operators.
+- Property is a filterable property. For filterable recipient properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipientfilter-properties).
 
-- You can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
-For more information, see Multi-domain support for Office 365 groups - Admin help (https://go.microsoft.com/fwlink/p/?linkid=838413).
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
-For a list of the filterable properties, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
+- You can't use a wildcard as the first character. For example, `'Sales*'` is allowed, but `'*Sales'` isn't allowed.
+
+For more information, see [Choose the domain to use when creating Office 365 Groups](https://go.microsoft.com/fwlink/p/?linkid=838413).
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 You need to use this parameter with the IncludeUnifiedGroupRecipients switch.
 
@@ -780,6 +816,7 @@ Type: String
 Parameter Sets: AllTemplatesForUnifiedGroupRecipientsFilter, SMTPTemplateForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -799,6 +836,7 @@ Type: EmailAddressPolicyPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -809,7 +847,7 @@ Accept wildcard characters: False
 ### -RecipientContainer
 This parameter is available only in on-premises Exchange.
 
-The RecipientContainer parameter specifies a filter that's based on the recipient's location in Active Directory. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+The RecipientContainer parameter specifies a filter that's based on the recipient's location in Active Directory. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
 
@@ -826,6 +864,7 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -841,6 +880,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -849,20 +889,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/23b6e364-b56e-4c5a-bc71-ff5652d7e42b.aspx)

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnptenantsequenceteamsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # New-PnPTenantSequenceTeamSite
 
 ## SYNOPSIS
 Creates a team site object
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 New-PnPTenantSequenceTeamSite -Alias <String>

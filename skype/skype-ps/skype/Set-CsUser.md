@@ -1,18 +1,20 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csuser
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUser
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsUser
 
 ## SYNOPSIS
-Modifies Skype for Business Server properties for an existing user account.
-Properties can be modified only for accounts that have been enabled for use with Skype for Business Server.
+Modifies Skype for Business properties for an existing user account.
+Properties can be modified only for accounts that have been enabled for use with Skype for Business.
 This cmdlet was introduced in Lync Server 2010.
 
 
@@ -28,13 +30,13 @@ Set-CsUser [-DomainController <Fqdn>] [-Identity] <UserIdParameter> [-PassThru] 
 ```
 
 ## DESCRIPTION
-The `Set-CsUser` cmdlet enables you to modify the Skype for Business Server related user account attributes that are stored in Active Directory Domain Services.
-For example, you can disable or re-enable a user for Skype for Business Server; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers.
-The `Set-CsUser` cmdlet can be used only for users who have been enabled for Skype for Business Server.
+The `Set-CsUser` cmdlet enables you to modify the Skype for Business related user account attributes that are stored in Active Directory Domain Services or modify a subset of Skype for Business online user attributes that are stored in Azure Active Directory. 
+For example, you can disable or re-enable a user for Skype for Business Server; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers. For Skype for Business online enable or disable a user for enterprise voice, hosted voicemail, or modify the user's on premise line uri. 
+The `Set-CsUser` cmdlet can be used only for users who have been enabled for Skype for Business.
 
-The only attributes you can modify using the `Set-CsUser` cmdlet are attributes related to Skype for Business Server.
+The only attributes you can modify using the `Set-CsUser` cmdlet are attributes related to Skype for Business.
 Other user account attributes, such as the user's job title or department, cannot be modified by using this cmdlet.
-Keep in mind, however, that the Skype for Business Server attributes should only be modified by using the `Set-CsUser` cmdlet or the Skype for Business Server Control Panel.
+Keep in mind, however, that the Skype for Business attributes should only be modified by using the `Set-CsUser` cmdlet or the Skype for Business Server Control Panel.
 You should not attempt to manually configure these attributes.
 
 
@@ -59,6 +61,13 @@ In Example 2, all the users in the Finance department have their accounts enable
 In this command, the `Get-CsUser` cmdlet and the LdapFilter parameter are first used to return a collection of all the users who work in the Finance department.
 That information is then piped to the `Set-CsUser` cmdlet, which enables Enterprise Voice for each account in the collection.
 
+### -------------------------- Example 3 --------------------------
+```
+Set-CsUser -Identity "Pilar Ackerman" -LineUri "tel:+123456789"
+```
+
+In Example 3, the `Set-CsUser` cmdlet is used to modify the user account with the Identity Pilar Ackerman.
+In this case, the account is modified to set the phone number assigned to the user settings its LineUri property.
 
 ## PARAMETERS
 
@@ -95,7 +104,7 @@ You cannot disable A/V communications if a user is currently enabled for remote 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +127,7 @@ When you run the `Disable-CsUser` cmdlet, all the Skype for Business Server data
 Type: Boolean
 Parameter Sets: (All)
 Aliases: CsEnabled
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -136,7 +145,7 @@ If this parameter is not included then the cmdlet will use the first available d
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -200,7 +209,7 @@ Note: Extension should be part of the E164 Number. For example if you have 5 dig
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -219,7 +228,7 @@ For example: sip:rccgateway@litwareinc.com
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -242,7 +251,7 @@ For example: TEL:+14255551297.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -266,7 +275,7 @@ To be enabled for remote call control, a user must have both a LineUri and a Lin
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -284,7 +293,7 @@ The SIP address must use the sip: prefix as well as a valid SIP domain; for exam
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -301,7 +310,7 @@ By default, the `Set-CsUser` cmdlet does not pass objects through the pipeline.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -317,7 +326,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -333,7 +342,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -351,7 +360,7 @@ However, it is recommended that you use the `Set-CsUserAcp` cmdlet to assign Aud
 Type: AcpInfo
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -377,7 +386,7 @@ NoArchiving
 Type: ExchangeArchivingPolicyOptionsEnum
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy
 applicable: Skype for Business Online
 title: Get-CsOnlineVoicemailPolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -50,7 +52,7 @@ Example 3 uses the Filter parameter to return all the voicemail policies that ha
 ## PARAMETERS
 
 ### -Filter
-This parameter accepts a wildcard string and returns all voicemail policies with identities matching that string. For example, a Filter value of Tag:* will return all preconfigured voicemail policy instances (excluding forest default “Global”) available to use by the tenant admins.
+This parameter accepts a wildcard string and returns all voicemail policies with identities matching that string. For example, a Filter value of Tag:* will return all preconfigured voicemail policy instances (excluding forest default "Global") available to use by the tenant admins.
 
 ```yaml
 Type: String
@@ -153,5 +155,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 [Set-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps)
+
+[New-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps)
+
+[Remove-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy?view=skype-ps)
 
 [Grant-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy?view=skype-ps)

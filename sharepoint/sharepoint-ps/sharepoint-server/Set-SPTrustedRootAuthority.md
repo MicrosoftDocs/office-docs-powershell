@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sptrustedrootauthority
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTrustedRootAuthority
 schema: 2.0.0
@@ -32,7 +34,7 @@ Set-SPTrustedRootAuthority [-Identity] <SPTrustedRootAuthorityPipeBind>
 
 ## DESCRIPTION
 The `Set-SPTrustedRootAuthority` cmdlet creates a new trusted root authority.
-If a certificate file is used, the certificate must be an X509 certificate with private keys, otherwise an exception is raised.
+If a certificate file is used, the certificate must be an X509 certificate without private keys, otherwise an exception is raised.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
@@ -41,8 +43,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-Get - SPTrustedRootAuthority -Name "WFEFarm1" | Set- SPTrustedRootAuthority -Certificate $cert
+C:\PS>$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+$cert.Import('C:\LiveIDSigningCert.pfx')
+Get-SPTrustedRootAuthority -Name "WFEFarm1" | Set-SPTrustedRootAuthority -Certificate $cert
 ```
 
 This example updates the certificate of the trusted root authority WFEFarm1.

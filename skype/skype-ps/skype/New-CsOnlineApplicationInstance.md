@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csonlineapplicationinstance
 applicable: Skype for Business Online
 title: New-CsOnlineApplicationInstance
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -21,21 +23,26 @@ New-CsOnlineApplicationInstance [-UserPrincipalName] <string> [[-ApplicationId] 
 ```
 
 ## DESCRIPTION
-This cmdlet is used to create an application instance in Azure Active Directory. 
+This cmdlet is used to create an application instance in Azure Active Directory. This same cmdlet is also run when creating a new resource account using Teams Admin Center.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-New-CsOnlineApplicationInstance -UserPrincipalName appinstance01@contoso.com -ApplicationId 4092daf3-a649-47f2-856e-e2902218cf9d -DisplayName "AppInstance01"
+New-CsOnlineApplicationInstance -UserPrincipalName appinstance01@contoso.com -ApplicationId ce933385-9390-45d1-9512-c8d228074e07 -DisplayName "AppInstance01"
 ```
 
-This example creates a new application instance with UserPrincipalName "appinstance01@contoso.com", ApplicationId "4092daf3-a649-47f2-856e-e2902218cf9d", DisplayName "AppInstance01" for the tenant.
+This example creates a new application instance for an Auto Attendant with UserPrincipalName "appinstance01@contoso.com", ApplicationId "ce933385-9390-45d1-9512-c8d228074e07", DisplayName "AppInstance01" for the tenant.
+
+The application ID's that you need to use while creating the application instances are:
+
+Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
+Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
 
 ## PARAMETERS
 
 ### -UserPrincipalName
-The user principal name. It will be used as the SIP URI too.
+The user principal name. It will be used as the SIP URI too. The user principal name should have an online domain.
 
 ```yaml
 Type: System.String

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenanttheme
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPTenantTheme
 
 ## SYNOPSIS
 Adds or updates a theme to the tenant.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPTenantTheme -Identity <ThemePipeBind>

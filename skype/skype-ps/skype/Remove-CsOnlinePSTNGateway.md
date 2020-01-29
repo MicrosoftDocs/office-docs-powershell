@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version:
+online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinepstngateway
 applicable: Skype for Business Online
 title: Remove-CsOnlinePSTNGateway
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -33,7 +34,7 @@ This example removes SBC with Identity (and FQDN) sbc.contoso.com.
 
 ### Example 2
 ```powershell
-PS C:\> Removes-CsOnlinePSTNGateway | ?{$_.Identity -like "*.contoso.com"}
+PS C:\> Remove-CsOnlinePSTNGateway | ?{$_.Identity -like "*.contoso.com"}
 ```
 
 This example removes the SBCs with identities (and FQDNs) matching the pattern *.contoso.com. For example: sbc1.contoso.com, sbc2.contoso.com etc.

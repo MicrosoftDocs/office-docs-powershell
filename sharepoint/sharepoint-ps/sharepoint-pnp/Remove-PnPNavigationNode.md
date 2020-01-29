@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpnavigationnode
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPNavigationNode
 
 ## SYNOPSIS
 Removes a menu item from either the quicklaunch or top navigation
 
-## SYNTAX 
+## SYNTAX
 
 ### Remove a node by ID
 ```powershell
@@ -59,10 +61,10 @@ Will remove the home navigation node from the top navigation bar without prompti
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Remove-PnPNavigationNode -Location QuickLaunch -All
+Get-PnPNavigationNode -Location QuickLaunch | Remove-PnPNavigationNode -Force
 ```
 
-Will remove all the navigation nodes from the quick launch bar in the current web.
+Will remove all the navigation nodes from the quick launch bar without prompting for a confirmation in the current web.
 
 ## PARAMETERS
 

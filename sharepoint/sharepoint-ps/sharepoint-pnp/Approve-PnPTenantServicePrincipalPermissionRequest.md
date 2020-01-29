@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/approve-pnptenantserviceprincipalpermissionrequest
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Approve-PnPTenantServicePrincipalPermissionRequest
 
 ## SYNOPSIS
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Approve-PnPTenantServicePrincipalPermissionRequest -RequestId <GuidPipeBind>

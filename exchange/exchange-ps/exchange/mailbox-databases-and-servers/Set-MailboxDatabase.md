@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/set-mailboxdatabase
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-MailboxDatabase
 schema: 2.0.0
@@ -16,37 +17,37 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-MailboxDatabase cmdlet to configure a variety of properties for a mailbox database.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
- [-AllowFileRestore <$true | $false>]
- [-AutoDagExcludeFromMonitoring <$true | $false>]
- [-AutoDatabaseMountDial <Lossless | GoodAvailability | BestAvailability>]
- [-BackgroundDatabaseMaintenance <$true | $false>]
+ [-AllowFileRestore <Boolean>]
+ [-AutoDagExcludeFromMonitoring <Boolean>]
+ [-AutoDatabaseMountDial <AutoDatabaseMountDial>]
+ [-BackgroundDatabaseMaintenance <Boolean>]
  [-CalendarLoggingQuota <Unlimited>]
- [-CircularLoggingEnabled <$true | $false>]
+ [-CircularLoggingEnabled <Boolean>]
  [-Confirm]
  [-DatabaseGroup <String>]
  [-DataMoveReplicationConstraint <DataMoveReplicationConstraintParameter>]
  [-DeletedItemRetention <EnhancedTimeSpan>]
  [-DomainController <Fqdn>]
  [-EventHistoryRetentionPeriod <EnhancedTimeSpan>]
- [-IndexEnabled <$true | $false>]
- [-IsExcludedFromInitialProvisioning <$true | $false>]
- [-IsExcludedFromProvisioning <$true | $false>]
- [-IsExcludedFromProvisioningByOperator <$true | $false>]
- [-IsExcludedFromProvisioningDueToLogicalCorruption <$true | $false>]
+ [-IndexEnabled <Boolean>]
+ [-IsExcludedFromInitialProvisioning <Boolean>]
+ [-IsExcludedFromProvisioning <Boolean>]
+ [-IsExcludedFromProvisioningByOperator <Boolean>]
+ [-IsExcludedFromProvisioningDueToLogicalCorruption <Boolean>]
  [-IsExcludedFromProvisioningReason <String>]
  [-IssueWarningQuota <Unlimited>]
- [-IsSuspendedFromProvisioning <$true | $false>]
+ [-IsSuspendedFromProvisioning <Boolean>]
  [-JournalRecipient <RecipientIdParameter>]
  [-MailboxRetention <EnhancedTimeSpan>]
  [-MaintenanceSchedule <Schedule>]
  [-MetaCacheDatabaseMaxCapacityInBytes <Int64>]
- [-MountAtStartup <$true | $false>]
+ [-MountAtStartup <Boolean>]
  [-Name <String>]
  [-OfflineAddressBook <OfflineAddressBookIdParameter>]
  [-ProhibitSendQuota <Unlimited>]
@@ -55,31 +56,31 @@ Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
  [-QuotaNotificationSchedule <Schedule>]
  [-RecoverableItemsQuota <Unlimited>]
  [-RecoverableItemsWarningQuota <Unlimited>]
- [-RetainDeletedItemsUntilBackup <$true | $false>]
+ [-RetainDeletedItemsUntilBackup <Boolean>]
  [-RpcClientAccessServer <ClientAccessServerOrArrayIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MailboxDatabase "Mailbox Database01" -DeletedItemRetention 7.00:00:00
 ```
 
 This example sets the length of time that deleted items are retained. If a specific mailbox has its own item retention set, that value is used instead of this value, which is set on the mailbox database.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-MailboxDatabase <Mailbox Database Name> -RpcClientAccessServer <ClientAccessServer or ClientAccessServerArrayID>
 ```
 
 In Exchange Server 2010, this example updates a mailbox database so that all client connections for mailboxes on the database come through the Client Access server or Client Access server array. You can also use this command to change the Client Access server or Client Access server array through which the client is connecting to the Mailbox server.
 
-For more information about RPC access through Client Access servers, see Set-RpcClientAccess and Set-ClientAccessArray.
+For more information about RPC access through Client Access servers, see [Set-RpcClientAccess](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-rpcclientaccess) and [Set-ClientAccessArray](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-clientaccessarray).
 
 ## PARAMETERS
 
@@ -97,6 +98,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -112,10 +114,11 @@ The AllowFileRestore parameter specifies whether to allow a database to be resto
 - $false: You can't replace an existing database with a newly-created database. You can't mount a database that doesn't match the database entry in Active Directory. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -131,10 +134,11 @@ The AutoDagExcludedFromMonitoring parameter specifies whether to exclude the mai
 - $false: An alert is issued when there's only one healthy copy of the replicated database. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -146,10 +150,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Lossless | GoodAvailability | BestAvailability
+Type: AutoDatabaseMountDial
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -165,10 +170,11 @@ The BackgroundDatabaseMaintenance parameter specifies whether the Extensible Sto
 - $false: The mailbox database reads the object during database mount and initializes the database without the option to perform background maintenance.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +210,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -218,13 +225,14 @@ The CircularLoggingEnabled parameter specifies whether circular logging is enabl
 
 - $false: Circular logging is disabled. This is the default value.
 
-For more information about circular logging, see Exchange Native Data Protection (https://technet.microsoft.com/library/dd876874.aspx#ENDP).
+For more information about circular logging, see [Exchange Native Data Protection](https://docs.microsoft.com/exchange/backup-restore-and-disaster-recovery-exchange-2013-help#exchange-native-data-protection).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +252,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -259,6 +268,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -285,13 +295,14 @@ The DataMoveReplicationConstraint parameter specifies the throttling behavior fo
 
 - SecondDatacenter: At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
 
-Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see Active Manager (https://technet.microsoft.com/library/dd776123.aspx).
+Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see [Active Manager](https://docs.microsoft.com/Exchange/high-availability/database-availability-groups/active-manager).
 
 ```yaml
 Type: DataMoveReplicationConstraintParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -308,13 +319,14 @@ Valid values are 00:00:00 to 24855.03:14:07. The default value is 14.00:00:00 (1
 
 This setting applies to all mailboxes in the database that don't have their own deleted item retention value configured.
 
-For more information, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
 ```yaml
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -330,6 +342,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -349,6 +362,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -366,10 +380,11 @@ The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox
 - $false: Exchange Search doesn't index the mailbox database.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: False
 Position: Named
 Default value: None
@@ -381,10 +396,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -402,10 +418,11 @@ The IsExcludedFromProvisioning parameter specifies whether to exclude the databa
 The value is automatically set to $true when you set the IsExcludedFromProvisioningDueToLogicalCorruption parameter to $true, and isn't changed back to $false when you set the IsExcludedFromProvisioningDueToLogicalCorruption parameter back to $false. In the case of database corruption, you should set the IsExcludedFromProvisioning parameter back to $false only after you fix the corruption issue or recreate the database.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -429,10 +446,11 @@ Note that setting this parameter to the value $true has these additional effects
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -458,10 +476,11 @@ Note that setting this parameter to the value $true has these additional effects
 - The IsExcludedFromProvisioning property is automatically set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -485,6 +504,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -518,6 +538,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -539,10 +560,11 @@ Note that setting this parameter to the value $true has these additional effects
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -570,6 +592,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -589,6 +612,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -630,6 +654,7 @@ Type: Schedule
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -647,6 +672,7 @@ Type: Int64
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -662,10 +688,11 @@ The MountAtStartup parameter specifies whether to mount the mailbox database whe
 - $false: The database isn't mounted when the service starts.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -681,6 +708,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -704,6 +732,7 @@ Type: OfflineAddressBookIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -737,6 +766,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -770,6 +800,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -793,6 +824,7 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -834,6 +866,7 @@ Type: Schedule
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -869,6 +902,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -904,6 +938,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -918,15 +953,16 @@ The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in t
 
 - $false: Retention of deleted items doesn't depend on a backup of the mailbox database. This is the default value.
 
-For more information, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
 This settings applies to all mailboxes in the database that don't have this value specifically configured.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -939,13 +975,14 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The RpcClientAccessServer parameter specifies the Client Access server or Client Access server array through which RPC clients (for example, Microsoft Office Outlook 2007 clients) access their mailboxes. This feature is supported for all versions of Outlook.
 
-When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see Understanding RPC Client Access.
+When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see [Understanding RPC Client Access](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ee332317(v=exchg.141)).
 
 ```yaml
 Type: ClientAccessServerOrArrayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -961,6 +998,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -969,20 +1007,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/a01edc66-bc10-4f65-9df4-432cb9e88f58.aspx)

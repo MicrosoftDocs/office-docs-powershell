@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-message
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-Message
 schema: 2.0.0
@@ -16,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-Message cmdlet to view the details of one or more messages in queues on Mailbox servers or Edge Transport servers.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -25,12 +26,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Get-Message [-Filter <String>]
  [-BookmarkIndex <Int32>]
  [-BookmarkObject <ExtensibleMessageInfo>]
- [-IncludeBookmark <$true | $false>]
+ [-IncludeBookmark <Boolean>]
  [-IncludeComponentLatencyInfo]
  [-IncludeRecipientInfo]
  [-ResultSize <Unlimited>]
- [-ReturnPageInfo <$true | $false>]
- [-SearchForward <$true | $false>]
+ [-ReturnPageInfo <Boolean>]
+ [-SearchForward <Boolean>]
  [-Server <ServerIdParameter>]
  [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
@@ -40,12 +41,12 @@ Get-Message [-Filter <String>]
 Get-Message [[-Identity] <MessageIdentity>]
  [-BookmarkIndex <Int32>]
  [-BookmarkObject <ExtensibleMessageInfo>]
- [-IncludeBookmark <$true | $false>]
+ [-IncludeBookmark <Boolean>]
  [-IncludeComponentLatencyInfo]
  [-IncludeRecipientInfo]
  [-ResultSize <Unlimited>]
- [-ReturnPageInfo <$true | $false>]
- [-SearchForward <$true | $false>]
+ [-ReturnPageInfo <Boolean>]
+ [-SearchForward <Boolean>]
  [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
 
@@ -54,38 +55,38 @@ Get-Message [[-Identity] <MessageIdentity>]
 Get-Message [-Queue <QueueIdentity>]
  [-BookmarkIndex <Int32>]
  [-BookmarkObject <ExtensibleMessageInfo>]
- [-IncludeBookmark <$true | $false>]
+ [-IncludeBookmark <Boolean>]
  [-IncludeComponentLatencyInfo]
  [-IncludeRecipientInfo]
  [-ResultSize <Unlimited>]
- [-ReturnPageInfo <$true | $false>]
- [-SearchForward <$true | $false>]
+ [-ReturnPageInfo <Boolean>]
+ [-SearchForward <Boolean>]
  [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can display messages by including the server name as part of the Identity parameter or the Queue parameter or by including the Server parameter with a filter query. The Identity parameter, Queue parameter, and Filter parameter settings are mutually exclusive.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Get-Message -Filter {FromAddress -like "*@contoso.com"} | Format-List
+### Example 1
+```powershell
+Get-Message -Filter "FromAddress -like '*@contoso.com'" | Format-List
 ```
 
 This example displays detailed information about all messages queued on the local server and received from any sender at the contoso.com domain.
 
-### -------------------------- Example 2 --------------------------
-```
-Get-Message -Filter {FromAddress -like "*@contoso.com" -and SCL -gt 3}
+### Example 2
+```powershell
+Get-Message -Filter "FromAddress -like '*@contoso.com' -and SCL -gt 3"
 ```
 
 This example lists all messages queued on the local server, received from any sender at the contoso.com domain and that have an SCL value greater than 3.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-Message -Server Server01.contoso.com -SortOrder: +FromAddress,-Size
 ```
 
@@ -94,13 +95,14 @@ This example displays all messages queued on the server named Server01. The resu
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see the "Message identity" section in Find queues and messages in queues in the Exchange Management Shell (https://technet.microsoft.com/library/aa998047.aspx).
+The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see [Message identity](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#message-identity).
 
 ```yaml
 Type: MessageIdentity
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -116,6 +118,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +134,7 @@ Type: ExtensibleMessageInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value, for example, {FromAddress -like "\*@contoso.com"}. For details about filterable message properties and comparison operators, see Properties of messages in queues (https://technet.microsoft.com/library/bb123714.aspx) and https://technet.microsoft.com/library/aa998047.aspx (Find queues and messages in queues in the Exchange Management Shell).
+The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value (for example, `"FromAddress -like '*@contoso.com'"`). For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://docs.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 
@@ -148,6 +152,7 @@ Type: String
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -159,10 +164,11 @@ Accept wildcard characters: False
 The IncludeBookmark parameter specifies whether to include the bookmark object when the query results are displayed. The IncludeBookmark parameter is valid when it's used with the BookmarkObject or BookmarkIndex parameters. If you don't specify a value for the IncludeBookmark parameter, the default value of $true is used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -178,6 +184,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +216,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -226,6 +234,7 @@ Type: QueueIdentity
 Parameter Sets: Queue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -241,6 +250,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -252,10 +262,11 @@ Accept wildcard characters: False
 The ReturnPageInfo parameter is a hidden parameter. Use it to return information about the total number of results and the index of the first object of the current page. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -267,10 +278,11 @@ Accept wildcard characters: False
 The SearchForward parameter specifies whether to search forward or backward in the result set. The default value is $true. This value causes the result page to be calculated forward from either the start of the result set or forward from a bookmark if specified.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -298,6 +310,7 @@ Type: ServerIdParameter
 Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -315,6 +328,7 @@ Type: QueueViewerSortOrderEntry[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -323,20 +337,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/d6020f77-c852-46f6-b7c5-5ca6feae0fdf.aspx)

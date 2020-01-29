@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailboxrestorerequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailboxRestoreRequest
 schema: 2.0.0
@@ -16,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -25,12 +26,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -38,7 +39,7 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
@@ -46,9 +47,9 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-SuspendComment <String>]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
- [-TargetType <Primary | Archive | MailboxLocation>]
+ [-TargetType <TargetTypeComponent>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -57,12 +58,12 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
 New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -71,7 +72,7 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-LargeItemLimit <Unlimited>]
  [-MRSServer <Fqdn>]
  [-Name <String>]
- [-Priority <Normal | High>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
@@ -79,23 +80,23 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-SuspendComment <String>]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
- [-TargetType <Primary | Archive | MailboxLocation>]
+ [-TargetType <TargetTypeComponent>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
 ### MailboxLocationIDRemoteMailboxRestore
 ```
-New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -RemoteRestoreType <None | RecoveryDatabase | DisconnectedMailbox | SoftDeletedRecipient> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
+New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -RemoteRestoreType <RemoteRestoreType> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -103,7 +104,7 @@ New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
@@ -111,9 +112,9 @@ New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <
  [-SuspendComment <String>]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
- [-TargetType <Primary | Archive | MailboxLocation>]
+ [-TargetType <TargetTypeComponent>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -122,12 +123,12 @@ New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <
 New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -135,7 +136,7 @@ New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetM
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
  [-Suspend]
@@ -143,7 +144,7 @@ New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetM
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -152,12 +153,12 @@ New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetM
 New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -165,7 +166,7 @@ New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter> -TargetMai
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceIsArchive]
@@ -174,9 +175,9 @@ New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter> -TargetMai
  [-SuspendComment <String>]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
- [-TargetType <Primary | Archive | MailboxLocation>]
+ [-TargetType <TargetTypeComponent>]
  [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
@@ -193,12 +194,12 @@ Exchange retains disabled mailboxes in the mailbox database based on the deleted
 
 To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Example 1 later in this topic.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyDN, DisplayName, MailboxGUID, DisconnectReason
 ```
 
@@ -206,15 +207,15 @@ To create a restore request, you must provide the DisplayName, LegacyDN, or Mail
 
 This example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyDN, MailboxGUID, and DisconnectReason for all mailboxes on mailbox database MBD01 that have a disconnect reason of SoftDeleted or Disabled.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
 ```
 
 This example restores the source mailbox with the MailboxGUID 1d20855f-fd54-4681-98e6-e249f7326ddd on mailbox database MBD01 to the target mailbox with the alias Ayla.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
 ```
 
@@ -232,6 +233,7 @@ Type: PSCredential
 Parameter Sets: MailboxLocationIDRemoteMailboxRestore
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -249,6 +251,7 @@ Type: Guid
 Parameter Sets: MailboxLocationIDRemoteMailboxRestore
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -266,6 +269,7 @@ Type: Fqdn
 Parameter Sets: MailboxLocationIDRemoteMailboxRestore
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -279,10 +283,11 @@ This parameter is available only in the cloud-based service.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | RecoveryDatabase | DisconnectedMailbox | SoftDeletedRecipient
+Type: RemoteRestoreType
 Parameter Sets: MailboxLocationIDRemoteMailboxRestore
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -306,6 +311,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxIDMigrationLocalMailboxRestore
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -321,6 +327,7 @@ Type: SourceMailbox
 Parameter Sets: SourceMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -340,6 +347,7 @@ Type: StoreMailboxIdParameter
 Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, MailboxIDRemoteMailboxRestore
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -361,6 +369,7 @@ Type: MailboxLocationIdParameter
 Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -373,6 +382,7 @@ Type: MailboxOrMailUserIdParameter
 Parameter Sets: MailboxIDMigrationLocalMailboxRestore, MailboxIDRemoteMailboxRestore
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: True
 Position: Named
 Default value: None
@@ -388,6 +398,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -405,6 +416,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -413,21 +425,22 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedMessagesCopyOption
-The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages are copied. This parameter accepts the following values:
+The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. Valid values are:
 
-- DoNotCopy: The associated messages aren't copied. This is the default option.
+- DoNotCopy: The associated messages aren't copied.
 
-- MapByMessageClass: This option finds the corresponding associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
+- MapByMessageClass: Find the associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
 
-- Copy: This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated.
+- Copy: Copy associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This is the default value.
 
 Content filtering doesn't apply to associated messages.
 
 ```yaml
-Type: DoNotCopy | MapByMessageClass | Copy
+Type: FAICopyOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -447,6 +460,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -462,6 +476,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -477,6 +492,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -496,6 +512,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -519,10 +536,11 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - UpdateFromSource
 
 ```yaml
-Type: KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem
+Type: ConflictResolutionOption
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: KeepSourceItem
@@ -540,6 +558,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -561,6 +580,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -620,6 +640,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -679,6 +700,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -696,6 +718,7 @@ Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -708,9 +731,9 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
+- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
 
-- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
+- Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
@@ -721,6 +744,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -738,6 +762,7 @@ Type: Fqdn
 Parameter Sets: MailboxIDMigrationLocalMailboxRestore
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -755,6 +780,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -784,10 +810,11 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Normal | High
+Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -813,6 +840,7 @@ Type: Unlimited
 Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -838,6 +866,7 @@ Type: SkippableMergeComponent[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -853,6 +882,7 @@ Type: SwitchParameter
 Parameter Sets: SourceMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -868,6 +898,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -883,6 +914,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -898,6 +930,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -913,6 +946,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -928,6 +962,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -945,10 +980,11 @@ The TargetType parameter specifies the type of mailbox that's the target for the
 - Primary (This is the default value)
 
 ```yaml
-Type: Primary | Archive | MailboxLocation
+Type: TargetTypeComponent
 Parameter Sets:  MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, SourceMailbox
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -964,6 +1000,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -974,13 +1011,14 @@ Accept wildcard characters: False
 ### -WorkloadType
 This parameter is available only in on-premises Exchange.
 
-The WorkloadType parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
+Type: RequestWorkloadType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -989,20 +1027,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/0b67defd-3c6c-4470-acfa-7f22a6c1d2bd.aspx)

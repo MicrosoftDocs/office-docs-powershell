@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Remove-PnPClientSidePage
 
 ## SYNOPSIS
 Removes a Client-Side Page
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPClientSidePage -Identity <ClientSidePagePipeBind>
@@ -27,6 +29,13 @@ Remove-PnPClientSidePage -Identity "MyPage"
 Removes the Client-Side page named 'MyPage.aspx'
 
 ### ------------------EXAMPLE 2------------------
+```powershell
+Remove-PnPClientSidePage -Identity "Templates/MyPageTemplate"
+```
+
+Removes the specified Client-Side page which is located in the Templates folder of the Site Pages library.
+
+### ------------------EXAMPLE 3------------------
 ```powershell
 Remove-PnPClientSidePage $page
 ```

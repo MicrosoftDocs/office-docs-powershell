@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/remove-team
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -12,8 +12,10 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Deletes a team.
+This cmdlet deletes a specified Team from Microsoft Teams. 
 
+NOTE: The associated Office 365 Unified Group will also be removed.
+ 
 ## SYNTAX
 
 ```
@@ -21,6 +23,8 @@ Remove-Team -GroupId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
+Removes a specified team via GroupID and all its associated components, like O365 Unified Group...  
 
 ## EXAMPLES
 
@@ -57,3 +61,5 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
+
+[New-Team]()

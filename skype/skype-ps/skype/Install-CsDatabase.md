@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/install-csdatabase
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Install-CsDatabase
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -63,21 +65,21 @@ The Install-CsDatabase cmdlet provides a way for you to install any of the SQL S
 When running the Install-CsDatabase cmdlet there are basically three different ways to handle the configuration of the database being installed:
 
 Option 1 -- Run the cmdlet without including a parameter that specifies the database paths.
-When the Install-CsDatabase cmdlet is run without the DatabasePath or the UseDefaultSqlPath parameter the cmdlet uses a built-on algorithm to choose the storage location for the database logs and data files.
+When the Install-CsDatabase cmdlet is run without the DatabasePaths or the UseDefaultSqlPath parameter the cmdlet uses a built-on algorithm to choose the storage location for the database logs and data files.
 Note that this built-in algorithm works with a stand-alone SQL Server, it will not work with a SQL Server cluster.
-To install a database on a SQL Server cluster your command must include either the DatabasePath or the UseDefaultSqlPath parameter
+To install a database on a SQL Server cluster your command must include either the DatabasePaths or the UseDefaultSqlPath parameter
 
-Option 2 -- Run the cmdlet along with the DatabasePath parameter.
-When the Install-CsDatabase is cmdlet run with the DatabasePath parameter the built-in algorithm is not used to choose the storage location for the database logs and data files.
+Option 2 -- Run the cmdlet along with the DatabasePaths parameter.
+When the Install-CsDatabase is cmdlet run with the DatabasePaths parameter the built-in algorithm is not used to choose the storage location for the database logs and data files.
 Instead, administrators can select the location for these logs and data files.
 To install both data files and SQL Server logs in the same location, simply specify the path to the folder where this data should be stored.
 For example:
 
-`-DatabasePath C:\SqlData`
+`-DatabasePaths C:\SqlData`
 
 To store data files in one location and log files in a second location, specify the path to each folder, separating the two locations by using a comma (be careful not to put a blank space before or after the comma):
 
-`-DatabasePath C:\SqlLogs,D:\SqlData`
+`-DatabasePaths C:\SqlLogs,D:\SqlData`
 
 The log files will always be stored on the first location specified, while data files will be stored in the second location.
 

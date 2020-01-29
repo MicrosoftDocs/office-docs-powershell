@@ -1,36 +1,20 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/apply-pnpprovisioningtemplate
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Apply-PnPProvisioningTemplate
 
 ## SYNOPSIS
 Applies a site template to a web
 
-## SYNTAX 
+## SYNTAX
 
 ### Instance
 ```powershell
 Apply-PnPProvisioningTemplate [-InputInstance <ProvisioningTemplate>]
-                              [-ResourceFolder <String>]
-                              [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
-                              [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
-                              [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
-                              [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
-                              [-ClearNavigation [<SwitchParameter>]]
-                              [-Parameters <Hashtable>]
-                              [-Handlers <Handlers>]
-                              [-ExcludeHandlers <Handlers>]
-                              [-ExtensibilityHandlers <ExtensibilityHandler[]>]
-                              [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
-                              [-Web <WebPipeBind>]
-                              [-Connection <SPOnlineConnection>]
-```
-
-### Gallery
-```powershell
-Apply-PnPProvisioningTemplate [-GalleryTemplateId <Guid>]
                               [-ResourceFolder <String>]
                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
@@ -114,7 +98,7 @@ Applies a site template from a pnp package stored in a library to the current we
 ```powershell
 
 $handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
-$handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
+$handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler2
 Apply-PnPProvisioningTemplate -Path NewTemplate.xml -ExtensibilityHandlers $handler1,$handler2
 ```
 
@@ -165,20 +149,8 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -GalleryTemplateId
-
-
-```yaml
-Type: Guid
-Parameter Sets: Gallery
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Handlers
-Allows you to only process a specific part of the template. Notice that this might fail, as some of the handlers require other artifacts in place if they are not part of what your applying.
+Allows you to only process a specific part of the template. Notice that this might fail, as some of the handlers require other artifacts in place if they are not part of what your applying. Visit https://docs.microsoft.com/dotnet/api/officedevpnp.core.framework.provisioning.model.handlers for possible values.
 
 ```yaml
 Type: Handlers

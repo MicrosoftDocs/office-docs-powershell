@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnppropertybagvalue
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPPropertyBagValue
 
 ## SYNOPSIS
 Removes a value from the property bag
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPPropertyBagValue -Key <String>

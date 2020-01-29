@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPSite
 
 ## SYNOPSIS
 Sets Site Collection properties.
 
-## SYNTAX 
+## SYNTAX
 
 ### Set Properties
 ```powershell
@@ -28,7 +30,6 @@ Set-PnPSite [-Classification <String>]
             [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
             [-DisableSharingForNonOwners [<SwitchParameter>]]
             [-LocaleId <UInt32>]
-            [-NewUrl <String>]
             [-RestrictedToGeo <RestrictedToRegion>]
             [-SocialBarOnSitePagesDisabled [<SwitchParameter>]]
             [-Identity <String>]
@@ -64,14 +65,14 @@ Unsets the current site classification
 Set-PnPSite -DisableFlows
 ```
 
-Disables Flows for this site
+Disables Microsoft Flow for this site, and also hides the Flow button from the ribbon
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
 Set-PnPSite -DisableFlows:$false
 ```
 
-Enables Flows for this site
+Enables Microsoft Flow for this site
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
@@ -167,7 +168,7 @@ Accept pipeline input: False
 ```
 
 ### -DisableFlows
-Disables flows for this site
+Disables Microsoft Flow for this site
 
 ```yaml
 Type: SwitchParameter
@@ -229,18 +230,6 @@ Accept pipeline input: False
 
 ### -LogoFilePath
 Sets the logo if the site is modern team site. If you want to set the logo for a classic site, use Set-PnPWeb -SiteLogoUrl
-
-```yaml
-Type: String
-Parameter Sets: Set Properties
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -NewUrl
-Specifies the language of this site collection.
 
 ```yaml
 Type: String

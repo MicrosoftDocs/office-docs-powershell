@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoicemailusersettings
 applicable: Skype for Business Online
 title: Set-CsOnlineVoicemailUserSettings
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -23,7 +25,6 @@ Set-CsOnlineVoicemailUserSettings -Identity <String> [-VoicemailEnabled <Boolean
 ## DESCRIPTION
 The Set-CsOnlineVoicemailUserSettings cmdlet lets tenant admin modify the online voicemail user settings of a specific user in the organization. New online voicemail user settings of the user would be returned after executing.
 For example, tenant admin could enable/disable voicemail, change voicemail prompt language, modify out-of-office voicemail greeting settings, or setup simple call answer rules. Only those properties that tenant admin have actually provided with be modified. If an online voicemail user setting was not set by tenant admin, it would remain the old value after this cmdlet has been executed.
-
 
 ## EXAMPLES
 
@@ -49,6 +50,13 @@ Set-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-00000000000
 This example changes CallAnswerRule setting to PromptOnlyWithTransfer and set TransferTarget to "sip:user2@contoso.com" for the user with Object ID "00000000-0000-0000-0000-000000000000".
 
 ### -------------------------- Example 4 --------------------------
+```
+Set-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-000000000000" -CallAnswerRule VoicemailWithTransferOption -TransferTarget "+12345678900"
+```
+
+This example changes CallAnswerRule setting to VoicemailWithTransferOption and set TransferTarget to "+12345678900" for the user with Object ID "00000000-0000-0000-0000-000000000000".
+
+### -------------------------- Example 5 --------------------------
 ```
 Set-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-000000000000" -DefaultGreetingPromptOverwrite "Hi, I am currently not available."
 ```
@@ -220,6 +228,8 @@ Accept wildcard characters: False
 ### -TransferTarget
 The TransferTarget parameter represents the target to transfer the call when call answer rule set to PromptOnlyWithTransfer or VoicemailWithTransferOption.
 Value of this parameter should be a SIP URI of another user, an auto attendant, or a hunt group (call queue) in your organization.
+For user with Enterprise Voice enabled, a valid telephone number could also be accepted as TransferTarget.
+
 
 ```yaml
 Type: System.String

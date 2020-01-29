@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsmeetingpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsMeetingPolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -54,7 +56,7 @@ The Set-CsTeamsMeetingPolicy cmdlet allows administrators to update existing mee
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-Set-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $false
+Set-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $True
 ```
 
 The command shown in Example 1 uses the Set-CsTeamsMeetingPolicy cmdlet to update an existing meeting policy with the Identity SalesMeetingPolicy.
@@ -193,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPowerPointSharing
-Determines whether Powerpoint sharing is allowed in a user’s meetings. Set this to TRUE to allow. Set this to FALSE to prohibit.
+Determines whether Powerpoint sharing is allowed in a user's meetings. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -238,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTranscription
-Determines whether real-time and/or post-meeting captions and transcriptions are allowed in a user's meetings.  Set this to TRUE to allow. Set this to FALSE to prohibit.
+Determines whether post-meeting captions and transcriptions are allowed in a user's meetings.  Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -253,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWhiteboard
-Determines whether whiteboard is allowed in a user’s meetings. Set this to TRUE to allow. Set this to FALSE to prohibit.
+Determines whether whiteboard is allowed in a user's meetings. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -489,7 +491,7 @@ Accept wildcard characters: False
 ```
 
 ### -LiveCaptionsEnabledType
-This parameter is reserved for internal Microsoft use.
+Determines whether real-time captions are available for the user in Teams meetings. Set this to DisabledUserOverride to allow user to turn on live captions. Set this to Disabled to prohibit.
 
 ```yaml
 Type: String
@@ -498,7 +500,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: DisabledUserOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

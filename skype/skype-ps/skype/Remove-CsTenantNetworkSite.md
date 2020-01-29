@@ -1,16 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/remove-cstenantnetworksite
 applicable: Skype for Business Online
 title: Remove-CsTenantNetworkSite
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # Remove-CsTenantNetworkSite
 
 ## SYNOPSIS
+Use the `Remove-CsTenantNetworkSite` cmdlet to remove a tenant network site.
 
 ## SYNTAX
 
@@ -20,16 +23,18 @@ Remove-CsTenantNetworkSite [-Tenant <System.Guid>] [-Identity] <XdsGlobalRelativ
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The `Remove-CsTenantNetworkSite` cmdlet removes an existing tenant network site.
+
+A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus. Network sites are defined as a collection of IP subnets.
 
 ## EXAMPLES
 
-### Example 1
+###-------------------------- Example 1 --------------------------
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-CsTenantNetworkSite -Identity "site1"
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 removes 'site1'.
 
 ## PARAMETERS
 
@@ -49,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the network site to be removed.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -79,7 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose network sites are being removed. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 ```yaml
 Type: System.Guid

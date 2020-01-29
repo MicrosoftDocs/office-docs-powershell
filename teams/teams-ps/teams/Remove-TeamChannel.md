@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/remove-teamchannel
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -25,6 +25,9 @@ Remove-TeamChannel -GroupId <String> -DisplayName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
 
 ## EXAMPLES
 

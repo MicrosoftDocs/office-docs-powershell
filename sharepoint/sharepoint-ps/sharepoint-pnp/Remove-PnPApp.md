@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpapp
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Remove-PnPApp
 
 ## SYNOPSIS
 Removes an app from the app catalog
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPApp -Identity <AppMetadataPipeBind>

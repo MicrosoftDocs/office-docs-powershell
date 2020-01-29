@@ -1,16 +1,20 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/remove-cstenantnetworkregion
 applicable: Skype for Business Online
 title: Remove-CsTenantNetworkRegion
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # Remove-CsTenantNetworkRegion
 
 ## SYNOPSIS
+Use the `Remove-CsTenantNetworkRegion` cmdlet to remove a tenant network region.
+
 
 ## SYNTAX
 
@@ -20,16 +24,18 @@ Remove-CsTenantNetworkRegion [-Tenant <System.Guid>] [-Identity] <XdsGlobalRelat
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The `Remove-CsTenantNetworkRegion` cmdlet removes an existing tenant network region.
+
+A network region contains a collection of network sites.
 
 ## EXAMPLES
 
-### Example 1
+###-------------------------- Example 1 --------------------------
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-CsTenantNetworkRegion -Identity "RedmondRegion"
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 removes 'RedmondRegion'.
 
 ## PARAMETERS
 
@@ -49,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the network region to be removed.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -79,7 +85,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose network regions are being removed. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 ```yaml
 Type: System.Guid

@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-spcontenttypereplication
 applicable: SSharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPContentTypeReplication
 schema: 2.0.0
@@ -11,7 +13,7 @@ ms.reviewer:
 # Stop-SPContentTypeReplication
 
 ## SYNOPSIS
-Stops Content Type replication job to SharePoint Online.
+Stops Content Type replication job from SharePoint Online.
 
 ## SYNTAX
 
@@ -20,7 +22,7 @@ Stop-SPContentTypeReplication [-AssignmentCollection <SPAssignmentCollection>] [
 ```
 
 ## DESCRIPTION
-Stops Content Type replication job to SharePoint Online and deletes the replication timer job.
+Stops Content Type replication job from SharePoint Online and deletes the replication timer job.
 
 ## EXAMPLES
 
@@ -28,7 +30,7 @@ Stops Content Type replication job to SharePoint Online and deletes the replicat
 ```
 Stop-SPContentTypeReplication
 ```
-Stops Content Type replication job to SharePoint Online.
+Stops Content Type replication job from SharePoint Online.
 
 ## PARAMETERS
 

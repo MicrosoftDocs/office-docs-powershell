@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-managedcontentsettings
 applicable: Exchange Server 2010
 title: New-ManagedContentSettings
 schema: 2.0.0
@@ -16,18 +17,18 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the New-ManagedContentSettings cmdlet to create managed content settings for managed folders.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 New-ManagedContentSettings [-Name] <String> -FolderName <ELCFolderIdParameter> -MessageClass <String>
  [-AddressForJournaling <RecipientIdParameter>] [-AgeLimitForRetention <EnhancedTimeSpan>] [-Confirm]
- [-DomainController <Fqdn>] [-JournalingEnabled <$true | $false>] [-LabelForJournaling <String>]
- [-MessageFormatForJournaling <UseMsg | UseTnef>] [-MoveToDestinationFolder <ELCFolderIdParameter>]
+ [-DomainController <Fqdn>] [-JournalingEnabled <Boolean>] [-LabelForJournaling <String>]
+ [-MessageFormatForJournaling <JournalingFormat>] [-MoveToDestinationFolder <ELCFolderIdParameter>]
  [-Organization <OrganizationIdParameter>]
- [-RetentionAction <MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive>]
- [-RetentionEnabled <$true | $false>] [-TriggerForRetention <WhenDelivered | WhenMoved>] [-WhatIf]
+ [-RetentionAction <RetentionAction>]
+ [-RetentionEnabled <Boolean>] [-TriggerForRetention <RetentionDateType>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -38,21 +39,21 @@ Managed content settings are settings that you associate with managed folders to
 
 - By automatically journaling important content to a separate storage location outside the mailbox.
 
-For more information about managed content settings, see Messaging Records Management.
+For more information about managed content settings, see [Messaging Records Management](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123507(v=exchg.141)).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ManagedContentSettings -Name "CS-Exec-DeletedItems" -FolderName "Exec-DeletedItems" -MessageClass * -RetentionEnabled $true -RetentionAction DeleteAndAllowRecovery -AgeLimitForRetention 30.00:00:00 -TriggerForRetention WhenDelivered
 ```
 
 This example creates managed content settings for the managed default folder Exec-DeletedItems. When added to a managed folder mailbox policy and applied to a mailbox, items in the Deleted Items folder will be permanently deleted 30 days from the date of delivery.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ManagedContentSettings -Name CS-Exec-Calendar -FolderName Exec-Calendar -MessageClass Calendar -RetentionEnabled $true -RetentionAction MoveToDeletedItems -AgeLimitForRetention 180
 ```
 
@@ -68,6 +69,7 @@ Type: ELCFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -123,6 +125,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -138,6 +141,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -167,6 +171,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +187,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +207,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -216,6 +223,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -227,10 +235,11 @@ Accept wildcard characters: False
 The JournalingEnabled parameter specifies that journaling is enabled when set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -246,6 +255,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -261,10 +271,11 @@ The MessageFormatForJournaling parameter specifies the message format that an it
 - UseTnef Outlook MAPI format
 
 ```yaml
-Type: UseMsg | UseTnef
+Type: JournalingFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -282,6 +293,7 @@ Type: ELCFolderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -290,13 +302,14 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -320,10 +333,11 @@ The RetentionAction parameter specifies one of the following actions:
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
 ```yaml
-Type: MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive
+Type: RetentionAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -335,10 +349,11 @@ Accept wildcard characters: False
 The RetentionEnabled parameter specifies that retention is enabled when set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -360,10 +375,11 @@ This value corresponds to the 0x4 bit of the msExchELCFlags attribute in Active 
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
 ```yaml
-Type: WhenDelivered | WhenMoved
+Type: RetentionDateType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -379,6 +395,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -387,20 +404,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/cbb71121-b857-4d1f-8806-952e42841a9b.aspx)

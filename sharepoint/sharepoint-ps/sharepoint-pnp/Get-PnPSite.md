@@ -1,16 +1,17 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsite
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPSite
 
 ## SYNOPSIS
 Returns the current site collection from the context.
 
-## SYNTAX 
+## SYNTAX
 
-### 
 ```powershell
 Get-PnPSite [-Includes <String[]>]
             [-Connection <SPOnlineConnection>]
@@ -24,6 +25,13 @@ Get-PnPSite
 ```
 
 Gets the current site
+
+### ------------------EXAMPLE 2------------------
+```powershell
+Get-PnPSite -Includes RootWeb,ServerRelativeUrl
+```
+
+Gets the current site specifying to include RootWeb and ServerRelativeUrl properties. For the full list of properties see https://docs.microsoft.com/previous-versions/office/sharepoint-server/ee538579(v%3doffice.15)
 
 ## PARAMETERS
 

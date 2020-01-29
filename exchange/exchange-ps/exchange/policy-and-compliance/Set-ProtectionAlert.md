@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-protectionalert
 applicable: Office 365 Security & Compliance Center
 title: Set-ProtectionAlert
 schema: 2.0.0
@@ -12,11 +13,12 @@ monikerRange: "o365scc-ps"
 # Set-ProtectionAlert
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Set-ProtectionAlert cmdlet to modify alert policies in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+
 
 > [!NOTE]
 > You cannot use this cmdlet to edit default alert policies. You can only modify alerts you have created using New-ProtectionAlert cmdlet.
@@ -25,35 +27,48 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
- [-AggregationType <None | SimpleAggregation | AnomalousAggregation>] [-AlertBy <MultiValuedProperty>]
+ [-AggregationType <AlertAggregationType>]
+ [-AlertBy <MultiValuedProperty>]
  [-AlertFor <MultiValuedProperty>]
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Comment <String>] [-Confirm] [-Description <String>] [-Disabled <$true | $false>] [-Filter <String>]
- [-Name <String>] [-NotificationCulture <CultureInfo>] [-NotifyUser <MultiValuedProperty>]
- [-NotifyUserOnFilterMatch <$true | $false>] [-NotifyUserSuppressionExpiryDate <DateTime>]
- [-NotifyUserThrottleThreshold <Int32>] [-NotifyUserThrottleWindow <Int32>] [-Operation <MultiValuedProperty>]
- [-Severity <Low | Medium | High | None>] [-Threshold <Int32>] [-TimeWindow <Int32>] [-WhatIf]
- [<CommonParameters>]
+ [-Category <AlertRuleCategory>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <Boolean>]
+ [-Filter <String>]
+ [-Name <String>]
+ [-NotificationCulture <CultureInfo>]
+ [-NotifyUser <MultiValuedProperty>]
+ [-NotifyUserOnFilterMatch <Boolean>]
+ [-NotifyUserSuppressionExpiryDate <DateTime>]
+ [-NotifyUserThrottleThreshold <Int32>]
+ [-NotifyUserThrottleWindow <Int32>]
+ [-Operation <MultiValuedProperty>]
+ [-Severity <RuleSeverity>]
+ [-Threshold <Int32>]
+ [-TimeWindow <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Insert example commands for example 1.
-```
-
-Insert descriptive text for example 1.
-
-### -------------------------- Example 2 --------------------------
-```
-Insert example commands for example 2.
+### Example 1
+```powershell
+Set-ProtectionAlert -Identity "Content search deleted" -Severity High
 ```
 
-Insert descriptive text for example 2.
+This example sets the Severity of the detection to High.
+
+### Example 2
+```powershell
+Set-ProtectionAlert -Identity "Content search deleted" -NotifyUserOnFilterMatch:$true -AggregationType SimpleAggregation -Threshold 10 -TimeWindow 120
+```
+
+This example modifies an alert so that even though it's configured for aggregated activity, a notification is triggered during a match for the activity. A threshold of 10 detections and a TimeWindow of two hours are also configured in the same command.
+
 
 ## PARAMETERS
 
@@ -71,6 +86,7 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -88,10 +104,11 @@ The AggregationType parameter specifies the how the alert policy triggers alerts
 - AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Office 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
 
 ```yaml
-Type: None | SimpleAggregation | AnomalousAggregation
+Type: AlertAggregationType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +130,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +146,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -151,10 +170,11 @@ The Category parameter specifies a category for the alert policy. Valid values a
 When an activity occurs that matches the conditions of the alert policy, the alert that's generated is tagged with the category that's specified by this parameter. This allows you to track and manage alerts that have the same category setting
 
 ```yaml
-Type: None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others
+Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -170,6 +190,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +210,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +226,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -219,10 +242,11 @@ The Disabled parameter enables or disables the alert policy. Valid values are:
 - $false: The alert policy is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -231,7 +255,21 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies part of the conditions for the alert policy by using OPath filter syntax. The OPath filter includes a property name followed by a comparison operator and value. For example, {Mail:Direction -eq 'Inbound'}. The filterable properties are:
+The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+- Property is a filterable property.
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+You can chain multiple search criteria together using the `-and` logical operator (for example, `"Criteria1 -and Criteria2"`).
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+
+The filterable properties are:
 
 Activity
 
@@ -314,6 +352,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -329,6 +368,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -339,13 +379,14 @@ Accept wildcard characters: False
 ### -NotificationCulture
 The NotificationCulture parameter specifies the language or locale that's used for notifications.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
 
 ```yaml
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -361,6 +402,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -378,10 +420,11 @@ The NotifyUserOnFilterMatch parameter specifies whether to trigger an alert for 
 You can't use this parameter when the AggregationType parameter value is None (alerts are triggered for every occurrence of the activity).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -399,6 +442,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -418,6 +462,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -437,6 +482,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -445,7 +491,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operation
-The Operation parameter specifies the activities that are monitored by the alert policy. For the list of available activities, see the Audited activities tab at Search the audit log in the Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?linkid=824986).
+The Operation parameter specifies the activities that are monitored by the alert policy. For the list of available activities, see the Audited activities tab at [Audited activities](https://go.microsoft.com/fwlink/p/?LinkId=824986).
 
 You can specify multiple values separated by commas.
 
@@ -456,6 +502,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -473,10 +520,11 @@ The Severity parameter specifies the severity of the detection. Valid values are
 - High
 
 ```yaml
-Type: Low | Medium | High | None
+Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -494,6 +542,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -511,6 +560,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -526,6 +576,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -534,7 +585,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -547,5 +598,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/413f0a8f-50ca-4649-ae41-7e7fccb82655.aspx)

@@ -1,17 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csadditionalinternaldomain
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsAdditionalInternalDomain
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
 # New-CsAdditionalInternalDomain
 
 ## SYNOPSIS
-Creates a new additional internal domain for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 – December 2017.
+Creates a new additional internal domain for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 - December 2017.
 
 ## SYNTAX
 

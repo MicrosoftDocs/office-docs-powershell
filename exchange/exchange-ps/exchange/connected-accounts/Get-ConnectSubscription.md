@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/connected-accounts/get-connectsubscription
 applicable: Exchange Online
 title: Get-ConnectSubscription
 schema: 2.0.0
@@ -16,32 +17,32 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-ConnectSubscription cmdlet to view information about the people subscriptions that have been set up between the users in your organization and a supported networking service (for example, Facebook and LinkedIn).
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Get-ConnectSubscription [[-Identity] <AggregationSubscriptionIdParameter>]
- [-AggregationType <Aggregation | Mirrored | Migration | PeopleConnection | All>] [-Confirm] [-IncludeReport]
+ [-AggregationType <AggregationType>] [-Confirm] [-IncludeReport]
  [-Mailbox <MailboxIdParameter>] [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Users can set up people subscriptions between supported networking services and their cloud-based mailbox. Currently, only LinkedIn people connections are supported. The Get-ConnectSubscription cmdlet returns the list of connections that have been set up in your organization. It can also return additional information such as the current connection status of each connection and the time of the most recent successful synchronization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ConnectSubscription -Mailbox "Kim Akers" | Format-List
 ```
 
 This example shows detailed information for all the contact subscriptions that are configured in the mailbox of the user Kim Akers.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ConnectSubscription -Mailbox "Kim Akers" -IncludeReport | Export-CSV C:\KimAkersConnectReport
 ```
 
@@ -63,10 +64,11 @@ The AggregationType parameter filters the results by type. The acceptable values
 - PeopleConnection
 
 ```yaml
-Type: Aggregation | Mirrored | Migration | PeopleConnection | All
+Type: AggregationType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +88,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +104,7 @@ Type: AggregationSubscriptionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -116,6 +120,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +156,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -166,6 +172,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +188,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -189,20 +197,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/89f2566b-cf64-437b-af09-4d495e52b25b.aspx)

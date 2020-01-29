@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/new-team
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -28,7 +28,7 @@ New-Team -DisplayName <String> [-Description <String>] [-MailNickName <String>] 
  [-AllowCreateUpdateChannels <Boolean>] [-AllowDeleteChannels <Boolean>] [-AllowAddRemoveApps <Boolean>]
  [-AllowCreateUpdateRemoveTabs <Boolean>] [-AllowCreateUpdateRemoveConnectors <Boolean>]
  [-AllowUserEditMessages <Boolean>] [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>]
- [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>] [<CommonParameters>]
+ [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
 ```
 
 ### MigrateGroup
@@ -39,7 +39,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
  [-AllowAddRemoveApps <Boolean>] [-AllowCreateUpdateRemoveTabs <Boolean>]
  [-AllowCreateUpdateRemoveConnectors <Boolean>] [-AllowUserEditMessages <Boolean>]
  [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>] [-AllowTeamMentions <Boolean>]
- [-AllowChannelMentions <Boolean>] [<CommonParameters>]
+ [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -444,6 +444,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ShowInTeamsSearchAndSuggestions
+Setting that determines whether or not private teams should be searchable from Teams clients for users who do not belong to that team.  Set to $false to make those teams not discoverable from Teams clients.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -458,7 +474,9 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Get-Team]()
+[Remove-Team](remove-team.md)
 
-[Set-Team]()
+[Get-Team](get-team.md)
+
+[Set-Team](set-team.md)
 

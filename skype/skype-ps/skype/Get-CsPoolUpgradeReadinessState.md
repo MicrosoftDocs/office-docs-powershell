@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-cspoolupgradereadinessstate
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Get-CsPoolUpgradeReadinessState
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -31,6 +33,7 @@ There are no options enabling you to run the Get-CsPoolUpgradeReadinessState cmd
 
 The functions carried out by the Get-CsPoolUpgradeReadinessState cmdlet are not available in the Skype for Business Server Control Panel.
 
+In Skype for Business Server 2019, Get-CsPoolUpgradeReadinessState cmdlet was replaced by [Get-CsUpgradeDomainInfo](Get-CsUpgradeDomainInfo.md) cmdlet.
 
 
 ## EXAMPLES

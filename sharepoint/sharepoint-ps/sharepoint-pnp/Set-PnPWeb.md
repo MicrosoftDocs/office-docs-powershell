@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpweb
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPWeb
 
 ## SYNOPSIS
 Sets properties on a web
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPWeb [-SiteLogoUrl <String>]
@@ -17,6 +19,8 @@ Set-PnPWeb [-SiteLogoUrl <String>]
            [-Description <String>]
            [-MasterUrl <String>]
            [-CustomMasterUrl <String>]
+           [-HeaderLayout <HeaderLayoutType>]
+           [-HeaderEmphasis <SPVariantThemeType>]
            [-Web <WebPipeBind>]
            [-Connection <SPOnlineConnection>]
 ```
@@ -55,6 +59,34 @@ Accept pipeline input: False
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -HeaderEmphasis
+
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SPVariantThemeType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -HeaderLayout
+
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: HeaderLayoutType
 Parameter Sets: (All)
 
 Required: False

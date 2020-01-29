@@ -1,4 +1,8 @@
-#SharePoint Server Cmdlets
+---
+title: SharePoint Server Cmdlets
+---
+
+# SharePoint Server Cmdlets
 
 For a listing of the SharePoint Server cmdlets, see [SharePoint Server cmdlets](../../sharepoint-ps/sharepoint-server/sharepoint-server.md)
 
@@ -8,7 +12,7 @@ After you install SharePoint Server, applicable PowerShell cmdlets are available
 
 With the SharePoint Management Shell, you do not have to register the snap-in that contains the cmdlets. Registration of the Microsoft.SharePoint.PowerShell.dll module for SharePoint Server cmdlets is automatic, as a result of the **Add-PSSnapin Microsoft.SharePoint.PowerShell** line in the SharePoint.ps1 file that is located in %CommonProgramFiles%\Microsoft Shared\Web Server Extensions\<version>\Config\PowerShell\Registration, where version "15" equals SharePoint Server 2013, and version "16" equals SharePoint Server 2016. To use the PowerShell console, you must register this snap-in manually.
 
-Whether you use the SharePoint Management Shell or the PowerShell console, you can also load additional snap-ins. For more information, see [Customizing Profiles](https://technet.microsoft.com/en-us/library/2008.10.windowspowershell.aspx).
+Whether you use the SharePoint Management Shell or the PowerShell console, you can also load additional snap-ins. For more information, see [Customizing Profiles](https://technet.microsoft.com/library/2008.10.windowspowershell.aspx).
 
 **NOTE:** The SharePoint Management Shell and the PowerShell console also differ in the use of the **ReuseThread** option, which defines how the threading model is used. The SharePoint Management Shell's use is defined by this line, {Host.Runspace.ThreadOptions = "ReuseThread"}, which is in the SharePoint.ps1 file. For more information, see [PS Thread Options](https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.psthreadoptions?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
 

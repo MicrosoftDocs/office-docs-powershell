@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnplistitemasrecord
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPListItemAsRecord
 
 ## SYNOPSIS
-Declares a list item as a record
+Declares a list item as a record, for more information, see https://docs.microsoft.com/sharepoint/governance/records-management-in-sharepoint-server
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Set-PnPListItemAsRecord -List <ListPipeBind>

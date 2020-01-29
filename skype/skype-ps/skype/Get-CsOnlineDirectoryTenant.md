@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedirectorytenant
 applicable: Skype for Business Online
 title: Get-CsOnlineDirectoryTenant
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -14,28 +16,26 @@ ms.reviewer:
 Use the Get-CsOnlineDirectoryTenant cmdlet to retrieve a tenant and associated parameters from the Business Voice Directory.
 
 ## SYNTAX
-
 ```
 Get-CsOnlineDirectoryTenant [[-Tenant] <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The following is an example of the Get-CsOnlineDirectoryTenant cmdlet's console output.
+The following is an example of the Get-CsOnlineDirectoryTenant cmdlet's console output:
 
-Get-CsOnlineDirectoryTenant
-
-RunspaceId : 8fa40044-7bcf-465b-b7c8-76e54f124c8d
-
-Id : 7a205197-8e59-487d-b9fa-3fc1b108f1e5
-
-DefaultBridge : 00000000-0000-0000-0000-000000000000
-
-Numbers : {13479167372, 13479167375, 13479167377, 13479167386...}
-
-Bridges : {Id = \[5bc815ae-d9e9-4fb6-af74-cf4fa73ceaa6\], Name = \[Conference Bridge\], DefaultServiceNumber = \[\],
-
-IsDefaultBridge = \[False\]}
+RunspaceId            : 27655c26-8142-4f23-a7a7-0c18303b809f
+Id                    : f71eaa50-9e75-4058-8c39-dba6fdd51b28
+AnnouncementsDisabled : False
+NameRecordingDisabled : False
+ServiceNumberCount    : 0
+SubscriberNumberCount : 0
+DefaultPoolFqdn       :
+DefaultBridge         : ae9ae5d8-c440-4ccd-8960-42792a9bcb0d
+Bridges               : {Id = [ae9ae5d8-c440-4ccd-8960-42792a9bcb0d], Name = [Conference Bridge], DefaultServiceNumber = [],      IsDefaultBridge = [True], IsShared = [False], Region = [NOAM]}
+Domains               : {}
+Pools                 : {sippoolsn44a06.infra.lync.com}
+TnmAccountId          :
 
 ## EXAMPLES
 
@@ -179,3 +179,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CsOnlineTelephoneNumber](Get-CsOnlineTelephoneNumber.md)

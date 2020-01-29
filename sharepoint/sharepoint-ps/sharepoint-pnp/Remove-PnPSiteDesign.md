@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpsitedesign
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Remove-PnPSiteDesign
 
 ## SYNOPSIS
 Removes a Site Design
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>

@@ -10,6 +10,9 @@ Locale: en-US
 The following cmdlet references are for Microsoft Teams.
 
 ## Microsoft Teams Cmdlets
+### [Add-TeamChannelUser](Add-TeamChannelUser.md)
+{{Manually Enter Add-TeamChannelUser Description Here}}
+
 ### [Add-TeamUser](Add-TeamUser.md)
 {{Manually Enter Add-TeamUser Description Here}}
 
@@ -24,6 +27,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Get-TeamChannel](Get-TeamChannel.md)
 {{Manually Enter Get-TeamChannel Description Here}}
+
+### [Get-TeamChannelUser](Get-TeamChannelUser.md)
+{{Manually Enter Get-TeamChannelUser Description Here}}
 
 ### [Get-TeamFunSettings](Get-TeamFunSettings.md)
 {{Manually Enter Get-TeamFunSettings Description Here}}
@@ -40,8 +46,23 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-TeamMessagingSettings](Get-TeamMessagingSettings.md)
 {{Manually Enter Get-TeamMessagingSettings Description Here}}
 
+### [Get-TeamPolicyPackage](Get-TeamPolicyPackage.md)
+{{Manually Enter Get-TeamPolicyPackage Description Here}}
+
+### [Get-TeamsApp](Get-TeamsApp.md)
+{{Manually Enter Get-TeamsApp Description Here}}
+
 ### [Get-TeamUser](Get-TeamUser.md)
 {{Manually Enter Get-TeamUser Description Here}}
+
+### [Get-TeamUserPolicyPackage](Get-TeamUserPolicyPackage.md)
+{{Manually Enter Get-TeamUserPolicyPackage Description Here}}
+
+### [Get-TeamUserPolicyPackageRecommendation](Get-TeamUserPolicyPackageRecommendation.md)
+{{Manually Enter Get-TeamUserPolicyPackageRecommendation Description Here}}
+
+### [Grant-TeamUserPolicyPackage](Grant-TeamUserPolicyPackage.md)
+{{Manually Enter Grant-TeamUserPolicyPackage Description Here}}
 
 ### [New-Team](New-Team.md)
 {{Manually Enter New-Team Description Here}}
@@ -49,11 +70,20 @@ The following cmdlet references are for Microsoft Teams.
 ### [New-TeamChannel](New-TeamChannel.md)
 {{Manually Enter New-TeamChannel Description Here}}
 
+### [New-TeamsApp](New-TeamChannel.md)
+{{Manually Enter New-TeamChannel Description Here}}
+
 ### [Remove-Team](Remove-Team.md)
 {{Manually Enter Remove-Team Description Here}}
 
 ### [Remove-TeamChannel](Remove-TeamChannel.md)
 {{Manually Enter Remove-TeamChannel Description Here}}
+
+### [Remove-TeamChannelUser](Remove-TeamChannelUser.md)
+{{Manually Enter Remove-TeamChannelUser Description Here}}
+
+### [Remove-TeamsApp](Remove-TeamsApp.md)
+{{Manually Enter Remove-TeamsApp Description Here}}
 
 ### [Remove-TeamUser](Remove-TeamUser.md)
 {{Manually Enter Remove-TeamUser Description Here}}
@@ -79,3 +109,5 @@ The following cmdlet references are for Microsoft Teams.
 ### [Set-TeamPicture](Set-TeamPicture.md)
 {{Manually Enter Set-TeamPicture Description Here}}
 
+### [Set-TeamsApp](Set-TeamsApp.md)
+{{Manually Enter Set-TeamsApp Description Here}}

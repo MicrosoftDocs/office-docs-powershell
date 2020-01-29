@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/show-csclslogging
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Show-CsClsLogging
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -51,7 +53,7 @@ The command shown in Example 1 returns information about the scenarios currently
 Show-CsClsLogging -Pools "atl-cs-001.litwareinc.com"
 ```
 
-In Example 2, logging information is returned for all the servers in the pool `atl-cs-001…litwareinc.com…`
+In Example 2, logging information is returned for all the servers in the pool `atl-cs-001...litwareinc.com...`
 
 
 ## PARAMETERS

@@ -1,16 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-cstenantnetworksite
 applicable: Skype for Business Online
 title: Set-CsTenantNetworkSite
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # Set-CsTenantNetworkSite
 
 ## SYNOPSIS
+As an Admin, you can use the Windows PowerShell command, Set-CsTenantNetworkSite to define network sites. Network sites are defined as a collection of IP subnets. Each network site must be associated with a network region. Tenant network site is used for Location Based Routing.
 
 ## SYNTAX
 
@@ -29,16 +32,27 @@ Set-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-Networ
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus. Network sites are defined as a collection of IP subnets. Each network site must be associated with a network region.
+
+A best practice for Location Based Routing (LBR) is to create a separate site for each location which has unique PSTN connectivity. Sites may be created as LBR or non-LBR enabled. A non-LBR enabled site may be created to allow LBR enabled users to make PSTN calls when they roam to that site. Note that network sites may also be used for emergency calling enablement and configuration.
 
 ## EXAMPLES
 
-### Example 1
+###-------------------------- Example 1 --------------------------
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsTenantNetworkSite -Identity "MicrosoftSite1" -NetworkRegionID "RegionRedmond" -Description "Microsoft site 1"
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 set the network site 'MicrosoftSite1' with description 'Microsoft site 1'.
+
+The network region 'RegionRedmond' is created beforehand and 'MicrosoftSite1' will be associated with 'RegionRedmond'.
+
+###-------------------------- Example 2 --------------------------
+```powershell
+PS C:\> Set-CsTenantNetworkSite -Identity "site2" -Description "site 2" -NetworkRegionID "RedmondRegion" -LocationPolicy "TestLocationPolicy" -EnableLocationBasedRouting $true -SiteAddress "One Microsoft way" -OnlineVoiceRoutingPolicy "OVRP1"
+```
+
+The command shown in Example 2 set the network site 'site2' with description 'site 2'. This site is enabled for LBR, and associates with network region 'RedmondRegion', with location policy 'TestLocationPolicy', and with OnlineVoiceRoutingPolicy "OVRP1"
 
 ## PARAMETERS
 
@@ -58,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+Provide a description of the network site to identify purpose of setting it.
 
 ```yaml
 Type: String
@@ -73,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLocationBasedRouting
-{{Fill EnableLocationBasedRouting Description}}
+This parameter determines whether the current site is enabled for location based routing.
 
 ```yaml
 Type: Boolean
@@ -88,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -103,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the network site to be set.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -118,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-{{Fill Instance Description}}
+The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values.
+You can retrieve this object reference by calling the `Get-CsTenantNetworkSite` cmdlet.
 
 ```yaml
 Type: PSObject
@@ -133,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationPolicy
-{{Fill LocationPolicy Description}}
+LocationPolicy is the identifier for the location policy which the current network site is associating to.
 
 ```yaml
 Type: String
@@ -148,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkRegionID
-{{Fill NetworkRegionID Description}}
+NetworkRegionID is the identifier for the network region which the current network site is associating to.
 
 ```yaml
 Type: String
@@ -163,7 +178,9 @@ Accept wildcard characters: False
 ```
 
 ### -OnlineVoiceRoutingPolicy
-{{Fill OnlineVoiceRoutingPolicy Description}}
+This parameter determines the unique name of existing OnlineVoiceRoutingPolicy that the current network site associates to.
+
+OnlineVoiceRoutingPolicy is used to associate a user with the appropriate PSTN usages.
 
 ```yaml
 Type: String
@@ -178,7 +195,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose network sites are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 ```yaml
 Type: System.Guid

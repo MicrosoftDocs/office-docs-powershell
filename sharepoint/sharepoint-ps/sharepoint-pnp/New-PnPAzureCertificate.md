@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpazurecertificate
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # New-PnPAzureCertificate
 
 ## SYNOPSIS
@@ -16,7 +18,7 @@ Certificate contains the PEM encoded certificate.
 
 PrivateKey contains the PEM encoded private key of the certificate.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 New-PnPAzureCertificate [-CommonName <String>]
@@ -25,7 +27,8 @@ New-PnPAzureCertificate [-CommonName <String>]
                         [-Locality <String>]
                         [-Organization <String>]
                         [-OrganizationUnit <String>]
-                        [-Out <String>]
+                        [-OutPfx <String>]
+                        [-OutCert <String>]
                         [-ValidYears <Int>]
                         [-CertificatePassword <SecureString>]
 ```
@@ -34,14 +37,14 @@ New-PnPAzureCertificate [-CommonName <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-New-PnPAzureCertificate
+New-PnPAzureCertificate -OutPfx pnp.pfx -OutCert pnp.cer
 ```
 
-This will generate a default self-signed certificate named "pnp.contoso.com" valid for 10 years.
+This will generate a default self-signed certificate named "pnp.contoso.com" valid for 10 years and output a pfx and cer file.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-New-PnPAzureCertificate -CommonName "My Certificate" -ValidYears 30 
+New-PnPAzureCertificate -CommonName "My Certificate" -ValidYears 30
 ```
 
 This will output a certificate named "My Certificate" which expires in 30 years from now.
@@ -120,7 +123,19 @@ Position: 5
 Accept pipeline input: False
 ```
 
-### -Out
+### -OutCert
+Filename to write to, optionally including full path (.cer)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: 6
+Accept pipeline input: False
+```
+
+### -OutPfx
 Filename to write to, optionally including full path (.pfx)
 
 ```yaml

@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/move-csuser
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsUser
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -19,7 +21,7 @@ Moves one or more user accounts enabled for Skype for Business Server to a new R
 ### (Default)
 
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-UseOAuth] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-MoveConferenceData] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +47,10 @@ When moving a user to or from Office 365 (either Skype for Business Online or Te
 - Contacts are moved in all cases, unless -force is specified.
 
 > [!NOTE]
-> The MoveToTeams switch is only available on Skype for Business Server 2019 and CU8 for Skype for Business Server 2015. Organizations using other versions of Skype for Business Server must first move the user to Skype for Business Online, and then apply TeamsUpgradePolicy.
+> <ul><li>The MoveToTeams switch is only available on Skype for Business Server 2019 and CU8 for Skype for Business Server 2015. Organizations using other versions of Skype for Business Server must first move the user to Skype for Business Online, and then apply TeamsUpgradePolicy.</li><li>If you are using Skype for Business Server 2015 with CU8 or later, we recommend you pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, instead of Legacy LiveID authentication. In Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.</li></ul>
+
+
+
 
 ## EXAMPLES
 
@@ -177,6 +182,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseOAuth
+
+If specified, authentication between on-premises and the host migration service is based on OAuth protocol. Otherwise, authentication is based on legacy LiveID authentication.  This parameter is only available with Skype for Business Server 2015 with CU8 or later. In Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Server 2015
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BypassAudioConferencingCheck
 
 By default, if the on-premise user is configured for dial in conferencing, moving the user to Office 365 will provision the user for Audio Conferencing, for an additional license is required.  If you want to move such a user to Office 365 but do not want to configure them for Audio Conferencing, specify this switch to by-pass the license check. This parameter is only available with Skype for Business Server 2019 and CU8 for Skype for Business Server 2015.
@@ -211,12 +232,30 @@ Accept wildcard characters: False
 
 ### -TenantAdminUserName
 
-This is an optional parameter that if, specified, pre-populates the username of the tenant admin when moving users to or from Office 365. This can be useful for scenarios involving smart card authentication or 2 factor auth. This parameter is only available with Skype for Business Server 2019 and CU8 for Skype for Business Server 2015.
+This is an optional parameter that if, specified, pre-populates the username of the tenant admin when moving users to or from Office 365. This can be useful for scenarios involving smart card authentication or 2 factor auth. This parameter is only available with Skype for Business Server 2019 and CU8 for Skype for Business Server 2015. When specifying this parameter on Skype for Business Server 2015 with CU8, you must also specify the UseOAuth parameter.
 
 ```yaml
 Type: UserIdParameter
 Aliases:
 Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveConferenceData
+
+When present, moves meeting and conference data for users being transferred to a different Registrar pool.
+Note that you should only use the MoveConferenceData parameter if you are moving users between on-premises pools and you should not use the MoveConferenceData parameter if you are moving users as part of a disaster recovery procedure.
+Instead, you should rely on the backup service for moving conference data as part of a disaster recovery procedure.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None

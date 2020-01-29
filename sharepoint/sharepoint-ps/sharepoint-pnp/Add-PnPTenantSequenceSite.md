@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenantsequencesite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPTenantSequenceSite
 
 ## SYNOPSIS
 Adds a existing tenant sequence site object to a tenant template
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Add-PnPTenantSequenceSite -Site <ProvisioningSitePipeBind>

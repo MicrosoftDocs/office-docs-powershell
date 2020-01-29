@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitedesigntask
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPSiteDesignTask
 
 ## SYNOPSIS
-Used to retrieve a scheduled site design script. It takes the ID of the scheduled site design and the URL for the site where the site design is scheduled to be applied. 
+Used to retrieve a scheduled site design script. It takes the ID of the scheduled site design and the URL for the site where the site design is scheduled to be applied.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPSiteDesignTask [-Identity <TenantSiteDesignTaskPipeBind>]

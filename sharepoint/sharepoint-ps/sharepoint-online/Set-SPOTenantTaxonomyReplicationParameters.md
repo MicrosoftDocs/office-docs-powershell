@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenanttaxonomyreplicationparameters
 applicable: SharePoint Online
 title: Set-SPOTenantTaxonomyReplicationParameters
 schema: 2.0.0
@@ -11,55 +13,59 @@ ms.reviewer:
 # Set-SPOTenantTaxonomyReplicationParameters
 
 ## SYNOPSIS
-Select groups for replication
 
+Select groups for replication
 
 ## SYNTAX
 
 ### ReplicateAllGroups
+
 ```powershell
 Set-SPOTenantTaxonomyReplicationParameters [-ReplicateAllGroups] [<CommonParameters>]
 ```
 
 ### ReplicateSelectedGroups
+
 ```powershell
 Set-SPOTenantTaxonomyReplicationParameters -ReplicatedGroups <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Before you run the cmdlets, please use �Connect-SPOService� to connect to SharePoint Online first.
-By default, all global groups except system/search/people/sitecollection in primary location will be replicated to
-satellite. 
 
+Before using this cmdlet, make sure you connect to Sharepoint Online using [Connect-SPOService](Connect-SPOService.md) and the desirable satellite location URL as the -Url parameter.
+
+By default, all global groups except system/search/people/sitecollection in primary location will be replicated to
+satellite.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
+
 ```powershell
 Set-SPOTenantTaxonomyReplicationParameters -ReplicatedGroups "group1","group2"
 ```
-Tenant admin can use this cmdlet to select some groups only for replicating to overwrite default settings. 
+
+Tenant admin can use this cmdlet to select some groups only for replicating to overwrite default settings.
 
 ### EXAMPLE 2
+
 ```powershell
-Set-SPOTenantTaxonomyReplicationParameters �ReplicateAllGroups
+Set-SPOTenantTaxonomyReplicationParameters -ReplicateAllGroups
 ```
+
 Tenant admin can also reset to replicate all the groups.
-
-
 
 ## PARAMETERS
 
 ### -ReplicateAllGroups
-PARAMVALUE: SwitchParameter
 
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ReplicateAllGroups
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-
 Required: True
 Position: Named
 Default value: None
@@ -68,15 +74,14 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicatedGroups
-PARAMVALUE: String[]
 
+PARAMVALUE: String[]
 
 ```yaml
 Type: String[]
 Parameter Sets: ReplicateSelectedGroups
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-
 Required: True
 Position: Named
 Default value: None
@@ -85,8 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 

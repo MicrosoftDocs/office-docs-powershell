@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csorganizationalautoattendantholidays
 applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendantHolidays
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -40,7 +42,7 @@ In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-CsOrganizationalAutoAttendantHolidays -PrimaryUri "sip:mainoaa@contoso.com" –Years @(2017) -Name @("Christmas")
+Get-CsOrganizationalAutoAttendantHolidays -PrimaryUri "sip:mainoaa@contoso.com" -Years @(2017) -Name @("Christmas")
 ```
 
 In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to get holiday named Christmas in the year 2017 in an auto attendant with Primary URI of sip:mainoaa@contoso.com.

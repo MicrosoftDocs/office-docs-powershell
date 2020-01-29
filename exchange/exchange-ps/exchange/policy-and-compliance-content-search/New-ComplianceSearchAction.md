@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/new-compliancesearchaction
 applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 title: New-ComplianceSearchAction
 schema: 2.0.0
@@ -16,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-ComplianceSearchAction cmdlet to create actions for content searches in Exchange Server and in the Office 365 Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,12 +28,12 @@ New-ComplianceSearchAction [-SearchName] <String[]> [-Export]
  [-ArchiveFormat <ComplianceExportArchiveFormat>]
  [-Confirm]
  [-FileTypeExclusionsForUnindexedItems <String[]>]
- [-EnableDedupe <$true | $false>]
+ [-EnableDedupe <Boolean>]
  [-ExchangeArchiveFormat <ComplianceExportArchiveFormat>]
  [-Force]
  [-Format <ComplianceDataTransferFormat>]
  [-IncludeCredential]
- [-IncludeSharePointDocumentVersions <$true | $false>]
+ [-IncludeSharePointDocumentVersions <Boolean>]
  [-JobOptions <Int32>]
  [-NotifyEmail <String>]
  [-NotifyEmailCC <String>]
@@ -89,34 +90,36 @@ After you create a content search using the New-ComplianceSearch cmdlet and run 
 
 In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group, and not to the Organization Management role group.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+In Office 365, the account that you use to run this cmdlet must have a valid Office 365 license assigned.
+
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ComplianceSearchAction -SearchName "Project X" -Preview
 ```
 
 This example creates a preview search action for the content search named Project X.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ComplianceSearchAction -SearchName "Project X" -Export
 ```
 
 This example creates an export search action for the content search named Project X.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
 ```
 
 This example deletes the search results returned by a content search named Remove Phishing Message. Note that unindexed items aren't deleted when you use the Purge parameter.
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 
 ```
 New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointArchiveFormat SingleZip
@@ -136,6 +139,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -153,6 +157,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -174,6 +179,7 @@ Type: ComplianceExportArchiveFormat
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -193,6 +199,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -210,10 +217,11 @@ The EnableDedupe parameter eliminates duplication of messages when you export co
 - $false: Export all copies of a message if the same message exists in multiple folders or mailboxes. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -247,6 +255,7 @@ Type: ComplianceExportArchiveFormat
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +277,7 @@ Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -283,6 +293,7 @@ Type: String[]
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -298,6 +309,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -321,6 +333,7 @@ Type: ComplianceDataTransferFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -336,6 +349,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -353,10 +367,11 @@ The IncludeSharePointDocumentVersions parameter specifies whether to export prev
 - $false: Export only the current published version of the topic. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -372,6 +387,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -391,6 +407,7 @@ Type: String
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -410,6 +427,7 @@ Type: String
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -427,6 +445,7 @@ Type: SwitchParameter
 Parameter Sets: Preview
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -441,7 +460,7 @@ Notes:
 
 - A maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
 
-- You can remove items from a maximum of 50,000 mailboxes using a single content search. To remove items from more than 50,000 mailboxes, you'll have to create separate content searches. For more information, see Search for and delete email messages in your Office 365 organization (https://docs.microsoft.com/office365/securitycompliance/search-for-and-delete-messages-in-your-organization).
+- You can remove items from a maximum of 50,000 mailboxes using a single content search. To remove items from more than 50,000 mailboxes, you'll have to create separate content searches. For more information, see [Search for and delete email messages in your Office 365 organization](hhttps://docs.microsoft.com/microsoft-365/compliance/search-for-and-delete-messages-in-your-organization).
 
 - Unindexed items aren't removed from mailboxes when you use this switch.
 
@@ -452,6 +471,7 @@ Type: SwitchParameter
 Parameter Sets: Purge
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -471,6 +491,7 @@ Type: ComplianceDestroyType
 Parameter Sets: Purge
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -488,6 +509,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -505,6 +527,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -522,6 +545,7 @@ Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -537,6 +561,7 @@ Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -552,6 +577,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -581,6 +607,7 @@ Type: ComplianceSearchActionScenario
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -604,6 +631,7 @@ Type: ComplianceExportScope
 Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -623,6 +651,7 @@ Type: ComplianceScopeDetail[]
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -642,6 +671,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -669,6 +699,7 @@ Type: ComplianceExportArchiveFormat
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -684,6 +715,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -701,6 +733,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -709,7 +742,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -722,5 +755,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/a3a2897c-07a8-41d6-99cd-f2440613fbce.aspx)

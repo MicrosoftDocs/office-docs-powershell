@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpfield
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPField
 
 ## SYNOPSIS
 Add a field
 
-## SYNTAX 
+## SYNTAX
 
 ### Add field by XML to list
 ```powershell
@@ -236,7 +238,7 @@ Accept pipeline input: False
 ```
 
 ### -Type
-The type of the field like Choice, Note, MultiChoice
+The type of the field like Choice, Note, MultiChoice. For a complete list of field types visit https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.client.fieldtype
 
 ```yaml
 Type: FieldType

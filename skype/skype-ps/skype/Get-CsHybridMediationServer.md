@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/get-cshybridmediationserver
 applicable: Skype for Business Online
 title: Get-CsHybridMediationServer
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -141,7 +143,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CsHybridMediationServer](Set-CsHybridMediationServer.md)
-
-[Online Version](https://technet.microsoft.com/EN-US/library/ca9c1492-7716-47d7-99e9-bc8ddb096535(OCS.15).aspx)
-
-

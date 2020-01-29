@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-cstenantblockednumberexceptionpattern
 applicable: Skype for Business Online 
 title: Set-CsTenantBlockedNumberExceptionPattern 
-author: danny-levin
-ms.author: dannyle
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
-manager: roykuntz
+manager: bulenteg
 schema: 2.0.0
 ---
 

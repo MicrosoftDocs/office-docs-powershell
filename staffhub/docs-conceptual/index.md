@@ -1,4 +1,8 @@
-#Microsoft StaffHub cmdlet reference
+---
+title: Microsoft StaffHub cmdlet reference
+---
+
+# Microsoft StaffHub cmdlet reference
 
 Welcome to the Microsoft StaffHub cmdlet help references. The Microsoft StaffHub cmdlets provide the command line interface for service administration and management.
 

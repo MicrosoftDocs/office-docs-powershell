@@ -1,7 +1,7 @@
 ﻿---
 external help file: Microsoft.Exchange.UM.TroubleshootingTool.dll-Help.xml
 Module Name: Microsoft.Exchange.UM.TroubleshootingTool.dll
-online version: https://technet.microsoft.com/library/2616c271-82cb-495e-97dc-d789a5f7a41f.aspx
+online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/Test-ExchangeUMCallFlow
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 schema: 2.0.0
 author: chrisda
@@ -13,17 +13,17 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 # Test-UMConnectivity
 
 ## SYNOPSIS
-**Note**: The Test-ExchangeUMCallFlow cmdlet (the Exchange UM Troubleshooting Tool) isn't included in Microsoft Exchange. You need to download the Exchange UM Troubleshooting Tool from the Microsoft Download Center. For more information, see [Unified Messaging Troubleshooting Tool](https://go.microsoft.com/fwlink/p/?linkId=182625). 
+**Note**: The Test-ExchangeUMCallFlow cmdlet (the Exchange UM Troubleshooting Tool) isn't included in Microsoft Exchange. You need to download the tool from the Microsoft Download Center. For more information, see [Unified Messaging Troubleshooting Tool](https://go.microsoft.com/fwlink/p/?linkId=182625).
 
 Use the Test-ExchangeUMCallFlow cmdlet to test call flow between the Microsoft Exchange Unified Messaging Call Router service (frontend), the Microsoft Exchange Unified Messaging service (backend), VoIP gateways, IP PBXs, Session Initiation Protocol (SIP) servers and Lync Server or Skype for Business servers. The Test-ExchangeUMCallFlow cmdlet can be used to diagnose configuration errors found in telephony components, Unified Messaging settings in Exchange 2010 SP1 or later, and connectivity issues between on-premises and hybrid Unified Messaging deployments.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### Set1
 ```
-Test-ExchangeUMCallFlow -Mode <Gateway> -Diversion <String> -NextHop <String> [-CertificateThumbprint <String>] [-HuntGroup <String>] [-VoIPSecurity <Unsecured | SIPSecured | Secured>
+Test-ExchangeUMCallFlow -Mode <Gateway> -Diversion <String> -NextHop <String> [-CertificateThumbprint <String>] [-HuntGroup <String>] [-VoIPSecurity <UMVoIPSecurityType>
  <CommonParameters>]
 ```
 
@@ -46,26 +46,26 @@ You can use this cmdlet in deployments with Lync Server or Skype for Business Se
 
 When you run the cmdlet, it states the reason and possible solutions for issues that have been detected. It also outputs general audio quality metrics for diagnosing audio quality issues related to network connectivity such as jitter and average packet loss. The Test-ExchangeUMCallFlow cmdlet supports testing UM components and services in Secured, SIP Secured, and Unsecured calls, and it can be run either in Gateway or SIPClient modes.
 
-**Important**: You use the Test-ExchangeUMCallFlow cmdlet to test only the voice mail functionality of an Exchange server. 
+**Important**: You use the Test-ExchangeUMCallFlow cmdlet to test only the voice mail functionality of an Exchange server.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Unsecured -NextHop 10.1.1.1 -Diversion 12345
 ```
 
 This example uses Gateway mode and tests the call flow in a non-Skype for Business environment. This example sets the VoIP security mode to Unsecured, uses the IP address 10.1.1.1 as the next hop, and includes an extension number in the diversion information.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Test-ExchangeUMCallFlow -Mode SIPClient -CallingParty tony@contoso.com -CalledParty david@contoso.com -Credential $get
 ```
 
 This example uses SIPClient mode and tests the call flow with a Secured UM dial plan in an environment that contains servers running Skype for Business. By default, when you run the cmdlet, the cmdlet uses the credentials of the user currently logged onto the computer.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Secured -CertificateThumbprint a909502dd82ae41433e6f83886b00d4277a32a7b -NextHop gateway.contoso.com -HuntGroup 10000 -Diversion "History-Info: <sip:10001@10.176.10.194;user=phone?Reason=SIP%3Bcause%3D487%3Btext%3DTimeout>;index=1,<sip:10000@10.176.10.194;user=phone?Reason=SIP>;index=1.1"
 ```
 
@@ -76,7 +76,7 @@ This example uses Gateway mode and tests the call flow in a non-Skype for Busine
 ### -Mode
 The Mode parameter specifies whether the deployment being tested includes VoIP gateways, IP PBX, or Lync or Skype for Business servers. Valid values are:
 
-- Gateway: The UM deployment includes VoIP gateways or IP PBXs. 
+- Gateway: The UM deployment includes VoIP gateways or IP PBXs.
 
 - SIPClient: The UM deployment includes Lync or Skype for Business server.
 
@@ -85,6 +85,7 @@ Type: Gateway | SIPClient
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +101,7 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -115,6 +117,7 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -138,6 +141,7 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -146,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -NextHop
-The NextHop parameter specifies the IP address or fully qualified domain name (FQDN) and can also include the TCP port of the next hop that the Test-ExchangeUMCallFlow cmdlet connects to while emulating the VoIP gateway or IP PBX. When you include the TCP port, you need to include either port 5060 for Unsecured mode or port 5061 for Secured or SIPSecured mode, for example: gateway.contoso.com:5061. 
+The NextHop parameter specifies the IP address or fully qualified domain name (FQDN) and can also include the TCP port of the next hop that the Test-ExchangeUMCallFlow cmdlet connects to while emulating the VoIP gateway or IP PBX. When you include the TCP port, you need to include either port 5060 for Unsecured mode or port 5061 for Secured or SIPSecured mode, for example: gateway.contoso.com:5061.
 
 If you're using the cmdlet in a hybrid environment, you need to enter the FQDN of the Session Border Controller (SBC).
 
@@ -161,6 +165,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -178,6 +183,7 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: False
 Position: Named
 Default value: None
@@ -188,13 +194,14 @@ Accept wildcard characters: False
 ### -Credential
 The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: True
 Position: Named
 Default value: None
@@ -210,6 +217,7 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: False
 Position: Named
 Default value: None
@@ -227,10 +235,11 @@ The VoIPSecurity parameter specifies the security mode when using the cmdlet in 
 - Secured (TLS/SRTP)
 
 ```yaml
-Type: Unsecured | SIPSecured | Secured
+Type: UMVoIPSecurityType
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -252,5 +261,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/2616c271-82cb-495e-97dc-d789a5f7a41f.aspx)

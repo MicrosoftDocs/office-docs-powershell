@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/get-teamhelp
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -17,7 +17,7 @@ Gets a list of commands for Microsoft Teams.
 ## SYNTAX
 
 ```
-Get-TeamHelp [<CommonParameters>]
+Get-TeamHelp
 ```
 
 ## DESCRIPTION
@@ -26,10 +26,10 @@ Get-TeamHelp [<CommonParameters>]
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-TeamHelp
 ```
 
-{{ Add example description here }}
+Gets a list of commands available for Microsoft Teams.
 
 ## PARAMETERS
 

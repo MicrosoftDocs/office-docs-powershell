@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/set-compliancesecurityfilter
 applicable: Office 365 Security & Compliance Center
 title: Set-ComplianceSecurityFilter
 schema: 2.0.0
@@ -12,34 +13,34 @@ monikerRange: "o365scc-ps"
 # Set-ComplianceSecurityFilter
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Set-ComplianceSecurityFilter cmdlet to modify compliance security filters in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-ComplianceSecurityFilter -FilterName <String> [-Action <Unknown | Preview | Export | Purge | Search | All>]
+Set-ComplianceSecurityFilter -FilterName <String> [-Action <ComplianceSecurityFilterActionType>]
  [-Confirm] [-Description <String>] [-Filters <MultiValuedProperty>] [-Region <String>]
  [-Users <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"; $filterusers.users.add("pilarp@contoso.com"); Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
 ```
 
 This example adds user pilarp@contoso.com to the compliance security filter named Ottawa Users Filter without affecting other users assigned to the filter.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"; $filterusers.users.remove("annb@contoso.com"); Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
 ```
 
@@ -55,6 +56,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -76,10 +78,11 @@ The Action parameter specifies that type of search action that the filter is app
 - All: The filter is applied to all search actions.
 
 ```yaml
-Type: Unknown | Preview | Export | Purge | Search | All
+Type: ComplianceSecurityFilterActionType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -99,6 +102,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +118,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -124,11 +129,11 @@ Accept wildcard characters: False
 ### -Filters
 The Filters parameter specifies the search criteria for the compliance security filter. You can create three different types of filters:
 
-- Mailbox filter: Specifies the mailboxes that can be searched by the assigned users. Valid syntax is Mailbox\_\<MailboxPropertyName\>, where \<MailboxPropertyName\> is a mailbox property value. For example, "Mailbox\_CustomAttribute10 -eq 'OttawaUsers'" allows users to only search mailboxes that have the value OttawaUsers in the CustomAttribute10 property. For a list of supported mailbox properties, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
+- Mailbox filter: Specifies the mailboxes that can be searched by the assigned users. Valid syntax is Mailbox\_\<MailboxPropertyName\>, where \<MailboxPropertyName\> is a mailbox property value. For example, "Mailbox\_CustomAttribute10 -eq 'OttawaUsers'" allows users to only search mailboxes that have the value OttawaUsers in the CustomAttribute10 property. For a list of supported mailbox properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipientfilter-properties).
 
-- Mailbox content filter: Specifies the mailbox content the assigned users can search for. Valid syntax is MailboxContent\_\<SearchablePropertyName\>:\<value\>, where \<SearchablePropertyName\> specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, MailboxContent\_recipients:contoso.com allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable message properties, see Keyword queries for Compliance Search (https://technet.microsoft.com/library/ms.o365.cc.searchquerylearnmore.aspx).
+- Mailbox content filter: Specifies the mailbox content the assigned users can search for. Valid syntax is MailboxContent\_\<SearchablePropertyName\>:\<value\>, where \<SearchablePropertyName\> specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, MailboxContent\_recipients:contoso.com allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable message properties, see [Keyword queries for Compliance Search](https://docs.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
 
-- Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create: Site\_\<SearchableSiteProperty\> (specifies site-related properties. For example,"Site\_Path -eq 'https://contoso.sharepoint.com/sites/doctors'" allows users to only search for content in the https://contoso.sharepoint.com/sites/doctors site collection) and SiteContent\_\<SearchableSiteProperty\> (specifies content-related properties. For example, "SiteContent\_FileExtension -eq 'docx'" allows users to only search for Word documents). For a list of searchable site properties, see Overview of crawled and managed properties in SharePoint (https://go.microsoft.com/fwlink/p/?LinkId=331599). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
+- Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create: Site\_\<SearchableSiteProperty\> (specifies site-related properties. For example,"Site\_Path -eq 'https://contoso.sharepoint.com/sites/doctors'" allows users to only search for content in the https://contoso.sharepoint.com/sites/doctors site collection) and SiteContent\_\<SearchableSiteProperty\> (specifies content-related properties. For example, "SiteContent\_FileExtension -eq 'docx'" allows users to only search for Word documents). For a list of searchable site properties, see [Overview of crawled and managed properties in SharePoint Server](https://go.microsoft.com/fwlink/p/?LinkId=331599). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
 
 You can specify multiple filters of the same type. For example, "Mailbox\_CustomAttribute10 -eq 'FTE' -and Mailbox\_MemberOfGroup -eq '$($DG.DistinguishedName)'".
 
@@ -137,6 +142,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -152,6 +158,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +184,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +200,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -200,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -213,5 +222,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/9e47c29a-abbe-4e9a-8e3f-cd210793273b.aspx)

@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchmetadatacrawledproperty
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchMetadataCrawledProperty
 schema: 2.0.0
@@ -244,6 +246,8 @@ For more information about valid values for this property, see VARIANT Type Cons
 
 The type must be an integer that specifies the variant data type of the property set.
 
+> [!NOTE] 
+> This parameter is required although the value is not used in SharePoint Server 2013 through SharePoint Server 2019. You will see an Obsolete warning when running the cmdlet. You may ignore this message.
 
 ```yaml
 Type: Int32

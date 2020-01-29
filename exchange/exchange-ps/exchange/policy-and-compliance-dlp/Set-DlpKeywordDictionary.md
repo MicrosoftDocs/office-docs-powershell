@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpkeyworddictionary
 applicable: Office 365 Security & Compliance Center
 title: Set-DlpKeywordDictionary
 schema: 2.0.0
@@ -12,11 +13,11 @@ monikerRange: "o365scc-ps"
 # Set-DlpKeywordDictionary
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Set-DlpKeywordDictionary cmdlet to modify data loss prevention (DLP) keyword dictionaries in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,33 +27,33 @@ Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter> [-Con
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $Keywords = "Aarskog's syndrome, Abandonment, Abasia, Abderhalden-Kaufmann-Lignac, Abdominalgia, Abduction contracture, Abetalipo proteinemia, Abiotrophy, Ablatio, ablation, Ablepharia, Abocclusion, Abolition, Aborter, Abortion, Abortus, Aboulomania, Abrami's disease, Abramo"; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($keywords); Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
 This example replaces the existing terms in the DLP keyword dictionary named Diseases with the specified values.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); $Terms += "Achylia","Acidemia","Acidocytopenia","Acidocytosis","Acidopenia","Acidosis","Aciduria","Acladiosis","Aclasis"; $Keywords = $Terms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
 This example adds the specified terms to the DLP keyword dictionary named Diseases without affecting other existing terms.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); $TermsToRemove = @('abandonment', 'ablatio'); $UpdatedTerms = $Terms | Where-Object {$_ -NotIn $TermsToRemove}; $Keywords = $UpdatedTerms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
 This example removes the specified terms from the DLP keyword dictionary named Diseases without affecting other existing terms.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 $Dictionary = Get-DlpKeywordDictionary -Name "Inappropriate Language"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); Set-Content $Terms -Path "C:\My Documents\InappropriateTerms.txt"; $UpdatedTerms = Get-Content -Path "C:\My Documents\InappropriateTerms.txt"; $Keywords = $UpdatedTerms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Inappropriate Language" -FileData $EncodedKeywords
 ```
 
@@ -70,6 +71,7 @@ Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -89,6 +91,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -112,13 +116,14 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF8. For more information, see the examples in this topic.
+The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF8. For more information, see the examples in this topic. The maximum file size limit is 100 KB.
 
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +139,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -149,6 +155,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -157,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -170,5 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/b1a010ed-ebfe-4300-97b7-5fc55f21169a.aspx)

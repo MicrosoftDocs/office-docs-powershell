@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csautoattendant
 applicable: Skype for Business Online
 title: New-CsAutoAttendant
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -202,6 +204,57 @@ This example creates two new AAs named _Main auto attendant_ and _Customer Suppo
 We can see when we ran the Get-CsOnlineSchedule cmdlet at the end, to get the _Christmas Holiday_ schedule information, that the configuration IDs for the newly created AAs have been added to the `AssociatedConfigurationIds` properties of that schedule. This means any updates made to this schedule would reflect in both associated AAs.
 
 Removing an association between an AA and a schedule is as simple as deleting the CallHandlingAssociation of that schedule in the AA you want to modify. Please refer to [Set-CsAutoAttendant](Set-CsAutoAttendant.md) cmdlet documentation for examples on how to do that.
+
+### -------------------------- Example 4 --------------------------
+```powershell
+$aaName = "Main Auto Attendant"
+$language = "en-US"
+$greetingText = "Welcome to Contoso"
+$mainMenuText = "To reach your party by name, say it now. To talk to Sales, please press 1. To talk to User2 press 2. Please press 0 for operator"
+$afterHoursText = "Sorry Contoso is closed. Please call back during week days from 7AM to 8PM. Goodbye!"
+$tz = "Romance Standard Time"
+$operatorId = (Get-CsOnlineUser -Identity "sip:user1@contoso.com").ObjectId
+$user1Id = (Get-CsOnlineUser -Identity "sip:user2@contoso.com").ObjectId
+$salesCQappinstance = (Get-CsOnlineUser -Identity "sales@contoso.com").ObjectId # one of the application instances associated to the Call Queue
+$tr1 = New-CsOnlineTimeRange -Start 07:00 -End 20:00
+
+# After hours
+$afterHoursSchedule = New-CsOnlineSchedule -Name "After Hours" -WeeklyRecurrentSchedule -MondayHours @($tr1) -TuesdayHours @($tr1) -WednesdayHours @($tr1) -ThursdayHours @($tr1) -FridayHours @($tr1) -Complement
+$afterHoursGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt $afterHoursText
+$afterHoursMenuOption = New-CsAutoAttendantMenuOption -Action DisconnectCall -DtmfResponse Automatic
+$afterHoursMenu = New-CsAutoAttendantMenu -Name "AA menu1" -MenuOptions @($afterHoursMenuOption)
+$afterHoursCallFlow = New-CsAutoAttendantCallFlow -Name "After Hours" -Menu $afterHoursMenu -Greetings @($afterHoursGreetingPrompt)
+$afterHoursCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $afterHoursSchedule.Id -CallFlowId $afterHoursCallFlow.Id
+
+# Business hours menu options
+$operator = New-CsAutoAttendantCallableEntity -Identity $operatorId -Type User
+$sales = New-CsAutoAttendantCallableEntity -Identity $salesCQappinstance -Type applicationendpoint
+$user1 = New-CsAutoAttendantCallableEntity -Identity $user1Id -Type User
+$menuOption0 = New-CsAutoAttendantMenuOption -Action TransferCallToOperator -DtmfResponse Tone0 -CallTarget $operator
+$menuOption1 = New-CsAutoAttendantMenuOption -Action TransferCallToTarget -DtmfResponse Tone1 -CallTarget $sales
+$menuOption2 = New-CsAutoAttendantMenuOption -Action TransferCallToTarget -DtmfResponse Tone2 -CallTarget $user1
+
+# Business hours menu
+$greetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt $greetingText
+$menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt $mainMenuText
+$menu = New-CsAutoAttendantMenu -Name "AA menu2" -Prompts @($menuPrompt) -EnableDialByName -MenuOptions @($menuOption0,$menuOption1,$menuOption2)
+$callFlow = New-CsAutoAttendantCallFlow -Name "Default" -Menu $menu -Greetings $greetingPrompt
+
+# Auto attendant
+New-CsAutoAttendant -Name $aaName -Language $language -CallFlows @($afterHoursCallFlow) -TimeZoneId $tz -Operator $operator -DefaultCallFlow $callFlow -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -EnableVoiceResponse
+```
+
+This example creates a new AA named _Main auto attendant_ that has the following properties:
+
+- It sets a default call flow.
+- It sets an after-hours call flow.
+- It sets a business hours options.
+- It references a call queue as a menu option.
+- The default language is en-US.
+- The time zone is set to Romance Standard.
+- It sets user1 as operator.
+- It has user2 also as a menu option.
+- The Auto Attendant is voice enabled.
 
 ## PARAMETERS
 

@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpinplacerecordsmanagement
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPInPlaceRecordsManagement
 
 ## SYNOPSIS
 Returns if the place records management feature is enabled.
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Get-PnPInPlaceRecordsManagement [-Web <WebPipeBind>]

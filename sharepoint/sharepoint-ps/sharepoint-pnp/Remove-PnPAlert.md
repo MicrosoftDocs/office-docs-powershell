@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpalert
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Remove-PnPAlert
 
 ## SYNOPSIS
 Removes an alert for a user
 
-## SYNTAX 
+## SYNTAX
 
 ```powershell
 Remove-PnPAlert -Identity <AlertPipeBind>
@@ -32,7 +34,7 @@ Removes the alert with the specified ID for the current user
 Remove-PnPAlert -Identity 641ac67f-0ce0-4837-874a-743c8f8572a7 -User "i:0#.f|membership|Alice@contoso.onmicrosoft.com"
 ```
 
-Removes the laert with the specified ID for the user specified
+Removes the alert with the specified ID for the user specified
 
 ## PARAMETERS
 
@@ -65,7 +67,7 @@ Accept pipeline input: False
 ```
 
 ### -User
-User to remove the alert for (User ID, login name or actual User object). Skip this parameter to usethe current user. Note: Only site owners can remove alerts for other users.
+User to remove the alert for (User ID, login name or actual User object). Skip this parameter to use the current user. Note: Only site owners can remove alerts for other users.
 
 Only applicable to: SharePoint Online, SharePoint Server 2019
 

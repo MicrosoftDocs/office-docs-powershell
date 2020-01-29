@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-spweb
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPWeb
 schema: 2.0.0
@@ -35,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------------. 
 ```
-Export-SPWeb https://site -Path "site export.cmp"
+Export-SPWeb https://site -Path "C:\Temp\export.cmp"
 ```
 
 This example exports the site at https://site/ to a file called site export.cmp in the current directory.

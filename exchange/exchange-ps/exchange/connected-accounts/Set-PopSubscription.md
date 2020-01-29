@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/connected-accounts/set-popsubscription
 applicable: Exchange Online
 title: Set-PopSubscription
 schema: 2.0.0
@@ -16,13 +17,13 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-PopSubscription cmdlet to modify the properties of an existing POP subscription that's configured in a user's cloud-based mailbox.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### SubscriptionModification
 ```
-Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <$true | $false>] [-Force] [-IncomingAuth <Basic | Spa>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>] [-LeaveOnServer <$true | $false>]
+Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <Boolean>] [-Force] [-IncomingAuth <AuthenticationMechanism>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <SecurityMechanism>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>] [-LeaveOnServer <Boolean>]
  [-Confirm]
  [-Mailbox <MailboxIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -47,12 +48,12 @@ Set-PopSubscription [-Identity] <AggregationSubscriptionIdParameter> [-ValidateS
 ## DESCRIPTION
 You can set properties for the POP subscription, such as the POP server, TCP port number, encryption method, and authentication method.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-PopSubscription "Ayla Contoso" -Mailbox "Ayla Kol" -LeaveOnServer $false
 ```
 
@@ -74,6 +75,7 @@ Type: AggregationSubscriptionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -93,6 +95,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +111,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -123,6 +127,7 @@ Type: SmtpAddress
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -134,10 +139,11 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the POP subscription is enabled. This parameter accepts $true or $false values. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +159,7 @@ Type: SwitchParameter
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,10 +171,11 @@ Accept wildcard characters: False
 The IncomingAuth parameter sets the authentication method used by POP clients to access the POP server. Valid values are Basic or Spa, which is secure password authentication. If you don't specify a value for the IncomingAuth parameter, the value Basic is used.
 
 ```yaml
-Type: Basic | Spa
+Type: AuthenticationMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -178,13 +186,14 @@ Accept wildcard characters: False
 ### -IncomingPassword
 The IncomingPassword parameter specifies the password used to sign in to the POP mailbox.
 
-This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter. 
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -200,6 +209,7 @@ Type: Int32
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -211,10 +221,11 @@ Accept wildcard characters: False
 The IncomingSecurity parameter specifies the encryption method used by POP clients to connect to the POP server. Valid values are None, Ssl, or Tls. If you don't specify a value for the IncomingSecurity parameter, the value None is used.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: SecurityMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -230,6 +241,7 @@ Type: Fqdn
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -245,6 +257,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -256,10 +269,11 @@ Accept wildcard characters: False
 The LeaveOnServer parameter configures the behavior of retrieved messages in the POP mailbox. When the LeaveOnServer parameter is set to the value $true, the retrieved messages are left in the POP mailbox. When it's set to the value $false, retrieved messages are removed from the POP mailbox. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -295,6 +309,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -312,6 +327,7 @@ Type: SwitchParameter
 Parameter Sets: ResendVerificationEmail
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -329,6 +345,7 @@ Type: String
 Parameter Sets: ValidateSendAs
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -344,6 +361,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -352,20 +370,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/3ec02987-7404-47fa-a6b0-43239344b6c8.aspx)

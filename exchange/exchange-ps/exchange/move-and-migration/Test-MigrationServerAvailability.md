@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/test-migrationserveravailability
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Test-MigrationServerAvailability
 schema: 2.0.0
@@ -16,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Test-MigrationServerAvailability cmdlet to test the availability of the target server in preparation to perform cross-forest mailbox moves, migration of on-premises mailboxes to Exchange Online, or to migrate on-premises mailbox data from an IMAP server to Exchange Online mailboxes. For all migration types, the cmdlet attempts to verify the connection settings used to connect to the target server.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +32,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <Smtp
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeOutlookAnywhere]
  [-Confirm]
- [-MailboxPermission <Admin | FullAccess>]
+ [-MailboxPermission <MigrationMailboxPermission>]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -47,9 +48,9 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn
 ### ExchangeOutlookAnywhere
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn> [-ExchangeOutlookAnywhere]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-EmailAddress <SmtpAddress>]
- [-MailboxPermission <Admin | FullAccess>] [-TestMailbox <MailboxIdParameter>]
+ [-MailboxPermission <MigrationMailboxPermission>] [-TestMailbox <MailboxIdParameter>]
  [-SourceMailboxLegacyDN <String>]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
@@ -58,7 +59,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <St
 ### PublicFolder
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -81,7 +82,7 @@ Test-MigrationServerAvailability -Endpoint <MigrationEndpointIdParameter>
 ### IMAP
 ```
 Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32> [-Imap]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>] [-Security <None | Ssl | Tls>]
+ [-Authentication <AuthenticationMethod>] [-Security <NIMAPSecurityMechanism]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -111,7 +112,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn
 ### LegacyPublicFolderToUnifiedGroup
 ```
 Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolderToUnifiedGroup]
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Authentication <AuthenticationMethod>]
  [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
@@ -140,40 +141,40 @@ If the verification is successful, you can use the same settings to create a mig
 
 - New-MigrationBatch
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-MigrationServerAvailability -Imap -RemoteServer imap.contoso.com -Port 143
 ```
 
 For IMAP migrations, this example verifies the connection to the IMAP mail server imap.contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
 This example uses the Autodiscover and ExchangeOutlookAnywhere parameters to verify the connection to an on-premises Exchange server in preparation for migrating on-premises mailboxes to Exchange Online. You can use a similar example to test the connection settings for a staged Exchange migration or a cutover Exchange migration.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 $Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
 ```
 
 This example verifies the connection to a server running Microsoft Exchange Server 2003 named exch2k3.contoso.com and uses NTLM for the authentication method.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Test-MigrationServerAvailability -Endpoint endpoint.contoso.com
 ```
 
 This example verifies the connection settings to a remote server using the settings stored in an existing migration endpoint in Exchange Online.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 $MRSEndpoints = (Get-MigrationEndpoint).RemoteServer; Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
 ```
 
@@ -189,6 +190,7 @@ Type: SwitchParameter
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscove
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -204,6 +206,7 @@ Type: SwitchParameter
 Parameter Sets: Compliance
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -214,13 +217,14 @@ Accept wildcard characters: False
 ### -Credentials
 The Credentials parameter specifies the username and password for an account that can access mailboxes on the target server. Specify the username in the domain\\username format or the user principal name (UPN) (user@example.com) format.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, PSTImport, ExchangeOutlookAnywhere, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup, MrsProxyPublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -233,6 +237,7 @@ Type: PSCredential
 Parameter Sets: ExchangeRemoteMove
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -248,6 +253,7 @@ Type: SmtpAddress
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -260,6 +266,7 @@ Type: SmtpAddress
 Parameter Sets: ExchangeOutlookAnywhere, Gmail
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -275,6 +282,7 @@ Type: MigrationEndpointIdParameter
 Parameter Sets: TestEndpoint
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -292,6 +300,7 @@ Type: SwitchParameter
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -307,6 +316,7 @@ Type: SwitchParameter
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeRemoteMove
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -324,6 +334,7 @@ Type: String
 Parameter Sets: ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -341,6 +352,7 @@ Type: SwitchParameter
 Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -358,6 +370,7 @@ Type: SwitchParameter
 Parameter Sets: Gmail
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -377,6 +390,7 @@ Type: Int32
 Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -392,6 +406,7 @@ Type: SwitchParameter
 Parameter Sets: PSTImport
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -407,6 +422,7 @@ Type: SwitchParameter
 Parameter Sets: PublicFolder, MrsProxyPublicFolder
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -422,6 +438,7 @@ Type: String
 Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -437,6 +454,7 @@ Type: SwitchParameter
 Parameter Sets: MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -458,6 +476,7 @@ Type: Fqdn
 Parameter Sets: PSTImport, ExchangeRemoteMove, IMAP, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -470,6 +489,7 @@ Type: Fqdn
 Parameter Sets: Compliance
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -487,6 +507,7 @@ Type: Fqdn
 Parameter Sets: ExchangeOutlookAnywhere, PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -506,6 +527,7 @@ Type: Byte[]
 Parameter Sets: Gmail
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -523,6 +545,7 @@ Type: String
 Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -535,6 +558,7 @@ Type: String
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -550,10 +574,11 @@ The Authentication parameter specifies the authentication method used by the on-
 The parameter is only used for cutover Exchange migrations and staged Exchange migrations.
 
 ```yaml
-Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
+Type: AuthenticationMethod
 Parameter Sets: ExchangeOutlookAnywhere, PublicFolder, IMAP, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -573,6 +598,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -588,6 +614,7 @@ Type: String
 Parameter Sets: PSTImport
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -609,10 +636,11 @@ Specify one of the following values for the account defined by the Credentials p
 This parameter isn't used for testing the connection to the remote server for a remote move migration or an IMAP migration.
 
 ```yaml
-Type: Admin | FullAccess
+Type: MigrationMailboxPermission
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -626,10 +654,11 @@ This parameter is available only in the cloud-based service.
 For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: IMAPSecurityMechanism
 Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -647,6 +676,7 @@ Type: MailboxIdParameter
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -662,6 +692,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -670,20 +701,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/a0959dbe-94ae-4f2e-8e2c-e5d5bd5e1521.aspx)

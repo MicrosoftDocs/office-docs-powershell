@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 title: Set-CsCloudCallDataConnectorConfiguration
-online version:
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -58,9 +59,12 @@ Get-CsCloudCallDataConnectorConfiguration -Filter "site:*"| Set-CsCloudCallDataC
 ```
 
 Another variation of the command used in Example 1 is shown in Example 3.
+
 In this example, the PurgeHourOfDay property is changed for all the Cloud Call Data Connector settings that have been configured at the site scope.
-To perform this task, the command first calls the \`Get-CsCloudCallDataConnectorConfiguration\` cmdlet along with the Filter parameter; the filter value "site:*" ensures that only Cloud Call Data Connector settings that have an Identity that begins with the string value "site:" will be returned.
-The filtered collection is then piped to the \`Set-CsCloudCallDataConnectorConfiguration\` cmdlet, which changes the EnableCallDataConnector property for each item in that collection.
+
+To perform this task, the command first calls the `Get-CsCloudCallDataConnectorConfiguration` cmdlet along with the Filter parameter; the filter value "site:*" ensures that only Cloud Call Data Connector settings that have an Identity that begins with the string value "site:" will be returned.
+
+The filtered collection is then piped to the `Set-CsCloudCallDataConnectorConfiguration` cmdlet, which changes the EnableCallDataConnector property for each item in that collection.
 
 ## PARAMETERS
 
@@ -71,7 +75,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +90,7 @@ Enables upload of call data.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +105,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -116,7 +120,7 @@ Represents the unique identifier to be assigned to the new collection of CloudCa
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -131,7 +135,7 @@ Allows you to pass a reference to an object to the cmdlet, rather than set indiv
 Type: PSObject
 Parameter Sets: Instance
 Aliases:
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +151,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
