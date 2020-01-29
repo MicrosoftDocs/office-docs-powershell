@@ -80,8 +80,6 @@ This example creates a new application access policy with the following settings
 
 - Description: Restrict this app to members of security group EvenUsers.
 
-
-
 ### Example 3
 ```powershell
 New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of security group OddUsers."
@@ -150,6 +148,19 @@ For example:
 - Email address
 
 - GUID
+
+**Note**: This parameter will only accept valid security principal resources, which excludes certain recipient types:
+
+- Discovery mailboxes  
+
+- Dynamic distribution groups
+
+- Distribution groups
+
+- Shared mailboxes
+
+To see the valid security principals, use the syntax `Get-Recipient <username> | Select-Object IsValidSecurityPrincipal`.
+
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
@@ -161,18 +172,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
-```
-  
-#### NOTE 
-This parameter will only accept valid security principal resources, which excludes certain RecipientTypes:  
-DiscoveryMailbox  
-DynamicDistributionGroup  
-MailUniversalDistributionGroup  
-SharedMailbox  
-  
-You can assess this value with the following PowerShell cmdlet:  
-```powershell
-Get-Recipient Username | Select-Object IsValidSecurityPrincipal
 ```
 
 ### -Confirm
