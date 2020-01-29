@@ -150,7 +150,6 @@ For example:
 - Email address
 
 - GUID
-
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
