@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -32,11 +32,11 @@ New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
 
 While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn’t have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
 
-Every API request using the Outlook Rest APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
+Every API request using the Outlook REST APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 
 1. If there are multiple application access policies for the same Application and Target Mailbox pair, DenyAccess policy is prioritized over a RestrictAccess policy.
 
@@ -52,7 +52,7 @@ Every API request using the Outlook Rest APIs or Microsoft Graph APIs to a targe
 
 ### Example 1
 ```powershell
-New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5,6ac794ca-2697-4137-8754-d2a78ae47d93 -PolicyScopeGroupId "Engineering Staff" -Description "Engineering Group Policy"
+New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId "3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5", "6ac794ca-2697-4137-8754-d2a78ae47d93" -PolicyScopeGroupId "Engineering Staff" -Description "Engineering Group Policy"
 ```
 
 This example creates a new application access policy with the following settings:
@@ -67,7 +67,7 @@ This example creates a new application access policy with the following settings
 
 ### Example 2
 ```powershell
-New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers."
+New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers."
 ```
 
 This example creates a new application access policy with the following settings:
@@ -80,11 +80,9 @@ This example creates a new application access policy with the following settings
 
 - Description: Restrict this app to members of security group EvenUsers.
 
-
-
 ### Example 3
 ```powershell
-New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of security group OddUsers."
+New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of security group OddUsers."
 ```
 
 This example creates a new application access policy with the following settings:
@@ -150,6 +148,18 @@ For example:
 - Email address
 
 - GUID
+
+This parameter only accepts recipients that are security principals (users or groups that can have permissions assigned to them). The following types of recipients are not security principals, so you can't use them with this parameter::
+
+- Discovery mailboxes  
+
+- Dynamic distribution groups
+
+- Distribution groups
+
+- Shared mailboxes
+
+To verify that a recipient is a security principal, use the syntax `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal`.
 
 ```yaml
 Type: RecipientIdParameter
