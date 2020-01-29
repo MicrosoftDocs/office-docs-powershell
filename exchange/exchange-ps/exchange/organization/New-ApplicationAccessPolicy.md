@@ -163,8 +163,8 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
-
-NOTE:  
+  
+#### NOTE 
 This parameter will only accept valid security principal resources, which excludes certain RecipientTypes:  
 DiscoveryMailbox  
 DynamicDistributionGroup  
@@ -172,7 +172,9 @@ MailUniversalDistributionGroup
 SharedMailbox  
   
 You can assess this value with the following PowerShell cmdlet:  
-[PS] > Get-Recipient Username | Select-Object IsValidSecurityPrincipal
+```powershell
+Get-Recipient Username | Select-Object IsValidSecurityPrincipal
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
