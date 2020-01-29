@@ -277,9 +277,21 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ## Release notes
 
-### Version 0.3527.3 (planned release date: January 20, 2020)
+### Current release (version 0.3555.1)
 
-[Download](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.3):
+- Fixed a bug where piped cmdlets were failing with the following error due to an authentication issue:
+
+  > Cannot invoke the pipeline because the runspace is not in the Opened state. Current state of the runspace is 'Closed'.
+
+### Previous releases
+
+#### Version 0.3527.4
+
+- Updated Get-Help content.
+
+- Fixed an issue in **Get-Help** where the *-Online* parameter was redirecting to a non-existent page with error code 400.
+
+#### Version 0.3527.3
 
 - Added support for managing Exchange for a different tenant using delegation flow.
 
