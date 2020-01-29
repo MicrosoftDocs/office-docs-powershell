@@ -15,7 +15,7 @@ description: "Learn how to connect to Exchange Online PowerShell by using multi-
 
 # Connect to Exchange Online PowerShell using multi-factor authentication
 
-If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-ExoPSSession** cmdlet to connect.
+If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
 > [!NOTE]
 > • The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect. <br/><br/>• To use the new Exchange Online PowerShell V2 module (which also supports MFA), see [Use the Exchange Online PowerShell V2 module](../exchange-online-powershell-v2/exchange-online-powershell-v2.md).)
@@ -111,7 +111,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
    This example connects to Exchange Online to manage another tenant
 
      ```PowerShell
-     Connect-ExoPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+     Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
      ```
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
@@ -133,9 +133,9 @@ Get-PSSession | Remove-PSSession
 
 ## Single sign-on
 
-If your organization has single sign-on (SSO) enabled and you are logged on to a computer as a user in the SSO domain, then **Connect-EXPOPSSession** may fail with the following error:
+If your organization has single sign-on (SSO) enabled and you are logged on to a computer as a user in the SSO domain, then **Connect-EXOPSSession** may fail with the following error:
 
-> New-ExoPSSession : User 'loggedonuser@contoso.com' returned by service does not match user 'userprincipalname@contoso.com' in the request.
+> New-EXOPSSession : User 'loggedonuser@contoso.com' returned by service does not match user 'userprincipalname@contoso.com' in the request.
 
 This error occurs because single sign-on overrides the specified user principal name (UPN). As a work-around, connect from a non-domain-joined computer or log on to the domain-joined computer using a local user account.
 
