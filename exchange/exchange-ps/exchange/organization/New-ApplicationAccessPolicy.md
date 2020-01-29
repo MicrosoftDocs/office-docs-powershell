@@ -149,7 +149,7 @@ For example:
 
 - GUID
 
-**Note**: This parameter will only accept valid security principal resources, which excludes certain recipient types:
+This parameter only accepts recipients that are security principals (users or groups that can have permissions assigned to them). The following types of recipients are not security principals, so you can't use them with this parameter::
 
 - Discovery mailboxes  
 
@@ -159,7 +159,7 @@ For example:
 
 - Shared mailboxes
 
-To see the valid security principals, use the syntax `Get-Recipient <username> | Select-Object IsValidSecurityPrincipal`.
+To verify that a recipient is a security principal, use the syntax `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal`.
 
 ```yaml
 Type: RecipientIdParameter
