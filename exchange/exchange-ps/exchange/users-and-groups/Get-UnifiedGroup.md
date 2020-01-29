@@ -81,7 +81,7 @@ This example returns detailed information about the Office 365 Group named Marke
 
 ### Example 4
 ```powershell
-Get-UnifiedGroup -IncludeSoftDeletedGroups |?{$_.ManagedBy -eq $null}
+Get-UnifiedGroup |?{!$_.ManagedBy}
 ```
 
 This example returns Office 365 Groups that do not have an owner.
