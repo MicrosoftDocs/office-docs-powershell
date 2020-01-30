@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedUrls
-The ExcludedUrls parameter specifies a URL that's skipped by Safe Links scanning. You can specify multiple values separated by commas.
+The ExcludedUrls parameter is deprecated. Use the DoNotRewriteUrls param instead. If you have any scripts that use the ExcludedUrls parameter, update them to use the DoNotRewriteUrls param.
 
 ```yaml
 Type: String[]
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhiteListedUrls
-This parameter is reserved for internal Microsoft use.
+The WhiteListedUrls parameter is deprecated. Use the DoNotRewriteUrls param instead. If you have any scripts that use the WhiteListedUrls parameter, update them to use the DoNotRewriteUrls param.
 
 ```yaml
 Type: String
