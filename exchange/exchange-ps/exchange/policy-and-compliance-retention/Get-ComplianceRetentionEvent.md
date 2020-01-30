@@ -32,7 +32,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```powershell
-Get-ComplianceRetentionEvent
+Get-ComplianceRetentionEvent | Format-Table Name,Description
 ```
 
 The example returns a summary list of all compliance retention events.
