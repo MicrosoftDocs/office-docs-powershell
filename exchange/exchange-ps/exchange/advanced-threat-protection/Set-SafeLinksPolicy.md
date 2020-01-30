@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedUrls
-The ExcludedUrls parameter is deprecated. Use the DoNotRewriteUrls param instead. If you have any scripts that use the ExcludedUrls parameter, update them to use the DoNotRewriteUrls param.
+The ExcludedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the ExcludedUrls parameter, update them to use the DoNotRewriteUrls parameter.
 
 ```yaml
 Type: String[]
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhiteListedUrls
-The WhiteListedUrls parameter is deprecated. Use the DoNotRewriteUrls param instead. If you have any scripts that use the WhiteListedUrls parameter, update them to use the DoNotRewriteUrls param.
+The WhiteListedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the WhiteListedUrls parameter, update them to use the DoNotRewriteUrls parameter.
 
 ```yaml
 Type: String
