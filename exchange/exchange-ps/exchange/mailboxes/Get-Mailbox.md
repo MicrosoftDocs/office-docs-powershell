@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch is required to return archive mailboxes in the results. You don't need to specify a value with this switch.
+The Archive switch filters the results by mailboxes that have an archive enabled (only mailboxes that have an archive mailbox are returned). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
