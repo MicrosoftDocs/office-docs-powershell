@@ -76,7 +76,7 @@ Enables Microsoft Flow for this site
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Set-PnPSite -SiteLogoPath c:\images\mylogo.png
+Set-PnPSite -LogoFilePath c:\images\mylogo.png
 ```
 
 Sets the logo if the site is a modern team site

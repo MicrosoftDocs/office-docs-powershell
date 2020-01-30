@@ -44,9 +44,9 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
 - The Exchange Online Remote PowerShell Module needs to be installed on your computer. If your installed version of the Exchange Online Remote PowerShell Module doesn't have the **Connect-IPPSSession** cmdlet, you need to install the latest version of the module:
 
-  1. In Internet Explorer or Edge, open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
+  1. In a browser that supports ClickOnce (for example, Internet Explorer or Edge), open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 
-     **Note**: Internet Explorer or Edge is required because the download in the next step uses ClickOnce, so Google Chrome or Mozilla Firefox won't work.
+     **Note**: ClickOnce support is available in the Chromium-based version of Edge at <edge://flags/#edge-click-once>.
 
   2. In the EAC, go to **Hybrid** > **Setup** and click the appropriate **Configure** button to download the Exchange Online Remote PowerShell Module for multi-factor authentication.
 
