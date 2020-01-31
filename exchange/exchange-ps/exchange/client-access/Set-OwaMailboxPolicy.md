@@ -525,6 +525,8 @@ This parameter is available only in the cloud-based service.
 
 The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access.  For this feature to properly work, you will need to additionally configure a Conditional Access policy in the Azure Active Directory Portal.
 
+Note: When enabling a ConditionalAccessPolicy, your users will not longer be able to access OWA Light. They will see an error message directing them to use the default premium experience.
+
 Valid values are:
 
 - Off: No conditional access policy is applied to Outlook on the web. This is the default value.
