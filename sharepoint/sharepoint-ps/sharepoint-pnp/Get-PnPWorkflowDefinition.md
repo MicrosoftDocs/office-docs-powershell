@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a workflow definition
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPWorkflowDefinition [-Name <String>]

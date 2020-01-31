@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a site column from a content type
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPFieldFromContentType -Field <FieldPipeBind>

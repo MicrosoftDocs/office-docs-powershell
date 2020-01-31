@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a SharePoint AddIn Instance
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPAppInstance [-Includes <String[]>]
                    [-Identity <AppPipeBind>]

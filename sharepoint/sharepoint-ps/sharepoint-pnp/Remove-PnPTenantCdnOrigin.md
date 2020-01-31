@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an origin from the Public or Private content delivery network (CDN).
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPTenantCdnOrigin -OriginUrl <String>

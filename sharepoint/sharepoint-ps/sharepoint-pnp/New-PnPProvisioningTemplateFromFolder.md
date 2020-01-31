@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Generates a provisioning template from a given folder, including only files that are present in that folder
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPProvisioningTemplateFromFolder [-Out <String>]

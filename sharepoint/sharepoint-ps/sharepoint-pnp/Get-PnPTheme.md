@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the current theme/composed look of the current web.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTheme [-DetectCurrentComposedLook [<SwitchParameter>]]

@@ -8,9 +8,9 @@ schema: 2.0.0
 # Add-PnPJavaScriptLink
 
 ## SYNOPSIS
-Adds a link to a JavaScript file to a web or sitecollection
+Adds a link to a JavaScript file to a web or sitecollection, valid only for SharePoint classic site experience.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPJavaScriptLink -Name <String>

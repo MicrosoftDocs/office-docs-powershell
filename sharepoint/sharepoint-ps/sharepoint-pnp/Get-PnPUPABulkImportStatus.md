@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Get user profile bulk import status.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPUPABulkImportStatus [-JobId <GuidPipeBind>]

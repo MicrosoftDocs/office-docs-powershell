@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns statistics on the list object
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Measure-PnPList -Identity <ListPipeBind>
                 [-Includes <String[]>]

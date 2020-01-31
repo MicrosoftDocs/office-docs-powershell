@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a taxonomy term group
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPTermGroup [-Includes <String[]>]
                  [-Identity <Id, Title or TaxonomyItem>]

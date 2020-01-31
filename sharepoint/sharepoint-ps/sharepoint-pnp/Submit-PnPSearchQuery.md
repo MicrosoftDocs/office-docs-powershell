@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Executes an arbitrary search query against the SharePoint search index
 
-## SYNTAX
+## SYNTAX 
 
 ### Limit
 ```powershell
@@ -186,7 +186,7 @@ Accept pipeline input: False
 ```
 
 ### -HiddenConstraints
-The keyword query's hidden constraints.
+The keyword query’s hidden constraints.
 
 ```yaml
 Type: String

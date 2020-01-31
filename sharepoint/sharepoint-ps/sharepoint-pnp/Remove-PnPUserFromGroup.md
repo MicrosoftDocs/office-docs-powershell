@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a user from a group
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPUserFromGroup -LoginName <String>

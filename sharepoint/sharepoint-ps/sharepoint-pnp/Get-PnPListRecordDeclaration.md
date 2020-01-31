@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the manual record declaration settings for a list
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPListRecordDeclaration -List <ListPipeBind>

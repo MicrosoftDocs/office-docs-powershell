@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the contents of a wikipage
 
-## SYNTAX
+## SYNTAX 
 
 ### STRING
 ```powershell

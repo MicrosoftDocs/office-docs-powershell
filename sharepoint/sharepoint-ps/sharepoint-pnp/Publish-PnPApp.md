@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Publishes/Deploys/Trusts an available app in the app catalog
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Publish-PnPApp -Identity <AppMetadataPipeBind>

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets organization-level site collection properties
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPTenant [-MinCompatibilityLevel <Int>]
@@ -71,6 +71,7 @@ Set-PnPTenant [-MinCompatibilityLevel <Int>]
               [-EmailAttestationRequired <Boolean>]
               [-EmailAttestationReAuthDays <Int>]
               [-HideDefaultThemes <Boolean>]
+              [-DisabledWebPartIds <Guid[]>]
               [-Connection <SPOnlineConnection>]
 ```
 
@@ -219,17 +220,29 @@ Accept pipeline input: False
 ```
 
 ### -DefaultSharingLinkType
-Lets administrators choose what type of link appears is selected in the "Get a link" sharing dialog box in OneDrive for Business and SharePoint Online.
+Lets administrators choose what type of link appears is selected in the “Get a link” sharing dialog box in OneDrive for Business and SharePoint Online.
 
 For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
 
 Note:
-Setting this value to "none" will default "get a link" to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.
+Setting this value to “none” will default “get a link” to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.
 
 The values are: None Direct Internal AnonymousAccess
 
 ```yaml
 Type: SharingLinkType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DisabledWebPartIds
+Guids of out of the box modern web part id's to hide
+
+```yaml
+Type: Guid[]
 Parameter Sets: (All)
 
 Required: False
@@ -504,7 +517,7 @@ Accept pipeline input: False
 ```
 
 ### -NotifyOwnersWhenInvitationsAccepted
-When this parameter is set to $true and when an external user accepts an invitation to a resource in a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
+When this parameter is set to $true and when an external user accepts an invitation to a resource in a user’s OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
 
 For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
 
@@ -520,7 +533,7 @@ Accept pipeline input: False
 ```
 
 ### -NotifyOwnersWhenItemsReshared
-When this parameter is set to $true and another user re-shares a document from a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
+When this parameter is set to $true and another user re-shares a document from a user’s OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
 
 For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
 
@@ -795,7 +808,7 @@ The valid values are:
 ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled. Disabled - External user sharing (share by email) and guest link sharing are both disabled.
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 
-For more information about sharing, see Manage external sharing for your SharePoint online environment (https://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
 
 ```yaml
 Type: SharingCapabilities

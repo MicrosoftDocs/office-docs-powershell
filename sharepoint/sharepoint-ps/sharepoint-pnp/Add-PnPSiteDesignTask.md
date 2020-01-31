@@ -11,7 +11,7 @@ schema: 2.0.0
 This command is used to apply a published site design to a specified site collection target. It schedules the operation, allowing for the application of larger site scripts (Invoke-PnPSiteDesign is limited to 30 actions and subactions).
 This command is intended to replace Invoke-PnPSiteDesign and is useful when you need to apply a large number of actions or multiple site scripts.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPSiteDesignTask -SiteDesignId <GuidPipeBind>

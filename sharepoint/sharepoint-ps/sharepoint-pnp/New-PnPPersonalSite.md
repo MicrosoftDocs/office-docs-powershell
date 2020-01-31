@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Office365 only: Creates a personal / OneDrive For Business site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPPersonalSite -Email <String[]>

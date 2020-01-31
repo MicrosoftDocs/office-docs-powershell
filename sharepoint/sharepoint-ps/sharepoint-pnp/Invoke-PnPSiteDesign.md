@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Apply a Site Design to an existing site. * Requires Tenant Administration Rights *
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Invoke-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>

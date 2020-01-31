@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves all members of a group
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPGroupMembers -Identity <GroupPipeBind>

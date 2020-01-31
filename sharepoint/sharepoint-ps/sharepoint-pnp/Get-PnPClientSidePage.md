@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a Client-Side Page
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPClientSidePage -Identity <ClientSidePagePipeBind>
@@ -40,6 +40,13 @@ Get-PnPClientSidePage "Templates/MyPageTemplate"
 ```
 
 Gets the Modern Page (Client-Side) named 'MyPageTemplate.aspx' from the templates folder of the Page Library in the current SharePoint site
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Get-PnPClientSidePage -Identity "MyPage.aspx" -Web (Get-PnPWeb -Identity "Subsite1")
+```
+
+Gets the Modern Page (Client-Side) named 'MyPage.aspx' from the subsite named 'Subsite1'
 
 ## PARAMETERS
 

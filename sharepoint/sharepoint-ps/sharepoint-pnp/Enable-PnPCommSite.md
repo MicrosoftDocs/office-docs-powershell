@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enable communication site on the root site of a tenant
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Enable-PnPCommSite [-SiteUrl <String>]

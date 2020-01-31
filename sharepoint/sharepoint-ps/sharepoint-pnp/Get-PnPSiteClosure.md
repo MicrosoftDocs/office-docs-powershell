@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Get the site closure status of the site which has a site policy applied
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPSiteClosure [-Web <WebPipeBind>]

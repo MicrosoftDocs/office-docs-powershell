@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a field from a list or site
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPField [-Includes <String[]>]
              [-List <ListPipeBind>]

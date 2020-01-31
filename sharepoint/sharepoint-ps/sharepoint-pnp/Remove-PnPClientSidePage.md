@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a Client-Side Page
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPClientSidePage -Identity <ClientSidePagePipeBind>

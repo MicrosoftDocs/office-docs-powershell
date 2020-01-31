@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a wiki page
 
-## SYNTAX
+## SYNTAX 
 
 ### WithContent
 ```powershell

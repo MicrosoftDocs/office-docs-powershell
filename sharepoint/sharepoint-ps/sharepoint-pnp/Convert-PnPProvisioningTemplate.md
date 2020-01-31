@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Converts a provisioning template to an other schema version
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Convert-PnPProvisioningTemplate -Path <String>

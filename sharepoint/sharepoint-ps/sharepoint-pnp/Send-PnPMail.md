@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sends an email using the Office 365 SMTP Service or SharePoint, depending on the parameters specified. See detailed help for more information.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Send-PnPMail -To <String[]>
