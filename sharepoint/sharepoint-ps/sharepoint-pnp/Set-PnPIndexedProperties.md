@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Marks values of the propertybag to be indexed by search. Notice that this will overwrite the existing flags, i.e. only the properties you define with the cmdlet will be indexed.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPIndexedProperties -Keys <String>

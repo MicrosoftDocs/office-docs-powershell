@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the available apps from the app catalog
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPApp [-Identity <AppMetadataPipeBind>]

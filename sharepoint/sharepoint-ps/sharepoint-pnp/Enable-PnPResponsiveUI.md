@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Activates the PnP Response UI Add-on
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Enable-PnPResponsiveUI [-InfrastructureSiteUrl <String>]

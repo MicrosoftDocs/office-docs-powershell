@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Return registered eventreceivers
 
-## SYNTAX
+## SYNTAX 
 
 ### List
 ```powershell

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a workflow subscription to a list
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPWorkflowSubscription -Name <String>

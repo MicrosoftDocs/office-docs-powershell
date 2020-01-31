@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a taxonomy term group and all its containing termsets
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPTermGroup -GroupName <String>

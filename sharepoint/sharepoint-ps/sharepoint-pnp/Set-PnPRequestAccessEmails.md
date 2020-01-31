@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets Request Access Emails on a web
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPRequestAccessEmails -Emails <String[]>
@@ -22,7 +22,7 @@ Set-PnPRequestAccessEmails -Emails <String[]>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPRequestAccessEmails -Emails someone@example.com
+Set-PnPRequestAccessEmails -Emails someone@example.com 
 ```
 
 This will update the request access e-mail address

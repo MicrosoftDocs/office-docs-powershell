@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a taxonomy term group
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPTermGroup -Name <String>

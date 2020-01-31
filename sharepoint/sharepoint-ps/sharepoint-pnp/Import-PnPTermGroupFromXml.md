@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Imports a taxonomy TermGroup from either the input or from an XML file.
 
-## SYNTAX
+## SYNTAX 
 
 ### XML
 ```powershell

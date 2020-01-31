@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a value from the property bag
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPPropertyBagValue -Key <String>

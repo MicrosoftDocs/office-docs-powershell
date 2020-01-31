@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the search configuration
 
-## SYNTAX
+## SYNTAX 
 
 ### Xml
 ```powershell

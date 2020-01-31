@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds datarows to a list inside a PnP Provisioning Template
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPDataRowsToProvisioningTemplate -Path <String>
@@ -31,14 +31,14 @@ Add-PnPDataRowsToProvisioningTemplate -Path <String>
 Add-PnPDataRowsToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice'
 ```
 
-Adds datarows to a list in an in-memory PnP Provisioning Template
+Adds datarows from the provided list to the PnP Provisioning Template at the provided location
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Add-PnPDataRowsToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice' -IncludeSecurity
 ```
 
-Adds datarows to a list in an in-memory PnP Provisioning Template
+Adds datarows from the provided list to the PnP Provisioning Template at the provided location
 
 ## PARAMETERS
 

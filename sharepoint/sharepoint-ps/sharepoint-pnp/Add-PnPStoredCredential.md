@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a credential to the Windows Credential Manager
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPStoredCredential -Name <String>
@@ -62,7 +62,7 @@ Accept pipeline input: False
 ```
 
 ### -Password
-If not specified you will be prompted to enter your password.
+If not specified you will be prompted to enter your password. 
 If you want to specify this value use ConvertTo-SecureString -String 'YourPassword' -AsPlainText -Force
 
 ```yaml

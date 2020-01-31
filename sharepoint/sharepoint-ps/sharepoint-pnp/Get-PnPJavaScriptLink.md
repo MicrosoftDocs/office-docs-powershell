@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns all or a specific custom action(s) with location type ScriptLink
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPJavaScriptLink [-Name <String>]

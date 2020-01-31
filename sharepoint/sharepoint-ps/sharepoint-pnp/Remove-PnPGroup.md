@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a group from a web.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPGroup [-Identity <GroupPipeBind>]

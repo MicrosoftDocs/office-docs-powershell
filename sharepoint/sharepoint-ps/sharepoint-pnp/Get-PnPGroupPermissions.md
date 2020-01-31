@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the permissions for a specific SharePoint group
 
-## SYNTAX
+## SYNTAX 
 
 ### ByName
 ```powershell

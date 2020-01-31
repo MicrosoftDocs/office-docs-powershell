@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Opens or closes a site which has a site policy applied
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPSiteClosure -State <ClosureState>

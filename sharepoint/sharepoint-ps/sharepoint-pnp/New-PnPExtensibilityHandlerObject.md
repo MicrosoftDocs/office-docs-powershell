@@ -8,9 +8,9 @@ schema: 2.0.0
 # New-PnPExtensibilityHandlerObject
 
 ## SYNOPSIS
-Creates an ExtensibilityHandler Object, to be used by the Get-SPOProvisioningTemplate cmdlet
+Creates an ExtensibilityHandler Object, to be used by the Get-PnPProvisioningTemplate cmdlet
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPExtensibilityHandlerObject -Assembly <String>

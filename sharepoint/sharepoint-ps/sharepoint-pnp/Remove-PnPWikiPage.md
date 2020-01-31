@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a wiki page
 
-## SYNTAX
+## SYNTAX 
 
 ### SERVER
 ```powershell

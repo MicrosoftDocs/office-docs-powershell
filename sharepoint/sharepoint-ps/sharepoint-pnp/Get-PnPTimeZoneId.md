@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a time zone ID
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTimeZoneId [-Match <String>]

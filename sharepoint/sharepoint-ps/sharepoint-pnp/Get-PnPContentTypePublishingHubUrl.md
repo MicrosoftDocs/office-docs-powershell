@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the url to Content Type Publishing Hub
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPContentTypePublishingHubUrl [-Connection <SPOnlineConnection>]

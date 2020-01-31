@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Revokes a permission that was previously granted to the "SharePoint Online Client" service principal.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Revoke-PnPTenantServicePrincipalPermission -ObjectId <String>

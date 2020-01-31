@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates a Webhook subscription
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPWebhookSubscription -Subscription <WebhookSubscriptionPipeBind>

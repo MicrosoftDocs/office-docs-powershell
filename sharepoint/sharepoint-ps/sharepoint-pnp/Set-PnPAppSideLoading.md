@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables the App SideLoading Feature on a site
 
-## SYNTAX
+## SYNTAX 
 
 ### On
 ```powershell

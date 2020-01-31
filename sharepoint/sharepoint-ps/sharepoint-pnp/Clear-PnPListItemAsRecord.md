@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Undeclares a list item as a record
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Clear-PnPListItemAsRecord -List <ListPipeBind>

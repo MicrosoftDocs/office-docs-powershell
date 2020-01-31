@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Moves a file to a different location
 
-## SYNTAX
+## SYNTAX 
 
 ### Server Relative
 ```powershell

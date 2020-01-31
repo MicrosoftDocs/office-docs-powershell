@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Loads/Reads a PnP file from the file system or a string
 
-## SYNTAX
+## SYNTAX 
 
 ### By Path
 ```powershell

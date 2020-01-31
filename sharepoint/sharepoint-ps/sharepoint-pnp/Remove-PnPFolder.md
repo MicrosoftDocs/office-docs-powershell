@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes a folder within a parent folder
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPFolder -Name <String>

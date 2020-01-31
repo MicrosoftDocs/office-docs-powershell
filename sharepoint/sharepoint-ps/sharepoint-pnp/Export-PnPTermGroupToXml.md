@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Exports a taxonomy TermGroup to either the output or to an XML file.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Export-PnPTermGroupToXml [-Identity <Id, Title or TermGroup>]

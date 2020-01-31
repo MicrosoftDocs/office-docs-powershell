@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a Webhook subscription from the resource
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPWebhookSubscription -Identity <WebhookSubscriptionPipeBind>

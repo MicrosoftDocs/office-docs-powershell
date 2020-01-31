@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Permanently deletes all or a specific recycle bin item
 
-## SYNTAX
+## SYNTAX 
 
 ### All
 ```powershell

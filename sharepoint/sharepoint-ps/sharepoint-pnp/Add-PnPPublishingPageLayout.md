@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a publishing page layout
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPPublishingPageLayout -SourceFilePath <String>

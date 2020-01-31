@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Uninstalls a sandboxed solution from a site collection
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Uninstall-PnPSolution -PackageId <GuidPipeBind>

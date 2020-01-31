@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Get the Auditing setting of a site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPAuditing [-Connection <SPOnlineConnection>]

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a file to a PnP Provisioning Template
 
-## SYNTAX
+## SYNTAX 
 
 ### Remove File
 ```powershell
