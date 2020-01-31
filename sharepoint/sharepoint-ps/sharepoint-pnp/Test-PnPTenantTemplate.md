@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Tests a tenant template for invalid references
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Test-PnPTenantTemplate -Template <ProvisioningHierarchy>
@@ -36,7 +36,6 @@ Only applicable to: SharePoint Online
 ```yaml
 Type: ProvisioningHierarchy
 Parameter Sets: __AllParameterSets
-Aliases: Hierarchy
 
 Required: True
 Position: Named

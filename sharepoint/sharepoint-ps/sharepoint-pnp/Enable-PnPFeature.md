@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables a feature
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Enable-PnPFeature -Identity <GuidPipeBind>

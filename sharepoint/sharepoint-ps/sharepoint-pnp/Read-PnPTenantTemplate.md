@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Loads/Reads a PnP tenant template from the file system and returns an in-memory instance of this template.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Read-PnPTenantTemplate -Path <String>

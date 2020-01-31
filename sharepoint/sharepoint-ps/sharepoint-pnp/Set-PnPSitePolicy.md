@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets a site policy
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPSitePolicy -Name <String>

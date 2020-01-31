@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes the currently set site as the home site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPHomeSite [-Force [<SwitchParameter>]]

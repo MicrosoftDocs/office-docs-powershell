@@ -8,9 +8,9 @@ schema: 2.0.0
 # Set-PnPUnifiedGroup
 
 ## SYNOPSIS
-Sets Office 365 Group (aka Unified Group) properties
+Sets Office 365 Group (aka Unified Group) properties. Requires the Azure Active Directory application permission 'Group.ReadWrite.All'.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPUnifiedGroup -Identity <UnifiedGroupPipeBind>

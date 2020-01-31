@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a folder within a parent folder
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPFolder -Name <String>

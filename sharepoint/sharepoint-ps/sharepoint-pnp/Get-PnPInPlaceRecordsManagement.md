@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns if the place records management feature is enabled.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPInPlaceRecordsManagement [-Web <WebPipeBind>]

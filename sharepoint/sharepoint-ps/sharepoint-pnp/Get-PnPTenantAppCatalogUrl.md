@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves the url of the tenant scoped app catalog.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTenantAppCatalogUrl [-Connection <SPOnlineConnection>]

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Tests if a given alias is already used used
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Test-PnPOffice365GroupAliasIsUsed -Alias <String>

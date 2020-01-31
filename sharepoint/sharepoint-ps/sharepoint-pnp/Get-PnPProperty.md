@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a previously not loaded property of a ClientObject
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPProperty -ClientObject <ClientObject>

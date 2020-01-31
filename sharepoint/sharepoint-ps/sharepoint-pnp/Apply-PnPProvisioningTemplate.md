@@ -10,11 +10,12 @@ schema: 2.0.0
 ## SYNOPSIS
 Applies a site template to a web
 
-## SYNTAX
+## SYNTAX 
 
 ### Instance
 ```powershell
 Apply-PnPProvisioningTemplate [-InputInstance <ProvisioningTemplate>]
+                              [-TemplateId <String>]
                               [-ResourceFolder <String>]
                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
@@ -33,6 +34,7 @@ Apply-PnPProvisioningTemplate [-InputInstance <ProvisioningTemplate>]
 ### Path
 ```powershell
 Apply-PnPProvisioningTemplate -Path <String>
+                              [-TemplateId <String>]
                               [-ResourceFolder <String>]
                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
@@ -110,6 +112,13 @@ Apply-PnPProvisioningTemplate -Path .\ -InputInstance $template
 ```
 
 Applies a site template from an in-memory instance of a ProvisioningTemplate type of the PnP Core Component, reading the supporting files, if any, from the current (.\) path. The syntax can be used together with any other supported parameters.
+
+### ------------------EXAMPLE 9------------------
+```powershell
+Apply-PnPProvisioningTemplate -Path .\template.xml -TemplateId "MyTemplate"
+```
+
+Applies the ProvisioningTemplate with the ID "MyTemplate" located in the template definition file template.xml.
 
 ## PARAMETERS
 
@@ -247,6 +256,18 @@ Accept pipeline input: False
 
 ### -ResourceFolder
 Root folder where resources/files that are being referenced in the template are located. If not specified the same folder as where the provisioning template is located will be used.
+
+```yaml
+Type: String
+Parameter Sets: __AllParameterSets
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -TemplateId
+ID of the template to use from the xml file containing the provisioning template. If not specified and multiple ProvisioningTemplate elements exist, the last one will be used.
 
 ```yaml
 Type: String

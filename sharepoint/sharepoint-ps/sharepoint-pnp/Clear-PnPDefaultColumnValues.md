@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Clear default column values for a document library
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Clear-PnPDefaultColumnValues -List <ListPipeBind>

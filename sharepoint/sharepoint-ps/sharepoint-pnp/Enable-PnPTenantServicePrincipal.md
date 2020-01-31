@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables the current tenant's "SharePoint Online Client" service principal.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Enable-PnPTenantServicePrincipal [-Force [<SwitchParameter>]]

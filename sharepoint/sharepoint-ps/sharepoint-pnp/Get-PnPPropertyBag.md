@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the property bag values.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPPropertyBag [-Key <String>]

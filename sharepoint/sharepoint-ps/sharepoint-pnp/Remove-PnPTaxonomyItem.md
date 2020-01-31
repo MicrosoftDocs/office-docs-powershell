@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a taxonomy item
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPTaxonomyItem -TermPath <String>

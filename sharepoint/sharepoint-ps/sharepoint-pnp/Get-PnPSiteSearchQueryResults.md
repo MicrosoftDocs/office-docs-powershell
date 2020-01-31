@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Executes a search query to retrieve indexed site collections
 
-## SYNTAX
+## SYNTAX 
 
 ### Limit
 ```powershell

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the CDN Policies for the specified CDN (Public | Private).
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTenantCdnPolicies -CdnType <SPOTenantCdnType>

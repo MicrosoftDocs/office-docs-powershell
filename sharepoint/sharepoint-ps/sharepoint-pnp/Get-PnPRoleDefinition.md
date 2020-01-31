@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves a Role Definitions of a site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPRoleDefinition [-Identity <RoleDefinitionPipeBind>]

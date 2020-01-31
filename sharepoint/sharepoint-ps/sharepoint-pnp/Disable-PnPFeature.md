@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Disables a feature
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Disable-PnPFeature -Identity <GuidPipeBind>

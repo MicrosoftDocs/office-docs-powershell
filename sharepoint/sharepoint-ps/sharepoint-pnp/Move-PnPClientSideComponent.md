@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Moves a Client-Side Component to a different section/column
 
-## SYNTAX
+## SYNTAX 
 
 ### Move to other section
 ```powershell

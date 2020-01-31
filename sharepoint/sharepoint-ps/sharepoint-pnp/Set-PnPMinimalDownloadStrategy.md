@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Activates or deactivates the minimal downloading strategy.
 
-## SYNTAX
+## SYNTAX 
 
 ### On
 ```powershell

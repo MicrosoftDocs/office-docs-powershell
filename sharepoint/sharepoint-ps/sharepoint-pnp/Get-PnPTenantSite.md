@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieve site information.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTenantSite [-Url <String>]
@@ -70,7 +70,7 @@ Returns all Communication sites
 
 ### ------------------EXAMPLE 7------------------
 ```powershell
-Get-PnPTenantSite -Filter "Url -like 'sales'"
+Get-PnPTenantSite -Filter "Url -like 'sales'" 
 ```
 
 Returns all sites including 'sales' in the url

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Resets a file to its previous version
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Reset-PnPFileVersion -ServerRelativeUrl <String>

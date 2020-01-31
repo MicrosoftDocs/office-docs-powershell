@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets Site Collection properties.
 
-## SYNTAX
+## SYNTAX 
 
 ### Set Properties
 ```powershell

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Disconnects a site from a hubsite.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPHubSiteAssociation -Site <SitePipeBind>

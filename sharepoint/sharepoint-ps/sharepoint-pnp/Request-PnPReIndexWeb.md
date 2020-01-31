@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Marks the web for full indexing during the next incremental crawl
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Request-PnPReIndexWeb [-Web <WebPipeBind>]

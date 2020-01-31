@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the home page of the current web.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPHomePage -RootFolderRelativeUrl <String>
