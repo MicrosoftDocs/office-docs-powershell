@@ -28,6 +28,8 @@ Use this cmdlet to set the multi-geo allowed locations.
 
 ## EXAMPLES
 
+### Example 1
+
 ```powershell
 Set-SPOMultiGeoCompanyAllowedDataLocation -Location AUS -Domain contoso.com
 ```
