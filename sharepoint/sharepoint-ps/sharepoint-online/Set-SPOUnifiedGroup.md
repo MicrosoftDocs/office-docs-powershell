@@ -78,6 +78,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPOUnifiedGroup.md](Get-SPOUnifiedGroup.md]
+[Get-SPOUnifiedGroup](Get-SPOUnifiedGroup.md]
 
 [Move a SharePoint site to a different geo location](https://docs.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)
