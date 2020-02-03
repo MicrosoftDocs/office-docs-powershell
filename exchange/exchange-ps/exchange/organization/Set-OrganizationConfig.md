@@ -542,10 +542,11 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -AutodiscoverPartialDirSync
 This parameter is available only in the cloud-based service.
 
-The AutodiscoverPartialDirSync option is for scenarios where tenants have Directory Synced some of their Active Directory users into the cloud, but still have on-premises Exchange users that are not Directory Synced. Setting this flag to true will cause unknown users to be redirected to the on-premises endpoint and will allow on-premises users to discover their mailbox automatically. Online email addresses will be susceptible to enumeration. It is recommended to full Directory Sync all Active Directory users and leave this flag as the default False.
+The AutodiscoverPartialDirSync parameter is for scenarios where tenants have Directory Synced some of their Active Directory users into the cloud, but still have on-premises Exchange users that are not Directory Synced. Setting this parameter to $true will cause unknown users to be redirected to the on-premises endpoint and will allow on-premises users to discover their mailbox automatically. Online email addresses will be susceptible to enumeration. We recommend full Directory Sync for all Active Directory users and leaving this parameter with the default $false.
 
 After you enable AutodiscoverPartialDirSync, it will take approximately 3 hours to fully saturate across the cloud.
 
