@@ -100,7 +100,7 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
-  > NOTE  
+  > [!NOTE] 
   > We never send the username and password combination here, but the Basic auth header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
 ### Install the EXO V2 module
@@ -127,9 +127,12 @@ To install the EXO V2 module for the first time, run the following commands:
    Set-ExecutionPolicy RemoteSigned
    ```
 
-  > NOTES
-  > - You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).  
-  > - If you don't do this step, you'll receive the following error when you try to connect:
+   **Notes**:
+   
+   - You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+   
+   - If you don't do this step, you'll receive the following error when you try to connect:
+   
      > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
 3. Close and re-open the elevated Windows PowerShell window to get the changes from the previous steps.
@@ -160,8 +163,7 @@ If the EXO V2 module is already installed on your computer, you can run the foll
 
    Enter **Y** to accept the license agreement.
 
-  > NOTE  
-  > If you receive the following error related to the PowerShellGet module, see Step 1 in the previous [Install the EXO V2 module](#install-the-exo-v2-module) section to update the PowerShellGet module to the latest version.
+   **Note**: If you receive the following error related to the PowerShellGet module, see Step 1 in the previous [Install the EXO V2 module](#install-the-exo-v2-module) section to update the PowerShellGet module to the latest version.
 
    > The specified module 'ExchangeOnlineManagement' with PowerShellGetFormatVersion '\<version\>' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'ExchangeOnlineManagement'.
 
@@ -181,13 +183,13 @@ To uninstall the module, run the following command:
 Uninstall-Module -Name ExchangeOnlineManagement
 ```
 
-  > TIP
-  > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
+> [!TIP]
+> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
 ## Connect to Exchange Online using the EXO V2 module
 
-  > NOTE  
-  > If your account uses multi-factor authentication (MFA), skip the first step (the **Get-Credential** cmdlet doesn't support MFA enabled accounts).
+> [!NOTE]
+> If your account uses multi-factor authentication (MFA), skip the first step (the **Get-Credential** cmdlet doesn't support MFA enabled accounts).
 
 1. On your local computer, open a Windows PowerShell window and run the following command:
 
@@ -237,8 +239,7 @@ Property sets are controlled by the following parameters on the EXO V2 module cm
   Get-EXOMailbox -Properties LitigationHoldEnabled,AuditEnabled
   ```
 
-  > NOTE  
-  > Cmdlets that only return a small number of output properties don't have the *PropertySet* or *Properties* parameters.
+  **Note**: Cmdlets that only return a small number of output properties don't have the *PropertySet* or *Properties* parameters.
 
 You can use *PropertySets* and *Properties* in the same command. For example:
 
@@ -276,8 +277,8 @@ The following example returns all properties for the 10 mailboxes:
 Get-EXOMailbox -ResultSize 10 -PropertySets All
 ```
 
-  > NOTE  
-  > We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the requires properties.
+> [!NOTE]  
+> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the requires properties.
 
 ## Release notes
 
