@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Initiates the move of an Office 365 Group to a new geo location
 
 ## SYNTAX
 
@@ -24,23 +24,23 @@ Start-SPOUnifiedGroupMove [-GroupAlias] <String> [-DestinationDataLocation] <Str
 
 ## DESCRIPTION
 
-.
+Initiates the move of an Office 365 Group to a new geo location. The administrator may set a preferred start and end time for the move, however the preferred end time is not guaranteed. The customer tenant must be multi-geo enabled.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Start-SPOUnifiedGroupMove -GroupAlias EUTeam -DestinationDataLocation EUR
 ```
 
-.
+Starts the move of Office 365 Group EUTeam to the Preferred Data Location EUR (Europe).
 
 ## PARAMETERS
 
 ### -DestinationDataLocation
 
-{{ Fill DestinationDataLocation Description }}
+The destination location for the Office 365 Group move.
 
 ```yaml
 Type: String
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-{{ Fill Force Description }}
+Force the cmdlet to run.
 
 ```yaml
 Type: SwitchParameter
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -GroupAlias
 
-{{ Fill GroupAlias Description }}
+The alias of the Office 365 Group.
 
 ```yaml
 Type: String
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 
 ### -PreferredMoveBeginDate
 
-{{ Fill PreferredMoveBeginDate Description }}
+The move will likely begin at this specified time.
 
 ```yaml
 Type: DateTime
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -PreferredMoveEndDate
 
-{{ Fill PreferredMoveEndDate Description }}
+The move will likely be completed by this specified time, on a best effort basis.
 
 ```yaml
 Type: DateTime
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -SuppressAllWarnings
 
-{{ Fill SuppressAllWarnings Description }}
+Suppress all warning messages.
 
 ```yaml
 Type: SwitchParameter
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 
 ### -SuppressBcsCheck
 
-{{ Fill SuppressBcsCheck Description }}
+Suppress checking of Business Connectivity Services used with the associated Office 365 Group Team site.
 
 ```yaml
 Type: SwitchParameter
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -SuppressMarketplaceAppCheck
 
-{{ Fill SuppressMarketplaceAppCheck Description }}
+Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated Office 365 Group Team site.
 
 ```yaml
 Type: SwitchParameter
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 
 ### -SuppressWorkflow2013Check
 
-{{ Fill SuppressWorkflow2013Check Description }}
+Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated Office 365 Group Team site.
 
 ```yaml
 Type: SwitchParameter
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 ### -ValidationOnly
 
-{{ Fill ValidationOnly Description }}
+This parameter will force the cmdlet to execute only validation.
 
 ```yaml
 Type: SwitchParameter
@@ -229,3 +229,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Move a SharePoint site to a different geo location](https://docs.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)
