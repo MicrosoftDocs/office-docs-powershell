@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -Filter
 
-Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form {$_PropertyName <operator> "filterValue"}. Valid operators are as follows: eq, ne, like, notlike.
+Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{$_PropertyName <operator> "filterValue"}`. Valid operators are as follows: eq, ne, like, notlike.
  Currently, you can filter by these properties: Owner, Template, LockState, Url.
 
 > [!NOTE]
