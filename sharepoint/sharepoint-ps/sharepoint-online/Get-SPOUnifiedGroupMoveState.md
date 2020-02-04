@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Returns the state of an Office 365 Group move between Preferred Data Locations.
 
 ## SYNTAX
 
@@ -24,23 +24,23 @@ Get-SPOUnifiedGroupMoveState [-GroupAlias] <string> [<CommonParameters>]
 
 ## DESCRIPTION
 
-.
+Retrieves the state of the Office 365 Group move to the Preferred Data Location (PDL) for the specified. The customer tenant must be multi-geo enabled.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Get-SPOUnifiedGroupMoveState -GroupAlias <string>
+Get-SPOUnifiedGroupMoveState -GroupAlias EUTeam
 ```
 
-.
+Returns the status of the move between geos for the Office 365 Group named 'EUTeam'.
 
 ## PARAMETERS
 
 ### -GroupAlias
 
-.
+The alias of the Office 365 Group.
 
 ```yaml
 Type: String
@@ -92,4 +92,22 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
+## OUTPUTS
+
+### System.Object
+
+The move status for the Office 365 Group. Possible values are:
+
+* Ready to Trigger: The move has not started.
+* Scheduled: The move is in queue but has not yet started.
+* InProgress (n/4): The move is in progress in one of the following states: Validation (1/4), Backup (2/4), Restore (3/4), Cleanup (4/4).
+* Success: The move has completed successfully.
+* Failed: The move failed.
+
 ## NOTES
+
+You can also apply the `-Verbose` option to see additional information about the move.
+
+## RELATED LINKS
+
+[Move a SharePoint site to a different geo location](https://docs.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)
