@@ -49,8 +49,6 @@ Additional site collections are now displayed. For example, all group and video 
 
 The Detailed parameter has been deprecated. It will continue to work with earlier versions
 
-Currently, Filter parameter is not functional.
-
 > [!NOTE]
 > Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.  
 
@@ -165,6 +163,7 @@ Accept wildcard characters: False
 ### -Filter
 
 Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form {$_PropertyName <operator> "filterValue"}. Valid operators are as follows: eq, ne, like, notlike.
+ Currently, you can filter by these properties: Owner, Template, LockState, Url.
 
 > [!NOTE]
 > The operator values are case-sensitive.  
