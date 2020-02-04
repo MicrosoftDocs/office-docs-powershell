@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Use this cmdlet to remove a multi geo allowed locations.
+Use this cmdlet to remove a multi geo allowed location.
 
 ## SYNTAX
 
