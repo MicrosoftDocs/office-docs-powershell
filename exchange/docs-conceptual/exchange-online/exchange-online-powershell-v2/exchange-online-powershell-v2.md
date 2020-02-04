@@ -18,7 +18,7 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 
 # Use the Exchange Online PowerShell V2 module
 
-The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
+The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online and its features.
 
 ## Report bugs and issues
 
@@ -34,9 +34,11 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 
 ## How the EXO V2 module works
 
-The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). It also contains the 700 or more older remote PowerShell cmdlets baked into the same module. Note that after you install the EXO V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment. All the cmdlets in the V2 module use Modern auth for authentication. You can't use Basic auth in the EXO V2 module.
+The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). Until you create a session to connect to your Exchange Online organization, you'll only see these new cmdlets in the module. After you connect to your Exchange Online organization, you'll see all of the older remote PowerShell cmdlets.
 
-The new cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents. However, the original cmdlets are still available in the EXO V2 module for backwards compatibility.
+The EXO V2 module use Modern authentication for all cmdlets. You can't use Basic authentication in the EXO V2 module; however, you still need to configure the Basic authentication setting in WinRM as described later in this topic.
+
+The new cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents. However, the original cmdlets are still available in the EXO V2 module for backwards compatibility **after** you create a session to connect to your Exchange Online organization.
 
 The new cmdlets in the EXO V2 module are listed in the following table:
 
@@ -57,7 +59,7 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
 
-> [!NOTE]
+> [!NOTE] 
 > The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.1. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon. This also implies that EXO PowerShell V2 module won't work in Linux or Mac as of now. Support for Linux and Mac is a work in progress and will be announced soon.
 
 ### What do you need to know before you begin?
@@ -88,7 +90,7 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command to enable basic authentication for WinRM:
+  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
 
   ```
   winrm set winrm/config/client/auth @{Basic="true"}
@@ -97,6 +99,9 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
   If Basic authentication is disabled, you'll get this error when you try to connect:
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
+
+  > [!NOTE] 
+  > We never send the username and password combination here, but the Basic auth header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
 ### Install the EXO V2 module
 
@@ -123,11 +128,11 @@ To install the EXO V2 module for the first time, run the following commands:
    ```
 
    **Notes**:
-
+   
    - You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
-
+   
    - If you don't do this step, you'll receive the following error when you try to connect:
-
+   
      > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
 3. Close and re-open the elevated Windows PowerShell window to get the changes from the previous steps.
@@ -272,7 +277,7 @@ The following example returns all properties for the 10 mailboxes:
 Get-EXOMailbox -ResultSize 10 -PropertySets All
 ```
 
-> [!NOTE]
+> [!NOTE]  
 > We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the requires properties.
 
 ## Release notes
