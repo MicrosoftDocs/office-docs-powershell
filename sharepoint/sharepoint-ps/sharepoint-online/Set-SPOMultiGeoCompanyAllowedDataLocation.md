@@ -112,4 +112,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-SPOMultiGeoCompanyAllowedDataLocation](Remove-SPOMultiGeoCompanyAllowedDataLocation.md)
+[Remove-SPOMultiGeoCompanyAllowedDataLocation](https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spomultigeocompanyalloweddatalocation)
