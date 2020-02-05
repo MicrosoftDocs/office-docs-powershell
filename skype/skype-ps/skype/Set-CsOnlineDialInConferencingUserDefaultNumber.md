@@ -47,10 +47,10 @@ Provide the detailed description here.
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsOnlineDialInConferencingUserDefaultNumber -FromNumber 14694235338 -ToNumber 132359192 -NumberType Toll -RescheduleMeetings -BridgeId 9884626f-dcfb-49f4-8025-912f5bc68fdc
+Set-CsOnlineDialInConferencingUserDefaultNumber -FromNumber 14255550100 -ToNumber 14255550101 -NumberType Toll -RescheduleMeetings -BridgeId 9884626f-dcfb-49f4-8025-912f5bc68fdc
 ```
 
-This example replaces the default toll or toll-free number for all users who have the number 14694235338 as a default number to the number 132359192 and starts the process of rescheduling their meetings.
+This example replaces the default toll or toll-free number for all users who have the number 14255550100 as a default number to the number 14255550101 and starts the process of rescheduling their meetings.
 
 
 ## PARAMETERS
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -ToNumber
-The new number to assign, without the + sign, for example 132359192.
+The new number to assign, without the + sign, for example 14255550101.
 
 ```yaml
 Type: String
