@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipSignalingPort
-Listening port used for communicating with Direct Routing services by using the Transport Layer Security (TLS) protocol. The value must be between 1 and 65535. Please note: Spelling of this parameter changed recently from SipSignallingPort to SipSignalingPort.
+Listening port used for communicating with Direct Routing services by using the Transport Layer Security (TLS) protocol. The value must be between 1 and 65535.
 
 ```yaml
 Type: Int32
