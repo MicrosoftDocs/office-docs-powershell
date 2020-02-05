@@ -139,6 +139,8 @@ Accept wildcard characters: False
 ### -City
 The City parameter specifies the room's city. If the value contains spaces, enclose the value in quotation marks (").
 
+For rooms synced with Active Directory this property should be modified on-premises.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -174,6 +176,8 @@ Accept wildcard characters: False
 
 ### -CountryOrRegion
 The CountryOrRegion parameter specifies the room's country or region.
+
+For rooms synced with Active Directory this property should be modified on-premises.
 
 ```yaml
 Type: CountryInfo
@@ -245,6 +249,8 @@ The GeoCoordinates parameter specifies the room's location in latitude, longitud
 
 - Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
 
+For rooms synced with Active Directory this property should be modified on-premises.
+
 ```yaml
 Type: GeoCoordinates
 Parameter Sets: (All)
@@ -297,6 +303,8 @@ Accept wildcard characters: False
 ### -Phone
 The Phone parameter specifies the room's telephone number.
 
+For rooms synced with Active Directory this property should be modified on-premises.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -312,6 +320,8 @@ Accept wildcard characters: False
 
 ### -PostalCode
 The PostalCode parameter specifies the room's postal code.
+
+For rooms synced with Active Directory this property should be modified on-premises.
 
 ```yaml
 Type: String
@@ -329,6 +339,8 @@ Accept wildcard characters: False
 ### -State
 The State parameter specifies the room's state or province.
 
+For rooms synced with Active Directory this property should be modified on-premises.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -344,6 +356,8 @@ Accept wildcard characters: False
 
 ### -Street
 The Street parameter specifies the room's physical address.
+
+For rooms synced with Active Directory this property should be modified on-premises.
 
 ```yaml
 Type: String
