@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new section to a Client-Side page
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPClientSidePageSection -Page <ClientSidePagePipeBind>

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Executes the currently queued actions
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Invoke-PnPQuery [-RetryCount <Int>]

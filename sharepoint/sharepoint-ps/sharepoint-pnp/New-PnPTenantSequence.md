@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new tenant sequence object
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPTenantSequence [-Id <String>]

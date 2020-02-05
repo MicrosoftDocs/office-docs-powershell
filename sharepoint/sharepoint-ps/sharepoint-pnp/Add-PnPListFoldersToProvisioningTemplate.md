@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds folders to a list in a PnP Provisioning Template
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPListFoldersToProvisioningTemplate -Path <String>

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a existing tenant sequence site object to a tenant template
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPTenantSequenceSite -Site <ProvisioningSitePipeBind>
@@ -24,7 +24,7 @@ Add-PnPTenantSequenceSite -Site <ProvisioningSitePipeBind>
 Add-PnPTenantSequenceSite -Site $myteamsite -Sequence $mysequence
 ```
 
-Adds an existing site object to an existing hierarchy sequence
+Adds an existing site object to an existing template sequence
 
 ## PARAMETERS
 

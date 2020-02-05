@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates Site Classifications for the tenant. Requires a connection to the Microsoft Graph.
 
-## SYNTAX
+## SYNTAX 
 
 ### Specific
 ```powershell

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Persists the current client side page conversion log data to the loggers linked to the last used page transformation run. Needs to be used in conjunction with the -LogSkipFlush flag on the ConvertTo-PnPClientSidePage cmdlet
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Save-PnPClientSidePageConversionLog [-Web <WebPipeBind>]

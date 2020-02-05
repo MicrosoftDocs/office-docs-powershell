@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns all or a specific navigation node
 
-## SYNTAX
+## SYNTAX 
 
 ### All nodes by location
 ```powershell

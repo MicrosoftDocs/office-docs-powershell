@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Add a taxonomy field
 
-## SYNTAX
+## SYNTAX 
 
 ### Id
 ```powershell

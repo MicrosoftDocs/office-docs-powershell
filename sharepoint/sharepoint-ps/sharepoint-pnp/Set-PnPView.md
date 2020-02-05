@@ -10,13 +10,14 @@ schema: 2.0.0
 ## SYNOPSIS
 Change view properties
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPView -Identity <ViewPipeBind>
             [-List <ListPipeBind>]
             [-Values <Hashtable>]
             [-Fields <String[]>]
+            [-Aggregations <String>]
             [-Web <WebPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
@@ -47,7 +48,28 @@ Set-PnPView -List "Documents" -Identity "Corporate Documents" -Fields "Title","C
 
 Updates the Corporate Documents view on the Documents library to have two fields
 
+### ------------------EXAMPLE 4------------------
+```powershell
+Set-PnPView -List "Documents" -Identity "Corporate Documents" -Fields "Title","Created" -Aggregations "<FieldRef Name='Title' Type='COUNT'/>"
+```
+
+Updates the Corporate Documents view on the Documents library and sets the totals (aggregations) to Count on the Title field
+
 ## PARAMETERS
+
+### -Aggregations
+A valid XML fragment containing one or more Aggregations
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Fields
 An array of fields to use in the view. Notice that specifying this value will remove the existing fields

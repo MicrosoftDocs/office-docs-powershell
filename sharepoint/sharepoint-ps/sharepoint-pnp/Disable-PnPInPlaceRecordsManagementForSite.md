@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Disables in place records management for a site.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Disable-PnPInPlaceRecordsManagementForSite [-Connection <SPOnlineConnection>]

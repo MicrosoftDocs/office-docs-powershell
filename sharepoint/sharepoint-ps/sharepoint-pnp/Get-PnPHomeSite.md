@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the home site url for your tenant
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPHomeSite [-Connection <SPOnlineConnection>]

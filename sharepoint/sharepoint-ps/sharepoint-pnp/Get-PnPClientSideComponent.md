@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieve one or more Client-Side components from a page
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPClientSideComponent -Page <ClientSidePagePipeBind>

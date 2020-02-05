@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a pnp package file of an existing template xml, and includes all files in the current folder
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Convert-PnPFolderToProvisioningTemplate -Out <String>

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a content type from a list
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPContentTypeFromList -List <ListPipeBind>

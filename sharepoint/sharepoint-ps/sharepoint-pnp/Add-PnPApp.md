@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Add/uploads an available app to the app catalog
 
-## SYNTAX
+## SYNTAX 
 
 ### Add only
 ```powershell

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Executes operations on web, lists and list items.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Invoke-PnPWebAction [-Webs <Web[]>]

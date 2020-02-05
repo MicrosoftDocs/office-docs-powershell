@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the current tenant's "SharePoint Online Client" service principal.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTenantServicePrincipal [-Connection <SPOnlineConnection>]

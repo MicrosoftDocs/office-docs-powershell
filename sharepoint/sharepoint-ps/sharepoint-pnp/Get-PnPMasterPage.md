@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the URLs of the default Master Page and the custom Master Page.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPMasterPage [-Web <WebPipeBind>]

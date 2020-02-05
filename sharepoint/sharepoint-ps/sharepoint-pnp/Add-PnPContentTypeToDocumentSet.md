@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a content type to a document set
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPContentTypeToDocumentSet -ContentType <ContentTypePipeBind[]>

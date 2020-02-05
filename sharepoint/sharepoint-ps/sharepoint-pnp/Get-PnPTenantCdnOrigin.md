@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the current registered origins from the public or private content delivery network (CDN).
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTenantCdnOrigin -CdnType <SPOTenantCdnType>

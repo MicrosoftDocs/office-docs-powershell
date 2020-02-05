@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the items in the recycle bin from the context
 
-## SYNTAX
+## SYNTAX 
 
 ### Identity
 ```powershell
@@ -21,12 +21,20 @@ Get-PnPRecycleBinItem [-Identity <GuidPipeBind>]
 ### FirstStage
 ```powershell
 Get-PnPRecycleBinItem [-FirstStage [<SwitchParameter>]]
+                      [-RowLimit <Int>]
                       [-Connection <SPOnlineConnection>]
 ```
 
 ### SecondStage
 ```powershell
 Get-PnPRecycleBinItem [-SecondStage [<SwitchParameter>]]
+                      [-RowLimit <Int>]
+                      [-Connection <SPOnlineConnection>]
+```
+
+### All
+```powershell
+Get-PnPRecycleBinItem [-RowLimit <Int>]
                       [-Connection <SPOnlineConnection>]
 ```
 
@@ -66,6 +74,13 @@ Get-PnPRecycleBinItem -SecondStage
 
 Returns all items in only the second stage recycle bin in the current site collection
 
+### ------------------EXAMPLE 5------------------
+```powershell
+Get-PnPRecycleBinItem -RowLimit 10000
+```
+
+Returns items in recycle bin limited by number of results
+
 ## PARAMETERS
 
 ### -FirstStage
@@ -101,6 +116,20 @@ Parameter Sets: (All)
 
 Required: False
 Position: 0
+Accept pipeline input: False
+```
+
+### -RowLimit
+Limits return results to specified amount
+
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
+
+```yaml
+Type: Int
+Parameter Sets: FirstStage, SecondStage, All
+
+Required: False
+Position: Named
 Accept pipeline input: False
 ```
 

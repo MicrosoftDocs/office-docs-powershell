@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables in place records management for a site.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Enable-PnPInPlaceRecordsManagementForSite [-Connection <SPOnlineConnection>]

@@ -8,9 +8,9 @@ schema: 2.0.0
 # Set-PnPListItemPermission
 
 ## SYNOPSIS
-Sets list item permissions
+Sets list item permissions. Use Get-PnPRoleDefinition to retrieve all available roles you can add or remove using this cmdlet.
 
-## SYNTAX
+## SYNTAX 
 
 ### Inherit
 ```powershell

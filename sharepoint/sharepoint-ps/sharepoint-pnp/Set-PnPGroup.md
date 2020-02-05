@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates a group
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPGroup -Identity <GroupPipeBind>

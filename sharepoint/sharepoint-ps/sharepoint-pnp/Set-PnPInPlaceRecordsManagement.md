@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Activates or deactivates in the place records management feature.
 
-## SYNTAX
+## SYNTAX 
 
 ### Enable or Disable
 ```powershell

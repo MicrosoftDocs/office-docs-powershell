@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Return a workflow subscription
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPWorkflowSubscription [-Name <String>]

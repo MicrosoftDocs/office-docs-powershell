@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Restores the provided recycle bin item to its original location
 
-## SYNTAX
+## SYNTAX 
 
 ### Identity
 ```powershell
@@ -45,7 +45,7 @@ Restores all the items in the first and second stage recycle bins to their origi
 ## PARAMETERS
 
 ### -All
-If provided all items will be stored
+If provided all items will be stored 
 
 ```yaml
 Type: SwitchParameter

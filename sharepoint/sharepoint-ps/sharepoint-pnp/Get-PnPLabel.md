@@ -8,9 +8,9 @@ schema: 2.0.0
 # Get-PnPLabel
 
 ## SYNOPSIS
-Gets the label/tag of the specified list or library (if applicable)
+Gets the Office 365 retention label/tag of the specified list or library (if applicable)
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPLabel -List <ListPipeBind>
@@ -25,7 +25,7 @@ Get-PnPLabel -List <ListPipeBind>
 Get-PnPLabel -List "Demo List"
 ```
 
-This gets the label which is set to a list or a library.
+This gets the Office 365 retention label which is set to a list or a library.
 
 ## PARAMETERS
 

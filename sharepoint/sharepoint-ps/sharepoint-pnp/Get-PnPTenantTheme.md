@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns all or a specific theme
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTenantTheme [-Name <String>]

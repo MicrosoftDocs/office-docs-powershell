@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Defines if the default / OOTB themes should be visible to users or not.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPHideDefaultThemes -HideDefaultThemes <Boolean>

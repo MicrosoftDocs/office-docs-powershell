@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates a list item
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPListItem -List <ListPipeBind>
@@ -18,6 +18,7 @@ Set-PnPListItem -List <ListPipeBind>
                 [-ContentType <ContentTypePipeBind>]
                 [-Values <Hashtable>]
                 [-SystemUpdate [<SwitchParameter>]]
+                [-Label <String>]
                 [-Web <WebPipeBind>]
                 [-Connection <SPOnlineConnection>]
 ```
@@ -45,6 +46,13 @@ Set-PnPListItem -List "Demo List" -Identity $item -Values @{"Title" = "Test Titl
 
 Sets fields value in the list item which has been retrieved by for instance Get-PnPListItem. It sets the content type of the item to "Company" and it sets both the Title and Category fields with the specified values. Notice, use the internal names of fields.
 
+### ------------------EXAMPLE 4------------------
+```powershell
+Set-PnPListItem -List "Demo List" -Identity 1 -Label "Public"
+```
+
+Sets the retention label in the list item with ID 1 in the "Demo List".
+
 ## PARAMETERS
 
 ### -ContentType
@@ -69,6 +77,20 @@ Parameter Sets: (All)
 Required: True
 Position: Named
 Accept pipeline input: True
+```
+
+### -Label
+The name of the retention label.
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
 ```
 
 ### -List

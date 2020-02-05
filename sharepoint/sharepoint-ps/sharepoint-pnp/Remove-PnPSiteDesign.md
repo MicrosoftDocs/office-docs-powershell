@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a Site Design
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>

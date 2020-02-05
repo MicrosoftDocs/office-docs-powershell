@@ -10,12 +10,13 @@ schema: 2.0.0
 ## SYNOPSIS
 Turn log tracing on or off
 
-## SYNTAX
+## SYNTAX 
 
 ### On
 ```powershell
 Set-PnPTraceLog -On [<SwitchParameter>]
                 [-LogFile <String>]
+                [-WriteToConsole [<SwitchParameter>]]
                 [-Level <LogLevel>]
                 [-Delimiter <String>]
                 [-IndentSize <Int>]
@@ -142,6 +143,18 @@ Type: SwitchParameter
 Parameter Sets: On
 
 Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -WriteToConsole
+Turn on console trace output.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: On
+
+Required: False
 Position: Named
 Accept pipeline input: False
 ```

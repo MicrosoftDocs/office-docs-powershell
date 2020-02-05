@@ -18,7 +18,7 @@ Certificate contains the PEM encoded certificate.
 
 PrivateKey contains the PEM encoded private key of the certificate.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPAzureCertificate -CertificatePath <String>

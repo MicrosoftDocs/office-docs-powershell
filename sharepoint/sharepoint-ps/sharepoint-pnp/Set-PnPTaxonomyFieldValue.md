@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets a taxonomy term value in a listitem field
 
-## SYNTAX
+## SYNTAX 
 
 ### ITEMS
 ```powershell
