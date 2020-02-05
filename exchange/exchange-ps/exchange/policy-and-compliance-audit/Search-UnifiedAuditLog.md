@@ -226,7 +226,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - AeD
 
-- AirInvestigation 
+- AirInvestigation
 
 - ApplicationAudit
 
@@ -244,9 +244,9 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - ComplianceDLPSharePointClassification
 
-- ComplianceSupervisionExchange 
+- ComplianceSupervisionExchange
 
-- CustomerKeyServiceEncryption 
+- CustomerKeyServiceEncryption
 
 - CRM
 
@@ -258,7 +258,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - Discovery
 
-- DLPEndpoint 
+- DLPEndpoint
 
 - ExchangeAdmin
 
@@ -276,7 +276,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - InformationWorkerProtection
 
-- InformationBarrierPolicyApplication 
+- InformationBarrierPolicyApplication
 
 - Kaizala
 
@@ -284,7 +284,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - MailSubmission
 
-- MicrosoftFlow 
+- MicrosoftFlow
 
 - MicrosoftForms
 
@@ -294,7 +294,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - MicrosoftTeamsAdmin
 
-- MicrosoftTeamsDevice 
+- MicrosoftTeamsDevice
 
 - MicrosoftTeamsAddOns
 
@@ -320,7 +320,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - PowerAppsPlan
 
-- Quarantine 
+- Quarantine
 
 - SecurityComplianceAlerts
 
@@ -332,7 +332,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - SharePointCommentOperation
 
-- SharePointContentTypeOperation 
+- SharePointContentTypeOperation
 
 - SharePointFileOperation
 
@@ -340,7 +340,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - SharePointListOperation
 
-- SharePointListItemOperation 
+- SharePointListItemOperation
 
 - SharePointSharingOperation
 
@@ -485,8 +485,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ###  
 The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
 
-$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; 
-Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
+$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
 
 ## NOTES
 

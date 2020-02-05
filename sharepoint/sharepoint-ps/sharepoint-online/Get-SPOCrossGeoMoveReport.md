@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Provides a report of objects moved between geo locations.
 
 ## SYNTAX
 
@@ -24,23 +24,27 @@ Get-SPOCrossGeoMoveReport -MoveJobType <JobType> [-Limit <uint32>] [-MoveStartTi
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+Use this cmdlet to return a report of objects moved between geo locations based on the specified parameters.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Get-SPOCrossGeoMoveReport -MoveJobType SiteMove -MoveState Failed
 ```
 
-This example .
+This example returns the failed site moves between geo locations.
 
 ## PARAMETERS
 
 ### -MoveJobType
 
-.
+The type of job to limit the report to. Valid values are:
+
+* GroupMove
+* SiteMove
+* UserMove
 
 ```yaml
 Type: JobType
@@ -56,7 +60,7 @@ Accept wildcard characters: False
 
 ### -Limit
 
-.
+Limit the number of items to return for the report.
 
 ```yaml
 Type: uint32
@@ -72,7 +76,7 @@ Accept wildcard characters: False
 
 ### -MoveStartTime
 
-.
+The start time to limit the move report to.
 
 ```yaml
 Type: datetime
@@ -88,7 +92,7 @@ Accept wildcard characters: False
 
 ### -MoveEndTime
 
-.
+The end time to limit the move report to.
 
 ```yaml
 Type: datetime
@@ -104,7 +108,17 @@ Accept wildcard characters: False
 
 ### -MoveState
 
-.
+The type of state to limit the report to. Valid values are:
+
+* All
+* Failed
+* InProgress
+* NotStarted
+* NotSupported
+* Queued
+* Rescheduled
+* Stopped
+* Success
 
 ```yaml
 Type: MoveState
@@ -120,7 +134,11 @@ Accept wildcard characters: False
 
 ### -MoveDirection
 
-.
+The direction of the move to limit the report to. Valid values are:
+
+* All
+* MoveIn
+* MoveOut
 
 ```yaml
 Type: MoveDirection
