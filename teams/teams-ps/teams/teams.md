@@ -46,23 +46,11 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-TeamMessagingSettings](Get-TeamMessagingSettings.md)
 {{Manually Enter Get-TeamMessagingSettings Description Here}}
 
-### [Get-TeamPolicyPackage](Get-TeamPolicyPackage.md)
-{{Manually Enter Get-TeamPolicyPackage Description Here}}
-
 ### [Get-TeamsApp](Get-TeamsApp.md)
 {{Manually Enter Get-TeamsApp Description Here}}
 
 ### [Get-TeamUser](Get-TeamUser.md)
 {{Manually Enter Get-TeamUser Description Here}}
-
-### [Get-TeamUserPolicyPackage](Get-TeamUserPolicyPackage.md)
-{{Manually Enter Get-TeamUserPolicyPackage Description Here}}
-
-### [Get-TeamUserPolicyPackageRecommendation](Get-TeamUserPolicyPackageRecommendation.md)
-{{Manually Enter Get-TeamUserPolicyPackageRecommendation Description Here}}
-
-### [Grant-TeamUserPolicyPackage](Grant-TeamUserPolicyPackage.md)
-{{Manually Enter Grant-TeamUserPolicyPackage Description Here}}
 
 ### [New-Team](New-Team.md)
 {{Manually Enter New-Team Description Here}}
