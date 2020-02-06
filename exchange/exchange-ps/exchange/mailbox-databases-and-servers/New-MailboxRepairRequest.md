@@ -108,6 +108,32 @@ The CorruptionType parameter specifies the type of corruption that you want to d
 
 - FolderView
 
+- ReplState
+
+- MessagePtagCn
+
+- MessageId
+
+Starting with Exchange Server 2013 these values can also be used:
+
+- RuleMessageClass 
+
+- RestrictionFolder 
+
+- FolderACL 
+
+- UniqueMidIndex 
+
+- CorruptJunkRule 
+
+- MissingSpecialFolders 
+
+- DropAllLazyIndexes 
+
+- ImapId 
+
+- CleanupOrphanedIndexes 
+
 You can search for multiple corruption types at a time. Separate multiple types with a comma, for example, SearchFolder,AggregateCounts.
 
 ```yaml
