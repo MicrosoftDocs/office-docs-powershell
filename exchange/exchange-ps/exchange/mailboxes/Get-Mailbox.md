@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-Mailbox
 schema: 2.0.0
@@ -141,7 +142,7 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
 
 ### AsyncParameterSet
 ```
-Get-Mailbox [-Async] -Properties <String[]>
+Get-Mailbox -Async -Properties <String[]>
  [-Archive]
  [-Filter <String>]
  [-GroupMailbox]
@@ -151,7 +152,7 @@ Get-Mailbox [-Async] -Properties <String[]>
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
- [-ResultSize <>]
+ [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>] [<CommonParameters>]
 ```
@@ -249,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch is required to return archive mailboxes in the results. You don't need to specify a value with this switch.
+The Archive switch filters the results by mailboxes that have an archive enabled (only mailboxes that have an archive mailbox are returned). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -267,7 +268,7 @@ Accept wildcard characters: False
 ### -Async
 This parameter is available only in the cloud-based service.
 
-{{Fill Async Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -307,7 +308,7 @@ Accept wildcard characters: False
 ### -AuxAuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch is required to return auxillary audit log mailboxes in the results. You don't need to specify a value with this switch.
+The AuxAuditLog switch is required to return auxiliary audit log mailboxes in the results. You don't need to specify a value with this switch.
 
 Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
@@ -844,5 +845,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)

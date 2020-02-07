@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csipphonepolicy
 applicable: Skype for Business Online, Skype for Business Server 2019
 title: Set-CsIPPhonePolicy
 schema: 2.0.0
@@ -66,8 +67,8 @@ This example sets the EnablePowerSaveMode, EnableOneTouchVoicemail and EnableDev
 
 ### -BetterTogetherOverEthernetPairingMode
 Valid values are:
-Auto – The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code.
-Manual – The user needs to enter the pairing code manually to pair with the BTOE app. 
+Auto - The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code.
+Manual - The user needs to enter the pairing code manually to pair with the BTOE app. 
 
 ```yaml
 Type: String

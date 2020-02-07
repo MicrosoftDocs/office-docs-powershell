@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
+online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox
 applicable: Exchange Online
 title: Get-EXOMailbox
 schema: 2.0.0
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch is required to return archive mailboxes in the results. You don't need to specify a value with this switch.
+The Archive switch filters the results by mailboxes that have an archive enabled (only mailboxes that have an archive mailbox are returned). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -513,5 +514,3 @@ The following properties aren't included in the output of Get-EXOMailbox:
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox)

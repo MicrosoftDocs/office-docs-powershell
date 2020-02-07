@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/set-mailboxregionalconfiguration
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailboxRegionalConfiguration
 schema: 2.0.0
@@ -51,6 +52,14 @@ Set-MailboxRegionalConfiguration -Identity "Alice Jakobsen" -Language da-dk -Dat
 ```
 
 This example sets Alice Jakobsen's mailbox language to Danish Denmark, sets the date in the day/month/year format and localizes the default folder names in Danish.
+
+
+### Example 4
+```powershell
+Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited | Set-MailboxRegionalConfiguration -Language es-es -DateFormat "dd/MM/yyyy" -TimeFormat H:mm -LocalizeDefaultFolderName
+```
+
+This example sets all User Mailboxes language to Spanish Spain, sets the date in the day/month/year format, sets the time in the H:mm format and localizes the default forder names in Spanish.
 
 ## PARAMETERS
 
@@ -274,5 +283,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-mailboxregionalconfiguration)

@@ -1,12 +1,14 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsearchcrawllog
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPSearchCrawlLog
 
 ## SYNOPSIS
-Returns entries from the SharePoint search crawl log
+Returns entries from the SharePoint search crawl log. Make sure you are granted access to the crawl log via the SharePoint search admin center at https://<tenant>-admin.sharepoint.com/_layouts/15/searchadmin/crawllogreadpermission.aspx in order to run this cmdlet.
 
 ## SYNTAX 
 
@@ -17,6 +19,7 @@ Get-PnPSearchCrawlLog [-LogLevel <LogLevel>]
                       [-ContentSource <ContentSource>]
                       [-StartDate <DateTime>]
                       [-EndDate <DateTime>]
+                      [-RawFormat [<SwitchParameter>]]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
 ```
@@ -53,7 +56,7 @@ Returns the last 100 crawl log entries for user profiles with the term "mikael" 
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Get-PnPSearchCrawlLog -ContentSource Sites LogLevel Error -RowLimit 10
+Get-PnPSearchCrawlLog -ContentSource Sites -LogLevel Error -RowLimit 10
 ```
 
 Returns the last 10 crawl log entries with a state of Error for site content.
@@ -63,7 +66,14 @@ Returns the last 10 crawl log entries with a state of Error for site content.
 Get-PnPSearchCrawlLog -EndDate (Get-Date).AddDays(-100)
 ```
 
-Returns the last 100 crawl log entries for site content up until 100 days ago.
+Returns the last 100 crawl log entries up until 100 days ago.
+
+### ------------------EXAMPLE 7------------------
+```powershell
+Get-PnPSearchCrawlLog -RowFilter 3 -RawFormat
+```
+
+Returns the last 3 crawl log entries showing the raw crawl log data.
 
 ## PARAMETERS
 
@@ -108,6 +118,18 @@ Filter what log entries to return (All, Success, Warning, Error). Defaults to Al
 
 ```yaml
 Type: LogLevel
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -RawFormat
+Show raw crawl log data
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False

@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenantsequencesite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPTenantSequenceSite
 
 ## SYNOPSIS
@@ -22,7 +24,7 @@ Add-PnPTenantSequenceSite -Site <ProvisioningSitePipeBind>
 Add-PnPTenantSequenceSite -Site $myteamsite -Sequence $mysequence
 ```
 
-Adds an existing site object to an existing hierarchy sequence
+Adds an existing site object to an existing template sequence
 
 ## PARAMETERS
 

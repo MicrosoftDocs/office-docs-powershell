@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-phishfilterpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Set-PhishFilterPolicy
 schema: 2.0.0
@@ -35,7 +36,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"; $UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
+Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"
+$UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"
+Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
 ```
 
 This configures the phish filter policy to block or allow all spoofed email messages from a source messaging server.
@@ -48,7 +51,9 @@ This configures the phish filter policy to block or allow all spoofed email mess
 
 ### Example 2
 ```powershell
-Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"; $UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
+Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"
+$UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"
+Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
 ```
 
 This example configures the phish filter policy to selectively block or allow some spoofed email messages from a source messaging server.
@@ -157,5 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-phishfilterpolicy)

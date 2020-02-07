@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/grant-csipphonepolicy
 applicable: Skype for Business Online
 title: Grant-CsIPPhonePolicy, Skype for Business Server 2019
 schema: 2.0.0

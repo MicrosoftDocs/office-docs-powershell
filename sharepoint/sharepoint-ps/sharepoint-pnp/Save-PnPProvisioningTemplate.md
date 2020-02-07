@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/save-pnpprovisioningtemplate
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Save-PnPProvisioningTemplate
 
 ## SYNOPSIS
@@ -11,7 +13,7 @@ Saves a PnP site template to the file system
 ## SYNTAX 
 
 ```powershell
-Save-PnPProvisioningTemplate -InputInstance <ProvisioningTemplate>
+Save-PnPProvisioningTemplate -Template <ProvisioningTemplate>
                              -Out <String>
                              [-Force [<SwitchParameter>]]
                              [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
@@ -40,18 +42,6 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -InputInstance
-Allows you to provide an in-memory instance of the ProvisioningTemplate type of the PnP Core Component. When using this parameter, the -Out parameter refers to the path for saving the template and storing any supporting file for the template.
-
-```yaml
-Type: ProvisioningTemplate
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Out
 Filename to write to, optionally including full path.
 
@@ -61,6 +51,19 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
+Accept pipeline input: False
+```
+
+### -Template
+Allows you to provide an in-memory instance of the ProvisioningTemplate type of the PnP Core Component. When using this parameter, the -Out parameter refers to the path for saving the template and storing any supporting file for the template.
+
+```yaml
+Type: ProvisioningTemplate
+Parameter Sets: (All)
+Aliases: InputInstance
+
+Required: True
+Position: Named
 Accept pipeline input: False
 ```
 

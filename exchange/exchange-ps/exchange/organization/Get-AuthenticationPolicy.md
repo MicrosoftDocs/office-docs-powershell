@@ -1,20 +1,21 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/get-authenticationpolicy
+applicable: Exchange Server 2019, Exchange Online
 title: Get-AuthenticationPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
+monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-AuthenticationPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-AuthenticationPolicy cmdlet to view authentication policies in Exchange Online.
+Use the Get-AuthenticationPolicy cmdlet to view authentication policies in your organization. 
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -58,7 +59,7 @@ The Identity parameter specifies the authentication policy you want to view. You
 Type: AuthPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 
 Required: False
 Position: 0
@@ -81,5 +82,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/get-authenticationpolicy)

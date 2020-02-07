@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/remove-cstenanttrustedipaddress
 applicable: Skype for Business Online
 title: Remove-CsTenantTrustedIPAddress
 schema: 2.0.0
@@ -24,7 +25,7 @@ Remove-CsTenantTrustedIPAddress [-Tenant <System.Guid>] [-Identity] <XdsGlobalRe
 ## DESCRIPTION
 The `Remove-CsTenantTrustedIPAddress` cmdlet removes an existing tenant trusted IP address.
 
-External trusted IPs are the Internet external IPs of the enterprise network and are used to determine if the user’s endpoint is inside the corporate network before checking for a specific site match. If the user’s external IP matches one defined in the trusted list, then Location-Based Routing will check to determine which internal subnet the user’s endpoint is located. If the user’s external IP doesn’t match one defined in the trusted list, the endpoint will be classified as being at an unknown and any PSTN calls to/from an LBR enabled user are blocked.
+External trusted IPs are the Internet external IPs of the enterprise network and are used to determine if the user's endpoint is inside the corporate network before checking for a specific site match. If the user's external IP matches one defined in the trusted list, then Location-Based Routing will check to determine which internal subnet the user's endpoint is located. If the user's external IP doesn't match one defined in the trusted list, the endpoint will be classified as being at an unknown and any PSTN calls to/from an LBR enabled user are blocked.
 
 ## EXAMPLES
 

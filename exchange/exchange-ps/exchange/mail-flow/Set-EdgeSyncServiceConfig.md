@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-edgesyncserviceconfig
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-EdgeSyncServiceConfig
 schema: 2.0.0
@@ -22,12 +23,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-EdgeSyncServiceConfig [-Identity] <EdgeSyncServiceConfigIdParameter>
- [-ConfigurationSyncInterval <EnhancedTimeSpan>] [-Confirm] [-CookieValidDuration <EnhancedTimeSpan>]
- [-DomainController <Fqdn>] [-FailoverDCInterval <EnhancedTimeSpan>] [-LockDuration <EnhancedTimeSpan>]
- [-LockRenewalDuration <EnhancedTimeSpan>] [-LogEnabled <Boolean>]
- [-LogLevel <None | Low | Medium | High>] [-LogMaxAge <EnhancedTimeSpan>] [-LogMaxDirectorySize <Unlimited>]
- [-LogMaxFileSize <Unlimited>] [-LogPath <String>] [-Name <String>] [-OptionDuration <EnhancedTimeSpan>]
- [-RecipientSyncInterval <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
+ [-ConfigurationSyncInterval <EnhancedTimeSpan>]
+ [-Confirm]
+ [-CookieValidDuration <EnhancedTimeSpan>]
+ [-DomainController <Fqdn>]
+ [-FailoverDCInterval <EnhancedTimeSpan>]
+ [-LockDuration <EnhancedTimeSpan>]
+ [-LockRenewalDuration <EnhancedTimeSpan>]
+ [-LogEnabled <Boolean>]
+ [-LogLevel <EdgeSyncLoggingLevel>]
+ [-LogMaxAge <EnhancedTimeSpan>]
+ [-LogMaxDirectorySize <Unlimited>]
+ [-LogMaxFileSize <Unlimited>]
+ [-LogPath <String>]
+ [-Name <String>]
+ [-OptionDuration <EnhancedTimeSpan>]
+ [-RecipientSyncInterval <EnhancedTimeSpan>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -211,10 +223,18 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-The LogLevel parameter specifies the EdgeSync logging level. Valid values for this parameter are None, Low, Medium and High. The default value is None.
+The LogLevel parameter specifies the EdgeSync logging level. Valid values are:
+
+- None (This is the default value)
+
+- Low
+
+- Medium
+
+- High
 
 ```yaml
-Type: None | Low | Medium | High
+Type: EdgeSyncLoggingLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -408,5 +428,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-edgesyncserviceconfig)

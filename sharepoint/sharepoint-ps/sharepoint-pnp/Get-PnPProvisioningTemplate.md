@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpprovisioningtemplate
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPProvisioningTemplate
 
 ## SYNOPSIS
@@ -38,6 +40,7 @@ Get-PnPProvisioningTemplate [-Out <String>]
                             [-OutputInstance [<SwitchParameter>]]
                             [-ExcludeContentTypesFromSyndication [<SwitchParameter>]]
                             [-ListsToExtract <String>]
+                            [-Configuration <ExtractConfigurationPipeBind>]
                             [-Schema <XMLPnPSchemaVersion>]
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
@@ -149,6 +152,18 @@ Get-PnPProvisioningTemplate -Out template.pnp -ListsToExtract "Title of List One
 Extracts a provisioning template in Office Open XML from the current web, including only the lists specified by title or ID.
 
 ## PARAMETERS
+
+### -Configuration
+Specify a JSON configuration file to configure the extraction progress.
+
+```yaml
+Type: ExtractConfigurationPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -ContentTypeGroups
 Allows you to specify from which content type group(s) the content types should be included into the template.

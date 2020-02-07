@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+online version: https://docs.microsoft.com/powershell/module/staffhub/remove-staffhubmember
 applicable: Microsoft StaffHub
 title: Remove-StaffHubMember
-online version: 
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -28,8 +28,8 @@ Removes the specified member from the team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-StaffHubMember -TeamId "TEAM_1234" -MemberId "MBER_1234"
 ```
 
@@ -43,7 +43,7 @@ MemberId of the member to be removed.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 1
@@ -58,7 +58,7 @@ Entire member object returned from `Get-StaffHubMember`.
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 2
@@ -73,7 +73,7 @@ TeamId from which the specified member is to be removed.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: True
 Position: 0

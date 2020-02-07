@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/test-clientaccessrule
 applicable: Exchange Server 2019, Exchange Online
 title: Test-ClientAccessRule
 schema: 2.0.0
@@ -273,5 +274,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/test-clientaccessrule)

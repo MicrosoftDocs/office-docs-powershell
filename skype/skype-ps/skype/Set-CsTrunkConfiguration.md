@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-cstrunkconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsTrunkConfiguration
 schema: 2.0.0
@@ -29,7 +30,7 @@ Set-CsTrunkConfiguration [[-Identity] <XdsIdentity>] [-ConcentratedTopology <Boo
  [-Enable3pccRefer <Boolean>] [-EnableFastFailoverTimer <Boolean>] [-EnableOnlineVoice <Boolean>]
  [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>]
  [-OutboundCallingNumberTranslationRulesList <PSListModifier>] [-PstnUsages <PSListModifier>]
- [-EnableLocationRestriction <Boolean>] [-NetworkSiteID <String>] [<CommonParameters>]
+ [-EnableLocationRestriction <Boolean>] [-NetworkSiteID <String>] [AcceptGatewayPAIForOutboundCalls] [<CommonParameters>]
 ```
 
 ### Instance
@@ -43,7 +44,7 @@ Set-CsTrunkConfiguration [-Instance <PSObject>] [-ConcentratedTopology <Boolean>
  [-Enable3pccRefer <Boolean>] [-EnableFastFailoverTimer <Boolean>] [-EnableOnlineVoice <Boolean>]
  [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>]
  [-OutboundCallingNumberTranslationRulesList <PSListModifier>] [-PstnUsages <PSListModifier>]
- [-EnableLocationRestriction <Boolean>] [-NetworkSiteID <String>] [<CommonParameters>]
+ [-EnableLocationRestriction <Boolean>] [-NetworkSiteID <String>] [AcceptGatewayPAIForOutboundCalls] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -696,6 +697,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AcceptGatewayPAIForOutboundCalls
+Set this parameter to True ($true) to modify the trunk configuration to display forwarded number for different trunks.
+This parameter was introduced in the January 2019 cumulative update, for more information see [Incorrect caller ID is shown on the Skype for Business client in a call-forwarding scenario](https://support.microsoft.com/help/4458692/incorrect-caller-id-shown-on-the-skype-for-business-client-in-a-call)
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).

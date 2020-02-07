@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-organizationconfig
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OrganizationConfig
 schema: 2.0.0
@@ -29,6 +30,7 @@ Set-OrganizationConfig
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
  [-AuditDisabled <Boolean>]
+ [-AutodiscoverPartialDirSync <Boolean>]
  [-AutoEnableArchiveMailbox <Boolean>]
  [-AutoExpandingArchive]
  [-BookingsEnabled <Boolean>]
@@ -302,10 +304,10 @@ This example allows only the client applications specified by the EwsAllowList p
 
 ### Example 6
 ```powershell
-Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location:15"
+Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location,Subject,Body,AllProperties:15"
 ```
 
-In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
+In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except any changes to meeting location, subject and body as well as any property changes within 15 minutes of the meeting start time.
 
 ## PARAMETERS
 
@@ -527,6 +529,26 @@ The AuditDisabled parameter specifies whether to disable or enable mailbox audit
 - $true: Mailbox auditing is disabled for the organization.
 
 - $false: Allow mailbox auditing in the organization. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutodiscoverPartialDirSync
+This parameter is available only in the cloud-based service.
+
+The AutodiscoverPartialDirSync parameter is for scenarios where tenants have Directory Synced some of their Active Directory users into the cloud, but still have on-premises Exchange users that are not Directory Synced. Setting this parameter to $true will cause unknown users to be redirected to the on-premises endpoint and will allow on-premises users to discover their mailbox automatically. Online email addresses will be susceptible to enumeration. We recommend full Directory Sync for all Active Directory users and leaving this parameter with the default $false.
+
+After you enable AutodiscoverPartialDirSync, it will take approximately 3 hours to fully saturate across the cloud.
 
 ```yaml
 Type: Boolean
@@ -890,8 +912,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultAuthenticationPolicy
-This parameter is available only in the cloud-based service.
-
 The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -900,13 +920,15 @@ The DefaultAuthenticationPolicy parameter specifies the authentication policy th
 
 - GUID
 
-You create authentication policies with the New-AuthenticationPolicy cmdlet to block or selectively allow Basic authentication.
+To remove the default policy assignment for the organization, use the value $null.
+
+You create authentication policies with the New-AuthenticationPolicy cmdlet to block or selectively allow Basic authentication or (in Exchange 2019 CU2 or later) other legacy authentication methods.
 
 ```yaml
 Type: AuthPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -2362,7 +2384,7 @@ This parameter is available only in the cloud-based service.
 
 The VisibleMeetingUpdateProperties parameter specifies whether meeting message updates will be auto-processed on behalf of attendees. Auto-processed updates are applied to the attendee's calendar item, and then the meeting message is moved to the deleted items. The attendee never sees the update in their inbox, but their calendar is updated.
 
-This parameter uses the syntax: MeetingProperty1:MeetingStartTimeWithinXMinutes1,MeetingProperty2:MeetingStartTimeWithinXMinutes2,...MeetingPropertyN:MeetingStartTimeWithinXMinutesN.
+This parameter uses the syntax: `"MeetingProperty1:MeetingStartTimeWithinXMinutes1,MeetingProperty2:MeetingStartTimeWithinXMinutes2,...MeetingPropertyN:MeetingStartTimeWithinXMinutesN"`.
 
 The valid meeting properties to monitor for updates are:
 
@@ -2390,7 +2412,7 @@ The valid meeting properties to monitor for updates are:
 
 If you don't specify a MeetingStartTimeWithinXMinutes value for the meeting property, any change to the meeting property will result in visible meeting update messages (regardless of how soon or how far away the meeting is). For updates to recurring meetings, the meeting start time is the start time of the next occurrence in the series.
 
-The default value is `Location,AllProperties:15`: changes to the meeting location at any time, or changes to other meeting properties within 15 minutes of the meeting start time results in visible meeting update messages.
+The default value is `"Location,AllProperties:15"`: changes to the meeting location at any time, or changes to other meeting properties within 15 minutes of the meeting start time results in visible meeting update messages.
 
 There are three scenarios where meeting update messages are not auto-processed regardless of the values specified in this parameter (in these scenarios, attendees will always see meeting update messages in their Inbox):
 
@@ -2512,5 +2534,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-organizationconfig)

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version:
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinepstngateway
 applicable: Skype for Business Online
 title: Set-CsOnlinePSTNGateway
 schema: 2.0.0
@@ -17,21 +17,15 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 
 ## SYNTAX
 
-### Identity (Default)
 ```
-Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
+Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignalingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
 [-ForwardCallHistory <Boolean>]  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] 
 [-MaxConcurrentSessions <System.Int32>]  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] 
-[-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [[-Identity] <XdsGlobalRelativeIdentity>] 
-[-BypassMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] 
-[-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Instance <PSObject>] 
- [-BypassMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [-Identity <XdsGlobalRelativeIdentity>] 
+[-BypassMode <String>] [-GenerateRingingWhileLocatingUser <Boolean>] 
+[-InboundTeamsNumberTranslationRules <String>] [-InboundPSTNNumberTranslationRules <String>] 
+[-OutboundTeamsNumberTranslationRules <String>] [-OutboundPSTNNumberTranslationRules <String>] 
+[-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,10 +42,10 @@ This example enables previously created SBC with Identity (and FQDN) sbc.contoso
 
 ### Example 2
 ```powershell
-PS C:\> Set-CsOnlinePSTNGateway -Identity sbc.contoso.com -SIPSignallingPort 5064 -ForwardPAI $true -Enabled $true
+PS C:\> Set-CsOnlinePSTNGateway -Identity sbc.contoso.com -SIPSignalingPort 5064 -ForwardPAI $true -Enabled $true
 ```
 
-This example modifies the configuration of an SBC with identity (and FQDN)  sbc.contoso.com. It changes the SIPSignallingPort to 5064 and enabled P-Asserted-Identity field on outbound connections (outbound from Direct Routing to SBC). For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator set identity of the caller as "Anonymous" or a general number of the company, but for the billing purposes the real identity of the user should be reported.
+This example modifies the configuration of an SBC with identity (and FQDN)  sbc.contoso.com. It changes the SIPSignalingPort to 5064 and enabled P-Asserted-Identity field on outbound connections (outbound from Direct Routing to SBC). For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator set identity of the caller as "Anonymous" or a general number of the company, but for the billing purposes the real identity of the user should be reported.
 
 ## PARAMETERS
 
@@ -280,8 +274,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SipSignallingPort
-Listening port used for communicating with Direct Routing services by using the Transport Layer Security (TLS) protocol. The value must be between 1 and 65535.
+### -SipSignalingPort
+Listening port used for communicating with Direct Routing services by using the Transport Layer Security (TLS) protocol. The value must be between 1 and 65535. Please note: Spelling of this parameter changed recently from SipSignallingPort to SipSignalingPort.
 
 ```yaml
 Type: Int32
@@ -302,7 +296,75 @@ Possible values are "None", "Always" and "OnlyForLocalUsers". By setting "Always
 Type: String
 Parameter Sets: (All)
 Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -GenerateRingingWhileLocatingUser
+This parameter is applicableis only for Direct Routing in non-media bypass mode. Sometimes inbound calls from the public switched telephone network (PSTN) to Teams clients can take longer than expected to be established. This can occur for various reasons. When this happens, the caller might not hear anything, the Teams client doesn't ring, and the call might be canceled by some telecommunications providers. This parameter helps to avoid unexpected silences that can occur in this scenario. When enabled for inbound calls from the PSTN to Teams clients, a distinctive audio signal is played to the caller to indicate that Teams is in the process of establishing the call.
 
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InboundTeamsNumberTranslationRules
+This parameter assigns an ordered list of Teams translation rules, that apply to Teams numbers on inbound direction.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InboundPSTNNumberTranslationRules
+Creates an ordered list of Teams translation rules, that apply to PSTN number on inbound direction.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutbundTeamsNumberTranslationRulesList
+Creates an ordered list of Teams translation rules, that apply to Teams Number on outbound direction.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutboundPSTNNumberTranslationRulesList
+Assigns an ordered list of Teams translation rules, that apply to PSTN number on outbound direction.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Required: False
 Position: Named
 Default value: None

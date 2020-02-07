@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscallinglineidentity
 applicable: Skype for Business Online
 title: New-CsCallingLineIdentity
 schema: 2.0.0
@@ -29,7 +30,7 @@ You can either change or block the Caller ID (also called a Calling Line ID) for
 Note:  
 - Identity must be unique.
 - ServiceNumber must be a valid Service Number in the Skype for Business Online online telephone number inventory.
-- If CallerIdSubstitute is given as “Service”, then ServiceNumber cannot be empty.
+- If CallerIdSubstitute is given as "Service", then ServiceNumber cannot be empty.
  
 
 
@@ -176,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet’s matching Set-<cmdlet>.
+Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-<cmdlet>.
 
 ```yaml
 Type: SwitchParameter
@@ -194,7 +195,7 @@ Accept wildcard characters: False
 ### -ServiceNumber
 The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute. 
 
-Note: Do not add ‘+’ to the Service number. For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx
+Note: Do not add '+' to the Service number. For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx
 
 ```yaml
 Type: String

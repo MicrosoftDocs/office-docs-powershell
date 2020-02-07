@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csvideointeropserviceprovider
 applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: New-CsVideoInteropServiceProvider
@@ -36,7 +37,7 @@ Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join T
 
 Use the New-CsVideoInteropServiceProvider to specify information about a supported CVI partner your organization would like to use.
 
-Important note: New-CsVideoInteropServiceProvider does not do a check on the -Name to be one of the Identity (without tag:) from the Get-CsTeamsVideoInteropServicePolicy, however if this is not set to match, the VTC coordinates will not added to the meetings correctly.  Make sure that your "Name" matches a valid policy.  Make sure that your "Name" matches a valid policy.
+Important note: New-CsVideoInteropServiceProvider does not do a check on the -Identity to be one of the Identity (without tag:) from the Get-CsTeamsVideoInteropServicePolicy, however if this is not set to match, the VTC coordinates will not added to the meetings correctly.  Make sure that your "Identity" matches a valid policy identity.
 
 ## EXAMPLES
 
@@ -163,14 +164,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-This is mandatory parameter and can have only one of the 6 values
-PolycomServiceProviderEnabled
-PexipServiceProviderEnabled
-BlueJeansServiceProviderEnabled
- 
-PolycomServiceProviderDisabled
-PexipServiceProviderDisabled
-BlueJeansServiceProviderDisabled
+This is mandatory parameter and can have only one of the 4 values
+
+Polycom
+BlueJeans
+Pexip
+Cisco
 
 ```yaml
 Type: String
@@ -179,7 +178,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: None
+Default value: DefaultProvider
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/set-casmailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-CASMailbox
 schema: 2.0.0
@@ -246,9 +247,10 @@ Accept wildcard characters: False
 ### -ActiveSyncSuppressReadReceipt
 The ActiveSyncSuppressReadReceipt parameter controls the behavior of read receipts for Exchange ActiveSync clients that access the mailbox. Valid values are:
 
-- $true: The user receives a read receipt when the recipient opens the message.
+- $true: Read receipts are not automatically returned when the user opens a message sent with a read receipt request.
 
-- $false: The user receives two read receipts: one when the message is downloaded and another when the message is opened. This is the default value.
+- $false: A read receipt is automatically returned when the user opens a message sent with a read receipt request. This is the default value.
+
 
 ```yaml
 Type: Boolean
@@ -1329,5 +1331,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/client-access/set-casmailbox)

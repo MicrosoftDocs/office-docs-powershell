@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/set-csgrouppolicyassignment
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
@@ -130,9 +130,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## INPUTS
 
 ## OUTPUTS
-
-### OperationId
-The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOperation cmdlet to get the status of the operation.
 
 ## NOTES
 

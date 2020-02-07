@@ -1,10 +1,10 @@
 ---
 External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-Applicable: SharePoint Migration Tool
-Title: Unregister-SPMTMigration
-Online version: 
-Schema: 2.0.0
+online version: https://docs.microsoft.com/powershell/module/spmt/unregister-spmtmigration
+applicable: SharePoint Migration Tool
+title: Unregister-SPMTMigration
+schema: 2.0.0
 author: kenwith
 ms.author: kenwith
 ms.reviewer:
@@ -13,12 +13,12 @@ ms.reviewer:
 # Unregister-SPMTMigration
 
 ## SYNOPSIS
-Remove the SPMT migration session created. 
+Remove the SPMT migration session created.
 
 ## SYNTAX
 
-```
-Unregister-SPMTMigration
+```powershell
+Unregister-SPMTMigration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,8 +26,8 @@ Remove the SPMT migration session created.
 
 ## EXAMPLES
 
-### Example 1
-```
+### EXAMPLE 1
+```powershell
 #Define SharePoint 2013 data source#
 
 $Global:SourceSiteUrl = "https://YourOnPremSite/"
@@ -35,7 +35,6 @@ $Global:OnPremUserName = "Yourcomputer\administrator"
 $Global:OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force
 $Global:SPCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:OnPremUserName, $Global:OnPremPassword
 $Global:SourceListName = "SourceListName"
-
 
 #Define SPO target#
 $Global:SPOUrl = "https://contoso.sharepoint.com"
@@ -64,20 +63,18 @@ Start-SPMTMigration -NoShow
 Stop-SPMTMigration
 Unregister-SPMTMigration
 ```
-Cancel the started migration and unregister the migration session.
+
+This example cancels the started migration and unregister the migration session.
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### None
-
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
-

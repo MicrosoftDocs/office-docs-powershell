@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpprovisioningtemplate
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPProvisioningTemplate
 
 ## SYNOPSIS
@@ -32,7 +34,6 @@ The template to add to the tenant template
 ```yaml
 Type: ProvisioningTemplate
 Parameter Sets: (All)
-Aliases: Template
 
 Required: True
 Position: Named
@@ -45,7 +46,6 @@ The tenant template to add the template to
 ```yaml
 Type: ProvisioningHierarchy
 Parameter Sets: (All)
-Aliases: Hierarchy
 
 Required: True
 Position: Named

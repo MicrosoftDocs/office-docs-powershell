@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-messagetrace
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MessageTrace
 schema: 2.0.0
@@ -30,7 +31,7 @@ Get-MessageTrace [-EndDate <DateTime>] [-Expression <Expression>] [-FromIP <Stri
 ## DESCRIPTION
 You can use this cmdlet to search message data for the last 10 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
 
- If you enter a time period that's older than 10 days, you won't receive an error, but the command will return no results. To search for message data that's between 10 and 90 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
+If you enter a time period that's older than 10 days, you won't receive an error, but the command will return no results. To search for message data that's between 10 and 90 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
 
 This cmdlet returns a maximum of 1000000 results, and will timeout on very large queries. If your query returns too many results, consider splitting it up using smaller StartDate and EndDate intervals.
 
@@ -285,5 +286,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-messagetrace)

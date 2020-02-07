@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsemergencynumber
 applicable: Skype for Business Online
 title: New-CsTeamsEmergencyNumber
 author: danny-levin
@@ -50,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyDialMask
- Specific the emergency phone number
+ For each Teams emergency number, you can specify zero or more emergency dial masks. A dial mask is a number that you want to translate into the value of the emergency dial number value when it is dialed.
 
 ```yaml
 Type: String
@@ -65,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyDialString
- For each Teams emergency number, you can specify zero or more emergency dial masks. A dial mask is a number that you want to translate into the value of the emergency dial number value when it is dialed.
+ Specifies the emergency phone number
 
 ```yaml
 Type: String

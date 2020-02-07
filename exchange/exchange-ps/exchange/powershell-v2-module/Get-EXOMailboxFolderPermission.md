@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
+online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderpermission
 applicable: Exchange Online
 title: Get-EXOMailboxFolderPermission
 schema: 2.0.0
@@ -32,7 +33,7 @@ Get-EXOMailboxFolderPermission
 ```
 
 ## DESCRIPTION
-Use this cmdlet to retreive folder level permission in the mailbox. 
+Use this cmdlet to retrieve folder level permission in the mailbox. 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you.
 
 ## EXAMPLES
@@ -164,5 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderpermission)

@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/revoke-spositedesignrights
 applicable: SharePoint Online
 title: Revoke-SPOSiteDesignRights
 schema: 2.0.0
@@ -17,10 +19,7 @@ Revokes rights for specified principals from a site design.
 ## SYNTAX
 
 ```powershell
-Revoke-SPOSiteDesignRights
-  [-Identity] <SPOSiteDesignPipeBind>
-  -Principals <string[]>
-  [<CommonParameters>]
+Revoke-SPOSiteDesignRights  [-Identity] <SPOSiteDesignPipeBind>  -Principals <string[]>  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +28,7 @@ Revokes rights for specified principals from a site design.
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 
 This example shows how to revoke rights to a site design for Nestor.
 
@@ -38,37 +37,38 @@ Revoke-SPOSiteDesignRights 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
    -Principals "nestorw@contoso.onmicrosoft.com"
 ```
 
-
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design from which to revoke rights.
 
 ```yaml
 Type: SPOSiteDesignPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
 ### -Principals
+
 One or more principals to revoke rights on the specified site design.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
 ## INPUTS

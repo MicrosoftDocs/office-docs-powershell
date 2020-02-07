@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spinsightsconfig
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPInsightsConfig
 schema: 2.0.0

@@ -1,5 +1,7 @@
 ---
 external help file:
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/approve-spotenantserviceprincipalpermissiongrant
 applicable: SharePoint Online
 schema: 2.0.0
 author: trent-green
@@ -12,7 +14,6 @@ ms.reviewer:
 ## SYNOPSIS
 
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal.
-
 
 ## SYNTAX
 
@@ -34,7 +35,7 @@ Adds a permission for the current tenant's "SharePoint Online Client" service pr
     Approve-SPOTenantServicePrincipalPermissionGrant -Resource "Microsoft Graph" -Scope "Mail.Read"
 ```
 
-Adds a permission scope for the 'Microsoft Graph' resource with scope claim 'Mail.Read'.  
+Adds a permission scope for the 'Microsoft Graph' resource with scope claim 'Mail.Read'.
 
 ## PARAMETERS
 
@@ -45,7 +46,7 @@ Resource of the permission request to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -62,7 +63,7 @@ Scope of the permission request to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True

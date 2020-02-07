@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-messageclassification
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MessageClassification
 schema: 2.0.0
@@ -117,8 +118,6 @@ Accept wildcard characters: False
 The DisplayName parameter specifies the title of the message classification that's displayed in Outlook and selected by users. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 The message classification XML file must be present on the sender's computer for the display name to be displayed.
-
-If the UserDisplayEnabled parameter is set to $true, the value of this parameter is displayed for the recipient, even if no message classification XML file is installed.
 
 ```yaml
 Type: String
@@ -307,5 +306,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-messageclassification)
