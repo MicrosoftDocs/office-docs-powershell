@@ -15,7 +15,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Set-UnifiedAuditLogRetentionPolicy cmdlet to 
+Use the Remove-UnifiedAuditLogRetentionPolicy cmdlet to delete audit log retention policies. It might take up to 30 minutes for the policy to be completely removed. For more information, see [Manage audit log retention policies](https://docs.microsoft.com/microsoft-365/compliance/audit-log-retention-policies).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -36,15 +36,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-UnifiedAuditLogRetentionPolicy -Identity "SearchQueryPerformed by app@sharepoint" 
 ```
 
-{{ Add example description here }}
+This example deletes the audit log retention policy named "SearchQueryPerformed by app@sharepoint".
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the unified audit log retention policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the audit log retention policy that you want to delete. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
