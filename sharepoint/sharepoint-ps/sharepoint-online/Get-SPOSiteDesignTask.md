@@ -33,7 +33,7 @@ Used to retrieve a scheduled site design script. It takes the ID of the schedule
 
 ### Example 1
 
-This example applies a site design that includes two site scripts - totaling over 30 site script actions. Executing the commands will schedule the site design to be queued and run against the designated site collection.
+This example returns a scheduled site design whose ID is 501z8c32-4147-44d4-8607-26c2f67cae82 and which was applied on the site "https://contoso.sharepoint.com/sites/projectawesome".  
 
 ```powershell
 Get-SPOSiteDesignTask -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectawesome"
