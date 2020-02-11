@@ -113,11 +113,11 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
    Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
    ```
 
-   This example connects to Exchange Online to manage another tenant
+   This example connects to Exchange Online to manage another tenant.
 
-     ```PowerShell
-     Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
-     ```
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName chris@contoso.com -DelegatedOrganization fabrikam.onmicrosoft.com
+   ```
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
 
