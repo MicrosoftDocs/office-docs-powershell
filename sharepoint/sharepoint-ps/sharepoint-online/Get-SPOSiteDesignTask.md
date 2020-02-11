@@ -3,7 +3,7 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositedesigntask
 applicable: SharePoint Online
-title: Add-SPOSiteDesignTask
+title: Get-SPOSiteDesignTask
 schema: 2.0.0
 author: trent-green
 ms.author: trgreen
@@ -31,14 +31,13 @@ Used to retrieve a scheduled site design script. It takes the ID of the schedule
 
 ## EXAMPLES
 
-### Example 1
-
-This example returns a scheduled site design whose ID is 501z8c32-4147-44d4-8607-26c2f67cae82 and which was applied on the site <https://contoso.sharepoint.com/sites/projectawesome>.  
+### -----------------------EXAMPLE 1-----------------------------
 
 ```powershell
 Get-SPOSiteDesignTask -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectawesome"
-
 ```
+
+This example returns a scheduled site design whose ID is 501z8c32-4147-44d4-8607-26c2f67cae82 and which was applied on the site <https://contoso.sharepoint.com/sites/projectawesome>.  
 
 ## PARAMETERS
 
