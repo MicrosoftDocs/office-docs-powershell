@@ -85,8 +85,6 @@ The Name parameter specifies the unique name of the group. The maximum length is
 
 This value is also used for the DisplayName property if you don't use the DisplayName parameter.
 
-If a group naming policy is enforced, you need to follow the naming constraints specified in the DistributionGroupNameBlockedWordList and the DistributionGroupNamingPolicy parameters on the Set-OrganizationConfig cmdlet.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
