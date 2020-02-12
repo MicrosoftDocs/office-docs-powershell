@@ -81,7 +81,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
  [-SetHeader <PswsHashtable>]
- [-StopPolicyProcessing Boolean]
+ [-StopPolicyProcessing <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
