@@ -1146,7 +1146,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionGroupNameBlockedWordsList
-The DistributionGroupNameBlockedWordsList parameter specifies words that can't be included in the names of distribution groups. Separate multiple values with commas.
+The DistributionGroupNameBlockedWordsList parameter specifies words that can't be included in the Display Name values of distribution groups that are created by users. Separate multiple values with commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1162,37 +1162,33 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionGroupNamingPolicy
-The DistributionGroupNamingPolicy parameter specifies the template applied to the name of distribution groups that are created in the organization. You can enforce that a prefix or suffix be applied to all distribution groups. Prefixes and suffixes can be either a string or an attribute, and you can combine strings and attributes. When creating a naming policy, use the following syntax:
+The DistributionGroupNamingPolicy parameter specifies the additional text that's applied to the Display Name value of distribution groups created by users. You can require a prefix, a suffix, or both. The prefix and suffix can be text strings, user attribute values from the person who created the group, or a combination of text strings and attributes.
 
-"prefix\<GroupName\>suffix"
+The basic syntax for this parameter is `"prefix<GroupName>suffix"`. The value `<GroupName>` is a literal value that you must always include.
 
-Don't set the \<GroupName\>. Users create the name when they create the distribution group. You can have multiple prefixes and suffixes.
+You can use the following user attributes. The actual values are determined by the user who creates the group:
 
-You can use the following attributes that will be gathered from the user who's creating the distribution group mailbox settings:
+- `<City>`
 
-- Department
+- `<Company>`
 
-- Company
+- `<CountryCode>`
 
-- Office
+- `<CountryOrRegion>
 
-- StateOrProvince
+- `<CustomAttribute1>` to `<CustomAttribute15>`
 
-- CountryOrRegion
+- `<Department>`
 
-- CountryCode
+- `<ExtensionCustomAttribute1>` to `<ExtensionCustomAttribute5>`
 
-- Title
+- `<Office>`
 
-- CustomAttribute1 to CustomAttribute15
+- `<StateOrProvince>`
 
-To create a naming policy using an attribute, use the following syntax: "\<PrefixAttribute\>\<GroupName\>\<SuffixAttribute\>".
+- `<Title>`
 
-For example, to create a naming policy using the Department as a prefix and CustomAttribute1 as the suffix:
-
-"\<Department\>\<GroupName\>\<CustomAttribute1\>".
-
-To create a naming policy using strings, use the following syntax "string\<GroupName\>string". For example to create a naming policy using the string "DL\_" as the prefix use the following syntax: "DL\_\<GroupName\>".
+For example: `"DL_<StateOrProvince>_<GroupName>"`, `"<StateOrProvince>-<City>-<Office>-<GroupName>"` or `"<GroupName> <CustomAttribute1>"`.
 
 ```yaml
 Type: DistributionGroupNamingPolicy

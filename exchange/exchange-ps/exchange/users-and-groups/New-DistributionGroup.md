@@ -231,6 +231,8 @@ The DisplayName parameter specifies the display name of the group. The display n
 
 If you don't use the DisplayName parameter, the value of the Name parameter is used for the display name.
 
+If a group naming policy is enforced in your organization, users need to follow the naming constraints as specified by the DistributionGroupNameBlockedWordList parameter on the Set-OrganizationConfig cmdlet. To bypass this requirement, use the IgnoreNamingPolicy switch.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -263,7 +265,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreNamingPolicy
-The IgnoreNamingPolicy switch specifies whether to prevent this group from being affected by your organization's distribution group naming policy. The policy is defined by the DistributionGroupNamingPolicy parameter on the Set-OrganizationConfig cmdlet. You don't need to specify a value with this switch.
+The IgnoreNamingPolicy switch specifies whether to prevent this group from being affected by your organization's group naming policy. You don't need to specify a value with this switch.
+
+The group naming policy is defined by the DistributionGroupNamingPolicy and DistributionGroupNameBlockedWordList parameters on the Set-OrganizationConfig cmdlet.
 
 ```yaml
 Type: SwitchParameter
