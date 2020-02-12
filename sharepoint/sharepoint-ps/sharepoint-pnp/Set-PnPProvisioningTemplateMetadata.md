@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets metadata of a provisioning template
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPProvisioningTemplateMetadata -Path <String>

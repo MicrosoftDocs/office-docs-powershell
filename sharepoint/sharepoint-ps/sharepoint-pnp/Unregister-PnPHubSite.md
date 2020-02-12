@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Unregisters a site as a hubsite
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Unregister-PnPHubSite -Site <SitePipeBind>

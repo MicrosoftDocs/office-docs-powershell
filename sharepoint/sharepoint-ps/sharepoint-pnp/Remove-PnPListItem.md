@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes an item from a list
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPListItem -List <ListPipeBind>

@@ -18,7 +18,7 @@ Certificate contains the PEM encoded certificate.
 
 PrivateKey contains the PEM encoded private key of the certificate.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPAzureCertificate [-CommonName <String>]
@@ -44,7 +44,7 @@ This will generate a default self-signed certificate named "pnp.contoso.com" val
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-New-PnPAzureCertificate -CommonName "My Certificate" -ValidYears 30
+New-PnPAzureCertificate -CommonName "My Certificate" -ValidYears 30 
 ```
 
 This will output a certificate named "My Certificate" which expires in 30 years from now.

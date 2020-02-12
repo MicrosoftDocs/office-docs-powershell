@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves a document set template
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPDocumentSetTemplate -Identity <DocumentSetPipeBind>
                            [-Includes <String[]>]

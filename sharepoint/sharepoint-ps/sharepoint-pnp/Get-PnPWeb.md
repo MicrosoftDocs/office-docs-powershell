@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the current web object
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPWeb [-Includes <String[]>]
            [-Identity <WebPipeBind>]

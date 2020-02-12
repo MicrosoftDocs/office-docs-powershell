@@ -10,17 +10,31 @@ schema: 2.0.0
 ## SYNOPSIS
 Return a folder object
 
-## SYNTAX
+## SYNTAX 
 
+### 
+```powershell
+Get-PnPFolder [-Includes <String[]>]
+              [-Web <WebPipeBind>]
+              [-Connection <SPOnlineConnection>]
+```
+
+### Folder By Url
 ```powershell
 Get-PnPFolder -Url <String>
-              [-Includes <String[]>]
+              [-Web <WebPipeBind>]
+              [-Connection <SPOnlineConnection>]
+```
+
+### Folders In List
+```powershell
+Get-PnPFolder -List <ListPipeBind>
               [-Web <WebPipeBind>]
               [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
-Retrieves a folder if it exists. Use Ensure-PnPFolder to create the folder if it does not exist.
+Retrieves a folder if it exists or all folders inside a provided list or library. Use Ensure-PnPFolder to create the folder if it does not exist.
 
 ## EXAMPLES
 
@@ -38,6 +52,13 @@ Get-PnPFolder -Url "/sites/demo/Shared Documents"
 
 Returns the folder called 'Shared Documents' which is located in the root of the current web
 
+### ------------------EXAMPLE 3------------------
+```powershell
+Get-PnPFolder -List "Shared Documents"
+```
+
+Returns the folder(s) residing inside a folder called 'Shared Documents'
+
 ## PARAMETERS
 
 ### -Includes
@@ -52,12 +73,24 @@ Position: 0
 Accept pipeline input: False
 ```
 
+### -List
+Name, ID or instance of a list or document library to retrieve the folders residing in it for.
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: Folders In List
+
+Required: True
+Position: 1
+Accept pipeline input: False
+```
+
 ### -Url
 Site or server relative URL of the folder to retrieve. In the case of a server relative url, make sure that the url starts with the managed path as the current web.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Folder By Url
 Aliases: RelativeUrl
 
 Required: True

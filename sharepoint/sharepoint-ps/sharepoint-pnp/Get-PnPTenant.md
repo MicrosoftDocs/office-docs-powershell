@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns organization-level site collection properties
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTenant [-Connection <SPOnlineConnection>]

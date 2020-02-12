@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns all image renditions or if Identity is specified a specific one
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPPublishingImageRendition [-Identity <ImageRenditionPipeBind>]

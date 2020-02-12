@@ -30,6 +30,7 @@ Set-OrganizationConfig
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
  [-AuditDisabled <Boolean>]
+ [-AutodiscoverPartialDirSync <Boolean>]
  [-AutoEnableArchiveMailbox <Boolean>]
  [-AutoExpandingArchive]
  [-BookingsEnabled <Boolean>]
@@ -528,6 +529,26 @@ The AuditDisabled parameter specifies whether to disable or enable mailbox audit
 - $true: Mailbox auditing is disabled for the organization.
 
 - $false: Allow mailbox auditing in the organization. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutodiscoverPartialDirSync
+This parameter is available only in the cloud-based service.
+
+The AutodiscoverPartialDirSync parameter is for scenarios where tenants have Directory Synced some of their Active Directory users into the cloud, but still have on-premises Exchange users that are not Directory Synced. Setting this parameter to $true will cause unknown users to be redirected to the on-premises endpoint and will allow on-premises users to discover their mailbox automatically. Online email addresses will be susceptible to enumeration. We recommend full Directory Sync for all Active Directory users and leaving this parameter with the default $false.
+
+After you enable AutodiscoverPartialDirSync, it will take approximately 3 hours to fully saturate across the cloud.
 
 ```yaml
 Type: Boolean

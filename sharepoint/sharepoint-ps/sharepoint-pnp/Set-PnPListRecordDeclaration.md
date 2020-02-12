@@ -15,7 +15,7 @@ NeverAllowManualDeclaration
 UseSiteCollectionDefaults
 
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPListRecordDeclaration -List <ListPipeBind>

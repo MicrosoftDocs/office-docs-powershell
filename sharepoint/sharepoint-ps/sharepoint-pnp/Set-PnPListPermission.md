@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets list permissions
 
-## SYNTAX
+## SYNTAX 
 
 ### Group
 ```powershell

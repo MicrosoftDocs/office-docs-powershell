@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the available client side components on a particular page
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPAvailableClientSideComponents -Page <ClientSidePagePipeBind>

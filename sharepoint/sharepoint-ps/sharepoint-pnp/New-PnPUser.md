@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a user to the built-in Site User Info List and returns a user object
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPUser -LoginName <String>

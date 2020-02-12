@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Set the ClientContext
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPContext -Context <ClientContext>

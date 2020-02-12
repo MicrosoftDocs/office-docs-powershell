@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a field from a list or a site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPField -Identity <FieldPipeBind>

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new remote event receiver
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPEventReceiver -Name <String>

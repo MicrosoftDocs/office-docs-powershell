@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the current site collection from the context.
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPSite [-Includes <String[]>]
             [-Connection <SPOnlineConnection>]

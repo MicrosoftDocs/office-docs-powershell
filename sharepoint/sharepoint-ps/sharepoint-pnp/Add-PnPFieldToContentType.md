@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds an existing site column to a content type
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPFieldToContentType -Field <FieldPipeBind>

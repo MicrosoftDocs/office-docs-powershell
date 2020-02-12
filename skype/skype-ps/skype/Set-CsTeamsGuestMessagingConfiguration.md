@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -GiphyRatingType
-Determines Giphy content restrictions. Default value is "Moderate", other option is "Strict"
+Determines Giphy content restrictions. Default value is "Moderate", other options are "NoRestriction" and "Strict"
 
 ```yaml
 Type: String

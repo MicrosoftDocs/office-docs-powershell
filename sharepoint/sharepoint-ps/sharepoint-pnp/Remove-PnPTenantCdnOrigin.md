@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an origin from the Public or Private content delivery network (CDN).
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPTenantCdnOrigin -OriginUrl <String>
@@ -27,7 +27,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Remove-PnPTenantCdnOrigin -Url /sites/site/subfolder -CdnType Public
+Remove-PnPTenantCdnOrigin -OriginUrl /sites/site/subfolder -CdnType Public
 ```
 
 This example removes the specified origin from the public CDN

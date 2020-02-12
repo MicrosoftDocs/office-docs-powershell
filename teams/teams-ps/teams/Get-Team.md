@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet supports retrieving teams with particular properties/information, inclding all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
+This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
 
 ## SYNTAX
 

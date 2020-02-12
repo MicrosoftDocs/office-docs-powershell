@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns one ore more provisioning sequence object(s) from a tenant template
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTenantSequence -Template <ProvisioningHierarchy>
@@ -21,14 +21,14 @@ Get-PnPTenantSequence -Template <ProvisioningHierarchy>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPTenantSequence -Template $myhierarchy
+Get-PnPTenantSequence -Template $myTemplateObject
 ```
 
 Returns all sequences from the specified tenant template
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPTenantSequence -Template $myhierarchy -Identity "mysequence"
+Get-PnPTenantSequence -Template $myTemplateObject -Identity "mysequence"
 ```
 
 Returns the specified sequence from the specified tenant template
@@ -50,7 +50,7 @@ Accept pipeline input: True
 ```
 
 ### -Template
-The hierarchy to retrieve the sequence from
+The template to retrieve the sequence from
 
 Only applicable to: SharePoint Online
 

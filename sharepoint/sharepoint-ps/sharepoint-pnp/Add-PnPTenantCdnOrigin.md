@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new origin to the public or private content delivery network (CDN).
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPTenantCdnOrigin -OriginUrl <String>

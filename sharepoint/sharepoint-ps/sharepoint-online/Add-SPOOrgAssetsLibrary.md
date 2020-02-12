@@ -77,14 +77,14 @@ Accept wildcard characters: False
 
 ### -OrgAssetType
 
-Indicates the type of content in this library. Currently supported value is ImageDocumentLibrary, which is set by default.
+Indicates the type of content in this library. Currently supported values are ImageDocumentLibrary, which is set by default, and OfficeTemplateLibrary.
 
 ```yaml
 Type: OrgAssetType
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
-Accepted values: ImageDocumentLibrary
+Accepted values: ImageDocumentLibrary, OfficeTemplateLibrary
 
 Required: False
 Position: Named

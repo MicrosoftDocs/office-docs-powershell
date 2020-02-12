@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Move a folder to another location in the current web
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Move-PnPFolder -Folder <String>

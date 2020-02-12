@@ -22,6 +22,19 @@ $ctx = Get-PnPContext
 
 This will put the current context in the $ctx variable.
 
+### ------------------EXAMPLE 2------------------
+```powershell
+Connect-PnPOnline -Url $siteAurl -Credentials $credentials
+$ctx = Get-PnPContext
+Get-PnPList # returns the lists from site specified with $siteAurl
+Connect-PnPOnline -Url $siteBurl -Credentials $credentials
+Get-PnPList # returns the lists from the site specified with $siteBurl
+Set-PnPContext -Context $ctx # switch back to site A
+Get-PnPList # returns the lists from site A
+```
+
+
+
 ## OUTPUTS
 
 ### Microsoft.SharePoint.Client.ClientContext

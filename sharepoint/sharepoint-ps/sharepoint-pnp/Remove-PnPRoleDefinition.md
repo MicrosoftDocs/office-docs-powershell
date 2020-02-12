@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Remove a Role Definition from a site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPRoleDefinition -Identity <RoleDefinitionPipeBind>

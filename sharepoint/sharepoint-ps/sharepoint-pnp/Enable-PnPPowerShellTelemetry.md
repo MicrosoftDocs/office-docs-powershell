@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables PnP PowerShell telemetry tracking.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Enable-PnPPowerShellTelemetry [-Force [<SwitchParameter>]]

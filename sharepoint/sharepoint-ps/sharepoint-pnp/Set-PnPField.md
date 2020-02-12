@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Changes one or more properties of a field in a specific list or for the whole web
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPField -Identity <FieldPipeBind>

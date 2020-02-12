@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Add a field
 
-## SYNTAX
+## SYNTAX 
 
 ### Add field by XML to list
 ```powershell

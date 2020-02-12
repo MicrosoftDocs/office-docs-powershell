@@ -8,9 +8,9 @@ schema: 2.0.0
 # Remove-PnPUnifiedGroup
 
 ## SYNOPSIS
-Removes one Office 365 Group (aka Unified Group)
+Removes one Office 365 Group (aka Unified Group). Requires the Azure Active Directory application permission 'Group.ReadWrite.All'.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPUnifiedGroup -Identity <UnifiedGroupPipeBind>

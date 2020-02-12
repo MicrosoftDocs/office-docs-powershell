@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an app from a site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Uninstall-PnPAppInstance -Identity <AppPipeBind>

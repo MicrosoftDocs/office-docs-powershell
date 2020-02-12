@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a workflow definition
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPWorkflowDefinition -Identity <WorkflowDefinitionPipeBind>

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a team site object
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPTenantSequenceTeamSite -Alias <String>

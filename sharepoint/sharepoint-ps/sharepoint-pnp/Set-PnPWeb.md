@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties on a web
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPWeb [-SiteLogoUrl <String>]
@@ -107,7 +107,7 @@ Accept pipeline input: False
 ```
 
 ### -SiteLogoUrl
-Sets the logo of the web to the current url. If you want to set the logo to a modern team site, use Set-PnPSite -SiteLogoPath
+Sets the logo of the web to the current url. If you want to set the logo to a modern team site, use Set-PnPSite -LogoFilePath.
 
 ```yaml
 Type: String

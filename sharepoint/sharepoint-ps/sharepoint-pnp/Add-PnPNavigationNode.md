@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds an item to a navigation element
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPNavigationNode -Location <NavigationType>

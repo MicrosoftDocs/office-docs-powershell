@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a tenant sequence object to a tenant template
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPTenantSequence -Template <ProvisioningHierarchy>
@@ -24,14 +24,14 @@ Add-PnPTenantSequence -Template <ProvisioningHierarchy>
 Add-PnPTenantSequence -Template $mytemplate -Sequence $mysequence
 ```
 
-Adds an existing sequence object to an existing hierarchy object
+Adds an existing sequence object to an existing template object
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 New-PnPTenantSequence -Id "MySequence" | Add-PnPTenantSequence -Template $template
 ```
 
-Creates a new instance of a provisioning sequence object and sets the Id to the value specified, then the sequence is added to an existing hierarchy object
+Creates a new instance of a provisioning sequence object and sets the Id to the value specified, then the sequence is added to an existing template object
 
 ## PARAMETERS
 
@@ -53,7 +53,6 @@ The template to add the sequence to
 ```yaml
 Type: ProvisioningHierarchy
 Parameter Sets: __AllParameterSets
-Aliases: Hierarchy
 
 Required: True
 Position: Named

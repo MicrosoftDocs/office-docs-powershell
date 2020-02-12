@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a folder from a given site relative path, and will create it if it does not exist.
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Resolve-PnPFolder -SiteRelativePath <String>
                   [-Includes <String[]>]

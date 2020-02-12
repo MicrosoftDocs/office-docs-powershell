@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets a site column from the available content types to a document set
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPDocumentSetField -DocumentSet <DocumentSetPipeBind>

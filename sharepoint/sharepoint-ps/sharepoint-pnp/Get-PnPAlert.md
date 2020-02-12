@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns registered alerts for a user.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPAlert [-List <ListPipeBind>]
