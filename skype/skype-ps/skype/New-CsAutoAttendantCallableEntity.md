@@ -66,7 +66,7 @@ This example gets an application instance by name using Find-CsOnlineApplication
  $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type SharedVoicemail -EnableTranscription
 ```
 
-This example gets an mail-enabled group by name using Find-CsGroup cmdlet. We then use the ObjectId of that group to create a shared voicemail callable entity that supports transcription.
+This example gets an O365 mail-enabled group by name using Find-CsGroup cmdlet. We then use the ObjectId of that group to create a shared voicemail callable entity that supports transcription.
 
 ## PARAMETERS
 
