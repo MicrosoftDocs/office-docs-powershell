@@ -129,7 +129,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingCapabil
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingDomainRestrictionMode AllowList -SharingAllowedDomainList "contoso.com"
 ```
 
-Example 6 sets the Sharing Capability to allow external users who accept sharing invitations and sign in as authenticated users and then specifies an email domain that is allowed for sharing with the external collaborators.
+Example 7 sets the Sharing Capability to allow external users who accept sharing invitations and sign in as authenticated users, and then specifies an email domain that is allowed for sharing with the external collaborators.
 
 
 ## PARAMETERS
