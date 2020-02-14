@@ -52,7 +52,7 @@ Example 2 returns two external users from the third page of the collection.
 Get-SPOExternalUser -Position 0 -PageSize 30 -SiteUrl https://contoso.sharepoint.com
 ```
 
-Example 3 returns the first 30 users that match the SiteUrl <https://contoso.sharepoint.com.>
+Example 3 returns the first 30 users that match the SiteUrl <https://contoso.sharepoint.com>.
 
 ## PARAMETERS
 
