@@ -1992,7 +1992,7 @@ Accept wildcard characters: False
 ### -OutlookPayEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization. Valid values are:
+The OutlookPayEnabled parameter enables or disables [Payments in Outlook](https://support.office.com/en-us/article/pay-bills-and-invoices-in-outlook-using-microsoft-pay-1196e7e6-c096-44f1-a18a-9df3af832a48) in the Office 365 organization. Valid values are:
 
 - $true: Payments in Outlook are enabled.
 
