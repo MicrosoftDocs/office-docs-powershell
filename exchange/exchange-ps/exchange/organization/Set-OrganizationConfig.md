@@ -1992,6 +1992,8 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookMobileHelpShiftEnabled
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -2008,6 +2010,8 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookMobileSingleAccountEnabled
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
