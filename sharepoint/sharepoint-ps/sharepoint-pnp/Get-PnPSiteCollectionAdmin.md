@@ -54,6 +54,8 @@ Required: False
 Position: Named
 Accept pipeline input: False
 ```
+## Outputs
+**Microsoft.SharePoint.Client.User**
 
 ## RELATED LINKS
 
