@@ -70,7 +70,7 @@ $callableEntityGroup=Find-CsGroup -SearchQuery "Main Auto Attendant" -ExactMatch
  $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type SharedVoicemail -EnableTranscription
 ```
 
-This example gets an Office 365 group by name using Find-CsGroup cmdlet. We then use the ObjectId of that group to create a shared voicemail callable entity that supports transcription.
+This example gets an Office 365 group by name using Find-CsGroup cmdlet. Then the Guid of that group is used to create a shared voicemail callable entity that supports transcription.
 
 ## PARAMETERS
 
