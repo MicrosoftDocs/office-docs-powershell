@@ -1409,7 +1409,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToFolder
-The MoveToFolder parameter specifies an action for the Inbox rule that moves messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \\Inbox\\Personal).
+The MoveToFolder parameter specifies an action for the Inbox rule that moves messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, fd087361-7537-49d0-b44c-0fe598d40188:\\Inbox\\Personal).
 
 ```yaml
 Type: MailboxFolderIdParameter
