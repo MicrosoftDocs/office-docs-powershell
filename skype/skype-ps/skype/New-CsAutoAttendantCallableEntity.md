@@ -66,7 +66,7 @@ This example gets an application instance by name using Find-CsOnlineApplication
 
 ### -------------------------- Example 5 --------------------------
 ```powershell
- $callableEntityId = (Find-CsGroup -SearchQuery "Main Auto Attendant") -MaxResults 1 -MailEnabledOnly $true | Select-Object -Property Id
+$callableEntityGroup=Find-CsGroup -SearchQuery "Main Auto Attendant" -ExactMatchOnly $true -MailEnabledOnly $true
  $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type SharedVoicemail -EnableTranscription
 ```
 
