@@ -30,7 +30,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity f
 
 ### NOTE
 
-In order to setup shared voicemail, only Office 365 Groups can be used.
+In order to setup a shared voicemail, an Office 365 Group that can receive external emails is required.
 
 ## EXAMPLES
 
