@@ -81,6 +81,8 @@ Set-OrganizationConfig
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
+ [-OutlookMobileHelpShiftEnabled <Boolean>]
+ [-OutlookMobileSingleAccountEnabled <Boolean>]
  [-OutlookPayEnabled <Boolean>]
  [-PerTenantSwitchToESTSEnabled <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -1975,6 +1977,38 @@ The Outlook for iOS and Android feature and services that are not FedRAMP compli
 - Any Microsoft services that are outside the Office 365 US Government Community Cloud (for example, Bing and Cortana).
 
  For a full list of Features and services that are not FedRAMP compliant for GCC customers, see [Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookMobileHelpShiftEnabled
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookMobileSingleAccountEnabled
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
