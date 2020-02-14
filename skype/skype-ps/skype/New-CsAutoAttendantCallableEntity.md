@@ -28,6 +28,10 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity f
 - ApplicationEndpoint
 - SharedVoicemail
 
+### NOTE
+
+In order to setup shared voicemail, only Office 365 Groups can be used.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -66,7 +70,7 @@ This example gets an application instance by name using Find-CsOnlineApplication
  $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type SharedVoicemail -EnableTranscription
 ```
 
-This example gets an O365 mail-enabled group by name using Find-CsGroup cmdlet. We then use the ObjectId of that group to create a shared voicemail callable entity that supports transcription.
+This example gets an Office 365 group by name using Find-CsGroup cmdlet. We then use the ObjectId of that group to create a shared voicemail callable entity that supports transcription.
 
 ## PARAMETERS
 
