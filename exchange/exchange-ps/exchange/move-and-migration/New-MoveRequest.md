@@ -480,6 +480,10 @@ Accept wildcard characters: False
 ### -AcceptLargeDataLoss
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You need to use this switch if you set either the BadItemLimit or LargeItemLimit parameters to a value of 51 or higher. Otherwise, the command will fail.
 
+Note, that in latest versions of Exchange we don't force data loss threshold on Mailbox Seplication Service, thus, this parameter is not required for BadItemLimit anymore.
+
+
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -580,6 +584,8 @@ The BadItemLimit parameter specifies the maximum number of bad items that are al
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+
+Note, that in latest versions of Exchange we don't force data loss threshold on Mailbox Seplication Service, thus, this parameter doesn't require AcceptLargeDataLoss switch anymore.
 
 **Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
 
