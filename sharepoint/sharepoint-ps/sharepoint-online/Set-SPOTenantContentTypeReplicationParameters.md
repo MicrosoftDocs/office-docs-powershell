@@ -51,13 +51,14 @@ Tenant admin can use this cmdlet to select only some content types only for repl
 Set-SPOTenantContentTypeReplicationParameters -ReplicateAllContentTypes
 ```
 
-Tenant admin can  also reset to replicate all the content types.
+Tenant admin can also reset to replicate all the content types.
 
 ## PARAMETERS
 
 ### -ReplicateAllContentTypes
 
-{{Fill ReplicateAllContentTypes Description}}
+The ReplicateAllContentTypes switch specifies whether all content types should be replicated.
+* To allow replication for all content types, use this switch without a value.
 
 ```yaml
 Type: SwitchParameter
