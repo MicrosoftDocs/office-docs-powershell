@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-User's UPN (user principal name - e.g. johndoe@example.com).
+UPN of a user of the organization (user principal name - e.g. johndoe@example.com).
 
 ```yaml
 Type: String
