@@ -57,23 +57,31 @@ This example returns all provided publishing information for the specified calen
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox and folder path or folder name to the calendar folder that has the publishing settings configured. You can use the following values:
+The Identity parameter specifies the calendar folder that you want to view. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
-- GUID
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
-- ADObjectID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
+
+Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Calendar`.
 
 ```yaml
 Type: MailboxFolderIdParameter
