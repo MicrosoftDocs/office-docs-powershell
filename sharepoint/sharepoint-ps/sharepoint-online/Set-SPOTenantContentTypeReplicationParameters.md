@@ -57,7 +57,7 @@ Tenant admin can also reset to replicate all the content types.
 
 ### -ReplicateAllContentTypes
 
-The ReplicateAllContentTypes switch specifies whether all content types should be replicated.
+The ReplicateAllContentTypes parameter specifies whether all content types should be replicated.
 * To allow replication for all content types, use this switch without a value.
 
 ```yaml
