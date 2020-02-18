@@ -48,7 +48,7 @@ This example sets a CDN to a public type with a policy value of valid site class
 
 ### -CdnType
 
-Specifies the CDN type. The valid values are Public or Private.
+The CdnType parameter specifies the CDN type. The valid values are Public or Private.
 
 ```yaml
 Type: SPOTenantCdnType
