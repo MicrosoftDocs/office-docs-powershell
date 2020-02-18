@@ -31,9 +31,9 @@ Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter>
  [-IntroductionText <String>]
  [-OTPEnabled <Boolean>]
  [-PortalText <String>]
+ [-PrivacyStatementUrl <String>]
  [-ReadButtonText <String>]
  [-SocialIdSignIn <Boolean>]
- [-PrivacyStatementUrl <String>]
  [<CommonParameters>]
 ```
 
