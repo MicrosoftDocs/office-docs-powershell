@@ -282,13 +282,29 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ## Release notes
 
-### Current release (version 0.3555.1)
+### Current release ( Version 0.3582.0 )
+- Support for prefix during session creation
+    > You can create only 1 session at a time which can have prefixed cmdlets.
+    > Note that the EXO V2 cmdlets will not be prefixed as they already have a prefix EXO and hence please refrain from using EXO as a prefix during session creation.
+
+- Use EXO V2 cmdlets even if WinRM Basic Auth is disabled on client machine
+    > Please note that Remote PowerShell cmdlets require WinRM Basic Auth to be enabled and they won't be available if it is disabled.
+
+-  Identity parameter for V2 cmdlets now supports name and alias as well
+    > Please note that using alias or name slows down the performance of V2 cmdlets and hence it is not recommended to use this option
+
+- Fixed issue where data-type of attributes returned by V2 cmdlet was different from Remote PowerShell cmdlets. We still have few attributes which have differing data-type and we plan to handle them in coming months.
+
+- Fixed bug - Frequent sessions reconnects issue when Connect-ExchangeOnline was invoked with Credentials or UserPrincipalName
+
+
+### Previous releases
+
+#### Version 0.3555.1
 
 - Fixed a bug where piped cmdlets were failing with the following error due to an authentication issue:
 
   > Cannot invoke the pipeline because the runspace is not in the Opened state. Current state of the runspace is 'Closed'.
-
-### Previous releases
 
 #### Version 0.3527.4
 
