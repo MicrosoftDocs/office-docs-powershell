@@ -122,6 +122,16 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $tru
 
 Example 6 enables the site "site1" to create  Project Web Applications (PWA).
 
+### -----------------------EXAMPLE 7-----------------------------
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingCapability ExternalUserSharingOnly
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingDomainRestrictionMode AllowList -SharingAllowedDomainList "contoso.com"
+```
+
+Example 7 sets the Sharing Capability to allow external users who accept sharing invitations and sign in as authenticated users, and then specifies an email domain that is allowed for sharing with the external collaborators.
+
+
 ## PARAMETERS
 
 ### -EnablePWA
