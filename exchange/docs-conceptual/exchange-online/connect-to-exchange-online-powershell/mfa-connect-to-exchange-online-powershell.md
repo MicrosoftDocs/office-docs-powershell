@@ -142,7 +142,7 @@ If your organization has single sign-on (SSO) enabled and you are logged on to a
 
 > New-EXOPSSession : User 'loggedonuser@contoso.com' returned by service does not match user 'userprincipalname@contoso.com' in the request.
 
-This error occurs because single sign-on overrides the specified user principal name (UPN). As a work-around, connect from a non-domain-joined computer or log on to the domain-joined computer using a local user account.
+This error occurs because single sign-on overrides the specified user principal name (UPN). As a work-around, use Connect-EXOPSSession without -UserPrincipalName parameter or use -Credential parameter instead.
 
 ## How do you know this worked?
 
