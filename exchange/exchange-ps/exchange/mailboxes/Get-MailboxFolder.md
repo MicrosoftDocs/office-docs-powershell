@@ -136,9 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox and the folder that you want to view. If you don't specify the folder, the command returns information about folders in the root hierarchy of the specified mailbox. You specify values for this parameter by using the syntax: \<Mailbox Identity\>:\<Parent\>.
+The Identity parameter specifies the mailbox folder that you want to view. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
-Valid values for \<Mailbox Identity\> are unique identifiers for the mailbox. For example:
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -160,7 +160,9 @@ Valid values for \<Mailbox Identity\> are unique identifiers for the mailbox. Fo
 
 - User ID or user principal name (UPN)
 
-Values for \<Parent\> can be both the store object ID and a path string such as \\Inbox\\Personal.
+If you don't specify the folder, the command returns information about folders in the root hierarchy of the specified mailbox.
+
+Example values for this parameter are `john@contoso.com:`, `John:\Inbox`.
 
 ```yaml
 Type: MailboxFolderIdParameter
