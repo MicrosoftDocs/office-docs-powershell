@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpwebhooksubscription
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPWebhookSubscription
 
 ## SYNOPSIS

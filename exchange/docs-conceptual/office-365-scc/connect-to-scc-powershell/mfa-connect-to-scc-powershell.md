@@ -44,9 +44,9 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
 - The Exchange Online Remote PowerShell Module needs to be installed on your computer. If your installed version of the Exchange Online Remote PowerShell Module doesn't have the **Connect-IPPSSession** cmdlet, you need to install the latest version of the module:
 
-  1. In Internet Explorer or Edge, open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
+  1. In a browser that supports ClickOnce (for example, Internet Explorer or Edge), open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 
-     **Note**: Internet Explorer or Edge is required because the download in the next step uses ClickOnce, so Google Chrome or Mozilla Firefox won't work.
+     **Note**: ClickOnce support is available in the Chromium-based version of Edge at <edge://flags/#edge-click-once>.
 
   2. In the EAC, go to **Hybrid** > **Setup** and click the appropriate **Configure** button to download the Exchange Online Remote PowerShell Module for multi-factor authentication.
 
@@ -56,19 +56,22 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
      ![Click Install in the Exchange Online PowerShell Module window](../../media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
 
-- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command **in a Command Prompt**:
+- Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
 
   ```
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command from an elevated Command Prompt (a Command Prompt window you open by selecting **Run as administrator**) to enable basic authentication for WinRM:
+  > [!NOTE]
+  > The Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+
+  If you don't see the value `Basic = true`, you need to run this command from an elevated Command Prompt (a Command Prompt window you open by selecting **Run as administrator**) to enable Basic authentication for WinRM:
 
   ```
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
 
-  If basic authentication is disabled, you'll get this error when you try to connect:
+  If Basic authentication is disabled, you'll get this error when you try to connect:
 
   `The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
 

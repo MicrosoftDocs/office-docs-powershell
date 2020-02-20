@@ -3267,3 +3267,26 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Get-CsTeamsUpgradeStatus](Get-CsTeamsUpgradeStatus.md)
 {{Manually Enter Get-CsTeamsUpgradeStatus Description Here}}
+
+### [New-CsTeamsTranslationRule](New-CsTeamsTranslationRuley.md)
+
+### [Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRuley.md)
+
+### [Get-CsTeamsTranslationRule](Get-CsTeamsTranslationRuley.md)
+
+### [Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRuley.md)
+
+### [Get-CsInboundBlockedNumberPattern](Get-CsInboundBlockedNumberPattern.md)
+
+### [New-CsInboundBlockedNumberPattern](New-CsInboundBlockedNumberPattern.md)
+
+### [Remove-CsInboundBlockedNumberPattern](Remove-CsInboundBlockedNumberPattern.md)
+
+### [Set-CsInboundBlockedNumberPattern](Set-CsInboundBlockedNumberPattern.md)
+
+### [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
+
+### [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
+
+### [Set-CsTenantBlockedCallingNumbers](Set-CsTenantBlockedCallingNumbers)
+

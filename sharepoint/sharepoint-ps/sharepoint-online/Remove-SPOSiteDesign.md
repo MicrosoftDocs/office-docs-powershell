@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spositedesign
 applicable: SharePoint Online
 title: Remove-SPOSiteDesign
 schema: 2.0.0
@@ -30,27 +32,26 @@ Removes a site design. It no longer appears in the UI for creating a new site.
 
 ### Example 1
 
-This example shows how to remove a site design. 
+This example shows how to remove a site design.
 
 ```powershell
 Remove-SPOSiteDesign 21209d88-38de-4844-9823-f1f600a1179a
 ```
 
-
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to remove.
 
 ```yaml
 Type: SPOSiteDesignPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
-

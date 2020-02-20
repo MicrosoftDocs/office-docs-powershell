@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csuser
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsUser
 schema: 2.0.0
@@ -12,7 +13,7 @@ ms.reviewer:
 # Get-CsUser
 
 ## SYNOPSIS
-Returns information about all the users in your organization who have been enabled for Skype for Business Server 2015 or a previous version of the software.
+Returns information about all the users in your organization who have been enabled for Skype for Business Server 2019 or a previous version of the software.
 This cmdlet was introduced in Lync Server 2010.
 
 

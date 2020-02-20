@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/new-publicfolderdatabaserepairrequest
 applicable: Exchange Server 2010
 title: New-PublicFolderDatabaseRepairRequest
 schema: 2.0.0
@@ -14,9 +15,7 @@ monikerRange: "exchserver-ps-2010"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-Use the New-PublicFolderDatabaseRepairRequest cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running. However, access isn't available to the public folder currently being repaired.
-
-After you begin the repair request, it can't be stopped unless you dismount the database. For more information, see [Dismount a Database](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123903(v=exchg.141)).
+Use the New-PublicFolderDatabaseRepairRequest cmdlet to detect and fix replication issues in the public folder database.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -29,6 +28,10 @@ New-PublicFolderDatabaseRepairRequest [-Database] <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
+Public folders on the public folder database can still be accessed while the request is running. However, access isn't available to the public folder currently being repaired.
+
+After you begin the repair request, it can't be stopped unless you dismount the database. For more information, see [Dismount a Database](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123903(v=exchg.141)).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -50,9 +53,7 @@ This example only detects and reports on replication issues on public folder dat
 ## PARAMETERS
 
 ### -CorruptionType
-The CorruptionType parameter specifies the type of corruption that you want to detect and repair. You can use the following values:
-
-ReplState
+The CorruptionType parameter specifies the type of corruption that you want to detect and repair. The only available value is ReplState.
 
 ```yaml
 Type: PublicFolderDatabaseCorruptionType[]
@@ -110,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetectOnly
-The DetectOnly parameter specifies that you want this command to report errors, but not fix them. You don't have to specify a value with this parameter.
+The DetectOnly switch specifies that you want this command to report errors, but not fix them. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -173,5 +174,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/new-publicfolderdatabaserepairrequest)

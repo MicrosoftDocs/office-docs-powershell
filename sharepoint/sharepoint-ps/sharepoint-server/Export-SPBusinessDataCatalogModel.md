@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-spbusinessdatacatalogmodel
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPBusinessDataCatalogModel
 schema: 2.0.0
@@ -67,7 +69,7 @@ The type must be a valid path in either of the following forms:
 
 - C:\folder_name \file.bdcm
 - \\\\server_name\folder_name \file.bdcm
-- …\folder_name\file.bdcm
+- ...\folder_name\file.bdcm
 
 ```yaml
 Type: String

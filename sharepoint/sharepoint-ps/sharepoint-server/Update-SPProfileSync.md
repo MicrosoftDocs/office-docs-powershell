@@ -1,6 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: microsoft.sharepoint.powershell
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spprofilesync
+applicable: 
 online version:
 schema: 2.0.0
 ---

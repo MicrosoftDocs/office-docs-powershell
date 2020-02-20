@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Add-PnPClientSidePage
 
 ## SYNOPSIS
@@ -43,6 +45,13 @@ Add-PnPClientSidePage -Name "NewPageTemplate" -PromoteAs Template
 ```
 
 Creates a new Client-Side page named 'NewPage' and saves as a template to the site.
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Add-PnPClientSidePage -Name "Folder/NewPage"
+```
+
+Creates a new Client-Side page named 'NewPage' under 'Folder' folder and saves as a template to the site.
 
 ## PARAMETERS
 

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/stop-informationbarrierpoliciesapplication
 applicable: Office 365 Security & Compliance Center
 title: Stop-InformationBarrierPoliciesApplication
 schema: 2.0.0
@@ -12,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Stop-InformationBarrierPoliciesApplication
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Stop-InformationBarrierPoliciesApplication cmdlet to stop the process of applying information barrier policies in the Office 365 Security & Compliance Center.
 
@@ -77,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
@@ -107,8 +108,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/stop-informationbarrierpoliciesapplication)
+[Define policies for information barriers](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies)
 
-[Define policies for information barriers](https://docs.microsoft.com/office365/securitycompliance/information-barriers-policies)
-
-[Edit (or remove) information barrier policies](https://docs.microsoft.com/office365/securitycompliance/information-barriers-edit-segments-policies)
+[Edit (or remove) information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-edit-segments-policies)

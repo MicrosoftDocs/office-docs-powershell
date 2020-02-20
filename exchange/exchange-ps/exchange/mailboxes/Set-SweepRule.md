@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-sweeprule
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-SweepRule
 schema: 2.0.0
@@ -89,9 +90,31 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationFolder
-The DestinationFolder parameter specifies an action for the Sweep rule that moves messages to the specified folder based on the conditions of the rule.
+The DestinationFolder parameter specifies an action for the Sweep rule that moves messages to the specified folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
-The default value is Deleted Items.
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+Example values for this parameter are `john@contoso.com:\Unimportant` or `John:\Inbox\Misc`. The default value is `MailboxID:\Deleted Items`.
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -341,9 +364,31 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFolder
-The SourceFolder parameter specifies a condition for the Sweep rule that looks for messages in the specified folder.
+The SourceFolder parameter specifies a condition for the Sweep rule that looks for messages in the specified folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
-The default value is Inbox.
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+Example values for this parameter are `john@contoso.com:\Marketing` or `John:\Inbox\Reports`. The default value is `MailboxID:\Inbox`.
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -452,5 +497,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-sweeprule)

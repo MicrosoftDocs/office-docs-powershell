@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsmobilitypolicy
 applicable: Skype for Business Online
 title: Get-CsTeamsMobilityPolicy
 schema: 2.0.0
@@ -32,6 +33,9 @@ Get-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
 
 The Get-CsTeamsMobilityPolicy cmdlet allows administrators to get all teams mobility policies.
+
+NOTE: Please note that this cmdlet was deprecated and then removed from this PowerShell module. This reference will continue to be listed here for legacy purposes.
+
 
 ## EXAMPLES
 

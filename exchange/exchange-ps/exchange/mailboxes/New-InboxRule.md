@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-InboxRule
 schema: 2.0.0
@@ -330,7 +331,31 @@ Accept wildcard characters: False
 ```
 
 ### -CopyToFolder
-The CopyToFolder parameter specifies an action for the Inbox rule that copies messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \\Inbox\\Personal).
+The CopyToFolder parameter specifies an action for the Inbox rule that copies messages to the specified mailbox folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
+
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+Example values for this parameter are `john@contoso.com:\Marketing` or `John:\Inbox\Reports`.
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -1408,7 +1433,31 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToFolder
-The MoveToFolder parameter specifies an action for the Inbox rule that moves messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \\Inbox\\Personal).
+The MoveToFolder parameter specifies an action for the Inbox rule that moves messages to the specified mailbox folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
+
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+Example values for this parameter are `john@contoso.com:\Marketing` or `John:\Inbox\Reports`.
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -1919,5 +1968,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule)

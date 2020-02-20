@@ -55,6 +55,22 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
   ```
 
   You need to configure this setting only once on your computer, not every time you connect.
+  
+- Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
+
+  ```
+  winrm get winrm/config/client/auth
+  ```
+
+  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
+
+  ```
+  winrm set winrm/config/client/auth @{Basic="true"}
+  ```
+
+  If Basic authentication is disabled, you'll get this error when you try to connect:
+
+  `The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).

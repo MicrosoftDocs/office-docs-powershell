@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-atppolicyforo365
 applicable: Exchange Online, Exchange Online Protection
 title: Set-AtpPolicyForO365
 schema: 2.0.0
@@ -18,6 +19,8 @@ Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (AT
 
 - Safe Links for Office 365 ProPlus desktop clients and Office Mobile apps.
 
+- Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
+
 - ATP to protect files in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
@@ -27,9 +30,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-AllowClickThrough <Boolean>]
+ [-AllowSafeDocsOpen <Boolean>]
  [-BlockUrls <MultiValuedProperty>]
  [-Confirm]
  [-EnableATPForSPOTeamsODB <Boolean>]
+ [-EnableSafeDocs <Boolean>]
  [-EnableSafeLinksForClients <Boolean>]
  [-TrackClicks <Boolean>]
  [-WhatIf] [<CommonParameters>]
@@ -81,6 +86,27 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSafeDocsOpen
+The AllowSafeDocsOpen parameter specifies whether users can click through and bypass the Protected View container even when Safe Documents in Microsoft Defender Advanced Threat Protection (MDATP) identifies a file as malicious. Valid values are:
+
+- $true: Users are allowed to exit the Protected View container even if the document has been identified as malicious.
+
+- $false: Users aren't allowed to exit Protected View in case of a malicious detection.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -145,12 +171,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableSafeLinksForO365Clients
-The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop clients and on the web. Valid values are:
+### -EnableSafeDocs
+The EnableSafeDocs parameter specifies whether to enable the Safe Documents feature in the organization. Valid values are:
+
+- $true: Safe Documents is enabled and will upload user files to Microsoft Defender Advanced Threat Protection (MDATP) for scanning and verification.
+
+- $false: Safe Documents is disabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSafeLinksForClients
+The EnableSafeLinksForClients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop clients and on the web. Valid values are:
 
 - $true: Safe Links are enabled for Office 365 apps. This is the default value.
 
 - $false: Safe Links are disabled for Office 365 apps.
+
+This parameter is being replaced by EnableSafeLinksForO365Clients with the same functionality. Use which ever one is currently available in your tenant.
 
 ```yaml
 Type: Boolean
@@ -215,5 +263,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-atppolicyforo365)

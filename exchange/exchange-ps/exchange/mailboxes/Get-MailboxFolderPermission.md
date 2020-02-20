@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxFolderPermission
 schema: 2.0.0
@@ -54,7 +55,9 @@ This example returns the permissions for the Calendar folder in John's mailbox, 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox folder that you want to view. This parameter uses the syntax: \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the mailbox folder that you want to view. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
+
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -76,7 +79,7 @@ The Identity parameter specifies the mailbox folder that you want to view. This 
 
 - User ID or user principal name (UPN)
 
-Example values for this parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
+Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Inbox\Reports`.
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -169,5 +172,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)

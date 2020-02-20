@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/new-rolegroup
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: New-RoleGroup
 schema: 2.0.0
@@ -340,7 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the mailboxes or USGs to add as a member of the role group. You can use the name, DN, or primary SMTP address of the user or USG you want to add. If the name of the user or USG contains spaces, enclose the name in quotation marks ("). If you want to add more than one user or USG, separate them using commas.
+The Members parameter specifies the mailboxes or mail-enabled USGs to add as a member of the role group. You can identify the user or group by the name, DN, or primary SMTP address value. You can specify multiple members separated by commas (`Value1,Value2,...ValueN`). If the value contains spaces, enclose the value in quotation marks (`"Value 1","Value 2",..."Value N"`).
 
 If you use the Members parameter, you can't use the LinkedForeignGroup, LinkedDomainController or LinkedCredential parameters.
 
@@ -445,5 +446,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/new-rolegroup)

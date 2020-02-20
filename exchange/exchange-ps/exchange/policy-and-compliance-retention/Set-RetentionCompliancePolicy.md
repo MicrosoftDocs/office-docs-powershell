@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-retentioncompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: Set-RetentionCompliancePolicy
 schema: 2.0.0
@@ -12,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Set-RetentionCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Set-RetentionCompliancePolicy cmdlet to modify existing retention policies in the Security & Compliance Center.
 
@@ -393,7 +394,17 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChannelLocation
-This parameter is reserved for internal Microsoft use.
+The AddTeamsChannelLocation parameter specifies the Teams to add to the policy.
+
+You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -409,7 +420,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChannelLocationException
-This parameter is reserved for internal Microsoft use.
+The AddTeamsChannelLocationException parameter specifies the Teams to add to the exclusion list when you use the value All for the TeamsChannelLocation parameter. You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -425,7 +444,19 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChatLocation
-This parameter is reserved for internal Microsoft use.
+The AddTeamsChatLocation parameter specifies the Teams users to add to the policy.
+
+You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -441,7 +472,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChatLocationException
-This parameter is reserved for internal Microsoft use.
+The AddTeamsChatLocationException parameter specifies the Teams users to add to the exclusion list when you use the value All for the TeamsChatLocation parameter. You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -805,7 +844,17 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChannelLocation
-This parameter is reserved for internal Microsoft use.
+The RemoveTeamsChannelLocation parameter specifies the Teams to remove from the policy.
+
+You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -821,7 +870,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChannelLocationException
-This parameter is reserved for internal Microsoft use.
+The RemoveTeamsChannelLocationException parameter specifies the Teams to remove from the exclusion list when you use the value All for the TeamsChannelLocation parameter. You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -837,7 +894,19 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChatLocation
-This parameter is reserved for internal Microsoft use.
+The RemoveTeamsChatLocation parameter specifies the Teams users to remove from the policy.
+
+You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -853,7 +922,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChatLocationException
-This parameter is reserved for internal Microsoft use.
+The RemoveTeamsChatLocationException parameter specifies the Teams users to remove from the exclusion list when you use the value All for the TeamsChatLocation parameter. You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -869,7 +946,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
@@ -898,5 +975,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-retentioncompliancepolicy)

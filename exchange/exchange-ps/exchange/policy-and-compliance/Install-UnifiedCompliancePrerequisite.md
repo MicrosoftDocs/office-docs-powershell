@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/install-unifiedcomplianceprerequisite
 applicable: Office 365 Security & Compliance Center
 title: Install-UnifiedCompliancePrerequisite
 schema: 2.0.0
@@ -12,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Install-UnifiedCompliancePrerequisite
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Install-UnifiedCompliancePrerequisite cmdlet to view, create, or configure the Compliance Policy Center in Microsoft SharePoint Online. The Compliance Policy Center is a site collection that's used by the Security & Compliance Center to store preservation policies that act on content in SharePoint Online sites.
 
@@ -138,5 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/install-unifiedcomplianceprerequisite)

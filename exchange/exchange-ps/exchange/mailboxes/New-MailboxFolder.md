@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailboxfolder
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailboxFolder
 schema: 2.0.0
@@ -72,9 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -Parent
-The Parent parameter specifies values of the mailbox identity and the parent folder under which the new folder is to be created. If the parent folder isn't specified, the cmdlet creates the folder in the root folder hierarchy of the specified mailbox. You specify values for this parameter by using the syntax: \<Mailbox Identity\>:\<Parent\>
+The Parent parameter specifies where to create the new mailbox folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
-Valid values for \<Mailbox Identity\> are unique identifiers for the mailbox. For example:
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -96,7 +97,9 @@ Valid values for \<Mailbox Identity\> are unique identifiers for the mailbox. Fo
 
 - User ID or user principal name (UPN)
 
-Values for \<Parent\> can be both the store object ID and a path string such as "\\Inbox\\Personal".
+If you don't specify the parent folder, the command creates the folder in the root folder hierarchy of the specified mailbox.
+
+Example values for this parameter are `john@contoso.com:`, `John:\Inbox`
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -181,5 +184,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailboxfolder)

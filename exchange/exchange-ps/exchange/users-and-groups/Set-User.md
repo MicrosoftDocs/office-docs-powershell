@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-user
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-User
 schema: 2.0.0
@@ -186,7 +187,17 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationPolicy
-The AuthenticationPolicy parameter specifies the authentication policy to apply to the user.
+The AuthenticationPolicy parameter specifies the authentication policy to apply to the user. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To remove the policy assignment for the user, use the value $null.
+
+You create authentication policies with the New-AuthenticationPolicy cmdlet to block or selectively allow Basic authentication or (in Exchange 2019 CU2 or later) other legacy authentication methods.
 
 ```yaml
 Type: String
@@ -1179,5 +1190,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-user)

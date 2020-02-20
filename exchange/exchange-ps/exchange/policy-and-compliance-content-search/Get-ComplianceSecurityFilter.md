@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/get-compliancesecurityfilter
 applicable: Office 365 Security & Compliance Center
 title: Get-ComplianceSecurityFilter
 schema: 2.0.0
@@ -12,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Get-ComplianceSecurityFilter
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Get-ComplianceSecurityFilter cmdlet to view compliance security filters in the Security & Compliance Center. These filters allow specified users to search only a subset of mailboxes and SharePoint Online or OneDrive for Business sites in your Office 365 organization.
 
@@ -133,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
@@ -162,5 +163,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/get-compliancesecurityfilter)

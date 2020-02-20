@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailboxexportrequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-MailboxExportRequest
 schema: 2.0.0
@@ -147,7 +148,7 @@ This example exports the user Kweku's archive to a .pst file on the network shar
 
 ### Example 3
 ```powershell
-New-MailboxExportRequest -Mailbox Tony -ContentFilter "(Body -like '*company*') -and (body -like "*profit*") -and (Received -lt '01/01/2018')" -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
+New-MailboxExportRequest -Mailbox Tony -ContentFilter "(Body -like '*company*') -and (body -like '*profit*') -and (Received -lt '01/01/2018')" -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
 ```
 
 This example exports messages that contain the words "company" and "profit" in the body of the message for the user Tony received before January 1, 2018.
@@ -596,7 +597,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 
 - JunkEmail
 
-- CommunicationHistory
+- CommunicatorHistory
 
 - Voicemail
 
@@ -935,5 +936,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailboxexportrequest)

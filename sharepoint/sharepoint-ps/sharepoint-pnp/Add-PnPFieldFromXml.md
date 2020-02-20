@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpfieldfromxml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPFieldFromXml
 
 ## SYNOPSIS
 Adds a field to a list or as a site column based upon a CAML/XML field definition
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPFieldFromXml -FieldXml <String>
@@ -91,4 +93,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Field CAML](https://msdn.microsoft.com/en-us/library/office/ms437580(v=office.15).aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Field CAML](http://msdn.microsoft.com/en-us/library/office/ms437580(v=office.15).aspx)

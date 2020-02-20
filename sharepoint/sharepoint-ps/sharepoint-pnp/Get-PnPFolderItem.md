@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpfolderitem
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPFolderItem
 
 ## SYNOPSIS
@@ -10,10 +12,22 @@ List content in folder
 
 ## SYNTAX 
 
+### Folder via url
 ```powershell
 Get-PnPFolderItem [-FolderSiteRelativeUrl <String>]
                   [-ItemType <String>]
                   [-ItemName <String>]
+                  [-Recursive [<SwitchParameter>]]
+                  [-Web <WebPipeBind>]
+                  [-Connection <SPOnlineConnection>]
+```
+
+### Folder via pipebind
+```powershell
+Get-PnPFolderItem [-Identity <FolderPipeBind>]
+                  [-ItemType <String>]
+                  [-ItemName <String>]
+                  [-Recursive [<SwitchParameter>]]
                   [-Web <WebPipeBind>]
                   [-Connection <SPOnlineConnection>]
 ```
@@ -48,18 +62,37 @@ Get-PnPFolderItem -FolderSiteRelativeUrl "SitePages" -ItemType File
 
 Returns all files in the folder SitePages which is located in the root of the current web
 
+### ------------------EXAMPLE 5------------------
+```powershell
+Get-PnPFolderItem -FolderSiteRelativeUrl "SitePages" -Recursive
+```
+
+Returns all files and folders, including contents of any subfolders, in the folder SitePages which is located in the root of the current web
+
 ## PARAMETERS
 
 ### -FolderSiteRelativeUrl
-The site relative folder to retrieve
+The site relative URL of the folder to retrieve
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Folder via url
 
 Required: False
 Position: 0
 Accept pipeline input: True
+```
+
+### -Identity
+A folder instance to the folder to retrieve
+
+```yaml
+Type: FolderPipeBind
+Parameter Sets: Folder via pipebind
+
+Required: False
+Position: 0
+Accept pipeline input: False
 ```
 
 ### -ItemName
@@ -83,6 +116,18 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
+Accept pipeline input: False
+```
+
+### -Recursive
+A switch parameter to include contents of all subfolders in the specified folder
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: 4
 Accept pipeline input: False
 ```
 

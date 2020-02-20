@@ -1,7 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: tmp_1cmcv0jw.3l2
-online version:
 schema: 2.0.0
 ms.reviewer: 
 manager: bulenteg

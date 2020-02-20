@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-distributiongroup
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-DistributionGroup
 schema: 2.0.0
@@ -83,8 +84,6 @@ This example creates a distribution group named ITDepartment and specifies the m
 The Name parameter specifies the unique name of the group. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 This value is also used for the DisplayName property if you don't use the DisplayName parameter.
-
-If a group naming policy is enforced, you need to follow the naming constraints specified in the DistributionGroupNameBlockedWordList and the DistributionGroupNamingPolicy parameters on the Set-OrganizationConfig cmdlet.
 
 ```yaml
 Type: String
@@ -230,6 +229,8 @@ The DisplayName parameter specifies the display name of the group. The display n
 
 If you don't use the DisplayName parameter, the value of the Name parameter is used for the display name.
 
+If a group naming policy is enforced in your organization, users need to follow the naming constraints as specified by the DistributionGroupNameBlockedWordList parameter on the Set-OrganizationConfig cmdlet. To bypass this requirement, use the IgnoreNamingPolicy switch.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -262,7 +263,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreNamingPolicy
-The IgnoreNamingPolicy switch specifies whether to prevent this group from being affected by your organization's distribution group naming policy. The policy is defined by the DistributionGroupNamingPolicy parameter on the Set-OrganizationConfig cmdlet. You don't need to specify a value with this switch.
+The IgnoreNamingPolicy switch specifies whether to prevent this group from being affected by your organization's group naming policy. You don't need to specify a value with this switch.
+
+The group naming policy is defined by the DistributionGroupNamingPolicy and DistributionGroupNameBlockedWordList parameters on the Set-OrganizationConfig cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -673,5 +676,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-distributiongroup)

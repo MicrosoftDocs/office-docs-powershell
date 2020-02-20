@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-retentioncompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: New-RetentionCompliancePolicy
 schema: 2.0.0
@@ -12,7 +13,7 @@ monikerRange: "o365scc-ps"
 # New-RetentionCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the New-RetentionCompliancePolicy cmdlet to create new retention policies in the Security & Compliance Center.
 
@@ -465,9 +466,9 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChannelLocation
-The TeamsChannelLocation parameter is used to target specific Teams to include in the policy.
+The TeamsChannelLocation parameter specifies the Teams to include in the policy.
 
-You can use any value that uniquely identifies the Team. For example:
+You can use any value that uniquely identifies the team. For example:
 
 - Name
 
@@ -501,7 +502,6 @@ The TeamsChannelLocationException parameter specifies the Teams to exclude when 
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
-
 ```yaml
 Type:
 Parameter Sets: TeamLocation
@@ -516,7 +516,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChatLocation
-The TeamsChatLocation parameter is used to target specific Teams users to include in the policy.
+The TeamsChatLocation parameter specifies the Teams users to include in the policy.
 
 You can use any value that uniquely identifies the user. For example:
 
@@ -570,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
@@ -599,5 +599,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-retentioncompliancepolicy)

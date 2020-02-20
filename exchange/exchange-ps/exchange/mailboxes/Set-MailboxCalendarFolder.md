@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboxcalendarfolder
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailboxCalendarFolder
 schema: 2.0.0
@@ -61,23 +62,31 @@ This example enables the calendar in Kai's mailbox to be searchable on the web.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox and folder path or folder name to the calendar folder that has the publishing settings configured. You can use the following values:
+The Identity parameter specifies the calendar folder that you want to modify. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
-- GUID
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
-- ADObjectID
+- Name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
+
+Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Calendar`
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -332,5 +341,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboxcalendarfolder)

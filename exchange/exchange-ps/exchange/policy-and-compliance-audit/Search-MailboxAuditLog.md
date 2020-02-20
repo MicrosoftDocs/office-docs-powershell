@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-mailboxauditlog
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Search-MailboxAuditLog
 schema: 2.0.0
@@ -277,11 +278,17 @@ Accept wildcard characters: False
 ```
 
 ### -Operations
-The Operations parameter filters the search results by the operations that are logged by mailbox audit logging. Valid values are:
+The Operations parameter filters the search results by the mailbox actions that are logged by mailbox audit logging. Valid values are:
+
+- AddFolderPermissions (Exchange 2019 and Exchange Online only. Although this value is accepted, it's already included in the UpdateFolderPermissions action and isn't audited separately.)
+
+- ApplyRecord (Exchange Online only)
 
 - Copy
 
 - Create
+
+- Default (Exchange Online only)
 
 - FolderBind
 
@@ -289,11 +296,19 @@ The Operations parameter filters the search results by the operations that are l
 
 - MailboxLogin
 
-- MessageBind
+- MailItemsAccessed (Exchange Online only and only for E5 or E5 Compliance add-on subscription users.)
+
+- MessageBind (Although this value is accepted, these actions are no longer logged.)
+
+- ModifyFolderPermissions (Exchange 2019 and Exchange Online only. Although this value is accepted, it's already included in the UpdateFolderPermissions action and isn't audited separately.)
 
 - Move
 
 - MoveToDeletedItems
+
+- RecordDelete (Exchange Online only)
+
+- RemoveFolderPermissions (Exchange 2019 and Exchange Online only. Although this value is accepted, it's already included in the UpdateFolderPermissions action and isn't audited separately.)
 
 - SendAs
 
@@ -303,11 +318,13 @@ The Operations parameter filters the search results by the operations that are l
 
 - Update
 
-- UpdateCalendarDelegation (cloud-based service only)
+- UpdateCalendarDelegation (Exchange 2019 and Exchange Online only)
 
-- UpdateFolderPermissions (cloud-based service only)
+- UpdateComplianceTag (Exchange Online only)
 
-- UpdateInboxRules (cloud-based service only)
+- UpdateFolderPermissions (Exchange 2019 and Exchange Online only)
+
+- UpdateInboxRules (Exchange 2019 and Exchange Online only)
 
 You can enter multiple values separated by commas.
 
@@ -394,5 +411,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-mailboxauditlog)

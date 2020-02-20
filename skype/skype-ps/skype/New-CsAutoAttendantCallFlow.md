@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csautoattendantcallflow
 applicable: Skype for Business Online
 title: New-CsAutoAttendantCallFlow
 schema: 2.0.0
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Greetings
-If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow’s menu is rendered.
+If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow's menu is rendered.
 
 You can create prompts by using the [`New-CsAutoAttendantPrompt`](New-CsAutoAttendantPrompt.md) cmdlet.
 

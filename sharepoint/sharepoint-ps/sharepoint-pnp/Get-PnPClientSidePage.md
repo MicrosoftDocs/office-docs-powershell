@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Get-PnPClientSidePage
 
 ## SYNOPSIS
@@ -38,6 +40,13 @@ Get-PnPClientSidePage "Templates/MyPageTemplate"
 ```
 
 Gets the Modern Page (Client-Side) named 'MyPageTemplate.aspx' from the templates folder of the Page Library in the current SharePoint site
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Get-PnPClientSidePage -Identity "MyPage.aspx" -Web (Get-PnPWeb -Identity "Subsite1")
+```
+
+Gets the Modern Page (Client-Side) named 'MyPage.aspx' from the subsite named 'Subsite1'
 
 ## PARAMETERS
 

@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/save-pnptenanttemplate
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Save-PnPTenantTemplate
 
 ## SYNOPSIS
@@ -20,7 +22,7 @@ Save-PnPTenantTemplate -Template <ProvisioningHierarchy>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Save-PnPTenantTemplate -Template $template -Out .\hierarchy.pnp
+Save-PnPTenantTemplate -Template $template -Out .\tenanttemplate.pnp
 ```
 
 Saves a PnP tenant template to the file system
@@ -57,7 +59,6 @@ Allows you to provide an in-memory instance of a Tenant Template. When using thi
 ```yaml
 Type: ProvisioningHierarchy
 Parameter Sets: (All)
-Aliases: Hierarchy
 
 Required: True
 Position: Named

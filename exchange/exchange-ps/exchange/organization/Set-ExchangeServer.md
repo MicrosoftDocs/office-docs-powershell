@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-exchangeserver
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ExchangeServer
 schema: 2.0.0
@@ -182,9 +183,7 @@ Accept wildcard characters: False
 ### -InternetWebProxyBypassList
 The InternetWebProxyBypassList parameter specifies a list of servers that bypass the web proxy server specified by the InternetWebProxy parameter. You identify the servers by their FQDN (for example, server01.contoso.com).
 
-To enter multiple values and overwrite any existing FQDN entries, use the following syntax: \<FQDN1\>,\<FQDN2\>,...\<FQDNX\>.
-
-To add or remove one or more values without affecting any existing FQDN entries, use the following syntax: @{Add="\<FQDN1\>","\<FQDN2\>"...; Remove="\<FQDN1\>","\<FQDN\>"...}.
+To enter multiple values and overwrite any existing FQDN entries, use the following syntax: @("host1.contoso.com","host2.contoso.com","host3.contoso.com").
 
 The maximum number of servers you can enter with this parameter is 100.
 
@@ -329,5 +328,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/organization/set-exchangeserver)

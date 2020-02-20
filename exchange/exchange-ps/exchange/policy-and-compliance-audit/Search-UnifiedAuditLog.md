@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog
 applicable: Exchange Online
 title: Search-UnifiedAuditLog
 schema: 2.0.0
@@ -93,9 +94,13 @@ This example searches the unified audit log from May 1, 2018 to May 8, 2018 for 
 ## PARAMETERS
 
 ### -EndDate
-The EndDate parameter specifies the end date of the date range.
+The EndDate parameter specifies the end date of the date range. Entries are stored in the unified audit log in Coordinated Universal Time (UTC). If you specify a date/time value without a time zone, the value is in UTC.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, `"2018-05-06 14:30:00z"`.
+
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2018 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
 
 If you don't include a timestamp in the value for this parameter, the default timestamp is 12:00 AM (midnight) on the specified date.
 
@@ -113,9 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-The StartDate parameter specifies the start date of the date range.
+The StartDate parameter specifies the start date of the date range. Entries are stored in the unified audit log in Coordinated Universal Time (UTC). If you specify a date/time value without a time zone, the value is in UTC.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, `"2018-05-06 14:30:00z"`.
+
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2018 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
 
 If you don't include a timestamp in the value for this parameter, the default timestamp is 12:00 AM (midnight) on the specified date.
 
@@ -225,7 +234,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - AeD
 
-- AirInvestigation 
+- AirInvestigation
 
 - ApplicationAudit
 
@@ -243,9 +252,9 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - ComplianceDLPSharePointClassification
 
-- ComplianceSupervisionExchange 
+- ComplianceSupervisionExchange
 
-- CustomerKeyServiceEncryption 
+- CustomerKeyServiceEncryption
 
 - CRM
 
@@ -257,7 +266,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - Discovery
 
-- DLPEndpoint 
+- DLPEndpoint
 
 - ExchangeAdmin
 
@@ -275,7 +284,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - InformationWorkerProtection
 
-- InformationBarrierPolicyApplication 
+- InformationBarrierPolicyApplication
 
 - Kaizala
 
@@ -283,7 +292,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - MailSubmission
 
-- MicrosoftFlow 
+- MicrosoftFlow
 
 - MicrosoftForms
 
@@ -293,7 +302,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - MicrosoftTeamsAdmin
 
-- MicrosoftTeamsDevice 
+- MicrosoftTeamsDevice
 
 - MicrosoftTeamsAddOns
 
@@ -319,7 +328,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - PowerAppsPlan
 
-- Quarantine 
+- Quarantine
 
 - SecurityComplianceAlerts
 
@@ -331,7 +340,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - SharePointCommentOperation
 
-- SharePointContentTypeOperation 
+- SharePointContentTypeOperation
 
 - SharePointFileOperation
 
@@ -339,7 +348,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - SharePointListOperation
 
-- SharePointListItemOperation 
+- SharePointListItemOperation
 
 - SharePointSharingOperation
 
@@ -484,11 +493,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ###  
 The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
 
-$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; 
-Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
+$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog)

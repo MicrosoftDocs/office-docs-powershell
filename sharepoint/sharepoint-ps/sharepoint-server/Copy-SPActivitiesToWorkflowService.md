@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.WorkflowServices.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-spactivitiestoworkflowservice
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPActivitiesToWorkflowService
 schema: 2.0.0
@@ -24,7 +26,7 @@ Copy-SPActivitiesToWorkflowService [-ActivityName <String>] [-AssignmentCollecti
 ```
 
 ## DESCRIPTION
-Copies Workflow activites from SharePoint Server to Workflow Manager.
+Copies Workflow activities from SharePoint Server to Workflow Manager.
 
 ## EXAMPLES
 

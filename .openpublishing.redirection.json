@@ -64,6 +64,16 @@
       "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-dlp/Set-DlpComplianceRuleV2.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpcompliancerule",
       "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "exchange/exchange-ps-v2-module/connect-exchangeonline.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/unified-messaging/Test-ExchangeUMCallFlow.md",
+      "redirect_url": "https://www.microsoft.com/download/details.aspx?id=20839",
+      "redirect_document_id": false
+    },
    ] 
   }

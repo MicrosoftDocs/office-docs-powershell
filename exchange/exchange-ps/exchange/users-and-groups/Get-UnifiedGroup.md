@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-unifiedgroup
 applicable: Exchange Online
 title: Get-UnifiedGroup
 schema: 2.0.0
@@ -77,6 +78,13 @@ Get-UnifiedGroup -Identity "Marketing Department" | Format-List
 ```
 
 This example returns detailed information about the Office 365 Group named Marketing Department.
+
+### Example 4
+```powershell
+Get-UnifiedGroup |?{!$_.ManagedBy}
+```
+
+This example returns Office 365 Groups that do not have an owner.
 
 ## PARAMETERS
 
@@ -244,5 +252,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-unifiedgroup)

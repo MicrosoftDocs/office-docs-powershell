@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-safelinkspolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Set-SafeLinksPolicy
 schema: 2.0.0
@@ -218,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedUrls
-The ExcludedUrls parameter specifies a URL that's skipped by Safe Links scanning. You can specify multiple values separated by commas.
+The ExcludedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the ExcludedUrls parameter, update them to use the DoNotRewriteUrls parameter.
 
 ```yaml
 Type: String[]
@@ -306,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhiteListedUrls
-This parameter is reserved for internal Microsoft use.
+The WhiteListedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the WhiteListedUrls parameter, update them to use the DoNotRewriteUrls parameter.
 
 ```yaml
 Type: String
@@ -335,5 +336,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-safelinkspolicy)
