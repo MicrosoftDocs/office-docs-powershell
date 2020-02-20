@@ -58,8 +58,8 @@ The following cmdlet references are for Microsoft Teams.
 ### [New-TeamChannel](New-TeamChannel.md)
 {{Manually Enter New-TeamChannel Description Here}}
 
-### [New-TeamsApp](New-TeamChannel.md)
-{{Manually Enter New-TeamChannel Description Here}}
+### [New-TeamsApp](New-TeamsApp.md)
+{{Manually Enter New-TeamsApp Description Here}}
 
 ### [Remove-Team](Remove-Team.md)
 {{Manually Enter Remove-Team Description Here}}
