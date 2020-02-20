@@ -32,19 +32,21 @@ This cmdlet does not currently support returning policies for multiple users.
 This examples returns the policies that are either directly assigned to a user or that the user inherited from a group.
 
 ```
-Get-CsUserPolicyAssignment -Identity 3b90faad-9056-49ff-8357-0b53b1d45d39
+Get-CsUserPolicyAssignment -Identity f0d9c148-27c1-46f5-9685-544d20170ea1
 
-PolicyName            PolicyType
-----------            ----------
-AllowCalling          TeamsCallingPolicy
-Employees Events      TeamsMeetingBroadcastPolicy
-Kiosk                 TeamsMeetingPolicy
+PolicyType                  PolicyName                 PolicySource
+----------                  ----------                 ------------
+TeamsMeetingPolicy          Kiosk                      {Kiosk, Kiosk}
+MeetingPolicy               BposSAllModality           {BposSAllModality}
+ExternalAccessPolicy        FederationAndPICDefault    {FederationAndPICDefault}
+TeamsMeetingBroadcastPolicy Vendor Live Events         {Vendor Live Events, Employees Events}
+TeamsCallingPolicy          AllowCalling               {AllowCalling}
 ```
 
 ### Example 2
 The PolicySource property can be expanded to show  more details for a particular policy type.  The PolicySource property indicates whether a particular policy was directly assigned to the user or inherited from a group.
 
-In this example, the details for the TeamsBroadcastMeetingPolicy are shown. The user was directly assigned the "Employees Events" policy, which took precedence over the "Vendor Live Events" policy which is assigned to a group that the user belongs to.
+In this example, the details for the TeamsBroadcastMeetingPolicy are shown. The user was directly assigned the "Employees Events" policy, which took precedence over the "Vendor Live Events" policy which is assigned to a group (566b8d39-5c5c-4aaa-bc07-4f36278a1b38) that the user belongs to.
 
 ```
 Get-CsUserPolicyAssignment -Identity 3b90faad-9056-49ff-8357-0b53b1d45d39 -PolicyType TeamsMeetingBroadcastPolicy | select -ExpandProperty PolicySource
@@ -69,10 +71,10 @@ Group          Kiosk      566b8d39-5c5c-4aaa-bc07-4f36278a1b38
 
 Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
 
-GroupId                              PolicyName PolicyType         Priority
--------                              ---------- ----------         --------
-d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 AllOn      TeamsMeetingPolicy 1
-566b8d39-5c5c-4aaa-bc07-4f36278a1b38 Kiosk      TeamsMeetingPolicy 2
+GroupId                              PolicyType         PolicyName Rank CreatedTime           CreatedBy
+-------                              ----------         ---------- ---- -----------           ---------
+d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/2019 3:57:27 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
+566b8d39-5c5c-4aaa-bc07-4f36278a1b38 TeamsMeetingPolicy kiosk      2    11/2/2019 12:14:41 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
 ```
 
 ## PARAMETERS
