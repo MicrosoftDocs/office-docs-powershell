@@ -891,7 +891,7 @@ The EnableRoomMailboxAccount parameter specifies whether to enable the disabled 
 
 You need to use this parameter with the Room switch.
 
-Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Lync Room System or the Skype for Business Room System.
+Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
 
 In Exchange Online, a room mailbox with an associated enabled account doesn't require a license.
 
