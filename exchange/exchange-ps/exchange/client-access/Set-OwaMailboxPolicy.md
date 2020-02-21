@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/set-owamailboxpolicy
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OwaMailboxPolicy
 schema: 2.0.0
@@ -16,116 +17,119 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-OwaMailboxPolicy cmdlet to configure existing Outlook on the web mailbox policies.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
- [-ActionForUnknownFileAndMIMETypes <Allow | ForceSave | Block>]
- [-ActiveSyncIntegrationEnabled <$true | $false>]
- [-AdditionalStorageProvidersAvailable <$true | $false>]
- [-AllAddressListsEnabled <$true | $false>]
- [-AllowCopyContactsToDeviceAddressBook <$true | $false>]
+ [-ActionForUnknownFileAndMIMETypes <AttachmentBlockingActions>]
+ [-ActiveSyncIntegrationEnabled <Boolean>]
+ [-AdditionalStorageProvidersAvailable <Boolean>]
+ [-AllAddressListsEnabled <Boolean>]
+ [-AllowCopyContactsToDeviceAddressBook <Boolean>]
  [-AllowedFileTypes <MultiValuedProperty>]
  [-AllowedMimeTypes <MultiValuedProperty>]
- [-AllowOfflineOn <PrivateComputersOnly | NoComputers | AllComputers>]
+ [-AllowOfflineOn <AllowOfflineOnEnum>]
  [-BlockedFileTypes <MultiValuedProperty>]
  [-BlockedMimeTypes <MultiValuedProperty>]
- [-CalendarEnabled <$true | $false>]
- [-ChangePasswordEnabled <$true | $false>]
- [-ClassicAttachmentsEnabled <$true | $false>]
- [-ConditionalAccessPolicy <Off | ReadOnly | ReadOnlyPlusAttachmentsBlocked>]
+ [-CalendarEnabled <Boolean>]
+ [-ChangePasswordEnabled <Boolean>]
+ [-ClassicAttachmentsEnabled <Boolean>]
+ [-ConditionalAccessPolicy <PolicyEnum>]
  [-Confirm]
- [-ContactsEnabled <$true | $false>]
+ [-ContactsEnabled <Boolean>]
  [-DefaultClientLanguage <Int32>]
  [-DefaultTheme <String>]
- [-DelegateAccessEnabled <$true | $false>]
- [-DirectFileAccessOnPrivateComputersEnabled <$true | $false>]
- [-DirectFileAccessOnPublicComputersEnabled <$true | $false>]
+ [-DelegateAccessEnabled <Boolean>]
+ [-DirectFileAccessOnPrivateComputersEnabled <Boolean>]
+ [-DirectFileAccessOnPublicComputersEnabled <Boolean>]
  [-DisableFacebook]
- [-DisplayPhotosEnabled <$true | $false>]
+ [-DisplayPhotosEnabled <Boolean>]
  [-DomainController <Fqdn>]
- [-ExplicitLogonEnabled <$true | $false>]
- [-ExternalImageProxyEnabled <$true | $false>]
+ [-ExplicitLogonEnabled <Boolean>]
+ [-ExternalImageProxyEnabled <Boolean>]
  [-ExternalSPMySiteHostURL <String>]
- [-ForceSaveAttachmentFilteringEnabled <$true | $false>]
+ [-ForceSaveAttachmentFilteringEnabled <Boolean>]
  [-ForceSaveFileTypes <MultiValuedProperty>]
  [-ForceSaveMimeTypes <MultiValuedProperty>]
- [-ForceWacViewingFirstOnPrivateComputers <$true | $false>]
- [-ForceWacViewingFirstOnPublicComputers <$true | $false>]
- [-ForceWebReadyDocumentViewingFirstOnPrivateComputers <$true | $false>]
- [-ForceWebReadyDocumentViewingFirstOnPublicComputers <$true | $false>]
- [-FreCardsEnabled <$true | $false>]
- [-GlobalAddressListEnabled <$true | $false>]
- [-GroupCreationEnabled <$true | $false>]
- [-InstantMessagingEnabled <$true | $false>]
- [-InstantMessagingType <None | Ocs | Msn>]
- [-InterestingCalendarsEnabled <$true | $false>]
+ [-ForceWacViewingFirstOnPrivateComputers <Boolean>]
+ [-ForceWacViewingFirstOnPublicComputers <Boolean>]
+ [-ForceWebReadyDocumentViewingFirstOnPrivateComputers <Boolean>]
+ [-ForceWebReadyDocumentViewingFirstOnPublicComputers <Boolean>]
+ [-FreCardsEnabled <Boolean>]
+ [-GlobalAddressListEnabled <Boolean>]
+ [-GroupCreationEnabled <Boolean>]
+ [-InstantMessagingEnabled <Boolean>]
+ [-InstantMessagingType <InstantMessagingTypeOptions>]
+ [-InterestingCalendarsEnabled <Boolean>]
  [-InternalSPMySiteHostURL <String>]
- [-IRMEnabled <$true | $false>]
+ [-IRMEnabled <Boolean>]
  [-IsDefault]
- [-JournalEnabled <$true | $false>]
- [-JunkEmailEnabled <$true | $false>]
- [-LinkedInEnabled <$true | $false>]
- [-LocalEventsEnabled <$true | $false>]
+ [-JournalEnabled <Boolean>]
+ [-JunkEmailEnabled <Boolean>]
+ [-LinkedInEnabled <Boolean>]
+ [-LocalEventsEnabled <Boolean>]
  [-LogonAndErrorLanguage <Int32>]
  [-Name <String>]
- [-NotesEnabled <$true | $false>]
- [-OrganizationEnabled <$true | $false>]
- [-OneDriveAttachmentsEnabled <$true | $false>]
- [-OnSendAddinsEnabled <$true | $false>]
- [-OutboundCharset <AlwaysUTF8 | AutoDetect | UserLanguageChoice>]
- [-OutlookBetaToggleEnabled <$true | $false>] [<CommonParameters>]
- [-OWALightEnabled <$true | $false>]
- [-OWAMiniEnabled <$true | $false>]
- [-PhoneticSupportEnabled <$true | $false>]
- [-PlacesEnabled <$true | $false>]
- [-PremiumClientEnabled <$true | $false>]
- [-PrintWithoutDownloadEnabled <$true | $false>]
- [-PublicFoldersEnabled <$true | $false>]
- [-RecoverDeletedItemsEnabled <$true | $false>]
- [-ReferenceAttachmentsEnabled <$true | $false>]
- [-RemindersAndNotificationsEnabled <$true | $false>]
- [-ReportJunkEmailEnabled <$true | $false>]
- [-RulesEnabled <$true | $false>]
- [-SatisfactionEnabled <$true | $false>]
- [-SaveAttachmentsToCloudEnabled <$true | $false>]
- [-SearchFoldersEnabled <$true | $false>]
- [-SetPhotoEnabled <$true | $false>]
+ [-NotesEnabled <Boolean>]
+ [-NpsMailboxPolicy <Boolean>]
+ [-OrganizationEnabled <Boolean>]
+ [-OneDriveAttachmentsEnabled <Boolean>]
+ [-OnSendAddinsEnabled <Boolean>]
+ [-OutboundCharset <OutboundCharsetOptions>]
+ [-OutlookBetaToggleEnabled <Boolean>] [<CommonParameters>]
+ [-OWALightEnabled <Boolean>]
+ [-OWAMiniEnabled <Boolean>]
+ [-PersonalAccountCalendarsEnabled <Boolean>]
+ [-PhoneticSupportEnabled <Boolean>]
+ [-PlacesEnabled <Boolean>]
+ [-PremiumClientEnabled <Boolean>]
+ [-PrintWithoutDownloadEnabled <Boolean>]
+ [-PublicFoldersEnabled <Boolean>]
+ [-RecoverDeletedItemsEnabled <Boolean>]
+ [-ReferenceAttachmentsEnabled <Boolean>]
+ [-RemindersAndNotificationsEnabled <Boolean>]
+ [-ReportJunkEmailEnabled <Boolean>]
+ [-RulesEnabled <Boolean>]
+ [-SatisfactionEnabled <Boolean>]
+ [-SaveAttachmentsToCloudEnabled <Boolean>]
+ [-SearchFoldersEnabled <Boolean>]
+ [-SetPhotoEnabled <Boolean>]
  [-SetPhotoURL <String>]
- [-SignaturesEnabled <$true | $false>]
- [-SilverlightEnabled <$true | $false>]
- [-SkipCreateUnifiedGroupCustomSharepointClassification <$true | $false>]
- [-SMimeEnabled <$true | $false>] [-SpellCheckerEnabled <$true | $false>]
- [-TasksEnabled <$true | $false>]
- [-TextMessagingEnabled <$true | $false>]
- [-ThemeSelectionEnabled <$true | $false>]
- [-ThirdPartyAttachmentsEnabled <$true | $false>]
- [-ThirdPartyFileProvidersEnabled <$true | $false>]
- [-UMIntegrationEnabled <$true | $false>]
- [-UNCAccessOnPrivateComputersEnabled <$true | $false>]
- [-UNCAccessOnPublicComputersEnabled <$true | $false>]
- [-UseGB18030 <$true | $false>]
- [-UseISO885915 <$true | $false>]
- [-UserVoiceEnabled <$true | $false>]
- [-WacEditingEnabled <$true | $false>]
- [-WacExternalServicesEnabled <$true | $false>]
- [-WacOMEXEnabled <$true | $false>]
- [-WacViewingOnPrivateComputersEnabled <$true | $false>]
- [-WacViewingOnPublicComputersEnabled <$true | $false>]
- [-WeatherEnabled <$true | $false>]
- [-WebPartsFrameOptionsType <Deny | AllowFrom | None | SameOrigin>]
- [-WebReadyDocumentViewingForAllSupportedTypes <$true | $false>]
- [-WebReadyDocumentViewingOnPrivateComputersEnabled <$true | $false>]
- [-WebReadyDocumentViewingOnPublicComputersEnabled <$true | $false>]
+ [-SignaturesEnabled <Boolean>]
+ [-SilverlightEnabled <Boolean>]
+ [-SkipCreateUnifiedGroupCustomSharepointClassification <Boolean>]
+ [-SMimeEnabled <Boolean>] [-SpellCheckerEnabled <Boolean>]
+ [-TasksEnabled <Boolean>]
+ [-TeamSnapCalendarsEnabled <Boolean>]
+ [-TextMessagingEnabled <Boolean>]
+ [-ThemeSelectionEnabled <Boolean>]
+ [-ThirdPartyAttachmentsEnabled <Boolean>]
+ [-ThirdPartyFileProvidersEnabled <Boolean>]
+ [-UMIntegrationEnabled <Boolean>]
+ [-UNCAccessOnPrivateComputersEnabled <Boolean>]
+ [-UNCAccessOnPublicComputersEnabled <Boolean>]
+ [-UseGB18030 <Boolean>]
+ [-UseISO885915 <Boolean>]
+ [-UserVoiceEnabled <Boolean>]
+ [-WacEditingEnabled <Boolean>]
+ [-WacExternalServicesEnabled <Boolean>]
+ [-WacOMEXEnabled <Boolean>]
+ [-WacViewingOnPrivateComputersEnabled <Boolean>]
+ [-WacViewingOnPublicComputersEnabled <Boolean>]
+ [-WeatherEnabled <Boolean>]
+ [-WebPartsFrameOptionsType <WebPartsFrameOptions>]
+ [-WebReadyDocumentViewingForAllSupportedTypes <Boolean>]
+ [-WebReadyDocumentViewingOnPrivateComputersEnabled <Boolean>]
+ [-WebReadyDocumentViewingOnPublicComputersEnabled <Boolean>]
  [-WebReadyDocumentViewingSupportedFileTypes <MultiValuedProperty>]
  [-WebReadyDocumentViewingSupportedMimeTypes <MultiValuedProperty>]
  [-WebReadyFileTypes <MultiValuedProperty>]
  [-WebReadyMimeTypes <MultiValuedProperty>]
  [-WhatIf]
- [-WSSAccessOnPrivateComputersEnabled <$true | $false>]
- [-WSSAccessOnPublicComputersEnabled <$true | $false>]
+ [-WSSAccessOnPrivateComputersEnabled <Boolean>]
+ [-WSSAccessOnPublicComputersEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -134,33 +138,33 @@ In on-premises Exchange, the default Outlook on the web mailbox policy is named 
 
 Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (Stop-Service WAS -Force and Start-Service W3SVC).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-OwaMailboxPolicy -Identity EMEA\Contoso\Corporate -CalendarEnabled $false
 ```
 
 This example disables access to the calendar for the mailbox policy named Corporate for the tenant Contoso in the organization EMEA.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-OwaMailboxPolicy -Identity Default -TasksEnabled $false
 ```
 
 This example disables access to the Tasks folder for the default mailbox policy in an on-premises Exchange organization.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -AllowedFileTypes '.doc', '.pdf'
 ```
 
 This example sets the allowed file type extensions to .doc and .pdf for the default mailbox policy in an Office 365 organization, allowing users to save files with those extensions locally or view them from a web browser.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -UserVoiceEnabled $false
 ```
 
@@ -182,6 +186,7 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -199,10 +204,11 @@ The ActionForUnknownFileAndMIMETypes parameter specifies how to handle file type
 - Block
 
 ```yaml
-Type: Allow | ForceSave | Block
+Type: AttachmentBlockingActions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,16 +226,18 @@ The AdditionalStorageProvidersAvailable parameter specifies whether to allow add
 - $false: Additional storage providers are disabled in Outlook on the web. Users can't connect their additional storage providers or share files over email.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -ActiveSyncIntegrationEnabled
 The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disable Exchange ActiveSync settings in Outlook on the web. Valid values are:
 
@@ -238,10 +246,11 @@ The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disabl
 - $false: ActiveSync isn't available in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -257,10 +266,11 @@ The AllAddressListsEnabled parameter specifies which address lists are available
 - $false: Only the global address list is visible in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -276,10 +286,11 @@ The AllowCopyContactsToDeviceAddressBook parameter specifies whether users can c
 - $false: Contacts can't be copied to the device's address book in Outlook on the web for devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -307,6 +318,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -340,6 +352,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -348,7 +361,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOfflineOn
-The AllowOfflineOn parameter specifies when Outlook on the web in offline mode is available for supported web browsers. Valid values are:
+This parameter is functional only in on-premises Exchange.
+
+The AllowOfflineOn parameter specifies when Outlook Web App in offline mode is available for supported web browsers. Valid values are:
 
 - PrivateComputersOnly: Offline mode is available in private computer sessions. By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers. In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
@@ -356,13 +371,14 @@ The AllowOfflineOn parameter specifies when Outlook on the web in offline mode i
 
 - AllComputers: Offline mode is available for public and private computer sessions. This is the default value.
 
-When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
+When offline mode is available, users can turn offline mode on or off themselves in Outlook Web App. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
 
 ```yaml
-Type: PrivateComputersOnly | NoComputers | AllComputers
+Type: AllowOfflineOnEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -390,6 +406,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -431,6 +448,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -439,17 +457,20 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarEnabled
-The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook on the web. Valid values are:
+This parameter is functional only in on-premises Exchange.
 
-- $true: The Calendar is available in Outlook on the web. This is the default value.
+The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook Web App. Valid values are:
 
-- $false: The Calendar isn't available in Outlook on the web.
+- $true: The Calendar is available in Outlook Web App. This is the default value.
+
+- $false: The Calendar isn't available in Outlook Web App.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -467,10 +488,11 @@ The ChangePasswordEnabled parameter specifies whether users can change their pas
 - $false: The Change password option isn't available in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -486,10 +508,11 @@ The ClassicAttachmentsEnabled parameter specifies whether users can attach local
 - $false: Users can't attach local files to email messages in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -500,7 +523,9 @@ Accept wildcard characters: False
 ### -ConditionalAccessPolicy
 This parameter is available only in the cloud-based service.
 
-The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access.  For this feature to properly work, you will need to additionally configure a Conditional Access policy in the Azure Active Directory Portal.
+The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access. For this feature to work properly, you also need to configure a Conditional Access policy in the Azure Active Directory Portal.
+
+Note: When you enable a Conditional Access policy, users will no longer be able to access the light version of Outlook on the web. An error message will direct them to use the default premium experience.
 
 Valid values are:
 
@@ -511,10 +536,11 @@ Valid values are:
 - ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser.
 
 ```yaml
-Type: Off | ReadOnly | ReadOnlyPlusAttachmentsBlocked
+Type: PolicyEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -534,6 +560,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -542,17 +569,20 @@ Accept wildcard characters: False
 ```
 
 ### -ContactsEnabled
-The ContactsEnabled parameter specifies whether to enable or disable Contacts in Outlook on the web. Valid values are:
+This parameter is functional only in on-premises Exchange.
 
-- $true: Contacts are available in Outlook on the web. This is the default value.
+The ContactsEnabled parameter specifies whether to enable or disable Contacts in Outlook Web App. Valid values are:
 
-- $false: Contacts aren't available in Outlook on the web.
+- $true: Contacts are available in Outlook Web App. This is the default value.
+
+- $false: Contacts aren't available in Outlook Web App.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -568,6 +598,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -585,6 +616,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -602,10 +634,11 @@ The DelegateAccessEnabled parameter specifies whether delegates can use Outlook 
 - $false: Delegates can't open the mailbox in Outlook Web App.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -623,10 +656,11 @@ The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click
 By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -644,10 +678,11 @@ The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -671,6 +706,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -686,10 +722,11 @@ The DisplayPhotosEnabled parameter specifies whether users see sender photos in 
 - $false: Users don't see sender photos in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -707,6 +744,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -722,10 +760,11 @@ The ExplicitLogonEnabled parameter specifies whether to allow a user to open som
 - $false: A user with the required permissions isn't able to open someone else's mailbox in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -743,10 +782,11 @@ The ExternalImageProxyEnabled parameter specifies whether to load all external i
 - $false: All external images are loaded through the web browser. This is potentially unsafe, as the images could have mixed content or malformed images that ask for user credentials.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -764,6 +804,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -779,10 +820,11 @@ The ForceSaveAttachmentFilteringEnabled parameter specifies whether files are fi
 - $false: The attachments aren't filtered before they're saved. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -810,6 +852,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -845,6 +888,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -862,10 +906,11 @@ The ForceWacViewingFirstOnPrivateComputers parameter specifies whether private c
 By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -883,10 +928,11 @@ The ForceWacViewingFirstOnPublicComputers parameter specifies whether public com
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -906,10 +952,11 @@ The ForceWebReadyDocumentViewingFirstOnPrivateComputers parameter specifies whet
 By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -929,10 +976,11 @@ The ForceWebReadyDocumentViewingFirstOnPublicComputers parameter specifies wheth
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -950,10 +998,11 @@ The FreCardsEnabled parameter specifies whether the theme, signature, and phone 
 - $false: The theme, signature, and phone cards aren't visible in Outlook on the web. Only the introduction, time zone, and final cards are visible.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -969,10 +1018,11 @@ The GlobalAddressListEnabled parameter specifies whether the global address list
 - $false: The global address list isn't visible in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -990,10 +1040,11 @@ The GroupCreationEnabled parameter specifies whether Office 365 group creation i
 - $false: Users can't create Office 365 groups in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1009,10 +1060,11 @@ The InstantMessagingEnabled parameter specifies whether instant messaging is ava
 - $false: Instant messaging isn't available in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1028,10 +1080,11 @@ The InstantMessagingType parameter specifies the type of instant messaging provi
 - Ocs: Lync or Skype (formerly known as Office Communication Server). This is the default value in Exchange Online.
 
 ```yaml
-Type: None | Ocs | Msn
+Type: InstantMessagingTypeOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1049,10 +1102,11 @@ The InterestingCalendarsEnabled parameter specifies whether interesting calendar
 - $false: Interesting calendars aren't available in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1070,6 +1124,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1085,10 +1140,11 @@ The IRMEnabled parameter specifies whether Information Rights Management (IRM) f
 - $false: IRM isn't available in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1106,6 +1162,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1121,10 +1178,11 @@ The JournalEnabled parameter specifies whether the Journal folder is available i
 - $false: The Journal folder isn't visible in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1142,10 +1200,11 @@ The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk 
 - $false: The Junk Email folder and junk email management aren't available in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1156,17 +1215,14 @@ Accept wildcard characters: False
 ### -LinkedInEnabled
 This parameter is available only in the cloud-based service.
 
-The LinkedInEnabled parameter specifies whether users can synchronize their LinkedIn contacts to their Contacts folder. Valid values are:
-
-- $true: LinkedIn integration is enabled. This is the default value.
-
-- $false: LinkedIn integration is disabled.
+LinkedIn integration is no longer supported.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1184,10 +1240,11 @@ The LocalEventsEnabled parameter specifies whether local events calendars are av
 - $false: Local events aren't available in Outlook on the web. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1207,6 +1264,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1222,6 +1280,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1237,10 +1296,33 @@ The NotesEnabled parameter specifies whether the Notes folder is available in Ou
 - $false: The Notes folder isn't visible in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NPSMailboxPolicy
+This parameter is avaialble only in the cloud-based service.
+
+The NPSMailboxPolicy parameter specifies whether to enable or disable the Net Promoter Score (NPS) survey in Outlook on the web. The survey allows uses to rate Outlook on the web on a scale of 1 to 5, and to provide feedback and suggested improvements in free text. Valid values are:
+
+- $true: The NPS survey is available in Outlook on the web. This is the default value.
+
+- $false: The NPS survey isn't available in Outlook on the web.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1254,10 +1336,11 @@ This parameter has been deprecated and is no longer used.
 To enable or disable personal OneDrive in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1273,10 +1356,11 @@ The OnSendAddinsEnabled parameter specifies whether to enable or disable on send
 - $false: On send add-ins are disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1288,10 +1372,11 @@ Accept wildcard characters: False
 When the OrganizationEnabled parameter is set to $false, the Automatic Reply option doesn't include external and internal options, the address book doesn't show the organization hierarchy, and the Resources tab in Calendar forms is disabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1309,10 +1394,11 @@ The OutboundCharset parameter specifies the character set that's used for outgoi
 - UserLanguageChoice: Use the user's language choice in Outlook on the web to encode outgoing messages.
 
 ```yaml
-Type: AlwaysUTF8 | AutoDetect | UserLanguageChoice
+Type: OutboundCharsetOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1330,10 +1416,11 @@ The OutlookBetaToggleEnabled parameter specifies whether to enable or disable th
 - $false: Outlook on the web Preview is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1349,10 +1436,11 @@ The OWALightEnabled parameter controls the availability of the light version of 
 - $false: The light version of Outlook on the web is isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1370,10 +1458,33 @@ The OWAMiniEnabled parameter controls the availability of the mini version of Ou
 - $false: The mini version of Outlook Web App isn't available.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PersonalAccountCalendarsEnabled
+This parameter is available only in the cloud-based service.
+
+The PersonalAccountCalendarsEnabled parameter specifies whether to allow users to connect to their personal Outlook.com or Google Calendar in Outlook on the web. Valid values are:
+
+- $true: Users can connect to their Outlook.com or Google Calendar to see those events in their Outlook on the web calendar. This is the default value.
+
+- $false: Users can't connect to their Outlook.com or Google Calendar in Outlook on the web.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1385,10 +1496,11 @@ Accept wildcard characters: False
 The PhoneticSupportEnabled parameter specifies phonetically spelled entries in the address book. This parameter is available for use in Japan.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1406,10 +1518,11 @@ The PlacesEnabled parameter specifies whether to enable or disable Places in Out
 - $false: Places is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1425,10 +1538,11 @@ The PremiumClientEnabled parameter controls the availability of the full version
 - $false: The full version of Outlook Web App isn't available.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1446,10 +1560,11 @@ The PrintWithoutDownloadEnabled specifies whether to allow printing of supported
 - $false: Supported files must be downloaded before they can be printed in Outlook web app.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1467,10 +1582,11 @@ The PublicFoldersEnabled parameter specifies whether a user can browse or read i
 - $false: Public folders aren't available in Outlook Web App.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1488,10 +1604,11 @@ The RecoverDeletedItemsEnabled parameter specifies whether a user can use Outloo
 - $false: Users can't view, recover, or permanently delete items in Outlook Web App. Items deleted from the Deleted Items folder in Outlook Web App are still retained.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1507,10 +1624,11 @@ The ReferenceAttachmentsEnabled parameter specifies whether users can attach fil
 - $false: Users can't share files in the cloud as linked attachments. They need to download a local copy of the file before attaching the file to the email message.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1528,10 +1646,11 @@ The RemindersAndNotificationsEnabled parameter specifies whether notifications a
 This parameter doesn't apply to the light version of Outlook Web App.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1549,10 +1668,11 @@ The ReportJunkEmailEnabled parameter specifies whether users can report messages
 This parameter is meaningful only when the JunkEmailEnabled parameter is set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1568,10 +1688,11 @@ The RulesEnabled parameter specifies whether a user can view, create, or modify 
 - $false: Users can't view, create, or modify server-side rules in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1587,10 +1708,11 @@ The SatisfactionEnabled parameter specifies whether to enable or disable the sat
 - $false: The satisfaction survey is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1606,10 +1728,11 @@ The SaveAttachmentsToCloudEnabled parameter specifies whether users can save reg
 - $false: Users can only save regular email attachments locally.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1625,10 +1748,11 @@ The SearchFoldersEnabled parameter specifies whether Search Folders are availabl
 - $false: Search Folders aren't visible in Outlook on the Web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1644,10 +1768,11 @@ The SetPhotoEnabled parameter specifies whether users can add, change, and remov
 - $false: Users can't manage their user photo in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1663,6 +1788,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1678,10 +1804,11 @@ The SignaturesEnabled parameter specifies whether to enable or disable the use o
 - $false: Signatures aren't available in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1699,10 +1826,11 @@ The SilverlightEnabled parameter specifies whether a user can use Microsoft Silv
 - $false: Silverlight features aren't available in Outlook Web App.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -1720,10 +1848,11 @@ The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whe
 - $false: The custom SharePoint page is shown when a user creates an Office 365 group in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1740,13 +1869,14 @@ The SMimeEnabled parameter specifies whether users can download the S/MIME contr
 
 - $false: Users can't read or compose messages in Outlook Web App that are opaque-signed or encrypted by using S/MIME. Messages that are clear-signed can be read but not composed, and their signatures aren't validated.
 
-**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see {S/MIME for message signing and encryption](https://technet.microsoft.com/library/dn626158.aspx).
+**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see [S/MIME for message signing and encryption](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -1766,10 +1896,11 @@ The SpellCheckerEnabled parameter specifies whether to enable or disable the bui
 This parameter doesn't apply to the light version of Outlook Web App.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -1778,19 +1909,44 @@ Accept wildcard characters: False
 ```
 
 ### -TasksEnabled
-The TasksEnabled parameter specifies whether Tasks folder is available in Outlook on the web. Valid values are:
+This parameter is functional only in on-premises Exchange.
 
-- $true: The Tasks folder is available in Outlook on the web. This is the default value.
+The TasksEnabled parameter specifies whether Tasks folder is available in Outlook Web App. Valid values are:
 
-- $false: The Tasks folder isn't available in Outlook on the web.
+- $true: The Tasks folder is available in Outlook Web App. This is the default value.
 
-This parameter doesn't apply to the light version of Outlook on the web.
+- $false: The Tasks folder isn't available in Outlook Web App.
+
+This parameter doesn't apply to the light version of Outlook Web App.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamSnapCalendarsEnabled
+This parameter is available only in the cloud-based service.
+
+The TeamSnapCalendarsEnabled parameter specifies whether to allow users to connect to their personal TeamSnap calendars in Outlook on the web. Valid values are:
+
+- $true: Users can connect to their TeamSnap calendars to see those events in their Outlook on the web calendar. This is the default value.
+
+- $false: Users can't connect to their TeamSnap calendars in Outlook on the web.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1808,10 +1964,11 @@ The TextMessagingEnabled parameter specifies whether users can send and receive 
 This parameter doesn't apply to the light version of Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1827,10 +1984,11 @@ The ThemeSelectionEnabled parameter specifies whether users can change the theme
 - $false: Users can't specify or change the theme in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1846,10 +2004,11 @@ This parameter has been deprecated and is no longer used.
 To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -1865,10 +2024,11 @@ This parameter has been deprecated and is no longer used.
 To enable or disable third party attachments in Outlook on the web, use the AdditionalStorageProvidersAvailable parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -1888,10 +2048,11 @@ This setting applies only if Unified Messaging has been enabled for a user (for 
 This parameter doesn't apply to the light version of Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1905,10 +2066,11 @@ This parameter is available only in on-premises Exchange.
 This parameter has been deprecated and is no longer used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1922,10 +2084,11 @@ This parameter is available only in on-premises Exchange.
 This parameter has been deprecated and is no longer used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1941,10 +2104,11 @@ The UseGB18030 parameter specifies whether to use the GB18030 character set inst
 - $false: GB2312 isn't replaced by GB18030 in Outlook on the web. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1960,10 +2124,11 @@ The UseISO885915 parameter specifies whether to use the character set ISO8859-15
 - $false: ISO8859-1 isn't replaced by GB18030 in Outlook on the web. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1981,10 +2146,11 @@ The UserVoiceEnabled parameter specifies whether to enable or disable Outlook Us
 - $false: Outlook UserVoice is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2000,10 +2166,11 @@ The WacEditingEnabled parameter specifies whether to enable or disable editing d
 - $false: Users can't edit supported documents in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2019,10 +2186,11 @@ The WacExternalServicesEnabled parameter specifies whether to enable or disable 
 - $false: External services are disabled when viewing supported documents in Outlook on the web.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2038,10 +2206,11 @@ The WacOMEXEnabled parameter specifies whether to enable or disable apps for Out
 - $false: apps for Outlook are disabled in Outlook on the web. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2059,10 +2228,11 @@ The WacViewingOnPrivateComputersEnabled parameter specifies whether to enable or
 By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2080,10 +2250,11 @@ The WacViewingOnPublicComputersEnabled parameter specifies whether to enable or 
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2098,13 +2269,14 @@ The WeatherEnabled parameter specifies whether to enable or disable weather info
 
 - $true: Weather is enabled. This is the default value.
 
-- $false: Weather is disabled. This is the default value.
+- $false: Weather is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2122,10 +2294,11 @@ The WebPartsFrameOptionsType parameter specifies what sources can access web par
 - Deny: Blocks display of Outlook on the web content in a frame, regardless of the origin of the site attempting to access it.
 
 ```yaml
-Type: Deny | AllowFrom | None | SameOrigin
+Type: WebPartsFrameOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2143,10 +2316,11 @@ The WebReadyDocumentViewingForAllSupportedTypes parameter specifies whether to e
 - $false: Only the attachment types that are specified by the WebReadyFileTypes and WebReadyMimeTypes parameters are available for WebReady Document Viewing (you can remove values from the lists).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2166,10 +2340,11 @@ The WebReadyDocumentViewingOnPrivateComputersEnabled parameter specifies whether
 By default in Exchange 2013, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2189,10 +2364,11 @@ The WebReadyDocumentViewingOnPublicComputersEnabled parameter specifies whether 
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2210,6 +2386,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2227,6 +2404,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2272,6 +2450,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2315,6 +2494,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -2330,6 +2510,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2341,10 +2522,11 @@ Accept wildcard characters: False
 This parameter has been deprecated and is no longer used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2356,10 +2538,11 @@ Accept wildcard characters: False
 This parameter has been deprecated and is no longer used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2368,20 +2551,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/530166f7-ab42-4609-ba73-9b5a39b567be.aspx)
+[New-OwaMailboxPolicy](https://docs.microsoft.com/powershell/module/exchange/client-access/new-owamailboxpolicy)
+
+[Get-OwaMailboxPolicy](https://docs.microsoft.com/powershell/module/exchange/client-access/get-owamailboxpolicy)
+
+[Set-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/set-casmailbox)
+
+[Outlook on the web mailbox policy procedures in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/outlook-web-app-mailbox-policy-procedures)

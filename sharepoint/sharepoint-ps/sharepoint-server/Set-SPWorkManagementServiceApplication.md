@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spworkmanagementserviceapplication
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPWorkManagementServiceApplication
 schema: 2.0.0

@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/update-pnpsiteclassification
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Update-PnPSiteClassification
 
 ## SYNOPSIS

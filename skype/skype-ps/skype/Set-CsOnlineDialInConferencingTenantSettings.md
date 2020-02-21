@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencingtenantsettings
 applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingTenantSettings
 schema: 2.0.0
@@ -267,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTollFreeNumberInMeetingInvites
-PARAMVALUE: $true | $false
+This parameter is obsolete and not functional.
 
 ```yaml
 Type: Boolean

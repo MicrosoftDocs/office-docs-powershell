@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpsite
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPSite
 
 ## SYNOPSIS
@@ -74,7 +76,7 @@ Enables Microsoft Flow for this site
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Set-PnPSite -SiteLogoPath c:\images\mylogo.png
+Set-PnPSite -LogoFilePath c:\images\mylogo.png
 ```
 
 Sets the logo if the site is a modern team site

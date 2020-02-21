@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csadprincipal
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAdPrincipal
 schema: 2.0.0
@@ -118,13 +119,12 @@ Accept wildcard characters: False
 ### -Filter
 Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server.
 
-The Filter parameter uses the much of the same Windows PowerShell filtering syntax used by the Where-Object cmdlet.
-For example, a filter that returns only principals who are not enabled for Skype for Business Server would look like this:
+The Filter parameter uses much of the same Windows PowerShell filtering syntax used by the Where-Object cmdlet.
+For example, a filter that returns only principals whose sip address equals "RedmondMeetingRoom@litwareinc.com" would look like this:
 
-`-Filter {Enabled -ne $True}`
+`-Filter {SipAddress -eq "sip:RedmondMeetingRoom@litwareinc.com"}`
 
-In that example.
-Enabled represents the Active Directory attribute, -ne represents the comparison operator (not equal to), and $True (a built-in Windows PowerShell variable) represents the value True.
+In that example, SipAddress represents the Skype for Business attribute, -eq represents the comparison operator (equal to "sip:RedmondMeetingRoom@litwareinc.com") 
 
 ```yaml
 Type: String

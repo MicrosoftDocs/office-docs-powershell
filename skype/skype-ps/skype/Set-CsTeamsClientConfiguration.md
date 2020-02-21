@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsclientconfiguration
 applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: Set-CsTeamsClientConfiguration
@@ -150,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowResourceAccountSendMessage
-Surface Hub uses a device account to provide email and collaboration services (IM, video, voice). This device account is used as the originating identity (the “from” party) when sending email, IM, and placing calls. As this account is not coming from an individual, identifiable user, it is deemed “anonymous” because it originated from the Surface Hub's device account. If set to $true, these device accounts will be able to send chat messages in Skype for Business Online (does not apply to Microsoft Teams).
+Surface Hub uses a device account to provide email and collaboration services (IM, video, voice). This device account is used as the originating identity (the "from" party) when sending email, IM, and placing calls. As this account is not coming from an individual, identifiable user, it is deemed "anonymous" because it originated from the Surface Hub's device account. If set to $true, these device accounts will be able to send chat messages in Skype for Business Online (does not apply to Microsoft Teams).
 
 ```yaml
 Type: Boolean
@@ -242,7 +243,7 @@ Accept wildcard characters: False
 ### -ContentPin
 This setting applies only to Skype for Business Online (not Microsoft Teams) and defines whether the user must provide a secondary form of authentication to access the meeting content *from a resource device account*.  Meeting content is defined as files that are shared to the "Content Bin" - files that have been attached to the meeting.
 
-Possible Values: NotRequired, RequiredOutsideScheduledMeeting, AlwaysRequired .  Default Value: RequiredOutsideScheduledMeeting
+Possible Values: NotRequired, RequiredOutsideScheduleMeeting, AlwaysRequired .  Default Value: RequiredOutsideScheduleMeeting
 
 ```yaml
 Type: String
@@ -301,7 +302,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceAccountContentAccess
-If $true, resource accounts for Surface Hub devices calling into Skype for Business meetings will be able to access content uploaded to the Content Bin.  Use with -ContentPIN parameter to designate whether a ContentPIN is required when access content from a device.
+Require a secondary form of authentication to access meeting content.
+
+Possible values: NoAccess, PartialAccess and FullAccess
 
 ```yaml
 Type: String

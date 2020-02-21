@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/install-spsolution
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Install-SPSolution
 schema: 2.0.0
@@ -36,7 +38,7 @@ Install-SPSolution [[-Identity] <SPSolutionPipeBind>] [-AssignmentCollection <SP
 
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets?view=powershell-5.1).
 
 The Install-SPSolution cmdlet deploys an installed SharePoint solution in the farm.
 Use the Add-SPSolution cmdlet to install a SharePoint solution package in the farm.

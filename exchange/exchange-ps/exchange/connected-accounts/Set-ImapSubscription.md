@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/connected-accounts/set-imapsubscription
 applicable: Exchange Online
 title: Set-ImapSubscription
 schema: 2.0.0
@@ -16,13 +17,13 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-ImapSubscription cmdlet to modify the properties of an existing IMAP subscription configured in a user's cloud-based mailbox.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### SubscriptionModification
 ```
-Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <$true | $false>] [-Force] [-IncomingAuth <Basic | Ntlm>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <None | Ssl | Tls>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>]
+Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-DisplayName <String>] [-EmailAddress <SmtpAddress>] [-Enabled <Boolean>] [-Force] [-IncomingAuth <IMAPAuthenticationMechanism>] [-IncomingPassword <SecureString>] [-IncomingPort <Int32>] [-IncomingSecurity <IMAPSecurityMechanism>] [-IncomingServer <Fqdn>] [-IncomingUserName <String>]
  [-Confirm]
  [-Mailbox <MailboxIdParameter>]
  [-WhatIf] [<CommonParameters>]
@@ -47,19 +48,19 @@ Set-ImapSubscription [-Identity] <AggregationSubscriptionIdParameter> [-Validate
 ## DESCRIPTION
 You can set properties for the IMAP subscription, such as the IMAP server, TCP port number, encryption method, and authentication method.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ImapSubscription "Fabrikam IMAP" -Mailbox "Kim Akers" -DisplayName "Kim's Fabrikam Mail"
 ```
 
 This example modifies the display name of the IMAP subscription Fabrikam IMAP that's configured in the cloud-based mailbox of the user Kim Akers.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-ImapSubscription "Brian Contoso Mail" -Mailbox "Brian Johnson" -IncomingServer imap.contoso.com -Force
 ```
 
@@ -81,6 +82,7 @@ Type: AggregationSubscriptionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -100,6 +102,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +118,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +134,7 @@ Type: SmtpAddress
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -141,10 +146,11 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the IMAP subscription is enabled. This parameter accepts $true or $false values. The default is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +166,7 @@ Type: SwitchParameter
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -171,10 +178,11 @@ Accept wildcard characters: False
 The IncomingAuth parameter sets the authentication method used by IMAP clients to access the IMAP server. The values are Basic or Ntlm. The default value is Basic.
 
 ```yaml
-Type: Basic | Ntlm
+Type: IMAPAuthenticationMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +200,7 @@ Type: SecureString
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +216,7 @@ Type: Int32
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -218,10 +228,11 @@ Accept wildcard characters: False
 The IncomingSecurity parameter specifies the encryption method used by IMAP clients to connect to the IMAP server. The values are None, Ssl, or Tls. The default value is None.
 
 ```yaml
-Type: None | Ssl | Tls
+Type: IMAPSecurityMechanism
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +248,7 @@ Type: Fqdn
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -252,6 +264,7 @@ Type: String
 Parameter Sets: SubscriptionModification
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -287,6 +300,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -304,6 +318,7 @@ Type: SwitchParameter
 Parameter Sets: ResendVerificationEmail
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -321,6 +336,7 @@ Type: String
 Parameter Sets: ValidateSendAs
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -336,6 +352,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -344,20 +361,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/2d7f36c8-38db-4318-879c-8f77cfd09b06.aspx)

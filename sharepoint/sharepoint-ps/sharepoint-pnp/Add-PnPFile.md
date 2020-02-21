@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpfile
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Add-PnPFile
 
 ## SYNOPSIS
@@ -78,21 +80,21 @@ This will add a file sample.doc with the contents of the stream into the Shared 
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-Add-PnPFile -FileName sample.doc -Folder "Shared Documents" -ContentType "Document" -Values @{Modified="1/1/2016"}
+Add-PnPFile -Path sample.doc -Folder "Shared Documents" -ContentType "Document" -Values @{Modified="1/1/2016"}
 ```
 
 This will add a file sample.doc to the Shared Documents folder, with a ContentType of 'Documents'. After adding it will set the Modified date to 1/1/2016.
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-Add-PnPFile -FileName sample.docx -Folder "Documents" -Values @{Modified="1/1/2016"; Created="1/1/2017"; Editor=23}
+Add-PnPFile -Path sample.docx -Folder "Documents" -Values @{Modified="1/1/2016"; Created="1/1/2017"; Editor=23}
 ```
 
 This will add a file sample.docx to the Documents folder and will set the Modified date to 1/1/2016, Created date to 1/1/2017 and the Modified By field to the user with ID 23. To find out about the proper user ID to relate to a specific user, use Get-PnPUser.
 
 ### ------------------EXAMPLE 7------------------
 ```powershell
-Add-PnPFile -FileName sample.docx -Folder "Documents" -NewFileName "differentname.docx"
+Add-PnPFile -Path sample.docx -Folder "Documents" -NewFileName "differentname.docx"
 ```
 
 This will upload a local file sample.docx to the Documents folder giving it the filename differentname.docx on SharePoint

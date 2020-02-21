@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csconferencingpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConferencingPolicy
 schema: 2.0.0
@@ -899,7 +900,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowFederatedParticipantJoinAsSameEnterprise
-PARAMVALUE: $true | $false
+Indicates whether a federated user will be directly admitted into conference bypassing the lobby. The default value is False.
+
+If set to False and AllowAnonymousParticipantsInMeetings parameter is also set to False, federated users will be treated as anonymous users and put into lobby.
+If set to True and conference admission policy is set to "Anyone from my organization" or openAuthenticated, federated users are treated as company users and admitted into conference directly.
+If set to True and conference admission policy is set to "People I Invite" or closedAuthenticated, federated users will be put into the lobby if they were not present in the pre-set invitee list.
+
 
 ```yaml
 Type: Boolean
@@ -909,7 +915,7 @@ Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1003,7 +1009,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableReliableConferenceDeletion
-PARAMVALUE: $true | $false
+When set to true, the conference state is removed from all replicas when the user deletes it, to provide instantaneous consistency of distributed conference state.
+If set to false, the deleted conference state is eventual and not instantaneous.
 
 ```yaml
 Type: Boolean

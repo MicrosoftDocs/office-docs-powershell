@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy
 applicable: Skype for Business Online
 title: Set-CsExternalUserCommunicationPolicy
 schema: 2.0.0
@@ -49,7 +50,7 @@ This example modifies an existing policy to block external file transfer.
 ## PARAMETERS
 
 ### -AllowPresenceVisibility
-{{Fill AllowPresenceVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -65,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTitleVisibility
-{{Fill AllowTitleVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileTransfer
-{{Fill EnableFileTransfer Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -145,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the external user communication policy to be modified.
 
 ```yaml
 Type: XdsIdentity
@@ -161,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-{{Fill Instance Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PSObject
@@ -177,15 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being modified. For example:
-
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
-
-You can return your tenant ID by running this command:
-
-`Get-CsTenant | Select-Object DisplayName, TenantID`
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+This parameter is reserved for internal Microsoft use.
 
 
 ```yaml

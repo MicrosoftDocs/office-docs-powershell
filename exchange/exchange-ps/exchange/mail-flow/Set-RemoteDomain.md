@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-remotedomain
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-RemoteDomain
 schema: 2.0.0
@@ -16,50 +17,50 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-RemoteDomain cmdlet to configure a managed connection for a remote domain.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
- [-AllowedOOFType <External | InternalLegacy | ExternalLegacy | None>]
- [-AutoForwardEnabled <$true | $false>]
- [-AutoReplyEnabled <$true | $false>]
- [-ByteEncoderTypeFor7BitCharsets <Use7Bit | UseQP | UseBase64 | UseQPHtmlDetectTextPlain | UseBase64HtmlDetectTextPlain | UseQPHtml7BitTextPlain | UseBase64Html7BitTextPlain | Undefined>]
+ [-AllowedOOFType <AllowedOOFType>]
+ [-AutoForwardEnabled <Boolean>]
+ [-AutoReplyEnabled <Boolean>]
+ [-ByteEncoderTypeFor7BitCharsets <ByteEncoderTypeFor7BitCharsetsEnum>]
  [-CharacterSet <String>]
  [-Confirm]
- [-ContentType <MimeHtmlText | MimeText | MimeHtml>]
- [-DeliveryReportEnabled <$true | $false>]
- [-DisplaySenderName <$true | $false>]
+ [-ContentType <ContentType>]
+ [-DeliveryReportEnabled <Boolean>]
+ [-DisplaySenderName <Boolean>]
  [-DomainController <Fqdn>]
- [-IsCoexistenceDomain <$true | $false>]
- [-IsInternal <$true | $false>]
+ [-IsCoexistenceDomain <Boolean>]
+ [-IsInternal <Boolean>]
  [-LineWrapSize <Unlimited>]
- [-MeetingForwardNotificationEnabled <$true | $false>]
+ [-MeetingForwardNotificationEnabled <Boolean>]
  [-MessageCountThreshold <Int32>]
  [-Name <String>]
- [-NDRDiagnosticInfoEnabled <$true | $false>]
- [-NDREnabled <$true | $false>]
+ [-NDRDiagnosticInfoEnabled <Boolean>]
+ [-NDREnabled <Boolean>]
  [-NonMimeCharacterSet <String>]
- [-PreferredInternetCodePageForShiftJis <Undefined | Iso2022Jp | Esc2022Jp | Sio2022Jp>]
+ [-PreferredInternetCodePageForShiftJis <PreferredInternetCodePageForShiftJisEnum>]
  [-RequiredCharsetCoverage <Int32>]
- [-TargetDeliveryDomain <$true | $false>]
- [-TNEFEnabled <$true | $false>]
- [-TrustedMailInboundEnabled <$true | $false>]
- [-TrustedMailOutboundEnabled <$true | $false>]
- [-UseSimpleDisplayName <$true | $false>]
+ [-TargetDeliveryDomain <Boolean>]
+ [-TNEFEnabled <Boolean>]
+ [-TrustedMailInboundEnabled <Boolean>]
+ [-TrustedMailOutboundEnabled <Boolean>]
+ [-UseSimpleDisplayName <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 When you set a remote domain, you can control mail flow with more precision, specify message formatting and policy and specify acceptable character sets for messages sent to or received from the remote domain.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-RemoteDomain Contoso -AllowedOOFType None -DeliveryReportEnabled $false -TNEFEnabled $true
 ```
 
@@ -67,12 +68,12 @@ This example performs the following actions:
 
 - It disables out-of-office notifications to the remote domain.
 
-- It suppresses read receipts sent from clients in your organization to the remote domain.
+- It suppresses delivery receipts sent from clients in your organization to the remote domain.
 
 - It enables TNEF message data on messages sent to the remote domain.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-RemoteDomain | Where {$_.AutoReplyEnabled -eq $false} | Set-RemoteDomain -AutoForwardEnabled $false -NDREnabled $false
 ```
 
@@ -94,6 +95,7 @@ Type: RemoteDomainIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -113,10 +115,11 @@ The AllowedOOFType parameter specifies the type of automatic replies or out-of-o
 - None: No automatic replies are sent to recipients in the remote domain.
 
 ```yaml
-Type: External | InternalLegacy | ExternalLegacy | None
+Type: AllowedOOFType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -132,10 +135,11 @@ The AutoForwardEnabled parameter specifies whether to allow messages that are au
 - $false: Auto-forwarded messages aren't delivered to recipients in the remote domain. This is the default value for the built-in remote domain named Default in on-premises Exchange.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -151,10 +155,11 @@ The AutoReplyEnabled parameter specifies whether to allow messages that are auto
 - $false: Automatic replies aren't delivered to recipients in the remote domain. This is the default value for the built-in remote domain named Default in on-premises Exchange.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -182,10 +187,11 @@ The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encodi
 - Undefined: Always use QP encoding for HTML and plain text. This is the default value.
 
 ```yaml
-Type: Use7Bit | UseQP | UseBase64 | UseQPHtmlDetectTextPlain | UseBase64HtmlDetectTextPlain | UseQPHtml7BitTextPlain | UseBase64Html7BitTextPlain | Undefined
+Type: ByteEncoderTypeFor7BitCharsetsEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +213,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -226,6 +233,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -243,10 +251,11 @@ The ContentType parameter specifies the outbound message content type and format
 - MimeHtml: Converts all messages to MIME messages that use HTML formatting.
 
 ```yaml
-Type: MimeHtmlText | MimeText | MimeHtml
+Type: ContentType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -262,10 +271,11 @@ The DeliveryReportEnabled parameter specifies whether to allow delivery reports 
 - $false: Delivery reports aren't delivered to recipients in the remote domain.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -283,10 +293,11 @@ The DisplaySenderName parameter specifies whether to show the sender's Display N
 - $false. Sender names aren't displayed in messages sent to recipients in the remote domain.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -306,6 +317,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -323,10 +335,11 @@ The IsCoexistenceDomain parameter specifies whether this remote domain is used t
 - $false: The remote domain doesn't represent your Exchange Online organization. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -342,10 +355,11 @@ The IsInternal parameter specifies whether the recipients in the remote domain a
 - $false: Recipients in the remote domain are treated as external recipients. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -361,6 +375,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -376,10 +391,11 @@ The MeetingForwardNotificationEnabled parameter specifies whether to enable meet
 - $false: Meeting requests forwarded to recipients in the remote domain don't generate a meeting forward notification to the meeting organizer.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -399,6 +415,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -414,6 +431,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -433,10 +451,11 @@ The NDRDiagnosticInfoEnabled parameter specifies whether diagnostic information 
 This parameter is meaningful only when the value of the NDREnabled parameter is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -454,10 +473,11 @@ The NDREnabled parameter specifies whether to allow non-delivery reports (also k
 - $false: NDRs from your organization aren't sent to recipients in the remote domain.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -479,6 +499,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -498,10 +519,11 @@ The PreferredInternetCodePageForShiftJis parameter specifies the specific code p
 - Undefined: No codepage is defined. This is the default value.
 
 ```yaml
-Type: Undefined | Iso2022Jp | Esc2022Jp | Sio2022Jp
+Type: PreferredInternetCodePageForShiftJisEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -521,6 +543,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -536,10 +559,11 @@ The TargetDeliveryDomain parameter specifies whether the remote domain is used i
 - $false: The remote domain isn't used for the target email address of mail users that represent the users in the other forest. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -557,10 +581,11 @@ The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Form
 - $null (blank): TNEF encoding isn't specified for the remote domain. This is the default value. TNEF encoding for recipients in the remote domain is controlled by the value of the UseMapiRichTextFormat parameter for any mail user or mail contact objects, the sender's per-recipient settings in Outlook, or the sender's default internet message settings in Outlook
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -576,10 +601,11 @@ The TrustedMailInboundEnabled parameter specifies whether messages from senders 
 - $false: Inbound messages from senders in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -595,10 +621,11 @@ The TrustedMailOutboundEnabled parameter specifies whether messages sent to reci
 - $false: Outbound messages to recipients in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -614,10 +641,11 @@ The UseSimpleDisplayName parameter specifies whether the sender's simple display
 - $false: Simple display names aren't used in messages sent to recipients in the remote domain. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -626,20 +654,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/4738bf25-39b8-4433-bd64-1d60252c2832.aspx)

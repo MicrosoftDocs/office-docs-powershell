@@ -26,7 +26,7 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 - The procedures in this topic don't work in the Office 365 Security & Compliance Center. For more information about permissions in the Security & Compliance Center, see [Permissions in Office 365 Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
-- The procedures in this topic don't work in Exchange Online Protection (EOP). For more information about permissions in EOP, see [Feature Permissions in EOP](https://technet.microsoft.com/library/34674847-a6b7-4a7e-9eaa-b64f22bc150d.aspx).
+- The procedures in this topic don't work in Exchange Online Protection (EOP). For more information about permissions in EOP, see [Feature permissions in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/feature-permissions-in-eop).
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) or [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542).
@@ -112,7 +112,7 @@ What if there are no results?
 - To see all users who are assigned a specific role, run the following command:
 
   ```PowerShell
-  Get-ManagementRoleAssignment -Role "<Role name>"  -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
+  Get-ManagementRoleAssignment -Role "<Role name>" -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
   ```
 
   For example:

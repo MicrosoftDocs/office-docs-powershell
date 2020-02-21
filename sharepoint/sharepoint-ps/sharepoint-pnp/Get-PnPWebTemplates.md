@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpwebtemplates
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Get-PnPWebTemplates
 
 ## SYNOPSIS
 Returns the available web templates.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPWebTemplates [-Lcid <UInt32>]
@@ -86,4 +88,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](https://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](http://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)

@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-applicable: Skype for Business Online
+online version: https://docs.microsoft.com/powershell/module/skype/set-csipphonepolicy
+applicable: Skype for Business Online, Skype for Business Server 2019
 title: Set-CsIPPhonePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -12,7 +13,7 @@ ms.reviewer:
 # Set-CsIPPhonePolicy
 
 ## SYNOPSIS
-Use the Set-CsIPPhonePolicy cmdlet to modify the settings of the Skype for Business Online global IP phone policy. IP phone policies define the Skype for Business Online features that are available to users.
+Use the Set-CsIPPhonePolicy cmdlet to modify the settings of the Skype for Business Online and Skype for Business Server 2019 global IP phone policy. IP phone policies define the Skype for Business features that are available to users.
 
 ## SYNTAX
 
@@ -66,18 +67,18 @@ This example sets the EnablePowerSaveMode, EnableOneTouchVoicemail and EnableDev
 
 ### -BetterTogetherOverEthernetPairingMode
 Valid values are:
-Auto – The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code.
-Manual – The user needs to enter the pairing code manually to pair with the BTOE app. 
+Auto - The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code.
+Manual - The user needs to enter the pairing code manually to pair with the BTOE app. 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
-Default value: None
+Default value: Manual
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -89,7 +90,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -105,7 +106,7 @@ Specifies the time format to be used. The acceptable values are "24" for a 24 ho
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -115,13 +116,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBetterTogetherOverEthernet
-Specifies whether the Better Together Over Ethernet (BTOE) feature is enabled for users. If $true, and if the BTOE plugin is installed on the IP device, the user can tether the device to a PC and sign in to Skype for Business Online. The default is $true.
+Specifies whether the Better Together Over Ethernet (BTOE) feature is enabled for users. If $true, and if the BTOE plugin is installed on the IP device, the user can tether the device to a PC and sign in to Skype for Business. The default is $true.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -131,13 +132,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDeviceUpdate
-Specifies whether the IP device will be updated by the Skype for Business Online service. If set to $true, IP devices will get firmware updates from the service, if $false the device will not be updated. The default is $true.
+Specifies whether the IP device will be updated by the Skype for Business service. If set to $true, IP devices will get firmware updates from the service, if $false the device will not be updated. The default is $true.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -153,7 +154,7 @@ Specifies whether an IP device is enabled to connect to the Exchange Online cale
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -169,7 +170,7 @@ Specifies whether the Visual Voicemail feature in Skype for Business Online is e
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -185,7 +186,7 @@ If enabled, phone goes to power saving mode (display turns off) based on values 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -201,7 +202,7 @@ The Force switch specifies whether to suppress warning and confirmation messages
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -217,7 +218,7 @@ This parameter is reserved for internal Microsoft use.
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -233,7 +234,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -249,7 +250,7 @@ Specifies the maximum number of retries allowed for phone unlock. The default is
 Type: UInt64
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -265,7 +266,7 @@ Specifies the address of the provisioning server for your organization.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -281,7 +282,7 @@ Specifies the password for the provisioning server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -297,7 +298,7 @@ Specifies the server type for the phone. The default is FTP.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -313,7 +314,7 @@ Specifies a username for the provisioning server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -329,7 +330,7 @@ Specifies the time in milliseconds to wait during office hours before turning on
 Type: UInt64
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -345,7 +346,7 @@ Specifies the time in milliseconds to wait after office hours before turning on 
 Type: UInt64
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -361,7 +362,7 @@ Specifies the order in which to prioritize codecs. The default is: "G722_8000;PC
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -377,7 +378,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -393,7 +394,7 @@ Specifies the time in milliseconds to wait in On-Hook mode before dialing out au
 Type: UInt64
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -411,7 +412,7 @@ The WhatIf switch causes the command to simulate its results. By using this swit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named

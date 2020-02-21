@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/uninstall-spfeature
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPFeature
 schema: 2.0.0
@@ -30,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-Uninstall-SPFeature -path "MyCustomFeature"
+Uninstall-SPFeature -Identity "MyCustomFeature"
 ```
 
 This example uninstalls the feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-Uninstall-SPFeature -path "MyCustomFeature" -CompatibilityLevel 14
+Uninstall-SPFeature -Identity "MyCustomFeature" -CompatibilityLevel 14
 ```
 
 This example uninstalls the feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.

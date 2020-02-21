@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csuserpoolinfo
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsUserPoolInfo
 schema: 2.0.0
@@ -58,8 +59,8 @@ This command returns user pool information for a single user: the user with the 
 Get-CsUser | Get-CsUserPoolInfo
 ```
 
-In Example 2, user pool information is returned for all the users who have been enabled for Skype for Business Server 2015.
-To carry out this task, the command first calls the Get-CsUser cmdlet without any parameters in order to return a collection of all the Skype for Business Server 2015-enabled users.
+In Example 2, user pool information is returned for all the users who have been enabled for Skype for Business Server.
+To carry out this task, the command first calls the Get-CsUser cmdlet without any parameters in order to return a collection of all the users enabled for Skype for Business Server.
 This collection is then piped to the Get-CsUserPoolInfo cmdlet, which displays pool information for each user in the collection.
 
 ### -------------------------- EXAMPLE -------------------------- 
@@ -68,8 +69,8 @@ Get-CsUser | Where-Object {$_.RegistrarPool -ne $Null} | Get-CsUserPoolInfo
 ```
 
 The command shown in Example 3 is a variation of the command used in Example 2.
-In Example 2, pool information is returned for all the users who have been enabled for Skype for Business Server 2015.
-However, it is possible to have users who have been enabled for Skype for Business Server 2015 but have not been assigned a Registrar pool.
+In Example 2, pool information is returned for all the users who have been enabled for Skype for Business Server.
+However, it is possible to have users who have been enabled for Skype for Business Server but have not been assigned a Registrar pool.
 The command shown in Example 2 displays an error message for each user who meets those criteria; those error messages are suppressed in Example 3.
 
 To suppress the error message, Example 3 again uses the Get-CsUser cmdlet to return a collection of all the Skype for Business Server-enabled users.
@@ -92,11 +93,11 @@ Get-CsUser | Get-CsUserPoolInfo | Where-Object {$_.BackupPoolFqdn -eq $Null}
 ```
 
 The command shown in Example 5 returns pool information for all the users who have not been assigned a backup Registrar pool.
-To carry out this task, the command first calls the Get-CsUser cmdlet to return a collection of all the users who have been enabled for Skype for Business Server 2015.
+To carry out this task, the command first calls the Get-CsUser cmdlet to return a collection of all the users who have been enabled for Skype for Business Server.
 That information is then piped to the Get-CsUserPoolInfo cmdlet, which retrieves pool information for each user in the collection.
 Finally, that pool information is piped to the Where-Object cmdlet, which displays data only for those users where the BackupPoolFqdn property is equal to a null value.
 
-### -------------------------- Example ------------------------ (Lync Server 2010)
+### -------------------------- Example ------------------------
 ```
 Get-CsUserPoolInfo "Ken Myer" | Select-Object -Expand PrimaryPoolMachinesInPreferredOrder
 ```
@@ -114,8 +115,8 @@ Indicates the Identity of the user whose user pool information is to be retrieve
 Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory Domain Services display name (for example, Ken Myer).
 You can also reference a user account by using the user's Active Directory distinguished name.
 
-You can use the asterisk (*) wildcard character when using the Display Name as the user Identity.
-For example, the Identity "* Smith" returns information for users who have a last name that ends with the string value " Smith".
+You can use the asterisk (\*) wildcard character when using the Display Name as the user Identity.
+For example, the Identity "\* Smith" returns information for users who have a last name that ends with the string value " Smith".
 
 
 
@@ -157,7 +158,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-The Get-CsUserPoolInfo cmdlet accepts a pipelined string value representing the SamAccountName of a user account that has been enabled for Skype for Business Server 2015.
+The Get-CsUserPoolInfo cmdlet accepts a pipelined string value representing the SamAccountName of a user account that has been enabled for Skype for Business Server.
 The cmdlet also accepts pipelined instances of the Active Directory user object.
 
 ## OUTPUTS

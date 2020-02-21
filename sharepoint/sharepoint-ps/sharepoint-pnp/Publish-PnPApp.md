@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/publish-pnpapp
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
 ---
+
 # Publish-PnPApp
 
 ## SYNOPSIS

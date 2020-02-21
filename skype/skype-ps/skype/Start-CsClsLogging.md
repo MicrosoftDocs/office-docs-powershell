@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/start-csclslogging
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Start-CsClsLogging
 schema: 2.0.0
@@ -109,7 +110,7 @@ Multiple servers can be specified by separating the computer FQDNs using commas:
 
 `-Computers "atl-server-001.litwareinc.com","red-server-002.litwareinc.com"`
 
-If you do not include the Computers parameter or the Pools parameter, the `Start-CsClsLogging` cmdlet will automatically run against all the computers in the topology.
+If you do not include the Computers parameter or the Pools parameter, the `Start-CsClsLogging` cmdlet will automatically run against the server you are connected to.
 
 
 ```yaml

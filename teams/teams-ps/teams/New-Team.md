@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/new-team
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -474,9 +474,9 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Remove-Team]()
+[Remove-Team](remove-team.md)
 
-[Get-Team]()
+[Get-Team](get-team.md)
 
-[Set-Team]()
+[Set-Team](set-team.md)
 

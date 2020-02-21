@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spprofileserviceapplicationproxy
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPProfileServiceApplicationProxy
 schema: 2.0.0
@@ -45,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE---------------------
 ```
 $sa = New-SPProfileServiceApplication -Name 'User Profile Service Application' -ApplicationPool 'SharePoint Web Services Default' -ProfileDBName Profile -SocialDBName Social -ProfileSyncDBname Sync
-New-ProfileServiceApplicationProxy -Name 'User Profile Service Application Proxy' -ServiceApplication $sa -DefaultProxyGroup
+New-SPProfileServiceApplicationProxy -Name 'User Profile Service Application Proxy' -ServiceApplication $sa -DefaultProxyGroup
 ```
 
 This example creates a new User Profile Service application proxy.

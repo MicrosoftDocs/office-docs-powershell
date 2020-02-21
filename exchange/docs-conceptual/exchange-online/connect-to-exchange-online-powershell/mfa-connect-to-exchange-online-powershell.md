@@ -18,7 +18,7 @@ description: "Learn how to connect to Exchange Online PowerShell by using multi-
 If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
 > [!NOTE]
-> • Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Exchange Online PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication. <br/><br/> • The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+> • The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect. <br/><br/>• To use the new Exchange Online PowerShell V2 module (which also supports MFA), see [Use the Exchange Online PowerShell V2 module](../exchange-online-powershell-v2/exchange-online-powershell-v2.md).)
 
 ## What do you need to know before you begin?
 
@@ -42,11 +42,11 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
     <sup>*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-- The Exchange Online Remote PowerShell Module needs to be installed on your computer:
+- The Exchange Online Remote PowerShell Module needs to be installed on your computer. You need to do the following steps in a browser that supports ClickOnce (for example, Internet Explorer or Edge):
 
-  1. In Internet Explorer or Edge, open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange Admin Center in Exchange Online](https://technet.microsoft.com/library/ace44f6b-4084-4f9c-89b3-e0317962472b.aspx).
+  **Note**: ClickOnce support is available in the Chromium-based version of Edge at <edge://flags/#edge-click-once>.
 
-     **Note**: A browser that uses ClickOnce to download (like Internet Explorer or Edge) is needed to complete the next step.
+  1. Open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 
   2. In the EAC, go to **Hybrid** > **Setup** and click the appropriate **Configure** button to download the Exchange Online Remote PowerShell Module for multi-factor authentication.
 
@@ -56,21 +56,24 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
      ![Click Install in the Exchange Online PowerShell Module window](../../media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
 
-- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command in a Command Prompt:
+- Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
 
-  ```PowerShell
+  ```
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command to enable basic authentication for WinRM:
+  > [!NOTE]
+  > The Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  ```PowerShell
+  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
+
+  ```
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
 
-  If basic authentication is disabled, you'll get this error when you try to connect:
+  If Basic authentication is disabled, you'll get this error when you try to connect:
 
-  `The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
+  > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
 - When you use the Exchange Online Remote PowerShell Module, your session will end after one hour, which can be problematic for long-running scripts or processes. To avoid this issue, use [Trusted IPs](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips) to bypass MFA for connections from your intranet. Trusted IPs allow you to connect to Exchange Online PowerShell from your intranet using the old instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md). Also, if you have servers in a datacenter, be sure to add their public IP addresses to Trusted IPs as described [here](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-mfasettings#enable-the-trusted-ips-feature-by-using-service-settings).
 
@@ -84,7 +87,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 2. The command that you need to run uses the following syntax:
 
    ```PowerShell
-   Connect-EXOPSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
+   Connect-EXOPSSession [-UserPrincipalName -ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri> -DelegatedOrganization <String>]
    ```
 
    - _\<UPN\>_ is your Office 365 work or school account.
@@ -98,17 +101,23 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
      |Office 365 GCC High|`https://outlook.office365.us/powershell-liveid`|`https://login.microsoftonline.us/common`|
      |Office 365 DoD|`https://webmail.apps.mil/powershell-liveid`|`https://login.microsoftonline.us/common`|
 
-     This example connects to Exchange Online in Office 365 using the account chris@contoso.com.
+   This example connects to Exchange Online in Office 365 using the account chris@contoso.com.
 
-     ```PowerShell
-     Connect-EXOPSSession -UserPrincipalName chris@contoso.com
-     ```
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName chris@contoso.com
+   ```
 
-     This example connects to Exchange Online in Office 365 Germany using the account lukas@fabrikam.com.
+   This example connects to Exchange Online in Office 365 Germany using the account lukas@fabrikam.com.
 
-     ```PowerShell
-     Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
-     ```
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   ```
+
+   This example connects to Exchange Online to manage another tenant.
+
+   ```PowerShell
+   Connect-EXOPSSession -UserPrincipalName chris@contoso.com -DelegatedOrganization fabrikam.onmicrosoft.com
+   ```
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
 
@@ -126,6 +135,14 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 ```PowerShell
 Get-PSSession | Remove-PSSession
 ```
+
+## Single sign-on
+
+If your organization has single sign-on (SSO) enabled and you are logged on to a computer as a user in the SSO domain, then **Connect-EXOPSSession** may fail with the following error:
+
+> New-EXOPSSession : User 'loggedonuser@contoso.com' returned by service does not match user 'userprincipalname@contoso.com' in the request.
+
+This error occurs because single sign-on overrides the specified user principal name (UPN). As a work-around, use Connect-EXOPSSession without -UserPrincipalName parameter or use -Credential parameter instead.
 
 ## How do you know this worked?
 

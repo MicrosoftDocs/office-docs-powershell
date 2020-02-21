@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/new-csbatchpolicyassignmentoperation
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
@@ -11,7 +11,9 @@ ms.reviewer:
 # New-CsBatchPolicyAssignmentOperation
 
 ## SYNOPSIS
-This cmdlet is used to assign a policy to a batch of users.  A batch may contain up to 20,000 users.
+NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
+
+This cmdlet is used to assign a policy to a batch of users.
 
 ## SYNTAX
 
@@ -23,6 +25,11 @@ New-CsBatchPolicyAssignmentOperation -PolicyType <String> -PolicyName <String> -
 When a policy is assigned to a batch of users, the assignments are performed as an asynchronous operation.  The cmdlet returns the operation ID which can be used to track the progress and status of the assignments.
 
 Users can be specified by their object ID (guid) or by their UPN/SIP/email (user@contoso.com).
+
+A batch may contain up to 20,000 users.
+
+Batch policy assignment is currently limited to the following policy types:
+CallingLineIdentity, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
 
 ## EXAMPLES
 

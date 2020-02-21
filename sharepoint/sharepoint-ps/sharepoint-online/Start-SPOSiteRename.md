@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/start-spositerename
 applicable: SharePoint Online
 title: Start-SPOSiteRename
 schema: 2.0.0
@@ -11,62 +13,68 @@ ms.reviewer:
 # Start-SPOSiteRename
 
 ## SYNOPSIS
-This Feature is part of the Admin Center Preview. If your tenant is not part of the Admin Center Preview, you will get an error when trying to run this cmdlet. 
+
+> [!NOTE]
+> This Feature is part of the Admin Center Preview. If your tenant is not part of the Admin Center Preview, you will get an error when trying to run this cmdlet.
 
 Starts a job to rename a site. You can change the title, the URL or both of a particular site on a SharePoint Online collection
 
-
 ## SYNTAX
+
 ```Powershell
 Start-SPOSiteRename [-Identity] <SpoSitePipeBind> [-NewSiteUrl] <string> [[-NewSiteTitle] <string>]
     [[-SuppressMarketplaceAppCheck]] [[-SuppressWorkflow2013Check]] [[-Reserved] <string>] [-WhatIf] [-Confirm]
     [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
+
 This command starts a rename of a site on a SharePoint Online site into a new title, name and url. Also allows you to simulate the run using the -WhatIf parameter as well as -SuppressWorkflow2013Check and SuppressMarketplaceAppCheck switch parameters.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
+
 ```powershell
 $url="https://<tenant>.sharepoint.com/site/samplesite"
 $NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
 Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl
 ```
+
 Starts the rename of the SPO site with name "samplesite" to "renamed" without modifying the title.
 
 ### EXAMPLE 2
+
 ```powershell
 $url="https://<tenant>.sharepoint.com/site/samplesite"
 $NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
 $newTitle="New Title"
-Start-SPOSiteRename-Identity $url  -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle
+Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle
 ```
+
 Starts the rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title"
 
 ### EXAMPLE 3
+
 ```powershell
 $url="https://<tenant>.sharepoint.com/site/samplesite"
-$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed" 
+$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
 $newTitle="New Title"
 Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle -SuppressMarketplaceAppCheck -SuppressWorkflow2013Check -WhatIf
 ```
-Starts the **simulation** rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title" without MarketPlaceAppCheck and without WorkFlow2013Check
 
+Starts the **simulation** rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title" without MarketPlaceAppCheck and without WorkFlow2013Check
 
 ## PARAMETERS
 
-
 ### -Identity
-PARAMVALUE: String
 
+PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -77,8 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewSiteUrl
-PARAMVALUE: String
 
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -93,12 +101,13 @@ Accept wildcard characters: False
 ```
 
 ### -NewSiteTitle
+
 PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -109,13 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressMarketplaceAppCheck
-PARAMVALUE: SwitchParameter
 
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -126,13 +135,13 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressWorkflow2013Check
-PARAMVALUE: SwitchParameter
 
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -143,13 +152,13 @@ Accept wildcard characters: False
 ```
 
 ### -Reserved
-PARAMVALUE: String
 
+PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -160,12 +169,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Simulation of what would happend if you run the script without modifying anything.
+
+Simulation of what would happened if you run the script without modifying anything.
 
 ```yaml
 Type: String
 Parameter Sets: UrlAndDestinationDataLocation, UrlAndDestinationUrl
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -176,13 +186,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-PARAMVALUE: SwitchParameter
 
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: False
@@ -193,9 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
@@ -208,4 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
 
 [Get-SPOUserAndContentMoveState](Get-SPOUserAndContentMoveState.md)
-

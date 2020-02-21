@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsupgradepolicy
 applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 title: Get-CsTeamsUpgradePolicy
 schema: 2.0.0

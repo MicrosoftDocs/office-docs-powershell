@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-exchangesettings
 applicable: Exchange Server 2016, Exchange Server 2019
 title: Set-ExchangeSettings
 schema: 2.0.0
@@ -16,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ExchangeSettings cmdlet to configure Exchange setting objects that you created with the New-ExchangeSettings cmdlet.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -62,7 +63,7 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsG
  [-MinVersion <String>]
  [-NameMatch <String>]
  [-Priority <Int32>]
- [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>] [-ScopeFilter <String>]
+ [-Scope <ExchangeSettingsScope>] [-ScopeFilter <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -75,7 +76,7 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsG
  [-Force]
  [-GroupName <String>]
  [-Priority <Int32>]
- [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>] [-WhatIf]
+ [-Scope <ExchangeSettingsScope>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -97,7 +98,7 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsG
  [-DomainController <Fqdn>]
  [-Force]
  [-Priority <Int32>]
- [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>]
+ [-Scope <ExchangeSettingsScope>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -162,12 +163,12 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ExchangeSettings Audit -UpdateSetting -ConfigName AuditLogPumperEnabled -ConfigValue $true -Reason "Enable Unified Audit Logging"
 ```
 
@@ -185,6 +186,7 @@ Type: ExchangeSettingsIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -200,6 +202,7 @@ Type: SwitchParameter
 Parameter Sets: ClearHistory
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -217,6 +220,7 @@ Type: String
 Parameter Sets: UpdateSetting, RemoveSetting
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -234,6 +238,7 @@ Type: String[]
 Parameter Sets: RemoveMultipleSettings, UpdateMultipleSettings
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -246,6 +251,7 @@ Type: String[]
 Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -263,6 +269,7 @@ Type: String
 Parameter Sets: UpdateSetting
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -280,6 +287,7 @@ Type: SwitchParameter
 Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupAdvanced, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -299,6 +307,7 @@ Type: DateTime
 Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -311,6 +320,7 @@ Type: DateTime
 Parameter Sets: UpdateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -330,6 +340,7 @@ Type: Guid
 Parameter Sets: CreateSettingsGroupGuid
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -345,6 +356,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -362,6 +374,7 @@ Type: SwitchParameter
 Parameter Sets: RemoveSetting, RemoveMultipleSettings
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -379,6 +392,7 @@ Type: SwitchParameter
 Parameter Sets: RemoveSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -396,6 +410,7 @@ Type: String
 Parameter Sets: CreateSettingsGroupAdvanced, UpdateSettingsGroupAdvanced
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -413,6 +428,7 @@ Type: SwitchParameter
 Parameter Sets: UpdateSetting, UpdateMultipleSettings
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -430,6 +446,7 @@ Type: SwitchParameter
 Parameter Sets: UpdateSettingsGroup, UpdateSettingsGroupAdvanced
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -449,6 +466,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -468,6 +486,7 @@ Type: SwitchParameter
 Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -485,6 +504,7 @@ Type: String
 Parameter Sets: EnableSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -500,6 +520,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -517,6 +538,7 @@ Type: String
 Parameter Sets: EnableSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -532,6 +554,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -547,6 +570,7 @@ Type: String
 Parameter Sets: CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -562,6 +586,7 @@ Type: String
 Parameter Sets: CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -587,6 +612,7 @@ Type: String
 Parameter Sets: UpdateSetting, RemoveSetting, CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric, UpdateSettingsGroup, RemoveMultipleSettings, RemoveSettingsGroup, UpdateMultipleSettings
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -606,6 +632,7 @@ Type: String
 Parameter Sets: CreateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -625,6 +652,7 @@ Type: String
 Parameter Sets: CreateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -644,6 +672,7 @@ Type: String
 Parameter Sets: CreateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -659,6 +688,7 @@ Type: Int32
 Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric, UpdateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -686,10 +716,11 @@ The Scope parameter specifies the scope of the Exchange settings object. Valid v
 - User
 
 ```yaml
-Type: Forest | Dag | Server | Process | Database | Organization | User | Generic
+Type: ExchangeSettingsScope
 Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -698,17 +729,30 @@ Accept wildcard characters: False
 ```
 
 ### -ScopeFilter
-The ScopeFilter parameter specifies the scope of an Exchange settings group based an OPATH filter (for example, ServerRole -like "Mailbox\*"). The filter that's used for this parameter is available for all Scope parameter values other than Forest.
+The ScopeFilter parameter uses OPath filter syntax to specify the scope of an Exchange settings group based. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"ServerRole -like 'Mailbox*'"`).
 
-You use the ScopeFilter parameter only when you update Exchange settings groups by using the UpdateSettingsGroup switch with the GroupName parameter.
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 
-You can't use this parameter with other scope-related parameters.
+- Property is a filterable property.
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+
+You can't use this parameter with the Scope parameter and the value Forest or other scope-related parameters.
+
+You use this parameter only when you update Exchange settings groups by using the UpdateSettingsGroup switch with the GroupName parameter.
 
 ```yaml
 Type: String
 Parameter Sets: CreateSettingsGroup, UpdateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -724,6 +768,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -732,7 +777,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -745,5 +790,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/09882525-a579-4af6-9565-4e44a24c8786.aspx)

@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/apply-pnptenanttemplate
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Apply-PnPTenantTemplate
 
 ## SYNOPSIS
@@ -25,6 +27,7 @@ Apply-PnPTenantTemplate -Path <String>
                         [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
                         [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
                         [-ClearNavigation [<SwitchParameter>]]
+                        [-Configuration <ApplyConfigurationPipeBind>]
                         [-Connection <SPOnlineConnection>]
 ```
 
@@ -43,6 +46,7 @@ Apply-PnPTenantTemplate -Template <ProvisioningHierarchy>
                         [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
                         [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
                         [-ClearNavigation [<SwitchParameter>]]
+                        [-Configuration <ApplyConfigurationPipeBind>]
                         [-Connection <SPOnlineConnection>]
 ```
 
@@ -79,6 +83,18 @@ Override the RemoveExistingNodes attribute in the Navigation elements of the tem
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Configuration
+Specify a JSON configuration file to configure the extraction progress.
+
+```yaml
+Type: ApplyConfigurationPipeBind
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -146,7 +162,7 @@ Accept pipeline input: False
 ```
 
 ### -Parameters
-Allows you to specify parameters that can be referred to in the hierarchy by means of the {parameter:&lt;Key&gt;} token. See examples on how to use this parameter.
+Allows you to specify parameters that can be referred to in the tenant template by means of the {parameter:&lt;Key&gt;} token. See examples on how to use this parameter.
 
 ```yaml
 Type: Hashtable
@@ -158,7 +174,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-Path to the xml or pnp file containing the provisioning hierarchy.
+Path to the xml or pnp file containing the tenant template.
 
 ```yaml
 Type: String
@@ -223,7 +239,6 @@ Accept pipeline input: False
 ```yaml
 Type: ProvisioningHierarchy
 Parameter Sets: By Object
-Aliases: Hierarchy
 
 Required: True
 Position: 0

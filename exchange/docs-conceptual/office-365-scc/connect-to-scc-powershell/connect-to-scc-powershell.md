@@ -48,15 +48,31 @@ For more information about the Security & Compliance Center, see [Office 365 Sec
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
-    `Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.`
+  > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
-    To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
+  To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-    ```PowerShell
-    Set-ExecutionPolicy RemoteSigned
-    ```
+  ```PowerShell
+  Set-ExecutionPolicy RemoteSigned
+  ```
 
-    You need to configure this setting only once on your computer, not every time you connect.
+  You need to configure this setting only once on your computer, not every time you connect.
+
+- Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
+
+  ```
+  winrm get winrm/config/client/auth
+  ```
+
+  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
+
+  ```
+  winrm set winrm/config/client/auth @{Basic="true"}
+  ```
+
+  If Basic authentication is disabled, you'll get this error when you try to connect:
+
+  > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
 
 ## Connect to the Security & Compliance Center
 
@@ -111,7 +127,7 @@ If you receive errors, check the following requirements:
 
 - The **New-PSSession** command (Step 2) might fail to connect if your client IP address changes during the connection request. This can happen if your organization uses a source network address translation (SNAT) pool that contains multiple IP addresses. The connection error looks like this:
 
-  `The request for the Windows Remote Shell with ShellId <ID> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation.`
+  > The request for the Windows Remote Shell with ShellId <ID> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation.
 
   To fix the issue, use an SNAT pool that contains a single IP address, or force the use of a specific IP address for connections to the Security & Compliance Center PowerShell endpoint.
 

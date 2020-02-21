@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csusercallforwardingsettings
 applicable: Skype for Business Server 2019
 title: Set-CsUserCallForwardingSettings
 schema: 2.0.0
@@ -12,7 +13,7 @@ ms.reviewer:
 # Set-CsUserCallForwardingSettings
 
 ## SYNOPSIS
-This cmdlet modifies the specified user’s call forwarding settings. This cmdlet returns the specified user’s call forwarding settings as an object, and displays the same on the screen, in case of success. In case of failure, the appropriate error message is shown.
+This cmdlet modifies the specified user's call forwarding settings. This cmdlet returns the specified user's call forwarding settings as an object, and displays the same on the screen, in case of success. In case of failure, the appropriate error message is shown.
 
 ## SYNTAX
 
@@ -42,7 +43,7 @@ Set-CsUserCallForwardingSettings -EnableSimulRing <String> [-SettingsActiveWorkH
 ## DESCRIPTION
 The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (Secondary Extension Feature Activation) enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user.
 The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below:
-•	CsAdministrator – Get and Set for all cmdlets
+•	CsAdministrator - Get and Set for all cmdlets
 •	CsVoiceAdministrator - Get and Set for all cmdlets
 •	CsServerAdministrator - Get and Set for all cmdlets
 •	CsHelpDesk - Get for all cmdlets
@@ -144,7 +145,7 @@ Accept wildcard characters: False
 ### -EnableSimulRing
 This is a switch parameter that enables forwarding to the specified destination. Cannot be used along with the DisableForwarding and EnableForwarding parameters.
 oSimulRingDestination can be a phone number, delegates, or team call group.
-	Acceptable input formats: “<phone number>”, Team, Delegates
+	Acceptable input formats: "<phone number>", Team, Delegates
 
 
 ```yaml

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csorganizationalautoattendantcallflow
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantCallFlow
 schema: 2.0.0
@@ -34,7 +35,7 @@ $menu = New-CsOrganizationalAutoAttendantMenu -Name "Default Menu" -Prompts @($m
 $callFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu
 ```
 
-This example creates a new call flow that renders the “Default Menu” menu.
+This example creates a new call flow that renders the "Default Menu" menu.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -44,7 +45,7 @@ $greeting = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "Welcome
 $callFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu -Greetings $greeting
 ```
 
-This example creates a new call flow that plays a greeting before rendering the “Default Menu” menu.
+This example creates a new call flow that plays a greeting before rendering the "Default Menu" menu.
 
 ## PARAMETERS
 
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Greetings
-If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow’s menu is rendered.
+If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow's menu is rendered.
 
 You can create prompts by using the New-CsOrganizationalAutoAttendantPrompt cmdlet.
 

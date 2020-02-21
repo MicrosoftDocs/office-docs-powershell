@@ -1,8 +1,10 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpuserprofileproperty
 applicable: SharePoint Online
 schema: 2.0.0
 ---
+
 # Set-PnPUserProfileProperty
 
 ## SYNOPSIS
@@ -36,14 +38,14 @@ Requires a connection to a SharePoint Tenant Admin site.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPUserProfileProperty -Account 'user@domain.com' -PropertyName 'SPS-Location' -Value 'Stockholm'
+Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'SPS-Location' -Value 'Stockholm'
 ```
 
 Sets the SPS-Location property for the user as specified by the Account parameter
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Set-PnPUserProfileProperty -Account 'user@domain.com' -PropertyName 'MyProperty' -Values 'Value 1','Value 2'
+Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'MyProperty' -Values 'Value 1','Value 2'
 ```
 
 Sets the MyProperty multi value property for the user as specified by the Account parameter
