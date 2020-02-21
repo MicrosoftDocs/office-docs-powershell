@@ -51,7 +51,7 @@ This example turns on the tenant blocked calling numbers setting. Inbound calls 
 Set-CsTenantBlockedCallingNumbers -Name "MyCustomBlockedCallingNumbersName"
 ```
 
-This example rename the current blocked calling numbers with "MyCustomBlockedCallingNumbersName". No change is made besides the Name field change.
+This example renames the current blocked calling numbers with "MyCustomBlockedCallingNumbersName". No change is made besides the Name field change.
 
 ### -------------------------- Example 4 --------------------------
 ```
