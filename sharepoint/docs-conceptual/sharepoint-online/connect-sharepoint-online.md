@@ -56,4 +56,5 @@ Connect-SPOService -Url https://$orgName-admin.sharepoint.com
 
 You are now ready to use SharePoint Online commands.
 
-> [!NOTE] If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](https://docs.microsoft.com/sharepoint/troubleshoot/security/cannot-force-modern-authentication)
+> [!NOTE]
+> If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](https://docs.microsoft.com/sharepoint/troubleshoot/security/cannot-force-modern-authentication)
