@@ -79,6 +79,9 @@ The following cmdlet references are for Microsoft Teams.
 ### [Set-Team](Set-Team.md)
 {{Manually Enter Set-Team Description Here}}
 
+### [Set-TeamArchivedState](Set-TeamArchivedState.md)
+{{Manually Enter Set-TeamArchivedState Description Here}}
+
 ### [Set-TeamChannel](Set-TeamChannel.md)
 {{Manually Enter Set-TeamChannel Description Here}}
 
