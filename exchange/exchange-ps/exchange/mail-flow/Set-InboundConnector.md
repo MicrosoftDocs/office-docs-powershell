@@ -23,13 +23,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-InboundConnector [-Identity] <InboundConnectorIdParameter>
- [-AssociatedAcceptedDomains <MultiValuedProperty>] [-CloudServicesMailEnabled <Boolean>]
- [-Comment <String>] [-Confirm] [-ConnectorSource <TenantConnectorSource>]
- [-ConnectorType <TenantConnectorType>] [-Enabled <Boolean>] [-Name <String>]
- [-RequireTls <Boolean>] [-RestrictDomainsToCertificate <Boolean>]
- [-RestrictDomainsToIPAddresses <Boolean>] [-SenderDomains <MultiValuedProperty>]
- [-SenderIPAddresses <MultiValuedProperty>] [-TlsSenderCertificateName <TlsCertificate>]
- [-TreatMessagesAsInternal <Boolean>] [-WhatIf] [<CommonParameters>]
+ [-AssociatedAcceptedDomains <MultiValuedProperty>]
+ [-CloudServicesMailEnabled <Boolean>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectorSource <TenantConnectorSource>]
+ [-ConnectorType <TenantConnectorType>]
+ [-EFSkipIPs <MultiValuedProperty>]
+ [-EFSkipLastIP <Boolean>]
+ [-EFSkipMailGateway <MultiValuedProperty>]
+ [-EFTestMode <Boolean>]
+ [-EFUsers <MultiValuedProperty>]
+ [-Enabled <Boolean>]
+ [-Name <String>]
+ [-RequireTls <Boolean>]
+ [-RestrictDomainsToCertificate <Boolean>]
+ [-RestrictDomainsToIPAddresses <Boolean>]
+ [-ScanAndDropRecipients <MultiValuedProperty>]
+ [-SenderDomains <MultiValuedProperty>]
+ [-SenderIPAddresses <MultiValuedProperty>]
+ [-TlsSenderCertificateName <TlsCertificate>]
+ [-TreatMessagesAsInternal <Boolean>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -188,6 +203,100 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EFSkipIPs
+the EFSkipIPs parameter specifies the source IP addresses to skip in Enhanced Filtering for Connectors when the EFSkipLastIP parameter value is $false. Valid values are:
+
+- A single IP address: For example, 192.168.1.1.
+
+- An IP address range: For example, 192.168.0.1-192.168.0.254.
+
+- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24
+
+You can specify multiple IP addresses or address range entries separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EFSkipLastIP
+The EFSkipIPs parameter specifies the behavior of Enhanced Filtering for Connectors. Valid values are:
+
+- $true: Only the last message source is skipped.
+
+- $false: Skip the source IP addresses specified by the EFSkipIPs parameter. If no IP addresses are specified, Enhanced Filtering for Connectors is disabled on the connector. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EFSkipMailGateway
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EFTestMode
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EFUsers
+The EFUsers parameter specifies the recipients that Enhanced Filtering for Connectors applies to. The default value is blank ($null), which means Enhanced Filtering for Connectors is applied to all recipients.
+
+You can specify multiple recipient email addresses separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Enabled
 The Enabled parameter enables or disables the connector. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -259,6 +368,22 @@ Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScanAndDropRecipients
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
