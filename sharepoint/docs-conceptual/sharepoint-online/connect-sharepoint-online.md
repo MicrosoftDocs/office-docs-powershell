@@ -55,3 +55,6 @@ Connect-SPOService -Url https://$orgName-admin.sharepoint.com
 3. Follow the instructions in the **Microsoft SharePoint Online Management Shell** dialog box to provide the additional authentication information, such as a verification code, and then click **Sign in**.
 
 You are now ready to use SharePoint Online commands.
+
+> [!NOTE]
+> If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](https://docs.microsoft.com/sharepoint/troubleshoot/security/cannot-force-modern-authentication)
