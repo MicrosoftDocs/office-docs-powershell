@@ -22,15 +22,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter> [-AllAcceptedDomains <Boolean>]
- [-CloudServicesMailEnabled <Boolean>] [-Comment <String>] [-Confirm]
- [-ConnectorSource <TenantConnectorSource>] [-ConnectorType <TenantConnectorType>]
- [-Enabled <Boolean>] [-IsTransportRuleScoped <Boolean>] [-IsValidated <Boolean>]
- [-LastValidationTimestamp <DateTime>] [-Name <String>] [-RecipientDomains <MultiValuedProperty>]
- [-RouteAllMessagesViaOnPremises <Boolean>] [-SmartHosts <MultiValuedProperty>]
- [-TestMode <Boolean>] [-TlsDomain <SmtpDomainWithSubdomains>]
- [-TlsSettings <TlsAuthLevel>] [-UseMXRecord <Boolean>]
- [-ValidationRecipients <String[]>] [-WhatIf] [<CommonParameters>]
+Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter>
+ [-AllAcceptedDomains <Boolean>]
+ [-CloudServicesMailEnabled <Boolean>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectorSource <TenantConnectorSource>]
+ [-ConnectorType <TenantConnectorType>]
+ [-Enabled <Boolean>]
+ [-IsTransportRuleScoped <Boolean>]
+ [-IsValidated <Boolean>]
+ [-LastValidationTimestamp <DateTime>]
+ [-Name <String>]
+ [-RecipientDomains <MultiValuedProperty>]
+ [-RouteAllMessagesViaOnPremises <Boolean>]
+ [-SmartHosts <MultiValuedProperty>]
+ [-TestMode <Boolean>]
+ [-TlsDomain <SmtpDomainWithSubdomains>]
+ [-TlsSettings <TlsAuthLevel>]
+ [-UseMXRecord <Boolean>]
+ [-ValidationRecipients <String[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
