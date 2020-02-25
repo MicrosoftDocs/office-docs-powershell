@@ -17,6 +17,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Remove-ConnectSubscription cmdlet to remove a previously configured contact aggregation subscription between a supported service (for example, Facebook or LinkedIn) and a cloud-based mailbox. An administrator can't use this cmdlet to remove subscriptions from another user's mailbox.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX

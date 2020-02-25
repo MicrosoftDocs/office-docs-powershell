@@ -1122,7 +1122,7 @@ The TimeZone parameter specifies the time zone of the administrator who submits 
 
 A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
 
-To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
+To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
 If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
 
