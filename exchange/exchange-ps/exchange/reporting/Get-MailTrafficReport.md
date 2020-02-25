@@ -46,15 +46,25 @@ You can use the EventTypes values from the Get-MailTrafficReport cmdlet to analy
 
 Mail traffic summary
 
+- AdvancedProtectionMalware: Messages that were marked as malware by the Office 365 Advanced Threat Protection service. For details about the Advanced Threat Protection service, see [Office 365 Advanced Threat Protection service description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+
+- AtpGoodMail: Messages that were delivered after passing through the Office 365 Advanced Threat Protection service. This count shows the number of unique messages. If a message was delivered to multiple recipients, it would still count as a single message.
+
+- DLPMessages: Messages that matched a data loss prevention (DLP) policy. For details about data loss prevention, see [Overview of data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies).
+
+- Expire: Messages that cannot be delivered, stuck in a queue, and after some time expired.
+
 - GoodMail: Messages that were delivered after passing through the malware and spam filters. This count shows the number of unique messages. If a message was delivered to multiple recipients, it would still count as a single message.
 
 - Malware: Messages that were marked as malware.
 
-- TransportRuleHits: Messages that matched a rule. If a message matched multiple rules, this event type would show each of the rule matches.
+-	Receive: Messages successfully received by the service.
 
-- EncryptionManual: Messages manually encrypted by users.
+-	SpoofMail: Messages that were marked as spoofed by the Office 365 anti-spoofing protection.
 
-- EncryptionPolicy: Messages that matched a rule for encrypting email messages using the latest Office 365 Message Encryption (OME) capabilities.
+- TransportRuleHits: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
+
+-	TransportRuleMessages: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
 
 Spam detections
 
@@ -103,6 +113,12 @@ Bulk mail
 - BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see [Use mail flow rules to configure bulk email filtering in Exchange Online Protection](https://docs.microsoft.com/microsoft-365/security/office-365-security/use-transport-rules-to-configure-bulk-email-filtering).
 
 - BCL1 through BCL9: Messages with BCL rating of 1 through 9.
+
+Encryption
+
+- EncryptionManual: Messages manually encrypted by users.
+
+- EncryptionPolicy: Messages that matched a rule for encrypting email messages using the latest Office 365 Message Encryption (OME) capabilities.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
