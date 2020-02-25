@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 URL of the target site that the source site will be swapped to. The site at this location must exist before performing the swap.
 
-The target site must be the either:
+The target site must be either:
 
 - The root site at <https://tenant-name.sharepoint.com;> or
 - The search center site at <https://tenant-name.sharepoint.com/search.>
