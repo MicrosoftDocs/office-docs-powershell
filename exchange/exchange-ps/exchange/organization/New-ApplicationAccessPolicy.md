@@ -17,6 +17,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
