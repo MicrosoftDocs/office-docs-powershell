@@ -478,7 +478,11 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptLargeDataLoss
-The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You need to use this switch if you set either the BadItemLimit or LargeItemLimit parameters to a value of 51 or higher. Otherwise, the command will fail.
+The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
+
+In Exchange 2013 or later or Exchange Online, you need to use this switch if you set the LargeItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
+
+In Exchange 2010, you need to use this switch if you set the BadItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
 
 ```yaml
 Type: SwitchParameter
@@ -579,9 +583,9 @@ The BadItemLimit parameter specifies the maximum number of bad items that are al
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
 
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
 
 ```yaml
 Type: Unlimited
@@ -831,7 +835,7 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
+- Exchange Server: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
 
 - Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
@@ -839,7 +843,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
 
 ```yaml
 Type: Unlimited
