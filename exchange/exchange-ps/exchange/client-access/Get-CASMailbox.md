@@ -17,6 +17,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-CASMailbox cmdlet to view the Client Access settings that are configured on mailboxes.
 
+> [!NOTE]
+> In Exchange Online PowerShell, we recommend that you use the Get-EXOCASMailbox cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
