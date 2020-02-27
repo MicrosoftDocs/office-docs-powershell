@@ -23,10 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ComplianceCase [-Identity] <ComplianceCaseIdParameter>
+ [-CaseType <ComplianceCaseType>]
  [-Close]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
+ [-ExternalId <String>]
  [-Name <String>]
  [-Reopen]
  [-WhatIf] [<CommonParameters>]
@@ -63,6 +65,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -CaseType
+{{ Fill CaseType Description }}
+
+```yaml
+Type: ComplianceCaseType
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -123,6 +141,22 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalId
+{{ Fill ExternalId Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

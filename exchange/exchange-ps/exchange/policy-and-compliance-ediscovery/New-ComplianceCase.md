@@ -22,8 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ComplianceCase [-Name] <String> [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-Sources <Object[]>] [-WhatIf] [<CommonParameters>]
+New-ComplianceCase [-Name] <String>
+ [-CaseType <ComplianceCaseType>]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-ExternalId <String>]
+ [-SecondaryCaseType <String>]
+ [-SourceCaseType <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,6 +58,22 @@ Applicable: Office 365 Security & Compliance Center
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CaseType
+{{ Fill CaseType Description }}
+
+```yaml
+Type: ComplianceCaseType
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -108,11 +131,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Sources
-This parameter is reserved for internal Microsoft use.
+### -ExternalId
+{{ Fill ExternalId Description }}
 
 ```yaml
-Type: Object[]
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SecondaryCaseType
+{{ Fill SecondaryCaseType Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceCaseType
+{{ Fill SourceCaseType Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

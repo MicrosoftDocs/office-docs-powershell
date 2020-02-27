@@ -22,7 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceCase [-Identity] <ComplianceCaseIdParameter>] [-CaseType <ComplianceCaseType>] [-DomainController <Fqdn>] [-RoleGroup <String>]
+Get-ComplianceCase [-Identity] <ComplianceCaseIdParameter>]
+ [-CaseType <ComplianceCaseType>]
+ [-DomainController <Fqdn>]
+ [-RecentOnly]
+ [-RoleGroup <String>]
  [<CommonParameters>]
 ```
 
@@ -100,6 +104,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RecentOnly
+{{ Fill RecentOnly Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
