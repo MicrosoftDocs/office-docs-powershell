@@ -46,7 +46,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
   1. In a browser that supports ClickOnce (for example, Internet Explorer or Edge), open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 
-     **Note**: ClickOnce support is available in the Chromium-based version of Edge at <edge://flags/#edge-click-once>.
+     **Note**: ClickOnce support is available in the Chromium-based version of Edge at <edge://flags/#edge-click-once>, and might not be enabled by default.
 
   2. In the EAC, go to **Hybrid** > **Setup** and click the appropriate **Configure** button to download the Exchange Online Remote PowerShell Module for multi-factor authentication.
 
