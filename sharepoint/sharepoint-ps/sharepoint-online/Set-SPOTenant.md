@@ -22,8 +22,12 @@ Sets properties on the SharePoint Online organization.
 Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BccExternalSharingInvitations <Boolean>]
  [-BccExternalSharingInvitationsList <String>]
+ [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-DisplayStartASiteOption <Boolean>]
+ [-EnableAIPIntegration <Boolean>]
+ [-EnableMinimumVersionRequirement <Boolean>]
  [-ExternalServicesEnabled <Boolean>]
+ [-MarkNewFilesSensitiveByDefault <SensitiveByDefaultState>]
  [-MaxCompatibilityLevel <Int32>]
  [-MinCompatibilityLevel <Int32>]
  [-NoAccessRedirectUrl <String>]
@@ -41,11 +45,13 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>]
  [-CommentsOnFilesDisabled <Boolean>]
  [-SocialBarOnSitePagesDisabled <Boolean>]
+ [-DefaultLinkPermission <SharingPermissionType>]
  [-DefaultSharingLinkType <SharingLinkType>]
  [-DisabledWebPartIds <Guid>]
  [-DisallowInfectedFileDownload <Boolean>]
  [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>]
+ [-FilePickerExternalImageSearchEnabled <Boolean>]
  [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>]
  [-IPAddressEnforcement <Boolean>]
@@ -71,16 +77,21 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>]
+ [-SyncPrivacyProfileProperties <Boolean>]
  [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>]
  [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]]
  [-CustomizedExternalSharingServiceUrl <String>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [-ConditionalAccessPolicyErrorHelpLink <String>]
  [-LimitedAccessFileType <SPOLimitedAccessFileType>]
+ [-AllowCommentsTextOnEmailEnabled <Boolean>]
  [-AllowEditing <Boolean>]
  [-EnableAzureADB2BIntegration <Boolean>]
  [-ExternalUserExpirationRequired <Boolean>]
  [-ExternalUserExpireInDays <Int32>]
+ [-EmailAttestationRequired <Boolean>]
+ [-EmailAttestationReAuthDays <Int32>]
  [<CommonParameters>]
 ```
 
@@ -240,6 +251,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockDownloadLinksFileType
+
+The valid values are:  
+
+- WebPreviewableFiles
+- ServerRenderedFilesOnly
+
+```yaml
+Type: BlockDownloadLinksFileTypes
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayStartASiteOption
 
 Determines whether tenant users see the Start a Site menu option.
@@ -257,6 +287,59 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAIPIntegration
+
+This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. (Currently in public preview). For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive (public preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files?view=o365-worldwide)
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMinimumVersionRequirement
+
+This parameter was used to opt-out of the versioning setting update. It has no effect as of today as versioning setting has already been rolled out.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MarkNewFilesSensitiveByDefault
+
+If external sharing is turned on, sensitive content could be shared and accessed by guests before the Office DLP rule finishes processing, you can address this issue by configuring this parameter.
+Possible values are
+- BlockExternalSharing: Prevents guests from accessing newly added files until at least one Office DLP policy scans the content of the file.
+- AllowExternalSharing: Disables this feature.
+
+For more information see [Mark new files as sensitive by default](https://docs.microsoft.com/sharepoint/sensitive-by-default)
+
+```yaml
+Type: SensitiveByDefaultState
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: AllowExternalSharing
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -663,6 +746,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultLinkPermission
+
+Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, internal and direct links.
+
+The valid values are None (non settable), View and Edit.
+
+```yaml
+Type: SharingPermissionType
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultSharingLinkType
 
 Lets administrators choose what type of link appears is selected in the "Get a link" sharing dialog box in OneDrive for Business and SharePoint Online.
@@ -766,6 +867,22 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -dd
+
+For Webparts that support inserting images, like for example Image or Hero webpart, the Web search (Powered by Bing) option will be available if enabled (the default).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1264,6 +1381,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SyncPrivacyProfileProperties
+
+This parameter enables the synchronization of privacy profile properties.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseFindPeopleInPeoplePicker
 
 This feature enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
@@ -1345,6 +1478,38 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: AllowFullAccess
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConditionalAccessPolicyErrorHelpLink
+
+A Link for help when Conditional Access Policy blocks a user.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCommentsTextOnEmailEnabled  
+
+When this parameter is true, the email notification that a user receives when is mentioned, includes the surrounding document context. Set it to false to disable this feature.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1442,6 +1607,39 @@ Accept wildcard characters: False
 > This feature is currently in development and will not work on Production tenants.
 
 Specifies the number of days before an external user will expire and be removed from the site collection if the policy is enabled. Value can be from 30 to 730 days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmailAttestationRequired
+
+Sets email attestation to required.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmailAttestationReAuthDays
+
+Sets the number of days for email attestation re-authentication. Value can be from 1 to 365 days.
 
 ```yaml
 Type: Int32
