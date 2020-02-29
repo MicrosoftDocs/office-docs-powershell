@@ -12,6 +12,7 @@ schema: 2.0.0
 # New-CsBatchPolicyPackageAssignmentOperation
 
 ## SYNOPSIS
+NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module. A batch may only contain up to 1000 users at this time.
 
 This cmdlet submits an operation that applies a policy package to a batch of users in a tenant.
 
