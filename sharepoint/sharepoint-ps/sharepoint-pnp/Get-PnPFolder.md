@@ -34,7 +34,7 @@ Get-PnPFolder -List <ListPipeBind>
 ```
 
 ## DESCRIPTION
-Retrieves a folder if it exists or all folders inside a provided list or library. Use Ensure-PnPFolder to create the folder if it does not exist.
+Retrieves a folder if it exists or all folders inside a provided list or library. Use Resolve-PnPFolder to create the folder if it does not exist.
 
 ## EXAMPLES
 
