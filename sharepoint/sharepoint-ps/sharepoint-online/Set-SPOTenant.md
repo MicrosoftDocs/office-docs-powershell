@@ -871,7 +871,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -dd
+### -FilePickerExternalImageSearchEnabled
 
 For Webparts that support inserting images, like for example Image or Hero webpart, the Web search (Powered by Bing) option will be available if enabled (the default).
 
