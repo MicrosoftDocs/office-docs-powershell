@@ -330,7 +330,7 @@ Possible values are
 - BlockExternalSharing: Prevents guests from accessing newly added files until at least one Office DLP policy scans the content of the file.
 - AllowExternalSharing: Disables this feature.
 
-For more information see [Mark new files as sensitive by default](https://docs.microsoft.com/sharepoint/sensitive-by-default)
+For more information see [Mark new files as sensitive by default](https://docs.microsoft.com/sharepoint/sensitive-by-default).
 
 ```yaml
 Type: SensitiveByDefaultState
