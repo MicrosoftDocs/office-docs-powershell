@@ -1484,7 +1484,7 @@ Accept wildcard characters: False
 
 ### -ConditionalAccessPolicyErrorHelpLink
 
-A Link for help when Conditional Access Policy blocks a user.
+A Link for help when Conditional Access Policy blocks a user. This should be in a valid URL format. A valid URL format that begins with http:// or https://.
 
 ```yaml
 Type: String
