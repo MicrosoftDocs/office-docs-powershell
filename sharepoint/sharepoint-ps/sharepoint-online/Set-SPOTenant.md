@@ -26,6 +26,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DisplayStartASiteOption <Boolean>]
  [-EnableAIPIntegration <Boolean>]
  [-EnableMinimumVersionRequirement <Boolean>]
+ [-EnablePromotedFileHandlers <Boolean>]
  [-ExternalServicesEnabled <Boolean>]
  [-MarkNewFilesSensitiveByDefault <SensitiveByDefaultState>]
  [-MaxCompatibilityLevel <Int32>]
@@ -319,6 +320,22 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePromotedFileHandlers
+
+This parameter is reserved for Microsoft internal use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
