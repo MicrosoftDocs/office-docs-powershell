@@ -104,7 +104,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <Smtp
 
 ### MrsProxyPublicFolderToUnifiedGroup
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>[-PublicFolderToUnifiedGroup] [-TestMailbox <MailboxIdParameter>]
+Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolderToUnifiedGroup] [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```

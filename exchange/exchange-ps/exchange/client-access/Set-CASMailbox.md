@@ -229,7 +229,7 @@ The ActiveSyncMailboxPolicy parameter specifies the Exchange ActiveSync mailbox 
 
 - GUID
 
-The name of the default Exchange ActiveSync mailbox policy is Default.
+The name of the default Exchange ActiveSync mailbox policy is Default. However, to reset this parameter back to the default value, use the value $null. The value $null also changes the value of the ActiveSyncMailboxPolicyIsDefaulted property to True. If you specify the value Default for the ActiveSyncMailboxPolicy parameter, the value of the ActiveSyncMailboxPolicyIsDefaulted property remains False.
 
 ```yaml
 Type: MailboxPolicyIdParameter
