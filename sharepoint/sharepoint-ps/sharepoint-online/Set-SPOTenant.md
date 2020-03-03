@@ -86,6 +86,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
  [-ConditionalAccessPolicyErrorHelpLink <String>]
  [-LimitedAccessFileType <SPOLimitedAccessFileType>]
+ [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-AllowCommentsTextOnEmailEnabled <Boolean>]
  [-AllowEditing <Boolean>]
  [-EnableAzureADB2BIntegration <Boolean>]
@@ -1505,6 +1506,22 @@ A Link for help when Conditional Access Policy blocks a user. This should be in 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowDownloadingNonWebViewableFiles  
+
+This paramater has been deprecated.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
