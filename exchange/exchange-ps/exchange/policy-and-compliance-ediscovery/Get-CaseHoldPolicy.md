@@ -15,7 +15,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Get-CaseHoldPolicy to view existing case hold policies in the Security & Compliance Center.
+Use the Get-CaseHoldPolicy to view existing case hold policies in the Security & Compliance Center. To get relevant information about how the hold was applied and the affected locations, you need to include the DistributionDetail switch.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -27,10 +27,6 @@ Get-CaseHoldPolicy [[-Identity] <PolicyIdParameter>] [-Case <String>] [-Distribu
 ```
 
 ## DESCRIPTION
-Use the Get-CaseHoldPolicy to view existing case hold policies in the Security & Compliance Center.
-
-Note: To get relevant information to how the hold has been applied and what the currently affected locations are, you must include the `-DistributionDetail` parameter!
-
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
@@ -74,8 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionDetail
-Retrieve detailed policy distribution information on the case hold policy.
-Without this parameter, there will be no information about the current deployment status and the DistributionStatus property will only show as "Pending".
+The DistributionDetail switch returns detailed policy distribution information on the case hold policy. You don't need to specify a value with this switch.
+
+If you don't use this switch, the command won't return information about the current deployment status, and the DistributionStatus property will only show as "Pending".
 
 The following properties are affected by this switch:
 
