@@ -27,6 +27,10 @@ Get-CaseHoldPolicy [[-Identity] <PolicyIdParameter>] [-Case <String>] [-Distribu
 ```
 
 ## DESCRIPTION
+Use the Get-CaseHoldPolicy to view existing case hold policies in the Security & Compliance Center.
+
+Note: To get relevant information to how the hold has been applied and what the currently affected locations are, you must include the `-DistributionDetail` parameter!
+
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
@@ -70,7 +74,17 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionDetail
-The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+Retrieve detailed policy distribution information on the case hold policy.
+Without this parameter, there will be no information about the current deployment status and the DistributionStatus property will only show as "Pending".
+
+The following properties are affected by this switch:
+
+- SharePointLocation
+- ExchangeLocation
+- PublicFolderLocation
+- DistributionStatus
+- DistributionResults
+- LastStatusUpdateTime
 
 ```yaml
 Type: SwitchParameter
