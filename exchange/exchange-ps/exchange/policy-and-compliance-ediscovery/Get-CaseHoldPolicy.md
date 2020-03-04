@@ -15,7 +15,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Get-CaseHoldPolicy to view existing case hold policies in the Security & Compliance Center.
+Use the Get-CaseHoldPolicy to view existing case hold policies in the Security & Compliance Center. To get relevant information about how the hold was applied and the affected locations, you need to include the DistributionDetail switch.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -70,7 +70,18 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionDetail
-The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+The DistributionDetail switch returns detailed policy distribution information on the case hold policy. You don't need to specify a value with this switch.
+
+If you don't use this switch, the command won't return information about the current deployment status, and the DistributionStatus property will only show as "Pending".
+
+The following properties are affected by this switch:
+
+- SharePointLocation
+- ExchangeLocation
+- PublicFolderLocation
+- DistributionStatus
+- DistributionResults
+- LastStatusUpdateTime
 
 ```yaml
 Type: SwitchParameter
