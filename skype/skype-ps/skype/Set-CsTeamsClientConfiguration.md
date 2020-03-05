@@ -21,7 +21,7 @@ The TeamsClientConfiguration allows IT admins to control the settings that can b
 ### Identity (Default)
 ```
 Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <Boolean>]
- [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>]
+ [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>]
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
@@ -32,7 +32,7 @@ Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <
 ### Instance
 ```
 Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <Boolean>]
- [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>]
+ [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>]
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
@@ -75,6 +75,21 @@ Accept wildcard characters: False
 
 ### -AllowDropBox
 Designates whether users are able to leverage DropBox as a third party storage solution in Microsoft Teams.  If $true, users will be able to add DropBox in the client and interact with the files stored there.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEgnyte
+Designates whether users are able to leverage Egnyte as a third party storage solution in Microsoft Teams.  If $true, users will be able to add Egnyte in the client and interact with the files stored there.
 
 ```yaml
 Type: Boolean
