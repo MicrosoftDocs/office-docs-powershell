@@ -29,7 +29,7 @@ New-Team -DisplayName <String> [-Description <String>] [-MailNickName <String>] 
  [-AllowCreateUpdateRemoveTabs <Boolean>] [-AllowCreateUpdateRemoveConnectors <Boolean>]
  [-AllowUserEditMessages <Boolean>] [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>]
  [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] 
- [-RetainCreatedGroup <Boolean>] [<CommonParameters>]
+ [-RetainCreatedGroup <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### MigrateGroup
@@ -40,7 +40,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
  [-AllowAddRemoveApps <Boolean>] [-AllowCreateUpdateRemoveTabs <Boolean>]
  [-AllowCreateUpdateRemoveConnectors <Boolean>] [-AllowUserEditMessages <Boolean>]
  [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>] [-AllowTeamMentions <Boolean>]
- [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [-RetainCreatedGroup <Boolean>] [<CommonParameters>]
+ [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [-RetainCreatedGroup <SwitchParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
