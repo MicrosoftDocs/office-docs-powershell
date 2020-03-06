@@ -464,7 +464,7 @@ Accept wildcard characters: False
 Switch Parameter allowing toggle of group cleanup if team creation fails. The default value of this parameter is $false to retain with current functionality where the unified group is deleted if the step of adding a team to the group fails. Set it to $true to retain the unified group created even if team creation fails to allow self-retry of team creation or self-cleanup of group as appropriate.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
