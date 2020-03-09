@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryCaseType
-{{ Fill SecondaryCaseType Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceCaseType
-{{ Fill SourceCaseType Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
