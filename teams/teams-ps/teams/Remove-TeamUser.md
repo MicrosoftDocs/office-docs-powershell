@@ -68,7 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Specify the role of the user you are removing from the team.
+Specify the role of the user you are removing from the team. Accepts "Owner" and "Member" as possible values.
+If cmdlet is called with -Role parameter as "Member" then the specified user is removed from the Team completely even if they were the owner of the Team. If "Owner" is specified in the -Role parameter then the specified user is removed as an owner of the team but stays as a team member. 
+Note: The last owner cannot be removed from the team.
 
 ```yaml
 Type: String
