@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Use this cmdlet to remove a multi geo allowed location.
 
 ## SYNTAX
 
@@ -24,23 +24,22 @@ Remove-SPOMultiGeoCompanyAllowedDataLocation [-Location] <string> [-WhatIf] [-Co
 
 ## DESCRIPTION
 
-.
+Removes a specified multi-geo location that was previously allowed by [Set-SPOMultiGeoCompanyAllowedDataLocation](Set-SPOMultiGeoCompanyAllowedDataLocation.md).
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Remove-SPOMultiGeoCompanyAllowedDataLocation -Location AUS
 ```
-
-.
+Removes AUS (Australia) as an allowed mutli-geo location.
 
 ## PARAMETERS
 
 ### -Location
 
-.
+The Preferred Data Location (PDL) to remove.
 
 ```yaml
 Type: String
@@ -93,3 +92,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## NOTES
+
+## RELATED LINKS
+
+[Set-SPOMultiGeoCompanyAllowedDataLocation](Set-SPOMultiGeoCompanyAllowedDataLocation.md)

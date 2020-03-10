@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a file from a PnP Provisioning Template
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPFileFromProvisioningTemplate -Path <String>

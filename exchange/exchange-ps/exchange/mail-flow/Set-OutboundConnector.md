@@ -17,20 +17,35 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-OutboundConnector cmdlet to modify an existing Outbound connector in your cloud-based organization.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter> [-AllAcceptedDomains <Boolean>]
- [-CloudServicesMailEnabled <Boolean>] [-Comment <String>] [-Confirm]
- [-ConnectorSource <TenantConnectorSource>] [-ConnectorType <TenantConnectorType>]
- [-Enabled <Boolean>] [-IsTransportRuleScoped <Boolean>] [-IsValidated <Boolean>]
- [-LastValidationTimestamp <DateTime>] [-Name <String>] [-RecipientDomains <MultiValuedProperty>]
- [-RouteAllMessagesViaOnPremises <Boolean>] [-SmartHosts <MultiValuedProperty>]
- [-TestMode <Boolean>] [-TlsDomain <SmtpDomainWithSubdomains>]
- [-TlsSettings <TlsAuthLevel>] [-UseMXRecord <Boolean>]
- [-ValidationRecipients <String[]>] [-WhatIf] [<CommonParameters>]
+Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter>
+ [-AllAcceptedDomains <Boolean>]
+ [-CloudServicesMailEnabled <Boolean>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectorSource <TenantConnectorSource>]
+ [-ConnectorType <TenantConnectorType>]
+ [-Enabled <Boolean>]
+ [-IsTransportRuleScoped <Boolean>]
+ [-IsValidated <Boolean>]
+ [-LastValidationTimestamp <DateTime>]
+ [-Name <String>]
+ [-RecipientDomains <MultiValuedProperty>]
+ [-RouteAllMessagesViaOnPremises <Boolean>]
+ [-SmartHosts <MultiValuedProperty>]
+ [-TestMode <Boolean>]
+ [-TlsDomain <SmtpDomainWithSubdomains>]
+ [-TlsSettings <TlsAuthLevel>]
+ [-UseMXRecord <Boolean>]
+ [-ValidationRecipients <String[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

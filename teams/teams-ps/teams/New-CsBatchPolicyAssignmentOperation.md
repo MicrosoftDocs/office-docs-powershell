@@ -29,7 +29,7 @@ Users can be specified by their object ID (guid) or by their UPN/SIP/email (user
 A batch may contain up to 20,000 users.
 
 Batch policy assignment is currently limited to the following policy types:
-CallingLineIdentity, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
+CallingLineIdentity, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsEmergencyCallingPolicy, TeamsMeetingBroadcastPolicy, TeamsEmergencyCallRoutingPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ In this example, the batch of users is specified as an array of user email addre
 
 ```
 $users_ids = @("psmith@contoso.com","tsanchez@contoso.com","bharvest@contoso.com")
-New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Example 1 batch"
+New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Batch assign Kiosk"
 ```
 
 ### Example 2
@@ -46,7 +46,7 @@ In this example, the batch of users is read from a text file containing user obj
 
 ```
 $user_ids = Get-Content .\users_ids.txt
-New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Example 1 batch"
+New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Batch assign Kiosk"
 ```
 
 ### Example 3
@@ -55,7 +55,7 @@ In this example, the batch of users is obtained by connecting to Azure AD and re
 ```
 Connect-AzureAD
 $users = Get-AzureADUser
-New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users.UserPrincipalName -OperationName "Example 1 batch"
+New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users.UserPrincipalName -OperationName "batch assign kiosk"
 ```
 
 ## PARAMETERS

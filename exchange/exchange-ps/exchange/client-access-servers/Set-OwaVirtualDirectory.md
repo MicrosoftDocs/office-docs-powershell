@@ -1586,6 +1586,7 @@ The IRMEnabled parameter specifies whether Information Rights Management (IRM) f
 - $true: IRM is available in Outlook on the web. This is the default value.
 
 - $false: IRM isn't available in Outlook on the web.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

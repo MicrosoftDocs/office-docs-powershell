@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a custom action
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPCustomAction [-Identity <UserCustomActionPipeBind>]

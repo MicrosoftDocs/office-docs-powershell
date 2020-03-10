@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Groupifies a classic team site by creating an Office 365 group for it and connecting the site with the newly created group
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPOffice365GroupToSite -Url <String>

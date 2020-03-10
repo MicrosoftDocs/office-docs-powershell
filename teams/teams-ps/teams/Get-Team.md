@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet supports retrieving teams with particular properties/information, inclding all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
+This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
 
 ## SYNTAX
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Visibility
-Filters to return teams with a set "visibility" value.  Accepted values are "Public" or "Private".  Do not specify any value to return teams that match filter regardless of visibility.  This is a filter rather than an exact match.
+Filters to return teams with a set "visibility" value.  Accepted values are "Public", "Private" or "HiddenMembership".  Do not specify any value to return teams that match filter regardless of visibility.  This is a filter rather than an exact match.
 
 ```yaml
 Type: String

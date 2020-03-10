@@ -429,9 +429,9 @@ This parameter is available only in the cloud-based service.
 
 The SimplifiedClientAccessDoNotForwardDisabled parameter specifies whether to disable **Do not forward** in Outlook on the web. Valid values are:
 
-- $true: **Do not forward** is available in Outlook on the web.
+- $true: **Do not forward** is not available in Outlook on the web.
 
-- $false: **Do not forward** is not available in Outlook on the web.
+- $false: **Do not forward** is available in Outlook on the web.
 
 ```yaml
 Type: Boolean

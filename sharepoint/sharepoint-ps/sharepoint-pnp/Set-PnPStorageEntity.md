@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Set Storage Entities / Farm Properties in either the tenant scoped app catalog or the site collection app catalog.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPStorageEntity -Key <String>

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an existing image rendition
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPPublishingImageRendition -Identity <ImageRenditionPipeBind>

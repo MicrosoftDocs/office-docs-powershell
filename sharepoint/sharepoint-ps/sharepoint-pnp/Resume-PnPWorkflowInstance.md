@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Resume a workflow
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Resume-PnPWorkflowInstance -Identity <WorkflowInstancePipeBind>

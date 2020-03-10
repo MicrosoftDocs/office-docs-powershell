@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns true if the PnP PowerShell Telemetry has been enabled.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPPowerShellTelemetryEnabled [-Connection <SPOnlineConnection>]

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets statistics on response time for the specified endpoint by sending probe requests
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Measure-PnPResponseTime [-Url <DiagnosticEndpointPipeBind>]

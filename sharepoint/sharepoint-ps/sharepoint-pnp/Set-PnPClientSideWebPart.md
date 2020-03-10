@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Set Client-Side Web Part properties
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPClientSideWebPart -Page <ClientSidePagePipeBind>

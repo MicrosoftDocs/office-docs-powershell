@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a Site Collection scoped App Catalog to a site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPSiteCollectionAppCatalog -Site <SitePipeBind>

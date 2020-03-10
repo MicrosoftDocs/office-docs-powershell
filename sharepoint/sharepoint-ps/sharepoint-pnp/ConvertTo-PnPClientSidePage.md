@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Converts a classic page (wiki or web part page) into a Client-Side Page
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 ConvertTo-PnPClientSidePage -Identity <PagePipeBind>
@@ -23,8 +23,11 @@ ConvertTo-PnPClientSidePage -Identity <PagePipeBind>
                             [-AddPageAcceptBanner [<SwitchParameter>]]
                             [-SkipItemLevelPermissionCopyToClientSidePage [<SwitchParameter>]]
                             [-SkipUrlRewriting [<SwitchParameter>]]
+                            [-SkipDefaultUrlRewriting [<SwitchParameter>]]
+                            [-UrlMappingFile <String>]
                             [-ClearCache [<SwitchParameter>]]
                             [-CopyPageMetadata [<SwitchParameter>]]
+                            [-AddTableListImageAsImageWebPart [<SwitchParameter>]]
                             [-UseCommunityScriptEditor [<SwitchParameter>]]
                             [-SummaryLinksToHtml [<SwitchParameter>]]
                             [-TargetWebUrl <String>]
@@ -33,11 +36,23 @@ ConvertTo-PnPClientSidePage -Identity <PagePipeBind>
                             [-LogSkipFlush [<SwitchParameter>]]
                             [-LogVerbose [<SwitchParameter>]]
                             [-DontPublish [<SwitchParameter>]]
+                            [-KeepPageCreationModificationInformation [<SwitchParameter>]]
+                            [-SetAuthorInPageHeader [<SwitchParameter>]]
+                            [-PostAsNews [<SwitchParameter>]]
                             [-DisablePageComments [<SwitchParameter>]]
                             [-PublishingPage [<SwitchParameter>]]
+                            [-BlogPage [<SwitchParameter>]]
+                            [-DelveBlogPage [<SwitchParameter>]]
+                            [-DelveKeepSubTitle [<SwitchParameter>]]
                             [-PageLayoutMapping <String>]
                             [-PublishingTargetPageName <String>]
+                            [-TargetPageName <String>]
+                            [-TargetPageFolder <String>]
+                            [-TargetPageFolderOverridesDefaultFolder [<SwitchParameter>]]
                             [-TargetConnection <SPOnlineConnection>]
+                            [-SkipUserMapping [<SwitchParameter>]]
+                            [-UserMappingFile <String>]
+                            [-LDAPConnectionString <String>]
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
 ```
@@ -49,28 +64,28 @@ ConvertTo-PnPClientSidePage -Identity <PagePipeBind>
 ConvertTo-PnPClientSidePage -Identity "somepage.aspx" -Overwrite
 ```
 
-Converts a wiki page named 'somepage' to a client side page
+Converts a wiki/web part page named 'somepage' to a client side page
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 ConvertTo-PnPClientSidePage -Identity "somepage.aspx" -Overwrite -WebPartMappingFile c:\contoso\webpartmapping.xml
 ```
 
-Converts a wiki page named 'somepage' to a client side page using a custom provided mapping file
+Converts a wiki/web part page named 'somepage' to a client side page using a custom provided mapping file
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 ConvertTo-PnPClientSidePage -Identity "somepage.aspx" -Overwrite -AddPageAcceptBanner
 ```
 
-Converts a wiki page named 'somepage' to a client side page and adds the page accept banner web part on top of the page. This requires that the SPFX solution holding the web part (https://github.com/SharePoint/sp-dev-modernization/blob/master/Solutions/PageTransformationUI/assets/sharepointpnp-pagetransformation-client.sppkg?raw=true) has been installed to the tenant app catalog
+Converts a wiki/web part page named 'somepage' to a client side page and adds the page accept banner web part on top of the page. This requires that the SPFX solution holding the web part (https://github.com/SharePoint/sp-dev-modernization/blob/master/Solutions/PageTransformationUI/assets/sharepointpnp-pagetransformation-client.sppkg?raw=true) has been installed to the tenant app catalog
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
 ConvertTo-PnPClientSidePage -Identity "somepage.aspx" -Overwrite -CopyPageMetadata
 ```
 
-Converts a wiki page named 'somepage' to a client side page, including the copying of the page metadata (if any)
+Converts a wiki/web part page named 'somepage' to a client side page, including the copying of the page metadata (if any)
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
@@ -105,26 +120,71 @@ Converts a web part page named 'somepage' living inside the root of the site col
 ConvertTo-PnPClientSidePage -Identity "somepage.aspx" -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/targetmodernsite
 ```
 
-Converts a wiki page named 'somepage' to a client side page in the https://contoso.sharepoint.com/sites/targetmodernsite site
+Converts a wiki/web part page named 'somepage' to a client side page in the https://contoso.sharepoint.com/sites/targetmodernsite site
 
 ### ------------------EXAMPLE 10------------------
 ```powershell
 ConvertTo-PnPClientSidePage -Identity "somepage.aspx" -LogType File -LogFolder c:\temp -LogVerbose -Overwrite
 ```
 
-Converts a web part page named 'somepage' and creates a log file in c:	emp using verbose logging
+Converts a wiki/web part page named 'somepage' and creates a log file in c:\temp using verbose logging
 
 ### ------------------EXAMPLE 11------------------
 ```powershell
 ConvertTo-PnPClientSidePage -Identity "somepage.aspx" -LogType SharePoint -LogSkipFlush
 ```
 
-Converts a web part page named 'somepage' and creates a log file in SharePoint but skip the actual write. Use this option to make multiple ConvertTo-PnPClientSidePage invocations create a single log
+Converts a wiki/web part page named 'somepage' and creates a log file in SharePoint but skip the actual write. Use this option to make multiple ConvertTo-PnPClientSidePage invocations create a single log
+
+### ------------------EXAMPLE 12------------------
+```powershell
+ConvertTo-PnPClientSidePage -Identity "My post title" -BlogPage -LogType Console -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/targetmodernsite
+```
+
+Converts a blog page with a title starting with 'my post title' to a client side page in the https://contoso.sharepoint.com/sites/targetmodernsite site
+
+### ------------------EXAMPLE 13------------------
+```powershell
+ConvertTo-PnPClientSidePage -Identity "My post title" -DelveBlogPage -LogType Console -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/targetmodernsite
+```
+
+Converts a Delve blog page with a title starting with 'my post title' to a client side page in the https://contoso.sharepoint.com/sites/targetmodernsite site
+
+### ------------------EXAMPLE 14------------------
+```powershell
+ConvertTo-PnPClientSidePage -Identity "somepage.aspx" -PublishingPage -Overwrite -TargetConnection $target -UserMappingFile c:\\temp\user_mapping_file.csv
+```
+
+Converts a publishing page named 'somepage' to a client side page in the site specified by the TargetConnection connection. This allows to read a page in on-premises environment and create in another online locations including using specific user mappings between the two environments.
 
 ## PARAMETERS
 
 ### -AddPageAcceptBanner
 Adds the page accept banner web part. The actual web part is specified in webpartmapping.xml file
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -AddTableListImageAsImageWebPart
+When an image lives inside a table/list then it's also created as separate image web part underneath that table/list by default. Use this switch set to $false to change that
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -BlogPage
+I'm transforming a blog page
 
 ```yaml
 Type: SwitchParameter
@@ -149,6 +209,30 @@ Accept pipeline input: False
 
 ### -CopyPageMetadata
 Copies the page metadata to the created modern page
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DelveBlogPage
+I'm transforming a Delve blog page
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DelveKeepSubTitle
+Transform the possible sub title as topic header on the modern page
 
 ```yaml
 Type: SwitchParameter
@@ -205,6 +289,30 @@ Parameter Sets: (All)
 Required: True
 Position: 0
 Accept pipeline input: True
+```
+
+### -KeepPageCreationModificationInformation
+Keep the author, editor, created and modified information from the source page (when source page lives in SPO)
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -LDAPConnectionString
+Specifies a LDAP connection string e.g. LDAP://OU=Users,DC=Contoso,DC=local
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
 ```
 
 ### -Library
@@ -291,6 +399,18 @@ Position: Named
 Accept pipeline input: True
 ```
 
+### -PostAsNews
+Post the created, and published, modern page as news
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -PublishingPage
 I'm transforming a publishing page
 
@@ -327,6 +447,30 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -SetAuthorInPageHeader
+Set's the author of the source page as author in the modern page header (when source page lives in SPO)
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -SkipDefaultUrlRewriting
+Set this flag to prevent the default URL rewriting while you still want to do URL rewriting using a custom URL mapping file
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -SkipItemLevelPermissionCopyToClientSidePage
 By default the item level permissions on a page are copied to the created client side page. Use this switch to prevent the copy
 
@@ -341,6 +485,18 @@ Accept pipeline input: False
 
 ### -SkipUrlRewriting
 If transforming cross site then by default urls in html and summarylinks are rewritten for the target site. Set this flag to prevent that
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -SkipUserMapping
+Disables user mapping during transformation
 
 ```yaml
 Type: SwitchParameter
@@ -387,8 +543,56 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -TargetPageFolder
+Folder to create the target page in (will be used in conjunction with auto-generated folders that ensure page name uniqueness)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -TargetPageFolderOverridesDefaultFolder
+When setting a target page folder then the target page folder overrides possibly default folder path (e.g. in the source page lived in a folder) instead of being appended to it
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -TargetPageName
+Name for the target page (only applies when doing cross site page transformation)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -TargetWebUrl
 Url of the target web that will receive the modern page. Defaults to null which means in-place transformation
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -UrlMappingFile
+File holding custom URL mapping definitions
 
 ```yaml
 Type: String
@@ -404,6 +608,18 @@ Uses the community script editor (https://github.com/SharePoint/sp-dev-fx-webpar
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -UserMappingFile
+Specifies a user mapping file
+
+```yaml
+Type: String
 Parameter Sets: (All)
 
 Required: False

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a specific user from the site collection User Information List
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPUser -Identity <UserPipeBind>

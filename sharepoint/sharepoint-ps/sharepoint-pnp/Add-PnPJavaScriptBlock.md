@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a link to a JavaScript snippet/block to a web or site collection
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPJavaScriptBlock -Name <String>

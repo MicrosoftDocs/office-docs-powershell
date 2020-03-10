@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a content type from a document set
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPContentTypeFromDocumentSet -ContentType <ContentTypePipeBind>

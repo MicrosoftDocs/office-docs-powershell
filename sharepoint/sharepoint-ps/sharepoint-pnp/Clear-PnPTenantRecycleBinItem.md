@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Permanently deletes a site collection from the tenant scoped recycle bin
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Clear-PnPTenantRecycleBinItem -Url <String>

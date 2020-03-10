@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new document set in a library.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPDocumentSet -List <ListPipeBind>

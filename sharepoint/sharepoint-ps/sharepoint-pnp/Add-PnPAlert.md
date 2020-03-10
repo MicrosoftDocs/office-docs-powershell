@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds an alert for a user to a list
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPAlert -List <ListPipeBind>

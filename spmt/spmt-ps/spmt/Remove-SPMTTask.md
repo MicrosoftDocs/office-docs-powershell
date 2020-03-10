@@ -17,7 +17,7 @@ Remove an existing migration task from the registered migration.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPMTTask -TaskId <Guid> [-Force]
 ```
 
@@ -26,7 +26,7 @@ Remove an existing migration task from the registered migration.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
 #Define SharePoint 2013 data source#
 
@@ -64,18 +64,19 @@ Start-SPMTMigration -NoShow
 Remove-SPMTTask -TaskID XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -Force
 ```
 
-Remove an existing migration task from the migration.
+This example removes an existing migration task from the migration.
 
 ## PARAMETERS
 
 ### -Force
-This parameter is optional. To remove a task already started, the Force parameter is required.
+This parameter is optional.
+To remove a task already started, the Force parameter is required.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Migration Tool
+
 Required: False
 Position: Named
 Default value: False
@@ -90,22 +91,21 @@ This parameter is mandatory and defines the ID of task to be removed.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Migration Tool
+
 Required: True
 Position: Named
-Default value: Empty
+Default value: 00000000-0000-0000-0000-000000000000
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### None
-
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 

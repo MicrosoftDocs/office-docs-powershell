@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a Role Defintion (Permission Level) to the site collection in the current context
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPRoleDefinition -RoleName <String>
@@ -49,7 +49,7 @@ Creates additional permission level by cloning "Contribute" and removes flags De
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS> $roleDefinition = Get-PnPRoleDefinition -Identity "Contribute"
+$roleDefinition = Get-PnPRoleDefinition -Identity "Contribute"
 Add-PnPRoleDefinition -RoleName "AddOnly" -Clone $roleDefinition -Exclude DeleteListItems, EditListItems
 ```
 
@@ -82,7 +82,7 @@ Accept pipeline input: False
 ```
 
 ### -Exclude
-Specifies permission flags(s) to disable.
+Specifies permission flags(s) to disable. Please visit https://docs.microsoft.com/previous-versions/office/sharepoint-csom/ee536458(v%3Doffice.15) for the PermissionKind enum
 
 ```yaml
 Type: PermissionKind[]
@@ -94,7 +94,7 @@ Accept pipeline input: False
 ```
 
 ### -Include
-Specifies permission flags(s) to enable.
+Specifies permission flags(s) to enable. Please visit https://docs.microsoft.com/previous-versions/office/sharepoint-csom/ee536458(v%3Doffice.15) for the PermissionKind enum
 
 ```yaml
 Type: PermissionKind[]

@@ -17,6 +17,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-Mailbox cmdlet to view mailbox objects and attributes, populate property pages, or supply mailbox information to other tasks.
 
+> [!NOTE]
+> In Exchange Online PowerShell, we recommend that you use the Get-EXOMailbox cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -250,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch is required to return archive mailboxes in the results. You don't need to specify a value with this switch.
+The Archive switch filters the results by mailboxes that have an archive enabled (only mailboxes that have an archive mailbox are returned). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

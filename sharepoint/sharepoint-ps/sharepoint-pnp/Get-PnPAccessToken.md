@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the current OAuth Access token
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPAccessToken [-Decoded [<SwitchParameter>]]

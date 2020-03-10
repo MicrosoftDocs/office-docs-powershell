@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves all or a specific site policy
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPSitePolicy [-AllAvailable [<SwitchParameter>]]

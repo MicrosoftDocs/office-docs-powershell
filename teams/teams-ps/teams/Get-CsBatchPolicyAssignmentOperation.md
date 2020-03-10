@@ -30,36 +30,46 @@ This cmdlets returns the status of all batch policy assignment operations for th
 In this example, the status of all batch assignment operations is returned.
 
 ```
-Get-CsBatchPolicyAssignmentOperation | ft OperationId, CreatedTime, CompletedTime, CompletedCount, ErrorCount
+Get-CsBatchPolicyAssignmentOperation
 
-OperationId                          CreatedTime           CompletedTime         CompletedCount ErrorCount
------------                          -----------           -------------         -------------- ----------
-e640a5c9-c74f-4df7-b62e-4b01ae878bdc 7/19/2019 5:21:07 AM  7/19/2019 5:21:15 AM               8          0
-01b9b2b7-5dbb-487c-b4ea-887c7c66559c 7/30/2019 7:55:16 PM  7/30/2019 7:55:21 PM               8          0
-47bbc636-365d-4441-af34-9e0eceb05ef1 7/30/2019 8:14:22 PM  7/30/2019 8:14:33 PM               8          0
-3964004e-caa8-4eb4-b0d2-7dd2c8173c8c 7/30/2019 8:17:37 PM  7/30/2019 8:17:49 PM               8          0
-e70ef814-3289-4ee8-9402-5ec7ce1dde49 8/19/2019 8:16:25 PM  8/19/2019 8:16:34 PM               8          0
-001141c3-1daa-4da1-88e9-66cc01c511e1 8/19/2019 8:17:41 PM  8/19/2019 8:17:51 PM               8          1
-fd269d30-ae75-45b2-ad10-ec678940ef81 8/21/2019 11:28:01 PM 8/21/2019 11:28:07 PM              8          0
-7040dcc2-30fa-4d19-a280-09e824c8b7aa 8/21/2019 11:37:00 PM 8/21/2019 11:37:12 PM              8          0
+OperationId                          OperationName           OverallStatus CreatedTime          CreatedBy
+-----------                          -------------           ------------- -----------          ---------
+e640a5c9-c74f-4df7-b62e-4b01ae878bdc Assigning Kiosk mtg     Completed     1/30/2020 3:21:07 PM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
+01b9b2b7-5dbb-487c-b4ea-887c7c66559c Assigning allow calling Completed     1/30/2020 3:55:16 PM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
+47bbc636-365d-4441-af34-9e0eceb05ef1                         Completed     1/30/2020 4:14:22 PM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
 ```
 
 ### Example 2
-In this example, the status of a single batch is returned, including the assignment status for each user.  In this example, one of the users was not found.
+In this example, the details of a specific operation are returned.
+
+```
+Get-CsBatchPolicyAssignmentOperation -OperationId 01b9b2b7-5dbb-487c-b4ea-887c7c66559c  | fl
+
+OperationId     : 01b9b2b7-5dbb-487c-b4ea-887c7c66559c
+OperationName   : Assigning allow calling
+OverallStatus   : Completed
+CreatedBy       : aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
+CreatedTime     : 1/30/2020 3:55:16 PM
+CompletedTime   : 1/30/2020 3:59:06 PM
+CompletedCount  : 3
+ErrorCount      : 1
+InProgressCount : 0
+NotStartedCount : 0
+UserState       : {f0d9c148-27c1-46f5-9685-544d20170ea1, cc05e18d-5fc0-4096-8461-ded64d7356e0,
+                  bcff5b7e-8d3c-4721-b34a-63552a6a53f9}
+```
+
+### Example 3
+In this example, the UserState property is expanded to see the status of each user in the batch. In this example, one of the users was not found.
 
 ```
 Get-CsBatchPolicyAssignmentOperation -OperationId 001141c3-1daa-4da1-88e9-66cc01c511e1 | Select -ExpandProperty UserState
 
-Id                                   Result                         State
---                                   ------                         -----
-user01@fabrikam.com                  Success                        Completed
-user02@fabrikam.com                  Success                        Completed
-user03@fabrikam.com                  Success                        Completed
-user04@fabrikam.com                  Success                        Completed
-user05@fabkam.com                    Error: User not found.         Completed
-user06@fabrikam.com                  Success                        Completed
-user07@fabrikam.com                  Success                        Completed
-user08@fabrikam.com                  Success                        Completed
+Id                                    Result           State
+--                                    ------           -----
+f0d9c148-27c1-46f5-9685-544d20170ea1  Success          Completed
+cc05e18d-5fc0-4096-8461-ded64d7356e0  Success          Completed
+bcff5b7e-8d3c-4721-b34a-63552a6a53f9  User not found   Completed
 ```
 
 ## PARAMETERS

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the authentication realm
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPAuthenticationRealm [-Url <String>]

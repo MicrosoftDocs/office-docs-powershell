@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new list
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPList -Title <String>

@@ -509,7 +509,7 @@ The FirstWeekOfYear parameter specifies the first week of the year. Valid values
 You configure the first day of the week by using the WeekStartDay parameter.
 
 ```yaml
-Type:
+Type: FirstWeekRules
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -994,7 +994,7 @@ The WorkingHoursTimeZone parameter specifies the time zone that's used by the Wo
 
 A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
 
-To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
+To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
 If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
 

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the last exception that occurred
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPException [-All [<SwitchParameter>]]

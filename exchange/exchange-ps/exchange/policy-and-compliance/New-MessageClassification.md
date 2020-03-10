@@ -93,8 +93,6 @@ The DisplayName parameter specifies the title of the message classification that
 
 The message classification XML file must be present on the sender's computer for the display name to be displayed.
 
-If the UserDisplayEnabled parameter is set to $true, the value of this parameter is displayed for the recipient, even if no message classification XML file is installed.
-
 ```yaml
 Type: String
 Parameter Sets: (All)

@@ -19,7 +19,12 @@ Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (AT
 
 - Safe Links for Office 365 ProPlus desktop clients and Office Mobile apps.
 
+- Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
+
 - ATP to protect files in SharePoint Online, OneDrive for Business and Microsoft Teams.
+
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -28,9 +33,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-AllowClickThrough <Boolean>]
+ [-AllowSafeDocsOpen <Boolean>]
  [-BlockUrls <MultiValuedProperty>]
  [-Confirm]
  [-EnableATPForSPOTeamsODB <Boolean>]
+ [-EnableSafeDocs <Boolean>]
  [-EnableSafeLinksForClients <Boolean>]
  [-TrackClicks <Boolean>]
  [-WhatIf] [<CommonParameters>]
@@ -90,6 +97,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowSafeDocsOpen
+The AllowSafeDocsOpen parameter specifies whether users can click through and bypass the Protected View container even when Safe Documents in Microsoft Defender Advanced Threat Protection (MDATP) identifies a file as malicious. Valid values are:
+
+- $true: Users are allowed to exit the Protected View container even if the document has been identified as malicious.
+
+- $false: Users aren't allowed to exit Protected View in case of a malicious detection.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockUrls
 The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning. You can specify multiple values separated by commas.
 
@@ -138,6 +166,26 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSafeDocs
+The EnableSafeDocs parameter specifies whether to enable the Safe Documents feature in the organization. Valid values are:
+
+- $true: Safe Documents is enabled and will upload user files to Microsoft Defender Advanced Threat Protection (MDATP) for scanning and verification.
+
+- $false: Safe Documents is disabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

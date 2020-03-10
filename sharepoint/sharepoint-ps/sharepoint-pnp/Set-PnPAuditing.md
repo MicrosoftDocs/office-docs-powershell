@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Set Auditing setting for a site
 
-## SYNTAX
+## SYNTAX 
 
 ### Specific flags
 ```powershell

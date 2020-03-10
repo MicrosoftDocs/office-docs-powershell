@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Set Client-Side Text Component properties
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPClientSideText -Page <ClientSidePagePipeBind>

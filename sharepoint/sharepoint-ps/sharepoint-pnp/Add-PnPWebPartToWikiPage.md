@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a web part to a wiki page in a specified table row and column
 
-## SYNTAX
+## SYNTAX 
 
 ### XML
 ```powershell

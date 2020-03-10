@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new subweb under the current web
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPWeb -Title <String>

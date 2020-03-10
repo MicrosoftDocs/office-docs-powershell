@@ -695,6 +695,8 @@ Accept wildcard characters: False
 ### -DisplayName
 The DisplayName parameter specifies the display name of the group. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
+If a group naming policy is enforced in your organization, users need to follow the naming constraints as specified by the DistributionGroupNameBlockedWordList parameter on the Set-OrganizationConfig cmdlet. To bypass this requirement, use the IgnoreNamingPolicy switch.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -1031,7 +1033,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreNamingPolicy
-The IgnoreNamingPolicy switch specifies whether to prevent this group from being affected by your organization's distribution group naming policy. The policy is defined by the DistributionGroupNamingPolicy parameter on the Set-OrganizationConfig cmdlet. You don't need to specify a value with this switch.
+The IgnoreNamingPolicy switch specifies whether to prevent this group from being affected by your organization's group naming policy. You don't need to specify a value with this switch.
+
+The group naming policy is defined by the DistributionGroupNamingPolicy and DistributionGroupNameBlockedWordList parameters on the Set-OrganizationConfig cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1316,8 +1320,6 @@ Accept wildcard characters: False
 
 ### -Name
 The Name parameter specifies the unique name of the group. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-If a group naming policy is enforced, you need to follow the naming constraints specified in the DistributionGroupNameBlockedWordList and DistributionGroupNamingPolicy parameters on the Set-OrganizationConfig cmdlet.
 
 ```yaml
 Type: String

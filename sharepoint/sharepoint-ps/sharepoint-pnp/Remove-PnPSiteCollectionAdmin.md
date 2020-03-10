@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes one or more users as site collection administrators from the site collection in the current context
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPSiteCollectionAdmin -Owners <UserPipeBind>

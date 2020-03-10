@@ -25,6 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DlpCompliancePolicy [-Name] <String>
  [-Comment <String>]
  [-Confirm]
+ [-EndpointDlpLocation <MultiValuedProperty>]
+ [-EndpointDlpLocationException <MultiValuedProperty>]
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeSenderMemberOf <SmtpAddress[]>]
  [-ExchangeSenderMemberOfException <SmtpAddress[]>]
@@ -106,6 +108,38 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpLocation
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpLocationException
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 
 Required: False
@@ -313,7 +347,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -329,7 +363,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -378,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

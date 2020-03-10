@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Get a credential
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPStoredCredential -Name <String>

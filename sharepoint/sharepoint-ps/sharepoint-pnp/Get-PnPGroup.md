@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a specific SharePoint group or all SharePoint groups in site.
 
-## SYNTAX
+## SYNTAX 
 
 ### ByName
 ```powershell

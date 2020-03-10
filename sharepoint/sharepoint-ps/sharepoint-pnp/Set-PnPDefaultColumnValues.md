@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets default column values for a document library
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPDefaultColumnValues -List <ListPipeBind>

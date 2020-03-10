@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a workflow definition
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPWorkflowDefinition -Definition <WorkflowDefinition>

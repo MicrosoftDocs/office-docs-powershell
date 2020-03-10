@@ -131,7 +131,7 @@ Accept wildcard characters: False
 {{Fill DynamicScopeLocation Description}}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -466,9 +466,9 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChannelLocation
-The TeamsChannelLocation parameter is used to target specific Teams to include in the policy.
+The TeamsChannelLocation parameter specifies the Teams to include in the policy.
 
-You can use any value that uniquely identifies the Team. For example:
+You can use any value that uniquely identifies the team. For example:
 
 - Name
 
@@ -479,7 +479,7 @@ You can use any value that uniquely identifies the Team. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -502,9 +502,8 @@ The TeamsChannelLocationException parameter specifies the Teams to exclude when 
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
-
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -517,7 +516,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChatLocation
-The TeamsChatLocation parameter is used to target specific Teams users to include in the policy.
+The TeamsChatLocation parameter specifies the Teams users to include in the policy.
 
 You can use any value that uniquely identifies the user. For example:
 
@@ -532,7 +531,7 @@ You can use any value that uniquely identifies the user. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -558,7 +557,7 @@ The TeamsChatLocationException parameter specifies the Teams users to exclude wh
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -571,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
