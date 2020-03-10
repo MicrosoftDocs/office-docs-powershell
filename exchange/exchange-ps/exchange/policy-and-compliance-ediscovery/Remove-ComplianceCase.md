@@ -15,7 +15,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Remove-ComplianceCase cmdlet to remove eDiscovery cases from the Security & Compliance Center.
+Use the Remove-ComplianceCase cmdlet to remove compliance cases from the Security & Compliance Center or the Microsoft 365 compliance center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -36,12 +36,12 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Remove-ComplianceCase -Identity "Case 5150"
 ```
 
-This example removes the eDiscovery case named Case 5150
+This example removes the compliance case named Case 5150
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the eDiscovery case that you want to remove. You can use any value that uniquely identifies the eDiscovery case. For example:
+The Identity parameter specifies the compliance case that you want to remove. You can use any value that uniquely identifies the case. For example:
 
 - Name
 

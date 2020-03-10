@@ -23,10 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ComplianceCase [-Identity] <ComplianceCaseIdParameter>
+ [-CaseType <ComplianceCaseType>]
  [-Close]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
+ [-ExternalId <String>]
  [-Name <String>]
  [-Reopen]
  [-WhatIf] [<CommonParameters>]
@@ -39,15 +41,15 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```powershell
-Set-ComplianceCase -Identity "Fabrikam Litigation" -Description "For details, contact the Laura at the Contoso law firm"
+Set-ComplianceCase -Identity "Fabrikam Litigation" -Description "For details, contact the Laura at the Contoso law firm" -ExternalId "Case number: 03092020"
 ```
 
-This example adds a description to the existing eDiscovery case named Fabrikam Litigation.
+This example adds a description and case Id to the existing eDiscovery case named Fabrikam Litigation.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the eDiscovery case that you want to modify. You can use any value that uniquely identifies the eDiscovery case. For example:
+The Identity parameter specifies the compliance case that you want to modify. You can use any value that uniquely identifies the case. For example:
 
 - Name
 
@@ -66,8 +68,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -CaseType
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: ComplianceCaseType
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Close
-The Close switch specifies that you want to close the eDiscovery case. You don't need to specify a value with this switch.
+The Close switch specifies that you want to close the compliance case. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -134,8 +152,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalId
+The ExternalId parameter specifies an optional ID or external case number that you can associate with the compliance case.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
-The Name parameter specifies the unique name of the eDiscovery case. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies the unique name of the compliance case. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -151,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -Reopen
-The Reopen switch specifies that you want to re-open a closed eDiscovery case. You don't need to specify a value with this switch.
+The Reopen switch specifies that you want to re-open a closed compliance case. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
