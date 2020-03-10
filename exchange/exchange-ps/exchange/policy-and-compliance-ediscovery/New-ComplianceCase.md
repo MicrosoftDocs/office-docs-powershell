@@ -45,7 +45,7 @@ New-ComplianceCase -Name "Fabrikam Litigation"
 
 This example creates a new core eDiscovery case named Fabrikam Litigation.
 
-### Example 1
+### Example 2
 ```powershell
 New-ComplianceCase -Name "Coho Case 03082020" -CaseType AdvancedEdiscovery -ExternalId "SaraDavis v. Coho Winery"
 ```
@@ -55,7 +55,7 @@ This example creates a new Advanced eDiscovery case named Coho Case 03082020 and
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the unique name of the eDiscovery case. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies the unique name of the compliance case. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -CaseType
-The CaseType parameter specifies the type of case that you want to create. Valid values are:
+The CaseType parameter specifies the type of compliance case that you want to create. Valid values are:
 
 - AdvancedEdiscovery: Advanced eDiscovery cases are used to manage legal or other types of investigations. In the Security & Compliance Center, Advanced eDiscovery cases are displayed under eDiscovery > Advanced eDiscovery.
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The Description parameter specifies a description for the case. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Description parameter specifies a description for the compliance case. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalId
-The ExternalId parameter specifies an optional ID or external case number that you can associate with the new case. This value is displayed in the Case number field when you view information about the case on the case settings page in the Security & Compliance Center.
+The ExternalId parameter specifies an optional ID or external case number that you can associate with the new compliance case.
 
 ```yaml
 Type: String

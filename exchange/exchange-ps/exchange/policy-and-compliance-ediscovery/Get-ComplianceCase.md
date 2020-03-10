@@ -15,7 +15,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Get-ComplianceCase cmdlet to different types of cases in the Security & Compliance Center and Microsoft 365 compliance center. See the CaseType parameter for a list of these case types.
+Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Security & Compliance Center and Microsoft 365 compliance center. See the CaseType parameter for a list of these case types.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -67,7 +67,7 @@ This example returns a summary list of all DSR cases that the custom role group 
 ## PARAMETERS
 
 ### -CaseType
-The CaseType parameter specifies the type of case that you want to view. Valid values are:
+The CaseType parameter specifies the type of compliance case that you want to view. Valid values are:
 
 - AdvancedEdiscovery: Advanced eDiscovery cases are used to manage legal or other types of investigations. In the Security & Compliance Center, Advanced eDiscovery cases are displayed under eDiscovery > Advanced eDiscovery.
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the case that you want to view. You can use any value that uniquely identifies the case. For example:
+The Identity parameter specifies the compliance case that you want to view. You can use any value that uniquely identifies the case. For example:
 
 - Name
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecentOnly
-The RecentOnly switch returns a list of the most recently modified cases of the specified case type. This switch is used to display data in the "Recently cases" widget that's displayed in the compliance centers for some of the features that use case objects.
+The RecentOnly switch returns a list of the most recently modified cases of the specified case type. This switch is used to display data in the "Recently cases" widget that's displayed in the compliance centers for some of the features that use compliance case objects.
 
 ```yaml
 Type: SwitchParameter
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleGroup
-The RoleGroup parameter returns a list of cases that the specified role group is a member of. If you don't include the CaseType parameter, the cmdlet returns a list of core eDiscovery cases that the role group is a member of.
+The RoleGroup parameter returns a list of compliance cases that the specified role group is a member of. If you don't include the CaseType parameter, the cmdlet returns a list of core eDiscovery cases that the role group is a member of.
 
 ```yaml
 Type: String
