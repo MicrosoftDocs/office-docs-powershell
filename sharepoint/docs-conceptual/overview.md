@@ -23,7 +23,7 @@ Verify that you have the following administrative permissions:
 * You must be assigned SharePoint administrator role.
   For more information, see [Default administrative roles and user groups](https://support.office.com/article/Default-SharePoint-Groups-13BB2B6B-DD8C-447E-B71B-0E4BB9EFE1D3?ui=en-US&rs=en-US&ad=US) and [About the SharePoint admin role in Microsoft 365](https://docs.microsoft.com/sharepoint/sharepoint-admin-role).
 
-**IMPORTANT:** You can use a specific group of PowerShell with SharePoint Online. For more information, see [Office 365 PowerShell for SharePoint Online](https://technet.microsoft.com/library/fp161362(v=office.16).aspx).
+**IMPORTANT:** You can use a specific group of PowerShell with SharePoint Online. For more information, see [Office 365 PowerShell for SharePoint Online](/office365/enterprise/powershell/manage-sharepoint-online-with-office-365-powershell).
 
 ## Learning PowerShell
 
