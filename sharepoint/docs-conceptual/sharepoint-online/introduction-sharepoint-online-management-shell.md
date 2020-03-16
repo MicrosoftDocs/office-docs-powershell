@@ -1,12 +1,12 @@
 ---
-title: What is the SharePoint Online Management Shell
+title: Intro to SharePoint Online Management Shell
 ---
 
-# What is the SharePoint Online Management Shell?
+# Intro to SharePoint Online Management Shell
 
-The SharePoint Online Management Shell is a Windows PowerShell module that you can use to manage SharePoint Online users, sites, and site collections. Command-line operations in Windows PowerShell are composed of a series of commands. Each command uses a cmdlet and a set of settings known as parameters. For example, you use the **New-SPOSite** cmdlet for a command that creates a new SharePoint Online site collection with a specified title, URL, owner, storage quota, and template (the parameters).
+The SharePoint Online Management Shell is a Windows PowerShell module that you can use to manage users, site collections, and subsites. Command-line operations in Windows PowerShell are composed of a series of commands. Each command uses a cmdlet and a set of settings known as parameters. For example, you use the **New-SPOSite** cmdlet to create a new site collection with a specified title, URL, owner, storage quota, and template (the parameters).
 
-SharePoint Online PowerShell commands can be very efficient for batch operations — for example, creating a dozen new site collections or adding hundreds of new SharePoint Online users to a site. For more information, see [Why you need to use Office 365 PowerShell](https://technet.microsoft.com/library/dn568034.aspx).
+SharePoint Online PowerShell commands can be very efficient for batch operations — for example, creating a dozen new site collections or adding hundreds of new users to a site. For more information, see [Why you need to use Office 365 PowerShell](/office365/enterprise/powershell/why-you-need-to-use-office-365-powershell).
 
 ## What is the difference between SharePoint Online PowerShell commands and Office 365 PowerShell commands?
 
