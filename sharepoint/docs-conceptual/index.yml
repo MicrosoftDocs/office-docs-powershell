@@ -1,0 +1,113 @@
+### YamlMime:Landing
+
+title: SharePoint PowerShell# < 60 chars
+summary: Learn about using PowerShell cmdlets for SharePoint in Microsoft 365 and SharePoint Server. # < 160 chars
+
+metadata:
+  title: SharePoint PowerShell # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Use PowerShell cmdlets for SharePoint in Microsoft 365 and SharePoint Server # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: sharepoint-online #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.subservice: subservice
+  ms.topic: landing-page # Required
+  ms.collection: M365-collaboration
+  author: kaarins #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kaarins #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/16/2020 #Required; mm/dd/yyyy format
+  localization_priority: Priority
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: SharePoint in Microsoft 365
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Intro to SharePoint Online Management Shell
+            url: introduction-sharepoint-online-management-shell.md
+          - text: Get started with SharePoint Online Management Shell
+            url: connect-sharepoint-online.md
+  
+
+  # Card
+  - title: Share and work together
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Turn external sharing on or off
+            url: turn-external-sharing-on-or-off.md         
+          - text: Small business - Create a company-wide team
+            url: https://support.office.com/article/037bb27a-bcc9-48fe-8d72-44d9482420a3
+          - text: Manage site creation
+            url: manage-site-creation.md
+          - text: How SharePoint interacts with Teams
+            url: https://docs.microsoft.com/microsoftmeams/sharepoint-onedrive-interact
+          - text: Administer OneDrive
+            url: https://docs.microsoft.com/onedrive/onedrive
+
+  # Card
+  - title: Inform and engage
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Create modern experiences
+            url: guide-to-sharepoint-modern-experience.md
+          - text: Plan your hub sites
+            url: planning-hub-sites.md
+          - text: Add featured links
+            url: change-links-list-on-sharepoint-home-page.md
+          - text: Admin help for Yammer
+            url: https://support.office.com/article/e1464355-1f97-49ac-b2aa-dd320b179dbe
+
+    # Card
+  - title: Transform business processes
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Get started with Power Automate
+            url: https://docs.microsoft.com/flow/getting-started
+          - text: Power Apps
+            url: https://docs.microsoft.com/powerapps/
+
+  # Card
+  - title: Harness collective knowledge
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Overview of search
+            url: overview-of-search.md
+          - text: Delve for Office 365 admins
+            url: https://docs.microsoft.com/sharepoint/delve-for-office-365-admins
+
+  # Card
+  - title: Protect and manage
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Office 365 Security and Compliance
+            url: https://docs.microsoft.com/office365/securitycompliance/
+          - text: How SharePoint and OneDrive safeguard your data
+            url: safeguarding-your-data.md
+          - text: New SharePoint admin center
+            url: get-started-new-admin-center.md
+          - text: SharePoint Online management shell
+            url: https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online
+          - text: Network planning and performance tuning
+            url: https://docs.microsoft.com/office365/enterprise/network-planning-and-performance
+
+  # Card
+  - title: Extend and develop
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Customizing SharePoint
+            url: extend-and-develop.md
+          - text: SharePoint Framework
+            url: https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview
+          - text: SharePoint add-ins
+            url: https://docs.microsoft.com/sharepoint/dev/sp-add-ins/sharepoint-add-ins
+          - text: Patterns and practices (PnP) solution guidance
+            url: https://docs.microsoft.com/sharepoint/dev/solution-guidance/office-365-development-patterns-and-practices-solution-guidance
+
