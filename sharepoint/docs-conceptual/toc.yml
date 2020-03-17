@@ -1,6 +1,7 @@
 - name: SharePoint PowerShell
   href: index.yml
 - name: SharePoint in Microsoft 365
+  href: sharepoint-online/introduction-sharepoint-online-management-shell.md
   items:
   - name: Intro to SharePoint Online Management Shell
     href: sharepoint-online/introduction-sharepoint-online-management-shell.md
