@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-The First parameter gets the first N Call Queues
+The First parameter gets the first N Call Queues. The default behavior is to return the first 100 number of queues. It is intended to be used for pagination purposes.
 
 ```yaml
 Type: Int32
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-The Skip parameter skips the first N Call Queues
+The Skip parameter skips the first N Call Queues. It is intended to be used for pagination purposes.
 
 ```yaml
 Type: Int32
