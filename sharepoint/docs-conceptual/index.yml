@@ -26,11 +26,11 @@ landingContent:
       - linkListType: reference
         links:
           - text: Intro to SharePoint Online Management Shell
-            url: introduction-sharepoint-online-management-shell.md
+            url: sharepoint-online/introduction-sharepoint-online-management-shell.md
           - text: Get started with SharePoint Online Management Shell
-            url: connect-sharepoint-online.md
+            url: sharepoint-online/connect-sharepoint-online.md
           - text: Cmdlet reference
-            url: powershell/module/sharepoint-online
+            url: /powershell/module/sharepoint-online
           - text: Manage SharePoint with Office 365 PowerShell
             url: /office365/enterprise/powershell/manage-sharepoint-online-with-office-365-powershell
   
