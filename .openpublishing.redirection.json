@@ -159,6 +159,11 @@
       "source_path": "exchange/virtual-folder/exchange/connected-accounts/Set-PopSubscription.md",
       "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "sharepoint/docs-conceptual/overview.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/sharepoint",
+      "redirect_document_id": true
     }
    ] 
   }
