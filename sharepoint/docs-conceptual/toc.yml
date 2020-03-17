@@ -1,5 +1,5 @@
-- name: Home
-  href: index.md
+- name: SharePoint PowerShell
+  href: index.yml
   items:
   - name: SharePoint in Microsoft 365
     items:
