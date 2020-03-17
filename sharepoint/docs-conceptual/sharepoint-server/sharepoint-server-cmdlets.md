@@ -27,7 +27,7 @@ Before you can use the Add-SPShellAdmin cmdlet to grant permissions for users to
 > [!NOTE]
 > If these permissions are not satisfied, contact your Setup administrator or SQL Server administrator to request these permissions.
 
-For additional information about PowerShell permissions and execution policies, see [Add-SPShellAdmin](../../sharepoint-ps/sharepoint-server/Add-SPShellAdmin.md) and [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+For additional information about PowerShell permissions, see [Add-SPShellAdmin](../../sharepoint-ps/sharepoint-server/Add-SPShellAdmin.md).
 
 If you do not have membership in the **SharePoint_Shell_Access** role or **WSS_Admin_WPG** local group, use the **Add-SPShellAdmin** cmdlet to add the **WSS_Admin_WPG** group in all front-end web servers in the SharePoint farm and the **SharePoint_Shell_Access** role. If the SQL Server database does not have a **SharePoint_Shell_Access** role, the role is automatically created when you run the **Add-SPShellAdmin** cmdlet. After you run the **Add-SPShellAdmin** cmdlet, users can run SharePoint PowerShell cmdlets in a multiple-server farm environment.
 
@@ -41,5 +41,5 @@ Although you can use Microsoft PowerShell to perform a single administrative tas
 
 To run scripts, the minimum required execution policy for SharePoint Server is **RemoteSigned**, although the default policy for PowerShell is Restricted. If the policy is left as Restricted, the SharePoint Management Shell will change the policy for PowerShell to RemoteSigned. This means that you must select **Run as administrator** to start the SharePoint Management Shell with elevated administrative permission. This change will apply to all PowerShell sessions. For more information, see [ExecutionPolicy Enumeration](/dotnet/api/microsoft.powershell.executionpolicy).
 
-For additional information about scripts, see [about_scripts](/powershell/module/microsoft.powershell.core/about/about_scripts).
+For additional information about scripts and execution policies, see [about_scripts](/powershell/module/microsoft.powershell.core/about/about_scripts) and [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
