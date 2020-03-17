@@ -39,6 +39,12 @@ Remove-SPContentDatabase WSS_Content
 
 This example deletes the content database named 'WSS_Content'.
 
+### -----------------EXAMPLE---------------------
+```
+Remove-SPContentDatabase WSS_Content -Confirm:$false -Force
+```
+
+This example deletes the content database named 'WSS_Content' without asking any confirmation.
 
 ## PARAMETERS
 
