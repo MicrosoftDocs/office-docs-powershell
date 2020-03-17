@@ -81,6 +81,8 @@ The Action parameter specifies the action for the Safe Attachments policy. Valid
 
 - Replace: Deliver the email message, but remove the malware attachment and replace it with warning text.
 
+- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [How Dynamic Delivery works](https://docs.microsoft.com/microsoft-365/security/office-365-security/dynamic-delivery-and-previewing#how-dynamic-delivery-works).
+
 The results of all actions are available in message trace.
 
 ```yaml

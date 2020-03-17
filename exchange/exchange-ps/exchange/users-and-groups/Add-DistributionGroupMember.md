@@ -130,20 +130,6 @@ Accept wildcard characters: False
 ```
 
 ### -Member
-The Member parameter specifies the recipient (mail-enabled object) that you want to add to the group. You can use any value that uniquely identifies the recipient. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- Email address
-
-- GUID
-
 The Member parameter specifies the recipient that you want to add to the group. A member can be any mail-enabled recipient in your organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name

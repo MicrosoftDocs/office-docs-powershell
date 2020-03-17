@@ -11,8 +11,6 @@ ms.reviewer:
 # New-CsBatchPolicyAssignmentOperation
 
 ## SYNOPSIS
-NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
-
 This cmdlet is used to assign a policy to a batch of users.
 
 ## SYNTAX
