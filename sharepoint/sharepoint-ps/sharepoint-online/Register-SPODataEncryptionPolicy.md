@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 Cmdlet to register customer encryption status for your geo tenant.
-For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Register-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> -PrimaryKeyVaultN
 ## DESCRIPTION
 
 Use the Update-DataEncryptionPolicy cmdlet to register customer encryption status for your geo tenant.
-For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
 
