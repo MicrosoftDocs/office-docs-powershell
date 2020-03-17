@@ -8,6 +8,12 @@ The SharePoint Online Management Shell is a Windows PowerShell module that you c
 
 SharePoint Online PowerShell commands can be very efficient for batch operations — for example, creating a dozen new site collections or adding hundreds of new users to a site. For more information, see [Why you need to use Office 365 PowerShell](/office365/enterprise/powershell/why-you-need-to-use-office-365-powershell).
 
+## Getting Started with SharePoint Online PowerShell
+
+To use SharePoint Online PowerShell commands, you must have the SharePoint Admin role or Global Administrator role in Office 365.
+
+You must install the SharePoint Online Management Shell module and connect to the SharePoint Online service. For more information, see [Connect SharePoint Online](connect-sharepoint-online.md).
+
 ## What's the difference between SharePoint Online PowerShell commands and Office 365 PowerShell commands?
 
 The major and obvious difference is the nouns they use. Every SharePoint Online cmdlet will start with SPO as its noun. Conversely, Office 365 will start with MSO as its noun.
@@ -21,7 +27,7 @@ If you are new to Office 365 and SharePoint Online and you have not done much ma
 After you get familiar with SharePoint sites and users, try using SharePoint Online PowerShell commands, especially when you want to manage lots of site collections or users.
 
 > [!NOTE] 
-> For the complete list of SharePoint Online cmdlets, see [SharePoint Online PowerShell](/powershell/module/sharepoint-online/)
+> For the complete list of SharePoint Online cmdlets, see [SharePoint Online PowerShell](https://docs.microsoft.com/powershell/module/sharepoint-online/?view=sharepoint-ps)
 
 ## How do I get permissions and set up the environment?
 
