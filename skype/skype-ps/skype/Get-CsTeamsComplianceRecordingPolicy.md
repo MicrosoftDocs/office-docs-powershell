@@ -54,14 +54,14 @@ The command shown in Example 1 returns information for all the Teams compliance 
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsComplianceRecordingPolicy -Identity "ContosoPartnerComplianceRecordingPolicy"
+PS C:\> Get-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerComplianceRecordingPolicy'
 ```
 
 In Example 2, information is returned for a single Teams compliance recording policy: the policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 
 ### Example 3
 ```powershell
-PS C:\> Get-CsTeamsComplianceRecordingPolicy -Filter "Tag:*"
+PS C:\> Get-CsTeamsComplianceRecordingPolicy -Filter 'Tag:*'
 ```
 
 The command shown in Example 3 returns information about all the Teams compliance recording policies configured at the per-user scope.
@@ -91,7 +91,7 @@ Accept wildcard characters: True
 Unique identifier of the Teams compliance recording policy to be retrieved.
 To return the global policy, use this syntax:
 
--Identity global
+-Identity "Global"
 
 To return a policy configured at the per-user scope, use syntax like this:
 
