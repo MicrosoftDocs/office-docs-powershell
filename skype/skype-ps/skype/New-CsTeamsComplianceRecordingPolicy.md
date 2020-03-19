@@ -5,7 +5,7 @@ applicable: Skype for Business Online
 title: New-CsTeamsComplianceRecordingPolicy
 schema: 2.0.0
 manager: nakumar
-author: aditd
+author: aditdalvi
 ms.author: aditd
 ms.reviewer:
 ---
