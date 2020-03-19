@@ -47,18 +47,18 @@ The command shown in Example 1 deletes the Teams compliance recording policy Con
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsComplianceRecordingPolicy -Filter "tag:*" | Remove-CsTeamsComplianceRecordingPolicy
+PS C:\> Get-CsTeamsComplianceRecordingPolicy -Filter 'Tag:*' | Remove-CsTeamsComplianceRecordingPolicy
 ```
 
 In Example 2, all the Teams compliance recording policies configured at the per-user scope are removed.
-The Filter value "tag:*" limits the returned data to Teams compliance recording policies configured at the per-user scope. Those per-user policies are then removed.
+The Filter value "Tag:*" limits the returned data to Teams compliance recording policies configured at the per-user scope. Those per-user policies are then removed.
 
 ## PARAMETERS
 
 ### -Identity
 Unique identifier to be assigned to the new Teams compliance recording policy.
 
-Use the "global" Identity if you wish to assign this policy to the entire tenant.
+Use the "Global" Identity if you wish to assign this policy to the entire tenant.
 
 ```yaml
 Type: XdsIdentity
