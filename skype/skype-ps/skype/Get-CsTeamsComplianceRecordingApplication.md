@@ -101,7 +101,7 @@ Unique identifier of the application instance of a policy-based recording applic
 
 You cannot use wildcard characters when specifying the Identity.
 
-If neither the Identity nor the Filter parameters are specified, then \`Get-CsTeamsComplianceRecordingApplication\` returns all application instances of policy-based recording applications that are associated with a Teams compliance recording policy.
+If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsComplianceRecordingApplication returns all application instances of policy-based recording applications that are associated with a Teams compliance recording policy.
 
 Note that application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
 Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
