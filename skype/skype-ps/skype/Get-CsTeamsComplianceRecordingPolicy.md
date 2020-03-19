@@ -99,7 +99,7 @@ To return a policy configured at the per-user scope, use syntax like this:
 
 You cannot use wildcard characters when specifying the Identity.
 
-If neither the Identity nor the Filter parameters are specified, then \`Get-CsTeamsComplianceRecordingPolicy\` returns all the Teams compliance recording policies configured for use in the tenant.
+If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsComplianceRecordingPolicy returns all the Teams compliance recording policies configured for use in the tenant.
 
 ```yaml
 Type: XdsIdentity
