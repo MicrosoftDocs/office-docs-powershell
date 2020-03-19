@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/en-us/powershell/module/skype/set-csteamscompliancerecordingapplication?view=skype-ps
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamscompliancerecordingapplication
 applicable: Skype for Business Online
 title: Set-CsTeamsComplianceRecordingApplication
 schema: 2.0.0
 manager: nakumar
-author: aditd
+author: aditdalvi
 ms.author: aditd
 ms.reviewer:
 ---
@@ -403,20 +403,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamscompliancerecordingpolicy?view=skype-ps)
+[Get-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamscompliancerecordingpolicy?view=skype-ps)
 
-[New-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/new-csteamscompliancerecordingpolicy?view=skype-ps)
+[New-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingpolicy?view=skype-ps)
 
-[Set-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csteamscompliancerecordingpolicy?view=skype-ps)
+[Set-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/powershell/module/skype/set-csteamscompliancerecordingpolicy?view=skype-ps)
 
-[Grant-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csteamscompliancerecordingpolicy?view=skype-ps)
+[Grant-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csteamscompliancerecordingpolicy?view=skype-ps)
 
-[Remove-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csteamscompliancerecordingpolicy?view=skype-ps)
+[Remove-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csteamscompliancerecordingpolicy?view=skype-ps)
 
-[Get-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamscompliancerecordingapplication?view=skype-ps)
+[Get-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/powershell/module/skype/get-csteamscompliancerecordingapplication?view=skype-ps)
 
-[New-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/en-us/powershell/module/skype/new-csteamscompliancerecordingapplication?view=skype-ps)
+[New-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingapplication?view=skype-ps)
 
-[Remove-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csteamscompliancerecordingapplication?view=skype-ps)
+[Remove-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/powershell/module/skype/remove-csteamscompliancerecordingapplication?view=skype-ps)
 
-[New-CsTeamsComplianceRecordingPairedApplication](https://docs.microsoft.com/en-us/powershell/module/skype/new-csteamscompliancerecordingpairedapplication?view=skype-ps)
+[New-CsTeamsComplianceRecordingPairedApplication](https://docs.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingpairedapplication?view=skype-ps)
