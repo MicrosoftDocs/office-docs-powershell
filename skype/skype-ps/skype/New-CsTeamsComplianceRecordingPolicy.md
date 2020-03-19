@@ -65,7 +65,7 @@ Any Microsoft Teams users who are assigned this policy will have their calls and
 ### -Identity
 Unique identifier to be assigned to the new Teams compliance recording policy.
 
-Use the "global" Identity if you wish to assign this policy to the entire tenant.
+Use the "Global" Identity if you wish to assign this policy to the entire tenant.
 
 ```yaml
 Type: XdsIdentity
