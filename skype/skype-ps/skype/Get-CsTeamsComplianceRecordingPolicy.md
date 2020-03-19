@@ -54,18 +54,18 @@ The command shown in Example 1 returns information for all the Teams compliance 
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsComplianceRecordingPolicy -Identity "ContosoPartnerComplianceRecordingPolicy"
+PS C:\> Get-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerComplianceRecordingPolicy'
 ```
 
 In Example 2, information is returned for a single Teams compliance recording policy: the policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 
 ### Example 3
 ```powershell
-PS C:\> Get-CsTeamsComplianceRecordingPolicy -Filter "tag:*"
+PS C:\> Get-CsTeamsComplianceRecordingPolicy -Filter 'Tag:*'
 ```
 
 The command shown in Example 3 returns information about all the Teams compliance recording policies configured at the per-user scope.
-To do this, the command uses the Filter parameter and the filter value "tag:\*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "tag:".
+To do this, the command uses the Filter parameter and the filter value "Tag:\*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "Tag:".
 
 ## PARAMETERS
 
@@ -73,7 +73,7 @@ To do this, the command uses the Filter parameter and the filter value "tag:\*";
 Enables you to use wildcards when retrieving one or more Teams compliance recording policies.
 For example, to return all the policies configured at the per-user scope, use this syntax:
 
--Filter "tag:\*"
+-Filter "Tag:\*"
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: True
 Unique identifier of the Teams compliance recording policy to be retrieved.
 To return the global policy, use this syntax:
 
--Identity global
+-Identity "Global"
 
 To return a policy configured at the per-user scope, use syntax like this:
 
@@ -99,7 +99,7 @@ To return a policy configured at the per-user scope, use syntax like this:
 
 You cannot use wildcard characters when specifying the Identity.
 
-If neither the Identity nor the Filter parameters are specified, then \`Get-CsTeamsComplianceRecordingPolicy\` returns all the Teams compliance recording policies configured for use in the tenant.
+If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsComplianceRecordingPolicy returns all the Teams compliance recording policies configured for use in the tenant.
 
 ```yaml
 Type: XdsIdentity

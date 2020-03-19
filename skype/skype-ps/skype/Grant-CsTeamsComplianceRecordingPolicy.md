@@ -50,14 +50,14 @@ Existing calls and meetings are unaffected.
 
 ### Example 1
 ```powershell
-PS C:\> Grant-CsTeamsComplianceRecordingPolicy -Identity "Ken Myer" -PolicyName "ContosoPartnerComplianceRecordingPolicy"
+PS C:\> Grant-CsTeamsComplianceRecordingPolicy -Identity 'Ken Myer' -PolicyName 'ContosoPartnerComplianceRecordingPolicy'
 ```
 
 The command shown in Example 1 assigns the per-user Teams compliance recording policy ContosoPartnerComplianceRecordingPolicy to the user with the display name "Ken Myer".
 
 ### Example 2
 ```powershell
-PS C:\> Grant-CsTeamsComplianceRecordingPolicy -Identity "Ken Myer" -PolicyName $null
+PS C:\> Grant-CsTeamsComplianceRecordingPolicy -Identity 'Ken Myer' -PolicyName $null
 ```
 
 In Example 2, any per-user Teams compliance recording policy previously assigned to the user "Ken Myer" is revoked.
@@ -101,9 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-"Name" of the policy to be assigned.
-The PolicyName is simply the policy Identity without the policy scope (the "tag:" prefix).
-For example, a policy with the Identity tag:ContosoPartnerComplianceRecordingPolicy has a PolicyName equal to ContosoPartnerComplianceRecordingPolicy.
+Name of the policy to be assigned.
+The PolicyName is simply the policy Identity without the policy scope i.e. the "Tag:" prefix.
+For example, a policy with the Identity Tag:ContosoPartnerComplianceRecordingPolicy has a PolicyName equal to ContosoPartnerComplianceRecordingPolicy.
 
 To revoke a per-user policy previously assigned to a user, set the PolicyName to a null value ($null).
 

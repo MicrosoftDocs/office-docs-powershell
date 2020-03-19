@@ -38,7 +38,7 @@ Instances of these applications are created using CsOnlineApplicationInstance cm
 
 Note that application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
 Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
-For example, the Identity of an application instance can be \"tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 Please work with your Microsoft certified policy-based recording application provider to obtain an instance of their recording application.
 Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
@@ -55,26 +55,26 @@ The command shown in Example 1 returns information for all the application insta
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsComplianceRecordingApplication -Identity tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144
+PS C:\> Get-CsTeamsComplianceRecordingApplication -Identity 'Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144'
 ```
 
-In Example 2, information is returned for a single application instance of a policy-based recording application with the Identity tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144.
+In Example 2, information is returned for a single application instance of a policy-based recording application with the Identity Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144.
 
 ### Example 3
 ```powershell
-PS C:\> Get-CsTeamsComplianceRecordingApplication -Filter "tag:*"
+PS C:\> Get-CsTeamsComplianceRecordingApplication -Filter 'Tag:*'
 ```
 
 The command shown in Example 3 returns all the application instances associated with Teams compliance recording policies at the per-user scope.
-To do this, the command uses the Filter parameter and the filter value "tag:\*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "tag:".
+To do this, the command uses the Filter parameter and the filter value "Tag:\*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "Tag:".
 
 ### Example 4
 ```powershell
-PS C:\> Get-CsTeamsComplianceRecordingApplication -Filter "tag:ContosoPartnerComplianceRecordingPolicy*"
+PS C:\> Get-CsTeamsComplianceRecordingApplication -Filter 'Tag:ContosoPartnerComplianceRecordingPolicy*'
 ```
 
 The command shown in Example 4 returns all the application instances associated with Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
-To do this, the command uses the Filter parameter and the filter value "tag:ContosoPartnerComplianceRecordingPolicy\*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "tag:ContosoPartnerComplianceRecordingPolicy".
+To do this, the command uses the Filter parameter and the filter value "Tag:ContosoPartnerComplianceRecordingPolicy\*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "Tag:ContosoPartnerComplianceRecordingPolicy".
 
 ## PARAMETERS
 
@@ -82,7 +82,7 @@ To do this, the command uses the Filter parameter and the filter value "tag:Cont
 Enables you to use wildcards when retrieving one or more application instances of policy-based recording applications.
 For example, to return all the application instances associated with Teams compliance recording policies at the per-user scope, use this syntax:
 
--Filter "tag:\*"
+-Filter "Tag:\*"
 
 ```yaml
 Type: String
@@ -101,11 +101,11 @@ Unique identifier of the application instance of a policy-based recording applic
 
 You cannot use wildcard characters when specifying the Identity.
 
-If neither the Identity nor the Filter parameters are specified, then \`Get-CsTeamsComplianceRecordingApplication\` returns all application instances of policy-based recording applications that are associated with a Teams compliance recording policy.
+If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsComplianceRecordingApplication returns all application instances of policy-based recording applications that are associated with a Teams compliance recording policy.
 
 Note that application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
 Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
-For example, the Identity of an application instance can be \"tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 ```yaml
 Type: XdsIdentity
