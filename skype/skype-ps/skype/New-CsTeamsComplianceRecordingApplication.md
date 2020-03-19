@@ -44,7 +44,7 @@ Instances of these applications are created using CsOnlineApplicationInstance cm
 
 Note that application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
 Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
-For example, the Identity of an application instance can be \"tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 Please work with your Microsoft certified policy-based recording application provider to obtain an instance of their recording application.
 Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
@@ -108,7 +108,7 @@ In this example, the application is made resilient by pairing it with another ap
 Separate invites are sent to the paired applications for the same call or meeting.
 Please refer to the documentation of the ComplianceRecordingPairedApplications parameter for more information.
 
-**Integration of this parameter into the policy-based recording workflows is still a work in progress.**
+**Integration of this example into the policy-based recording workflows is still a work in progress.**
 **This warning will be removed once the integration is complete.**
 
 ### Example 7
@@ -138,7 +138,7 @@ A name that uniquely identifies the application instance of the policy-based rec
 
 Application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
 To do this association correctly, the Identity of these application instances must be \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
-For example, the Identity of an application instance can be \"tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 ```yaml
 Type: XdsIdentity
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 
 ### -Parent
 The Identity of the Teams compliance recording policy that this application instance of a policy-based recording application is associated with.
-For example, the Parent of an application instance can be \"tag:ContosoPartnerComplianceRecordingPolicy\", which indicates that the application instance is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+For example, the Parent of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy\", which indicates that the application instance is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 ```yaml
 Type: String
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The ObjectId of the application instance of a policy-based recording application as exposed by the \`Get-CsOnlineApplicationInstance\` cmdlet.
+The ObjectId of the application instance of a policy-based recording application as exposed by the Get-CsOnlineApplicationInstance cmdlet.
 For example, the Id of an application instance can be \"39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance has ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144.
 
 ```yaml
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-This priority determines the order in which the policy-based recording applications are displayed in the output of the \`Get-CsTeamsComplianceRecordingPolicy\` cmdlet.
+This priority determines the order in which the policy-based recording applications are displayed in the output of the Get-CsTeamsComplianceRecordingPolicy cmdlet.
 
 All policy-based recording applications are invited in parallel to ensure low call setup and meeting join latencies.
 So this parameter does not affect the order of invitations to the applications, or any other routing.
