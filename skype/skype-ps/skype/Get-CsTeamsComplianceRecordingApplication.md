@@ -40,6 +40,8 @@ Note that application instances of policy-based recording applications must be a
 Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
 For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
+Note that if neither the Identity nor the Filter parameters are specified, then Get-CsTeamsComplianceRecordingApplication returns all application instances of policy-based recording applications that are associated with a Teams compliance recording policy.
+
 Please work with your Microsoft certified policy-based recording application provider to obtain an instance of their recording application.
 Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
 Please also refer to the documentation of CsTeamsComplianceRecordingPolicy cmdlets for further information.
@@ -100,8 +102,6 @@ Accept wildcard characters: True
 Unique identifier of the application instance of a policy-based recording application to be retrieved.
 
 You cannot use wildcard characters when specifying the Identity.
-
-If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsComplianceRecordingApplication returns all application instances of policy-based recording applications that are associated with a Teams compliance recording policy.
 
 Note that application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
 Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.

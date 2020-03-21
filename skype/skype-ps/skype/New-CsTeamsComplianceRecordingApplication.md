@@ -23,7 +23,7 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 New-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-RequiredBeforeMeetingJoin <Boolean>] [-RequiredDuringMeeting <Boolean>]
  [-RequiredBeforeCallEstablishment <Boolean>] [-RequiredDuringCall <Boolean>]
- [-ConcurrentInvitationCount <UInt32>] [-ComplianceRecordingPairedApplications <>]
+ [-ConcurrentInvitationCount <UInt32>] [-ComplianceRecordingPairedApplications <ComplianceRecordingPairedApplication[]>]
  [-Priority <Int32>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ New-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] [-Identity <Xd
 New-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] -Parent <String> -Id <String>
  [-RequiredBeforeMeetingJoin <Boolean>] [-RequiredDuringMeeting <Boolean>]
  [-RequiredBeforeCallEstablishment <Boolean>] [-RequiredDuringCall <Boolean>]
- [-ConcurrentInvitationCount <UInt32>] [-ComplianceRecordingPairedApplications <>]
+ [-ConcurrentInvitationCount <UInt32>] [-ComplianceRecordingPairedApplications <ComplianceRecordingPairedApplication[]>]
  [-Priority <Int32>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -110,26 +110,6 @@ Please refer to the documentation of the ComplianceRecordingPairedApplications p
 
 **Integration of this example into the policy-based recording workflows is still a work in progress.**
 **This warning will be removed once the integration is complete.**
-
-### Example 7
-```powershell
-PS C:\> New-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerComplianceRecordingPolicy' -Enabled $true -ComplianceRecordingApplications @(New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899')
-```
-
-The command shown in Example 7 creates a new per-user Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
-This policy is assigned a single application instance of a policy-based recording application: d93fefc7-93cc-4d44-9a5d-344b0fff2899, which is the ObjectId of the application instance as obtained from the Get-CsOnlineApplicationInstance cmdlet.
-
-Any Microsoft Teams users who are assigned this policy will have their calls and meetings recorded by that application instance. Existing calls and meetings are unaffected.
-
-### Example 8
-```powershell
-PS C:\> Set-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerComplianceRecordingPolicy' -ComplianceRecordingApplications @(New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899')
-```
-
-The command shown in Example 8 modifies an existing per-user Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
-This policy is re-assigned a single application instance of a policy-based recording application: d93fefc7-93cc-4d44-9a5d-344b0fff2899, which is the ObjectId of the application instance as obtained from the Get-CsOnlineApplicationInstance cmdlet.
-
-Any Microsoft Teams users who are assigned this policy will have their calls and meetings recorded by that application instance. Existing calls and meetings are unaffected.
 
 ## PARAMETERS
 
@@ -318,7 +298,7 @@ Please work with your Microsoft certified policy-based recording application pro
 **This warning will be removed once the integration is complete.**
 
 ```yaml
-Type:
+Type: ComplianceRecordingPairedApplication[]
 Parameter Sets: (All)
 Aliases:
 

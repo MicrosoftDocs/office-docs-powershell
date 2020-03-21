@@ -22,7 +22,7 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 ```
 Set-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-Description <String>]
- [-ComplianceRecordingApplications <>]
+ [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -30,7 +30,7 @@ Set-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIden
 ```
 Set-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Instance <PSObject>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-Description <String>]
- [-ComplianceRecordingApplications <>]
+ [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -182,7 +182,7 @@ Please work with your Microsoft certified policy-based recording application pro
 Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
 
 ```yaml
-Type:
+Type: ComplianceRecordingApplication[]
 Parameter Sets: (All)
 Aliases:
 

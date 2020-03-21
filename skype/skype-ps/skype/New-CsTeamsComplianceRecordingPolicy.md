@@ -21,7 +21,7 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 ```
 New-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-Description <String>]
- [-ComplianceRecordingApplications <>]
+ [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>]
  [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -136,7 +136,7 @@ Please work with your Microsoft certified policy-based recording application pro
 Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
 
 ```yaml
-Type:
+Type: ComplianceRecordingApplication[]
 Parameter Sets: (All)
 Aliases:
 

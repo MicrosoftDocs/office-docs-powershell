@@ -34,6 +34,8 @@ Get-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Filter <String>]
 Teams compliance recording policies are used in automatic policy-based recording scenarios.
 When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams compliance recording policy are invited into the call or meeting to record audio, video and video-based screen sharing activity.
 
+Note that if neither the Identity nor the Filter parameters are specified, then Get-CsTeamsComplianceRecordingPolicy returns all the Teams compliance recording policies configured for use in the tenant.
+
 Note that simply assigning a Teams compliance recording policy to a Microsoft Teams user will not activate automatic policy-based recording for all Microsoft Teams calls and meetings that the user participates in.
 Among other things, you will need to create an application instance of a policy-based recording application i.e. a bot in your tenant and will then need to assign an appropriate policy to the user.
 
@@ -98,8 +100,6 @@ To return a policy configured at the per-user scope, use syntax like this:
 -Identity "ContosoPartnerComplianceRecordingPolicy"
 
 You cannot use wildcard characters when specifying the Identity.
-
-If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsComplianceRecordingPolicy returns all the Teams compliance recording policies configured for use in the tenant.
 
 ```yaml
 Type: XdsIdentity

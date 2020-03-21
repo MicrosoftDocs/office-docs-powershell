@@ -23,7 +23,7 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 Set-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-RequiredBeforeMeetingJoin <Boolean>] [-RequiredDuringMeeting <Boolean>]
  [-RequiredBeforeCallEstablishment <Boolean>] [-RequiredDuringCall <Boolean>]
- [-ConcurrentInvitationCount <UInt32>] [-ComplianceRecordingPairedApplications <>]
+ [-ConcurrentInvitationCount <UInt32>] [-ComplianceRecordingPairedApplications <ComplianceRecordingPairedApplication[]>]
  [-Priority <Int32>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ Set-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] [-Identity <Xd
 Set-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] [-Instance <PSObject>]
  [-RequiredBeforeMeetingJoin <Boolean>] [-RequiredDuringMeeting <Boolean>]
  [-RequiredBeforeCallEstablishment <Boolean>] [-RequiredDuringCall <Boolean>]
- [-ConcurrentInvitationCount <UInt32>] [-ComplianceRecordingPairedApplications <>]
+ [-ConcurrentInvitationCount <UInt32>] [-ComplianceRecordingPairedApplications <ComplianceRecordingPairedApplication[]>]
  [-Priority <Int32>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -289,7 +289,7 @@ Please work with your Microsoft certified policy-based recording application pro
 **This warning will be removed once the integration is complete.**
 
 ```yaml
-Type:
+Type: ComplianceRecordingPairedApplication[]
 Parameter Sets: (All)
 Aliases:
 
