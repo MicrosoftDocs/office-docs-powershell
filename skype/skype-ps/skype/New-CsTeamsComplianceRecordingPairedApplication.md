@@ -47,7 +47,14 @@ Please also refer to the documentation of CsTeamsComplianceRecordingApplication 
 
 ## EXAMPLES
 
-This cmdlet is only used in conjunction with New-CsTeamsComplianceRecordingApplication and Set-CsTeamsComplianceRecordingApplication to create associations between multiple application instances of policy-based recording applications.
+### Example 1
+```powershell
+PS C:\> New-CsTeamsComplianceRecordingPairedApplication -Id '39dc3ede-c80e-4f19-9153-417a65a1f144'
+```
+
+The command shown in Example 1 creates an in-memory instance of an application instance of a policy-based recording application that can be associated with other such application instances to achieve application resiliency.
+
+Note that this cmdlet is only used in conjunction with New-CsTeamsComplianceRecordingApplication and Set-CsTeamsComplianceRecordingApplication to create associations between multiple application instances of policy-based recording applications.
 Please refer to the documentation of CsTeamsComplianceRecordingApplication cmdlets for examples and further information.
 
 ## PARAMETERS
