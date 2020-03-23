@@ -1171,7 +1171,7 @@ This parameter uses the following syntax:
 
 The available \<capability\> values are:
 
-- AcceptCloudServicesMail
+- AcceptCloudServicesMail (Exchange 2013 or later)
 
 - AcceptOorgProtocol
 
@@ -1180,8 +1180,6 @@ The available \<capability\> values are:
 The available \<domainy\> values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
 
 For example, "contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptOorgProtocol,AcceptOorgHeader"
-
-Note: AcceptCloudServicesMail is available on Exchange 2013 or later Mailbox servers or Edge Transport servers.
 
 ```yaml
 Type: MultiValuedProperty
