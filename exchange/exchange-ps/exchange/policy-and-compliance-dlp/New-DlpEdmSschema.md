@@ -14,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-DlpEdmSchema cmdlet to create exact data match (EDM) data loss prevention (DLP) schemas in the Security & Compliance Center.
+Use the New-DlpEdmSchema cmdlet to create exact data match (EDM)-based classification schemas in the Security & Compliance Center. Such schemas can be used with data loss prevention (DLP) policies.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -106,6 +106,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Create custom sensitive information types with Exact Data Match based classification](https://docs.microsoft.com/office365/securitycompliance/create-custom-sensitive-info-type-edm)
 
 [Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/New-DlpEdmSchema)
 
