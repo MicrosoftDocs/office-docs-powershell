@@ -1228,6 +1228,8 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderAssistantSchedule
+**Note**: Although this parameter is available in Exchange 2016 and Exchange 2019, it's only used for coexistence with previous versions of Exchange. For more information, see [Configure and run the Managed Folder Assistant in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/mrm/configure-managed-folder-assistant).
+
 The ManagedFolderAssistantSchedule parameter specifies the intervals each week during which the Managed Folder Assistant applies messaging records management (MRM) settings to managed folders in mailboxes on the Mailbox server.
 
 The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\]. You can specify multiple schedules separated by commas: "\<Schedule1\>","\<Schedule2\>",..."\<ScheduleN\>".

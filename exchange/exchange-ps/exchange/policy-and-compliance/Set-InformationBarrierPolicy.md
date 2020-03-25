@@ -107,7 +107,7 @@ You identify the segment by its Name value. If the value contains spaces, enclos
 You can't use this parameter with the SegmentsBlocked parameter.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsAllowed
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -143,7 +143,7 @@ You identify the segment by its Name value. If the value contains spaces, enclos
 You can't use this parameter with the SegmentsAllowed parameter.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
 Applicable: Office 365 Security & Compliance Center
