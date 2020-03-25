@@ -10,8 +10,10 @@ ms.reviewer:
 
 # Get-CsUserPolicyAssignment
 
+> [!NOTE]
+> This cmdlet is currently in public preview. 
+
 ## SYNOPSIS
-NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
 
 This cmdlet is used to return the policy assignments for a user, both directly assigned and inherited from a group.
 
