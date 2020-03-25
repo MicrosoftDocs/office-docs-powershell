@@ -10,10 +10,10 @@ ms.reviewer:
 
 # Get-CsUserPolicyAssignment
 
+## SYNOPSIS
+
 > [!NOTE]
 > This cmdlet is currently in public preview. 
-
-## SYNOPSIS
 
 This cmdlet is used to return the policy assignments for a user, both directly assigned and inherited from a group.
 
