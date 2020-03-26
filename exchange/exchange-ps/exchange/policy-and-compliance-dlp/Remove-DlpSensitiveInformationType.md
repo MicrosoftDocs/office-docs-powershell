@@ -29,9 +29,9 @@ Remove-DlpSensitiveInformationType [-Identity] <DataClassificationIdParameter> [
 ## DESCRIPTION
 Sensitive information type rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+**Note**: A "ManagementObjectNotFoundException" error means there was a synchronization problem between the Security & Compliance Center and Exchange Online. This happens when you try to remove data classifications that are being used in mail flow rules (aslo known as transport rules). You can remove the mail flow rule, wait for synchronization to finish, and then add the rule back.
 
-> Notice:  If there is a syncing problem between EOP to EXO. You'll get "ManagementObjectNotFoundException" from EOP. Classification rule collection can't be updated because the update removes some data classifications which are currently used by transport rules. Requested customer to remove the transport rule. After syncing finished, adding the rule back if you would like.
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
