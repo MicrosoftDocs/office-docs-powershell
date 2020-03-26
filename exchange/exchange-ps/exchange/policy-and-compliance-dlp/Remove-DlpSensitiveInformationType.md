@@ -31,6 +31,8 @@ Sensitive information type rule packages are used by data loss prevention (DLP) 
 
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
+> Notice:  If there is a syncing problem between EOP to EXO. You'll get "ManagementObjectNotFoundException" from EOP. Classification rule collection can't be updated because the update removes some data classifications which are currently used by transport rules. Requested customer to remove the transport rule. After syncing finished, adding the rule back if you would like.
+
 ## EXAMPLES
 
 ### Example 1
