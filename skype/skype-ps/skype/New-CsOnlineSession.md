@@ -38,7 +38,7 @@ New-CsOnlineSession [-OAuthAccessToken <SecureString>] [-OverrideAdminDomain <St
 ```
 
 ## DESCRIPTION
-Creates a remote session to Microsoft Skype For Business Online DataCenter.
+Creates a remote session to Microsoft Skype for Business Online DataCenter.
 In this session, tenant administrator can run Skype For Business cmdlets to manage users, policies and configurations.
 
 ## EXAMPLES
