@@ -52,11 +52,19 @@ Establishes a Skype for Business Online Remote PowerShell Session, supplying the
 
 ### EXAMPLE 2
 ```
-New-CsOnlineSession -Credential User@Domain.com -OverrideAdminDomain TargetDomain.com
+New-CsOnlineSession -Credential User@Domain.com -OverrideAdminDomain contoso.onmicrosoft.com
 ```
 
 Establishes a Skype For Business Online Remote PowerShell Session, with a Skype for Business Online administrator account that has permission to manage the tenant contoso.onmicrosoft.com.
 Please change the OverrideAdminDomain to your default tenant domain.
+
+### EXAMPLE 3
+```
+$sfbSession = New-CsOnlineSession
+Import-PSSession $sfbSession
+```
+
+Establishes a Skype For Business Online Remote PowerShell Session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication)
 
 ## PARAMETERS
 
