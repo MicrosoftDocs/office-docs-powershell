@@ -56,7 +56,7 @@ New-CsOnlineSession -Credential User@Domain.com -OverrideAdminDomain TargetDomai
 ```
 
 Establishes a Skype For Business Online Remote PowerShell Session, with a Skype for Business Online administrator account that has permission to manage the tenant contoso.onmicrosoft.com.
-Please change the OverrideAdminDomain to your target Tenant domain.
+Please change the OverrideAdminDomain to your default tenant domain.
 
 ## PARAMETERS
 
