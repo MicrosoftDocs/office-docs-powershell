@@ -69,7 +69,7 @@ Establishes a Skype For Business Online Remote PowerShell Session using multi-fa
 ## PARAMETERS
 
 ### -UserName
-Specifies the user name of an administrator account of the tenant to be used when prompting for credentials.
+Specifies the Skype for Business Online administrator account name to be used when prompting for credentials.
 
 ```yaml
 Type: String
