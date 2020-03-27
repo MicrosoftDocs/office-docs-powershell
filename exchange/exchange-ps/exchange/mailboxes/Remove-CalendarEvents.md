@@ -26,7 +26,7 @@ Remove-CalendarEvents [-Identity] <MailboxIdParameter>
  [-Confirm]
  [-PreviewOnly]
  [-QueryStartDate <ExDateTime>]
- [-QueryWindowInDays <Int32>]
+ -QueryWindowInDays <Int32>
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -176,8 +176,6 @@ Accept wildcard characters: False
 
 ### -QueryWindowInDays
 The QueryWindowInDays parameter specifies the number of days after the QueryStartDate parameter value to look for meetings that you want to cancel.
-
-If you don't use this parameter, all future meetings on or after the specified start date will be cancelled.
 
 If an instance of a recurring meeting occurs during the specified time period, the entire series is cancelled (not just the instances during the time period).
 
