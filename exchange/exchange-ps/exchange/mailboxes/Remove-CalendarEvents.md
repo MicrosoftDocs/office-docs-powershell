@@ -39,10 +39,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-CalendarEvents -Identity chris@contoso.com -CancelOrganizedMeetings
+Remove-CalendarEvents -Identity chris@contoso.com -CancelOrganizedMeetings -QueryWindowInDays 120
 ```
 
-This example cancels every meeting in the mailbox chris@contoso.com that occurs on or after today's date. After you cancel the meetings, you can remove the mailbox.
+This example cancels every meeting in the mailbox chris@contoso.com that occurs on or 120 days after today's date. After you cancel the meetings, you can remove the mailbox.
 
 ### Example 2
 ```powershell
