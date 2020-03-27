@@ -80,7 +80,7 @@ Specifies a user account that is Tenant Administrator, or Syndicated Partner Adm
 
 Type a Skype for Business Online administrator account name, such as "User@Domain.com", or enter a PSCredential object, such as one returned by the Get-Credential cmdlet.
 
-When you type a user name, you will be prompted for a password.
+When you type an account name, you will be prompted for a password.
 
 ```yaml
 Type: PSCredential
