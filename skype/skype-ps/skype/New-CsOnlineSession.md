@@ -48,7 +48,7 @@ In this session, tenant administrator can run Skype For Business cmdlets to mana
 New-CsOnlineSession -Credential User@Domain.com
 ```
 
-Establishes a Skype For Business Remote PowerShell Session, supplying the credentials of an administrator account of the tenant.
+Establishes a Skype for Business Online Remote PowerShell Session, supplying the credentials of a Skype for Business Online administrator account.
 
 ### EXAMPLE 2
 ```
