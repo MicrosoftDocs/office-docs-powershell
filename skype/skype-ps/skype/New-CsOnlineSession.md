@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideAdminDomain
-Specifies a domain to be managed.
+Specifies a default domain to be managed.
 This could be home domain of signed in user, or a different one that he/she has permission to manage.
 Optional.
 
