@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies a user account that is Tenant Administrator, or Syndicated Partner Administrator.
+Specifies a Skype for Business Online administrator, or Syndicated Partner administrator account.
 
 Type a Skype for Business Online administrator account name, such as "User@Domain.com", or enter a PSCredential object, such as one returned by the Get-Credential cmdlet.
 
