@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -OAuthAccessToken
-Specifies access token acquired already by the Tenant Administrator, or Syndicated Partner Administrator.
+Specifies access token acquired already by the Skype for Business Online administrator, or Syndicated Partner Administrator.
 
 ```yaml
 Type: SecureString
