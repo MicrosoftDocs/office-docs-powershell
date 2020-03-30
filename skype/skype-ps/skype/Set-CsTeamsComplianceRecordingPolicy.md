@@ -13,8 +13,10 @@ ms.reviewer:
 # Set-CsTeamsComplianceRecordingPolicy
 
 ## SYNOPSIS
-Modifies an existing Teams compliance recording policy for governing automatic policy-based recording in your tenant.
+Modifies an existing Teams recording policy for governing automatic policy-based recording in your tenant.
 Automatic policy-based recording is only applicable to Microsoft Teams users.
+
+**Note:** The system will load the bot and join it to appropriate calls and meetings in order for the bot to enforce compliance with the administrative set policy.
 
 ## SYNTAX
 
