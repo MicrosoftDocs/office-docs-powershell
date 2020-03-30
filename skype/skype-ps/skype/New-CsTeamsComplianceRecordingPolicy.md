@@ -16,8 +16,6 @@ ms.reviewer:
 Creates a new Teams recording policy for governing automatic policy-based recording in your tenant.
 Automatic policy-based recording is only applicable to Microsoft Teams users.
 
-**Note:** The system will load the bot and join it to appropriate calls and meetings in order for the bot to enforce compliance with the administrative set policy.
-
 ## SYNTAX
 
 ```
@@ -28,16 +26,17 @@ New-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIden
 ```
 
 ## DESCRIPTION
-Teams compliance recording policies are used in automatic policy-based recording scenarios.
-When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams compliance recording policy are invited into the call or meeting to record audio, video and video-based screen sharing activity.
+Teams recording policies are used in automatic policy-based recording scenarios.
+When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams recording policy are invited into the call or meeting to record audio, video and video-based screen sharing activity.
 
-Note that simply assigning a Teams compliance recording policy to a Microsoft Teams user will not activate automatic policy-based recording for all Microsoft Teams calls and meetings that the user participates in.
+Note that simply assigning a Teams recording policy to a Microsoft Teams user will not activate automatic policy-based recording for all Microsoft Teams calls and meetings that the user participates in.
 Among other things, you will need to create an application instance of a policy-based recording application i.e. a bot in your tenant and will then need to assign an appropriate policy to the user.
 
 Please work with your Microsoft certified policy-based recording application provider to obtain an instance of their recording application.
 Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
 
-Assigning your Microsoft Teams users a Teams compliance recording policy activates automatic policy-based recording for all new Microsoft Teams calls and meetings that the users participate in.
+Assigning your Microsoft Teams users a Teams recording policy activates automatic policy-based recording for all new Microsoft Teams calls and meetings that the users participate in.
+The system will load the recording application and join it to appropriate calls and meetings in order for it to enforce compliance with the administrative set policy.
 Existing calls and meetings are unaffected.
 
 ## EXAMPLES
@@ -47,7 +46,7 @@ Existing calls and meetings are unaffected.
 PS C:\> New-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerComplianceRecordingPolicy' -Enabled $true -ComplianceRecordingApplications @(New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899')
 ```
 
-The command shown in Example 1 creates a new per-user Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
+The command shown in Example 1 creates a new per-user Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 This policy is assigned a single application instance of a policy-based recording application: d93fefc7-93cc-4d44-9a5d-344b0fff2899, which is the ObjectId of the application instance as obtained from the Get-CsOnlineApplicationInstance cmdlet.
 
 Any Microsoft Teams users who are assigned this policy will have their calls and meetings recorded by that application instance. Existing calls and meetings are unaffected.
@@ -58,14 +57,14 @@ PS C:\> New-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerCompliance
 ```
 
 Example 2 is a variation of Example 1.
-In this case, the Teams compliance recording policy is assigned two application instances of policy-based recording applications.
+In this case, the Teams recording policy is assigned two application instances of policy-based recording applications.
 
 Any Microsoft Teams users who are assigned this policy will have their calls and meetings recorded by both those application instances. Existing calls and meetings are unaffected.
 
 ## PARAMETERS
 
 ### -Identity
-Unique identifier to be assigned to the new Teams compliance recording policy.
+Unique identifier to be assigned to the new Teams recording policy.
 
 Use the "Global" Identity if you wish to assign this policy to the entire tenant.
 
@@ -82,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Controls whether this Teams compliance recording policy is active or not.
+Controls whether this Teams recording policy is active or not.
 
 Setting this to True and having the right set of ComplianceRecordingApplications will initiate automatic policy-based recording for all new calls and meetings of all Microsoft Teams users who are assigned this policy. Existing calls and meetings are unaffected.
 
@@ -116,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Enables administrators to provide explanatory text to accompany a Teams compliance recording policy. For example, the Description might include information about the users the policy should be assigned to.
+Enables administrators to provide explanatory text to accompany a Teams recording policy. For example, the Description might include information about the users the policy should be assigned to.
 
 ```yaml
 Type: String
@@ -150,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose Teams compliance recording policies are being queried.
+Globally unique identifier (GUID) of the tenant account whose Teams recording policies are being queried.
 For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
