@@ -12,7 +12,7 @@ ms.reviewer:
 # New-CsOnlineSession
 
 ## SYNOPSIS
-Creates a persistent connection to Microsoft Skype For Business Online DataCenter.
+Creates a persistent connection to Microsoft Skype for Business Online DataCenter.
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ New-CsOnlineSession [-OAuthAccessToken <SecureString>] [-OverrideAdminDomain <St
 
 ## DESCRIPTION
 Enables you to create a remote Windows PowerShell session that connects to Skype for Business Online.
-In this session, Skype for Business Online administrator can run Skype For Business cmdlets to manage users, policies and configurations.
+In this session, Skype for Business Online administrator can run Skype for Business cmdlets to manage users, policies and configurations.
 
 ## EXAMPLES
 
@@ -55,7 +55,7 @@ Establishes a Skype for Business Online Remote PowerShell Session, supplying the
 New-CsOnlineSession -Credential User@Domain.com -OverrideAdminDomain contoso.onmicrosoft.com
 ```
 
-Establishes a Skype For Business Online Remote PowerShell Session, with a Skype for Business Online administrator account that has permission to manage the tenant contoso.onmicrosoft.com.
+Establishes a Skype for Business Online Remote PowerShell Session, with a Skype for Business Online administrator account that has permission to manage the tenant contoso.onmicrosoft.com.
 Please change the OverrideAdminDomain to your default tenant domain.
 
 ### EXAMPLE 3
@@ -64,7 +64,7 @@ $sfbSession = New-CsOnlineSession
 Import-PSSession $sfbSession
 ```
 
-Establishes a Skype For Business Online Remote PowerShell Session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication)
+Establishes a Skype for Business Online Remote PowerShell Session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication).
 
 ## PARAMETERS
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideDiscoveryUri
-Specifies Skype For Business Auto Discovery URI.
+Specifies Skype for Business Auto Discovery URI.
 Optional.
 
 ```yaml
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverridePowerShellUri
-Specifies Skype For Business Remote Powershell URI.
+Specifies Skype for Business Remote Powershell URI.
 Optional.
 
 ```yaml
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideAccessTokenResourceUri
-Specifies Skype For Business Remote Powershell Authorization Token URI.
+Specifies Skype for Business Remote Powershell Authorization Token URI.
 Optional.
 
 ```yaml
