@@ -112,11 +112,8 @@ This example allows a list of users to submit in-policy meeting requests to the 
 ### Example 7
 ```powershell
 $group = New-DistributionGroup "Room 221 Booking Allowed"
-$members = @()
-$members += "karina@contoso.com","tony@contoso.com"
-$members = $members | Get-Mailbox
-Add-DistributionGroupMember -Identity $group -Members $members -BypassSecurityGroupManagerCheck:$true
-Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group -AllBookInPolicy $false
+Update-DistributionGroupMember -Identity $group.Identity -Members karina@contoso.com,tony@contoso.com -BypassSecurityGroupManagerCheck:$true
+Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group.Identity -AllBookInPolicy $false
 ```
 
 This example rejects meeting requests from any user who isn't a member of the "Room 221 Booking Allowed" distribution group.
