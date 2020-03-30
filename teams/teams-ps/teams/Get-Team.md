@@ -31,7 +31,8 @@ Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>] [-Display
 ## DESCRIPTION
 This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
 
-Note: depending on the number of teams and O365 Groups in your organization and which filters you are using, this cmdlet can take upwards of ten minutes to run.  Some of the input parameters are guaranteed unique (e.g. GroupId), and others serve as filters (e.g. -Archived).
+>[!NOTE]
+>Depending on the number of teams and O365 Groups in your organization and which filters you are using, this cmdlet can take upwards of ten minutes to run.  Some of the input parameters are guaranteed unique (e.g. GroupId), and others serve as filters (e.g. -Archived).
 
 ## EXAMPLES
 

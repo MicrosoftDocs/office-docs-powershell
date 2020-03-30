@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAddress
-The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas. The maximum number of addresses is 100.
 
 ```yaml
 Type: MultiValuedProperty
@@ -306,7 +306,7 @@ Accept wildcard characters: True
 ```
 
 ### -SenderAddress
-The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas.
+The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas. The maximum number of addresses is 100.
 
 ```yaml
 Type: MultiValuedProperty
