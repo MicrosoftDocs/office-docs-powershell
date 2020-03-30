@@ -21,12 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-CalendarEvents [-Identity] <MailboxIdParameter>
+Remove-CalendarEvents [-Identity] <MailboxIdParameter> -QueryWindowInDays <Int32>
  [-CancelOrganizedMeetings]
  [-Confirm]
  [-PreviewOnly]
  [-QueryStartDate <ExDateTime>]
- -QueryWindowInDays <Int32>
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -93,6 +92,26 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -QueryWindowInDays
+The QueryWindowInDays parameter specifies the number of days after the QueryStartDate parameter value to look for meetings that you want to cancel.
+
+If an instance of a recurring meeting occurs during the specified time period, the entire series is cancelled (not just the instances during the time period).
+
+**Note**: The maximum window that's allowed for meeting cancellation is 1825 days (5 years).
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -168,26 +187,6 @@ Aliases:
 Applicable: Exchange Server 2019, Exchange Online
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QueryWindowInDays
-The QueryWindowInDays parameter specifies the number of days after the QueryStartDate parameter value to look for meetings that you want to cancel.
-
-If an instance of a recurring meeting occurs during the specified time period, the entire series is cancelled (not just the instances during the time period).
-
-**Note**: The maximum window that's allowed for meeting cancellation is 1825 days (5 years).
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2019, Exchange Online
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
