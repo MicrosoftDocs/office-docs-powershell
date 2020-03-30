@@ -13,7 +13,7 @@ ms.reviewer:
 # New-CsTeamsComplianceRecordingApplication
 
 ## SYNOPSIS
-Creates a new association between an application instance of a policy-based recording application and a Teams compliance recording policy for administering automatic policy-based recording in your tenant.
+Creates a new association between an application instance of a policy-based recording application and a Teams recording policy for administering automatic policy-based recording in your tenant.
 Automatic policy-based recording is only applicable to Microsoft Teams users.
 
 ## SYNTAX
@@ -38,13 +38,13 @@ New-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] -Parent <Strin
 
 ## DESCRIPTION
 Policy-based recording applications are used in automatic policy-based recording scenarios.
-When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams compliance recording policy are invited into the call or meeting to record audio, video and video-based screen sharing activity.
+When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams recording policy are invited into the call or meeting to enforce compliance with the administrative set policy.
 
-Instances of these applications are created using CsOnlineApplicationInstance cmdlets and are then associated with Teams compliance recording policies.
+Instances of these applications are created using CsOnlineApplicationInstance cmdlets and are then associated with Teams recording policies.
 
-Note that application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
-Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
-For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+Note that application instances of policy-based recording applications must be associated with a Teams recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
+Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams recording policy\>/\<ObjectId of the application instance\>.
+For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 Please work with your Microsoft certified policy-based recording application provider to obtain an instance of their recording application.
 Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
@@ -57,7 +57,7 @@ Please also refer to the documentation of CsTeamsComplianceRecordingPolicy cmdle
 PS C:\> New-CsTeamsComplianceRecordingApplication -Identity 'Tag:ContosoPartnerComplianceRecordingPolicy/d93fefc7-93cc-4d44-9a5d-344b0fff2899'
 ```
 
-The command shown in Example 1 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
+The command shown in Example 1 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 
 ### Example 2
 ```powershell
@@ -65,14 +65,14 @@ PS C:\> New-CsTeamsComplianceRecordingApplication -Parent 'Tag:ContosoPartnerCom
 ```
 
 The command shown in Example 2 is a variation of Example 1.
-It also creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy, but it does this by using the Parent and Id parameters instead of the Identity parameter.
+It also creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy, but it does this by using the Parent and Id parameters instead of the Identity parameter.
 
 ### Example 3
 ```powershell
 PS C:\> New-CsTeamsComplianceRecordingApplication -Parent 'Tag:ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899' -RequiredBeforeMeetingJoin $false -RequiredDuringMeeting $false
 ```
 
-The command shown in Example 3 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
+The command shown in Example 3 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 
 In this example, the application is deemed optional for meetings but mandatory for calls.
 Please refer to the documentation of the RequiredBeforeMeetingJoin and RequiredDuringMeeting parameters for more information.
@@ -82,7 +82,7 @@ Please refer to the documentation of the RequiredBeforeMeetingJoin and RequiredD
 PS C:\> New-CsTeamsComplianceRecordingApplication -Parent 'Tag:ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899' -RequiredBeforeCallEstablishment $false -RequiredDuringCall $false
 ```
 
-The command shown in Example 4 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
+The command shown in Example 4 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 
 In this example, the application is deemed optional for calls but mandatory for meetings.
 Please refer to the documentation of the RequiredBeforeCallEstablishment and RequiredDuringCall parameters for more information.
@@ -92,7 +92,7 @@ Please refer to the documentation of the RequiredBeforeCallEstablishment and Req
 PS C:\> New-CsTeamsComplianceRecordingApplication -Parent 'Tag:ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899' -ConcurrentInvitationCount 2
 ```
 
-The command shown in Example 5 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
+The command shown in Example 5 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 
 In this example, the application is made resilient by specifying that two invites must be sent to the same application for the same call or meeting.
 Please refer to the documentation of the ConcurrentInvitationCount parameter for more information.
@@ -102,7 +102,7 @@ Please refer to the documentation of the ConcurrentInvitationCount parameter for
 PS C:\> New-CsTeamsComplianceRecordingApplication -Parent 'Tag:ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899' -ComplianceRecordingPairedApplications @(New-CsTeamsComplianceRecordingPairedApplication -Id '39dc3ede-c80e-4f19-9153-417a65a1f144')
 ```
 
-The command shown in Example 6 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
+The command shown in Example 6 creates a new association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 
 In this example, the application is made resilient by pairing it with another application instance of a policy-based recording application with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144.
 Separate invites are sent to the paired applications for the same call or meeting.
@@ -116,9 +116,9 @@ Please refer to the documentation of the ComplianceRecordingPairedApplications p
 ### -Identity
 A name that uniquely identifies the application instance of the policy-based recording application.
 
-Application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
-To do this association correctly, the Identity of these application instances must be \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
-For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+Application instances of policy-based recording applications must be associated with a Teams recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
+To do this association correctly, the Identity of these application instances must be \<Identity of the associated Teams recording policy\>/\<ObjectId of the application instance\>.
+For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 ```yaml
 Type: XdsIdentity
@@ -133,8 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -Parent
-The Identity of the Teams compliance recording policy that this application instance of a policy-based recording application is associated with.
-For example, the Parent of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy\", which indicates that the application instance is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+The Identity of the Teams recording policy that this application instance of a policy-based recording application is associated with.
+For example, the Parent of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy\", which indicates that the application instance is associated with the Teams recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 ```yaml
 Type: String
@@ -328,7 +328,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose Teams compliance recording policies are being queried.
+Globally unique identifier (GUID) of the tenant account whose Teams recording policies are being queried.
 For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
