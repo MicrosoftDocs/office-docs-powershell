@@ -55,6 +55,12 @@ PS> Get-Team -MailNickName "BusinessDevelopment"
 ```
 Returns the team that matches the specified MailNickName
 
+### Example 4
+```
+PS> Get-Team -DisplayName "Sales and Marketing"
+```
+Returns the team that matches the specified DisplayName
+
 ## PARAMETERS
 
 ### -User
