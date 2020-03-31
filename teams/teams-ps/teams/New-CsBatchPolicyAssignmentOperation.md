@@ -10,10 +10,9 @@ ms.reviewer:
 
 # New-CsBatchPolicyAssignmentOperation
 
-> [!Note]
-> This cmdlet is currently in public preview. 
-
 ## SYNOPSIS
+
+**Note:** This cmdlet is currently in public preview. 
 
 This cmdlet is used to assign a policy to a batch of users.
 
