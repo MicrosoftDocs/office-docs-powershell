@@ -11,7 +11,8 @@ ms.reviewer:
 # Get-CsGroupPolicyAssignment
 
 ## SYNOPSIS
-NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
+
+**Note:** This cmdlet is currently only available in private preview in the pre-release Teams PowerShell module.
 
 This cmdlet is used to return group policy assignments.
 
