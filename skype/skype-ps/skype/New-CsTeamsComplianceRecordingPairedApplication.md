@@ -25,9 +25,9 @@ New-CsTeamsComplianceRecordingPairedApplication -Id <String>
 
 ## DESCRIPTION
 Policy-based recording applications are used in automatic policy-based recording scenarios.
-When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams compliance recording policy are invited into the call or meeting to record audio, video and video-based screen sharing activity.
+When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams recording policy are invited into the call or meeting to enforce compliance with the administrative set policy.
 
-Instances of these applications are created using CsOnlineApplicationInstance cmdlets and are then associated with Teams compliance recording policies.
+Instances of these applications are created using CsOnlineApplicationInstance cmdlets and are then associated with Teams recording policies.
 
 In situations where application resiliency is a necessity, invites can be sent to separate paired applications for the same call or meeting.
 If multiple such invites are accepted, then it means that multiple instances of this application are in the call or meeting and each of those instances can record independent of the others.
