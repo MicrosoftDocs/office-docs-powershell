@@ -10,7 +10,7 @@ ms.reviewer:
 
 # New-CsBatchPolicyAssignmentOperation
 
-> [!NOTE]
+> [!Note]
 > This cmdlet is currently in public preview. 
 
 ## SYNOPSIS
