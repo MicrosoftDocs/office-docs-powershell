@@ -10,10 +10,12 @@ ms.reviewer:
 
 # Set-CsGroupPolicyAssignment
 
-## SYNOPSIS
-NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
+> [!Note]
+> This cmdlet is currently only available in private preview in the pre-release Teams PowerShell module.
 
-This cmdlet is update a group policy assignment.
+## SYNOPSIS
+
+This cmdlet is used to update a group policy assignment.
 
 ## SYNTAX
 
