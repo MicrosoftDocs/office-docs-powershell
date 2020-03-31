@@ -282,7 +282,16 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ## Release notes
 
-### Current release ( Version 0.3582.0 )
+### Current release ( Version 0.4368.1 )
+   - Added support for Exchange Online Protection (EOP) cmdlets using ''Connect-IPPSSession'' cmdlet
+   - Hide announcement banner using ''ShowBanner'' switch. Default value of this switch is $true. Use below syntax to hide the banner
+        "Connect-ExchangeOnline -ShowBanner:$false"
+   - Terminate cmdlet execution on client exception
+   - Remote PowerShell contained various Complex data types which was consciously not supported in EXO cmdlets for improving the performance. Differences in non-complex Data-types between RPS cmdlets and V2 cmdlets has been resolved to allow seamless migration of management scripts
+
+### Previous releases
+
+### ( Version 0.3582.0 )
 - Support for prefix during session creation
     > You can create only 1 session at a time which can have prefixed cmdlets.
     > Note that the EXO V2 cmdlets will not be prefixed as they already have a prefix EXO and hence please refrain from using EXO as a prefix during session creation.
@@ -297,8 +306,6 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 - Fixed bug - Frequent sessions reconnects issue when Connect-ExchangeOnline was invoked with Credentials or UserPrincipalName
 
-
-### Previous releases
 
 #### Version 0.3555.1
 
