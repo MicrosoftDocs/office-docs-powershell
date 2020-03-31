@@ -12,8 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-> [!NOTE]
-> This cmdlet is currently in public preview.
+**Note:** This cmdlet is currently in public preview. 
 
 This cmdlet is used to assign retrieve the status of batch policy assignment operations.
 
