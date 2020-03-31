@@ -10,10 +10,9 @@ ms.reviewer:
 
 # Get-CsBatchPolicyAssignmentOperation
 
-> [!Note]
-> This cmdlet is currently in public preview.
-
 ## SYNOPSIS
+
+**Note:** This cmdlet is currently in public preview. 
 
 This cmdlet is used to assign retrieve the status of batch policy assignment operations.
 
