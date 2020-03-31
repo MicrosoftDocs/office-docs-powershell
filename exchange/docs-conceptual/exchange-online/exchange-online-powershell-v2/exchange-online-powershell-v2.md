@@ -278,34 +278,40 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 ```
 
 > [!NOTE]
-> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the requires properties.
+> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the required properties.
 
 ## Release notes
 
-### Current release ( Version 0.4368.1 )
-   - Added support for Exchange Online Protection (EOP) cmdlets using ''Connect-IPPSSession'' cmdlet
-   - Hide announcement banner using ''ShowBanner'' switch. Default value of this switch is $true. Use below syntax to hide the banner
-        "Connect-ExchangeOnline -ShowBanner:$false"
-   - Terminate cmdlet execution on client exception
-   - Remote PowerShell contained various Complex data types which was consciously not supported in EXO cmdlets for improving the performance. Differences in non-complex Data-types between RPS cmdlets and V2 cmdlets has been resolved to allow seamless migration of management scripts
+### Current release: Version 0.4368.1
+
+   - Added support for Exchange Online Protection (EOP) cmdlets using ''Connect-IPPSSession'' cmdlet.
+   
+   - Hide announcement banner using _ShowBanner_ switch. Run the following command to hide the banner:
+   
+     ```powershell
+     Connect-ExchangeOnline -ShowBanner:$false
+     ```
+
+   - Terminate cmdlet execution on client exception.
+   
+   - Remote PowerShell contained various complex data types which were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.
 
 ### Previous releases
 
-### ( Version 0.3582.0 )
-- Support for prefix during session creation
-    > You can create only 1 session at a time which can have prefixed cmdlets.
-    > Note that the EXO V2 cmdlets will not be prefixed as they already have a prefix EXO and hence please refrain from using EXO as a prefix during session creation.
+#### Version 0.3582.0
 
-- Use EXO V2 cmdlets even if WinRM Basic Auth is disabled on client machine
-    > Please note that Remote PowerShell cmdlets require WinRM Basic Auth to be enabled and they won't be available if it is disabled.
+- Support for prefix during session creation.
 
--  Identity parameter for V2 cmdlets now supports name and alias as well
-    > Please note that using alias or name slows down the performance of V2 cmdlets and hence it is not recommended to use this option
+  - You can create only 1 session at a time that contains prefixed cmdlets.
+  - Note that the EXO V2 cmdlets will not be prefixed as they already have the prefix EXO, so don't use `EXO` as a prefix.
 
-- Fixed issue where data-type of attributes returned by V2 cmdlet was different from Remote PowerShell cmdlets. We still have few attributes which have differing data-type and we plan to handle them in coming months.
+- Use EXO V2 cmdlets even if WinRM Basic Auth is disabled on client machine. Note that remote PowerShell cmdlets require WinRM Basic Auth, and they won't be available if it's disabled.
 
-- Fixed bug - Frequent sessions reconnects issue when Connect-ExchangeOnline was invoked with Credentials or UserPrincipalName
+-  Identity parameter for V2 cmdlets now supports Name and Alias as well. Note that using Alias or Name slows down the performance of V2 cmdlets, so we don't recommend using them.
 
+- Fixed issue where the data type of attributes returned by V2 cmdlet was different from remote PowerShell cmdlets. We still have few attributes which have differing data types, and we plan to handle them in coming months.
+
+- Fixed bug: Frequent sessions reconnects issue when Connect-ExchangeOnline was invoked with Credentials or UserPrincipalName
 
 #### Version 0.3555.1
 
