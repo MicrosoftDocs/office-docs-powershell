@@ -13,7 +13,7 @@ ms.reviewer:
 # Remove-CsTeamsComplianceRecordingApplication
 
 ## SYNOPSIS
-Deletes an existing association between an application instance of a policy-based recording application and a Teams compliance recording policy for administering automatic policy-based recording in your tenant.
+Deletes an existing association between an application instance of a policy-based recording application and a Teams recording policy for administering automatic policy-based recording in your tenant.
 Automatic policy-based recording is only applicable to Microsoft Teams users.
 
 ## SYNTAX
@@ -25,13 +25,13 @@ Remove-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] [-Identity 
 
 ## DESCRIPTION
 Policy-based recording applications are used in automatic policy-based recording scenarios.
-When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams compliance recording policy are invited into the call or meeting to record audio, video and video-based screen sharing activity.
+When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams recording policy are invited into the call or meeting to enforce compliance with the administrative set policy.
 
-Instances of these applications are created using CsOnlineApplicationInstance cmdlets and are then associated with Teams compliance recording policies.
+Instances of these applications are created using CsOnlineApplicationInstance cmdlets and are then associated with Teams recording policies.
 
-Note that application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
-Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
-For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+Note that application instances of policy-based recording applications must be associated with a Teams recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
+Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams recording policy\>/\<ObjectId of the application instance\>.
+For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 Please work with your Microsoft certified policy-based recording application provider to obtain an instance of their recording application.
 Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
@@ -44,7 +44,7 @@ Please also refer to the documentation of CsTeamsComplianceRecordingPolicy cmdle
 PS C:\> Remove-CsTeamsComplianceRecordingApplication -Identity 'Tag:ContosoPartnerComplianceRecordingPolicy/d93fefc7-93cc-4d44-9a5d-344b0fff2899'
 ```
 
-The command shown in Example 1 deletes an existing association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams compliance recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
+The command shown in Example 1 deletes an existing association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 
 ### Example 2
 ```powershell
@@ -58,8 +58,8 @@ The command shown in Example 2 deletes all existing associations between applica
 ### -Identity
 A name that uniquely identifies the application instance of the policy-based recording application.
 
-Application instances of policy-based recording applications must be associated with a Teams compliance recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
-To do this association correctly, the Identity of these application instances must be \<Identity of the associated Teams compliance recording policy\>/\<ObjectId of the application instance\>.
+Application instances of policy-based recording applications must be associated with a Teams recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
+To do this association correctly, the Identity of these application instances must be \<Identity of the associated Teams recording policy\>/\<ObjectId of the application instance\>.
 For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
 
 ```yaml
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose Teams compliance recording policies are being queried.
+Globally unique identifier (GUID) of the tenant account whose Teams recording policies are being queried.
 For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
