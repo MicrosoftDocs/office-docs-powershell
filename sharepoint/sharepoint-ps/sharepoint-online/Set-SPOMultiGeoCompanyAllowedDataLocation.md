@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Set the SharePoint Online Multi Geo Company allowed locations.
+Adds a multi-geo allowed location.
 
 ## SYNTAX
 
@@ -24,13 +24,23 @@ Set-SPOMultiGeoCompanyAllowedDataLocation [-Location] <string> [-InitialDomain] 
 
 ## DESCRIPTION
 
-Use this cmdlet to set the multi geo allowed locations.
+Use this cmdlet to set the multi-geo allowed locations.
 
 ## EXAMPLES
+
+### Example 1
+
+```powershell
+Set-SPOMultiGeoCompanyAllowedDataLocation -Location AUS -Domain contoso.com
+```
+
+Sets AUS (Australia) as an allowed multi-geo location for the domain contoso.com.
 
 ## PARAMETERS
 
 ### -Location
+
+The Preferred Data Location (PDL) to allow.
 
 ```yaml
 Type: String
@@ -45,6 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -InitialDomain
+
+Sets the initial domain to assocate with the specified data location.
 
 ```yaml
 Type: String
@@ -97,3 +109,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## NOTES
+
+## RELATED LINKS
+
+[Remove-SPOMultiGeoCompanyAllowedDataLocation](https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spomultigeocompanyalloweddatalocation)

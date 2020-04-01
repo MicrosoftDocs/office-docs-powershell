@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Downloads a file.
 
-## SYNTAX
+## SYNTAX 
 
 ### Return as file object
 ```powershell

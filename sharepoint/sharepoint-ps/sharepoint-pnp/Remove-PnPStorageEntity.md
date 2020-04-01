@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Remove Storage Entities / Farm Properties from either the tenant scoped app catalog or the current site collection if the site has a site collection scoped app catalog
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPStorageEntity -Key <String>
@@ -22,7 +22,7 @@ Remove-PnPStorageEntity -Key <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Remove-PnPStorageEntity -Key MyKey
+Remove-PnPStorageEntity -Key MyKey 
 ```
 
 Removes an existing storage entity / farm property

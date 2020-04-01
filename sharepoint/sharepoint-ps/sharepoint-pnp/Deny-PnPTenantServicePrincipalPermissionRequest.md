@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Deny-PnPTenantServicePrincipalPermissionRequest -RequestId <GuidPipeBind>

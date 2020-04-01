@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a theme
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPTenantTheme -Identity <ThemePipeBind>

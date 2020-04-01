@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns statistics on the web object
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Measure-PnPWeb [-Identity <WebPipeBind>]

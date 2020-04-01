@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieve all or a specific hubsite.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPHubSite [-Connection <SPOnlineConnection>]

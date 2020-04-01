@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Imports a taxonomy from either a string array or a file
 
-## SYNTAX
+## SYNTAX 
 
 ### Direct
 ```powershell

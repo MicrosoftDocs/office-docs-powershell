@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the current site collection administrators of the site collection in the current context
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPSiteCollectionAdmin [-Web <WebPipeBind>]
@@ -54,6 +54,10 @@ Required: False
 Position: Named
 Accept pipeline input: False
 ```
+
+## Outputs
+
+### Microsoft.SharePoint.Client.User
 
 ## RELATED LINKS
 

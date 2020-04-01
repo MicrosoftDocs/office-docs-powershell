@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns one ore more sites from a tenant template
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTenantSequenceSite -Sequence <ProvisioningSequence>

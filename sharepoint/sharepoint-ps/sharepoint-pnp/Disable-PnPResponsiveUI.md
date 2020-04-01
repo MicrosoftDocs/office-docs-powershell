@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Deactivate the PnP Response UI add-on
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Disable-PnPResponsiveUI [-Web <WebPipeBind>]

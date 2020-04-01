@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Explicitly grants a specified permission to the "SharePoint Online Client" service principal
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Grant-PnPTenantServicePrincipalPermission -Scope <String>

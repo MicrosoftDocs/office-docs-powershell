@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Unpublishes/retracts an available add-in from the app catalog
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Unpublish-PnPApp -Identity <AppMetadataPipeBind>

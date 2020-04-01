@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a SharePoint Addin to a site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Import-PnPAppPackage -Path <String>
@@ -32,7 +32,7 @@ Import-PnPAppPackage -Path c:\files\demo.app -LoadOnly
 ```
 
 This will load the addin in the demo.app package, but will not install it to the site.
-
+ 
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
@@ -40,7 +40,7 @@ Import-PnPAppPackage -Path c:\files\demo.app -Force
 ```
 
 This load first activate the addin sideloading feature, upload and install the addin, and deactivate the addin sideloading feature.
-
+    
 
 ## PARAMETERS
 

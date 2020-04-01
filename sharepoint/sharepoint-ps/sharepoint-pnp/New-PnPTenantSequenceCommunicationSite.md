@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a communication site object
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPTenantSequenceCommunicationSite -Url <String>

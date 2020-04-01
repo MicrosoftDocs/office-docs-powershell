@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a user to a group
 
-## SYNTAX
+## SYNTAX 
 
 ### Internal
 ```powershell

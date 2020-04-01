@@ -23,16 +23,17 @@ The status of current tasks includes:
 
 ## SYNTAX
 
-```
-Get-SPMTMigration
+```powershell
+Get-SPMTMigration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Return object of current session. It includes current tasks status and current session level settings.
+Return object of current session. 
+It includes current tasks status and current session level settings.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
 #Define SharePoint 2013 data source#
 $Global:SourceSiteUrl = "https://YourOnPremSite/"
@@ -69,18 +70,16 @@ Start-SPMTMigration -NoShow
 $session = Get-SPMTMigration
 ```
 
-Start a migration first, and then run "Get-SPMTMigration" to get the object of current migration.
+This example starts a migration first, and then run "Get-SPMTMigration" to get the object of current migration.
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### None
-
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 

@@ -46,23 +46,11 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-TeamMessagingSettings](Get-TeamMessagingSettings.md)
 {{Manually Enter Get-TeamMessagingSettings Description Here}}
 
-### [Get-TeamPolicyPackage](Get-TeamPolicyPackage.md)
-{{Manually Enter Get-TeamPolicyPackage Description Here}}
-
 ### [Get-TeamsApp](Get-TeamsApp.md)
 {{Manually Enter Get-TeamsApp Description Here}}
 
 ### [Get-TeamUser](Get-TeamUser.md)
 {{Manually Enter Get-TeamUser Description Here}}
-
-### [Get-TeamUserPolicyPackage](Get-TeamUserPolicyPackage.md)
-{{Manually Enter Get-TeamUserPolicyPackage Description Here}}
-
-### [Get-TeamUserPolicyPackageRecommendation](Get-TeamUserPolicyPackageRecommendation.md)
-{{Manually Enter Get-TeamUserPolicyPackageRecommendation Description Here}}
-
-### [Grant-TeamUserPolicyPackage](Grant-TeamUserPolicyPackage.md)
-{{Manually Enter Grant-TeamUserPolicyPackage Description Here}}
 
 ### [New-Team](New-Team.md)
 {{Manually Enter New-Team Description Here}}
@@ -70,8 +58,8 @@ The following cmdlet references are for Microsoft Teams.
 ### [New-TeamChannel](New-TeamChannel.md)
 {{Manually Enter New-TeamChannel Description Here}}
 
-### [New-TeamsApp](New-TeamChannel.md)
-{{Manually Enter New-TeamChannel Description Here}}
+### [New-TeamsApp](New-TeamsApp.md)
+{{Manually Enter New-TeamsApp Description Here}}
 
 ### [Remove-Team](Remove-Team.md)
 {{Manually Enter Remove-Team Description Here}}
@@ -90,6 +78,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Set-Team](Set-Team.md)
 {{Manually Enter Set-Team Description Here}}
+
+### [Set-TeamArchivedState](Set-TeamArchivedState.md)
+{{Manually Enter Set-TeamArchivedState Description Here}}
 
 ### [Set-TeamChannel](Set-TeamChannel.md)
 {{Manually Enter Set-TeamChannel Description Here}}

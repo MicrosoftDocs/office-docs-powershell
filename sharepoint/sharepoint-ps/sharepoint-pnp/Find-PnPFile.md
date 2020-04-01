@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Finds a file in the virtual file system of the web.
 
-## SYNTAX
+## SYNTAX 
 
 ### Web
 ```powershell

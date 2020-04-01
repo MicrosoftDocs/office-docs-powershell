@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Connects a site to a hubsite.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPHubSiteAssociation -Site <SitePipeBind>

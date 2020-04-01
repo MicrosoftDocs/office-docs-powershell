@@ -18,7 +18,7 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 
 # Use the Exchange Online PowerShell V2 module
 
-The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online & its features.
+The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online and its features.
 
 ## Report bugs and issues
 
@@ -28,15 +28,17 @@ When you report an issue, be sure to include the log files in your email message
 
 To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
-   ```PowerShell
-   Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
-   ```
+```PowerShell
+Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
+```
 
-## What's new in the EXO V2 module?
+## How the EXO V2 module works
 
-The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). It also contains the 700 or more older remote PowerShell cmdlets baked into the same module. Note that after you install the EXO V2 module from the PowerShell Gallery, you only see new cmdlets in the module. You'll see the older remote PowerShell cmdlets after you create a session to connect to your Exchange Online environment. All the cmdlets in the V2 module use Modern auth for authentication. You can't use Basic auth in the EXO V2 module.
+The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). Until you create a session to connect to your Exchange Online organization, you'll only see these new cmdlets in the module. After you connect to your Exchange Online organization, you'll see all of the older remote PowerShell cmdlets.
 
-The new cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents. However, the original cmdlets are still available in the EXO V2 module for backwards compatibility.
+The EXO V2 module use Modern authentication for all cmdlets. You can't use Basic authentication in the EXO V2 module; however, you still need to configure the Basic authentication setting in WinRM as described later in this topic.
+
+The new cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents. However, the original cmdlets are still available in the EXO V2 module for backwards compatibility **after** you create a session to connect to your Exchange Online organization.
 
 The new cmdlets in the EXO V2 module are listed in the following table:
 
@@ -58,7 +60,7 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
 
 > [!NOTE]
-> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.0. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon. This also implies that EXO PowerShell V2 module won't work in Linux or Mac as of now. Support for Linux/Mac is a work in progress and will be announced soon.
+> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.1. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon. This also implies that EXO PowerShell V2 module won't work in Linux or Mac as of now. Support for Linux and Mac is a work in progress and will be announced soon.
 
 ### What do you need to know before you begin?
 
@@ -81,32 +83,43 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
   <sup>\*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
-  
-- Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command **in a Command Prompt**:
+
+- Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
 
   ```
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command to enable basic authentication for WinRM:
+  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
 
   ```
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
 
-  If basic authentication is disabled, you'll get this error when you try to connect:
+  If Basic authentication is disabled, you'll get this error when you try to connect:
 
-  `The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
+  > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
+
+  > [!NOTE]
+  > We don't send the username and password combination here, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
 ### Install the EXO V2 module
 
 To install the EXO V2 module for the first time, run the following commands:
 
-1. On your local computer, run the following command from an elevated Windows PowerShell session (a Windows PowerShell window you open by selecting **Run as administrator**):
+1. On your local computer, run the **one** of the following commands from an elevated Windows PowerShell session (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-   ```PowerShell
-   Install-Module PowershellGet -Force
-   ```
+   - Install the PowerShellGet module for the first time *or* run your current version of the PowerShellGet module side-by-side with the latest version:
+
+     ```PowerShell
+     Install-Module PowershellGet -Force
+     ```
+
+   - Update your existing version of the PowerShellGet module to the latest version:
+
+     ```PowerShell
+     Update-Module PowershellGet
+     ```
 
 2. Windows PowerShell needs to be configured to run scripts, and by default, it isn't. To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window:
 
@@ -116,13 +129,15 @@ To install the EXO V2 module for the first time, run the following commands:
 
    **Notes**:
 
-   - You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)
+   - You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
    - If you don't do this step, you'll receive the following error when you try to connect:
 
      > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
-3. From an elevated Windows PowerShell session and run the following command:
+3. Close and re-open the elevated Windows PowerShell window to get the changes from the previous steps.
+
+4. Run the following command from an elevated Windows PowerShell window:
 
    ```PowerShell
    Install-Module -Name ExchangeOnlineManagement
@@ -132,7 +147,7 @@ To install the EXO V2 module for the first time, run the following commands:
 
 ### Update the EXO V2 module
 
-If the EXO V2 module is already installed on your computer, you can run the following commands to see the version that's currently installed and update it if necessary.
+If the EXO V2 module is already installed on your computer, you can run the following commands to see the version that's currently installed and update it to the latest version.
 
 1. To see the version of the EXO V2 module that's currently installed, run the following commands:
 
@@ -147,6 +162,12 @@ If the EXO V2 module is already installed on your computer, you can run the foll
    ```
 
    Enter **Y** to accept the license agreement.
+
+   **Note**: If you receive the following error related to the PowerShellGet module, see Step 1 in the previous [Install the EXO V2 module](#install-the-exo-v2-module) section to update the PowerShellGet module to the latest version.
+
+   > The specified module 'ExchangeOnlineManagement' with PowerShellGetFormatVersion '\<version\>' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'ExchangeOnlineManagement'.
+
+   If you need to update the PowerShellGet module, be sure to close and re-open the Windows PowerShell window before you attempt to update the ExchangeOnlineManagement module.
 
 3. To confirm that the update was successful, run the following commands:
 
@@ -194,9 +215,7 @@ Uninstall-Module -Name ExchangeOnlineManagement
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline).
 
-## What's new in the EXO V2 module?
-
-### Properties and property sets
+## Properties and property sets in the EXO V2 module
 
 The output of traditional Exchange Online cmdlets returns all possible object properties, including many properties that are often blank, or aren't even required in many scenarios. Returning a large number of blank and unnecessary properties causes degraded performance (more server computation and added network load). The full complement of properties are rarely required in the cmdlet output.
 
@@ -252,20 +271,61 @@ For details about the property sets that are available in EXO V2 module cmdlets,
 
 EXO cmdlets also provide a way to retrieve all properties for an object by using the _ProperySets_ parameter with the value `All`.
 
-The following example returns all properties for the 10 mailboxes: 
+The following example returns all properties for the 10 mailboxes:
 
 ```PowerShell
 Get-EXOMailbox -ResultSize 10 -PropertySets All
 ```
 
 > [!NOTE]
-> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the requires properties.
+> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the required properties.
 
 ## Release notes
 
-### Version 0.3527.3 (planned release date: January 20, 2020)
+### Current release: Version 0.4368.1
 
-[Download](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/0.3527.3):
+   - Added support for Exchange Online Protection (EOP) cmdlets using ''Connect-IPPSSession'' cmdlet.
+   
+   - Hide announcement banner using _ShowBanner_ switch. Run the following command to hide the banner:
+   
+     ```powershell
+     Connect-ExchangeOnline -ShowBanner:$false
+     ```
+
+   - Terminate cmdlet execution on client exception.
+   
+   - Remote PowerShell contained various complex data types which were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.
+
+### Previous releases
+
+#### Version 0.3582.0
+
+- Support for prefix during session creation.
+
+  - You can create only 1 session at a time that contains prefixed cmdlets.
+  - Note that the EXO V2 cmdlets will not be prefixed as they already have the prefix EXO, so don't use `EXO` as a prefix.
+
+- Use EXO V2 cmdlets even if WinRM Basic Auth is disabled on client machine. Note that remote PowerShell cmdlets require WinRM Basic Auth, and they won't be available if it's disabled.
+
+-  Identity parameter for V2 cmdlets now supports Name and Alias as well. Note that using Alias or Name slows down the performance of V2 cmdlets, so we don't recommend using them.
+
+- Fixed issue where the data type of attributes returned by V2 cmdlet was different from remote PowerShell cmdlets. We still have few attributes which have differing data types, and we plan to handle them in coming months.
+
+- Fixed bug: Frequent sessions reconnects issue when Connect-ExchangeOnline was invoked with Credentials or UserPrincipalName
+
+#### Version 0.3555.1
+
+- Fixed a bug where piped cmdlets were failing with the following error due to an authentication issue:
+
+  > Cannot invoke the pipeline because the runspace is not in the Opened state. Current state of the runspace is 'Closed'.
+
+#### Version 0.3527.4
+
+- Updated Get-Help content.
+
+- Fixed an issue in **Get-Help** where the *-Online* parameter was redirecting to a non-existent page with error code 400.
+
+#### Version 0.3527.3
 
 - Added support for managing Exchange for a different tenant using delegation flow.
 

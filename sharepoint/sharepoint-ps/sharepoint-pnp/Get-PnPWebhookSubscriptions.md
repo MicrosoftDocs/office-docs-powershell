@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets all the Webhook subscriptions of the resource
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPWebhookSubscriptions [-List <ListPipeBind>]

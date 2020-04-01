@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Disconnects the context
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Disconnect-PnPOnline [-Connection <SPOnlineConnection>]

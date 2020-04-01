@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns all activated or a specific activated feature
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPFeature [-Includes <String[]>]
                [-Identity <FeaturePipeBind>]

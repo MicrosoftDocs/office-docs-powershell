@@ -17,6 +17,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-SafeLinksPolicy cmdlet to modify Safe Links policies in your cloud-based organization.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -219,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedUrls
-The ExcludedUrls parameter specifies a URL that's skipped by Safe Links scanning. You can specify multiple values separated by commas.
+The ExcludedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the ExcludedUrls parameter, update them to use the DoNotRewriteUrls parameter.
 
 ```yaml
 Type: String[]
@@ -307,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhiteListedUrls
-This parameter is reserved for internal Microsoft use.
+The WhiteListedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the WhiteListedUrls parameter, update them to use the DoNotRewriteUrls parameter.
 
 ```yaml
 Type: String

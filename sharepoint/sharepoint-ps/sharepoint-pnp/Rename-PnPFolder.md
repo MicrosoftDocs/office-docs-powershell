@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Renames a folder
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Rename-PnPFolder -Folder <String>

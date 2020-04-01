@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds or updates a theme to the tenant.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPTenantTheme -Identity <ThemePipeBind>

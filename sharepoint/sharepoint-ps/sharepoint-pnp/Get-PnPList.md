@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a List object
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPList [-Includes <String[]>]
             [-Identity <ListPipeBind>]

@@ -17,6 +17,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-AntiPhishRule cmdlet to modify antiphishing rules in your cloud-based organization.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -317,7 +320,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.
 
 ```yaml
-Type:
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

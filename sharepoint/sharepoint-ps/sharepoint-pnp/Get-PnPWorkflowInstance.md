@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Get workflow instances
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPWorkflowInstance -List <ListPipeBind>

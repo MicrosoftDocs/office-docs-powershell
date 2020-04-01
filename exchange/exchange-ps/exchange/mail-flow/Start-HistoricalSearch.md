@@ -17,6 +17,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Start-HistoricalSearch cmdlet to start a new historical search.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -287,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAddress
-The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas. The maximum number of addresses is 100.
 
 ```yaml
 Type: MultiValuedProperty
@@ -303,7 +306,7 @@ Accept wildcard characters: True
 ```
 
 ### -SenderAddress
-The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas.
+The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas. The maximum number of addresses is 100.
 
 ```yaml
 Type: MultiValuedProperty

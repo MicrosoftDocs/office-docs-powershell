@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. Because tenant properties are stored in the tenant app catalog, you must provide the tenant app catalog site collection URL or the site collection app catalog URL in the following cmdlets.
-This cmdLet is used to get a value in the property bag.
+This cmdlet is used to get a value in the property bag.
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ Use this cmdlet to get a value in the property bag.
 Get-SPOStorageEntity -Site "https://tenant-name.sharepoint.com/sites/app-catalog" -Key "MyCustomValues"
 ```
 
-This example return the whole entry in the property bag.
+This example returns the whole entry in the property bag.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -Key
 
-The key in the property bag that should be removed.
+The key in the property bag that should be returned.
 
 ```yaml
 Type: String

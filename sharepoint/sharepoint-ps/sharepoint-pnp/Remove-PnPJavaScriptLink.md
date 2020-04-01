@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a JavaScript link or block from a web or sitecollection
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPJavaScriptLink [-Identity <UserCustomActionPipeBind>]

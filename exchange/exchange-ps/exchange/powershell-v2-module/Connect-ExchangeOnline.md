@@ -34,6 +34,7 @@ Connect-ExchangeOnline
  [-LogDirectoryPath <String>]
  [-LogLevel <String>]
  [-PageSize <UInt32>]
+ [-Prefix <String>]
  [[-PSSessionOption] <PSSessionOption>]
  [-ShowProgress <Boolean>]
  [-TrackPerformance <Boolean>]
@@ -247,6 +248,22 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Prefix
+The Prefix parameter specifies an alias to add to nouns in the names of older remote PowerShell cmdlets (cmdlet with nouns that don't already start with EXO). A valid value is a text string without spaces, and you can't use the value EXO (this prefix is reserved for PowerShell V2 module cmdlets).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -PSSessionOption
 The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$Options = New-PSSessionOption <Settings>`), and you use the variable name as the value for this parameter (for example, $Options).

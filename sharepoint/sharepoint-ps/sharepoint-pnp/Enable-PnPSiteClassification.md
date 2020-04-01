@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables Site Classifications for the tenant. Requires a connection to the Microsoft Graph.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Enable-PnPSiteClassification -Classifications <String>

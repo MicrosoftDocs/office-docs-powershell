@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Installs a sandboxed solution to a site collection. WARNING! This method can delete your composed look gallery due to the method used to activate the solution. We recommend you to only to use this cmdlet if you are okay with that.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Install-PnPSolution -PackageId <GuidPipeBind>
