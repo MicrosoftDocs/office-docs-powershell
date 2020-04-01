@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminEnabled
-The AdminEnabled parameter specifies that the EAC isn't able to be accessed through the Internet. For more information, see [Turn off access to the Exchange admin center](https://docs.microsoft.com/Exchange/architecture/client-access/disable-exchange-admin-center-acces). This parameter accepts $true or $false.
+The AdminEnabled parameter specifies that the EAC isn't able to be accessed through the Internet. For more information, see [Turn off access to the Exchange admin center](https://docs.microsoft.com/Exchange/architecture/client-access/disable-exchange-admin-center-access). This parameter accepts $true or $false.
 
 ```yaml
 Type: Boolean

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a Site Script
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPSiteScript -Identity <TenantSiteScriptPipeBind>

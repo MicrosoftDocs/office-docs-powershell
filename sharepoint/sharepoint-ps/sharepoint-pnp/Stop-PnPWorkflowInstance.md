@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Stops a workflow instance
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Stop-PnPWorkflowInstance -Identity <WorkflowInstancePipeBind>

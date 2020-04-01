@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the default column values for all folders in document library
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPDefaultColumnValues -List <ListPipeBind>

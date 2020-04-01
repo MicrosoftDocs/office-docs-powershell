@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a Masterpage
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPMasterPage -SourceFilePath <String>

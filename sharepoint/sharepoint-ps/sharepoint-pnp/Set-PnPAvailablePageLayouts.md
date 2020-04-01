@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the available page layouts for the current site
 
-## SYNTAX
+## SYNTAX 
 
 ### SPECIFIC
 ```powershell

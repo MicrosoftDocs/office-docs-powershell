@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds group to the Site Groups List and returns a group object
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPGroup -Title <String>

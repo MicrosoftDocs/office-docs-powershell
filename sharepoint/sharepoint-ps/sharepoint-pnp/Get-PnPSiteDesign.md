@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieve Site Designs that have been registered on the current tenant.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPSiteDesign [-Identity <TenantSiteDesignPipeBind>]

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new content type to a list
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPContentTypeToList -List <ListPipeBind>

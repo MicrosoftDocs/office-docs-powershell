@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Return the homepage
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPHomePage [-Web <WebPipeBind>]

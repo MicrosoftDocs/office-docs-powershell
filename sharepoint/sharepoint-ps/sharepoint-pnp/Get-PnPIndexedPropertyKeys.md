@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the keys of the property bag values that have been marked for indexing by search
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPIndexedPropertyKeys [-List <ListPipeBind>]

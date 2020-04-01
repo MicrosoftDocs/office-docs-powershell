@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Registers a site as a hubsite
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Register-PnPHubSite -Site <SitePipeBind>

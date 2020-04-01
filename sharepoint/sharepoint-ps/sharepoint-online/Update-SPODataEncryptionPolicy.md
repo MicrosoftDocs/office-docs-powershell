@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Updates customer encryption status for a geo tenant.
 
 ## SYNTAX
 

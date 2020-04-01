@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a web part property
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPWebPartProperty -ServerRelativePageUrl <String>

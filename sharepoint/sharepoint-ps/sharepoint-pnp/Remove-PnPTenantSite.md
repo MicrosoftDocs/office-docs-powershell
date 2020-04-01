@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a site collection
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPTenantSite -Url <String>

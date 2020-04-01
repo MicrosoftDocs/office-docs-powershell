@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the request access e-mail addresses
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPRequestAccessEmails [-Web <WebPipeBind>]

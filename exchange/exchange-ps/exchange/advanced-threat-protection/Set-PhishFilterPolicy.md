@@ -17,6 +17,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-PhishFilterPolicy cmdlet to configure the phish filter policy in your cloud-based organization.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -36,7 +39,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"; $UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
+Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"
+$UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"
+Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
 ```
 
 This configures the phish filter policy to block or allow all spoofed email messages from a source messaging server.
@@ -49,7 +54,9 @@ This configures the phish filter policy to block or allow all spoofed email mess
 
 ### Example 2
 ```powershell
-Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"; $UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
+Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"
+$UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"
+Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
 ```
 
 This example configures the phish filter policy to selectively block or allow some spoofed email messages from a source messaging server.

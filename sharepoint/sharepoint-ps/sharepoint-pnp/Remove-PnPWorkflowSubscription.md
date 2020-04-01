@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Remove workflow subscription
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPWorkflowSubscription -Identity <WorkflowSubscriptionPipeBind>

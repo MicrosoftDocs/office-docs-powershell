@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns one or all views from a list
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPView -List <ListPipeBind>
             [-Includes <String[]>]

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the web part XML of a web part registered on a site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPWebPartXml -ServerRelativePageUrl <String>

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates a Site Design on the current tenant.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>

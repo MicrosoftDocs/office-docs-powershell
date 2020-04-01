@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets a property bag value
 
-## SYNTAX
+## SYNTAX 
 
 ### Folder
 ```powershell
@@ -96,7 +96,7 @@ Accept pipeline input: False
 
 ```yaml
 Type: String
-Parameter Sets: Web, Folder,
+Parameter Sets: Web, Folder, 
 
 Required: True
 Position: Named

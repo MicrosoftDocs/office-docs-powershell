@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Remove an eventreceiver
 
-## SYNTAX
+## SYNTAX 
 
 ### List
 ```powershell

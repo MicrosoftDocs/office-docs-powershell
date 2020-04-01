@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Remove the search configuration
 
-## SYNTAX
+## SYNTAX 
 
 ### Config
 ```powershell

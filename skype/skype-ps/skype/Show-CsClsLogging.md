@@ -45,7 +45,7 @@ The `Show-CsClsLogging` cmdlet returns information about all the scenarios curre
 Show-CsClsLogging
 ```
 
-The command shown in Example 1 returns information about the scenarios currently being logged on all the Computers in the topology.
+The command shown in Example 1 returns information about the scenarios currently being logged on the server where this cmdlet is run.
 
 
 ### -------------------------- Example 2 --------------------------

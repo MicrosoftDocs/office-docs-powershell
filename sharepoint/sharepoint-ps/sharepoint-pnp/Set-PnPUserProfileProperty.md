@@ -10,10 +10,10 @@ schema: 2.0.0
 ## SYNOPSIS
 Office365 only: Uses the tenant API to retrieve site information.
 
-You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.
+You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command. 
 
 
-## SYNTAX
+## SYNTAX 
 
 ### Single
 ```powershell
@@ -38,14 +38,14 @@ Requires a connection to a SharePoint Tenant Admin site.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPUserProfileProperty -Account 'user@domain.com' -PropertyName 'SPS-Location' -Value 'Stockholm'
+Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'SPS-Location' -Value 'Stockholm'
 ```
 
 Sets the SPS-Location property for the user as specified by the Account parameter
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Set-PnPUserProfileProperty -Account 'user@domain.com' -PropertyName 'MyProperty' -Values 'Value 1','Value 2'
+Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'MyProperty' -Values 'Value 1','Value 2'
 ```
 
 Sets the MyProperty multi value property for the user as specified by the Account parameter

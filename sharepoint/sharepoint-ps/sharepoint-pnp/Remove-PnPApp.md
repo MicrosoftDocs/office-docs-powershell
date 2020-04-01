@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an app from the app catalog
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPApp -Identity <AppMetadataPipeBind>

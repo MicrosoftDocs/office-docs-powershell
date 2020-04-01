@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables or disabled the public or private Office 365 Content Delivery Network (CDN).
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPTenantCdnEnabled -Enable <Boolean>

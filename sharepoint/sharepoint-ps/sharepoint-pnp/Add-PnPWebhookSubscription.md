@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new Webhook subscription
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPWebhookSubscription -NotificationUrl <String>

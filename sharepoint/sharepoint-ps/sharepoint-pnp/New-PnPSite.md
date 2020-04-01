@@ -8,9 +8,9 @@ schema: 2.0.0
 # New-PnPSite
 
 ## SYNOPSIS
-Creates a new site collection
+Creates either a communication site or an Office 365 group-connected team site
 
-## SYNTAX
+## SYNTAX 
 
 ### Communication Site with Built-In Site Design
 ```powershell
@@ -19,10 +19,12 @@ New-PnPSite -Title <String>
             -Type <SiteType>
             [-Description <String>]
             [-Classification <String>]
+            [-Owner <String>]
             [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
             [-SiteDesign <CommunicationSiteDesign>]
             [-Lcid <UInt32>]
             [-HubSiteId <GuidPipeBind>]
+            [-Wait [<SwitchParameter>]]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -37,6 +39,7 @@ New-PnPSite -Title <String>
             [-IsPublic <String>]
             [-Owners <String[]>]
             [-HubSiteId <GuidPipeBind>]
+            [-Wait [<SwitchParameter>]]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -48,14 +51,16 @@ New-PnPSite -Title <String>
             -Type <SiteType>
             [-Description <String>]
             [-Classification <String>]
+            [-Owner <String>]
             [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
             [-Lcid <UInt32>]
             [-HubSiteId <GuidPipeBind>]
+            [-Wait [<SwitchParameter>]]
             [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
-The New-PnPSite cmdlet creates a new site collection for the current tenant. Currently only 'modern' sites like Communication Site and the Modern Team Site are supported. If you want to create a classic site, use New-PnPTenantSite.
+The New-PnPSite cmdlet creates a new site collection for the current tenant. Currently only 'modern' sites like Communication Site and the Modern Office 365 group-connected team sites are supported. If you want to create a classic site, use New-PnPTenantSite.
 
 ## EXAMPLES
 
@@ -208,6 +213,18 @@ Position: 0
 Accept pipeline input: False
 ```
 
+### -Owner
+Specifies the owner of the site. Specify the value as a string array: "user@domain.com"
+
+```yaml
+Type: String
+Parameter Sets: Communication Site with Built-In Site Design
+
+Required: False
+Position: 0
+Accept pipeline input: False
+```
+
 ### -Owners
 Specifies the owners of the site. Specify the value as a string array: "user@domain.com","anotheruser@domain.com"
 
@@ -277,6 +294,18 @@ Parameter Sets: Communication Site with Built-In Site Design
 
 Required: True
 Position: 0
+Accept pipeline input: False
+```
+
+### -Wait
+If specified the cmdlet will wait until the site has been fully created and all site artifacts have been provisioned by SharePoint. Notice that this can take a while.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
 Accept pipeline input: False
 ```
 

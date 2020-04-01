@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Checks in a file
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPFileCheckedIn -Url <String>

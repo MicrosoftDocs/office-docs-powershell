@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a web part from a page
 
-## SYNTAX
+## SYNTAX 
 
 ### ID
 ```powershell
