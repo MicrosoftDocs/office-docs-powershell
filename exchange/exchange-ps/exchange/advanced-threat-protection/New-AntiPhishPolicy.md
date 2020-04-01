@@ -17,18 +17,19 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-AntiPhishPolicy cmdlet to create antiphishing policies in your cloud-based organization.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-AntiPhishPolicy -Name <String>
+New-AntiPhishPolicy [-Name] <String>
  [-AdminDisplayName <String>]
  [-AuthenticationFailAction <SpoofAuthenticationFailAction>]
  [-Confirm]
  [-EnableAntiSpoofEnforcement <Boolean>]
- [-EnableAuthenticationSafetyTip <Boolean>]
- [-EnableAuthenticationSoftPassSafetyTip <Boolean>]
  [-Enabled <Boolean>]
  [-EnableMailboxIntelligence <Boolean>]
  [-EnableMailboxIntelligenceProtection <Boolean>]
@@ -41,14 +42,19 @@ New-AntiPhishPolicy -Name <String>
  [-EnableUnusualCharactersSafetyTips <Boolean>]
  [-ExcludedDomains <MultiValuedProperty>]
  [-ExcludedSenders <MultiValuedProperty>]
+ [-ImpersonationProtectionState <ImpersonationProtectionState>]
+ [-MailboxIntelligenceProtectionAction <ImpersonationAction>]
+ [-MailboxIntelligenceProtectionActionRecipients <MultiValuedProperty>]
  [-PhishThresholdLevel <Int32>]
+ [-PolicyTag <String>]
+ [-SimilarUsersSafetyTipsCustomText <String>]
  [-TargetedDomainActionRecipients <MultiValuedProperty>]
  [-TargetedDomainProtectionAction <ImpersonationAction>]
  [-TargetedDomainsToProtect <MultiValuedProperty>]
  [-TargetedUserActionRecipients <MultiValuedProperty>]
  [-TargetedUserProtectionAction <ImpersonationAction>]
  [-TargetedUsersToProtect <MultiValuedProperty>]
- [-TreatSoftPassAsAuthenticated <Boolean>]
+ [-UnusualCharactersSafetyTipsCustomText <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -131,9 +137,9 @@ Accept wildcard characters: False
 ### -AuthenticationFailAction
 The AuthenticationFailAction parameter specifies the action to take when the message fails composite authentication. Valid values are:
 
-- MoveToJmf: Move the message to the user's Junk Email folder. This is the default value.
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 
-- Quarantine: Move the message to the phishing quarantine.
+- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 
 ```yaml
 Type: SpoofAuthenticationFailAction
@@ -174,42 +180,6 @@ The EnableAntispoofEnforcement parameter specifies whether to enable or disable 
 - $true: Antispoofing is enabled for the policy. This is the default value, and is recommended.
 
 - $false: Antispoofing is disabled for the policy. We only recommend this value if you have a domain that's protected by another email filtering service.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableAuthenticationSafetyTip
-The EnableAuthenticationSafetyTip parameter specifies whether to enable safety tips that are shown to recipients when a message fails composite authentication. Valid values are:
-
-- $true: Safety tips are enabled for messages that fail composite authentication. This is the default value, and we strongly recommend that you don't change it.
-
-- $false: Safety tips are disabled for messages that fail composite authentication.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableAuthenticationSoftPassSafetyTip
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -487,9 +457,9 @@ The MailboxIntelligenceProtectionAction parameter specifies what to do with mess
 
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 
-- MoveToJmf: Move the message to the user's Junk Email folder.
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 
-- Quarantine: Move the message to the phishing quarantine.
+- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 
 - Redirect: Redirect the message to the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter.
 
@@ -548,6 +518,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyTag
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SimilarUsersSafetyTipsCustomText
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TargetedDomainActionRecipients
 The TargetedDomainActionRecipients parameter specifies the recipients to add to detected domain impersonation messages when the TargetedDomainProtectionAction parameter is set to the value Redirect or BccMessage.
 
@@ -569,15 +571,15 @@ Accept wildcard characters: False
 ### -TargetedDomainProtectionAction
 The TargetedDomainProtectionAction parameter specifies the action to take on detected domain impersonation messages for the domains specified by the TargetedDomainsToProtect parameter. Valid values are:
 
-- NoAction (This is the default value)
+- NoAction: This is the default value.
 
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 
-- MoveToJmf: Move the message to the user's Junk Email folder.
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 
-- Quarantine: Move the message to the phishing quarantine.
+- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
@@ -639,9 +641,9 @@ The TargetedUserProtectionAction parameter specifies the action to take on det
 
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 
-- MoveToJmf: Move the message to the user's Junk Email folder.
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 
-- Quarantine: Move the message to the phishing quarantine.
+- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
@@ -682,17 +684,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TreatSoftPassAsAuthenticated
-The TreatSoftPassAsAuthenticated parameter specifies whether or not to respect the composite authentication softpass result. Valid values are:
-
-- $true: This is the default value.
-
-- $false: Only use this value when you want to enable more restrictive antispoofing filtering, because this value might cause false positives.
-
-Note: This parameter corresponds to the Strict filtering value in the Microsoft 365 admin center.
+### -UnusualCharactersSafetyTipsCustomText
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

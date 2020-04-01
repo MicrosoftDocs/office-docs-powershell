@@ -44,7 +44,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
 - The Exchange Online Remote PowerShell Module needs to be installed on your computer. You need to do the following steps in a browser that supports ClickOnce (for example, Internet Explorer or Edge):
 
-  **Note**: ClickOnce support is available in the Chromium-based version of Edge at <edge://flags/#edge-click-once>.
+  **Note**: ClickOnce support is available in the Chromium-based version of Edge at <edge://flags/#edge-click-once>, and might not be enabled by default.
 
   1. Open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 
@@ -142,7 +142,7 @@ If your organization has single sign-on (SSO) enabled and you are logged on to a
 
 > New-EXOPSSession : User 'loggedonuser@contoso.com' returned by service does not match user 'userprincipalname@contoso.com' in the request.
 
-This error occurs because single sign-on overrides the specified user principal name (UPN). As a work-around, connect from a non-domain-joined computer or log on to the domain-joined computer using a local user account.
+This error occurs because single sign-on overrides the specified user principal name (UPN). As a work-around, use Connect-EXOPSSession without -UserPrincipalName parameter or use -Credential parameter instead.
 
 ## How do you know this worked?
 

@@ -3209,9 +3209,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 
-### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
-
 ### [Get-CsTeamsMobilityPolicy](Get-CsTeamsMobilityPolicy.md)
+
+### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
 
 ### [Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
 
@@ -3220,6 +3220,24 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Grant-CsTeamsCallParkPolicy](Grant-CsTeamsCallParkPolicy.md)
 
 ### [Remove-CsTeamsCallParkPolicy](Remove-CsTeamsCallParkPolicy.md)
+
+### [Get-CsTeamsComplianceRecordingPolicy](Get-CsTeamsComplianceRecordingPolicy.md)
+
+### [Set-CsTeamsComplianceRecordingPolicy](Set-CsTeamsComplianceRecordingPolicy.md)
+
+### [New-CsTeamsComplianceRecordingPolicy](New-CsTeamsComplianceRecordingPolicy.md)
+
+### [Remove-CsTeamsComplianceRecordingPolicy](Remove-CsTeamsComplianceRecordingPolicy.md)
+
+### [Grant-CsTeamsComplianceRecordingPolicy](Grant-CsTeamsComplianceRecordingPolicy.md)
+
+### [Get-CsTeamsComplianceRecordingApplication](Get-CsTeamsComplianceRecordingApplication.md)
+
+### [Set-CsTeamsComplianceRecordingApplication](Set-CsTeamsComplianceRecordingApplication.md)
+
+### [New-CsTeamsComplianceRecordingApplication](New-CsTeamsComplianceRecordingApplication.md)
+
+### [Remove-CsTeamsComplianceRecordingApplication](Remove-CsTeamsComplianceRecordingApplication.md)
 
 ### [Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
 
