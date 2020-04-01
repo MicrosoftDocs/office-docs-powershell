@@ -244,19 +244,15 @@ The Region parameter specifies the satellite location for multi-geo tenants to c
 
 - FRA: France
 
+- GBR: United Kingdom
+
 - IND: India
 
 - JPN: Japan
 
-- KOR: Korea
+- LAM: Latin America
 
 - NAM: North America
-
-- ZAF: South Africa
-
-- ARE: United Arab Emirates
-
-- GBR: United Kingdom
 
 If you don't use this parameter in a multi-geo tenant, eDiscovery searches are performed in the central location.
 

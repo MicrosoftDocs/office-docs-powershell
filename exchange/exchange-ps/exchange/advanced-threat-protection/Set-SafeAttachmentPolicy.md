@@ -17,6 +17,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-SafeAttachmentPolicy cmdlet to modify Safe Attachments policies in your cloud-based organization.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -76,6 +79,8 @@ The Action parameter specifies the action for the Safe Attachments policy. Valid
 - Block: Block the email message that contains the malware attachment. This is the default value.
 
 - Replace: Deliver the email message, but remove the malware attachment and replace it with warning text.
+
+- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [How Dynamic Delivery works](https://docs.microsoft.com/microsoft-365/security/office-365-security/dynamic-delivery-and-previewing#how-dynamic-delivery-works).
 
 The results of all actions are available in message trace.
 

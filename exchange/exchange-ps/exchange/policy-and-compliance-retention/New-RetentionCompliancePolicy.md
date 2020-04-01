@@ -131,7 +131,7 @@ Accept wildcard characters: False
 {{Fill DynamicScopeLocation Description}}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -479,7 +479,7 @@ You can use any value that uniquely identifies the team. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -503,7 +503,7 @@ The TeamsChannelLocationException parameter specifies the Teams to exclude when 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -531,7 +531,7 @@ You can use any value that uniquely identifies the user. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -557,7 +557,7 @@ The TeamsChatLocationException parameter specifies the Teams users to exclude wh
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
