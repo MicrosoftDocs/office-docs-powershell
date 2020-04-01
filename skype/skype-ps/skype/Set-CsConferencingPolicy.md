@@ -966,7 +966,7 @@ Determines the protocol used for screen sharing - VbSS vs RDP.  This parameter i
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
