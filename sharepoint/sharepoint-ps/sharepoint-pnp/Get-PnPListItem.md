@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves list items
 
-## SYNTAX
+## SYNTAX 
 
 ### By Id
 ```powershell

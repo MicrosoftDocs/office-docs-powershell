@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a subweb in the current web
 
-## SYNTAX
+## SYNTAX 
 
 ### ByUrl
 ```powershell

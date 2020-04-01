@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new tenant template object
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPTenantTemplate [-Author <String>]

@@ -8,9 +8,9 @@ schema: 2.0.0
 # Get-PnPUnifiedGroup
 
 ## SYNOPSIS
-Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups
+Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups. Requires the Azure Active Directory application permission 'Group.Read.All'.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPUnifiedGroup [-Identity <UnifiedGroupPipeBind>]

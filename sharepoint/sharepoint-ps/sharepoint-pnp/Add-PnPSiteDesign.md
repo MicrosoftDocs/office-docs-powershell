@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new Site Design on the current tenant.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPSiteDesign -Title <String>

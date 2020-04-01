@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Return user custom actions
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPCustomAction [-Includes <String[]>]
                     [-Identity <GuidPipeBind>]

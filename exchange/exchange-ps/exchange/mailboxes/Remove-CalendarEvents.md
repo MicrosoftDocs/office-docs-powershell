@@ -21,12 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-CalendarEvents [-Identity] <MailboxIdParameter>
+Remove-CalendarEvents [-Identity] <MailboxIdParameter> -QueryWindowInDays <Int32>
  [-CancelOrganizedMeetings]
  [-Confirm]
  [-PreviewOnly]
  [-QueryStartDate <ExDateTime>]
- [-QueryWindowInDays <Int32>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -39,10 +38,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-CalendarEvents -Identity chris@contoso.com -CancelOrganizedMeetings
+Remove-CalendarEvents -Identity chris@contoso.com -CancelOrganizedMeetings -QueryWindowInDays 120
 ```
 
-This example cancels every meeting in the mailbox chris@contoso.com that occurs on or after today's date. After you cancel the meetings, you can remove the mailbox.
+This example cancels every meeting in the mailbox chris@contoso.com that occurs on or 120 days after today's date. After you cancel the meetings, you can remove the mailbox.
 
 ### Example 2
 ```powershell
@@ -93,6 +92,26 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -QueryWindowInDays
+The QueryWindowInDays parameter specifies the number of days after the QueryStartDate parameter value to look for meetings that you want to cancel.
+
+If an instance of a recurring meeting occurs during the specified time period, the entire series is cancelled (not just the instances during the time period).
+
+**Note**: The maximum window that's allowed for meeting cancellation is 1825 days (5 years).
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -168,28 +187,6 @@ Aliases:
 Applicable: Exchange Server 2019, Exchange Online
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QueryWindowInDays
-The QueryWindowInDays parameter specifies the number of days after the QueryStartDate parameter value to look for meetings that you want to cancel.
-
-If you don't use this parameter, all future meetings on or after the specified start date will be cancelled.
-
-If an instance of a recurring meeting occurs during the specified time period, the entire series is cancelled (not just the instances during the time period).
-
-**Note**: The maximum window that's allowed for meeting cancellation is 1825 days (5 years).
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2019, Exchange Online
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

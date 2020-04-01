@@ -30,6 +30,7 @@ Set-OrganizationConfig
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
  [-AuditDisabled <Boolean>]
+ [-AutodiscoverPartialDirSync <Boolean>]
  [-AutoEnableArchiveMailbox <Boolean>]
  [-AutoExpandingArchive]
  [-BookingsEnabled <Boolean>]
@@ -80,6 +81,8 @@ Set-OrganizationConfig
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
+ [-OutlookMobileHelpShiftEnabled <Boolean>]
+ [-OutlookMobileSingleAccountEnabled <Boolean>]
  [-OutlookPayEnabled <Boolean>]
  [-PerTenantSwitchToESTSEnabled <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -528,6 +531,26 @@ The AuditDisabled parameter specifies whether to disable or enable mailbox audit
 - $true: Mailbox auditing is disabled for the organization.
 
 - $false: Allow mailbox auditing in the organization. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutodiscoverPartialDirSync
+This parameter is available only in the cloud-based service.
+
+The AutodiscoverPartialDirSync parameter is for scenarios where tenants have Directory Synced some of their Active Directory users into the cloud, but still have on-premises Exchange users that are not Directory Synced. Setting this parameter to $true will cause unknown users to be redirected to the on-premises endpoint and will allow on-premises users to discover their mailbox automatically. Online email addresses will be susceptible to enumeration. We recommend full Directory Sync for all Active Directory users and leaving this parameter with the default $false.
+
+After you enable AutodiscoverPartialDirSync, it will take approximately 3 hours to fully saturate across the cloud.
 
 ```yaml
 Type: Boolean
@@ -1125,7 +1148,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionGroupNameBlockedWordsList
-The DistributionGroupNameBlockedWordsList parameter specifies words that can't be included in the names of distribution groups. Separate multiple values with commas.
+The DistributionGroupNameBlockedWordsList parameter specifies words that can't be included in the Display Name values of distribution groups that are created by users. Separate multiple values with commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1141,37 +1164,33 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionGroupNamingPolicy
-The DistributionGroupNamingPolicy parameter specifies the template applied to the name of distribution groups that are created in the organization. You can enforce that a prefix or suffix be applied to all distribution groups. Prefixes and suffixes can be either a string or an attribute, and you can combine strings and attributes. When creating a naming policy, use the following syntax:
+The DistributionGroupNamingPolicy parameter specifies the additional text that's applied to the Display Name value of distribution groups created by users. You can require a prefix, a suffix, or both. The prefix and suffix can be text strings, user attribute values from the person who created the group, or a combination of text strings and attributes.
 
-"prefix\<GroupName\>suffix"
+The basic syntax for this parameter is `"prefix<GroupName>suffix"`. The value `<GroupName>` is a literal value that you must always include.
 
-Don't set the \<GroupName\>. Users create the name when they create the distribution group. You can have multiple prefixes and suffixes.
+You can use the following user attributes. The actual values are determined by the user who creates the group:
 
-You can use the following attributes that will be gathered from the user who's creating the distribution group mailbox settings:
+- `<City>`
 
-- Department
+- `<Company>`
 
-- Company
+- `<CountryCode>`
 
-- Office
+- `<CountryOrRegion>
 
-- StateOrProvince
+- `<CustomAttribute1>` to `<CustomAttribute15>`
 
-- CountryOrRegion
+- `<Department>`
 
-- CountryCode
+- `<ExtensionCustomAttribute1>` to `<ExtensionCustomAttribute5>`
 
-- Title
+- `<Office>`
 
-- CustomAttribute1 to CustomAttribute15
+- `<StateOrProvince>`
 
-To create a naming policy using an attribute, use the following syntax: "\<PrefixAttribute\>\<GroupName\>\<SuffixAttribute\>".
+- `<Title>`
 
-For example, to create a naming policy using the Department as a prefix and CustomAttribute1 as the suffix:
-
-"\<Department\>\<GroupName\>\<CustomAttribute1\>".
-
-To create a naming policy using strings, use the following syntax "string\<GroupName\>string". For example to create a naming policy using the string "DL\_" as the prefix use the following syntax: "DL\_\<GroupName\>".
+For example: `"DL_<StateOrProvince>_<GroupName>"`, `"<StateOrProvince>-<City>-<Office>-<GroupName>"` or `"<GroupName> <CustomAttribute1>"`.
 
 ```yaml
 Type: DistributionGroupNamingPolicy
@@ -1968,10 +1987,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OutlookMobileHelpShiftEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookMobileSingleAccountEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OutlookPayEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization. Valid values are:
+The OutlookPayEnabled parameter enables or disables [Payments in Outlook](https://support.office.com/article/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Office 365 organization. Valid values are:
 
 - $true: Payments in Outlook are enabled.
 

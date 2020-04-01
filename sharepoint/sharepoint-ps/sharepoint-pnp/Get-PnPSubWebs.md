@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the subwebs of the current web
 
-## SYNTAX
+## SYNTAX 
 
+### 
 ```powershell
 Get-PnPSubWebs [-Includes <String[]>]
                [-Identity <WebPipeBind>]

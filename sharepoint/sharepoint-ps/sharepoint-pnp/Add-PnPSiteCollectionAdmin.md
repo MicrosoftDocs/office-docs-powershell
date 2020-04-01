@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds one or more users as site collection administrators to the site collection in the current context
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPSiteCollectionAdmin -Owners <UserPipeBind>

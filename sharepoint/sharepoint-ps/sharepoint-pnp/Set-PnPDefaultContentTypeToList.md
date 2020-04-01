@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the default content type for a list
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPDefaultContentTypeToList -List <ListPipeBind>

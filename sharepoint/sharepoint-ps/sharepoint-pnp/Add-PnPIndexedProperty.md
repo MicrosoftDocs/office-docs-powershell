@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Marks the value of the propertybag key specified to be indexed by search.
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPIndexedProperty -Key <String>

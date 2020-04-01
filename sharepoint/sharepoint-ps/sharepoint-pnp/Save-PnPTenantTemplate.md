@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Saves a PnP provisioning hierarchy to the file system
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Save-PnPTenantTemplate -Template <ProvisioningHierarchy>
@@ -22,7 +22,7 @@ Save-PnPTenantTemplate -Template <ProvisioningHierarchy>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Save-PnPTenantTemplate -Template $template -Out .\hierarchy.pnp
+Save-PnPTenantTemplate -Template $template -Out .\tenanttemplate.pnp
 ```
 
 Saves a PnP tenant template to the file system
@@ -59,7 +59,6 @@ Allows you to provide an in-memory instance of a Tenant Template. When using thi
 ```yaml
 Type: ProvisioningHierarchy
 Parameter Sets: (All)
-Aliases: Hierarchy
 
 Required: True
 Position: Named

@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a team site subsite with no Office 365 group object
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPTenantSequenceTeamNoGroupSubSite -Url <String>

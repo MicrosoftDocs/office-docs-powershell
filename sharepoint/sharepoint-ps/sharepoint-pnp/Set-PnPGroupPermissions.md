@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds and/or removes permissions of a specific SharePoint group
 
-## SYNTAX
+## SYNTAX 
 
 ### ByName
 ```powershell

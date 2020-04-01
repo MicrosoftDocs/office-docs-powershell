@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an alert for a user
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Remove-PnPAlert -Identity <AlertPipeBind>

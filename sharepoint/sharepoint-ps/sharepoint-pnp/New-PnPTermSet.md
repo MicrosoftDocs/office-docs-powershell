@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a taxonomy term set
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 New-PnPTermSet -Name <String>

@@ -17,6 +17,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Undo-SoftDeletedMailbox cmdlet to recover a mailbox that has been deleted. Mailboxes can be recovered within 30 days of being deleted.
 
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -38,7 +41,7 @@ Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-Password <Se
 ```
 
 ## DESCRIPTION
-Use the Undo-SoftDeletedMailbox cmdlet to recover a mailbox that has been deleted. When a mailbox is deleted with the Remove-Mailbox cmdlet, it's not actually deleted. It's hidden in Exchange and moved in Active Directory to the organizational unit (OU) Soft Deleted Objects. This enables administrators to recover deleted mailboxes for up to 30 days after deletion.
+Use the Undo-SoftDeletedMailbox cmdlet to recover a mailbox that has been deleted. When a mailbox is deleted with the Remove-Mailbox or Disable-Mailbox cmdlet, it's not actually deleted. It's hidden in Exchange and moved in Active Directory to the organizational unit (OU) Soft Deleted Objects. This enables administrators to recover deleted mailboxes for up to 30 days after deletion.
 
 If the Microsoft account (formerly known as a Windows Live ID) wasn't deleted when the mailbox was deleted, you have to specify a new Microsoft account and password when you use the Undo-SoftDeletedMailbox cmdlet to recover a mailbox.
 

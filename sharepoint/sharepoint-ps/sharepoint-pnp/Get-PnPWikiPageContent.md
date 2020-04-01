@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the contents/source of a wiki page
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPWikiPageContent -ServerRelativePageUrl <String>

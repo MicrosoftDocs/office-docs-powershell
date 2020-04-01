@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the site collection term store
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPSiteCollectionTermStore [-Connection <SPOnlineConnection>]

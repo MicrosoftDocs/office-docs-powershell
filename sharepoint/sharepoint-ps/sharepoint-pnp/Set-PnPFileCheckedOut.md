@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Checks out a file
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPFileCheckedOut -Url <String>

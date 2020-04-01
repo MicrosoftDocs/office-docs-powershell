@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a taxonomy item
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPTaxonomyItem -TermPath <String>

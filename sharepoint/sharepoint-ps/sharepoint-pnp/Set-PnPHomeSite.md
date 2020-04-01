@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the home site for your tenant
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPHomeSite -Url <String>

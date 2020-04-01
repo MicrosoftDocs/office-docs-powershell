@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Moves an item from a list to the Recycle Bin
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Move-PnPListItemToRecycleBin -List <ListPipeBind>

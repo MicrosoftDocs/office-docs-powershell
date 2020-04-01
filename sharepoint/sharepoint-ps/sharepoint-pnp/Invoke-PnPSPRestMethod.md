@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Invokes a REST request towards a SharePoint site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Invoke-PnPSPRestMethod -Url <String>

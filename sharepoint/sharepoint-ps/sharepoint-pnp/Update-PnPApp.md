@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates an available app from the app catalog
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Update-PnPApp -Identity <AppMetadataPipeBind>

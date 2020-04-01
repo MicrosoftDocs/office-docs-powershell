@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Renames a file in its current location
 
-## SYNTAX
+## SYNTAX 
 
 ### SERVER
 ```powershell

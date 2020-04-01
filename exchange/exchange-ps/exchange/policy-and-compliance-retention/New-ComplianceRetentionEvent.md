@@ -22,7 +22,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ComplianceRetentionEvent -Name <String> [-AssetId <String>] [-Comment <String>] [-Confirm] [-EventDateTime <DateTime>] [-EventTags <MultiValuedProperty>] [-EventType <ComplianceRuleIdParameter>] [-ExchangeAssetIdQuery <String>] [-SharePointAssetIdQuery <String>] [-WhatIf] [<CommonParameters>]
+New-ComplianceRetentionEvent -Name <String>
+ [-AssetId <String>]
+ [-Comment <String>]
+ [-Confirm]
+ [-EventDateTime <DateTime>]
+ [-EventTags <MultiValuedProperty>]
+ [-EventType <ComplianceRuleIdParameter>]
+ [-ExchangeAssetIdQuery <String>]
+ [-SharePointAssetIdQuery <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,22 +41,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```powershell
-Insert example commands for example 1.
+New-ComplianceRetentionEvent -Name "Research Project Employees" -EventTag 80e0d620-13ea-4ed9-b6a6-aa883278bcca -EventType e823b782-9a07-4e30-8091-034fc01f9347 -SharePointAssetIDQuery "EmployeeNumber:123456 EmployeeNumber:456789"
 ```
 
-Insert descriptive text for example 1.
+This example creates a compliance retention event named Research Project Employees with the following settings:
 
-### Example 2
-```powershell
-Insert example commands for example 2.
-```
+- EventTag: 80e0d620-13ea-4ed9-b6a6-aa883278bcca
 
-Insert descriptive text for example 2.
+- EventTpe: e823b782-9a07-4e30-8091-034fc01f9347
+
+- SharePointAssetIDQuery: EmployeeNumber:123456 EmployeeNumber:456789
 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies a unique name for the compliance retention event. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
+The Name parameter specifies a unique name for the compliance retention event. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -63,7 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -AssetId
-The AssetId parameter.
+The AssetId parameter specifies the Property:Value pair found in the properties of SharePoint or OneDrive for Business documents that's used for retention. For example:
+
+- Product codes that you can use to retain content for only a specific product.
+
+- Project codes that you can use to retain content for only a specific project.
+
+- Employee IDs that you can use to retain content for only a specific person.
 
 ```yaml
 Type: String
@@ -133,7 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -EventTags
-The EventTags parameter.
+The EventTags parameter specifies the GUID value of the labels tha are associated with the compliance retention event. Run the following command to see the available GUID values: `Get-ComplianceTag | Format-Table Name,GUID`.
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -149,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter.
+The EventType parameter specifies the GUID value of the event that will start the retention period for labels that use this event type. Run the following command to see the available GUID values: `Get-ComplianceRetentionEventType | Format-Table Name,GUID`.
 
 ```yaml
 Type: ComplianceRuleIdParameter
@@ -165,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeAssetIdQuery
-The ExchangeAssetIdQuery parameter.
+The ExchangeAssetIdQuery parameter specifies the keywords that are used to scope Exchange content for the compliance retention event. For details, see [Keyword queries and search conditions for Content Search](https://go.microsoft.com/fwlink/p/?linkid=828045).
 
 ```yaml
 Type: String
@@ -181,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointAssetIdQuery
-The SharePointAssetIdQuery parameter.
+The SharePointAssetIdQuery parameter specifies one or more the Property:Value pairs that you've specified in the properties (also known as Columns) of SharePoint and OneDrive for Business documents to scope the compliance retention event.
 
 ```yaml
 Type: String
@@ -197,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

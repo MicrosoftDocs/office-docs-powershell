@@ -1,0 +1,73 @@
+### YamlMime:Landing
+
+title: SharePoint PowerShell # < 60 chars
+summary: Learn about using PowerShell cmdlets for SharePoint in Microsoft 365 and SharePoint Server. # < 160 chars
+
+metadata:
+  title: SharePoint PowerShell # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Use PowerShell cmdlets for SharePoint in Microsoft 365 and SharePoint Server # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: sharepoint-online #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.subservice: subservice
+  ms.topic: landing-page # Required
+  ms.collection: M365-collaboration
+  author: kaarins #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kaarins #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/16/2020 #Required; mm/dd/yyyy format
+  localization_priority: Priority
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: SharePoint in Microsoft 365
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Intro to SharePoint Online Management Shell
+            url: sharepoint-online/introduction-sharepoint-online-management-shell.md
+          - text: Get started with SharePoint Online Management Shell
+            url: sharepoint-online/connect-sharepoint-online.md
+          - text: Cmdlet reference
+            url: /powershell/module/sharepoint-online
+          - text: Manage SharePoint with Office 365 PowerShell
+            url: /office365/enterprise/powershell/manage-sharepoint-online-with-office-365-powershell
+  
+
+  # Card
+  - title: SharePoint Server
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Overview
+            url: /powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets         
+          - text: Cmdlet reference
+            url: /powershell/module/sharepoint-server
+
+ # Card
+  - title: SharePoint Patterns and Practices (PnP)
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Overview
+            url: /powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets         
+          - text: Cmdlet reference
+            url: /powershell/module/sharepoint-pnp
+          - text: PowerShell Gallery
+            url: https://www.powershellgallery.com/
+
+  # Card
+  - title: Learning PowerShell
+    linkLists:
+      - linkListType: learn
+        links:
+          - text: PowerShell documentation
+            url: /powershell
+          - text: Overview
+            url: /powershell/scripting/overview
+          - text: More resources for learning PowerShell
+            url: /powershell/scripting/learn/more-powershell-learning
+          
+
+   

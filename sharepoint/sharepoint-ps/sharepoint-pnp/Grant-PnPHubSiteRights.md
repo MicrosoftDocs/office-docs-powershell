@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Grant additional permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Grant-PnPHubSiteRights [-Connection <SPOnlineConnection>]

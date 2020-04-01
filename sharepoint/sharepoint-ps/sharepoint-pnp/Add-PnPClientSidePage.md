@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a Client-Side Page
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPClientSidePage -Name <String>
@@ -45,6 +45,13 @@ Add-PnPClientSidePage -Name "NewPageTemplate" -PromoteAs Template
 ```
 
 Creates a new Client-Side page named 'NewPage' and saves as a template to the site.
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Add-PnPClientSidePage -Name "Folder/NewPage"
+```
+
+Creates a new Client-Side page named 'NewPage' under 'Folder' folder and saves as a template to the site.
 
 ## PARAMETERS
 

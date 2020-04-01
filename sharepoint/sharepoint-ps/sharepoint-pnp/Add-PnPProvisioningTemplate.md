@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a PnP Provisioning Template object to a tenant template
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Add-PnPProvisioningTemplate -SiteTemplate <ProvisioningTemplate>
@@ -34,7 +34,6 @@ The template to add to the tenant template
 ```yaml
 Type: ProvisioningTemplate
 Parameter Sets: (All)
-Aliases: Template
 
 Required: True
 Position: Named
@@ -47,7 +46,6 @@ The tenant template to add the template to
 ```yaml
 Type: ProvisioningHierarchy
 Parameter Sets: (All)
-Aliases: Hierarchy
 
 Required: True
 Position: Named

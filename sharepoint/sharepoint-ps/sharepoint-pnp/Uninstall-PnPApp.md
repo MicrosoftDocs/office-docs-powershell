@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Uninstalls an available add-in from the site
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Uninstall-PnPApp -Identity <AppMetadataPipeBind>

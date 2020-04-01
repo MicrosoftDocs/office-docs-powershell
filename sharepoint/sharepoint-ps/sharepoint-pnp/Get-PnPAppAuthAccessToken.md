@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the access token
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPAppAuthAccessToken [-Connection <SPOnlineConnection>]
