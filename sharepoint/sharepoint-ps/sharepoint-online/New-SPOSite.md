@@ -31,7 +31,7 @@ However, creating a new SharePoint Online site collection fails if a deleted sit
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832>.
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 
-Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (<https://go.microsoft.com/fwlink/p/?LinkId=242911).> The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
+Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (<https://go.microsoft.com/fwlink/p/?LinkId=242911>). The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
 
 ```yaml
 Type: UInt32
