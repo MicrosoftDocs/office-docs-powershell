@@ -162,7 +162,7 @@ Accept pipeline input: False
 ```
 
 ### -PromoteAs
-Allows to promote the page for a specific purpose (HomePage | NewsPage)
+Allows to promote the page for a specific purpose (None, HomePage, NewsArticle, Template)
 
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
