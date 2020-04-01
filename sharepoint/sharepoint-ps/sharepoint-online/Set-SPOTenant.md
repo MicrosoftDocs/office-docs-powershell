@@ -1591,7 +1591,7 @@ Allows users to preview only Office files in the browser. This option increases 
 The following parameters can be used with `-ConditionalAccessPolicy AllowLimitedAccess` for both the organization-wide setting and the site-level setting.
 
 - OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
-- LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+- LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files. **Warning:** This option is known to cause problems with PDF and image file types because they can be required to be downloaded to the end user's machine to render in the browser. Plan the use of this control carefully. Otherwise, your users could be faced with unexpected "Access Denied" errors.
 - LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
 
 PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
@@ -1610,15 +1610,12 @@ Accept wildcard characters: False
 
 ### -ExternalUserExpirationRequired
 
-> [!NOTE]
-> This feature is currently in development and will not work on Production tenants.
-
 Specifies whether to enable the external user expiration policy, where external users will be expired and removed from the site collection in a given number of days.
 
 > [!NOTE]
 > Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
 
-he valid values are:
+The valid values are:
 True - Enables the Policy.
 False (default) - Disables the policy.
 
@@ -1636,9 +1633,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalUserExpireInDays
-
-> [!NOTE]
-> This feature is currently in development and will not work on Production tenants.
 
 Specifies the number of days before an external user will expire and be removed from the site collection if the policy is enabled. Value can be from 30 to 730 days.
 
