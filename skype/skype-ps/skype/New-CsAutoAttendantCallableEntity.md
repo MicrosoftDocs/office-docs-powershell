@@ -18,7 +18,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint> [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | SharedVoicemail> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
