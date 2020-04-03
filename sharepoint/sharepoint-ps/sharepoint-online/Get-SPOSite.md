@@ -54,7 +54,7 @@ The Detailed parameter has been deprecated. It will continue to work with earlie
 
 You need to be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832.>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 > [!NOTE]
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
