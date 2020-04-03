@@ -50,7 +50,7 @@ Skype for Business Server Control Panel: To create a new Persistent Chat chat ro
 ### -------------------------- Example 1 -------------------------- 
 ```
 
-New-CsPersistentChatRoom -Name "ITChatRoom" -PersistentChatPoolFqdn "atl-cs-001.litwareinc.com"-Category "IT"
+New-CsPersistentChatRoom -Name "ITChatRoom" -PersistentChatPoolFqdn "atl-cs-001.litwareinc.com" -Category "IT"
 ```
 
 The command shown in Example 1 creates a new Persistent Chat chat room named ITChatRoom on the pool atl-cs-001.litwareinc.com.
