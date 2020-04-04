@@ -167,13 +167,15 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
+This parameter is available only in on-premises Exchange.
+
 The Archive switch retrieves the diagnostics logs of the archive mailbox instead of the primary mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
