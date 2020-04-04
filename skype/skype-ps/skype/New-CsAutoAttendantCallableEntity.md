@@ -18,7 +18,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | SharedVoicemail> [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | OrganizationalAutoAttendant | HuntGroup | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,8 +97,11 @@ Accept wildcard characters: False
 The Type parameter represents the type of the callable entity, which can be any of the following:
 
 - User
+- OrganizationalAutoAttendant
+- HuntGroup
 - ApplicationEndpoint
-
+- ExternalPstn
+- SharedVoicemail
 
 ```yaml
 Type: Object
