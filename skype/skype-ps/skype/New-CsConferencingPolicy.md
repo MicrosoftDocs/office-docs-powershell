@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/new-csconferencingpolicy
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015, Lync Server 2013, Lync Server 2010, 
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
@@ -13,9 +13,7 @@ ms.reviewer: rogupta
 
 ## SYNOPSIS
 
-Creates a new conferencing policy for use in your organization.
-Conferencing policies determine the features and capabilities that can be used in a conference; this includes everything from whether or not the conference can include IP audio and video to the maximum number of people who can attend a meeting.
-This cmdlet was introduced in Lync Server.
+Creates a new conferencing policy for your organization. Conferencing policy determines the features and capabilities that can be used in a conference as well as in a broadcast meeting; this includes everything from whether or not the conference can include IP audio and video to the maximum number of people who can attend a meeting.
 
 
 
@@ -43,7 +41,7 @@ New-CsConferencingPolicy [-Tenant <System.Guid>] [-AllowIPAudio <Boolean>] [-All
 ```
 ## DESCRIPTION
 
-Conferencing is an important part of Skype for Business Server: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
+Conferencing is an important part of Skype for Business Online and Skype for Business Server: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
 It's important for administrators to maintain control over conferences and conference settings.
 In some cases, there might be security concerns: by default, anyone, including unauthenticated users, can participate in meetings and save any of the slides or handouts distributed during those meetings.
@@ -52,15 +50,10 @@ In addition, there might be occasional legal concerns.
 For example, by default meeting participants are allowed to make annotations on shared content; however, these annotations are not saved when the meeting is archived.
 If your organization is required to keep a record of all electronic communication, you might want to disable annotations.
 
-Needing to manage conferencing settings is one thing; actually managing these settings is another.
-In Skype for Business Server, conferences are managed by using conferencing policies.
-(In previous versions of the software, these were known as meeting policies.) As noted, conferencing policies determine the features and capabilities that can be used in a conference, including everything from whether or not the conference can include IP audio and video to the maximum number of people who can attend a meeting.
-Conferencing policies can be configured at the global scope; at the site scope; or at the per-user scope.
-This provides administrators with enormous flexibility when it comes to deciding which capabilities will be made available to which users.
+In Skype for Business Online and Skype for Business Server, conferences are managed using conferencing policy. Conferencing policy determines the features and capabilities that can be used in a conference, including everything from whether or not the conference can include IP audio and video to the maximum number of people who can attend a meeting. In Skype for Business Online, conferencing policy also governs certain aspects of broadcast meetings, in particular, the video bit rate.
 
-The New-CsConferencingPolicy cmdlet enables you to create new conferencing policies at either the site or the per-user scope.
-You cannot create a new global policy because the global policy already exists.
-However, you can modify the property values of the global policy by using the Set-CsConferencingPolicy cmdlet.
+ - In Skype for Business Online, conferencing policy is managed on a per-user basis.  Skype for Business Online provides several built-in conferencing policy instances, and if needed administrators, can create their own policy instances as well, using the New-CsConferencingPolicy cmdlet.
+ - In Skype for Business Server, conferencing policies can be created at either the site or the per-user scope. If you need to modify  property values of the global conferencing policy, use the Set-CsConferencingPolicy cmdlet.
 
 The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AsJob, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, InMemory, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb.
 
@@ -68,16 +61,15 @@ The following parameters are not applicable to Skype for Business Online: Applic
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 -------------------------- 
+### EXAMPLE 1: Create a new conferencing policy with per user scope (Skype for Business Online, Skype for Business Server)
 ```
 New-CsConferencingPolicy -Identity SalesConferencingPolicy -MaxMeetingSize 50
 ```
 
-The command shown in Example 1 uses the New-CsConferencingPolicy cmdlet to create a new conferencing policy with the Identity SalesConferencingPolicy.
-This policy will use all the default values for a conferencing policy except one: MaxMeetingSize; in this example, the maximum size for a meeting will be set to 50 instead of the default value of 250.
+The command shown in Example 1 uses the New-CsConferencingPolicy cmdlet to create a new conferencing policy with the Identity SalesConferencingPolicy.  This policy will use all the default values for a conferencing policy except one: MaxMeetingSize; in this example, the maximum size for a meeting will be set to 50 instead of the default value of 250.
 
 
-### -------------------------- EXAMPLE 2 -------------------------- 
+### EXAMPLE 2: Create a new conferencing policy with per site scope (Skype for Business Server)
 ```
 New-CsConferencingPolicy -Identity site:Redmond -MaxMeetingSize 100 -AllowParticipantControl $False
 ```
@@ -91,7 +83,7 @@ All other policy properties will use the default values.
 
 ### -Identity
 Unique identifier for the conferencing policy to be created.
-Conferencing policies can be created at the site or per-user scopes.
+In Skype for Business Server, Conferencing policies can be created at the site or per-user scopes. In Skype for Business Online, Conferencing policies can created on a per-user scope only.
 To create a site policy, use syntax similar to this: `-Identity site:Redmond.`
 To create a per-user policy, use syntax similar to this: `-Identity SalesConferencingPolicy.`
 
@@ -778,7 +770,9 @@ Accept wildcard characters: False
 Bit rate (in kilobits) used for video transmissions.
 The default value is 50000.
 
-This setting is enforced at the per-user level, and for both conferences and peer-to-peer communication sessions.
+This setting is enforced at the per-user level, and for both conferences and peer-to-peer communication sessions. In Skype for Business Online, this setting is also enforced for producers of Skype for Business Online Broadcast meetings.
+
+**Note:** As a result of unprecedented demand for video conferencing during the COVID-19 situation, when creating policies in Skype for Business Online, this setting cannot be changed from its default value. If you are using broadcast meeting functionality and require a a higher video bit rate, please contact your Technical Account Manager or Support to request this change.
 
 
 
@@ -786,7 +780,7 @@ This setting is enforced at the per-user level, and for both conferences and pee
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015, Lync Server 2013, Lync Server 2010, 
 
 Required: False
 Position: Named
