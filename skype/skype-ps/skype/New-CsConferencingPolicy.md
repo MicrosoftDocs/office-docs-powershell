@@ -768,7 +768,7 @@ Accept wildcard characters: False
 ### -VideoBitRateKb
 
 Bit rate (in kilobits) used for video transmissions.
-The default value is 50000.
+The default value is 400.
 
 This setting is enforced at the per-user level, and for both conferences and peer-to-peer communication sessions. In Skype for Business Online, this setting is also enforced for producers of Skype for Business Online Broadcast meetings.
 
