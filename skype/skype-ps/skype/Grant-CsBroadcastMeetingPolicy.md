@@ -29,7 +29,7 @@ Administrators can manage Broadcast meeting functionality in Skype for Business 
 
 Broadcast meeting configuration and broadcast meeting policy govern broadcast-specific functionality. In addition, the settings of the conferencing policy assigned to the user producing the broadcast also general conferencing settings that are also relevant for broadcast meetings.  
 
-This document describes how to specify which broadcast meeting policy is assigned to a user. Be sure to also review:[Grant-CsConferencingPolicy](Grant-CsConferencingPolicy.md) to set conferencing policy.
+This document describes how to specify which broadcast meeting policy is assigned to a user. Be sure to also review the following docs to manage conferencing policy:[Grant-CsConferencingPolicy](Grant-CsConferencingPolicy.md), [New-CsConferencingPolicy](New-CsConferencingPolicy.md), and [Set-CsConferencingPolicy](Set-CsConferencingPolicy.md).
 
 **NOTES**
 - Broadcast meeting policies are predefined in Skype for Business. The defined settings for each policy can be displayed by using the Get-CsBroadcastMeetingPolicy cmdlet with no parameters.
@@ -220,4 +220,7 @@ None
 
 [Get-CsBroadcastMeetingPolicy](Get-CsBroadcastMeetingPolicy.md)
 [Grant-CsConferencingPolicy](Grant-CsConferencingPolicy.md)
+[New-CsConferencingPolicy](New-CsConferencingPolicy.md)
+[Set-CsConferencingPolicy](Set-CsConferencingPolicy.md)
 [Set-CsBroadcastMeetingConfiguration](Set-CsBroadcastMeetingConfiguration.md)
+
