@@ -13,7 +13,9 @@ Retrieves all sites linked to a specific hub site
 ## SYNTAX 
 
 ```powershell
-Get-PnPHubSiteChild [-Connection <SPOnlineConnection>]
+Get-PnPHubSiteChild
+    [-Connection <SPOnlineConnection>]
+    [-Identity SpoHubSitePipeBind>[<CommonParameters>]
 ```
 
 ## DESCRIPTION
