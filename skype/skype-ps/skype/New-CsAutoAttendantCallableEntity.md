@@ -25,7 +25,10 @@ New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | Organizationa
 The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity for use with call transfers from the Auto Attendant service. Callable entities can be created using either Object ID or TEL URIs and can refer to any of the following entities:
 
 - User
+- OrganizationalAutoAttendant
+- HuntGroup
 - ApplicationEndpoint
+- ExternalPstn
 - SharedVoicemail
 
 **NOTE**
