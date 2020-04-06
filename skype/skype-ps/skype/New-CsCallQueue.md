@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -Users
-The Users parameter lets you add agents to the Call Queue. This is a list of user GUIDs.
+The Users parameter lets you add agents to the Call Queue. This parameter expects a list of user unique identifiers (GUID).
 
 ```yaml
 Type: List
