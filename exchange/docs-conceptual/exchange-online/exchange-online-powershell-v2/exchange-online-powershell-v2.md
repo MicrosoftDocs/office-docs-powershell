@@ -284,17 +284,17 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ### Current release: Version 0.4368.1
 
-   - Added support for Exchange Online Protection (EOP) cmdlets using ''Connect-IPPSSession'' cmdlet.
-   
-   - Hide announcement banner using _ShowBanner_ switch. Run the following command to hide the banner:
-   
-     ```powershell
-     Connect-ExchangeOnline -ShowBanner:$false
-     ```
+- Added support for Exchange Online Protection (EOP) cmdlets using the **Connect-IPPSSession** cmdlet.
 
-   - Terminate cmdlet execution on client exception.
-   
-   - Remote PowerShell contained various complex data types which were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.
+- Hide the announcement banner using the _ShowBanner_ switch. Run the following command to hide the banner:
+
+  ```powershell
+  Connect-ExchangeOnline -ShowBanner:$false
+  ```
+
+- Terminate cmdlet execution on client exception.
+
+- Remote PowerShell contained various complex data types which were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.
 
 ### Previous releases
 
