@@ -341,7 +341,7 @@ Accept wildcard characters: False
 
 ### -SensitivityLabel
 
-Used to specify the unique identifier (GUID) of the SensitivityLabel
+Used to specify the unique identifier (GUID) of the SensitivityLabel.
 
 ```yaml
 Type: String
