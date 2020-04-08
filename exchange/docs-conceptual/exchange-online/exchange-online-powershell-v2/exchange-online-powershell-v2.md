@@ -284,7 +284,7 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ### Current release: Version 0.4368.1
 
-- Added support for Exchange Online Protection (EOP) cmdlets using the **Connect-IPPSSession** cmdlet.
+- Added support for Office 365 Security & Compliance Center PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
 
 - Hide the announcement banner using the _ShowBanner_ switch. Run the following command to hide the banner:
 

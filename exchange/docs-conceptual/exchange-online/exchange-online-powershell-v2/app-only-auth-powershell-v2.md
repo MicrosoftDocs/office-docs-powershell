@@ -13,6 +13,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
+robots: noindex,nofollow
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks."
 ---
 
@@ -91,7 +92,7 @@ For a detailed visual flow bout creating applications in Azure AD, see <https://
 
 ## Roadmap
 
-App-only authentication is currently supported for the legacy remote PowerShell cmdlets that you access by using the **Connect-ExchangeOnline** cmdlet in the EXO V2 module. It doesn't work with the 9 new EXO V2 cmdlets in the module (for example, Get-EXOMailbox), nor does it work with Exchange Online Protection cmdlets that you access by using the **ConnectIPPSSession** cmdlet.
+App-only authentication is currently supported for the legacy remote PowerShell cmdlets that you access by using the **Connect-ExchangeOnline** cmdlet in the EXO V2 module. It doesn't work with the 9 new EXO V2 cmdlets in the module (for example, Get-EXOMailbox), nor does it work with Office 365 Security & Compliance Center PowerShell cmdlets that you access by using the **ConnectIPPSSession** cmdlet.
 
 The following list describes other items that we're working on:
 
@@ -99,7 +100,7 @@ The following list describes other items that we're working on:
 - Support for more built-in RBAC roles (Exchange Service Admin, Global Reader, Recipient Admin)
 - Custom RBAC and mailbox scoping using Azure AD administrative units.
 - Delegation support in app-only scenarios
-- Support for Exchange Online Protection cmdlets.
+- Support for Security & Compliance Center PowerShell cmdlets.
 
 ## Appendix
 
