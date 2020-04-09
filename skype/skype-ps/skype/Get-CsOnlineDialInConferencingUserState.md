@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies the user to retrieve. The user can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). You can also reference a user account by using the user's Active Directory distinguished name.
+Specifies the user to retrieve. The user can be specified by using the user's SIP address, the user's user principal name (UPN) or the user's display name (for example, Ken Myer).
 
 ```yaml
 Type: UserIdParameter
