@@ -22,7 +22,7 @@ ResourceQuotaAllocated, and SiteCreationMode.
 
 Currently, there are no parameters for this cmdlet.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a Global administrator to run the cmdlet.
 
 ## EXAMPLES
 

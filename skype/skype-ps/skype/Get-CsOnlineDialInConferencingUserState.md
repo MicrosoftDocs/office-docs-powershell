@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsOnlineDialInConferencingUserState
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the `Get-CsOnlineDialInConferencingUserState` cmdlet to view the current Dial In Conferencing state of users in your Tenant.
 
 ## SYNTAX
 
@@ -24,21 +24,20 @@ Get-CsOnlineDialInConferencingUserState [[-Identity] <UserIdParameter>] [-Tenant
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Use the `Get-CsOnlineDialInConferencingUserState` cmdlet to view the current Dial In Conferencing state of users in your Tenant.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-Insert example commands for example 1.
+Get-CsOnlineDialInConferencingUserState
 ```
-
-Insert descriptive text for example 1.
+Gets the Dial In Conferencing state of every user.
 
 ## PARAMETERS
 
 ### -DomainController
-PARAMVALUE: Fqdn
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
@@ -53,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -68,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-PARAMVALUE: UserIdParameter
+Specifies the user to retrieve. The user can be specified by using the user's SIP address, the user's user principal name (UPN) or the user's display name (for example, Ken Myer).
 
 ```yaml
 Type: UserIdParameter
@@ -83,7 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -LicenseState
-PARAMVALUE: String\[\]
+License state of the user, possible values
+- NoLicense
+- Licensed
 
 ```yaml
 Type: String[]
@@ -98,7 +99,11 @@ Accept wildcard characters: False
 ```
 
 ### -Provider
-PARAMVALUE: AllProviders | NoProviders | Microsoft | ThirdParty
+Audio Conferencing Provider name, possible values
+- AllProviders
+- NoProviders
+- Microsoft
+- ThirdParty
 
 ```yaml
 Type: ProviderType
@@ -128,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -143,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantDomain
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
