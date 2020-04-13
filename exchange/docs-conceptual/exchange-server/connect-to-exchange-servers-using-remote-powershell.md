@@ -21,6 +21,9 @@ If you don't have the Exchange management tools installed on your local computer
 > [!NOTE]
 > We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You'll get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md).
 
+> [!NOTE]
+> Get-ExchangeCertificate does not fully support remote PowerShell. We recommend that you use the Exchange Management Shell instead to get all the properties of this cmdlet.
+
 ## What do you need to know before you begin?
 
 - Estimated time to complete: less than 5 minutes
