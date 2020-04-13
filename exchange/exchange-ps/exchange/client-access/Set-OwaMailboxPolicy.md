@@ -1033,11 +1033,11 @@ Accept wildcard characters: False
 ### -GroupCreationEnabled
 This parameter is available or functional only in the cloud-based service.
 
-The GroupCreationEnabled parameter specifies whether Office 365 group creation is available in Outlook on the web. Valid values are:
+The GroupCreationEnabled parameter specifies whether Office 365 group creation is available in Outlook and Outlook on the web. Valid values are:
 
-- $true: Users can create Office 365 groups in Outlook on the web. This is the default value.
+- $true: Users can create Office 365 groups in Outlook and Outlook on the web. This is the default value.
 
-- $false: Users can't create Office 365 groups in Outlook on the web.
+- $false: Users can't create Office 365 groups in Outlook and Outlook on the web.
 
 ```yaml
 Type: Boolean
