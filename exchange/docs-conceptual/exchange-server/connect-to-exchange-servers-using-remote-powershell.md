@@ -19,7 +19,7 @@ description: "Use Windows PowerShell on a local computer to connect to an Exchan
 If you don't have the Exchange management tools installed on your local computer, you can use Windows PowerShell to create a remote PowerShell session to an Exchange server. It's a simple three-step process, where you enter your credentials, provide the required connection settings, and then import the Exchange cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!NOTE]
-> We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You'll get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md).
+> We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You'll get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md). <br/><br/> Get-ExchangeCertificate does not fully support remote PowerShell. We recommend that you use the Exchange Management Shell instead to get all the properties of this cmdlet.
 
 ## What do you need to know before you begin?
 
@@ -41,7 +41,7 @@ If you don't have the Exchange management tools installed on your local computer
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-    <sup>*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
