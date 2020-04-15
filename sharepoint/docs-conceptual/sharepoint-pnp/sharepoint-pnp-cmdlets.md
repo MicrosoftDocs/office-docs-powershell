@@ -8,7 +8,7 @@ SharePoint Patterns and Practices (PnP) contains a library of PowerShell command
 
 ![SharePoint Patterns and Practices](https://devofficecdn.azureedge.net/media/Default/PnP/sppnp.png)
 
-_**Applies to:** SharePoint Online, SharePoint 2016, SharePoint 2013_
+_**Applies to:** SharePoint Online, SharePoint 2019, SharePoint 2016, SharePoint 2013_
 
 ## Installation
 
@@ -21,6 +21,7 @@ If you main OS is Windows 10, or if you have [PowerShellGet](https://github.com/
 |**SharePoint Version**|**Command to install**|
 |------------------|------------------|
 |SharePoint Online|`Install-Module SharePointPnPPowerShellOnline `|
+|SharePoint 2019|`Install-Module SharePointPnPPowerShell2019`|
 |SharePoint 2016|`Install-Module SharePointPnPPowerShell2016`|
 |SharePoint 2013|`Install-Module SharePointPnPPowerShell2013`|
 
@@ -29,7 +30,7 @@ If you main OS is Windows 10, or if you have [PowerShellGet](https://github.com/
 
 ### Setup files
 
-You can download setup files from the [releases](https://github.com/sharepoint/pnp-powershell/releases) section of the PnP PowerShell repository. These files will up be updated on a monthly basis. Run the install and restart any open instances of PowerShell to use the cmdlets.
+You can download setup files from the [releases](https://github.com/pnp/pnp-powershell/releases) section of the PnP PowerShell repository. These files will up be updated on a monthly basis. Run the install and restart any open instances of PowerShell to use the cmdlets.
 
 ### Installation script
 
@@ -38,12 +39,12 @@ This is an alternative for installation on machines that have at least PowerShel
 To install the cmdlets you can run the below command which will install PowerShell Package Management and then install the PowerShell Modules from the PowerShell Gallery.
 
 ```powershell
-Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/sharepoint/PnP-PowerShell/master/Samples/Modules.Install/Install-SharePointPnPPowerShell.ps1')
+Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/pnp/PnP-PowerShell/master/Samples/Modules.Install/Install-SharePointPnPPowerShell.ps1')
 ```
 
 ## Updating
 
-Every month a new release will be made available of the PnP PowerShell Cmdlets. If you earlier installed the cmdlets using the setup file, simply download the [latest version](https://github.com/SharePoint/PnP-PowerShell/releases/latest) and run the setup. This will update your existing installation.
+Every month a new release will be made available of the PnP PowerShell Cmdlets. If you earlier installed the cmdlets using the setup file, simply download the [latest version](https://github.com/pnp/PnP-PowerShell/releases/latest) and run the setup. This will update your existing installation.
 
 If you have installed the cmdlets using PowerShellGet with `Install-Module` from the PowerShell Gallery then you will be able to use the following command to install the latest updated version:
 
@@ -87,7 +88,7 @@ At the following links you will find a few videos on how to get started with the
 
 ### Setting up credentials
 
-See this [wiki page](https://github.com/SharePoint/PnP-PowerShell/wiki/How-to-use-the-Windows-Credential-Manager-to-ease-authentication-with-PnP-PowerShell) for more information on how to use the Windows Credential Manager to setup credentials that you can use in unattended scripts
+See this [wiki page](https://github.com/pnp/PnP-PowerShell/wiki/How-to-use-the-Windows-Credential-Manager-to-ease-authentication-with-PnP-PowerShell) for more information on how to use the Windows Credential Manager to setup credentials that you can use in unattended scripts
 
 ## Cmdlet overview
 
