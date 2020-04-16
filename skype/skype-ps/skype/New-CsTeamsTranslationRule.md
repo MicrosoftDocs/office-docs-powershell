@@ -35,7 +35,7 @@ This example creates a rule that adds +1 to any ten digits number. For example, 
 
 ### Example 2
 ```powershell
-PS C:\> New-CsTeamsTranslationRule -Identity 'StripPlus1' -Pattern '^+1(\d{10})$' -Translation '$1'
+PS C:\> New-CsTeamsTranslationRule -Identity 'StripPlus1' -Pattern '^\+1(\d{10})$' -Translation '$1'
 ```
 
 This example creates a rule that strips +1 from any E.164 eleven digits number. For example, +12065555555 will be translated to 206555555
@@ -56,7 +56,7 @@ This example creates a rule that adds 425555 to any four digits number (converts
 
 ### Example 5
 ```powershell
-PS C:\> New-CsTeamsTranslationRule -Identity 'StripE164SeattleAreaCode' -Pattern '^+1206555(\d{4})$' -Translation '$1'
+PS C:\> New-CsTeamsTranslationRule -Identity 'StripE164SeattleAreaCode' -Pattern  '^\+1206555(\d{4})$' -Translation '$1'
 ```
 
 This example creates a rule that strips +1206555 from any E.164 ten digits number. For example, +12065555555 will be translated to 5555
