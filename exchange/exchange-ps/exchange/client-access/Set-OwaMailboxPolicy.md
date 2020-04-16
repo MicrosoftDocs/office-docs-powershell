@@ -1033,11 +1033,11 @@ Accept wildcard characters: False
 ### -GroupCreationEnabled
 This parameter is available or functional only in the cloud-based service.
 
-The GroupCreationEnabled parameter specifies whether Office 365 group creation is available in Outlook on the web. Valid values are:
+The GroupCreationEnabled parameter specifies whether Office 365 group creation is available in Outlook and Outlook on the web. Valid values are:
 
-- $true: Users can create Office 365 groups in Outlook on the web. This is the default value.
+- $true: Users can create Office 365 groups in Outlook and Outlook on the web. This is the default value.
 
-- $false: Users can't create Office 365 groups in Outlook on the web.
+- $false: Users can't create Office 365 groups in Outlook and Outlook on the web.
 
 ```yaml
 Type: Boolean
@@ -1659,11 +1659,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkEmailEnabled
-The ReportJunkEmailEnabled parameter specifies whether users can report messages to Microsoft or unsubscribe from messages in Outlook on the web. Valid values are:
+The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 
-- $true: The Report junk, Report phishing or Report not junk options are available after the user selects Mark as junk, Mark as phishing, or Mark as not junk. The Unsubscribe option is also available. This is the default value.
+- $true: This is the default value. Selecting a message in the Junk Email folder and clicking Not junk \> Not junk moves the message back into the Inbox and gives users the option to report the message to Microsoft. Selecting a message in any other email folder and clicking Junk \> Junk folder moves the message to the Junk Email folder and gives users the option to report the message to Microsoft. Selecting a message and clicking Not junk \> Phishing (in the Junk Email folder) and Junk \> Phishing (everywhere else) are available to report phishing messages to Microsoft.
 
-- $false: The Report junk, Report phishing, Report not junk and Unsubscribe options aren't available. Users can stil mark messages as junk, phishing, or not junk, but they won't be able to report messages to Microsoft.
+- $false: Selecting a message in the Junk Email folder and clicking Not junk \> Not junk moves the message back into the Inbox with no option to report the message to Microsoft. Selecting a message in any other email folder and clicking Junk \> Junk moves the message to the Junk Email folder with no option to report the message to Microsoft. Selecting a message and clicking Not junk \> Phishing (in the Junk Email folder) and Junk \> Phishing (everywhere else) are available to report phishing messages to Microsoft.
 
 This parameter is meaningful only when the JunkEmailEnabled parameter is set to $true.
 
