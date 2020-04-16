@@ -43,10 +43,10 @@ The command shown in Example 1 created the IP address '192.168.0.1' with no desc
 
 ###-------------------------- Example 2 --------------------------
 ```powershell
-PS C:\> New-CsTenantTrustedIPAddress -IPAddress "192.168.0.2" -MaskBits "24"
+PS C:\> New-CsTenantTrustedIPAddress -IPAddress "192.168.2.0" -MaskBits "24"
 ```
 
-The command shown in Example 2 created the IP address '192.168.0.2' with no description. The IP address is in IPv4 format, and the maskbits is set to 24.
+The command shown in Example 2 created the IP address '192.168.2.0' with no description. The IP address is in IPv4 format, and the maskbits is set to 24.
 
 IPv4 format IP address accepts maskbits from 0 to 32 inclusive.
 
