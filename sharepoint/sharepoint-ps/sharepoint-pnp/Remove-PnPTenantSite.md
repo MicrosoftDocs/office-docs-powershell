@@ -1,8 +1,9 @@
 ---
 external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptenantsite
-applicable: SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Remove-PnPTenantSite
 ---
 
 # Remove-PnPTenantSite
@@ -61,6 +62,8 @@ Accept pipeline input: False
 
 ### -SkipRecycleBin
 Do not add to the tenant scoped recycle bin when selected.
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
