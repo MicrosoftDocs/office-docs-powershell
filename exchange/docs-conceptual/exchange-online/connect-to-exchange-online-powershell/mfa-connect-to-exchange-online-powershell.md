@@ -130,7 +130,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
    ![Enter your verification code in the Exchange Online Remote PowerShell window](../../media/d3a405ce-5364-4732-a7bb-2cc9c678da2d.png)
 
 > [!NOTE]
-> Be sure to disconnect the remote PowerShell session when you're finished. 
+> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Exchange Online Remote PowerShell Module window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. 
 
 ```PowerShell
 Get-PSSession | Remove-PSSession
