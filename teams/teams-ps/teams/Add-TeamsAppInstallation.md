@@ -11,7 +11,7 @@ ms.reviewer:
 # Add-TeamsAppInstallation
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Add a Teams App to Microsoft Teams.
 
 ## SYNTAX
 
@@ -26,21 +26,21 @@ Add-TeamsAppInstallation -AppId <String> -UserId <String> [-Permissions <String>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Add a Teams App to Microsoft Teams.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Add-TeamsAppInstallation -AppId b9cc7986-dd56-4b57-ab7d-9c4e5288b775 -TeamId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df
 ```
 
-{{ Add example description here }}
+This example adds a Teams App to Microsoft Teams.
 
 ## PARAMETERS
 
 ### -AppId
-{{ Fill AppId Description }}
+Teams App identifier in Microsoft Teams.
 
 ```yaml
 Type: String
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Permissions
-{{ Fill Permissions Description }}
+RSC permissions for the Teams App.
 
 ```yaml
 Type: String
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamId
-{{ Fill TeamId Description }}
+Team identifier in Microsoft Teams.
 
 ```yaml
 Type: String
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-{{ Fill UserId Description }}
+User identifier in Microsoft Teams.
 
 ```yaml
 Type: String

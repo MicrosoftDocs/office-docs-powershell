@@ -11,7 +11,7 @@ ms.reviewer:
 # Update-TeamsAppInstallation
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Update a Teams App in Microsoft Teams.
 
 ## SYNTAX
 
@@ -28,21 +28,21 @@ Update-TeamsAppInstallation [-AppInstallationId <String>] [-AppId <String>] -Use
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Update a Teams App in Microsoft Teams.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Update-TeamsAppInstallation -AppId b9cc7986-dd56-4b57-ab7d-9c4e5288b775 -TeamId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df
 ```
 
-{{ Add example description here }}
+This example updates a Teams App in Microsoft Teams specifying its AppId and TeamId.
 
 ## PARAMETERS
 
 ### -AppId
-{{ Fill AppId Description }}
+Teams App identifier in Microsoft Teams.
 
 ```yaml
 Type: String
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppInstallationId
-{{ Fill AppInstallationId Description }}
+Installation identifier of the Teams App.
 
 ```yaml
 Type: String
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Permissions
-{{ Fill Permissions Description }}
+RSC permissions for the Teams App.
 
 ```yaml
 Type: String
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamId
-{{ Fill TeamId Description }}
+Team identifier in Microsoft Teams.
 
 ```yaml
 Type: String
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-{{ Fill UserId Description }}
+User identifier in Microsoft Teams.
 
 ```yaml
 Type: String

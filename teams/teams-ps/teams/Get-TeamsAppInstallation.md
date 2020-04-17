@@ -11,7 +11,7 @@ ms.reviewer:
 # Get-TeamsAppInstallation
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Get a Teams App installed in Microsoft Teams.
 
 ## SYNTAX
 
@@ -26,21 +26,21 @@ Get-TeamsAppInstallation -UserId <String> [-AppInstallationId <String>] [-AppId 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Get a Teams App installed in Microsoft Teams.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-TeamsAppInstallation -AppId b9cc7986-dd56-4b57-ab7d-9c4e5288b775 -TeamId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df
 ```
 
-{{ Add example description here }}
+This example gets a Teams App specifying its AppId and the TeamId.
 
 ## PARAMETERS
 
 ### -AppId
-{{ Fill AppId Description }}
+Teams App identifier in Microsoft Teams.
 
 ```yaml
 Type: String
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppInstallationId
-{{ Fill AppInstallationId Description }}
+Installation identifier of the Teams App.
 
 ```yaml
 Type: String
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamId
-{{ Fill TeamId Description }}
+Team identifier in Microsoft Teams.
 
 ```yaml
 Type: String
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-{{ Fill UserId Description }}
+User identifier in Microsoft Teams.
 
 ```yaml
 Type: String
