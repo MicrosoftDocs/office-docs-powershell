@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpterm
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPTerm
 ---
 
 # Get-PnPTerm
@@ -67,6 +68,14 @@ Get-PnPTerm -Identity "Small Finance" -TermSet "Departments" -TermGroup "Corpora
 ```
 
 Returns the term named "Small Finance", from the "Departments" termset in a term group called "Corporate" from the site collection termstore even if it's a subterm below "Finance"
+
+### ------------------EXAMPLE 5------------------
+```powershell
+$term = Get-PnPTerm -Identity "Small Finance" -TermSet "Departments" -TermGroup "Corporate" -Include Labels
+$term.Labels
+```
+
+Returns all the localized labels for the term named "Small Finance", from the "Departments" termset in a term group called "Corporate"
 
 ## PARAMETERS
 

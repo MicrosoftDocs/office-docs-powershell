@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/connect-pnponline
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Connect-PnPOnline
 ---
 
 # Connect-PnPOnline
@@ -125,6 +126,7 @@ Connect-PnPOnline -Url <String>
                   [-Realm <String>]
                   [-CreateDrive [<SwitchParameter>]]
                   [-DriveName <String>]
+                  [-AzureEnvironment <AzureEnvironment>]
                   [-Scopes <String[]>]
                   [-TenantAdminUrl <String>]
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
@@ -221,6 +223,7 @@ Connect-PnPOnline -Url <String>
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
                   [-HighTrustCertificateIssuerId <String>]
+                  [-UserName <String>]
                   [-NoTelemetry [<SwitchParameter>]]
 ```
 
@@ -261,6 +264,7 @@ Connect-PnPOnline -Url <String>
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
                   [-HighTrustCertificateIssuerId <String>]
+                  [-UserName <String>]
                   [-NoTelemetry [<SwitchParameter>]]
 ```
 
@@ -535,7 +539,7 @@ Only applicable to: SharePoint Online
 
 ```yaml
 Type: AzureEnvironment
-Parameter Sets: Azure Active Directory, App-Only with Azure Active Directory, App-Only with Azure Active Directory using certificate as PEM strings, App-Only with Azure Active Directory using certificate from certificate store by thumbprint, App-Only with Azure Active Directory using X502 certificates
+Parameter Sets: Azure Active Directory, App-Only with Azure Active Directory, App-Only with Azure Active Directory using certificate as PEM strings, App-Only with Azure Active Directory using certificate from certificate store by thumbprint, App-Only with Azure Active Directory using X502 certificates, Token
 
 Required: False
 Position: Named
@@ -1061,6 +1065,20 @@ If you want to connect to your SharePoint farm using ADFS with Certificate Authe
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Main
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -UserName
+Name of the user (login name) on whose behalf to create the access token. Supported input formats are SID and User Principal Name (UPN) in the format user@domain.local. If the parameter is not specified, an App Only Context is created.
+
+Only applicable to: SharePoint Server 2019, SharePoint Server 2016, SharePoint Server 2013
+
+```yaml
+Type: String
+Parameter Sets: High Trust using a X509Certificate2 object., High Trust using a certificate from a PFX file.
 
 Required: False
 Position: Named

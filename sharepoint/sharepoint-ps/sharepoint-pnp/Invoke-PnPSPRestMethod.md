@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/invoke-pnpsprestmethod
 applicable: SharePoint Online
 schema: 2.0.0
+title: Invoke-PnPSPRestMethod
 ---
 
 # Invoke-PnPSPRestMethod

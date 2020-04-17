@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/save-pnptenanttemplate
 applicable: SharePoint Online
 schema: 2.0.0
+title: Save-PnPTenantTemplate
 ---
 
 # Save-PnPTenantTemplate
@@ -13,8 +14,9 @@ Saves a PnP provisioning hierarchy to the file system
 ## SYNTAX 
 
 ```powershell
-Save-PnPTenantTemplate -Template <ProvisioningHierarchy>
+Save-PnPTenantTemplate -Template <ProvisioningHierarchyPipeBind>
                        -Out <String>
+                       [-Schema <XMLPnPSchemaVersion>]
                        [-Force [<SwitchParameter>]]
 ```
 
@@ -22,10 +24,33 @@ Save-PnPTenantTemplate -Template <ProvisioningHierarchy>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Save-PnPTenantTemplate -Template $template -Out .\tenanttemplate.pnp
+Save-PnPTenantTemplate -Template template.xml -Out .\tenanttemplate.pnp
 ```
 
 Saves a PnP tenant template to the file system
+
+### ------------------EXAMPLE 2------------------
+```powershell
+$template = Read-PnPTenantTemplate -Path template.xml
+Save-PnPTenantTemplate -Template $template -Out .\template.pnp
+```
+
+Saves a PnP tenant template to the file system as a PnP file. The schema used will the latest released schema when creating the PnP file regardless of the original schema
+
+### ------------------EXAMPLE 3------------------
+```powershell
+$template = Read-PnPTenantTemplate -Path template.xml
+Save-PnPTenantTemplate -Template $template -Out .\template.pnp -Schema V202002
+```
+
+Saves a PnP tenant template to the file system as a PnP file and converts the template in the PnP file to the specified schema.
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Read-PnPTenantTemplate -Path template.xml | Save-PnPTenantTemplate -Out .\template.pnp
+```
+
+Saves a PnP tenant template to the file system as a PnP file.
 
 ## PARAMETERS
 
@@ -53,16 +78,28 @@ Position: 0
 Accept pipeline input: False
 ```
 
-### -Template
-Allows you to provide an in-memory instance of a Tenant Template. When using this parameter, the -Out parameter refers to the path for saving the template and storing any supporting file for the template.
+### -Schema
+The optional schema to use when creating the PnP file. Always defaults to the latest schema.
 
 ```yaml
-Type: ProvisioningHierarchy
+Type: XMLPnPSchemaVersion
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Template
+Allows you to provide an in-memory instance of a Tenant Template or a filename of a template file in XML format. When using this parameter, the -Out parameter refers to the path for saving the template and storing any supporting file for the template.
+
+```yaml
+Type: ProvisioningHierarchyPipeBind
 Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: False
+Accept pipeline input: True
 ```
 
 ## RELATED LINKS
