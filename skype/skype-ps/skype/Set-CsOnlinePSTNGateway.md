@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -PidfloSupported
-Enables PIDFLO support on the PSTN Gateway. If turned on the .xml body payload is sent to the SBC with the location details of the user.
+Enables PIDF-LO support on the PSTN Gateway. If turned on the .xml body payload is sent to the SBC with the location details of the user.
 
 ```yaml
 Type: Boolean
