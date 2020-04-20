@@ -2226,6 +2226,9 @@ Removes the trusted security token service object. Platform: SharePoint Server 2
 #### [Remove-SPTrustedServiceTokenIssuer](Remove-SPTrustedServiceTokenIssuer.md)
 Deletes the object that represents the farm trust. Platform: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019.
 
+### [Revoke-SPObjectSecurity](Revoke-SPObjectSecurity.md)
+Removes a security principal from a SPObjectSecurity object.
+
 #### [Set-SPSecurityTokenServiceConfig](Set-SPSecurityTokenServiceConfig.md)
 Updates the settings of the SharePoint security token service (STS) identity provider. Platform: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019.
 
