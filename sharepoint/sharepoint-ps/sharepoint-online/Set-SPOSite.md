@@ -489,7 +489,8 @@ Accept wildcard characters: False
 
 ### -CommentsOnSitePagesDisabled
 
-PARAMVALUE: $true | $false
+Use this parameter to disable Comments section on Site Pages.
+The parameter can't be used for Groups Site Collections.
 
 ```yaml
 Type: Boolean
