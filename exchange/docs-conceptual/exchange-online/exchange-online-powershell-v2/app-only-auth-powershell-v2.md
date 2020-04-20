@@ -31,13 +31,14 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 - Connect using a local certificate:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com"
+  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" -RoutingHintUPN "admin_exo@contosoelectronics.com"
   ```
+In the above syntax, RoutingHintUPN takes the email of admin in the tenant for efficient routing of requests. Email ID of any admin in the organization works for app-only authentication scenarios.
 
 - Connect using a certificate thumbprint:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com"
+  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" -RoutingHintUPN "admin_exo@contosoelectronics.com"
   ```
 
 - Connect using an existing service principal and client-secret:
@@ -100,11 +101,11 @@ The following list describes other items that we're working on:
 - Support for more built-in RBAC roles (Exchange Service Admin, Global Reader, Recipient Admin)
 - Custom RBAC and mailbox scoping using Azure AD administrative units.
 - Delegation support in app-only scenarios
-- Support for Security & Compliance Center PowerShell cmdlets.
+
 
 ## Appendix
 
-### Step 1: Application registration in Azure AD
+## Step 1: Application registration in Azure AD
 
 If you encounter problems, check the [required permssions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
 
@@ -154,7 +155,7 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 7. Close the flyout when you're finished.
 
-### Step 3: Generate a self-signed certificate
+## Step 3: Generate a self-signed certificate
 
 Create a self-signed x.509 certificate using one of the following methods:
 
@@ -166,7 +167,7 @@ Create a self-signed x.509 certificate using one of the following methods:
 
 - Use the **makecert.exe** tool from the Windows SDK.
 
-### Step 4: Attach the certificate to the Azure AD application
+## Step 4: Attach the certificate to the Azure AD application
 
 After you register the certificate with your application, you can use the public key (.pfx file) or the thumbprint for authentication.
 
@@ -184,7 +185,7 @@ After you register the certificate with your application, you can use the public
 
 6. In the dialog that appears, browse to the self-signed certificate you created in the previous Step, and then click **Add**.
 
-### Step 5: Assign a role to the application
+## Step 5: Assign a role to the application
 
 Azure AD has more than 50 admin roles available. For app-only authentication in Exchange Online, we currently support the previously mentioned roles:
 
