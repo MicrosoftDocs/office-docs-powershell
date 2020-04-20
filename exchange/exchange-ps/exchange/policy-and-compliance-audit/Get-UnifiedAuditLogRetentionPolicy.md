@@ -131,7 +131,7 @@ The RecordType parameter filters the results by the record types that are define
 
 - Kaizala
 
-- LabelExplorer
+- LabelContentExplorer
 
 - MIPLabel
 
