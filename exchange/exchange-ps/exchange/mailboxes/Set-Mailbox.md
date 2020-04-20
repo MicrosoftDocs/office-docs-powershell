@@ -263,7 +263,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
  [-ForwardingAddress <RecipientIdParameter>]
  [-ForwardingSmtpAddress <ProxyAddress>]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
-[-GroupMailbox <MailboxIdParameter>]
+ [-GroupMailbox <MailboxIdParameter>]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImListMigrationCompleted <Boolean>]
  [-ImmutableId <String>]
@@ -295,6 +295,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
  [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
@@ -415,6 +416,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
  [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
@@ -535,6 +537,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
  [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
@@ -655,6 +658,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
  [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
@@ -772,6 +776,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayReleaseHoldApplied]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
  [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
@@ -892,6 +897,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDisabledArchive]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
  [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
@@ -1011,6 +1017,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
  [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
@@ -2615,7 +2622,7 @@ The EnableRoomMailboxAccount parameter specifies whether to enable the disabled 
 
 - $false: The account that's associated with the room mailbox is disabled. You can't use the account to logon to the room mailbox. This is the default value.
 
-Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Lync Room System or the Skype for Business Room System.
+Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
 
 In Exchange Online, a room mailbox with an associated enabled account doesn't require a license.
 
@@ -4357,19 +4364,17 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientLimits
-This parameter is available only in on-premises Exchange.
-
 The RecipientLimits parameter specifies the maximum number of recipients allowed in messages sent by the mailbox.
 
-A valid value is an integer or the value unlimited. The default value is unlimited.
+In on-premises Exchange, a valid value is an integer or the value unlimited. The default value is unlimited, which indicates the maximum number of recipients per message for the mailbox is controlled elsewhere (for example, organization, server, or connector limits).
 
-The value unlimited indicates the maximum number of recipients per message for the mailbox is controlled elsewhere (for example, organization, server, or connector limits).
+In the cloud-based service, a valid value is an integer from 1 to 1000.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

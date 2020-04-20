@@ -50,7 +50,7 @@ In this example, we defined a segment called NotSales that includes everyone who
 
 ### Example 3
 ```powershell
-New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" and "Position -ne 'Temporary'"
+New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" -and "Position -ne 'Temporary'"
 ```
 
 In this example, we defined a segment called LocalFTE that includes people who are locally located and whose positions are not listed as Temporary.
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

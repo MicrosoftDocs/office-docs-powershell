@@ -49,14 +49,12 @@ Additional site collections are now displayed. For example, all group and video 
 
 The Detailed parameter has been deprecated. It will continue to work with earlier versions
 
-Currently, Filter parameter is not functional.
-
 > [!NOTE]
 > Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.  
 
 You need to be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832.>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 > [!NOTE]
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
@@ -164,7 +162,8 @@ Accept wildcard characters: False
 
 ### -Filter
 
-Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form {$_PropertyName <operator> "filterValue"}. Valid operators are as follows: eq, ne, like, notlike.
+Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{$_PropertyName <operator> "filterValue"}`. Valid operators are as follows: eq, ne, like, notlike.
+ Currently, you can filter by these properties: Owner, Template, LockState, Url.
 
 > [!NOTE]
 > The operator values are case-sensitive.  

@@ -2,14 +2,15 @@
 Module Name: Microsoft Teams PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: teams
-Locale: en-US
 ---
 
 # Microsoft Teams PowerShell
+
 ## Description
 The following cmdlet references are for Microsoft Teams.
 
 ## Microsoft Teams Cmdlets
+
 ### [Add-TeamChannelUser](Add-TeamChannelUser.md)
 {{Manually Enter Add-TeamChannelUser Description Here}}
 
@@ -58,8 +59,8 @@ The following cmdlet references are for Microsoft Teams.
 ### [New-TeamChannel](New-TeamChannel.md)
 {{Manually Enter New-TeamChannel Description Here}}
 
-### [New-TeamsApp](New-TeamChannel.md)
-{{Manually Enter New-TeamChannel Description Here}}
+### [New-TeamsApp](New-TeamsApp.md)
+{{Manually Enter New-TeamsApp Description Here}}
 
 ### [Remove-Team](Remove-Team.md)
 {{Manually Enter Remove-Team Description Here}}
@@ -78,6 +79,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Set-Team](Set-Team.md)
 {{Manually Enter Set-Team Description Here}}
+
+### [Set-TeamArchivedState](Set-TeamArchivedState.md)
+{{Manually Enter Set-TeamArchivedState Description Here}}
 
 ### [Set-TeamChannel](Set-TeamChannel.md)
 {{Manually Enter Set-TeamChannel Description Here}}

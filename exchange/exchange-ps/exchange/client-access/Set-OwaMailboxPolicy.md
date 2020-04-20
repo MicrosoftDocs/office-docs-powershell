@@ -389,7 +389,7 @@ Accept wildcard characters: False
 ### -BlockedFileTypes
 The BlockedFileTypes parameter specifies a list of attachment file types (file extensions) that can't be saved locally or viewed from Outlook on the web. The default values are:
 
-.ade, .adp, .app, .appcontent-ms, .asp, .aspx, .asx, .bas, .bat, .cer, .chm, .cmd, .cnt, .com, .cpl, .crt, .csh, .der, .diagcab, .exe, .fxp, .gadget, .grp, .hlp, .hpj, .hta, .htc, .inf, .ins, .isp, .its, .jar, .jnlp, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mcf, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .msu, .ops, .osd, .pcd, .pif, .pl, .plg, .prf, .prg, .printerexport, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .psd1, .psdm1, .pst, .reg, .scf, .scr, .sct, .settingcontent-ms, .shb, .shs, .theme, .tmp, .url, .vb, .vbe, .vbp, .vbs, .vsmacros, .vsw, .webpnp, .website, .ws, .wsc, .wsf, .wsh, .xbap, .xll, .xnk
+.ade, .adp, .app, .appcontent-ms, .appref-ms, .asp, .aspx, .asx, .bas, .bat, .cdxml, .cer, .chm, .cmd, .cnt, .com, .cpl, .crt, .csh, .der, .diagcab, .exe, .fxp, .gadget, .grp, .hlp, .hpj, .hta, .htc, .inf, .ins, .isp, .its, .jar, .jnlp, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mcf, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .msu, .ops, .osd, .pcd, .pif, .pl, .plg, .prf, .prg, .printerexport, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .psd1, .psdm1, .pssc, .pst, .py, .pyc, .pyo, .pyw, .pyz, .pyzw, .reg, .scf, .scr, .sct, .settingcontent-ms, .shb, .shs, .theme, .tmp, .udl, .url, .vb, .vbe, .vbp, .vbs, .vsmacros, .vsw, .webpnp, .website, .ws, .wsb, .wsc, .wsf, .wsh, .xbap, .xll, .xnk
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -525,7 +525,7 @@ This parameter is available only in the cloud-based service.
 
 The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access. For this feature to work properly, you also need to configure a Conditional Access policy in the Azure Active Directory Portal.
 
-Note: When you enable a Conditional Access policy, users will not longer be able to access the light version of Outlook on the web. An error message will direct them to use the default premium experience.
+Note: When you enable a Conditional Access policy, users will no longer be able to access the light version of Outlook on the web. An error message will direct them to use the default premium experience.
 
 Valid values are:
 
@@ -1033,11 +1033,11 @@ Accept wildcard characters: False
 ### -GroupCreationEnabled
 This parameter is available or functional only in the cloud-based service.
 
-The GroupCreationEnabled parameter specifies whether Office 365 group creation is available in Outlook on the web. Valid values are:
+The GroupCreationEnabled parameter specifies whether Office 365 group creation is available in Outlook and Outlook on the web. Valid values are:
 
-- $true: Users can create Office 365 groups in Outlook on the web. This is the default value.
+- $true: Users can create Office 365 groups in Outlook and Outlook on the web. This is the default value.
 
-- $false: Users can't create Office 365 groups in Outlook on the web.
+- $false: Users can't create Office 365 groups in Outlook and Outlook on the web.
 
 ```yaml
 Type: Boolean
@@ -1659,11 +1659,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkEmailEnabled
-The ReportJunkEmailEnabled parameter specifies whether users can report messages to Microsoft or unsubscribe from messages in Outlook on the web. Valid values are:
+The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 
-- $true: The Report junk, Report phishing or Report not junk options are available after the user selects Mark as junk, Mark as phishing, or Mark as not junk. The Unsubscribe option is also available. This is the default value.
+- $true: This is the default value. Selecting a message in the Junk Email folder and clicking Not junk \> Not junk moves the message back into the Inbox and gives users the option to report the message to Microsoft. Selecting a message in any other email folder and clicking Junk \> Junk folder moves the message to the Junk Email folder and gives users the option to report the message to Microsoft. Selecting a message and clicking Not junk \> Phishing (in the Junk Email folder) and Junk \> Phishing (everywhere else) are available to report phishing messages to Microsoft.
 
-- $false: The Report junk, Report phishing, Report not junk and Unsubscribe options aren't available. Users can stil mark messages as junk, phishing, or not junk, but they won't be able to report messages to Microsoft.
+- $false: Selecting a message in the Junk Email folder and clicking Not junk \> Not junk moves the message back into the Inbox with no option to report the message to Microsoft. Selecting a message in any other email folder and clicking Junk \> Junk moves the message to the Junk Email folder with no option to report the message to Microsoft. Selecting a message and clicking Not junk \> Phishing (in the Junk Email folder) and Junk \> Phishing (everywhere else) are available to report phishing messages to Microsoft.
 
 This parameter is meaningful only when the JunkEmailEnabled parameter is set to $true.
 

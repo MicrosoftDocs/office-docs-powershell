@@ -34,7 +34,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [<CommonParameters>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>][<CommonParameters>]
 ```
 
 ### ParamSet2
@@ -121,6 +121,16 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $tru
 ```
 
 Example 6 enables the site "site1" to create  Project Web Applications (PWA).
+
+### -----------------------EXAMPLE 7-----------------------------
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingCapability ExternalUserSharingOnly
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingDomainRestrictionMode AllowList -SharingAllowedDomainList "contoso.com"
+```
+
+Example 7 sets the Sharing Capability to allow external users who accept sharing invitations and sign in as authenticated users, and then specifies an email domain that is allowed for sharing with the external collaborators.
+
 
 ## PARAMETERS
 
@@ -329,6 +339,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SensitivityLabel
+
+Used to specify the unique identifier (GUID) of the SensitivityLabel.
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SandboxedCodeActivationCapability
 
 PARAMVALUE: Unknown | Check | Disabled | Enabled
@@ -463,7 +489,8 @@ Accept wildcard characters: False
 
 ### -CommentsOnSitePagesDisabled
 
-PARAMVALUE: $true | $false
+Use this parameter to disable Comments section on Site Pages.
+The parameter can't be used for Groups Site Collections.
 
 ```yaml
 Type: Boolean

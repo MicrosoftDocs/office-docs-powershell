@@ -15,7 +15,10 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-PhishFilterPolicy cmdlet to configure the phish filter policy in your cloud-based organization.
+Use the Set-PhishFilterPolicy cmdlet to configure the spoof intelligence policy in your cloud-based organization.
+
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -23,7 +26,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-PhishFilterPolicy [-Identity] <HostedConnectionFilterPolicyIdParameter> -SpoofAllowBlockList <String>
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-Action <SetPhishFilterPolicyAction>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,38 +41,34 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"
+Get-PhishFilterPolicy -Detailed | Export-CSV "C:\My Documents\Spoofed Senders.csv"
 $UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"
 Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
 ```
 
-This configures the phish filter policy to block or allow all spoofed email messages from a source messaging server.
+This example configures the spoof intelligence policy to block or allow all spoofed email messages from a source email server.
 
 - Step 1: Write the output of the Get-PhishFilterPolicy cmdlet to a CSV file.
-
-- Step 2: Add or modify the SpoofedUser, and AllowedToSpoof values in the CSV file, save the file, and then read the file and store it as a variable named $UpdateSpoofedSenders.
-
-- Step 3: Use the $UpdateSpoofedSenders variable to configure the phish filter policy.
+- Step 2: Add or modify the SpoofedUser and AllowedToSpoof values in the CSV file, save the file, and then read the file and store it as a variable named $UpdateSpoofedSenders.
+- Step 3: Use the $UpdateSpoofedSenders variable to configure the spoof intelligence policy.
 
 ### Example 2
 ```powershell
-Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "C:\My Documents\Spoofed Senders.csv"
+Get-PhishFilterPolicy -Detailed | Export-CSV "C:\My Documents\Spoofed Senders.csv"
 $UpdateSpoofedSenders = Get-Content -Raw "C:\My Documents\Spoofed Senders.csv"
 Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSpoofedSenders
 ```
 
-This example configures the phish filter policy to selectively block or allow some spoofed email messages from a source messaging server.
+This example configures the spoof intelligence policy to selectively block or allow some spoofed email messages from a source email server.
 
 - Step 1: Write the output of the Get-PhishFilterPolicy cmdlet to a CSV file.
-
 - Step 2: Add or modify the Sender, SpoofedUser, and AllowedToSpoof values in the CSV file, save the file, and then read the CSV file and store it as a variable named $UpdateSpoofedSenders.
-
-- Step 3: Use the $UpdateSpoofedSenders variable to configure the phish filter policy.
+- Step 3: Use the $UpdateSpoofedSenders variable to configure the spoof intelligence policy.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the phish filter policy that you want to modify. The only available value is Default.
+The Identity parameter specifies the spoof intelligence policy that you want to modify. The only valid value is Default.
 
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter
@@ -82,30 +83,16 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -SpoofAllowBlockList
-The SpoofAllowBlockList parameter specifies the CSV file that you want to use to configure the phish filter policy.
-
-A valid value for this parameter reads the CSV file and stores it as a variable. For example, run the command $SpoofedUsers = Get-Content -Raw \<PathAndFileName\>.csv, and then use the value $SpoofedUsers for this parameter.
-
-There are two basic options for the CSV file:
-
-- Block or allow all spoofed mail from the source: You want to block or allow any and all spoofed messages from the specified message source, regardless of the spoofed email address. You can get the CSV file by running the command Get-PhishFilterPolicy -SpoofAllowBlockList | Export-CSV "\<PathAndFileName\>.csv". The important header fields (column headers) are Sender (the domain of the source messaging server from DNS records, or the IP address if there aren't any DNS records) and AllowedToSpoof (indicates whether the message source is allowed to send spoofed messages. Valid values are Yes or No).
-
-- Block or allow some spoofed mail from the source: You want to block or allow some spoofed messages from the specified message source, but not others. You can get the CSV file by running the command Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "\<PathAndFileName\>.csv". The important header fields (column headers) are:
-
-- Sender: The domain of the source messaging server from DNS records, or the IP address if there aren't any DNS records.
-
-- SpoofedUser: The spoofed email address in your organization that the messages appear to be coming from.
-
-- AllowedToSpoof: Indicates whether messages that contain the spoofed sender from the source messaging server are allowed. Valid values are Yes or No.
+### -Action
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: String
+Type: SetPhishFilterPolicyAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -126,6 +113,40 @@ Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpoofAllowBlockList
+The SpoofAllowBlockList parameter specifies the CSV file that you want to use to configure the spoof intelligence policy.
+
+A valid value for this parameter reads the CSV file and stores it as a variable. For example, run the command `$SpoofedUsers = Get-Content -Raw "<PathAndFileName>.csv"`, and then use the value `$SpoofedUsers` for this parameter.
+
+There are two basic options for the CSV file:
+
+- **Block or allow all spoofed mail from the source**: You want to block or allow any and all spoofed messages from the specified message source, regardless of the spoofed email address. You can get the CSV file by running the command `Get-PhishFilterPolicy -Detailed | Export-CSV "<PathAndFileName>.csv"`. The important header fields (column headers) are:
+
+  **Sender**: The domain of the source email server from DNS records, or the IP address if there aren't any DNS records.
+
+  **AllowedToSpoof**: Indicates whether the message source is allowed to send spoofed messages. Valid values are Yes or No.
+
+- **Block or allow some spoofed mail from the source**: You want to block or allow some spoofed messages from the specified message source, but not others. You can get the CSV file by running the command `Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "<PathAndFileName>.csv"`. The important header fields (column headers) are:
+
+  **Sender**: The domain of the source email server from DNS records, or the IP address if there aren't any DNS records.
+
+  **SpoofedUser**: The spoofed email address in your organization that the messages appear to be coming from.
+
+  **AllowedToSpoof**: Indicates whether messages that contain the spoofed sender from the source email server are allowed. Valid values are Yes or No.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

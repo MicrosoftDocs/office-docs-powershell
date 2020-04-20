@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnptenanttemplate
 applicable: SharePoint Online
 schema: 2.0.0
+title: New-PnPTenantTemplate
 ---
 
 # New-PnPTenantTemplate

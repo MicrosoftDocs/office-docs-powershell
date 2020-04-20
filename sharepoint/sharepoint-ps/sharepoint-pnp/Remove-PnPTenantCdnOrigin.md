@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptenantcdnorigin
 applicable: SharePoint Online
 schema: 2.0.0
+title: Remove-PnPTenantCdnOrigin
 ---
 
 # Remove-PnPTenantCdnOrigin
@@ -27,7 +28,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Remove-PnPTenantCdnOrigin -Url /sites/site/subfolder -CdnType Public
+Remove-PnPTenantCdnOrigin -OriginUrl /sites/site/subfolder -CdnType Public
 ```
 
 This example removes the specified origin from the public CDN

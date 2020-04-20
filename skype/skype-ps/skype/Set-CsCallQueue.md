@@ -18,8 +18,7 @@ Updates a Call Queue in your Skype for Business Online organization.
 ## SYNTAX
 
 ```
-Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-MusicOnHoldAudioFileId <Guid>] [-Name <String>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] 
-[-OverflowThreshold <Int16>] [-RoutingMethod <Object>] [-TimeoutAction <Object>] [-Tenant <Guid>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [<CommonParameters>]
+Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-MusicOnHoldAudioFileId <Guid>] [-Name <String>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] [-RoutingMethod <Object>] [-TimeoutAction <Object>] [-Tenant <Guid>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-PresenceBasedRouting <Boolean>] [-Users <List>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,11 +38,10 @@ This example updates the Call Queue with identity e7e00636-47da-449c-a36b-1b3d6e
 
 ### -------------------------- Example 2 -------------------------- 
 ```
-Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldAudioFileId 4d7361c1-5b46-4f69-b125-cf35a098a341
+Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldAudioFileId 4d7361c1-5b46-4f69-b125-cf35a098a341
 ```
 
 This example updates the Call Queue with new distribution lists and references a new music on hold audio file.
-
 
 ## PARAMETERS
 
@@ -294,6 +292,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PresenceBasedRouting
+The PresenceBasedRouting parameter indicates whether or not presence based routing will be applied while call being routed to Call Queue agents. When set to False, calls will be routed to agents who have opted in to receive calls, regardless of their presence state. When set to True, opted-in agents will receive calls only when their presence state is Available.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Users
+The Users parameter lets you add agents to the Call Queue. This parameter expects a list of user unique identifiers (GUID).
+
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tenant
 This parameter is reserved for Microsoft internal use only.
 
@@ -322,4 +352,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -2,7 +2,6 @@
 Module Name: SharePoint Migration Tool
 Module Guid: joece26c-1775-4100-85c0-20c4d71eaa21
 Title: SharePoint Migration Tool
-Locale: en-US
 content_git_url: https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/spmt/spmt-ps/spmt/spmt.md
 ---
 

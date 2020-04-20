@@ -24,6 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddEndpointDlpLocation <MultiValuedProperty>]
+ [-AddEndpointDlpLocationException <MultiValuedProperty>]
  [-AddExchangeLocation <MultiValuedProperty>]
  [-AddOneDriveLocation <MultiValuedProperty>]
  [-AddOneDriveLocationException <MultiValuedProperty>]
@@ -38,6 +40,8 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Force]
  [-Mode <PolicyMode>]
  [-Priority <Int32>]
+ [-RemoveEndpointDlpLocation <MultiValuedProperty>]
+ [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocation <MultiValuedProperty>]
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
@@ -110,6 +114,38 @@ Aliases:
 Applicable: Office 365 Security & Compliance Center
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddEndpointDlpLocation
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddEndpointDlpLocationException
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -384,6 +420,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveEndpointDlpLocation
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveEndpointDlpLocationException
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveExchangeLocation
 This parameter is reserved for internal Microsoft use.
 
@@ -509,7 +577,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

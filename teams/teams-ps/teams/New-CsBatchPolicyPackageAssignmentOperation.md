@@ -12,8 +12,7 @@ schema: 2.0.0
 # New-CsBatchPolicyPackageAssignmentOperation
 
 ## SYNOPSIS
-
-This cmdlet submits an operation that applies a policy package to a batch of users in a tenant.
+This cmdlet submits an operation that applies a policy package to a batch of users in a tenant. A batch may contain up to 5000 users.
 
 ## SYNTAX
 
