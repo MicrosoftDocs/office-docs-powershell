@@ -399,10 +399,6 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Restore-SPODeletedSite Description Here}}
 
-### [Revoke-SPObjectSecurity](Revoke-SPObjectSecurity.md)
-
-{{Manually Enter Revoke-SPObjectSecurity Description Here}}
-
 ### [Revoke-SPOHubSiteRights](Revoke-SPOHubSiteRights.md)
 
 {{Manually Enter Revoke-SPOHubSiteRights Description Here}}
