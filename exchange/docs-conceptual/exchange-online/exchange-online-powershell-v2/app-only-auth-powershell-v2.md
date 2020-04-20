@@ -33,7 +33,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```powershell
   Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" -RoutingHintUPN "admin_exo@contosoelectronics.com"
   ```
-In the above syntax, RoutingHintUPN takes the email of admin in the tenant for efficient routing of requests. Email ID of any admin in the organization works for app-only authentication scenarios.
+  The _RoutingHintUPN_ value is an admin email address in the tenant, and is used for efficient routing of requests. The email address of any admin in the organization works for app-only authentication scenarios.
 
 - Connect using a certificate thumbprint:
 
