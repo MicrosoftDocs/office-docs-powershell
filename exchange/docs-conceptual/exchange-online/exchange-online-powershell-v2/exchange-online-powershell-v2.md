@@ -282,8 +282,22 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ## Release notes
 
-### Current release: Version 0.4368.1
+### Current release: Version 0.4578.0
+- Added support for configuring Briefing Email for your organization at the user level with "Set-UserBriefingConfig" and "Get-UserBriefingConfig" cmdlets.
 
+- Support for session cleanup using Disconnect-ExchangeOnline cmdlet. This cmdlet is V2 equivalent of "Get-PSSession | Remove-PSSession". In addition to cleaning up session object and local files, it also removes access token from cache which is used for authenticating against V2 cmdlets.
+
+- You can now use FolderId as identity parameter in Get-ExoMailboxFolderPermission. You can get folderId using Get-MailboxFolder cmdlet. Below are the supported syntax for getting folder permissions -
+        > Get-MailboxFolderPermission -Identity <UPN>:<Folder-Path>
+        > Get-MailboxFolderPermission -Identity <UPN>:\<Folder-Id>
+
+- Improved reliability of Get-ExoMailboxStatistics cmdlet as certain request routing errors which led to failures have been resolved
+
+- Optimized memory usage when session is created by re-using any existing module with a new session instead of creating a new one every time session is imported
+
+### Previous releases
+
+#### Version 0.4368.1
 - Added support for Office 365 Security & Compliance Center PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
 
 - Hide the announcement banner using the _ShowBanner_ switch. Run the following command to hide the banner:
@@ -295,8 +309,6 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 - Terminate cmdlet execution on client exception.
 
 - Remote PowerShell contained various complex data types which were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.
-
-### Previous releases
 
 #### Version 0.3582.0
 
