@@ -24,7 +24,7 @@ Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignalingPort <Int32>] [-Fa
 [-GatewaySiteLbrEnabled <Boolean>] [-MediaRelayRoutingLocationOverride] [-Identity <XdsGlobalRelativeIdentity>] 
 [-BypassMode <String>] [-GenerateRingingWhileLocatingUser <Boolean>] 
 [-InboundTeamsNumberTranslationRules <String>] [-InboundPSTNNumberTranslationRules <String>] 
-[-OutboundTeamsNumberTranslationRules <String>] [-OutboundPSTNNumberTranslationRules <String>] 
+[-OutboundTeamsNumberTranslationRules <String>] [-PidfloSupported <Boolean>] [-OutboundPSTNNumberTranslationRules <String>] 
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -368,6 +368,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PidfloSupported
+Enables PIDFLO support on the PSTN Gateway. If turned on the .xml body payload is sent to the SBC with the location details of the user.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: $false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
