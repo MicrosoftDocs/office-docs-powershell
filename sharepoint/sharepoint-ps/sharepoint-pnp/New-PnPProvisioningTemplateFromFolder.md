@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpprovisioningtemplatefromfolder
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: New-PnPProvisioningTemplateFromFolder
 ---
 
 # New-PnPProvisioningTemplateFromFolder
@@ -233,4 +234,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Encoding](https://msdn.microsoft.com/en-us/library/system.text.encoding_properties.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Encoding](https://docs.microsoft.com/dotnet/api/system.text.encoding)

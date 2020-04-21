@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/export-pnptaxonomy
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Export-PnPTaxonomy
 ---
 
 # Export-PnPTaxonomy
@@ -43,14 +44,14 @@ Exports the full taxonomy the file output.txt
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Export-PnPTaxonomy -Path c:\output.txt -TermSet f6f43025-7242-4f7a-b739-41fa32847254
+Export-PnPTaxonomy -Path c:\output.txt -TermSetId f6f43025-7242-4f7a-b739-41fa32847254
 ```
 
 Exports the term set with the specified id
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-Export-PnPTaxonomy -Path c:\output.txt -TermSet f6f43025-7242-4f7a-b739-41fa32847254 -Lcid 1044
+Export-PnPTaxonomy -Path c:\output.txt -TermSetId f6f43025-7242-4f7a-b739-41fa32847254 -Lcid 1044
 ```
 
 Exports the term set with the specified id using Norwegian labels

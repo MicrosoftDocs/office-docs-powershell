@@ -3,12 +3,13 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpclientsidecomponent
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Get-PnPClientSideComponent
 ---
 
 # Get-PnPClientSideComponent
 
 ## SYNOPSIS
-Retrieve one or more Client-Side components from a page
+Retrieve one or more Client-Side components from a site page
 
 ## SYNTAX 
 
@@ -18,6 +19,9 @@ Get-PnPClientSideComponent -Page <ClientSidePagePipeBind>
                            [-Web <WebPipeBind>]
                            [-Connection <SPOnlineConnection>]
 ```
+
+## DESCRIPTION
+This command allows the retrieval of the components placed on a modern sitepage along with its properties. Note that for a newly created modern site, the Home.aspx page will not be returning any components. This is because the underlying CanvasContent1 will not be populated until the homepage has been edited and published. The reason for this behavior is to allow for the default homepage to be able to be updated by Microsoft as long as it hasn't been modified. For any other site page or after editing and publishing the homepage, this command will return the correct components as they are positioned on the site page.
 
 ## EXAMPLES
 
