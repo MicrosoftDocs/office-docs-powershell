@@ -25,16 +25,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MessageTrace [-EndDate <DateTime>] [-Expression <Expression>] [-FromIP <String>]
- [-MessageId <MultiValuedProperty>] [-MessageTraceId <Guid>] [-Page <Int32>] [-PageSize <Int32>]
- [-ProbeTag <String>] [-RecipientAddress <MultiValuedProperty>] [-SenderAddress <MultiValuedProperty>]
- [-StartDate <DateTime>] [-Status <MultiValuedProperty>] [-ToIP <String>] [<CommonParameters>]
+Get-MessageTrace
+ [-EndDate <DateTime>]
+ [-Expression <Expression>]
+ [-FromIP <String>]
+ [-MessageId <MultiValuedProperty>]
+ [-MessageTraceId <Guid>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-RecipientAddress <MultiValuedProperty>]
+ [-SenderAddress <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [-Status <MultiValuedProperty>]
+ [-ToIP <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to search message data for the last 10 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
+You can use this cmdlet to search message data for the last 30 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
 
-If you enter a time period that's older than 10 days, you won't receive an error, but the command will return no results. To search for message data that's between 10 and 90 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
+If you enter a time period that's older than 30 days, you won't receive an error, but the command will return no results. To search for message data that's between 10 and 90 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
 
 This cmdlet returns a maximum of 1000000 results, and will timeout on very large queries. If your query returns too many results, consider splitting it up using smaller StartDate and EndDate intervals.
 
