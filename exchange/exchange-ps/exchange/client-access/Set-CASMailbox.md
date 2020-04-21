@@ -748,7 +748,7 @@ The IsOptimizedForAccessibility parameter specifies whether the mailbox is confi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
