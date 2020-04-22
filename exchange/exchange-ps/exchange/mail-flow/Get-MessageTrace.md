@@ -43,9 +43,13 @@ Get-MessageTrace
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to search message data for the last 30 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
+You can use this cmdlet to search message data for the last 10 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
 
-If you enter a time period that's older than 30 days, you won't receive an error, but the command will return no results. To search for message data that's between 30 and 90 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
+If you enter a start date that is greater than 10 days and less than or equal to 30 days, only 10 days of data will be returned.
+
+If you enter a start date that is older than 30 days, you will receive an error and the command will return no results.
+
+To search for message data that is greater than 10 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
 
 This cmdlet returns a maximum of 1000000 results, and will timeout on very large queries. If your query returns too many results, consider splitting it up using smaller StartDate and EndDate intervals.
 
