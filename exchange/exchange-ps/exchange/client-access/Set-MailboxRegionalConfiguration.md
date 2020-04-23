@@ -22,12 +22,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter> [-Confirm] [-DateFormat <String>]
- [-DomainController <Fqdn>] [-Language <CultureInfo>] [-LocalizeDefaultFolderName] [-TimeFormat <String>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [<CommonParameters>]
+Set-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter>
+ [-Confirm] [-DateFormat <String>]
+ [-DomainController <Fqdn>]
+ [-Language <CultureInfo>]
+ [-LocalizeDefaultFolderName]
+ [-TimeFormat <String>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+As shown in Example 5, you might need to set the DateFormat and TimeFormat parameter values to $null when you change the Language parameter value and you recieve an error about invalid DateFormat values.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
