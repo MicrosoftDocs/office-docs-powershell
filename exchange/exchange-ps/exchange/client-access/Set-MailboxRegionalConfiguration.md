@@ -61,6 +61,13 @@ Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited | Set-Mailbo
 
 This example sets all User Mailboxes language to Spanish Spain, sets the date in the day/month/year format, sets the time in the H:mm format and localizes the default forder names in Spanish.
 
+### Example 5
+```powershell
+Set-MailboxRegionalConfiguration -Identity "Megan Bowen" -Language es-ar -DateFormat $null -TimeFormat $null -LocalizeDefaultFolderName
+```
+
+This example sets Megan Bowen mailbox language to Spanish Argentina, sets the date and time format to default value for es-ar, and localizes the default folder names in Spanish.
+
 ## PARAMETERS
 
 ### -Identity
