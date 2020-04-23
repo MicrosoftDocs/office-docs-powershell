@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -DateFormat
-The DateFormat parameter specifies the date format based on the current or specified language for the mailbox. For example, if the language is set to en-US, valid DateFormat parameter values include:
+The DateFormat parameter specifies a valid date format based on the current or specified language for the mailbox. For example, if the language is set to en-US, valid DateFormat parameter values include:
 
 - M/d/yyyy: This is the default value for en-US.
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeFormat
-The TimeFormat parameter specifies the time format based on the current or specified language value for the mailbox. For example, if the language is set to en-us, valid TimeFormat parameter values include:
+The TimeFormat parameter specifies a valid time format based on the current or specified language value for the mailbox. For example, if the language is set to en-us, valid TimeFormat parameter values include:
 
 - h:mm tt: This is the default value for en-US.
 
