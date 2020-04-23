@@ -82,7 +82,7 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-  <sup>\*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
 
@@ -278,27 +278,56 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 ```
 
 > [!NOTE]
-> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the requires properties.
+> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the required properties.
 
 ## Release notes
 
-### Current release ( Version 0.3582.0 )
-- Support for prefix during session creation
-    > You can create only 1 session at a time which can have prefixed cmdlets.
-    > Note that the EXO V2 cmdlets will not be prefixed as they already have a prefix EXO and hence please refrain from using EXO as a prefix during session creation.
+### Current release: Version 0.4578.0
 
-- Use EXO V2 cmdlets even if WinRM Basic Auth is disabled on client machine
-    > Please note that Remote PowerShell cmdlets require WinRM Basic Auth to be enabled and they won't be available if it is disabled.
+- Added support for configuring the Briefing Email for your organization at the user level with **Set-UserBriefingConfig** and **Get-UserBriefingConfig** cmdlets.
 
--  Identity parameter for V2 cmdlets now supports name and alias as well
-    > Please note that using alias or name slows down the performance of V2 cmdlets and hence it is not recommended to use this option
+- Support for session cleanup using **Disconnect-ExchangeOnline** cmdlet. This cmdlet is the V2 equivalent of `Get-PSSession | Remove-PSSession`. In addition to cleaning up session object and local files, it also removes the access token from cache, which is used for authenticating against V2 cmdlets.
 
-- Fixed issue where data-type of attributes returned by V2 cmdlet was different from Remote PowerShell cmdlets. We still have few attributes which have differing data-type and we plan to handle them in coming months.
+- You can now use `FolderId` as an identity parameter in **Get-EXOMailboxFolderPermission**. You can get the `FolderId` value using **Get-MailboxFolder**. For example:
 
-- Fixed bug - Frequent sessions reconnects issue when Connect-ExchangeOnline was invoked with Credentials or UserPrincipalName
+  `Get-MailboxFolderPermission -Identity <UPN>:<Folder-Path>`
+  
+  `Get-MailboxFolderPermission -Identity <UPN>:\<Folder-Id>`
 
+- Improved reliability of **Get-EXOMailboxStatistics** as certain request routing errors which led to failures have been resolved.
+
+- Optimized memory usage when a session is created by re-using any existing module with a new session instead of creating a new one every time session is imported.
 
 ### Previous releases
+
+#### Version 0.4368.1
+
+- Added support for Office 365 Security & Compliance Center PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
+
+- Hide the announcement banner using the _ShowBanner_ switch. Run the following command to hide the banner:
+
+  ```powershell
+  Connect-ExchangeOnline -ShowBanner:$false
+  ```
+
+- Terminate cmdlet execution on client exception.
+
+- Remote PowerShell contained various complex data types which were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.
+
+#### Version 0.3582.0
+
+- Support for prefix during session creation.
+
+  - You can create only 1 session at a time that contains prefixed cmdlets.
+  - Note that the EXO V2 cmdlets will not be prefixed as they already have the prefix EXO, so don't use `EXO` as a prefix.
+
+- Use EXO V2 cmdlets even if WinRM Basic Auth is disabled on client machine. Note that remote PowerShell cmdlets require WinRM Basic Auth, and they won't be available if it's disabled.
+
+-  Identity parameter for V2 cmdlets now supports Name and Alias as well. Note that using Alias or Name slows down the performance of V2 cmdlets, so we don't recommend using them.
+
+- Fixed issue where the data type of attributes returned by V2 cmdlet was different from remote PowerShell cmdlets. We still have few attributes which have differing data types, and we plan to handle them in coming months.
+
+- Fixed bug: Frequent sessions reconnects issue when Connect-ExchangeOnline was invoked with Credentials or UserPrincipalName
 
 #### Version 0.3555.1
 

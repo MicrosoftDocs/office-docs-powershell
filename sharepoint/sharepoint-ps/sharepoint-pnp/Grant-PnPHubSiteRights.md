@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/grant-pnphubsiterights
 applicable: SharePoint Online
 schema: 2.0.0
+title: Grant-PnPHubSiteRights
 ---
 
 # Grant-PnPHubSiteRights
@@ -20,17 +21,10 @@ Grant-PnPHubSiteRights [-Connection <SPOnlineConnection>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com","myotheruser@mydomain.com" -Rights Join
+Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com","myotheruser@mydomain.com"
 ```
 
 This example shows how to grant rights to myuser and myotheruser to associate their sites with the provided Hub Site
-
-### ------------------EXAMPLE 2------------------
-```powershell
-Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com" -Rights None
-```
-
-This example shows how to revoke rights from myuser to associate their sites with the provided Hub Site
 
 ## PARAMETERS
 

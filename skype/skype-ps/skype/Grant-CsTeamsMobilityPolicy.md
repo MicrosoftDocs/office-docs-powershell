@@ -39,7 +39,7 @@ The Grant-CsTeamsMobilityPolicy cmdlet lets an Admin assign a custom teams mobil
 
 ### Example 1
 ```powershell
-PS C:\>  Grant-CsTeamsCallParkPolicy -PolicyName SalesPolicy -Identity "Ken Myer"
+PS C:\>  Grant-CsTeamsMobilityPolicy -PolicyName SalesPolicy -Identity "Ken Myer"
 ```
 Assigns a custom policy "Sales Policy" to the user "Ken Myer"
 
