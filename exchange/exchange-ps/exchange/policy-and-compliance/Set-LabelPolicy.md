@@ -303,11 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-The Enabled parameter enables or disable the policy. Valid values are:
-
-- $true: The policy is enabled. This is the default value.
-
-- $false: The policy is disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
