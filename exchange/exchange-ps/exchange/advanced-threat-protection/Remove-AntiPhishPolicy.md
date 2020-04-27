@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-AntiPhishPolicy cmdlet to remove antiphishing policies from your cloud-based organization.
+Use the Remove-AntiPhishPolicy cmdlet to remove antiphish policies from your Office 365 Advanced Threat Protection (ATP) organization. You can't remove antiphish policies in Exchange Online Protection (EOP).
 
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
@@ -39,12 +39,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-AntiPhishPolicy -Identity "Quarantine Policy"
 ```
 
-This example removes the antiphishing policy named Quarantine Policy.
+This example removes the antiphish policy named Quarantine Policy.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the antiphishing policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the antiphish policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
