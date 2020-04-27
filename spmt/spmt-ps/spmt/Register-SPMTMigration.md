@@ -152,6 +152,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IgnoreUpdate
+The default setting is OFF.
+
+Skip the checking and installation of new updates, even when a new version of PowerShell SPMT is available.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableMultiRound
 The default setting is Off.
 This means the migration will only do one check round to make sure no new changes or additions were made since the previous run.

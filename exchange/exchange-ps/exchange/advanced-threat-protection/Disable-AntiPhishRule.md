@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Disable-AntiPhishRule cmdlet to disable enabled antiphishing rules in your cloud-based organization.
+Use the Disable-AntiPhishRule cmdlet to disable antiphish rules in your Office 365 Advanced Threat Protection (ATP) organization. There are no antiphish rules in Exchange Online Protection (EOP).
 
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
@@ -38,12 +38,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Disable-AntiPhishRule -Identity "Engineering Department Phishing Rule"
 ```
 
-This example disables the antiphishing rule named Engineering Department Phishing Rule.
+This example disables the antiphish rule named Engineering Department Phishing Rule.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the antiphishing rule that you want to disable. You can use any value that uniquely identifies the rule. For example:
+The Identity parameter specifies the antiphish rule that you want to disable. You can use any value that uniquely identifies the rule. For example:
 
 - Name
 

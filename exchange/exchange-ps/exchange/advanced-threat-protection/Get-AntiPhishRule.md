@@ -15,7 +15,8 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-AntiPhishRule cmdlet to view antiphishing rules in your cloud-based organization.
+Use the Get-AntiPhishRule cmdlet to view antiphish rules in your Office 365 Advanced Threat Protection (ATP) organization. There are no antiphish rules in Exchange Online Protection (EOP).
+
 
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
@@ -35,22 +36,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-AntiPhishRule
+Get-AntiPhishRule | Format-Table Name,Priority,State
 ```
 
-This example returns a summary list of all antiphishing rules in your organization.
+This example returns a summary list of all antiphish rules in your organization.
 
 ### Example 2
 ```powershell
-Get-AntiPhishRule -Identity "Research Department Phishing Rule" | Format-List
+Get-AntiPhishRule -Identity "Research Department Phishing Rule"
 ```
 
-This example returns detailed information about the antiphishing rule named Research Department Phishing Rule.
+This example returns detailed information about the antiphish rule named Research Department Phishing Rule.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the antiphishing rule that you want to view. You can use any value that uniquely identifies the rule. For example:
+The Identity parameter specifies the antiphish rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
 

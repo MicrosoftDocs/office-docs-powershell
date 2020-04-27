@@ -15,8 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-AntiPhishRule cmdlet to modify antiphishing rules in your cloud-based organization.
-
+Use the Set-AntiPhishRule cmdlet to modify antiphish rules in your Office 365 Advanced Threat Protection (ATP) organization. There are no antiphish rules in Exchange Online Protection (EOP).
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
@@ -50,12 +49,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-AntiPhishRule -Identity "Engineering Department Phishing Rule" -ExceptIfRecipientDomainIs fabrikam.com
 ```
 
-This example modifies the existing antiphishing rule named Engineering Department Phishing Rule to exclude messages sent to the fabrikam.com domain.
+This example modifies the existing antiphish rule named Engineering Department Phishing Rule to exclude messages sent to the fabrikam.com domain.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the antiphishing rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
+The Identity parameter specifies the antiphish rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
 - Name
 
@@ -77,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -AntiPhishPolicy
-The AntiPhishPolicy parameter specifies the antiphishing policy that's associated with the antiphishing rule. The rule defines the conditions, and the policy defines the actions.
+The AntiPhishPolicy parameter specifies the antiphish policy that's associated with the antiphish rule. The rule defines the conditions, and the policy defines the actions.
 
 You can use any value that uniquely identifies the policy. For example:
 
@@ -213,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the antiphishing rule. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the antiphish rule. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
