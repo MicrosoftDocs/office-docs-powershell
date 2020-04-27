@@ -15,7 +15,7 @@ After a session is registered, the user can add a migration task to the migratio
 ## SYNTAX
 
 ```
-Register-SPMTMigration [-Credentials <PSCredential>][-Incremental <bool>]  [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToKeep <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-WorkingFolder <string>] -Force
+Register-SPMTMigration [-Credentials <PSCredential>][-Incremental <bool>]  [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToKeep <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-WorkingFolder <string>] -Force [-IgnoreUpdate <switch parameter>]
 ```
 
 ## DESCRIPTION
@@ -126,6 +126,24 @@ Type: SwitchParameter
 Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -IgnoreUpdate
+The default setting is OFF.
+
+Skip the checking and installation of new updates, even when a new version of PowerShell SPMT is available.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
 Required: False
 Position: Named
 Default value: False
