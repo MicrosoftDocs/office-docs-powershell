@@ -169,12 +169,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Incremental
-The default setting is On. This lets you rerun the migration with same source and target at a later date, migrating only the changes or additions since the previous run.
-
-Important: If you wish to be able to submit the same job again for incremental migration, this setting must be set to On * before* the initial migration job is submitted.
-
-
 ### -EnableMultiRound
 The default setting is Off.
 This means the migration will only do one check round to make sure no new changes or additions were made since the previous run.
