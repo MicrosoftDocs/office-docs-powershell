@@ -43,11 +43,15 @@
         href: exchange-server/recipient-filters/filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
         href: exchange-server/recipient-filters/recipientfilter-properties.md
-  - name: Exchange Online PowerShell V2
+    - name: Automate tasks in Exchange Online PowerShell
+      href: exchange-online/automate-exchange-online-tasks.md
+        - name: Exchange Online PowerShell V2
     href: exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2.md
     items:
     - name: Property sets in cmdlets
       href: exchange-online/exchange-online-powershell-v2/cmdlet-property-sets.md
+    - name: Filterable properties for EXO V2 module cmdlets
+      href: exchange-online/exchange-online-powershell-v2/filterable-properties-in-exo-v2-cmdlets.md
   - name: Office 365 Security & Compliance Center PowerShell
     href: office-365-scc/office-365-scc-powershell.md
     items:
