@@ -17,7 +17,7 @@ robots: noindex,nofollow
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks."
 ---
 
-# App-only authentication in Exchange Online PowerShell (Preview)
+# Automating tasks in Exchange Online using PowerShell (Preview)
 
 > [!NOTE]
 > The features described in this topic are in Preview, are not available to everyone, and are subject to change.
@@ -31,15 +31,15 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 - Connect using a local certificate:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" -RoutingHintUPN "admin_exo@contosoelectronics.com"
+  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com"
   ```
-  The _RoutingHintUPN_ value is an admin email address in the tenant, and is used for efficient routing of requests. The email address of any admin in the organization works for app-only authentication scenarios.
-
+ 
 - Connect using a certificate thumbprint:
 
   ```powershell
   Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" -RoutingHintUPN "admin_exo@contosoelectronics.com"
   ```
+   When CertificateThumbPrint is passed, the certificate needs to be installed in machine from where cmdlet is invoked. Certificate should be installed in user cert store.
 
 - Connect using an existing service principal and client-secret:
 
