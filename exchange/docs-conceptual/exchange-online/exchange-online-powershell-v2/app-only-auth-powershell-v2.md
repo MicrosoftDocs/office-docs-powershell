@@ -17,7 +17,7 @@ robots: noindex,nofollow
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks."
 ---
 
-# Automating tasks in Exchange Online using PowerShell (Preview)
+# Automate tasks in Exchange Online using PowerShell (Preview)
 
 > [!NOTE]
 > The features described in this topic are in Preview, are not available to everyone, and are subject to change.
@@ -39,7 +39,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```powershell
   Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" -RoutingHintUPN "admin_exo@contosoelectronics.com"
   ```
-   When CertificateThumbPrint is passed, the certificate needs to be installed in machine from where cmdlet is invoked. Certificate should be installed in user cert store.
+  When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
 
 - Connect using an existing service principal and client-secret:
 
