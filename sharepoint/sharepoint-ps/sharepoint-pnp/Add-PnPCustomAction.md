@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpcustomaction
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPCustomAction
 ---
+
 # Add-PnPCustomAction
 
 ## SYNOPSIS
@@ -16,10 +19,12 @@ Add-PnPCustomAction -Name <String>
                     -Title <String>
                     -Location <String>
                     -ClientSideComponentId <GuidPipeBind>
+                    [-Sequence <Int>]
                     [-RegistrationId <String>]
                     [-RegistrationType <UserCustomActionRegistrationType>]
                     [-Scope <CustomActionScope>]
                     [-ClientSideComponentProperties <String>]
+                    [-ClientSideHostProperties <String>]
                     [-Web <WebPipeBind>]
                     [-Connection <SPOnlineConnection>]
 ```
@@ -62,14 +67,14 @@ Adds a new custom action to the custom list template, and sets the Title, Name a
 Add-PnPCustomAction -Title "CollabFooter" -Name "CollabFooter" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId c0ab3b94-8609-40cf-861e-2a1759170b43 -ClientSideComponentProperties "{`"sourceTermSet`":`"PnP-CollabFooter-SharedLinks`",`"personalItemsStorageProperty`":`"PnP-CollabFooter-MyLinks`"}
 ```
 
-Adds a new application customizer to the site. This requires that an SPFX solution has been deployed containing the application customizer specified.
+Adds a new application customizer to the site. This requires that an SPFX solution has been deployed containing the application customizer specified. Be sure to run Install-PnPApp before trying this cmdlet on a site.
 
 ## PARAMETERS
 
 ### -ClientSideComponentId
 The Client Side Component Id of the custom action
 
-Only applicable to: SharePoint Online
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: GuidPipeBind
@@ -82,6 +87,20 @@ Accept pipeline input: False
 
 ### -ClientSideComponentProperties
 The Client Side Component Properties of the custom action. Specify values as a json string : "{Property1 : 'Value1', Property2: 'Value2'}"
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
+```yaml
+Type: String
+Parameter Sets: Client Side Component Id
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -ClientSideHostProperties
+The Client Side Host Properties of the custom action. Specify values as a json string : "{'preAllocatedApplicationCustomizerTopHeight': '50', 'preAllocatedApplicationCustomizerBottomHeight': '50'}"
 
 Only applicable to: SharePoint Online
 
@@ -219,7 +238,7 @@ Sequence of this CustomAction being injected. Use when you have a specific seque
 
 ```yaml
 Type: Int
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: False
 Position: Named
@@ -276,4 +295,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[UserCustomAction](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.usercustomaction.aspx)[BasePermissions](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.basepermissions.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[UserCustomAction](https://docs.microsoft.com/en-us/previous-versions/office/sharepoint-server/ee539583(v=office.15))[BasePermissions](https://docs.microsoft.com/en-us/previous-versions/office/sharepoint-server/ee543321(v=office.15))

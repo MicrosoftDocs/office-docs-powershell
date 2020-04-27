@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/grant-csclientpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsClientPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Grant-CsClientPolicy
@@ -13,13 +18,18 @@ Assigns a client policy to a user or a group of users.
 Among other things, client policies help determine the features of Skype for Business Server that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 This cmdlet was introduced in Lync Server 2010.
 
-
-
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsClientPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-DomainController <Fqdn>]
- [-PassThru] [-WhatIf] [-Confirm] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Grant-CsClientPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsClientPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,16 +47,13 @@ In order to assign per-user policies to users, you must use the Grant-CsClientPo
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 Grant-CsClientPolicy -Identity "Ken Myer" -PolicyName SalesPolicy
 ```
 
 In Example 1, the client policy SalesPolicy is assigned to the user with the Identity Ken Myer.
 
-
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 Get-CsUser -LDAPFilter "Department=Sales" | Grant-CsClientPolicy -PolicyName SalesPolicy
 ```
 
@@ -54,12 +61,9 @@ In Example 2, all the users who belong to the Sales department are assigned the 
 The command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the users who are members of the Sales department.
 This collection of users is then piped to the Grant-CsClientPolicy cmdlet, which assigns the policy SalesPolicy to each user in the collection.
 
-
 ### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-
 Get-CsUser -LDAPFilter "(&(Title=Accountant)(l=Redmond))" | Grant-CsClientPolicy -PolicyName RedmondAccountingPolicy
-
 ```
 
 In Example 3, the client policy RedmondAccountingPolicy is assigned to all the users who meet two criteria: 1) the user must have the job title Accountant; and, 2) the user must work in the city of Redmond.
@@ -69,10 +73,8 @@ The filter value "(&(Title=Accountant)(l=Redmond))" limits the returned data to 
 
 The resulting collection is then piped to the Grant-CsClientPolicy cmdlet, which assigns the policy RedmondAccountingPolicy to each user in the collection.
 
-
 ### -------------------------- EXAMPLE 4 -------------------------- 
 ```
-
 Get-CsUser -LdapFilter "(|(Title=Accountant)(Title=Senior Accountant))" | Grant-CsClientPolicy -PolicyName AccountingPolicy
 ```
 
@@ -81,10 +83,8 @@ To carry out this task, the Get-CsUser cmdlet and the LdapFilter parameter are u
 The filter value "(|(Title=Accountant)(Title=Senior Accountant))" limits the returned data to users with the job title Accountant (Title=Accountant) or (|) users with the job title Senior Accountant (Title=Senior Accountant).
 This filtered collection is then piped to the Grant-CsClientPolicy cmdlet, which assigns the client policy AccountingPolicy to each user in the collection.
 
-
 ### -------------------------- EXAMPLE 5 -------------------------- 
 ```
-
 Get-CsUser -Filter {RegistrarPool -eq "atl-cs-001.litwareinc.com"} | Grant-CsClientPolicy -PolicyName AtlantaBranchPolicy
 ```
 
@@ -95,16 +95,12 @@ This collection is then piped to the Grant-CsClientPolicy cmdlet, which assigns 
 ## PARAMETERS
 
 ### -Identity
-
 Indicates the Identity of the user account the policy should be assigned to.
 User Identities can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
 User Identities can also be referenced by using the user's Active Directory distinguished name.
 
 In addition, you can use the asterisk (*) wildcard character when using the Display Name as the user Identity.
 For example, the Identity "* Smith" returns all the users who have a display name that ends in the string value " Smith".
-
-
-
 
 ```yaml
 Type: UserIdParameter
@@ -120,7 +116,6 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope ("tag:").
 For example, a policy that has the Identity tag:Redmond has a PolicyName equal to Redmond; a policy with the Identity tag:RedmondConferencingPolicy has a PolicyName equal to RedmondConferencingPolicy.
@@ -129,8 +124,6 @@ If you set PolicyName to a null value, then the command will unassign any per-us
 For example:
 
 `Grant-CsClientPolicy -Identity "Ken Myer" -PolicyName $Null`
-
-
 
 ```yaml
 Type: String
@@ -146,11 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
 Enables you to specify a domain controller to connect to when assigning the policy.
 If this parameter is not included then the cmdlet will use the first available domain controller.
-
-
 
 ```yaml
 Type: Fqdn
@@ -166,11 +156,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
 If present, causes the cmdlet to pass the user object (or objects) through the Windows PowerShell pipeline.
 By default, the Grant-CsClientPolicy cmdlet does not pass objects through the pipeline.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -232,7 +219,7 @@ Instead, the tenant ID will automatically be filled in for you based on your con
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -245,7 +232,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -261,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

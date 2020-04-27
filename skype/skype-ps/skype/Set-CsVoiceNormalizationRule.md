@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csvoicenormalizationrule
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsVoiceNormalizationRule
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsVoiceNormalizationRule
@@ -15,25 +20,18 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsVoiceNormalizationRule [[-Identity] <XdsIdentity>] [-Description <String>]
- [-IsInternalExtension <Boolean>] [-Priority <Int32>] [-Pattern <String>] [-Translation <String>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsVoiceNormalizationRule [-Tenant <Guid>] [-Description <String>] [-Pattern <String>]
+ [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [[-Identity] <XdsIdentity>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsVoiceNormalizationRule [-Instance <PSObject>] [-Description <String>] [-IsInternalExtension <Boolean>]
- [-Priority <Int32>] [-Pattern <String>] [-Translation <String>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsVoiceNormalizationRule [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-Description <Object>] [-Force] [-Instance <Object>] [-IsInternalExtension <Object>] [-Pattern <Object>]
- [-Priority <Object>] [-Tenant <Object>] [-Translation <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsVoiceNormalizationRule [-Tenant <Guid>] [-Description <String>] [-Pattern <String>]
+ [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [-Instance <PSObject>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,20 +86,6 @@ Next, we pass the variable to the Instance parameter of the `Set-CsVoiceNormaliz
 A unique identifier for the rule.
 The Identity specified must include the scope followed by a slash followed by the name; for example: site:Redmond/Rule1, where site:Redmond is the scope and Rule1 is the name.
 
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
@@ -123,19 +107,6 @@ This object must be of type NormalizationRule and can be retrieved by calling th
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -288,43 +259,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -337,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/remove-cspushnotificationconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsPushNotificationConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Remove-CsPushNotificationConfiguration
@@ -175,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -192,8 +197,8 @@ Instead, the `Remove-CsPushNotificationConfiguration` cmdlet deletes instances o
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-cspushnotificationconfiguration?view=skype-ps)
+[Set-CsPushNotificationConfiguration](https://docs.microsoft.com/powershell/module/skype/set-cspushnotificationconfiguration?view=skype-ps)
 
-[New-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/new-cspushnotificationconfiguration?view=skype-ps)
+[New-CsPushNotificationConfiguration](https://docs.microsoft.com/powershell/module/skype/new-cspushnotificationconfiguration?view=skype-ps)
 
-[Get-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-cspushnotificationconfiguration?view=skype-ps)
+[Get-CsPushNotificationConfiguration](https://docs.microsoft.com/powershell/module/skype/get-cspushnotificationconfiguration?view=skype-ps)

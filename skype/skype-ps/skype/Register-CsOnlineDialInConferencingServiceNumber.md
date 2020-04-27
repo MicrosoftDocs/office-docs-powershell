@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/register-csonlinedialinconferencingservicenumber
 applicable: Skype for Business Online
 title: Register-CsOnlineDialInConferencingServiceNumber
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Register-CsOnlineDialInConferencingServiceNumber
@@ -12,10 +17,18 @@ Provide the topic introduction here.
 
 ## SYNTAX
 
+### UniqueNumberParams
 ```
-Register-CsOnlineDialInConferencingServiceNumber [[-Identity] <Object>] [[-Instance] <Object>]
- [-BridgeId <Object>] [-BridgeName <Object>] [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-Tenant <Object>] [-TenantDomain <Object>] [-AsJob] [<CommonParameters>]
+Register-CsOnlineDialInConferencingServiceNumber [-Identity] <String> [-BridgeId <Guid>]
+ [-BridgeName <String>] [-Tenant <Guid>] [-TenantDomain <String>] [-DomainController <Fqdn>] [-Force]
+ [<CommonParameters>]
+```
+
+### InstanceParams
+```
+Register-CsOnlineDialInConferencingServiceNumber [-Instance] <ConferencingServiceNumber>
+ [-BridgeId <Guid>] [-BridgeName <String>] [-Tenant <Guid>] [-TenantDomain <String>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +50,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -53,7 +66,7 @@ Accept wildcard characters: False
 PARAMVALUE: ConferencingServiceNumber
 
 ```yaml
-Type: Object
+Type: ConferencingServiceNumber
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -69,7 +82,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -85,23 +98,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -117,7 +114,7 @@ Accept wildcard characters: False
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -149,7 +146,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -165,23 +162,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -194,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

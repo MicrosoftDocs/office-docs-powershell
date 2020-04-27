@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sproutingrule
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPRoutingRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPRoutingRule
@@ -22,22 +27,22 @@ Set-SPRoutingRule [-Identity] <SPRoutingRulePipeBind> [-AssignmentCollection <SP
 ## DESCRIPTION
 Use the `Set-SPRoutingRule` cmdlet to change properties of an existing routing rule.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$wa = Get-SPWebApplication http://webAppUrl
-PS C:\>$rm = Get-SPRequestManagementSettings -Identity $wa
-PS C:\>Get-SPRoutingRule -RequestManagementSettings $rm
-PS C:\>$machines = Get-SPRoutingMachineInfo -RequestManagementSettings $rm
-PS C:\>$pool = Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
-PS C:\>$criteria = New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
-PS C:\>$rule = Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
-PS C:\>$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
-PS C:\>Set-SPRoutingRule -Identity $rule -Criteria $criteriaNew
+$wa = Get-SPWebApplication https://webAppUrl
+$rm = Get-SPRequestManagementSettings -Identity $wa
+Get-SPRoutingRule -RequestManagementSettings $rm
+$machines = Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+$pool = Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
+$criteria = New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
+$rule = Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
+$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
+Set-SPRoutingRule -Identity $rule -Criteria $criteriaNew
 ```
 
 This example sets a routing rule for the specified identity by using the $rule variable.
@@ -52,7 +57,7 @@ Specifies the name of the request management settings object to set.
 Type: SPRoutingRulePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -70,7 +75,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -86,7 +91,7 @@ Specifies the criteria for the rule to match.
 Type: SPRequestManagementRuleCriteriaPipeBind[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -102,7 +107,7 @@ Specifies the group in which the rule will be placed.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +123,7 @@ Specifies the expiration date and time of the rule.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -134,7 +139,7 @@ Specifies the pool of machines to which a request will be routed if the changed 
 Type: SPRoutingMachinePoolPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -144,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

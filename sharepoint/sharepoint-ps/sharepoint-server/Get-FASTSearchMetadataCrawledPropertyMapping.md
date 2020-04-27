@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatacrawledpropertymapping
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchMetadataCrawledPropertyMapping
 ---
 
@@ -26,7 +31,7 @@ Get-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty <ManagedProperty> 
 This cmdlet retrieves a list of the crawled properties that are mapped to a managed property.
 The managed property can be specified with the Name parameter or by a ManagedPropertyImpl object as returned by Get-FASTSearchMetadataManagedProperty (using the ManagedProperty parameter).
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
@@ -39,8 +44,8 @@ This example returns a list of crawled properties that are mapped to the managed
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>$managedproperty = Get-FASTSearchMetadataManagedProperty -name title
-PS C:\>Get-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty $managedproperty
+$managedproperty = Get-FASTSearchMetadataManagedProperty -name title
+Get-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty $managedproperty
 ```
 
 This example first retrieves a ManagedPropertyImpl object, and then uses it to look up the corresponding crawled property mappings.
@@ -48,8 +53,8 @@ It returns all crawled properties that are set up to map content into this manag
 
 ### ---------------EXAMPLE 3-----------------
 ```
-PS C:\>$crawledproperty = Get-FASTSearchmetadataCrawledProperty -name title
-PS C:\>$crawledproperty.GetMappedManagedProperties()
+$crawledproperty = Get-FASTSearchmetadataCrawledProperty -name title
+$crawledproperty.GetMappedManagedProperties()
 ```
 
 These commands are the opposite of Get-FASTSearchMetdataCrawledPropertyMapping; they find all managed properties that have a mapping for a specific crawled property.
@@ -90,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

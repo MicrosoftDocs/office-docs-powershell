@@ -1,40 +1,44 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/set-eventloglevel
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-EventLogLevel
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
-# Set-eventloglevel
+# Set-EventLogLevel
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-EventLogLevel cmdlet to set the event log level registry value for the specified category.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-eventloglevel [-Identity] <ECIdParameter> -Level <Lowest | Low | Medium | High | Expert> [-Confirm]
+Set-EventLogLevel [-Identity] <ECIdParameter> -Level <ECIdParameter> [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-EventLogLevel -Identity "Exchange01\MSExchangeTransport\SmtpReceive" -Level High
 ```
 
 This example sets the event log level to High for the MSExchangeTransport\\SmtpReceive event logging category on the Exchange server Exchange01.
 
-Note: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see Get-EventLogLevel.
+Note: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see [Get-EventLogLevel](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-eventloglevel).
 
 ## PARAMETERS
 
@@ -45,7 +49,8 @@ The Identity parameter specifies the name of the event logging category for whic
 Type: ECIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -67,10 +72,11 @@ The Level parameter specifies the log level for the specific event logging categ
 - Expert
 
 ```yaml
-Type: Lowest | Low | Medium | High | Expert
+Type: ECIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -89,7 +95,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -104,7 +111,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -113,20 +121,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/797f1691-32b7-4752-bb01-fea54cc28e1c.aspx)

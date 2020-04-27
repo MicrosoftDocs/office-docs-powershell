@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spmetadataserviceapplicationproxy
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPMetadataServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPMetadataServiceApplicationProxy
@@ -23,14 +28,14 @@ Set-SPMetadataServiceApplicationProxy [-Identity] <SPMetadataServiceProxyCmdletP
 ## DESCRIPTION
 Use the `Set-SPMetadataServiceApplicationProxy` cmdlet to set the properties of a connection to a managed metadata service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### -----------------EXAMPLE 1---------------------
 ```
-C:\PS>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled -ContentTypePushdownEnabled
+Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled -ContentTypePushdownEnabled
 ```
 
 This example enables content type syndication and enables content type pushdown on an existing connection to a managed metadata service application.
@@ -38,7 +43,7 @@ This example enables content type syndication and enables content type pushdown 
 
 ### -----------------EXAMPLE 2---------------------
 ```
-C:\PS>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled:$false -ContentTypePushdownEnabled:$false
+Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled:$false -ContentTypePushdownEnabled:$false
 ```
 
 This example disables content type syndication and disables content type pushdown on an existing connection to a managed metadata service application.
@@ -46,7 +51,7 @@ This example disables content type syndication and disables content type pushdow
 
 ### -----------------EXAMPLE 3---------------------
 ```
-C:\PS>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -DefaultKeywordTaxonomy -DefaultSiteCollectionTaxonomy:$false
+Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -DefaultKeywordTaxonomy -DefaultSiteCollectionTaxonomy:$false
 ```
 
 This example configures an existing connection to a managed metadata service application to be the default location for storing enterprise keywords and prevents it from being the default location for storing column-specific term sets.
@@ -63,7 +68,7 @@ The type must be a GUID that represents the identity of the connection to modify
 Type: SPMetadataServiceProxyCmdletPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -85,7 +90,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -102,7 +107,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +123,7 @@ Specifies that existing instances of changed content types in subsites and libra
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -134,7 +139,7 @@ Specifies that this connection will provide access to the content types that are
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -152,7 +157,7 @@ Do not make more than one connection the default keyword location.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -170,7 +175,7 @@ Do not make more than one connection the default location for site collection te
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -187,7 +192,7 @@ The name can contain a maximum of 128 characters.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -203,7 +208,7 @@ Specifies that the connection be added to the default proxy group of the farm.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -220,7 +225,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -230,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

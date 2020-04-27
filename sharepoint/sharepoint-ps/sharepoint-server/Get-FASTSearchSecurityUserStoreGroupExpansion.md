@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecurityuserstoregroupexpansion
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchSecurityUserStoreGroupExpansion
 ---
 
@@ -20,13 +25,13 @@ Get-FASTSearchSecurityUserStoreGroupExpansion [-Identity] <String> [-User] <Stri
 ## DESCRIPTION
 This cmdlet gets all the groups in a user store that the user is a member of, and all the groups that any owning group is a member of.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln1 -User user1
+Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln1 -User user1
 ```
 
 This example gets all the groups in the "ln1" user store that are parents, grand-parents, etc.
@@ -34,7 +39,7 @@ of the "user1" user.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln2 -User user1
+Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln2 -User user1
 ```
 
 This example gets all the groups in the "ln2" user store from the worker with a server name of "workerserver" that are parents, grand-parents, etc.
@@ -91,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

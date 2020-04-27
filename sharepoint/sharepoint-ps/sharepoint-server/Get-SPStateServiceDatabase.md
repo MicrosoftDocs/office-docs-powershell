@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spstateservicedatabase
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPStateServiceDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPStateServiceDatabase
@@ -27,32 +32,32 @@ Get-SPStateServiceDatabase [[-ServiceApplication] <SPStateServiceApplicationPipe
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Get-SPStateServiceDatabase cmdlet returns a state service database on the farm.
 If the Identity parameter is not specified, this cmdlet returns the collection of all state service databases on the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1---------------- 
 ```
-C:\PS>Get-SPStateServiceDatabase
+Get-SPStateServiceDatabase
 ```
 
 This example displays all of the state service databases on the farm.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-C:\PS>Get-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
+Get-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
 ```
 
 This example displays a specific state service database in the farm.
 
 ### --------------EXAMPLE 3-------------- 
 ```
-C:\PS>Get-SPStateServiceDatabase -ServiceApplication "StateServiceApp1"
+Get-SPStateServiceDatabase -ServiceApplication "StateServiceApp1"
 ```
 
 This example displays all state service databases associated with a specific service.
@@ -68,7 +73,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPStateDatabasePipeBind
 Parameter Sets: Default
 Aliases: Name
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -86,7 +91,7 @@ The type must be a valid name of a state service application (for example, State
 Type: SPStateServiceApplicationPipeBind
 Parameter Sets: ServiceApplication
 Aliases: Application
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -108,7 +113,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -125,7 +130,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -142,7 +147,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -152,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

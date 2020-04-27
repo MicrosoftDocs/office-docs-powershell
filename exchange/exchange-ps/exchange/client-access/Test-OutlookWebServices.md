@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/test-outlookwebservices
 applicable: Exchange Server 2010
 title: Test-OutlookWebServices
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -13,25 +17,25 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Test-OutlookWebServices cmdlet to verify the Autodiscover service settings for Microsoft Outlook on a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
  [-ClientAccessServer <ClientAccessServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-MonitoringContext <$true | $false>] [-TargetAddress <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+ [-MonitoringContext <Boolean>] [-TargetAddress <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Test-OutlookWebServices cmdlet uses a specified e-mail address to verify that the Outlook provider is configured correctly.
+The Test-OutlookWebServices cmdlet uses a specified  address to verify that the Outlook provider is configured correctly.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-OutlookWebServices -Identity:holly@contoso.com
 ```
 
@@ -59,6 +63,7 @@ Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -78,6 +83,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -93,6 +99,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -101,13 +108,14 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies any valid e-mail address in the forest. If you specify this parameter, incorrectly formed e-mail addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and user name in the domain\\user name format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
+The Identity parameter specifies any valid address in the forest. If you specify this parameter, incorrectly formed  addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and username in the domain\\username format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
 
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -119,10 +127,11 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether the results of the command include monitoring events and performance counters. The two possible values for this parameter are $true or $false. If you specify $true, the results include monitoring events and performance counters, in addition to information about the MAPI transaction.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +147,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +163,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -161,20 +172,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/c41152b0-b304-4b13-b8ea-a24e2c2c3ea8.aspx)

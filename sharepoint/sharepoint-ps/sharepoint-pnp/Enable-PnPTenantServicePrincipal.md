@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/enable-pnptenantserviceprincipal
 applicable: SharePoint Online
 schema: 2.0.0
+title: Enable-PnPTenantServicePrincipal
 ---
+
 # Enable-PnPTenantServicePrincipal
 
 ## SYNOPSIS
@@ -46,4 +49,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spprofileserviceapplicationproxy
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPProfileServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPProfileServiceApplicationProxy
@@ -29,20 +34,20 @@ New-SPProfileServiceApplicationProxy -Uri <Uri> [-AssignmentCollection <SPAssign
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The `New-SPProfileServiceApplicationProxy` creates a User Profile Service application proxy on the local farm.
 The proxy is added to the default proxy group for the local farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$sa = New-SPProfileServiceApplication -Name 'User Profile Service Application' -ApplicationPool 'SharePoint Web Services Default' -ProfileDBName Profile -SocialDBName Social -ProfileSyncDBname Sync
-PS C:\>New-ProfileServiceApplicationProxy -Name 'User Profile Service Application Proxy' -ServiceApplication $sa -DefaultProxyGroup
+$sa = New-SPProfileServiceApplication -Name 'User Profile Service Application' -ApplicationPool 'SharePoint Web Services Default' -ProfileDBName Profile -SocialDBName Social -ProfileSyncDBname Sync
+New-SPProfileServiceApplicationProxy -Name 'User Profile Service Application Proxy' -ServiceApplication $sa -DefaultProxyGroup
 ```
 
 This example creates a new User Profile Service application proxy.
@@ -59,7 +64,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPServiceApplicationPipeBind
 Parameter Sets: Application
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -76,7 +81,7 @@ This value is required only if you plan to connect a User Profile Service applic
 Type: Uri
 Parameter Sets: Uri
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -98,7 +103,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -115,7 +120,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +136,7 @@ Specifies that the User Profile Service application proxy be added to the defaul
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -151,7 +156,7 @@ The type must be a name of a valid User Profile Service application proxy; for e
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -168,7 +173,7 @@ After the PartitionMode parameter is set and the service application is created,
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -185,7 +190,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -195,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

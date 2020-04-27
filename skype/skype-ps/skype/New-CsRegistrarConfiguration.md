@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csregistrarconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRegistrarConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # New-CsRegistrarConfiguration
@@ -373,7 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCertificateReplicationThreshold
-PARAMVALUE: UInt64
+Minimum interval in minutes for user certificate to be replicated.
 
 ```yaml
 Type: UInt64
@@ -389,7 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### -WinFabMaxLogsSizeMb
-PARAMVALUE: Int32
+Limits the maximum disk space used by Fabric traces.  Only applies to deployments using Windows Fabric 3.0 or newer
 
 ```yaml
 Type: Int32
@@ -405,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

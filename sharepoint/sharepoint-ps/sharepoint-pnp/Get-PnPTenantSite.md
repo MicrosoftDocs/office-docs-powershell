@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantsite
+applicable: SharePoint Online, SharePoint 2016, SharePoint 2019
 schema: 2.0.0
+title: Get-PnPTenantSite
 ---
+
 # Get-PnPTenantSite
 
 ## SYNOPSIS
@@ -78,6 +81,8 @@ Returns all sites including 'sales' in the url
 ### -Detailed
 By default, not all returned attributes are populated. This switch populates all attributes. It can take several seconds to run. Without this, some attributes will show default values that may not be correct.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -89,6 +94,8 @@ Accept pipeline input: False
 
 ### -Filter
 Specifies the script block of the server-side filter to apply. See https://technet.microsoft.com/en-us/library/fp161380.aspx
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -102,6 +109,8 @@ Accept pipeline input: False
 ### -IncludeOneDriveSites
 By default, the OneDrives are not returned. This switch includes all OneDrives.
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -113,6 +122,8 @@ Accept pipeline input: False
 
 ### -Template
 By default, all sites will be returned. Specify a template value alike "STS#0" here to filter on the template
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -126,6 +137,8 @@ Accept pipeline input: False
 ### -Url
 The URL of the site
 
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -138,6 +151,8 @@ Accept pipeline input: True
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
 
 ```yaml
 Type: SPOnlineConnection
@@ -154,4 +169,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

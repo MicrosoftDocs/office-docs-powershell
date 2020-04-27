@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/update-pnpapp
+applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Update-PnPApp
 ---
+
 # Update-PnPApp
 
 ## SYNOPSIS
@@ -37,6 +40,8 @@ This will update an already installed app if a new version is available in the s
 ### -Identity
 Specifies the Id or an actual app metadata instance
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: AppMetadataPipeBind
 Parameter Sets: (All)
@@ -48,6 +53,8 @@ Accept pipeline input: True
 
 ### -Scope
 Defines which app catalog to use. Defaults to Tenant
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: AppCatalogScope
@@ -61,6 +68,8 @@ Accept pipeline input: False
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: SPOnlineConnection
 Parameter Sets: (All)
@@ -72,4 +81,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

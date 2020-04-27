@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailtrafficreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -13,27 +17,54 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficReport cmdlet to view details about message traffic in your organization for the last 180 days.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MailTrafficReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Direction <MultiValuedProperty>] [-Domain <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-Page <Int32>] [-PageSize <Int32>]
- [-ProbeTag <String>] [-StartDate <DateTime>] [-SummarizeBy <MultiValuedProperty>] [<CommonParameters>]
+Get-MailTrafficReport
+ [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Direction <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [-SummarizeBy <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can use the EventTypes values from the Get-MailTrafficReport cmdlet to analyze what happened to messages when they were filtered by the service. The following list describes all possible event types for messages.
+You can use the EventTypes values from the Get-MailTrafficReport cmdlet to analyze what happened to messages when they were filtered by the service. The following list describes the event types for messages.
 
 Mail traffic summary
+
+- AdvancedProtectionMalware: Messages that were marked as malware by the Office 365 Advanced Threat Protection service. For details about the Advanced Threat Protection service, see [Office 365 Advanced Threat Protection service description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+
+- AtpGoodMail: Messages that were delivered after passing through the Office 365 Advanced Threat Protection service. This count shows the number of unique messages. If a message was delivered to multiple recipients, it would still count as a single message.
+
+- DLPMessages: Messages that matched a data loss prevention (DLP) policy. For details about data loss prevention, see [Overview of data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies).
+
+- Expire: Messages that cannot be delivered, stuck in a queue, and after some time expired.
 
 - GoodMail: Messages that were delivered after passing through the malware and spam filters. This count shows the number of unique messages. If a message was delivered to multiple recipients, it would still count as a single message.
 
 - Malware: Messages that were marked as malware.
 
-- TransportRuleHits: Messages that matched a rule. If a message matched multiple rules, this event type would show each of the rule matches.
+-	Receive: Messages successfully received by the service.
+
+-	SpoofMail: Messages that were marked as spoofed by the Office 365 anti-spoofing protection.
+
+- TransportRuleHits: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
+
+-	TransportRuleMessages: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
 
 Spam detections
 
@@ -47,11 +78,11 @@ Spam detections
 
 Spam analysis - content-filtered spam
 
-- Spam\_AdditionalSpamFiltered: Messages filtered based on advanced spam filters that have been enabled. For details about the advanced spam filter, see Advanced spam filtering \(ASF\) options (https://technet.microsoft.com/library/jj200750.aspx) Options.
+- Spam\_AdditionalSpamFiltered: Messages filtered based on advanced spam filters that have been enabled. For details about the advanced spam filter, see [Advanced spam filtering options](https://docs.microsoft.com/microsoft-365/security/office-365-security/advanced-spam-filtering-asf-options).
 
-- Spam\_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see Configure your spam filter policies (https://technet.microsoft.com/library/jj200684.aspx).
+- Spam\_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see [Configure your spam filter policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies).
 
-- Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see What's the difference between junk email and bulk email? (https://technet.microsoft.com/library/dn720441.aspx)
+- Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see [What's the difference between junk email and bulk email?](https://docs.microsoft.com/microsoft-365/security/office-365-security/what-s-the-difference-between-junk-email-and-bulk-email).
 
 - Spam\_ContentScanFiltered: Messages that were filtered based on the message content.
 
@@ -61,9 +92,9 @@ Spam analysis - content-filtered spam
 
 Spam analysis - non-spam messages
 
-- NonSpam\_AdditionalSpamFilterPassed: Messages that were passed based on advanced spam filters that have been enabled. For details about the advanced spam filters, see Advanced spam filtering \(ASF\) options (https://technet.microsoft.com/library/jj200750.aspx) Options.
+- NonSpam\_AdditionalSpamFilterPassed: Messages that were passed based on advanced spam filters that have been enabled. For details about the advanced spam filters, see [Advanced spam filtering options](https://docs.microsoft.com/microsoft-365/security/office-365-security/advanced-spam-filtering-asf-options).
 
-- NonSpam\_AllowList: Messages that were passed because the sender was on a spam filter allow list. For more details on how to configure these lists, see Configure your spam filter policies (https://technet.microsoft.com/library/jj200684.aspx).
+- NonSpam\_AllowList: Messages that were passed because the sender was on a spam filter allow list. For more details on how to configure these lists, see [Configure your spam filter policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies).
 
 - NonSpam\_BulkPassed: Messages that were determined not to be bulk mail.
 
@@ -79,30 +110,36 @@ Spam analysis - non-spam messages
 
 Bulk mail
 
-- BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see Use transport rules to configure bulk email filtering (https://technet.microsoft.com/library/dn720438.aspx).
+- BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see [Use mail flow rules to configure bulk email filtering in Exchange Online Protection](https://docs.microsoft.com/microsoft-365/security/office-365-security/use-transport-rules-to-configure-bulk-email-filtering).
 
 - BCL1 through BCL9: Messages with BCL rating of 1 through 9.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+Encryption
+
+- EncryptionManual: Messages manually encrypted by users.
+
+- EncryptionPolicy: Messages that matched a rule for encrypting email messages using the latest Office 365 Message Encryption (OME) capabilities.
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailTrafficReport -Direction Inbound -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
 
 This example retrieves details for incoming messages between June 13, 2015 and June 15, 2015.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
 This example retrieves the statistics for outgoing messages on December 12, 2015, and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
@@ -120,6 +157,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +173,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +189,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +213,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -183,13 +224,14 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +249,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -222,6 +265,7 @@ Type: Expression
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +281,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -252,6 +297,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -267,6 +313,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -277,13 +324,14 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -301,6 +349,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -309,20 +358,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/28988896-893c-46c9-a174-8ab6f834d0c9.aspx)

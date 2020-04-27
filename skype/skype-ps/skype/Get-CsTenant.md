@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/get-cstenant
 applicable: Skype for Business Online
 title: Get-CsTenant
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsTenant
@@ -14,8 +19,8 @@ Tenants represent groups of online users.
 ## SYNTAX
 
 ```
-Get-CsTenant [[-Identity] <Object>] [-DomainController <Object>] [-Filter <Object>] [-ResultSize <Object>]
- [-AsJob] [<CommonParameters>]
+Get-CsTenant [-Filter <String>] [-DomainController <Fqdn>] [[-Identity] <OUIdParameter>] [-ResultSize <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +44,7 @@ Organizations will have only one tenant.
 This parameter is not used with Skype for Business Online.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -66,7 +71,7 @@ The Filter parameter uses the same Windows PowerShell filtering syntax is used b
 You cannot use both the Identity parameter and the Filter parameter in the same command.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -87,7 +92,7 @@ For example:
 If you do not include either the Identity or the Filter parameter then the `Get-CsTenant` cmdlet will return information about all your tenants.
 
 ```yaml
-Type: Object
+Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -109,7 +114,7 @@ If set to 0 the command will run, but no data will be returned.
 If you set the tenants to 7 but you have only three contacts in your forest, the command will return those three tenants and then complete without error.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -138,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

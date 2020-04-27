@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecuritypublicfilter
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchSecurityPublicFilter
 ---
 
@@ -20,20 +25,20 @@ Get-FASTSearchSecurityPublicFilter [[-Worker] <WorkerPoolNode>] [<CommonParamete
 This cmdlet retrieves the public filter general setting configuration information.
 The public filter is the search security filter that is used to find documents that all users have access to.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityPublicFilter
+Get-FASTSearchSecurityPublicFilter
 ```
 
 This example gets the security public filter's general setting configuration information.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityPublicFilter
+Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityPublicFilter
 ```
 
 This example gets the security public filter's general setting configuration information for a security worker with the server name of "workerserver".
@@ -57,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

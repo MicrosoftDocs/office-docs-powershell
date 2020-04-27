@@ -4,6 +4,9 @@ Module Name: officewebapps
 title: Set-OfficeWebAppsFarm
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-OfficeWebAppsFarm
@@ -50,7 +53,7 @@ This example enables insertion of clip art from Office.com.
 Set-OfficeWebAppsFarm -EditingEnabled:$true
 ```
 
-This example enables edit functionality for Office Online.
+This example enables edit functionality for Office in a browser.
 
 ### ------------------EXAMPLE 3---------------------
 ```
@@ -272,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelAllowExternalData
-Enables the refresh of supported external data in Excel Online workbooks where workbooks contain connections to external data.
+Enables the refresh of supported external data in Excel workbooks in a browser where workbooks contain connections to external data.
 The default is True.
 
 ```yaml
@@ -321,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelChartAndImageSizeMax
-Specifies the maximum size, in megabytes, of a chart or image that can be opened by Excel Online.
+Specifies the maximum size, in megabytes, of a chart or image that can be opened by Excel in a browser.
 The value must be an integer greater than 0.
 
 ```yaml
@@ -353,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelConnectionLifetime
-Specifies the duration, in seconds, of external data connections for Excel Online.
+Specifies the duration, in seconds, of external data connections for Excel in a browser.
 The default is 1800 seconds.
 
 ```yaml
@@ -384,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelExternalDataCacheLifetime
-Specifies the duration, in seconds, of the external data cache lifetime in Excel Online.
+Specifies the duration, in seconds, of the external data cache lifetime in Excel in a browser.
 The default is 300 seconds.
 
 ```yaml
@@ -417,7 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelPrivateBytesMax
-Specifies the maximum private bytes, in megabytes, used by Excel Online.
+Specifies the maximum private bytes, in megabytes, used by Excel in a browser.
 When set to -1, the maximum private bytes use 50 percent of physical memory on the computer.
 
 The type must be -1 or any positive integer.
@@ -475,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelSessionTimeout
-Specifies the time, in seconds, that a session remains active in Excel Online when there is no user activity.
+Specifies the time, in seconds, that a session remains active in Excel in a browser when there is no user activity.
 Valid values include the following:
 
 -1 Session never expires.
@@ -498,7 +501,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelUdfsAllowed
-Enables User Defined Functions for Excel Online.
+Enables User Defined Functions for Excel in a browser.
 The default is False.
 
 ```yaml
@@ -532,7 +535,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelUseEffectiveUserName
-Enables the use of the Analysis Services EffectiveUserName parameter with Excel Online.
+Enables the use of the Analysis Services EffectiveUserName parameter with Excel in a browser.
 The default is False.
 
 ```yaml
@@ -548,7 +551,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelWarnOnDataRefresh
-Turns off or on the warning dialog box that is displayed when data refreshes in Excel Online.
+Turns off or on the warning dialog box that is displayed when data refreshes in Excel in a browser.
 
 ```yaml
 Type: SwitchParameter
@@ -813,9 +816,9 @@ Accept wildcard characters: False
 ```
 
 ### -PicturePasteDisabled
-Turns off the ability for users to paste images from a web page into Office Online.
+Turns off the ability for users to paste images from a web page into Office in a browser.
 The default is False.
-If OpenFromURLEnabled is set to True and PicturePasteDisabled is not set or set to False, users can paste images into Office Online.
+If OpenFromURLEnabled is set to True and PicturePasteDisabled is not set or set to False, users can paste images into Office in a browser.
 
 ```yaml
 Type: SwitchParameter
@@ -945,7 +948,7 @@ Accept wildcard characters: False
 
 ### -TranslationEnabled
 Enables support for automatic document translation using Microsoft Translator, an online service that translates text between languages.
-The translated file is shown in the Word Online.
+The translated file is shown in Word.
 Because Microsoft Translator is an online service, you must enable server-to-web communication directly or by using a proxy that you specify by using the Proxy parameter.
 
 Microsoft Translator may collect data to improve the quality of translations.
@@ -983,7 +986,7 @@ Accept wildcard characters: False
 
 ### -TranslationServiceAppId
 Specifies the application ID for the translation service.
-The default is the public application ID for Office Online.
+The default is the public application ID for Office in a browser.
 Typically you will not use this parameter unless you have negotiated with Microsoft Translator for additional services and they have provided you with a private application ID.
 
 ```yaml

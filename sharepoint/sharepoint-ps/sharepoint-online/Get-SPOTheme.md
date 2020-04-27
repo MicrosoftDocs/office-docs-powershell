@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotheme
 applicable: SharePoint Online
 title: Get-SPOTheme
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Get-SPOTheme
@@ -21,12 +26,11 @@ The **Get-SPOTheme** cmdlet returns the settings for a named existing theme, or 
 
 This example shows how to use the **Get-SPOTheme** cmdlet to return the settings for the `"Custom Cyan"` theme created in the example for the **Add-SPOTheme** cmdlet. Note that this example uses the PowerShell `ConvertTo-Json` filter to display the theme in JSON format.
 
-```
+```powershell
 Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
 ```
 
-
-```
+```powershell
 {
     "Name":  "Custom Cyan",
     "Palette":  {
@@ -64,11 +68,11 @@ Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
 
 To return all uploaded themes, use the **Get-SPOTheme** command with no arguments.
 
-```
+```powershell
 Get-SPOTheme
 ```
 
-<!--(Commenting out this image because I don't see a way to have images in this location) 
+<!--(Commenting out this image because I don't see a way to have images in this location)
 
 This is an example of the output from this command.
 
@@ -77,4 +81,3 @@ This is an example of the output from this command.
 ## INPUTS
 
 ## OUTPUTS
-

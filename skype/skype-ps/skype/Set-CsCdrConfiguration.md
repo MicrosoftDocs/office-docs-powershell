@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-cscdrconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsCdrConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsCdrConfiguration
@@ -19,15 +24,15 @@ This cmdlet was introduced in Lync Server 2010.
 ### Identity
 ```
 Set-CsCdrConfiguration [[-Identity] <XdsIdentity>] [-EnableCDR <Boolean>] [-EnablePurging <Boolean>]
- [-KeepCallDetailForDays <UInt32>] [-KeepErrorReportForDays <UInt32>] [-PurgeHourOfDay <UInt32>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-KeepCallDetailForDays <UInt32>] [-KeepErrorReportForDays <UInt32>] [-PurgeHourOfDay <UInt32>] 
+ [-EnableUdcLite <Boolean>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsCdrConfiguration [-Instance <PSObject>] [-EnableCDR <Boolean>] [-EnablePurging <Boolean>]
- [-KeepCallDetailForDays <UInt32>] [-KeepErrorReportForDays <UInt32>] [-PurgeHourOfDay <UInt32>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-KeepCallDetailForDays <UInt32>] [-KeepErrorReportForDays <UInt32>] [-PurgeHourOfDay <UInt32>]
+ [-EnableUdcLite <Boolean>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -218,6 +223,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableUdcLite
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
@@ -267,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

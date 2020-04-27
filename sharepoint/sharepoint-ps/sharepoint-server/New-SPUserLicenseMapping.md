@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spuserlicensemapping
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPUserLicenseMapping
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPUserLicenseMapping
@@ -43,7 +48,7 @@ New-SPUserLicenseMapping -License <String> -SecurityGroup <String>
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the `New-SPUserLicenseMapping` cmdlet to create a new license mapping object.
 This cmdlet must be used first before the `Add-SPUserLicenseMapping` cmdlet can be used.
@@ -51,15 +56,15 @@ This cmdlet must be used first before the `Add-SPUserLicenseMapping` cmdlet can 
 The object created by using the `New-SPUserLicenseMapping` cmdlet is stored in memory and is not written to any database in SharePoint Server.
 After the object is created you can pipe the result to the `Add-SPUserLicenseMapping` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ----------------------- EXAMPLE---------------------------)
 ```
-PS C:\>$a = New-SPUserLicenseMapping -SecurityGroup EntSecGroup -License Enterprise
-PS C:\>$a | Add-SPUserLicenseMapping
+$a = New-SPUserLicenseMapping -SecurityGroup EntSecGroup -License Enterprise
+$a | Add-SPUserLicenseMapping
 ```
 
 This example creates a license mapping object for the Active Directory secured group named 'EntSecGroup' and then pipes the result to the `Add-SPUserLicenseMapping` cmdlet.
@@ -75,7 +80,7 @@ The value must be an authentic claims principal.
 Type: SPClaim
 Parameter Sets: TrustIdentity
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -92,7 +97,7 @@ The value must be an authentic name of a claim type.
 Type: String
 Parameter Sets: ClaimsValues
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -109,7 +114,7 @@ For the full list of supported licenses on a SharePoint farm, see the `Get-SPUse
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -126,7 +131,7 @@ The value must be the authentic name of an original issuer.
 Type: String
 Parameter Sets: ClaimsValues
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -143,7 +148,7 @@ The value must be an authentic name of a forms-based role.
 Type: String
 Parameter Sets: FormsAuth
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -160,7 +165,7 @@ The value must be an authentic name of a role provider.
 Type: String
 Parameter Sets: FormsAuth
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -177,7 +182,7 @@ The value must be a name of an Active Directory security group.
 Type: String
 Parameter Sets: WindowsAuth
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -194,7 +199,7 @@ The value must be an authentic claim value.
 Type: String
 Parameter Sets: ClaimsValues
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -216,7 +221,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -233,7 +238,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -250,7 +255,7 @@ The value must be an authentic name of a claim value type.
 Type: String
 Parameter Sets: ClaimsValues
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -269,7 +274,7 @@ The type must be an URL in the form http://server_name or http://server_name/sit
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -286,7 +291,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -296,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-fastsearchconfiguration
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Set-FASTSearchConfiguration
 ---
 
@@ -23,13 +28,13 @@ FAST Search Server 2010 for SharePoint must be installed, but not running, on th
 
 If you are not running this cmdlet on the admin node in the FAST Search Server 2010 for SharePoint installation, make sure that the admin node is started before you run this cmdlet.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FastSearchConfiguration -LogFile C:\log.txt
+Set-FastSearchConfiguration -LogFile C:\log.txt
 ```
 
 This example configures the local machine and writes the log output to C:\log.txt.
@@ -53,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

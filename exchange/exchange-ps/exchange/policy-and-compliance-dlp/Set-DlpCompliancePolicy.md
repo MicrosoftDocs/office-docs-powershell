@@ -1,57 +1,78 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpcompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: Set-DlpCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
 # Set-DlpCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Set-DlpCompliancePolicy cmdlet to modify Data Loss Prevention (DLP) policies in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### Identity
 ```
-Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
- [-AddOneDriveLocationException <MultiValuedProperty>] [-AddSharePointLocationException <MultiValuedProperty>]
- [-Confirm] [-Name <String>] [-RemoveOneDriveLocationException <MultiValuedProperty>]
- [-RemoveSharePointLocationException <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddEndpointDlpLocation <MultiValuedProperty>]
+ [-AddEndpointDlpLocationException <MultiValuedProperty>]
+ [-AddExchangeLocation <MultiValuedProperty>]
+ [-AddOneDriveLocation <MultiValuedProperty>]
+ [-AddOneDriveLocationException <MultiValuedProperty>]
+ [-AddSharePointLocation <MultiValuedProperty>]
+ [-AddSharePointLocationException <MultiValuedProperty>]
+ [-AddTeamsLocation <MultiValuedProperty>]
+ [-AddTeamsLocationException <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ExchangeSenderMemberOf <SmtpAddress[]>]
+ [-ExchangeSenderMemberOfException <SmtpAddress[]>]
+ [-Force]
+ [-Mode <PolicyMode>]
+ [-Priority <Int32>]
+ [-RemoveEndpointDlpLocation <MultiValuedProperty>]
+ [-RemoveEndpointDlpLocationException <MultiValuedProperty>]
+ [-RemoveExchangeLocation <MultiValuedProperty>]
+ [-RemoveOneDriveLocation <MultiValuedProperty>]
+ [-RemoveOneDriveLocationException <MultiValuedProperty>]
+ [-RemoveSharePointLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-RemoveTeamsLocation <MultiValuedProperty>]
+ [-RemoveTeamsLocationException <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### RetryDistribution
 ```
-Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-AddExchangeLocation <MultiValuedProperty>]
- [-AddOneDriveLocation <MultiValuedProperty>] [-AddOneDriveLocationException <MultiValuedProperty>]
- [-AddSharePointLocation <MultiValuedProperty>] [-AddSharePointLocationException <MultiValuedProperty>]
- [-Comment <String>] [-Confirm] [-Force]
- [-Mode <Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion>]
- [-Name <String>] [-NewName <String>] [-RemoveExchangeLocation <MultiValuedProperty>]
- [-RemoveOneDriveLocation <MultiValuedProperty>] [-RemoveOneDriveLocationException <MultiValuedProperty>]
- [-RemoveSharePointLocation <MultiValuedProperty>] [-RemoveSharePointLocationException <MultiValuedProperty>]
+Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+ [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-DlpCompliancePolicy -Identity "Main PII" -AddSharePointLocation "https://my.url1","https://my.url2" -AddOneDriveLocation "https://my.url3","https://my.url4"
 ```
 
 This example adds the specified URLs to the SharePoint Online and OneDrive for Business locations for the DLP policy named Main PII without affecting the existing URL values.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-DlpCompliancePolicy -Identity MainPII -Mode Disable
 ```
 
@@ -75,6 +96,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -87,10 +109,43 @@ The RetryDistribution switch redistributes the policy to all OneDrive for Busine
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddEndpointDlpLocation
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddEndpointDlpLocationException
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -102,9 +157,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -119,9 +175,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -136,9 +193,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -155,9 +213,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -172,9 +231,46 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddTeamsLocation
+The AddTeamsLocation parameter specifies the Teams accounts to add to the list of included accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddTeamsLocationException
+The AddTeamsLocationException parameter specifies the Teams accounts to add to the list of excluded accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -187,9 +283,10 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +306,47 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeSenderMemberOf
+The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the DLP policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
+
+You can't use this parameter to specify Office 365 Groups.
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeSenderMemberOfException
+The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the DLP policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
+
+You can't use this parameter to specify Office 365 Groups.
+
+```yaml
+Type: SmtpAddress[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -221,9 +359,10 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -243,10 +382,11 @@ The Mode parameter specifies the action and notification level of the DLP policy
 - TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
 
 ```yaml
-Type: Enable | TestWithNotifications | TestWithoutNotifications | Disable | PendingDeletion
-Parameter Sets: Set1
+Type: PolicyMode
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -254,14 +394,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-This parameter is reserved for internal Microsoft use.
+### -Priority
+The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and policies can't have the same priority value.
+
+Valid values and the default value for this parameter depend on the number of existing policies. For example, if there are 5 existing policies:
+
+- Valid priority values for the existing 5 policies are from 0 through 4.
+
+- Valid priority values for a new 6th policy are from 0 through 5.
+
+- The default value for a new 6th policy is 5.
+
+If you modify the priority value of a policy, the position of the policy in the list changes to match the priority value you specify. In other words, if you set the priority value of a policy to the same value as an existing policy, the priority value of the existing policy and all other lower priority policies after it is increased by 1.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: Int32
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -269,14 +420,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NewName
+### -RemoveEndpointDlpLocation
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: String
-Parameter Sets: Set1
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveEndpointDlpLocationException
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -289,9 +457,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -306,9 +475,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -323,9 +493,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -340,9 +511,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -357,9 +529,46 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsLocation
+The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of included accounts when you use the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsLocationException
+The RemoveTeamsLocation parameter specifies the Teams accounts to remove from the list of excluded accounts when you aren't using the value All for the TeamsLocation parameter. You identify the account by its name or email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -368,13 +577,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -383,20 +593,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/d62d4466-5a16-4206-8105-aed442b6fa9e.aspx)

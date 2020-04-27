@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-spinfopathadministrationfiles
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPInfoPathAdministrationFiles
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPInfoPathAdministrationFiles
@@ -22,13 +27,13 @@ The Export-SPInfoPathAdministrationFiles cmdlet saves all InfoPath form template
 The backup package includes all workflow forms in InfoPath that were deployed by an administrator and not included with SharePoint Server, and includes browser forms that were deployed by an administrator.
 The backup package is output to the specified .cab file.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE-------------- 
 ```
-C:\PS>Export-SPInfoPathAdministrationFiles -path d:\file.cab
+Export-SPInfoPathAdministrationFiles -path d:\file.cab
 ```
 
 This example saves all InfoPath form templates (.xsn files) and universal data connections (.udcx files) located on the SharePoint Central Administration Web site in a compressed cabinet file named file.cab.
@@ -44,7 +49,7 @@ The type must be a valid file path, in the form \\\\ipadmin\folder\backups1\ipfs
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -66,7 +71,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -83,7 +88,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -95,13 +100,13 @@ Accept wildcard characters: False
 ### -Identity
 Specifies the site collection that contains the InfoPath form template and Central Administration .udcx files to export.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
 ```yaml
 Type: SPFormsServicePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +123,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -128,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

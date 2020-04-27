@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/install-sphelpcollection
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Install-SPHelpCollection
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Install-SPHelpCollection
@@ -29,19 +34,19 @@ Install-SPHelpCollection -LiteralPath <String> [-AssignmentCollection <SPAssignm
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Install-SPHelpCollection cmdlet installs the Help site collection files for SharePoint Products in the current farm.
 Use the LiteralPath parameter to install specific custom Help collection files.
 If the LiteralPath parameter is not specified, all available Help in the Help site collection is installed and existing Help collection files are overwritten.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>Install-SPHelpCollection -LiteralPath 'C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\1033\OSSAdmin.cab'
+Install-SPHelpCollection -LiteralPath 'C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\1033\OSSAdmin.cab'
 ```
 
 This example installs the specified help collection in the current farm.
@@ -55,7 +60,7 @@ If the LiteralPath parameter is not specified, specifies that all Help Collectio
 Type: SwitchParameter
 Parameter Sets: InstallAll
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -76,7 +81,7 @@ The type must be a valid path in either of the following forms:
 Type: String
 Parameter Sets: InstallOne
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -98,7 +103,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

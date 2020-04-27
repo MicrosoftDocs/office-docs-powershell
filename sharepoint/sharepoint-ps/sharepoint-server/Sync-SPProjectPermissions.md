@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/sync-spprojectpermissions
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Sync-SPProjectPermissions
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Sync-SPProjectPermissions
@@ -29,29 +34,29 @@ The `Sync-SPProjectPermissions` cmdlet causes permissions to be synchronized to 
 
 This cmdlet works with both SharePoint permission mode and Project Server permission mode.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\>Sync-SPProjectPermissions -Url http://pwa_site -Type Full
+Sync-SPProjectPermissions -Url https://pwa_site -Type Full
 ```
 
-Performs a full sync against the PWA site http://pwa_site.
+Performs a full sync against the PWA site https://pwa_site.
 
 ## PARAMETERS
 
 ### -Url
 Specifies the URL of the Project Web App instance for which you want to synch permissions.
 
-The type must be a valid URL, in the form http://pwa_site.
+The type must be a valid URL, in the form https://pwa_site.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -69,7 +74,7 @@ This parameter is used with Project Server permission mode.
 Type: SwitchParameter
 Parameter Sets: PSMode
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: 2
@@ -91,7 +96,7 @@ Full, Incremental, AllGroups
 Type: SharePointPermissionModeSyncType
 Parameter Sets: SPMode
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: 2
@@ -109,7 +114,7 @@ This parameter is used with Project Server permission mode.
 Type: SwitchParameter
 Parameter Sets: PSMode
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: 3
@@ -128,7 +133,7 @@ This parameter is used with Project Server permission mode.
 Type: SwitchParameter
 Parameter Sets: PSMode
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: 4
@@ -150,7 +155,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

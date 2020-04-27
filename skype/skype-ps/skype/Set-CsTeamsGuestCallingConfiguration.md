@@ -1,10 +1,14 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version:
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsguestcallingconfiguration
 applicable: Skype for Business Online
 title: Set-CsTeamsGuestCallingConfiguration
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 # Set-CsTeamsGuestCallingConfiguration
 
@@ -14,9 +18,16 @@ Allows admins to set values in the GuestCallingConfiguration, which specifies wh
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsGuestCallingConfiguration [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
- [-AllowPrivateCalling <Boolean>] [-Force] [-Instance <Object>] [-AsJob]
+Set-CsTeamsGuestCallingConfiguration [-Tenant <Guid>] [-AllowPrivateCalling <Boolean>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsGuestCallingConfiguration [-Tenant <Guid>] [-AllowPrivateCalling <Boolean>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +93,7 @@ Accept wildcard characters: False
 The only option is Global
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -97,7 +108,7 @@ Accept wildcard characters: False
 Internal Microsoft use 
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases:
 
@@ -112,7 +123,7 @@ Accept wildcard characters: False
 Internal Microsoft use
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -139,30 +150,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Internal Microsoft use
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

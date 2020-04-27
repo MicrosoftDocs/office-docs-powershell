@@ -1,12 +1,15 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnplistitem
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPListItem
 ---
+
 # Add-PnPListItem
 
 ## SYNOPSIS
-Adds an item to a list
+Adds an item to the list and sets the creation time to the current date and time. The author is set to the current authenticated user executing the cmdlet. In order to set the author to a different user, please refer to Set-PnPListItem.
 
 ## SYNTAX 
 
@@ -15,6 +18,7 @@ Add-PnPListItem -List <ListPipeBind>
                 [-ContentType <ContentTypePipeBind>]
                 [-Values <Hashtable>]
                 [-Folder <String>]
+                [-Label <String>]
                 [-Web <WebPipeBind>]
                 [-Connection <SPOnlineConnection>]
 ```
@@ -49,6 +53,13 @@ Add-PnPListItem -List "Demo List" -Values @{"Title"="Sales Report"} -Folder "pro
 
 Adds a new list item to the "Demo List". It will add the list item to the europe folder which is located in the projects folder. Folders will be created if needed.
 
+### ------------------EXAMPLE 5------------------
+```powershell
+Add-PnPListItem -List "Demo List" -Values @{"Title"="Sales Report"} -Label "Public"
+```
+
+Adds a new list item to the "Demo List". Sets the retention label to "Public" if it exists on the site.
+
 ## PARAMETERS
 
 ### -ContentType
@@ -65,6 +76,20 @@ Accept pipeline input: False
 
 ### -Folder
 The list relative URL of a folder. E.g. "MyFolder" for a folder located in the root of the list, or "MyFolder/SubFolder" for a folder located in the MyFolder folder which is located in the root of the list.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Label
+The name of the retention label.
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -116,7 +141,7 @@ Multi value lookup (id of lookup values as string): -Values @{"MultiLookupField"
 
 Yes/No: -Values @{"YesNo" = $false}
 
-Person/Group (id of user/group in Site User Info List or email of the user, seperate multiple values with a comma): -Values @{"Person" = "user1@domain.com","21"}
+Person/Group (id of user/group in Site User Info List or email of the user, separate multiple values with a comma): -Values @{"Person" = "user1@domain.com","21"}
 
 Managed Metadata (single value with path to term): -Values @{"MetadataField" = "CORPORATE|DEPARTMENTS|FINANCE"}
 
@@ -167,4 +192,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

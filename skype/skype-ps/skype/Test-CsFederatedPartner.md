@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/test-csfederatedpartner
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsFederatedPartner
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Test-CsFederatedPartner
@@ -24,7 +29,7 @@ Test-CsFederatedPartner [-TargetFqdn] <String> [-Domain] <String> [-Certificate 
 `Test-CsFederatedPartner` verifies your ability to connect to the domain of a federated partner.
 In order to verify the connectivity to a domain, that domain must be listed in the collection of allowed (federated) domains.
 Domains can be added to the allowed list by using the `New-CsAllowedDomain` cmdlet.
-When using this cmdlet, make sure that the TargetFqdn parameter points to the internal edge of the proxy server to which federated SIP traffic is directed.
+When using this cmdlet, make sure that the TargetFqdn parameter points to the internal Edge Server FQDN to which federated SIP traffic is directed.
 
 
 ## EXAMPLES
@@ -35,12 +40,12 @@ Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinc.com -Domain fabrikam.
 ```
 
 The command shown in Example 1 verifies the connection between the local access proxy server (accessproxy.litwareinc.com) and the federated domain Fabrikam.com.
-Note that TargetFqdn must point to the internal edge of the proxy server to which federated SIP traffic is directed.
+Note that TargetFqdn must point to the internal Edge Server FQDN to which federated SIP traffic is directed.
 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinco.com -Domain push.lync.com -ProxyFqdn sipfed.online.lync.com
+Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinc.com -Domain push.lync.com -ProxyFqdn sipfed.online.lync.com
 ```
 
 Example 2 shows how you can test the connection between your domain and the Lync Server Push Notification Service.
@@ -80,7 +85,7 @@ Accept wildcard characters: False
 
 ### -TargetFqdn
 FQDN of the access proxy server used by your organization for federated SIP traffic.
-The TargetFqdn must point to the internal edge of the proxy server to which federated SIP traffic is directed.
+The TargetFqdn must point to the internal Edge Server FQDN to which federated SIP traffic is directed.
 
 ```yaml
 Type: String
@@ -211,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

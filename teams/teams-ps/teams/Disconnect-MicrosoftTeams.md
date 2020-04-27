@@ -1,60 +1,69 @@
 ---
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
-title: Disconnect-MicrosoftTeams
-online version: 
+online version: https://docs.microsoft.com/powershell/module/teams/disconnect-microsoftteams
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Disconnect-MicrosoftTeams
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 
 ## SYNTAX
 
 ```
-Disconnect-MicrosoftTeams [-WhatIf] [-Confirm]
+Disconnect-MicrosoftTeams [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 ## EXAMPLES
 
+### Example 1
+```powershell
+PS C:\> Disconnect-MicrosoftTeams
+```
+
+Disconnects from the Microsoft Teams environment.
+
 ## PARAMETERS
 
 ### -WhatIf
-@{Text=}
+Simulates what would happen if the cmdlet is run.  The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Confirm
-@{Text=}
+Proactively accepts any confirmation prompts.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -63,4 +72,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

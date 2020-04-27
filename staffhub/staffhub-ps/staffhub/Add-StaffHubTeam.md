@@ -1,10 +1,13 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+online version: https://docs.microsoft.com/powershell/module/staffhub/add-staffhubteam
 applicable: Microsoft StaffHub
 title: Add-StaffHubTeam
-online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Add-StaffHubTeam
@@ -25,15 +28,15 @@ Creates a team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-StaffHubTeam -Name "TeamFromCmdletTest" -TimeZone "Asia/Calcutta" -ManagerEmail "abc@contoso.com"
 ```
 
 Creates a team with abc@contoso.com as manager.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Add-StaffHubTeam -Name "TeamFromCmdletTest" -TimeZone "Asia/Calcutta"
 ```
 
@@ -47,7 +50,7 @@ Organizational email of the member who should be the manager of the team. If not
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: False
 Position: 2
@@ -62,7 +65,7 @@ Name of the team to be created.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: True
 Position: 0
@@ -78,7 +81,7 @@ Reference: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft StaffHub
 Required: True
 Position: 1

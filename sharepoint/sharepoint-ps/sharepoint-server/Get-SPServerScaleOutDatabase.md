@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserverscaleoutdatabase
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPServerScaleOutDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPServerScaleOutDatabase
@@ -25,7 +30,7 @@ Get-SPServerScaleOutDatabase -ServiceApplication <SPServiceApplicationPipeBind>
 Use the Get-SPServerScaleOutDatabase cmdlet to return all scale-out database objects for the specified service application.
 
 A scale-out database is a database which implements the Shared Service Database Scale Out Generic Protocol.
-For more information, see SharePoint Shared Service Database Scale Out Generic Protocol Specification (http://go.microsoft.com/fwlink/p/?LinkId=273867)
+For more information, see SharePoint Shared Service Database Scale Out Generic Protocol Specification (https://go.microsoft.com/fwlink/p/?LinkId=273867)
 
 
 
@@ -36,7 +41,7 @@ For more information, see SharePoint Shared Service Database Scale Out Generic P
 ```
 C:\PS>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
-C:\PS>Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
 This example gets all scale-out databases for the given service application by using the $serviceApplication variable.
@@ -55,7 +60,7 @@ Specifies the service application of the scale-out databases.
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -82,7 +87,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -103,7 +108,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -125,7 +130,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -135,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

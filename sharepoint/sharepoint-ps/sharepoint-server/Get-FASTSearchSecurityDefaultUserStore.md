@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecuritydefaultuserstore
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchSecurityDefaultUserStore
 ---
 
@@ -20,20 +25,20 @@ Get-FASTSearchSecurityDefaultUserStore [[-Worker] <WorkerPoolNode>] [<CommonPara
 This cmdlet gets the identity of the default user store that users and groups are looked up in.
 The purpose of the command is to determine the user's or group's document access if the user store identity is not specified when looking up the user or group.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityDefaultUserStore
+Get-FASTSearchSecurityDefaultUserStore
 ```
 
 This example gets the identity of the default user store.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityDefaultUserStore
+Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityDefaultUserStore
 ```
 
 This example gets the default user store's general setting information for the security worker with a server name of "workerserver".
@@ -57,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

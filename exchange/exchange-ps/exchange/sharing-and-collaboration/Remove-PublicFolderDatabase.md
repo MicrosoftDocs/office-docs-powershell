@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-publicfolderdatabase
 applicable: Exchange Server 2010
 title: Remove-PublicFolderDatabase
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -13,7 +17,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Remove-PublicFolderDatabase cmdlet to delete public folder databases.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -23,14 +27,14 @@ Remove-PublicFolderDatabase [-Identity] <DatabaseIdParameter> [-Confirm] [-Domai
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
-Removing a public folder database can have a broad range of serious consequences. (This is particularly true when removing the last public folder database in the organization.) For more information, see Remove Public Folder Databases.
+Removing a public folder database can have a broad range of serious consequences. (This is particularly true when removing the last public folder database in the organization.) For more information, see [Remove Public Folder Databases](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd876883(v=exchg.141)).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-PublicFolderDatabase "Public Folder Database"
 ```
 
@@ -39,21 +43,20 @@ This example removes the database Public Folder Database after all the prerequis
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies a public folder database. You can use the following values:
+The Identity parameter specifies the public folder database that you want to remove. You can use any value that uniquely identifies the database. For example:
 
-- GUID
+- Name
 
 - Distinguished name (DN)
 
-- Database name
-
-If you don't specify the server name, the command searches for databases on the local server. If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
+- GUID
 
 ```yaml
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -73,6 +76,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +92,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +108,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +124,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -126,20 +133,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/11289582-170b-445e-94a4-8f73df6ccb13.aspx)

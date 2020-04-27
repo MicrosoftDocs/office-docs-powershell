@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnplistitem
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPListItem
 ---
+
 # Get-PnPListItem
 
 ## SYNOPSIS
@@ -32,6 +35,7 @@ Get-PnPListItem -List <ListPipeBind>
 ```powershell
 Get-PnPListItem -List <ListPipeBind>
                 [-Query <String>]
+                [-FolderServerRelativeUrl <String>]
                 [-PageSize <Int>]
                 [-ScriptBlock <ScriptBlock>]
                 [-Web <WebPipeBind>]
@@ -41,6 +45,7 @@ Get-PnPListItem -List <ListPipeBind>
 ### All Items
 ```powershell
 Get-PnPListItem -List <ListPipeBind>
+                [-FolderServerRelativeUrl <String>]
                 [-Fields <String[]>]
                 [-PageSize <Int>]
                 [-ScriptBlock <ScriptBlock>]
@@ -62,14 +67,14 @@ Retrieves all list items from the Tasks list
 Get-PnPListItem -List Tasks -Id 1
 ```
 
-Retrieves the list item with ID 1 from from the Tasks list
+Retrieves the list item with ID 1 from the Tasks list
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Get-PnPListItem -List Tasks -UniqueId bd6c5b3b-d960-4ee7-a02c-85dc6cd78cc3
 ```
 
-Retrieves the list item with unique id bd6c5b3b-d960-4ee7-a02c-85dc6cd78cc3 from from the tasks lists
+Retrieves the list item with unique id bd6c5b3b-d960-4ee7-a02c-85dc6cd78cc3 from the tasks lists
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
@@ -99,6 +104,13 @@ Get-PnPListItem -List Tasks -PageSize 1000 -ScriptBlock { Param($items) $items.C
 
 Retrieves all list items from the Tasks list in pages of 1000 items and breaks permission inheritance on each item
 
+### ------------------EXAMPLE 8------------------
+```powershell
+Get-PnPListItem -List Samples -FolderServerRelativeUrl "/sites/contosomarketing/Lists/Samples/Demo"
+```
+
+Retrieves all list items from the Demo folder in the Samples list located in the contosomarketing site collection
+
 ## PARAMETERS
 
 ### -Fields
@@ -107,6 +119,18 @@ The fields to retrieve. If not specified all fields will be loaded in the return
 ```yaml
 Type: String[]
 Parameter Sets: All Items, By Id, By Unique Id
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -FolderServerRelativeUrl
+The server relative URL of a list folder from which results will be returned.
+
+```yaml
+Type: String
+Parameter Sets: By Query, All Items
 
 Required: False
 Position: Named
@@ -134,7 +158,7 @@ Parameter Sets: __AllParameterSets
 
 Required: True
 Position: 0
-Accept pipeline input: False
+Accept pipeline input: True
 ```
 
 ### -PageSize
@@ -215,4 +239,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

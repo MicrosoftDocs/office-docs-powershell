@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-deliveryagentconnector
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-DeliveryAgentConnector
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-DeliveryAgentConnector
@@ -13,27 +17,27 @@ This cmdlet is available only in on-premises Exchange.
 
 The New-DeliveryAgentConnector cmdlet creates a delivery agent connector in your organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 New-DeliveryAgentConnector [-Name] <String> -AddressSpaces <MultiValuedProperty> -DeliveryProtocol <String>
- [-Comment <String>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-IsScopedConnector <$true | $false>] [-MaxConcurrentConnections <Int32>] [-MaxMessageSize <Unlimited>]
+ [-Comment <String>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
+ [-IsScopedConnector <Boolean>] [-MaxConcurrentConnections <Int32>] [-MaxMessageSize <Unlimited>]
  [-MaxMessagesPerConnection <Int32>] [-SourceTransportServers <MultiValuedProperty>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delivery agent connectors are used to route messages addressed to foreign systems that don't utilize the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in the Drop and Pickup directories. For more information, see Delivery agents and Delivery Agent connectors (https://technet.microsoft.com/library/dd638118.aspx).
+Delivery agent connectors are used to route messages addressed to foreign systems that don't utilize the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in the Drop and Pickup directories. For more information, see [Delivery agents and Delivery Agent connectors](https://docs.microsoft.com/exchange/delivery-agents-and-delivery-agent-connectors-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-DeliveryAgentConnector -Name "Contoso X.400 Connector" -AddressSpaces "X400:c=US;a=Fabrikam;p=Contoso;1" -DeliveryProtocol "X.400" -SourceTransportServers Hub01,Hub02,Hub05
 ```
 
@@ -60,7 +64,8 @@ The AddressSpaces parameter specifies the domain names for which this delivery a
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -75,7 +80,8 @@ The DeliveryProtocol parameter specifies the communication protocol that determi
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -90,7 +96,8 @@ The Name parameter specifies the name of this delivery agent connector. The valu
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -105,7 +112,8 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +132,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +150,8 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -155,10 +165,11 @@ The Enabled parameter specifies whether the delivery agent connector is enabled.
 The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -170,10 +181,11 @@ Accept wildcard characters: False
 The IsScopedConnector parameter specifies the availability of the connector to other Mailbox servers. If the value of this parameter is $false, the connector can be used by all Mailbox servers in your organization. If the value of this parameter is $true, the connector can only be used by Mailbox servers in the same Active Directory site. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +200,8 @@ The MaxConcurrentConnections parameter specifies the maximum number of concurren
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +226,8 @@ Unqualified values are treated as bytes. The valid input range for this paramete
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -228,7 +242,8 @@ The MaxMessagesPerConnection parameter specifies the maximum number of messages 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +260,8 @@ By default, only the local server on which the command is executed is added to t
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -260,7 +276,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -269,20 +286,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/b09ac95b-ea07-41cf-9c69-95c215bfa02c.aspx)

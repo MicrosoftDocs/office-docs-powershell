@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/stop-databaseavailabilitygroup
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Stop-DatabaseAvailabilityGroup
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Stop-DatabaseAvailabilityGroup
@@ -13,47 +17,51 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Stop-DatabaseAvailabilityGroup cmdlet to mark a member of a database availability group (DAG) as failed, or to mark all DAG members in a specific Active Directory site as failed.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
- -ActiveDirectorySite <AdSiteIdParameter> [-ConfigurationOnly] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-QuorumOnly] [<CommonParameters>]
+Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter> -ActiveDirectorySite <AdSiteIdParameter>
+ [-ConfigurationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### MailboxSet
 ```
-Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
- -MailboxServer <MailboxServerIdParameter> [-ConfigurationOnly] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-QuorumOnly] [<CommonParameters>]
+Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter> -MailboxServer <MailboxServerIdParameter>
+ [-ConfigurationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Stop-DatabaseAvailabilityGroup cmdlet is used during a datacenter switchover. This cmdlet is used to mark one or members of the DAG as failed (also known as stopped).The Stop-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode value of DagOnly.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Stop-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer MBX2
 ```
 
 This example stops the Mailbox server MBX2 in the DAG DAG1.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Stop-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond
 ```
 
 This example stops all members in the DAG DAG1 in the Active Directory site Redmond.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Stop-DatabaseAvailabilityGroup -Identity DAG2 -MailboxServer MBX3 -ConfigurationOnly
 ```
 
@@ -66,9 +74,10 @@ The ActiveDirectorySite parameter specifies the Active Directory site containing
 
 ```yaml
 Type: AdSiteIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -83,7 +92,8 @@ The Identity parameter specifies the name of the DAG being stopped.
 Type: DatabaseAvailabilityGroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -96,9 +106,10 @@ The MailboxServer parameter specifies a single DAG member to stop. If Datacenter
 
 ```yaml
 Type: MailboxServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -113,7 +124,8 @@ The ConfigurationOnly parameter updates the Active Directory properties with the
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +144,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +160,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -162,22 +176,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -QuorumOnly
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -186,20 +186,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/1e167fe5-b1c5-48d9-b3d8-4cf823d1c43c.aspx)

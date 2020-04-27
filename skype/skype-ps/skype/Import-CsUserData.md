@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/import-csuserdata
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsUserData
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Import-CsUserData
@@ -34,6 +39,8 @@ Import-CsUserData -FileName <String> -PoolFqdn <Fqdn> [-ConfDirectoryFilter <Str
 
 The Import-CsUserData cmdlet is used to import previously-saved user data and/or conference directory data to Skype for Business Server.
 Note that this data must have been exported by using the Export-CsUserData cmdlet.
+
+To make sure changes happen after this cmdlet, FE services need to be stopped in all FE servers in the pool firstly then be restarted at the same time after executing Import-CsUserdata cmdlet. 
 
 Skype for Business Server Control Panel: The functions carried out by the Import-CsUserData cmdlet are not available in the Skype for Business Server Control Panel.
 
@@ -229,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

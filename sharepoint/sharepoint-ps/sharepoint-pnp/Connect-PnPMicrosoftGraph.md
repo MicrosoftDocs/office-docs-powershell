@@ -1,14 +1,16 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/connect-pnpmicrosoftgraph
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Connect-PnPMicrosoftGraph
 
 ## SYNOPSIS
 Connect to the Microsoft Graph
 
-## SYNTAX 
+## SYNTAX
 
 ### Scope
 ```powershell
@@ -44,7 +46,7 @@ Connects to the Microsoft Graph API using application permissions via an app's d
 ## PARAMETERS
 
 ### -AADDomain
-The AAD where the O365 app is registred. Eg.: contoso.com, or contoso.onmicrosoft.com.
+The AAD where the O365 app is registered. Eg.: contoso.com, or contoso.onmicrosoft.com.
 
 ```yaml
 Type: String
@@ -93,4 +95,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

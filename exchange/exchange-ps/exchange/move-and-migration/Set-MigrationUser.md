@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-migrationuser
 applicable: Exchange Online
 title: Set-MigrationUser
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -13,29 +17,46 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-MigrationUser cmdlet to modify the migration settings of a user in an existing migration batch.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-MigrationUser [-Identity] <MigrationUserIdParameter> [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>] [-Confirm] [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>]
- [-Partition <MailboxIdParameter>] [-StartAfter <DateTime>] [-SyncNow] [-WhatIf] [<CommonParameters>]
+Set-MigrationUser [-Identity] <MigrationUserIdParameter>
+ [-ApproveSkippedItems]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-LargeItemLimit <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-StartAfter <DateTime>]
+ [-SyncNow]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Some settings can be applied both to the batch as well as to individual users within the batch. It is important to note that when a setting is applied to a user it will override any corresponding setting on the batch.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MigrationUser -Identity laura@contoso.com -LargeItemLimit 15 -BadItemLimit 15
 ```
 
 This example changes the large item limit and bad item limit for the user laura@contoso.com in an existing migration batch.
+
+### Example 2
+```powershell
+Set-MigrationUser -Identity laura@contoso.com -ApproveSkippedItems
+```
+
+This example approves all of the skipped items encountered for the user laura@contoso.com in an existing migration batch.
 
 ## PARAMETERS
 
@@ -49,10 +70,33 @@ Type: MigrationUserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ApproveSkippedItems
+This parameter is available only in the cloud-based service.
+
+The ApproveSkippedItems switch marks all of the skipped items discovered prior to the current time as approved. If the data loss that was detected during this migration is significant, the migration will not be able to complete without approving skipped items. Items may have been skipped because they are corrupted in the source mailbox and can't be copied to the target mailbox, they are larger than the max allowable message size configured for the tenant, or they were detected as missing from the target mailbox when the migration is ready to complete.
+
+For more information about maximum message size values, see the following topic [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926).
+
+You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -61,11 +105,14 @@ The BadItemLimit parameter specifies the maximum number of bad items that are al
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
 
+**Note**: This parameter is being deprecated. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -74,11 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is available only in the cloud-based service.
-
 The CompleteAfter parameter specifies a delay before the user is completed. Data migration for the user will start, but won't complete until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
 
@@ -86,13 +131,14 @@ To specify a date/time value for this parameter, use either of the following opt
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -112,21 +158,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -139,17 +171,20 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
+- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
 
-- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
+- Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
+
+**Note**: This parameter is being deprecated. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -165,6 +200,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -173,11 +209,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartAfter
-This parameter is available only in the cloud-based service.
-
 The StartAfter parameter specifies a delay before the data migration for the user is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
 
@@ -185,13 +219,14 @@ To specify a date/time value for this parameter, use either of the following opt
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +244,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -224,6 +260,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -232,20 +269,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/4c8642ad-0844-457a-af41-45feec280906.aspx)

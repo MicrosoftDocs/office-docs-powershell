@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsmeetingbroadcastpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsMeetingBroadcastPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 
@@ -15,13 +20,19 @@ Get-CsTeamsMeetingBroadcastPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsMeetingBroadcastPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
- [-AsJob]
+Get-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to retrieve one or more policies.
+User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to retrieve one or more policies.
 
 ## EXAMPLES
 
@@ -32,7 +43,7 @@ User-level policy for tenant admin to configure meeting broadcast behavior for t
 Enables you to use wildcard characters when specifying the policy (or policies) to be returned. For example, this syntax returns all the policies configured at the per-user scope
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -51,7 +62,7 @@ If this parameter is not included, the cmdlet will return a collection of all th
 Note that wildcards are not allowed when specifying an Identity. Use the Filter parameter if you need to use wildcards when specifying a policy.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -81,7 +92,7 @@ Accept wildcard characters: False
 Not applicable to online service.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -92,29 +103,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

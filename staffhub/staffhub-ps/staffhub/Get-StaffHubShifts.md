@@ -1,10 +1,13 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
-online version:
+online version: https://docs.microsoft.com/powershell/module/staffhub/get-staffhubshifts
 applicable: Microsoft StaffHub
 title: Get-StaffHubShifts
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-StaffHubShifts
@@ -26,7 +29,7 @@ Get details of the shifts for all team members or for a specified team member
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 $startTime = Get-Date -Date "2018-01-01T00:10:00"
 $endTime = Get-Date -Date "2018-01-01T04:10:00"
 Get-StaffHubShifts -TeamId "TEAM_1234" -StartDateTime $startTime -EndDateTime $endTime -MemberId MBER_1234
@@ -34,7 +37,7 @@ Get-StaffHubShifts -TeamId "TEAM_1234" -StartDateTime $startTime -EndDateTime $e
 Get the details of the shifts for MBER_1234 in the team TEAM_1234 between start time and end time
 
 ### Example 2
-```
+```powershell
 $startTime = Get-Date -Date "2018-01-01T00:10:00"
 $endTime = Get-Date -Date "2018-01-01T04:10:00"
 Get-StaffHubShifts -TeamId "TEAM_1234" -StartDateTime $startTime -EndDateTime $endTime
@@ -110,7 +113,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://docs.microsoft.com/powershell/module/skype/clear-cspersistentchatroom
+applicable: Lync Server 2013, Skype for Business Server 2015
 title: Clear-CsPersistentChatRoom
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Clear-CsPersistentChatRoom
@@ -78,7 +83,7 @@ You must specify an EndDate when running the `Clear-CsPersistentChatRoom` cmdlet
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -97,7 +102,7 @@ For example:
 Type: String
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: 1
@@ -113,7 +118,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: ChatRoom
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: 1
@@ -132,7 +137,7 @@ If you set the value of this parameter to False then you will not get a confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -148,7 +153,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -158,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

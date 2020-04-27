@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailbox
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-Mailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-Mailbox
@@ -13,652 +17,753 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-Mailbox cmdlet to create mailboxes and user accounts at the same time.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set5
+### User
 ```
-New-Mailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String> [-InactiveMailbox <MailboxIdParameter>] [-RemovedMailbox <RemovedMailboxIdParameter>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxPlan <MailboxPlanIdParameter>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>] 
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- [-ImportLiveId] -WindowsLiveID <WindowsLiveId>
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-TargetAllMDBs] [-UseExistingLiveId] [-InactiveMailbox <MailboxIdParameter>] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set15
-```
-New-Mailbox [-Name] <String> [-Arbitration] [-Password <SecureString>] -UserPrincipalName <String>
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-Force] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>] 
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-ArbitrationMailbox <MailboxIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-SendModerationNotifications <Never | Internal | Always>]
- [-TargetAllMDBs] -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
- [-LinkedCredential <PSCredential>] [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set9
+### MicrosoftOnlineServicesID
 ```
-New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString> -UserPrincipalName <String>
+New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID <WindowsLiveId> [-InactiveMailbox <MailboxIdParameter>] [-RemovedMailbox <RemovedMailboxIdParameter>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxPlan <MailboxPlanIdParameter>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] 
- [-RemoteArchive] [-RemotePowerShellEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-TargetAllMDBs] [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set16
-```
-New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-Force] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-Discovery]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>] 
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-Arbitration]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-TargetAllMDBs]
- [-ArbitrationMailbox <MailboxIdParameter>] [-MailboxRegion <String>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set13
-```
-New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>] 
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] -WindowsLiveID <WindowsLiveId> [-EvictLiveId]
- [-MailboxPlan <MailboxPlanIdParameter>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-TargetAllMDBs] -ArchiveDomain <SmtpDomain> [-MailboxRegion <String>] [-RemoteArchive]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set8
+### Arbitration
 ```
-New-Mailbox [-Name] <String> -FederatedIdentity <String> -WindowsLiveID <WindowsLiveId>
+New-Mailbox [-Name] [-Arbitration] <String> [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-EvictLiveId] [-FirstName <String>] [-Force] [-ImmutableId <String>]
- [-Initials <String>] [-LastName <String>] [-MailboxPlan <MailboxPlanIdParameter>]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>] 
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- -MicrosoftOnlineServicesID <WindowsLiveId> [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-TargetAllMDBs] [-ImportLiveId] [-ArbitrationMailbox <MailboxIdParameter>] [-MailboxRegion <String>]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set6
+### AuditLog
 ```
-New-Mailbox [-Name] <String> [-ImportLiveId] -WindowsLiveID <WindowsLiveId>
+New-Mailbox [-Name] <String> -UserPrincipalName <String> [-AuditLog]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxPlan <MailboxPlanIdParameter>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>] 
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- [-Password <SecureString>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] -RemovedMailbox <RemovedMailboxIdParameter>
- [-TargetAllMDBs] -UserPrincipalName <String> [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set11
-```
-New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
- [-Password <SecureString>] [-UserPrincipalName <String>] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>] [-LinkedCredential <PSCredential>]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-MailboxPlan <MailboxPlanIdParameter>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-TargetAllMDBs] -FederatedIdentity <String>
- -WindowsLiveID <WindowsLiveId> [-EvictLiveId] [-MailboxRegion <String>]
- [-RemovedMailbox <RemovedMailboxIdParameter>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
-```
-
-### Set1
-```
-New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String>
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxPlan <MailboxPlanIdParameter>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>] 
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-TargetAllMDBs] [-InactiveMailbox <MailboxIdParameter>] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set10
-```
-New-Mailbox [-Name] <String> -Password <SecureString> -WindowsLiveID <WindowsLiveId>
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-EvictLiveId]
- [-FirstName <String>] [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxPlan <MailboxPlanIdParameter>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>] 
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- -MicrosoftOnlineServicesID <WindowsLiveId> [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-TargetAllMDBs] -InactiveMailbox <MailboxIdParameter> [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set2
-```
-New-Mailbox [-Name] <String> [-Password <SecureString>] [-Room] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>] [-Office <String>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-Phone <String>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-ResourceCapacity <Int32>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-TargetAllMDBs] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set3
-```
-New-Mailbox [-Name] <String> [-Password <SecureString>] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxPlan <MailboxPlanIdParameter>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>] 
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedRoom]
- [-UserPrincipalName <String>] [-LinkedCredential <PSCredential>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-Office <String>] [-Phone <String>]
- [-ResourceCapacity <Int32>] [-TargetAllMDBs] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set12
-```
-New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>] 
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-AccountDisabled]
- [-MailboxPlan <MailboxPlanIdParameter>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-TargetAllMDBs] -FederatedIdentity <String>
- -MicrosoftOnlineServicesID <WindowsLiveId> [-MailboxRegion <String>]
- [-RemovedMailbox <RemovedMailboxIdParameter>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set14
-```
-New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>] 
- [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-Discovery]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-TargetAllMDBs]
- -MicrosoftOnlineServicesID <WindowsLiveId> [-InactiveMailbox <MailboxIdParameter>]
- [-MailboxPlan <MailboxPlanIdParameter>] [-MailboxRegion <String>]
- [-RemovedMailbox <RemovedMailboxIdParameter>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
-```
-
-### Set4
-```
-New-Mailbox [-Name] <String> [-UseExistingLiveId] -WindowsLiveID <WindowsLiveId>
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxPlan <MailboxPlanIdParameter>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>] 
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-TargetAllMDBs] -Password <SecureString> [-EvictLiveId] [-InactiveMailbox <MailboxIdParameter>]
- [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set7
-```
-New-Mailbox [-Name] <String> -UserPrincipalName <String> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxPlan <MailboxPlanIdParameter>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>] 
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf]
- -FederatedIdentity <String> -WindowsLiveID <WindowsLiveId> [-EvictLiveId]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-RemovedMailbox <RemovedMailboxIdParameter>]
- [-TargetAllMDBs] [-AccountDisabled] [-Password <SecureString>] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set23
-```
-New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <$true | $false>
- [-MicrosoftOnlineServicesID <WindowsLiveId>] [-Room] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-Force] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-RoomMailboxPassword <SecureString>]
- [-SamAccountName <String>] [-SharingPolicy <SharingPolicyIdParameter>] [-TargetAllMDBs]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-Arbitration] [-Migration]
- [-Password <SecureString>] [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
-```
-
-### Set17
-```
-New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-TargetAllMDBs] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set20
-```
-New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
- [-Password <SecureString>] [-UserPrincipalName <String>] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>] [-LinkedCredential <PSCredential>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-TargetAllMDBs] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set18
-```
-New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-Force] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-TargetAllMDBs] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [-Scheduling] [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
-```
-
-### Set19
-```
-New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-TargetAllMDBs] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-Shared]
- [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set21
-```
-New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-TargetAllMDBs] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set22
-```
-New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-TargetAllMDBs] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [-Arbitration]
- [-MailboxRegion <String>] [-OfficeGraph] [-ProvisionedForOfficeGraph]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set26
-```
-New-Mailbox [-Name] <String> [-PublicFolder] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-Force] [-HoldForMigration] [-ImmutableId <String>]
- [-Initials <String>] [-IsExcludedFromServingHierarchy <$true | $false>] [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-TargetAllMDBs] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [-AuditLog] -UserPrincipalName <String> [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set24
-```
-New-Mailbox [-Name] <String> -UserPrincipalName <String> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-Force] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-TargetAllMDBs] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [-Discovery] [-Password <SecureString>] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set25
-```
-New-Mailbox [-Name] <String> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SharingPolicy <SharingPolicyIdParameter>] [-TargetAllMDBs] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] -EnableRoomMailboxAccount <$true | $false> [-MicrosoftOnlineServicesID <WindowsLiveId>] [-Room]
- [-UserPrincipalName <String>] [-MailboxRegion <String>] [-RoomMailboxPassword <SecureString>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set27
+### AuxAuditLog
 ```
 New-Mailbox [-Name] <String> [-AuxAuditLog] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-Force] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-MailboxRegion <String>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation] [-TargetAllMDBs]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [<CommonParameters>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set30
+### DisabledUser
 ```
-New-Mailbox [-Name] <String> [-PublicFolder] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-Force] [-HoldForMigration] [-ImmutableId <String>]
- [-Initials <String>] [-IsExcludedFromServingHierarchy <$true | $false>] [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-MailboxRegion <String>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation] [-TargetAllMDBs]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set28
-```
-New-Mailbox [-Name] <String> [-SupervisoryReviewPolicy] [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-Force] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-MailboxRegion <String>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation] [-TargetAllMDBs]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [<CommonParameters>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemovedMailbox <RemovedMailboxIdParameter>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set29
+### Discovery
 ```
-New-Mailbox [-Name] <String> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>]
- [-Force] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-MailboxRegion <String>]
- [-ModeratedBy <MultiValuedProperty>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation] [-TargetAllMDBs]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-WhatIf] [<CommonParameters>]
+New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrincipalName <String>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### EnableRoomMailboxAccount
+```
+New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <Boolean> [-MicrosoftOnlineServicesID <WindowsLiveId> [-Room] [-RoomMailboxPassword <SecureString>] [-UserPrincipalName <String>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Equipment
+```
+New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrincipalName <String>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### FederatedUser
+```
+New-Mailbox [-Name] <String> -FederatedIdentity <String> [-RemovedMailbox <RemovedMailboxIdParameter>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-Password <SecureString>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### InactiveMailbox
+```
+New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter> [-Password <SecureString>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemovedMailbox <RemovedMailboxIdParameter>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Linked
+```
+New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [-Password <SecureString>] [-UserPrincipalName <String>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemovedMailbox <RemovedMailboxIdParameter>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### LinkedRoomMailbox
+```
+New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [-LinkedRoom] [-Office <String>] [-Password <SecureString>] [-Phone <String>] [-UserPrincipalName <String>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-ResourceCapacity <Int32>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### MicrosoftOnlineServicesFederatedUser
+```
+New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServicesID <WindowsLiveId> [-RemovedMailbox <RemovedMailboxIdParameter>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Migration
+```
+New-Mailbox [-Name] <String> [-Arbitration] [-Migration] [-Password <SecureString>] [-UserPrincipalName <String>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### PublicFolder
+```
+New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFromServingHierarchy <Boolean>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RemoteArchive
+```
+New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString> -UserPrincipalName <String> [-RemoteArchive]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemovedMailbox <RemovedMailboxIdParameter>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RemovedMailbox
+```
+New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter> [-Password <SecureString>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Room
+```
+New-Mailbox [-Name] <String> [-Password <SecureString>] [-ResourceCapacity <Int32>] [-Room] [-UserPrincipalName <String>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-Office <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-Phone <String>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Scheduling
+```
+New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <String>] [-Scheduling]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Shared
+```
+New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipalName <String>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-Force]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-TargetAllMDBs]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $password = Read-Host "Enter password" -AsSecureString; New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
 ```
 
 This example creates a user Chris Ashton in Active Directory and creates a mailbox for the user. The mailbox is located on Mailbox Database 1. The password must be reset at the next logon. To set the initial value of the password, this example creates a variable ($password), prompts you to enter a password, and assigns that password to the variable as a SecureString object.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-Mailbox -UserPrincipalName confmbx@contoso.com -Alias confmbx -Name ConfRoomMailbox -Database "Mailbox Database 1" -OrganizationalUnit Users -Room -ResetPasswordOnNextLogon $true
 ```
 
 This example creates a user in Active Directory and a resource mailbox for a conference room. The resource mailbox is located in Mailbox Database 1. The password must be reset at the next logon. You are prompted for the value of the initial password because it's not specified.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-Mailbox -UserPrincipalName confroom1010@contoso.com -Alias confroom1010 -Name "Conference Room 1010" -Room -EnableRoomMailboxAccount $true -RoomMailboxPassword (ConvertTo-SecureString -String P@ssw0rd -AsPlainText -Force)
 ```
 
 This example creates an enabled user account in Active Directory and a room mailbox for a conference room in an on-premises Exchange organization. The RoomMailboxPassword parameter specifies the password for the user account.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales; Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG; Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
 ```
 
@@ -675,7 +780,8 @@ The Name parameter specifies the unique name of the mailbox. The maximum length 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -692,9 +798,10 @@ The mailbox is created, and the associated account is created, but the account i
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set5, Set12, Set7
+Parameter Sets: DisabledUser
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -705,17 +812,18 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch specifies that the mailbox you're creating is an arbitration mailbox. You don't need to specify a value with this switch.
+The Arbitration switch is required to create arbitration mailboxes. You don't need to specify a value with this switch.
 
 Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
 
-Note: To create an arbitration mailbox that's used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
+To create arbitration mailboxes that are used to store audit log settings or data, don't use this switch. Instead, use the AuditLog or AuxAuditLog switches.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set15, Set16, Set22
+Parameter Sets: Arbitration
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -725,9 +833,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set23
+Parameter Sets: Migration
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -744,9 +853,10 @@ Only use this parameter if the archive is hosted in the cloud-based service.
 
 ```yaml
 Type: SmtpDomain
-Parameter Sets: Set9, Set13
+Parameter Sets: RemoteArchive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -755,17 +865,42 @@ Accept wildcard characters: False
 ```
 
 ### -Discovery
-The Discoveryswitch specifies that the mailbox is a Discovery mailbox. You don't need to specify a value with this switch.
+The Discovery switch is required to create Discovery mailboxes. You don't need to specify a value with this switch.
 
-This switch is required only if you're creating a Discovery mailbox.
-
-Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be repurposed or converted to another type of mailbox. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
+Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be repurposed or converted to another type of mailbox. For more information, see [In-Place eDiscovery in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set16, Set14, Set24
+Parameter Sets: Discovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRoomMailboxAccount
+The EnableRoomMailboxAccount parameter specifies whether to enable the disabled user account that's associated with this room mailbox. Valid values are:
+
+- $true: The disabled account that's associated with the room mailbox is enabled. You also need to use the RoomMailboxPassword with this value. This allows the account to log on to the room mailbox.
+
+- $false: The account that's associated with the room mailbox is disabled. You can't use the account to logon to the room mailbox. This is the default value.
+
+You need to use this parameter with the Room switch.
+
+Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
+
+In Exchange Online, a room mailbox with an associated enabled account doesn't require a license.
+
+```yaml
+Type: Boolean
+Parameter Sets: EnableRoomMailboxAccount
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -774,15 +909,16 @@ Accept wildcard characters: False
 ```
 
 ### -Equipment
-The Equipment switch specifies that the resource mailbox is an equipment mailbox. You don't need to specify a value with this switch.
+The Equipment switch is required to create equipment mailboxes. You don't need to specify a value with this switch.
 
-This switch is required only if you're creating an equipment mailbox.
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set13, Set17
+Parameter Sets: Equipment
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -797,9 +933,10 @@ The FederatedIdentity parameter associates an on-premises Active Directory user 
 
 ```yaml
 Type: String
-Parameter Sets: Set8, Set11, Set12, Set7
+Parameter Sets: FederatedUser, MicrosoftOnlineServicesFederatedUser
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -807,22 +944,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ImportLiveId
+### -InactiveMailbox
 This parameter is available only in the cloud-based service.
 
-The ImportLiveID switch specifies whether to import an unmanaged Microsoft account (formerly known as a Windows Live ID) into the cloud-based domain. You don't need to specify a value with this switch.
-
-An unmanaged Microsoft account was created in the domain before the domain was enrolled in the cloud-based service. Importing a Microsoft account into the domain lets you save any settings associated with the Microsoft account, like instant messaging contacts. However, the Microsoft account is now subject to the security and privacy policies of the organization.
+The InactiveMailbox parameter specifies the inactive mailbox that you want to recover. To find inactive mailboxes, run the command `Get-Mailbox -InactiveMailboxOnly | Format-List Name,PrimarySmtpAddress,DistinguishedName,ExchangeGuid` and then use the DistinguishedName or ExchangeGuid property values to identify the inactive mailbox for this parameter (only those values are guaranteed to be unique for inactive mailboxes).
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Set5, Set8, Set6
+Type: MailboxIdParameter
+Parameter Sets: InactiveMailbox
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: User
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -835,9 +984,10 @@ This parameter is required only if you're creating a linked mailbox.
 
 ```yaml
 Type: String
-Parameter Sets: Set15, Set11, Set3, Set20
+Parameter Sets: Linked, LinkedRoomMailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -846,13 +996,9 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedMasterAccount
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account.
-
-For example:
+The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -862,9 +1008,77 @@ For example:
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set15, Set11, Set3, Set20
+Parameter Sets: Linked, LinkedRoomMailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LinkedRoom
+This parameter is available only in on-premises Exchange.
+
+The LinkedRoom switch is required to create linked resource mailboxes. You don't need to specify a value with this switch.
+
+A linked resource mailbox is useful in a scenario where you have an account in an authentication forest and you want it to be directly linked to a resource mailbox in resource forest.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: LinkedRoomMailbox
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MicrosoftOnlineServicesID
+This parameter is available only in the cloud-based service.
+
+The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service. It isn't available for on-premises deployments.
+
+```yaml
+Type: WindowsLiveId
+Parameter Sets: MicrosoftOnlineServicesFederatedUser, MicrosoftOnlineServicesFederatedUser
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: WindowsLiveId
+Parameter Sets: EnableRoomMailboxAccount
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Migration
+The Migration switch is required to create migration mailboxes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Migration
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -875,25 +1089,14 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password for the mailbox (the user account that's associated with the mailbox). This parameter isn't required if you're creating a linked mailbox, resource mailbox, or shared mailbox, because the associated user accounts are disabled for these types of mailboxes.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
-Parameter Sets: Set5, Set15, Set16, Set13, Set6, Set11, Set2, Set3, Set12, Set14, Set7, Set23, Set17, Set20, Set18, Set19, Set21, Set22, Set24
+Parameter Sets: User, MicrosoftOnlineServicesID, RemoteArchive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-```yaml
-Type: SecureString
-Parameter Sets: Set9, Set1, Set10, Set4
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -901,18 +1104,83 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Room
-The Room switch specifies that the resource mailbox is a room mailbox. You don't need to specify a value with this switch.
+```yaml
+Type: SecureString
+Parameter Sets: Arbitration, DisabledUser, Discovery, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration RemovedMailbox, Room, Scheduling, Shared
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-This switch is required only if you're creating a room mailbox.
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolder
+The PublicFolder switch is required to create public folder mailboxes. You don't need to specify a value with this switch.
+
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
+
+The first public folder mailbox created in your Exchange organization is the primary hierarchy mailbox that contains the writeable copy of the hierarchy of public folders for the organization and public folder content. There can be only one writeable copy of the public folder hierarchy in your organization. All other public folder mailboxes are secondary public folder mailboxes that contain a read-only copy of the hierarchy and the content for public folders.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PublicFolder
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovedMailbox
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: RemovedMailboxIdParameter
+Parameter Sets: RemovedMailbox
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+```yaml
+Type: RemovedMailboxIdParameter
+Parameter Sets: User, MicrosoftOnlineServicesID, FederatedUser, MicrosoftOnlineServicesFederatedUser, RemoteArchive, RemovedMailbox
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Room
+The Room switch is required to create room mailboxes. You don't need to specify a value with this switch.
+
+Room mailboxes are resource mailboxes that are associated with a specific location (for example, conference rooms).
 
 When you use this switch, a logon-disabled account is created with the room mailbox, which prevents users from signing in to the mailbox. When you use the EnableRoomMailboxAccount and RoomMailboxPassword parameters, you can mail-enable the associated account.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set23, Set25
+Parameter Sets: EnableRoomMailboxAccount, Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -921,36 +1189,16 @@ Accept wildcard characters: False
 ```
 
 ### -Shared
-The Shared parameter specifies that the mailbox is a shared mailbox. You don't need to specify a value with this switch.
-
-This switch is required only if you're creating a shared mailbox.
+The Shared switch is required to create shared mailboxes. You don't need to specify a value with this switch.
 
 A shared mailbox is a mailbox where multiple users can log on to access the mailbox contents. The mailbox isn't associated with any of the users that can log on. It's associated with a disabled user account.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set14, Set19, Set21
+Parameter Sets: Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -UseExistingLiveId
-This parameter is available only in the cloud-based service.
-
-The UseExistingLiveId switch specifies whether to use the specified Microsoft account (formerly known as a Windows Live ID) that already exists in the cloud-based domain. The specified Microsoft account can't have a mail user associated with it.
-
-You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set5, Set4
-Aliases:
-Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -965,10 +1213,11 @@ The UserPrincipalName parameter specifies the logon name for the user account. T
 
 ```yaml
 Type: String
-Parameter Sets: Set5, Set16, Set13, Set11, Set2, Set3, Set12, Set14, Set23, Set17, Set20, Set18, Set19, Set21, Set22, Set25, Set27, Set28
+Parameter Sets: User, Arbitration, AuditLog, RemoteArchive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -977,27 +1226,11 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Set15, Set9, Set6, Set1, Set7, Set26, Set24
+Parameter Sets: AuxAuditLog, DisabledUser,Discovery, EnableRoomMailboxAccount, Equipment, Linked, LinkedRoomMailbox, Migration, Room, Scheduling, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -WindowsLiveID
-This parameter is available only in the cloud-based service.
-
-The WindowsLiveID parameter specifies the Microsoft account (formerly known as a Windows Live ID) of the mailbox.
-
-```yaml
-Type: WindowsLiveId
-Parameter Sets: Set5, Set13, Set8, Set6, Set11, Set10, Set4, Set7
-Aliases:
-Applicable: Exchange Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1019,7 +1252,8 @@ If you don't use this parameter, the default mobile device mailbox policy is use
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1038,13 +1272,14 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 
 - GUID
 
-For more information about address book policies, see Address book policies (https://technet.microsoft.com/library/hh529948.aspx).
+For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
-Parameter Sets: (All)
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1063,7 +1298,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -1073,7 +1308,8 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1084,13 +1320,9 @@ Accept wildcard characters: False
 ### -ArbitrationMailbox
 This parameter is available only in on-premises Exchange.
 
-The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox.
-
-For example:
+The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1112,9 +1344,10 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22, Set25, Set29
+Parameter Sets: User, MicrosoftOnlineServicesID, DisabledUser, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1123,13 +1356,14 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archiveswitch specifies that an archive mailbox is created for this mailbox. You don't need to specify a value with this switch.
+The Archive switch specifies that an archive mailbox is created for this mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1150,10 +1384,55 @@ The ArchiveDatabase parameter specifies the Exchange database that contains the 
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: (All)
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditLog
+This parameter is available only in on-premises Exchange.
+
+The AuditLog switch is required to create audit log mailboxes. You don't need to specify a value with this switch.
+
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
+
+To create other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AuditLog
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuxAuditLog
+This parameter is available only in on-premises Exchange.
+
+The AuxAuditLog switch is required to create auxiliary audit log mailboxes. You don't need to specify a value with this switch.
+
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
+
+To create other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AuxAuditLog
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1171,7 +1450,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1194,9 +1474,10 @@ Use the Get-MailboxDatabase cmdlet to see the available mailbox databases.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: (All)
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1213,7 +1494,8 @@ If you don't use the DisplayName parameter, the value of the Name parameter is u
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1228,28 +1510,10 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -EvictLiveId
-This parameter is available only in the cloud-based service.
-
-The EvictLiveId switch specifies whether to remove an unmanaged Microsoft account (formerly known as a Windows Live ID) from the cloud-based domain. An unmanaged Microsoft account was created in the domain before the domain was enrolled in the cloud-based service. Evicting a Microsoft account from the domain lets you save any settings associated with the Microsoft account, like instant messaging contacts.
-
-You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set13, Set8, Set11, Set10, Set4, Set7
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1264,7 +1528,8 @@ The FirstName parameter specifies the user's first name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1279,7 +1544,28 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HoldForMigration
+The HoldForMigration switch specifies whether to prevent any client or user, except the Microsoft Exchange Mailbox Replication service (MRS) process, from logging on to a public folder mailbox. You don't need to specify a value with this switch.
+
+You need to use this parameter when you create the first public folder, which is called the hierarchy mailbox, in your organization.
+
+Use this parameter only if you plan to migrate legacy Exchange 2010 public folders to Exchange 2016. If you use this switch but don't have legacy public folders to migrate, you won't be able to create any public folders.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PublicFolder
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1296,7 +1582,8 @@ You need to set the ImmutableId parameter if Active Directory Federation Service
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1311,7 +1598,24 @@ The Initials parameter specifies the user's middle initials.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsExcludedFromServingHierarchy
+The IsExcludedFromServingHierarchy parameter prevents users from accessing the public folder hierarchy on this public folder mailbox. For load-balancing purposes, users are equally distributed across public folder mailboxes by default. When this parameter is set on a public folder mailbox, that mailbox isn't included in this automatic load-balancing and won't be accessed by users to retrieve the public folder hierarchy. However, if an administrator has set the DefaultPublicFolderMailbox property on a user mailbox to a specific public folder mailbox, the user will still access the specified public folder mailbox even if the IsExcludedFromServingHierarchy parameter is set for that public folder mailbox.
+
+```yaml
+Type: Boolean
+Parameter Sets: PublicFolder
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1326,7 +1630,8 @@ The LastName parameter specifies the user's last name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1339,13 +1644,14 @@ This parameter is available only in on-premises Exchange.
 
 The LinkedCredential parameter specifies credentials to use to access the domain controller specified by the LinkedDomainController parameter. This parameter is optional, even if you're enabling a linked mailbox.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set15, Set11, Set3, Set20
+Parameter Sets: Linked, LinkedRoomMailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1356,7 +1662,7 @@ Accept wildcard characters: False
 ### -MailboxPlan
 This parameter is available only in the cloud-based service.
 
-The MailboxPlan parameter specifies the mailbox plan to applytothe mailbox. You can use any value that uniquely identifies the mailbox plan. For example:
+The MailboxPlan parameter specifies the mailbox plan to apply to the mailbox. You can use any value that uniquely identifies the mailbox plan. For example:
 
 - Name
 
@@ -1368,15 +1674,34 @@ The MailboxPlan parameter specifies the mailbox plan to applytothe mailbox. You 
 
 - GUID
 
-A mailbox plan specifies the permissions and features that are available to a mailbox. In Office 365, mailbox plans correspond to the subscriptions and licenses that administrators purchase and assign in the Office 365 admin center.
+A mailbox plan specifies the permissions and features that are available to a mailbox. In Office 365, mailbox plans correspond to the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center.
 
 You can see the available mailbox plans by using the Get-MailboxPlan cmdlet.
 
 ```yaml
 Type: MailboxPlanIdParameter
-Parameter Sets: Set5, Set9, Set13, Set8, Set6, Set11, Set1, Set10, Set3, Set12, Set14, Set4, Set7
+Parameter Sets: User, MicrosoftOnlineServicesID, DisabledUser, FederatedUser, InactiveMailbox, MicrosoftOnlineServicesFederatedUser, RemoteArchive, RemovedMailbox
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxRegion
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1391,9 +1716,10 @@ The ManagedFolderMailboxPolicy parameter specifies the managed folder mailbox po
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -1404,15 +1730,16 @@ Accept wildcard characters: False
 ### -ManagedFolderMailboxPolicyAllowed
 This parameter is available or functional only in Exchange Server 2010.
 
-The ManagedFolderMailboxPolicyAllowed parameter specifies whether to bypass the warning that messaging records management (MRM) features aren't supported for e-mail clients using versions of Microsoft Outlook earlier than Office Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
+The ManagedFolderMailboxPolicyAllowed parameter specifies whether to bypass the warning that messaging records management (MRM) features aren't supported for clients using versions of Microsoft Outlook earlier than Office Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
 
 Outlook 2003 Service Pack 3 clients are supported but are provided limited functionality for MRM.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -1421,13 +1748,9 @@ Accept wildcard characters: False
 ```
 
 ### -ModeratedBy
-The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
-
-For example:
+The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -1445,9 +1768,10 @@ You need to use this parameter to specify at least one moderator when you set th
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22, Set25, Set29
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1465,10 +1789,11 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
-Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22
+Type: Boolean
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1481,9 +1806,10 @@ The Office parameter specifies the user's physical office name or number.
 
 ```yaml
 Type: String
-Parameter Sets: Set2, Set3
+Parameter Sets: LinkedRoomMailbox, Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1494,7 +1820,7 @@ Accept wildcard characters: False
 ### -OrganizationalUnit
 The OrganizationalUnit parameter specifies the location in Active Directory where the new mailbox is created.
 
-Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
 
@@ -1508,7 +1834,8 @@ Valid input for this parameter is an organizational unit (OU) or domain that's v
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1521,9 +1848,10 @@ The Phone parameter specifies the user's telephone number.
 
 ```yaml
 Type: String
-Parameter Sets: Set2, Set3
+Parameter Sets: LinkedRoomMailbox, Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1532,7 +1860,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 If you use the PrimarySmtpAddress parameter to specify the primary email address, the command sets the EmailAddressPolicyEnabled property of the mailbox to False, which means the email addresses of the mailbox aren't automatically updated by email address policies.
 
@@ -1540,7 +1868,8 @@ If you use the PrimarySmtpAddress parameter to specify the primary email address
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1555,9 +1884,10 @@ The RemoteArchive switch specifies that a remote archive mailbox is created for 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set9, Set13
+Parameter Sets: RemoteArchive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1577,10 +1907,11 @@ Access to remote PowerShell is required even if you're trying to open the Exchan
 A user's experience in any of these management interfaces is still controlled by the role-based access control (RBAC) permissions that are assigned to them.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1596,10 +1927,11 @@ The ResetPasswordOnNextLogon parameter specifies whether the user is required to
 - $false: The user isn't required to change their password the next time they log on to their mailbox. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1612,9 +1944,10 @@ The ResourceCapacity parameter specifies the capacity of the resource mailbox. F
 
 ```yaml
 Type: Int32
-Parameter Sets: Set2, Set3
+Parameter Sets: Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1641,9 +1974,10 @@ If you don't use this parameter, the retention policy named Default MRM Policy i
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: (All)
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1662,13 +1996,38 @@ The RoleAssignmentPolicy parameter specifies the role assignment policy that's a
 
 In Office 365, if you don't use this parameter, the default role assignment policy named Default Role Assignment Policy is automatically applied to the mailbox. In on-premises Exchange, no role assignment policy is automatically applied to the mailbox.
 
-Use the Get-RoleAssignmentPolicy cmdlet to see the available role assignment policies. For more information about assignment policies, see Understanding management role assignment policies (https://technet.microsoft.com/library/dd638100.aspx).
+Use the Get-RoleAssignmentPolicy cmdlet to see the available role assignment policies. For more information about assignment policies, see [Understanding management role assignment policies](https://docs.microsoft.com/exchange/understanding-management-role-assignment-policies-exchange-2013-help).
 
 ```yaml
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoomMailboxPassword
+Use the RoomMailboxPassword parameter to configure the password for a room mailbox that has a logon-enabled account (the EnableRoomMailboxAccount parameter is set to the value $true.)
+
+To use this parameter, you need to be a member of one of the following role groups:
+
+- Office 365: The Organization Management role group via the Mail Recipients, Reset Password, and User Options roles, the Help Desk role group via the Reset Password and User Options roles, or the Recipient Management role group via the Mail Recipients and Reset Password roles.
+
+- On-premises Exchange: The Organization Management role group via the Mail Recipients and User Options roles, the Recipient Management role group via the Mail Recipients role, or the Help Desk role group via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
+
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
+
+```yaml
+Type: SecureString
+Parameter Sets: EnableRoomMailboxAccount
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1683,10 +2042,29 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Scheduling
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Scheduling
+Aliases:
+Applicable: Exchange Online
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1705,10 +2083,11 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 ```yaml
-Type: Never | Internal | Always
-Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22, Set25, Set29
+Type: TransportModerationNotificationFlags
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, RemoteArchive, RemovedMailbox, Room, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1733,9 +2112,28 @@ If you don't use this parameter, the sharing policy named Default Sharing Policy
 
 ```yaml
 Type: SharingPolicyIdParameter
-Parameter Sets: (All)
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetAllMDBs
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, FederatedUser, InactiveMailbox, Linked, LinkedRoomMailbox, MicrosoftOnlineServicesFederatedUser, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1760,9 +2158,10 @@ By default, no throttling policy is applied to the mailbox.
 
 ```yaml
 Type: ThrottlingPolicyIdParameter
-Parameter Sets: (All)
+Parameter Sets: User, MicrosoftOnlineServicesID, Arbitration, AuditLog, AuxAuditLog, DisabledUser, Discovery, EnableRoomMailboxAccount, Equipment, InactiveMailbox, Linked, LinkedRoomMailbox, Migration, PublicFolder, RemoteArchive, RemovedMailbox, Room, Scheduling, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1777,406 +2176,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -EnableRoomMailboxAccount
-The EnableRoomMailboxAccount parameter specifies whether to enable the disabled user account that's associated with this room mailbox. Valid values are:
-
-- $true: The disabled account that's associated with the room mailbox is enabled. You also need to use the RoomMailboxPassword with this value. This allows the account to log on to the room mailbox.
-
-- $false: The account that's associated with the room mailbox is disabled. You can't use the account to logon to the room mailbox. This is the default value.
-
-You need to use this parameter with the Room switch.
-
-Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Lync Room System or the Skype for Business Room System.
-
-In Exchange Online, a room mailbox with an associated enabled account doesn't require a license.
-
-```yaml
-Type: $true | $false
-Parameter Sets: Set23, Set25
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LinkedRoom
-This parameter is available only in on-premises Exchange.
-
-The LinkedRoom switch specifies that the mailbox is a linked resource mailbox. You don't need to specify a value with this switch.
-
-A linked resource mailbox is useful in a scenario where you have an account in an authentication forest and you want it to be directly linked to a resource mailbox in resource forest.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MicrosoftOnlineServicesID
-This parameter is available only in the cloud-based service.
-
-The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-```yaml
-Type: WindowsLiveId
-Parameter Sets: Set8, Set10, Set12, Set14
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: WindowsLiveId
-Parameter Sets: Set23, Set25
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolder
-The PublicFolder switch specifies that the mailbox is a public folder mailbox. You don't need to specify a value with this switch.
-
-This switch is required only if you're creating a public folder mailbox.
-
-Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders. The first public folder mailbox created in your Exchange organization is called the primary hierarchy mailbox. It contains the writeable copy of the hierarchy of public folders for the organization and public folder content. There can be only one writeable copy of the public folder hierarchy in your organization. All other public folder mailboxes are called secondary public folder mailboxes and contain a read-only copy of the hierarchy and the content for public folders.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set26, Set30
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HoldForMigration
-The HoldForMigration switch specifies whether to prevent any client or user, except the Microsoft Exchange Mailbox Replication service (MRS) process, from logging on to a public folder mailbox. You don't need to specify a value with this switch.
-
-You need to use this parameter when you create the first public folder, which is called the hierarchy mailbox, in your organization.
-
-Use this parameter only if you plan to migrate legacy Exchange 2010 public folders to Exchange 2016. If you use this switch but don't have legacy public folders to migrate, you won't be able to create any public folders.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set26, Set30
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsExcludedFromServingHierarchy
-The IsExcludedFromServingHierarchy parameter prevents users from accessing the public folder hierarchy on this public folder mailbox. For load-balancing purposes, users are equally distributed across public folder mailboxes by default. When this parameter is set on a public folder mailbox, that mailbox isn't included in this automatic load-balancing and won't be accessed by users to retrieve the public folder hierarchy. However, if an administrator has set the DefaultPublicFolderMailbox property on a user mailbox to a specific public folder mailbox, the user will still access the specified public folder mailbox even if the IsExcludedFromServingHierarchy parameter is set for that public folder mailbox.
-
-```yaml
-Type: $true | $false
-Parameter Sets: Set26, Set30
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxProvisioningConstraint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxProvisioningConstraint
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxProvisioningPreferences
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemovedMailbox
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: RemovedMailboxIdParameter
-Parameter Sets: Set5, Set9, Set13, Set8, Set11, Set1, Set10, Set12, Set14, Set4, Set7
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: RemovedMailboxIdParameter
-Parameter Sets: Set6
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -RoomMailboxPassword
-Use the RoomMailboxPassword parameter to configure the password for a room mailbox that has a logon-enabled account (the EnableRoomMailboxAccount parameter is set to the value $true.)
-
-To use this parameter, you need to be a member of one of the following role groups:
-
-- Office 365: The Organization Management role group via the Mail Recipients, Reset Password, and User Options roles, the Help Desk role group via the Reset Password and User Options roles, or the Recipient Management role group via the Mail Recipients and Reset Password roles.
-
-- On-premises Exchange: The Organization Management role group via the Mail Recipients and User Options roles, the Recipient Management role group via the Mail Recipients role, or the Help Desk role group via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
-
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
-
-```yaml
-Type: SecureString
-Parameter Sets: Set23, Set25
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TargetAllMDBs
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuditLog
-The AuditLog switch specifies the mailbox is an arbitration mailbox that's used to store audit log settings. You don't need to specify a value with this switch.
-
-Notes: 
-
-- This switch is required only if you're creating this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for creating this type of arbitration mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set26
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuxAuditLog
-The AuxAuditLog switch specifies the mailbox is an arbitration mailbox that's used to store audit log data. You don't need to specify a value with this switch.
-
-Notes: 
-
-- This switch is required only if you're creating this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for creating this type of arbitration mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set27
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Migration
-The Migration switch specifies that the mailbox is a migration mailbox. You don't need to specify a value with this switch.
-
-This switch is required only if you're creating a migration mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set23
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Scheduling
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set18
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set28
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InactiveMailbox
-This parameter is available only in the cloud-based service.
-
-The InactiveMailbox parameter specifies the inactive mailbox that you want to recover. To find inactive mailboxes, run the command Get-Mailbox -InactiveMailboxOnly | FL Name,PrimarySmtpAddress,DistinguishedName,ExchangeGuid and then use the DistinguishedName or ExchangeGuid property values to identify the inactive mailbox for this parameter (values guaranteed to be unique).
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: Set5, Set1, Set14, Set4
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: Set10
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -MailboxRegion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OfficeGraph
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set22
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProvisionedForOfficeGraph
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set22
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipMailboxProvisioningConstraintValidation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2185,20 +2186,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/42dbb25a-0b23-4775-ae15-7af62c089565.aspx)

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-calendarprocessing
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-CalendarProcessing
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-CalendarProcessing
@@ -13,79 +17,109 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-CalendarProcessing cmdlet to modify calendar processing options for resource mailboxes, which include the Calendar Attendant, resource booking assistant, and calendar configuration. Note that this cmdlet is effective only on resource mailboxes.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-CalendarProcessing [-Identity] <MailboxIdParameter> [-AddAdditionalResponse <$true | $false>]
- [-AdditionalResponse <String>] [-AddNewRequestsTentatively <$true | $false>]
- [-AddOrganizerToSubject <$true | $false>] [-AllBookInPolicy <$true | $false>]
- [-AllowConflicts <$true | $false>] [-AllowRecurringMeetings <$true | $false>]
- [-AllRequestInPolicy <$true | $false>] [-AllRequestOutOfPolicy <$true | $false>]
- [-AutomateProcessing <None | AutoUpdate | AutoAccept>] [-BookingType <Standard | Reserved>] [-BookingWindowInDays <Int32>]
- [-BookInPolicy <RecipientIdParameter[]>] [-Confirm] [-ConflictPercentageAllowed <Int32>]
- [-DeleteAttachments <$true | $false>] [-DeleteComments <$true | $false>]
- [-DeleteNonCalendarItems <$true | $false>] [-DeleteSubject <$true | $false>] [-DomainController <Fqdn>]
- [-EnableResponseDetails <$true | $false>] [-EnforceSchedulingHorizon <$true | $false>]
- [-ForwardRequestsToDelegates <$true | $false>] [-IgnoreDefaultScope] [-MaximumConflictInstances <Int32>]
- [-MaximumDurationInMinutes <Int32>] [-OrganizerInfo <$true | $false>]
- [-ProcessExternalMeetingMessages <$true | $false>] [-RemoveForwardedMeetingNotifications <$true | $false>]
- [-RemoveOldMeetingMessages <$true | $false>] [-RemovePrivateProperty <$true | $false>]
- [-RequestInPolicy <RecipientIdParameter[]>] [-RequestOutOfPolicy <RecipientIdParameter[]>]
- [-ResourceDelegates <RecipientIdParameter[]>] [-ScheduleOnlyDuringWorkHours <$true | $false>]
- [-TentativePendingApproval <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-CalendarProcessing [-Identity] <MailboxIdParameter>
+ [-AddAdditionalResponse <Boolean>]
+ [-AdditionalResponse <String>]
+ [-AddNewRequestsTentatively <Boolean>]
+ [-AddOrganizerToSubject <Boolean>]
+ [-AllBookInPolicy <Boolean>]
+ [-AllowConflicts <Boolean>]
+ [-AllowRecurringMeetings <Boolean>]
+ [-AllRequestInPolicy <Boolean>]
+ [-AllRequestOutOfPolicy <Boolean>]
+ [-AutomateProcessing <CalendarProcessingFlags>]
+ [-BookingType <ResourceBookingType>]
+ [-BookingWindowInDays <Int32>]
+ [-BookInPolicy <RecipientIdParameter[]>]
+ [-Confirm]
+ [-ConflictPercentageAllowed <Int32>]
+ [-DeleteAttachments <Boolean>]
+ [-DeleteComments <Boolean>]
+ [-DeleteNonCalendarItems <Boolean>]
+ [-DeleteSubject <Boolean>]
+ [-DomainController <Fqdn>]
+ [-EnableResponseDetails <Boolean>]
+ [-EnforceSchedulingHorizon <Boolean>]
+ [-ForwardRequestsToDelegates <Boolean>]
+ [-IgnoreDefaultScope]
+ [-MaximumConflictInstances <Int32>]
+ [-MaximumDurationInMinutes <Int32>]
+ [-OrganizerInfo <Boolean>]
+ [-ProcessExternalMeetingMessages <Boolean>]
+ [-RemoveForwardedMeetingNotifications <Boolean>]
+ [-RemoveOldMeetingMessages <Boolean>]
+ [-RemovePrivateProperty <Boolean>]
+ [-RequestInPolicy <RecipientIdParameter[]>]
+ [-RequestOutOfPolicy <RecipientIdParameter[]>]
+ [-ResourceDelegates <RecipientIdParameter[]>]
+ [-ScheduleOnlyDuringWorkHours <Boolean>]
+ [-TentativePendingApproval <Boolean>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-CalendarProcessing -Identity "Conf 212" -AutomateProcessing AutoAccept -DeleteComments $true -AddOrganizerToSubject $true -AllowConflicts $false
 ```
 
 This example automates the processing of calendar requests to the resource mailbox Conf 212.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-CalendarProcessing -Identity "Car 53" -AutomateProcessing None
 ```
 
 This example disables automatic processing for the resource mailbox Car 53.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-CalendarProcessing -Identity "5th Floor Conference Room" -AutomateProcessing AutoAccept -AllBookInPolicy $true
 ```
 
 This example allows the Calendar Attendant to approve in-policy requests from all users.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Set-CalendarProcessing -Identity "5th Floor Conference Room" -AutomateProcessing AutoAccept -AllRequestInPolicy $true -AllBookInPolicy $false -ResourceDelegates "chris@contoso.com","michelle@contoso.com"
 ```
 
 This example allows all users to submit in-policy requests, but the request is still subject to approval by one of the specified delegates.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -RequestOutOfPolicy DavidPelton@contoso.com -ResourceDelegates "chris@contoso.com","michelle@contoso.com"
 ```
 
 This example allows the Calendar Attendant to accept out-of-policy requests from David Pelton. The request is still subject to approval by one of the specified delegates.
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 Set-CalendarProcessing -Identity "Car 53" -AutomateProcessing AutoAccept -BookInPolicy "ayla@contoso.com","tony@contoso.com" -AllBookInPolicy $false
 ```
 
 This example allows a list of users to submit in-policy meeting requests to the equipment mailbox for Car 53.
 
-### -------------------------- Example 7 --------------------------
+### Example 7
+```powershell
+$group = New-DistributionGroup "Room 221 Booking Allowed"
+Update-DistributionGroupMember -Identity $group.Identity -Members karina@contoso.com,tony@contoso.com -BypassSecurityGroupManagerCheck:$true
+Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group.Identity -AllBookInPolicy $false
 ```
+
+This example rejects meeting requests from any user who isn't a member of the "Room 221 Booking Allowed" distribution group.
+
+### Example 8
+```powershell
 Set-CalendarProcessing -Identity "Room 221" -ProcessExternalMeetingMessages $false
 ```
 
@@ -94,13 +128,9 @@ This example rejects meeting requests from any user who isn't a member of the Ex
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the resource mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -124,7 +154,8 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -133,15 +164,20 @@ Accept wildcard characters: False
 ```
 
 ### -AddAdditionalResponse
-The AddAdditionalResponse parameter specifies whether additional information would be sent from the resource mailbox when responding to meeting requests. Valid input for this parameter is $true or $false. The default value is $false.
+The AddAdditionalResponse parameter specifies whether additional information (the value of the AdditionalResponse parameter) is added to meeting request responses. Valid values are:
+
+- $true: Text from the AdditionalResponse parameter is added to meeting request responses.
+
+- $false: No additional text is added to meeting request responses (any text in the AddAdditionalResponse parameter isn't used). This is the default value.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -150,13 +186,14 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalResponse
-The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests. This parameter is meaningful only when the AddAdditionalRepsponse parameter is set to $true.
+The AdditionalResponse parameter specifies the additional information to be included in responses to meeting requests when the value of the AddAdditionalResponse parameter is $true. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -165,15 +202,18 @@ Accept wildcard characters: False
 ```
 
 ### -AddNewRequestsTentatively
-The AddNewRequestsTentatively parameter specifies whether to have the Calendar Attendant put new calendar items tentatively on the calendar. If the AddNewRequestsTentatively parameter is set to $false, only existing calendar items are updated by the Calendar Attendant
+The AddNewRequestsTentatively parameter specifies whether new meeting requests are added to the calendar as tentative. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: New calendar items are added to the calendar as tentative. This is the default value.
+
+- $false: Only existing calendar items are updated by the Calendar Attendant.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -182,15 +222,20 @@ Accept wildcard characters: False
 ```
 
 ### -AddOrganizerToSubject
-The AddOrganizerToSubject parameter specifies whether the meeting organizer's name is used as the subject of the meeting request. Valid input for this parameter is $true or $false. The default value is $true.
+The AddOrganizerToSubject parameter specifies whether the meeting organizer's name is used as the subject of the meeting request. Valid values are:
+
+- $true: The meeting organizer's name replaces any existing Subject value for the meeting request. This is the default value.
+
+- $false: The original Subject value is preserved.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -199,13 +244,18 @@ Accept wildcard characters: False
 ```
 
 ### -AllBookInPolicy
-The AllBookInPolicy parameter specifies whether to automatically approve in-policy requests from all users. Valid input for this parameter is $true or $false. The default value is $true.
+The AllBookInPolicy parameter specifies whether to automatically approve in-policy requests from all users to the resource mailbox. Valid values are:
+
+- $true: In-policy requests from all users are automatically approved. This is the default value.
+
+- $false: In-policy requests from all users aren't automatically approved (approval by a delegate is required).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -214,13 +264,18 @@ Accept wildcard characters: False
 ```
 
 ### -AllowConflicts
-The AllowConflicts parameter specifies whether to allow conflicting meeting requests. Valid input for this parameter is $true or $false. The default value is $false.
+The AllowConflicts parameter specifies whether to allow conflicting meeting requests. Valid values are:
+
+- $true: Conflicts are allowed.
+
+- $false: Conflicts aren't allowed. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -229,13 +284,18 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRecurringMeetings
-The AllowRecurringMeetings parameter specifies whether to allow recurring meetings. Valid input for this parameter is $true or $false. The default value is $true.
+The AllowRecurringMeetings parameter specifies whether to allow recurring meetings in meeting requests. Valid values are:
+
+- $true: Recurring meetings are allowed. This is the default value.
+
+- $false: Recurring meetings aren't allowed.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -244,15 +304,18 @@ Accept wildcard characters: False
 ```
 
 ### -AllRequestInPolicy
-The AllRequestInPolicy parameter specifies whether to allow all users to submit in-policy requests. Valid input for this parameter is $true or $false. The default value is $false.
+The AllRequestInPolicy parameter specifies whether to allow all users to submit in-policy requests to the resource mailbox. Valid values are:
 
-These requests are subject to approval by a resource mailbox delegate unless the AllBookInPolicy parameter is set to $true.
+- $true: All users are allowed to submit in-policy requests to the resource mailbox. These requests require approval by a resource mailbox delegate if the AllBookInPolicy parameter is set to $false (the default value is $true).
+
+- $false: All users can't submit in-policy requests to the resource mailbox. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -261,15 +324,18 @@ Accept wildcard characters: False
 ```
 
 ### -AllRequestOutOfPolicy
-The AllRequestOutOfPolicy parameter specifies whether to allow all users to submit out-of-policy requests. Valid input for this parameter is $true or $false. The default value is $false.
+The AllRequestOutOfPolicy parameter specifies whether to allow all users to submit out-of-policy requests to the resource mailbox. Valid values are:
 
-Out-of-policy requests are subject to approval by a resource mailbox delegate.
+- $true: All users are allowed to submit out-of-policy requests to the resource mailbox. Out-of-policy requests require approval by a resource mailbox delegate.
+
+- $false: All users can't submit out-of-policy requests to the resource mailbox. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -278,23 +344,26 @@ Accept wildcard characters: False
 ```
 
 ### -AutomateProcessing
-The AutomateProcessing parameter enables or disables calendar processing on the mailbox.
+The AutomateProcessing parameter enables or disables calendar processing on the mailbox. Valid values are:
 
-This parameter takes the following values:
+- None: Calendar processing is disabled on the mailbox. Both the resource booking attendant and the Calendar Attendant are disabled on the mailbox.
 
-- None: Both the resource booking attendant and the Calendar Attendant are disabled on the mailbox.
+- AutoUpdate: Only the Calendar Attendant processes meeting requests and responses. Meeting requests are tentative in the calendar until they're approved by a delegate. Meeting organizers receive only decisions from delegates.
 
-- AutoUpdate: Only the Calendar Attendant processes meeting requests and responses.
+- AutoAccept: Both the Calendar Attendant and resource booking attendant are enabled on the mailbox. This means that the Calendar Attendant updates the calendar, and then the resource booking assistant accepts the meeting based upon the policies. Eligible meeting organizers receive the decision directly without human intervention (free = accept; busy = decline).
 
-- AutoAccept: Both the Calendar Attendant and resource booking attendant are enabled on the mailbox. This means that the Calendar Attendant updates the calendar, and then the resource booking assistant accepts the meeting based upon the policies.
+In on-premises Exchange, resource mailboxes created in the Exchange admin center (EAC) have the default value AutoAccept, while resource mailboxes created in PowerShell have the default value AutoUpdate.
 
-The default value on a resource mailbox is AutoAccept. The default value on a user mailbox is AutoUpdate, but you can't change the value on a user mailbox.
+In Exchange Online, resource mailbox created in the EAC and resource mailboxes created in PowerShell after November 15, 2018 have the default value AutoAccept. Resource mailboxes created in PowerShell before November 15 have the default value AutoUpdate.
+
+The default value for user mailboxes is AutoUpdate, but you can't change the value on a user mailbox.
 
 ```yaml
-Type: None | AutoUpdate | AutoAccept
+Type: CalendarProcessingFlags
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -303,28 +372,36 @@ Accept wildcard characters: False
 ```
 
 ### -BookingType
-Description of this parameter
+This parameter is available only in the cloud-based service.
+
+The BookingType parameter specifies how reservations work on the resource mailbox. Valid values are:
+
+- Standard: The resource can be reserved based on the other settings in this cmdlet. This is the default value
+
+- Reserved: The resource can't be reserved.
 
 ```yaml
-Type: 
-Parameter Sets: ()
+Type: <ResourceBookingType>
+Parameter Sets: (All)
 Aliases:
-Applicable: 
-Required: 
-Position: 
-Default value: 
-Accept pipeline input:
-Accept wildcard characters: 
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -BookingWindowInDays
-The BookingWindowInDays parameter specifies the maximum number of days in advance that the resource can be reserved. Valid input is an integer from 0 through 1080. The default value is 180 days. The value 0 means today.
+The BookingWindowInDays parameter specifies the maximum number of days in advance that the resource can be reserved. A valid value is an integer from 0 through 1080. The default value is 180 days. The value 0 means today.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -333,15 +410,9 @@ Accept wildcard characters: False
 ```
 
 ### -BookInPolicy
-The BookInPolicy parameter specifies a comma-separated list of users who are allowed to submit in-policy meeting requests to the resource mailbox. Any in-policy meeting requests from these users are automatically approved.
-
-You can use any value that uniquely identifies the recipient.
-
-For example:
+The BookInPolicy parameter specifies users or groups who are allowed to submit in-policy meeting requests to the resource mailbox that are automatically approved. You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -353,11 +424,14 @@ For example:
 
 - GUID
 
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -376,7 +450,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -385,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConflictPercentageAllowed
-The ConflictPercentageAllowed parameter specifies the maximum percentage of meeting conflicts for new recurring meeting requests. Valid input for this parameter is an integer from 0 through 100. The default value is 0.
+The ConflictPercentageAllowed parameter specifies the maximum percentage of meeting conflicts for new recurring meeting requests. A valid value is an integer from 0 through 100. The default value is 0.
 
 If a new recurring meeting request conflicts with existing reservations for the resource more than the percentage specified by this parameter, the recurring meeting request is automatically declined. When the value is 0, no conflicts are permitted for new recurring meeting requests.
 
@@ -393,7 +468,8 @@ If a new recurring meeting request conflicts with existing reservations for the 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -402,15 +478,20 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteAttachments
-The DeleteAttachments parameter specifies whether to remove attachments from all incoming messages. Valid input for this parameter is $true or $false. The default value is $true.
+The DeleteAttachments parameter specifies whether to remove attachments from all incoming messages. Valid values are:
+
+- $true: Remove any attachments in incoming messages. This is the default value.
+
+- $false: Preserve any attachments in incoming messages.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -419,17 +500,20 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteComments
-The DeleteComments parameter specifies whether to remove or keep any text in the message body of incoming meeting requests.
+The DeleteComments parameter specifies whether to remove or keep any text in the message body of incoming meeting requests. Valid values are:
 
-Valid input for this parameter is $true or $false.
+- $true: Remove any text in the message body of incoming meeting requests. This is the default value.
+
+- $false: Preserve any text in the message body of incoming meeting requests.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -438,13 +522,18 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteNonCalendarItems
-The DeleteNonCalendarItems parameter specifies whether to remove or keep all non-calendar items received by the resource mailbox. Valid input for this parameter is $true or $false. The default value is $true.
+The DeleteNonCalendarItems parameter specifies whether to remove or keep all non-calendar-related messages that are received by the resource mailbox. Valid values are:
+
+- $true: Non-calendar messages are deleted. This is the default value.
+
+- $false: Non-calendar messages are preserved.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -453,15 +542,20 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteSubject
-The DeleteSubject parameter specifies whether to remove or keep the subject of incoming meeting requests. Valid input for this parameter is $true or $false. The default value is $true.
+The DeleteSubject parameter specifies whether to remove or keep the subject of incoming meeting requests. Valid values are:
+
+- $true: Remove the Subject value of incoming meeting requests. This is the default value.
+
+- $false: Preserve The Subject value of incoming meeting requests.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -478,7 +572,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -487,15 +582,18 @@ Accept wildcard characters: False
 ```
 
 ### -EnableResponseDetails
-The EnableResponseDetails parameter specifies whether to include the reasons for accepting or declining a meeting in the response email message. Valid input for this parameter is $true or $false. The default value is $true.
+The EnableResponseDetails parameter specifies whether to include the reasons for accepting or declining a meeting in the response email message. Valid values are:
 
-By default, the reasons for accepting or declining a meeting in the response email message are included.
+- $true: The reasons for accepting or declining a meeting are included in the response message. This is the default value.
+
+- $false: The reasons for accepting or declining a meeting aren't included in the response message.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -504,21 +602,18 @@ Accept wildcard characters: False
 ```
 
 ### -EnforceSchedulingHorizon
-The EnforceSchedulingHorizon parameter controls the behavior of recurring meetings that extend beyond the date specified by the BookingWindowInDays parameter.
+The EnforceSchedulingHorizon parameter controls the behavior of recurring meetings that extend beyond the date specified by the BookingWindowInDays parameter. Valid values are:
 
-Valid values for this parameter are:
-
-- $true: A recurring meeting request is automatically declined if the meetings start on or before the date specified by the BookingWindowInDays parameter, and the meetings extend beyond the specified date.
+- $true: A recurring meeting request is automatically declined if the meetings start on or before the date specified by the BookingWindowInDays parameter, and the meetings extend beyond the specified date. This is the default value.
 
 - $false: A recurring meeting request is automatically accepted if the meetings start on or before the date specified by the BookingWindowInDays parameter, and the meetings extend beyond the specified date. However, the number of meetings is automatically reduced so meetings won't occur after the specified date.
 
-The default value is $true.
-
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -527,15 +622,18 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardRequestsToDelegates
-The ForwardRequestsToDelegates parameter specifies whether to forward incoming meeting requests to the delegates defined for the resource mailbox.
+The ForwardRequestsToDelegates parameter specifies whether to forward incoming meeting requests to the delegates that are configured for the resource mailbox. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: Forward incoming meeting requests to the delegates. This is the default value.
+
+- $false: Don't forward incoming meeting requests to the delegates.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -556,7 +654,8 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -565,7 +664,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConflictInstances
-The MaximumConflictInstances parameter specifies the maximum number of conflicts for new recurring meeting requests when the AllowRecurringMeetings parameter is set to $true. Valid input for this parameter is an integer from 0 through INT32 (2147483647). The default value is 0.
+The MaximumConflictInstances parameter specifies the maximum number of conflicts for new recurring meeting requests when the AllowRecurringMeetings parameter is set to $true. A valid value is an integer from 0 through INT32 (2147483647). The default value is 0.
 
 If a new recurring meeting request conflicts with existing reservations for the resource more than the number of times specified by the MaximumConflictInstances parameter value, the recurring meeting request is automatically declined. When the value is 0, no conflicts are permitted for new recurring meeting requests.
 
@@ -573,7 +672,8 @@ If a new recurring meeting request conflicts with existing reservations for the 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -582,7 +682,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumDurationInMinutes
-The MaximumDurationInMinutes parameter specifies the maximum duration in minutes for meeting requests. Valid input for this parameter is an integer from 0 through INT32 (2147483647). The default value is 1440 (24 hours).
+The MaximumDurationInMinutes parameter specifies the maximum duration in minutes for meeting requests. A valid value is an integer from 0 through INT32 (2147483647). The default value is 1440 (24 hours).
 
 When the value is set to 0, the maximum duration of a meeting is unlimited. For recurring meetings, the value of this parameter applies to the length of an individual meeting instance.
 
@@ -590,7 +690,8 @@ When the value is set to 0, the maximum duration of a meeting is unlimited. For 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -599,17 +700,18 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizerInfo
-The OrganizerInfo parameter specifies whether to have mailboxes send organizer information when a meeting request is declined because of conflicts.
+The OrganizerInfo parameter specifies whether the resource mailbox sends organizer information when a meeting request is declined because of conflicts. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: Organizer information is sent when a meeting request is declined because of conflicts. This is the default value.
 
-By default, resource mailboxes send organizer information when a meeting request is declined because of conflicts.
+- $false: Organizer information isn't sent when a meeting request is declined because of conflicts.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -618,15 +720,18 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessExternalMeetingMessages
-The ProcessExternalMeetingMessages parameter specifies whether to process meeting requests that originate outside the Exchange organization. Valid input for this parameter is $true or $false. The default value is $false.
+The ProcessExternalMeetingMessages parameter specifies whether to process meeting requests that originate outside the Exchange organization. Valid values are:
 
-By default, meeting requests that originate outside of the organization are rejected.
+- $true: Meeting requests from external senders are processed.
+
+- $false: Meeting requests from external senders are rejected. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -635,15 +740,18 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveForwardedMeetingNotifications
-The RemoveForwardedMeetingNotifications parameter specifies whether forwarded meeting notifications are moved to the Deleted Items folder after they're processed by the Calendar Attendant.
+The RemoveForwardedMeetingNotifications parameter specifies whether forwarded meeting notifications are moved to the Deleted Items folder after they're processed by the Calendar Attendant. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+- $true: Processed forwarded meeting notifications are deleted (moved to the Deleted Items folder).
+
+- $false: Processed forwarded meeting notifications aren't deleted. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -652,15 +760,18 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOldMeetingMessages
-The RemoveOldMeetingMessages parameter specifies whether the Calendar Attendant removes old and redundant updates and responses.
+The RemoveOldMeetingMessages parameter specifies whether the Calendar Attendant removes old and redundant updates and responses. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: Outdated and redundant meeting messages are deleted. This is the default value.
+
+- $false: Outdated and redundant meeting messages aren't deleted.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -669,15 +780,18 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePrivateProperty
-The RemovePrivateProperty parameter specifies whether to clear the private flag for incoming meeting requests. Valid input for this parameter is $true or $false. The default value is $true.
+The RemovePrivateProperty parameter specifies whether to clear the private flag for incoming meetings that were sent by the organizer in the original requests. Valid values are:
 
-By default, the private flag for incoming meeting requests is cleared. To ensure the private flag that was sent by the organizer in the original request remains as specified, set tthis parameter to $false.
+- $true: The private flag for incoming meeting requests is cleared (the meeting is no longer private). This is the default value.
+
+- $false: The private flag for incoming meeting requests is preserved (private meetings stay private).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -686,15 +800,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestInPolicy
-The RequestInPolicy parameter specifies a comma-separated list of users who are allowed to submit in-policy meeting requests to the resource mailbox. All in-policy meeting requests from these users are subject to approval by a resource mailbox delegate.
-
-You can use any value that uniquely identifies the user.
-
-For example:
+The RequestInPolicy parameter specifies users who are allowed to submit in-policy meeting requests to the resource mailbox that require approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -706,11 +814,14 @@ For example:
 
 - GUID
 
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -719,15 +830,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestOutOfPolicy
-The RequestOutOfPolicy parameter specifies a comma-separated list of users who are allowed to submit out-of-policy requests.
-
-You can use any value that uniquely identifies the user.
-
-For example:
+The RequestOutOfPolicy parameter specifies users who are allowed to submit out-of-policy requests that require approval by a resource mailbox delegate. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -739,13 +844,14 @@ For example:
 
 - GUID
 
-Out-of-policy requests are subject to approval by a resource mailbox delegate.
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -754,15 +860,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceDelegates
-The ResourceDelegates parameter specifies a comma-separated list of users who are resource mailbox delegates. Resource mailbox delegates can approve or reject requests sent to the resource mailbox.
-
-You can use any value that uniquely identifies the user.
-
-For example:
+The ResourceDelegates parameter specifies users can approve or reject requests that are sent to the resource mailbox. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -774,11 +874,14 @@ For example:
 
 - GUID
 
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -787,19 +890,20 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleOnlyDuringWorkHours
-The ScheduleOnlyDuringWorkHours parameter specifies whether to allow meetings to be scheduled outside of the working hours that are defined for the resource mailbox.
+The ScheduleOnlyDuringWorkHours parameter specifies whether to allow meetings to be scheduled outside of the working hours that are defined for the resource mailbox. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+- $true: Meeting requests that are outside of working hours are automatically rejected.
 
-If set to $true, meeting requests for times outside the working hours of the resource mailbox will be rejected.
+- $false: Meeting requests that are outside of working hours aren't automatically rejected. This is the default value.
 
 You configure the working hours of the resource mailbox by using the WorkDays, WorkingHoursStartTime, WorkingHoursEndTime and WorkingHoursTimeZone parameters on the Set-MailboxCalendarConfiguration cmdlet.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -808,15 +912,18 @@ Accept wildcard characters: False
 ```
 
 ### -TentativePendingApproval
-The TentativePendingApproval parameter specifies whether to mark pending requests as tentative on the calendar. Valid input for this parameter is $true or $false. The default value is $true.
+The TentativePendingApproval parameter specifies whether to mark pending requests as tentative on the calendar. Valid values are:
 
-If set to $false, pending requests are marked as free.
+- $true: Meeting requests that are awaiting approval from a delegate appear in the calendar as tentative. This is the default value.
+
+- $false: Meeting requests that are awaiting approval appear in the calendar as free.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -831,7 +938,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -840,20 +948,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/000bc90f-1d00-4384-ab59-d6cf6f674825.aspx)

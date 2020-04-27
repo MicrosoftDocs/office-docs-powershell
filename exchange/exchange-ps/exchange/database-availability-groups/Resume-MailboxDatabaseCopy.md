@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/resume-mailboxdatabasecopy
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Resume-MailboxDatabaseCopy
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Resume-MailboxDatabaseCopy
@@ -13,44 +17,42 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Resume-MailboxDatabaseCopy cmdlet to unblock activation or resume log copying and replay for a passive mailbox database copy.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-###  (Default)
+### Identity
 ```
-Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-ReplicationOnly] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-DisableReplayLag] [-Confirm]
- [-DisableReplayLagReason <String>] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ReplicationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### DisableReplayLag
 ```
-Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-ReplicationOnly] [-WhatIf] [<CommonParameters>]
+Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-DisableReplayLag] [-DisableReplayLagReason <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Resume-MailboxDatabaseCopy cmdlet resumes replication and replay from a suspended state. If a database copy was suspended without administrator intervention, it's because the database copy is in a bad state. You can use the Get-MailboxDatabaseCopyStatus cmdlet to see if there are any messages indicating a failure. If the copy of the database is in a bad state, resuming the copy causes replication to fail and the mailbox database copy to return to a suspended state.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Resume-MailboxDatabaseCopy -Identity DB1\MBX3
 ```
 
 This example resumes replication and replay activity for the copy of the database DB1 hosted on the Mailbox server MBX3.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Resume-MailboxDatabaseCopy -Identity DB2\MBX4 -ReplicationOnly
 ```
 
@@ -65,7 +67,8 @@ The Identity parameter specifies the name of the database whose copying is being
 Type: DatabaseCopyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -84,7 +87,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +103,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -112,9 +117,10 @@ The ReplicationOnly switch specifies whether to resume replication without affec
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +135,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -142,9 +149,10 @@ The DisableReplayLag parameter specifies that any configured replay lag time for
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: DisableReplayLag
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -157,9 +165,10 @@ The DisableReplayLagReason parameter is used with the DisableReplayLag parameter
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: DisableReplayLag
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -168,20 +177,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/3d90b006-9914-415b-9a1f-730bd91c8548.aspx)

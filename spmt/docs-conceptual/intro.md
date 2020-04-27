@@ -1,8 +1,9 @@
 ---
 localization_priority: Normal
+title: Microsoft SharePoint Migration Tool cmdlet reference
 ---
 
-#Microsoft SharePoint Migration Tool cmdlet reference
+# Microsoft SharePoint Migration Tool cmdlet reference
 
 Welcome to the Microsoft SharePoint Migration Tool PowerShell cmdlet help references. The Microsoft SharePoint Migration Tool cmdlets provide the command line interface for service administration and management.
 
@@ -10,4 +11,4 @@ Here you will find all of the Microsoft SharePoint Migration Tool PowerShell hel
 
 The repo is located here: https://github.com/microsoftdocs/office-docs-powershell and you can find the README displayed at the bottom of the page.
 
-To find other modules you can use the PowerShell Module Browser located at: https://docs.microsoft.com/en-us/powershell/module. For example, to see the SharePoint modules you could use this query: https://docs.microsoft.com/en-us/powershell/module/?term=sharepoint.
+To find other modules you can use the PowerShell Module Browser located at: https://docs.microsoft.com/powershell/module. For example, to see the SharePoint modules you could use this query: https://docs.microsoft.com/powershell/module/?term=sharepoint.

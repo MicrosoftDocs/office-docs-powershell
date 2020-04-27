@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spperformancepointcontent
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPPerformancePointContent
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Import-SPPerformancePointContent
@@ -25,9 +30,9 @@ The Import-SPPerformancePointContent imports a PPS dashboard and its dependencie
 
 ### Example 1 
 ```
-PS C:\>$ContentList = @{"/bi/Dashboard Content" = "/biprod/Dashboard Content"; "/bi/My Projects" = "/biprod/My Projects"}
-PS C:\>$DatasourceList = @{"/bi/DataConnections/AdventureWorks.ppsdc" = "/myBi/libraries/DataConnections/AdventureWorks_prod.ppsdc"; "/bi/DataConnections/AW 2008 Cubes4.ppsdc" =     "/myBi/libraries/DataConnections/AW 2008 Cubes3.ppsdc"; "/sales/DataConnections/Excel DS.ppsdc" = "/marketing/PPS Data Sources/PDW 2010.ppsdc"}
-PS C:\>Import-SPPerformancePointContent -ImportFileURL "http://contoso.com/biprod/DocumentLibrary/Dashboard1.cmp" -SiteDestination "http://contoso.com/biprod/" -LocationMap $ContentList -DatasourceMap $DatasourceList -MasterPage "marketing and sales.master"
+$ContentList = @{"/bi/Dashboard Content" = "/biprod/Dashboard Content"; "/bi/My Projects" = "/biprod/My Projects"}
+$DatasourceList = @{"/bi/DataConnections/AdventureWorks.ppsdc" = "/myBi/libraries/DataConnections/AdventureWorks_prod.ppsdc"; "/bi/DataConnections/AW 2008 Cubes4.ppsdc" =     "/myBi/libraries/DataConnections/AW 2008 Cubes3.ppsdc"; "/sales/DataConnections/Excel DS.ppsdc" = "/marketing/PPS Data Sources/PDW 2010.ppsdc"}
+Import-SPPerformancePointContent -ImportFileURL "https://contoso.com/biprod/DocumentLibrary/Dashboard1.cmp" -SiteDestination "https://contoso.com/biprod/" -LocationMap $ContentList -DatasourceMap $DatasourceList -MasterPage "marketing and sales.master"
 ```
 
 This example imports a dashboard by using the $Datasourcelist and $ContentList variables.
@@ -43,7 +48,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -59,7 +64,7 @@ Maps existing or adds new data sources to destination library.
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -75,7 +80,7 @@ Path and Name of the CMP file created in the export command.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -91,7 +96,7 @@ Maps the locations between source lists and destination lists.
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -107,7 +112,7 @@ Specifies which master page to use for imported dashboards.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -123,7 +128,7 @@ Specifies the site to which the dashboard will be deployed. Also used to determi
 Type: SPWebPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -133,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

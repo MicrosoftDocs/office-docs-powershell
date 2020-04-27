@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchcrawlrule
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchCrawlRule
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchCrawlRule
@@ -22,18 +27,18 @@ Remove-SPEnterpriseSearchCrawlRule [-Identity] <CrawlRulePipeBind>
 ## DESCRIPTION
 The `Remove-SPEnterpriseSearchCrawlRule` cmdlet deletes a crawl rule that is used to crawl content for a content source.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
-PS C:\>Remove-SPEnterpriseSearchCrawlRule -Identity http://mySPSite -SearchApplication $searchApp
+$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
+Remove-SPEnterpriseSearchCrawlRule -Identity https://mySPSite -SearchApplication $searchApp
 ```
 
-This example removes a crawl rule pertaining to the path http://mySPSite from the mySearchServiceApp search service application.
+This example removes a crawl rule pertaining to the path https://mySPSite from the mySearchServiceApp search service application.
 
 
 ## PARAMETERS
@@ -41,13 +46,13 @@ This example removes a crawl rule pertaining to the path http://mySPSite from th
 ### -Identity
 The crawl rule to delete.
 
-A valid crawl rule URL, such as http://server_name, or an instance of a valid CrawlRule object.
+A valid crawl rule URL, such as https://server_name, or an instance of a valid CrawlRule object.
 
 ```yaml
 Type: CrawlRulePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -65,7 +70,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -82,7 +87,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -100,7 +105,7 @@ A valid search application name, such as SearchApp1, or a valid GUID, such as 12
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -117,7 +122,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -127,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/import-csrgsaudiofile
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsRgsAudioFile
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Import-CsRgsAudioFile
@@ -55,7 +60,7 @@ In addition to the Identity parameter (which specifies the service location) the
 At the same time, the Content parameter is used to import the audio file.
 File importing is carried out by calling the Get-Content cmdlet followed by the path to the file being imported.
 Get-Content also requires you to set the encoding type to byte and the ReadCount to 0.
-(Setting the ReadCount to 0 ensures that the entire file is read in in a single operation.) The imported file is then stored in a variable named $x.
+(Setting the ReadCount to 0 ensures that the entire file is read in a single operation.) The imported file is then stored in a variable named $x.
 
 In the second command, Get-CsRgsWorkflow is used to create an object reference ($y) to the workflow Help Desk Workflow.
 After this object reference has been created, command 3 sets the value of the CustomMusicOnHoldFile property to $x, the variable containing the imported audio file.
@@ -166,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

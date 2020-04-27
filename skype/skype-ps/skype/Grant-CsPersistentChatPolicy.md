@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://docs.microsoft.com/powershell/module/skype/grant-cspersistentchatpolicy
+applicable: Lync Server 2013, Skype for Business Server 2015
 title: Grant-CsPersistentChatPolicy
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Grant-CsPersistentChatPolicy
@@ -98,7 +103,7 @@ For example, the Identity "* Smith" returns all the users who have a display nam
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: 1
@@ -114,7 +119,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -134,7 +139,7 @@ If this parameter is not specified then the Grant-CsPersistentChatPolicy cmdlet 
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -151,7 +156,7 @@ By default, the Grant-CsPersistentChatPolicy cmdlet does not pass objects throug
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -170,7 +175,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: 2
@@ -186,7 +191,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -196,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

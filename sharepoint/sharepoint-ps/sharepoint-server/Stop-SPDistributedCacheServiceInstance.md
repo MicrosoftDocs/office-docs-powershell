@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-spdistributedcacheserviceinstance
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPDistributedCacheServiceInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Stop-SPDistributedCacheServiceInstance
@@ -21,13 +26,13 @@ Stop-SPDistributedCacheServiceInstance [-Graceful] [-AssignmentCollection <SPAss
 ## DESCRIPTION
 Use the Stop-SPDistributedCacheServiceInstance cmdlet to stop an instance of the Distributed Cache service on a local server. While a -Graceful switch does exist, this cmdlet is not capable of properly transferring cached items to another Distributed Cache host within the farm. Follow the guidance available at [Manage the Distributed Cache service in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/jj219613.aspx) to properly issue a graceful shutdown of the Distributed Cache service.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
 ### ------------ Example 1 ----------
 ```
-C:\PS>
+
 ```
 Please see referenced article instead of using this cmdlet directly.
 
@@ -40,7 +45,7 @@ Specifies whether to gracefully stop an instance of the Distributed Cache servic
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -62,7 +67,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -72,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

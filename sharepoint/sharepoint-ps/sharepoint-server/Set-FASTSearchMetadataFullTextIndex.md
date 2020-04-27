@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-fastsearchmetadatafulltextindex
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Set-FASTSearchMetadataFullTextIndex
 ---
 
@@ -30,20 +35,20 @@ This cmdlet enables/disables stemming and changes the description of a full text
 Stemming is the process of reducing words to their base form or expanding to all known forms to increase recall.
 Whether stemming is done through reduction or expansion depends on the language in which the content is written.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataFullTextIndex -name content -description "Central content repository"
+Set-FASTSearchMetadataFullTextIndex -name content -description "Central content repository"
 ```
 
 This example updates the description of the existing full text index named "content".
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataFullTextIndex -Name content -StemmingEnabled 1
+Set-FASTSearchMetadataFullTextIndex -Name content -StemmingEnabled 1
 ```
 
 This example enables stemming on the full text index named "content".
@@ -116,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

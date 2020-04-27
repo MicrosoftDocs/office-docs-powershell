@@ -1,12 +1,15 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/copy-pnpfile
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Copy-PnPFile
 ---
+
 # Copy-PnPFile
 
 ## SYNOPSIS
-Copies a file or folder to a different location
+Copies a file or folder to a different location, currently there is a 200MB file size limit for the file to be copied.
 
 ## SYNTAX 
 
@@ -115,7 +118,7 @@ Accept pipeline input: False
 ```
 
 ### -OverwriteIfAlreadyExists
-If provided, if a file already exists at the TargetUrl, it will be overwritten. If ommitted, the copy operation will be canceled if the file already exists at the TargetUrl location.
+If provided, if a file already exists at the TargetUrl, it will be overwritten. If omitted, the copy operation will be canceled if the file already exists at the TargetUrl location.
 
 ```yaml
 Type: SwitchParameter
@@ -189,4 +192,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

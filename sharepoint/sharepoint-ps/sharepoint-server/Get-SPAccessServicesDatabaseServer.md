@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: microsoft.office.access.server.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spaccessservicesdatabaseserver
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAccessServicesDatabaseServer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAccessServicesDatabaseServer
@@ -33,7 +38,7 @@ Returns the SQL Server instances that are available for use with Access Services
 
 ### Example 1 
 ```
-PS C:\>Get-SPAccessServicesDatabaseServer
+Get-SPAccessServicesDatabaseServer
 ```
 
 Returns all SQL Server instances available for use.
@@ -41,10 +46,10 @@ Returns all SQL Server instances available for use.
 
 ### Example 2 
 ```
-PS C:\>Get-SPAccessServicesDatabaseServer -DatabaseServer ACCSQL -ServiceContext http://siteUrl -DatabaseServergroup DEFAULT
+Get-SPAccessServicesDatabaseServer -DatabaseServer ACCSQL -ServiceContext https://siteUrl -DatabaseServergroup DEFAULT
 ```
 
-Returns the database server ACCSQL from the DEFAULT database server group using the service context from http://siteUrl.
+Returns the database server ACCSQL from the DEFAULT database server group using the service context from https://siteUrl.
 
 
 ## PARAMETERS
@@ -58,7 +63,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -74,7 +79,7 @@ Specifies an existing Database Server associated with Access Services.
 Type: AccessServicesDatabaseServerPipeBind
 Parameter Sets: GetSingleDatabaseServerParamterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -90,7 +95,7 @@ The name of the database server group.
 Type: AccessServicesDatabaseServerGroupPipeBind
 Parameter Sets: GetSingleDatabaseServerParamterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -103,7 +108,7 @@ Accept wildcard characters: False
 Type: AccessServicesDatabaseServerGroupPipeBind
 Parameter Sets: GetDatabaseServersParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -119,7 +124,7 @@ Specifies the service context to retrieve Access Services database server inform
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 0
@@ -129,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

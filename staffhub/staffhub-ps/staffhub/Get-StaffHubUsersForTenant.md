@@ -1,10 +1,13 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
-online version:
+online version: https://docs.microsoft.com/powershell/module/staffhub/get-staffhubusersfortenant
 applicable: Microsoft StaffHub
 title: Get-StaffHubUsersForTenant
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-StaffHubUsersForTenant
@@ -27,7 +30,7 @@ Here is an example of the next call that can be made: Get-StaffHubUsersForTenant
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-StaffHubUsersForTenant -Top 10
 ```
 
@@ -37,7 +40,7 @@ This returns a continuation token stored in $nextToken variable which can be use
 Eg: Get-StaffHubUsersForTenant -Top 10 -ContinuationToken $nextToken
 
 ### Example 2
-```
+```powershell
 Get-StaffHubUsersForTenant
 ```
 

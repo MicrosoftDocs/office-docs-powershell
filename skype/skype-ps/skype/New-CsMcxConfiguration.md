@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csmcxconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsMcxConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # New-CsMcxConfiguration
@@ -198,7 +203,7 @@ Accept wildcard characters: False
 
 ### -SessionExpirationInterval
 
-Length of time, in seconds, of a mobile session for iPhone or Widows Phone users.
+Length of time, in seconds, of a mobile session for iPhone or Windows Phone users.
 If Skype for Business is running in the background on these phones, users will receive push notifications as long as the session expiration interval has not expired.
 
 The mobile device must send a notice to the server indicating that the device is still active before the session timeout is reached.
@@ -266,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

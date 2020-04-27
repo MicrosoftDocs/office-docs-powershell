@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csexternalaccesspolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsExternalAccessPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # New-CsExternalAccessPolicy
@@ -18,10 +23,10 @@ This cmdlet was introduced in Lync Server 2010.
 ## SYNTAX
 
 ```
-New-CsExternalAccessPolicy [-Identity] <XdsIdentity> [-Description <String>]
- [-EnableFederationAccess <Boolean>] [-EnableOutsideAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
- [-EnablePublicCloudAudioVideoAccess <Boolean>] [-Force] [-InMemory] [-WhatIf] [-Confirm]
- [-EnableXmppAccess <Boolean>] [-BypassDualWrite <Object>] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+New-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>]
+ [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
+ [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableOutsideAccess <Boolean>] [-Identity] <XdsIdentity>
+ [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,7 +100,6 @@ Should that happen, an external access policy with the Identity RedmondAccessPol
 ## PARAMETERS
 
 ### -Identity
-
 Unique Identity to be assigned to the policy.
 New external access policies can be created at the site or per-user scope.
 To create a new site policy, use the prefix "site:" and the name of the site as your Identity.
@@ -105,8 +109,6 @@ To create a new per-user policy, use an Identity similar to this: `-Identity Sal
 Note that you cannot create a new global policy; if you want to make changes to the global policy, use the Set-CsExternalAccessPolicy cmdlet instead.
 Likewise, you cannot create a new site or per-user policy if a policy with that Identity already exists.
 If you need to make changes to an existing policy, use the Set-CsExternalAccessPolicy cmdlet.
-
-
 
 ```yaml
 Type: XdsIdentity
@@ -122,12 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
 Enables administrators to provide explanatory text to accompany the policy.
 For example, the Description might include information about the users the policy should be assigned to.
-
-
-
 
 ```yaml
 Type: String
@@ -143,12 +141,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFederationAccess
-
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
 The default value is False.
-
-
-
 
 ```yaml
 Type: Boolean
@@ -164,11 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOutsideAccess
-
 Indicates whether the user is allowed to connect to Skype for Business Server over the Internet, without logging on to the organization's internal network.
 The default value is False.
-
-
 
 ```yaml
 Type: Boolean
@@ -184,13 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePublicCloudAccess
-
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
 The default value is False.
-
-
-
-
 
 ```yaml
 Type: Boolean
@@ -206,12 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePublicCloudAudioVideoAccess
-
-
 Indicates whether the user is allowed to conduct audio/video conversations with people who have SIP accounts with a public Internet connectivity provider such as MSN.
 When set to False, audio and video options in Skype for Business Server will be disabled any time a user is communicating with a public Internet connectivity contact.
-
-
 
 ```yaml
 Type: Boolean
@@ -227,11 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
 Suppresses the display of any non-fatal error message that might occur when running the command.
-
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -247,11 +225,8 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -267,11 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Describes what would happen if you executed the command without actually executing the command.
-
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -287,11 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
-
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -307,11 +274,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableXmppAccess
-
 Indicates whether the user is allowed to communicate with users who have SIP accounts with a federated XMPP (Extensible Messaging and Presence Protocol) partner.
 The default value is False.
-
-
 
 ```yaml
 Type: Boolean
@@ -326,25 +290,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
-
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the new external access policy is being created.
 For example:
 
@@ -354,10 +300,8 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
-
-
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -370,7 +314,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -386,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

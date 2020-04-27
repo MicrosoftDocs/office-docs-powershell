@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-frontendtransportservice
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-FrontendTransportService
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-FrontendTransportService
@@ -11,54 +15,75 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-FrontEndTransportService cmdlet to set the transport configuration options for the Front End Transport service on Mailbox servers.
+Use the Get-FrontEndTransportService cmdlet to modify the configuration of the Front End Transport service on Exchange 2013 or later servers that have the Client Access server role installed.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-FrontendTransportService [-Identity] <FrontendTransportServerIdParameter>
- [-AgentLogEnabled <$true | $false>] [-AgentLogMaxAge <EnhancedTimeSpan>]
- [-AgentLogMaxDirectorySize <Unlimited>] [-AgentLogMaxFileSize <Unlimited>] [-AgentLogPath <LocalLongFullPath>]
- [-AntispamAgentsEnabled <$true | $false>] [-Confirm] [-ConnectivityLogEnabled <$true | $false>]
- [-ConnectivityLogMaxAge <EnhancedTimeSpan>] [-ConnectivityLogMaxDirectorySize <Unlimited>]
- [-ConnectivityLogMaxFileSize <Unlimited>] [-ConnectivityLogPath <LocalLongFullPath>]
- [-DnsLogEnabled <$true | $false>] [-DnsLogMaxAge <EnhancedTimeSpan>] [-DnsLogMaxDirectorySize <Unlimited>]
- [-DnsLogMaxFileSize <Unlimited>] [-DnsLogPath <LocalLongFullPath>] [-DomainController <Fqdn>]
- [-ExternalDNSAdapterEnabled <$true | $false>] [-ExternalDNSAdapterGuid <Guid>]
- [-ExternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>] [-ExternalDNSServers <MultiValuedProperty>]
- [-ExternalIPAddress <IPAddress>] [-InternalDNSAdapterEnabled <$true | $false>]
- [-InternalDNSAdapterGuid <Guid>] [-InternalDNSProtocolOption <Any | UseUdpOnly | UseTcpOnly>]
- [-InternalDNSServers <MultiValuedProperty>] [-IntraOrgConnectorProtocolLoggingLevel <None | Verbose>]
- [-MaxConnectionRatePerMinute <Int32>] [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
- [-ReceiveProtocolLogMaxDirectorySize <Unlimited>] [-ReceiveProtocolLogMaxFileSize <Unlimited>]
- [-ReceiveProtocolLogPath <LocalLongFullPath>] [-ResourceLogEnabled <$true | $false>]
- [-ResourceLogMaxAge <EnhancedTimeSpan>] [-ResourceLogMaxDirectorySize <Unlimited>]
- [-ResourceLogMaxFileSize <Unlimited>] [-ResourceLogPath <LocalLongFullPath>]
- [-SendProtocolLogMaxAge <EnhancedTimeSpan>] [-SendProtocolLogMaxDirectorySize <Unlimited>]
- [-SendProtocolLogMaxFileSize <Unlimited>] [-SendProtocolLogPath <LocalLongFullPath>]
- [-TransientFailureRetryCount <Int32>] [-TransientFailureRetryInterval <EnhancedTimeSpan>] [-WhatIf]
- [-RoutingTableLogMaxAge <EnhancedTimeSpan>] [-RoutingTableLogMaxDirectorySize <Unlimited>]
- [-RoutingTableLogPath <LocalLongFullPath>] [<CommonParameters>]
+ [-AgentLogEnabled <Boolean>]
+ [-AgentLogMaxAge <EnhancedTimeSpan>]
+ [-AgentLogMaxDirectorySize <Unlimited>]
+ [-AgentLogMaxFileSize <Unlimited>]
+ [-AgentLogPath <LocalLongFullPath>]
+ [-AntispamAgentsEnabled <Boolean>]
+ [-Confirm]
+ [-ConnectivityLogEnabled <Boolean>]
+ [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
+ [-ConnectivityLogMaxDirectorySize <Unlimited>]
+ [-ConnectivityLogMaxFileSize <Unlimited>]
+ [-ConnectivityLogPath <LocalLongFullPath>]
+ [-DnsLogEnabled <Boolean>]
+ [-DnsLogMaxAge <EnhancedTimeSpan>]
+ [-DnsLogMaxDirectorySize <Unlimited>]
+ [-DnsLogMaxFileSize <Unlimited>]
+ [-DnsLogPath <LocalLongFullPath>]
+ [-DomainController <Fqdn>]
+ [-ExternalDNSAdapterEnabled <Boolean>]
+ [-ExternalDNSAdapterGuid <Guid>]
+ [-ExternalDNSProtocolOption <ProtocolOption>]
+ [-ExternalDNSServers <MultiValuedProperty>]
+ [-ExternalIPAddress <IPAddress>]
+ [-InternalDNSAdapterEnabled <Boolean>]
+ [-InternalDNSAdapterGuid <Guid>]
+ [-InternalDNSProtocolOption <ProtocolOption>]
+ [-InternalDNSServers <MultiValuedProperty>]
+ [-IntraOrgConnectorProtocolLoggingLevel <ProtocolLoggingLevel>]
+ [-MaxConnectionRatePerMinute <Int32>]
+ [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
+ [-ReceiveProtocolLogMaxFileSize <Unlimited>]
+ [-ReceiveProtocolLogPath <LocalLongFullPath>]
+ [-RoutingTableLogMaxAge <EnhancedTimeSpan>]
+ [-RoutingTableLogMaxDirectorySize <Unlimited>]
+ [-RoutingTableLogPath <LocalLongFullPath>]
+ [-SendProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-SendProtocolLogMaxDirectorySize <Unlimited>]
+ [-SendProtocolLogMaxFileSize <Unlimited>]
+ [-SendProtocolLogPath <LocalLongFullPath>]
+ [-TransientFailureRetryCount <Int32>]
+ [-TransientFailureRetryInterval <EnhancedTimeSpan>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Front End Transport service runs on all Mailbox servers and acts as a stateless proxy for all inbound and outbound external SMTP traffic for the Exchange organization. The Front End Transport service only communicates with the Transport service on a Mailbox server, and doesn't queue any messages locally.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-FrontEndTransportService MBX01 -TransientFailureRetryCount 3 -TransientFailureRetryInterval 00:00:30
 ```
 
 This example sets the TransientFailureRetryCount parameter to 3 and sets the TransientFailureRetryInterval parameter to 30 seconds for the Front End Transport service on the Mailbox server named MBX01.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-FrontEndTransportService MBX01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```
 
@@ -73,7 +98,8 @@ The Identity parameter specifies the server that you want to modify.
 Type: FrontendTransportServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -85,10 +111,11 @@ Accept wildcard characters: False
 The AgentLogEnabled parameter specifies whether the agent log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +134,8 @@ Setting the value of the AgentLogMaxAge parameter to 00:00:00 prevents the autom
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -138,7 +166,8 @@ The value of the AgentLogMaxFileSize parameter must be less than or equal to the
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +198,8 @@ The value of the AgentLogMaxFileSize parameter must be less than or equal to the
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -184,7 +214,8 @@ The AgentLogPath parameter specifies the default agent log directory location. T
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -198,10 +229,11 @@ The AntispamAgentsEnabled parameter specifies whether anti-spam agents are insta
 You set this parameter by using a script. You shouldn't modify this parameter manually.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -220,7 +252,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -232,10 +265,11 @@ Accept wildcard characters: False
 The ConnectivityLogEnabled parameter specifies whether the connectivity log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -254,7 +288,8 @@ For example, to specify 25 days for this parameter, use 25.00:00:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -285,7 +320,8 @@ The value of the ConnectivityLogMaxFileSize parameter must be less than or equal
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -316,7 +352,8 @@ The value of the ConnectivityLogMaxFileSize parameter must be less than or equal
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -331,7 +368,8 @@ The ConnectivityLogPath parameter specifies the default connectivity log directo
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -343,10 +381,11 @@ Accept wildcard characters: False
 The DnsLogEnabled parameter specifies whether the DNS log is enabled. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -365,7 +404,8 @@ Setting the value of the DnsLogMaxAge parameter to 00:00:00 prevents the automat
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -396,7 +436,8 @@ The value of the DnsLogMaxFileSize parameter must be less than or equal to the v
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -427,7 +468,8 @@ The value of the DnsLogMaxFileSize parameter must be less than or equal to the v
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -442,7 +484,8 @@ The DnsLogPath parameter specifies the DNS log directory location. The default v
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -457,7 +500,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -469,10 +513,11 @@ Accept wildcard characters: False
 The ExternalDNSAdapterEnabled parameter specifies one or more Domain Name System (DNS) servers that Exchange uses for external DNS lookups. When the ExternalDNSAdapterEnabled parameter is set to $true, DNS lookups of destinations outside the Exchange organization are performed by using the DNS settings of the external network adapter specified by the value of the ExternalDNSAdapterGuid parameter. If you want to specify a custom list of DNS servers used for external Exchange DNS lookups only, you must specify the DNS servers by using the ExternalDNSServers parameter, and you must also set the value of the ExternalDNSAdapterEnabled parameter to $false. The default value of the ExternalDNSAdapterEnabled parameter is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -489,7 +534,8 @@ If the value of the ExternalDNSAdapterEnabled parameter is set to $false, the va
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -501,10 +547,11 @@ Accept wildcard characters: False
 The ExternalDNSProtocolOption parameter specifies which protocol to use when querying external DNS servers. The valid options for this parameter are Any, UseTcpOnly, and UseUdpOnly. The default value is Any.
 
 ```yaml
-Type: Any | UseUdpOnly | UseTcpOnly
+Type: ProtocolOption
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -521,7 +568,8 @@ If the value of the ExternalDNSAdapterEnabled parameter is set to $true, the Ext
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -536,7 +584,8 @@ The ExternalIPAddress parameter specifies the IP address used in the Received me
 Type: IPAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -548,10 +597,11 @@ Accept wildcard characters: False
 The InternalDNSAdapterEnabled parameter specifies one or more DNS servers that Exchange uses for internal DNS lookups. When the InternalDNSAdapterEnabled parameter is set to $true, DNS lookups of destinations inside the Exchange organization are performed by using the DNS settings of the internal network adapter specified by the value of the InternalDNSAdapterGuid parameter. If you want to specify a custom list of DNS servers used for internal Exchange DNS lookups only, you must specify the DNS servers by using the InternalDNSServers parameter, and you must also set the value of the InternalDNSAdapterEnabled parameter to $false. The default value of the InternalDNSAdapterEnabled parameter is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -568,7 +618,8 @@ If the value of the InternalDNSAdapterEnabled parameter is set to $false, the va
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -582,10 +633,11 @@ The InternalDNSProtocolOption parameter specifies which protocol to use when you
 The default value is Any.
 
 ```yaml
-Type: Any | UseUdpOnly | UseTcpOnly
+Type: ProtocolOption
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -602,7 +654,8 @@ If the InternalDNSAdapterGuid parameter is set, and the value of the InternalDNS
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -611,17 +664,18 @@ Accept wildcard characters: False
 ```
 
 ### -IntraOrgConnectorProtocolLoggingLevel
-The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging on the implicit and invisible intra-organization Send connector In the Front End Transport servicee. Valid values are:
+The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging on the implicit and invisible intra-organization Send connector In the Front End Transport service. Valid values are:
 
 - None: Protocol logging is disabled for the intra-organization Send connector in the Front End Transport service.
 
 - Verbose: Protocol logging is enabled for the intra-organization Send connector in the Front End Transport service. This is the default value. The location of the log files is controlled by the SendProtocolLogPath parameter.
 
 ```yaml
-Type: None | Verbose
+Type: ProtocolLoggingLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -636,7 +690,8 @@ The MaxConnectionRatePerMinute parameter specifies the maximum rate that connect
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -657,7 +712,8 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -692,7 +748,8 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -727,7 +784,8 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -744,7 +802,8 @@ Don't use the value $null for this parameter, because event log errors are gener
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -752,29 +811,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceLogEnabled
-This parameter is reserved for internal Microsoft use.
+### -RoutingTableLogMaxAge
+The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
 
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
-### -ResourceLogMaxAge
-This parameter is reserved for internal Microsoft use.
+For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting this parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
 
 ```yaml
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -782,14 +831,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceLogMaxDirectorySize
-This parameter is reserved for internal Microsoft use.
+### -RoutingTableLogMaxDirectorySize
+The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -797,29 +863,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceLogMaxFileSize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceLogPath
-This parameter is reserved for internal Microsoft use.
+### -RoutingTableLogPath
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\FrontEnd\\Routing. Setting this parameter to $null disables routing table logging.
 
 ```yaml
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -840,7 +892,8 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -875,7 +928,8 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -910,7 +964,8 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -931,7 +986,8 @@ Don't use the value $null for this parameter, because event log errors are gener
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -946,7 +1002,8 @@ The TransientFailureRetryCount parameter specifies the maximum number of immedia
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -965,7 +1022,8 @@ For example, to specify 8 minutes for this parameter, use 00:08:00. The valid in
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -980,72 +1038,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -RoutingTableLogMaxAge
-The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting this parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogMaxDirectorySize
-The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\FrontEnd\\Routing. Setting this parameter to $null disables routing table logging.
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1054,20 +1048,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/593be8fd-ae2d-4cd2-a98a-88c2e8c36ddd.aspx)

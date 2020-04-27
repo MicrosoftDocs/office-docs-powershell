@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlineenhancedemergencyservicedisclaimer
 applicable: Skype for Business Online
 title: Set-CsOnlineEnhancedEmergencyServiceDisclaimer
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsOnlineEnhancedEmergencyServiceDisclaimer
@@ -14,10 +19,10 @@ Any tenant administrator can accept the terms and conditions.
 ## SYNTAX
 
 ```
-Set-CsOnlineEnhancedEmergencyServiceDisclaimer [-CountryOrRegion <Object>] [-BypassDualWrite <Object>]
- [-Confirm] [-DomainController <Object>] [-Force] [-ForceAccept] [-Tenant <Object>] [-Version <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion <String> [-Version <String>] [-ForceAccept]
+ [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
 
 ## DESCRIPTION
 You must run this cmdlet prior to assigning phone numbers and locations to voice enabled users in the United States.
@@ -40,23 +45,7 @@ Specifies the region or country whose terms and conditions you wish to accept.
 The United States is currently the only country supported, but it must be specified as "US".
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -88,7 +77,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -138,7 +127,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -154,7 +143,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -183,24 +172,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/enable-mailcontact
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-MailContact
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Enable-MailContact
@@ -13,27 +17,27 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Enable-MailContact cmdlet to add email capabilities to existing contacts that aren't already mail-enabled.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Enable-MailContact [-Identity] <ContactIdParameter> -ExternalEmailAddress <ProxyAddress> [-Alias <String>]
  [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
- [-PrimarySmtpAddress <SmtpAddress>] [-UsePreferMessageFormat <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-MacAttachmentFormat <MacAttachmentFormat>]
+ [-MessageBodyFormat <MessageBodyFormat>] [-MessageFormat <MessageFormat>]
+ [-PrimarySmtpAddress <SmtpAddress>] [-UsePreferMessageFormat <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Enable-MailContact cmdlet mail-enables existing contacts by adding the email attributes that are required by Exchange. Mail contacts are visible to the other \*-MailContact cmdlets.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-MailContact -Identity Roland -ExternalEmailAddress "roland@tailspintoys.com"
 ```
 
@@ -50,7 +54,8 @@ In on-premises environments, you can use the PrimarySMTPAddress parameter to set
 Type: ProxyAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -59,13 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the non-mail-enabled contact that you want to mail-enable. You can use any value that uniquely identifies the contact.
-
-For example:
+The Identity parameter specifies the non-mail-enabled contact that you want to mail-enable. You can use any value that uniquely identifies the contact. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -77,7 +78,8 @@ For example:
 Type: ContactIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -96,7 +98,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -106,7 +108,8 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +128,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +144,8 @@ The DisplayName parameter specifies the display name of the mail contact. The di
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -155,7 +160,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -181,10 +187,11 @@ The MacAttachmentFormat and MessageFormat parameters are interdependent:
 - MessageFormat is Mime: MacAttachmentFormat can be BinHex, AppleSingle, or AppleDouble.
 
 ```yaml
-Type: BinHex | UuEncode | AppleSingle | AppleDouble
+Type: MacAttachmentFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -208,10 +215,11 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 - MessageFormat is Text: MessageBodyFormat can only be Text.
 
 ```yaml
-Type: Text | Html | TextAndHtml
+Type: MessageBodyFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -235,10 +243,11 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 Therefore, if you want to change the MessageFormat parameter from Mime to Text, you must also change the MessageBodyFormat parameter to Text.
 
 ```yaml
-Type: Text | Mime
+Type: MessageFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -247,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 By default, the primary address is the same as the ExternalEmailAddress parameter value.
 
@@ -257,7 +266,8 @@ If you use the PrimarySmtpAddress parameter to specify the primary email address
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -273,10 +283,11 @@ The UsePreferMessageFormat specifies whether the message format settings configu
 - $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -291,7 +302,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -300,20 +312,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/0accff85-3a03-4068-81e2-0508a4df21ec.aspx)

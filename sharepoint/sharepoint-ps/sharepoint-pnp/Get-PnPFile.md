@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpfile
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPFile
 ---
+
 # Get-PnPFile
 
 ## SYNOPSIS
@@ -13,6 +16,7 @@ Downloads a file.
 ### Return as file object
 ```powershell
 Get-PnPFile -Url <String>
+            [-AsFileObject [<SwitchParameter>]]
             [-Web <WebPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
@@ -103,6 +107,18 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -AsFileObject
+Retrieve the file contents as a file object.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Return as file object
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -AsListItem
 Returns the file as a listitem showing all its properties
 
@@ -164,7 +180,7 @@ Accept pipeline input: False
 ```
 
 ### -ThrowExceptionIfFileNotFound
-If provided in combination with -AsListItem, a Sytem.ArgumentException will be thrown if the file specified in the -Url argument does not exist. Otherwise it will return nothing instead.
+If provided in combination with -AsListItem, a System.ArgumentException will be thrown if the file specified in the -Url argument does not exist. Otherwise it will return nothing instead.
 
 ```yaml
 Type: SwitchParameter
@@ -218,4 +234,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

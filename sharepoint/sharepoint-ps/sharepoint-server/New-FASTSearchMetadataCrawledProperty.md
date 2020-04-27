@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-fastsearchmetadatacrawledproperty
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchMetadataCrawledProperty
 ---
 
@@ -35,7 +40,7 @@ See New-FASTSearchMetadataCategory for information about creating a new category
 
 See Set-FASTSearchMetadataCrawledProperty for information about changing the properties of an existing crawled property.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
@@ -53,7 +58,7 @@ The new category gets the property set value "e20d8de2-0b5c-46f8-993d-6cdacbda51
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchMetadataCrawledProperty | Where-Object -filterscript { $_.CategoryName -eq "Web"}
+Get-FASTSearchMetadataCrawledProperty | Where-Object -filterscript { $_.CategoryName -eq "Web"}
 New-FASTSearchMetadataCrawledProperty -Name Internaltitle -varianttype 31 -Propset d1b5d3f0-c0b3-11cf-9a92-00a0c908dbf1
 ```
 
@@ -111,7 +116,7 @@ Accept wildcard characters: False
 
 ### -VariantType
 An integer value specifying the data type of the crawled property.
-See http://go.microsoft.com/fwlink/?LinkId=163232 (http://go.microsoft.com/fwlink/?LinkId=163232) for a list of common variant types.
+See https://go.microsoft.com/fwlink/?LinkId=163232 (https://go.microsoft.com/fwlink/?LinkId=163232) for a list of common variant types.
 
 ```yaml
 Type: Int32
@@ -127,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

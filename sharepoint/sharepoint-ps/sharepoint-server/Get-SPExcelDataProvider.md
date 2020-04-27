@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spexceldataprovider
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelDataProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPExcelDataProvider
@@ -23,13 +28,13 @@ Excel Services Application refreshes external data connections only if the data 
 Excel Services Application includes a set of common data providers on this list.
 Therefore, using cmdlets to modify safe data providers is typically done only in custom data connection scenarios.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ---------------------EXAMPLE--------------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "ExcelServices" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB"}
+Get-SPExcelServiceApplication -Identity "ExcelServices" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB"}
 ```
 
 This example displays the data provider with the provider identifier (ID) SQLOLEDB from the list of data providers that is on the MyExcelService application.
@@ -37,7 +42,7 @@ To select a specific provider from the list of safe providers, you must pipe a w
 
 ### --------------EXAMPLE-------------- 
 ```
-C:\PS>Get-SPExcelDataProvider -ExcelServiceApplication "Excel Services" | format-table
+Get-SPExcelDataProvider -ExcelServiceApplication "Excel Services" | format-table
 ```
 
 This example displays a list of safe data providers for the specific Excel Services Application Web service application, and then formats the results of the data providers in a table.
@@ -85,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

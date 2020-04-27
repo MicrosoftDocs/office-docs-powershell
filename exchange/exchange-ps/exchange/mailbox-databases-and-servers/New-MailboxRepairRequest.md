@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/new-mailboxrepairrequest
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-MailboxRepairRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-MailboxRepairRequest
@@ -11,74 +15,73 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the New-MailboxRepairRequest cmdlet to detect and fix mailbox corruptions. You can run this command against a specific mailbox or against a database. While this task is running, mailbox access is disrupted only for the mailbox being repaired. If you're running this command against a database, only the mailbox being repaired is disrupted. All other mailboxes on the database remain operational.
+Use the New-MailboxRepairRequest cmdlet to detect and fix mailbox corruption issues.
 
-After you begin the repair request, it can't be stopped unless you dismount the database.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### Database
 ```
-New-MailboxRepairRequest [-Database] <DatabaseIdParameter> -CorruptionType <MailboxStoreCorruptionType[]>
- [-Confirm] [-DetectOnly] [-DomainController <Fqdn>] [-WhatIf] [[-StoreMailbox] <StoreMailboxIdParameter>]
- [-Force] [<CommonParameters>]
+New-MailboxRepairRequest [-Database] <DatabaseIdParameter> -CorruptionType <MailboxStoreCorruptionType[]> [[-StoreMailbox] <StoreMailboxIdParameter>]
+ [-Confirm]
+ [-DetectOnly]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Mailbox
 ```
-New-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> -CorruptionType <MailboxStoreCorruptionType[]>
- [-Archive] [-Confirm] [-DetectOnly] [-DomainController <Fqdn>] [-WhatIf] [-Force] [<CommonParameters>]
+New-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> -CorruptionType <MailboxStoreCorruptionType[]> [-Archive]
+ [-Confirm]
+ [-DetectOnly]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To avoid any performance problems, there are limits placed on the number of simultaneous repair requests that can be submitted per server. Only one request can be active for a database-level repair, or up to 100 requests can be active for a mailbox-level repair per server.
+You can use this cmdlet on a specific mailbox or all mailboxes in a database. While this task is running, mailbox access is disrupted only for the mailbox that's currently being repaired.
 
-The New-MailboxRepairRequest cmdlet detects and fixes the following types of mailbox corruptions:
+After you begin a repair request, you can't stop it unless you dismount the database.
 
-- Search folder corruptions (SearchFolder)
+To avoid performance problems, only one request can be active on a server for a database-level repair, or up to 100 requests can be active on a server for a mailbox-level repair.
 
-- Aggregate counts on folders that aren't reflecting correct values (AggregateCounts)
-
-- Views on folders that aren't returning correct contents (FolderView)
-
-- Provisioned folders that are incorrectly pointing into parent folders that aren't provisioned (ProvisionedFolder)
-
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-MailboxRepairRequest -Mailbox tony@contoso.com -CorruptionType FolderView
 ```
 
 This example detects and repairs all folder views for the mailbox tony@contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-MailboxRepairRequest -Mailbox ayla -CorruptionType ProvisionedFolder,SearchFolder -DetectOnly
 ```
 
 This example only detects and reports on ProvisionedFolder and SearchFolder corruption issues to Ayla Kol's mailbox. This command doesn't repair the mailbox.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-MailboxRepairRequest -Database MBX-DB01 -CorruptionType AggregateCounts
 ```
 
 This example detects and repairs AggregateCounts for all mailboxes on mailbox database MBX-DB01.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 New-MailboxRepairRequest -Mailbox ayla -CorruptionType ProvisionedFolder,SearchFolder,AggregateCounts,Folderview -Archive
 ```
 
 This example detects and repairs all corruption types for Ayla Kol's mailbox and archive.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 $Mailbox = Get-MailboxStatistics annb; New-MailboxRepairRequest -Database $Mailbox.Database -StoreMailbox $Mailbox.MailboxGuid -CorruptionType ProvisionedFolder,SearchFolder,AggregateCounts,Folderview
 ```
 
@@ -89,21 +92,92 @@ This example creates a variable that identifies Ann Beebe's mailbox and then use
 ### -CorruptionType
 The CorruptionType parameter specifies the type of corruption that you want to detect and repair. You can use the following values:
 
-- SearchFolder
+- AbandonedMoveDestination: Exchange 2016 or later, but only with the Database parameter, not the Mailbox parameter.
 
-- AggregateCounts
+- AggregateCounts: Aggregate counts on folders that aren't reflecting correct values.
 
-- ProvisionedFolder
+- BigFunnelMissingPOIs: Exchange 2016.
 
-- FolderView
+- BigFunnelPOI: Exchange 2019.
 
-You can search for multiple corruption types at a time. Separate multiple types with a comma, for example, SearchFolder,AggregateCounts.
+- CleanupFilesFolder: Exchange 2016 or later.
+
+- CleanupGraphNodesWithPropertyError: Exchange 2016 or later.
+
+- CleanupOfficeGraphFolders: Exchange 2016 or later.
+
+- CleanupOfficeGraphSsc: Exchange 2016 or later.
+
+- CleanupOrphanedIndexes: Exchange 2016 or later.
+
+- CleanupTrendingAroundMe: Exchange 2016 or later.
+
+- CorruptJunkRule: Exchange 2013 or later.
+
+- CorruptSearchFolderCriteria: Exchange 2016 or later.
+
+- CorruptedPerUserData: Exchange 2016 or later.
+
+- DropAllLazyIndexes: Exchange 2013 or later.
+
+- EmptyFilesFolder: Exchange 2016 or later.
+
+- Extension1: Exchange 2013 or later, but reserved for internal Microsoft use.
+
+- Extension2: Exchange 2013 or later, but reserved for internal Microsoft use.
+
+- Extension3: Exchange 2013 or later, but reserved for internal Microsoft use.
+
+- Extension4: Exchange 2013 or later, but reserved for internal Microsoft use.
+
+- Extension5: Exchange 2013 or later, but reserved for internal Microsoft use.
+
+- FocusedInboxCleanup: Exchange 2016 or later.
+
+- FolderACL: Exchange 2013 or later.
+
+- FolderView: Views on folders that aren't returning correct contents.
+
+- ImapId: Exchange 2013 or later.
+
+- LockedMoveTarget: Exchange 2013 or later, but only if the mailbox is locked.
+
+- MessageId
+
+- MessagePtagCn
+
+- MissingSpecialFolders: Exchange 2013 or later.
+
+- OlcFolderCleanup: Exchange 2016 or later.
+
+- ProvisionedFolder: Provisioned folders that are incorrectly pointing into parent folders that aren't provisioned.
+
+- ReduceRedundantAI: Exchange 2016 or later, and only by itself.
+
+- RemovePICWFolder: Exchange 2016 or later, but reserved for internal Microsoft use.
+
+- ReplState: Exchange 2013 or later.
+
+- RestrictionFolder: Exchange 2013 or later.
+
+- RuleMessageClass: Exchange 2013 or later.
+
+- ScheduledCheck: Exchange 2013 or later.
+
+- SearchFolder: Search folder corruption.
+
+- SyncDefaultFolderLocalizationWithMailbox: Exchange 2016 or later.
+
+- UniqueMidIndex: Exchange 2013 or later.
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MailboxStoreCorruptionType[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -112,19 +186,24 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-The Database parameter specifies the database on which you run this command. If you use this parameter, all mailboxes on the database are searched for corruptions. To avoid performance issues, you're limited to one active database repair request at a time. You can use the following values:
+The Database parameter repairs or detects corruption in all mailboxes in the specified database. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
 
-You can't use this parameter in conjunction with the Mailbox parameter.
+- GUID
+
+You can't use this parameter with the Mailbox parameter.
+
+To avoid performance issues, you're limited to one active database repair request at a time.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -133,29 +212,36 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox on which you run this command. You can use the following values:
+The Mailbox parameter specifies the mailbox that you want to repair or detect corruption in. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SMTP address
+- Name
 
 - Alias
 
-You can't use this parameter in conjunction with the Database parameter.
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Database parameter.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -164,15 +250,18 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive parameter specifies whether to detect corruptions or repair the archive mailbox associated with the specified mailbox. If you don't specify this parameter, only the primary mailbox is repaired.
+The Archive switch specifies whether to repair or detect corruption the archive mailbox that's associated with the specified mailbox. You don't need to specify a value with this switch.
 
-You can't use this parameter in conjunction with the Database parameter.
+If you don't use this switch, only the primary mailbox is included.
+
+You can't use this switch with the Database parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +280,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -200,13 +290,14 @@ Accept wildcard characters: False
 ```
 
 ### -DetectOnly
-The DetectOnly parameter specifies that you want this command to report errors, but not fix them. You don't have to specify a value with this parameter.
+The DetectOnly switch specifies that you want to report errors, but not fix them. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -221,11 +312,46 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies that the command should run immediately and not wait to be dispatched by workload management. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StoreMailbox
+The StoreMailbox parameter specifies the mailbox GUID of the mailbox you want to repair or detect corruption in. Use this parameter with the Database parameter.
+
+Run the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -236,61 +362,28 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies that the cmdlet should run immediately and not wait to be dispatched by workload management.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreMailbox
-The StoreMailbox parameter specifies the mailbox GUID of the mailbox you want to repair. Use this parameter with the Database parameter.
-
-Run the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
-
-```yaml
-Type: StoreMailboxIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/5fd53ecb-1445-489d-91ac-1e771f41eb01.aspx)

@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatamanagedproperty
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchMetadataManagedProperty
 ---
 
@@ -24,13 +29,13 @@ A managed property is a piece of information (such as title, author, etc.) that 
 
 See Set-FASTSearchMetadataManagedProperty for details about the managed property parameters and how to configure them.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchMetadataManagedProperty -name title
+Get-FASTSearchMetadataManagedProperty -name title
 ```
 
 This example retrieves a managed property named "title".
@@ -38,7 +43,7 @@ It returns an object representing the managed property.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchMetadataManagedProperty -name content*
+Get-FASTSearchMetadataManagedProperty -name content*
 ```
 
 This example returns all managed properties with names starting with "content".
@@ -64,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

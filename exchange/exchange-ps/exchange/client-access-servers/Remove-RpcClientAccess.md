@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/remove-rpcclientaccess
 applicable: Exchange Server 2010
 title: Remove-RpcClientAccess
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -13,24 +17,26 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Remove-RpcClientAccess cmdlet to remove the configuration information that allows RPC access through the Client Access server role on Microsoft Exchange Server 2010. After you remove the configuration information, the Exchange RPC Client Access service stops and no longer starts.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-RPCClientAccess -Server <ServerIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [<CommonParameters>]
+Remove-RPCClientAccess -Server <ServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Disabling RPC client access on a server blocks all RPC access through the specified Client Access server. Therefore, RPC clients (for example, clients running Microsoft Office Outlook 2007) with mailboxes on any mailbox databases configured to use the specified Client Access server won't be able to connect.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-RpcClientAccess -Server CAS01
 ```
 
@@ -39,13 +45,22 @@ This example removes the configuration information for the Exchange RPC Client A
 ## PARAMETERS
 
 ### -Server
-The Server parameter specifies the Client Access server.
+The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -65,6 +80,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +96,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +112,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -103,20 +121,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/92da5f1f-e65b-4995-96fe-47f53df34b48.aspx)

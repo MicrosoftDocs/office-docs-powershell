@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spserverscaleoutdatabase
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPServerScaleOutDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Add-SPServerScaleOutDatabase
@@ -25,17 +30,12 @@ Add-SPServerScaleOutDatabase -DatabaseName <String> -ServiceApplication <SPServi
 
 Use the Add-SPServerScaleOutDatabase cmdlet to add an existing scale-out database to the specified service application by using the ServiceApplication parameter or creates a new scale-out database and adds it to the specified service application.
 
-
-
-
-
 ## EXAMPLES
 
 ### -------------EXAMPLE------------ 
 ```
-C:\PS>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
-
-C:\PS>Add-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
+Add-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
 This example adds a new or existing scale out database into a specific service application.
@@ -47,15 +47,11 @@ This example adds a new or existing scale out database into a specific service a
 
 Specifies the name of the database to add to the specified service application.
 
-
-
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -68,14 +64,11 @@ Accept wildcard characters: False
 
 Specifies the service application of the scale-out databases.
 
-
-
-
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -94,14 +87,11 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
-
-
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -115,14 +105,11 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
-
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -135,14 +122,11 @@ Accept wildcard characters: False
 
 Specifies the owner's credentials of the scale-out database to be added to the service application.
 
-
-
-
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -155,14 +139,11 @@ Accept wildcard characters: False
 
 The name of the failover server for the scale-out database to be added.
 
-
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -176,14 +157,11 @@ Accept wildcard characters: False
 The name of the server hosting the scale-out database to be added.
 If a value is not provided, the default database server will be used.
 
-
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -197,14 +175,11 @@ Accept wildcard characters: False
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
-
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -220,7 +195,7 @@ Specifies whether upgrade actions are deferred duringi an Upgrade process.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -230,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

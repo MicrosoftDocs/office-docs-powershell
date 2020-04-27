@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+online version: https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/remove-rolegroupmember
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Remove-RoleGroupMember
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Remove-RoleGroupMember
@@ -13,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-RoleGroupMember cmdlet to remove a member of a management role group.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,22 +33,22 @@ If the ManagedBy property has been populated with role group managers, the user 
 
 If the role group is a linked role group, you can't use the Remove-RoleGroupMember cmdlet to remove members from the role group. Instead, you need to remove members from the foreign universal security group (USG) linked to the linked role group. To find the foreign USG linked to a role group, use the Get-RoleGroup cmdlet.
 
-For more information about role groups, see Understanding management role groups (https://technet.microsoft.com/library/dd638105.aspx).
+For more information about role groups, see [Understanding management role groups](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-RoleGroupMember "Recipient Management" -Member David
 ```
 
 This example removes the user David from the role group Recipient Management.
 
-### -------------------------- Example 2 --------------------------
-```
-Get-User -Filter { Department -Eq "Sales" -And -RecipientType -Eq "UserMailbox" } | Get-Mailbox | Remove-RoleGroupMember "Sales and Marketing Group" -WhatIf
+### Example 2
+```powershell
+Get-User -Filter "Department -eq 'Sales' -and -RecipientType -eq 'UserMailbox'" | Get-Mailbox | Remove-RoleGroupMember "Sales and Marketing Group" -WhatIf
 ```
 
 This example finds all the mailboxes that are part of the Sales department and removes them from the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be removed.
@@ -53,12 +57,12 @@ After you've verified that the correct members will be removed the role group, r
 
 For more information about pipelining, and the WhatIf parameter, see the following topics:
 
-- Pipelining (https://technet.microsoft.com/library/aa998260.aspx)
+- [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
 
 - WhatIf, Confirm and ValidateOnly switches
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Remove-RoleGroupMember "Training Administrators" -Member "Training Assistants" -BypassSecurityGroupManagerCheck
 ```
 
@@ -73,7 +77,8 @@ The Identity parameter specifies the role group that you want to remove a member
 Type: RoleGroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -88,7 +93,8 @@ The Member parameter specifies the mailbox or USG to remove from a role group. Y
 Type: SecurityPrincipalIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -103,7 +109,8 @@ The BypassSecurityGroupManagerCheck switch enables a user who hasn't been added 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +129,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +147,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +165,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -165,20 +175,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/eed5ec30-471f-4c60-b377-bdf4a249b3d5.aspx)

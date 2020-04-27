@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://docs.microsoft.com/powershell/module/skype/set-csxmppallowedpartner
+applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsXmppAllowedPartner
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsXmppAllowedPartner
@@ -102,7 +107,7 @@ Additional XMPP domains belonging to the allowed partner.
 Type: PSListModifier
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -118,7 +123,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -134,7 +139,7 @@ Specifies the maximum number of simultaneous connections to a specific partner.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -151,7 +156,7 @@ For example, the Description might include contact information for the partner.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -167,7 +172,7 @@ Indicates whether or not the XMPP partner should periodically transmit "keep ali
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -183,7 +188,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -199,7 +204,7 @@ Fully qualified domain name (FQDN) of the XMPP allowed partner to be modified (f
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: 2
@@ -215,7 +220,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -239,7 +244,7 @@ The default value is PublicUnverified.
 Type: PartnerType
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -255,7 +260,7 @@ Full qualified domain name of the proxy server used by the XMPP partner.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -279,7 +284,7 @@ The default value is Required.
 Type: SaslNegotiation
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -303,7 +308,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -328,7 +333,7 @@ The default value is Required.
 Type: TlsNegotiation
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -344,7 +349,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -354,7 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

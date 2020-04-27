@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://docs.microsoft.com/powershell/module/skype/get-cspersistentchateligibleprincipal
+applicable: Lync Server 2013, Skype for Business Server 2015
 title: Get-CsPersistentChatEligiblePrincipal
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Get-CsPersistentChatEligiblePrincipal
@@ -79,7 +84,7 @@ You must use either the Category or the Room parameter when calling the Get-CsPe
 Type: String
 Parameter Sets: Category
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -96,7 +101,7 @@ You must use either the Category or the Room parameter when calling the Get-CsPe
 Type: String
 Parameter Sets: Room
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -117,7 +122,7 @@ Note that the Filter parameter can only filter on user SIP addresses.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -136,7 +141,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -155,7 +160,7 @@ This parameter can only be used along with the Room parameter, and can only retu
 Type: SwitchParameter
 Parameter Sets: Room
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -177,7 +182,7 @@ If you set the ResultSize to 7 but you have only three principals in your forest
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -187,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

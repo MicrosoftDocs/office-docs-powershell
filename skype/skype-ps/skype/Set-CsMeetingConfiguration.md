@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csmeetingconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMeetingConfiguration
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsMeetingConfiguration
@@ -15,33 +20,26 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsMeetingConfiguration [[-Identity] <XdsIdentity>] [-AdmitAnonymousUsersByDefault <Boolean>]
- [-AssignedConferenceTypeByDefault <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
- [-EnableAssignedConferenceType <Boolean>] [-PstnCallersBypassLobby <Boolean>] [-Force] [-Tenant <Guid>]
- [-WhatIf] [-Confirm] [-CustomFooterText <String>] [-HelpURL <String>] [-LegalURL <String>] [-LogoURL <String>]
- [-RequireRoomSystemsAuthorization <Boolean>] [<CommonParameters>]
+Set-CsMeetingConfiguration [-Tenant <Guid>] [-PstnCallersBypassLobby <Boolean>]
+ [-EnableAssignedConferenceType <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
+ [-AssignedConferenceTypeByDefault <Boolean>] [-AdmitAnonymousUsersByDefault <Boolean>]
+ [-RequireRoomSystemsAuthorization <Boolean>] [-LogoURL <String>] [-LegalURL <String>] [-HelpURL <String>]
+ [-CustomFooterText <String>] [-AllowConferenceRecording <Boolean>] [-AllowCloudRecordingService <Boolean>]
+ [-EnableMeetingReport <Boolean>] [-UserUriFormatForStUser <String>] [[-Identity] <XdsIdentity>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsMeetingConfiguration [-Instance <PSObject>] [-AdmitAnonymousUsersByDefault <Boolean>]
- [-AssignedConferenceTypeByDefault <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
- [-EnableAssignedConferenceType <Boolean>] [-PstnCallersBypassLobby <Boolean>] [-Force] [-Tenant <Guid>]
- [-WhatIf] [-Confirm] [-CustomFooterText <String>] [-HelpURL <String>] [-LegalURL <String>] [-LogoURL <String>]
- [-RequireRoomSystemsAuthorization <Boolean>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsMeetingConfiguration [[-Identity] <Object>] [-AdmitAnonymousUsersByDefault <Object>]
- [-AllowCloudRecordingService <Object>] [-AllowConferenceRecording <Object>]
- [-AssignedConferenceTypeByDefault <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-CustomFooterText <Object>] [-DesignateAsPresenter <Object>] [-EnableAssignedConferenceType <Object>]
- [-EnableMeetingReport <Object>] [-Force] [-HelpURL <Object>] [-Instance <Object>] [-LegalURL <Object>]
- [-LogoURL <Object>] [-PstnCallersBypassLobby <Object>] [-RequireRoomSystemsAuthorization <Object>]
- [-Tenant <Object>] [-UserUriFormatForStUser <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsMeetingConfiguration [-Tenant <Guid>] [-PstnCallersBypassLobby <Boolean>]
+ [-EnableAssignedConferenceType <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
+ [-AssignedConferenceTypeByDefault <Boolean>] [-AdmitAnonymousUsersByDefault <Boolean>]
+ [-RequireRoomSystemsAuthorization <Boolean>] [-LogoURL <String>] [-LegalURL <String>] [-HelpURL <String>]
+ [-CustomFooterText <String>] [-AllowConferenceRecording <Boolean>] [-AllowCloudRecordingService <Boolean>]
+ [-EnableMeetingReport <Boolean>] [-UserUriFormatForStUser <String>] [-Instance <PSObject>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -126,23 +124,11 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -AdmitAnonymousUsersByDefault
-Determines whether meetings will, by default, allow attendance by anonymous users (that is, by unauthenticated users).
-Set this value to True if you would like new meetings to allow for attendance by anonymous users by default.
-Set this value to False if you would prefer that, by default, new meetings do not allow for attendance by anonymous users.
+Determines whether meetings will, by default, allow attendance by anonymous users (that is, by unauthenticated users) or by federated users (authenticated users from other tenants).
+Set this value to True if you would like new meetings to allow for attendance by anonymous users or federated users by default.
+Set this value to False if you would prefer that, by default, new meetings do not allow for attendance by anonymous users or federated users. When set to False, anonymous and federated users will be placed in the lobby of a meeting when trying to join it. After being placed in the lobby, they can be admitted by any presenter in the meeting.
+When this value is changed, the change will only apply to new meetings and it will not applied to meetings already scheduled.
 The default value is True.
 
 ```yaml
@@ -190,12 +176,14 @@ Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype
 
 Required: False
 Position: Named
-Default value: None
+Default value: Company
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -EnableAssignedConferenceType
+This parameter is not available in Skype for Business Online.
+
 Indicates whether users are allowed to schedule public meetings.
 With a public meeting, the conference ID and the meeting link remain consistent each time the meeting is held.
 With a private meeting, the conference ID and meeting link change from meeting to meeting.
@@ -205,7 +193,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -311,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomFooterText
-Text to be used on custom meeting invitations.
+Text to be used on custom meeting invitations. Multiple lines are supported using the Enter key.
 
 ```yaml
 Type: String
@@ -395,7 +383,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -412,23 +400,7 @@ Determines whether or not users are allowed to record conference proceedings.
 The default value is True.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -444,7 +416,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -460,23 +432,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -489,7 +445,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

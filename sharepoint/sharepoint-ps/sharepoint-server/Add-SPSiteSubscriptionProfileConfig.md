@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spsitesubscriptionprofileconfig
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPSiteSubscriptionProfileConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Add-SPSiteSubscriptionProfileConfig
@@ -31,20 +36,20 @@ Add-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Add-SPSiteSubscriptionProfileConfig cmdlet adds a new site subscription to a User Profile Service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE------------------
 ```
-C:\PS>$sub = Get-SPSiteSubscription http://contoso/my
-C:\PS>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
-C:\PS>Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $proxy -MySiteHostLocation http://contoso/my
-C:\PS>$sub = New-SPSiteSubscription
+$sub = Get-SPSiteSubscription https://contoso/my
+$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $proxy -MySiteHostLocation https://contoso/my
+$sub = New-SPSiteSubscription
 ```
 
 This example creates a new User Profile Service application tenant.
@@ -60,7 +65,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -72,13 +77,13 @@ Accept wildcard characters: False
 ### -MySiteHostLocation
 Specifies the site collection where the My Site host for the site subscription is provisioned.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -91,7 +96,7 @@ Accept wildcard characters: False
 Type: SPSitePipeBind
 Parameter Sets: MySiteSettings
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -107,7 +112,7 @@ Specifies the identifier for the User Profile Service Application proxy where th
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -129,7 +134,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -146,7 +151,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -158,13 +163,13 @@ Accept wildcard characters: False
 ### -MySiteManagedPath
 Specifies the managed path where personal sites will be created.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: SPPrefixPipeBind
 Parameter Sets: MySiteSettings
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -179,13 +184,13 @@ Specifies the format to use to name personal sites.
 Use one of the following integer values:
 
 1   Personal site collections are to be named based on user names without any conflict resolution.
-For example, http://portal_site/location/username/
+For example, https://portal_site/location/username/
 
 2   Personal site collections are to be based on user names with conflict resolution by using domain names.
 For example, .../username/ or .../domain_username/
 
 3   Personal site collections are to be named by using domain and user name always, to avoid any conflicts.
-For example, http://portal_site/location/domain_username/
+For example, https://portal_site/location/domain_username/
 
 The default value is 1 (do not resolve conflicts).
 
@@ -193,7 +198,7 @@ The default value is 1 (do not resolve conflicts).
 Type: String
 Parameter Sets: MySiteSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -211,7 +216,7 @@ The type must be a valid name of an organizational unit; for example, OrgUnit1.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -228,7 +233,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -238,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

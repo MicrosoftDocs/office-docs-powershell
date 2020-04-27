@@ -1,9 +1,13 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/new-umcallansweringrule
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-UMCallAnsweringRule
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-UMCallAnsweringRule
@@ -13,13 +17,13 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-UMCallAnsweringRule cmdlet to create a call answering rule.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 New-UMCallAnsweringRule -Name <String> [-CallerIds <MultiValuedProperty>]
- [-CallersCanInterruptGreeting <$true | $false>] [-CheckAutomaticReplies <$true | $false>] [-Confirm]
+ [-CallersCanInterruptGreeting <Boolean>] [-CheckAutomaticReplies <Boolean>] [-Confirm]
  [-DomainController <Fqdn>] [-ExtensionsDialed <MultiValuedProperty>] [-KeyMappings <MultiValuedProperty>]
  [-Mailbox <MailboxIdParameter>] [-Priority <Int32>] [-ScheduleStatus <Int32>] [-TimeOfDay <TimeOfDay>]
  [-WhatIf] [<CommonParameters>]
@@ -46,19 +50,19 @@ You can also specify the following actions:
 
 After this task is completed, the cmdlet sets the parameters and the values specified.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-UMCallAnsweringRule -Mailbox tonysmith -Name MyCallAnsweringRule -Priority 2
 ```
 
 This example creates the call answering rule MyCallAnsweringRule in the mailbox for tonysmith with the priority of 2.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-UMCallAnsweringRule -Name MyCallAnsweringRule -CallerIds "1,4255550100,,","1,4255550123,," -Priority 2 -CallersCanInterruptGreeting $true -Mailbox tonysmith
 ```
 
@@ -70,15 +74,15 @@ This example creates the following actions on the call answering rule MyCallAnsw
 
 - Sets the call answering rule to allow callers to interrupt the greeting.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith@contoso.com -ScheduleStatus 0x8
 ```
 
 This example creates the call answering rule MyCallAnsweringRule in the mailbox for tonysmith that sets the free/busy status to Out of Office and sets the priority to 2.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 New-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -ScheduleStatus 0x4 - -KeyMappings "1,1,Receptionist,,,,,45678,","5,2,Urgent Issues,23456,23,45671,50,,"
 ```
 
@@ -94,8 +98,8 @@ If the caller reaches the voice mail for the user and the status of the user is 
 
 - Press the 2 key and the Find Me feature will be used for urgent issues and ring extension 23456 first, and then 45671.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 New-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "1,0,,"
 ```
 
@@ -105,8 +109,8 @@ This example creates the call answering rule MyCallAnsweringRule in the mailbox 
 
 - If the caller reaches voice mail during working hours, the caller is asked to call back later.
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 New-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "3,4,8:00,12:00"
 ```
 
@@ -125,7 +129,8 @@ The Name parameter specifies the name of the Unified Messaging (UM) call answeri
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -140,7 +145,8 @@ The CallerIds parameter specifies an entry for the "If the Caller is" condition.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -152,10 +158,11 @@ Accept wildcard characters: False
 The CallersCanInterruptGreeting parameter specifies whether a caller can interrupt the voice mail greeting while it's being played. The default is $null.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -167,10 +174,11 @@ Accept wildcard characters: False
 The CheckAutomaticReplies parameter specifies an entry for the "If My Automatic Replies are Enabled" condition. The default is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -189,7 +197,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -206,7 +215,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -221,7 +231,8 @@ The ExtensionsDialed parameter specifies an entry for the "If the Caller Dials" 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +247,8 @@ The KeyMappings parameter specifies a key mapping entry for a call answering rul
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -245,13 +257,36 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the UM-enabled mailbox where the call answering rule is created. The default is the user's mailbox that's running the cmdlet.
+The Mailbox parameter specifies the UM-enabled mailbox where the call answering rule is created.  You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+If you don't use this parameter, the mailbox of the user who is running the command is used.
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -266,7 +301,8 @@ The Priority parameter specifies the order that the call answering rule will be 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -293,7 +329,8 @@ The default setting is $null.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -308,7 +345,8 @@ The TimeOfDay parameter specifies an entry for the "If the Call Arrives During" 
 Type: TimeOfDay
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -323,7 +361,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -332,20 +371,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/79547dbf-1fb3-43ed-a788-03e4907e68a3.aspx)

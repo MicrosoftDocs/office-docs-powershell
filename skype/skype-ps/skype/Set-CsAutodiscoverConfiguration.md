@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csautodiscoverconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAutodiscoverConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsAutodiscoverConfiguration
@@ -57,12 +62,12 @@ From there, you can use the `Set-CsAutoDiscoverConfiguration` cmdlet to add or r
 
 ### -------------------------- Example 1 --------------------------
 ```
-$Link1 = New-CsWebLink -Token "Fabrikam" -Href "http://LyncDiscover.fabrikam.com"
+$Link1 = New-CsWebLink -Token "Fabrikam" -Href "https://LyncDiscover.fabrikam.com"
 
 Set-CsAutoDiscoverConfiguration -Identity "site:Redmond" -WebLinks @{Add=$Link1}
 ```
 
-The commands shown in Example 1 add a new Autodiscover URL (http://LyncDiscover.fabrikam.com) to the Autodiscover configuration settings assigned to the Redmond site.
+The commands shown in Example 1 add a new Autodiscover URL (https://LyncDiscover.fabrikam.com) to the Autodiscover configuration settings assigned to the Redmond site.
 To do this, the first command in the example uses the `New-CsWebLink` cmdlet to create a new Autodiscover URL; that URL is stored in a variable named $Link1.
 In the second command, the `Set-CsAutoDiscoverConfiguration` cmdlet is used to add the new URL to any URLs already assigned to these settings.
 This is done by using the WebLinks parameter and the parameter value @{Add=$Link1}.
@@ -88,14 +93,14 @@ To do this, the command uses the WebLinks parameter and the parameter value @{Re
 
 ### -------------------------- Example 3 --------------------------
 ```
-$Link2 = New-CsWebLink -Token "Contoso" -Href "http://LyncDiscover.contoso.com"
+$Link2 = New-CsWebLink -Token "Contoso" -Href "https://LyncDiscover.contoso.com"
 
 Set-CsAutoDiscoverConfiguration -Identity "site:Redmond" -WebLinks @{Replace=$Link2}
 ```
 
 Example 3 shows how you can replace an existing collection of Autodiscover URLs with, in this case, a single URL.
-To carry out this task, the first command in the example uses the `New-CsWebLink` cmdlet to create a new Autodiscover URL for http://LyncDiscover.contoso.com; the resulting URL is stored in a variable named $Link2.
-The second command then uses the `Set-CsAutoDiscoverConfiguration` cmdlet and the WebLinks parameter to remove any URLs previously assigned to the Redmond site and replace them with the URL for http://LyncDiscover.contoso.com.
+To carry out this task, the first command in the example uses the `New-CsWebLink` cmdlet to create a new Autodiscover URL for https://LyncDiscover.contoso.com; the resulting URL is stored in a variable named $Link2.
+The second command then uses the `Set-CsAutoDiscoverConfiguration` cmdlet and the WebLinks parameter to remove any URLs previously assigned to the Redmond site and replace them with the URL for https://LyncDiscover.contoso.com.
 To do this, the command uses the Replace method instead of the Add or Remove method.
 
 
@@ -268,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

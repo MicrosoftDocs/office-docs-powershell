@@ -1,58 +1,49 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/move-csmeetingroom
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsMeetingRoom
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Move-CsMeetingRoom
 
 ## SYNOPSIS
-
-Moves a Skype for Business Server meeting room object from one Registrar pool to another.
+Moves a Skype for Business Server 2015 meeting room object from one Registrar pool to another, or to Skype for Business Online.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
 This cmdlet was introduced in Lync Server 2013.
 
-
-
 ## SYNTAX
 
-###  (Default)
+### Identity (Default)
 ```
-Move-CsMeetingRoom [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Confirm] [-DomainController <Fqdn>]
- [-Force] [-IgnoreBackendStoreException] [-PassThru] [-ProxyPool <Fqdn>] [-WhatIf] [<CommonParameters>]
-```
-
-### Identity
-```
-Move-CsMeetingRoom [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Confirm] [-DomainController <Fqdn>]
- [-Force] [-IgnoreBackendStoreException] [-PassThru] [-ProxyPool <Fqdn>] [-Report <String>] [-WhatIf]
- [<CommonParameters>]
+Move-CsMeetingRoom [-HostedMigrationOverrideUrl <String>] [-Credential <PSCredential>] [-Target] <Fqdn>
+ [-Report <String>] [-Force] [-IgnoreBackendStoreException] [-ProxyPool <Fqdn>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Users
 ```
-Move-CsMeetingRoom [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-IgnoreBackendStoreException] [-PassThru] [-ProxyPool <Fqdn>]
- [-Report <String>] [-WhatIf] [<CommonParameters>]
+Move-CsMeetingRoom [-HostedMigrationOverrideUrl <String>] [-Credential <PSCredential>] [-Target] <Fqdn>
+ -UserList <String> [-Report <String>] [-Force] [-IgnoreBackendStoreException] [-ProxyPool <Fqdn>]
+ [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+In Skype for Business Server 2015, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
-In Skype for Business Server, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
+* One touch meeting join experience
+* Multi-view video gallery
+* Touch-enabled white-boarding on the front of room screen
+* Calendar integration to provide access to scheduled meetings
+* Content sharing and switching
 
-One touch meeting join experience
-
-Multi-view video gallery
-
-Touch-enabled white-boarding on the front of room screen
-
-Calendar integration to provide access to scheduled meetings
-
-Content sharing and switching
-
-In order to manage these new endpoint devices you must, among other things, create and enable a Exchange resource mailbox account for the device, then enable that resource account for Skype for Business Server.
-Note that, for Skype for Business Server, there are no cmdlets for creating or removing meeting rooms.
+In order to manage these new endpoint devices you must, among other things, create and enable a Exchange resource mailbox account for the device, then enable that resource account for Skype for Business Server 2015.
+Note that, for Skype for Business Server 2015, there are no cmdlets for creating or removing meeting rooms.
 Instead, you use the Enable-CsMeetingRoom cmdlet to enable meeting rooms and the Disable-CsMeetingRoom cmdlet to disable meeting rooms.
 The resource account must already exist in order for you to enable the meeting room, and disabling a meeting room only removes that room from your collection of meeting rooms; it does not delete the resource mailbox account.
 
@@ -64,16 +55,13 @@ Skype for Business Server Control Panel: The functions carried out by the Move-C
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
 Move-CsMeetingRoom -Target "atl-cs-001.litwareinc.com" -Identity "Room 14"
 ```
 
 The command shown in Example 1 moves the meeting room with the display name "Room 14" to the pool atl-cs-001.litwareinc.com.
 
-
 ### -------------------------- Example 2 -------------------------- 
 ```
-
 Get-CsMeetingRoom | Move-CsMeetingRoom -Target "atl-cs-001.litwareinc.com"
 ```
 
@@ -81,6 +69,12 @@ Example 2 moves all the meeting rooms in the organization to the pool atl-cs-001
 To do this, the command first calls the Get-CsMeetingRoom cmdlet without any parameters; that returns a collection of all the meeting rooms configured for use in the organization.
 That collection is then piped to the Move-CsMeetingRoom cmdlet, which moves each meeting room in the collection to the new pool.
 
+### -------------------------- Example 3 -------------------------- 
+```
+Move-CsMeetingRoom -Identity "Room 15" -HostedMigrationOverrideUrl "https://admin2a.online.lync.com/HostedMigration/hostedmigrationservice.svc" -Target "sipfed.online.lync.com" -Credential $credential
+```
+
+The command shown in Example 3 moves the meeting room with the display name "Room 15" to Skype for Business Online.
 
 ## PARAMETERS
 
@@ -151,18 +145,49 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
+### -Credential
+Enables you to run the Move-CsMeetingRoom cmdlet under alternate credentials.
+This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
 
+To use the Credential parameter you must first create a PSCredential object using the Get-Credential cmdlet.
+For details, see the Get-Credential cmdlet help topic.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
 When present, instructs the Move-CsMeetingRoom cmdlet to ignore all errors that might occur when carrying out the move operation.
 As a general rule, you should avoid using the Force parameter unless absolutely necessary.
-
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HostedMigrationOverrideUrl
+URL for the hosted migration service used when moving a user to Lync Online.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -205,10 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-
 This parameter is not used with the on-premises version of Skype for Business Online.
-
-
 
 ```yaml
 Type: Fqdn
@@ -255,24 +277,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConcurrentMovesPerFE
-PARAMVALUE: Int32
-
-```yaml
-Type: Int32
-Parameter Sets: Users
-Aliases: 
-Applicable: Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Report
-PARAMVALUE: String
+Specifies the file path for the log file created when the cmdlet runs.
+For example: -Report "C:\Logs\S1_FailOverLog.html".
+If this file already exists, it will be overwritten.
+By default, reports are written to the "AppData\Local\Temp" folder in your user profile.
 
 ```yaml
 Type: String
@@ -288,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

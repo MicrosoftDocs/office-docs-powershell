@@ -1,72 +1,96 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxlocation
 applicable: Exchange Online
 title: Get-MailboxLocation
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
 # Get-MailboxLocation
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MailboxLocation cmdlet to view mailbox location information in Exchange Online.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set3
+### DatabaseSet
 ```
-Get-MailboxLocation -Database <DatabaseIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-MailboxLocation -Identity <MailboxLocationIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Get-MailboxLocation -Database <DatabaseIdParameter>
+ [-Confirm]
+ [-MailboxLocationType <MailboxLocationType>]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### Identity
 ```
-Get-MailboxLocation -Organization <OrganizationIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Get-MailboxLocation -Identity <MailboxLocationIdParameter>
+ [-Confirm]
+ [-MailboxLocationType <MailboxLocationType>]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### User
 ```
-Get-MailboxLocation -User <UserIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Get-MailboxLocation -User <UserIdParameter> [-IncludePreviousPrimary]
+ [-Confirm]
+ [-MailboxLocationType <MailboxLocationType>]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxLocation -User chris@contoso.com
 ```
 
-This example returns the mailbox location for the user chris@contoso.com.
+In Exchange Online, this example returns the mailbox location information for the user chris@contoso.com.
+
+### Example 2
+```powershell
+Get-MailboxLocation -Identity e15664af-82ed-4635-b02a-df7c2e03d950
+```
+
+In Exchange Server or Exchange Online, this example returns the mailbox location information for the specified mailbox GUID (the ExchangeGuid property value from the results of Get-Mailbox -Identity \<MailboxIdentity\> | Format-List ExchangeGuid).
 
 ## PARAMETERS
 
 ### -Database
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The Database parameter returns the mailbox location information for all mailboxes on the specified mailbox database. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set3
+Parameter Sets: DatabaseSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -75,30 +99,24 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox location object that you want to view. The value uses the syntax \<GUID1\>\\\<GUID2\>. Typically, you can only find this value after you run Get-MailboxLocation with the User parameter.
+The Identity parameter specifies the mailbox location object that you want to view. The value uses the either of the following formats:
+
+- \<TenantGUID\>\\\<MailboxGUID\>
+
+- \<MailboxGUID\>
+
+In Exchange Server or Exchange Online, you can run the following command to find and compare the \<MailboxGUID\> values for the user: Get-Mailbox -Identity \<MailboxIdentity\> \| Format-List *GUID,MailboxLocations.
+
+In Exchange Online, you can find the \<TenantGUID\> and \<MailboxGUID\> values after you run Get-MailboxLocation with the User parameter.
 
 You can't use this parameter with the User parameter.
 
 ```yaml
 Type: MailboxLocationIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -107,13 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user.
+This parameter is available only in the cloud-based service.
 
-For example:
+The User parameter specifies the user whose mailbox location you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -125,9 +141,10 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set2
+Parameter Sets: User
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -146,7 +163,28 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludePreviousPrimary
+This parameter is available only in the cloud-based service.
+
+The IncludePreviousPrimary switch specifies whether to include the previous primary mailbox in the results. You don't need to specify a value with this switch.
+
+You can only use this switch with the User parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: User
+Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -167,15 +205,16 @@ The MailboxLocationType filters the results by the type of mailbox. Valid values
 
 - MainArchive
 
+- PreviousPrimary (Exchange Online only)
+
 - Primary
 
-- RemotePrimary
-
 ```yaml
-Type: Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared
+Type: MailboxLocationType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +229,8 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -205,7 +245,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -214,20 +255,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/b6393122-1556-4b0b-b80d-c7737b09eb9c.aspx)

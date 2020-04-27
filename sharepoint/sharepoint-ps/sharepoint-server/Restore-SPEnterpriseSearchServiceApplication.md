@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/restore-spenterprisesearchserviceapplication
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Restore-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Restore-SPEnterpriseSearchServiceApplication
@@ -33,7 +38,7 @@ Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
 This cmdlet contains more than one parameter set.
 
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 This cmdlet is used by third parties to create a search application that uses existing data.
 
@@ -46,16 +51,16 @@ The first set of parameters is for Application Configuration Attach mode and the
 Application Configuration Attach mode only restores configuration data that is stored in the administration database.
 However, Search Application Attach restores configuration, topology and all crawled data.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-PS C:\>$searchInstance = Get-SPEnterpriseSearchServiceInstance -local
-PS C:\>$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
-PS C:\>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
+$searchInstance = Get-SPEnterpriseSearchServiceInstance -local
+$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
+Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
 ```
 
 This example uses Application Configuration Attach mode to restore configuration data.
@@ -63,8 +68,8 @@ This example uses Application Configuration Attach mode to restore configuration
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-PS C:\>$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
-PS C:\>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
+$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
+Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
 ```
 
 This example uses Search Application Attach mode to restore topology data in the file that is named topology.xml.
@@ -79,7 +84,7 @@ Specifies the new Search application name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -95,7 +100,7 @@ Specifies the application pool for the query web service.
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -111,7 +116,7 @@ Specifies the search service instance to be used with the administration compone
 Type: SearchServiceInstancePipeBind
 Parameter Sets: Config
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -134,7 +139,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -152,7 +157,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -170,7 +175,7 @@ The type must be a valid name of a SQL Server database, for example, RestoreDB1.
 Type: String
 Parameter Sets: Config
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -186,7 +191,7 @@ Specifies the name of the password for the database server on the SQL Server.
 Type: SecureString
 Parameter Sets: Config
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -204,7 +209,7 @@ The type must be a valid SQL Server host name, for example, SQLServerHost1.
 Type: String
 Parameter Sets: Config
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -220,7 +225,7 @@ Specifies the account name that is specified in the Database Server parameter.
 Type: String
 Parameter Sets: Config
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -236,7 +241,7 @@ Use this parameter if you want the administration database to use a failover dat
 Type: String
 Parameter Sets: Config
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -252,7 +257,7 @@ Specifies if the search service application ID's from the topology .xml file sho
 Type: SwitchParameter
 Parameter Sets: Full
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -270,7 +275,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -286,7 +291,7 @@ Specifies the path of the .XML file that contains the application topology infor
 Type: String
 Parameter Sets: Full
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -302,7 +307,7 @@ Prevents database schema update during restore. Do not use.
 Type: SwitchParameter
 Parameter Sets: Full
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -312,7 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,12 +1,15 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpwebparttowebpartpage
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPWebPartToWebPartPage
 ---
+
 # Add-PnPWebPartToWebPartPage
 
 ## SYNOPSIS
-Adds a webpart to a web part page in a specified zone
+Adds a web part to a web part page in a specified zone
 
 ## SYNTAX 
 
@@ -37,19 +40,19 @@ Add-PnPWebPartToWebPartPage -Path <String>
 Add-PnPWebPartToWebPartPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Path "c:\myfiles\listview.webpart" -ZoneId "Header" -ZoneIndex 1 
 ```
 
-This will add the webpart as defined by the XML in the listview.webpart file to the specified page in the specified zone and with the order index of 1
+This will add the web part as defined by the XML in the listview.webpart file to the specified page in the specified zone and with the order index of 1
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Add-PnPWebPartToWebPartPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -XML $webpart -ZoneId "Header" -ZoneIndex 1 
 ```
 
-This will add the webpart as defined by the XML in the $webpart variable to the specified page in the specified zone and with the order index of 1
+This will add the web part as defined by the XML in the $webpart variable to the specified page in the specified zone and with the order index of 1
 
 ## PARAMETERS
 
 ### -Path
-A path to a webpart file on a the file system.
+A path to a web part file on a the file system.
 
 ```yaml
 Type: String
@@ -61,7 +64,7 @@ Accept pipeline input: False
 ```
 
 ### -ServerRelativePageUrl
-Server Relative Url of the page to add the webpart to.
+Server Relative Url of the page to add the web part to.
 
 ```yaml
 Type: String
@@ -74,7 +77,7 @@ Accept pipeline input: False
 ```
 
 ### -Xml
-A string containing the XML for the webpart.
+A string containing the XML for the web part.
 
 ```yaml
 Type: String
@@ -86,7 +89,7 @@ Accept pipeline input: False
 ```
 
 ### -ZoneId
-The Zone Id where the webpart must be placed
+The Zone Id where the web part must be placed
 
 ```yaml
 Type: String
@@ -98,7 +101,7 @@ Accept pipeline input: False
 ```
 
 ### -ZoneIndex
-The Zone Index where the webpart must be placed
+The Zone Index where the web part must be placed
 
 ```yaml
 Type: Int
@@ -135,4 +138,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

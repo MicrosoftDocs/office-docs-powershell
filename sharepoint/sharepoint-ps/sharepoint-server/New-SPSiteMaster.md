@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spsitemaster
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: New-SPSiteMaster
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPSiteMaster
@@ -27,7 +32,7 @@ Use the New-SPSiteMaster cmdlet to create a site master information in the farm.
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
+New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
 ```
 
 This example creates a site master in the database WSS_Content.
@@ -44,7 +49,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -62,7 +67,7 @@ When this parameter is not specified, the CompatibilityLevel will default to the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -78,7 +83,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -94,7 +99,7 @@ Specifies the name of the database to create the site master in. For example, WS
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 0
@@ -110,7 +115,7 @@ Specifies the locale ID to use. For example, use 1033 for English.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -142,7 +147,7 @@ The values are the following:
 Type: SPWebTemplatePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -159,7 +164,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -169,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

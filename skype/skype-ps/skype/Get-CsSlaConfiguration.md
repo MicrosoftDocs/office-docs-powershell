@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csslaconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsSlaConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Get-CsSlaConfiguration
@@ -34,14 +39,14 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsSlaConfiguration"}
 Get-CsSlaConfiguration -Identity sip:emergency@contosohealth.com
 ```
 
-This example command returns information about the shared number with the Identity of “emergency@contosohealth.com”.
+This example command returns information about the shared number with the Identity of "emergency@contosohealth.com".
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-CsSlaConfiguration emergency@contosohealth.com
 ```
 
-This example command returns information about the shared number with the Identity of “emergency@contosohealth.com”. This example specifies Identity by its position.
+This example command returns information about the shared number with the Identity of "emergency@contosohealth.com". This example specifies Identity by its position.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -111,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

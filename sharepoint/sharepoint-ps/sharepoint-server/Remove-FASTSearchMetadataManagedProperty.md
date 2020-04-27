@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchmetadatamanagedproperty
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: Remove-FASTSearchMetadataManagedProperty
 ---
 
@@ -28,13 +33,13 @@ This command removes a managed property and its content from the FAST Search Ser
 If the managed property is mapped into any full text indexes, the mapping is also removed.
 If there are any crawled property mappings to this managed property, those mappings are also removed.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Remove-FASTSearchMetadataManagedProperty -Name title
+Remove-FASTSearchMetadataManagedProperty -Name title
 ```
 
 This example removes the managed property named "title" from the system.
@@ -42,8 +47,8 @@ It will ask for confirmation before going through with the removal unless Force 
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>$createdby = Get-FASTSearchMetadataManagedProperty -name CreatedBy
-PS C:\>Remove-FASTSearchMetadataManagedProperty -ManagedProperty $createdby -Force
+$createdby = Get-FASTSearchMetadataManagedProperty -name CreatedBy
+Remove-FASTSearchMetadataManagedProperty -ManagedProperty $createdby -Force
 ```
 
 This example removes the managed property represented by the object $managedproperty.
@@ -139,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

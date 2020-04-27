@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://docs.microsoft.com/powershell/module/skype/set-cspersistentchatcategory
+applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatCategory
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsPersistentChatCategory
@@ -81,7 +86,7 @@ The Identity consists of the Persistent Chat pool were the category is located f
 Type: String
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: 1
@@ -97,7 +102,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: Category
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -137,7 +142,7 @@ To add all the users in a distribution list, use the Active Directory distinguis
 Type: System.Management.Automation.PSListModifier`1[System.String]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -154,7 +159,7 @@ When not specified, SIP addresses are used when managing these lists.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -164,14 +169,14 @@ Accept wildcard characters: False
 ```
 
 ### -ChatHistory
-When set the False ($False), the chat history feature will be disabled for the new category.
+When set to False ($False), the chat history feature will be disabled for the new category.
 Typically, chat history is only disabled for chat rooms that are used for announcements that are posted once and then never need to be referred to again.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -187,7 +192,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -227,7 +232,7 @@ To add all the users in a distribution list, use the Active Directory distinguis
 Type: System.Management.Automation.PSListModifier`1[System.String]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -267,7 +272,7 @@ To deny access to all the users in a distribution list, use the Active Directory
 Type: System.Management.Automation.PSListModifier`1[System.String]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -284,7 +289,7 @@ For example, the Description might explain the purpose of the category and what 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -300,7 +305,7 @@ When set to True ($True), allows file uploads to the chat rooms in the category.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -317,7 +322,7 @@ Among other things, this means that users on the AllowedMembers list will automa
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -334,7 +339,7 @@ Names must be unique per Persistent Chat pool.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -350,7 +355,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -360,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

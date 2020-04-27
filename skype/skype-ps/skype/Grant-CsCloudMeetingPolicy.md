@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/grant-cscloudmeetingpolicy
 applicable: Skype for Business Online
 title: Grant-CsCloudMeetingPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Grant-CsCloudMeetingPolicy
@@ -13,8 +18,8 @@ Grants Skype Meetings polices for a user.
 ## SYNTAX
 
 ```
-Grant-CsCloudMeetingPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm]
- [-DomainController <Object>] [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsCloudMeetingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +48,7 @@ Specifies the identity of the hybrid public switched telephone network (PSTN) si
 For example: `-Identity "SeattlePSTN".`
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -56,11 +61,11 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Specifes the policy for all users automatic Skype Meeting Ready scheduling.
+Specifies the policy for all users automatic Skype Meeting Ready scheduling.
 Can be either AutoScheduleEnabled or AutoScheduleDisabled.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -93,7 +98,7 @@ Specifies the domain controller that's used by the cmdlet to read or write the s
 Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -131,7 +136,7 @@ The tenant ID will be determined by your connection and credentials.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -177,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-addressrewriteentry
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-AddressRewriteEntry
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-AddressRewriteEntry
@@ -13,14 +17,14 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Set-AddressRewriteEntry cmdlet to modify an existing address rewrite entry that rewrites sender and recipient email addresses in messages sent to or sent from your organization through an Edge Transport server.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-AddressRewriteEntry [-Identity] <AddressRewriteEntryIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-ExceptionList <MultiValuedProperty>] [-ExternalAddress <String>] [-InternalAddress <String>]
- [-Name <String>] [-OutboundOnly <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-Name <String>] [-OutboundOnly <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,8 +32,8 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AddressRewriteEntry "Address rewrite entry for contoso.com" -Name "Address rewrite entry for northwindtraders.com" -InternalAddress northwindtraders.com
 ```
 
@@ -39,8 +43,8 @@ Changes the original email addresses that are affected by the address rewrite en
 
 Changes the Name value to "Address rewrite entry for northwindtraders.com".
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-AddressRewriteEntry "Address rewrite entry for all contoso.com email addresses" -OutboundOnly $true
 ```
 
@@ -55,7 +59,8 @@ The Identity parameter specifies the address rewrite entry you want to modify. Y
 Type: AddressRewriteEntryIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -74,7 +79,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -91,7 +97,8 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -100,13 +107,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptionList
-The ExceptionList parameter specifies the domain names that should be excluded from address rewriting when the InternalAddress parameter contains a value that specifies multiple domain names. You can separate multiple domain names included with the ExceptionList parameter with commas. For more information about how to add values to or remove values from multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+The ExceptionList parameter specifies the domain names that should be excluded from address rewriting when the InternalAddress parameter contains a value that specifies multiple domain names. You can separate multiple domain names included with the ExceptionList parameter with commas. For more information about how to add values to or remove values from multivalued properties, see [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -123,7 +131,8 @@ You can't use the wildcard character (\*) with the ExternalAddress parameter.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -144,7 +153,8 @@ The InternalAddress parameter specifies the original email addresses that you wa
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +169,8 @@ The Name parameter specifies a unique name for this address rewrite entry.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -175,10 +186,11 @@ You must set this parameter to $true if the InternalAddress parameter contains t
 Also, when you configure outbound-only address rewriting, you need to configure the rewritten email address as a proxy address on the affected recipients. For example, if laura@sales.contoso.com is rewritten to laura@contoso.com, the proxy address laura@contoso.com must be configured on Laura's mailbox. This allows replies and inbound messages to be delivered correctly.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +205,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -202,20 +215,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/2390ee56-7d46-4584-aae8-fba8455e9e04.aspx)

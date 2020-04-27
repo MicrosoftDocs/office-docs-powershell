@@ -1,83 +1,103 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-activityalert
 applicable: Office 365 Security & Compliance Center
 title: New-ActivityAlert
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
 # New-ActivityAlert
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the New-ActivityAlert cmdlet to create activity alerts in the Security & Compliance Center. Activity alerts send you email notifications when users perform specific activities in Office 365.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set4
+### AnomalousOperationAuditAlert
 ```
-New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty>
- [-Operation <MultiValuedProperty>]
- -Type <Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation>
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Condition <String>] [-Confirm] [-Description <String>] [-Disabled <$true | $false>]
- [-DomainController <Fqdn>] [-EmailCulture <CultureInfo>]
- [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
- [-ScopeLevel <SingleUser | AllUsers>] [-Severity <Low | Medium | High | None>] [-UserId <MultiValuedProperty>]
+New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Type <AlertType>
+ [-Category <AlertRuleCategory>]
+ [-Condition <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <Boolean>]
+ [-DomainController <Fqdn>]
+ [-EmailCulture <CultureInfo>]
+ [-RecordType <AuditRecordType>]
+ [-ScopeLevel <AlertScopeLevel>]
+ [-Severity <RuleSeverity>]
+ [-UserId <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Default
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty>
- [-Type <Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation>]
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Confirm] [-Description <String>] [-Disabled <$true | $false>] [-DomainController <Fqdn>]
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <AlertType>]
+ [-Category <AlertRuleCategory>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <Boolean>]
+ [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
- [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
- [-Severity <Low | Medium | High | None>] [-UserId <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>]
- -Threshold <Int32> -TimeWindow <Int32>
- -Type <Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation>
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Condition <String>] [-Confirm] [-Description <String>] [-Disabled <$true | $false>]
- [-DomainController <Fqdn>] [-EmailCulture <CultureInfo>]
- [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
- [-ScopeLevel <SingleUser | AllUsers>] [-Severity <Low | Medium | High | None>] [-UserId <MultiValuedProperty>]
+ [-RecordType <AuditRecordType>]
+ [-Severity <RuleSeverity>]
+ [-UserId <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### SimpleAggregationAuditAlert
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty>
- -Type <Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation>
- [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Confirm] [-Description <String>] [-Disabled <$true | $false>] [-DomainController <Fqdn>]
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
+ [-Category <AlertRuleCategory>]
+ [-Condition <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <Boolean>]
+ [-DomainController <Fqdn>]
  [-EmailCulture <CultureInfo>]
- [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
- [-Severity <Low | Medium | High | None>] [-UserId <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-RecordType <AuditRecordType>]
+ [-ScopeLevel <AlertScopeLevel>]
+ [-Severity <RuleSeverity>]
+ [-UserId <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ElevationOfPrivilegeAuditAlert
+```
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Type <AlertType>
+ [-Category <AlertRuleCategory>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <Boolean>]
+ [-DomainController <Fqdn>]
+ [-EmailCulture <CultureInfo>]
+ [-RecordType <AuditRecordType>]
+ [-Severity <RuleSeverity>]
+ [-UserId <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-New-ActivityAlert -Name "External Sharing Alert" -Operation sharingset,sharinginvitationcreated -NotifyUser chrisda@contoso.com,michelle@contoso.com -UserId laura@contoso.com,julia@contoso.com -Description "Notification for external sharing events by laura@contoso.com and julia@contoso.com"
+### Example 1
+```powershell
+New-ActivityAlert -Name "External Sharing Alert" -Operation sharinginvitationcreated -NotifyUser chrisda@contoso.com,michelle@contoso.com -UserId laura@contoso.com,julia@contoso.com -Description "Notification for external sharing events by laura@contoso.com and julia@contoso.com"
 ```
 
 This example creates a new activity alert named External Sharing Alert that has the following properties:
 
-- Operation: sharingset and sharinginvitationcreated.
+- Operation: sharinginvitationcreated.
 
 - NotifyUser: chrisda@contoso.com and michelle@contoso.com.
 
@@ -94,9 +114,10 @@ You can only use this parameter with the Type parameter value AnomalousAggregati
 
 ```yaml
 Type: Double
-Parameter Sets: Set4
+Parameter Sets: AnomalousOperationAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -112,6 +133,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -129,6 +151,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -137,20 +160,21 @@ Accept wildcard characters: False
 ```
 
 ### -Operation
-The Operation parameter specifies the activitiesthat trigger activity alerts.
+The Operation parameter specifies the activity that triggers an activity alert.
 
-A valid value for this parameter is an activity that's available in the Office 365 audit log. For a description of these activities, see Search the audit log in the Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=824986).
+A valid value for this parameter is an activity that's available in the Office 365 audit log. For a description of these activities, see [Audited activities](https://go.microsoft.com/fwlink/p/?LinkId=824986).
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+Although this parameter is technically capable of accepting multiple values separated by commas, multiple values don't work.
 
 You can't use this parameter if the Type parameter value is ElevationOfPrivilege.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set3
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-Required: False
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -159,10 +183,11 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-Required: True
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -176,9 +201,10 @@ You can only use this parameter with the Type parameter value SimpleAggregation.
 
 ```yaml
 Type: Int32
-Parameter Sets: Set3
+Parameter Sets: SimpleAggregationAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -193,9 +219,10 @@ You can only use this parameter with the Type parameter value SimpleAggregation.
 
 ```yaml
 Type: Int32
-Parameter Sets: Set3
+Parameter Sets: SimpleAggregationAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -217,10 +244,11 @@ The Type parameter specifies the type alert. Valid values are:
 Note: You can't change the Type value in an existing activity alert.
 
 ```yaml
-Type: Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation
-Parameter Sets: Set4, Set3, Set2
+Type: AlertType
+Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert, ElevationOfPrivilegeAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -229,10 +257,11 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation
-Parameter Sets: Set1
+Type: AlertType
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -256,10 +285,11 @@ The Category parameter specifies a category for the activity alert. Valid values
 - Others
 
 ```yaml
-Type: None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others
+Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -272,9 +302,10 @@ The Condition parameter specifies filter conditions for event aggregation.
 
 ```yaml
 Type: String
-Parameter Sets: Set4, Set3
+Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -294,6 +325,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -309,6 +341,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -324,10 +357,11 @@ The Disabled parameter specifies whether the activity alert is enabled or disabl
 - $false: The activity alert is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -343,6 +377,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -353,13 +388,14 @@ Accept wildcard characters: False
 ### -EmailCulture
 The EmailCulture parameter specifies the language of the notification email message.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
 
 ```yaml
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -368,9 +404,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter specifies a record type label for the activity alert.
+The RecordType parameter specifies a record type label for the activity alert. Valid values are:
 
-Valid values are:
+- AeD
 
 - AzureActiveDirectory
 
@@ -398,19 +434,21 @@ Valid values are:
 
 - MicrosoftTeams
 
-- MicrosoftTeamsAddOns
-
-- MicrosoftTeamsSettingsOperation
-
 - OneDrive
 
 - PowerBIAudit
 
+- SecurityComplianceAlerts
+
 - SecurityComplianceCenterEOPCmdlet
+
+- SecurityComplianceInsights
 
 - SharePoint
 
 - SharePointFileOperation
+
+- SharePointListOperation
 
 - SharePointSharingOperation
 
@@ -424,15 +462,22 @@ Valid values are:
 
 - ThreatIntelligence
 
+- ThreatIntelligenceAtpContent
+
+- ThreatIntelligenceUrl
+
+- WorkplaceAnalytics
+
 - Yammer
 
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
 
 ```yaml
-Type: ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence
+Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -448,10 +493,11 @@ The ScopeLevel parameter specifies the scope for activity alerts that use the Ty
 - AllUsers
 
 ```yaml
-Type: SingleUser | AllUsers
-Parameter Sets: Set4, Set3
+Type: AlertScopeLevel
+Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -471,10 +517,11 @@ The Severity parameter specifies a severity level for the activity alert. Valid 
 - High
 
 ```yaml
-Type: Low | Medium | High | None
+Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -496,6 +543,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -504,13 +552,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -519,20 +568,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/c84fb3ae-c608-4ff2-9d1b-3c423a815d9e.aspx)

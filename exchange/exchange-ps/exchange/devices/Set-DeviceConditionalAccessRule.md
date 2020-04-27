@@ -1,48 +1,52 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/devices/set-deviceconditionalaccessrule
 applicable: Office 365 Security & Compliance Center
 title: Set-DeviceConditionalAccessRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
 # Set-DeviceConditionalAccessRule
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Set-DeviceConditionalAccessRule cmdlet to modify mobile device conditional access rules in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-DeviceConditionalAccessRule [-Identity] <ComplianceRuleIdParameter> -TargetGroups <MultiValuedProperty>
- [-AccountName <String>] [-AccountUserName <String>] [-AllowAppStore <$true | $false>]
- [-AllowAssistantWhileLocked <$true | $false>] [-AllowConvenienceLogon <$true | $false>]
- [-AllowDiagnosticSubmission <$true | $false>] [-AllowiCloudBackup <$true | $false>]
- [-AllowiCloudDocSync <$true | $false>] [-AllowiCloudPhotoSync <$true | $false>]
- [-AllowJailbroken <$true | $false>] [-AllowPassbookWhileLocked <$true | $false>]
- [-AllowScreenshot <$true | $false>] [-AllowSimplePassword <$true | $false>]
- [-AllowVideoConferencing <$true | $false>] [-AllowVoiceAssistant <$true | $false>]
- [-AllowVoiceDialing <$true | $false>] [-AntiVirusSignatureStatus <Int64>] [-AntiVirusStatus <Int64>]
- [-AppsRating <DontAllow | Rating4plus | Rating9plus | Rating12plus | Rating17plus | AllowAll>]
- [-AutoUpdateStatus <AutomaticUpdatesRequired | AutomaticCheckForUpdates | AutomaticDownloadUpdates | NeverCheckUpdates | DeviceDefault>]
- [-BluetoothEnabled <$true | $false>] [-CameraEnabled <$true | $false>] [-Confirm] [-DomainController <Fqdn>]
- [-EmailAddress <String>] [-EnableRemovableStorage <$true | $false>] [-ExchangeActiveSyncHost <String>]
- [-FirewallStatus <Required>] [-ForceAppStorePassword <$true | $false>]
- [-ForceEncryptedBackup <$true | $false>] [-MaxPasswordAttemptsBeforeWipe <Int32>]
+ [-AccountName <String>] [-AccountUserName <String>] [-AllowAppStore <Boolean>]
+ [-AllowAssistantWhileLocked <Boolean>] [-AllowConvenienceLogon <Boolean>]
+ [-AllowDiagnosticSubmission <Boolean>] [-AllowiCloudBackup <Boolean>]
+ [-AllowiCloudDocSync <Boolean>] [-AllowiCloudPhotoSync <Boolean>]
+ [-AllowJailbroken <Boolean>] [-AllowPassbookWhileLocked <Boolean>]
+ [-AllowScreenshot <Boolean>] [-AllowSimplePassword <Boolean>]
+ [-AllowVideoConferencing <Boolean>] [-AllowVoiceAssistant <Boolean>]
+ [-AllowVoiceDialing <Boolean>] [-AntiVirusSignatureStatus <Int64>] [-AntiVirusStatus <Int64>]
+ [-AppsRating <CARatingAppsEntry>]
+ [-AutoUpdateStatus <CAAutoUpdateStatusEntry>]
+ [-BluetoothEnabled <Boolean>] [-CameraEnabled <Boolean>] [-Confirm] [-DomainController <Fqdn>]
+ [-EmailAddress <String>] [-EnableRemovableStorage <Boolean>] [-ExchangeActiveSyncHost <String>]
+ [-FirewallStatus <Required>] [-ForceAppStorePassword <Boolean>]
+ [-ForceEncryptedBackup <Boolean>] [-MaxPasswordAttemptsBeforeWipe <Int32>]
  [-MaxPasswordGracePeriod <TimeSpan>]
- [-MoviesRating <DontAllow | AllowAll | USRatingG | USRatingPG | USRatingPG13 | USRatingR | USRatingNC17 | AURatingG | AURatingPG | AURatingM | AURatingMA15plus | AURatingR18plus | CARatingG | CARatingPG | CARating14A | CARating18A | CARatingR | DERatingab0Jahren | DERatingab6Jahren | DERatingab12Jahren | DERatingab16Jahren | DERatingab18Jahren | FRRating10minus | FRRating12minus | FRRating16minus | FRRating18minus | IERatingG | IERatingPG | IERating12 | IERating15 | IERating16 | IERating18 | JPRatingG | JPRatingPG12 | JPRatingRdash15 | JPRatingRdash18 | NZRatingG | NZRatingPG | NZRatingM | NZRatingR13 | NZRatingR15 | NZRatingR16 | NZRatingR18 | NZRatingR | NZRatingRP16 | GBRatingU | GBRatingUc | GBRatingPG | GBRating12 | GBRating12A | GBRating15 | GBRating18>]
+ [-MoviesRating <CARatingMovieEntry>]
  [-PasswordComplexity <Int64>] [-PasswordExpirationDays <Int32>] [-PasswordHistoryCount <Int32>]
  [-PasswordMinComplexChars <Int32>] [-PasswordMinimumLength <Int32>] [-PasswordQuality <Int32>]
- [-PasswordRequired <$true | $false>] [-PasswordTimeout <TimeSpan>] [-PhoneMemoryEncrypted <$true | $false>]
- [-RegionRatings <us | au | ca | de | fr | ie | jp | nz | gb>] [-RequireEmailProfile <$true | $false>]
- [-SmartScreenEnabled <$true | $false>] [-SystemSecurityTLS <$true | $false>]
- [-TVShowsRating <DontAllow | AllowAll | USRatingTVY | USRatingTVY7 | USRatingTVG | USRatingTVPG | USRatingTV14 | USRatingTVMA | AURatingP | AURatingC | AURatingG | AURatingPG | AURatingM | AURatingMA15plus | AURatingAv15plus | CARatingC | CARatingC8 | CARatingG | CARatingPG | CARating14plus | CARating18plus | DERatingab0Jahren | DERatingab6Jahren | DERatingab12Jahren | DERatingab16Jahren | DERatingab18Jahren | FRRating10minus | FRRating12minus | FRRating16minus | FRRating18minus | IERatingGA | IERatingCh | IERatingYA | IERatingPS | IERatingMA | JPRatingExplicitAllowed | NZRatingG | NZRatingPGR | NZRatingAO | GBRatingCaution>]
- [-UserAccountControlStatus <AlwaysNotify | NotifyAppChanges | NotifyAppChangesDoNotDimdesktop | NeverNotify>]
- [-WhatIf] [-WLANEnabled <$true | $false>] [-WorkFoldersSyncUrl <String>] [<CommonParameters>]
+ [-PasswordRequired <Boolean>] [-PasswordTimeout <TimeSpan>] [-PhoneMemoryEncrypted <Boolean>]
+ [-RegionRatings <CARatingRegionEntry>] [-RequireEmailProfile <Boolean>]
+ [-SmartScreenEnabled <Boolean>] [-SystemSecurityTLS <Boolean>]
+ [-TVShowsRating <CARatingTvShowEntry>]
+ [-UserAccountControlStatus <CAUserAccountControlStatusEntry>]
+ [-WhatIf] [-WLANEnabled <Boolean>] [-WorkFoldersSyncUrl <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,13 +60,13 @@ These are the cmdlets that are used for mobile device management in the Security
 
 - Get-DevicePolicy: Returns all mobile device management policies regardless of type (DeviceTenantPolicy, DeviceConditionalAccessPolicy or DeviceConfigurationPolicy).
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Set-DeviceConditionalAccessRule -Identity "Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}" -AllowJailbroken $false
+### Example 1
+```powershell
+Set-DeviceConditionalAccessRule -Identity "Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}" -AllowJailbroken $false -TargetGroups 95386852-1c11-4302-8733-b9e1058333e3
 ```
 
 This example modifies the specified mobile device conditional access rule to block jailbroken devices.
@@ -77,6 +81,7 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -94,6 +99,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -113,6 +119,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +139,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -155,10 +163,11 @@ This setting is available on the following types of devices:
 - Apple iOS 6+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -178,10 +187,11 @@ The AllowAssistantWhileLocked parameter specifies whether to allow the use of th
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -201,10 +211,11 @@ The AllowConvenienceLogon parameter specifies whether to allow convenience logon
 This setting is available only on Windows 8.1 RT devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -230,10 +241,11 @@ This setting is available on the following types of devices:
 - Apple iOS 6+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -257,10 +269,11 @@ This setting is available on the following types of devices:
 - Android 4+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -284,10 +297,11 @@ This setting is available on the following types of devices:
 - Android 4+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -311,10 +325,11 @@ This setting is available on the following types of devices:
 - Android 4+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -338,10 +353,11 @@ This setting is available on the following types of devices:
 - Android 4+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -361,10 +377,11 @@ The AllowPassbookWhileLocked parameter specifies whether to allow the use of App
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -388,10 +405,11 @@ This setting is available on the following types of devices:
 - Apple iOS 6+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -417,10 +435,11 @@ This setting is available on the following types of devices:
 - Apple iOS 6+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -440,10 +459,11 @@ The AllowVideoConferencing parameter specifies whether to allow video conferenci
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -463,10 +483,11 @@ The AllowVoiceAssistant parameter specifies whether to allow using the voice ass
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -486,10 +507,11 @@ The AllowVoiceDialing parameter specifies whether to allow voice-activated telep
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -511,6 +533,7 @@ Type: Int64
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -532,6 +555,7 @@ Type: Int64
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -557,10 +581,11 @@ The AppsRating parameter species the maximum or most restrictive rating of apps 
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: DontAllow | Rating4plus | Rating9plus | Rating12plus | Rating17plus | AllowAll
+Type: CARatingAppsEntry
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -586,10 +611,11 @@ The AutoUpdateStatus parameter specifies the update settings for devices. Valid 
 This setting is available only on Windows 8.1 RT devices.
 
 ```yaml
-Type: AutomaticUpdatesRequired | AutomaticCheckForUpdates | AutomaticDownloadUpdates | NeverCheckUpdates | DeviceDefault
+Type: CAAutoUpdateStatusEntry
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -609,10 +635,11 @@ The BluetoothEnabled parameter specifies whether to enable or disable Bluetooth 
 This setting is available only on Windows Phone 8.1 devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -638,10 +665,11 @@ This setting is available on the following types of devices:
 - Android 4+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -661,6 +689,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -676,6 +705,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -695,6 +725,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -714,10 +745,11 @@ The EnableRemovableStorage parameter specifies whether removable storage can be 
 This setting is available only on Windows Phone 8.1 devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -737,6 +769,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -758,6 +791,7 @@ Type: Required
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -777,10 +811,11 @@ The ForceAppStorePassword parameter specifies whether to require a password to u
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -804,10 +839,11 @@ This setting is available on the following types of devices:
 - Android 4+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -837,6 +873,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -856,6 +893,7 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -919,8 +957,6 @@ France
 - FRRating16minus
 
 - FRRating18minus
-
-- 
 
 United Kingdom
 
@@ -995,10 +1031,11 @@ United States
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: DontAllow | AllowAll | USRatingG | USRatingPG | USRatingPG13 | USRatingR | USRatingNC17 | AURatingG | AURatingPG | AURatingM | AURatingMA15plus | AURatingR18plus | CARatingG | CARatingPG | CARating14A | CARating18A | CARatingR | DERatingab0Jahren | DERatingab6Jahren | DERatingab12Jahren | DERatingab16Jahren | DERatingab18Jahren | FRRating10minus | FRRating12minus | FRRating16minus | FRRating18minus | IERatingG | IERatingPG | IERating12 | IERating15 | IERating16 | IERating18 | JPRatingG | JPRatingPG12 | JPRatingRdash15 | JPRatingRdash18 | NZRatingG | NZRatingPG | NZRatingM | NZRatingR13 | NZRatingR15 | NZRatingR16 | NZRatingR18 | NZRatingR | NZRatingRP16 | GBRatingU | GBRatingUc | GBRatingPG | GBRating12 | GBRating12A | GBRating15 | GBRating18
+Type: CARatingMovieEntry
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1018,6 +1055,7 @@ Type: Int64
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1047,6 +1085,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1076,6 +1115,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1095,6 +1135,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1124,6 +1165,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1147,6 +1189,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1172,10 +1215,11 @@ This setting is available on the following types of devices:
 - Android 4+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1203,6 +1247,7 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1226,10 +1271,11 @@ This setting is available on the following types of devices:
 - Android 4+
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1265,10 +1311,11 @@ Valid values for the RegionRating parameter are:
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: us | au | ca | de | fr | ie | jp | nz | gb
+Type: CARatingRegionEntry
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1286,10 +1333,11 @@ The RequireEmailProfile parameter specifies whether an email profile is required
 - $null (blank): The setting isn't configured. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1309,10 +1357,11 @@ The SmartScreenEnabled parameter specifies whether to requireWindows SmartScreen
 This setting is available only on Windows 8.1 RT devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1332,10 +1381,11 @@ The SystemSecurityTLS parameter specifies whether TLS encryption is used on devi
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1406,8 +1456,6 @@ France
 
 - FRRating18minus
 
-- 
-
 United Kingdom
 
 - GBRatingCaution
@@ -1453,10 +1501,11 @@ United States
 This setting is available only on Apple iOS 6+ devices.
 
 ```yaml
-Type: DontAllow | AllowAll | USRatingTVY | USRatingTVY7 | USRatingTVG | USRatingTVPG | USRatingTV14 | USRatingTVMA | AURatingP | AURatingC | AURatingG | AURatingPG | AURatingM | AURatingMA15plus | AURatingAv15plus | CARatingC | CARatingC8 | CARatingG | CARatingPG | CARating14plus | CARating18plus | DERatingab0Jahren | DERatingab6Jahren | DERatingab12Jahren | DERatingab16Jahren | DERatingab18Jahren | FRRating10minus | FRRating12minus | FRRating16minus | FRRating18minus | IERatingGA | IERatingCh | IERatingYA | IERatingPS | IERatingMA | JPRatingExplicitAllowed | NZRatingG | NZRatingPGR | NZRatingAO | GBRatingCaution
+Type: CARatingTvShowEntry
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1480,10 +1529,11 @@ The UserAccountControlStatus parameter specifies how User Account Control messag
 This setting is available only on Windows 8.1 RT devices.
 
 ```yaml
-Type: AlwaysNotify | NotifyAppChanges | NotifyAppChangesDoNotDimdesktop | NeverNotify
+Type: CAUserAccountControlStatusEntry
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1492,13 +1542,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1518,10 +1569,11 @@ The WLANEnabled parameter specifies whether Wi-Fi is enabled devices. Valid valu
 This setting is available only on Microsoft Windows Phone 8.1 devices.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1541,6 +1593,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -1549,20 +1602,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/c545d9ea-af01-4ca1-87bb-3b6ec1da9166.aspx)

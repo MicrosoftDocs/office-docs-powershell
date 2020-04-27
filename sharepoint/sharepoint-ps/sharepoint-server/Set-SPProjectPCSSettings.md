@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectpcssettings
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectPCSSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectPCSSettings
@@ -25,14 +30,14 @@ The `Set-SPProjectPCSSettings` cmdlet lets you configure the different settings 
 The settings are per service application, which is identified by the Service Application parameter provided to this cmdlet.
 The settings have maximum and minimum values that are enforced by Project Server.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
 ```
-C:\PS>Set-SPProjectPCSSettings -sa "Project Service Application" -MaximumSessionsPerUser 500
+Set-SPProjectPCSSettings -sa "Project Service Application" -MaximumSessionsPerUser 500
 ```
 
 This example sets 500 as the maximum allowed Project Calculation Engine sessions that a user can open on the "Project Service Application" service application.
@@ -47,7 +52,7 @@ The Project Server service application for which the settings are to be read.
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -69,7 +74,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -85,7 +90,7 @@ The maximum length of time before the Project Calculation Engine can begin to re
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -101,7 +106,7 @@ The maximum length of time that a user can be idle in a Project Calculation Engi
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -117,7 +122,7 @@ The maximum number of idle Project Calculation Engine sessions available at a gi
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -133,7 +138,7 @@ The maximum size of a project that can be opened by the Project Calculation Engi
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +154,7 @@ The maximum number of sessions that a user is allowed to open.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -165,7 +170,7 @@ The maximum number of Project Calculation Engine sessions that can be created.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -181,7 +186,7 @@ The minimum memory required before launching a new Project Calculation Engine se
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -197,7 +202,7 @@ The maximum allowable time for a request to the Project Calculation Engine to co
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -213,7 +218,7 @@ The TCP port to use with the PCS service.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -223,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

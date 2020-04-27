@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-messageclassification
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MessageClassification
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-MessageClassification
@@ -13,45 +17,58 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MessageClassification cmdlet to configure an existing message classification instance in your organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-MessageClassification [-Identity] <MessageClassificationIdParameter> [-ClassificationID <Guid>] [-Confirm]
+Set-MessageClassification [-Identity] <MessageClassificationIdParameter>
+ [-ClassificationID <Guid>]
+ [-Confirm]
  [-DisplayName <String>]
- [-DisplayPrecedence <Highest | Higher | High | MediumHigh | Medium | MediumLow | Low | Lower | Lowest>]
- [-DomainController <Fqdn>] [-Name <String>] [-PermissionMenuVisible <$true | $false>]
- [-RecipientDescription <String>] [-RetainClassificationEnabled <$true | $false>] [-SenderDescription <String>]
+ [-DisplayPrecedence <ClassificationDisplayPrecedenceLevel>]
+ [-DomainController <Fqdn>]
+ [-Name <String>]
+ [-PermissionMenuVisible <Boolean>]
+ [-RecipientDescription <String>]
+ [-RetainClassificationEnabled <Boolean>]
+ [-SenderDescription <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
+```powershell
+Set-MessageClassification -Identity "My Message Classification" -DisplayPrecedence Low -RetainClassificationEnabled $false
 ```
-Set-MessageClassification MyMessageClassification -DisplayPrecedence Low -RetainClassificationEnabled $false
-```
 
-This example makes the following configuration changes to the message classification named MyMessageClassification:
+This example makes the following configuration changes to the message classification named My Message Classification:
 
-Changes the display precedence to Low.
+- Changes the display precedence to Low.
 
-Specifies that the message classification shouldn't persist with the message if the message is forwarded or replied to.
+- Specifies that the message classification shouldn't persist with the message if the message is forwarded or replied to.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name or GUID of the message classification you want to modify.
+The Identity parameter specifies the message classification that you want to modify. You can use any value that uniquely identifies the message classification. For example:
+
+- Name
+
+- Identity: Default\\<Name\> or \<Locale\>\\<Name\>; for example, "Default\My Message Classification" or "es-ES\My Message Classification".
+
+- ClassificationID (GUID)
 
 ```yaml
 Type: MessageClassificationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -60,13 +77,16 @@ Accept wildcard characters: False
 ```
 
 ### -ClassificationID
-The ClassificationID parameter specifies the GUID of an existing message classification that you want to use in your Exchange organization. Use this parameter if you're configuring message classifications to span two Exchange forests in the same organization.
+The ClassificationID parameter specifies the classification ID (GUID) of an existing message classification that you want to import and use in your Exchange organization. Use this parameter if you're configuring message classifications that span two Exchange forests in the same organization.
+
+To find the ClassificationID value of the message classification, replace \<MessageClassificationName\> with the name of the message classification and run the following command: Get-MessageCalssification -Identity "\<MessageClassificationName\>.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -85,7 +105,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -94,15 +115,16 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The DisplayName parameter specifies the display name for the message classification instance. The display name appears in the Microsoft Office and is used by Outlook users to select the appropriate message classification before they send a message.
+The DisplayName parameter specifies the title of the message classification that's displayed in Outlook and selected by users. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
-When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Display Name". The DisplayName parameter can contain a maximum of 64 characters.
+The message classification XML file must be present on the sender's computer for the display name to be displayed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -111,17 +133,34 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayPrecedence
-The DisplayPrecedence parameter specifies the relative precedence of the message classification to other message classifications that may be applied to a specified message. Although Outlook only lets a user specify a single classification for each message, transport rules may apply other classifications to a message. The classification with the highest precedence is shown first, and the subsequent classifications, which are those with lesser precedence as defined by this parameter, are appended in the appropriate order thereafter.
+The DisplayPrecedence parameter specifies the relative precedence of the message classification to other message classifications that may be applied to a specified message. Valid values are:
 
-Valid input for the DisplayPrecedence parameter is Highest, Higher, High, MediumHigh, Medium, MediumLow, Low, Lower, and Lowest.
+- Highest
 
-The default value is Medium.
+- Higher
+
+- High
+
+- MediumHigh
+
+- Medium (This is the default value)
+
+- MediumLow
+
+- Low
+
+- Lower
+
+- Lowest
+
+Although Outlook only lets a user specify a single classification for a message, transport rules may apply other classifications to a message. The classification with the highest precedence is shown first and the subsequent classifications, which are those with lesser precedence as defined by this parameter, are appended in the appropriate order thereafter.
 
 ```yaml
-Type: Highest | Higher | High | MediumHigh | Medium | MediumLow | Low | Lower | Lowest
+Type: ClassificationDisplayPrecedenceLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +179,8 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -149,13 +189,14 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the administrative name for the message classification instance. The name is used to administer the message classification instance. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Administrative Name". The Name parameter can contain a maximum of 256 characters.
+The Name parameter specifies the unique name for the message classification. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,17 +205,18 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionMenuVisible
-The PermissionMenuVisible parameter specifies whether the values that you entered for the DisplayName and RecipientDescription parameters are displayed in Outlook as the user composes a message.
+The PermissionMenuVisible parameter specifies whether the values that you entered for the DisplayName and RecipientDescription parameters are displayed in Outlook as the user composes a message. Valid values are:
 
-If you set the PermissionMenuVisible parameter to $false, users won't be able to assign this message classification to the messages they're composing. However, messages received with this message classification still display the classification information.
+- $true: Users can assign the message classification to messages before they're sent, and the classification information is displayed. This is the default value.
 
-The default value is $true.
+- $false: Users can't assign the message classification to messages before they're sent, However, messages received with this message classification still display the classification information.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -183,15 +225,14 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientDescription
-The RecipientDescription parameter specifies the purpose of the message classification to the recipient. The value of this parameter is shown to Outlook users when they receive a message that has this message classification. Enclose the value in quotation marks ("), for example, "This is the recipient description that explains how to treat the message that has been classified". The RecipientDescription parameter can contain a maximum of 1,024 characters.
-
-If you don't enter a value for this parameter, the description that you enter for SenderDescription is used.
+The RecipientDescription parameter specifies the the detailed text that's shown to Outlook recipient when they receive a message that has the message classification applied. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -205,10 +246,11 @@ The RetainClassificationEnabled parameter specifies whether the message classifi
 The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -217,13 +259,14 @@ Accept wildcard characters: False
 ```
 
 ### -SenderDescription
-The SenderDescription parameter specifies the purpose of the message classification to the sender. The value of this parameter is used by Outlook users to select the appropriate message classification before they send a message. Enclose the value in quotation marks ("), for example, "This is the sender description that explains when to use this message classification". The SenderDescription parameter can contain a maximum of 1,024 characters.
+The SenderDescription parameter specifies the the detailed text that's shown to Outlook senders when they select a message classification to apply to a message before they send the message. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -238,7 +281,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -247,20 +291,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/fdbe9e1d-6e92-4ab7-9a77-88814c0eda68.aspx)

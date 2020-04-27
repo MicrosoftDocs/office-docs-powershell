@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingservicenumber
 applicable: Skype for Business Online
 title: Get-CsOnlineDialInConferencingServiceNumber
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsOnlineDialInConferencingServiceNumber
@@ -12,10 +17,34 @@ Use the Get-CsOnlineDialInConferencingServiceNumber cmdlet to return all of the 
 
 ## SYNTAX
 
+### FiltersParams (Default)
 ```
-Get-CsOnlineDialInConferencingServiceNumber [[-Identity] <Object>] [-BridgeId <Object>] [-Tenant <Object>]
- [-TenantDomain <Object>] [-BridgeName <Object>] [-BypassDualWrite <Object>] [-City <Object>]
- [-DomainController <Object>] [-Force] [-ResultSize <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineDialInConferencingServiceNumber [-BridgeName <String>] [-City <String>] [-ResultSize <Int32>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### UniqueNumberParams
+```
+Get-CsOnlineDialInConferencingServiceNumber [-Identity] <String> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### UniqueBridgeParams
+```
+Get-CsOnlineDialInConferencingServiceNumber -BridgeId <Guid> [-City <String>] [-ResultSize <Int32>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### TenantIdParams
+```
+Get-CsOnlineDialInConferencingServiceNumber [-BridgeName <String>] -Tenant <Guid> [-City <String>]
+ [-ResultSize <Int32>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### TenantDomainParams
+```
+Get-CsOnlineDialInConferencingServiceNumber [-BridgeName <String>] -TenantDomain <String> [-City <String>]
+ [-ResultSize <Int32>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +83,7 @@ Specifies the globally-unique identifier (GUID) for the audio conferencing bridg
 When it's used it returns all of the service numbers that are configured on the audio conferencing bridge.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -70,7 +99,7 @@ Accept wildcard characters: False
 Specifies the default dial-in service number string.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -86,7 +115,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -102,7 +131,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -119,23 +148,7 @@ Specifies the name of the audio conferencing bridge.
 When it is used it returns all of the service numbers that are configured on the audio conferencing bridge.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -152,7 +165,7 @@ Specifies the city geocode to be used.
 When used it lists all of the service numbers for a specific city geocode.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -173,7 +186,7 @@ Fully qualified domain name (FQDN): `-DomainController atl-cs-001.Contoso.com.`
 Computer name: `-DomainController atl-cs-001`
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -213,7 +226,7 @@ If set to 0 the command will run, but no data will be returned.
 If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -226,7 +239,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -242,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-contact
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-Contact
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Set-Contact
@@ -13,14 +17,14 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-Contact cmdlet to modify contact object settings. If the contact is a mail contact, you can use the Set-MailContact cmdlet to modify other Microsoft Exchange settings that aren't available by using the Set-Contact cmdlet.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-Contact [-Identity] <ContactIdParameter> [-AllowUMCallsFromNonUsers <None | SearchEnabled>]
+Set-Contact [-Identity] <ContactIdParameter> [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
  [-AssistantName <String>] [-City <String>] [-Company <String>] [-Confirm] [-CountryOrRegion <CountryInfo>]
- [-CreateDTMFMap <$true | $false>] [-Department <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
+ [-CreateDTMFMap <Boolean>] [-Department <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
  [-Fax <String>] [-FirstName <String>] [-HomePhone <String>] [-IgnoreDefaultScope] [-Initials <String>]
  [-LastName <String>] [-Manager <UserContactIdParameter>] [-MobilePhone <String>] [-Name <String>]
  [-Notes <String>] [-Office <String>] [-OtherFax <MultiValuedProperty>] [-OtherHomePhone <MultiValuedProperty>]
@@ -33,12 +37,12 @@ Set-Contact [-Identity] <ContactIdParameter> [-AllowUMCallsFromNonUsers <None | 
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-Contact -Identity "contoso.com/Users/Arlene Huff" -City "Seattle" -Company "Contoso"
 ```
 
@@ -51,13 +55,9 @@ Change the Company parameter value to Contoso.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the contact that you want to modify. You can use any value that uniquely identifies the contact.
-
-For example:
+The Identity parameter specifies the contact that you want to modify. You can use any value that uniquely identifies the contact. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -69,7 +69,8 @@ For example:
 Type: ContactIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -81,10 +82,11 @@ Accept wildcard characters: False
 The AllowUMCallsFromNonUsers parameter specifies whether to exclude the contact from directory searches.
 
 ```yaml
-Type: None | SearchEnabled
+Type: AllowUMCallsFromNonUsersFlags
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +101,8 @@ The AssistantName parameter specifies the name of the contact's assistant.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -114,7 +117,8 @@ The City parameter specifies the contact's city.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +133,8 @@ The Company parameter specifies the contact's company.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +153,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +169,8 @@ The CountryOrRegion parameter specifies the contact's country or region.
 Type: CountryInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -179,10 +186,11 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 - $false: A DTMF map isn't created for the recipient.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +205,8 @@ The Department parameter specifies the contact's department.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -208,13 +217,14 @@ Accept wildcard characters: False
 ### -DisplayName
 The DisplayName parameter specifies the display name of the contact. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaninful only if the contact is mail-enabled.
+This parameter is meaningful only if the contact is mail-enabled.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -231,7 +241,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -246,7 +257,8 @@ The Fax parameter specifies the contact's fax number.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -261,7 +273,8 @@ The FirstName parameter specifies the user's first name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -276,7 +289,8 @@ The HomePhone parameter specifies the contact's home telephone number.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -299,7 +313,8 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -314,7 +329,8 @@ The Initials parameter specifies the user's middle initials.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -329,7 +345,8 @@ The LastName parameter specifies the user's last name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -344,7 +361,8 @@ The Manager parameter specifies the contact's manager.
 Type: UserContactIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -359,7 +377,8 @@ The MobilePhone parameter specifies the contact's primary mobile phone number.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -374,7 +393,8 @@ The Name parameter specifies the unique name of the contact. The maximum length 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -389,7 +409,8 @@ The Notes parameters specifies additional information about the object. If the v
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -404,7 +425,8 @@ The Office parameter specifies the user's physical office name or number.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -419,7 +441,8 @@ The OtherFax parameter specifies the contact's alternative fax number.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -434,7 +457,8 @@ The OtherHomePhone parameter specifies the contact's alternative home telephone 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -449,7 +473,8 @@ The OtherTelephone parameter specifies the contact's alternative office telephon
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -464,7 +489,8 @@ The Pager parameter specifies the contact's pager number.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -479,7 +505,8 @@ The Phone parameter specifies the contact's office telephone number.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -494,7 +521,8 @@ The PhoneticDisplayName parameter specifies an alternate spelling of the user's 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -509,7 +537,8 @@ The PostalCode parameter specifies the contact's postal code.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -524,7 +553,8 @@ The PostOfficeBox parameter specifies the contact's post office box number.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -539,7 +569,8 @@ The SeniorityIndex parameter specifies the order in which this contact will disp
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -564,7 +595,8 @@ This parameter is meaningful only if the contact is mail-enabled.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -579,7 +611,8 @@ The StateOrProvince parameter specifies the contact's state or province.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -594,7 +627,8 @@ The StreetAddress parameter specifies the contact's physical address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -609,7 +643,8 @@ The TelephoneAssistant parameter specifies the telephone number of the contact's
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -624,7 +659,8 @@ The Title parameter specifies the contact's title.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -639,7 +675,8 @@ The UMCallingLineIds parameter specifies telephone numbers or extensions that ca
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -662,13 +699,14 @@ If you use this syntax and you omit any of the DTMF map values, those values are
 
 To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
 
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<intgers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<integers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -683,7 +721,8 @@ The WebPage parameter specifies the contact's web page.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -698,7 +737,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -719,7 +759,8 @@ The WindowsEmailAddress property is visible for the recipient in Active Director
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -728,17 +769,18 @@ Accept wildcard characters: False
 ```
 
 ### -GeoCoordinates
-The GeoCoordinates parameter specifies the contact's physical location in latitude, longitude and altitude coordinates. Use this parameter to specify the global position of the contact's location. You have to specify one of the following sets of coordinates; use semicolons to separate the values:
+The GeoCoordinates parameter specifies the contact's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
 
 - Latitude and longitude: For example, "47.644125;-122.122411"
 
-- Latitude, longitude and altitude: For example, "47.644125;-122.122411;161.432"
+- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
 
 ```yaml
 Type: GeoCoordinates
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -747,20 +789,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/c86ca5af-bb1d-4619-8af8-9f04c83d84c5.aspx)

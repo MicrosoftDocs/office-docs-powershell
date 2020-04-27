@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositescript
 applicable: SharePoint Online
 title: Get-SPOSiteScript
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Get-SPOSiteScript
@@ -14,9 +19,7 @@ Displays information about existing site scripts. When no parameter is provided,
 ## SYNTAX
 
 ```powershell
-Get-SPOSiteScript
-  [[-Identity] <SPOSiteScriptPipeBind>]
-  [<CommonParameters>]
+Get-SPOSiteScript [[-Identity] <SPOSiteScriptPipeBind>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,17 +55,21 @@ Version     : 1
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site script to get information about.
 
 ```yaml
 Type: SPOSiteScriptPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: False 
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
 
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

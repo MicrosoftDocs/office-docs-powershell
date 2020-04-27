@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-spcontenttypes
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPContentTypes
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Copy-SPContentTypes
@@ -25,10 +30,10 @@ This cmdlet is used in hybrid scenarios with SharePoint Online to copy Content T
 
 ### Example 1 
 ```
-PS C:\>Copy-SPContentTypes -LocalSiteUrl http://localsite/ -LocalTermStoreName "managed metadata service application proxy" -RemoteSiteUrl https://contoso.sharepoint.com/ -ContentTypeNames @("ContentTypeA", "ContentTypeB") -Credential (Get-Credential) 
+Copy-SPContentTypes -LocalSiteUrl https://localsite/ -LocalTermStoreName "managed metadata service application proxy" -RemoteSiteUrl https://contoso.sharepoint.com/ -ContentTypeNames @("ContentTypeA", "ContentTypeB") -Credential (Get-Credential) 
 ```
 
-This example migrates the specified content types named: ContentTypeA, ContentTypeB on the local site http://localsite/ whose term store named "managed metadata service application proxy" to the hub site of remote site https://contoso.sharepoint.com/. If the remote site is a hub site, the migration target will be itself. 
+This example migrates the specified content types named: ContentTypeA, ContentTypeB on the local site https://localsite/ whose term store named "managed metadata service application proxy" to the hub site of remote site https://contoso.sharepoint.com/. If the remote site is a hub site, the migration target will be itself. 
 
 ## PARAMETERS
 
@@ -41,7 +46,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -57,7 +62,7 @@ Specifies the AuthEndpoint to use, but not the default one.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -73,7 +78,7 @@ Specifies the content type names to be migrated. Can be in a form of an array.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -89,7 +94,7 @@ Specifies the administrator account credential of the target SharePoint Online s
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -105,7 +110,7 @@ Specifies the GraphApiEndpoint to use, but not the default one.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -121,7 +126,7 @@ Specifies the migration source. Can be a local site or a local hubsite.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -137,7 +142,7 @@ Specifies the name of the local term store of the local site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -153,7 +158,7 @@ Specifies the migration target. You can input a remote site url or remote hub si
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -163,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

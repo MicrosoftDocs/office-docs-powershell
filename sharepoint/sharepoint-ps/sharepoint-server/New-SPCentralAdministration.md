@@ -1,6 +1,8 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spcentraladministration
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPCentralAdministration
 schema: 2.0.0
 ---
@@ -24,13 +26,13 @@ New-SPCentralAdministration [[-Port] <Int32>] [[-WindowsAuthProvider] <String>]
 The New-SPCentralAdministration cmdlet creates a new Central Administration Web application and starts the central administration service on the local computer.
 Central Administration is available only on computers where this service runs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>New-SPCentralAdministration -WindowsAuthProvider NTLM -Port 8080
+New-SPCentralAdministration -WindowsAuthProvider NTLM -Port 8080
 ```
 
 This example creates the Central Administration site at port 8080 on the local farm using NTLM authentication.
@@ -38,7 +40,7 @@ This example creates the Central Administration site at port 8080 on the local f
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>New-SPCentralAdministration -WindowsAuthProvider Kerberos -Port 443 -SecureSocketsLayer
+New-SPCentralAdministration -WindowsAuthProvider Kerberos -Port 443 -SecureSocketsLayer
 ```
 
 This example creates the Central Administration site using SSL on port 443 with Kerberos authentication.
@@ -58,7 +60,7 @@ If you specify a port number that has already been assigned, IIS does not start 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -77,7 +79,7 @@ The type must be one of two values: Kerberos or NTLM.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 2
@@ -99,7 +101,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -119,7 +121,7 @@ If this parameter is omitted or set to False the Central Administration site wil
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

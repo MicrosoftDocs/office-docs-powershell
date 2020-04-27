@@ -1,47 +1,50 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-retentioncompliancerule
 applicable: Office 365 Security & Compliance Center
 title: Set-RetentionComplianceRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
 # Set-RetentionComplianceRule
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Set-RetentionComplianceRule cmdlet to modify existing retention rules in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
 ```
-Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter> [-ApplyComplianceTag <String>]
- [-Comment <String>] [-Confirm] [-ContentContainsSensitiveInformation <PswsHashtable[]>]
- [-ContentDateFrom <DateTime>] [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionDurationDisplayHint <Days | Months | Years>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-RetentionComplianceRule [-ApplyComplianceTag <String>] [-Comment <String>] [-Confirm]
- [-ContentContainsSensitiveInformation <PswsHashtable[]>] [-ContentDateFrom <DateTime>]
- [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>] [-ExcludedItemClasses <MultiValuedProperty>]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionDurationDisplayHint <Days | Months | Years>] [-WhatIf] [<CommonParameters>]
+Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter>
+ [-ApplyComplianceTag <String>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentDateFrom <DateTime>]
+ [-ContentDateTo <DateTime>]
+ [-ContentMatchQuery <String>]
+ [-ExcludedItemClasses <MultiValuedProperty>]
+ [-ExpirationDateOption <String>]
+ [-RetentionComplianceAction <String>]
+ [-RetentionDuration <Unlimited>]
+ [-RetentionDurationDisplayHint <HoldDurationHint>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-RetentionComplianceRule -Identity "Internal Company Rule" -RetentionDuration 180 RetentionDurationDisplayHint Days
 ```
 
@@ -60,9 +63,10 @@ The Identity parameter specifies the retention rule that you want to modify. You
 
 ```yaml
 Type: ComplianceRuleIdParameter
-Parameter Sets: Set1
+Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -82,6 +86,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +102,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +122,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -128,13 +135,14 @@ The ContentContainsSensitiveInformation parameter specifies a condition for the 
 
 This parameter uses the basic syntax @(@{Name="\<SensitiveInformationType1\>";[minCount="\<Value\>"],@{Name="\<SensitiveInformationType2\>";[minCount="\<Value\>"],...). For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
 
-Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see Sensitive information types inventory (https://go.microsoft.com/fwlink/p/?LinkId=529420).
+Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://go.microsoft.com/fwlink/p/?LinkId=529420).
 
 ```yaml
 Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -145,13 +153,14 @@ Accept wildcard characters: False
 ### -ContentDateFrom
 The ContentDateFrom parameter specifies the start date of the date range for content to include.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -162,13 +171,14 @@ Accept wildcard characters: False
 ### -ContentDateTo
 The ContentDateTo parameter specifies the end date of the date range for content to include.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -179,13 +189,14 @@ Accept wildcard characters: False
 ### -ContentMatchQuery
 The ContentMatchQuery parameter specifies a content search filter.
 
-This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
+This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://go.microsoft.com/fwlink/p/?linkid=269603).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -216,9 +227,10 @@ You can specify multiple item class values by using the syntax "Value1","Value2"
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +250,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -259,6 +272,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -278,6 +292,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -297,10 +312,11 @@ The RetentionDurationDisplayHint parameter specifies the units that are used to 
 For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
 
 ```yaml
-Type: Days | Months | Years
+Type: HoldDurationHint
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -309,13 +325,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -324,20 +341,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/ad2b541a-4168-4b5b-868d-3e2e42042e2d.aspx)

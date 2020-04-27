@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-app
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-App
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-App
@@ -13,68 +17,99 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-App cmdlet to install apps for Outlook.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### ExtensionOfficeMarketplace
 ```
-New-App [-AllowReadWriteMailbox] [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-DownloadOnly] [-Enabled <$true | $false>] [-Etoken <String>]
- [-Mailbox <MailboxIdParameter>] [-MarketplaceAssetID <String>] [-MarketplaceQueryMarket <String>]
- [-MarketplaceServicesUrl <String>] [-OrganizationApp] [-ProvidedTo <Everyone | SpecificUsers>]
- [-UserList <MultiValuedProperty>] [-WhatIf] [-MarketplaceCorrelationID <String>]
- [-MarketplaceUserProfileType <String>] [-PrivateCatalog] [<CommonParameters>]
-```
-
-### Set1
-```
-New-App [-AllowReadWriteMailbox] [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-DownloadOnly] [-Enabled <$true | $false>] [-FileData <Byte[]>]
- [-Mailbox <MailboxIdParameter>] [-OrganizationApp] [-ProvidedTo <Everyone | SpecificUsers>]
- [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog] [<CommonParameters>]
+New-App [-Etoken <String>] [-Mailbox <MailboxIdParameter>] [-MarketplaceCorrelationID <String>] [-MarketplaceAssetID <String>] [-MarketplaceQueryMarket <String>] [-MarketplaceServicesUrl <String>] [-MarketplaceUserProfileType <String>]
+ [-AllowReadWriteMailbox]
+ [-Confirm]
+ [-DefaultStateForUser <DefaultStateForUser>]
+ [-DomainController <Fqdn>]
+ [-DownloadOnly]
+ [-Enabled <Boolean>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### ExtensionFileData
 ```
-New-App [-AllowReadWriteMailbox] [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-DownloadOnly] [-Enabled <$true | $false>] [-FileStream <Stream>]
- [-Mailbox <MailboxIdParameter>] [-OrganizationApp] [-ProvidedTo <Everyone | SpecificUsers>]
- [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog] [<CommonParameters>]
+New-App [-FileData <Byte[]>]
+ [-AllowReadWriteMailbox]
+ [-Confirm]
+ [-DefaultStateForUser <DefaultStateForUser>]
+ [-DomainController <Fqdn>]
+ [-DownloadOnly]
+ [-Enabled <Boolean>]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### ExtensionFileStream
 ```
-New-App [-AllowReadWriteMailbox] [-Confirm] [-DefaultStateForUser <Enabled | Disabled | AlwaysEnabled>]
- [-DomainController <Fqdn>] [-DownloadOnly] [-Enabled <$true | $false>] [-Mailbox <MailboxIdParameter>]
- [-OrganizationApp] [-ProvidedTo <Everyone | SpecificUsers>] [-Url <Uri>] [-UserList <MultiValuedProperty>]
- [-WhatIf] [-PrivateCatalog] [<CommonParameters>]
+New-App [-FileStream <Stream>]
+ [-AllowReadWriteMailbox]
+ [-Confirm]
+ [-DefaultStateForUser <DefaultStateForUser>]
+ [-DomainController <Fqdn>]
+ [-DownloadOnly]
+ [-Enabled <Boolean>]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ExtensionPrivateURL
+```
+New-App [-Url <Uri>]
+ [-AllowReadWriteMailbox]
+ [-Confirm]
+ [-DefaultStateForUser <DefaultStateForUser>]
+ [-DomainController <Fqdn>]
+ [-DownloadOnly]
+ [-Enabled <Boolean>]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 If the app is enabled for the entire organization, users can activate the new app when viewing mail or calendar items within Microsoft Outlook or Outlook on the web. If an installed app isn't enabled, users can enable the app from Outlook on the web Options. Similarly, administrators can enable installed apps from the Exchange admin center or by using the Enable-App or Set-App cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://docs.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of Office 365 add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-App -FileData ([Byte[]](Get-Content -Encoding Byte -Path "C:\Apps\FinanceTestApp.xml" -ReadCount 0))
 ```
 
 This example installs the Finance Test app manifest file that has been copied to the local hard disk.
 
-For more information, see Install or remove add-ins for Outlook for your organization (https://technet.microsoft.com/library/jj943752.aspx).
-
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-App -OrganizationApp -Url https://Server01.Contoso.com/apps/ContosoCRMApp/manifest.xml -ProvidedTo SpecificUsers -UserList "user1,user2,user3,user4,user5" -DefaultStateForUser Enabled
 ```
 
 This example installs the Contoso CRM app manifest.xml from a URL on the Contoso corporate network. The Exchange server must be able to reach the target URL. This app is installed as an organization app,is made available to a specific list of users, and is enabled for those users by default.
-
-For more information, see Install or remove add-ins for Outlook for your organization (https://technet.microsoft.com/library/jj943752.aspx).
 
 ## PARAMETERS
 
@@ -85,7 +120,8 @@ The AllowReadWriteMailbox switch specifies whether the app allows read/write mai
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -104,7 +140,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -124,10 +161,11 @@ The DefaultStateForUser parameter specifies the default initial state of an orga
 You need to use the OrganizationApp switch when you use this parameter.
 
 ```yaml
-Type: Enabled | Disabled | AlwaysEnabled
+Type: DefaultStateForUser
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -144,7 +182,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +200,8 @@ When you use this switch, the cmdlet only downloads the app manifest file and di
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -179,10 +219,11 @@ The Enabled parameter specifies whether the app is available to users in the org
 This setting overrides the ProvidedTo, UserList and DefaultStateForUser settings. This setting doesn't prevent users from installing their own instance of the app if they have install permissions.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -195,9 +236,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -212,9 +254,10 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set1
+Parameter Sets: ExtensionFileData
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -227,9 +270,10 @@ The FileStream parameter is used only by the Exchange admin center to support th
 
 ```yaml
 Type: Stream
-Parameter Sets: Set3
+Parameter Sets: ExtensionFileStream
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -238,13 +282,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example:
-
-For example:
+The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example: For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -268,7 +308,8 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -281,9 +322,26 @@ The MarketplaceAssetID parameter specifies the Office Store identifier for the a
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MarketplaceCorrelationID
+The MarketplaceCorrelationID parameter specifies the Office Store correlation identifier for the app.
+
+```yaml
+Type: String
+Parameter Sets: ExtensionOfficeMarketplace
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -292,13 +350,14 @@ Accept wildcard characters: False
 ```
 
 ### -MarketplaceQueryMarket
-The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. The default value isen-US.
+The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. The default value is en-US.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -311,9 +370,26 @@ The MarketplaceServicesUrl parameter specifies the full services URL for the app
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MarketplaceUserProfileType
+The MarketplaceUserProfileType parameter specifies the user profile type for the Office Store.
+
+```yaml
+Type: String
+Parameter Sets: ExtensionOfficeMarketplace
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -322,13 +398,30 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationApp
-The OrganizationAppswitch specifies that the scope of the app is organizational (not bound to a specific user). You don't need to specify a value with this switch.
+The OrganizationApp switch specifies that the scope of the app is organizational (not bound to a specific user). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrivateCatalog
+The PrivateCatalog switch specifies whether the app is located in a private catalog. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -346,10 +439,11 @@ The ProvidedTo parameter specifies the availability of the app in your organizat
 You use this parameter with the OrganizationApp switch.
 
 ```yaml
-Type: Everyone | SpecificUsers
+Type: ClientExtensionProvidedTo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -362,9 +456,10 @@ The Url parameter specifies the full URL location of the app manifest file that 
 
 ```yaml
 Type: Uri
-Parameter Sets: Set4
+Parameter Sets: ExtensionPrivateURL
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -373,13 +468,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserList
-The UserList parameter specifies who can usean organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user.
-
-For example:
+The UserList parameter specifies who can use an organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -407,7 +498,8 @@ You use this parameter with the OrganizationApp switch.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -422,52 +514,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -MarketplaceCorrelationID
-The MarketplaceCorrelationID parameter specifies the Office Store correlation identifier for the app.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MarketplaceUserProfileType
-The MarketplaceUserProfileType parameter specifies the user profile type for the Office Store.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrivateCatalog
-The PrivateCatalog switch specifies whether the app is located in a private catalog. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -476,20 +524,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/f05951d8-1e49-42b6-a341-66eb67b2870f.aspx)

@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnplistfolderstoprovisioningtemplate
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPListFoldersToProvisioningTemplate
 ---
+
 # Add-PnPListFoldersToProvisioningTemplate
 
 ## SYNOPSIS
@@ -27,21 +30,21 @@ Add-PnPListFoldersToProvisioningTemplate -Path <String>
 Add-PnPListFoldersToProvisioningTemplate -Path template.pnp -List 'PnPTestList'
 ```
 
-Adds top level folders from a list to an existing template and returns an in-memory PnP Provisioning Template
+Adds top level folders from a list to an existing template and returns an in-memory PnP Site Template
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Add-PnPListFoldersToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Recursive
 ```
 
-Adds all folders from a list to an existing template and returns an in-memory PnP Provisioning Template
+Adds all folders from a list to an existing template and returns an in-memory PnP Site Template
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Add-PnPListFoldersToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Recursive -IncludeSecurity
 ```
 
-Adds all folders from a list with unique permissions to an in-memory PnP Provisioning Template
+Adds all folders from a list with unique permissions to an in-memory PnP Site Template
 
 ## PARAMETERS
 
@@ -70,7 +73,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-Filename of the .PNP Open XML provisioning template to read from, optionally including full path.
+Filename of the .PNP Open XML site template to read from, optionally including full path.
 
 ```yaml
 Type: String
@@ -131,4 +134,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

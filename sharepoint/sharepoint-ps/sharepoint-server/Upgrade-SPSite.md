@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/upgrade-spsite
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Upgrade-SPSite
@@ -29,24 +34,24 @@ This prevents unexpected version upgrades of site collections if you use this cm
 When in version-to-version upgrade mode, site collection health checks are run in repair mode to ensure that the site collection is healthy enough to upgrade successfully.
 If successful, the remainder of the upgrade occurs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### -------------EXAMPLE 1----------
 ```
-PS C:\>Upgrade-SPSite http://<site name>/sites/testsite
+Upgrade-SPSite https://<site name>/sites/testsite
 ```
 
-This example upgrades the existing http://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
+This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
 The SPSite.CompatibilityLevel will not be changed by this operation.
 
 ### -------------EXAMPLE 2----------
 ```
-PS C:\>Upgrade-SPSite http://<site name>/sites/testsite -VersionUpgrade
+Upgrade-SPSite https://<site name>/sites/testsite -VersionUpgrade
 ```
 
-This example upgrades the existing http://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
+This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
 The SPSite.CompatibilityLevel will not be changed by this operation.
 
 ## PARAMETERS
@@ -58,7 +63,7 @@ Specifies the SPSite object to run upgrade operations against.
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -80,7 +85,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -97,7 +102,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -113,7 +118,7 @@ Specifies whether to send mail on completion of the site collection upgrade.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -129,7 +134,7 @@ Specifies to put the site into the queue for a delayed upgrade that is managed b
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -145,7 +150,7 @@ Specifies a farm administrator to bypass the throttle which permits a site colle
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -164,7 +169,7 @@ When this parameter is not set, it triggers only available build-to-build upgrad
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -181,7 +186,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -205,7 +210,7 @@ The valid values are:
 Type: Byte
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -215,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

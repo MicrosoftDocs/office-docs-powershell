@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-publicfoldermoverequest
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-PublicFolderMoveRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-PublicFolderMoveRequest
@@ -13,40 +17,47 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-PublicFolderMoveRequest cmdlet to view the detailed status of an ongoing public folder move that was initiated using the New-PublicFolderMoveRequest cmdlet.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### Filtering
 ```
-Get-PublicFolderMoveRequest [-BatchName <String>] [-DomainController <Fqdn>] [-HighPriority <$true | $false>]
- [-Name <String>] [-RequestQueue <DatabaseIdParameter>] [-ResultSize <Unlimited>]
- [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>] [<CommonParameters>]
+Get-PublicFolderMoveRequest [-BatchName <String>]
+ [-DomainController <Fqdn>]
+ [-HighPriority <Boolean>]
+ [-Name <String>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-Status <RequestStatus>]
+ [-Suspend <Boolean>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-PublicFolderMoveRequest [[-Identity] <PublicFolderMoveRequestIdParameter>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-PublicFolderMoveRequest [[-Identity] <PublicFolderMoveRequestIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Public folder move requests are used to move public folders between public folder mailboxes. After the move request is complete, you need to update the hierarchy using the Update-PublicFolderMailbox cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-PublicFolderMoveRequest -Identity \PublicFolderMove
 ```
 
 This example returns the status of an in-progress public folder move request with the identity \\PublicFolderMove, which is the default name assigned to public folder moves.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PublicFolderMoveRequest -RequestQueue MBD01
 ```
 
@@ -57,13 +68,14 @@ This example returns the status of in-progress and queued requests that are on t
 ### -BatchName
 The BatchName parameter specifies the name that was given to a batch public folder move request.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +90,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -96,10 +109,11 @@ The HighPriority parameter filters the results based on the Priority value that 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
-Parameter Sets: Set2
+Type: Boolean
+Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +124,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the identity of the public folder move request. The default identity assigned to public folder move requests is \\PublicFolderMove.
 
-This parameter can't be used in conjunction with the following parameters:
+You can't use this parameter with the following parameters:
 
 - BatchName
 
@@ -126,9 +140,10 @@ This parameter can't be used in conjunction with the following parameters:
 
 ```yaml
 Type: PublicFolderMoveRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -139,13 +154,14 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies the name of the public folder move request. If you didn't specify a name when creating the move request, PublicFolderMove will be the default name assigned to the request.
 
-You can't use this parameter in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -156,17 +172,20 @@ Accept wildcard characters: False
 ### -RequestQueue
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
-- Database GUID
+- Name
 
-- Database name
+- Distinguished name (DN)
+
+- GUID
 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -181,7 +200,8 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -215,10 +235,11 @@ The Status parameter filters the results based on status. You can use the follow
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed
-Parameter Sets: Set2
+Type: RequestStatus
+Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -232,10 +253,11 @@ The Suspend parameter specifies whether to return requests that have been suspen
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
-Parameter Sets: Set2
+Type: Boolean
+Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -244,20 +266,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/2bcadd33-e520-498b-8551-9ef38d6d5f54.aspx)

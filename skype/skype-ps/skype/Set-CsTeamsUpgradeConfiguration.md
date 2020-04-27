@@ -1,28 +1,40 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-applicable: Skype for Business Online, Skype for Business Server 2019
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsupgradeconfiguration
+applicable: Skype for Business Online
 title: Set-CsTeamsUpgradeConfiguration
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsTeamsUpgradeConfiguration
 
 ## SYNOPSIS
-Administrators can use Set-CsTeamsUpgradeConfiguration to manage certain aspects of client behavior for users being upgraded from Skype for Business to Teams. TeamsUpgradeConfiguration should be used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. For Office 365 users, it allows administrators to determine which application end users should use to join Skype for Business meetings.
+Administrators can use Set-CsTeamsUpgradeConfiguration to manage certain aspects of client behavior for users being upgraded from Skype for Business to Teams. TeamsUpgradeConfiguration should be used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application end users should use to join Skype for Business meetings.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsUpgradeConfiguration [[-Identity] <XdsIdentity>] [-Tenant <guid>] [-DownloadTeams <bool>] [-SfBMeetingJoinUx <string>]  [-Confirm] [<CommonParameters>]
+Set-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [-DownloadTeams <Boolean>] [-SfBMeetingJoinUx <String>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [-DownloadTeams <Boolean>] [-SfBMeetingJoinUx <String>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-TeamsUpgradeConfiguration is used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application Office 365 users should use to join Skype for Business meetings.
+TeamsUpgradeConfiguration is used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application end users should use to join Skype for Business meetings.
 
-Separate instances of TeamsUpgradeConfiguration exist in Office 365 and Skype for Business Server.  
- - TeamsUpgradeConfiguration in Office 365 applies to any user who does not have an on-premises Skype for Business account. 
- - TeamsUpgradeConfiguration in Skype for Business Server can used to manage on-premises users in a hybrid environment. In on-premises, only the DownloadTeams property is available. 
+The DownloadTeams property allows admins to control whether the Skype for Business client should automatically download Teams in the background. This setting is only honored on Windows clients, and only for certain values of the user's TeamsUpgradePolicy. If NotifySfbUser=true or if Mode=TeamsOnly in TeamsUpgradePolicy, this setting is honored. Otherwise it is ignored. 
 
+The SfBMeetingJoinUx property allows admins to specify which app is used to join Skype for Business meetings, even after the user has been upgraded to Teams. Allowed values are: SkypeMeetingsApp and NativeLimitedClient.   "NativeLimitedClient"  means the existing Skype for Business rich client will be used, but since the user is upgraded, only meeting functionality is available. Calling and Messaging are done via Teams.  "SkypeMeetingsApp" means use the web-downloadable app. This setting can be useful for organizations that have upgraded to Teams and no longer want to install Skype for Business on their users' computers.
 
 ## EXAMPLES
 
@@ -42,7 +54,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -52,16 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadTeams
-The DownloadTeams property allows admins to control whether the Skype for Business client should automatically download the Teams app in the background. This Boolean setting is only honored for users on Windows clients, and only if TeamsUpgradePolicy for the user meets either of these conditions:  
- - NotifySfbUser=true, or  
- - Mode=TeamsOnly 
-Otherwise, this setting is ignored.  
+The DownloadTeams property allows admins to control whether the Skype for Business client should automatically download Teams in the background. This Boolean setting is only honored on Windows clients, and only for certain values of the user's TeamsUpgradePolicy. If NotifySfbUser=true or if Mode=TeamsOnly in TeamsUpgradePolicy, this setting is honored. Otherwise it is ignored. 
 
 ```yaml
-Type: Bool
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -70,7 +79,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -SfBMeetingJoinUx
-The SfBMeetingJoinUx property allows admins to specify which app is used to join Skype for Business meetings, even after the user has been upgraded to Teams. Allowed values are: "SkypeMeetingsApp" and "NativeLimitedClient".   "NativeLimitedClient"  means the existing Skype for Business rich client will be used, but since the user is upgraded, only meeting functionality is available. Calling and Messaging are done via Teams.  "SkypeMeetingsApp" means use the web-downloadable app. This setting can be useful for organizations that have upgraded to Teams and no longer want to install Skype for Business on their users' computers. This property is only available when configuring TeamsUpgradeConfiguration in Office 365. It is not honored for users homed on-premises in Skype for Business Server. 
+The SfBMeetingJoinUx property allows admins to specify which app is used to join Skype for Business meetings, even after the user has been upgraded to Teams. Allowed values are: "SkypeMeetingsApp" and "NativeLimitedClient".   "NativeLimitedClient"  means the existing Skype for Business rich client will be used, but since the user is upgraded, only meeting functionality is available. Calling and Messaging are done via Teams.  "SkypeMeetingsApp" means use the web-downloadable app. This setting can be useful for organizations that have upgraded to Teams and no longer want to install Skype for Business on their users' computers.
 
 ```yaml
 Type: string
@@ -84,15 +93,30 @@ Default value: NativeLimitedClient
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -Force
+{{Fill Force Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 {{Fill Identity Description}}
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Skype for Business Online
 
 Required: False
 Position: 1
@@ -107,10 +131,10 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -119,6 +143,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## INPUTS
 
@@ -140,4 +180,4 @@ These settings are only honored by newer versions of Skype for Business clients.
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

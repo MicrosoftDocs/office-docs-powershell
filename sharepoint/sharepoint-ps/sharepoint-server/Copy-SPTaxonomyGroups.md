@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-sptaxonomygroups
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPTaxonomyGroups
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Copy-SPTaxonomyGroups
@@ -25,11 +30,11 @@ Use the Copy-SPTaxonomyGroups cmdlet to copy specified Metadata groups from an o
 
 ### Example 1 
 ```
-PS C:\>$credential = Get-Credential
-PS C:\>Copy-SPTaxonomyGroups -LocalTermStoreName "Managed Metadata Service Application Proxy" -LocalSiteUrl "http://sharepoint" -RemoteSiteUrl "http://contoso.sharepoint.com" -GroupNames "Group1","Group2" -Credential $credential
+$credential = Get-Credential
+Copy-SPTaxonomyGroups -LocalTermStoreName "Managed Metadata Service Application Proxy" -LocalSiteUrl "https://sharepoint" -RemoteSiteUrl "https://contoso.sharepoint.com" -GroupNames "Group1","Group2" -Credential $credential
 ```
 
-This example copies two taxonomy groups "Group1" and "Group2" from local Term Store to the remote Term Store in "http://contoso.com". These two sites have been enabled with Hybrid Taxonomy.
+This example copies two taxonomy groups "Group1" and "Group2" from local Term Store to the remote Term Store in "https://contoso.com". These two sites have been enabled with Hybrid Taxonomy.
 
 ## PARAMETERS
 
@@ -47,7 +52,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -63,7 +68,7 @@ Specifies the Azure Active Directory Graph API authentication endpoint. By defau
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -81,7 +86,7 @@ Writes data to remote Term Store, so a Term Store Administrator's credential is 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -97,7 +102,7 @@ Specifies the Azure Active Directory Graph API endpoint. By default, the well-kn
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -113,7 +118,7 @@ Specifies the name array of Taxonomy groups in local on-premises term store that
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -129,7 +134,7 @@ Specifies the Url of local SharePoint on-premises site that contains the local T
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -145,7 +150,7 @@ Specifies the name of local Taxonomy Term Store in the SharePoint on-premises fa
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -161,7 +166,7 @@ Specifies the Url of remote SharePoint Online site that contains remote Taxonomy
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -171,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

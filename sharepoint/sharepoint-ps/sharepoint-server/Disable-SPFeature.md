@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spfeature
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Disable-SPFeature
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Disable-SPFeature
@@ -25,24 +30,24 @@ The Disable-SPFeature cmdlet disables a SharePoint Feature at the given scope.
 If the scope of the Feature is the farm, the URL is not needed.
 Otherwise, provide the URL at which this Feature is to be deactivated (explicit scope is not needed).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Disable-SPFeature -identity "MyCustom" -URL http://somesite
+Disable-SPFeature -identity "MyCustom" -URL https://somesite
 ```
 
-This example disables the "MyCustom" Web site scoped feature at   http://somesite.
+This example disables the "MyCustom" Web site scoped feature at   https://somesite.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>$w = Get-SPWeb http://somesite/myweb | ForEach{ $_.URL }
-C:\PS>Get-SPFeature -Web $w |%{ Disable-SPFeature -Identity $_ -URL $w}
+C:\PS>$w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
+Get-SPFeature -Web $w |%{ Disable-SPFeature -Identity $_ -URL $w}
 ```
 
-This example disables all features in the subsite at http://somesite/myweb.
+This example disables all features in the subsite at https://somesite/myweb.
 
 You do not need to use the SPAssignment cmdlets in this case because the Web object is not stored -- only the string value for the URL.
 
@@ -57,7 +62,7 @@ The type must be the name of the Feature folder located in the 14\Template\Featu
 Type: SPFeatureDefinitionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -79,7 +84,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -96,7 +101,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -112,7 +117,7 @@ Forces a Feature to be disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -124,13 +129,13 @@ Accept wildcard characters: False
 ### -Url
 Specifies the URL of the Web application, site collection, or Web site to which the Feature is being disabled.
 
-The type must be a valid URL, such as http://server_name.
+The type must be a valid URL, such as https://server_name.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -147,7 +152,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -157,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

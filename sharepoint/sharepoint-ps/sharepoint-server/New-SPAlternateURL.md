@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spalternateurl
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAlternateURL
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPAlternateURL
@@ -31,7 +36,7 @@ New-SPAlternateURL [-Url] <String> -ResourceName <String> [-AssignmentCollection
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The New-SPAlternateUrl cmdlet creates a new public or internal URL for the specified Web application zone or resource.
 Use the ResourceName parameter if the alternate URL is for an external resource.
@@ -45,20 +50,20 @@ Many internal URLs can be associated with a single public URL in multiserver far
 Each Web application supports five collections of mappings per URL; the five collections correspond to five zones (default, intranet, extranet, Internet, and custom).
 When the Web application receives a request for an internal URL in a particular zone, links on the pages returned to the user have the public URL for that zone.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE----------------------- 
 ```
-PS C:\>#create the public URL
-PS C:\>New-SPAlternateURL https://www.contoso.com -Zone "Internet"
+#create the public URL
+New-SPAlternateURL https://www.contoso.com -Zone "Internet"
 
-PS C:\>#create the internal URL
-PS C:\>New-SPAlternateURL http://sharepoint.contoso.com -Zone "Internet" -internal
+#create the internal URL
+New-SPAlternateURL https://sharepoint.contoso.com -Zone "Internet" -internal
 ```
 
-This example translates incoming requests for https://www.contoso.com into http://sharepoint.contoso.com (on the Internet zone).
+This example translates incoming requests for https://www.contoso.com into https://sharepoint.contoso.com (on the Internet zone).
 
 When a reverse proxy is being set up to handle public URL SSL termination, alternate access mappings must be configured to handle the URL translation.
 
@@ -67,13 +72,13 @@ When a reverse proxy is being set up to handle public URL SSL termination, alter
 ### -Url
 Specifies the public URL that users access to sign in to the Web application.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -85,13 +90,13 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the name, URL, or GUID of the Web application for which to create the mapping.
 
-The type must be a valid name, URL, in the form WebApplication-1212, http://server_name, or GUID, in the form 1234-5678-9876-0987.
+The type must be a valid name, URL, in the form WebApplication-1212, https://server_name, or GUID, in the form 1234-5678-9876-0987.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -108,7 +113,7 @@ If no value is specified, the value is left blank.
 Type: String
 Parameter Sets: ResourceName
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -130,7 +135,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -147,7 +152,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -164,7 +169,7 @@ If this parameter is not provided, the URL is a public URL.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -181,7 +186,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -199,7 +204,7 @@ The type must be a valid zone: Default, Intranet, Internet, Extranet, or Custom.
 Type: SPUrlZone
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -209,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

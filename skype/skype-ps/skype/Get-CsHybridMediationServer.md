@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/get-cshybridmediationserver
 applicable: Skype for Business Online
 title: Get-CsHybridMediationServer
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsHybridMediationServer
@@ -13,7 +18,7 @@ Gets the external FQDN of an Edge server access proxy that serves as a hosting p
 ## SYNTAX
 
 ```
-Get-CsHybridMediationServer [[-Identity] <Object>] [-Confirm] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Get-CsHybridMediationServer [-Identity] <String> [-Tenant <Guid>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -41,7 +46,7 @@ Specifies the identity of the hybrid public switched telephone network (PSTN) si
 For example: -Identity "SeattlePSTN".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -77,7 +82,7 @@ The tenant ID will be determined by your connection and credentials.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -107,7 +112,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -123,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -134,7 +143,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CsHybridMediationServer](Set-CsHybridMediationServer.md)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/ca9c1492-7716-47d7-99e9-bc8ddb096535(OCS.15).aspx)
-
-

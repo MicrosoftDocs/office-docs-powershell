@@ -1,12 +1,15 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpwebpart
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Remove-PnPWebPart
 ---
+
 # Remove-PnPWebPart
 
 ## SYNOPSIS
-Removes a webpart from a page
+Removes a web part from a page
 
 ## SYNTAX 
 
@@ -33,33 +36,19 @@ Remove-PnPWebPart -Title <String>
 Remove-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
 ```
 
-This will remove the webpart specified by ID to the specified page in the first row and the first column of the HTML table present on the page
+This will remove the web part specified by ID to the specified page in the first row and the first column of the HTML table present on the page
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Remove-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Title MyWebpart
 ```
 
-This will remove the webpart specified by title to the specified page in the first row and the first column of the HTML table present on the page
-
-### ------------------EXAMPLE 3------------------
-```powershell
-Remove-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
-```
-
-This will remove the webpart as defined by the XML in the listview.webpart file to the specified page in the first row and the first column of the HTML table present on the page
-
-### ------------------EXAMPLE 4------------------
-```powershell
-Remove-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Name MyWebpart
-```
-
-This will remove the webpart as defined by the XML in the listview.webpart file to the specified page in the first row and the first column of the HTML table present on the page
+This will remove the web part specified by title to the specified page in the first row and the first column of the HTML table present on the page
 
 ## PARAMETERS
 
 ### -Identity
-The Guid of the webpart
+The Guid of the web part
 
 ```yaml
 Type: GuidPipeBind
@@ -71,7 +60,7 @@ Accept pipeline input: False
 ```
 
 ### -ServerRelativePageUrl
-Server relative url of the webpart page, e.g. /sites/demo/sitepages/home.aspx
+Server relative url of the web part page, e.g. /sites/demo/sitepages/home.aspx
 
 ```yaml
 Type: String
@@ -84,7 +73,7 @@ Accept pipeline input: False
 ```
 
 ### -Title
-The name of the webpart
+The name of the web part
 
 ```yaml
 Type: String
@@ -122,4 +111,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

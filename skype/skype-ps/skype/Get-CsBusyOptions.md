@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csbusyoptions
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsBusyOptions
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Get-CsBusyOptions
@@ -71,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS
@@ -91,6 +96,6 @@ Microsoft.Rtc.Management.AD.UserIdParameter object.
 
 
 ## RELATED LINKS
-[Remove-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
+[Remove-CsBusyOptions](https://docs.microsoft.com/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
 
-[Set-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/set-csbusyoptions?view=skype-ps)
+[Set-CsBusyOptions](https://docs.microsoft.com/powershell/module/skype/set-csbusyoptions?view=skype-ps)

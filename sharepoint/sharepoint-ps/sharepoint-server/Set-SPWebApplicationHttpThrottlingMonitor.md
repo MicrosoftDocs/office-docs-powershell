@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spwebapplicationhttpthrottlingmonitor
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPWebApplicationHttpThrottlingMonitor
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPWebApplicationHttpThrottlingMonitor
@@ -23,27 +28,27 @@ Set-SPWebApplicationHttpThrottlingMonitor [-Identity] <SPWebApplicationPipeBind>
 ## DESCRIPTION
 The `Set-SPWebApplicationHttpThrottlingMonitor` cmdlet sets the Health Score bucket values for an existing network throttling performance counter for a specified Web application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```
 C:\PS>$buckets=(2000,1000,500,300,200,100,50,30,20,10)
-Set-SPWebApplicationHttpThrottlingMonitor http://sharepoint -
+Set-SPWebApplicationHttpThrottlingMonitor https://sharepoint -
 Category Memory -Counter 'Available Mbytes' -IsDesc -HealthScoreBuckets $buckets
 ```
 
-This example sets the Health Score bucket values for the Memory\Available Mbytes counter to the array listed for the http://sharepoint Web application.
+This example sets the Health Score bucket values for the Memory\Available Mbytes counter to the array listed for the https://sharepoint Web application.
 
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>Set-SPWebApplicationHttpThrottlingMonitor http://sharepoint
+Set-SPWebApplicationHttpThrottlingMonitor https://sharepoint
 0 -Category Memory -Counter 'Available Mbytes' -IsDesc -UpperLimit 3000
 ```
 
-This example sets the upper limit for the Memory\Available Mbytes counter, the highest value in the Health Score buckets, to 3000 for the the http://sharepoint Web application.
+This example sets the upper limit for the Memory\Available Mbytes counter, the highest value in the Health Score buckets, to 3000 for the https://sharepoint Web application.
 
 
 ## PARAMETERS
@@ -57,7 +62,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -76,7 +81,7 @@ Use the `Get-SPWebApplicationHttpThrottlingMonitor` cmdlet to return a list of p
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 2
@@ -95,7 +100,7 @@ Use the `Get-SPWebApplicationHttpThrottlingMonitor` cmdlet to return a list of p
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 3
@@ -117,7 +122,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -134,7 +139,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -150,7 +155,7 @@ Specifies bucket ranges to use in determining the calculation of the server Heal
 Type: Double[]
 Parameter Sets: (All)
 Aliases: Buckets
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -168,7 +173,7 @@ If the specified value is invalid, this cmdlet will not run.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -186,7 +191,7 @@ If this parameter is set, Health Score bucket values are interpreted in descendi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -203,7 +208,7 @@ The lower limit is the lowest value in the Health Score bucket values.
 Type: Double
 Parameter Sets: (All)
 Aliases: Lower
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -220,7 +225,7 @@ The upper limit is the highest value in the Health Score bucket values.
 Type: Double
 Parameter Sets: (All)
 Aliases: Upper
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -237,7 +242,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -247,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchstatus
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchStatus
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchStatus
@@ -48,28 +53,28 @@ If you do not use the Text parameter, the cmdlet will output a set of objects th
 - string Message: additional information that is provided as a text string
 - ReadOnlyDictionary\<string,string\>Details: dictionary name/value pairs that provide additional diagnostic information
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
+Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
 ```
 
 This example retrieves a list that has diagnostics information about all search components of the default Search Service Application.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchStatus -SearchApplication 'Search Service Application' -JobStatus -Text
+Get-SPEnterpriseSearchStatus -SearchApplication 'Search Service Application' -JobStatus -Text
 ```
 
 This example retrieves the background activity job status for the search analytics timer jobs.
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
+Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
 ```
 
 This example retrieves the diagnostic information for the index component named IndexComponent1.
@@ -83,7 +88,7 @@ Specifies the search service application that contains the search components.
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -101,7 +106,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -121,7 +126,7 @@ This parameter is only used in association with the HealthReport and Primary par
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -141,7 +146,7 @@ This parameter should only be used for debugging.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -158,7 +163,7 @@ When this parameter is used, the cmdlet will also output verbose diagnostic info
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -178,7 +183,7 @@ This parameter should only be used for debugging.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -198,7 +203,7 @@ When using this parameter, you must specify the component name using the Compone
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -214,7 +219,7 @@ Specifies if status information for the Search Analytics and Usage Analytics tim
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -235,7 +240,7 @@ Returns true if the Admin Component has the Primary role.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -257,7 +262,7 @@ When using this parameter, the output is printed to the console and cannot be pi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -267,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

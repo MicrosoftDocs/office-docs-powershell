@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/uninstall-pnpsolution
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Uninstall-PnPSolution
 ---
+
 # Uninstall-PnPSolution
 
 ## SYNOPSIS
@@ -22,7 +25,7 @@ Uninstall-PnPSolution -PackageId <GuidPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Uninstall-PnPSolution -PackageId c2f5b025-7c42-4d3a-b579-41da3b8e7254 -SourceFilePath mypackage.wsp
+Uninstall-PnPSolution -PackageId c2f5b025-7c42-4d3a-b579-41da3b8e7254 -PackageName mypackage.wsp
 ```
 
 Removes the package to the current site
@@ -91,4 +94,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

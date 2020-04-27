@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/get-cstenantdialplan
 applicable: Skype for Business Online
 title: Get-CsTenantDialPlan
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsTenantDialPlan
@@ -12,9 +17,14 @@ Use the Get-CsTenantDialPlan cmdlet to retrieve a tenant dial plan.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTenantDialPlan [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsTenantDialPlan [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTenantDialPlan [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,27 +56,11 @@ This example retrieves the tenant dial plan that is within the scope of Vt1Tenan
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 The Filter parameter allows you to limit the number of results based on filters you specify.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -82,7 +76,7 @@ Accept wildcard characters: False
 The Identity parameter is a unique identifier that designates the scope, and for per-user scope a name, which identifies the tenant dial plan to retrieve.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -116,7 +110,7 @@ For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
 You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -145,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

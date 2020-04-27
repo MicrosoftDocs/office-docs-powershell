@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/add-mailboxfolderpermission
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Add-MailboxFolderPermission
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Add-MailboxFolderPermission
@@ -13,38 +17,38 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Add-MailboxFolderPermission cmdlet to add folder-level permissions for users in mailboxes.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Add-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights <MailboxFolderAccessRight[]>
- -User <MailboxFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-SendNotificationToUser <$true | $false>] [-SharingPermissionFlags <None | Delegate | CanViewPrivateItems>] [<CommonParameters>]
+ -User <MailboxFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-SendNotificationToUser <Boolean>] [-SharingPermissionFlags <MailboxFolderPermissionFlags>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 To modify the permissions that are assigned to the user on a mailbox folder, use the Set-MailboxFolderPermission cmdlet. To remove all permissions that are assigned to a user on a mailbox folder, use the Remove-MailboxFolderPermission cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Marketing -User ed@contoso.com -AccessRights Owner
 ```
 
 This example grants the Owner role to Ed on the Marketing folder in Ayla's mailbox.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User julia@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate
 ```
 
 In Office 365, this example adds Julia as a calendar delegate to Ayla's mailbox, but without access to private items.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User laura@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate,CanViewPrivateItems
 ```
 
@@ -109,7 +113,8 @@ The following roles apply specifically to calendar folders:
 Type: MailboxFolderAccessRight[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -118,13 +123,11 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox.
+The Identity parameter specifies the target mailbox and folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
-For example:
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -144,13 +147,14 @@ For example:
 
 - User ID or user principal name (UPN)
 
-Example values for the Identity parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
+Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Inbox\Reports`.
 
 ```yaml
 Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -167,13 +171,9 @@ The User parameter specifies who's granted permission to the mailbox folder. Val
 
 - Mail-enabled security groups
 
-You can use any value that uniquely identifies the user or group.
-
-For example:
+You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -189,7 +189,8 @@ For example:
 Type: MailboxFolderUserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -208,7 +209,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +227,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +243,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -268,10 +272,11 @@ This parameter only applies to calendar folders and can only be used with the fo
 - Editor
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -293,10 +298,11 @@ The SharingPermissionFlags parameter assigns calendar delegate permissions. This
 You can specify multiple values separated by commas.
 
 ```yaml
-Type: None | Delegate | CanViewPrivateItems
+Type: MailboxFolderPermissionFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -305,20 +311,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/73f4e8e8-1673-4f58-8353-2f7a597a0a23.aspx)

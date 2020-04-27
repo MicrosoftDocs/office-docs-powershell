@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-Mailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-Mailbox
@@ -13,97 +17,186 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-Mailbox cmdlet to view mailbox objects and attributes, populate property pages, or supply mailbox information to other tasks.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> In Exchange Online PowerShell, we recommend that you use the Get-EXOMailbox cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set5
+### AnrSet
 ```
-Get-Mailbox [-Anr <String>] [-Arbitration] [-Archive] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-RecipientTypeDetails <RecipientTypeDetails[]>] 
- [-RemoteArchive] [-ResultSize <Unlimited>] [-SortBy <String>]
- [-InactiveMailboxOnly] [-IncludeInactiveMailbox] [-Monitoring] [-PublicFolder] [-SoftDeletedMailbox]
- [-AuditLog] [-AuxAuditLog] [-GroupMailbox] [-Migration] [-SupervisoryReviewPolicy] [<CommonParameters>]
-```
-
-### Set4
-```
-Get-Mailbox [-Arbitration] [-Archive] [-Credential <PSCredential>] [-Database <DatabaseIdParameter>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] 
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
- [-RecipientTypeDetails <RecipientTypeDetails[]>] [-RemoteArchive] [-ResultSize <Unlimited>] [-SortBy <String>]
- [-InactiveMailboxOnly] [-IncludeInactiveMailbox] [-Monitoring] [-PublicFolder] [-SoftDeletedMailbox]
- [-AuditLog] [-AuxAuditLog] [-GroupMailbox] [-Migration] [-SupervisoryReviewPolicy] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-Mailbox [[-Identity] <MailboxIdParameter>] [-Arbitration] [-Archive] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] 
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
- [-RecipientTypeDetails <RecipientTypeDetails[]>] [-RemoteArchive] [-ResultSize <Unlimited>] [-SortBy <String>]
- [-InactiveMailboxOnly] [-IncludeInactiveMailbox] [-Monitoring] [-PublicFolder] [-SoftDeletedMailbox]
- [-AuditLog] [-AuxAuditLog] [-GroupMailbox] [-Migration] [-SupervisoryReviewPolicy] [<CommonParameters>]
-```
-
-### Set2
-```
-Get-Mailbox [-Arbitration] [-Archive] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-MailboxPlan <MailboxPlanIdParameter>]
+Get-Mailbox [-Anr <String>]
+ [-Arbitration]
+ [-Archive]
+ [-AuditLog]
+ [-AuxAuditLog]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-GroupMailbox]
+ [-IgnoreDefaultScope]
+ [-InactiveMailboxOnly]
+ [-IncludeInactiveMailbox]
+ [-Migration]
+ [-Monitoring]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ReadFromDomainController] [-RecipientTypeDetails <RecipientTypeDetails[]>] [-RemoteArchive]
- [-ResultSize <Unlimited>] [-SortBy <String>] [-InactiveMailboxOnly] [-IncludeInactiveMailbox] [-Monitoring]
- [-PublicFolder] [-SoftDeletedMailbox] [-AuditLog] [-AuxAuditLog] [-GroupMailbox] [-Migration]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+ [-PublicFolder]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-RemoteArchive]
+ [-ResultSize <Unlimited>]
+ [-SoftDeletedMailbox]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
-### Set3
+### DatabaseSet
 ```
-Get-Mailbox [-Arbitration] [-Archive] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-RecipientTypeDetails <RecipientTypeDetails[]>] 
- [-RemoteArchive] [-ResultSize <Unlimited>]
- [-Server <ServerIdParameter>] [-SortBy <String>] [-InactiveMailboxOnly] [-IncludeInactiveMailbox]
- [-Monitoring] [-PublicFolder] [-SoftDeletedMailbox] [-AuditLog] [-AuxAuditLog] [-GroupMailbox] [-Migration]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+Get-Mailbox [-Database <DatabaseIdParameter>]
+ [-Arbitration]
+ [-Archive]
+ [-AuditLog]
+ [-AuxAuditLog]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-GroupMailbox]
+ [-IgnoreDefaultScope]
+ [-Migration]
+ [-Monitoring]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PublicFolder]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-RemoteArchive]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [<CommonParameters>]
+```
+
+### Identity
+```
+Get-Mailbox [[-Identity] <MailboxIdParameter>]
+ [-Arbitration]
+ [-Archive]
+ [-AuditLog]
+ [-AuxAuditLog]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-GroupMailbox]
+ [-IgnoreDefaultScope]
+ [-InactiveMailboxOnly]
+ [-IncludeInactiveMailbox]
+ [-Migration]
+ [-Monitoring]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PublicFolder]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-RemoteArchive]
+ [-ResultSize <Unlimited>]
+ [-SoftDeletedMailbox]
+ [-SortBy <String>]
+ [<CommonParameters>]
+```
+
+### ServerSet
+```
+Get-Mailbox [-Server <ServerIdParameter>]
+ [-Arbitration]
+ [-Archive]
+ [-AuditLog]
+ [-AuxAuditLog]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-GroupMailbox]
+ [-IgnoreDefaultScope]
+ [-Migration]
+ [-Monitoring]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PublicFolder]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-RemoteArchive]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [<CommonParameters>]
+```
+
+### MailboxPlanSet
+```
+Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
+ [-Archive]
+ [-Filter <String>]
+ [-GroupMailbox]
+ [-InactiveMailboxOnly]
+ [-IncludeInactiveMailbox]
+ [-Migration]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PublicFolder]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SoftDeletedMailbox]
+ [-SortBy <String>] [<CommonParameters>]
+```
+
+### AsyncParameterSet
+```
+Get-Mailbox -Async -Properties <String[]>
+ [-Archive]
+ [-Filter <String>]
+ [-GroupMailbox]
+ [-InactiveMailboxOnly]
+ [-IncludeInactiveMailbox]
+ [-Migration]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PublicFolder]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SoftDeletedMailbox]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 When you use the Get-Mailbox cmdlet in on-premises Exchange environments to view the quota settings for a mailbox, you first need to check the value of the UseDatabaseQuotaDefaults property. The value True means per-mailbox quota settings are ignored, and you need to use the Get-MailboxDatabase cmdlet to see the actual values. If the UseDatabaseQuotaDefaults property is False, the per-mailbox quota settings are used, so what you see with the Get-Mailbox cmdlet are the actual quota values for the mailbox.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-Mailbox -ResultSize unlimited
 ```
 
 This example returns a summary list of all the mailboxes in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-Mailbox -OrganizationalUnit Users
 ```
 
 This example returns a list of all the mailboxes in your organization in the Users OU.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-Mailbox -Anr Chr
 ```
 
 This example returns all the mailboxes that resolve from the ambiguous name resolution search on the string "Chr". This example returns mailboxes for users such as Chris Ashton, Christian Hess, and Christa Geller.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-Mailbox -Archive -Server Mailbox01
 ```
 
 This example returns a summary list of all archive mailboxes on the Mailbox server named Mailbox01.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Get-Mailbox -Identity ed@contoso.com -RemoteArchive
 ```
 
@@ -126,9 +219,10 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set5
+Parameter Sets: AnrSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -139,21 +233,18 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch filters the results by arbitration mailboxes. You don't need to specify a value with this switch.
+The Arbitration switch is required to return arbitration mailboxes in the results. You don't need to specify a value with this switch.
 
-Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
-Notes:
-
-- If you don't use this switch, the command can't find arbitration mailboxes.
-
-- To return arbitration mailboxes that are used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
+To return arbitration mailboxes that are used to store audit log settings or data, don't use this switch. Instead, use the AuditLog or AuxAuditLog switches.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -162,15 +253,76 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to include only archive mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return archive mailboxes.
+The Archive switch filters the results by mailboxes that have an archive enabled (only mailboxes that have an archive mailbox are returned). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Async
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AsyncParameterSet
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditLog
+This parameter is available only in on-premises Exchange.
+
+The AuditLog switch is required to return audit log mailboxes in the results. You don't need to specify a value with this switch.
+
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
+
+To return other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuxAuditLog
+This parameter is available only in on-premises Exchange.
+
+The AuxAuditLog switch is required to return auxiliary audit log mailboxes in the results. You don't need to specify a value with this switch.
+
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
+
+To return other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -181,15 +333,16 @@ Accept wildcard characters: False
 ### -Credential
 This parameter is available only in on-premises Exchange.
 
-The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
-Parameter Sets: (All)
+Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -212,9 +365,10 @@ You can't use this parameter with the Anr, Identity, or Server parameters.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set4
+Parameter Sets: DatabaseSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -229,9 +383,10 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -240,15 +395,42 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter indicates the OPath filter used to filter recipients.
+The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
-For more information about the filterable properties, see Filterable properties for the -Filter parameter (https://technet.microsoft.com/library/bb738155.aspx).
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+- Property is a filterable property. For more information about the filterable properties, see [Filterable properties for the Filter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/filter-properties).
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupMailbox
+The GroupMailbox switch is required to return Office 365 groups in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -257,13 +439,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -287,9 +465,10 @@ You can't use this parameter with the Anr, Database, MailboxPlan or Server param
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -310,9 +489,54 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InactiveMailboxOnly
+This parameter is available only in the cloud-based service.
+
+The InactiveMailboxOnly switch specifies whether to return only inactive mailboxes in the results. You don't need to specify a value with this switch.
+
+An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
+
+To include active and inactive mailboxes in the results, don't use this switch. Instead, use the IncludeInactiveMailbox switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeInactiveMailbox
+This parameter is available only in the cloud-based service.
+
+The IncludeInactiveMailbox switch specifies whether to include inactive mailboxes in the results. You don't need to specify a value with this switch.
+
+An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
+
+To return only inactive mailboxes in the results, don't use this switch. Instead, use the InactiveMailboxOnly switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -341,9 +565,10 @@ You can't use this parameter with the Anr or Identity parameters.
 
 ```yaml
 Type: MailboxPlanIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxPlanSet
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -351,8 +576,44 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Migration
+The Migration switch is required to return migration mailboxes in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Monitoring
+This parameter is available only in on-premises Exchange.
+
+The Monitoring switch is required to return monitoring mailboxes in the results. You don't need to specify a value with this switch.
+
+Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OrganizationalUnit
-The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
 
@@ -366,7 +627,26 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolder
+The PublicFolder switch is required to return public folder mailboxes in the results. You don't need to specify a value with this switch.
+
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -383,9 +663,10 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -424,7 +705,8 @@ You can specify multiple values separated by commas.
 Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -435,17 +717,16 @@ Accept wildcard characters: False
 ### -RemoteArchive
 This parameter is available only in on-premises Exchange.
 
-The RemoteArchive switch specifies whether to include only remote archive mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return remote archive mailboxes.
+The RemoteArchive switch is required to return remote archive mailboxes in the results. You don't need to specify a value with this switch.
 
 Remote archive mailboxes are archive mailboxes in the cloud-based service that are associated with mailbox users in on-premises Exchange organizations.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -460,7 +741,8 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -475,13 +757,13 @@ The Server parameter filters the results by Exchange server. When you use this p
 
 You can use any value that uniquely identifies the server. For example:
 
-- Name (for example, Exchange01)
+- Name
 
-- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
+- FQDN
 
-- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
+- Distinguished name (DN)
 
-- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+- Exchange Legacy DN
 
 You can't use this parameter with the Anr, Database, or Identity parameters.
 
@@ -489,13 +771,34 @@ The ServerName and ServerLegacyDN properties for a mailbox may not be updated im
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set3
+Parameter Sets: ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange 
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -SoftDeletedMailbox
+This parameter is available only in the cloud-based service.
+
+The SoftDeletedMailbox switch is required to return soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
+
+Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AnrSet, Identity, MailboxPlanSet, AsyncParameterSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -520,203 +823,8 @@ You can sort by the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -InactiveMailboxOnly
-This parameter is available only in the cloud-based service.
-
-The InactiveMailboxOnly switch specifies whether to include only inactive mailboxes in the results. You don't need to specify a value with this switch.
-
-When you use this switch, only inactive mailboxes are included in the results.
-
-An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeInactiveMailbox
-This parameter is available only in the cloud-based service.
-
-The IncludeInactiveMailbox switch specifies whether to include inactive mailboxes in the results. You don't need to specify a value with this switch.
-
-When you use this switch, active and inactive mailboxes are included in the results.
-
-An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Monitoring
-This parameter is available only in on-premises Exchange.
-
-The Monitoringswitch specifies whether to include only monitoring mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return monitoring mailboxes.
-
-Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolder
-The PublicFolder switch specifies whether to include only public folder mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return public folder mailboxes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SoftDeletedMailbox
-This parameter is available only in the cloud-based service.
-
-The SoftDeletedMailbox switch specifies whether to include only soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return soft-deleted mailboxes.
-
-Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuditLog
-This parameter is available only in on-premises Exchange.
-
-The AuxAuditLog switch filters the results by arbitration mailboxes that are used to store audit log settings. You don't need to specify a value with this switch.
-
-Notes: 
-
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't return this type of arbitration mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuxAuditLog
-This parameter is available only in on-premises Exchange.
-
-The AuxAuditLog switch filters the results by arbitration mailboxes that are used to store audit log data. You don't need to specify a value with this switch.
-
-Notes: 
-
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't return this type of arbitration mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GroupMailbox
-The GroupMailbox switch specifies whether to include only Office 365 groups in the results. You don't need to specify a value with this switch.
-
-This switch is required to return Office 365 groups.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Migration
-The Migration switch specifies whether to include only migration mailboxes in the results. You don't need to specify a value with this switch.
-
-This switch is required to return migration mailboxes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -725,20 +833,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/8a5a6eb9-4a75-47f9-ae3b-a3ba251cf9a8.aspx)

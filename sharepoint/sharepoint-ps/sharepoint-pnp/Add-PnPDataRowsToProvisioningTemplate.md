@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpdatarowstoprovisioningtemplate
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPDataRowsToProvisioningTemplate
 ---
+
 # Add-PnPDataRowsToProvisioningTemplate
 
 ## SYNOPSIS
@@ -13,7 +16,7 @@ Adds datarows to a list inside a PnP Provisioning Template
 ```powershell
 Add-PnPDataRowsToProvisioningTemplate -Path <String>
                                       -List <ListPipeBind>
-                                      -Query <String>
+                                      [-Query <String>]
                                       [-Fields <String[]>]
                                       [-TokenizeUrls [<SwitchParameter>]]
                                       [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
@@ -29,14 +32,14 @@ Add-PnPDataRowsToProvisioningTemplate -Path <String>
 Add-PnPDataRowsToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice'
 ```
 
-Adds datarows to a list in an in-memory PnP Provisioning Template
+Adds datarows from the provided list to the PnP Provisioning Template at the provided location
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Add-PnPDataRowsToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice' -IncludeSecurity
 ```
 
-Adds datarows to a list in an in-memory PnP Provisioning Template
+Adds datarows from the provided list to the PnP Provisioning Template at the provided location
 
 ## PARAMETERS
 
@@ -77,7 +80,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-Filename of the .PNP Open XML provisioning template to read from, optionally including full path.
+Filename of the .PNP Open XML site template to read from, optionally including full path.
 
 ```yaml
 Type: String
@@ -89,13 +92,13 @@ Accept pipeline input: False
 ```
 
 ### -Query
-The CAML query to execute against the list
+The CAML query to execute against the list. Defaults to all items.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 
-Required: True
+Required: False
 Position: Named
 Accept pipeline input: False
 ```
@@ -150,4 +153,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

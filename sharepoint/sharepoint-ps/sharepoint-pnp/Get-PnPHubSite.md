@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnphubsite
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPHubSite
 ---
+
 # Get-PnPHubSite
 
 ## SYNOPSIS
@@ -18,17 +21,17 @@ Get-PnPHubSite [-Connection <SPOnlineConnection>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPStorageEntity
+Get-PnPHubSite
 ```
 
-Returns all site storage entities/farm properties
+Returns all hubsite properties
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPTenantSite -Key MyKey
+Get-PnPHubSite -Identity https://contoso.sharepoint.com/sites/myhubsite
 ```
 
-Returns the storage entity/farm property with the given key.
+Returns the properties of the specified hubsite
 
 ## PARAMETERS
 
@@ -46,4 +49,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

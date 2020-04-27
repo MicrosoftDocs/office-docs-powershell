@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spexcelfilelocation
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelFileLocation
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPExcelFileLocation
@@ -25,27 +30,27 @@ Properties of trusted file locations control how workbooks can be used when load
 Excel Services Application always enforces the properties that are defined by the trusted file location from which a workbook was loaded.
 The properties of the trusted file location to use are determined through comparison of the file path for the workbook with the address of the trusted file location.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation
+Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation
 ```
 
 This example displays a list of trusted file locations for the Excel Services Application Web service application named MyExcelService.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation | Format-list *
+Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation | Format-list *
 ```
 
 This example displays a list of trusted file locations for the Excel Services Application Web service application named MyExcelService, and then formats the list of properties into a table.
 
 ### --------------EXAMPLE 3-------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation | where {$_.ExternalDataAllowed -ne "None"}
+Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation | where {$_.ExternalDataAllowed -ne "None"}
 ```
 
 This example displays a list of trusted file locations that allow external data connectivity for the Excel Services Application Web service application named MyExcelService.
@@ -57,7 +62,7 @@ Specifies the SPExcelFileLocation object to return.
 If the Identity parameter is not specified, the cmdlet returns all the file locations in the specified.
 Excel Services Application Web service application.
 
-The type must be a valid string that identifies the file location, in the form http://myPortal/myTeam; a valid string that identifies the path, in the form C:\folder_name; a valid UNC path to a trusted location in the form, \\\\computer_name\share; a valid GUID, in the form  12345678-90ab-cdef-1234-567890bcdefgh; or an instance of a valid SPExcelFileLocation object.
+The type must be a valid string that identifies the file location, in the form https://myPortal/myTeam; a valid string that identifies the path, in the form C:\folder_name; a valid UNC path to a trusted location in the form, \\\\computer_name\share; a valid GUID, in the form  12345678-90ab-cdef-1234-567890bcdefgh; or an instance of a valid SPExcelFileLocation object.
 
 ```yaml
 Type: SPExcelFileLocationPipeBind
@@ -113,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

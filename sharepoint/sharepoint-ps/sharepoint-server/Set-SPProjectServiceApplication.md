@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectserviceapplication
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectServiceApplication
@@ -21,13 +26,13 @@ Set-SPProjectServiceApplication [-Identity] <PsiServiceApplicationPipeBind>
 ## DESCRIPTION
 The `Set-SPProjectServiceApplication` cmdlet sets the properties of a Project Server Service application.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>Set- SPProjectServiceApplication -Identity PSIServiceApp -ApplicationPool newapppool RegisterTimerJob
+Set- SPProjectServiceApplication -Identity PSIServiceApp -ApplicationPool newapppool RegisterTimerJob
 ```
 
 This example updates the application pool and re-registers the timer job for a Project Server Service application.
@@ -44,7 +49,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -62,7 +67,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -84,7 +89,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -94,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

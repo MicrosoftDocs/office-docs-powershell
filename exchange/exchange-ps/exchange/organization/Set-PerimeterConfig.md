@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-perimeterconfig
 applicable: Exchange Online
 title: Set-PerimeterConfig
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -13,11 +17,13 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-PerimeterConfig cmdlet to modify the list of gateway server IP addresses that have been added to the cloud-based safelists.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
 ```
 Set-PerimeterConfig [-Confirm] [-GatewayIPAddresses <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
@@ -27,8 +33,8 @@ If you have an on-premises email system, you can use the Set-PerimeterConfig cmd
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-PerimeterConfig -GatewayIPAddresses 123.0.0.1
 ```
 
@@ -46,8 +52,9 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf 
+Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -61,8 +68,9 @@ Use the GatewayIPAddresses parameter to create or modify a list of gateway serve
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -78,6 +86,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -86,20 +95,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-### 
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+###  
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-### 
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+###  
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/4f40a5fc-3275-42a0-b12f-a199bd42c8d5.aspx)

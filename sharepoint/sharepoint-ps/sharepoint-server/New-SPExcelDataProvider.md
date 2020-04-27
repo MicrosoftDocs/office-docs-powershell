@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spexceldataprovider
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelDataProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPExcelDataProvider
@@ -25,14 +30,14 @@ Excel Services Application refreshes external data connections only if the data 
 Excel Services Application includes a set of common data providers on this list.
 Therefore, using cmdlets to modify safe data providers typically occurs only in custom data connection scenarios.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
+Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
 ```
 
 This example adds a new custom OLEDB data provider to the list of safe data providers for the Excel Services Application Web service application named MyExcelService.
@@ -40,7 +45,7 @@ This example adds a new custom OLEDB data provider to the list of safe data prov
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>Get-SPExcelServiceApplication | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
+Get-SPExcelServiceApplication | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
 ```
 
 This example adds a new custom OLEDB data provider to the list of safe data providers for all Excel Services Application Web service application in the farm.
@@ -178,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

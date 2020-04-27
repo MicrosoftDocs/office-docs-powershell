@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpworkflowdefinition
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPWorkflowDefinition
 ---
+
 # Add-PnPWorkflowDefinition
 
 ## SYNOPSIS
@@ -41,7 +44,7 @@ Accept pipeline input: False
 ```
 
 ### -DoNotPublish
-Overrides the default behaviour, which is to publish workflow definitions.
+Overrides the default behavior, which is to publish workflow definitions.
 
 ```yaml
 Type: SwitchParameter
@@ -84,4 +87,4 @@ Returns the Id of the workflow definition
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

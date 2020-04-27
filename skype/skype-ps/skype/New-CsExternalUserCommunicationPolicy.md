@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/new-csexternalusercommunicationpolicy
 applicable: Skype for Business Online
 title: New-CsExternalUserCommunicationPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # New-CsExternalUserCommunicationPolicy
@@ -11,8 +16,11 @@ schema: 2.0.0
 Creates a new external user communication policy for use in your organization to block P2P file transfer with Federated partners only.
 
 ## SYNTAX
+
 ```
-New-CsExternalUserCommunicationPolicy [[-Identity] <XdsIdentity>] [-AllowPresenceVisibility <Boolean>] [-AllowTitleVisibility <Boolean>] [-Confirm] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>] [-Force] [-InMemory] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
+New-CsExternalUserCommunicationPolicy [-Tenant <Guid>] [-EnableFileTransfer <Boolean>]
+ [-EnableP2PFileTransfer <Boolean>] [-AllowPresenceVisibility <Boolean>] [-AllowTitleVisibility <Boolean>]
+ [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,7 +30,7 @@ This cmdlet allows you to block P2P file transfer with Federated partners only.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1 
 ```
 PS C:\> New-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer -EnableP2PFileTransfer $False
 ```
@@ -30,54 +38,6 @@ PS C:\> New-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTran
 This example creates a new policy to block external file transfer. Then you can use `Grant-CsExternalUserCommunicationPolicy` to assign it to an user account.
 
 ## PARAMETERS
-
-### -AllowPresenceVisibility
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowTitleVisibility
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -EnableP2PFileTransfer
 Indicates whether file transfers to Federated partners are allowed. The default value is True.
@@ -101,8 +61,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -111,14 +70,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
+### -AllowPresenceVisibility
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTitleVisibility
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases: cf
 
 Required: False
 Position: Named
@@ -143,8 +131,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InMemory
-This parameter is reserved for internal Microsoft use.
+{{Fill InMemory Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -198,28 +201,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -232,10 +215,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
+[Set-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Get-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csexternalusercommunicationpolicy?view=skype-ps)
+[Get-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Remove-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
+[Remove-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Grant-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)
+[Grant-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)

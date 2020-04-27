@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenant
 applicable: SharePoint Online
 schema: 2.0.0
+title: Set-PnPTenant
 ---
+
 # Set-PnPTenant
 
 ## SYNOPSIS
@@ -69,6 +72,7 @@ Set-PnPTenant [-MinCompatibilityLevel <Int>]
               [-EmailAttestationRequired <Boolean>]
               [-EmailAttestationReAuthDays <Int>]
               [-HideDefaultThemes <Boolean>]
+              [-DisabledWebPartIds <Guid[]>]
               [-Connection <SPOnlineConnection>]
 ```
 
@@ -76,7 +80,7 @@ Set-PnPTenant [-MinCompatibilityLevel <Int>]
 Sets organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota,
 ResourceQuotaAllocated, and SiteCreationMode.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must have the SharePoint Online admin or Global admin role to run the cmdlet.
 
 ## EXAMPLES
 
@@ -148,11 +152,11 @@ Accept pipeline input: False
 ```
 
 ### -BccExternalSharingInvitations
-When the feature is enabled, all external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingsInvitationList.
+When the feature is enabled, all external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingInvitationsList.
 
 The valid values are:
 False (default) - BCC for external sharing is disabled.
-True - All external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingsInvitationList.
+True - All external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingInvitationsList.
 
 ```yaml
 Type: Boolean
@@ -228,6 +232,18 @@ The values are: None Direct Internal AnonymousAccess
 
 ```yaml
 Type: SharingLinkType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DisabledWebPartIds
+Guids of out of the box modern web part id's to hide
+
+```yaml
+Type: Guid[]
 Parameter Sets: (All)
 
 Required: False
@@ -823,7 +839,7 @@ Accept pipeline input: False
 ### -ShowAllUsersClaim
 Enables the administrator to hide the All Users claim groups in People Picker.
 
-When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organtization members in the tenant that used NTLM to authentication with SharePoint.
+When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organization members in the tenant that used NTLM to authentication with SharePoint.
 
 Note, the All Users(authenticated) group is equivalent to the Everyone claim, and shows as Everyone.To change this, see - ShowEveryoneClaim.
 
@@ -1001,4 +1017,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-eopdistributiongroup
 applicable: Exchange Online Protection
 title: New-EOPDistributionGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "eop-ps"
 ---
 
@@ -17,13 +21,13 @@ Typically, EOP standalone customers that also have on-premises Active Directory 
 
 This cmdlet uses a batch processing method that results in a propagation delay of a few minutes before the results of the cmdlet are visible.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 New-EOPDistributionGroup -Name <String> [-Alias <String>] [-DisplayName <String>] [-ManagedBy <String[]>]
- [-Members <String[]>] [-Notes <String>] [-PrimarySmtpAddress <SmtpAddress>] [-Type <Distribution | Security>]
+ [-Members <String[]>] [-Notes <String>] [-PrimarySmtpAddress <SmtpAddress>] [-Type <GroupType>]
  [<CommonParameters>]
 ```
 
@@ -36,19 +40,19 @@ You can use the New-EOPDistributionGroup cmdlet to create the following types of
 
 Distribution groups are used to consolidate groups of recipients into a single point of contact for email messages. Security groups are used to grant permissions to multiple users.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-EOPDistributionGroup -Name Managers -Type Security -ManagedBy "Kitty Petersen"
 ```
 
 This example creates a mail-enabled universal security group named Managers that's managed by Kitty Petersen.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-EOPDistributionGroup -Name "Security Team" -ManagedBy "Tyson Fawcett" -Alias SecurityTeamThree -DisplayName "Security Team" -Notes "Security leads from each division" -PrimarySmtpAddress SecTeamThree@contoso.com -Type Distribution -Members @("Tyson Fawcett","Kitty Petersen")
 ```
 
@@ -66,6 +70,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -83,6 +88,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -98,6 +104,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -106,13 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
-The ManagedBy parameter specifies a user who owns the group. In Exchange Online Protection, you need to use this parameter to specify at least one group owner. You can use any value that uniquely identifies the user.
-
-For example:
+The ManagedBy parameter specifies a user who owns the group. In Exchange Online Protection, you need to use this parameter to specify at least one group owner. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -133,6 +136,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -149,13 +153,9 @@ The Members parameter specifies the initial list of recipients (mail-enabled obj
 
 - Mail-enabled security groups
 
-You can use any value that uniquely identifies the recipient.
-
-For example:
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -174,6 +174,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +190,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +206,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -215,10 +218,11 @@ Accept wildcard characters: False
 The Type parameter specifies the group type. Valid values are Distribution or Security.
 
 ```yaml
-Type: Distribution | Security
+Type: GroupType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -227,20 +231,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/4610dfe5-fca8-4ba8-be3c-535d1753e0f4.aspx)

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-remotedomain
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-RemoteDomain
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-RemoteDomain
@@ -13,40 +17,39 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-RemoteDomain cmdlet to view the configuration information for the remote domains configured in your organization. You can view the remote domain configuration from inside the Exchange organization or from an Edge Transport server in the perimeter network.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-RemoteDomain [[-Identity] <RemoteDomainIdParameter>] 
-[-DomainController <Fqdn>] [<CommonParameters>]
+Get-RemoteDomain [[-Identity] <RemoteDomainIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-RemoteDomain
 ```
 
-This example returns all remote domains configured in the Active Directory forest in which you run the command.
+This example returns a summary list of all remote domains in the organization.
 
-### -------------------------- Example 2 --------------------------
-```
-Get-RemoteDomain Contoso
+### Example 2
+```powershell
+Get-RemoteDomain -Identity Contoso | Format-List
 ```
 
-This example returns the configuration for the remote domain Contoso.
+This example returns detailed information for the remote domain named Contoso.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-RemoteDomain | Where {$_.TNEFEnabled -eq $false}
 ```
 
-This example queries Active Directory for all remote domains and displays only those remote domains for which Transport Neutral Encapsulation Format (TNEF) encoding isn't used.
+This example returns all domains where Transport Neutral Encapsulation Format (TNEF) encoding isn't used.
 
 ## PARAMETERS
 
@@ -61,7 +64,8 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -70,13 +74,20 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the remote domain you want to view. Enter either the GUID or name of the remote domain.
+The Identity parameter specifies the remote domain that you want to view. You can use any value that uniquely identifies the remote domain. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: RemoteDomainIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: 1
 Default value: None
@@ -85,20 +96,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/183b2f07-4225-4ef3-96c8-d29269730d18.aspx)

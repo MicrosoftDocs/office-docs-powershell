@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/test-spcontentdatabase
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Test-SPContentDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Test-SPContentDatabase
@@ -30,7 +35,7 @@ Test-SPContentDatabase -Name <String> -WebApplication <SPWebApplicationPipeBind>
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the `Test-SPContentDatabase` cmdlet to test a content database against a Web application to verify all customizations referenced within the content database are also installed in the web application.
 This cmdlet can be issued against a content database currently attached to the farm, or a content database that is not connected to the farm.
@@ -39,13 +44,13 @@ It can be used to test content databases from SharePoint 2010 Products and from 
 The `Test-SPContentDatabase` cmdlet does not change any of the data or structure of the content database, but can cause load on the database while the checks are in progress, which could temporarily block use of the content database.
 This cmdlet should only be used against a content database that is currently under low or no usage.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ----------------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Test-SPContentDatabase -name WSS_Content_DB -webapplication http://sitename
+Test-SPContentDatabase -name WSS_Content_DB -webapplication https://sitename
 ```
 
 This example tests the WSS_Content_DB content database against the sitename Web application and returns a list of issues.
@@ -53,11 +58,11 @@ This example tests the WSS_Content_DB content database against the sitename Web 
 
 ### ----------------------------EXAMPLE 2-----------------------
 ```
-PS C:\>$DB = Get-SPContentDatabase -site http://contoso.com
-PS C:\>Test-SPContentDatabase $DB -showrowcounts
+$DB = Get-SPContentDatabase -site https://contoso.com
+Test-SPContentDatabase $DB -showrowcounts
 ```
 
-This example gets the content database that contains the site collection at http://contoso.com and then tests the database against the Web application that hosts it to determine issues.
+This example gets the content database that contains the site collection at https://contoso.com and then tests the database against the Web application that hosts it to determine issues.
 Together with displaying the list of issues, by specifying the ShowRowCounts parameter, this also returns the table size metrics from the content database.
 
 ## PARAMETERS
@@ -69,7 +74,7 @@ Specifies an existing connected SharePoint content database to one of the two pa
 Type: SPContentDatabasePipeBind
 Parameter Sets: ContentDatabaseById
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -87,7 +92,7 @@ The type must be a valid name of a SharePoint content database; for example, SPC
 Type: String
 Parameter Sets: ContentDatabaseByName
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -105,7 +110,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPWebApplicationPipeBind
 Parameter Sets: ContentDatabaseByName
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -127,7 +132,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -145,7 +150,7 @@ The type must be a valid PSCredential object.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -163,7 +168,7 @@ The selected mode, claims or classic, must be the same in both versions.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -181,7 +186,7 @@ The type must be a valid GUID, such as 12345678-90ab-cdef-1234-567890bcdefgh; a 
 Type: SPDatabaseServiceInstancePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -200,7 +205,7 @@ The use of the parameter significantly increases the time to complete the test p
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -216,7 +221,7 @@ Returns database statistics which are row counts for tables in the content datab
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -226,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

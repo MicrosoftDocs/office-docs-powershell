@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/repair-spprojectwebinstance
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Repair-SPProjectWebInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Repair-SPProjectWebInstance
@@ -22,17 +27,17 @@ Repair-SPProjectWebInstance [-Identity] <ProjectInstancePipeBind> -RepairRule <P
 The `Repair-SPProjectWebInstance` cmdlet re-queues specific Project Server queue items that may have fallen out of the queue.
 This includes triggers that may have been missed and queue jobs that were enqueued on a server that was subsequently removed from the farm.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
 ```
-C:\PS>Repair-SPProjectWebInstance -Identity http://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
+Repair-SPProjectWebInstance -Identity https://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
 ```
 
-This example enqueues any missing triggers for the Project Web App instance at http://contoso-appsrv/PWA.
+This example enqueues any missing triggers for the Project Web App instance at https://contoso-appsrv/PWA.
 
 
 ## PARAMETERS
@@ -44,7 +49,7 @@ The identity of the instance of Project Web App.
 Type: ProjectInstancePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -60,7 +65,7 @@ Valid values: QueueMissingTriggers searches the Project Web App for any triggers
 Type: ProjectSiteHealthRuleName
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -82,7 +87,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -92,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

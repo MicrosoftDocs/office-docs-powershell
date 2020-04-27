@@ -1,22 +1,34 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/grant-csipphonepolicy
 applicable: Skype for Business Online
-title: Grant-CsIPPhonePolicy
+title: Grant-CsIPPhonePolicy, Skype for Business Server 2019
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Grant-CsIPPhonePolicy
 
 ## SYNOPSIS
 Use the Grant-CsIPPhonePolicy cmdlet to assign an Internet Protocol (IP) phone policy to a user or a group of users.
-IP phone policies determine the features of Skype for Business Online that are available to users.
+IP phone policies determine the features of Skype for Business Online and Skype for Business Server 2019 that are available to users.
 For example, you might enable the Better Together Over Ethernet feature for some users while disabling it for others.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsIPPhonePolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <String>] [-Confirm] [-DomainController <Fqdn>]
- [-PassThru] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsIPPhonePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsIPPhonePolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +39,6 @@ IP phone policies are applied each time a user accesses the system, regardless o
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
 Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName SkypePolicy
 ```
 
@@ -36,7 +47,6 @@ This example assigns the IP phone policy "SkypePolicy" to the user with the iden
 
 ### -------------------------- Example 2 -------------------------- 
 ```
-
 Get-CsUser -LDAPFilter "Department=Sales" | Grant-CsIPPhonePolicy -PolicyName SalesPolicy
 ```
 
@@ -58,7 +68,7 @@ For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -74,7 +84,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -90,7 +100,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -113,7 +123,7 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -130,7 +140,7 @@ By default, the Grant-CsIPPhonePolicy cmdlet does not pass objects through the p
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -140,22 +150,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
--Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -172,7 +173,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -186,7 +187,7 @@ Indicates that this cmdlet runs as a background job.
 
 When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -202,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

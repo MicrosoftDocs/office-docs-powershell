@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpterm
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPTerm
 ---
+
 # Get-PnPTerm
 
 ## SYNOPSIS
@@ -12,12 +15,27 @@ Returns a taxonomy term
 
 ### 
 ```powershell
+Get-PnPTerm [-Includes <String[]>]
+            [-IncludeChildTerms [<SwitchParameter>]]
+            [-Connection <SPOnlineConnection>]
+```
+
+### By Term Id
+```powershell
+Get-PnPTerm -Identity <Id, Name or Object>
+            [-TermStore <Id, Name or Object>]
+            [-IncludeChildTerms [<SwitchParameter>]]
+            [-Connection <SPOnlineConnection>]
+```
+
+### By Termset
+```powershell
 Get-PnPTerm -TermSet <Id, Title or TaxonomyItem>
             -TermGroup <Id, Title or TermGroup>
-            [-Includes <String[]>]
             [-Identity <Id, Name or Object>]
             [-TermStore <Id, Name or Object>]
             [-Recursive [<SwitchParameter>]]
+            [-IncludeChildTerms [<SwitchParameter>]]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -51,6 +69,14 @@ Get-PnPTerm -Identity "Small Finance" -TermSet "Departments" -TermGroup "Corpora
 
 Returns the term named "Small Finance", from the "Departments" termset in a term group called "Corporate" from the site collection termstore even if it's a subterm below "Finance"
 
+### ------------------EXAMPLE 5------------------
+```powershell
+$term = Get-PnPTerm -Identity "Small Finance" -TermSet "Departments" -TermGroup "Corporate" -Include Labels
+$term.Labels
+```
+
+Returns all the localized labels for the term named "Small Finance", from the "Departments" termset in a term group called "Corporate"
+
 ## PARAMETERS
 
 ### -Identity
@@ -58,7 +84,19 @@ The Id or Name of a Term
 
 ```yaml
 Type: Id, Name or Object
-Parameter Sets: (All)
+Parameter Sets: By Term Id, By Termset
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -IncludeChildTerms
+Includes the hierarchy of child terms if available
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -78,11 +116,11 @@ Accept pipeline input: False
 ```
 
 ### -Recursive
-Find the first term recursivly matching the label in a term hierarchy.
+Find the first term recursively matching the label in a term hierarchy.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: By Termset
 
 Required: False
 Position: Named
@@ -94,7 +132,7 @@ Name of the termgroup to check.
 
 ```yaml
 Type: Id, Title or TermGroup
-Parameter Sets: (All)
+Parameter Sets: By Termset
 
 Required: True
 Position: 0
@@ -106,7 +144,7 @@ Name of the termset to check.
 
 ```yaml
 Type: Id, Title or TaxonomyItem
-Parameter Sets: (All)
+Parameter Sets: By Termset
 
 Required: True
 Position: 0
@@ -118,7 +156,7 @@ Term store to check; if not specified the default term store is used.
 
 ```yaml
 Type: Id, Name or Object
-Parameter Sets: (All)
+Parameter Sets: By Term Id, By Termset
 
 Required: False
 Position: Named
@@ -143,4 +181,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

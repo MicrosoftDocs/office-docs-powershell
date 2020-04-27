@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://docs.microsoft.com/powershell/module/skype/set-cspersistentchataddin
+applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatAddin
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsPersistentChatAddin
@@ -45,11 +50,11 @@ Skype for Business Server Control Panel: To modify an existing Persistent Chat a
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsPersistentChatAddin -Identity "atl-cs-001.litwareinc.com\ITPersistentChatAddin" -Url "http://atl-cs-001.litwareinc.com/itchat2"
+Set-CsPersistentChatAddin -Identity "atl-cs-001.litwareinc.com\ITPersistentChatAddin" -Url "https://atl-cs-001.litwareinc.com/itchat2"
 ```
 
 Example 1 modifies the URL assigned to the Persistent Chat add-in ITPersistentChatAddin.
-In this case, the URL is changed to http://atl-cs-001.litwareinc.com/itchat2.
+In this case, the URL is changed to https://atl-cs-001.litwareinc.com/itchat2.
 
 
 ## PARAMETERS
@@ -65,7 +70,7 @@ For example:
 Type: String
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: 1
@@ -81,7 +86,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: Addin
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: 1
@@ -97,7 +102,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -114,7 +119,7 @@ Names must be unique per Persistent Chat pool.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -130,7 +135,7 @@ URL of the Web page to be displayed by the Persistent Chat add-in.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -146,7 +151,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -156,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

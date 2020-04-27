@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/add-databaseavailabilitygroupserver
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Add-DatabaseAvailabilityGroupServer
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Add-DatabaseAvailabilityGroupServer
@@ -13,14 +17,16 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Add-DatabaseAvailabilityGroupServer cmdlet to add a Mailbox server to a database availability group (DAG). A DAG is a set of Mailbox servers that use continuous replication and managed availability to provide automatic database-level recovery from database, server, or network failures.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Add-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdParameter>
- [-MailboxServer] <ServerIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-SkipDagValidation]
- [-SkipInstallCluster] [-SpareServer] [<CommonParameters>]
+Add-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdParameter> [-MailboxServer] <ServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-SkipDagValidation]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,12 +36,12 @@ To add a Mailbox server to a DAG, the Mailbox server must be running the Windows
 
 To add the first server to a DAG and create a computer object for the DAG, the Exchange Windows Permissions security group must have the appropriate rights to add computer accounts to the domain. Alternatively, a computer account can be created and disabled prior to adding the server. Adding the first server to the DAG enables the computer account for the DAG. Thus, the account used for the task doesn't need permissions to add a computer account to the domain. If you're pre-creating the computer account, the name of the account must match the name for the DAG. For example, if the DAG is named DAG1, the computer account must be named DAG1.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
 ```
 
@@ -50,7 +56,8 @@ The Identity parameter specifies the name of the DAG to which the server is bein
 Type: DatabaseAvailabilityGroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -59,13 +66,22 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxServer
-The MailboxServer parameter specifies the name of the Mailbox server being added to the DAG.
+The MailboxServer parameter specifies the Mailbox server to add to the DAG. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
 
 ```yaml
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 2
 Default value: None
@@ -84,7 +100,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -99,22 +116,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +132,8 @@ The SkipDagValidation switch specifies whether to bypass the validation of the D
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -137,29 +141,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SkipInstallCluster
-This parameter is reserved for internal Microsoft use.
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -SpareServer
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -168,20 +158,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/6bd0a3fe-dec6-47c2-b9a3-8dffb60e4aad.aspx)

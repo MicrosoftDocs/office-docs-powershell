@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/rename-pnpfile
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Rename-PnPFile
 ---
+
 # Rename-PnPFile
 
 ## SYNOPSIS
@@ -68,7 +71,7 @@ Accept pipeline input: False
 ```
 
 ### -OverwriteIfAlreadyExists
-If provided, if a file already exist with the provided TargetFileName, it will be overwritten. If ommitted, the rename operation will be canceled if a file already exists with the TargetFileName file name.
+If provided, if a file already exist with the provided TargetFileName, it will be overwritten. If omitted, the rename operation will be canceled if a file already exists with the TargetFileName file name.
 
 ```yaml
 Type: SwitchParameter
@@ -141,4 +144,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

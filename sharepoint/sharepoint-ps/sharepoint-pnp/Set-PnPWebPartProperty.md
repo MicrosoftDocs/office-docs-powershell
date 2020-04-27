@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpwebpartproperty
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPWebPartProperty
 ---
+
 # Set-PnPWebPartProperty
 
 ## SYNOPSIS
@@ -26,12 +29,12 @@ Set-PnPWebPartProperty -ServerRelativePageUrl <String>
 Set-PnPWebPartProperty -ServerRelativePageUrl /sites/demo/sitepages/home.aspx -Identity ccd2c98a-c9ae-483b-ae72-19992d583914 -Key "Title" -Value "New Title" 
 ```
 
-Sets the title property of the webpart.
+Sets the title property of the web part.
 
 ## PARAMETERS
 
 ### -Identity
-The Guid of the webpart
+The Guid of the web part
 
 ```yaml
 Type: GuidPipeBind
@@ -55,7 +58,7 @@ Accept pipeline input: False
 ```
 
 ### -ServerRelativePageUrl
-Full server relative url of the webpart page, e.g. /sites/demo/sitepages/home.aspx
+Full server relative url of the web part page, e.g. /sites/demo/sitepages/home.aspx
 
 ```yaml
 Type: String
@@ -105,4 +108,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

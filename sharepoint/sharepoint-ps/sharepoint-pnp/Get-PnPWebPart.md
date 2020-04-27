@@ -1,12 +1,15 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpwebpart
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPWebPart
 ---
+
 # Get-PnPWebPart
 
 ## SYNOPSIS
-Returns a webpart definition object
+Returns a web part definition object
 
 ## SYNTAX 
 
@@ -31,12 +34,12 @@ Returns all webparts defined on the given page.
 Get-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
 ```
 
-Returns a specific webpart defined on the given page.
+Returns a specific web part defined on the given page.
 
 ## PARAMETERS
 
 ### -Identity
-The identity of the webpart, this can be the webpart guid or an webpart object
+The identity of the web part, this can be the web part guid or a web part object
 
 ```yaml
 Type: WebPartPipeBind
@@ -48,7 +51,7 @@ Accept pipeline input: True
 ```
 
 ### -ServerRelativePageUrl
-Full server relative URL of the webpart page, e.g. /sites/mysite/sitepages/home.aspx
+Full server relative URL of the web part page, e.g. /sites/mysite/sitepages/home.aspx
 
 ```yaml
 Type: String
@@ -90,4 +93,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

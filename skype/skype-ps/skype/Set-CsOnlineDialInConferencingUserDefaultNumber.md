@@ -1,71 +1,66 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguserdefaultnumber
 applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingUserDefaultNumber
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsOnlineDialInConferencingUserDefaultNumber
 
 ## SYNOPSIS
-This cmdlet identifies a group of users based on a given criteria and changes the Audio Conferencing default number of all the users in the group to a new default number.
+Replace the default toll or toll-free number for all users.
 
 ## SYNTAX
 
+### BridgeNameParams
 ```
-Set-CsOnlineDialInConferencingUserDefaultNumber [-BridgeId <Object>] [-BridgeName <Object>]
- [-CountryOrRegion <Object>] [-FromNumber <Object>] [-NumberType <Object>] [-ToNumber <Object>]
- [-AreaOrState <Object>] [-BypassDualWrite <Object>] [-CapitalOrMajorCity <Object>] [-Confirm]
- [-DomainController <Object>] [-Force] [-RescheduleMeetings] [-Tenant <Object>] [-TenantDomain <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineDialInConferencingUserDefaultNumber [-TenantDomain <String>] [-Tenant <Guid>]
+ -BridgeName <String> [-FromNumber <String>] -ToNumber <String> -NumberType <String>
+ [-CountryOrRegion <String>] [-AreaOrState <String>] [-CapitalOrMajorCity <String>] [-RescheduleMeetings]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### FilterByUsageLocation
+```
+Set-CsOnlineDialInConferencingUserDefaultNumber [-TenantDomain <String>] [-Tenant <Guid>]
+ [-BridgeName <String>] -BridgeId <Guid> -ToNumber <String> -NumberType <String>
+ -CountryOrRegion <String> [-AreaOrState <String>] [-CapitalOrMajorCity <String>] [-RescheduleMeetings]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UniqueBridgeParams
+```
+Set-CsOnlineDialInConferencingUserDefaultNumber [-TenantDomain <String>] [-Tenant <Guid>]
+ -BridgeId <System.Guid> -FromNumber <String> -ToNumber <String> -NumberType <String> [-RescheduleMeetings]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet identifies a group of users based on the location of the users or their Audio Conferencing default number and replaces their Audio Conferencing default number with the new number provided in the input. 
-This cmdlet can be used to replace Audio Conferencing default toll and toll-free numbers.
-To use this cmdlet, specify the criteria that will be used to find the desired group of users, specify the type of default phone number to modify and specify the new Audio Conferencing default number that needs to be assigned to the users that are found with the criteria specified.
-Optionally, it’s possible to trigger the rescheduling of the existing meetings of the group of users to include the new Audio Conferencing default numbers in the meeting invites of their existing meeting. If the meetings of the users aren’t rescheduled, their existing meetings will continue to have their previous Audio Conferencing default numbers and new meetings will have the new Audio Conferencing default number. Please note that rescheduling the existing meetings of the users will result in having the meeting invites of all their existing meetings resent to all the participants of their existing meetings.
-
+Provide the detailed description here.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsOnlineDialInConferencingUserDefaultNumber -FromNumber +14255551234 -ToNumber +12065555678 NumberType TollFree -BridgeId <Bridge Id> -RescheduleMeetings
+Set-CsOnlineDialInConferencingUserDefaultNumber -FromNumber 14255550100 -ToNumber 14255550101 -NumberType Toll -RescheduleMeetings -BridgeId 9884626f-dcfb-49f4-8025-912f5bc68fdc
 ```
 
-To change the default toll number of all users that have +14255551234 as their default toll-free number to +12065555678, run example 1.
+This example replaces the default toll or toll-free number for all users who have the number 14255550100 as a default number to the number 14255550101 and starts the process of rescheduling their meetings.
 
-### -------------------------- Example 2 --------------------------
-```
-Set-CsOnlineDialInConferencingUserDefaultNumber -FromNumber $null -ToNumber +18005551234 -NumberType TollFree -BridgeId <Bridge Id>
-```
-
-Example 2 shows how to set the default toll-free number for all users without one to +18005551234.
-
-### -------------------------- Example 3 --------------------------
-```
-Set-CsOnlineDialInConferencingUserDefaultNumber -FromNumber +18005551234 -ToNumber +18005551239 NumberType TollFree -BridgeId <Bridge Id>
-```
-
-Example 3 shows how to change the default toll-free number of all users that have +18005551234 as their default toll-free number to +18005551239.
-
-### -------------------------- Example 4 --------------------------
-```
-Set-CsOnlineDialInConferencingUserDefaultNumber -Country US -ToNumber +18005551234 -NumberType TollFree -BridgeId <Bridge Id>
-```
-
-Example 3 shows how to set the default toll-free number of all users located in the U.S. to +18005551234.
 
 ## PARAMETERS
 
 ### -BridgeId
-Specifies the Audio Conferencing bridge that will be used to scope the search of the users that match the input criteria. When the cmdlet is run, the cmdlet will find all of the users that are assigned to the specified bridge that match the given criteria.
-
-PARAMVALUE: Guid
+The Bridge Id results from running [Get-CsOnlineDialInConferencingBridge](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
+For example "9884626f-dcfb-49f4-8025-912f5bc68fdc". You can either specify BridgeName or BridgeId.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -78,12 +73,11 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
-Specifies the Audio Conferencing bridge that will be used to scope the search of the users that match the input criteria. When the cmdlet is run, the cmdlet will find all of the users that are assigned to the specified bridge that match the given criteria.
-
-PARAMVALUE: String
+The Bridge Name results from running [Get-CsOnlineDialInConferencingBridge](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
+For example "Conference Bridge". You can either specify BridgeName or BridgeId.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -96,12 +90,10 @@ Accept wildcard characters: False
 ```
 
 ### -CountryOrRegion
-This parameter instructs the cmdlet to make the requested modifications to all the users that are assigned to the specified Audio Conferencing bridge and for which their Office 365 country or region matches the input provided in this parameter.
-
-PARAMVALUE: String
+A String representing the Country or Region this Dial In Conferencing Default number belongs to.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -114,12 +106,11 @@ Accept wildcard characters: False
 ```
 
 ### -FromNumber
-This parameter instructs the cmdlet to make the requested modifications to all the users that are assigned to the specified Audio Conferencing bridge and for which their original default phone number matches the phone number provided in this parameter.
-
-PARAMVALUE: String
+The current default number defined.
+$null if no number defined.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -132,12 +123,14 @@ Accept wildcard characters: False
 ```
 
 ### -NumberType
-This parameter specifies the type of phone numbers that are specified as part of the search criteria.
+The type of number this Dial In Conferencing Default number has.
+Valid values are
 
-PARAMVALUE: String
+- Toll
+- TollFree
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -150,12 +143,10 @@ Accept wildcard characters: False
 ```
 
 ### -ToNumber
-This parameter instructs the cmdlet to set the input provided in this parameter as the default number of all the users in the specified Audio Conferencing bridge that match the search criteria.
-
-PARAMVALUE: String
+The new number to assign, without the + sign, for example 14255550101.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -168,28 +159,10 @@ Accept wildcard characters: False
 ```
 
 ### -AreaOrState
-This parameter instructs the cmdlet to make the requested modifications to all the users that are assigned to the specified Audio Conferencing bridge and for which their Office 365 area or state matches the input provided in this parameter.
-
-PARAMVALUE: String
+A String representing the Area or State this Dial In Conferencing Default number belongs to.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -202,12 +175,10 @@ Accept wildcard characters: False
 ```
 
 ### -CapitalOrMajorCity
-This parameter instructs the cmdlet to make the requested modifications to all the users that are assigned to the specified Audio Conferencing bridge and for which their Office 365 capital or major city matches the input provided in this parameter.
-
-PARAMVALUE: String
+A String representing the Capital or Major City this Dial In Conferencing Default number belongs to.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -220,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-PARAMVALUE: SwitchParameter
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -236,10 +207,10 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -252,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -268,9 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -RescheduleMeetings
-This parameter instructs the cmdlet to trigger the meeting migration service for all users that will have their default numbers modified by the cmdlet. Please take into consideration the potential side effects of triggering the meeting migration service for users in your organization. For additional details see, [Setting up the Meeting Migration Service (MMS)](https://docs.microsoft.com/en-us/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms?redirectSourcePath=%252fen-us%252farticle%252fSetting-up-the-Meeting-Migration-Service-MMS-031f09c0-9d2a-487a-b6db-b5d4bed6d16a).
-
-PARAMVALUE: SwitchParameter
+Sends e-mail notifications to Meeting attendes with the updated settings.
 
 ```yaml
 Type: SwitchParameter
@@ -286,10 +255,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -302,10 +271,10 @@ Accept wildcard characters: False
 ```
 
 ### -TenantDomain
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -318,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -333,24 +302,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -359,3 +312,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

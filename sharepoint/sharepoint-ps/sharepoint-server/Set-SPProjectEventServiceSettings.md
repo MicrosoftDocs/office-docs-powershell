@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojecteventservicesettings
+applicable: Project Server 2016, Project Server 2019
 title: Set-SPProjectEventServiceSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectEventServiceSettings
@@ -24,7 +29,7 @@ Allows you to change the Microsoft Project Server Events Service 2016 TCP port s
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPProjectEventServiceSettings -NetTcpPort 16100
+Set-SPProjectEventServiceSettings -NetTcpPort 16100
 ```
 
 This example tells the service to listen on port 16100.
@@ -41,7 +46,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -57,7 +62,7 @@ TCP port to listen on.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -67,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

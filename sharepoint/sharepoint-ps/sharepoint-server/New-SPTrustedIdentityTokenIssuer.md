@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sptrustedidentitytokenissuer
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPTrustedIdentityTokenIssuer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPTrustedIdentityTokenIssuer
@@ -45,14 +50,14 @@ The specified claim type cannot be NTLM, Classic NTLM, Negotiate, or Classic Neg
 For ASP.NET Membership provider or Role providers, no objects are persisted.
 For security token service (STS) identity providers, this cmdlet creates and persists the identity provider object in the SPFarm object.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ----------------------- EXAMPLE---------------------------
 ```
-PS C:\>New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem "cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl http://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
+New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem "cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl https://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
 ```
 
 This example creates a new identity provider in the farm named LiveIDSTS.
@@ -69,7 +74,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPClaimMappingPipeBind[]
 Parameter Sets: BasicParameterSet, MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -87,7 +92,7 @@ The type must be a valid string; for example, LiveID STS.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -105,7 +110,7 @@ The type must be a valid claim type from the trusted STS; for example, http://sc
 Type: String
 Parameter Sets: BasicParameterSet, MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -123,7 +128,7 @@ The type must be a valid name of an identity provider; for example, LiveIDSTS.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -141,7 +146,7 @@ The type must be a name of a valid realm; for example, MD_REALM.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -153,13 +158,13 @@ Accept wildcard characters: False
 ### -SignInUrl
 Specifies the sign-in URLs for this trusted STS identity provider.
 
-The type must be a valid URL, in the form http://int.live.com/.
+The type must be a valid URL, in the form https://int.live.com/.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -181,7 +186,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -199,7 +204,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPClaimProviderPipeBind
 Parameter Sets: BasicParameterSet, MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -217,7 +222,7 @@ The type must be a name of a valid X.509 certificate; for example, Certificate1.
 Type: X509Certificate2
 Parameter Sets: BasicParameterSet, ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -233,7 +238,7 @@ Specifies the URI for the metadata endpoint of the trusted provider.
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -251,7 +256,7 @@ WReply is a URL at the relying party to which the requestor is redirected once s
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -267,7 +272,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -285,7 +290,7 @@ Only used if the UseDefaultConfiguration parameter is set to true, otherwise use
 Type: String
 Parameter Sets: ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -301,7 +306,7 @@ Specifies the Registered Issuer Name instead of not using the metadata endpoint.
 Type: String
 Parameter Sets: BasicParameterSet, ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -317,7 +322,7 @@ Specifies the sign out URI for the trusted provider. This lets SharePoint to sig
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SSharePoint Server 2013, SharePoint Server 2016
+Applicable: SSharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -335,7 +340,7 @@ If UseDefaultConfiguration parameter is used, then the IdentifierClaimIs paramet
 Type: SwitchParameter
 Parameter Sets: ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -352,7 +357,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -362,7 +367,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

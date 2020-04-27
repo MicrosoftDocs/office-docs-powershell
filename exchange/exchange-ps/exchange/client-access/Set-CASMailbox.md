@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/set-casmailbox
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-CASMailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-CASMailbox
@@ -13,59 +17,88 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-CASMailbox cmdlet to configure client access settings on a mailbox. For example, you can configure settings for Exchange ActiveSync, Outlook, Outlook on the web, POP3, and IMAP4.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-CASMailbox [-Identity] <MailboxIdParameter> [-ActiveSyncAllowedDeviceIDs <MultiValuedProperty>]
- [-ActiveSyncBlockedDeviceIDs <MultiValuedProperty>] [-ActiveSyncDebugLogging <$true | $false>]
- [-ActiveSyncEnabled <$true | $false>] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-ECPEnabled <$true | $false>]
- [-EmailAddresses <ProxyAddressCollection>] [-EmwsEnabled <$true | $false>]
- [-EwsAllowEntourage <$true | $false>] [-EwsAllowList <MultiValuedProperty>]
- [-EwsAllowMacOutlook <$true | $false>] [-EwsAllowOutlook <$true | $false>]
- [-EwsApplicationAccessPolicy <EnforceAllowList | EnforceBlockList>] [-EwsBlockList <MultiValuedProperty>]
- [-EwsEnabled <$true | $false>] [-HasActiveSyncDevicePartnership <$true | $false>] [-IgnoreDefaultScope]
- [-ImapEnabled <$true | $false>] [-ImapEnableExactRFC822Size <$true | $false>]
- [-ImapMessagesRetrievalMimeFormat <TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef>]
- [-ImapSuppressReadReceipt <$true | $false>] [-ImapUseProtocolDefaults <$true | $false>]
- [-MAPIBlockOutlookNonCachedMode <$true | $false>] [-MAPIBlockOutlookRpcHttp <$true | $false>]
- [-MAPIBlockOutlookVersions <String>] [-MAPIEnabled <$true | $false>] [-Name <String>]
- [-OWAEnabled <$true | $false>] [-OwaMailboxPolicy <MailboxPolicyIdParameter>] [-PopEnabled <$true | $false>]
- [-PopEnableExactRFC822Size <$true | $false>]
- [-PopMessagesRetrievalMimeFormat <TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef>]
- [-PopSuppressReadReceipt <$true | $false>] [-PopUseProtocolDefaults <$true | $false>]
- [-PrimarySmtpAddress <SmtpAddress>] [-SamAccountName <String>] [-ShowGalAsDefaultView <$true | $false>]
- [-WhatIf] [-ImapForceICalForCalendarRetrievalOption <$true | $false>]
- [-MAPIBlockOutlookExternalConnectivity <$true | $false>] [-MapiHttpEnabled <$true | $false>]
- [-OWAforDevicesEnabled <$true | $false>] [-PopForceICalForCalendarRetrievalOption <$true | $false>]
- [-ResetAutoBlockedDevices] [-ActiveSyncSuppressReadReceipt <$true | $false>]
- [-IsOptimizedForAccessibility <$true | $false>] [-UniversalOutlookEnabled <$true | $false>]
- [<CommonParameters>]
+Set-CASMailbox [-Identity] <MailboxIdParameter>
+ [-ActiveSyncAllowedDeviceIDs <MultiValuedProperty>]
+ [-ActiveSyncBlockedDeviceIDs <MultiValuedProperty>]
+ [-ActiveSyncDebugLogging <Boolean>]
+ [-ActiveSyncEnabled <Boolean>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ActiveSyncSuppressReadReceipt <Boolean>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-ECPEnabled <Boolean>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-EmwsEnabled <Boolean>]
+ [-EwsAllowEntourage <Boolean>]
+ [-EwsAllowList <MultiValuedProperty>]
+ [-EwsAllowMacOutlook <Boolean>]
+ [-EwsAllowOutlook <Boolean>]
+ [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
+ [-EwsBlockList <MultiValuedProperty>]
+ [-EwsEnabled <Boolean>]
+ [-HasActiveSyncDevicePartnership <Boolean>]
+ [-IgnoreDefaultScope]
+ [-ImapEnabled <Boolean>]
+ [-ImapEnableExactRFC822Size <Boolean>]
+ [-ImapMessagesRetrievalMimeFormat <MimeTextFormat>]
+ [-ImapForceICalForCalendarRetrievalOption <Boolean>]
+ [-ImapSuppressReadReceipt <Boolean>]
+ [-ImapUseProtocolDefaults <Boolean>]
+ [-IsOptimizedForAccessibility <Boolean>]
+ [-MAPIBlockOutlookExternalConnectivity <Boolean>]
+ [-MAPIBlockOutlookNonCachedMode <Boolean>]
+ [-MAPIBlockOutlookRpcHttp <Boolean>]
+ [-MAPIBlockOutlookVersions <String>]
+ [-MAPIEnabled <Boolean>]
+ [-MapiHttpEnabled <Boolean>]
+ [-Name <String>]
+ [-OutlookMobileEnabled <Boolean>]
+ [-OWAEnabled <Boolean>]
+ [-OWAforDevicesEnabled <Boolean>]
+ [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
+ [-PopEnabled <Boolean>]
+ [-PopEnableExactRFC822Size <Boolean>]
+ [-PopForceICalForCalendarRetrievalOption <Boolean>]
+ [-PopMessagesRetrievalMimeFormat <MimeTextFormat>]
+ [-PopSuppressReadReceipt <Boolean>]
+ [-PopUseProtocolDefaults <Boolean>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-PublicFolderClientAccess <Boolean>]
+ [-ResetAutoBlockedDevices]
+ [-SamAccountName <String>]
+ [-ShowGalAsDefaultView <Boolean>]
+ [-SmtpClientAuthenticationDisabled <Boolean>]
+ [-UniversalOutlookEnabled <Boolean>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-CASMailbox adam@contoso.com -OWAEnabled $false -PopEnabled $false
 ```
 
 This example disables Outlook on the web and POP3 access for the user adam@contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-CASMailbox adam@contoso.com -ActiveSyncDebugLogging $true -ActiveSyncMailboxPolicy Management
 ```
 
 This example enables Exchange ActiveSync debug logging and specifies the Exchange ActiveSync mailbox policy named Management for the user adam@contoso.com.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-CASMailbox tony@contoso.com -DisplayName "Tony Smith" -MAPIBlockOutlookRpcHttp $true
 ```
 
@@ -74,13 +107,9 @@ This example sets the display name and disables Outlook Anywhere access for the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to configure. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the mailbox that you want to configure. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -104,7 +133,8 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -115,7 +145,7 @@ Accept wildcard characters: False
 ### -ActiveSyncAllowedDeviceIDs
 TheActiveSyncAllowedDeviceIDs parameter specifies one or more Exchange ActiveSync device IDs that are allowed to synchronize with the mailbox. A device ID is a text string that uniquely identifies the device. Use the Get-MobileDevice cmdlet to see the devices that have Exchange ActiveSync partnerships with the mailbox.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -125,7 +155,8 @@ To clear the list of device IDs, use the value $null for this parameter.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +167,7 @@ Accept wildcard characters: False
 ### -ActiveSyncBlockedDeviceIDs
 The ActiveSyncBlockedDeviceIDs parameter specifies one or more Exchange ActiveSync device IDs that aren't allowed to synchronize with the mailbox. A device ID is a text string that uniquely identifies the device. Use the Get-MobileDevice cmdlet to see the devices that have Exchange ActiveSync partnerships with the mailbox.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -146,7 +177,8 @@ To clear the list of device IDs, use the value $null for this parameter.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -160,10 +192,11 @@ The ActiveSyncDebugLogging parameter enables or disables Exchange ActiveSync deb
 This parameter is primarily for troubleshooting and will revert to $false in 48 hours for Exchange Online, and in 72 hours for Exchange Server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -175,10 +208,11 @@ Accept wildcard characters: False
 The ActiveSyncEnabled parameter enables or disables Exchange ActiveSync for the mailbox. Valid input for this parameter is $true or $false. The default value is $true. When you set this parameter to $false, the other Exchange ActiveSync settings in this cmdlet are ignored.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -195,13 +229,35 @@ The ActiveSyncMailboxPolicy parameter specifies the Exchange ActiveSync mailbox 
 
 - GUID
 
-The name of the default Exchange ActiveSync mailbox policy is Default.
+The name of the default Exchange ActiveSync mailbox policy is Default. However, to reset this parameter back to the default value, use the value $null. The value $null also changes the value of the ActiveSyncMailboxPolicyIsDefaulted property to True. If you specify the value Default for the ActiveSyncMailboxPolicy parameter, the value of the ActiveSyncMailboxPolicyIsDefaulted property remains False.
 
 ```yaml
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ActiveSyncSuppressReadReceipt
+The ActiveSyncSuppressReadReceipt parameter controls the behavior of read receipts for Exchange ActiveSync clients that access the mailbox. Valid values are:
+
+- $true: Read receipts are not automatically returned when the user opens a message sent with a read receipt request.
+
+- $false: A read receipt is automatically returned when the user opens a message sent with a read receipt request. This is the default value.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,7 +276,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -237,7 +294,8 @@ The DisplayName parameter specifies the display name of the mailbox. The display
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -254,7 +312,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -268,10 +327,11 @@ This parameter is available only in on-premises Exchange.
 The ECPEnabled parameter enables or disables access to the Exchange admin center (EAC) for the specified user. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -282,7 +342,7 @@ Accept wildcard characters: False
 ### -EmailAddresses
 This parameter is available only in on-premises Exchange.
 
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx).
+The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
 
@@ -302,7 +362,7 @@ To specify the primary SMTP email address, you can use any of the following meth
 
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
 
-- If it's available, use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
+- Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
@@ -312,7 +372,8 @@ To add or remove specify proxy addresses without affecting other existing values
 Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -326,10 +387,11 @@ This parameter is available or functional only in Exchange Server 2010.
 The EmwsEnabled parameter specifies whether the Exchange Management Web Service is enabled on this Client Access server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -343,10 +405,11 @@ The EwsAllowEntourage parameter enables or disables access to the mailbox by Mic
 Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -357,7 +420,7 @@ Accept wildcard characters: False
 ### -EwsAllowList
 The EwsAllowList parameter specifies the Exchange Web Services applications (user agent strings) that are allowed to access the mailbox.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -367,7 +430,8 @@ This parameter is meaningful only when the EwsEnabled parameter is set to $true,
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -381,10 +445,11 @@ The EwsAllowMacOutlook parameter enables or disables access to the mailbox by Ou
 Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -396,10 +461,11 @@ Accept wildcard characters: False
 The EwsAllowOutlook parameter enables or disables access to the mailbox by Outlook clients that use Exchange Web Services. Outlook uses Exchange Web Services for free/busy, out-of-office settings, and calendar sharing.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -419,10 +485,11 @@ Valid values for this parameter are:
 This parameter doesn't affect access to the mailbox by using Entourage, Outlook for Mac, and Outlook. Access to the mailbox by using these clients is controlled by the EwsAllowEntourage, EwsAllowMacOutlook and EwsAllowOutlook parameters.
 
 ```yaml
-Type: EnforceAllowList | EnforceBlockList
+Type: EwsApplicationAccessPolicy
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -433,7 +500,7 @@ Accept wildcard characters: False
 ### -EwsBlockList
 The EwsBlockList parameter specifies the Exchange Web Services applications (user agent strings) that aren't allowed to access the mailbox by using Exchange Web Services.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -443,7 +510,8 @@ This parameter is meaningful only when the EwsEnabled parameter is set to $true,
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -457,10 +525,11 @@ The EwsEnabled parameter enables or disables access to the mailbox by using Exch
 Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other Exchange Web Services settings in this cmdlet are ignored.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -474,10 +543,11 @@ This parameter is available or functional only in Exchange Server 2010.
 The HasActiveSyncDevicePartnership parameter specifies whether the mailbox has an ActiveSync device partnership established.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -500,7 +570,8 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -514,10 +585,11 @@ The ImapEnabled parameter enables or disables access to the mailbox by using IMA
 Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other IMAP4 settings in this cmdlet are ignored.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -541,10 +613,37 @@ The default value is $false.
 We don't recommend changing this value unless you determine that the default setting causes problems for IMAP4 clients. To change the value of this parameter, you also need to set the value of the ImapUseProtocolDefaults parameter to $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ImapForceICalForCalendarRetrievalOption
+The ImapForceICalForCalendarRetrievalOption parameter specifies how meeting requests are presented to IMAP4 clients that access the mailbox.
+
+Valid values for this parameter are:
+
+- $true: All meeting requests are in the iCal format.
+
+- $false: All meeting requests appear as Outlook on the web links.
+
+The default value is $false.
+
+To change the value of this parameter, you also need to set the value of the ImapUseProtocolDefaults parameter to $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -574,10 +673,11 @@ The default value is BestBodyFormat.
 To change the value of this parameter, you also need to set the value of the ImapUseProtocolDefaults parameter to $false.
 
 ```yaml
-Type: TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef
+Type: MimeTextFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -599,10 +699,11 @@ The default value is $false.
 To change the value of this parameter, you also need to set the value of the ImapUseProtocolDefaults parameter to $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -624,10 +725,33 @@ You need to set the ImapUseProtocolDefaults parameter to $false when you use any
 - ImapSuppressReadReceipt
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsOptimizedForAccessibility
+This parameter is available only in on-premises Exchange.
+
+The IsOptimizedForAccessibility parameter specifies whether the mailbox is configured to use the light version of Outlook on the web. Valid values are:
+
+- $true: The mailbox is configured to use the light version of Outlook on the web.
+
+- $false: The mailbox isn't configured to use the light version of Outlook on the web.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -649,10 +773,35 @@ Valid values for this parameter are:
 The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MAPIBlockOutlookExternalConnectivity
+This parameter is available only in on-premises Exchange.
+
+The MAPIBlockOutlookExternalConnectivity parameter enables or disables external access to the mailbox in Outlook by removing the external URLs from the Autodiscover response. This setting affects Outlook Anywhere, MAPI over HTTP, and Exchange Web Services (EWS). Valid values are:
+
+- $true: External Outlook clients can't use Outlook Anywhere, MAPI over HTTP, or EWS to access the mailbox.
+
+- $false: External Outlook clients can use Outlook Anywhere, MAPI over HTTP, or EWS to access the mailbox.
+
+Note: If your organization uses the same Autodiscover URL values for internal and external clients, setting this parameter to $true won't block access for external clients.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -670,10 +819,11 @@ The MAPIBlockOutlookRpcHttp parameter enables or disables access to the mailbox 
 - $false: Access to the mailbox by using Outlook Anywhere is enabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -694,7 +844,8 @@ The default value is blank. To reset this parameter, use the value $null.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -708,10 +859,35 @@ The MAPIEnabled parameter enables or disables access to the mailbox by using MAP
 Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other MAPI settings in this cmdlet are ignored.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MapiHttpEnabled
+This parameter is available only in on-premises Exchange.
+
+The MapiHttpEnabled parameter enables or disables access to the mailbox in Outlook by using MAPI over HTTP. Valid values are:
+
+- $true: Access to the mailbox by using MAPI over HTTP is enabled.
+
+- $false: Access to the mailbox by using MAPI over HTTP is disabled.
+
+- $null (blank): The setting isn't configured. The mailbox uses the organization setting for MAPI over HTTP (the MapiHttpEnabled parameter on the Set-OrganizationConfig cmdlet). This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -728,7 +904,30 @@ The Name parameter specifies the unique name of the mailbox. The maximum length 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookMobileEnabled
+This parameter is available only in the cloud-based service.
+
+The OutlookMobileEnabled parameter enables or disables access to the mailbox by using Outlook for iOS and Android. Valid values are:
+
+- $true: Access to the mailbox using Outlook for iOS and Android is enabled. This is the default value.
+
+- $false: Access to the mailbox using Outlook for iOS and Android is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -742,10 +941,29 @@ The OWAEnabled parameter enables or disables access to the mailbox by using Outl
 Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other Outlook on the web settings in this cmdlet are ignored.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OWAforDevicesEnabled
+The OWAforDevicesEnabled parameter enables or disables access to the mailbox by using Outlook on the web for devices.
+
+Valid input for this parameter is $true or $false. The default value is $true.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -768,7 +986,8 @@ The name of the default Outlook on the web mailbox policy is Default.
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -782,10 +1001,11 @@ The PopEnabled parameter enables or disables access to the mailbox by using POP3
 Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other POP3 settings in this cmdlet are ignored.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -809,10 +1029,37 @@ The default value is $false.
 We don't recommend changing this value unless you determine that the default setting causes problems for POP3 clients. To change the value of this parameter, you also need to set the value of the PopUseProtocolDefaults parameter to $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PopForceICalForCalendarRetrievalOption
+The PopForceICalForCalendarRetrievalOption parameter specifies how meeting requests are presented to POP3 clients that access the mailbox.
+
+Valid values for this parameter are:
+
+- $true: All meeting requests are in the iCal format.
+
+- $false: All meeting requests appear as Outlook on the web links.
+
+The default value is $false.
+
+To change the value of this parameter, you also need to set the value of the PopUseProtocolDefaults parameter to $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -842,10 +1089,11 @@ The default value is BestBodyFormat.
 To change the value of this parameter, you also need to set the value of the PopUseProtocolDefaults parameter to $false.
 
 ```yaml
-Type: TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef
+Type: MimeTextFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -867,10 +1115,11 @@ The default value is $false.
 To change the value of this parameter, you also need to set the value of the PopUseProtocolDefaults parameter to $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -892,10 +1141,11 @@ Valid input for this parameter is $true or $false. The default value is $true. Y
 - PopSuppressReadReceipt
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -906,13 +1156,52 @@ Accept wildcard characters: False
 ### -PrimarySmtpAddress
 This parameter is available only in on-premises Exchange.
 
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
 ```yaml
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolderClientAccess
+The PublicFolderClientAccess parameter enables or disables access to public folders in Microsoft Outlook. Valid values are:
+
+- $true: The user can access public folders in Outlook if the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is set to the value $true (the default value is $false).
+
+- $false: The user can't access public folders in Outlook. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: $false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResetAutoBlockedDevices
+This parameter is available only in on-premises Exchange.
+
+The ResetAutoBlockedDevices switch resets the status of blocked mobile devices that have exceeded the limits defined by the Set-ActiveSyncDeviceAutoblockThreshold cmdlet. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -929,7 +1218,8 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -941,10 +1231,69 @@ Accept wildcard characters: False
 The ShowGalAsDefaultView parameter shows the global address list (GAL) as the default recipient picker for messages. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmtpClientAuthenticationDisabled
+This parameter is available only in the cloud-based service.
+
+The SmtpClientAuthenticationDisabled parameter specifies whether to disable authenticated SMTP (SMTP AUTH) for the mailbox. Examples of clients and services that require authenticated SMTP to send email messages include:
+
+- POP3 and IMAP4 clients.
+
+- Devices with scan to email capability.
+
+- Workflow applications that send email notifications.
+
+- Online services that send messages using internal email addresses in the organization.
+
+Valid values for this parameter are:
+
+- $true: Authenticated SMTP is disabled for the mailbox.
+
+- $false: Authenticated SMTP is enabled for the mailbox.
+
+- blank ($null): This is the default value. The authenticated SMTP setting for the mailbox is controlled by the corresponding SmtpClientAuthenticationDisabled parameter on the Set-TransportConfig cmdlet for the whole organization. By default, authenticated SMTP is enabled for the organization ($false), which means authenticated SMTP is also enabled for the mailbox.
+
+To selectively enable authenticated SMTP for specific mailboxes only: disable authenticated SMTP at the organizational level ($true), enable it for the specific mailboxes ($false), and leave the rest of the mailboxes with their default value ($null).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UniversalOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+The UniversalOutlookEnabled parameter enables or disables access to the mailbox by using Windows 10 Mail and Calendar. Valid values are:
+
+- $true: Access to the mailbox using Windows 10 Mail and Calendar is enabled. This is the default value.
+
+- $false: Access to the mailbox using Windows 10 Mail and Calendar is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -959,196 +1308,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -ImapForceICalForCalendarRetrievalOption
-The ImapForceICalForCalendarRetrievalOption parameter specifies how meeting requests are presented to IMAP4 clients that access the mailbox.
-
-Valid values for this parameter are:
-
-- $true: All meeting requests are in the iCal format.
-
-- $false: All meeting requests appear as Outlook on the web links.
-
-The default value is $false.
-
-To change the value of this parameter, you also need to set the value of the ImapUseProtocolDefaults parameter to $false.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MAPIBlockOutlookExternalConnectivity
-This parameter is available only in on-premises Exchange.
-
-The MAPIBlockOutlookExternalConnectivity parameter enables or disables external access to the mailbox in Outlook by removing the external URLs from the Autodiscover response. This setting affects Outlook Anywhere, MAPI over HTTP, and Exchange Web Services (EWS). Valid values are:
-
-- $true: External Outlook clients can't use Outlook Anywhere, MAPI over HTTP, or EWS to access the mailbox.
-
-- $false: External Outlook clients can use Outlook Anywhere, MAPI over HTTP, or EWS to access the mailbox.
-
-Note: If your organization uses the same Autodiscover URL values for internal and external clients, setting this parameter to $true won't block access for external clients.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MapiHttpEnabled
-This parameter is available only in on-premises Exchange.
-
-The MapiHttpEnabled parameter enables or disables access to the mailbox in Outlook by using MAPI over HTTP. Valid values are:
-
-- $true: Access to the mailbox by using MAPI over HTTP is enabled.
-
-- $false: Access to the mailbox by using MAPI over HTTP is disabled.
-
-- $null (blank): The setting isn't configured. The mailbox uses the organization setting for MAPI over HTTP (the MapiHttpEnabled parameter on the Set-OrganizationConfig cmdlet). This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OWAforDevicesEnabled
-The OWAforDevicesEnabled parameter enables or disables access to the mailbox by using Outlook on the web for devices.
-
-Valid input for this parameter is $true or $false. The default value is $true.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopForceICalForCalendarRetrievalOption
-The PopForceICalForCalendarRetrievalOption parameter specifies how meeting requests are presented to POP3 clients that access the mailbox.
-
-Valid values for this parameter are:
-
-- $true: All meeting requests are in the iCal format.
-
-- $false: All meeting requests appear as Outlook on the web links.
-
-The default value is $false.
-
-To change the value of this parameter, you also need to set the value of the PopUseProtocolDefaults parameter to $false.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResetAutoBlockedDevices
-This parameter is available only in on-premises Exchange.
-
-The ResetAutoBlockedDevices switch resets the status of blocked mobile devices that have exceeded the limits defined by the Set-ActiveSyncDeviceAutoblockThreshold cmdlet. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActiveSyncSuppressReadReceipt
-The ActiveSyncSuppressReadReceipt parameter controls the behavior of read receipts for Exchange ActiveSync clients that access the mailbox. Valid values are:
-
-- $true: The user receives a read receipt when the recipient opens the message.
-
-- $false: The user receives two read receipts: one when the message is downloaded and another when the message is opened. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsOptimizedForAccessibility
-The IsOptimizedForAccessibility parameter specifies whether the mailbox is configured to use the light version of Outlook on the web. Valid values are:
-
-- $true: The mailbox is configured to use the light version of Outlook on the web.
-
-- $false: The mailbox isn't configured to use the light version of Outlook on the web.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UniversalOutlookEnabled
-This parameter is available only in the cloud-based service.
-
-The UniversalOutlookEnabled parameter enables or disables access to the mailbox by using Mail and Calendar. Valid values are:
-
-- $true: Access to the mailbox in Mail and Calendar is enabled. This is the default value.
-
-- $false: Access to the mailbox in Mail and Calendar is disabled.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1157,20 +1318,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/ff7d4dc5-755e-4005-a0a3-631eed3f9b3b.aspx)

@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spweb
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWeb
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPWeb
@@ -38,35 +43,35 @@ The Filter parameter is a script block that uses the same syntax as a Where-Obje
 It is important to note that every site collection returned by the Get-SPWeb cmdlet is automatically disposed of at the end of the pipeline.
 To store the results of Get-SPWeb in a local variable, the Start-SPAssignment and Stop-SPAssignment cmdlets must be used to avoid memory leaks.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------- 
 ```
-C:\PS>Get-SPWeb -site http://sitename/sites/site1
+Get-SPWeb -site https://sitename/sites/site1
 ```
 
 This example returns all the subwebs in a given site collection.
 
 ### --------------------EXAMPLE 2---------------------- 
 ```
-C:\PS>Get-SPWeb -Site http://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
+Get-SPWeb -Site https://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
 ```
 
 This example displays all subsites that use the "STS#0" template.
 
 ### --------------------EXAMPLE 3---------------------- 
 ```
-C:\PS>Start-SPAssignment -Global
+Start-SPAssignment -Global
 
-C:\PS>$w = Get-SPWeb http://sitename
+C:\PS>$w = Get-SPWeb https://sitename
 
-C:\PS>$w.set_SiteLogoUrl("http://PathToImage/test.jpg")
+C:\PS>$w.set_SiteLogoUrl("https://PathToImage/test.jpg")
 
 C:\PS>$w.Update()
 
-C:\PS>Stop-SPAssignment -Global
+Stop-SPAssignment -Global
 ```
 
 This example demonstrates how to save a subsite as a variable and to call object model methods on the SPAssignment object.
@@ -77,13 +82,13 @@ This example demonstrates how to save a subsite as a variable and to call object
 Specifies the name or full or partial URL of the subsite.
 If you use a relative path, you must specify the Site parameter.
 
-A valid URL in the form http://server_name or a relative path in the form of /SubSites/MySubSite.
+A valid URL in the form https://server_name or a relative path in the form of /SubSites/MySubSite.
 
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -105,7 +110,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -122,7 +127,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -140,7 +145,7 @@ The type must be a valid filter in the form {filterName \<operator\> "filterValu
 Type: ScriptBlock
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +165,7 @@ The type must be a valid number greater than 0 or ALL.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -176,7 +181,7 @@ Specifies the URL that is provided by the Identity parameter is treated as a reg
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -188,13 +193,13 @@ Accept wildcard characters: False
 ### -Site
 Specifies the URL or GUID of the site collection from which to list subsites.
 
-The type must be a valid URL, in the form  of http://server_name; a GUID, in the form 1234-5678-9807, or an SPSite object.
+The type must be a valid URL, in the form  of https://server_name; a GUID, in the form 1234-5678-9807, or an SPSite object.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -211,7 +216,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -221,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

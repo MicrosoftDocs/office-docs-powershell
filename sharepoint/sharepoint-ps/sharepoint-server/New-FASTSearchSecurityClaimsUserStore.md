@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsecurityclaimsuserstore
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchSecurityClaimsUserStore
 ---
 
@@ -20,13 +25,13 @@ New-FASTSearchSecurityClaimsUserStore [-Identity] <String> [[-Description] <Stri
 ## DESCRIPTION
 This cmdlet configures extended security for claims content.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchSecurityClaimsUserStore -Identity clm
+New-FASTSearchSecurityClaimsUserStore -Identity clm
 ```
 
 This example creates a new security claims user store with a user store Identity of "clm".
@@ -35,7 +40,7 @@ This example uses default values for all parameters except the required Identity
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchSecurityClaimsUserStore -Identity clm | New-FASTSearchSecurityClaimsUserStore -Identity cl2
+Get-FASTSearchSecurityClaimsUserStore -Identity clm | New-FASTSearchSecurityClaimsUserStore -Identity cl2
 ```
 
 This example creates a new security claims user store with an identity of "cl2" using all properties from the claims user store "clm" as a baseline.
@@ -108,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

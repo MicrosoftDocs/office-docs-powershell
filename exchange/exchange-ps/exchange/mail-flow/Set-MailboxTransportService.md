@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-mailboxtransportservice
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-MailboxTransportService
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-MailboxTransportService
@@ -11,47 +15,68 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-MailboxTransportService cmdlet to view the transport configuration information for the Mailbox Transport service on Mailbox servers.
+Use the Set-MailboxTransportService cmdlet to modify the configuration of the Mailbox Transport service on Exchange 2013 or later Mailbox servers.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-MailboxTransportService [-Identity] <MailboxTransportServerIdParameter> [-Confirm]
- [-ConnectivityLogEnabled <$true | $false>] [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
- [-ConnectivityLogMaxDirectorySize <Unlimited>] [-ConnectivityLogMaxFileSize <Unlimited>]
- [-ConnectivityLogPath <LocalLongFullPath>] [-ContentConversionTracingEnabled <$true | $false>]
- [-DomainController <Fqdn>] [-MailboxDeliveryAgentLogEnabled <$true | $false>]
- [-MailboxDeliveryAgentLogMaxAge <EnhancedTimeSpan>] [-MailboxDeliveryAgentLogMaxDirectorySize <Unlimited>]
- [-MailboxDeliveryAgentLogMaxFileSize <Unlimited>] [-MailboxDeliveryAgentLogPath <LocalLongFullPath>]
- [-MailboxDeliveryConnectorProtocolLoggingLevel <None | Verbose>]
- [-MailboxDeliveryThrottlingLogEnabled <$true | $false>]
+Set-MailboxTransportService [-Identity] <MailboxTransportServerIdParameter>
+ [-Confirm]
+ [-ConnectivityLogEnabled <Boolean>]
+ [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
+ [-ConnectivityLogMaxDirectorySize <Unlimited>]
+ [-ConnectivityLogMaxFileSize <Unlimited>]
+ [-ConnectivityLogPath <LocalLongFullPath>]
+ [-ContentConversionTracingEnabled <Boolean>]
+ [-DomainController <Fqdn>]
+ [-MailboxDeliveryAgentLogEnabled <Boolean>]
+ [-MailboxDeliveryAgentLogMaxAge <EnhancedTimeSpan>]
+ [-MailboxDeliveryAgentLogMaxDirectorySize <Unlimited>]
+ [-MailboxDeliveryAgentLogMaxFileSize <Unlimited>]
+ [-MailboxDeliveryAgentLogPath <LocalLongFullPath>]
+ [-MailboxDeliveryConnectorMaxInboundConnection <Unlimited>]
+ [-MailboxDeliveryConnectorProtocolLoggingLevel <ProtocolLoggingLevel>]
+ [-MailboxDeliveryConnectorSMTPUtf8Enabled <Boolean>]
+ [-MailboxDeliveryThrottlingLogEnabled <Boolean>]
  [-MailboxDeliveryThrottlingLogMaxAge <EnhancedTimeSpan>]
  [-MailboxDeliveryThrottlingLogMaxDirectorySize <Unlimited>]
- [-MailboxDeliveryThrottlingLogMaxFileSize <Unlimited>] [-MailboxDeliveryThrottlingLogPath <LocalLongFullPath>]
- [-MailboxSubmissionAgentLogEnabled <$true | $false>] [-MailboxSubmissionAgentLogMaxAge <EnhancedTimeSpan>]
- [-MailboxSubmissionAgentLogMaxDirectorySize <Unlimited>] [-MailboxSubmissionAgentLogMaxFileSize <Unlimited>]
- [-MailboxSubmissionAgentLogPath <LocalLongFullPath>] [-MaxConcurrentMailboxDeliveries <Int32>]
- [-MaxConcurrentMailboxSubmissions <Int32>] [-PipelineTracingEnabled <$true | $false>]
- [-PipelineTracingPath <LocalLongFullPath>] [-PipelineTracingSenderAddress <SmtpAddress>]
- [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>] [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
- [-ReceiveProtocolLogMaxFileSize <Unlimited>] [-ReceiveProtocolLogPath <LocalLongFullPath>]
- [-SendProtocolLogMaxAge <EnhancedTimeSpan>] [-SendProtocolLogMaxDirectorySize <Unlimited>]
- [-SendProtocolLogMaxFileSize <Unlimited>] [-SendProtocolLogPath <LocalLongFullPath>] [-WhatIf]
- [-MailboxDeliveryConnectorMaxInboundConnection <Unlimited>] [-RoutingTableLogMaxAge <EnhancedTimeSpan>]
- [-RoutingTableLogMaxDirectorySize <Unlimited>] [-RoutingTableLogPath <LocalLongFullPath>] [<CommonParameters>]
+ [-MailboxDeliveryThrottlingLogMaxFileSize <Unlimited>]
+ [-MailboxDeliveryThrottlingLogPath <LocalLongFullPath>]
+ [-MailboxSubmissionAgentLogEnabled <Boolean>]
+ [-MailboxSubmissionAgentLogMaxAge <EnhancedTimeSpan>]
+ [-MailboxSubmissionAgentLogMaxDirectorySize <Unlimited>]
+ [-MailboxSubmissionAgentLogMaxFileSize <Unlimited>]
+ [-MailboxSubmissionAgentLogPath <LocalLongFullPath>]
+ [-MaxConcurrentMailboxDeliveries <Int32>]
+ [-MaxConcurrentMailboxSubmissions <Int32>]
+ [-PipelineTracingEnabled <Boolean>]
+ [-PipelineTracingPath <LocalLongFullPath>]
+ [-PipelineTracingSenderAddress <SmtpAddress>]
+ [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
+ [-ReceiveProtocolLogMaxFileSize <Unlimited>]
+ [-ReceiveProtocolLogPath <LocalLongFullPath>]
+ [-RoutingTableLogMaxAge <EnhancedTimeSpan>]
+ [-RoutingTableLogMaxDirectorySize <Unlimited>]
+ [-RoutingTableLogPath <LocalLongFullPath>]
+ [-SendProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-SendProtocolLogMaxDirectorySize <Unlimited>]
+ [-SendProtocolLogMaxFileSize <Unlimited>]
+ [-SendProtocolLogPath <LocalLongFullPath>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Mailbox Transport service runs on all Mailbox servers and is responsible for delivering messages to and accepting messages from local mailbox databases using a remote procedure call (RPC). The Mailbox Transport service also uses SMTP to send messages to and from the Transport service that runs on all Mailbox servers for routing messages to their ultimate destinations.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MailboxTransportService Mailbox01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```
 
@@ -66,7 +91,8 @@ The Identity parameter specifies the server that you want to modify.
 Type: MailboxTransportServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -85,7 +111,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -97,10 +124,11 @@ Accept wildcard characters: False
 The ConnectivityLogEnabled parameter specifies whether the connectivity log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -119,7 +147,8 @@ For example, to specify 25 days for this parameter, use 25.00:00:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -150,7 +179,8 @@ The value of the ConnectivityLogMaxFileSize parameter must be less than or equal
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -181,7 +211,8 @@ The value of the ConnectivityLogMaxFileSize parameter must be less than or equal
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -196,7 +227,8 @@ The ConnectivityLogPath parameter specifies the default connectivity log directo
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -214,10 +246,11 @@ The ContentConversionTracingEnabled parameter specifies whether content conversi
 - System: Full Control
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -232,7 +265,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -244,10 +278,11 @@ Accept wildcard characters: False
 The MailboxDeliveryAgentLogEnabled parameter specifies whether the agent log for the Mailbox Transport Delivery service is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -266,7 +301,8 @@ Setting the value of the MailboxDeliveryAgentLogMaxAge parameter to 00:00:00 pre
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -297,7 +333,8 @@ The value of the MailboxDeliveryAgentLogMaxFileSize parameter must be less than 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -328,7 +365,8 @@ The value of the MailboxDeliveryAgentLogMaxFileSize parameter must be less than 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -343,7 +381,24 @@ The MailboxDeliveryAgentLogPath parameter specifies the default agent log direct
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxDeliveryConnectorMaxInboundConnection
+The MailboxDeliveryConnectorMaxInboundConnection parameter specifies the maximum number of inbound connections for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. The default value is 5000. If you enter the value unlimited, no connection limit is imposed on the mailbox delivery Receive connector.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -359,10 +414,31 @@ The MailboxDeliveryConnectorProtocolLoggingLevel parameter enables or disables S
 - Verbose: Protocol logging is enabled for the mailbox delivery Receive connector. The location of the log files is controlled by the ReceiveProtocolLogPath parameter.
 
 ```yaml
-Type: None | Verbose
+Type: ProtocolLoggingLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxDeliveryConnectorSmtpUtf8Enabled
+The MailboxDeliveryConnectorSmtpUtf8Enabled parameters or disables email address internationalization (EAI) support for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Valid values are:
+
+- $true: Mail can be delivered to local mailboxes that have international characters in email addresses. This is the default value
+
+- $false: Mail can't be delivered to local mailboxes that have international characters in email addresses.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -374,10 +450,11 @@ Accept wildcard characters: False
 The MailboxDeliveryThrottlingLogEnabled parameter specifies whether the mailbox delivery throttling log is enabled. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -396,7 +473,8 @@ Setting the value of the MailboxDeliveryThrottlingLogMaxAge parameter to 00:00:0
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -427,7 +505,8 @@ The value of the MailboxDeliveryThrottlingLogMaxFileSize parameter must be less 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -458,7 +537,8 @@ The value of the MailboxDeliveryThrottlingLogMaxFileSize parameter must be less 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -473,7 +553,8 @@ The MailboxDeliveryThrottlingLogPath parameter specifies the default mailbox del
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -485,10 +566,11 @@ Accept wildcard characters: False
 The MailboxSubmissionAgentLogEnabled parameter specifies whether the agent log is enabled for the Mailbox Transport Submission service. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -507,7 +589,8 @@ Setting the value of the MailboxSubmissionAgentLogMaxAge parameter to 00:00:00 p
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -538,7 +621,8 @@ The value of the MailboxSubmissionAgentLogMaxFileSize parameter must be less tha
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -569,7 +653,8 @@ The value of the MailboxSubmissionAgentLogMaxFileSize parameter must be less tha
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -584,7 +669,8 @@ The MailboxSubmissionAgentLogPath parameter specifies the default agent log dire
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -599,7 +685,8 @@ The MaxConcurrentMailboxDeliveries parameter specifies the maximum number of del
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -614,7 +701,8 @@ The MaxConcurrentMailboxSubmissions parameter specifies the maximum number of su
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -626,10 +714,11 @@ Accept wildcard characters: False
 The PipelineTracingEnabled parameter specifies whether to enable pipeline tracing. Pipeline tracing captures message snapshot files that record the changes made to the message by each transport agent configured in the transport service on the server. Pipeline tracing creates verbose log files that accumulate quickly. Pipeline tracing should only be enabled for a short time to provide in-depth diagnostic information that enables you to troubleshoot problems. In addition to troubleshooting, you can use pipeline tracing to validate changes that you make to the configuration of the transport service where you enable pipeline tracing. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -650,7 +739,8 @@ The PipelineTracingPath parameter specifies the location of the pipeline tracing
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -665,7 +755,8 @@ The PipelineTracingSenderAddress parameter specifies the sender email address th
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -688,7 +779,8 @@ This parameter is only meaningful when the MailboxDeliveryConnectorProtocolLoggi
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -723,7 +815,8 @@ This parameter is only meaningful when the MailboxDeliveryConnectorProtocolLoggi
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -758,7 +851,8 @@ This parameter is only meaningful when the MailboxDeliveryConnectorProtocolLoggi
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -775,7 +869,76 @@ Don't use the value $null for this parameter, because event log errors are gener
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoutingTableLogMaxAge
+The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting this parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoutingTableLogMaxDirectorySize
+The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoutingTableLogPath
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\Routing. Setting this parameter to $null disables routing table logging.
+
+```yaml
+Type: LocalLongFullPath
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -796,7 +959,8 @@ This parameter is only meaningful when the IntraOrgConnectorProtocolLoggingLevel
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -831,7 +995,8 @@ This parameter is only meaningful when the IntraOrgConnectorProtocolLoggingLevel
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -866,7 +1031,8 @@ This parameter is only meaningful when the IntraOrgConnectorProtocolLoggingLevel
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -887,7 +1053,8 @@ Don't use the value $null for this parameter, because event log errors are gener
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -902,87 +1069,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -MailboxDeliveryConnectorMaxInboundConnection
-The MailboxDeliveryConnectorMaxInboundConnection parameter specifies the maximum number of inbound connections for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. The default value is 5000. If you enter the value unlimited, no connection limit is imposed on the mailbox delivery Receive connector.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogMaxAge
-The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting this parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogMaxDirectorySize
-The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\Routing. Setting this parameter to $null disables routing table logging.
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -991,20 +1079,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/72ed234d-cd25-4070-a5b2-ae5f056cc6a0.aspx)

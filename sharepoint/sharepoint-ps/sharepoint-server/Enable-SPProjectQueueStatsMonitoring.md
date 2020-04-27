@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spprojectqueuestatsmonitoring
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectQueueStatsMonitoring
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPProjectQueueStatsMonitoring
@@ -23,7 +28,7 @@ Enables monitoring Project Server queue statistics.
 
 ### Example 1 
 ```
-PS C:\>Enable-SPProjectQueueStatsMonitoring
+Enable-SPProjectQueueStatsMonitoring
 ```
 
 Enables monitoring Project Server queue statistics.
@@ -39,7 +44,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -49,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

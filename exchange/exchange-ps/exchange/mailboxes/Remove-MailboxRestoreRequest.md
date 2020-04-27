@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-mailboxrestorerequest
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MailboxRestoreRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Remove-MailboxRestoreRequest
@@ -13,20 +17,24 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-MailboxRestoreRequest cmdlet to remove fully or partially completed restore requests.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Remove-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-Force] [<CommonParameters>]
+Remove-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-Force]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### MigrationRequestQueue
 ```
-Remove-MailboxRestoreRequest -RequestGuid <Guid> -RequestQueue <DatabaseIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-MailboxRestoreRequest -RequestGuid <Guid> -RequestQueue <DatabaseIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,26 +42,26 @@ The parameter set that requires the Identity parameter allows you to remove a fu
 
 The parameter set that requires the RequestGuid and RequestQueue parameters is used for Microsoft Exchange Mailbox Replication service (MRS) debugging purposes only.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1"
 ```
 
 This example removes the second restore request Ayla\\MailboxRestore1.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
 ```
 
 This example removes all restore requests that have the status of Completed.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
 
@@ -68,9 +76,10 @@ If you didn't specify a name for the restore request when it was created, Exchan
 
 ```yaml
 Type: MailboxRestoreRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -83,13 +92,14 @@ This parameter is available only in on-premises Exchange.
 
 The RequestGuid parameter specifies the unique identifier for the restore request. To find the GUID, use the Get-MailboxRestoreRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter.
 
-This parameter can't be used in conjunction with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid
-Parameter Sets: Set2
+Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -100,19 +110,22 @@ Accept wildcard characters: False
 ### -RequestQueue
 This parameter is available only in on-premises Exchange.
 
-The RequestQueue parameter specifies the target mailbox database on which the mailbox or archive of the request resides. You can use one of the following values:
+The RequestQueue parameter specifies the target mailbox database on which the mailbox or archive of the request resides. You can use any value that uniquely identifies the database. For example:
 
-- GUID of the database
+- Name
 
-- Database name
+- Distinguished name (DN)
 
-If you specify the RequestQueue parameter, you must also specify the RequestGuid parameter. This parameter can't be used in conjunction with the Identity parameter.
+- GUID
+
+You must use this parameter with the RequestGuid parameter. You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -131,7 +144,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +162,24 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -163,22 +194,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -187,20 +204,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/a3d3327e-99b0-4d44-bd81-3e8f59eab41d.aspx)

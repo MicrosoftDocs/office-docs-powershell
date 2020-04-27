@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnplist
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPList
 ---
+
 # Set-PnPList
 
 ## SYNOPSIS
@@ -14,6 +17,7 @@ Updates list settings
 Set-PnPList -Identity <ListPipeBind>
             [-EnableContentTypes <Boolean>]
             [-BreakRoleInheritance [<SwitchParameter>]]
+            [-ResetRoleInheritance [<SwitchParameter>]]
             [-CopyRoleAssignments [<SwitchParameter>]]
             [-ClearSubscopes [<SwitchParameter>]]
             [-Title <String>]
@@ -235,7 +239,7 @@ Accept pipeline input: False
 ```
 
 ### -ListExperience
-Set the list experience: Auto, NewExperience or ClassExperience
+Set the list experience: Auto, NewExperience or ClassicExperience
 
 Only applicable to: SharePoint Online
 
@@ -265,6 +269,18 @@ Maximum minor versions to keep
 
 ```yaml
 Type: UInt32
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -ResetRoleInheritance
+If used the security inheritance is reset for this list (inherited from parent)
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
@@ -310,4 +326,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

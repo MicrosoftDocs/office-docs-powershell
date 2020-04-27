@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/test-systemhealth
 applicable: Exchange Server 2010
 title: Test-SystemHealth
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -13,7 +17,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Test-SystemHealth cmdlet to gather data about your Microsoft Exchange system and to analyze the data according to best practices.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,19 +31,19 @@ Test-SystemHealth [-ADCredentials <PSCredential>] [-Analyze] [-Collect] [-Config
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-SystemHealth
 ```
 
 This example gathers data about your Exchange system.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $temp=Test-SystemHealth -OutData; Set-Content -Value $temp.FileData -Path d:\temp\SystemHealthOutData.xml -Encoding Byte
 ```
 
@@ -48,15 +52,16 @@ This example saves the output data as a byte stream to the temporary variable $t
 ## PARAMETERS
 
 ### -ADCredentials
-The ADCredentials parameter specifies the credentials used to access Active Directory. The default value is the current user's credentials.
+The ADCredentials parameter specifies the username and password that's used to access Active Directory. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkid=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +77,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +93,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +109,7 @@ Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -117,6 +125,7 @@ Type: LongPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -136,6 +145,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +161,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -166,6 +177,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +193,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -189,15 +202,16 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeCredentials
-The ExchangeCredentials parameter identifies the credentials to apply for accessing servers running Exchange.
+The ExchangeCredentials parameter specifies the username and password that's used to access Exchange servers. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkid=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -213,6 +227,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -228,6 +243,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -243,6 +259,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -258,6 +275,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -273,6 +291,7 @@ Type: LongPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -288,6 +307,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -303,6 +323,7 @@ Type: LongPath
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -318,6 +339,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -333,6 +355,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -348,6 +371,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -363,6 +387,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -378,6 +403,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -386,20 +412,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/65ceedf4-796d-4dda-a126-c7cd4d509f67.aspx)

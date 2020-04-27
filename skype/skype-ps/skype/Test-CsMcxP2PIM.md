@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://docs.microsoft.com/powershell/module/skype/test-csmcxp2pim
+applicable: Lync Server 2013, Skype for Business Server 2015
 title: Test-CsMcxP2PIM
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Test-CsMcxP2PIM
@@ -60,7 +65,7 @@ Allowed values are: TrustedServer; Negotiate; ClientCertificate; and LiveID.
 Type: AuthenticationMechanism
 Parameter Sets: (All)
 Aliases: Ath
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -82,7 +87,7 @@ You need to supply the user password when running this command.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: rc
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -103,7 +108,7 @@ The ReceiverSipAddress parameter must reference the same user account as the Rec
 Type: String
 Parameter Sets: (All)
 Aliases: ra
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -125,7 +130,7 @@ You need to supply the user password when running this command.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: sc
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -146,7 +151,7 @@ The SenderSipAddress parameter must reference the same user account as the Sende
 Type: String
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -162,7 +167,7 @@ Fully qualified domain name (FQDN) of the pool to be tested.
 Type: String
 Parameter Sets: (All)
 Aliases: t
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: 2
@@ -178,7 +183,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -209,7 +214,7 @@ To save the information stored in the logger variable to an XML file, use a comm
 Type: String
 Parameter Sets: (All)
 Aliases: olv
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -230,7 +235,7 @@ Do not use prepend a $ character when specifying the variable name.
 Type: String
 Parameter Sets: (All)
 Aliases: ovv
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -247,7 +252,7 @@ This parameter is not required if the Registrar uses the default port 5061.
 Type: Int32
 Parameter Sets: (All)
 Aliases: rp
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -257,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

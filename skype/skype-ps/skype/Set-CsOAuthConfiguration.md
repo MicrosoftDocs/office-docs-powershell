@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csoauthconfiguration
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsOAuthConfiguration
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsOAuthConfiguration
@@ -15,26 +20,19 @@ This cmdlet was introduced in Lync Server 2013.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-Confirm] [-ExchangeAutodiscoverAllowedDomains <String>]
- [-ExchangeAutodiscoverUrl <String>] [-Force] [-Realm <String>] [-ServiceName <String>] [-Tenant <Guid>]
- [-WhatIf] [-ClientAuthorizationOAuthServerIdentity <String>] [<CommonParameters>]
+Set-CsOAuthConfiguration [-Tenant <Guid>] [-Realm <String>] [-ServiceName <String>]
+ [-ClientAuthorizationOAuthServerIdentity <String>] [-ExchangeAutodiscoverAllowedDomains <String>]
+ [-ExchangeAutodiscoverUrl <String>] [-ClientAdalAuthOverride <ClientAdalAuthOverride>]
+ [-AlternateAudienceUrl <String>] [-AdditionalAudienceUrls <String>] [[-Identity] <XdsIdentity>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsOAuthConfiguration [-Confirm] [-Force] [-Instance <PSObject>] [-Tenant <Guid>] [-WhatIf]
+Set-CsOAuthConfiguration [-Tenant <Guid>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsOAuthConfiguration [[-Identity] <Object>] [-AdditionalAudienceUrls <Object>]
- [-AlternateAudienceUrl <Object>] [-BypassDualWrite <Object>] [-ClientAdalAuthOverride <Object>]
- [-ClientAuthorizationOAuthServerIdentity <Object>] [-Confirm] [-ExchangeAutodiscoverAllowedDomains <Object>]
- [-ExchangeAutodiscoverUrl <Object>] [-Force] [-Instance <Object>] [-Realm <Object>] [-ServiceName <Object>]
- [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,7 +82,7 @@ Accept wildcard characters: False
 Collection of domains that autodiscover requests can be redirected to.
 For example:
 
-`-ExchangeAutodiscoverAllowedDomains "*.contoso.com","*.fabrikam.com"`
+`-ExchangeAutodiscoverAllowedDomains "*.contoso.com;*.fabrikam.com"`
 
 
 ```yaml
@@ -155,22 +153,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-
 
 ```yaml
 Type: PSObject
@@ -185,23 +169,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -Realm
 Server-to-server security container.
 By default, Skype for Business Server uses your default SIP domain as its OAuth realm.
-
 
 ```yaml
 Type: String
@@ -275,10 +245,10 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalAudienceUrls
-{{Fill AdditionalAudienceUrls Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -291,26 +261,10 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateAudienceUrl
-{{Fill AlternateAudienceUrl Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -323,10 +277,18 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAdalAuthOverride
-{{Fill ClientAdalAuthOverride Description}}
+Enable or disable ADAL (Modern Authentication) for Skype for Business Online in your tenant. Valid values are
+
+NoOverride, use global OAuth configuration
+
+Allowed, Enables OAuth for the tenant
+
+Disallowed, Disables OAuth for the tenant
+
+For more information, see [Hybrid Modern Authentication overview and prerequisites for using it with on-premises Skype for Business and Exchange servers](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
 
 ```yaml
-Type: Object
+Type: ClientAdalAuthOverride
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NoOverride, Allowed, Disallowed
@@ -344,7 +306,7 @@ URI of the OAuth server used for client authentication.
 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: Identity, (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -356,24 +318,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

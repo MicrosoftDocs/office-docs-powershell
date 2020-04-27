@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/grant-pnptenantserviceprincipalpermission
 applicable: SharePoint Online
 schema: 2.0.0
+title: Grant-PnPTenantServicePrincipalPermission
 ---
+
 # Grant-PnPTenantServicePrincipalPermission
 
 ## SYNOPSIS
-Explicitely grants a specified permission to the "SharePoint Online Client" service principal
+Explicitly grants a specified permission to the "SharePoint Online Client" service principal
 
 ## SYNTAX 
 
@@ -23,7 +26,7 @@ Grant-PnPTenantServicePrincipalPermission -Scope <String>
 Grant-PnPTenantServicePrincipalPermission -Scope "Group.Read.All" -Resource "Microsoft Graph"
 ```
 
-This will explicitely grant the Group.Read.All permission on the Microsoft Graph resource
+This will explicitly grant the Group.Read.All permission on the Microsoft Graph resource
 
 ## PARAMETERS
 
@@ -69,4 +72,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

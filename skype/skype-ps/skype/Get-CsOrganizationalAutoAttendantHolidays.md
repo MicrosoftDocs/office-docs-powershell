@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csorganizationalautoattendantholidays
 applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendantHolidays
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsOrganizationalAutoAttendantHolidays
@@ -37,7 +42,7 @@ In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-CsOrganizationalAutoAttendantHolidays -PrimaryUri "sip:mainoaa@contoso.com" –Years @(2017) -Name @("Christmas")
+Get-CsOrganizationalAutoAttendantHolidays -PrimaryUri "sip:mainoaa@contoso.com" -Years @(2017) -Name @("Christmas")
 ```
 
 In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to get holiday named Christmas in the year 2017 in an auto attendant with Primary URI of sip:mainoaa@contoso.com.
@@ -116,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

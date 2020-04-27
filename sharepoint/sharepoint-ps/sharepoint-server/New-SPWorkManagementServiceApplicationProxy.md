@@ -1,14 +1,19 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spworkmanagementserviceapplicationproxy
 applicable: SharePoint Server 2013
 title: New-SPWorkManagementServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPWorkManagementServiceApplicationProxy
 
 ## SYNOPSIS
-Creates a new service application proxy group.
+Creates a new Work Management Service application proxy.
 
 
 ## SYNTAX
@@ -22,16 +27,16 @@ New-SPWorkManagementServiceApplicationProxy -Name <String> [-AssignmentCollectio
 ## DESCRIPTION
 Use the `New-SPWorkManagementServiceApplicationProxy` cmdlet to create a new Work Management Service application proxy object.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-Note: This functionality has been removed from SharePoint Server 2016, but the cmdlet is still present in the product.
+Note: This functionality has been removed from SharePoint Server 2016, SharePoint Server 2019, but the cmdlet is still present in the product.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>$sa = New-SPWorkManagementServiceApplication -Name 'Work Management Service Application' -ApplicationPool 'SharePoint Web Services Default'
-PS C:\>New-SPWorkManagementServiceApplicationProxy -name 'Work Management Service Application Proxy' -ServiceApplication $sa
+$sa = New-SPWorkManagementServiceApplication -Name 'Work Management Service Application' -ApplicationPool 'SharePoint Web Services Default'
+New-SPWorkManagementServiceApplicationProxy -name 'Work Management Service Application Proxy' -ServiceApplication $sa
 ```
 
 This example creates a new SPWorkManagementServiceApplicationProxy called Work Management Service Application Proxy mapped to the "Work Management Service Application" Service Application.
@@ -175,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

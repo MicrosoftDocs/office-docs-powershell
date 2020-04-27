@@ -1,14 +1,19 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: microsoft.office.access.server.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spaccessservicesdatabaseserver
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAccessServicesDatabaseServer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAccessServicesDatabaseServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets parameters associated with a database server hosting Access Services databases.
 
 
 ## SYNTAX
@@ -77,29 +82,36 @@ Set-SPAccessServicesDatabaseServer [-ServiceContext] <SPServiceContextPipeBind>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Sets parameters associated with a database server hosting Access Services databases allowing you to control database creation, credentials, and failover database servers.
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+$site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
+$dbsvr = (Get-SPAccessServicesDatabaseServer -ServiceContext $site -DatabaseServerGroup DEFAULT)[0]
+Set-SPAccessServicesDatabaseServer -ServiceContext $site -DatabaseServerGroup DEFAULT -DatabaseServer $dbsvr -Exclusive $true -AvailableForCreate $false
 ```
-
-{{ Add example description here }}
+Sets the first database in the database server group named DEFAULT to exclusive mode and disallowing creation of new Access Services database on the selected database server.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal.
+Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -109,13 +121,13 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableForCreate
-{{Fill AvailableForCreate Description}}
+Indicates whether new Access Services databases can be created on the specified SQL Server.
 
 ```yaml
 Type: Boolean
 Parameter Sets: SetAvailableForCreateParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -131,7 +143,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -141,13 +153,13 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
-{{Fill DatabaseServer Description}}
+Specifies the SQL Server hosting Access Services databases.
 
 ```yaml
 Type: AccessServicesDatabaseServerPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -157,13 +169,13 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerCredentials
-{{Fill DatabaseServerCredentials Description}}
+Specifies the Credential object for the database user. Use this parameter if you use SQL Server Authentication. If no database credentials are provided, Windows authentication is used.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: SetCredentialsParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -173,13 +185,13 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerGroup
-{{Fill DatabaseServerGroup Description}}
+The name of the Access Services database server group containing the SQL Server object to set.
 
 ```yaml
 Type: AccessServicesDatabaseServerGroupPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -189,13 +201,13 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerName
-{{Fill DatabaseServerName Description}}
+Specifies the database server hosting Access Services databases.
 
 ```yaml
 Type: String
 Parameter Sets: SetCredentialsParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -205,13 +217,13 @@ Accept wildcard characters: False
 ```
 
 ### -Encrypt
-{{Fill Encrypt Description}}
+Encrypts the database server connection.
 
 ```yaml
 Type: Boolean
 Parameter Sets: SetEncryptParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -221,13 +233,13 @@ Accept wildcard characters: False
 ```
 
 ### -Exclusive
-{{Fill Exclusive Description}}
+Sets the database server to exclusive mode. No further Access Services databases are allowed to be created on the database server.
 
 ```yaml
 Type: Boolean
 Parameter Sets: SetAvailableForCreateParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -237,13 +249,13 @@ Accept wildcard characters: False
 ```
 
 ### -Failover
-{{Fill Failover Description}}
+Enables or disables failover for the Access Services database server.
 
 ```yaml
 Type: Boolean
 Parameter Sets: SetFailoverParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -253,13 +265,13 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryDatabaseServerName
-{{Fill SecondaryDatabaseServerName Description}}
+Specifies the failover database server name.
 
 ```yaml
 Type: String
 Parameter Sets: SetSecondaryDatabaseServerNameParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -269,13 +281,13 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
-{{Fill ServiceContext Description}}
+Specifies the service context which is in the form of an instance of an SPServiceContext object, an SPSiteAdministration object identifier, or a SPSite object. An example of a service context value is an identifier from the ID field, a string identifier, a URI, or a string representation of a GUID.
 
 ```yaml
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 0
@@ -285,13 +297,13 @@ Accept wildcard characters: False
 ```
 
 ### -TrustServerCertificate
-{{Fill TrustServerCertificate Description}}
+Sets a value that indicates whether the channel will be encrypted while bypassing walking the certificate chain to validate trust.
 
 ```yaml
 Type: Boolean
 Parameter Sets: SetEncryptParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -301,13 +313,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserDomain
-{{Fill UserDomain Description}}
+Sets the user domain for the specified database server.
 
 ```yaml
 Type: String
 Parameter Sets: SetUserDomainParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -324,7 +336,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -334,14 +346,22 @@ Accept wildcard characters: False
 ```
 
 ### -State
-{{Fill State Description}}
+Sets the database server state.
+Valid values:
+
+
+- Active
+
+- Locked
+
+- Reserved
 
 ```yaml
 Type: DatabaseServerStates
 Parameter Sets: SetServerStateParameterSet
 Aliases: 
 Accepted values: Active, Locked, Reserved
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -351,14 +371,20 @@ Accept wildcard characters: False
 ```
 
 ### -StateOwner
-{{Fill StateOwner Description}}
+Sets the state owner.
+
+Valid values:
+
+- NoOwner
+
+- TenantMove
 
 ```yaml
 Type: ServerStateOwner
 Parameter Sets: SetServerStateParameterSet
 Aliases: 
 Accepted values: NoOwner, TenantMove
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -368,7 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

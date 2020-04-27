@@ -4,6 +4,9 @@ Module Name: officewebapps
 title: New-OfficeWebAppsExcelUserDefinedFunction
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-OfficeWebAppsExcelUserDefinedFunction
@@ -30,7 +33,7 @@ New-OfficeWebAppsExcelUserDefinedFunction -Assembly c:\myudf.dll -AssemblyLocati
 
 ### ------------------EXAMPLE 2---------------------
 ```
-New-OfficeWebAppsExcelUserDefinedFunction -Assembly "CompanyName.Hierarchichal.MyUdfNamespace.MyUdfClassName.dll, Version=1.1.0.0, Culture=en, PublicKeyToken=e8123117d7ba9ae38" -AssemblyLocation GAC -Enable:$true -Description "My GAC Server UDFs"
+New-OfficeWebAppsExcelUserDefinedFunction -Assembly "CompanyName.Hierarchical.MyUdfNamespace.MyUdfClassName.dll, Version=1.1.0.0, Culture=en, PublicKeyToken=e8123117d7ba9ae38" -AssemblyLocation GAC -Enable:$true -Description "My GAC Server UDFs"
 ```
 
 ## PARAMETERS

@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchmetadatacrawledproperty
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchMetadataCrawledProperty
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchMetadataCrawledProperty
@@ -25,17 +30,17 @@ This cmdlet is used when the search functionality is configured for the first ti
 SPEnterpriseSearchMetadataCrawledProperty represents a crawled property in the enterprise search metadata property schema.
 Or, crawled properties are automatically created during regular crawls (see SPEnterpriseSearchMetadataCategory).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
-PS C:\>$crawlprop = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
-PS C:\>New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name "MyCrawlProp" -PropSet $crawlprop.PropSet -Category $crawlprop.CategoryName -IsNameEnum $false -VariantType $crawlprop.VariantType -IsMappedToContents $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
+$crawlprop = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
+New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name "MyCrawlProp" -PropSet $crawlprop.PropSet -Category $crawlprop.CategoryName -IsNameEnum $false -VariantType $crawlprop.VariantType -IsMappedToContents $false
 ```
 
 This example maps the new crawled property MyCrawlProp to the People metadata category for the default search service application.
@@ -58,7 +63,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -77,7 +82,7 @@ The type must be a valid GUID in the form 12345678-90ab-cdef-1234-567890bcdefgh,
 Type: CategoryPipeBind
 Parameter Sets: (All)
 Aliases: c
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -95,7 +100,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -113,7 +118,7 @@ Specify true to map a crawled property to a managed property.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: im
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +136,7 @@ Specified by true or false.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: ie
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -150,7 +155,7 @@ The type must be a valid crawled property name, for example "urn:schemas-microso
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -169,7 +174,7 @@ A valid GUID that specifies the property set, in the form 12345678-90ab-cdef-123
 Type: Guid
 Parameter Sets: (All)
 Aliases: p
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -188,7 +193,7 @@ The type must be a valid search application name, for example, SearchApp1, or an
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -207,7 +212,7 @@ The type must be a valid GUID that specifies the property set in the form 123456
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -226,7 +231,7 @@ The type must be a valid GUID that specifies the property set in the form 123456
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -237,16 +242,18 @@ Accept wildcard characters: False
 
 ### -VariantType
 Adds the crawled property as the specified variant type.
-For more information about valid values for this property, see VARIANT Type Constants (http://go.microsoft.com/fwlink/p/?LinkId=143322&clcid=0x409) (http://go.microsoft.com/fwlink/p/?LinkId=143322&clcid=0x409).
+For more information about valid values for this property, see VARIANT Type Constants (https://go.microsoft.com/fwlink/p/?LinkId=143322&clcid=0x409) (https://go.microsoft.com/fwlink/p/?LinkId=143322&clcid=0x409).
 
 The type must be an integer that specifies the variant data type of the property set.
 
+> [!NOTE] 
+> This parameter is required although the value is not used in SharePoint Server 2013 through SharePoint Server 2019. You will see an Obsolete warning when running the cmdlet. You may ignore this message.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: vt
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -264,7 +271,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -274,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

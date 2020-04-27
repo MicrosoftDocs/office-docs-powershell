@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-fastsearchmetadatamanagedproperty
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchMetadataManagedProperty
 ---
 
@@ -27,19 +32,19 @@ The managed property can be one of the following data types:
 -- Decimal: Integer with up to 27 decimals (number of decimals is set through the DecimalPlaces parameter of the managed property; see Set-FASTSearchMetadataManagedProperty).
 -- Datetime: Date range in ISO8601 format. Valid date range is -29000-01-01T00:00:00,000 to 29000-12-31T23:59:59,999. Managed properties which have the type datetime always have sorting enabled.
 
-See http://go.microsoft.com/fwlink/?LinkId=163234 (http://go.microsoft.com/fwlink/?LinkId=163234) for more detailed information about the valid value ranges for each of these data types, and how illegal values are handled.
+See https://go.microsoft.com/fwlink/?LinkId=163234 (https://go.microsoft.com/fwlink/?LinkId=163234) for more detailed information about the valid value ranges for each of these data types, and how illegal values are handled.
 
-For IEEE-754, see http://ieeexplore.ieee.org/servlet/opac?punumber=2355 (http://ieeexplore.ieee.org/servlet/opac?punumber=2355).
+For IEEE-754, see https://ieeexplore.ieee.org/servlet/opac?punumber=2355 (https://ieeexplore.ieee.org/servlet/opac?punumber=2355).
 
 For details about the options that can be set on a managed property, see Set-FASTSearchMetadataManagedProperty.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchMetadataManagedProperty -name integervalue -type 2 -description "A managed property for integer values"
+New-FASTSearchMetadataManagedProperty -name integervalue -type 2 -description "A managed property for integer values"
 ```
 
 This example creates a managed property called "integervalue" of type 2 (integer).
@@ -124,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

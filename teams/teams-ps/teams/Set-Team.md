@@ -1,31 +1,38 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
-title: Set-Team
-online version: 
+online version: https://docs.microsoft.com/powershell/module/teams/set-team
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-Team
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
-
-Updates a team.
+This cmdlet allows you to update properties of a team, including its displayname, description, and team-specific settings.
 
 ## SYNTAX
 
 ```
-Set-Team -GroupId <String> [-DisplayName <String>] [-Description <String>] [-Alias <String>]
- [-Classification <String>] [-Visibility <String>]
+Set-Team -GroupId <String> [-DisplayName <String>] [-Description <String>] [-MailNickName <String>]
+ [-Classification <String>] [-Visibility <String>] [-AllowGiphy <Boolean>] [-GiphyContentRating <String>]
+ [-AllowStickersAndMemes <Boolean>] [-AllowCustomMemes <Boolean>] [-AllowGuestCreateUpdateChannels <Boolean>]
+ [-AllowGuestDeleteChannels <Boolean>] [-AllowCreateUpdateChannels <Boolean>] [-AllowDeleteChannels <Boolean>]
+ [-AllowAddRemoveApps <Boolean>] [-AllowCreateUpdateRemoveTabs <Boolean>]
+ [-AllowCreateUpdateRemoveConnectors <Boolean>] [-AllowUserEditMessages <Boolean>]
+ [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>] [-AllowTeamMentions <Boolean>]
+ [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
+This cmdlet allows you to update properties of a team, including its displayname, description, and team-specific settings.  This cmdlet includes all settings that used to be set using the Set-TeamFunSettings, Set-TeamGuestSettings, etc. cmdlets
+
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+### Example 1
 ```
 Set-Team -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -DisplayName "Updated TeamName" -Visibility Public
 ```
@@ -39,7 +46,6 @@ GroupId of the team
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -56,7 +62,6 @@ Team Name Characters Limit - 256.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -73,7 +78,6 @@ Team Description Characters Limit - 1024.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -82,15 +86,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Alias
-Same as displayName without any spaces.
-Team Alias Characters Limit - 64
+### -MailNickName
+The MailNickName parameter specifies the alias for the associated Office 365 Group.
+This value will be used for the mail enabled object and will be used as PrimarySmtpAddress for this Office 365 Group.
+The value of the MailNickName parameter has to be unique across your tenant.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -100,13 +104,12 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-Team classification.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -123,7 +126,6 @@ Valid values are "Private" and "Public"
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -131,6 +133,266 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AllowAddRemoveApps
+Boolean value that determines whether or not members (not only owners) are allowed to add apps to the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowChannelMentions
+Boolean value that determines whether or not channels in the team can be @ mentioned so that all users who follow the channel are notified.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCreateUpdateChannels
+Setting that determines whether or not members (and not just owners) are allowed to create channels.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCreateUpdateRemoveConnectors
+Setting that determines whether or not members (and not only owners) can manage connectors in the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCreateUpdateRemoveTabs
+Setting that determines whether or not members (and not only owners) can manage tabs in channels.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCustomMemes
+Setting that determines whether or not members can use the custom memes functionality in teams.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowDeleteChannels
+Setting that determines whether or not members (and not only owners) can delete channels in the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGiphy
+Setting that determines whether or not giphy can be used in the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGuestCreateUpdateChannels
+Setting that determines whether or not guests can create channels in the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGuestDeleteChannels
+Setting that determines whether or not guests can delete in the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowOwnerDeleteMessages
+Setting that determines whether or not owners can delete messages that they or other members of the team have posted.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowStickersAndMemes
+Setting that determines whether stickers and memes usage is allowed in the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTeamMentions
+Setting that determines whether the entire team can be @ mentioned (which means that all users will be notified)
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUserDeleteMessages
+Setting that determines whether or not members can delete messages that they have posted.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUserEditMessages
+Setting that determines whether or not users can edit messages that they have posted.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GiphyContentRating
+Setting that determines the level of sensitivity of giphy usage that is allowed in the team.  Accepted values are "Strict" or "Moderate"
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowInTeamsSearchAndSuggestions
+Setting that determines whether or not private teams should be searchable from Teams clients for users who do not belong to that team.  Set to $false to make those teams not discoverable from Teams clients.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -140,6 +402,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-Team](Get-Team.md)
+[Get-Team]()
 
-[New-Team](New-Team.md)
+[New-Team]()
+

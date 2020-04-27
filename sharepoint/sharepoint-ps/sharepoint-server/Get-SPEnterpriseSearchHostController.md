@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchhostcontroller
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchHostController
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchHostController
@@ -22,21 +27,21 @@ This cmdlet lists the specified or all SearchHostControllers in the farm.
 The SearchHostController is related to the SearchServiceInstance, where the SearchHostController manages the search components that run on a server, and maintains a local repository for linguistic dictionaries.
 The search components retrieve the linguistic dictionaries from the PrimaryHostController.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-C:\PS>Get-SPEnterpriseSearchHostController
+Get-SPEnterpriseSearchHostController
 ```
 
 This example retrieves a list of all HostControllers in the farm with their status (primary/secondary) and repository version.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>$ssi = Get-SPEnterpriseSearchServiceInstance -Local
-PS C:\>Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
+$ssi = Get-SPEnterpriseSearchServiceInstance -Local
+Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
 ```
 
 This example retrieves the status information for the SearchHostController on the local server.
@@ -52,7 +57,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -68,7 +73,7 @@ The Search Service instance of the server from where the SearchHostController ob
 Type: SearchServiceInstancePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -78,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

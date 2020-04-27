@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spexceluserdefinedfunction
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Remove-SPExcelUserDefinedFunction
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPExcelUserDefinedFunction
@@ -25,14 +30,14 @@ User-defined functions are managed code assemblies that can be called from an Ex
 The assemblies can perform custom logic or other actions, such as refresh data.
 The Windows PowerShell cmdlets operate on the entries in the user-defined function list, but do not operate on the assemblies.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-C:\PS>Get-SPExcelServiceApplication | Remove-SPExcelUserDefinedFunction -Identity "SampleCompany.SampleApplication.SampleUdf"
+Get-SPExcelServiceApplication | Remove-SPExcelUserDefinedFunction -Identity "SampleCompany.SampleApplication.SampleUdf"
 ```
 
 This example removes the SampleCompany.SampleApplication.SampleUdf user-defined function from the list of user-defined functions for every Excel Services Application Web service application in the farm.
@@ -133,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

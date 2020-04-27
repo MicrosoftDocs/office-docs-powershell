@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csorganizationalautoattendant
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendant
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # New-CsOrganizationalAutoAttendant
@@ -13,7 +18,12 @@ Use the New-CsOrganizationalAutoAttendant cmdlet to create a new Auto Attendant 
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> -CallFlows <Object> -Schedules <Object> -CallHandlingAssociations <Object> [-LineUris <Uri>] [-Operator <Object>] [-Domain <String>] [-VoiceId <String>] [-EnableVoiceResponse] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-ApplicationId <Guid>] [-CallbackUri <Uri>] [-ClientAudience <Object>] [-Ring <String>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsOrganizationalAutoAttendant -Name <String> [-Domain <String>] [-LineUris <>] -LanguageId <String>
+ [-VoiceId <String>] -DefaultCallFlow <CallFlow> [-Operator <CallableEntity>] [-EnableVoiceResponse]
+ [-ApplicationId <Guid>] [-CallbackUri <Uri>] [-Ring <String>] [-ClientAudience <Uri>]
+ -TimeZoneId <String> [-CallFlows <List>] [-Schedules <List>] [-CallHandlingAssociations <List>]
+ [-InclusionScope <DialScope>] [-ExclusionScope <DialScope>] [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +37,7 @@ You can create new OAAs by using the New-CsOrganizationalAutoAttendant cmdlet; e
 - PrimaryUri of OAAs is a SIP URI.
 - The default call flow has the lowest precedence, and any custom call flow has a higher precedence and is executed if the schedule associated with it is in effect.
 - Holiday call flows have higher priority than after-hours call flows. Thus, if a holiday schedule and an after-hours schedule are both in effect at a particular time, the call flow corresponding to the holiday call flow will be rendered.
-- The default call flow can be used either as the 24/7 call flow if no other call flows are specified, or as the business hours call flow if an “after hours” call flow was specified together with the corresponding schedule and call handling association.
+- The default call flow can be used either as the 24/7 call flow if no other call flows are specified, or as the business hours call flow if an "after hours" call flow was specified together with the corresponding schedule and call handling association.
 - If a user is present in both inclusion and exclusion scopes, then exclusion scope always takes priority, i.e., the user will not be able to be contacted through directory lookup feature.
 
 ## EXAMPLES
@@ -56,7 +66,7 @@ $afterHoursSchedule = New-CsOnlineSchedule -Name "After Hours Schedule" -WeeklyR
 
 $afterHoursCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $afterHoursSchedule.Id -CallFlowId $afterHoursCallFlow.Id
 
-$inclusionScopeGroupIds = @(“4c3053a6-20bf-43df-bf7a-156124168856”)
+$inclusionScopeGroupIds = @("4c3053a6-20bf-43df-bf7a-156124168856")
 $inclusionScope = New-CsOrganizationalAutoAttendantDialScope -GroupScope -GroupIds $inclusionScopeGroupIds
 
 $o=New-CsOrganizationalAutoAttendant -Name "Main auto attendant" -LineUris @($lineUri) -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule) -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
@@ -125,7 +135,7 @@ This example creates a new OAA named _Main auto attendant_ that has the followin
 The Name parameter is a friendly name that is assigned to the OAA.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -142,9 +152,8 @@ The LanguageId parameter is the language that is used to read text-to-speech (TT
 
 You can query the supported languages using the Get-CsOrganizationalAutoAttendantSupportedLanguage cmdlet.
 
-
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -162,7 +171,7 @@ The TimeZoneId parameter represents the OAA time zone. All schedules are evaluat
 You can query the supported timezones using the Get-CsOrganizationalAutoAttendantSupportedTimeZone cmdlet.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -179,9 +188,8 @@ The DefaultCallFlow parameter is the flow to be executed when no other call flow
 
 You can create the DefaultCallFlow by using the New-CsOrganizationalAutoAttendantCallFlow cmdlet. 
 
-
 ```yaml
-Type: Object
+Type: CallFlow
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -194,13 +202,12 @@ Accept wildcard characters: False
 ```
 
 ### -CallFlows
-The CallFlows parameter represents call flows, which are required if they are referenced in the CallHandlingAssociations parameter. 
+The CallFlows parameter represents call flows, which are required if they are referenced in the Associations parameter. 
 
 You can create CallFlows by using the New-CsOrganizationalAutoAttendantCallFlow cmdlet. 
 
-
 ```yaml
-Type: System.Collections.Generic.List
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -217,9 +224,8 @@ The Schedules parameter reflects schedules that are associated with the OAA. Sch
 
 You can create schedules by using the New-CsOnlineSchedule cmdlet. 
 
-
 ```yaml
-Type: System.Collections.Generic.List
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -238,7 +244,7 @@ The OAA service uses call handling associations to determine which call flow to 
 You can create CallHandlingAssociations by using the New-CsOrganizationalAutoAttendantCallHandlingAssociation cmdlet.
 
 ```yaml
-Type: System.Collections.Generic.List
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -258,9 +264,8 @@ For example: `-LineUris [System.Uri]"tel:+4255551219"`.
 
 Note: Only PSTN numbers that are acquired through or migrated to Skype for Business Online are supported. 
 
-
 ```yaml
-Type: System.Collections.Generic.List
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -277,9 +282,8 @@ The Operator parameter represents the SIP address or PSTN number of the operator
 
 You can create callable entities by using the New-CsOrganizationalAutoAttendantCallableEntity cmdlet. 
 
-
 ```yaml
-Type: Object
+Type: CallableEntity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -297,7 +301,7 @@ The domain name is validated against the list of domains that are configured by 
 If not provided, then a domain is randomly chosen for primary URI. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -320,7 +324,7 @@ $defaultVoice = $language.Voices[0].Gender
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -354,9 +358,8 @@ If not specified, all users in the organization can be reached through directory
 
 Dial scopes can be created by using the New-CsOrganizationalAutoAttendantDialScope cmdlet. 
 
-
 ```yaml
-Type: Object
+Type: DialScope
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -376,7 +379,7 @@ Dial scopes can be created by using the New-CsOrganizationalAutoAttendantDialSco
 
 
 ```yaml
-Type: Object
+Type: DialScope
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -392,7 +395,7 @@ Accept wildcard characters: False
 Specifies a custom application ID to use for OAAs. This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -408,7 +411,7 @@ Accept wildcard characters: False
 Specifies a custom Callback URI for OAAs. This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Uri
+Type: Uri
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -424,7 +427,7 @@ Accept wildcard characters: False
 Specifies a custom client audience for OAAs. This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Uri
+Type: Uri
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -440,7 +443,7 @@ Accept wildcard characters: False
 Specifies a custom ring for OAAs. This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -455,7 +458,7 @@ Accept wildcard characters: False
 ### -Tenant
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -468,7 +471,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

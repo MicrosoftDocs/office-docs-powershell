@@ -1,35 +1,50 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-compliancetag
 applicable: Office 365 Security & Compliance Center
 title: New-ComplianceTag
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
 # New-ComplianceTag
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the New-ComplianceTag cmdlet to create labels in the Security & Compliance Center. Labels apply retention settings to content.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-ComplianceTag [-Name] <String> [-Comment <String>] [-Confirm] [-EventType <ComplianceRuleIdParameter>]
- [-IsRecordLabel <$true | $false>] [-RetentionAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionType <String>] [-ReviewerEmail <SmtpAddress[]>] [-WhatIf] [<CommonParameters>]
+New-ComplianceTag [-Name] <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-EventType <ComplianceRuleIdParameter>]
+ [-FilePlanProperty <String>]
+ [-Force]
+ [-IsRecordLabel <Boolean>]
+ [-Notes <String>]
+ [-Regulatory <Boolean>]
+ [-RetentionAction <String>]
+ [-RetentionDuration <Unlimited>]
+ [-RetentionType <String>]
+ [-ReviewerEmail <SmtpAddress[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ComplianceTag -Name "HR Content" -RetentionAction Keep -RetentionDuration 1825 -RetentionType ModificationAgeInDays
 ```
 
@@ -51,6 +66,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -66,6 +82,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +102,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +126,71 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePlanProperty
+The FilePlanProperty parameter specifies the file plan properties to include in the label. To view the file plan property names that you need to use in this parameter, run the following commands:
+
+- Get-FilePlanPropertyAuthority | Format-List Name
+
+- Get-FilePlanPropertyCategory | Format-List Name
+
+- Get-FilePlanPropertyCitation | Format-List Name
+
+- Get-FilePlanPropertyDepartment | Format-List Name
+
+- Get-FilePlanPropertyReferenceId | Format-List Name
+
+- Get-FilePlanPropertySubCategory | Format-List Name
+
+A valid value for this parameter involves two steps:
+
+- A variable to store the file plan properties as a PSCustomObject using the following syntax:
+
+  $Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}
+
+  For example:
+
+  $retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="ReferenceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
+
+- A second variable to convert the PSCustomObject to a JSON object using the following syntax:
+
+  $Variable2 = ConvertTo-Json $Variable1
+
+  For example:
+
+  $fpStr = ConvertTo-Json $retentionLabelAction
+
+You use the second variable as the value for this parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -123,10 +206,43 @@ The IsRecordLabel parameter specifies whether the label is a record label. Valid
 - $false: The label isn't a record label. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notes
+The Notes parameter specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Regulatory
+{{ Fill Regulatory Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +264,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +284,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +308,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +324,7 @@ Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -213,13 +333,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -228,20 +349,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/2414a7c4-57d2-4f90-a1bc-3dc14643155d.aspx)

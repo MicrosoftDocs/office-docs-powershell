@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/clear-csonlinetelephonenumberreservation
 applicable: Skype for Business Online
 title: Clear-CsOnlineTelephoneNumberReservation
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Clear-CsOnlineTelephoneNumberReservation
@@ -14,14 +19,13 @@ The telephone numbers will then be available for search and reservation again.
 ## SYNTAX
 
 ```
-Clear-CsOnlineTelephoneNumberReservation [-InventoryType <Object>] [-ReservationId <Object>]
- [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob]
- [<CommonParameters>]
+Clear-CsOnlineTelephoneNumberReservation [-Tenant <Guid>] -ReservationId <String>
+ -InventoryType <String> [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This cmdlet will fail if any of the numbers in the reservation have already been assigned.
-An error message will identify the source of the failure.
+An error message will identify the source of the failure. 
 
 ## EXAMPLES
 
@@ -44,7 +48,7 @@ Acceptable values are:
 - "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -60,23 +64,7 @@ Accept wildcard characters: False
 Specifies the identification of the reservation you want to clear.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -92,7 +80,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -126,23 +114,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -155,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -170,6 +142,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online version:](https://docs.microsoft.com/en-us/powershell/module/skype/Clear-CsOnlineTelephoneNumberReservation?view=skype-ps)
-

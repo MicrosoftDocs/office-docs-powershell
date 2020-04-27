@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-routinggroupconnector
 applicable: Exchange Server 2010
 title: New-RoutingGroupConnector
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -13,14 +17,14 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the New-RoutingGroupConnector cmdlet to establish a connection between a Microsoft Exchange Server 2010 routing group and an Exchange Server 2003 routing group when the organization is running more than one version of Exchange.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 New-RoutingGroupConnector [-Name] <String> -SourceTransportServers <MultiValuedProperty>
- -TargetTransportServers <MultiValuedProperty> [-BiDirectional <$true | $false>] [-Confirm] [-Cost <Int32>]
- [-DomainController <Fqdn>] [-PublicFolderReferralsEnabled <$true | $false>] [-WhatIf] [<CommonParameters>]
+ -TargetTransportServers <MultiValuedProperty> [-BiDirectional <Boolean>] [-Confirm] [-Cost <Int32>]
+ [-DomainController <Fqdn>] [-PublicFolderReferralsEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,12 +32,12 @@ The New-RoutingGroupConnector cmdlet creates a new routing group connector betwe
 
 To create the routing group connector, you must specify the source servers from the originating routing group and the target servers in the destination routing group. The routing group connector is created in the routing group of which the source server is a member. By using the Bidirectional parameter, you can specify whether the connector is used for one-way or two-way mail flow. If you specify a two-way connector, a reciprocal connector is created in the target routing group. The source and target servers must be Exchange 2010 Hub Transport servers or Exchange 2003 bridgehead servers.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-RoutingGroupConnector -Name "Interop RGC" -SourceTransportServers "Hub2010.contoso.com" -TargetTransportServers "Bridgehead2003.contoso.com" -Cost 100 -Bidirectional $true
 ```
 
@@ -41,7 +45,7 @@ This example creates the routing group connector Interop RGC with the following 
 
 - The Exchange 2010 server is Hub2010.contoso.com.
 
-- The Exchange 2003 bridgehead server is Bridghead2003.contoso.com.
+- The Exchange 2003 bridgehead server is Bridgehead2003.contoso.com.
 
 - The routing group connector is a two-way connector between the Exchange 2010 routing group and the routing group associated with the specified Exchange 2003 server.
 
@@ -57,6 +61,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -72,6 +77,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -87,6 +93,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -98,10 +105,11 @@ Accept wildcard characters: False
 The BiDirectional parameter specifies whether this is a one-way or two-way connector. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -121,6 +129,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -136,6 +145,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +161,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -162,10 +173,11 @@ Accept wildcard characters: False
 The PublicFolderReferralsEnabled parameter specifies whether users can use this routing group connector to access a public folder replica located in the routing group of the target servers when an instance of that public folder isn't available in the same routing group as the user's mailbox. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +193,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -189,20 +202,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/6297510c-7022-4702-83e6-a213a93d46e1.aspx)

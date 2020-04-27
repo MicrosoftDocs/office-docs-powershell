@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchlinguisticcomponentsstatus
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchLinguisticComponentsStatus
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchLinguisticComponentsStatus
@@ -24,15 +29,15 @@ Set-SPEnterpriseSearchLinguisticComponentsStatus [-AllEnabled <Boolean>]
 ## DESCRIPTION
 This cmdlet sets the operational status of the linguistic query and document processing components.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -StemmingEnabled $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -StemmingEnabled $false
 ```
 
 This example shows how to disable stemming during query processing by setting the parameter StemmingEnabled to false.
@@ -40,8 +45,8 @@ This example shows how to disable stemming during query processing by setting th
 
 ### ------------------EXAMPLE 2-----------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -AllEnabled $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -AllEnabled $false
 ```
 
 This example shows how to disable all linguistic query and document processing functionalities.
@@ -57,7 +62,7 @@ A Boolean value to enable or deactivate all linguistic functionalities.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -80,7 +85,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -97,7 +102,7 @@ A Boolean value to enable or deactivate the company extractor and all custom ext
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -114,7 +119,7 @@ An object that represents the current status of the linguistic components.
 Type: LinguisticComponentsStatusPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +136,7 @@ A Boolean value to enable or deactivate query spelling correction.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -148,7 +153,7 @@ Specifies the search service application that contains the linguistic processing
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -165,7 +170,7 @@ A Boolean value to enable or deactivate expansive stemming during query processi
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -182,7 +187,7 @@ A Boolean value to enable or deactivate thesaurus lookup during query processing
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -192,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

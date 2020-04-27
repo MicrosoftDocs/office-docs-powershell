@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spexcelfilelocation
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelFileLocation
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelFileLocation
@@ -33,14 +38,14 @@ Properties of trusted file locations control how workbooks can be used when they
 Excel Services Application always enforces the properties that are defined by the trusted file location from which a workbook was loaded.
 The properties that are used by the trusted file location are determined by comparison of the file path for the workbook with the Address parameter of the trusted file location.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1--------------
 ```
-PS C:\>Get-SPExcelFileLocation -ExcelServiceApplication "My Excel Service" | where { $_.externaldataallowed -eq "DclAndEmbedded"} | Set-SPExcelFileLocation -ExernalDataAllowed Dcl
+Get-SPExcelFileLocation -ExcelServiceApplication "My Excel Service" | where { $_.externaldataallowed -eq "DclAndEmbedded"} | Set-SPExcelFileLocation -ExernalDataAllowed Dcl
 ```
 
 This example gets every trusted file location for the Excel Services Application Web service application named My Excel Service that allows data connections to load from workbook files and specifies that the locations must use a data connection library to load data connections.
@@ -48,7 +53,7 @@ This example gets every trusted file location for the Excel Services Application
 
 ### --------------EXAMPLE 2--------------
 ```
-PS C:\>Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "http://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
+Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "https://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
 ```
 
 This example changes the description of the default file location for every Excel Services Application Web service application in the farm.
@@ -60,7 +65,7 @@ This example changes the description of the default file location for every Exce
 Specifies the FileLocation object to update.
 The name must be unique in the list of file locations.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid string identifying the file location, in the form http://myPortal/myTeam; a valid string identifying the path, in the form C:\folder_name; or an instance of a valid SPExcelFileLocation object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid string identifying the file location, in the form https://myPortal/myTeam; a valid string identifying the path, in the form C:\folder_name; or an instance of a valid SPExcelFileLocation object.
 
 ```yaml
 Type: SPExcelFileLocationPipeBind
@@ -118,7 +123,7 @@ System.String
 
 Specifies a Web folder, or file directory from which Excel Services Application can load workbooks.
 
-The type must be a valid URL, in the form http://myPortal/myTeam; or a valid UNC path in form, \\\\server_name\folder_name
+The type must be a valid URL, in the form https://myPortal/myTeam; or a valid UNC path in form, \\\\server_name\folder_name
 
 ```yaml
 Type: String
@@ -318,7 +323,7 @@ Accept wildcard characters: False
 
 ### -IncludeChildren
 Indicates that subordinate URLs, directories and libraries are trusted.
-For example, if the trusted file location is http://portal, and IncludeChildren is true, then http://portal/subSite is also trusted, as is any subURL under the URL specified in Address.
+For example, if the trusted file location is https://portal, and IncludeChildren is true, then https://portal/subSite is also trusted, as is any subURL under the URL specified in Address.
 
 ```yaml
 Type: SwitchParameter
@@ -602,7 +607,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

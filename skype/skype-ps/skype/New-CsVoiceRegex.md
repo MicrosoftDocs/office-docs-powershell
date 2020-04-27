@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csvoiceregex
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsVoiceRegex
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # New-CsVoiceRegex
@@ -14,22 +19,16 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### AtLeastLength
-```
-New-CsVoiceRegex -AtLeastLength <Int32> [-DigitsToPrepend <String>] [-DigitsToStrip <Int32>]
- [-StartsWith <String>] [<CommonParameters>]
-```
-
 ### ExactLength
 ```
-New-CsVoiceRegex -ExactLength <Int32> [-DigitsToPrepend <String>] [-DigitsToStrip <Int32>]
- [-StartsWith <String>] [<CommonParameters>]
+New-CsVoiceRegex [-StartsWith <String>] -ExactLength <Int32> [-DigitsToStrip <Int32>]
+ [-DigitsToPrepend <String>] [<CommonParameters>]
 ```
 
-###  (Default)
+### AtLeastLength
 ```
-New-CsVoiceRegex [-AtLeastLength <Object>] [-DigitsToPrepend <Object>] [-DigitsToStrip <Object>]
- [-ExactLength <Object>] [-StartsWith <Object>] [-AsJob] [<CommonParameters>]
+New-CsVoiceRegex [-StartsWith <String>] -AtLeastLength <Int32> [-DigitsToStrip <Int32>]
+ [-DigitsToPrepend <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,20 +83,6 @@ For example, if you're defining a normalization rule that affects only numbers t
 You must enter a value for this parameter or for the ExactLength parameter.
 You cannot enter values for both.
 
-
-```yaml
-Type: Int32
-Parameter Sets: AtLeastLength
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -118,20 +103,6 @@ For example, if you want a normalization rule to affect only 10-digit numbers, s
 You must enter a value for this parameter or for the AtLeastLength parameter.
 You cannot enter values for both.
 
-
-```yaml
-Type: Int32
-Parameter Sets: ExactLength
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -150,7 +121,6 @@ A string specifying the characters or numbers to add to the beginning of the pho
 The value entered for this parameter will impact the Translation value, prepending characters to the number matching the regular expression Pattern.
 For example, if the number matching the pattern is 5551212 and the DigitsToPrepend value is 425, the translated number will be 4255551212 (assuming no other translations have been applied).
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -167,7 +137,6 @@ Accept wildcard characters: False
 ### -DigitsToStrip
 The number of characters to strip from the beginning of the string (phone number).
 For example, if the number 2065551212 is entered and the DigitsToStrip is 3, the number will be translated to 5551212
-
 
 ```yaml
 Type: Int32
@@ -189,7 +158,6 @@ For example, if a value of "+1" is specified for StartsWith, only numbers that b
 Note that the number of characters in the StartsWith string will be included in the ExactLength and AtLeastLength totals.
 For example, if you've specified an ExactLength of 10 and a StartsWith string of +1, a matching phone number would be 8 characters long, preceded by +1, for a total of 10 digits.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -203,24 +171,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

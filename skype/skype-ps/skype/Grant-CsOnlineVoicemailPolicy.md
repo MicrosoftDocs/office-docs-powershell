@@ -1,54 +1,47 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy
 applicable: Skype for Business Online
 title: Grant-CsOnlineVoicemailPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Grant-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Use the Grant-CsOnlineVoicemailPolicy cmdlet to assign a voicemail policy to a user.
+Assigns a online voice mail policy at the per-user scope. Online voicemail policies manage usages for Voicemail service.
 
 ## SYNTAX
 
 ```
-Grant-CsOnlineVoicemailPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm]
- [-DomainController <Object>] [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsOnlineVoicemailPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet assigns an existing per-user voicemail policy to a user. Voicemail policies are used to manage Voicemail-related features such as transcription. 
-
-You can check whether a user has been granted a per-user voicemail policy by calling a command in this format: 
-
-Get-CsOnlineUser "<user identity>" | Select-Object OnlineVoicemailPolicy
- 
-
-For example: 
-
-Get-CsOnlineUser "Ken Myer" | Select-Object OnlineVoicemailPolicy
- 
-
+This cmdlet assigns an existing user-specific online voicemail policy to a user. Online voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+Grant-CsOnlineVoicemailPolicy -Identity "sip:user@contoso.com" -PolicyName TranscriptionDisabled
 ```
 
-Grant-CsOnlineVoicemailPolicy -Identity "Ken Myer" -PolicyName "TranscriptionDisabled" 
-```
-This example assigns the voicemail policy with the Identity TranscriptionDisabled to the user with the display name Ken Myer.
-
+The command shown in Example 1 assigns the per-user online voicemail policy TranscriptionDisabled to a single user with SIP URI sip:user@contoso.com.
 
 
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: UserIdParameter
+The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
 
 ```yaml
-Type: Object
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -61,10 +54,10 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-PARAMVALUE: String
+A unique identifier(name) of the policy.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -77,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-PARAMVALUE: SwitchParameter
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -93,10 +86,10 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy. If this parameter is not specified then the Grant-CsMobilityPolicy cmdlet will contact the first available domain controller.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -109,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-PARAMVALUE: SwitchParameter
+Enables you to pass a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsOnlineVoicemailPolicy cmdlet does not pass objects through the pipeline.
 
 ```yaml
 Type: SwitchParameter
@@ -125,10 +118,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+Globally unique identifier (GUID) of the Skype for Business Online tenant account whose voicemail policy is to be retrieved. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" You can return the tenant ID for each of your tenants by running this command: 
+
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -141,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -157,7 +152,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -173,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -182,5 +181,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy?view=skype-ps)
 
+[Set-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps)
 
+[New-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps)
+
+[Remove-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy?view=skype-ps)

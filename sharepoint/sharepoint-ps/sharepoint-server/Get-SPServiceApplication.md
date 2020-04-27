@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserviceapplication
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPServiceApplication
@@ -24,27 +29,27 @@ Get-SPServiceApplication [[-Identity] <SPServiceApplicationPipeBind>]
 The Get-SPServiceApplication cmdlet returns the service application specified by the Identity parameter.
 If no parameter is specified, the cmdlet returns all service applications in the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1---------------------- 
 ```
-PS C:\>Get-SPServiceApplication
+Get-SPServiceApplication
 ```
 
 This example returns all service applications in the farm.
 
 ### ------------------EXAMPLE 2---------------------- 
 ```
-PS C:\>Get-SPServiceApplication -Identity e2c2be70-6382-4ce7-8a44-ae7dadff5597
+Get-SPServiceApplication -Identity e2c2be70-6382-4ce7-8a44-ae7dadff5597
 ```
 
 This example returns the service application that has the Identity "e2c2be70-6382-4ce7-8a44-ae7dadff5597".
 
 ### ------------------EXAMPLE 3---------------------- 
 ```
-PS C:\>Get-SPServiceApplication -Name AccountingServiceApp
+Get-SPServiceApplication -Name AccountingServiceApp
 ```
 
 This example returns the service application that has the friendly name "AccountingServiceApp".
@@ -60,7 +65,7 @@ Specifies the GUID of the service application to get.
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -82,7 +87,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -98,7 +103,7 @@ Specifies the friendly name of the new usage application.The type must be a vali
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

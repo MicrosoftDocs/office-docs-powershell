@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/test-exchangesearch
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-ExchangeSearch
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Test-ExchangeSearch
@@ -13,26 +17,38 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-ExchangeSearch cmdlet to test that Exchange Search is currently enabled and is indexing new email messages in a timely manner.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Test-ExchangeSearch [[-Identity] <MailboxIdParameter>] [-Archive] [-Confirm] [-DomainController <Fqdn>]
- [-IndexingTimeoutInSeconds <Int32>] [-MonitoringContext] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Test-ExchangeSearch [-Confirm] [-DomainController <Fqdn>] [-IndexingTimeoutInSeconds <Int32>]
- [-MailboxDatabase <DatabaseIdParameter>] [-MonitoringContext] [-WhatIf] [<CommonParameters>]
+Test-ExchangeSearch [[-Identity] <MailboxIdParameter>] [-Archive]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IndexingTimeoutInSeconds <Int32>]
+ [-MonitoringContext]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Database
 ```
-Test-ExchangeSearch [-Confirm] [-DomainController <Fqdn>] [-IndexingTimeoutInSeconds <Int32>]
- [-MonitoringContext] [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Test-ExchangeSearch [-MailboxDatabase <DatabaseIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IndexingTimeoutInSeconds <Int32>]
+ [-MonitoringContext]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Server
+```
+Test-ExchangeSearch [-Server <ServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IndexingTimeoutInSeconds <Int32>]
+ [-MonitoringContext]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,19 +56,19 @@ The Test-ExchangeSearch cmdlet creates a hidden message and an attachment in the
 
 You can use the Verbose switch to get detailed information about each step performed by the cmdlet as part of the test.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-ExchangeSearch -Identity john@contoso.com
 ```
 
 This example tests Exchange Search results for the mailbox database on which the specified mailbox resides.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Test-ExchangeSearch -Identity john@contoso.com -Verbose
 ```
 
@@ -65,9 +81,10 @@ The Archive switch specifies that the test be run against the archive mailbox fo
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +103,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +119,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -110,13 +129,36 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to test Exchange Search against.
+The Identity parameter specifies the mailbox that you want to test Exchange Search against. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the MailboxDatabase or Server parameters.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -131,7 +173,8 @@ The IndexingTimeoutInSeconds parameter specifies, in seconds, the maximum amount
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -142,13 +185,22 @@ Accept wildcard characters: False
 ### -MailboxDatabase
 This parameter is available or functional only in Exchange Server 2010 and 2013.
 
-The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against. The MailboxDatabase and Identity parameters can't be used together.
+The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't use this parameter with the Identity or Server parameters.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set3
+Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +215,8 @@ The MonitoringContext switch includes the associated monitoring events and perfo
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -172,15 +225,24 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available or functional only in Exchange Server 2010 and 2013.
+The Server parameter specifies the Exchange server for the recipient that you want to test Exchange Search against. You can use any value that uniquely identifies the server. For example:
 
-The Server parameter specifies the Exchange server for the recipient that you want to test Exchange Search against.
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+You can't use this parameter with the MailboxDatabase or Identity parameters.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -195,7 +257,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -204,20 +267,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/d50b8f0b-7b79-45d5-b1a4-8a5bc84d0724.aspx)

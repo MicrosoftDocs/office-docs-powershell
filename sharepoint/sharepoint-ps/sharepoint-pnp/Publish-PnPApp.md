@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/publish-pnpapp
+applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Publish-PnPApp
 ---
+
 # Publish-PnPApp
 
 ## SYNOPSIS
@@ -21,14 +24,14 @@ Publish-PnPApp -Identity <AppMetadataPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Publish-PnPApp -Identity -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f
+Publish-PnPApp -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f
 ```
 
 This will deploy/trust an app into the app catalog. Notice that the app needs to be available in the tenant scoped app catalog
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Publish-PnPApp -Identity -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f -Scope Site
+Publish-PnPApp -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f -Scope Site
 ```
 
 This will deploy/trust an app into the app catalog. Notice that the app needs to be available in the site collection scoped app catalog
@@ -37,6 +40,8 @@ This will deploy/trust an app into the app catalog. Notice that the app needs to
 
 ### -Identity
 Specifies the Id of the app
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: AppMetadataPipeBind
@@ -50,6 +55,8 @@ Accept pipeline input: True
 ### -Scope
 Defines which app catalog to use. Defaults to Tenant
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: AppCatalogScope
 Parameter Sets: (All)
@@ -61,6 +68,8 @@ Accept pipeline input: False
 
 ### -SkipFeatureDeployment
 
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: SwitchParameter
@@ -74,6 +83,8 @@ Accept pipeline input: False
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: SPOnlineConnection
 Parameter Sets: (All)
@@ -85,4 +96,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

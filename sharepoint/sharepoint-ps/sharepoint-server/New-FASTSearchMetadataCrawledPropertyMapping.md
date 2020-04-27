@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-fastsearchmetadatacrawledpropertymapping
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchMetadataCrawledPropertyMapping
 ---
 
@@ -25,9 +30,9 @@ If you map multiple crawled properties to a single managed property, use the man
 See Set-FASTSearchMetadataManagedProperty for more information.
 
 When you map a crawled property into a managed property, the variant type of the crawled property is converted into the available data types in FAST Search Server 2010 for SharePoint.
-See http://go.microsoft.com/fwlink/?LinkId=163233 (http://go.microsoft.com/fwlink/?LinkId=163233) for details about this conversion, and which variant types can be converted into native FAST Search Server 2010 for SharePoint types.
+See https://go.microsoft.com/fwlink/?LinkId=163233 (https://go.microsoft.com/fwlink/?LinkId=163233) for details about this conversion, and which variant types can be converted into native FAST Search Server 2010 for SharePoint types.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
@@ -93,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

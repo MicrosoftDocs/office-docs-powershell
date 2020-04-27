@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpdocumentset
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPDocumentSet
 ---
+
 # Add-PnPDocumentSet
 
 ## SYNOPSIS
@@ -30,7 +33,7 @@ This will add a new document set based upon the 'Test Document Set' content type
 ## PARAMETERS
 
 ### -ContentType
-The name of the content type, its ID or an actual content object referencing to the document set.
+The name of the content type, its ID or an actual content object referencing to the document set
 
 ```yaml
 Type: ContentTypePipeBind
@@ -95,4 +98,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

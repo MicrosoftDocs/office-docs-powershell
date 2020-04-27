@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-fastsearchmetadatarankprofile
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Set-FASTSearchMetadataRankProfile
 ---
 
@@ -37,13 +42,13 @@ If QualityWeight is 400, and AuthorityWeight is 100, this means that QualityWeig
 After being multiplied by the weights determined in the rank profile, all relevance components are combined into a single rank score, which decides the sorting of the result set (as long as non-relevancy sorting is not specified).
 All changes are effective immediately, and the content does not need to be re-fed for this to take effect.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -QualityWeight 100 -AuthorityWeight 200 -QueryAuthorityWeight 10 -FreshnessWeight 0
+Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -QualityWeight 100 -AuthorityWeight 200 -QueryAuthorityWeight 10 -FreshnessWeight 0
 ```
 
 This example changes the weights of the relevancy components on the rank profile named "ExtraRankProfile".
@@ -64,7 +69,7 @@ The time the item was processed is stored in the "processingtime" managed proper
 
 ### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -StopWordThreshold 100000
+Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -StopWordThreshold 100000
 ```
 
 This example sets the stop word threshold of the rank profile named "ExtraRankProfile" to 100000.
@@ -335,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

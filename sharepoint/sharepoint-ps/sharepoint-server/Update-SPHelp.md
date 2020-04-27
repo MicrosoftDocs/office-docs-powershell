@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-sphelp
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPHelp
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPHelp
@@ -29,20 +34,20 @@ Note: This cmdlet currently does not update cmdlet help.
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>Update-SPHelp
+Update-SPHelp
 ```
 Updates SharePoint cmdlet help.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>Update-SPHelp -Force
+Update-SPHelp -Force
 ```
 
 This example over-rides the throttling logic and checks for updates to the help files even if a check was made in the last 24 hours.
 
 ### --------------------EXAMPLE 3---------------------
 ```
-C:\PS>Update-SPHelp -Verbose
+Update-SPHelp -Verbose
 ```
 
 This example checks for updates to the help files and provides detailed feedback for each step of the process.
@@ -58,7 +63,7 @@ NOTE: When the Global parameter is used, all objects are contained in the global
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -74,7 +79,7 @@ Over-rides the throttling logic and checks for updates to the help files even if
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -84,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

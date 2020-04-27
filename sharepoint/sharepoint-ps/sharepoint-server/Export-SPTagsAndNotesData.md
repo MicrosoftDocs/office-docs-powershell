@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-sptagsandnotesdata
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPTagsAndNotesData
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPTagsAndNotesData
@@ -25,10 +30,10 @@ The tags and notes are written into separate files, and then the two are compres
 
 ### ----------------EXAMPLE----------------- 
 ```
-Export-SPTagsAndNotesData -Site http://site.contoso.com -FilePath C:\TagsAndNotes.zip
+Export-SPTagsAndNotesData -Site https://site.contoso.com -FilePath C:\TagsAndNotes.zip
 ```
 
-This example creates a new ZIP file called TagsAndNotes.zip, on the root of C: drive, exports tags and notes from the SharePoint database for the site http://site.contoso.com, and adds the resulting files to the TagsAndNotes.zip file
+This example creates a new ZIP file called TagsAndNotes.zip, on the root of C: drive, exports tags and notes from the SharePoint database for the site https://site.contoso.com, and adds the resulting files to the TagsAndNotes.zip file
 
 ## PARAMETERS
 
@@ -36,13 +41,13 @@ This example creates a new ZIP file called TagsAndNotes.zip, on the root of C: d
 URL of the root site where you want to export the tags and notes from.
 
 You must specify a valid URL to an existing SharePoint root site.
-For example: http://site.contoso.com
+For example: https://site.contoso.com
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -61,7 +66,7 @@ If the file already exists, the cmdlet won't perform the export and will ask you
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 2
@@ -77,7 +82,7 @@ Accept wildcard characters: False
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -87,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spappprincipalpermission
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPAppPrincipalPermission
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPAppPrincipalPermission
@@ -22,19 +27,19 @@ Remove-SPAppPrincipalPermission -AppPrincipal <SPAppPrincipal> -Scope <SPCmdletA
 ## DESCRIPTION
 Use the `Remove-SPAppPrincipalPermission` cmdlet to remove the permissions on a specified app principal for a given scope (that is, SharePoint Online, site collection, or web).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE------------
 ```
-PS C:\>$clientID = "11111111-2222-3333-4444-555555555555"
-PS C:\>$site = Get-SPSite http://siteUrl
-PS C:\>$realm = Get-SPAuthenticationRealm -ServiceContext $site
-PS C:\>$appIdentifier = $clientID + "@" + $realm
-PS C:\>$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Web $site.RootWeb
-PS C:\>Remove-AppPrincipalPermission -AppPrincipal $appPrincipal -site $site.RootWeb -Scope Site
+$clientID = "11111111-2222-3333-4444-555555555555"
+$site = Get-SPSite http://siteUrl
+$realm = Get-SPAuthenticationRealm -ServiceContext $site
+$appIdentifier = $clientID + "@" + $realm
+$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Web $site.RootWeb
+Remove-AppPrincipalPermission -AppPrincipal $appPrincipal -site $site.RootWeb -Scope Site
 ```
 
 This example removes the App Principal permission from the site collection scope.
@@ -49,7 +54,7 @@ Specifies the AppPrincipal object to remove.
 Type: SPAppPrincipal
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -63,21 +68,17 @@ Specifies the scope to which to apply the principal permission.
 
 The value is any of the following scopes:
 
---Farm
+--Site
 
---Site collection
+--SiteCollection
 
---SharePoint Online
-
---Web
-
---Documents, List, or Library
+--SiteSubscription
 
 ```yaml
 Type: SPCmdletAppPrincipalPermissionScope
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -93,7 +94,7 @@ Specifies the site (that is, SPWeb object) to remove.
 Type: SPWebPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -111,7 +112,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -128,7 +129,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -145,7 +146,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -161,7 +162,7 @@ Disables the app only policy.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -171,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

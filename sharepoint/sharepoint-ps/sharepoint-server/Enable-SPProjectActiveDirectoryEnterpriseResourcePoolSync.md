@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spprojectactivedirectoryenterpriseresourcepoolsync
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
@@ -38,18 +43,18 @@ The following actions can occur during the Enterprise Resource Pool synchronizat
 - An existing Project Server user account's metadata (for example, name, e-mail address, and so on) can be updated if it has changed in Active Directory.
 - A previously inactive Project Server resource/user account can be reactivated.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
 ###   ------------ Example 1 --------------------
 ```
-C:\PS>$groupGuids = Get-ADGroup -Filter {Name -eq 'Domain Users' -or Name -eq 'Domain Admins'} | select ObjectGuid #Active Directory PowerShell Module required
-C:\PS>[Guid[]]$groupUids = $groupGuids[0].ObjectGuid,$groupGuids[1].ObjectGuid
-C:\PS>Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync -Url http://pwa_site -GroupUids $groupUids
+$groupGuids = Get-ADGroup -Filter {Name -eq 'Domain Users' -or Name -eq 'Domain Admins'} | select ObjectGuid #Active Directory PowerShell Module required
+[Guid[]]$groupUids = $groupGuids[0].ObjectGuid,$groupGuids[1].ObjectGuid
+Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync -Url https://pwa_site -GroupUids $groupUids
 ```
 
-Retrieves the ObjectGuid values of the Domain Users and Domain Admins Active Directory groups and adds them to the Active Directory Enterprise Resource Pool Synchronization on the Project Web Apps site, http://pwa_site.
+Retrieves the ObjectGuid values of the Domain Users and Domain Admins Active Directory groups and adds them to the Active Directory Enterprise Resource Pool Synchronization on the Project Web Apps site, https://pwa_site.
 
 ## PARAMETERS
 
@@ -60,7 +65,7 @@ Specifies the URL of the Project Web App instance to enable Active Directory Ent
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -76,7 +81,7 @@ The Active Directory Group GUID to synchronize the Enterprise Resource Pool with
 Type: System.Collections.Generic.IEnumerable`1[System.Guid]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 2
@@ -108,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

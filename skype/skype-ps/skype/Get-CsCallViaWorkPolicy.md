@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscallviaworkpolicy
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsCallViaWorkPolicy
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Get-CsCallViaWorkPolicy
@@ -26,10 +31,7 @@ Get-CsCallViaWorkPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid
 
 
 ## DESCRIPTION
-To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
-
+Use the Get-CsCallViaWorkPolicy cmdlet to return call via work policies.
 
 ## EXAMPLES
 
@@ -46,8 +48,8 @@ This example returns the properties of the policy currently assigned to the Redm
 
 ### -Filter
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
-For example, to return all the policies configured at the site scope use this syntax: -Filter "site:*".
-To return a collection of all the per-user policies, use this syntax: -Filter "tag:*"
+For example, to return all the policies configured at the site scope use this syntax: -Filter "site:\*".
+To return a collection of all the per-user policies, use this syntax: -Filter "tag:\*"
 
 ```yaml
 Type: String
@@ -118,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

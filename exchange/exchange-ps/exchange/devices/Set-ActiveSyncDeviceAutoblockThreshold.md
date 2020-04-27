@@ -1,9 +1,13 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
-applicable: Exchange Server 2013, Exchange Server 2016
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/devices/set-activesyncdeviceautoblockthreshold
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ActiveSyncDeviceAutoblockThreshold
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-ActiveSyncDeviceAutoblockThreshold
@@ -13,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ActiveSyncDeviceAutoblockThreshold cmdlet to change settings for autoblocking mobile devices.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,19 +31,19 @@ Set-ActiveSyncDeviceAutoblockThreshold [-Identity] <ActiveSyncDeviceAutoblockThr
 ## DESCRIPTION
 Microsoft Exchange and Microsoft Exchange ActiveSync can block Exchange ActiveSync mobile devices if these devices display any of a defined list of behaviors that can potentially cause issues with the server. The Set-ActiveSyncDeviceAutoblockThreshold cmdlet can modify an existing autoblock threshold rule and change a variety of settings including the duration of blocking.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ActiveSyncDeviceAutoblockThreshold -Identity "UserAgentChanges" BehaviorTypeIncidenceLimit 2 -BehaviorTypeIncidenceDuration 1440 -DeviceBlockDuration 1440 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
 ```
 
 This example sets the autoblock threshold rule UserAgentChanges with several settings. It limits the number of accepted UserAgent changes to 2, specifies that the incidence duration is 1440 minutes and blocks the mobile device for 1440 minutes. Lastly, it inserts a message into the administrative email message sent to the user.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-ActiveSyncDeviceAutoblockThreshold -Identity "RecentCommands" BehaviorTypeIncidenceLimit 5 -BehaviorTypeIncidenceDuration 720 -DeviceBlockDuration 720 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
 ```
 
@@ -54,7 +58,8 @@ The Identity parameter specifies the name of the autoblock threshold rule.
 Type: ActiveSyncDeviceAutoblockThresholdIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -69,7 +74,8 @@ The AdminEmailInsert parameter specifies the text to include in the email sent t
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +90,8 @@ The BehaviorTypeIncidenceDuration parameter specifies the interval (in minutes) 
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +106,8 @@ The BehaviorTypeIncidenceLimit parameter specifies the number of occurrences of 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +126,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -133,7 +142,8 @@ The DeviceBlockDuration parameter specifies the length of time (in minutes) that
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +158,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +174,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -172,20 +184,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/2710ccb0-9e18-4906-acd1-e97be05d57cd.aspx)

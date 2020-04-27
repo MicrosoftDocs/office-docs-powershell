@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/enable-remotemailbox
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-RemoteMailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Enable-RemoteMailbox
@@ -13,44 +17,71 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Enable-RemoteMailbox cmdlet to create a mailbox in the cloud-based service for an existing user in the on-premises Active Directory.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### Default
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-RemoteRoutingAddress <ProxyAddress>] [-ACLableSyncedObjectEnabled]
- [-Alias <String>] [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>] [-Confirm]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### Room
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room] [-ACLableSyncedObjectEnabled] [-Alias <String>]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemoteRoutingAddress <ProxyAddress>] [-Confirm] [-WhatIf] [<CommonParameters>]
- 
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Equipment
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment] [-ACLableSyncedObjectEnabled] [-Alias <String>]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemoteRoutingAddress <ProxyAddress>] [-Confirm] [-WhatIf] [<CommonParameters>]
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Archive
 ```
 Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Archive] [-ArchiveName <MultiValuedProperty>]
- [-ACLableSyncedObjectEnabled] [-Alias <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-PrimarySmtpAddress <SmtpAddress>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Shared
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Shared] [-ACLableSyncedObjectEnabled [-Alias <String>]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemoteRoutingAddress <ProxyAddress>] [-Confirm] [-WhatIf]] [<CommonParameters>]
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Shared]
+ [-ACLableSyncedObjectEnabled [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-WhatIf]] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,12 +91,12 @@ Directory synchronization must be configured correctly for a mailbox to be creat
 
 The policies that you apply to recipients in the on-premises Exchange organization, such as Unified Messaging or compliance policies, aren't applied to mailboxes in the service. You must configure policies in the service if you want policies to be applied to recipients in the service.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicrosoft.com"
 ```
 
@@ -75,9 +106,10 @@ To mail-enable an existing user and create an associated mailbox in the service,
 
 After the user is mail-enabled, directory synchronization synchronizes the mail-enabled user to the service and the associated mailbox is created.
 
-### -------------------------- Example 2 --------------------------
-```
-Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicrosoft.com" -Archive
+### Example 2
+```powershell
+Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicrosoft.com"
+Enable-RemoteMailbox "Kim Akers" -Archive
 ```
 
 This example does the following:
@@ -113,7 +145,8 @@ The Identity parameter specifies the identity of the existing on-premises user. 
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -122,7 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -Equipment
-The Equipment switch specifies that the mailbox in the service should be created as an equipment resource mailbox.
+The Equipment switch specifies that the mailbox in the service should be created as an equipment resource mailbox. You don't need to specify a value with this switch.
+
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 You can't use this switch with the Room or Shared switches.
 
@@ -130,7 +165,8 @@ You can't use this switch with the Room or Shared switches.
 Type: SwitchParameter
 Parameter Sets: Equipment, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -147,7 +183,8 @@ You can't use this switch with the Equipment or Shared switches.
 Type: SwitchParameter
 Parameter Sets: Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -166,7 +203,8 @@ You can't use this switch with the Room or Equipment switches.
 Type: SwitchParameter
 Parameter Sets: Shared
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -175,13 +213,14 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-The ACLableSyncedObjectEnabled switch specfies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
+The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -200,7 +239,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -210,7 +249,8 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -219,15 +259,14 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to create an archive mailbox in the service in addition to the mailbox created in the service.
-
-You don't need to specify a value with this switch.
+The Archive switch specifies whether to create an archive mailbox in the service in addition to the mailbox created in the service. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -242,67 +281,8 @@ The ArchiveName parameter specifies the name of the archive mailbox. Use this pa
 Type: MultiValuedProperty
 Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -DisplayName
-The DisplayName parameter specifies the display name for the mailbox that's created in the service. The display name is visible in the Exchange admin center, address lists and Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
-
-```yaml
-Type: SmtpAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteRoutingAddress
-The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in the service that this user is associated with.
-
-```yaml
-Type: ProxyAddress
-Parameter Sets: Default, Room, Equipment, Shared
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -321,7 +301,72 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayName
+The DisplayName parameter specifies the display name for the mailbox that's created in the service. The display name is visible in the Exchange admin center, address lists and Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrimarySmtpAddress
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteRoutingAddress
+The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in the service that this user is associated with.
+
+```yaml
+Type: ProxyAddress
+Parameter Sets: Default, Room, Equipment, Shared
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -336,7 +381,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -345,20 +391,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/63a504e5-c1ee-4812-921f-d461e24afa1b.aspx)

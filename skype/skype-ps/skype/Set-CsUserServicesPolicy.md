@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csuserservicespolicy
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUserServicesPolicy
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsUserServicesPolicy
@@ -17,24 +22,18 @@ This cmdlet was introduced in Lync Server 2013.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsUserServicesPolicy [[-Identity] <XdsIdentity>] [-Confirm] [-Force] [-Tenant <Guid>]
- [-UcsAllowed <Boolean>] [-WhatIf] [-EnableAwaySinceIndication <Boolean>] [-MigrationDelayInDays <Int32>]
+Set-CsUserServicesPolicy [-Tenant <Guid>] [-UcsAllowed <Boolean>] [-MigrationDelayInDays <Int32>]
+ [-EnableAwaySinceIndication <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsUserServicesPolicy [-Confirm] [-Force] [-Instance <PSObject>] [-Tenant <Guid>] [-UcsAllowed <Boolean>]
- [-WhatIf] [-EnableAwaySinceIndication <Boolean>] [-MigrationDelayInDays <Int32>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsUserServicesPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-EnableAwaySinceIndication <Object>] [-Force] [-Instance <Object>] [-MigrationDelayInDays <Object>]
- [-Tenant <Object>] [-UcsAllowed <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsUserServicesPolicy [-Tenant <Guid>] [-UcsAllowed <Boolean>] [-MigrationDelayInDays <Int32>]
+ [-EnableAwaySinceIndication <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -87,7 +86,7 @@ Suppresses the display of any non-fatal error message that might arise when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -104,7 +103,7 @@ Suppresses the display of any non-fatal error message that might arise when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -136,23 +135,10 @@ If this parameter is not included then the `Set-CsUserServicesPolicy` cmdlet wil
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -166,20 +152,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -203,7 +176,7 @@ You can return the tenant ID for each of your tenants by running this command:
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -221,7 +194,7 @@ When set to False, users can be removed from the unified contact store, but only
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -238,23 +211,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -268,10 +225,10 @@ PARAMVALUE: $true | $false
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -287,26 +244,10 @@ The default value is 0.
 
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -316,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

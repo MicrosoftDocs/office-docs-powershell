@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-sweeprule
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-SweepRule
 schema: 2.0.0
-monikerRange: "exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-SweepRule
@@ -13,27 +17,27 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-SweepRule cmdlet to modify Sweep rules in mailboxes.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-SweepRule [-Identity] <SweepRuleIdParameter> [-Confirm] [-DestinationFolder <MailboxFolderIdParameter>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-ExceptIfFlagged <$true | $false>]
- [-ExceptIfPinned <$true | $false>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
+ [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExceptIfFlagged <Boolean>]
+ [-ExceptIfPinned <Boolean>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
  [-Mailbox <MailboxIdParameter>] [-Name <String>] [-Provider <String>] [-Sender <RecipientIdParameter>]
  [-SourceFolder <MailboxFolderIdParameter>]
- [-SystemCategory <NotDefined | FromContact | Newsletter | Photo | SocialUpdate | Video | Document | File | MailingList | ShippingNotification | LiveView | DocumentPlus | Important | Family | Bills | Shopping | Travel | Flight | RestaurantReservation | Lodging | RentalCar | Purchase | Event | RetiredPromotion>]
+ [-SystemCategory <SystemCategoryType>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-SweepRule -Identity x2hlsdpGmUifjFgxxGIOJw== -KeepForDays 15 -ExceptIfPinned $true
 ```
 
@@ -56,7 +60,8 @@ You can get these identity values by using the Get-SweepRule cmdlet.
 Type: SweepRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -75,7 +80,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -84,15 +90,38 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationFolder
-The DestinationFolder parameter specifies an action for the Sweep rule that moves messages to the specified folder based on the conditions of the rule.
+The DestinationFolder parameter specifies an action for the Sweep rule that moves messages to the specified folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
-The default value is Deleted Items.
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+Example values for this parameter are `john@contoso.com:\Unimportant` or `John:\Inbox\Misc`. The default value is `MailboxID:\Deleted Items`.
 
 ```yaml
 Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +138,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -121,10 +151,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,10 +195,11 @@ The typical message flag values are:
 - Review
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -183,10 +215,11 @@ The PinMessage parameter specifies an exception for the Sweep rule that looks fo
 - $false: The exception isn't used.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +236,8 @@ You can't use this parameter with the KeepLatest parameter, and the Sweep rule m
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,7 +254,8 @@ You can't use this parameter with the KeepForDays parameter, and the Sweep rule 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -229,13 +264,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that contains the rule you want to modify. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Mailbox parameter specifies the mailbox that contains the rule you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -259,7 +290,8 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -274,7 +306,8 @@ The Name parameter specifies the name of the Sweep rule. If the value contains s
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -291,7 +324,8 @@ For Sweep rules that you create in Outlook on the web, the default value is Exch
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -300,13 +334,9 @@ Accept wildcard characters: False
 ```
 
 ### -Sender
-The Sender parameter specifies a condition for the Sweep rule that looks for the specified sender in messages. For internal senders, you can use any value that uniquely identifies the sender.
-
-For example:
+The Sender parameter specifies a condition for the Sweep rule that looks for the specified sender in messages. For internal senders, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -324,7 +354,8 @@ For external senders, use their email address.
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -333,15 +364,38 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFolder
-The SourceFolder parameter specifies a condition for the Sweep rule that looks for messages in the specified folder.
+The SourceFolder parameter specifies a condition for the Sweep rule that looks for messages in the specified folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
-The default value is Inbox.
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+Example values for this parameter are `john@contoso.com:\Marketing` or `John:\Inbox\Reports`. The default value is `MailboxID:\Inbox`.
 
 ```yaml
 Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -401,10 +455,11 @@ The SystemCategory parameter specifies a condition for the sweep rule that looks
 - Video
 
 ```yaml
-Type: NotDefined | FromContact | Newsletter | Photo | SocialUpdate | Video | Document | File | MailingList | ShippingNotification | LiveView | DocumentPlus | Important | Family | Bills | Shopping | Travel | Flight | RestaurantReservation | Lodging | RentalCar | Purchase | Event | RetiredPromotion
+Type: SystemCategoryType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -419,7 +474,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -428,20 +484,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/d8c929db-9ec4-4f75-b79d-f5297bf9e8e1.aspx)

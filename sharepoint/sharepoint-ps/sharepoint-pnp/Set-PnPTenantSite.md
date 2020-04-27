@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenantsite
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPTenantSite
 ---
+
 # Set-PnPTenantSite
 
 ## SYNOPSIS
@@ -14,14 +17,23 @@ Set site information.
 ```powershell
 Set-PnPTenantSite -Url <String>
                   [-Title <String>]
-                  [-Sharing <SharingCapabilities>]
-                  [-StorageMaximumLevel <Int>]
-                  [-StorageWarningLevel <Int>]
-                  [-UserCodeMaximumLevel <Double>]
-                  [-UserCodeWarningLevel <Double>]
+                  [-LocaleId <UInt32>]
                   [-AllowSelfServiceUpgrade [<SwitchParameter>]]
                   [-Owners <String>]
-                  [-NoScriptSite [<SwitchParameter>]]
+                  [-DenyAddAndCustomizePages [<SwitchParameter>]]
+                  [-SharingCapability <SharingCapabilities>]
+                  [-StorageMaximumLevel <Int>]
+                  [-StorageWarningLevel <Int>]
+                  [-DefaultLinkPermission <SharingPermissionType>]
+                  [-DefaultSharingLinkType <SharingLinkType>]
+                  [-SharingAllowedDomainList <String>]
+                  [-SharingBlockedDomainList <String>]
+                  [-BlockDownloadOfNonViewableFiles [<SwitchParameter>]]
+                  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
+                  [-CommentsOnSitePagesDisabled [<SwitchParameter>]]
+                  [-DisableAppViews <AppViewsPolicy>]
+                  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
+                  [-DisableFlows <FlowsPolicy>]
                   [-Wait [<SwitchParameter>]]
                   [-Connection <SPOnlineConnection>]
 ```
@@ -88,20 +100,10 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -LockState
-Sets the lockstate of a site
+### -BlockDownloadOfNonViewableFiles
+Specifies if non web viewable files can be downloaded.
 
-```yaml
-Type: SiteLockState
-Parameter Sets: Set Lock State
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -NoScriptSite
-Specifies if a site allows custom script or not. See https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f for more information.
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -112,8 +114,131 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -CommentsOnSitePagesDisabled
+Specifies if comments on site pages are enabled
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DefaultLinkPermission
+Specifies the default link permission for the site collection. None - Respect the organization default link permission. View - Sets the default link permission for the site to "view" permissions. Edit - Sets the default link permission for the site to "edit" permissions
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SharingPermissionType
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DefaultSharingLinkType
+Specifies the default link type for the site collection. None - Respect the organization default sharing link type. AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link. Internal - Sets the default sharing link for this site to the "organization" link or company shareable link. Direct - Sets the default sharing link for this site to the "Specific people" link
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SharingLinkType
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DenyAddAndCustomizePages
+Determines whether the Add And Customize Pages right is denied on the site collection. For more information about permission levels, see User permissions and permission levels in SharePoint.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Set Properties
+Aliases: NoScriptSite
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DisableAppViews
+-
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: AppViewsPolicy
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DisableCompanyWideSharingLinks
+-
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: CompanyWideSharingLinksPolicy
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DisableFlows
+-
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: FlowsPolicy
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -LocaleId
+Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911).
+
+```yaml
+Type: UInt32
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -LockState
+Sets the lockstate of a site
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SiteLockState
+Parameter Sets: Set Lock State
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Owners
-Specifies owner(s) to add as site collection adminstrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
+Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
 
 ```yaml
 Type: String
@@ -124,11 +249,56 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -Sharing
-Specifies what the sharing capablilites are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+### -SharingAllowedDomainList
+Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: String
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -SharingBlockedDomainList
+Specifies a list of email domains that is blocked for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: String
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -SharingCapability
+Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SharingCapabilities
+Parameter Sets: Set Properties
+Aliases: Sharing
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -SharingDomainRestrictionMode
+Specifies the external sharing mode for domains.
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SharingDomainRestrictionModes
 Parameter Sets: Set Properties
 
 Required: False
@@ -138,6 +308,8 @@ Accept pipeline input: False
 
 ### -StorageMaximumLevel
 Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: Int
@@ -150,6 +322,8 @@ Accept pipeline input: False
 
 ### -StorageWarningLevel
 Specifies the warning level for the storage quota in megabytes. This value must not exceed the values set for the StorageMaximumLevel parameter
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: Int
@@ -184,32 +358,10 @@ Position: 0
 Accept pipeline input: True
 ```
 
-### -UserCodeMaximumLevel
-Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint 2010 : http://msdn.microsoft.com/en-us/library/gg615462.aspx.
-
-```yaml
-Type: Double
-Parameter Sets: Set Properties
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -UserCodeWarningLevel
-Specifies the warning level for the resource quota. This value must not exceed the value set for the UserCodeMaximumLevel parameter
-
-```yaml
-Type: Double
-Parameter Sets: Set Properties
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Wait
 Wait for the operation to complete
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -234,4 +386,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

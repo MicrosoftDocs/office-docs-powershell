@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/import-rmstrustedpublishingdomain
 applicable: Exchange Online
 title: Import-RMSTrustedPublishingDomain
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -13,42 +17,43 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Import-RMSTrustedPublishingDomain cmdlet to import a trusted publishing domain (TPD) from an on-premises server running Active Directory Rights Management Services (AD RMS) or from RMS Online into your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
+### IntranetLicensingUrl
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]>
- -IntranetLicensingUrl <Uri> -Password <SecureString> [-Confirm] [-Default] [-DomainController <Fqdn>]
+Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString>
+ [-Confirm]
+ [-Default]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ImportFromFile
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]>
- -IntranetLicensingUrl <Uri> -Password <SecureString> [-Confirm] [-Default] [-DomainController <Fqdn>]
- [-ExtranetCertificationUrl <Uri>] [-IntranetCertificationUrl <Uri>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString> [-Confirm]
- [-Default] [-DomainController <Fqdn>] [-RefreshTemplates] [-WhatIf] [<CommonParameters>]
+Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString> [-ExtranetCertificationUrl <Uri>] [-IntranetCertificationUrl <Uri>]
+ [-Confirm]
+ [-Default]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### RefreshTemplates
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> [-RMSOnline] [-Confirm] [-Default]
- [-DomainController <Fqdn>] [-RefreshTemplates] [-RMSOnlineAuthCertThumbprintOverride <String>]
- [-RMSOnlineOrgOverride <Guid>] [-WhatIf] [<CommonParameters>]
+Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString> [-RefreshTemplates]
+ [-Confirm]
+ [-Default]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
+### RMSOnline
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -RMSOnlineConfig <Byte[]> -RMSOnlineKeys <Hashtable>
- [-Confirm] [-Default] [-DomainController <Fqdn>] [-RMSOnlineAuthorTest <Hashtable>] [-WhatIf]
- [<CommonParameters>]
+Import-RMSTrustedPublishingDomain [-Name] <String> [-RMSOnline] [-RefreshTemplates]
+ [-Confirm]
+ [-Default]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,12 +61,12 @@ A TPD contains the settings needed to use RMS features in your organization. For
 
 If the InternalLicensingEnabled parameter value is $true on the Set-IRMConfiguration cmdlet, all TPDs require a private key. If the InternalLicensingEnabled parameter value is $false, TPDs don't require a private key. However, the only RMS feature available to the organization is Outlook protection rules. Typically, TPDs without private keys are created when the AD RMS server uses a hardware-based cryptographic service provider (CSP) or a custom CSP.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData $([byte[]](Get-Content -Encoding byte -Path "C:\My Documents\Contoso.xml" -ReadCount 0)) -Password (ConvertTo-SecureString -String 'Pa$$word1' -AstPlainText -Force)-ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -IntranetLicensingUrl https://RMS01/_wmcs/licensing
 ```
 
@@ -86,9 +91,10 @@ By default, the value of the ExtranetLicensingUrl parameter is https://\<FQDN\>/
 
 ```yaml
 Type: Uri
-Parameter Sets: Set1, Set2
+Parameter Sets: IntranetLicensingUrl, ImportFromFile
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -103,9 +109,10 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: IntranetLicensingUrl, ImportFromFile, RefreshTemplates
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -120,9 +127,10 @@ By default, the value of the IntranetLicensingUrl parameter is https://\<server 
 
 ```yaml
 Type: Uri
-Parameter Sets: Set1, Set2
+Parameter Sets: IntranetLicensingUrl, ImportFromFile
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -138,6 +146,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -148,13 +157,14 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password of the TPD that you want to import. The password value must match the password in the XML file when you exported the TPD from the on-premises AD RMS server.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: IntranetLicensingUrl, ImportFromFile, RefreshTemplates
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -163,45 +173,14 @@ Accept wildcard characters: False
 ```
 
 ### -RMSOnline
-This parameter is available only in the cloud-based service.
-
 The RMSOnline switch specifies that the TPD is imported from RMS Online. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: RMSOnline
 Aliases:
 Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -RMSOnlineConfig
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Byte[]
-Parameter Sets: Set5
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RMSOnlineKeys
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable
-Parameter Sets: Set5
-Aliases:
-Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -221,6 +200,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -240,21 +220,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -269,9 +235,10 @@ By default, the value of the ExtranetCertificationUrl parameter is https://\<FQD
 
 ```yaml
 Type: Uri
-Parameter Sets: Set2
+Parameter Sets: ImportFromFile
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -286,9 +253,10 @@ By default, the value of the IntranetCertificationUrl parameter is https://\<ser
 
 ```yaml
 Type: Uri
-Parameter Sets: Set2
+Parameter Sets: ImportFromFile
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -311,54 +279,10 @@ When you add, modify, or remove RMS templates in a TPD on the AD RMS server, you
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set4
+Parameter Sets: RefreshTemplates, RMSOnline
 Aliases:
 Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -RMSOnlineAuthCertThumbprintOverride
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RMSOnlineAuthorTest
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable
-Parameter Sets: Set5
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RMSOnlineOrgOverride
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -374,6 +298,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -382,20 +307,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/7c5e7a0f-9c9d-4863-bab8-bcc729cc16a6.aspx)

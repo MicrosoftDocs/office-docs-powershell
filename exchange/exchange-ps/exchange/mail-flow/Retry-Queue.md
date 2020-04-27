@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/retry-queue
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Retry-Queue
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Retry-Queue
@@ -13,31 +17,36 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Retry-Queue cmdlet to force a connection attempt for a queue on a Mailbox server or an Edge Transport server.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### Filter
 ```
-Retry-Queue -Filter <String> [-Confirm] [-Resubmit <$true | $false>] [-Server <ServerIdParameter>] [-WhatIf]
- [<CommonParameters>]
+Retry-Queue -Filter <String> [-Server <ServerIdParameter>]
+ [-Confirm]
+ [-Resubmit <Boolean>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Retry-Queue [-Identity] <QueueIdentity> [-Confirm] [-Resubmit <$true | $false>] [-WhatIf] [<CommonParameters>]
+Retry-Queue [-Identity] <QueueIdentity>
+ [-Confirm]
+ [-Resubmit <Boolean>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Retry-Queue cmdlet forces a connection attempt for a queue that has a status of Retry. The cmdlet establishes a connection to the next hop if possible. If a connection isn't established, a new retry time is set. To use this command to retry delivery of messages in the Unreachable queue, you must include the Resubmit parameter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Retry-Queue -Filter {NextHopDomain -eq "contoso.com" -and Status -eq "Retry"}
+### Example 1
+```powershell
+Retry-Queue -Filter "NextHopDomain -eq "contoso.com" -and Status -eq 'Retry'"
 ```
 
 This example forces a connection attempt for all queues that meet the following criteria:
@@ -51,15 +60,16 @@ This example forces a connection attempt for all queues that meet the following 
 ## PARAMETERS
 
 ### -Filter
-The Filter parameter specifies one or more queues by using OPath filter syntax. The OPath filter includes a queue property name followed by a comparison operator and value, for example, {NextHopDomain -eq "contoso.com"}. For details about filterable queue properties and comparison operators, see Queue properties (https://technet.microsoft.com/library/bb125237.aspx) and Find queues and messages in queues in the Exchange Management Shell (https://technet.microsoft.com/library/aa998047.aspx).
+The Filter parameter specifies one or more queues by using OPath filter syntax. The OPath filter includes a queue property name followed by a comparison operator and value (for example, `"NextHopDomain -eq 'contoso.com'"`). For details about filterable queue properties and comparison operators, see [Queue properties in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/queues/queue-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -68,13 +78,14 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the queue. Valid input for this parameter uses the syntax Server\\Queue or Queue, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see the "Queue identity" section in Find queues and messages in queues in the Exchange Management Shell (https://technet.microsoft.com/library/aa998047.aspx).
+The Identity parameter specifies the queue. Valid input for this parameter uses the syntax Server\\Queue or Queue, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see [Queue identity](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#queue-identity).
 
 ```yaml
 Type: QueueIdentity
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -93,7 +104,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -105,10 +117,11 @@ Accept wildcard characters: False
 The Resubmit parameter specifies whether the queue contents should be resubmitted to the categorizer before a connection is established. Valid input for this parameter is $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -133,9 +146,10 @@ You can use the Server parameter and the Filter parameter in the same command. Y
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -150,7 +164,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -159,20 +174,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/a75a524b-2491-47b2-83e6-922cd0887c6d.aspx)

@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatacrawledproperty
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchMetadataCrawledProperty
 ---
 
@@ -35,41 +40,41 @@ To paginate a set of results from this cmdlet, use an Offset and Count to contro
 Offset and Count are calculated before either filter or named matching is done.
 This means that if a crawled property falls outside the \[Offset,Offset+Count\] range, it will not be returned.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchMetadataCrawledProperty
+Get-FASTSearchMetadataCrawledProperty
 ```
 
 Calling Get-FASTSearchMetadataCrawledProperty without any parameters returns all known crawled properties in the FAST Search Server 2010 for SharePoint system.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchMetadataCrawledProperty -Name viewurl
+Get-FASTSearchMetadataCrawledProperty -Name viewurl
 ```
 
 This example retrieves a crawled property with the exact name "viewurl".
 
 ### ---------------EXAMPLE 3-----------------
 ```
-PS C:\>Get-FASTSearchMetadataCrawledProperty -filter 4
+Get-FASTSearchMetadataCrawledProperty -filter 4
 ```
 
 This example retrieves and returns any crawled property that includes a "4" in its name.
 
 ### ---------------EXAMPLE 4-----------------
 ```
-PS C:\>Get-FASTSearchMetadataCrawledproperty -filter url -count 2
+Get-FASTSearchMetadataCrawledproperty -filter url -count 2
 ```
 
 This example retrieves the first two crawled properties with the name "url".
 
 ### ---------------EXAMPLE 5-----------------
 ```
-PS C:\>Get-FASTSearchMetadataCrawledproperty |ForEach-Object{ if ($_.IsMappedToContents) {$_.Name} }
+Get-FASTSearchMetadataCrawledproperty |ForEach-Object{ if ($_.IsMappedToContents) {$_.Name} }
 ```
 
 This example returns the names of all crawled properties that have the IsMappedToContents parameter set to "true".
@@ -77,9 +82,9 @@ The example first retrieves all configured crawled properties, and then iterates
 
 ### ---------------EXAMPLE 6-----------------
 ```
-PS C:\>Get-FASTSearchMetadataCrawledproperty -offset 0 -count 2
-PS C:\>Get-FASTSearchMetadataCrawledproperty -offset 2 -count 2
-PS C:\>Get-FASTSearchMetadataCrawledproperty -offset 4 -count 2
+Get-FASTSearchMetadataCrawledproperty -offset 0 -count 2
+Get-FASTSearchMetadataCrawledproperty -offset 2 -count 2
+Get-FASTSearchMetadataCrawledproperty -offset 4 -count 2
 ```
 
 This example generates a list of two crawled properties each time the cmdlet is run.
@@ -87,7 +92,7 @@ The Offset is increased by the Count value to start returning crawled properties
 
 ### ---------------EXAMPLE 7----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Get-FASTSearchMetadataCrawledProperty -filter url| where-object {($_.Name -eq "url") -and ($_.VariantType -eq 31) -and ($_.Propset -eq "63e90878-0292-490d-8b7c-f3905a8b65fd")}
+Get-FASTSearchMetadataCrawledProperty -filter url| where-object {($_.Name -eq "url") -and ($_.VariantType -eq 31) -and ($_.Propset -eq "63e90878-0292-490d-8b7c-f3905a8b65fd")}
 ```
 
 This example lists all potential matches to a named crawled property, and then selects the exact crawled property by iterating over the result set and picking out the result that also matches both the requested property set and variant type.
@@ -168,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

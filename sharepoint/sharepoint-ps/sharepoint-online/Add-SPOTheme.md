@@ -1,8 +1,13 @@
---
-external help file: 
+---
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spotheme
 applicable: SharePoint Online
 title: Add-SPOTheme
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Add-SPOTheme
@@ -10,6 +15,12 @@ schema: 2.0.0
 ## SYNOPSIS
 
 Creates a new custom theme, or overwrites an existing theme to modify its settings.
+
+## SYNTAX
+
+```powershell
+Add-SPOTheme -Identity <SpoThemePipeBind> -IsInverted <bool> -Overwrite -Palette <SpoThemePalettePipeBind>  [<CommonParameters>]
+```
 
 ## DESCRIPTION
 
@@ -52,7 +63,7 @@ $themepalette = @{
   "primaryText" = "#333"
  }
 
-Add-SPOTheme -Name "Custom Cyan" -Palette $themepalette -IsInverted $false
+Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false
 ```
 
 > [!NOTE]
@@ -63,10 +74,67 @@ Add-SPOTheme -Name "Custom Cyan" -Palette $themepalette -IsInverted $false
 If you want to update an existing theme (to modify some of its color settings, for example), use the same syntax as shown previously, but add the `-Overwrite` flag to the **Add-SPOTheme** cmdlet.
 
 ```powershell
-Add-SPOTheme -Name "Custom Cyan" -Palette $themepalette -IsInverted $false -Overwrite
+Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false -Overwrite
+```
+
+## PARAMETERS
+
+### -Identity
+
+```yaml
+Type: SpoThemePalettePipeBind
+Parameter Sets: (All)
+Aliases: Name
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsInverted
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: None
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Overwrite
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: None
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Palette
+
+```yaml
+Type: SpoThemePalettePipeBind
+Parameter Sets: (All)
+Aliases: None
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## INPUTS
 
 ## OUTPUTS
-

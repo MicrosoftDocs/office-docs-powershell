@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositedesign
 applicable: SharePoint Online
 title: Get-SPOSiteDesign
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Get-SPOSiteDesign
@@ -14,9 +19,7 @@ Gets details about site designs that are on the SharePoint tenant. You can speci
 ## SYNTAX
 
 ```powershell
-Get-SPOSiteDesign
-  [[-Identity] <SPOSiteDesignPipeBind>]
-  [<CommonParameters>]
+Get-SPOSiteDesign [[-Identity] <SPOSiteDesignPipeBind>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +28,7 @@ Gets details about site designs that are on the SharePoint tenant. You can speci
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 
 This example and sample response show how to get site design details.
 
@@ -40,21 +43,20 @@ Description         : Use this design to apply Contoso theme and create
                       custom lists and add to nav
 ```
 
-
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to retrieve.
 
 ```yaml
 Type: SPOSiteDesignPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: False 
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
-

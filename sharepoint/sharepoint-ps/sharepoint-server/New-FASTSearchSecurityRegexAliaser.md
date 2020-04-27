@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsecurityregexaliaser
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchSecurityRegexAliaser
 ---
 
@@ -22,20 +27,20 @@ New-FASTSearchSecurityRegexAliaser [-InputUserStoreId] <String> [-OutputUserStor
 ## DESCRIPTION
 This cmdlet creates a regular expression aliaser to map users/groups from one user store to users/groups in other user stores, based on a regular expression pattern.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -Identity regex1 -InputUserStoreId ln1 -OutputUserStoreIds ln2
+New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -Identity regex1 -InputUserStoreId ln1 -OutputUserStoreIds ln2
 ```
 
 This example creates a regular expression aliaser pattern object and pipes it into a New-FASTSearchSecurityRegexAliaser cmdlet to create a regular expression aliaser.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -InputUserStoreId ln1 -OutputUserStoreIds ln2,ln3 -CaseSensitive $False -UnicodeCaseSensitive $False
+New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -InputUserStoreId ln1 -OutputUserStoreIds ln2,ln3 -CaseSensitive $False -UnicodeCaseSensitive $False
 ```
 
 This example creates a regular expression aliaser pattern object and pipes it into a New-FASTSearchSecurityRegexAliaser cmdlet to create a regular expression aliaser.
@@ -159,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

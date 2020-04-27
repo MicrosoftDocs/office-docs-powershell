@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csvoicenormalizationrule
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsVoiceNormalizationRule
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # New-CsVoiceNormalizationRule
@@ -15,26 +20,18 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-New-CsVoiceNormalizationRule [-Identity] <XdsIdentity> [-Description <String>] [-IsInternalExtension <Boolean>]
- [-Pattern <String>] [-Priority <Int32>] [-Translation <String>] [-Force] [-InMemory] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CsVoiceNormalizationRule [-Tenant <Guid>] [-Description <String>] [-Pattern <String>]
+ [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [-Identity] <XdsIdentity>
+ [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
 ```
-New-CsVoiceNormalizationRule -Name <String> -Parent <String> [-Description <String>]
- [-IsInternalExtension <Boolean>] [-Pattern <String>] [-Priority <Int32>] [-Translation <String>] [-Force]
- [-InMemory] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-###  (Default)
-```
-New-CsVoiceNormalizationRule [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-Description <Object>] [-Force] [-InMemory] [-IsInternalExtension <Object>] [-Name <Object>]
- [-Parent <Object>] [-Pattern <Object>] [-Priority <Object>] [-Tenant <Object>] [-Translation <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+New-CsVoiceNormalizationRule [-Tenant <Guid>] -Parent <String> -Name <String> [-Description <String>]
+ [-Pattern <String>] [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [-InMemory]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -111,26 +108,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 The name of the rule.
 This parameter is required if a value has been specified for the Parent parameter.
 If no value has been specified for the Parent parameter, Name defaults to the name specified in the Identity parameter.
 For example, if a rule is created with the Identity site:Redmond/RedmondRule, the Name will default to RedmondRule.
 The Name parameter and the Identity parameter cannot be used in the same command.
-
 
 ```yaml
 Type: String
@@ -139,19 +122,6 @@ Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -166,20 +136,6 @@ A dial plan with the specified scope must already exist or the command will fail
 The Parent parameter is required unless the Identity parameter is specified.
 You cannot include the Identity parameter and the Parent parameter in the same command.
 If you include the Parent parameter, the Name parameter is also required.
-
-
-```yaml
-Type: String
-Parameter Sets: ParentAndRelativeKey
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ```yaml
 Type: String
@@ -198,7 +154,6 @@ Accept wildcard characters: False
 A friendly description of the normalization rule.
 
 Maximum string length: 512 characters.
-
 
 ```yaml
 Type: String
@@ -220,7 +175,6 @@ This value is ignored if the value of the OptimizeDeviceDialing property of the 
 
 Default: False
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -238,7 +192,6 @@ Accept wildcard characters: False
 A regular expression that the dialed number must match in order for this rule to be applied.
 
 Default: ^(\d{11})$ (The default represents any set of numbers up to 11 digits.)
-
 
 ```yaml
 Type: String
@@ -258,7 +211,6 @@ The order in which rules are applied.
 A phone number might match more than one rule.
 This parameter sets the order in which the rules are tested against the number.
 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -277,7 +229,6 @@ The regular expression pattern that will be applied to the number to convert it 
 
 Default: +$1 (The default prefixes the number with a plus sign \[+\].)
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -293,7 +244,6 @@ Accept wildcard characters: False
 
 ### -Force
 Suppresses any confirmation prompts that would otherwise be displayed before making changes.
-
 
 ```yaml
 Type: SwitchParameter
@@ -312,7 +262,6 @@ Accept wildcard characters: False
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -328,7 +277,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Describes what would happen if you executed the command without actually executing the command.
-
 
 ```yaml
 Type: SwitchParameter
@@ -346,7 +294,6 @@ Accept wildcard characters: False
 ### -Confirm
 Prompts you for confirmation before executing the command.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -360,43 +307,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -409,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

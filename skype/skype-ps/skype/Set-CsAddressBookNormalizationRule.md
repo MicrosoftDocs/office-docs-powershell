@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csaddressbooknormalizationrule
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAddressBookNormalizationRule
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsAddressBookNormalizationRule
@@ -44,7 +49,7 @@ The command shown in Example 1 changes the priority of the RedmondAddresses norm
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsAddressBookNormalizationRule | Where-Object {$_.Translation -eq '+1206556$1'} Set-CsAddressBookNormalizationRule -Translation '+1425556$1'
+Get-CsAddressBookNormalizationRule | Where-Object {$_.Translation -eq '+1206556$1'} | Set-CsAddressBookNormalizationRule -Translation '+1425556$1'
 ```
 
 In Example 2, all the normalization rules that use the Translation +12065556$1 are updated to use the Translation +14255556$1; this might be required if an area code changes from 206 to 425.
@@ -212,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-cssimpleurl
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSimpleUrl
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # New-CsSimpleUrl
@@ -13,10 +18,7 @@ Creates a new simple URL, which can then be added to a simple URL configuration 
 Simple URLs make it easier for users to join meetings and conferences, and also make it easier for administrators to log on to the Skype for Business Server Control Panel.
 This cmdlet was introduced in Lync Server 2010.
 
-
-
 ## SYNTAX
-
 ```
 New-CsSimpleUrl -Component <String> -Domain <String> [-SimpleUrlEntry <PSListModifier>] [-ActiveUrl <String>]
  [<CommonParameters>]
@@ -61,13 +63,10 @@ After creating a simple URL entry, you then use the New-CsSimpleUrl cmdlet to cr
 After you have created an object representing the simple URL, that object can then be added to a new (or existing) simple URL collection.
 After updating a simple URL collection, you must then run the Enable-CsComputer cmdlet.
 
-
-
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 $urlEntry = New-CsSimpleUrlEntry -Url "https://meet.fabrikam.com"
 
 $simpleUrl = New-CsSimpleUrl -Component "meet" -Domain "fabrikam.com" -SimpleUrlEntry $urlEntry -ActiveUrl "https://meet.fabrikam.com"
@@ -85,25 +84,23 @@ After the URL has been created (and stored in the object reference $simpleUrl) t
 This is done by using the Set-CsSimpleUrlConfiguration cmdlet, the SimpleUrl parameter, and the parameter value @{Add=$simpleUrl}.
 This syntax causes the URL stored in the object reference $simpleUrl to be added to the SimpleUrl property.
 
-
 ## PARAMETERS
 
 ### -Component
-
 Indicates the type of simple URL being created.
 Valid values are:
 
-Meet - URL used for managing meetings.
+- Meet - URL used for managing meetings.
 
-Admin - URL that points to the Skype for Business Server Control Panel.
+- Admin - URL that points to the Skype for Business Server Control Panel.
 
-Dialin - URL used for dial-in conferencing.
+- Dialin - URL used for dial-in conferencing.
+
+- WebScheduler - URL used for schedule meetings.
 
 For example:
 
 `-Component "Meet"`
-
-
 
 ```yaml
 Type: String
@@ -187,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

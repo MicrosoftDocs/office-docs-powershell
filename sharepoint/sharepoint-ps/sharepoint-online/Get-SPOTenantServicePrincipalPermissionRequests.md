@@ -1,25 +1,31 @@
 ---
-external help file:
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantserviceprincipalpermissionrequests
 applicable: SharePoint Online
+title: Get-SPOTenantServicePrincipalPermissionRequests
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Get-SPOTenantServicePrincipalPermissionRequests
 
 ## SYNOPSIS
-Gets the collection of permission requests for the "SharePoint Online Client" service principal
 
-> [!NOTE] 
-> This is a preview feature and should not be used in production.
+Gets the collection of permission requests for the "SharePoint Online Client" service principal
 
 ## SYNTAX
 
 ### Default
+
 ```powershell
 Get-SPOTenantServicePrincipalPermissionRequests
 ```
 
 ## DESCRIPTION
+
 Gets the collection of permission requests for the "SharePoint Online Client" service principal.
 
 Permission request object
@@ -35,9 +41,9 @@ A permission request contains the following properties:
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+
 ```powershell
 Get-SPOTenantServicePrincipalPermissionRequests
 ```
 
 Gets the collection of permission requests for the "SharePoint Online Client" service principal.
-

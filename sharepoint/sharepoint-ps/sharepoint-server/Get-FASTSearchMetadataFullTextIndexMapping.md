@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatafulltextindexmapping
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchMetadataFullTextIndexMapping
 ---
 
@@ -27,14 +32,14 @@ Running Get-FASTSearchMetadataFullTextIndexMapping with only a full text index a
 
 Running Get-FASTSearchMetadataFullTextIndexMapping with both the ManagedProperty and the FullTextIndex parameters returns a single FullTextIndexMappingImpl object for that exact mapping, if it exists in the Microsoft FAST Search Server 2010 for SharePoint system.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>$fulltextindex = Get-FASTSearchMetadataFullTextIndex -name content
-PS C:\>Get-FASTSearchMetadataFullTextIndexMapping -fulltextindex $fulltextindex| ForEach-Object {$_.ManagedProperty.Name}
+$fulltextindex = Get-FASTSearchMetadataFullTextIndex -name content
+Get-FASTSearchMetadataFullTextIndexMapping -fulltextindex $fulltextindex| ForEach-Object {$_.ManagedProperty.Name}
 ```
 
 This example retrieves the full text index mappings for the full text index "content".
@@ -42,8 +47,8 @@ It then iterates over the mappings and outputs the names of the managed properti
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>$title = Get-FASTSearchMetadataManagedProperty -name title
-PS C:\>Get-FASTSearchMetadataFullTextIndexMapping -managedproperty $title
+$title = Get-FASTSearchMetadataManagedProperty -name title
+Get-FASTSearchMetadataFullTextIndexMapping -managedproperty $title
 ```
 
 This example retrieves all full text indexes where the managed property named "title" is included.
@@ -85,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/test-owaconnectivity
 applicable: Exchange Server 2010
 title: Test-OwaConnectivity
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010"
 ---
 
@@ -13,23 +17,34 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Test-OwaConnectivity cmdlet to verify that Microsoft Office Outlook Web App is running as expected. The Test-OwaConnectivity cmdlet can be used to test Outlook Web App connectivity for all Microsoft Exchange Server 2010 virtual directories on a specified Client Access server for all mailboxes on servers running Exchange that are in the same Active Directory site. The Test-OwaConnectivity cmdlet can also be used to test the connectivity for an individual Exchange Outlook Web App URL.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### URL
 ```
-Test-OwaConnectivity [-URL] <String> -MailboxCredential <PSCredential> [-AllowUnsecureAccess] [-Confirm]
- [-DomainController <Fqdn>] [-LightMode] [-ResetTestAccountCredentials] [-Timeout <UInt32>]
- [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+Test-OwaConnectivity [-URL] <String> -MailboxCredential <PSCredential>
+ [-AllowUnsecureAccess]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-AllowUnsecureAccess] [-Confirm]
- [-DomainController <Fqdn>] [-LightMode] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
- [-ResetTestAccountCredentials] [-RSTEndpoint <String>] [-TestType <Internal | External>] [-Timeout <UInt32>]
- [-TrustAnySSLCertificate] [-VirtualDirectoryName <String>] [-WhatIf] [<CommonParameters>]
+Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-RSTEndpoint <String>] [-TestType <OwaConnectivityTestType>] [-VirtualDirectoryName <String>]
+ [-AllowUnsecureAccess]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,19 +62,19 @@ If the command encounters a virtual directory that doesn't require Secure Socket
 
 The Test-OwaConnectivity cmdlet can be run as a one-time interactive task or as a scheduled task under Microsoft System Center Operations Manager 2007 control. To run the Test-OwaConnectivity cmdlet as a System Center Operations Manager 2007 task, the Client Access test mailbox must be available on the Mailbox servers that the cmdlet tests against.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-OwaConnectivity -URL:https://mail.contoso.com/owa -MailboxCredential:(get-credential contoso\kweku)
 ```
 
 This example tests the connectivity for the URL https://mail.contoso.com/owa using the credentials for the user contoso\\kweku.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Test-OwaConnectivity -ClientAccessServer:Contoso12 -AllowUnsecureAccess
 ```
 
@@ -70,13 +85,16 @@ This example tests the connectivity of a specific Client Access server Contoso12
 ### -MailboxCredential
 The MailboxCredential parameter specifies the mailbox credential for a single URL test.
 
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+
 The MailboxCredential parameter is required only when using the URL parameter.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: Named
 Default value: None
@@ -93,9 +111,10 @@ You can't use the URL parameter with the TestType or ClientAccessServer paramete
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -111,6 +130,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -125,9 +145,10 @@ Don't use this parameter with the URL parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: 1
 Default value: None
@@ -147,6 +168,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +184,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +202,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -191,9 +215,10 @@ The MailboxServer parameter specifies the name of the Mailbox server to test. If
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -206,9 +231,10 @@ The MonitoringContext parameter shows you what information is returned to System
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -224,6 +250,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -236,9 +263,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -250,10 +278,11 @@ Accept wildcard characters: False
 The TestType parameter specifies whether the command tests internal or external URLs. Values are Internal and External. You can't use this parameter with the URL parameter. When neither the TestType parameter nor the URL parameter is specified, the default is TestType:Internal.
 
 ```yaml
-Type: Internal | External
-Parameter Sets: Set1
+Type: OwaConnectivityTestType
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -269,6 +298,7 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -284,6 +314,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -296,9 +327,10 @@ The VirtualDirectoryName parameter specifies the name of the virtual directory t
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -314,6 +346,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -322,20 +355,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/44808bba-56b3-45bc-8cab-b45f52758636.aspx)

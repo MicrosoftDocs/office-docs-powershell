@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/restore-spfarm
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Restore-SPFarm
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Restore-SPFarm
@@ -29,19 +34,19 @@ Restore-SPFarm -Directory <String> [-ShowTree] [-AssignmentCollection <SPAssignm
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The `Restore-SPFarm` cmdlet restores one or more items from a backup such as an individual database, Web application, or the entire farm.
 This cmdlet can also be used to apply a farm template to the entire farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### -------------------EXAMPLE 1-----------------------
 ```
-C:\PS>Restore-SPFarm -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -RestoreMethod new -ConfigurationOnly
+Restore-SPFarm -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -RestoreMethod new -ConfigurationOnly
 ```
 
 This example restores the configuration settings from the backup package in the \\\\file_server\share\Backup directory to the farm.
@@ -49,7 +54,7 @@ This example restores the configuration settings from the backup package in the 
 
 ### -------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Restore-SPFarm -ShowTree -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -Item "Microsoft SharePoint Foundation Web Application" -Verbose
+Restore-SPFarm -ShowTree -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -Item "Microsoft SharePoint Foundation Web Application" -Verbose
 ```
 
 This example show which components of the farm would be restored under the Microsoft SharePoint Foundation Web Application node, but does not actually restore them.
@@ -57,7 +62,7 @@ This example show which components of the farm would be restored under the Micro
 
 ### -------------------EXAMPLE 3-----------------------
 ```
-C:\PS>Restore-SPFarm -Directory C:\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef  -RestoreMethod overwrite -RestoreThreads 10 -Force
+Restore-SPFarm -Directory C:\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef  -RestoreMethod overwrite -RestoreThreads 10 -Force
 ```
 
 This example restores a farm by using 10 threads and suppresses the overwrite warning.
@@ -82,7 +87,7 @@ The spbr* folders are created automatically.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -103,7 +108,7 @@ The valid values are:
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -122,7 +127,7 @@ A restore operation will not be performed if the ShowTree parameter is present.
 Type: SwitchParameter
 Parameter Sets: ShowTree
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -144,7 +149,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -165,7 +170,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -181,7 +186,7 @@ Specifies settings only (no data) will be restored from the backup package and a
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -198,7 +203,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -216,7 +221,7 @@ If an application pool being restored already exists in the farm, the credential
 Type: PSCredential
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -232,7 +237,7 @@ Suppresses the prompt warning that you will overwrite components when you perfor
 Type: SwitchParameter
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -256,7 +261,7 @@ Farm\Microsoft SharePoint Foundation Web Application\SharePoint - 80
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -276,7 +281,7 @@ It is not valid for overwrite restores.
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -304,7 +309,7 @@ The default value is 5.
 Type: Int32
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -326,7 +331,7 @@ The default value is 3.
 Type: Int32
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -343,7 +348,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -353,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

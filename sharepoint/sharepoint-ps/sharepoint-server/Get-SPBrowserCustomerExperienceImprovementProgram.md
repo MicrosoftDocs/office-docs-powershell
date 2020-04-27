@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spbrowsercustomerexperienceimprovementprogram
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPBrowserCustomerExperienceImprovementProgram
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPBrowserCustomerExperienceImprovementProgram
@@ -36,24 +41,24 @@ Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication <SPWebApplicat
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Get-SPBrowserCustomerExperienceImprovementProgram cmdlet reads the current opt-in state for the browser Customer Experience Improvement Program.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication http://WebAppexample1
+Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication https://WebAppexample1
 ```
 
 This example returns the current Customer Experience Improvement Program opt-in state for the Web application, WebAppexample1.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Get-SPSiteSubscription http://SiteSubscription1 | Get-SPBrowserCustomerExperienceImprovementProgram
+Get-SPSiteSubscription https://SiteSubscription1 | Get-SPBrowserCustomerExperienceImprovementProgram
 ```
 
 The following example returns the Customer Experience Improvement Program opt-in state for the site subscription, SiteSubscription1.
@@ -67,7 +72,7 @@ Specifies that the opt-in state for the farm is returned by this cmdlet.
 Type: SwitchParameter
 Parameter Sets: Farm
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -79,13 +84,13 @@ Accept wildcard characters: False
 ### -SiteSubscription
 Returns the opt-in state for the specified site subscription.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscription1); or an instance of a valid SiteSubscription object.
+The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscription1); or an instance of a valid SiteSubscription object.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -97,13 +102,13 @@ Accept wildcard characters: False
 ### -WebApplication
 Returns the opt-in state for the specified SharePoint Web application.
 
-The type must be a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
+The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -121,7 +126,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

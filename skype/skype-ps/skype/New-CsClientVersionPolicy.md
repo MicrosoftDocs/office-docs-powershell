@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csclientversionpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsClientVersionPolicy
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # New-CsClientVersionPolicy
@@ -69,7 +74,7 @@ Get-CsSite | Select-Object Identity | ForEach-Object {New-CsClientVersionPolicy 
 
 The command shown in Example 2 creates a new client version policy for each site in the organization.
 To accomplish this task, the command first calls the Get-CsSite cmdlet without any additional parameters; that returns a collection of all the sites in the topology.
-This collection of sites is then then piped to the Select-Object cmdlet, which extracts the Identity property for each site.
+This collection of sites is then piped to the Select-Object cmdlet, which extracts the Identity property for each site.
 Those Identities are then piped to the ForEach-Object cmdlet, which takes each site in the collection and creates a new client version policy for that site.
 
 
@@ -233,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spbackuphistory
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPBackupHistory
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPBackupHistory
@@ -24,27 +29,27 @@ Get-SPBackupHistory -Directory <String> [-AssignmentCollection <SPAssignmentColl
 The Get-SPBackupHistory cmdlet reads a history of backup and restore operations that have been run.
 Specifies whether you want to display only the backup history, only the restore history, or all of the history.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPBackupHistory -Directory \\file_server\share\Backup
+Get-SPBackupHistory -Directory \\file_server\share\Backup
 ```
 
 This example returns all farm backup and restore operations that have been run for the \\\\file_server\share\Backup directory.
 
 ### ------------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPBackupHistory -Directory C:\Backup -ShowBackup
+Get-SPBackupHistory -Directory C:\Backup -ShowBackup
 ```
 
 This example returns all of the farm backup operations that have been run for the C:\Backup directory.
 
 ### ------------------EXAMPLE 3----------------- 
 ```
-PS C:\>(Get-SPBackupHistory -Directory C:\Backup -ShowBackup)[0].SelfId | Restore-SPFarm -Directory C:\Backup -RestoreMethod overwrite
+(Get-SPBackupHistory -Directory C:\Backup -ShowBackup)[0].SelfId | Restore-SPFarm -Directory C:\Backup -RestoreMethod overwrite
 ```
 
 This example gets all of the farm backup operations that have been run for the C:\Backup directory, finds the most recent backup, and then passes its backup GUID to the Restore-SPFarm cmdlet.
@@ -64,7 +69,7 @@ The type must be a valid path in either of the following forms:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -86,7 +91,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -103,7 +108,7 @@ If both the ShowBackup and the ShowRestore parameters are not specified, the his
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -120,7 +125,7 @@ If both the ShowBackup and the ShowRestore parameters are absent, the history of
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -130,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

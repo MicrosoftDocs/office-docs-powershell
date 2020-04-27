@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpdefaultcolumnvalues
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPDefaultColumnValues
 ---
+
 # Set-PnPDefaultColumnValues
 
 ## SYNOPSIS
@@ -40,10 +43,10 @@ Sets a default value for the enterprise keywords field on a library to a term wi
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Set-PnPDefaultColumnValues -List Documents -Field MyTextField -Value "DefaultValue"
+Set-PnPDefaultColumnValues -List Documents -Field MyTextField -Value "DefaultValue" -Folder "My folder"
 ```
 
-Sets a default value for the MyTextField text field on a library to a value of "DefaultValue"
+Sets a default value for the MyTextField text field on the folder "My folder" in a library to a value of "DefaultValue"
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
@@ -145,4 +148,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

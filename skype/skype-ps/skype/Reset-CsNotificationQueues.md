@@ -1,32 +1,36 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/reset-csnotificationqueues
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Reset-CsNotificationQueues
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Reset-CsNotificationQueues
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+The `Reset-CsNotificationQueues` cmdlet resets all presence notification queues. This cmdlet was introduced in Skype for Business Server 2015 November 2015 Cumulative Update.
 
 ## SYNTAX
-
 ```
 Reset-CsNotificationQueues [[-Fqdn] <Fqdn>] [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The `Reset-CsNotificationQueues` cmdlet resets all presence notification queues. Pending notifications will not be sent.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Reset-CsNotificationQueues -Fqdn FE01.contoso.com
 ```
 
-{{ Add example description here }}
+This example resets the notification queues on server FE01.contoso.com.
 
 ## PARAMETERS
 
@@ -47,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fqdn
-{{Fill Fqdn Description}}
+Specifies the fqdn of the server which you want to reset notification queues.
 
 ```yaml
 Type: Fqdn
@@ -96,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

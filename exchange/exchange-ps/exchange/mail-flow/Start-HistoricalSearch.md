@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/start-historicalsearch
 applicable: Exchange Online, Exchange Online Protection
 title: Start-HistoricalSearch
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -13,34 +17,43 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Start-HistoricalSearch cmdlet to start a new historical search.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String>
- -ReportType <MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2>
- -StartDate <DateTime> [-DeliveryStatus <String>] [-Direction <All | Sent | Received>]
- [-DLPPolicy <MultiValuedProperty>] [-Locale <CultureInfo>] [-MessageID <MultiValuedProperty>]
- [-NotifyAddress <MultiValuedProperty>] [-OriginalClientIP <String>] [-RecipientAddress <MultiValuedProperty>]
- [-SenderAddress <MultiValuedProperty>] [-TransportRule <MultiValuedProperty>] [<CommonParameters>]
+Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType>
+ -StartDate <DateTime> [-DeliveryStatus <String>]
+ [-Direction <MessageDirection>]
+ [-DLPPolicy <MultiValuedProperty>]
+ [-Locale <CultureInfo>]
+ [-MessageID <MultiValuedProperty>]
+ [-NotifyAddress <MultiValuedProperty>]
+ [-OriginalClientIP <String>]
+ [-RecipientAddress <MultiValuedProperty>]
+ [-SenderAddress <MultiValuedProperty>]
+ [-TransportRule <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and ninety days old. There is a limit of 250 historical searches that can be submitted in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota.
+A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and 90 days old. There is a limit of 250 historical searches that you can submit in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota. Also, in each CSV file there is a limit of 50000 results or lines.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2016 -EndDate 1/7/2016 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
+### Example 1
+```powershell
+Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2018 -EndDate 1/7/2018 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
 ```
 
-This example starts a new historical search named "Fabirkam Search" that has the following properties:
+This example starts a new historical search named "Fabrikam Search" that has the following properties:
 
-- Date range: January 1, 2016 to January 7, 2016
+- Date range: January 1, 2018 to January 7, 2018
 
 - Report type: Message trace
 
@@ -53,13 +66,16 @@ This example starts a new historical search named "Fabirkam Search" that has the
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -70,11 +86,14 @@ Accept wildcard characters: False
 ### -ReportTitle
 The ReportTitle parameter specifies a descriptive name for the historical search. If the value contains spaces, enclose the value in quotation marks (").
 
+You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -99,22 +118,24 @@ The ReportType parameter specifies the type of historical search that you want t
 
 - MessageTraceDetail: Message Trace Details Report.
 
-- Phish: Exchange Online Protetion and Advanced Threat Protection E-mail Phish Report.
+- Phish: Exchange Online Protection and Advanced Threat Protection E-mail Phish Report.
 
 - SPAM: SPAM Detections Report.
 
-- Spoof: Spood Mail Report.
+- Spoof: Spoof Mail Report.
 
 - TransportRule: Transport or Mail FLow Rules Report.
 
 - UnifiedDLP: Unified Data Loss Prevention Report.
 
+You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
-Type: MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2 | Phish | ATPDocument
+Type: HistoricalSearchReportType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -125,13 +146,14 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -153,6 +175,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -170,10 +193,11 @@ The Direction parameter filters the results by the direction of the message. Val
 - Sent: Outgoing messages only.
 
 ```yaml
-Type: All | Sent | Received
+Type: MessageDirection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +213,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -199,13 +224,14 @@ Accept wildcard characters: False
 ### -Locale
 The Locale parameter filters the results by the locale of the message.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
 
 ```yaml
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -214,13 +240,14 @@ Accept wildcard characters: False
 ```
 
 ### -MessageID
-The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string. This may include angle brackets.
+The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +265,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +281,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -261,28 +290,30 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAddress
-The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas. The maximum number of addresses is 100.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -SenderAddress
-The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas.
+The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas. The maximum number of addresses is 100.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -298,6 +329,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -306,20 +338,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/9688689c-2953-49de-bb38-eeea10b7f08e.aspx)

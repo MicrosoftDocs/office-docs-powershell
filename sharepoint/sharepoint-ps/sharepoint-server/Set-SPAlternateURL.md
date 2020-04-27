@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spalternateurl
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAlternateURL
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAlternateURL
@@ -22,14 +27,14 @@ Set-SPAlternateURL [-Identity] <SPAlternateUrlPipeBind> [-Url <String>] [-Zone <
 The `Set-SPAlternateUrl` cmdlet changes the URL or zone of the alternate URL specified by the Identity parameter.
 This cmdlet can be used to change only the zone of internal URLs and cannot be used to change the zone of public URLs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
+Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
@@ -37,7 +42,7 @@ This example changes the zone of the alternate URL https://www.contoso.com.
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
+Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
 ```
 
 This example changes the URL and zone of the alternate URL https://www.contoso.com.
@@ -45,7 +50,7 @@ This example changes the URL and zone of the alternate URL https://www.contoso.c
 
 ### ------------------EXAMPLE 3------------------
 ```
-C:\PS>Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
+Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
@@ -53,7 +58,7 @@ This example changes the zone of the alternate URL https://www.contoso.com.
 
 ### ------------------EXAMPLE 4------------------
 ```
-C:\PS>Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
+Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
 ```
 
 This example changes the zone of the alternate URL for the specified Web application from Extranet to Intranet.
@@ -64,13 +69,13 @@ This example changes the zone of the alternate URL for the specified Web applica
 ### -Identity
 Specifies the URL or GUID of the alternate URL to change.
 
-The type must be a valid URL, in the form http://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+The type must be a valid URL, in the form https://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
 ```yaml
 Type: SPAlternateUrlPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -86,7 +91,7 @@ Specifies the new alternate URL.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -104,7 +109,7 @@ The type must be any one of the following values: Default, Intranet, Internet, E
 Type: SPUrlZone
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -126,7 +131,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -143,7 +148,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +165,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -170,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

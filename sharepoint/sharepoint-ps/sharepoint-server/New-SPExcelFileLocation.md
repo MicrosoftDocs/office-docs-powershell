@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spexcelfilelocation
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelFileLocation
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPExcelFileLocation
@@ -34,21 +39,21 @@ Excel Services Application always enforces the properties defined by the trusted
 The properties that the trusted file location uses are determined through comparison of the file path for the workbook with the Address parameter of the trusted file location.
 
 The longest match takes precedence.
-For example, if http://portal/site/ and http://portal/site/subsite are trusted locations and you load a workbook from the subsite, the application uses the properties from the subsite trusted location because it has the longest matching address.
+For example, if https://portal/site/ and https://portal/site/subsite are trusted locations and you load a workbook from the subsite, the application uses the properties from the subsite trusted location because it has the longest matching address.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address "http://myPortal/myTeam" -includechildren -locationType SharePoint -description "This is my team's site on myPortal." -workbooksizemax 50 -externaldataallowed DclAndEmbedded -WarnOnDataRefresh:$false
+Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address "https://myPortal/myTeam" -includechildren -locationType SharePoint -description "This is my team's site on myPortal." -workbooksizemax 50 -externaldataallowed DclAndEmbedded -WarnOnDataRefresh:$false
 ```
 
 This example adds a new trusted file location to the list of trusted file locations that is in the Excel Services Application Web service application named MyExcelService.
 
-This example enables workbooks to load from any child or subfolder that starts with http://myPortal/myTeam.
+This example enables workbooks to load from any child or subfolder that starts with https://myPortal/myTeam.
 All workbooks loaded from this location must be smaller than 50 megabytes (MB) in size.
 The workbooks can refresh external data by using connections that are embedded in the workbook file or stored in a data connection library.
 A warning message that the workbook is attempting to refresh external data will not be displayed.
@@ -56,7 +61,7 @@ A warning message that the workbook is attempting to refresh external data will 
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address http://myPortal/myTeam/managers -locationType SharePoint -description "This is the manager's subsite for myTeam."
+Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address https://myPortal/myTeam/managers -locationType SharePoint -description "This is the manager's subsite for myTeam."
 ```
 
 This example adds a new trusted file location to the list of trusted file locations that is in the Excel Services Application Web service application named MyExcelService with a given address and description.
@@ -67,7 +72,7 @@ This example adds a new trusted file location to the list of trusted file locati
 ### -Address
 Specifies a Web folder, or file directory from which Excel Services Application can load workbooks.
 
-The type must be a valid URL, in the form http://myPortal/myTeam; or a valid UNC path in form, \\\\server_name\folder_name
+The type must be a valid URL, in the form https://myPortal/myTeam; or a valid UNC path in form, \\\\server_name\folder_name
 
 ```yaml
 Type: String
@@ -310,7 +315,7 @@ Accept wildcard characters: False
 
 ### -IncludeChildren
 Indicates that subordinate URLs, directories and libraries are trusted.
-For example, if the trusted file location is http://portal and IncludeChildren is true, http://portal/subSite is also trusted, as is any URL subordinate to the URL specified in Address.
+For example, if the trusted file location is https://portal and IncludeChildren is true, https://portal/subSite is also trusted, as is any URL subordinate to the URL specified in Address.
 
 ```yaml
 Type: SwitchParameter
@@ -588,7 +593,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

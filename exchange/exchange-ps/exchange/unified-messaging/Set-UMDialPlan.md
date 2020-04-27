@@ -1,9 +1,13 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-umdialplan
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-UMDialPlan
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-UMDialPlan
@@ -11,67 +15,67 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-UMDialplan cmdlet to set various properties on a Unified Messaging (UM) dial plan.
+Use the Set-UMDialPlan cmdlet to set various properties on a Unified Messaging (UM) dial plan.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-UMDialPlan [-Identity] <UMDialPlanIdParameter> [-AccessTelephoneNumbers <MultiValuedProperty>]
- [-AllowDialPlanSubscribers <$true | $false>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
- [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <$true | $false>]
- [-AllowHeuristicADCallingLineIdResolution <$true | $false>] [-AudioCodec <G711 | Wma | Gsm | Mp3>]
- [-AutomaticSpeechRecognitionEnabled <$true | $false>] [-CallAnsweringRulesEnabled <$true | $false>]
- [-CallSomeoneEnabled <$true | $false>] [-ConfiguredInCountryOrRegionGroups <MultiValuedProperty>]
+ [-AllowDialPlanSubscribers <Boolean>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
+ [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <Boolean>]
+ [-AllowHeuristicADCallingLineIdResolution <Boolean>] [-AudioCodec <AudioCodecEnum>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>] [-CallAnsweringRulesEnabled <Boolean>]
+ [-CallSomeoneEnabled <Boolean>] [-ConfiguredInCountryOrRegionGroups <MultiValuedProperty>]
  [-ConfiguredInternationalGroups <MultiValuedProperty>] [-Confirm]
  [-ContactAddressList <AddressListIdParameter>] [-ContactRecipientContainer <OrganizationalUnitIdParameter>]
- [-ContactScope <DialPlan | GlobalAddressList | Extension | AutoAttendantLink | AddressList>]
+ [-ContactScope <CallSomeoneScopeEnum>]
  [-CountryOrRegionCode <String>] [-DefaultLanguage <UMLanguage>] [-DefaultOutboundCallingLineId <String>]
- [-DialByNamePrimary <LastFirst | FirstLast | SMTPAddress>]
- [-DialByNameSecondary <LastFirst | FirstLast | SMTPAddress | None>] [-DomainController <Fqdn>]
- [-EquivalentDialPlanPhoneContexts <MultiValuedProperty>] [-Extension <String>] [-FaxEnabled <$true | $false>]
+ [-DialByNamePrimary <DialByNamePrimaryEnum>]
+ [-DialByNameSecondary <DialByNameSecondaryEnum>] [-DomainController <Fqdn>]
+ [-EquivalentDialPlanPhoneContexts <MultiValuedProperty>] [-Extension <String>] [-FaxEnabled <Boolean>]
  [-ForceUpgrade] [-InCountryOrRegionNumberFormat <NumberFormat>]
- [-InfoAnnouncementEnabled <True | False | Uninterruptible>] [-InfoAnnouncementFilename <String>]
+ [-InfoAnnouncementEnabled <InfoAnnouncementEnabledEnum>] [-InfoAnnouncementFilename <String>]
  [-InputFailuresBeforeDisconnect <Int32>] [-InternationalAccessCode <String>]
  [-InternationalNumberFormat <NumberFormat>] [-LegacyPromptPublishingPoint <String>]
  [-LogonFailuresBeforeDisconnect <Int32>]
- [-MatchedNameSelectionMethod <Title | Department | Location | None | PromptForAlias>]
+ [-MatchedNameSelectionMethod <DisambiguationFieldEnum>]
  [-MaxCallDuration <Int32>] [-MaxRecordingDuration <Int32>] [-Name <String>] [-NationalNumberPrefix <String>]
  [-NumberingPlanFormats <MultiValuedProperty>] [-OperatorExtension <String>] [-OutsideLineAccessCode <String>]
  [-PilotIdentifierList <MultiValuedProperty>] [-RecordingIdleTimeout <Int32>]
- [-SendVoiceMsgEnabled <$true | $false>] [-TUIPromptEditingEnabled <$true | $false>]
- [-UMAutoAttendant <UMAutoAttendantIdParameter>] [-VoIPSecurity <SIPSecured | Unsecured | Secured>]
- [-WelcomeGreetingEnabled <$true | $false>] [-WelcomeGreetingFilename <String>] [-WhatIf] [<CommonParameters>]
+ [-SendVoiceMsgEnabled <Boolean>] [-TUIPromptEditingEnabled <Boolean>]
+ [-UMAutoAttendant <UMAutoAttendantIdParameter>] [-VoIPSecurity <UMVoIPSecurityType>]
+ [-WelcomeGreetingEnabled <Boolean>] [-WelcomeGreetingFilename <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-UMDialplan cmdlet changes or modifies the properties of an existing UM dial plan. Some UM dial plan properties are required and are created by default. However, in some cases, after the UM dial plan is created, not all properties for the UM dial plan are writable. Therefore, some of the properties can't be changed unless the existing UM dial plan is deleted and a new one is created.
+The Set-UMDialPlan cmdlet changes or modifies the properties of an existing UM dial plan. Some UM dial plan properties are required and are created by default. However, in some cases, after the UM dial plan is created, not all properties for the UM dial plan are writable. Therefore, some of the properties can't be changed unless the existing UM dial plan is deleted and a new one is created.
 
 UM dial plans are important to the operation of Unified Messaging. Modifications to an existing UM dial plan should be performed by an administrator who understands the implications of changes to UM dial plans.
 
 After this task is completed, the parameters and values specified are configured on the UM dial plan.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Set-UMDialplan -Identity MyDialPlan -OutsideLineAccessCode 9
+### Example 1
+```powershell
+Set-UMDialPlan -Identity MyDialPlan -OutsideLineAccessCode 9
 ```
 
 This example configures the UM dial plan MyDialPlan to use 9 for the outside line access code.
 
-### -------------------------- Example 2 --------------------------
-```
-Set-UMDialplan -Identity MyDialPlan -WelcomeGreetingEnabled $true -WelcomeGreetingFilename welcome.wav
+### Example 2
+```powershell
+Set-UMDialPlan -Identity MyDialPlan -WelcomeGreetingEnabled $true -WelcomeGreetingFilename welcome.wav
 ```
 
 This example configures the UM dial plan MyDialPlan to use a welcome greeting.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 $csv=import-csv "C:\MyInCountryGroups.csv"; Set-UMDialPlan -Identity MyDialPlan -ConfiguredInCountryOrRegionGroups $csv; Set-UMDialPlan -Identity MyDialPlan -AllowedInCountryOrRegionGroups "local, long distance"
 ```
 
@@ -86,7 +90,8 @@ The Identity parameter specifies the UM dial plan ID. This parameter is the dire
 Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -101,7 +106,8 @@ The AccessTelephoneNumbers parameter specifies a single valid voice mail pilot n
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -113,10 +119,11 @@ Accept wildcard characters: False
 The AllowDialPlanSubscribers parameter specifies whether to allow subscribers dial numbers that resolve to a subscriber within the same dial plan. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +138,8 @@ The AllowedInCountryOrRegionGroups parameter specifies the list of in-country/re
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -146,7 +154,8 @@ The AllowedInternationalGroups parameter specifies the list of international dia
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -158,10 +167,11 @@ Accept wildcard characters: False
 The AllowExtensions parameter specifies whether to allow calls to dial plan extensions. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -173,10 +183,11 @@ Accept wildcard characters: False
 The AllowHeuristicADCallingLineIdResolution parameter specifies whether to allow calling line ID resolution using telephone number fields that may be configured in Active Directory. When this parameter is set to $true, the telephone numbers such as those defined in the Mobile or Home telephone number fields in Active Directory are used. Setting this parameter to $true allows for resolution of calling IDs for both UM-enabled and non-UM-enabled users. The default is $true. You may want to set this parameter to $false if the telephone numbers for users aren't in a standard format. If the telephone numbers aren't in a standard format, the Mailbox server may not be able to correctly resolve the caller ID to a name of a user in a consistent manner.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -188,10 +199,11 @@ Accept wildcard characters: False
 The AudioCodec parameter specifies the audio codec used for recording. Mp3 is the default setting.
 
 ```yaml
-Type: G711 | Wma | Gsm | Mp3
+Type: AudioCodecEnum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -203,10 +215,11 @@ Accept wildcard characters: False
 The AutomaticSpeechRecognitionEnabled parameter specifies whether Automatic Speech Recognition (ASR) is enabled for users who are members of the dial plan.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -218,10 +231,11 @@ Accept wildcard characters: False
 The CallAnsweringRulesEnabled parameter specifies whether Call Answering Rules are enabled for UM-enabled users associated with the UM dial plan.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -233,10 +247,11 @@ Accept wildcard characters: False
 The CallSomeoneEnabled parameter specifies whether the Call Someone feature is enabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -259,7 +274,8 @@ The ConfiguredInCountryOrRegionGroups parameter specifies the in-country groups 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -282,7 +298,8 @@ The ConfiguredInternationalGroups parameter specifies the international groups t
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -301,7 +318,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -316,7 +334,8 @@ The ContactAddressList parameter specifies the identity of the address list. If 
 Type: AddressListIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -331,7 +350,8 @@ The ContactRecipientContainer parameter specifies the name or identity of the co
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -343,10 +363,11 @@ Accept wildcard characters: False
 The ContactScope parameter specifies the scope of the directory search provided to callers when they access the UM dial plan and specify a user's name.
 
 ```yaml
-Type: DialPlan | GlobalAddressList | Extension | AutoAttendantLink | AddressList
+Type: CallSomeoneScopeEnum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -361,7 +382,8 @@ The CountryOrRegionCode parameter specifies the country or region code that prec
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -376,7 +398,8 @@ The DefaultLanguage parameter specifies the default language of the system. This
 Type: UMLanguage
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -394,6 +417,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -405,10 +429,11 @@ Accept wildcard characters: False
 The DialByNamePrimary parameter specifies that the Dial by Name lookup key is to be created from the specified source. The default value is LastFirst.
 
 ```yaml
-Type: LastFirst | FirstLast | SMTPAddress
+Type: DialByNamePrimaryEnum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -420,10 +445,11 @@ Accept wildcard characters: False
 The DialByNameSecondary parameter specifies that the secondary Dial by Name lookup key is to be created from the specified source. The default value is SMTPAddress.
 
 ```yaml
-Type: LastFirst | FirstLast | SMTPAddress | None
+Type: DialByNameSecondaryEnum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -440,7 +466,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -455,7 +482,8 @@ The EquivalentDialPlanPhoneContexts parameter specifies the name of an equivalen
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -470,7 +498,8 @@ The Extension parameter specifies the extension number used by the Call Someone 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -482,10 +511,11 @@ Accept wildcard characters: False
 The FaxEnabled parameter specifies whether the Mailbox servers associated with the UM dial plan answers and processes incoming fax calls. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -500,7 +530,8 @@ The ForceUpgrade switch specifies whether you're prompted for confirmation befor
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -515,7 +546,8 @@ The InCountryOrRegionNumberFormat parameter specifies the prefix string to use a
 Type: NumberFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -527,10 +559,11 @@ Accept wildcard characters: False
 The InfoAnnouncementEnabled parameter specifies whether an informational announcement is enabled. This parameter can be set to True, False, or Uninterruptible. The default value is False.
 
 ```yaml
-Type: True | False | Uninterruptible
+Type: InfoAnnouncementEnabledEnum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -545,7 +578,8 @@ The InfoAnnouncementFilename parameter specifies the audio file name for an info
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -560,7 +594,8 @@ The InputFailuresBeforeDisconnect parameter specifies the number of sequential u
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -575,7 +610,8 @@ The InternationalAccessCode parameter specifies the code that precedes a telepho
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -590,7 +626,8 @@ The InternationalNumberFormat parameter specifies the prefix string to use and t
 Type: NumberFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -605,7 +642,8 @@ The LegacyPromptPublishingPoint parameter was used to specify the location of th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -620,7 +658,8 @@ The LogonFailuresBeforeDisconnect parameter specifies the number of sequential u
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -642,10 +681,11 @@ The MatchedNameSelectionMethod parameter specifies the selection to use to diffe
 - PromptForAlias
 
 ```yaml
-Type: Title | Department | Location | None | PromptForAlias
+Type: DisambiguationFieldEnum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -660,7 +700,8 @@ The MaxCallDuration parameter specifies the maximum length of time that a call c
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -675,7 +716,8 @@ The MaxRecordingDuration parameter specifies the maximum length of time that mes
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -690,7 +732,8 @@ The Name parameter specifies the display name to use for the UM dial plan. This 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -705,7 +748,8 @@ The NationalNumberPrefix parameter specifies the dialing code that precedes a te
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -720,7 +764,8 @@ The NumberingPlanFormats parameter specifies one or more phone number masks that
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -735,7 +780,8 @@ The OperatorExtension parameter specifies the extension number of the operator. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -750,7 +796,8 @@ The OutsideLineAccessCode parameter specifies the code that precedes a telephone
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -765,7 +812,8 @@ The PilotIdentifierList parameter specifies the pilot numbers configured on the 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -780,7 +828,8 @@ The RecordingIdleTimeout parameter specifies the length of time that a caller ca
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -792,10 +841,11 @@ Accept wildcard characters: False
 The SendVoiceMsgEnabled parameter specifies whether the Send Message feature is enabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -807,10 +857,11 @@ Accept wildcard characters: False
 The TUIPromptEditingEnabled parameter specifies whether authorized users are permitted to record UM dial plan or automated attendant prompts by using the Telephone User Interface (TUI). The default setting is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -825,7 +876,8 @@ The UMAutoAttendant parameter specifies the auto attendant run when the caller p
 Type: UMAutoAttendantIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -839,10 +891,11 @@ This parameter is available only in on-premises Exchange.
 The VoIPSecurity parameter specifies whether the Voice over IP (VoIP) traffic is encrypted or that the signaling channel or the signaling and the media channels are encrypted by using mutual Transport Layer Security (TLS). The default setting is Unsecured.
 
 ```yaml
-Type: SIPSecured | Unsecured | Secured
+Type: UMVoIPSecurityType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -854,10 +907,11 @@ Accept wildcard characters: False
 The WelcomeGreetingEnabled parameter specifies whether a custom welcome greeting is enabled. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -872,7 +926,8 @@ The WelcomeGreetingFilename parameter specifies the audio file name for the welc
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -887,7 +942,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -896,20 +952,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/bf6cbfde-35aa-4a03-86b0-50e2c3664eeb.aspx)

@@ -1,19 +1,26 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-supervisoryreviewpolicyreport
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-SupervisoryReviewPolicyReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Get-SupervisoryReviewPolicyReport
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Get-SupervisoryReviewPolicyReport cmdlet to view supervisory review policy events in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -37,19 +44,19 @@ For the reporting period you specify, the Get-SupervisoryReviewPolicyReport cmdl
 
 - Item Count
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Get-SupervisoryReviewPolicyReport -StartDate 03/01/2017 -EndDate 03/31/2017
+### Example 1
+```powershell
+Get-SupervisoryReviewPolicyReport -StartDate 03/01/2018 -EndDate 03/31/2018
 ```
 
-This example returns the supervisory review policy events for the month of March, 2017.
+This example returns the supervisory review policy events for the month of March, 2018.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-SupervisoryReviewPolicyReport -Policies "EU Brokers Policy"
 ```
 
@@ -60,13 +67,14 @@ This example returns the supervisory review policy events for the policy named E
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +90,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +106,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +124,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -124,13 +135,14 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -139,20 +151,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/cdd3cf55-6319-47ef-bcf8-12b6d4dc29e7.aspx)

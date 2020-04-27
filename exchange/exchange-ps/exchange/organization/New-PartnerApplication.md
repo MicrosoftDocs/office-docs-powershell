@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/new-partnerapplication
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-PartnerApplication
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-PartnerApplication
@@ -13,36 +17,51 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-PartnerApplication cmdlet to create a partner application configuration.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### ACSTrustApplication
 ```
-New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String>
- [-AcceptSecurityIdentifierInformation <$true | $false>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-LinkedAccount <UserIdParameter>] [-Realm <String>] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] 
- [<CommonParameters>]
+New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String> [-Realm <String>]
+ [-AcceptSecurityIdentifierInformation <Boolean>]
+ [-AccountType <SupportedAccountType>]
+ [-ActAsPermissions <String[]>]
+ [-AppOnlyPermissions <String[]>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-IssuerIdentifier <String>]
+ [-LinkedAccount <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### AuthMetadataUrl
 ```
-New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String>
- [-AcceptSecurityIdentifierInformation <$true | $false>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-LinkedAccount <UserIdParameter>] [-TrustAnySSLCertificate] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] [<CommonParameters>]
+New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
+ [-AcceptSecurityIdentifierInformation <Boolean>]
+ [-AccountType <SupportedAccountType>]
+ [-ActAsPermissions <String[]>]
+ [-AppOnlyPermissions <String[]>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-IssuerIdentifier <String>]
+ [-LinkedAccount <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can configure partner applications such as Microsoft SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business (https://technet.microsoft.com/en-us/library/jj150480.aspx).
+You can configure partner applications such as Microsoft SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange resources. For details, see [Plan Exchange 2016 integration with SharePoint and Skype for Business](https://docs.microsoft.com/Exchange/plan-and-deploy/integration-with-sharepoint-and-skype/integration-with-sharepoint-and-skype).
 
 We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the %ExchangeInstallPath%Scripts folder to configure partner applications.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-PartnerApplication -Name HRApp -ApplicationIdentifier 00000006-0000-0dd1-ac00-000000000000
 ```
 
@@ -50,14 +69,31 @@ This example creates a new HRApp partner application named HRApp.
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a name for the partner application.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplicationIdentifier
 The ApplicationIdentifier parameter specifies a unique application identifier for the partner application that uses an authorization server. When specifying a value for the ApplicationIdentifier parameter, you must also use the UseAuthServer parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ACSTrustApplication
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -72,26 +108,12 @@ The AuthMetadataUrl parameter specifies the URL that Exchange can retrieve the A
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: AuthMetadataUrl
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a name for the partner application.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -101,10 +123,67 @@ Accept wildcard characters: False
 The AcceptSecurityIdentifierInformation parameter specifies whether Exchange should accept security identifiers (SIDs) from another trusted Active Directory forest for the partner application. By default, new partner applications are configured to not accept SIDs from another forest. If you're in deployment with a trusted forest, set the parameter to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AccountType
+The AccountType parameter specifies the type of Microsoft account that's required for the partner application. Valid values are:
+
+- OrganizationalAccount (This is the default value)
+
+- ConsumerAccount
+
+```yaml
+Type: SupportedAccountType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ActAsPermissions
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppOnlyPermissions
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -123,7 +202,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +220,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -152,10 +233,29 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the partner application is enabled. By default, new partner applications are enabled. Set the parameter to $false to create the application configuration in a disabled state.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IssuerIdentifier
+This parameter is available only in Exchange 2013.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -170,7 +270,8 @@ The LinkedAccount parameter specifies a linked Active Directory user account for
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -185,9 +286,10 @@ The Realm parameter specifies a security realm for the partner application. If t
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ACSTrustApplication
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -204,9 +306,10 @@ We don't recommend using this switch in a production environment.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: AuthMetadataUrl
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -221,26 +324,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -AccountType
-The AccountType parameter specifies the type of Microsoft account that's required for the partner application. Valid values are:
-
-- OrganizationalAccount: This is the default value
-
-- ConsumerAccount
-
-```yaml
-Type: OrganizationalAccount | ConsumerAccount
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -249,20 +334,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/e7cce1f0-d4f1-4eb9-a136-551725a35599.aspx)

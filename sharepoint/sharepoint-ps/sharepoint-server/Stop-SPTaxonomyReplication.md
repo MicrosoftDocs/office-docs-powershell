@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-sptaxonomyreplication
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPTaxonomyReplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Stop-SPTaxonomyReplication
@@ -24,7 +29,7 @@ Use the Stop-SPTaxonomyReplication cmdlet to terminate Hybrid SharePoint Taxonom
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Stop-SPTaxonomyReplication -Credential (Get-Credential)
+Stop-SPTaxonomyReplication -Credential (Get-Credential)
 ```
 
 This example performs a full replication and deletes the Taxonomy Groups Replication timer job. If the full replication fails, you can run the cmdlet again.  The credential is a SharePoint Online tenant administrator credential.
@@ -40,7 +45,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -58,7 +63,7 @@ Fetches full taxonomy data properties, so a Term Store Administrator's credentia
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -68,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

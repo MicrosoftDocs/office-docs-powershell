@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/backup-spfarm
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPFarm
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Backup-SPFarm
@@ -31,36 +36,45 @@ Backup-SPFarm [-ShowTree] [-AssignmentCollection <SPAssignmentCollection>] [-Con
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Backup-SPFarm cmdlet creates a backup for the entire farm or individual components within the farm.
 It can also be used to back up just the configuration settings of a farm to be used as a farm template for other SharePoint farms.
 If you want to back up a single site collection, use the Backup-SPSite cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+To see the available objects to backup, use the `-ShowTree` parameter set.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1--------------------- 
 ```
-C:\PS>Backup-SPFarm -Directory \\file_server\share\Backup -BackupMethod full -ConfigurationOnly
+Backup-SPFarm -Directory \\file_server\share\Backup -BackupMethod full -ConfigurationOnly
 ```
 
 This example backs up the configuration settings of the farm to the \\\\file_server\share\Backup directory.
 
 ### --------------------EXAMPLE 2--------------------- 
 ```
-C:\PS>Backup-SPFarm -ShowTree -Item "Microsoft SharePoint Foundation Web Application" -Verbose
+Backup-SPFarm -ShowTree -Item "Microsoft SharePoint Foundation Web Application" -Verbose
 ```
 
 This example shows which components of the farm would be backed up under the "Microsoft SharePoint Foundation Web Application" node, but do not actually back them up.
 
 ### --------------------EXAMPLE 3--------------------- 
 ```
-C:\PS>Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
+Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
 ```
 
 This example performs a backup of a farm using 10 threads and forces the backup to be saved to the C:\Backup directory even though SharePoint estimates that it does not have sufficient space available.
+
+### --------------------EXAMPLE 4--------------------- 
+```
+Backup-SPFarm -ShowTree
+```
+
+This example shows you the available objects to backup with `Backup-SPFarm`.
 
 ## PARAMETERS
 
@@ -82,7 +96,7 @@ The type must be either of the following:
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -111,7 +125,7 @@ The spbr* folders are automatically created.
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -130,7 +144,7 @@ A backup will not be performed if the ShowTree parameter is present.
 Type: SwitchParameter
 Parameter Sets: ShowTree
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -152,7 +166,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -175,7 +189,7 @@ If a backup is performed with the -ShowTree parameter, then the BackupMethod par
 Type: Int32
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -191,7 +205,7 @@ If set, the backup will contain configuration settings only (no data) for each o
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -209,7 +223,7 @@ If a backup is performed with the ShowTree parameter, then the Force parameter i
 Type: SwitchParameter
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -232,7 +246,7 @@ The type must be a valid item; for example, Farm\Microsoft SharePoint Foundation
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -259,7 +273,7 @@ Valid values are an integer value between 1 and 100.
 Type: Int32
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -276,7 +290,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -292,7 +306,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -302,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

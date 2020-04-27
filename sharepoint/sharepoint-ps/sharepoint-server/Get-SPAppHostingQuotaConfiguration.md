@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spapphostingquotaconfiguration
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppHostingQuotaConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPAppHostingQuotaConfiguration
@@ -20,20 +25,20 @@ Get-SPAppHostingQuotaConfiguration [-AssignmentCollection <SPAssignmentCollectio
 ## DESCRIPTION
 Use the `Get-SPAppHostingQuotaConfiguration` cmdlet to return the hosting quotas for a specified app by using the Identity parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715](http://go.microsoft.com/fwlink/p/?LinkId=671715).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [https://go.microsoft.com/fwlink/p/?LinkId=671715](https://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1--------- 
 ```
-PS C:\>Get-SPAppHostingQuotaConfiguration -Identity '586d4a32-98c3-42ce-80be-3c76c10c250c'
+Get-SPAppHostingQuotaConfiguration -Identity '586d4a32-98c3-42ce-80be-3c76c10c250c'
 ```
 
 This example returns the hosted app quota associated to SiteSubscriptionID "586d4a32-98c3-42ce-80be-3c76c10c250c".
 
 ### --------------EXAMPLE 1--------- 
 ```
-PS C:\>Get-SPSiteSubscription | Get-SPAppHostingQuotaConfiguration -Identity $_
+Get-SPSiteSubscription | Get-SPAppHostingQuotaConfiguration -Identity $_
 ```
 
 This example returns the hosted app quota associated for all site subscriptions in the farm.
@@ -50,7 +55,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -67,7 +72,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -85,7 +90,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -97,13 +102,13 @@ Accept wildcard characters: False
 ### -SiteSubscription
 Specifies the site subscription from which to get site collections.
 
-The type must be a valid URL, in the form, http://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL, in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -113,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenant
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPTenant
 ---
+
 # Get-PnPTenant
 
 ## SYNOPSIS
@@ -20,7 +23,7 @@ ResourceQuotaAllocated, and SiteCreationMode.
 
 Currently, there are no parameters for this cmdlet.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must have the SharePoint Online admin or Global admin role to run the cmdlet.
 
 ## EXAMPLES
 
@@ -47,4 +50,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

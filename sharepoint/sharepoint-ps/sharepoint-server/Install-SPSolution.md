@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/install-spsolution
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Install-SPSolution
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Install-SPSolution
@@ -33,12 +38,12 @@ Install-SPSolution [[-Identity] <SPSolutionPipeBind>] [-AssignmentCollection <SP
 
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets?view=powershell-5.1).
 
 The Install-SPSolution cmdlet deploys an installed SharePoint solution in the farm.
 Use the Add-SPSolution cmdlet to install a SharePoint solution package in the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 
@@ -46,21 +51,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-C:\PS>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment
+Install-SPSolution -Identity contoso_solution.wsp -GACDeployment
 ```
 
 This example deploys the installed SharePoint solution contoso_solution.wsp in the farm and specifies that GAC can be deployed for the new SharePoint solution.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-C:\PS>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -AddtoLatestVersion $true
-```
-
-This example deploys the installed SharePoint solution contoso_solution.wsp in the farm within the latest version directories and specifies that global assembly cache (GAC) can be deployed for the new SharePoint solution.
-
-### ------------------EXAMPLE 3------------------ 
-```
-C:\PS>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -CompatibilityLevel {14,15}
+Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -CompatibilityLevel {14,15}
 ```
 
 This example deploys the installed SharePoint solution installs a previously added solution so it can be used correctly in both 14 and 15 mode site collections.
@@ -76,7 +74,7 @@ The value must be an authentic GUID, in the form 12345678-90ab-cdef-1234-567890b
 Type: SPSolutionPipeBind
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -89,7 +87,7 @@ Accept wildcard characters: False
 Type: SPSolutionPipeBind
 Parameter Sets: Synchronize
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -105,7 +103,7 @@ Specifies that the new SharePoint solution is deployed for all SharePoint web ap
 Type: SwitchParameter
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -127,7 +125,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -143,7 +141,7 @@ Specifies that code access security (CAS) policies can be deployed for the new S
 Type: SwitchParameter
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -154,15 +152,21 @@ Accept wildcard characters: False
 
 ### -CompatibilityLevel
 
-{{Fill CompatibilityLevel Description}}
+Specifies whether to install into the solution, into a specific version directory based on CompatibilityLevel. The default behavior if this parameter is not specified is to install the solution only to the version directory based on the version tracked in the manifest of the solution's cab file.
 
+Valid values are:
 
+--14
+
+--15
+
+--14,15
 
 ```yaml
 Type: String
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -179,7 +183,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -195,7 +199,7 @@ Forces the deployment of the new SharePoint solution.
 Type: SwitchParameter
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -216,7 +220,7 @@ For additional information about bin assembly, see Assembly Element
 Type: SwitchParameter
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -232,7 +236,7 @@ Specifies that global assembly cache (GAC) can be deployed for the new SharePoin
 Type: SwitchParameter
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -250,7 +254,7 @@ Use zero for solutions that are valid for all languages.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -266,7 +270,7 @@ Deploys the solution on the active server.
 Type: SwitchParameter
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -282,7 +286,7 @@ Synchronizes all solutions or the specified solution in the local farm.
 Type: SwitchParameter
 Parameter Sets: Synchronize
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -301,7 +305,7 @@ The type must be a valid DateTime value, in the form 2010, 5, 1.
 Type: String
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -317,16 +321,16 @@ Deploys the SharePoint solution for the specified SharePoint web application.
 The value must be in one of the following forms:
 
 --An authentic GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
+
 --An authentic name of a SharePoint web application (for example, MyOfficeApp1)
+
 --An instance of an authentic SPWebApplication object.
-
-
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -343,7 +347,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -353,7 +357,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

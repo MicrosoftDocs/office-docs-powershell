@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/test-csonlineportabilityin
 applicable: Skype for Business Online
 title: Test-CsOnlinePortabilityIn
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Test-CsOnlinePortabilityIn
@@ -13,7 +18,8 @@ Tests the ability to use ported phone numbers from your current service provider
 ## SYNTAX
 
 ```
-Test-CsOnlinePortabilityIn [-Confirm] [-DomainController <Fqdn>] [-Force] [-TelephoneNumberRanges <String>] [-TelephoneNumbers <String>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Test-CsOnlinePortabilityIn [-TelephoneNumbers <String[]>] [-TelephoneNumberRanges <String[][]>]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,17 +30,10 @@ Tests the ability to use ported phone numbers from your current service provider
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> Test-CsOnlinePortabilityIn -TelephoneNumberRanges 2522444440,2522444449
+PS C:\> 
 ```
 
-This example tests the phone numbers range from 2522444440 to 2522444449.
-
-### -------------------------- Example 2 --------------------------
-```
-PS C:\> Test-CsOnlinePortabilityIn -TelephoneNumbers 2522444441,2522444445,2522444447
-```
-
-This example tests the phone numbers 2522444441, 2522444445 and 2522444447.
+Insert descriptive text for example 1.
 
 
 ## PARAMETERS
@@ -72,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Suppresses any confirmation prompts that would otherwise be displayed before testing.
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: SwitchParameter
@@ -88,10 +87,10 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberRanges
-Defines a telephone number range to test.
+Defines a telephone number range to test. For example, let's say you want to test all of your 25 phone numbers (+1 425-555-1235 through 1259). You should enter: "+14255551234-+14255551259".
 
 ```yaml
-Type: String
+Type: String[][]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -104,10 +103,10 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumbers
-Defines a list of telephone numbers to test.
+Defines a list of telephone numbers to test. For example, let's say you want to test +1 425-555-1235, +1 425-555-1245 and +1 425-555-1259. You should enter: "+14255551235,+14255551245,+14255551259".
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -135,28 +134,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

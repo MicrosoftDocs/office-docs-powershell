@@ -1,9 +1,13 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/devices/new-activesyncmailboxpolicy
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-ActiveSyncMailboxPolicy
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-ActiveSyncMailboxPolicy
@@ -13,45 +17,71 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-ActiveSyncMailboxPolicy cmdlet to create a Microsoft Mobile Device mailbox policy object.
 
-The New-ActiveSyncMailboxPolicy cmdlet will be removed in a future version of Microsoft Exchange. Use the New-MobileMailboxPolicy cmdlet instead. If you have any scripts that use the New-ActiveSyncMailboxPolicy cmdlet, update them to use the New-MobileMailboxPolicy cmdlet.
+Note: In Exchange 2013 or later, use the New-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use New-ActiveSyncMailboxPolicy, update them to use New-MobileDeviceMailboxPolicy.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-ActiveSyncMailboxPolicy [-Name] <String> [-AllowBluetooth <Disable | HandsfreeOnly | Allow>]
- [-AllowBrowser <$true | $false>] [-AllowCamera <$true | $false>] [-AllowConsumerEmail <$true | $false>]
- [-AllowDesktopSync <$true | $false>] [-AllowExternalDeviceManagement <$true | $false>]
- [-AllowHTMLEmail <$true | $false>] [-AllowInternetSharing <$true | $false>] [-AllowIrDA <$true | $false>]
- [-AllowMobileOTAUpdate <$true | $false>] [-AllowNonProvisionableDevices <$true | $false>]
- [-AllowPOPIMAPEmail <$true | $false>] [-AllowRemoteDesktop <$true | $false>]
- [-AllowSimpleDevicePassword <$true | $false>]
- [-AllowSMIMEEncryptionAlgorithmNegotiation <BlockNegotiation | OnlyStrongAlgorithmNegotiation | AllowAnyAlgorithmNegotiation>]
- [-AllowSMIMESoftCerts <$true | $false>] [-AllowStorageCard <$true | $false>]
- [-AllowTextMessaging <$true | $false>] [-AllowUnsignedApplications <$true | $false>]
- [-AllowUnsignedInstallationPackages <$true | $false>] [-AllowWiFi <$true | $false>]
- [-AlphanumericDevicePasswordRequired <$true | $false>]
- [-ApprovedApplicationList <ApprovedApplicationCollection>] [-AttachmentsEnabled <$true | $false>] [-Confirm]
- [-DeviceEncryptionEnabled <$true | $false>] [-DevicePasswordEnabled <$true | $false>]
- [-DevicePasswordExpiration <Unlimited>] [-DevicePasswordHistory <Int32>]
- [-DevicePolicyRefreshInterval <Unlimited>] [-DomainController <Fqdn>] [-IrmEnabled <$true | $false>]
- [-IsDefaultPolicy <$true | $false>] [-MaxAttachmentSize <Unlimited>]
- [-MaxCalendarAgeFilter <All | TwoWeeks | OneMonth | ThreeMonths | SixMonths>]
+New-ActiveSyncMailboxPolicy [-Name] <String>
+ [-AllowApplePushNotifications <Boolean>]
+ [-AllowBluetooth <BluetoothType>]
+ [-AllowBrowser <Boolean>]
+ [-AllowCamera <Boolean>]
+ [-AllowConsumerEmail <Boolean>]
+ [-AllowDesktopSync <Boolean>]
+ [-AllowExternalDeviceManagement <Boolean>]
+ [-AllowHTMLEmail <Boolean>]
+ [-AllowInternetSharing <Boolean>]
+ [-AllowIrDA <Boolean>]
+ [-AllowMobileOTAUpdate <Boolean>]
+ [-AllowNonProvisionableDevices <Boolean>]
+ [-AllowPOPIMAPEmail <Boolean>]
+ [-AllowRemoteDesktop <Boolean>]
+ [-AllowSMIMEEncryptionAlgorithmNegotiation <SMIMEEncryptionAlgorithmNegotiationType>]
+ [-AllowSMIMESoftCerts <Boolean>]
+ [-AllowSimpleDevicePassword <Boolean>]
+ [-AllowStorageCard <Boolean>]
+ [-AllowTextMessaging <Boolean>]
+ [-AllowUnsignedApplications <Boolean>]
+ [-AllowUnsignedInstallationPackages <Boolean>]
+ [-AllowWiFi <Boolean>]
+ [-AlphanumericDevicePasswordRequired <Boolean>]
+ [-ApprovedApplicationList <ApprovedApplicationCollection>]
+ [-AttachmentsEnabled <Boolean>]
+ [-Confirm]
+ [-DeviceEncryptionEnabled <Boolean>]
+ [-DevicePasswordEnabled <Boolean>]
+ [-DevicePasswordExpiration <Unlimited>]
+ [-DevicePasswordHistory <Int32>]
+ [-DevicePolicyRefreshInterval <Unlimited>]
+ [-DomainController <Fqdn>]
+ [-IrmEnabled <Boolean>]
+ [-IsDefault <Boolean>]
+ [-IsDefaultPolicy <Boolean>]
+ [-MaxAttachmentSize <Unlimited>]
+ [-MaxCalendarAgeFilter <CalendarAgeFilterType>]
  [-MaxDevicePasswordFailedAttempts <Unlimited>]
- [-MaxEmailAgeFilter <All | OneDay | ThreeDays | OneWeek | TwoWeeks | OneMonth>]
- [-MaxEmailBodyTruncationSize <Unlimited>] [-MaxEmailHTMLBodyTruncationSize <Unlimited>]
- [-MaxInactivityTimeDeviceLock <Unlimited>] [-MinDevicePasswordComplexCharacters <Int32>]
+ [-MaxEmailAgeFilter <EmailAgeFilterType>]
+ [-MaxEmailBodyTruncationSize <Unlimited>]
+ [-MaxEmailHTMLBodyTruncationSize <Unlimited>]
+ [-MaxInactivityTimeDeviceLock <Unlimited>]
+ [-MinDevicePasswordComplexCharacters <Int32>]
  [-MinDevicePasswordLength <Int32>]
- [-MobileOTAUpdateMode <MajorVersionUpdates | MinorVersionUpdates | BetaVersionUpdates>]
- [-PasswordRecoveryEnabled <$true | $false>]
- [-RequireDeviceEncryption <$true | $false>] [-RequireEncryptedSMIMEMessages <$true | $false>]
- [-RequireEncryptionSMIMEAlgorithm <TripleDES | DES | RC2128bit | RC264bit | RC240bit>]
- [-RequireManualSyncWhenRoaming <$true | $false>] [-RequireSignedSMIMEAlgorithm <SHA1 | MD5>]
- [-RequireSignedSMIMEMessages <$true | $false>] [-RequireStorageCardEncryption <$true | $false>]
- [-UnapprovedInROMApplicationList <MultiValuedProperty>] [-UNCAccessEnabled <$true | $false>] [-WhatIf]
- [-WSSAccessEnabled <$true | $false>] [-AllowApplePushNotifications <$true | $false>]
- [-IsDefault <$true | $false>] [<CommonParameters>]
+ [-MobileOTAUpdateMode <MobileOTAUpdateModeType>]
+ [-PasswordRecoveryEnabled <Boolean>]
+ [-RequireDeviceEncryption <Boolean>]
+ [-RequireEncryptedSMIMEMessages <Boolean>]
+ [-RequireEncryptionSMIMEAlgorithm <EncryptionSMIMEAlgorithmType>]
+ [-RequireManualSyncWhenRoaming <Boolean>]
+ [-RequireSignedSMIMEAlgorithm <SignedSMIMEAlgorithmType>]
+ [-RequireSignedSMIMEMessages <Boolean>]
+ [-RequireStorageCardEncryption <Boolean>]
+ [-UNCAccessEnabled <Boolean>]
+ [-UnapprovedInROMApplicationList <MultiValuedProperty>]
+ [-WSSAccessEnabled <Boolean>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,26 +89,26 @@ The New-ActiveSyncMailboxPolicy cmdlet creates a Mobile Device mailbox policy fo
 
 Some Mobile Device mailbox policy settings require the mobile device to have certain built-in features that enforce these security and device management settings. If your organization allows all devices, you must set the AllowNonProvisionableDevices parameter to $true. This allows devices that can't enforce all policy settings to synchronize with your server.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ActiveSyncMailboxPolicy -Name:"SalesPolicy" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -IsDefault:$false -AttachmentsEnabled:$false -AllowStorageCard:$true
 ```
 
 This example creates the Mobile Device mailbox policy SalesPolicy that has several preconfigured values.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ActiveSyncMailboxPolicy -Name:"Management" -AllowBluetooth:Allow -AllowBrowser:$true -AllowCamera:$true -AllowPOPIMAPEmail:$false -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:OneWeek -AllowWiFi:$true -AllowStorageCard:$true
 ```
 
 This example creates the Mobile Device mailbox policy Management that has several preconfigured values. Users assigned to this policy should have an Enterprise client access license (CAL) to use many of these features.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-ActiveSyncMailboxPolicy -Name:"Contoso" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MinDevicePasswordComplexCharacters:3 -IsDefault:$true -DevicePasswordHistory:10
 ```
 
@@ -93,9 +123,28 @@ The Name parameter specifies the name of the policy.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowApplePushNotifications
+This parameter is available only in the cloud-based service.
+
+The AllowApplePushNotifications parameter specifies whether push notifications are allowed for Apple mobile devices. The default value is $true.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -105,10 +154,11 @@ Accept wildcard characters: False
 The AllowBluetooth parameter specifies whether the Bluetooth capabilities of the mobile phone are allowed. The available options are Disable, HandsfreeOnly, and Allow. The default value is Allow.
 
 ```yaml
-Type: Disable | HandsfreeOnly | Allow
+Type: BluetoothType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -120,10 +170,11 @@ Accept wildcard characters: False
 The AllowBrowser parameter specifies whether Microsoft Pocket Internet Explorer is allowed on the mobile phone. The default value is $true. This parameter doesn't affect third-party browsers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -135,10 +186,11 @@ Accept wildcard characters: False
 The AllowCamera parameter specifies whether the mobile phone's camera is allowed. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -150,10 +202,11 @@ Accept wildcard characters: False
 The AllowConsumerEmail parameter specifies whether the mobile phone user can configure a personal email account on the device. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -165,10 +218,11 @@ Accept wildcard characters: False
 The AllowDesktopSync parameter specifies whether the mobile phone can synchronize with a desktop computer through a cable. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -180,10 +234,11 @@ Accept wildcard characters: False
 The AllowExternalDeviceManagement parameter specifies whether an external device management program is allowed to manage the device.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -195,10 +250,11 @@ Accept wildcard characters: False
 The AllowHTMLEmail parameter specifies whether HTML email is enabled on the device. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -210,10 +266,11 @@ Accept wildcard characters: False
 The AllowInternetSharing parameter specifies whether the mobile phone can be used as a modem to connect a computer to the Internet. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -225,10 +282,11 @@ Accept wildcard characters: False
 The AllowIrDA parameter specifies whether infrared connections are allowed to the mobile phone. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -240,10 +298,11 @@ Accept wildcard characters: False
 The AllowMobileOTAUpdate parameter specifies whether certain updates are seen by devices that implemented support for this restricting functionality. Further control can be specified via the MobileOTAUpdateMode parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -255,10 +314,11 @@ Accept wildcard characters: False
 When set to $true, the AllowNonProvisionableDevices parameter enables all devices to synchronize with the computer running Exchange, regardless of whether the device can enforce all the specific settings established in the Mobile Device mailbox policy. This also includes devices managed by a separate device management system. When set to $false, this parameter blocks these devices that aren't provisioned from synchronizing with the server running Exchange. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -270,10 +330,11 @@ Accept wildcard characters: False
 The AllowPOPIMAPEmail parameter specifies whether the user can configure a POP3 or IMAP4 email account on the device. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -285,10 +346,11 @@ Accept wildcard characters: False
 The AllowRemoteDesktop parameter specifies whether the mobile phone can initiate a remote desktop connection. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -300,10 +362,11 @@ Accept wildcard characters: False
 The AllowSimpleDevicePassword parameter specifies whether a simple device password is allowed. A simple device password is a password that has a specific pattern, such as 1111 or 1234. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -315,10 +378,11 @@ Accept wildcard characters: False
 The AllowSMIMEEncryptionAlgorithmNegotiation parameter specifies whether the messaging application on the device can negotiate the encryption algorithm in case a recipient's certificate doesn't support the specified encryption algorithm.
 
 ```yaml
-Type: BlockNegotiation | OnlyStrongAlgorithmNegotiation | AllowAnyAlgorithmNegotiation
+Type: SMIMEEncryptionAlgorithmNegotiationType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -330,10 +394,11 @@ Accept wildcard characters: False
 The AllowSMIMESoftCerts parameter specifies whether S/MIME software certificates are allowed. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -345,10 +410,11 @@ Accept wildcard characters: False
 The AllowStorageCard parameter specifies whether the device can access information stored on a storage card. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -360,10 +426,11 @@ Accept wildcard characters: False
 The AllowTextMessaging parameter specifies whether text messaging is allowed from the device. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -375,10 +442,11 @@ Accept wildcard characters: False
 The AllowUnsignedApplications parameter specifies whether unsigned applications can be installed on the device. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -390,10 +458,11 @@ Accept wildcard characters: False
 The AllowUnsignedInstallationPackages parameter specifies whether unsigned installation packages can be run on the device. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -405,10 +474,11 @@ Accept wildcard characters: False
 The AllowWiFi parameter specifies whether wireless Internet access is allowed on the device. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -420,10 +490,11 @@ Accept wildcard characters: False
 The AlphanumericDevicePasswordRequired parameter specifies whether the device password must be alphanumeric. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -438,7 +509,8 @@ The ApprovedApplicationList parameter specifies a list of approved applications 
 Type: ApprovedApplicationCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -450,10 +522,11 @@ Accept wildcard characters: False
 The AttachmentsEnabled parameter specifies whether the user can download attachments. When set to $false, the user is blocked from downloading attachments. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -472,7 +545,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -484,10 +558,11 @@ Accept wildcard characters: False
 The DeviceEncryptionEnabled parameter, when set to $true, enables device encryption on the mobile phone. The default value is $false. Currently, only the storage card can be encrypted on devices running Windows Mobile 6.0 or later. We recommend that you don't use this setting and use the RequireStorageCardEncryption parameter instead.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -499,10 +574,11 @@ Accept wildcard characters: False
 When set to $true, the DevicePasswordEnabled parameter specifies that the user set a password for the device. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -517,7 +593,8 @@ The DevicePasswordExpiration parameter specifies the length of time, in days, th
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -532,7 +609,8 @@ The DevicePasswordHistory parameter specifies the number of previously used pass
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -547,7 +625,8 @@ The DevicePolicyRefreshInterval parameter specifies how often the policy is sent
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -564,7 +643,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -576,10 +656,27 @@ Accept wildcard characters: False
 The IrmEnabled parameter specifies whether Information Rights Management (IRM) is enabled for the mailbox policy.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDefault
+The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -591,10 +688,11 @@ Accept wildcard characters: False
 The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -609,7 +707,8 @@ The MaxAttachmentSize parameter specifies the maximum size of attachments that c
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -618,7 +717,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCalendarAgeFilter
-The MaxCalendarAgeFilter parameter specifies the maximum range of calendar days that can be synchronized to the device. Possible values are:
+The MaxCalendarAgeFilter parameter specifies the maximum range of calendar days that can be synchronized to the device. Valid values are:
 
 - All
 
@@ -631,10 +730,11 @@ The MaxCalendarAgeFilter parameter specifies the maximum range of calendar days 
 - SixMonths
 
 ```yaml
-Type: All | TwoWeeks | OneMonth | ThreeMonths | SixMonths
+Type: CalendarAgeFilterType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -649,7 +749,8 @@ The MaxDevicePasswordFailedAttempts parameter specifies the number of attempts a
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -679,10 +780,11 @@ Possible values are:
 - SixMonths
 
 ```yaml
-Type: All | OneDay | ThreeDays | OneWeek | TwoWeeks | OneMonth
+Type: EmailAgeFilterType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -697,7 +799,8 @@ The MaxEmailBodyTruncationSize parameter specifies the maximum size at which ema
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -712,7 +815,8 @@ The MaxEmailHTMLBodyTruncationSize parameter specifies the maximum size at which
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -727,7 +831,8 @@ The MaxInactivityTimeDeviceLock parameter specifies the length of time that the 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -742,7 +847,8 @@ The MinDevicePasswordComplexCharacters parameter specifies the minimum number of
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -757,7 +863,8 @@ The MinDevicePasswordLength parameter specifies the minimum number of characters
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -768,13 +875,22 @@ Accept wildcard characters: False
 ### -MobileOTAUpdateMode
 This parameter is available or functional only in Exchange Server 2010.
 
-The MobileOTAUpdateMode parameter specifies which updates can be seen by the devices that implemented support for this restricting functionality. It must be used in conjunction with the AllowMobileOTAUpdate parameter to function properly.
+The MobileOTAUpdateMode parameter specifies which updates can be seen by the devices that implemented support for this restricting functionality. Valid values are:
+
+- MajorVersionUpdates
+
+- MinorVersionUpdates
+
+- BetaVersionUpdates
+
+You need to use this parameter with the AllowMobileOTAUpdate parametery.
 
 ```yaml
-Type: MajorVersionUpdates | MinorVersionUpdates | BetaVersionUpdates
+Type: MobileOTAUpdateModeType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -786,10 +902,11 @@ Accept wildcard characters: False
 The PasswordRecoveryEnabled parameter specifies whether you can store the recovery password for the device on an Exchange server. When set to $true, you can store the recovery password for the device on an Exchange server. The default value is $false. The recovery password can be viewed from either Outlook on the web or the Exchange admin center.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -801,10 +918,11 @@ Accept wildcard characters: False
 The RequireDeviceEncryption parameter specifies whether encryption is required on the device. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -816,10 +934,11 @@ Accept wildcard characters: False
 The RequireEncryptedSMIMEMessages parameter specifies whether you must encrypt S/MIME messages. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -831,10 +950,11 @@ Accept wildcard characters: False
 The RequireEncryptionSMIMEAlgorithm parameter specifies what required algorithm must be used when encrypting a message.
 
 ```yaml
-Type: TripleDES | DES | RC2128bit | RC264bit | RC240bit
+Type: EncryptionSMIMEAlgorithmType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -846,10 +966,11 @@ Accept wildcard characters: False
 The RequireManualSyncWhenRoaming parameter specifies whether the device must synchronize manually while roaming. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -861,10 +982,11 @@ Accept wildcard characters: False
 The RequireSignedSMIMEAlgorithm parameter specifies what required algorithm must be used when signing a message.
 
 ```yaml
-Type: SHA1 | MD5
+Type: SignedSMIMEAlgorithmType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -876,10 +998,11 @@ Accept wildcard characters: False
 The RequireSignedSMIMEMessages parameter specifies whether the device must send signed S/MIME messages.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -891,10 +1014,11 @@ Accept wildcard characters: False
 The RequireStorageCardEncryption parameter specifies whether encryption of a storage card is required. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -909,7 +1033,8 @@ The UnapprovedInROMApplicationList parameter specifies a list of applications th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -921,10 +1046,11 @@ Accept wildcard characters: False
 The UNCAccessEnabled parameter specifies whether access to Microsoft Windows file shares is enabled. Access to specific shares is configured on the Microsoft Exchange ActiveSync virtual directory.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -939,7 +1065,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -951,42 +1078,11 @@ Accept wildcard characters: False
 The WSSAccessEnabled parameter specifies whether access to Microsoft Windows SharePoint Services is enabled. Access to specific shares is configured on the Exchange ActiveSync virtual directory.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -AllowApplePushNotifications
-This parameter is available only in the cloud-based service.
-
-The AllowApplePushNotifications parameter specifies whether push notifications are allowed for Apple mobile devices. The default value is $true.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefault
-The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -995,20 +1091,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/90d6872e-8e2b-4e53-9554-a2120e99cc20.aspx)

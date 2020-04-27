@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpunifiedgroup
 applicable: SharePoint Online
 schema: 2.0.0
+title: Set-PnPUnifiedGroup
 ---
+
 # Set-PnPUnifiedGroup
 
 ## SYNOPSIS
-Sets Office 365 Group (aka Unified Group) properties
+Sets Office 365 Group (aka Unified Group) properties. Requires the Azure Active Directory application permission 'Group.ReadWrite.All'.
 
 ## SYNTAX 
 
@@ -18,6 +21,7 @@ Set-PnPUnifiedGroup -Identity <UnifiedGroupPipeBind>
                     [-Members <String[]>]
                     [-IsPrivate [<SwitchParameter>]]
                     [-GroupLogoPath <String>]
+                    [-CreateTeam [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
@@ -55,9 +59,21 @@ Sets a group to be Public if previously Private.
 Set-PnPUnifiedGroup -Identity $group -Owners demo@contoso.com
 ```
 
-Adds demo@contoso.com as an additional owner to the group.
+Sets demo@contoso.com as owner of the group.
 
 ## PARAMETERS
+
+### -CreateTeam
+Creates a MS Teams team associated with created group.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Description
 The Description of the group to set.
@@ -145,4 +161,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

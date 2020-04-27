@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscallviaworkpolicy
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsCallViaWorkPolicy
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # New-CsCallViaWorkPolicy
@@ -19,9 +24,7 @@ New-CsCallViaWorkPolicy [-Identity] <XdsIdentity> [-AdminCallbackNumber <String>
 ```
 
 ## DESCRIPTION
-To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+This cmdlet creates a new call via work policy.
 
 ## EXAMPLES
 
@@ -41,13 +44,13 @@ The policy is enabled, the administrative callback number is specified and enfor
 Unique identity to be assigned to the policy.
 New policies can be created at the site or per-user scope.
 To create a new site policy, use the prefix "site:" and the name of the site as the Identity.
-For example, to create a new policy for the Redmond site you would use this syntax: `-Identity site:Redmond.`
-To create a new per-user policy, this syntax: `-Identity SalesDepartmentPolicy.`
+For example, to create a new policy for the Redmond site you would use this syntax: `-Identity site:Redmond`.
+To create a new per-user policy, this syntax: `-Identity SalesDepartmentPolicy`.
 
 You cannot create a new global policy.
-If you want to make changes to the global policy, use the Set-CsCallViawork cmdlet instead.
+If you want to make changes to the global policy, use the Set-CsCallViaWorkPolicy cmdlet instead.
 Likewise, you cannot create a new site or per-user policy if a policy with that Identity already exists.
-If you need to make changes to an existing policy, use the Set-CsCallViawork cmdlet.
+If you need to make changes to an existing policy, use the Set-CsCallViaWorkPolicy cmdlet.
 
 ```yaml
 Type: XdsIdentity
@@ -183,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -199,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

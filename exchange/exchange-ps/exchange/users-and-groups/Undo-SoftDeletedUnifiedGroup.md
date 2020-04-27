@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/undo-softdeletedunifiedgroup
 applicable: Exchange Online
 title: Undo-SoftDeletedUnifiedGroup
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -13,7 +17,10 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Undo-SoftDeletedUnifiedGroup cmdlet to restore soft-deleted Office 365 groups in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,12 +34,14 @@ Office 365 groups are group objects that are available across Office 365 service
 
 Soft-deleted Office 365 groups are groups that have been deleted, but can be restored within 30 days of being deleted. All of the group contents can be restored within this period. After 30 days, soft-deleted Office 365 groups are marked for permanent deletion and can't be restored.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+To display all soft-deleted Office 365 groups in your organization, use the Get-AzureADMSDeletedGroup cmdlet in Azure Active Directory PowerShell. To permanently remove (purge) a soft-deleted Office 365 group, use the Remove-AzureADMSDeletedDirectoryObject cmdlet in Azure Active Directory PowerShell. For more information, see [Permanently delete an Office 365 group](https://support.office.com/article/b7c66b59-657a-4e1a-8aa0-8163b1f4eb54#bkmk_perm).
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Undo-SoftDeletedUnifiedGroup -SoftDeletedObject "Marketing Department"
 ```
 
@@ -41,13 +50,9 @@ This example restores the soft-deleted Office 365 Group named Marketing Departme
 ## PARAMETERS
 
 ### -SoftDeletedObject
-The SoftDeletedObject parameter specifies the soft-deleted Office 365 Group that you want to restore. You can use any value that uniquely identifies the Office 365 Group.
-
-For example:
+The SoftDeletedObject parameter specifies the soft-deleted Office 365 Group that you want to restore. You can use any value that uniquely identifies the Office 365 Group. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -74,6 +79,7 @@ Type: UnifiedGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -93,6 +99,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +115,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -116,20 +124,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/89f09bfc-43d6-457c-978f-b699c27ea325.aspx)

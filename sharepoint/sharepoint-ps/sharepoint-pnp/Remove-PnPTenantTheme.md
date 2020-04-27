@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptenanttheme
 applicable: SharePoint Online
 schema: 2.0.0
+title: Remove-PnPTenantTheme
 ---
+
 # Remove-PnPTenantTheme
 
 ## SYNOPSIS
@@ -56,4 +59,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

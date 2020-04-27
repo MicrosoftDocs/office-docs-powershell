@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-fastsearchmetadatacategory
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Set-FASTSearchMetadataCategory
 ---
 
@@ -38,13 +43,13 @@ You can also use the cmdlet to rename a category.
 
 You can only map a crawled property to one category at a time.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataCategory -Name Titles -DiscoverNewProperties 1 -MapToContents 1
+Set-FASTSearchMetadataCategory -Name Titles -DiscoverNewProperties 1 -MapToContents 1
 ```
 
 With this example, all new crawled properties for the category "Titles" are automatically discovered and added to the category.
@@ -55,7 +60,7 @@ If you do not want a newly discovered crawled property made available through th
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataCategory -Name ExtendedTitle -Newname Titles
+Set-FASTSearchMetadataCategory -Name ExtendedTitle -Newname Titles
 ```
 
 This example changes the name of the category "ExtendedTitle" to "Titles".
@@ -145,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

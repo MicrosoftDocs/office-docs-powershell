@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/export-csuserdata
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Export-CsUserData
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Export-CsUserData
@@ -45,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Export-CsUserData"}
 
 The functions carried out by the `Export-CsUserData` cmdlet are not available in the Skype for Business Server Control Panel.
 
-NOTE: URNs that have the following characters back slash (\\) and forward slash (/) will cause the powershell command to fail and stop the export of the user data until that point.The following error is reported: Export-CsUserData : "urn:hcd:User1/test@domain.com" is not a valid uniform resource name (At line:1 char:1+ Export-CsUserData -PoolFqdn pool01.domain.com -FileName c:\temp\UserDataExport.zip+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo          : NotSpecified: (:) [Export-CsUserData], UriFormatException    + FullyQualifiedErrorId : System.UriFormatException,Microsoft.Rtc.Management.BlobStor
+NOTE: URNs that have the following characters back slash (\\) and forward slash (/) will cause the powershell command to fail and stop the export of the user data until that point.The following error is reported: Export-CsUserData : "urn:hcd:User1/test@domain.com" is not a valid uniform resource name (At line:1 char:1+ Export-CsUserData -PoolFqdn pool01.domain.com -FileName c:\temp\UserDataExport.zip+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo          : NotSpecified: (:) [Export-CsUserData], UriFormatException    + FullyQualifiedErrorId : System.UriFormatException,Microsoft.Rtc.Management.BlobStor
 
 ## EXAMPLES
 
@@ -263,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

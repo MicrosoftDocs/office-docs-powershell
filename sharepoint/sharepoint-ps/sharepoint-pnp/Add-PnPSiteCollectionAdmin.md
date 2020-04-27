@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsitecollectionadmin
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPSiteCollectionAdmin
 ---
+
 # Add-PnPSiteCollectionAdmin
 
 ## SYNOPSIS
@@ -16,7 +19,7 @@ Add-PnPSiteCollectionAdmin -Owners <UserPipeBind>
 ```
 
 ## DESCRIPTION
-This command allows adding one to many users as site collection administrators to the site collection in the current context. It does not replace or remove exisitng site collection administrators.
+This command allows adding one to many users as site collection administrators to the site collection in the current context. It does not replace or remove existing site collection administrators.
 
 ## EXAMPLES
 
@@ -44,7 +47,7 @@ This will add all users with their title ending with "Doe" as additional site co
 ## PARAMETERS
 
 ### -Owners
-Specifies owner(s) to add as site collection adminstrators. They will be added as additional site collection administrators to the site in the current context. Existing administrators will stay. Can be both users and groups.
+Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators to the site in the current context. Existing administrators will stay. Can be both users and groups.
 
 ```yaml
 Type: UserPipeBind
@@ -69,4 +72,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/update-csuserdatabase
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Update-CsUserDatabase
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Update-CsUserDatabase
@@ -21,7 +26,7 @@ Update-CsUserDatabase [[-Fqdn] <Fqdn>] [-Force] [<CommonParameters>]
 
 ## DESCRIPTION
 The Skype for Business Server user database holds detailed information about such things as contacts, groups, and access permissions.
-As such, the database is required to periodically synch its contents with the information stored in Active Directory.
+As such, the database is required to periodically synchronize its contents with the information stored in Active Directory.
 
 More often than not, the automatic synch between the user database and Active Directory will keep the information in the user database up to date.
 However, it is possible that a problem might occur that prevents this automatic synchronization from taking place.
@@ -84,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,15 +1,15 @@
 ---
 Module Name: SharePoint Migration Tool
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Module Guid: joece26c-1775-4100-85c0-20c4d71eaa21
 Title: SharePoint Migration Tool
-Locale: en-US
+content_git_url: https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/spmt/spmt-ps/spmt/spmt.md
 ---
 
 # Microsoft SharePoint Migration Tool
 ## Description
 The following migration cmdlets are based on the SharePoint Migration Tool (SPMT) migration engine. It will move files from File Share, SharePoint 2013 document libraries, or items of SharePoint 2013 lists to Office 365. 
 
-[Install SPMT and Get PowerShell module](http://spmtreleasescus.blob.core.windows.net/install/default.htm "Install SPMT and Get PowerShell module")
+[Install SPMT and Get PowerShell module](https://spmtreleasescus.blob.core.windows.net/install/default.htm "Install SPMT and Get PowerShell module")
 
 Notes:
 

@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/backup-spsite
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Backup-SPSite
@@ -26,36 +31,36 @@ The Backup-SPSite cmdlet performs a backup of the site collection when the Ident
 By default, the site collection will be set to read-only for the duration of the backup to reduce the potential for user activity during the backup operation to corrupt the backup.
 If you have SQL Server Enterprise Edition, we recommend that UseSqlSnapshot parameter be used because this ensures a valid backup while it allows users to continue reading and writing to the site collection during the backup.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### -------------------EXAMPLE 1-------------------- 
 ```
-C:\PS>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
+Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
-This example backs up a site collection at http://server_name/sites/site_name to the C:\Backup\site_name.bak file.
+This example backs up a site collection at https://server_name/sites/site_name to the C:\Backup\site_name.bak file.
 
 
 ### -------------------EXAMPLE 2-------------------- 
 ```
-C:\PS>Get-SPSiteAdministration http://server_name/sites/site_name | Backup-SPSite -Path C:\Backup\site_name.bak
+Get-SPSiteAdministration https://server_name/sites/site_name | Backup-SPSite -Path C:\Backup\site_name.bak
 ```
 
-This example backs up a site collection at http://server_name/sites/site_name to the C:\Backup\site_name.bak file.
+This example backs up a site collection at https://server_name/sites/site_name to the C:\Backup\site_name.bak file.
 Same result as Example 1, but a different way of performing the operation.
 
 ### -------------------EXAMPLE 3-------------------- 
 ```
-C:\PS>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -UseSqlSnapshot
+Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -UseSqlSnapshot
 ```
 
 This example backs up a site collection using database snapshots to ensure backup integrity.
 
 ### -------------------EXAMPLE 4-------------------- 
 ```
-C:\PS>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
+Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
 ```
 
 This example backs up a site collection and prevents placing the site into a read only mode during the backup phase. Use the -NoSiteLock parameter when backing up a site in production where it is desirable to not place the site into a read only mode while the backup takes place.
@@ -65,13 +70,13 @@ This example backs up a site collection and prevents placing the site into a rea
 ### -Identity
 Specifies the URL or GUID of the site collection to be backed up.
 
-For example, a valid URL, such as http://server_name/sites/site_name or a GUID such as, "01234567-89ab-cdef-0123-456789abcdef"
+For example, a valid URL, such as https://server_name/sites/site_name or a GUID such as, "01234567-89ab-cdef-0123-456789abcdef"
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -87,7 +92,7 @@ Specifies the full path to the backup file (that is, C:\Backup\site_name.bak.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -109,7 +114,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -126,7 +131,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -142,7 +147,7 @@ Specify to overwrite an existing backup file if it already exists.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -164,7 +169,7 @@ If users are writing to the site collection while the site collection is being b
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -185,7 +190,7 @@ It is not necessary to specify the NoSiteLock parameter when specifying the UseS
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -202,7 +207,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -212,13 +217,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseABSDocStreamInfo
-{{Fill UseABSDocStreamInfo Description}}
+Do not use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -228,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

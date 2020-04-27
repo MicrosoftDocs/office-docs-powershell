@@ -1,10 +1,13 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+online version: https://docs.microsoft.com/powershell/module/staffhub/add-staffhubmember
 applicable: Microsoft StaffHub
 title: Add-StaffHubMember
-online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Add-StaffHubMember
@@ -26,8 +29,8 @@ Adds a member or manager to the specified team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-StaffHubMember -TeamId "TEAM_1234" -FirstName "Abc" -LastName "123" -Email "abc@contoso.com" -IsManager $false
 ```
 

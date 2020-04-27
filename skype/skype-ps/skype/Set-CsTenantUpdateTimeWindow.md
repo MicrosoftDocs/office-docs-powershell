@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-cstenantupdatetimewindow
 applicable: Skype for Business Online
 title: Set-CsTenantUpdateTimeWindow
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsTenantUpdateTimeWindow
@@ -12,10 +17,44 @@ Use the `Set-CsTenantUpdateTimeWindow` cmdlet to modify an existing tenant updat
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTenantUpdateTimeWindow [[-Identity] <Object>] [-Daily] [-DayOfMonth <Object>] [-DaysOfWeek <Object>]
- [-Monthly] [-Weekly] [-WeeksOfMonth <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Duration <Object>]
- [-Force] [-Instance <Object>] [-StartTime <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Daily
+```
+Set-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Daily]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Weekly
+```
+Set-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Weekly]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] -DaysOfWeek <TenantUpdateTimeWindowDayOfWeek> [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### MonthlyByDate
+```
+Set-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Monthly]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] -DayOfMonth <Int32> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### MonthlyByWeekDay
+```
+Set-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Monthly]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] -WeeksOfMonth <TenantUpdateTimeWindowWeekOfMonth>
+ -DaysOfWeek <TenantUpdateTimeWindowDayOfWeek> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTenantUpdateTimeWindow [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>]
+ [-StartTime <TimeSpan>] [-Duration <TimeSpan>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,7 +124,7 @@ Day of month.
 It must be defined when Type is Monthly.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -103,7 +142,7 @@ It can be multiple days separated by a comma.
 It must be defined when Type is Weekly or Monthly.
 
 ```yaml
-Type: Object
+Type: TenantUpdateTimeWindowDayOfWeek
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -119,7 +158,7 @@ Accept wildcard characters: False
 Specifies the identity of the tenant update time window.
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -169,23 +208,7 @@ It can be multiple weeks separated by a comma.
 It must be defined when Type is Monthly.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: TenantUpdateTimeWindowWeekOfMonth
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -217,7 +240,7 @@ Accept wildcard characters: False
 Duration of the update time window.
 
 ```yaml
-Type: Object
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -251,7 +274,7 @@ Accept wildcard characters: False
 PARAMVALUE: PSObject
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -267,7 +290,7 @@ Accept wildcard characters: False
 Time of day when the update time window starts.
 
 ```yaml
-Type: Object
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -283,7 +306,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -311,24 +334,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

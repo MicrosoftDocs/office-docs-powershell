@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csuserpstnsettings
 applicable: Skype for Business Online
 title: Set-CsUserPstnSettings
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsUserPstnSettings
@@ -13,8 +18,8 @@ Use the `Set-CsUserPstnSettings` cmdlet to modify an existing voice-enabled user
 ## SYNTAX
 
 ```
-Set-CsUserPstnSettings [[-Identity] <Object>] [-AllowInternationalCalls <Object>] [-Confirm]
- [-HybridPSTNSite <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsUserPstnSettings [-AllowInternationalCalls <Boolean>] [-HybridPSTNSite <String>]
+ [-Identity] <UserIdParameter> [-Tenant <Guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +53,7 @@ Example: sip:jphillips@contoso.com
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -66,7 +71,7 @@ If $false, international calls are not enabled.
 The default is $false.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -99,7 +104,7 @@ Specifies the identity (name) of the hybrid public switched telephone network (P
 Set HybridPSTNSite to $null to revert to the default PSTN site.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -122,7 +127,7 @@ Instead, the tenant ID will be determined by your connection and credentials.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -151,24 +156,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

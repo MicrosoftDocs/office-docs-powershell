@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsguestmessagingconfiguration
 applicable: Skype for Business Online
 title: Set-CsTeamsGuestMessagingConfiguration
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsTeamsGuestMessagingConfiguration
@@ -10,17 +15,22 @@ schema: 2.0.0
 ## SYNOPSIS
 TeamsGuestMessagingConfiguration determines the messaging settings for the guest users.
 
-Set-CsTeamsGuestMessagingConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-AllowUserEditMessage \<bool\>\] \[-AllowUserDeleteMessage \<bool\>\] \[-AllowUserChat \<bool\>\] \[-AllowGiphy \<bool\>\] \[-GiphyRatingType \<string\>\] \[-AllowMemes \<bool\>\] \[-AllowStickers \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsTeamsGuestMessagingConfiguration \[-Tenant \<guid\>\] \[-AllowUserEditMessage \<bool\>\] \[-AllowUserDeleteMessage \<bool\>\] \[-AllowUserChat \<bool\>\] \[-AllowGiphy \<bool\>\] \[-GiphyRatingType \<string\>\] \[-AllowMemes \<bool\>\] \[-AllowStickers \<bool\>\] \[-Instance \<psobject\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsGuestMessagingConfiguration [-AllowMemes <Object>] [-WhatIf] [-AllowGiphy <Object>]
- [-AllowStickers <Object>] [-AllowUserEditMessage <Object>] [-AllowUserDeleteMessage <Object>]
- [[-Identity] <Object>] [-Tenant <Object>] [-AllowUserChat <Object>] [-GiphyRatingType <Object>] [-Confirm]
- [-Force] [-Instance <Object>] [-AsJob]
+Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <Boolean>]
+ [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
+ [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [[-Identity] <XdsIdentity>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <Boolean>]
+ [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
+ [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [-Instance <PSObject>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +51,7 @@ The command shown in Example 1 disables memes usage by guests within Teams.
 Determines if Giphy images are available.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -56,7 +66,7 @@ Accept wildcard characters: False
 Determines if memes are available for use. 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -71,7 +81,7 @@ Accept wildcard characters: False
 Determines if stickers are available for use.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -86,7 +96,7 @@ Accept wildcard characters: False
 Determines if a user is allowed to chat. 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -101,7 +111,7 @@ Accept wildcard characters: False
 Determines if a user is allowed to delete their own messages.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -116,7 +126,7 @@ Accept wildcard characters: False
 Determines if a user is allowed to edit their own messages. 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -157,10 +167,10 @@ Accept wildcard characters: False
 ```
 
 ### -GiphyRatingType
-Determines Giphy content restrictions. Default value is "Moderate", other option is "Strict"
+Determines Giphy content restrictions. Default value is "Moderate", other options are "NoRestriction" and "Strict"
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -174,7 +184,7 @@ Accept wildcard characters: False
 ### -Identity
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -188,7 +198,7 @@ Accept wildcard characters: False
 ### -Instance
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases:
 
@@ -202,7 +212,7 @@ Accept wildcard characters: False
 ### -Tenant
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -221,20 +231,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named

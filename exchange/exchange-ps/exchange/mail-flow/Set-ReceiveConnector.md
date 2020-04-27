@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-receiveconnector
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ReceiveConnector
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-ReceiveConnector
@@ -13,46 +17,46 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ReceiveConnector cmdlet to modify Receive connectors on Mailbox servers and Edge Transport servers.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-ReceiveConnector [-Identity] <ReceiveConnectorIdParameter> [-AdvertiseClientSettings <$true | $false>]
- [-AuthMechanism <None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative>]
- [-Banner <String>] [-BareLinefeedRejectionEnabled <$true | $false>] [-BinaryMimeEnabled <$true | $false>]
- [-Bindings <MultiValuedProperty>] [-ChunkingEnabled <$true | $false>] [-Comment <String>] [-Confirm]
+Set-ReceiveConnector [-Identity] <ReceiveConnectorIdParameter> [-AdvertiseClientSettings <Boolean>]
+ [-AuthMechanism <AuthMechanisms>]
+ [-Banner <String>] [-BareLinefeedRejectionEnabled <Boolean>] [-BinaryMimeEnabled <Boolean>]
+ [-Bindings <MultiValuedProperty>] [-ChunkingEnabled <Boolean>] [-Comment <String>] [-Confirm]
  [-ConnectionInactivityTimeout <EnhancedTimeSpan>] [-ConnectionTimeout <EnhancedTimeSpan>]
- [-DefaultDomain <AcceptedDomainIdParameter>] [-DeliveryStatusNotificationEnabled <$true | $false>]
- [-DomainController <Fqdn>] [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
- [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
- [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
+ [-DefaultDomain <AcceptedDomainIdParameter>] [-DeliveryStatusNotificationEnabled <Boolean>]
+ [-DomainController <Fqdn>] [-DomainSecureEnabled <Boolean>] [-EightBitMimeEnabled <Boolean>]
+ [-EnableAuthGSSAPI <Boolean>] [-Enabled <Boolean>]
+ [-EnhancedStatusCodesEnabled <Boolean>] [-ExtendedProtectionPolicy <ExtendedProtectionPolicySetting>]
+ [-Fqdn <Fqdn>] [-LongAddressesEnabled <Boolean>]
  [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
  [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
  [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
  [-MaxMessageSize <ByteQuantifiedSize>] [-MaxProtocolErrors <Unlimited>] [-MaxRecipientsPerMessage <Int32>]
- [-MessageRateLimit <Unlimited>] [-MessageRateSource <None | IPAddress | User | All>] [-Name <String>]
- [-OrarEnabled <$true | $false>]
- [-PermissionGroups <None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom>]
- [-PipeliningEnabled <$true | $false>] [-ProtocolLoggingLevel <None | Verbose>]
- [-RemoteIPRanges <MultiValuedProperty>] [-RequireEHLODomain <$true | $false>] [-RequireTLS <$true | $false>]
- [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>] [-SuppressXAnonymousTls <$true | $false>]
+ [-MessageRateLimit <Unlimited>] [-MessageRateSource <MessageRateSourceFlags>] [-Name <String>]
+ [-OrarEnabled <Boolean>]
+ [-PermissionGroups <PermissionGroups>]
+ [-PipeliningEnabled <Boolean>] [-ProtocolLoggingLevel <ProtocolLoggingLevel>]
+ [-RemoteIPRanges <MultiValuedProperty>] [-RequireEHLODomain <Boolean>] [-RequireTLS <Boolean>]
+ [-SizeEnabled <SizeMode>] [-SuppressXAnonymousTls <Boolean>]
  [-TarpitInterval <EnhancedTimeSpan>] [-TlsDomainCapabilities <MultiValuedProperty>] [-WhatIf]
- [-ServiceDiscoveryFqdn <Fqdn>] [-SmtpUtf8Enabled <$true | $false>] [-TlsCertificateName <SmtpX509Identifier>]
- [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
- [-AuthTarpitInterval <EnhancedTimeSpan>] [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
- [-RejectReservedTopLevelRecipientDomains <$true | $false>]
- [-RejectSingleLabelRecipientDomains <$true | $false>] [<CommonParameters>]
+ [-ServiceDiscoveryFqdn <Fqdn>] [-SmtpUtf8Enabled <Boolean>] [-TlsCertificateName <SmtpX509Identifier>]
+ [-TransportRole <ServerRole>]
+ [-AuthTarpitInterval <EnhancedTimeSpan>] [-RejectReservedSecondLevelRecipientDomains <Boolean>]
+ [-RejectReservedTopLevelRecipientDomains <Boolean>]
+ [-RejectSingleLabelRecipientDomains <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ReceiveConnector -Identity "Internet Receive Connector" -Banner "220 SMTP OK" -ConnectionTimeout 00:15:00
 ```
 
@@ -79,7 +83,8 @@ The Identity parameter specifies the Receive connector that you want to modify. 
 Type: ReceiveConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -95,10 +100,11 @@ The AdvertiseClientSettings parameter specifies whether the SMTP server name, po
 - $false: The SMTP values are displayed in Outlook on the web. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -136,10 +142,11 @@ You can specify multiple values separated by commas, but some values have depend
 - The value ExternalAuthoritative, requires you to set the value of the PermissionGroups parameter to ExchangeServers.
 
 ```yaml
-Type: None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative
+Type: AuthMechanisms
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +165,8 @@ The default value of this parameter is blank ($null), which uses the following S
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -176,10 +184,11 @@ The BareLinefeedRejectionEnabled parameter specifies whether this Receive connec
 Although message that contain bare line feeds might be delivered successfully, these messages don't follow SMTP protocol standards and might cause problems on messaging servers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -197,10 +206,11 @@ The BinaryMimeEnabled parameter specifies whether the BINARYMIME Extended SMTP e
 The binary MIME extension is defined in RFC 3030.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +233,8 @@ The values for this parameter must satisfy one of the following uniqueness requi
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -241,10 +252,11 @@ The ChunkingEnabled parameter specifies whether the CHUNKING Extended SMTP exten
 Chunking is defined in RFC 3030.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -259,7 +271,8 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -278,7 +291,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -301,7 +315,8 @@ The value of this parameter must be less than the value of the ConnectionTimeout
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -324,7 +339,8 @@ The value of this parameter must be greater than the value of the ConnectionInac
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -353,7 +369,8 @@ Although you can configure any accepted domain as the default domain, you typica
 Type: AcceptedDomainIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -371,16 +388,18 @@ The DeliveryStatusNotificationEnabled parameter specifies whether the DSN (deliv
 Delivery status notifications are defined in RFC 3461.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -390,7 +409,8 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -418,10 +438,11 @@ Note that setting this parameter to the value $true is only part of the requirem
 - The TLSSendDomainSecureList parameter on the Set-TransportConfig cmdlet.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -439,10 +460,11 @@ The EightBitMimeEnabled parameter specifies whether the 8BITMIME Extended SMTP e
 8-bit data transmission is defined in RFC 6152.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -460,10 +482,11 @@ The EnableAuthGSSAPI parameter enables or disables Kerberos when Integrated Wind
 The Generic Security Services application programming interface (GSSAPI) is an IETF standard for accessing security services.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -479,10 +502,11 @@ The Enabled parameter specifies whether to enable or disable the Receive connect
 - $false: The Receive connector is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -500,10 +524,11 @@ The EnhancedStatusCodesEnabled parameter specifies whether the ENHANCEDSTATUSCOD
 Enhanced status codes are defined in RFC 2034.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -523,10 +548,11 @@ The ExtendedProtectionPolicy parameter specifies how you want to use Extended Pr
 Extended Protection for Authentication enhances the protection and handling of credentials when authenticating network connections using Integrated Windows authentication. Integrated Windows authentication is also known as NTLM. We strongly recommend that you use Extended Protection for Authentication if you are using Integrated Windows authentication.
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionPolicySetting
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -553,7 +579,8 @@ Don't modify this value on the default Receive connector named Default \<Server 
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -579,10 +606,11 @@ When you set this parameter to the value $true the following changes are made to
 You can only configure this parameter on Receive connectors in the Transport service on Mailbox servers.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -601,7 +629,8 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -622,8 +651,6 @@ When you enter a value, qualify the value with one of the following units:
 
 - GB (gigabytes)
 
-- TB (terabytes)
-
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value is from 1 to 2147483647 bytes.
@@ -632,7 +659,8 @@ A valid value is from 1 to 2147483647 bytes.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -649,7 +677,8 @@ A valid value is from 1 to 500. The default value is 30.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -668,7 +697,8 @@ To disable the inbound connection limit on a Receive connector, enter a value of
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -685,7 +715,8 @@ A valid value is from 1 to 100 without the percent sign (%). The default value i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -704,7 +735,8 @@ To disable the inbound connection per source limit on a Receive connector, enter
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -723,7 +755,8 @@ When you specify the value 0, the message is never rejected based on the number 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -742,7 +775,8 @@ When you specify the value 0, the connection is never closed because of logon fa
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -775,7 +809,8 @@ For any message size limit, you need to set a value that's larger than the actua
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -794,7 +829,8 @@ When you specify the value unlimited, a connection is never closed because of pr
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -811,7 +847,8 @@ A valid value is from 1 to 512000. The default value is 200.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -832,7 +869,8 @@ The default value for Receive connectors on Mailbox servers is unlimited. The de
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -852,10 +890,11 @@ The MessageRateSource parameter specifies how the message submission rate is cal
 - All: The message submission rate is calculated for both the sending users and sending hosts.
 
 ```yaml
-Type: None | IPAddress | User | All
+Type: MessageRateSourceFlags
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -870,7 +909,8 @@ The Name parameter specifies the unique name for the Receive connector. The maxi
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -888,10 +928,11 @@ The OrarEnabled parameter enables or disables Originator Requested Alternate Rec
 If the email address specified in the ORAR information is a long X.400 email address, you need to set the LongAddressesEnabled parameter to the value $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -920,13 +961,14 @@ The default permission groups that are assigned to a Receive connector depend on
 
 When you use the value Custom, you need to configure individual permissions by using the Add-ADPermission cmdlet.
 
-For more information about the default permissions and security principals for permission groups, see Receive connector permission groups (https://technet.microsoft.com/library/aa996395.aspx#PermissionGroups).
+For more information about the default permissions and security principals for permission groups, see [Receive connector permission groups](https://docs.microsoft.com/Exchange/mail-flow/connectors/receive-connectors#receive-connector-permission-groups).
 
 ```yaml
-Type: None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom
+Type: PermissionGroups
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -944,10 +986,11 @@ The PipeliningEnabled parameter specifies whether the PIPELINING Extended SMTP e
 Pipelining is defined in RFC 2920.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -962,13 +1005,14 @@ The ProtocolLoggingLevel parameter specifies whether to enable or disable protoc
 
 - Verbose: Protocol logging is enabled on the Receive connector.
 
-For more information about protocol logging, see Protocol logging (https://technet.microsoft.com/library/aa997624.aspx).
+For more information about protocol logging, see [Protocol logging](https://docs.microsoft.com/Exchange/mail-flow/connectors/protocol-logging).
 
 ```yaml
-Type: None | Verbose
+Type: ProtocolLoggingLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1001,7 +1045,8 @@ When remote IP address ranges overlap, the Receive connector with the most speci
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1017,10 +1062,11 @@ The RequireEHLODomain parameter specifies whether the client must provide a doma
 - $false: The client isn't required to provide a domain name in the EHLO handshake. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1036,10 +1082,11 @@ The RequireTLS parameter specifies whether to require TLS transmission for inbou
 - $false: Inbound messages on the Receive connector don't require TLS transmission. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1059,10 +1106,11 @@ The SizeEnabled parameter specifies how the SIZE Extended SMTP extension is used
 SIZE is defined in RFC 1870.
 
 ```yaml
-Type: Disabled | Enabled | EnabledWithoutValue
+Type: SizeMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1080,10 +1128,11 @@ The SuppressXAnonymousTls parameter specifies whether the X-ANONYMOUSTLS Extende
 The X-ANONYMOUSTLS extension is important when the AuthMechanism parameter contains the value ExchangeServer.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1104,7 +1153,8 @@ You can configure the delay for authentication failure responses by using the Au
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1121,6 +1171,8 @@ This parameter uses the following syntax:
 
 The available \<capability\> values are:
 
+- AcceptCloudServicesMail (Exchange 2013 or later)
+
 - AcceptOorgProtocol
 
 - AcceptOorgHeader
@@ -1133,7 +1185,8 @@ For example, "contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptOorgProtocol,A
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1148,7 +1201,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1163,7 +1217,8 @@ The ServiceDiscoveryFqdn parameter specifies the service discovery fully-qualifi
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1175,10 +1230,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1193,7 +1249,8 @@ The TlsCertificateName parameter specifies the X.509 certificate to use for TLS 
 Type: SmtpX509Identifier
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1211,10 +1268,11 @@ The TransportRole parameter specifies the transport service on the Mailbox serve
 You can't use this parameter on Edge Transport servers.
 
 ```yaml
-Type: None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP
+Type: ServerRole
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1235,7 +1293,8 @@ You can configure the delay for other SMTP failure responses by using the Tarpit
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1251,10 +1310,11 @@ The RejectReservedSecondLevelRecipientDomains parameter specifies whether to rej
 - $false: RCPT TO commands that contain reserved second-level domains aren't rejected. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1270,10 +1330,11 @@ The RejectReservedTopLevelRecipientDomains parameter specifies whether to reject
 - $false: RCPT TO commands that contain reserved TLDs aren't rejected. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1289,10 +1350,11 @@ The RejectSingleLabelRecipientDomains parameter specifies whether to reject conn
 - $false: RCPT TO commands that contain single-label domains aren't rejected. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1301,20 +1363,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/eb7f8960-e772-4312-9d3f-47dd27d9545c.aspx)

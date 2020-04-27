@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenantcdnpolicy
 applicable: SharePoint Online
 schema: 2.0.0
+title: Set-PnPTenantCdnPolicy
 ---
+
 # Set-PnPTenantCdnPolicy
 
 ## SYNOPSIS
@@ -81,4 +84,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

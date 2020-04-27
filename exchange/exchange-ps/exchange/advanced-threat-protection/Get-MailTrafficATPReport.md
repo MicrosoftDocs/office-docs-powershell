@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-mailtrafficatpreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficATPReport
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -13,7 +17,10 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Advanced Threat Protection (ATP) detections in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -43,27 +50,27 @@ For the reporting period you specify, the cmdlet returns the following informati
 
 - Message Count
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Get-MailTrafficATPReport -Direction Inbound -StartDate 06/13/2017 -EndDate 06/15/2017
-```
-
-This example retrieves details for incoming messages between June 13, 2017 and June 15, 2017.
-
-### -------------------------- Example 2 --------------------------
-```
-Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
+### Example 1
+```powershell
+Get-MailTrafficATPReport -Direction Inbound -StartDate 06/13/2018 -EndDate 06/15/2018
 ```
 
-This example retrieves the statistics for outgoing messages on July 20, 2017 and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
+This example retrieves details for incoming messages between June 13, 2018 and June 15, 2018.
 
-### -------------------------- Example 3 --------------------------
+### Example 2
+```powershell
+Get-MailTrafficATPReport -StartDate 7/20/2018 -EndDate 7/20/2018 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
-Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
+
+This example retrieves the statistics for outgoing messages on July 20, 2018 and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
+
+### Example 3
+```powershell
+Get-MailTrafficATPReport -StartDate 7/20/2018 -EndDate 7/20/2018 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
 This example is similar to the previous example, but now the results are summarized. Because EventType is one of the summarized values, the rows in the table now contain the unique values of Action. The total number of rows in the report is reduced and values of MessageCount are correspondingly larger on each row.
@@ -80,6 +87,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +103,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +119,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +135,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -135,13 +146,14 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -152,31 +164,47 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-- Advanced phish filter\*
+- Message passed (Indicates a good message.)
 
-- Anti-malware engine
+Email phish EventTypes:
 
-- ATP safe attachments\*
+- Advanced phish filter (Indicates a message caught by the Office 365 machine learning model.)
 
-- ATP safe links\*
+- Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
 
-- Anti-spoof: Intra-org
+- Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
-- Anti-spoof: external domain\*
+- Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
-- Domain impersonation\*
+- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
 
-- General phish filter
+- Brand impersonation (Indicates a message caught by Office 365 phish filters as impersonating a known brand.)
 
-- Malicious URL reputation
+- General phish filter (Indicates a message caught by basic Office 365 phish protection.)
 
-- Message passed
+- Malicious URL reputation (Indicates a message with a known malicious URL caught by Office 365 phish filters.)
 
-- Phish ZAP
+- Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
 
-- User impersonation\*
+Email malware EventTypes:
 
-- ZAP
+- Anti-malware engine (Indicates a message caught by the Office 365 anti-malware engine.)
+
+- ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
+
+- ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
+
+- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
+
+- Office 365 file reputation (Indicates a message with a known malicious file blocked.)
+
+- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
+
+Content malware EventTypes:
+
+- AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
+
+- AvDocumentMalware (Indicates malware found by the Office 365 anti-malware engine. Reporting requires ATP/E5.)
 
 \* These features require a standalone Office 365 ATP or E5 subscription.
 
@@ -187,6 +215,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -202,6 +231,7 @@ Type: Expression
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -217,6 +247,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -232,6 +263,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -247,6 +279,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -257,13 +290,14 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -281,6 +315,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -289,20 +324,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/cc9c2cd8-0629-4aa8-bc60-bbd8b0ae9c57.aspx)

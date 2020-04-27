@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/convertto-jsonforpsws
 applicable: Skype for Business Online
 title: ConvertTo-JsonForPSWS
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # ConvertTo-JsonForPSWS
@@ -13,7 +18,7 @@ Converts an object to a JSON-formatted string for PowerShell Web Services.
 ## SYNTAX
 
 ```
-ConvertTo-JsonForPSWS [[-InputObject] <Object>] [-Compress] [-Depth <Object>] [-AsJob] [<CommonParameters>]
+ConvertTo-JsonForPSWS [-InputObject] <Object> [-Depth <Int>] [-Compress] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -125,7 +130,7 @@ Accept wildcard characters: False
 Specifies how many levels of contained objects are included in the JSON representation. The default value is 2.
 
 ```yaml
-Type: Object
+Type: Int
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -155,28 +160,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -191,5 +176,5 @@ You can pipe any object to ConvertTo-JsonForPSWS.
 
 ## RELATED LINKS
 
-[ConvertTo-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-6)
+[ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-6)
 

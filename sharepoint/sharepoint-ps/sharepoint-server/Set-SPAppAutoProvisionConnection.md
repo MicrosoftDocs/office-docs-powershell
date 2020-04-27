@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappautoprovisionconnection
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppAutoProvisionConnection
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPAppAutoProvisionConnection
@@ -43,36 +48,36 @@ Set-SPAppAutoProvisionConnection [-Remove] [-AssignmentCollection <SPAssignmentC
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the `Set-SPAppAutoProvisionConnection` cmdlet to set provision connection settings for a specified app.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
 ```
-C:\PS>Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
+Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
 ```
 
-This example configures remote web host to be used provision apps that use this functionality for the default site subscription server on http://SPremotewebhost.
+This example configures remote web host to be used provision apps that use this functionality for the default site subscription server on https://SPremotewebhost.
 
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
+C:\PS>$subscription = Get-SPSiteSubscription https://Contoso.com
 
-C:\PS>Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
+Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
 ```
 
-This example configures remote web host to be used provision apps that use this functionality for the site subscription of Contoso.com site to server on http://SPremotewebhost.
+This example configures remote web host to be used provision apps that use this functionality for the site subscription of Contoso.com site to server on https://SPremotewebhost.
 
 
 ### --------------------EXAMPLE 3---------------------
 ```
-C:\PS>Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost
+Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost
 ```
 
 This example updates the endpoint of the already configured remote web host server https://SPRemotewebhost for the default site subscription.
@@ -80,7 +85,7 @@ This example updates the endpoint of the already configured remote web host serv
 
 ### --------------------EXAMPLE 4---------------------
 ```
-C:\PS>Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -Remove
+Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -Remove
 ```
 
 This example removes the remote web host configuration for the default site subscription.
@@ -95,7 +100,7 @@ Specifies the connection type to provision.
 Type: ConnectionTypes
 Parameter Sets: WebHostEndPoint, WebHostSetup, WebHostCredential
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -111,7 +116,7 @@ Specifies the end point of the provision connection.
 Type: String
 Parameter Sets: WebHostEndPoint, WebHostSetup
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -127,7 +132,7 @@ Specifies the password for the provision connection.
 Type: String
 Parameter Sets: WebHostSetup, WebHostCredential
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -143,7 +148,7 @@ Removes the auto provision connection of the app.
 Type: SwitchParameter
 Parameter Sets: Remove
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -159,7 +164,7 @@ Specifies the user name of the connection.
 Type: String
 Parameter Sets: WebHostSetup, WebHostCredential
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -181,7 +186,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -197,7 +202,7 @@ Specifies the site collection for which the provision connection is to be associ
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -207,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

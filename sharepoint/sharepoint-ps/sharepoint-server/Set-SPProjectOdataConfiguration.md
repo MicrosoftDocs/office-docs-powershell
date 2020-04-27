@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectodataconfiguration
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectOdataConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectOdataConfiguration
@@ -26,14 +31,14 @@ Paging can be specified per entity.
 If no paging overrides exist for a given entity, the DefaultMaxPageSize parameter is used. 
 MaxResultsPerCollection cannot be used in conjunction with paging.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-C:\PS>Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
+Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
 ```
 
 This example clears any page size overrides that have been set for any specific entities.
@@ -41,7 +46,7 @@ This example clears any page size overrides that have been set for any specific 
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
+Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
 ```
 
 This example sets AcceptProjectionRequests to true.
@@ -49,7 +54,7 @@ This example sets AcceptProjectionRequests to true.
 
 ### ----------------------EXAMPLE 3-----------------------
 ```
-C:\PS>Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
+Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
 ```
 
 This example sets the default maximum page size to 50 rows.
@@ -57,7 +62,7 @@ This example sets the default maximum page size to 50 rows.
 
 ### ----------------------EXAMPLE 4-----------------------
 ```
-C:\PS>Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
+Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
 ```
 
 This example sets the page size override for the Assignments entity.
@@ -72,7 +77,7 @@ Sets whether requests with the $count path segment or the $inlinecount query opt
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -89,7 +94,7 @@ Projection requests are made by using the $select query option.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -111,7 +116,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -127,7 +132,7 @@ Clears all page-size overrides that had been set for any entities.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -144,7 +149,7 @@ This is used for any entities that do not have an override set using the PageSiz
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +165,7 @@ Specifies the entity name that is used to set a page size override with PageSize
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -177,7 +182,7 @@ This parameter cannot be used in conjunction with paging.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -193,7 +198,7 @@ Overrides the page size that is used for a specific entity.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -209,7 +214,7 @@ Sets the service to use more verbose error messages (for example, stack trace).
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -219,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

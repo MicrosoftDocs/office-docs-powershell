@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/new-databaseavailabilitygroup
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-DatabaseAvailabilityGroup
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-DatabaseAvailabilityGroup
@@ -13,17 +17,17 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-DatabaseAvailabilityGroup cmdlet to create a database availability group (DAG).
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 New-DatabaseAvailabilityGroup [-Name] <String> [-Confirm] [-DatabaseAvailabilityGroupIpAddresses <IPAddress[]>]
- [-DomainController <Fqdn>] [-ThirdPartyReplication <Disabled | Enabled>] [-WhatIf]
+ [-DomainController <Fqdn>] [-ThirdPartyReplication <ThirdPartyReplicationMode>] [-WhatIf]
  [-WitnessDirectory <NonRootLocalLongFullPath>] [-WitnessServer <FileShareWitnessServerName>]
  [-DagConfiguration <DatabaseAvailabilityGroupConfigurationIdParameter>]
- [-ActivityState <NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare>]
- [-FileSystem <NTFS | ReFS>] [<CommonParameters>]
+ [-ActivityState <ActivityStateOption>]
+ [-FileSystem <FileSystemMode>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,26 +51,26 @@ If the witness server that you specify isn't an Exchange server, you need to add
 
 In Windows Server 2012 R2 or later, a DAG is created without a cluster administrative access point by default. In this scenario, you don't need to provide any IP addresses to the DAG. However, in all supported versions of Windows, you have the option of assigning static IP addresses to the DAG by using the DatabaseAvailabilityGroupIpAddresses parameter. If you specify Any or 0.0.0.0, the task attempts to use Dynamic Host Configuration Protocol (DHCP) to obtain IP addresses. If you omit this parameter or configure the parameter with a value of None or 255.255.255.255, the DAG will not have a cluster administrative access point.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-DatabaseAvailabilityGroup -Name DAG1 -WitnessServer SERVER1 -WitnessDirectory C:\DAG1
 ```
 
 This example creates a DAG named DAG1 that's configured to use a witness server of SERVER1, and a local directory of C:\\DAG1. This example requires Windows Server 2012 R2 or later.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-DatabaseAvailabilityGroup -Name DAG2 -WitnessServer SERVER2 -DatabaseAvailabilityGroupIpAddresses ([])::Any
 ```
 
 This example creates the DAG named DAG2 with a witness server named SERVER2. The system automatically selects an Exchange server in the same site as the DAG to use as the witness server. DAG2 is configured to use DHCP for the DAG's IP address.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 New-DatabaseAvailabilityGroup -Name DAG3 -WitnessServer SERVER1 -WitnessDirectory C:\DAG3 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8,192.168.0.8
 ```
 
@@ -81,7 +85,8 @@ The Name parameter specifies a unique name for the new DAG of up to 15 character
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -100,7 +105,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +121,8 @@ The DatabaseAvailabilityGroupIpAddresses parameter specifies one or more static 
 Type: IPAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -130,7 +137,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -142,10 +150,11 @@ Accept wildcard characters: False
 The ThirdPartyReplication parameter specifies to configure and enable a DAG to use third-party replication that leverages the Exchange Third Party Replication API instead of the built-in continuous replication. Valid values are Enabled and Disabled. After this mode is enabled, it can't be changed.
 
 ```yaml
-Type: Disabled | Enabled
+Type: ThirdPartyReplicationMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +169,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +185,8 @@ The WitnessDirectory parameter specifies the name of the directory on the witnes
 Type: NonRootLocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +201,8 @@ The WitnessServer parameter specifies the name of a server used as a quorum witn
 Type: FileShareWitnessServerName
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -205,7 +217,8 @@ This parameter is reserved for internal Microsoft use.
 Type: DatabaseAvailabilityGroupConfigurationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -217,10 +230,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare
+Type: ActivityStateOption
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -236,10 +250,11 @@ The FileSystem parameter specifies the file system that's used for the DAG. Vali
 - ReFS
 
 ```yaml
-Type: NTFS | ReFS
+Type: FileSystemMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -248,20 +263,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/c0cd98a9-eaaa-4cfb-845d-213e5d606d3b.aspx)

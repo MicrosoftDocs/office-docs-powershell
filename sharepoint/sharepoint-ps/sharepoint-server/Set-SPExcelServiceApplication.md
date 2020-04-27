@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spexcelserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelServiceApplication
@@ -45,15 +50,15 @@ Set-SPExcelServiceApplication [[-Identity] <SPExcelServiceApplicationPipeBind>]
 The `Set-ExcelServiceApplication` cmdlet changes global runtime properties for Excel Services Application. 
 Changes to properties that are made by using this cmdlet affect all machines in the farm that are running an instance of the specified Excel Services Application Web service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1--------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
-PS C:\>Set-SPExcelServiceApplication -Identity $sa -SessionsPerUserMax 10
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+Set-SPExcelServiceApplication -Identity $sa -SessionsPerUserMax 10
 ```
 
 This example sets the Excel Services Application to enable each user to open no more than 10 sessions at one time on a back-end application server that runs Excel Services Application.
@@ -61,8 +66,8 @@ This example sets the Excel Services Application to enable each user to open no 
 
 ### --------------EXAMPLE 2--------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
-PS C:\>Set-SPExcelServiceApplication -Identity $sa -PrivateBytesMax -1
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+Set-SPExcelServiceApplication -Identity $sa -PrivateBytesMax -1
 ```
 This example sets the maximum number of private bytes of memory on the computer to a value of -1, which indicates that Excel Services Application will consume 50 percent of the available memory resources.
 
@@ -518,7 +523,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

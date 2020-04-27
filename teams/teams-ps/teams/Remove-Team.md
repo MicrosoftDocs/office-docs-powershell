@@ -1,32 +1,36 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
-title: Remove-Team
-online version: 
+online version: https://docs.microsoft.com/powershell/module/teams/remove-team
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-Team
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 
-Deletes a team.
+This cmdlet deletes a specified Team from Microsoft Teams. 
 
+NOTE: The associated Office 365 Unified Group will also be removed.
+ 
 ## SYNTAX
 
 ```
-Remove-Team -GroupId <String>
+Remove-Team -GroupId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
+Removes a specified team via GroupID and all its associated components, like O365 Unified Group...  
+
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+### Example 1
 ```
-Remove-Team -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df  
+Remove-Team -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df
 ```
 
 ## PARAMETERS
@@ -38,7 +42,6 @@ GroupId of the team
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -46,6 +49,10 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -55,3 +62,4 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[New-Team]()

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailboximportrequest
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailboxImportRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MailboxImportRequest
@@ -11,89 +15,155 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive. You can create more than one mailbox import request per mailbox and each mailbox import request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox import request. However, to create more than 10 import requests for a mailbox, you need to specify a unique name when creating the import request, or you can remove existing import requests with the Remove-MailboxExportRequest cmdlet before starting a new import request with the default request \<Alias\>\\MailboxImportX (where X = 0-9).
+Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive.
 
-By default, the import checks for duplication of items and doesn't copy the data from the .pst file into the mailbox or archive if a matching item exists in the target mailbox or target archive.
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-###  (Default)
+### Mailbox
 ```
-New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <LongPath> [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-Confirm] [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
- [-DomainController <Fqdn>] [-ExcludeDumpster] [-ExcludeFolders <String[]>] [-IncludeFolders <String[]>]
- [-IsArchive] [-MRSServer <Fqdn>] [-Name <String>] [-Priority <Normal | High>] [-SourceRootFolder <String>]
- [-Suspend] [-SuspendComment <String>] [-TargetRootFolder <String>] [-WhatIf]
- [-CompletedRequestAgeLimit <Unlimited>] [-ContentCodePage <Int32>] [-InternalFlags <InternalMrsFlag[]>]
- [-LargeItemLimit <Unlimited>] [-RemoteCredential <PSCredential>] [-RemoteHostName <Fqdn>]
+New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <LongPath>
+ [-AcceptLargeDataLoss]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-ContentCodePage <Int32>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-IsArchive]
+ [-LargeItemLimit <Unlimited>]
+ [-MRSServer <Fqdn>]
+ [-Name <String>]
+ [-Priority <RequestPriority>]
+ [-RemoteCredential <PSCredential>]
+ [-RemoteHostName <Fqdn>]
  [-SkipMerging <SkippableMergeComponent[]>]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetRootFolder <String>]
+ [-WhatIf]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
-### Set3
+### MailboxImportRequest
 ```
-New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStorageAccountUri <Uri>
- -AzureSharedAccessSignatureToken <String> [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
- [-AzureStatusPublishEndpointInfo <String>] [-BadItemLimit <Unlimited>] [-BatchName <String>]
- [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
- [-ContentCodePage <Int32>] [-DomainController <Fqdn>] [-ExcludeDumpster] [-ExcludeFolders <String[]>]
- [-IncludeFolders <String[]>] [-InternalFlags <InternalMrsFlag[]>] [-IsArchive] [-LargeItemLimit <Unlimited>]
- [-MigrationMailbox <MailboxIdParameter>] [-MRSContentFilterSasUri <Uri>] [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RequestExpiryInterval <Unlimited>] [-SkipMerging <SkippableMergeComponent[]>]
- [-SourceEndpoint <MigrationEndpointIdParameter>] [-SourceRootFolder <String>] [-Suspend]
- [-SuspendComment <String>] [-TargetRootFolder <String>] [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <LongPath>
+ [-AcceptLargeDataLoss]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-ContentCodePage <Int32>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-IsArchive]
+ [-LargeItemLimit <Unlimited>]
+ [-MigrationMailbox <MailboxIdParameter>]
+ [-Name <String>]
+ [-Priority <RequestPriority>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetRootFolder <String>]
+ [-WhatIf]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
-### Set1
+### AzureImportRequest
 ```
-New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <LongPath> [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
- [-ContentCodePage <Int32>] [-DomainController <Fqdn>] [-ExcludeDumpster] [-ExcludeFolders <String[]>]
- [-IncludeFolders <String[]>] [-InternalFlags <InternalMrsFlag[]>] [-IsArchive] [-LargeItemLimit <Unlimited>]
- [-MigrationMailbox <MailboxIdParameter>] [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RequestExpiryInterval <Unlimited>] [-SkipMerging <SkippableMergeComponent[]>]
- [-SourceEndpoint <MigrationEndpointIdParameter>] [-SourceRootFolder <String>] [-Suspend]
- [-SuspendComment <String>] [-TargetRootFolder <String>] [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStorageAccountUri <Uri> -AzureSharedAccessSignatureToken <String>
+ [-AcceptLargeDataLoss]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
+ [-AzureStatusPublishEndpointInfo <String>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-ContentCodePage <Int32>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-IsArchive]
+ [-LargeItemLimit <Unlimited>]
+ [-MigrationMailbox <MailboxIdParameter>]
+ [-MRSContentFilterSasUri <Uri>]
+ [-Name <String>]
+ [-Priority <RequestPriority>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetRootFolder <String>]
+ [-WhatIf]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
-### Set2
+### RemoteRequest
 ```
-New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -RemoteFilePath <LongPath>
- -RemoteHostName <Fqdn> [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
- [-ContentCodePage <Int32>] [-DomainController <Fqdn>] [-ExcludeDumpster] [-ExcludeFolders <String[]>]
- [-IncludeFolders <String[]>] [-InternalFlags <InternalMrsFlag[]>] [-IsArchive] [-LargeItemLimit <Unlimited>]
- [-MigrationMailbox <MailboxIdParameter>] [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RemoteCredential <PSCredential>] [-RequestExpiryInterval <Unlimited>]
- [-SkipMerging <SkippableMergeComponent[]>] [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-SourceRootFolder <String>] [-Suspend] [-SuspendComment <String>] [-TargetRootFolder <String>] [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
+New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -RemoteFilePath <LongPath> -RemoteHostName <Fqdn>
+ [-AcceptLargeDataLoss]
+ [-AssociatedMessagesCopyOption <FAICopyOption>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-ContentCodePage <Int32>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-IsArchive]
+ [-LargeItemLimit <Unlimited>]
+ [-MigrationMailbox <MailboxIdParameter>]
+ [-Name <String>]
+ [-Priority <RequestPriority>]
+ [-RemoteCredential <PSCredential>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetRootFolder <String>]
+ [-WhatIf]
+ [-WorkloadType <RequestWorkloadType>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You can create more than one mailbox import request per mailbox and each mailbox import request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox import request. However, to create more than 10 import requests for a mailbox, you need to specify a unique name when creating the import request, or you can remove existing import requests with the Remove-MailboxExportRequest cmdlet before starting a new import request with the default request \<Alias\>\\MailboxImportX (where X = 0-9).
 
-You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
+By default, the import checks for duplication of items and doesn't copy the data from the .pst file into the mailbox or archive if a matching item exists in the target mailbox or target archive.
+
+In on-premises Exchange, you need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
 
 - To import PST files from the share: Read permission
 
@@ -103,49 +173,28 @@ If you don't grant this permission, you will receive an error message stating th
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-MailboxImportRequest -Mailbox Ayla -FilePath \\SERVER01\PSTFiles\Recovered.pst -TargetRootFolder "RecoveredFiles" -IncludeFolders "#Inbox#"
 ```
 
 This example imports a recovered .pst file on SERVER01 into the user Ayla's primary mailbox. Only data in the .pst file's Inbox is imported. The data is imported into the RecoveredFiles folder of the target mailbox for Ayla.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-MailboxImportRequest User2 -FilePath \\server\share\User1.pst -IsArchive -TargetRootFolder /
 ```
 
 This example imports a .pst file into Kweku's archive folder. The TargetRootFolder isn't specified; therefore, content is merged under existing folders and new folders are created if they don't already exist in the target folder structure.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Dir \\SERVER01\PSTshareRO\Recovered\*.pst | %{ New-MailboxImportRequest -Name RecoveredPST -BatchName Recovered -Mailbox $_.BaseName -FilePath $_.FullName -TargetRootFolder SubFolderInPrimary}
 ```
 
 This example imports all of the .pst files on a shared folder. Each .pst file name is named after a corresponding user's alias. The command creates an import request for all the .pst files and imports the data into the matching mailbox.
 
 ## PARAMETERS
-
-### -Mailbox
-The Mailbox parameter specifies the mailbox or mail-enabled user into which to import contents. You can use the following values:
-
-- Alias
-
-- SMTP address
-
-- Display name
-
-```yaml
-Type: MailboxOrMailUserIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
 
 ### -FilePath
 This parameter is available only in on-premises Exchange.
@@ -162,9 +211,10 @@ If you don't grant this permission, you will receive an error message stating th
 
 ```yaml
 Type: LongPath
-Parameter Sets: (All), Set1
+Parameter Sets: Mailbox, MailboxImportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -172,14 +222,117 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Mailbox
+The Mailbox parameter specifies the destination mailbox where the content is being imported to.
+
+In Exchange 2016 CU7 or later and Exchange Online, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
+
+In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxOrMailUserIdParameter
+Parameter Sets: Mailbox
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxImportRequest
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RemoteFilePath
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: LongPath
+Parameter Sets: RemoteRequest
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteHostName
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: RemoteRequest
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: Fqdn
+Parameter Sets: Mailbox
+Aliases:
+Applicable: Exchange Server 2013
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AcceptLargeDataLoss
-The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You need to use this switch if you set either the BadItemLimit or LargeItemLimit parameters to a value of 51 or higher. Otherwise, the command will fail.
+The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
+
+In Exchange 2013 or later or Exchange Online, you need to use this switch if you set the LargeItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
+
+In Exchange 2010, you need to use this switch if you set the BadItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -199,10 +352,65 @@ The AssociatedMessagesCopyOption parameter specifies whether associated messages
 Content filtering doesn't apply to associated messages.
 
 ```yaml
-Type: DoNotCopy | MapByMessageClass | Copy
+Type: FAICopyOption
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureBlobStorageAccountUri
+This parameter is available only in the cloud-based service.
+
+PARAMVALUE: Uri
+
+```yaml
+Type: Uri
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureSharedAccessSignatureToken
+This parameter is available only in the cloud-based service.
+
+PARAMVALUE: String
+
+```yaml
+Type: String
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureStatusPublishEndpointInfo
+This parameter is available only in the cloud-based service.
+
+PARAMVALUE: String
+
+```yaml
+Type: String
+Parameter Sets: AzureImportRequest
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -215,13 +423,16 @@ The BadItemLimit parameter specifies the maximum number of bad items that are al
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
 
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +447,24 @@ The BatchName parameter specifies a descriptive name for importing a batch of ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompletedRequestAgeLimit
+The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default value of the CompletedRequestAgeLimit parameter is 30 days.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -255,7 +483,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -279,10 +508,27 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - UpdateFromSource
 
 ```yaml
-Type: KeepSourceItem | KeepLatestItem | KeepAll
+Type: ConflictResolutionOption
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentCodePage
+The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst filesare used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://go.microsoft.com/fwlink/p/?linkId=328514) topic.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -299,7 +545,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -320,7 +567,8 @@ The ExcludeDumpster parameter specifies whether to exclude the Recoverable Items
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -357,7 +605,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 
 - JunkEmail
 
-- CommunicationHistory
+- CommunicatorHistory
 
 - Voicemail
 
@@ -381,7 +629,8 @@ If the TargetRootFolder parameter isn't specified when the Recoverable Items fol
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -440,176 +689,8 @@ Wildcard characters can't be used in folder names.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -IsArchive
-The IsArchive switch specifies that you're importing the .pst file into the user's archive. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MRSServer
-This parameter is available or functional only in Exchange Server 2010.
-
-The MRSServer parameter specifies the FQDN of the Client Access server on which the instance of the Microsoft Exchange Mailbox Replication service (MRS) is running. This parameter is used for debugging purposes only. Use this parameter only if directed by support personnel.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the name of the specific request for tracking and display purposes. Because you can have multiple import requests per mailbox, Exchange precedes the name with the mailbox's alias. For example, if you create an import request for a user's mailbox that has the alias Kweku and specify the value of this parameter as PC1toArchive, the identity of this import request is Kweku\\PC1toArchive.
-
-If you don't specify a name using this parameter, Exchange generates up to 10 request names per mailbox, which is MailboxImportX (where X = 0-9). The identity of the request is displayed and searchable as \<alias\>\\MailboxImportX.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Priority
-The Priority parameter specifies the order in which this request should be processed in the request queue. Requests are processed in order, based on server health, status, priority and last update time.
-
-```yaml
-Type: Normal | High
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceRootFolder
-The SourceRootFolder parameter specifies the root folder of the .pst file from which data is imported. When specified, the folder hierarchy outside the value of the SourceRootFolder parameter isn't imported, and the SourceRootFolder parameter is mapped to the TargetRootFolder parameter. If this parameter isn't specified, the command imports all folders.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SuspendComment
-The SuspendComment parameter specifies a description about why the request was suspended. You can only use this parameter if you specify the Suspend parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TargetRootFolder
-The TargetRootFolder parameter specifies the top-level mailbox folder that the imported content is placed in. If you don't specify this parameter, the command imports folders to the top of the folder structure in the target mailbox or archive. If the folder already exists, content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompletedRequestAgeLimit
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default value of the CompletedRequestAgeLimit parameter is 30 days.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContentCodePage
-The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst filesare used in Outlook 97 to Outlook 2002. You can find the valid values in the Code Page Identifiers (https://go.microsoft.com/fwlink/p/?linkId=328514) topic.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -626,7 +707,24 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsArchive
+The IsArchive switch specifies that you're importing the .pst file into the user's archive. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -639,163 +737,22 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
+- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
 
-- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
+- Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -RemoteCredential
-This parameter is available only in on-premises Exchange.
-
-The RemoteCredential parameter specifies the credentials of an administrator who has permission to perform the mailbox import request.
-
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All), Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteHostName
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: Fqdn
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipMerging
-The SkipMerging parameter specifies steps in the import that should be skipped. This parameter is used primarily for debugging purposes.
-
-```yaml
-Type: SkippableMergeComponent[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WorkloadType
-This parameter is available only in on-premises Exchange.
-
-The WorkloadType parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureBlobStorageAccountUri
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: Uri
-
-```yaml
-Type: Uri
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureSharedAccessSignatureToken
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteFilePath
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: LongPath
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureStatusPublishEndpointInfo
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -808,9 +765,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set3, Set1, Set2
+Parameter Sets: AzureImportRequest, MailboxImportRequest, RemoteRequest
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -823,9 +781,82 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Uri
-Parameter Sets: Set3
+Parameter Sets: AzureImportRequest
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MRSServer
+This parameter is available or functional only in Exchange Server 2010.
+
+The MRSServer parameter specifies the FQDN of the Client Access server on which the instance of the Microsoft Exchange Mailbox Replication service (MRS) is running. This parameter is used for debugging purposes only. Use this parameter only if directed by support personnel.
+
+```yaml
+Type: Fqdn
+Parameter Sets: Mailbox
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+The Name parameter specifies the name of the specific request for tracking and display purposes. Because you can have multiple import requests per mailbox, Exchange precedes the name with the mailbox's alias. For example, if you create an import request for a user's mailbox that has the alias Kweku and specify the value of this parameter as PC1toArchive, the identity of this import request is Kweku\\PC1toArchive.
+
+If you don't specify a name using this parameter, Exchange generates up to 10 request names per mailbox, which is MailboxImportX (where X = 0-9). The identity of the request is displayed and searchable as \<alias\>\\MailboxImportX.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Priority
+The Priority parameter specifies the order in which this request should be processed in the request queue. Requests are processed in order, based on server health, status, priority and last update time.
+
+```yaml
+Type: RequestPriority
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteCredential
+This parameter is available only in on-premises Exchange.
+
+The RemoteCredential parameter specifies the credentials of an administrator who has permission to perform the mailbox import request.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+
+```yaml
+Type: PSCredential
+Parameter Sets: Mailbox, RemoteRequest
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -846,9 +877,26 @@ When you use the value Unlimited, the completed request isn't automatically remo
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set3, Set1, Set2
+Parameter Sets: AzureImportRequest, MailboxImportRequest, RemoteRequest
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipMerging
+The SkipMerging parameter specifies steps in the import that should be skipped. This parameter is used primarily for debugging purposes.
+
+```yaml
+Type: SkippableMergeComponent[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -861,9 +909,108 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MigrationEndpointIdParameter
-Parameter Sets: Set3, Set1, Set2
+Parameter Sets: AzureImportRequest, MailboxImportRequest, RemoteRequest
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceRootFolder
+The SourceRootFolder parameter specifies the root folder of the .pst file from which data is imported. When specified, the folder hierarchy outside the value of the SourceRootFolder parameter isn't imported, and the SourceRootFolder parameter is mapped to the TargetRootFolder parameter. If this parameter isn't specified, the command imports all folders.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Suspend
+The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuspendComment
+The SuspendComment parameter specifies a description about why the request was suspended. You can only use this parameter if you specify the Suspend parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetRootFolder
+The TargetRootFolder parameter specifies the top-level mailbox folder that the imported content is placed in. If you don't specify this parameter, the command imports folders to the top of the folder structure in the target mailbox or archive. If the folder already exists, content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkloadType
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: RequestWorkloadType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -872,20 +1019,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/4ca9af1a-33fa-4d53-a765-f46a1b7f2d3a.aspx)

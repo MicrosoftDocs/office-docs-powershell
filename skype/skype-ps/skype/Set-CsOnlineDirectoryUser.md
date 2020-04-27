@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinedirectoryuser
 applicable: Skype for Business Online
 title: Set-CsOnlineDirectoryUser
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsOnlineDirectoryUser
@@ -14,9 +19,8 @@ This should be done via provisioning or operations in special cases.
 ## SYNTAX
 
 ```
-Set-CsOnlineDirectoryUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-DomainController <Object>] [-Force] [-Ring <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
- [<CommonParameters>]
+Set-CsOnlineDirectoryUser [-Identity] <UserIdParameter> [-Tenant <Guid>] [-Ring <String>]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,32 +39,25 @@ Insert descriptive text for example 1.
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: UserIdParameter
+Specifies the identity of the target user.
+Acceptable values include:
+
+Example: jphillips@contoso.com
+
+Example: sip:jphillips@contoso.com
+
+Example: 98403f08-577c-46dd-851a-f0460a13b03d
+
+You can use the `Get-CsOnlineUser` cmdlet to identify the users you want to modify.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -87,7 +84,7 @@ Specifies the domain controller that's used by the cmdlet to read or write the s
 Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -121,7 +118,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -139,7 +136,7 @@ For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
 You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -168,24 +165,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

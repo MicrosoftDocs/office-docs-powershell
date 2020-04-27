@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spappcatalogconfiguration
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPAppCatalogConfiguration
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPAppCatalogConfiguration
@@ -20,15 +25,15 @@ Update-SPAppCatalogConfiguration [-Site] <SPSitePipeBind> [-AssignmentCollection
 ## DESCRIPTION
 Use the Update-SPAppCatalogConfiguration cmdlet to set a specific site collection as the App Catalog site collection. The App Catalog site collection contains catalogs for Apps for SharePoint and Apps for Office. It is used to help ITPro administrators distribute SharePoint Apps and Office Apps to their end users. Each Web Application or Tenancy can have 1 App Catalog Site collection associated to it.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference (http://go.microsoft.com/fwlink/p/?LinkId=671715).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference (https://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE-----------
 ```
-PS C:\>Update-SPAppCatalogConfiguration -Site http://contoso/sites/appcatalog_1 -Force:$true -SkipWebTemplateChecking:$true
+Update-SPAppCatalogConfiguration -Site https://contoso/sites/appcatalog_1 -Force:$true -SkipWebTemplateChecking:$true
 ```
-This example sets http://contoso/sites/appcatalog_1 as the app catalog site collection for the tenant it belongs to.
+This example sets https://contoso/sites/appcatalog_1 as the app catalog site collection for the tenant it belongs to.
 
 ## PARAMETERS
 
@@ -40,7 +45,7 @@ Specifies the URL or GUID of the site collection to be set as the app catalog si
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -59,7 +64,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -76,7 +81,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -92,7 +97,7 @@ Specifies to force marking the site collection even if there are validation erro
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +113,7 @@ Specifies whether to skip checking if the template of the site is APCATALOG#0.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -126,7 +131,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -136,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

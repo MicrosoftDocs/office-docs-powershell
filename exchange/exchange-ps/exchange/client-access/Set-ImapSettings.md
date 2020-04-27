@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/set-imapsettings
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ImapSettings
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-ImapSettings
@@ -13,72 +17,72 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ImapSettings cmdlet to modify the settings of the Microsoft Exchange IMAP4 service on Exchange servers. This service exists on Exchange servers that have the Client Access server role installed, and is used by IMAP4 clients to connect to Exchange.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-ImapSettings [-AuthenticatedConnectionTimeout <EnhancedTimeSpan>] [-Banner <String>]
- [-CalendarItemRetrievalOption <iCalendar | intranetUrl | InternetUrl | Custom>] [-Confirm]
- [-DomainController <Fqdn>] [-EnableExactRFC822Size <$true | $false>]
- [-EnableGSSAPIAndNTLMAuth <$true | $false>] [-EnforceCertificateErrors <$true | $false>]
- [-ExtendedProtectionPolicy <None | Allow | Require>] [-ExternalConnectionSettings <MultiValuedProperty>]
+ [-CalendarItemRetrievalOption <CalendarItemRetrievalOptions>] [-Confirm]
+ [-DomainController <Fqdn>] [-EnableExactRFC822Size <Boolean>]
+ [-EnableGSSAPIAndNTLMAuth <Boolean>] [-EnforceCertificateErrors <Boolean>]
+ [-ExtendedProtectionPolicy <ExtendedProtectionTokenCheckingMode>] [-ExternalConnectionSettings <MultiValuedProperty>]
  [-InternalConnectionSettings <MultiValuedProperty>] [-LogFileLocation <String>]
- [-LogFileRollOverSettings <Hourly | Daily | Weekly | Monthly>]
- [-LoginType <PlainTextLogin | PlainTextAuthentication | SecureLogin>] [-LogPerFileSizeQuota <Unlimited>]
+ [-LogFileRollOverSettings <LogFileRollOver>]
+ [-LoginType <LoginOptions>] [-LogPerFileSizeQuota <Unlimited>]
  [-MaxCommandSize <Int32>] [-MaxConnectionFromSingleIP <Int32>] [-MaxConnections <Int32>]
  [-MaxConnectionsPerUser <Int32>]
- [-MessageRetrievalMimeFormat <TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef>]
+ [-MessageRetrievalMimeFormat <MimeTextFormat>]
  [-OwaServerUrl <Uri>] [-PreAuthenticatedConnectionTimeout <EnhancedTimeSpan>]
- [-ProtocolLogEnabled <$true | $false>] [-ProxyTargetPort <Int32>] [-Server <ServerIdParameter>]
- [-ShowHiddenFoldersEnabled <$true | $false>] [-SSLBindings <MultiValuedProperty>]
- [-SuppressReadReceipt <$true | $false>] [-UnencryptedOrTLSBindings <MultiValuedProperty>] [-WhatIf]
+ [-ProtocolLogEnabled <Boolean>] [-ProxyTargetPort <Int32>] [-Server <ServerIdParameter>]
+ [-ShowHiddenFoldersEnabled <Boolean>] [-SSLBindings <MultiValuedProperty>]
+ [-SuppressReadReceipt <Boolean>] [-UnencryptedOrTLSBindings <MultiValuedProperty>] [-WhatIf]
  [-X509CertificateName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can run the Set-ImapSettings cmdlet for a single Exchange server that's running the Microsoft Exchange IMAP4 service, or for all Exchange servers that are running the Microsoft Exchange IMAP4 service.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ImapSettings -Server "MBX01" -UnencryptedOrTLSBindings 10.0.0.0:143
 ```
 
 This example configures the unencrypted or STARTTLS encrypted IMAP4 connection to the server named MBX01 by using the local IP address 10.0.0.0 on TCP port 143.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-ImapSettings -ProtocolLogEnabled $true -LogFileLocation "C:\Imap4Logging"
 ```
 
 This example turns on IMAP4 protocol logging. It also changes the IMAP4 protocol logging directory to C:\\Imap4Logging.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-ImapSettings -LogPerFileSizeQuota 2MB
 ```
 
 This example changes the IMAP4 protocol logging to create a new log file when a log file reaches 2 megabytes (MB).
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Set-ImapSettings -LogPerFileSizeQuota 0 -LogFileRollOverSettings Hourly
 ```
 
 This example changes the IMAP4 protocol logging to create a new log file every hour.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Set-ImapSettings -X509CertificateName mail.contoso.com
 ```
 
 This example specifies the certificate that contains mail.contoso.com is used to encrypt IMAP4 client connections.
 
-**Note**: For single subject certificates or a SAN certificates, you also need to assign the the certificate to the Exchange IMAP service by using the Enable-ExchangeCertificate cmdlet. For wildcard certificates, you don't need to assign the certificate to the Exchange IMAP service (you'll receive an error if you try).
+**Note**: For single subject certificates or a SAN certificates, you also need to assign the certificate to the Exchange IMAP service by using the Enable-ExchangeCertificate cmdlet. For wildcard certificates, you don't need to assign the certificate to the Exchange IMAP service (you'll receive an error if you try).
 
 ## PARAMETERS
 
@@ -93,7 +97,8 @@ Valid values are 00:00:30 to 1:00:00. The default setting is 00:30:00 (30 minute
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -108,7 +113,8 @@ The Banner parameter specifies the text string that's displayed to connecting IM
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -130,10 +136,11 @@ The CalendarItemRetrievalOption parameter specifies how calendar items are prese
 If you specify 3 or Custom, you need to specify a value for the OwaServerUrl parameter setting.
 
 ```yaml
-Type: iCalendar | intranetUrl | InternetUrl | Custom
+Type: CalendarItemRetrievalOptions
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +159,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +175,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -183,10 +192,11 @@ The EnableExactRFC822Size parameter specifies how message sizes are presented to
 - $false: Use an estimated message size. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -202,10 +212,11 @@ The EnableGSSAPIAndNTLMAuth parameter specifies whether connections can use Inte
 - $false: NTLM for IMAP4 connections is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -223,10 +234,11 @@ The default setting is $false.
 - $false: The server doesn't deny IMAP4 connections based on certificate errors. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -246,10 +258,11 @@ The ExtendedProtectionPolicy parameter specifies how Extended Protection for Aut
 Extended Protection for Authentication enhances the protection and handling of credentials by Integrated Windows authentication (also known as NTLM), so we strongly recommend that you use it if it's supported by your clients (default installations of Windows 7 or later and Windows Server 2008 R2 or later support it).
 
 ```yaml
-Type: None | Allow | Require
+Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -264,7 +277,7 @@ This parameter uses the syntax \<HostName\>:\<Port\>:[\<TLS | SSL\>]. The encryp
 
 The default value is blank ($null), which means no external IMAP4 connection settings are configured.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -274,7 +287,8 @@ The combination of encryption methods and ports that are specified for this para
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -289,7 +303,7 @@ This parameter uses the syntax \<HostName\>:\<Port\>:[\<TLS | SSL\>]. The encryp
 
 The default value is \<ServerFQDN\>:993:SSL,\<ServerFQDN\>:143:TLS.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -299,7 +313,8 @@ The combination of encryption methods and ports that are specified for this para
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -316,7 +331,8 @@ This parameter is only meaningful when the ProtocolLogEnabled parameter value is
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -338,10 +354,11 @@ The LogFileRollOverSettings parameter specifies how frequently IMAP4 protocol lo
 This parameter is only meaningful when the LogPerFileSizeQuota parameter value is 0, and the ProtocolLogEnabled parameter value is $true.
 
 ```yaml
-Type: Hourly | Daily | Weekly | Monthly
+Type: LogFileRollOver
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -359,10 +376,11 @@ The LoginType parameter specifies the authentication method for IMAP4 connection
 - 3 or SecureLogin. This is the default value.
 
 ```yaml
-Type: PlainTextLogin | PlainTextAuthentication | SecureLogin
+Type: LoginOptions
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -395,7 +413,8 @@ This parameter is only meaningful when the ProtocolLogEnabled parameter value is
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -404,13 +423,14 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCommandSize
-The MaxCommandSize parameter specifies the maximum size in bytes of a single IMAP4 command. Valid values are from 40 through 1024. The default value is 512.
+The MaxCommandSize parameter specifies the maximum size in bytes of a single IMAP4 command. Valid values are from 1024 through 16384. The default value is 10240.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -425,7 +445,8 @@ The MaxConnectionFromSingleIP parameter specifies the maximum number of IMAP4 co
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -440,7 +461,8 @@ The MaxConnections parameter specifies the maximum number of IMAP4 connections t
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -455,7 +477,8 @@ The MaxConnectionsPerUser parameter specifies the maximum number of IMAP4 connec
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -481,10 +504,11 @@ The MessageRetrievalMimeFormat parameter specifies the MIME encoding of messages
 - 6 or Tnef.
 
 ```yaml
-Type: TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef
+Type: MimeTextFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -499,7 +523,8 @@ The OwaServerUrl parameter specifies the URL that's used to retrieve calendar in
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -518,7 +543,8 @@ Valid values are00:00:30 to 1:00:00. The default value is 00:01:00 (one minute).
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -534,10 +560,11 @@ The ProtocolLogEnabled parameter specifies whether to enable protocol logging fo
 - $false: IMAP4 protocol logging is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -552,7 +579,8 @@ The ProxyTargetPort parameter specifies the port on the Microsoft Exchange IMAP4
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -577,7 +605,8 @@ If you don't use this parameter, the command is run on the local server.
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -593,10 +622,11 @@ The ShowHiddenFoldersEnabled parameter specifies whether hidden mailbox folders 
 - $false: Hidden folders aren't visible. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -609,7 +639,7 @@ The SSLBindings parameter specifies the IP address and TCP port that's used for 
 
 The default value is [::]:993,0.0.0.0:993.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -617,7 +647,8 @@ To add or remove one or more values without affecting any existing entries, use 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -633,10 +664,11 @@ The SuppressReadReceipt parameter specifies whether to stop duplicate read recei
 - $false: The sender receives a read receipt when the recipient downloads the message, and when the recipient opens the message. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -649,7 +681,7 @@ The UnencryptedOrTLSBindings parameter specifies the IP address and TCP port tha
 
 The default value is [::]:143,0.0.0.0:143.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -657,7 +689,8 @@ To add or remove one or more values without affecting any existing entries, use 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -672,7 +705,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -693,7 +727,8 @@ If you use a wildcard certificate, you don't need to assign the certificate to t
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -702,20 +737,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/58e51734-83bd-4e71-bd13-9960efaa80c3.aspx)

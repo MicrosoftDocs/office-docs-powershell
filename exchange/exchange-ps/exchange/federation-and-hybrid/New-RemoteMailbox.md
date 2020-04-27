@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/new-remotemailbox
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-RemoteMailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-RemoteMailbox
@@ -13,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-RemoteMailbox cmdlet to create a mail user in the on-premises Active Directory and also create an associated mailbox in the cloud-based service.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -22,11 +26,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String> [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -35,11 +39,11 @@ New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <
 New-RemoteMailbox [-Name] <String> [-Password <SecureString>] [-Room] [-UserPrincipalName <String>]
  [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -48,11 +52,11 @@ New-RemoteMailbox [-Name] <String> [-Password <SecureString>] [-Room] [-UserPrin
 New-RemoteMailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -61,11 +65,11 @@ New-RemoteMailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-Use
 New-RemoteMailbox [-Name] <String> [-Shared] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -74,11 +78,11 @@ New-RemoteMailbox [-Name] <String> [-Shared] [-Password <SecureString>] [-UserPr
 New-RemoteMailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
  [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
  [<CommonParameters>]
 ```
 
@@ -89,12 +93,12 @@ Directory synchronization must be configured correctly for a mailbox to be creat
 
 The policies that you apply to recipients in the on-premises Exchange organization, such as Unified Messaging or compliance policies, aren't applied to mailboxes in the service. You must configure policies in the service if you want policies to be applied to recipients in the service.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
 ```
 
@@ -104,8 +108,8 @@ The first command stores the password to use with the new remote mailbox in a va
 
 After the new mail user is created, directory synchronization synchronizes the new mail user to the service and the associated mailbox is created.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
 ```
 
@@ -128,7 +132,8 @@ The AccountDisabled switch specifies whether to create the mail user in a disabl
 Type: SwitchParameter
 Parameter Sets: AccountDisabled
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -139,13 +144,16 @@ Accept wildcard characters: False
 ### -Equipment
 The Equipment switch specifies that the mailbox in the service should be created as an equipment resource mailbox.
 
-You can't use the Equipment switch if you specified the Room switch.
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
+
+You can't use this switch with the Room switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Equipment
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -160,7 +168,8 @@ The Name parameter specifies the unique name of the on-premises mail user and th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -171,13 +180,14 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password used by the mail user to secure his or her account and associated mailbox in the service.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 ```yaml
 Type: SecureString
 Parameter Sets: AccountDisabled, Equipment, Room, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -189,7 +199,8 @@ Accept wildcard characters: False
 Type: SecureString
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -206,7 +217,8 @@ You can't use the Room switch if you specified the Equipment switch.
 Type: SwitchParameter
 Parameter Sets: Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -225,7 +237,8 @@ You can't use this switch with the Room or Equipment switches.
 Type: SwitchParameter
 Parameter Sets: Shared
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -240,7 +253,8 @@ The UserPrincipalName parameter specifies the logon name for the user account. T
 Type: String
 Parameter Sets: AccountDisabled, Equipment, Room, Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -252,7 +266,8 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -271,7 +286,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -281,7 +296,8 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -292,13 +308,34 @@ Accept wildcard characters: False
 ### -ArbitrationMailbox
 This parameter is available or functional only in Exchange Server 2010.
 
-The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process.
+The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -307,15 +344,14 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to create an archive mailbox in the service in addition to the mailbox that's created in the service.
-
-You don't have to specify a value with this switch.
+The Archive switch specifies whether to also create an archive mailbox in the service. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -334,7 +370,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -351,7 +388,8 @@ If you don't use the DisplayName parameter, the value of the Name parameter is u
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -366,7 +404,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -381,7 +420,8 @@ The FirstName parameter specifies the user's first name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -394,13 +434,12 @@ The ImmutableId parameter is used by GAL synchronization (GALSync) and specifies
 
 You need to set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premises Exchange deployment scenario.
 
-The ImmutableId parameter is used by GAL Synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox that's used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange creates the value for the immutable identifier based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com. You must set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premise Exchange deployment scenario.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -415,7 +454,8 @@ The Initials parameter specifies the user's middle initials.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -430,7 +470,8 @@ The LastName parameter specifies the user's last name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -439,13 +480,9 @@ Accept wildcard characters: False
 ```
 
 ### -ModeratedBy
-The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
-
-For example:
+The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -465,7 +502,8 @@ You need to use this parameter to specify at least one moderator when you set th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -483,10 +521,11 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -497,7 +536,7 @@ Accept wildcard characters: False
 ### -OnPremisesOrganizationalUnit
 The OnPremisesOrganizationalUnit parameter specifies the organizational unit (OU) in the on-premises organization in which the new mailbox is added (for example, redmond.contoso.com/Users).
 
-Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
 
@@ -513,7 +552,8 @@ This parameter has no effect on the mailbox in the service.
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -522,13 +562,14 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 ```yaml
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -544,10 +585,11 @@ The RemotePowerShellEnabled parameter specifies whether the user can connect to 
 - $false: The user can't use remote PowerShell.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -564,7 +606,8 @@ If you've configured mail flow between the on-premises organization and the serv
 Type: ProxyAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -580,10 +623,11 @@ The ResetPasswordOnNextLogon parameter specifies whether the user must change th
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -598,7 +642,8 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -618,10 +663,11 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 ```yaml
-Type: Never | Internal | Always
+Type: TransportModerationNotificationFlags
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -636,7 +682,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -645,13 +692,14 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-The ACLableSyncedObjectEnabled switch specfies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
+The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -660,20 +708,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/f9e000c3-5f77-494b-8caf-05176aa75c8a.aspx)

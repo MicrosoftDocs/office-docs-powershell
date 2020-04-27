@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-spserverscaleoutdatabasedeleteddatasubrange
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPServerScaleOutDatabaseDeletedDataSubRange
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Clear-SPServerScaleOutDatabaseDeletedDataSubRange
@@ -10,8 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 
 Clears all partitions inside the specified deleted subrange.
-
-
 
 
 ## SYNTAX
@@ -32,17 +35,12 @@ Use the Clear-SPServerScaleOutDatabaseDeletedDataSubRange cmdlet to clear all pa
 
 ### --------------EXAMPLE-------------- 
 ```
-C:\PS>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-
-C:\PS>$database = $databases[0]
-
-C:\PS>$state = Get-SPServerScaleOutDatabaseDataState -Database $database
-
-C:\PS>Set-SPServerScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode Deleted -IsUpperSubRange $false
-
-C:\PS>$state = Get-SPServerScaleOutDatabaseDataState -Database $database
-
-C:\PS>Clear-SPServerScaleOutDatabaseDeletedDataSubRange -Database $database -Range $state.Range -IsUpperSubRange $false
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+$state = Get-SPServerScaleOutDatabaseDataState -Database $database
+Set-SPServerScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode Deleted -IsUpperSubRange $false
+$state = Get-SPServerScaleOutDatabaseDataState -Database $database
+Clear-SPServerScaleOutDatabaseDeletedDataSubRange -Database $database -Range $state.Range -IsUpperSubRange $false
 ```
 
 This example creates a deleted subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.
@@ -55,13 +53,11 @@ The example then clears that subrange and all data in the partitions in the subr
 
 Specifies the scale-out database to clear the deleted subrange from.
 
-
-
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -74,14 +70,11 @@ Accept wildcard characters: False
 
 Specifies whether the subrange with deleted mode is on the upper or lower side of the data range.
 
-
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -94,14 +87,11 @@ Accept wildcard characters: False
 
 Specifies the expected data range of the scale-out database.
 
-
-
-
 ```yaml
 Type: SPScaleOutDataRange
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -120,14 +110,11 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
-
-
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -141,14 +128,11 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
-
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -162,13 +146,11 @@ Accept wildcard characters: False
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -178,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

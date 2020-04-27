@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csadprincipal
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAdPrincipal
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Get-CsAdPrincipal
@@ -114,13 +119,12 @@ Accept wildcard characters: False
 ### -Filter
 Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server.
 
-The Filter parameter uses the much of the same Windows PowerShell filtering syntax used by the Where-Object cmdlet.
-For example, a filter that returns only principals who are not enabled for Skype for Business Server would look like this:
+The Filter parameter uses much of the same Windows PowerShell filtering syntax used by the Where-Object cmdlet.
+For example, a filter that returns only principals whose sip address equals "RedmondMeetingRoom@litwareinc.com" would look like this:
 
-`-Filter {Enabled -ne $True}`
+`-Filter {SipAddress -eq "sip:RedmondMeetingRoom@litwareinc.com"}`
 
-In that example.
-Enabled represents the Active Directory attribute, -ne represents the comparison operator (not equal to), and $True (a built-in Windows PowerShell variable) represents the value True.
+In that example, SipAddress represents the Skype for Business attribute, -eq represents the comparison operator (equal to "sip:RedmondMeetingRoom@litwareinc.com") 
 
 ```yaml
 Type: String
@@ -230,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

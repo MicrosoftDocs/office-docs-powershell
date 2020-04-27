@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-spsitesubscriptionsettings
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPSiteSubscriptionSettings
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Export-SPSiteSubscriptionSettings
@@ -23,38 +28,38 @@ Export-SPSiteSubscriptionSettings [-Identity] <SPSiteSubscriptionPipeBind> -Path
 ## DESCRIPTION
 The Export-SPSiteSubscriptionSettings cmdlet generates a backup file of all settings in the subscription data store for the given site subscription.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Export-SPSiteSubscriptionSettings -Identity "http://siteCollection" -Path "C:\siteCollection_sitesubscriptionsettings.txt"
+Export-SPSiteSubscriptionSettings -Identity "https://siteCollection" -Path "C:\siteCollection_sitesubscriptionsettings.txt"
 ```
 
-The example backs up the subscription settings store of http://siteCollection.
+The example backs up the subscription settings store of https://siteCollection.
 
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>$site = Get-SPSite http://siteCollection
-C:\PS>Export-SPSiteSubscriptionSettings -Identity $site.SiteSubscription -Path "C:\siteCollection_sitesubscriptionsettings.txt"
+C:\PS>$site = Get-SPSite https://siteCollection
+Export-SPSiteSubscriptionSettings -Identity $site.SiteSubscription -Path "C:\siteCollection_sitesubscriptionsettings.txt"
 ```
 
-The example backs up the subscription settings store of http://siteCollection using the Site Subscription object.
+The example backs up the subscription settings store of https://siteCollection using the Site Subscription object.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the ID of the site subscription from which to back up data.
 
-The type must be a valid URL, in the form http://server_name or a Site Subscription object.
+The type must be a valid URL, in the form https://server_name or a Site Subscription object.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -72,7 +77,7 @@ The type must be a valid path; for example,  C:/backupfile.back..
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -89,7 +94,7 @@ If this parameter is not set, only non-administrator subscription properties are
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -111,7 +116,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -127,7 +132,7 @@ Forces the output backup file (if provided) to overwrite any existing file at th
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -137,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

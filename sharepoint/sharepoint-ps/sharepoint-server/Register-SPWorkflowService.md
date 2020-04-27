@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.WorkflowServices.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/register-spworkflowservice
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Register-SPWorkflowService
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Register-SPWorkflowService
@@ -26,7 +31,7 @@ This cmdlet registers a Workflow Manager farm with the SharePoint farm in order 
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Register-SPWorkflowService -SPSite https://site_name -WorkflowHostUri https://workflow.contoso.com:12290 -ScopeName SharePoint
+Register-SPWorkflowService -SPSite https://site_name -WorkflowHostUri https://workflow.contoso.com:12290 -ScopeName SharePoint
 ```
 Registers the Workflow Manager farm located at https://workflow.contoso.com:12290 with the SharePoint farm using https://site_name as a reference. A custom Scope named 'SharePoint' is used.
 
@@ -39,7 +44,7 @@ Allows connecting to Workflow Manager using HTTP rather than HTTPS. This is not 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -61,7 +66,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -77,7 +82,7 @@ Forces the registration, even if previously registered. Will overwrite the exist
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -109,7 +114,7 @@ The Site Collection used as a reference to register Workflow Manager with the Sh
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -125,7 +130,7 @@ The name of the scope in Workflow Manager to use. if not specified, the default 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -141,7 +146,7 @@ The URI on which the Workflow Manager is hosted.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -151,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/remove-cshybridapplicationendpoint
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsHybridApplicationEndpoint
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Remove-CsHybridApplicationEndpoint
@@ -82,7 +87,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -96,8 +101,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[New-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/new-cshybridapplicationendpoint?view=skype-ps)
+[New-CsHybridApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/new-cshybridapplicationendpoint?view=skype-ps)
 
-[Get-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/get-cshybridapplicationendpoint?view=skype-ps)
+[Get-CsHybridApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/get-cshybridapplicationendpoint?view=skype-ps)
 
-[Set-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/set-cshybridapplicationendpoint?view=skype-ps)
+[Set-CsHybridApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/set-cshybridapplicationendpoint?view=skype-ps)

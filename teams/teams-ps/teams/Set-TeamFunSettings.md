@@ -3,14 +3,17 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Set-TeamFunSettings
-online version: 
+online version: https://docs.microsoft.com/powershell/module/teams/set-teamfunsettings
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-TeamFunSettings
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
+Note: This cmdlet is deprecated as of our 1.0 PowerShell release, and is not supported in our 1.0 release.  To set a Team's settings, run Set-Team.
 
 Update Giphy, Stickers and Memes settings.
 

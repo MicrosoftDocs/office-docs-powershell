@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/get-cstenanthybridconfiguration
 applicable: Skype for Business Online
 title: Get-CsTenantHybridConfiguration
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsTenantHybridConfiguration
@@ -13,9 +18,15 @@ A hybrid scenario (also known as a split-domain scenario) is a Skype for Busines
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTenantHybridConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>]
- [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsTenantHybridConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTenantHybridConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,15 +34,15 @@ In a hybrid or "split domain" deployment, an organization has some users who hav
 By default, users homed on Skype for Business Online do not have access to the complete range of capabilities offered by Enterprise Voice; that's because the Skype for Business Server servers do not have direct access to Skype for Business Online deployment and network configuration information.
 Among other things, Skype for Business Online users do not have default access to such things as:
 
-Enhanced 9-1-1, the service used for making emergency phone calls.
+* Enhanced 9-1-1, the service used for making emergency phone calls.
 
-Call parking, the service that enables users to place a call on hold phone A, then retrieve that call from phone B.
+* Call parking, the service that enables users to place a call on hold phone A, then retrieve that call from phone B.
 
-Media bypass, which enables calls to and from the public switched telephone network (PSTN) to bypass the Mediation server, helping to minimize transcoding and network latency.
+* Media bypass, which enables calls to and from the public switched telephone network (PSTN) to bypass the Mediation server, helping to minimize transcoding and network latency.
 
-PSTN conferencing dial-in and dial-out, which enables users to participate in the audio portion of an online conference by using any PSTN telephone or mobile device.
+* PSTN conferencing dial-in and dial-out, which enables users to participate in the audio portion of an online conference by using any PSTN telephone or mobile device.
 
-The Response Group application, which provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
+* The Response Group application, which provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 By default, Skype for Business Online users cannot function as Response Group agents.
 
 In order to provide Skype for Business Online users with access to these Enterprise Voice capabilities, administrators need to assign the appropriate values to hybrid configuration settings such as the internal and external Web service URLs and the fully qualified domain name of the organization's Access Edge server.
@@ -61,22 +72,6 @@ In Example 2, property values are returned for the custom tenant hybrid configur
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 Enables you to use wildcard characters in order to return a collection of tenant hybrid configuration settings.
 Because you are limited to a single, global collection of hybrid configuration settings there is no need to use the Filter parameter.
@@ -85,7 +80,7 @@ However, this is valid syntax for the Get-CsTenantHybridConfiguration cmdlet:
 `Get-CsTenantHybridConfiguration -Filter "g*"`
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -106,7 +101,7 @@ Because you are limited to a single, global collection of hybrid configuration s
 To modify the settings for an individual tenant, use the Tenant parameter instead of the Identity parameter.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -145,7 +140,7 @@ Instead, the tenant ID will be determined by your connection and credentials.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -174,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

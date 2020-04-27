@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spdefaultprofileconfig
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPDefaultProfileConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPDefaultProfileConfig
@@ -22,15 +27,15 @@ Set-SPDefaultProfileConfig [-AssignmentCollection <SPAssignmentCollection>] [-Co
 ## DESCRIPTION
 Use the Set-SPDefaultProfileConfig cmdlet to change the MySitesPublicEnabled property of a User Profile Application Proxy from whatever was set at the time of Proxy creation to whatever is defined by using this cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715)](http://go.microsoft.com/fwlink/p/?LinkId=671715).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [https://go.microsoft.com/fwlink/p/?LinkId=671715)](https://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Set-SPDefaultProfileConfig $proxy -MySitesPublicEnabled $true
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Set-SPDefaultProfileConfig $proxy -MySitesPublicEnabled $true
 ```
 
 This example changes the MySitesPublicEnabled property of the specified user profile service application.
@@ -47,7 +52,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -63,7 +68,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -81,7 +86,7 @@ The valid values are $True or $False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -97,7 +102,7 @@ Specifies the proxy of the User Profile Service application that contains the si
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -114,7 +119,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -124,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

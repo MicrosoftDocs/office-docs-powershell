@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/resume-spprojectwebinstance
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Resume-SPProjectWebInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Resume-SPProjectWebInstance
@@ -22,16 +27,16 @@ Switches the specified instance of Project Web App to read-write mode, allowing 
 This cmdlet does not set the database itself to read-write.
 The database must be set to read-write before you run this cmdlet, or this cmdlet will fail.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
-PS C:\>$instance = Get-SPProjectWebInstance -ServiceApplication $sa
-PS C:\>Resume-SPProjectWebInstance -Identity $instance
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+$instance = Get-SPProjectWebInstance -ServiceApplication $sa
+Resume-SPProjectWebInstance -Identity $instance
 ```
 
 Resumes the Project Web Server Instance in the Project Web Application Service Application.
@@ -46,7 +51,7 @@ It can be the unique id of the instance, the URL of the Project Web App site, th
 Type: ProjectInstancePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -68,7 +73,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -78,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

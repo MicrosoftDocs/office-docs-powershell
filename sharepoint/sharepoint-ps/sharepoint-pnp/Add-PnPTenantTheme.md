@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenanttheme
 applicable: SharePoint Online
 schema: 2.0.0
+title: Add-PnPTenantTheme
 ---
+
 # Add-PnPTenantTheme
 
 ## SYNOPSIS
@@ -18,7 +21,7 @@ Add-PnPTenantTheme -Identity <ThemePipeBind>
 ```
 
 ## DESCRIPTION
-Adds or updates atheme to the tenant.
+Adds or updates a theme to the tenant.
 
 ## EXAMPLES
 
@@ -108,4 +111,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

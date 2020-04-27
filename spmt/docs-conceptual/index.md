@@ -1,8 +1,9 @@
 ---
 localization_priority: Normal
+title: Microsoft SharePoint Migration Tool cmdlet reference
 ---
 
-#Microsoft SharePoint Migration Tool cmdlet reference
+# Microsoft SharePoint Migration Tool cmdlet reference
 
 Welcome to the Microsoft SharePoint Migration Tool PowerShell cmdlet help references. The Microsoft SharePoint Migration Tool cmdlets provide the command line interface for service administration and management.
 

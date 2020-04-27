@@ -1,10 +1,13 @@
 ---
 external help file: Microsoft.Whiteboard.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftWhiteboard
+online version: https://docs.microsoft.com/powershell/module/whiteboard/get-whiteboard
 applicable: Microsoft Whiteboard
 title: Get-Whiteboard
-online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-Whiteboard
@@ -18,13 +21,13 @@ Gets one or more Whiteboards from the Microsoft Whiteboard service and returns t
 ### Get a specific Whiteboard
 
 ```powershell
-Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
+Get-Whiteboard -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
 ```
 
 ### Get all Whiteboards for a user
 
 ```powershell
-Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> [<CommonParameters>]
+Get-Whiteboard -UserId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,19 +46,6 @@ Get all of a user's Whiteboards.
 
 
 ## PARAMETERS
-
-### -Token
-The Azure AD bearer token corresponding to the specified credentials. If unspecified, a new token will be generated.
-
-```yaml
-Type:                        Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationResult
-Required:                    false
-Position:                    named
-Default value:               None               
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
-```
 
 ### -UserId
 Optional. The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned. 
@@ -78,7 +68,7 @@ Optional. The ID of a specific Whiteboard.
 Type:                        Guid
 Required:                    true
 Position:                    named
-Default value:               None       
+Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
@@ -92,7 +82,7 @@ Optional. Always prompt for auth. Use to ignore cached credentials.
 Type:                        SwitchParameter
 Required:                    false
 Position:                    named
-Default value:               false       
+Default value:               false
 Accept pipeline input:       false
 Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard

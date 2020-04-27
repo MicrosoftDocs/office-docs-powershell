@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-atppolicyforo365
 applicable: Exchange Online, Exchange Online Protection
 title: Set-AtpPolicyForO365
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -15,36 +19,63 @@ Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (AT
 
 - Safe Links for Office 365 ProPlus desktop clients and Office Mobile apps.
 
+- Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
+
 - ATP to protect files in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>] [-AllowClickThrough <$true | $false>]
- [-BlockUrls <MultiValuedProperty>] [-Confirm] [-EnableSafeLinksForClients <$true | $false>]
- [-EnableSafeLinksForWebAccessCompanion <$true | $false>] [-TrackClicks <$true | $false>] [-WhatIf]
- [<CommonParameters>]
+Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
+ [-AllowClickThrough <Boolean>]
+ [-AllowSafeDocsOpen <Boolean>]
+ [-BlockUrls <MultiValuedProperty>]
+ [-Confirm]
+ [-EnableATPForSPOTeamsODB <Boolean>]
+ [-EnableSafeDocs <Boolean>]
+ [-EnableSafeLinksForClients <Boolean>]
+ [-TrackClicks <Boolean>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. For more information, see ATP safe links in Office 365 (https://go.microsoft.com/fwlink/p/?linkid=857638).
+Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. For more information, see [Office 365 ATP Safe Links](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links).
 
-ATP can also protect files in SharePoint Online, OneDrive for Business and Microsoft Teams by preventing users from opening and downloading files that are identified as malicious. For more information, see Office 365 Advanced Threat Protection for SharePoint, OneDrive and Teams (https://go.microsoft.com/fwlink/p/?linkid=857638).
+ATP can also protect files in SharePoint Online, OneDrive for Business and Microsoft Teams by preventing users from opening and downloading files that are identified as malicious. For more information, see [Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](https://go.microsoft.com/fwlink/p/?linkid=857638).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AtpPolicyForO365 -EnableSafeLinksForClients $true -EnableATPForSPOTeamsODB $true
 ```
 
 This example enables Safe Links for Office 365 ProPlus clients and ATP for SharePoint Online, OneDrive for Business and Microsoft Teams.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the ATP policy that you want to modify. There's only one policy named Default.
+
+```yaml
+Type: AtpPolicyForO365IdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -AllowClickThrough
 The AllowClickThrough parameter specifies whether to allow users to click through to the original blocked URL in Office 365 ProPlus. Valid values are:
@@ -54,10 +85,32 @@ The AllowClickThrough parameter specifies whether to allow users to click throug
 - $false: Users aren't allowed to click through to the original URL.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSafeDocsOpen
+The AllowSafeDocsOpen parameter specifies whether users can click through and bypass the Protected View container even when Safe Documents in Microsoft Defender Advanced Threat Protection (MDATP) identifies a file as malicious. Valid values are:
+
+- $true: Users are allowed to exit the Protected View container even if the document has been identified as malicious.
+
+- $false: Users aren't allowed to exit Protected View in case of a malicious detection.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -66,13 +119,14 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
-The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning. You can specify multiple values separated by semicolons.
+The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning. You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +146,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -106,53 +161,58 @@ The EnableATPForSPOTeamsODB parameter specifies whether ATP is enabled for Share
 
 - $false: ATP is disabled for SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.
 
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSafeDocs
+The EnableSafeDocs parameter specifies whether to enable the Safe Documents feature in the organization. Valid values are:
+
+- $true: Safe Documents is enabled and will upload user files to Microsoft Defender Advanced Threat Protection (MDATP) for scanning and verification.
+
+- $false: Safe Documents is disabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableSafeLinksForClients
+The EnableSafeLinksForClients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop clients and on the web. Valid values are:
 
-The EnableSafeLinksForClients parameter specifies whether Safe Links is enabled for Office 365 ProPlus clients. Valid values are:
+- $true: Safe Links are enabled for Office 365 apps. This is the default value.
 
-- $true: Safe Links are enabled for Office clients.
+- $false: Safe Links are disabled for Office 365 apps.
 
-- $false: Safe Links are disabled for Office clients. This is the default value.
+This parameter is being replaced by EnableSafeLinksForO365Clients with the same functionality. Use which ever one is currently available in your tenant.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableSafeLinksForWebAccessCompanion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the ATP policy that you want to modify. There's only one policy named Default.
-
-```yaml
-Type: AtpPolicyForO365IdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -164,10 +224,11 @@ The TrackClicks parameter specifies whether to track user clicks related to bloc
 - $false: User clicks aren't tracked.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +244,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -191,20 +253,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/60b0d121-2060-4f29-be3f-e1e4ad7805b8.aspx)

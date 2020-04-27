@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/invoke-cscomputerfailover
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsComputerFailOver
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Invoke-CsComputerFailOver
@@ -31,13 +36,19 @@ To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has 
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
 ```
-
 Invoke-CsComputerFailOver -ComputerName "atl-mcs-001.litwareinc.com" -Report "C:\Logs\S1_FailOverLog.html" -WaitTime 1:30:00
 ```
 
 This example directs that the users assigned to server "atl-mcs-001.litwareinc.com" will be moved to other servers in the pool.
 The log output path is specified and the cmdlet will wait 1 hour 30 minutes before timing out.
 
+### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+```
+$TimeSpan = New-TimeSpan -Minutes 30
+Invoke-CsComputerFailOver -ComputerName "atl-mcs-001.litwareinc.com" -DrainingTimeout $TimeSpan
+```
+
+This example force to drain all conferences and sessions after 30 minutes. If users aren't moved to different front end after 30 minutes, it will drain all conferences and sessions and stop all services in the front end.
 
 ## PARAMETERS
 
@@ -77,6 +88,8 @@ Accept wildcard characters: False
 
 ### -Force
 If the Force parameter is specified, the server is failed over without verifying the pool's capacity to absorb the failed over server's workload.
+
+**Note:** If you run this parameter together with -WhatIf parameter, it will be ignored and a server failover will be started.
 
 ```yaml
 Type: SwitchParameter
@@ -162,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -DrainingTimeout
-Draining timeout in minutes to gracefully drain MCUs.
+Draining timeout in TimeSpan format to gracefully drain MCUs.
 
 ```yaml
 Type: TimeSpan
@@ -178,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipFabricHealthCheck
-{{Fill SkipFabricHealthCheck Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -194,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

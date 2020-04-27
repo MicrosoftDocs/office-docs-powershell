@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spexcelserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPExcelServiceApplication
@@ -45,14 +50,14 @@ New-SPExcelServiceApplication -ApplicationPool <SPIisWebServiceApplicationPoolPi
 The `New-SPExcelServiceApplication` cmdlet creates a new Excel Services Application Web service application with new settings. 
 After you create a new Excel Services Application Web service application, you can use the `Set-SPExcelServiceApplication` cmdlet to modify the global settings of the new application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>New-SPExcelServiceApplication -Name "MyExcelService" -ApplicationPool "SharePoint Services"
+New-SPExcelServiceApplication -Name "MyExcelService" -ApplicationPool "SharePoint Services"
 ```
 
 This example creates a new instance of Excel Services Application with the display name MyExcelService.
@@ -60,7 +65,7 @@ This example creates a new instance of Excel Services Application with the displ
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>New-SPExcelServiceApplication -Name "My Excel Service" -ApplicationPool "SharePoint Services" -SessionsPerUserMax 5
+New-SPExcelServiceApplication -Name "My Excel Service" -ApplicationPool "SharePoint Services" -SessionsPerUserMax 5
 ```
 
 This example creates a new instance of Excel Services Application with the display name My Excel Service and allows only five sessions per user for each back-end application server computer that is running Excel Services Application.
@@ -551,7 +556,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

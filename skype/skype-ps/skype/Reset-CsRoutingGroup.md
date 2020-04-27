@@ -1,14 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/reset-csroutinggroup
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Reset-CsRoutingGroup
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Reset-CsRoutingGroup
 
 ## SYNOPSIS
-Enables administrators to reset a Windows fabric routing group that is not working correctly.
+Enables administrators to reset a Windows Fabric routing group that is not working correctly.
 
 ## SYNTAX
 
@@ -26,7 +31,7 @@ Missing routing groups can be identified by using the `Get-CsPoolFabricState` cm
 
 ### -------------------------- Example 1 --------------------------
 ```
-Reset-CsRoutingGroup -RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c" -Type "Transient"
+Reset-CsRoutingGroup -RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c" -ResetType "Transient"
 ```
 
 The command shown in Example 1 performs a transient on the routing group with the identity bef5fa3b-3c97-4af0-abe7-611deee7616c.
@@ -137,11 +142,11 @@ Accept wildcard characters: False
 Type of reset to be performed.
 Allowed values are:
 
-Invalid
+- Permanent. Takes everything back from Back End Servers and recreates the whole routing group.
 
-Permanent
+- Transient. Resets the Windows Fabric service and fixes any issues, then syncs up any missing data from the RTCLocal Database.
 
-Transient
+- Recreate. Deletes existing data from Windows Fabric service about the routing group and reloads them from the RTCLocal Database.
 
 ```yaml
 Type: RgResetType
@@ -189,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

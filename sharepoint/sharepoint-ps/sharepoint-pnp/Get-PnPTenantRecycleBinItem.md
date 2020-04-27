@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantrecyclebinitem
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPTenantRecycleBinItem
 ---
+
 # Get-PnPTenantRecycleBinItem
 
 ## SYNOPSIS
-Returns the items in the tenant scoped recycle bin
+Returns all modern and classic site collections in the tenant scoped recycle bin
 
 ## SYNTAX 
 
@@ -24,7 +27,7 @@ This command will return all the items in the tenant recycle bin for the Office 
 Get-PnPTenantRecycleBinItem
 ```
 
-Returns all site collections in the tenant scoped recycle bin
+Returns all modern and classic site collections in the tenant scoped recycle bin
 
 ## PARAMETERS
 
@@ -46,4 +49,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -1,54 +1,65 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-holdcompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: Set-HoldCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
 # Set-HoldCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Set-HoldCompliancePolicy cmdlet to modify existing preservation policies in the Security & Compliance Center.
 
-The Set-HoldCompliancePolicy cmdlet has been replaced by the Set-RetentionCompliancePolicy cmdlet. If you have any scripts that use the Set-HoldCompliancePolicy cmdlet, update them to use the Set-RetentionCompliancePolicy cmdlet.
+Note: The Set-HoldCompliancePolicy cmdlet has been replaced by the Set-RetentionCompliancePolicy cmdlet. If you have scripts that use Set-HoldCompliancePolicy, update them to use Set-RetentionCompliancePolicy.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### RetryDistribution
 ```
-Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter> [-AddExchangeLocation <MultiValuedProperty>]
- [-AddPublicFolderLocation <MultiValuedProperty>] [-AddSharePointLocation <MultiValuedProperty>]
- [-Comment <String>] [-Confirm] [-Enabled <$true | $false>] [-Force]
- [-RemoveExchangeLocation <MultiValuedProperty>] [-RemovePublicFolderLocation <MultiValuedProperty>]
- [-RemoveSharePointLocation <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddExchangeLocation <MultiValuedProperty>]
+ [-AddPublicFolderLocation <MultiValuedProperty>]
+ [-AddSharePointLocation <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>] [-Force]
+ [-RemoveExchangeLocation <MultiValuedProperty>]
+ [-RemovePublicFolderLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocation <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Set-HoldCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocation "Kitty Petersen" -AddSharePointLocation "http://contoso.sharepoint.com/sites/teams/finance" -RemovePublicFolderLocation All -Comment "Added new counsel, 9/9/14"
+### Example 1
+```powershell
+Set-HoldCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocation "Kitty Petersen" -AddSharePointLocation "https://contoso.sharepoint.com/sites/teams/finance" -RemovePublicFolderLocation All -Comment "Added new counsel, 9/9/14"
 ```
 
 This example makes the following changes to the existing preservation policy named "Regulation 123 Compliance":
 
 - Adds the mailbox for the user named Kitty Petersen.
 
-- Adds the SharePoint Online site http://contoso.sharepoint.com/sites/teams/finance.
+- Adds the SharePoint Online site https://contoso.sharepoint.com/sites/teams/finance.
 
 - Removes public folders.
 
@@ -70,6 +81,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -82,9 +94,10 @@ The RetryDistribution switch specifies whether to redistribute the policy to all
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -113,9 +126,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -128,9 +142,10 @@ The AddPublicFolderLocation parameter specifies that you want to add all public 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -147,9 +162,10 @@ SharePoint Online sites can't be added to the policy until they have been indexe
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -162,9 +178,10 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -184,6 +201,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -199,10 +217,11 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
-Parameter Sets: Set1
+Type: Boolean
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -215,9 +234,10 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -246,9 +266,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -261,9 +282,10 @@ The RemovePublicFolderLocation parameter specifies that you want to remove all p
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -278,9 +300,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -289,13 +312,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -304,20 +328,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/32731a42-6c45-4574-bc1a-538a91013189.aspx)

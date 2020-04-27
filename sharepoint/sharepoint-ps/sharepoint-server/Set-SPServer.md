@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spserver
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPServer
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPServer
@@ -19,7 +24,7 @@ Set-SPServer [-Identity] <SPServerPipeBind> [-AssignmentCollection <SPAssignment
 ```
 
 ## DESCRIPTION
-The Set-SPServer cmdlet changes the role of the server in the farm by using the Role parameter. A new cmdlet in SharePoint Server 2016 that is used in MinRole.
+The Set-SPServer cmdlet changes the role of the server in the farm by using the Role parameter. A new cmdlet in SharePoint Server 2016, SharePoint Server 2019 that is used in MinRole.
 
 
 ## EXAMPLES
@@ -43,7 +48,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -59,7 +64,7 @@ Specifies the name of the server in the farm.
 Type: SPServerPipeBind
 Parameter Sets: (All)
 Aliases: Address
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 0
@@ -88,7 +93,7 @@ Type: SPServerRole
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Application, ApplicationWithSearch, Custom, DistributedCache, Search, SingleServerFarm, WebFrontEnd, WebFrontEndWithDistributedCache
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -105,7 +110,7 @@ Type: SPObjectStatus
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Online, Disabled, Offline, Unprovisioning, Provisioning, Upgrading, Patching
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -115,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,23 +1,29 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/disconnect-sposervice
 applicable: SharePoint Online
 title: Disconnect-SPOService
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Disconnect-SPOService
 
 ## SYNOPSIS
-Disconnects from a SharePoint Online service.
 
+Disconnects from a SharePoint Online service.
 
 ## SYNTAX
 
-```
+```powershell
 Disconnect-SPOService [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `Disconnect-SPOService` cmdlet explicitly disconnects a previously created SharePoint Online service connection.
 
 Global administrators can disconnect the service by running the `Disconnect-SPOService` cmdlet or by running the `Connect-SPOService` cmdlet to initiate another connection.
@@ -28,22 +34,23 @@ In other words, long-running operations will not be terminated by running the `D
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
-
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
 ## EXAMPLES
 
-###   ------------ Example 1 --------------------
-```
+### ------------ Example 1 --------------------
+
+```powershell
 Disconnect-SPOService
 ```
-This example disconnects the service for the tenant. 
 
+This example disconnects the service for the tenant.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -53,9 +60,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

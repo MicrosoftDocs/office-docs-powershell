@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/restore-spdeletedsite
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Restore-SPDeletedSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Restore-SPDeletedSite
@@ -24,20 +29,20 @@ This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and Sh
 
 Use the `Restore-SPDeletedSite` cmdlet to restore a previously deleted site collection.
 
-Unlike the `Restore-SPSite` cmdlet that uses the host name and scheme for the Identity parameter (that is, http://server_name), the value of the identity parameter for all SPDeletedSite cmdlets use a server-relative URL.
+Unlike the `Restore-SPSite` cmdlet that uses the host name and scheme for the Identity parameter (that is, https://server_name), the value of the identity parameter for all SPDeletedSite cmdlets use a server-relative URL.
 Typically, the forward slash character (/) begins the relative URL and also denotes the root site.
 
-For additional information about a server-relative URL or understanding general concepts about absolute and relative URLs, see Server-relative URL Property (http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spsite.serverrelativeurl.aspx) or Understanding Absolute and Relative URL Addresses (http://msdn.microsoft.com/en-us/library/bb208688(office.12).aspx).
+For additional information about a server-relative URL or understanding general concepts about absolute and relative URLs, see Server-relative URL Property (https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spsite.serverrelativeurl.aspx) or Understanding Absolute and Relative URL Addresses (https://msdn.microsoft.com/en-us/library/bb208688(office.12).aspx).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1----------------------
 ```
-PS C:\>$deletedSite = Get-SPDeletedSite /sites/site_name
-PS C:\>Restore-SPDeletedSite -Identity $deletedSite
+$deletedSite = Get-SPDeletedSite /sites/site_name
+Restore-SPDeletedSite -Identity $deletedSite
 ```
 
 This example restores a specific deleted site collection by using the site ID.
@@ -55,7 +60,7 @@ A site collection must not already exist at the URL location to perform a restor
 Type: SPDeletedSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -77,7 +82,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -94,7 +99,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -111,7 +116,7 @@ If no content database is specified, the content database with the greatest unus
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -123,13 +128,13 @@ Accept wildcard characters: False
 ### -WebApplication
 Specifies the URL, GUID, or name of the Web application from which to list sites.
 
-The type must be a valid URL in the form http://server_name; a valid GUID, for example, 12345678-90ab-cdef-1234-567890bcdefgh; or the Web application name, for example, WebApplication1212.
+The type must be a valid URL in the form https://server_name; a valid GUID, for example, 12345678-90ab-cdef-1234-567890bcdefgh; or the Web application name, for example, WebApplication1212.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -146,7 +151,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -156,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

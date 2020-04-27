@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+online version: https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/update-rolegroupmember
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Update-RoleGroupMember
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Update-RoleGroupMember
@@ -13,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Update-RoleGroupMember cmdlet to modify the members of a management role group.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,36 +35,36 @@ If the ManagedBy property has been populated with role group managers, the user 
 
 If the role group is a linked role group, you can't use the Update-RoleGroupMember cmdlet to modify members on the role group. Instead, you need to modify members on the foreign universal security group (USG) that's linked to the linked role group. To find the foreign USG that's linked to a role group, use the Get-RoleGroup cmdlet.
 
-For more information about role groups, see Understanding management role groups (https://technet.microsoft.com/library/dd638105.aspx).
+For more information about role groups, see [Understanding management role groups](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Update-RoleGroupMember "Recipient Administrators" -Members "Mark", "Jane", "Mary", "Fred"
 ```
 
 This example sets the Recipient Administrators role group membership list to Mark, Jane, Mary and Fred.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Update-RoleGroupMember "Recipient Administrators" -Members "Mark", "Jane", "Mary", "Fred" -BypassSecurityGroupManagerCheck
 ```
 
 This example sets the Recipient Administrators role group membership list to Mark, Jane, Mary and Fred. Because the user running the command wasn't added to the ManagedBy property of the role group, the BypassSecurityGroupManagerCheck switch must be used. The user is assigned the Role Management role, which enables the user to bypass the security group manager check.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Update-RoleGroupMember "Organization Management" -Members @{Add=(Get-Mailbox David).Identity, (Get-Group "Help Desk Managers").Identity; Remove=(Get-Mailbox "Christine").Identity, (Get-Mailbox "Isabel").Identity}
 ```
 
-This example adds multiple members to, and removes multiple members from, a role group without replacing all the existing members on the role group. This example makes use of multivalued property syntax that's described in the topic Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx). When you use this multivalued property syntax, you must manually retrieve the Identity of the mailbox or security group that you want to add to or remove from the role group. Use the syntax that matches the type of object you want to add or remove:
+This example adds multiple members to, and removes multiple members from, a role group without replacing all the existing members on the role group. This example makes use of multivalued property syntax that's described in the topic [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help). When you use this multivalued property syntax, you must manually retrieve the Identity of the mailbox or mail-enabled security group that you want to add to or remove from the role group. Use the syntax that matches the type of object you want to add or remove:
 
 Mailbox: If you want to add or remove a mailbox, use the syntax (Get-Mailbox "\<Alias or Name\>").Identity
 
-Security Group: If you want to add or remove a security group, use the syntax (Get-Group "\<Name\>").Identity
+Mail-enabled security group: If you want to add or remove a mail-enabled security group, use the syntax (Get-Group "\<Name\>").Identity
 
 ## PARAMETERS
 
@@ -71,7 +75,8 @@ The Identity parameter specifies the role group whose membership you want to mod
 Type: RoleGroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -92,7 +97,8 @@ You don't need to specify a value with this switch.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +117,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +135,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -137,17 +145,16 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the mailboxes or USG that should be members of a security group. If the member name contains spaces, enclose the name in quotation marks ("). Separate multiple members using commas.
+The Members parameter specifies the mailboxes or mail-enabled USGs to add as a member of the role group. You can identify the user or group by the name, DN, or primary SMTP address value. You can specify multiple members separated by commas (`Value1,Value2,...ValueN`). If the value contains spaces, enclose the value in quotation marks (`"Value 1","Value 2",..."Value N"`).
 
-The list that you specify using the Members parameter overwrites the existing membership list of the role group. If you want to add or remove individual members to or from a role group, use the Add-RoleGroupMember or Remove-RoleGroupMember cmdlets.
-
-If you want to add or remove multiple members without replacing the entire membership list, see the Examples section.
+By default, the values that you specify overwrite the existing membership list of the role group. To add or remove multiple members without replacing the entire membership list, see the Examples section.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -164,7 +171,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -173,20 +181,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/37f82792-aaf1-4306-a563-37d6de3a8ee8.aspx)

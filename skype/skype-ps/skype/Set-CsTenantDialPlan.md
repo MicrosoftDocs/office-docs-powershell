@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-cstenantdialplan
 applicable: Skype for Business Online
 title: Set-CsTenantDialPlan
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsTenantDialPlan
@@ -12,11 +17,18 @@ Use the `Set-CsTenantDialPlan` cmdlet to modify an existing tenant dial plan.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTenantDialPlan [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Description <Object>]
- [-ExternalAccessPrefix <Object>] [-Force] [-Instance <Object>] [-NormalizationRules <Object>]
- [-OptimizeDeviceDialing <Object>] [-SimpleName <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
- [<CommonParameters>]
+Set-CsTenantDialPlan [-Tenant <Guid>] [-Description <String>] [-NormalizationRules <List>]
+ [-ExternalAccessPrefix <String>] [-SimpleName <String>] [-OptimizeDeviceDialing <Boolean>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTenantDialPlan [-Tenant <Guid>] [-Description <String>] [-NormalizationRules <List>]
+ [-ExternalAccessPrefix <String>] [-SimpleName <String>] [-OptimizeDeviceDialing <Boolean>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,22 +61,6 @@ This example updates the vt1tenantDialPlan9 tenant dial plan to have an external
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
@@ -86,7 +82,7 @@ The Description parameter describes the tenant dial plan - what it's for, what t
 Maximum characters is 512.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -107,7 +103,7 @@ The value of this parameter must match the regular expression \[0-9\]{1,4}.
 This means it must be a value one to four digits in length, with each digit being a number 0 through 9.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -144,7 +140,7 @@ A tenant dial plan at the service scope is a Registrar or PSTN gateway service, 
 A per-user Identity is a unique string value.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -161,7 +157,7 @@ The Instance parameter allows you to pass a reference to an object to the cmdlet
 You can retrieve this object reference by calling the `Get-CsTenantDialPlan` cmdlet.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -177,10 +173,10 @@ Accept wildcard characters: False
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
 Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
 
-The number of normalization rules cannot exceed 25 per TenantDialPlan.
+The number of normalization rules cannot exceed 50 per TenantDialPlan.
 
 ```yaml
-Type: Object
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -196,7 +192,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -216,7 +212,7 @@ This string can be up to 256 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -234,7 +230,7 @@ For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
 You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -262,24 +258,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/new-globaladdresslist
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-GlobalAddressList
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-GlobalAddressList
@@ -13,32 +17,46 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-GlobalAddressList cmdlet to create a global address list (GAL).
 
-In Exchange Online, this cmdlet is available only in the Address Lists role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Address Lists role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+In Exchange Online, this cmdlet is available only in the Address Lists role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Address Lists role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
+### PrecannedFilter
 ```
-New-GlobalAddressList [-Name] <String> [-ConditionalCompany <MultiValuedProperty>]
- [-ConditionalCustomAttribute1 <MultiValuedProperty>] [-ConditionalCustomAttribute10 <MultiValuedProperty>]
- [-ConditionalCustomAttribute11 <MultiValuedProperty>] [-ConditionalCustomAttribute12 <MultiValuedProperty>]
- [-ConditionalCustomAttribute13 <MultiValuedProperty>] [-ConditionalCustomAttribute14 <MultiValuedProperty>]
- [-ConditionalCustomAttribute15 <MultiValuedProperty>] [-ConditionalCustomAttribute2 <MultiValuedProperty>]
- [-ConditionalCustomAttribute3 <MultiValuedProperty>] [-ConditionalCustomAttribute4 <MultiValuedProperty>]
- [-ConditionalCustomAttribute5 <MultiValuedProperty>] [-ConditionalCustomAttribute6 <MultiValuedProperty>]
- [-ConditionalCustomAttribute7 <MultiValuedProperty>] [-ConditionalCustomAttribute8 <MultiValuedProperty>]
- [-ConditionalCustomAttribute9 <MultiValuedProperty>] [-ConditionalDepartment <MultiValuedProperty>]
- [-ConditionalStateOrProvince <MultiValuedProperty>] [-Confirm] [-DomainController <Fqdn>]
- [-IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>]
- [-RecipientContainer <OrganizationalUnitIdParameter>] [-WhatIf] [<CommonParameters>]
+New-GlobalAddressList [-Name] <String> -IncludedRecipients <WellKnownRecipientType>
+ [-ConditionalCompany <MultiValuedProperty>]
+ [-ConditionalCustomAttribute1 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute10 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute11 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute12 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute13 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute14 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute15 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute2 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute3 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute4 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute5 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute6 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute7 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute8 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute9 <MultiValuedProperty>]
+ [-ConditionalDepartment <MultiValuedProperty>]
+ [-ConditionalStateOrProvince <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### CustomFilter
 ```
-New-GlobalAddressList [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
- [-RecipientContainer <OrganizationalUnitIdParameter>] [-RecipientFilter <String>] [-WhatIf] [<CommonParameters>]
+New-GlobalAddressList [-Name] <String> -RecipientFilter <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,20 +70,20 @@ The Conditional parameters that are used with the IncludedRecipients parameter a
 
 To create flexible filters that use any available recipient property and that aren't subject to these limitations, you can use the RecipientFilter parameter to create an OPath filter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-GlobalAddressList -Name "NewGAL"
 ```
 
 This example creates the GAL named NewGAL.
 
-### -------------------------- Example 2 --------------------------
-```
-New-GlobalAddressList -Name GAL_AgencyB -RecipientFilter {((RecipientType -eq "UserMailbox") -and (CustomAttribute15 -eq "AgencyB"))}
+### Example 2
+```powershell
+New-GlobalAddressList -Name GAL_AgencyB -RecipientFilter "(RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -eq 'AgencyB')"
 ```
 
 This example creates the GAL named GAL\_AgencyB by using the RecipientFilter parameter to include all mailbox users whose custom attribute 15 equals AgencyB.
@@ -79,7 +97,8 @@ The Name parameter specifies a unique name for the global address list. The maxi
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -87,18 +106,83 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludedRecipients
+The IncludedRecipients parameter specifies a precanned filter that's based on the recipient type. Valid values are:
+
+- AllRecipients: This value can be used only by itself.
+
+- MailboxUsers
+
+- MailContacts
+
+- MailGroups
+
+- MailUsers
+
+- Resources: This value indicates room or equipment mailboxes.
+
+You can specify multiple values separated by commas. When you use multiple values, the OR Boolean operator is applied.
+
+You need to use this parameter when you use any Conditional parameters as part of a precanned filter. You can't use this parameter in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
+
+```yaml
+Type: WellKnownRecipientType
+Parameter Sets: PrecannedFilter
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientFilter
+The RecipientFilter parameter specifies a custom OPath filter that's based on the value of any available recipient property. You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+- Property is a filterable property. For filterable properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipientfilter-properties).
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+
+- Value is the property value to filter on. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+- In cloud-based environments, you can't use a wildcard as the first character. For example, `'Sales*'` is allowed, but `'*Sales'` isn't allowed.
+
+- In on-premises Exchange, wildcards are valid only as the first or last character. For example, `'Sales*'` or `'*Sales'` are allowed, but `'Sa*les'` isn't allowed.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+
+You can't use this parameter in combination with the IncludedRecipients parameter or any Conditional parameters (which are used to create precanned filters).
+
+```yaml
+Type: String
+Parameter Sets: CustomFilter
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ConditionalCompany
-The ConditionalCompany parameter specifies a filter that's based on the value of the recipient's Company property. You can specify multiple values separated by commas.
+The ConditionalCompany parameter specifies a precanned filter that's based on the value of the recipient's Company property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -107,17 +191,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute1
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute1 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute1 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -126,17 +211,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute10
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute10 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute10 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -145,17 +231,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute11
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute11 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute11 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,17 +251,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute12
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute12 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute12 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -183,17 +271,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute13
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute13 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute13 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -202,17 +291,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute14
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute14 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute14 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -221,17 +311,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute15
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute15 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute15 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -240,17 +331,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute2
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute2 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute2 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -259,17 +351,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute3
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute3 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute3 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -278,17 +371,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute4
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute4 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute4 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -297,17 +391,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute5
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute5 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute5 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -316,17 +411,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute6
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute6 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute6 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -335,17 +431,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute7
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute7 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute7 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -354,17 +451,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute8
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute8 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute8 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -373,17 +471,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute9
-This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
+The ConditionalCustomAttribute9 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute9 property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -392,17 +491,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalDepartment
-The ConditionalDepartment parameter specifies a filter that's based on the value of the recipient's Department property. You can specify multiple values separated by commas.
+The ConditionalDepartment parameter specifies a precanned filter that's based on the value of the recipient's Department property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -411,17 +511,18 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalStateOrProvince
-The ConditionalStateOrProvince parameter specifies a filter that's based on the value of the recipient's StateOrProvince property. You can specify multiple values separated by commas.
+The ConditionalStateOrProvince parameter specifies a precanned filter that's based on the value of the recipient's StateOrProvince property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
-You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
+You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPath filters).
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -440,7 +541,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -457,38 +559,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -IncludedRecipients
-The IncludedRecipients parameter specifies a filter that's based on the recipient type. Valid values are:
-
-- AllRecipients: This value can be used only by itself.
-
-- MailboxUsers
-
-- MailContacts
-
-- MailGroups
-
-- MailUsers
-
-- Resources: This value indicates room or equipment mailboxes.
-
-You can specify multiple values separated by commas. When you use multiple values, the OR Boolean operator is applied.
-
-You need to use this parameter when you use any of the Conditional parameters. You can't use this parameter with the RecipientFilter parameter.
-
-```yaml
-Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -499,7 +571,7 @@ Accept wildcard characters: False
 ### -RecipientContainer
 This parameter is available only in on-premises Exchange.
 
-The RecipientContainer parameter specifies a filter that's based on the recipient's location in Active Directory. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+The RecipientContainer parameter specifies a filter that's based on the recipient's location in Active Directory. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
 
@@ -515,32 +587,8 @@ If you don't use this parameter, the default value is the OU where the object wa
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -RecipientFilter
-The RecipientFilter parameter specifies an OPath filter that's based on the value of any available recipient property. You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. When you use this parameter, remember the following OPath filter rules:
-
-- Use braces { } around the whole OPath syntax string.
-
-- Include a hyphen before all operators.
-
-- In cloud-based environments, you can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
-
-For more information, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
-
-You can't use this parameter with the IncludedRecipients parameter or any of the Conditional parameters.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -555,7 +603,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -564,20 +613,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/9349a281-f92f-40f9-bf29-2a2e138c2783.aspx)

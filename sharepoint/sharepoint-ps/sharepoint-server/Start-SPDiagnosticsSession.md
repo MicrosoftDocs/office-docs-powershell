@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/start-spdiagnosticssession
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Start-SPDiagnosticsSession
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Start-SPDiagnosticsSession
@@ -22,15 +27,15 @@ Start-SPDiagnosticsSession [-AssignmentCollection <SPAssignmentCollection>] [-Co
 Use the `Start-SPDiagnosticsSession` cmdlet to report diagnostic information to the usage database.
 After a diagnostic session starts, all Windows PowerShell for SharePoint cmdlets in Windows PowerShell scripts will use the same correlation to report diagnostic information.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### -------------EXAMPLE-------
 ```
-PS C:\>$correlationId = [guid]::NewGuid()
-PS C:\>Start-SPDiagnosticsSession -CorrelationId $correlationId -Dashboard:$true -TraceLevel Verbose
+$correlationId = [guid]::NewGuid()
+Start-SPDiagnosticsSession -CorrelationId $correlationId -Dashboard:$true -TraceLevel Verbose
 ```
 
 This example starts a diagnostic session for a specified correlation ID with the trace level of verbose.
@@ -51,7 +56,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -67,7 +72,7 @@ Specifies the correlation ID to be used for the diagnostic session.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -83,7 +88,7 @@ Specifies that diagnostics behave as if the developer dashboard were enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +113,7 @@ Specifies the Unified Logging Service (ULS) trace level override.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

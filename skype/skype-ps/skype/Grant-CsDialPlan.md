@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/grant-csdialplan
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsDialPlan
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Grant-CsDialPlan
@@ -19,7 +24,7 @@ This cmdlet was introduced in Lync Server 2010.
 
 ```
 Grant-CsDialPlan [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-DomainController <Fqdn>] [-PassThru]
- [-WhatIf] [-Confirm] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +34,8 @@ Dial plans provide information required to enable Enterprise Voice users to make
 Users who do not have a valid dial plan will not be enabled to make calls by using Enterprise Voice.
 A dial plan determines such things as how normalization rules are applied and whether a prefix must be dialed for external calls.
 
-You can check whether a user has been granted a per-user dial plan by calling a command in this format: `Get-CsUser "\<user name\>" | Select-Object DialPlan.`
+You can check whether a user has been granted a per-user dial plan by calling a command in this format: `Get-CsUser "<user name>" | Select-Object DialPlan`
+
 For example:
 
 `Get-CsUser "Ken Myer" | Select-Object DialPlan`
@@ -88,9 +94,6 @@ The Identity value of the dial plan to be assigned to the user.
 (Note that this includes only the name portion of the Identity.
 Per-user dial plan identities include a prefix of tag: that should not be included with the PolicyName.)
 
-
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -108,9 +111,6 @@ Accept wildcard characters: False
 
 Allows you to specify a domain controller.
 If no domain controller is specified, the first available will be used.
-
-
-
 
 ```yaml
 Type: Fqdn
@@ -130,8 +130,6 @@ Accept wildcard characters: False
 Returns the results of the command.
 By default, this cmdlet does not generate any output.
 
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -148,8 +146,6 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Describes what would happen if you executed the command without actually executing the command.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -168,7 +164,6 @@ Accept wildcard characters: False
 
 Prompts you for confirmation before executing the command.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -183,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

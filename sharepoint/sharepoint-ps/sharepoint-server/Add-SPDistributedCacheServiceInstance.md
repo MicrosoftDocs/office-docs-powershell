@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spdistributedcacheserviceinstance
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPDistributedCacheServiceInstance
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Add-SPDistributedCacheServiceInstance
@@ -34,7 +39,7 @@ Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollec
 
 ## DESCRIPTION
 
-This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [Cmdlet Parameter Sets](http://go.microsoft.com/fwlink/?LinkID=187810).
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [Cmdlet Parameter Sets](https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the Add-SPDistributedCacheServiceInstance cmdlet to add an instance of the distributed cache server to a local server. This is required to start the AppFabric service.
 
@@ -63,7 +68,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -81,7 +86,7 @@ If this parameter is not specified, the default value will be used.
 Type: Int32
 Parameter Sets: CacheSizeSet
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -106,7 +111,7 @@ Type: SPServerRole
 Parameter Sets: LocalServerRoleSet
 Aliases: 
 Accepted values: DistributedCache, SingleServerFarm, WebFrontEndWithDistributedCache
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -116,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

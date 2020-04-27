@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spexceldataconnectionlibrary
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelDataConnectionLibrary
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelDataConnectionLibrary
@@ -29,25 +34,25 @@ Data connection libraries enable you to reuse and share data connections.
 Data connections can be loaded by using information from the workbook file.
 However, using a data connection library to load data connections provides an additional layer for data connections so that they can be managed separately from workbooks.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1--------------
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Description "This is the DCL where all the connections to the sales data are stored
+Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "https://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Description "This is the DCL where all the connections to the sales data are stored
 ```
 
-This example sets a display description for the entry http://portal/site/salesDCL in the list of trusted data connection libraries (DCLs) that is on the Excel Services Application Web service application named MyExcelService.
+This example sets a display description for the entry https://portal/site/salesDCL in the list of trusted data connection libraries (DCLs) that is on the Excel Services Application Web service application named MyExcelService.
 
 
 ### --------------EXAMPLE 2--------------
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL
+Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "https://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Address "https://portal/site/salesDCL
 ```
 
-This example updates the address of the data connection library for the entry http://portal/test/site/salesDCL to http://portal/site/salesDCL in the list of trusted data connection libraries, which is on the Excel Services Application Web service application named MyExcelService.
+This example updates the address of the data connection library for the entry https://portal/test/site/salesDCL to https://portal/site/salesDCL in the list of trusted data connection libraries, which is on the Excel Services Application Web service application named MyExcelService.
 
 
 ## PARAMETERS
@@ -55,7 +60,7 @@ This example updates the address of the data connection library for the entry ht
 ### -Identity
 Specifies the DataConnectionLibrary object to update.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection library (for example, DataConnectionLib1); a valid URL, in the form http://server_name; or an instance of a valid SPExcelDCL object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection library (for example, DataConnectionLib1); a valid URL, in the form https://server_name; or an instance of a valid SPExcelDCL object.
 
 ```yaml
 Type: SPExcelDCLPipeBind
@@ -92,7 +97,7 @@ Accept wildcard characters: False
 Specifies the address of the data connection library.
 The address must be unique in the list of trusted data connection libraries.
 
-The type must be a valid URL, in the form http://server_name.
+The type must be a valid URL, in the form https://server_name.
 
 ```yaml
 Type: String
@@ -182,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

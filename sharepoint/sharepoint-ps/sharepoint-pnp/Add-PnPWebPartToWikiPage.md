@@ -1,12 +1,15 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpwebparttowikipage
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPWebPartToWikiPage
 ---
+
 # Add-PnPWebPartToWikiPage
 
 ## SYNOPSIS
-Adds a webpart to a wiki page in a specified table row and column
+Adds a web part to a wiki page in a specified table row and column
 
 ## SYNTAX 
 
@@ -39,19 +42,19 @@ Add-PnPWebPartToWikiPage -Path <String>
 Add-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Path "c:\myfiles\listview.webpart" -Row 1 -Column 1
 ```
 
-This will add the webpart as defined by the XML in the listview.webpart file to the specified page in the first row and the first column of the HTML table present on the page
+This will add the web part as defined by the XML in the listview.webpart file to the specified page in the first row and the first column of the HTML table present on the page
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Add-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -XML $webpart -Row 1 -Column 1
 ```
 
-This will add the webpart as defined by the XML in the $webpart variable to the specified page in the first row and the first column of the HTML table present on the page
+This will add the web part as defined by the XML in the $webpart variable to the specified page in the first row and the first column of the HTML table present on the page
 
 ## PARAMETERS
 
 ### -AddSpace
-Must there be a extra space between the webpart
+Must there be a extra space between the web part
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +66,7 @@ Accept pipeline input: False
 ```
 
 ### -Column
-Column number where the webpart must be placed
+Column number where the web part must be placed
 
 ```yaml
 Type: Int
@@ -75,7 +78,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-A path to a webpart file on a the file system.
+A path to a web part file on a the file system.
 
 ```yaml
 Type: String
@@ -87,7 +90,7 @@ Accept pipeline input: False
 ```
 
 ### -Row
-Row number where the webpart must be placed
+Row number where the web part must be placed
 
 ```yaml
 Type: Int
@@ -99,7 +102,7 @@ Accept pipeline input: False
 ```
 
 ### -ServerRelativePageUrl
-Full server relative url of the webpart page, e.g. /sites/demo/sitepages/home.aspx
+Full server relative url of the web part page, e.g. /sites/demo/sitepages/home.aspx
 
 ```yaml
 Type: String
@@ -112,7 +115,7 @@ Accept pipeline input: False
 ```
 
 ### -Xml
-A string containing the XML for the webpart.
+A string containing the XML for the web part.
 
 ```yaml
 Type: String
@@ -149,4 +152,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

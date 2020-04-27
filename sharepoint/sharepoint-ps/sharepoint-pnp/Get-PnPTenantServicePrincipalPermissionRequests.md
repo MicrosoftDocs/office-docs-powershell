@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantserviceprincipalpermissionrequests
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPTenantServicePrincipalPermissionRequests
 ---
+
 # Get-PnPTenantServicePrincipalPermissionRequests
 
 ## SYNOPSIS
@@ -42,4 +45,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-clientaccessservice
+applicable: Exchange Server 2016, Exchange Server 2019
 title: Set-ClientAccessService
 schema: 2.0.0
-monikerRange: "exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-ClientAccessService
@@ -13,32 +17,33 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ClientAccessService cmdlet to modify settings that are associated with the Client Access server role.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### AlternateServiceAccount
 ```
-Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter>
- [-AlternateServiceAccountCredential <PSCredential[]>] [-CleanUpInvalidAlternateServiceAccountCredentials]
- [-Confirm] [-DomainController <Fqdn>] [-RemoveAlternateServiceAccountCredentials] [-WhatIf]
- [<CommonParameters>]
+Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter> [-AlternateServiceAccountCredential <PSCredential[]>] [-CleanUpInvalidAlternateServiceAccountCredentials] [-RemoveAlternateServiceAccountCredentials]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter> [-Array <ClientAccessArrayIdParameter>]
- [-AutoDiscoverServiceInternalUri <Uri>] [-AutoDiscoverSiteScope <MultiValuedProperty>] [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter> [-Array <ClientAccessArrayIdParameter>] [-AutoDiscoverServiceInternalUri <Uri>] [-AutoDiscoverSiteScope <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-ClientAccessService -Identity "MBX-01" -AutoDiscoverServiceInternalUri "https://mbx01.contoso.com/autodiscover/autodiscover.xml" -AutoDiscoverSiteScope "Mail"
 ```
 
@@ -61,7 +66,8 @@ The Identity parameter specifies the server that you want to modify. You can use
 Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -70,15 +76,16 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateServiceAccountCredential
-The AlternateServiceAccountCredential parameter specifies an alternative service account that'stypically used for Kerberos authentication in Exchange Server 2010 coexistence environments.
+The AlternateServiceAccountCredential parameter specifies an alternative service account that's typically used for Kerberos authentication in Exchange Server 2010 coexistence environments.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential[]
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -91,9 +98,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ClientAccessArrayIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -106,9 +114,10 @@ The AutoDiscoverServiceInternalUri parameter specifies the internal URL of the A
 
 ```yaml
 Type: Uri
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -121,15 +130,16 @@ The AutoDiscoverSiteScope parameter specifies the Active Directory site that the
 
 To see the available Active Directory sites, use the Get-ADSite cmdlet.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -138,13 +148,14 @@ Accept wildcard characters: False
 ```
 
 ### -CleanUpInvalidAlternateServiceAccountCredentials
-The CleanUpInvalidAlternateServiceAccountCredentialsswitch specifies whether to remove a previously configured alternate service account that's no longer valid. You don't need to specify a value with this switch.
+The CleanUpInvalidAlternateServiceAccountCredentials switch specifies whether to remove a previously configured alternate service account that's no longer valid. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +174,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +190,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -187,13 +200,14 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAlternateServiceAccountCredentials
-The RemoveAlternateServiceAccountCredentialsswitch specifies whether to remove a previously distributed alternate service account. You don't need to specify a value with this switch.
+The RemoveAlternateServiceAccountCredentials switch specifies whether to remove a previously distributed alternate service account. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +222,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -217,20 +232,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/59440ef8-8ea4-4168-9b75-8f4d7aa6652d.aspx)

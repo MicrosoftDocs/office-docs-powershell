@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spuser
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPUser
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPUser
@@ -23,27 +28,27 @@ Remove-SPUser [-Identity] <SPUserPipeBind> -Web <SPWebPipeBind>
 The `Remove-SPUser` cmdlet specifies the identity and user group from which a user is to be removed.
 The `Remove-SPUser` cmdlet does not remove the user from Active Directory Domain Services (AD DS).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-C:\PS>Remove-SPUser "Contoso \jdoe" -web http://test/web1
+Remove-SPUser "Contoso\jdoe" -web https://test/web1
 
-C:\PS>Get-SPWeb "http://test/web1" | Remove-SPUser "Contoso\jdoe"
+Get-SPWeb "https://test/web1" | Remove-SPUser "Contoso\jdoe"
 ```
 
-This example removes the user (Contoso\jdoe) from the Web application http://test/web1.
+This example removes the user (Contoso\jdoe) from the Web application https://test/web1.
 
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Get-SPSite http://contoso.com |Get-SPWeb |Remove-SPUser "Contoso\jdoe"
+Get-SPSite https://contoso.com |Get-SPWeb |Remove-SPUser "Contoso\jdoe"
 ```
 
-This syntax removes the user (Contoso\Jdoe) from every Web in a site collection located at http://contoso.com.
+This syntax removes the user (Contoso\Jdoe) from every Web in a site collection located at https://contoso.com.
 
 
 ## PARAMETERS
@@ -57,7 +62,7 @@ The type must be a valid GUID of the user, in the form 1234-5678-9876-0987.
 Type: SPUserPipeBind
 Parameter Sets: (All)
 Aliases: UserAlias
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -70,13 +75,13 @@ Accept wildcard characters: False
 Specifies the name of the URL or GUID from which the user is to be removed.
 This parameter is needed only if the identity provided is the user name.
 
-The type must be a valid URL, in the form http://server_name, or a GUID, in the form 1234-5678-9807.
+The type must be a valid URL, in the form https://server_name, or a GUID, in the form 1234-5678-9807.
 
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -98,7 +103,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -115,7 +120,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -132,7 +137,7 @@ Otherwise, the user gets removed from the site.
 Type: SPGroupPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +154,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -159,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/enable-mailbox
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Enable-Mailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Enable-Mailbox
@@ -13,161 +17,237 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Enable-Mailbox cmdlet to create mailboxes for existing users who don't already have mailboxes. You can also use this cmdlet to create In-Place archives for existing mailboxes.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+Note: In Exchange Online, this cmdlet doesn't activate/enable a mailbox the same way it does in on-premises Exchange. To add a mailbox for an existing Azure AD account, you can simply add a license to the account by using the Set-MsolUserLicense cmdlet.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set8
+### Arbitration
 ```
 Enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf] -LinkedDomainController <String>
- -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [<CommonParameters>]
-```
-
-### Set10
-```
-Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteArchive]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- [-Shared] [-Database <DatabaseIdParameter>] [<CommonParameters>]
-```
-
-### Set4
-```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Discovery] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- [-Arbitration] [<CommonParameters>]
-```
-
-### Set2
-```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Equipment] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedRoom]
- [-LinkedCredential <PSCredential>] [-Arbitration] [<CommonParameters>]
-```
-
-### Set5
-```
-Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>
- -LinkedMasterAccount <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>]
- [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
- [-LinkedCredential <PSCredential>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- [-PublicFolder] [-HoldForMigration] [-Equipment] [<CommonParameters>]
-```
-
-### Set6
-```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Room] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- [-Discovery] -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
- [-LinkedCredential <PSCredential>] [<CommonParameters>]
-```
-
-### Set7
-```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Shared] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- [-Equipment] [-Room] [<CommonParameters>]
-```
-
-### Set1
-```
-Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- [<CommonParameters>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set9
-```
-Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-ArchiveGuid <Guid>]
- [-ArchiveName <MultiValuedProperty>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf] [-Room] [-Database <DatabaseIdParameter>]
- -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedRoom]
- [-LinkedCredential <PSCredential>] [<CommonParameters>]
-```
-
-### Set3
-```
-Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf] [-AuditLog] [-PublicFolder] [-HoldForMigration]
- [<CommonParameters>]
-```
-
-### Set13
+### RemoteArchive
 ```
 Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteArchive]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-ArchiveGuid <Guid>] [-ArchiveName <MultiValuedProperty>]
- [<CommonParameters>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemoteArchive]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set12
+### Discovery
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-ArchiveGuid <Guid>]
- [-ArchiveName <MultiValuedProperty>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
- [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf] [-AuditLog] [-Database <DatabaseIdParameter>]
- [<CommonParameters>]
-```
-
-### Set11
-```
-Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-PrimarySmtpAddress <SmtpAddress>]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set15
-```
-Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteArchive]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
- [<CommonParameters>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Discovery]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set14
+### Equipment
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-Alias <String>] [-AutoExpandingArchive] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-Force] [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf] [<CommonParameters>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Equipment]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### LinkedRoomMailbox
+```
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [-LinkedRoom]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>]
+ [-ArchiveGuid <Guid>]
+ [-ArchiveName <MultiValuedProperty>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Linked
+```
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### PublicFolder
+```
+Enable-Mailbox [-Identity] <UserIdParameter> [-PublicFolder]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-HoldForMigration]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Room
+```
+Enable-Mailbox [-Identity] <UserIdParameter> [-Room]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Shared
+```
+Enable-Mailbox [-Identity] <UserIdParameter> [-Shared]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### User
+```
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Archive
+```
+Enable-Mailbox [-Identity] <UserIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>  [-ArchiveGuid <Guid>] [-ArchiveName <MultiValuedProperty>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### AuditLog
+```
+Enable-Mailbox [-Identity] <UserIdParameter> [AuditLog]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### AutoExpandingArchive
+```
+Enable-Mailbox [-Identity] <UserIdParameter> [-AutoExpandingArchive]
+ [-Confirm]
+ [-Force]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -175,26 +255,26 @@ The Enable-Mailbox cmdlet mailbox-enables existing users, public folders, or Ine
 
 When mailbox-enabling an existing user, beware of non-supported characters in the user account or Name property. If you don't specify an Alias value when you mailbox-enable the user, Exchange converts all non-supported characters to question marks (?). To avoid question marks in the Alias, verify that the user account and Name properties have only supported ASCII or Unicode characters or specify an Alias value when you mailbox-enable the user.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Enable-Mailbox -Identity Ayla
 ```
 
 This example creates a mailbox for the existing user named Ayla.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Enable-Mailbox -Identity Ayla -Archive
 ```
 
-This example creates an In-Place archive for the existing user name Ayla who already has a mailbox.
+This example creates an In-Place archive for the existing username Ayla who already has a mailbox.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Enable-Mailbox -Identity ayla@contoso.com -RemoteArchive -ArchiveDomain "archive.contoso.com"
 ```
 
@@ -203,13 +283,9 @@ This example creates a remote archive for the existing on-premises user named Ay
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user or InetOrgPerson object that you want to mailbox-enable. You can use any value that uniquely identifies the user.
-
-For example:
+The Identity parameter specifies the user or InetOrgPerson object that you want to mailbox-enable. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -221,7 +297,8 @@ For example:
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -232,13 +309,16 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
+The Arbitration switch is required to mailbox-enable arbitration mailboxes. You don't need to specify a value with this switch.
+
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set8, Set4, Set2
+Parameter Sets: Arbitration
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -255,9 +335,10 @@ Only use this parameter if the archive is hosted in the cloud-based service.
 
 ```yaml
 Type: SmtpDomain
-Parameter Sets: Set10, Set13, Set15
+Parameter Sets: RemoteArchive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -266,15 +347,16 @@ Accept wildcard characters: False
 ```
 
 ### -Discovery
-The Discoveryswitch specifies that the mailbox is a Discovery mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a Discovery mailbox.
+The Discovery switch is required to mailbox-enable Discovery mailboxes. You don't need to specify a value with this switch.
 
-Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be converted to another type of mailbox. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
+Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be converted to another type of mailbox. For more information, see [In-Place eDiscovery in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set6
+Parameter Sets: Discovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -285,13 +367,16 @@ Accept wildcard characters: False
 ### -Equipment
 This parameter is available only in on-premises Exchange.
 
-The Equipment parameter specifies that the resource mailbox is an equipment mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling an equipment resource mailbox.
+The Equipment switch is required to mailbox-enable equipment mailboxes. You don't need to specify a value with this switch.
+
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set5, Set7
+Parameter Sets: Equipment
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -308,9 +393,10 @@ This parameter is required only if you're enabling a linked mailbox.
 
 ```yaml
 Type: String
-Parameter Sets: Set8, Set2, Set5, Set6, Set9
+Parameter Sets: LinkedRoomMailbox, Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -321,13 +407,9 @@ Accept wildcard characters: False
 ### -LinkedMasterAccount
 This parameter is available only in on-premises Exchange.
 
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example:
-
-For example:
+The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example: For example:
 
 - Name
-
-- Display name
 
 - Distinguished name (DN)
 
@@ -339,9 +421,50 @@ This parameter is required only if you're enabling a linked mailbox.
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set8, Set2, Set5, Set6, Set9
+Parameter Sets: LinkedRoomMailbox, Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LinkedRoom
+This parameter is available only in on-premises Exchange.
+
+The LinkedRoom switch is required to mailbox-enable linked resource mailboxes. You don't need to specify a value with this switch.
+
+A linked resource mailbox is useful in a scenario where you have an account in an authentication forest and you want it to be directly linked to a resource mailbox in resource forest.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: LinkedRoomMailbox
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolder
+This parameter is available only in on-premises Exchange.
+
+The PublicFolder switch is required to mailbox-enable public folder mailboxes. You don't need to specify a value with this switch.
+
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PublicFolder
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -352,13 +475,16 @@ Accept wildcard characters: False
 ### -Room
 This parameter is available only in on-premises Exchange.
 
-The Roomswitch specifies that the resource mailbox is a room mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a room resource mailbox.
+The Room switch is required to mailbox-enable room mailboxes. You don't need to specify a value with this switch.
+
+Room mailboxes are resource mailboxes that are associated with a specific location (for example, conference rooms).
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set6, Set7, Set9
+Parameter Sets: Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -369,15 +495,16 @@ Accept wildcard characters: False
 ### -Shared
 This parameter is available only in on-premises Exchange.
 
-The Sharedswitch specifies that the mailbox is a shared mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a shared mailbox.
+The Shared switch is required to connect shared mailboxes. You don't need to specify a value with this switch.
 
 A shared mailbox is a mailbox where multiple users can log on to access the mailbox contents. The mailbox isn't associated with any of the users that can log on. It's associated with a disabled user account.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set10, Set7
+Parameter Sets: Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -400,9 +527,10 @@ If you don't use this parameter, the default mobile device mailbox policy is app
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: (All)
+Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -421,13 +549,14 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 
 - GUID
 
-For more information about address book policies, see Address book policies (https://technet.microsoft.com/library/hh529948.aspx).
+For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
-Parameter Sets: Set1
+Parameter Sets: User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -448,7 +577,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -456,9 +585,10 @@ The Alias parameter never generates or updates the primary email address of a ma
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -467,13 +597,14 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archiveswitchcreates an archive mailbox for an existing user that already has a mailbox. You don't need to specify a value with this switch.
+The Archive switch creates an archive mailbox for an existing user that already has a mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set9, Set13, Set12
+Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -494,9 +625,10 @@ The ArchiveDatabase parameter specifies the Exchange database that contains the 
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set9, Set13, Set12
+Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -509,9 +641,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
-Parameter Sets: Set9, Set13, Set12
+Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -526,9 +659,54 @@ If you don't use this parameter, the default value is In-Place Archive - \<Mailb
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set9, Set13, Set12
+Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditLog
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AuditLog
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoExpandingArchive
+This parameter is available only in the cloud-based service.
+
+The AutoExpandingArchive switch enables the unlimited archiving feature (called auto-expanding archiving) for the specified mailbox. You don't need to specify a value with this switch.
+
+After you enable auto-expanding archiving, additional storage space is automatically added to the user's archive mailbox when it approaches the storage limit.
+
+Notes:
+
+- The user's archive mailbox has to be enabled before auto-expanding archiving can be enabled.
+
+- After you enable auto-expanding archiving for the user's mailbox, it can't be disabled.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AutoExpandingArchive
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -547,7 +725,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -568,9 +747,10 @@ The Database parameter specifies the Exchange database that contains the new mai
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set8, Set10, Set4, Set2, Set5, Set6, Set7, Set1, Set9, Set3, Set12, Set11
+Parameter Sets: Arbitration, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -585,9 +765,10 @@ If you don't use DisplayName parameter, the value of the Name property is used f
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -602,9 +783,10 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -619,7 +801,30 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HoldForMigration
+This parameter is available only in on-premises Exchange.
+
+The HoldForMigration switch specifies whether to prevent any client or user, except the Microsoft Exchange Mailbox Replication service (MRS) process, from logging on to a public folder mailbox. You don't need to specify a value with this switch.
+
+You need to use this parameter when you create the first public folder, which is called the hierarchy mailbox, in your organization.
+
+Use this parameter only if you plan to migrate legacy Exchange 2010 public folders to Exchange 2016. If you use this switch but don't have legacy public folders to migrate, you won't be able to create any public folders.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PublicFolder
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -632,13 +837,14 @@ This parameter is available only in on-premises Exchange.
 
 The LinkedCredential parameter specifies the credentials used to access the domain controller that's specified by the LinkedDomainController parameter. This parameter is optional, even if you're enabling a linked mailbox.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set8, Set2, Set5, Set6, Set9
+Parameter Sets: LinkedRoomMailbox, Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -653,9 +859,10 @@ The ManagedFolderMailboxPolicy parameter specifies the managed folder mailbox po
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: Set8, Set10, Set4, Set2, Set5, Set6, Set7, Set1, Set9, Set3
+Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -666,15 +873,16 @@ Accept wildcard characters: False
 ### -ManagedFolderMailboxPolicyAllowed
 This parameter is available or functional only in Exchange Server 2010.
 
-The ManagedFolderMailboxPolicyAllowed parameter specifies whether to bypass the warning that messaging records management (MRM) features aren't supported for e-mail clients using versions of Outlook earlier than Office Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
+The ManagedFolderMailboxPolicyAllowed parameter specifies whether to bypass the warning that messaging records management (MRM) features aren't supported for  clients using versions of Outlook earlier than Office Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
 
 Outlook 2003 Service Pack 3 clients are supported but are provided limited functionality for MRM.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set8, Set10, Set4, Set2, Set5, Set6, Set7, Set1, Set9, Set3
+Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -685,15 +893,16 @@ Accept wildcard characters: False
 ### -PrimarySmtpAddress
 This parameter is available only in on-premises Exchange.
 
-The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
+The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
 If you use the PrimarySmtpAddress parameter to specify the primary email address, the command sets the EmailAddressPolicyEnabled property of the mailbox to False, which means the email addresses of the mailbox aren't automatically updated by email address policies.
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: (All)
+Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -704,15 +913,16 @@ Accept wildcard characters: False
 ### -RemoteArchive
 This parameter is available only in on-premises Exchange.
 
-The RemoteArchiveswitch specifies that a remote archive mailbox is created for this mailbox. A remote archive exists in the cloud-based service. You don't need to specify a value with this switch.
+The RemoteArchive switch specifies that a remote archive mailbox is created for this mailbox. A remote archive exists in the cloud-based service. You don't need to specify a value with this switch.
 
 You need to use this parameter with the ArchiveDomain parameter, and you can't use this parameter with the Archive parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set10, Set13, Set15
+Parameter Sets: RemoteArchive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -735,9 +945,10 @@ Retention policies consist of tags that are applied to mailbox folders and mail 
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: (All)
+Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -754,13 +965,14 @@ The RoleAssignmentPolicy parameter specifies the management role assignment poli
 
 - GUID
 
-If you don't use this parameter, the default role assignment policy is used. If the assignment policy name contains spaces, enclose the name in quotation marks ("). If you don't want to assign an assignment policy when a mailbox is created or enabled, specify a value of $null. For more information about assignment policies, see Understanding management role assignment policies (https://technet.microsoft.com/library/dd638100.aspx).
+If you don't use this parameter, the default role assignment policy is used. If the assignment policy name contains spaces, enclose the name in quotation marks ("). If you don't want to assign an assignment policy when a mailbox is created or enabled, specify a value of $null. For more information about assignment policies, see [Understanding management role assignment policies](https://docs.microsoft.com/exchange/understanding-management-role-assignment-policies-exchange-2013-help).
 
 ```yaml
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -775,98 +987,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-### -LinkedRoom
-This parameter is available only in on-premises Exchange.
-
-The LinkedRoomswitchspecifies that the mailbox is a linked resource mailbox. You don't need to specify a value with this switch.
-
-A linked resource mailbox is useful in a scenario where you have an account in an authentication forest and you want it to be directly linked to a resource mailbox in resource forest.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2, Set9
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolder
-This parameter is available only in on-premises Exchange.
-
-The PublicFolderswitch specifies that the mailbox is a public folder mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a public folder mailbox.
-
-Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set5, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuditLog
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3, Set12
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HoldForMigration
-This parameter is available only in on-premises Exchange.
-
-The HoldForMigrationswitch specifies whether to prevent any client or user, except the Microsoft Exchange Mailbox Replication service (MRS) process, from logging on to a public folder mailbox. You don't need to specify a value with this switch.
-
-You need to use this parameter when you create the first public folder, which is called the hierarchy mailbox, in your organization.
-
-Use this parameter only if you plan to migrate legacy Exchange 2010 public folders to Exchange 2016. If you use this switch but don't have legacy public folders to migrate, you won't be able to create any public folders.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set5, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoExpandingArchive
-This parameter is available only in the cloud-based service.
-
-The AutoExpandingArchive switch enables the unlimited archiving feature (called auto-expanding archiving) for the specified mailbox. After you enable auto-expanding archiving, additional storage space is automatically added to the user's archive mailbox when it approaches the storage limit. Note that the user's archive mailbox has to be enabled before auto-expanding archiving can be enabled. Also note that after you enable auto-expanding archiving for the user's mailbox, it can't be disabled.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set14
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -875,20 +997,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/58de5b3c-05c3-4a1f-84c6-f082d990f22b.aspx)

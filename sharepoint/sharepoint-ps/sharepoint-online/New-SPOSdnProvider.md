@@ -1,41 +1,45 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-sposdnprovider
 applicable: SharePoint Online
 title: New-SPOSdnProvider
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # New-SPOSdnProvider
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
 
+Adds a new Software-Defined Networking (SDN) provider
 
 ## SYNTAX
 
-```
+```powershell
 New-SPOSdnProvider [-Identity] <String> [-License] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
-{{Fill in the Description}}
 
+This Cmdlet creates a new Software-Defined Networking, and it receives two parameters, the Identity (ID) of the Hive and the License key of the Hive.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE 1
 
-```
+```powershell
 New-SPOSdnProvider -ID "Hive" -License "<Hive license key>"
 ```
 
-This example activates the Hive SDN Provider.
-
+This example creates the Hive for a SDN Provider.
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -52,13 +56,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-PARAMVALUE: String
 
+PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -69,13 +73,13 @@ Accept wildcard characters: False
 ```
 
 ### -License
-PARAMVALUE: String
 
+PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 
 Required: True
@@ -86,6 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -103,16 +108,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### System.String
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
+
+[Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
+
+[SharePoint Online Management Shell Download](https://www.microsoft.com/en-US/download/details.aspx?id=35588)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Remove-SPOSdnProvider](Remove-SPOSdnProvider.md)

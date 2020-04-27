@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csdialplan
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsDialPlan
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Get-CsDialPlan
@@ -14,20 +19,14 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Get-CsDialPlan [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsDialPlan [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsDialPlan [-Filter <String>] [-LocalStore] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Get-CsDialPlan [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsDialPlan [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -102,7 +101,7 @@ The unique identifier designating the scope, and for per-user scope a name, to i
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -118,7 +117,7 @@ Performs a wildcard search that allows you to narrow down your results to only d
 Type: String
 Parameter Sets: Filter, (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -134,23 +133,7 @@ Retrieves the dial plan information from the local replica of the Central Manage
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -163,23 +146,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -192,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

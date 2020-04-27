@@ -1,10 +1,13 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+online version: https://docs.microsoft.com/powershell/module/staffhub/add-staffhubshift
 applicable: Microsoft StaffHub
 title: Add-StaffHubShift
-online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Add-StaffHubShift
@@ -26,8 +29,8 @@ Adds a shift to the specified member in a team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $startTime = Get-Date -Date "2018-01-01T00:10:00"
 $endTime = Get-Date -Date "2018-01-01T04:10:00"
 Add-StaffHubShift -Title "Title" -StartDateTime $startTime -EndDateTime $endTime -ShiftType Working -MemberId "MBER_1234" -TeamId "TEAM_1234"

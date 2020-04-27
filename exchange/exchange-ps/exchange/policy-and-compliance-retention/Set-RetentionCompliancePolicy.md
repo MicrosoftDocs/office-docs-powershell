@@ -1,68 +1,99 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-retentioncompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: Set-RetentionCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
 # Set-RetentionCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the Set-RetentionCompliancePolicy cmdlet to modify existing retention policies in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### RetryDistribution
 ```
 Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
- [-AddExchangeLocationException <MultiValuedProperty>] [-AddModernGroupLocationException <MultiValuedProperty>]
- [-AddOneDriveLocationException <MultiValuedProperty>] [-AddSharePointLocationException <MultiValuedProperty>]
- [-AddSkypeLocationException <MultiValuedProperty>] [-Confirm]
- [-RemoveExchangeLocationException <MultiValuedProperty>]
- [-RemoveModernGroupLocationException <MultiValuedProperty>]
- [-RemoveOneDriveLocationException <MultiValuedProperty>]
- [-RemoveSharePointLocationException <MultiValuedProperty>]
- [-RemoveSkypeLocationException <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-AddExchangeLocation <MultiValuedProperty>]
- [-AddExchangeLocationException <MultiValuedProperty>] [-AddModernGroupLocation <MultiValuedProperty>]
- [-AddModernGroupLocationException <MultiValuedProperty>] [-AddOneDriveLocation <MultiValuedProperty>]
- [-AddOneDriveLocationException <MultiValuedProperty>] [-AddPublicFolderLocation <MultiValuedProperty>]
- [-AddSharePointLocation <MultiValuedProperty>] [-AddSharePointLocationException <MultiValuedProperty>]
- [-AddSkypeLocation <MultiValuedProperty>] [-AddSkypeLocationException <MultiValuedProperty>]
- [-Comment <String>] [-Confirm] [-Enabled <$true | $false>] [-Force]
- [-RemoveExchangeLocation <MultiValuedProperty>] [-RemoveExchangeLocationException <MultiValuedProperty>]
- [-RemoveModernGroupLocation <MultiValuedProperty>] [-RemoveModernGroupLocationException <MultiValuedProperty>]
- [-RemoveOneDriveLocation <MultiValuedProperty>] [-RemoveOneDriveLocationException <MultiValuedProperty>]
- [-RemovePublicFolderLocation <MultiValuedProperty>] [-RemoveSharePointLocation <MultiValuedProperty>]
- [-RemoveSharePointLocationException <MultiValuedProperty>] [-RemoveSkypeLocation <MultiValuedProperty>]
- [-RemoveSkypeLocationException <MultiValuedProperty>] [-RestrictiveRetention <$true | $false>] [-WhatIf]
- [<CommonParameters>]
+Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddExchangeLocation <MultiValuedProperty>]
+ [-AddExchangeLocationException <MultiValuedProperty>]
+ [-AddModernGroupLocation <MultiValuedProperty>]
+ [-AddModernGroupLocationException <MultiValuedProperty>]
+ [-AddOneDriveLocation <MultiValuedProperty>]
+ [-AddOneDriveLocationException <MultiValuedProperty>]
+ [-AddPublicFolderLocation <MultiValuedProperty>]
+ [-AddSharePointLocation <MultiValuedProperty>]
+ [-AddSharePointLocationException <MultiValuedProperty>]
+ [-AddSkypeLocation <MultiValuedProperty>]
+ [-AddSkypeLocationException <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-RemoveExchangeLocation <MultiValuedProperty>]
+ [-RemoveExchangeLocationException <MultiValuedProperty>]
+ [-RemoveModernGroupLocation <MultiValuedProperty>]
+ [-RemoveModernGroupLocationException <MultiValuedProperty>]
+ [-RemoveOneDriveLocation <MultiValuedProperty>]
+ [-RemoveOneDriveLocationException <MultiValuedProperty>]
+ [-RemovePublicFolderLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-RemoveSkypeLocation <MultiValuedProperty>]
+ [-RemoveSkypeLocationException <MultiValuedProperty>]
+ [-RestrictiveRetention <Boolean>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### TeamLocation
+```
+Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddTeamsChannelLocation <MultiValuedProperty>]
+ [-AddTeamsChannelLocationException <MultiValuedProperty>]
+ [-AddTeamsChatLocation <MultiValuedProperty>]
+ [-AddTeamsChatLocationException <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-RemoveTeamsChannelLocation <MultiValuedProperty>]
+ [-RemoveTeamsChannelLocationException <MultiValuedProperty>]
+ [-RemoveTeamsChatLocation <MultiValuedProperty>]
+ [-RemoveTeamsChatLocationException <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocation "Kitty Petersen" -AddSharePointLocation "http://contoso.sharepoint.com/sites/teams/finance" -RemovePublicFolderLocation All -Comment "Added new counsel, 9/9/14"
+### Example 1
+```powershell
+Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocation "Kitty Petersen" -AddSharePointLocation "https://contoso.sharepoint.com/sites/teams/finance" -RemovePublicFolderLocation All -Comment "Added new counsel, 9/9/14"
 ```
 
 This example makes the following changes to the existing retention policy named "Regulation 123 Compliance":
 
 - Adds the mailbox for the user named Kitty Petersen.
 
-- Adds the SharePoint Online site http://contoso.sharepoint.com/sites/teams/finance.
+- Adds the SharePoint Online site https://contoso.sharepoint.com/sites/teams/finance.
 
 - Removes public folders.
 
@@ -84,6 +115,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -96,9 +128,10 @@ The RetryDistribution switch specifies whether to redistribute the policy to all
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -127,9 +160,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -158,9 +192,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -185,9 +220,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -212,9 +248,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -229,9 +266,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -246,9 +284,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -261,9 +300,10 @@ The AddPublicFolderLocation parameter specifies that you want to add all public 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -280,9 +320,10 @@ SharePoint Online sites can't be added to the policy until they have been indexe
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -297,9 +338,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -324,9 +366,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -339,9 +382,112 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddTeamsChannelLocation
+The AddTeamsChannelLocation parameter specifies the Teams to add to the policy.
+
+You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddTeamsChannelLocationException
+The AddTeamsChannelLocationException parameter specifies the Teams to add to the exclusion list when you use the value All for the TeamsChannelLocation parameter. You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddTeamsChatLocation
+The AddTeamsChatLocation parameter specifies the Teams users to add to the policy.
+
+You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddTeamsChatLocationException
+The AddTeamsChatLocationException parameter specifies the Teams users to add to the exclusion list when you use the value All for the TeamsChatLocation parameter. You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -354,9 +500,10 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity, TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -376,6 +523,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -391,10 +539,11 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
-Parameter Sets: Set1
+Type: Boolean
+Parameter Sets: Identity, TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -407,9 +556,10 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity, TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -438,9 +588,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -469,9 +620,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -496,9 +648,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -523,9 +676,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -540,9 +694,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -557,9 +712,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -572,9 +728,10 @@ The RemovePublicFolderLocation parameter specifies that you want to remove all p
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -589,9 +746,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -606,9 +764,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -633,9 +792,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -648,9 +808,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -670,10 +831,113 @@ After a policy has been locked, no one can turn off or disable it, or remove con
 Therefore, before you lock a retention policy, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
 
 ```yaml
-Type: $true | $false
-Parameter Sets: Set1
+Type: Boolean
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsChannelLocation
+The RemoveTeamsChannelLocation parameter specifies the Teams to remove from the policy.
+
+You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsChannelLocationException
+The RemoveTeamsChannelLocationException parameter specifies the Teams to remove from the exclusion list when you use the value All for the TeamsChannelLocation parameter. You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsChatLocation
+The RemoveTeamsChatLocation parameter specifies the Teams users to remove from the policy.
+
+You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveTeamsChatLocationException
+The RemoveTeamsChatLocationException parameter specifies the Teams users to remove from the exclusion list when you use the value All for the TeamsChatLocation parameter. You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -682,13 +946,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -697,20 +962,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/17c199c0-a714-4ae2-b916-f77c90829cca.aspx)

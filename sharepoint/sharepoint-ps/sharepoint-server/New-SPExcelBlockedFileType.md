@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spexcelblockedfiletype
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelBlockedFileType
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPExcelBlockedFileType
@@ -23,7 +28,7 @@ The `New-SPExcelBlockedFileType` cmdlet adds an entry to the list of file types 
 Excel Services Application does not load any files that correspond to a file type that is on this list.
 The specified file type is prevented from loading by all instances of Excel Services Application for the specified Excel Services Application Web service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
@@ -31,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```
 C:\PS>$sa = Get-SPExcelServiceApplication 
-PS C:\>New-SPExcelBlockedFileType -FileType XLSM -ExcelServiceApplication $sa
+New-SPExcelBlockedFileType -FileType XLSM -ExcelServiceApplication $sa
 ```
 
 This example adds an entry for XLSM to the list of file types that Excel Services Application currently prevents from loading.
@@ -132,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

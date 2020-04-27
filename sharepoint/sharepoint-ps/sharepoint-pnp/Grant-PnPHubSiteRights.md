@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/grant-pnphubsiterights
 applicable: SharePoint Online
 schema: 2.0.0
+title: Grant-PnPHubSiteRights
 ---
+
 # Grant-PnPHubSiteRights
 
 ## SYNOPSIS
-Grant Permissions to associate sites to Hub Sites.
+Grant additional permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users
 
 ## SYNTAX 
 
@@ -18,10 +21,10 @@ Grant-PnPHubSiteRights [-Connection <SPOnlineConnection>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com","myotheruser@mydomain.com" -Rights Join
+Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com","myotheruser@mydomain.com"
 ```
 
-This example shows how to grant right to myuser and myotheruser to associate their sites with hubsite
+This example shows how to grant rights to myuser and myotheruser to associate their sites with the provided Hub Site
 
 ## PARAMETERS
 
@@ -39,4 +42,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

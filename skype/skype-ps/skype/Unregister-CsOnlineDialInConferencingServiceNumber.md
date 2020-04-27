@@ -1,34 +1,39 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/unregister-csonlinedialinconferencingservicenumber
 applicable: Skype for Business Online
 title: Unregister-CsOnlineDialInConferencingServiceNumber
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Unregister-CsOnlineDialInConferencingServiceNumber
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Unassigns the previously assigned service number as default Conference Bridge number.
 
 ## SYNTAX
 
 ```
-Unregister-CsOnlineDialInConferencingServiceNumber [[-Identity] <Object>] [[-Instance] <Object>]
- [-BridgeId <Object>] [-BridgeName <Object>] [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-RemoveDefaultServiceNumber] [-Tenant <Object>] [-TenantDomain <Object>] [-AsJob] [<CommonParameters>]
+Unregister-CsOnlineDialInConferencingServiceNumber [-Identity] <String> [-BridgeId <Guid>]
+ [-BridgeName <String>] [-Tenant <Guid>] [-TenantDomain <String>] [-RemoveDefaultServiceNumber]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Unassigns the previously assigned service number as default Conference Bridge number.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Unregister-CsOnlineDialInConferencingServiceNumber -BridgeName "Conference Bridge" -RemoveDefaultServiceNumber 1234 
 ```
 
-Insert descriptive text for example 1.
+Unassigns the 1234 Service Number to the given Conference Bridge.
 
 
 ## PARAMETERS
@@ -37,7 +42,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -53,7 +58,7 @@ Accept wildcard characters: False
 PARAMVALUE: ConferencingServiceNumber
 
 ```yaml
-Type: Object
+Type: ConferencingServiceNumber
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -69,7 +74,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -85,23 +90,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -117,7 +106,7 @@ Accept wildcard characters: False
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -165,7 +154,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -181,7 +170,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -210,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

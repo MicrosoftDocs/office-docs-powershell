@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnproledefinition
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPRoleDefinition
 ---
+
 # Add-PnPRoleDefinition
 
 ## SYNOPSIS
@@ -47,7 +50,7 @@ Creates additional permission level by cloning "Contribute" and removes flags De
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS> $roleDefinition = Get-PnPRoleDefinition -Identity "Contribute"
+$roleDefinition = Get-PnPRoleDefinition -Identity "Contribute"
 Add-PnPRoleDefinition -RoleName "AddOnly" -Clone $roleDefinition -Exclude DeleteListItems, EditListItems
 ```
 
@@ -80,7 +83,7 @@ Accept pipeline input: False
 ```
 
 ### -Exclude
-Specifies permission flags(s) to disable.
+Specifies permission flags(s) to disable. Please visit https://docs.microsoft.com/previous-versions/office/sharepoint-csom/ee536458(v%3Doffice.15) for the PermissionKind enum
 
 ```yaml
 Type: PermissionKind[]
@@ -92,7 +95,7 @@ Accept pipeline input: False
 ```
 
 ### -Include
-Specifies permission flags(s) to enable.
+Specifies permission flags(s) to enable. Please visit https://docs.microsoft.com/previous-versions/office/sharepoint-csom/ee536458(v%3Doffice.15) for the PermissionKind enum
 
 ```yaml
 Type: PermissionKind[]
@@ -129,4 +132,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

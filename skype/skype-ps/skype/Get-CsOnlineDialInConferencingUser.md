@@ -1,22 +1,26 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser
 applicable: Skype for Business Online
 title: Get-CsOnlineDialInConferencingUser
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsOnlineDialInConferencingUser
 
 ## SYNOPSIS
-Use the Get-CsOnlineDialInConferencingUser cmdlet to view the properties and settings of users that are enabled for dial-in conferencing and are using Microsoft as their PSTN conferencing provider.
+Use the `Get-CsOnlineDialInConferencingUser` cmdlet to view the properties and settings of users that are enabled for dial-in conferencing and are using Microsoft as their PSTN conferencing provider.
 
 ## SYNTAX
 
 ```
-Get-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-BridgeId <Object>] [-BridgeName <Object>]
- [-ServiceNumber <Object>] [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-LdapFilter <Object>] [-ResultSize <Object>] [-Tenant <Object>] [-TenantDomain <Object>] [-AsJob]
- [<CommonParameters>]
+Get-CsOnlineDialInConferencingUser [-BridgeName <String>] [-ServiceNumber <String>] [-TenantDomain <String>]
+ [-LdapFilter <String>] [[-Identity] <UserIdParameter>] [-Tenant <Guid>] [-BridgeId <Guid>] [-ResultSize <Int32>]
+ [-DomainController <Fqdn>] [-Force] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,16 +33,14 @@ The see a list of users with conferencing providers other than Microsoft use the
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
+```powershell
 Get-CsOnlineDialInConferencingUser -LdapFilter "Department=Finance"
 ```
 
 This example uses the LdapFilter parameter to limit the returned data to users who work in the Finance department.
 
-
-
 ### -------------------------- Example 2 --------------------------
-```
+```powershell
 Get-CsOnlineDialInConferencingUser -ServiceNumber +14255034412 | Format-Table -Property DisplayName, SipAddress
 ```
 
@@ -49,14 +51,13 @@ Therefore, in this example the retrieved data is piped to the Format-Table cmdle
 The Format-Table cmdlet then uses the Property parameter to select the properties DisplayName and SipAddress.
 
 
-
 ## PARAMETERS
 
 ### -BridgeId
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -69,10 +70,10 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
-Specifies the name of the audio conferencing bridge.
+Specifies the name for the audio conferencing bridge.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -90,7 +91,7 @@ The user can be specified by using one of four formats: 1) the user's SIP addres
 You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -108,23 +109,7 @@ Only users who have been assigned the specified number will be returned.
 The service number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -140,7 +125,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -177,7 +162,7 @@ The LdapFilter parameter uses the LDAP query language when creating filters.
 For example, a filter that returns only users who work in the city of Redmond would look like this: "l=Redmond", with "l" (a lowercase L) representing the Active Directory attribute (locality); "=" representing the comparison operator (equal to); and "Redmond" representing the filter value.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -198,7 +183,7 @@ If set to 0 the command will run, but no data will be returned.
 If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -211,10 +196,16 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-This parameter is reserved for internal Microsoft use.
+NOTE: This parameter is reserved for internal Microsoft use.
+
+Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+You can find your tenant ID by running this command: 
+
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -243,7 +234,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -259,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS
@@ -269,4 +264,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Enable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
 
+[Disable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
+
+[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/export-csorganizationalautoattendantholidays
 applicable: Skype for Business Online
 title: Export-CsOrganizationalAutoAttendantHolidays
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Export-CsOrganizationalAutoAttendantHolidays
@@ -24,7 +29,7 @@ The Export-CsOrganizationalAutoAttendantHolidays cmdlet returns the holiday sche
 **NOTE**
 - Each line in the CSV file used by Export-CsOrganizationalAutoAttendantHolidays and Import-CsOrganizationalAutoAttendantHolidays cmdlet should be of the following format:
 
-   `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,…,StartDateTime10,EndDateTime10`
+   `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,...,StartDateTime10,EndDateTime10`
 
     where 
     - HolidayName is the name of the holiday to be imported.
@@ -78,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

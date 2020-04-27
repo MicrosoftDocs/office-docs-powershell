@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencingtenantsettings
 applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingTenantSettings
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsOnlineDialInConferencingTenantSettings
@@ -13,15 +18,30 @@ Dial-in conferencing tenant settings control the conference experience of users 
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsOnlineDialInConferencingTenantSettings [[-Identity] <Object>] [-AllowPSTNOnlyMeetingsByDefault <Object>]
- [-AutomaticallyMigrateUserMeetings <Object>] [-AutomaticallyReplaceAcpProvider <Object>]
- [-AutomaticallySendEmailsToUsers <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-EnableEntryExitNotifications <Object>] [-EnableNameRecording <Object>]
- [-EntryExitAnnouncementsType <Object>] [-Force] [-IncludeTollFreeNumberInMeetingInvites <Object>]
- [-Instance <Object>] [-MigrateServiceNumbersOnCrossForestMove <Object>] [-PinLength <Object>]
- [-SendEmailFromAddress <Object>] [-SendEmailFromDisplayName <Object>] [-SendEmailFromOverride <Object>]
- [-Tenant <Object>] [-UseUniqueConferenceIds <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineDialInConferencingTenantSettings [-Tenant <Guid>] [-EnableEntryExitNotifications <Boolean>]
+ [-EntryExitAnnouncementsType <EntryExitAnnouncementsType>] [-EnableNameRecording <Boolean>]
+ [-IncludeTollFreeNumberInMeetingInvites <Boolean>] [-PinLength <UInt32>]
+ [-AllowPSTNOnlyMeetingsByDefault <Boolean>] [-AutomaticallySendEmailsToUsers <Boolean>]
+ [-SendEmailFromOverride <Boolean>] [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>]
+ [-AutomaticallyReplaceAcpProvider <Boolean>] [-UseUniqueConferenceIds <Boolean>]
+ [-AutomaticallyMigrateUserMeetings <Boolean>] [-MigrateServiceNumbersOnCrossForestMove <Boolean>]
+ [-EnableDialOutJoinConfirmation <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsOnlineDialInConferencingTenantSettings [-Tenant <Guid>] [-EnableEntryExitNotifications <Boolean>]
+ [-EntryExitAnnouncementsType <EntryExitAnnouncementsType>] [-EnableNameRecording <Boolean>]
+ [-IncludeTollFreeNumberInMeetingInvites <Boolean>] [-PinLength <UInt32>]
+ [-AllowPSTNOnlyMeetingsByDefault <Boolean>] [-AutomaticallySendEmailsToUsers <Boolean>]
+ [-SendEmailFromOverride <Boolean>] [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>]
+ [-AutomaticallyReplaceAcpProvider <Boolean>] [-UseUniqueConferenceIds <Boolean>]
+ [-AutomaticallyMigrateUserMeetings <Boolean>] [-MigrateServiceNumbersOnCrossForestMove <Boolean>]
+ [-EnableDialOutJoinConfirmation <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,7 +92,7 @@ An unauthenticated caller is defined as a participant who joins a meeting over t
 For more information on the "AllowPSTNOnlyMeetings" user setting, see `Set-CsOnlineDialInConferencingUser`.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -88,7 +108,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -104,7 +124,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -130,23 +150,7 @@ The dial-in conferencing PIN is reset by the tenant administrator.
 Changes to either the user's conference ID, or the user's default dial-in conference number.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -182,7 +186,7 @@ The default is $true.
 This setting can be overridden on a meeting by meeting basis when a user joins a meeting via a Skype for Business client and modifies the Announce when people enter or leave setting on the Skype Meeting Options menu of a meeting.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -201,7 +205,7 @@ Set to $true to enable name recording, set to $false to bypass name recording.
 The default is $true.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -217,7 +221,7 @@ Accept wildcard characters: False
 PARAMVALUE: UseNames | ToneOnly
 
 ```yaml
-Type: Object
+Type: EntryExitAnnouncementsType
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -251,7 +255,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -264,10 +268,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTollFreeNumberInMeetingInvites
-PARAMVALUE: $true | $false
+This parameter is obsolete and not functional.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -283,7 +287,7 @@ Accept wildcard characters: False
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -299,7 +303,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -320,7 +324,7 @@ A user's PIN will only authenticate them as leaders for a meeting they scheduled
 The PIN of a user that did not schedule the meeting will not enable that user to lead the meeting.
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -340,7 +344,7 @@ For example, "KenMyer@Contoso.com" or "Admin@Contoso.com".
 The SendEmailFromAddress value is used only if the SendEmailFromDisplayName setting is specified, and the SendEmailFromOverride setting is $true.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -358,7 +362,7 @@ Specifies the display name to use in the "From" contact information on emails th
 The SendEmailFromDisplayName value is used only if the SendEmailFromDisplayName setting is specified, and the SendEmailFromOverride setting is $true.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -381,7 +385,7 @@ SendEmailFromOverride can't be $true if SendEmailFromAddress and SendEmailFromDi
 If you want to change the email address information, you need to make sure that your inbound email policies allow for emails that come from the address specified by the SendEmailFromAddress parameter.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -413,7 +417,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -442,24 +446,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

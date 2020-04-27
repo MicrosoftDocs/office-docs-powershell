@@ -1,8 +1,11 @@
 ---
 external help file:
-applicable: SharePoint Online, SharePoint 2016
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/measure-pnpweb
+applicable: SharePoint Online, SharePoint 2016, SharePoint 2019
 schema: 2.0.0
+title: Measure-PnPWeb
 ---
+
 # Measure-PnPWeb
 
 ## SYNOPSIS
@@ -28,17 +31,17 @@ Gets statistics on the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Measure-PnPList $web -Recursive
+Measure-PnPWeb $web -Recursive
 ```
 
-Gets statistics on the chosen including all sub webs
+Gets statistics on the provided web including all its subwebs
 
 ## PARAMETERS
 
 ### -Identity
 
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
 
 ```yaml
 Type: WebPipeBind
@@ -52,7 +55,7 @@ Accept pipeline input: True
 ### -IncludeHiddenList
 Include hidden lists in statistics calculation
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
 
 ```yaml
 Type: SwitchParameter
@@ -66,7 +69,7 @@ Accept pipeline input: False
 ### -Recursive
 Iterate all sub webs recursively
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
 
 ```yaml
 Type: SwitchParameter
@@ -80,7 +83,7 @@ Accept pipeline input: False
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
-Only applicable to: SharePoint Online, SharePoint Server 2016
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
 
 ```yaml
 Type: SPOnlineConnection
@@ -93,4 +96,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

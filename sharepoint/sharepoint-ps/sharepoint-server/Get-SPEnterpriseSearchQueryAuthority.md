@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchqueryauthority
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchQueryAuthority
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchQueryAuthority
@@ -23,21 +28,21 @@ The Get-SPEnterpriseSearchQueryAuthority cmdlet reads a QueryAuthority object wh
 
 If the Identity parameter is not specified, this cmdlet returns the authority page collection for the specified search application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-PS C:\>Get-SPEnterpriseSearchQueryAuthority -Identity 'http://contoso.com' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+Get-SPEnterpriseSearchQueryAuthority -Identity 'https://contoso.com' -SearchApplication $ssa
 ```
 
-This example obtains the authoritative page for the URL http://contoso.com from the search service application named 'Search Service Application'.
+This example obtains the authoritative page for the URL https://contoso.com from the search service application named 'Search Service Application'.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchQueryAuthority -SearchApplication 'Search Service Application'
+Get-SPEnterpriseSearchQueryAuthority -SearchApplication 'Search Service Application'
 ```
 
 This example obtains the collection of query authority pages from a search service application named 'Search Service Application'.
@@ -47,13 +52,13 @@ This example obtains the collection of query authority pages from a search servi
 ### -Identity
 Specifies the query authority to get.
 
-The type must be a valid URL, in the form http://server_name; or an instance of a valid AuthorityPage object.
+The type must be a valid URL, in the form https://server_name; or an instance of a valid AuthorityPage object.
 
 ```yaml
 Type: AuthorityPagePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -69,7 +74,7 @@ Specifies the search object owner that defines the scope at which the correspond
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -87,7 +92,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -109,7 +114,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -119,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

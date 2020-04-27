@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spsecurestoreserviceapplicationproxy
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPSecureStoreServiceApplicationProxy
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPSecureStoreServiceApplicationProxy
@@ -29,7 +34,7 @@ New-SPSecureStoreServiceApplicationProxy -Uri <Uri> [-AssignmentCollection <SPAs
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The `New-SPSecureStoreServiceApplicationProxy` cmdlet creates a new Secure Store Service application proxy for a Secure Store Service application in the farm.
 
@@ -39,15 +44,15 @@ The result of the `New-SPSecureStoreServiceApplication` cmdlet can be passed to 
 Similarly, if you want to specify an unpartitioned service application proxy, an unpartitioned service application can be created by using the `New-SPSecureStoreServiceApplication` cmdlet.
 The result of the `New-SPSecureStoreServiceApplication` cmdlet can be passed to the `New-SPSecureStoreServiceApplicationProxy` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>$sa = New-SPSecureStoreServiceApplication -ApplicationPool 'SharePoint Web Services Default' -AuditingEnabled:$false -DatabaseName 'Secure Store' -Name 'Secure Store Service Application'
-PS C:\>New-SPSecureStoreServiceApplicationProxy -Name 'Secure Store Service Application Proxy' -ServiceApplication $sa
+$sa = New-SPSecureStoreServiceApplication -ApplicationPool 'SharePoint Web Services Default' -AuditingEnabled:$false -DatabaseName 'Secure Store' -Name 'Secure Store Service Application'
+New-SPSecureStoreServiceApplicationProxy -Name 'Secure Store Service Application Proxy' -ServiceApplication $sa
 ```
 
 This example creates a new Secure Store Service application and proxy.
@@ -55,13 +60,13 @@ This example creates a new Secure Store Service application and proxy.
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>$nameofproxy = "Connection to: HostedSecureStoreInParentFarm"
-PS C:\>$proxy = Get-SPServiceApplicationProxy | where {$_ -match $nameofproxy}
-PS C:\>$prop = $proxy.Properties
-PS C:\>$type = $prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"].GetType()
-PS C:\>$partition = [enum]::Parse( $type, 1 )
-PS C:\>$prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = $partition
-PS C:\>$proxy.Update()
+$nameofproxy = "Connection to: HostedSecureStoreInParentFarm"
+$proxy = Get-SPServiceApplicationProxy | where {$_ -match $nameofproxy}
+$prop = $proxy.Properties
+$type = $prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"].GetType()
+$partition = [enum]::Parse( $type, 1 )
+$prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = $partition
+$proxy.Update()
 ```
 
 This example converts an unpartitioned secure store service application proxy in the child to a partitioned one.
@@ -76,7 +81,7 @@ Specifies the local Secure Store Service application associated with the new pro
 Type: SPServiceApplicationPipeBind
 Parameter Sets: PipeBind
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -94,7 +99,7 @@ The type must be a valid URI, in the form file:\\\\server_name\sitedocs.
 Type: Uri
 Parameter Sets: Uri
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -116,7 +121,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -133,7 +138,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +154,7 @@ Specifies that the service application proxy be added to the farm's default prox
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -165,7 +170,7 @@ Specifies the name of the new service application proxy to create.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -182,7 +187,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -192,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

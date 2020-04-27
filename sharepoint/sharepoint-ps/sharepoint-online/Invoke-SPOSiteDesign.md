@@ -1,15 +1,20 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/invoke-spositedesign
 applicable: SharePoint Online
 title: Invoke-SPOSiteDesign
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Invoke-SPOSiteDesign
 
 ## SYNOPSIS
 
-Applies a published site design to a specified site collection target. This allows a site design to be applied to an existing site collection.
+Applies a published site design to a specified site collection target. This allows a site design to be applied to an existing site collection. The supported site templates you can apply a site design to include: "modern" team site (with O365 group), "modern" team site (without an O365 group); communication site; classic team site; and classic publishing site.
 
 ## SYNTAX
 
@@ -31,7 +36,7 @@ Applies a published site design to a specified site collection target. This allo
 This example applies a site design whose script creates two lists, formats several of the columns, adds the lists to the site navigation, and then joins the site to an existing hub site.
 
 ```powershell
-Invoke-SPOSiteDesign -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectgo”
+Invoke-SPOSiteDesign -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectgo"
 
 Title                                             Outcome
 ----------------------------------------------    -------
@@ -52,32 +57,33 @@ Add to Hub Site                                   Success
 ## PARAMETERS
 
 ### -Identity
+
 The ID of the site design to apply.
 
 ```yaml
 Type: SPOSiteDesignPipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
 
 ### -WebUrl
+
 The URL of the site collection where the site design will be applied.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False  
+Accept wildcard characters: False
 ```
-

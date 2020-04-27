@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/new-safeattachmentpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: New-SafeAttachmentPolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
 ---
 
@@ -13,14 +17,17 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-SafeAttachmentPolicy cmdlet to create Safe Attachments policies in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-SafeAttachmentPolicy [-Name] <String> [-Action <Block | Replace | Allow | DynamicDelivery>]
- [-ActionOnError <$true | $false>] [-AdminDisplayName <String>] [-Confirm] [-Enable <$true | $false>]
- [-Redirect <$true | $false>] [-RedirectAddress <SmtpAddress>] [-WhatIf] [<CommonParameters>]
+New-SafeAttachmentPolicy [-Name] <String> [-Action <SafeAttachmentAction>]
+ [-ActionOnError <Boolean>] [-AdminDisplayName <String>] [-Confirm] [-Enable <Boolean>]
+ [-Redirect <Boolean>] [-RedirectAddress <SmtpAddress>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,12 +35,12 @@ New Safe Attachments policies aren't valid and aren't applied until you add a Sa
 
 Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-SafeAttachmentPolicy -Name "Marketing Block Attachments" -Enable $true -Redirect $true -RedirectAddress admin@contoso.com
 ```
 
@@ -57,6 +64,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -73,13 +81,16 @@ The Action parameter specifies the action for the Safe Attachments policy. Valid
 
 - Replace: Deliver the email message, but remove the malware attachment and replace it with warning text.
 
+- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [How Dynamic Delivery works](https://docs.microsoft.com/microsoft-365/security/office-365-security/dynamic-delivery-and-previewing#how-dynamic-delivery-works).
+
 The results of all actions are available in message trace.
 
 ```yaml
-Type: Block | Replace | Allow | DynamicDelivery
+Type: SafeAttachmentAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -95,10 +106,11 @@ The ActionOnError parameter specifies the error handling option for Safe Attachm
 - $false: The action specified by the Action parameter isn't applied to messages when the attachments aren't successfully scanned. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +126,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +146,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -141,19 +155,18 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The Enable parameter specifies whether policy is enabled. Valid values are:
 
 - $true: The rule or policy is enabled.
 
-- $false: The rule or policy is disabled.
-
-The default value is $false.
+- $false: The rule or policy is disabled. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -169,10 +182,11 @@ The Redirect parameter specifies whether to send detected malware attachments to
 - $false: Malware attachments aren't sent to another email address. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +202,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +218,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -211,20 +227,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/ef3b8cad-176b-485f-833d-73cba4cfa3f3.aspx)

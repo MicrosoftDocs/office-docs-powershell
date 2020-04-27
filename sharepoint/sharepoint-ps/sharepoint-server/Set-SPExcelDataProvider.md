@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spexceldataprovider
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelDataProvider
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPExcelDataProvider
@@ -25,16 +30,16 @@ Excel Services Application refreshes external data connections only if the data 
 Excel Services Application include a set of common data providers in this list.
 Therefore, using cmdlets to modify safe data providers is typically an operation of custom data connection scenarios.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$provider = Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB" } 
-PS C:\>Set-SPExcelDataProvider $provider -Description "The SQLOLEDB provider description has changed."
-PS C:\>$provider | format-table
+$provider = Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB" } 
+Set-SPExcelDataProvider $provider -Description "The SQLOLEDB provider description has changed."
+$provider | format-table
 ```
 
 This example retrieves the SQLOLEDB data provider from the list of safe data providers that is on the Excel Services Application Web service application named MyExcelService, as an object, adds a new display description and then displays the provider output in a Command Prompt window, formatted as a table.
@@ -172,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

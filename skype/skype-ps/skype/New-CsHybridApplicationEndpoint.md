@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-cshybridapplicationendpoint
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsHybridApplicationEndpoint
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # New-CsHybridApplicationEndpoint
@@ -24,13 +29,13 @@ Skype for Business application endpoint can be connected to the Skype for Busine
 
 Hybrid connectivity between Skype for Business Server and Skype for Business Online means users of a domain, such as contoso.com, are split between using Skype for Business Server on premises and Skype for Business Online. Some of the domain users are homed on premises, and some users are homed online. Application endpoint will be configured as online users reachable by the on-premises users.
 
-Before `New-CsHybridApplicationEndpoint` you must run `New-CsOnlineApplicationEndpoint` to register your application endpoint in Skype for Business Online. Please make sure that the `New-CsHybridApplicationEndpoint` parameters: ApplicationId, DisplayName and SipAddress have the same values as `New-CsOnlineApplicationEndpoint` parameters: ApplicationID, Name and Uri, respectively.  
+`New-CsHybridApplicationEndpoint` must be run in Skype for Business Server. It will be copied to Skype for Business Online via dir sync.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> New-CsHybridApplicationEndpoint -ApplicationId 41ec7d50-ba91-1208-73ee-136b88859725 -DisplayName NewBot1 -SipAddress sip:newbot1@litwareinc.com –OU "ou=Redmond,dc=litwareinc,dc=com"
+PS C:\> New-CsHybridApplicationEndpoint -ApplicationId 41ec7d50-ba91-1208-73ee-136b88859725 -DisplayName NewBot1 -SipAddress sip:newbot1@litwareinc.com -OU "ou=Redmond,dc=litwareinc,dc=com"
 ```
 
 This example creates a hybrid application endpoint named NewBot1 in Skype for Business Server. This application was created using the Skype for Business Bot Framework which allows you to build and connect intelligent bots to interact with your Skype for Business users using text, cards, or speech.
@@ -38,7 +43,11 @@ This example creates a hybrid application endpoint named NewBot1 in Skype for Bu
 ## PARAMETERS
 
 ### -ApplicationId
-The ApplicationId for the application endpoint that is being created.
+The ApplicationId or Client Id for which the endpoint is being created.
+
+There are predefined values if you are creating an on-premises resource account for Skype for Business hybrid deployments:
+* Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
+* Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
 
 ```yaml
 Type: Guid
@@ -102,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-Active Directory Organizational Unit (OU) for the disabled user to be created. Wait for the newly created user object to be directory synced to the Azure Active Directory or start a new directory sync cycle by running the [Start-ADSyncSyncCycle](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-feature-scheduler#start-the-scheduler) on the domain controller machine.
+Active Directory Organizational Unit (OU) for the disabled user to be created. Wait for the newly created user object to be directory synced to the Azure Active Directory or start a new directory sync cycle by running the [Start-ADSyncSyncCycle](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-feature-scheduler#start-the-scheduler) on the domain controller machine.
 
 ```yaml
 Type: OUIdParameter
@@ -167,7 +176,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -181,8 +190,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/get-cshybridapplicationendpoint?view=skype-ps)
+[Get-CsHybridApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/get-cshybridapplicationendpoint?view=skype-ps)
 
-[Set-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/set-cshybridapplicationendpoint?view=skype-ps)
+[Set-CsHybridApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/set-cshybridapplicationendpoint?view=skype-ps)
 
-[Remove-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/remove-cshybridapplicationendpoint?view=skype-ps)
+[Remove-CsHybridApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/remove-cshybridapplicationendpoint?view=skype-ps)

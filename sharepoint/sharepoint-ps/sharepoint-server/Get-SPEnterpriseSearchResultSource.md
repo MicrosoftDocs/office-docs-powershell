@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchresultsource
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchResultSource
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchResultSource
@@ -22,7 +27,7 @@ Get-SPEnterpriseSearchResultSource [[-Identity] <ResultSourcePipeBind>] -Owner <
 
 This cmdlet retrieves a result source object.
 
-If the Identity parameter is not specified, this cmdlet returns the result source collection for the specified search object owner. For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831] (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+If the Identity parameter is not specified, this cmdlet returns the result source collection for the specified search object owner. For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831] (https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 
@@ -30,9 +35,9 @@ If the Identity parameter is not specified, this cmdlet returns the result sourc
 
 ### --------------  Example 1: Get result source by name  -------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level SSA
-PS C:\>Get-SPEnterpriseSearchResultSource -Identity "Local SharePoint Results" -SearchApplication $ssa -Owner $owner
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+$owner = Get-SPEnterpriseSearchOwner -Level SSA
+Get-SPEnterpriseSearchResultSource -Identity "Local SharePoint Results" -SearchApplication $ssa -Owner $owner
 ```
 
 This example retrieves the search service application level result source with the name "Local SharePoint Results".
@@ -40,18 +45,18 @@ This example retrieves the search service application level result source with t
 
 ### --------------  Example 2: Get result source by id  -------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level SSA
-PS C:\>Get-SPEnterpriseSearchResultSource -Identity 8413cd39-2156-4e00-b54d-11efd9abdB89 -SearchApplication $ssa -Owner $owner
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+$owner = Get-SPEnterpriseSearchOwner -Level SSA
+Get-SPEnterpriseSearchResultSource -Identity 8413cd39-2156-4e00-b54d-11efd9abdB89 -SearchApplication $ssa -Owner $owner
 ```
 
 This example retrieves the search service application level result source with the id 8413cd39-2156-4e00-b54d-11efd9abdB89.
 
 ### --------------  Example 3: Get all result sources under SSA  -------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level SSA
-PS C:\>Get-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+$owner = Get-SPEnterpriseSearchOwner -Level SSA
+Get-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner
 ```
 
 This example retrieves all the search service application level result sources.
@@ -69,7 +74,7 @@ If not specified, the result source collection for the specified search object o
 Type: ResultSourcePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -85,7 +90,7 @@ Specifies the search object owner that defines the scope at which the correspond
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -103,7 +108,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -122,7 +127,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -132,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

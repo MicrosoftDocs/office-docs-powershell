@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/active-directory/add-adpermission
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Add-ADPermission
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Add-ADPermission
@@ -13,53 +17,66 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Add-ADPermission cmdlet to add permissions to an Active Directory object.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
+### AccessRights
 ```
 Add-ADPermission [-Identity] <ADRawEntryIdParameter> -User <SecurityPrincipalIdParameter>
- [-AccessRights <ActiveDirectoryRights[]>] [-ChildObjectTypes <ADSchemaObjectIdParameter[]>] [-Confirm] [-Deny]
- [-DomainController <Fqdn>] [-ExtendedRights <ExtendedRightIdParameter[]>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
- [-InheritedObjectType <ADSchemaObjectIdParameter>] [-Properties <ADSchemaObjectIdParameter[]>] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set2
-```
-Add-ADPermission [-Identity] <ADRawEntryIdParameter> -Owner <SecurityPrincipalIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Add-ADPermission [[-Identity] <ADRawEntryIdParameter>] -Instance <ADAcePresentationObject>
- [-User <SecurityPrincipalIdParameter>] [-AccessRights <ActiveDirectoryRights[]>]
- [-ChildObjectTypes <ADSchemaObjectIdParameter[]>] [-Confirm] [-Deny] [-DomainController <Fqdn>]
+ [-AccessRights <ActiveDirectoryRights[]>]
+ [-ChildObjectTypes <ADSchemaObjectIdParameter[]>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
- [-InheritedObjectType <ADSchemaObjectIdParameter>] [-Properties <ADSchemaObjectIdParameter[]>] [-WhatIf]
- [<CommonParameters>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
+ [-InheritedObjectType <ADSchemaObjectIdParameter>]
+ [-Properties <ADSchemaObjectIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Owner
+```
+Add-ADPermission [-Identity] <ADRawEntryIdParameter> -Owner <SecurityPrincipalIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Instance
+```
+Add-ADPermission -Instance <ADAcePresentationObject>
+ [-AccessRights <ActiveDirectoryRights[]>]
+ [-ChildObjectTypes <ADSchemaObjectIdParameter[]>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [-ExtendedRights <ExtendedRightIdParameter[]>]
+ [[-Identity] <ADRawEntryIdParameter>]
+ [-InheritanceType <ActiveDirectorySecurityInheritance>]
+ [-InheritedObjectType <ADSchemaObjectIdParameter>]
+ [-Properties <ADSchemaObjectIdParameter[]>]
+ [-User <SecurityPrincipalIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The ADPermission cmdlets can be used to directly modify Active Directory access control lists (ACLs). Although some Microsoft Exchange features may continue to use the ADPermission cmdlets to manage permissions (for example Send and Receive connectors) Exchange 2013 and later versions no longer use customized ACLs to manage administrative permissions. If you want to grant or deny administrative permissions in Exchange 2013 or later, you need to use Role Based Access Control (RBAC). For more information about RBAC, see Permissions.
+The ADPermission cmdlets can be used to directly modify Active Directory access control lists (ACLs). Although some Microsoft Exchange features may continue to use the ADPermission cmdlets to manage permissions (for example Send and Receive connectors) Exchange 2013 and later versions no longer use customized ACLs to manage administrative permissions. If you want to grant or deny administrative permissions in Exchange 2013 or later, you need to use Role Based Access Control (RBAC). For more information about RBAC, see [Permissions in Exchange Server](https://docs.microsoft.com/Exchange/permissions/permissions).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Add-ADPermission -Identity "Terry Adams" -User AaronPainter -AccessRights ExtendedRight -ExtendedRights "Send As"
 ```
 
 This example grants Send As permissions for Aaron Painter to Terry Adams's mailbox.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Add-AdPermission "IP Secured Inbound" -User "NT AUTHORITY\ANONYMOUS LOGON" -ExtendedRights ms-Exch-SMTP-Submit,ms-Exch-SMTP-Accept-Any-Recipient,ms-Exch-Bypass-Anti-Spam
 ```
 
@@ -74,9 +91,10 @@ The Identity parameter specifies the identity of the object that's getting permi
 
 ```yaml
 Type: ADRawEntryIdParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: AccessRights, Owner
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -86,9 +104,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: ADRawEntryIdParameter
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -101,9 +120,10 @@ The Instance parameter enables you to pass an entire object to the command to be
 
 ```yaml
 Type: ADAcePresentationObject
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -118,9 +138,10 @@ The Owner parameter can only be used with the Identity parameter and no other pa
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set2
+Parameter Sets: Owner
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -133,9 +154,10 @@ The User parameter specifies the user that the permissions are being granted to 
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -145,9 +167,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -198,9 +221,10 @@ The AccessRights parameter specifies the rights needed to perform the operation.
 
 ```yaml
 Type: ActiveDirectoryRights[]
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -215,9 +239,10 @@ The ChildObjectTypes parameter can only be used if the AccessRights parameter is
 
 ```yaml
 Type: ADSchemaObjectIdParameter[]
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -228,15 +253,16 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -249,9 +275,10 @@ The Deny switch specifies whether to deny permissions to the user on the Active 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -268,7 +295,8 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -281,9 +309,10 @@ The ExtendedRights parameter specifies the extended rights needed to perform the
 
 ```yaml
 Type: ExtendedRightIdParameter[]
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -295,10 +324,11 @@ Accept wildcard characters: False
 The InheritanceType parameter specifies whether permissions are inherited.
 
 ```yaml
-Type: None | All | Descendents | SelfAndChildren | Children
-Parameter Sets: Set1, Set3
+Type: ActiveDirectorySecurityInheritance
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -311,9 +341,10 @@ The InheritedObjectType parameter specifies what kind of object inherits this ac
 
 ```yaml
 Type: ADSchemaObjectIdParameter
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -328,9 +359,10 @@ The Properties parameter can only be used if the AccessRights parameter is set t
 
 ```yaml
 Type: ADSchemaObjectIdParameter[]
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -345,7 +377,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -354,20 +387,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/bef9f3db-84f6-4a40-81cb-c9cb9b9ee201.aspx)

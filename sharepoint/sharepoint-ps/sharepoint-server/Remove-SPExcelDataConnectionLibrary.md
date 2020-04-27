@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spexceldataconnectionlibrary
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Remove-SPExcelDataConnectionLibrary
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPExcelDataConnectionLibrary
@@ -23,14 +28,14 @@ Remove-SPExcelDataConnectionLibrary [-Identity] <SPExcelDCLPipeBind>
 The `Remove-SPExcelDataConnectionLibrary` cmdlet removes a library from the Excel Services Application trusted data connection libraries list. 
 Excel Services Application loads data connection files only if they are stored in a data connection library that is on the trusted data connection libraries list.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-C:\PS>Get-SPExcelServiceApplication | Get-SPExcelDataConnectionLibrary | Remove-SPExcelDataConnectionLibrary
+Get-SPExcelServiceApplication | Get-SPExcelDataConnectionLibrary | Remove-SPExcelDataConnectionLibrary
 ```
 
 This example removes all data connection libraries from all Excel Services Application running in the farm.
@@ -44,7 +49,7 @@ Workbooks that depend on any connection files might not refresh data.
 ### -Identity
 Specifies the data connection library to remove.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection library (for example, DataConnectionLib1); a valid URL, in the form http://server_name; or an instance of a valid SPExcelDCL object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection library (for example, DataConnectionLib1); a valid URL, in the form https://server_name; or an instance of a valid SPExcelDCL object.
 
 ```yaml
 Type: SPExcelDCLPipeBind
@@ -134,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 title: Get-CsCloudCallDataConnectorConfiguration
-online version:
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Get-CsCloudCallDataConnectorConfiguration
@@ -73,7 +77,7 @@ To return a collection of all the settings that have the string value "Western" 
 Type: String
 Parameter Sets: Filter
 Aliases:
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +98,7 @@ If this parameter is not specified, the Get-CsCloudCallDataConnectorConfiguratio
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -109,7 +113,7 @@ Retrieves the CloudCallDataConnector configuration data from the local replica o
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -119,12 +123,11 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

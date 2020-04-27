@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+online version: https://docs.microsoft.com/powershell/module/exchange/active-directory/reset-provisioningcache
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Reset-ProvisioningCache
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Reset-ProvisioningCache
@@ -13,20 +17,24 @@ This cmdlet is available only in on-premises Exchange.
 
 The Reset-ProvisioningCache cmdlet clears the Windows PowerShell provisioning cache of frequently used Active Directory objects. This cmdlet is only used for diagnostic purposes.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### GlobalCache
 ```
 Reset-ProvisioningCache [-Server] <Fqdn> -Application <String> [-GlobalCache]
- [-CacheKeys <MultiValuedProperty>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-CacheKeys <MultiValuedProperty>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### OrganizationCache
 ```
-Reset-ProvisioningCache [-Server] <Fqdn> -Application <String> [-CacheKeys <MultiValuedProperty>] [-Confirm]
- [-CurrentOrganization] [-Organizations <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Reset-ProvisioningCache [-Server] <Fqdn> -Application <String>] [-CurrentOrganization] [-Organizations <MultiValuedProperty>]
+ [-CacheKeys <MultiValuedProperty>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,19 +42,19 @@ The Reset-ProvisioningCache cmdlet is for diagnostic purposes only and is rarely
 
 The Reset-ProvisioningCache cmdlet clears the Windows PowerShell provisioning cache of frequently used Active Directory objects. To reduce Active Directory requests, a provisioning cache is initialized in each Windows PowerShell runspace and is used to cache common objects that are frequently used by cmdlets and provisioning handlers. During Exchange cmdlet execution, the provisioning cache loads configuration objects from Active Directory to help run a cmdlet. For example, when you create a mailbox, the New-Mailbox cmdlet obtains properties from Active Directory. When running cmdlets, configuration objects such as database containers, administrative role groups, and LegacyDNs are retrieved from Active Directory. Because these types of objects are stable and don't change for months or years after they're created, they're stored in the provisioning cache used by Windows PowerShell. This increases provisioning efficiency and significantly improves cmdlet performance.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Reset-ProvisioningCache -Server EXSRV1.contoso.com -Application Powershell -GlobalCache
 ```
 
 This example resets the provisioning cache for Windows PowerShell running on the server EXSRV1.contoso.com in an on-premises Exchange organization and specifies that all cache keys are cleared.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Reset-ProvisioningCache -Application Powershell-Proxy -Server datacenter1.adatum.com -GlobalCache
 ```
 
@@ -73,7 +81,8 @@ The Application parameter specifies the specific administrative application to r
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -86,9 +95,10 @@ The GlobalCache switch specifies that all cache keys are cleared.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: GlobalCache
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -103,7 +113,8 @@ The Server parameter specifies the fully qualified domain name (FQDN) of the ser
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -120,7 +131,8 @@ Use the Dump-ProvisioningCache cmdlet to return a list of cache keys.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +151,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -152,9 +165,10 @@ The CurrentOrganization switch specifies that the provision cache is reset for t
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: OrganizationCache
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -167,9 +181,10 @@ The Organizations parameter specifies the organizations that the provisioning ca
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: OrganizationCache
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -184,7 +199,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -193,20 +209,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/687309c9-150e-4cdf-9639-3247eb6608a4.aspx)

@@ -1,8 +1,13 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spexcelserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelServiceApplication
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Get-SPExcelServiceApplication
@@ -21,27 +26,27 @@ Get-SPExcelServiceApplication [[-Identity] <SPExcelServiceApplicationPipeBind>]
 The Get-SPExcelServiceApplication cmdlet retrieves an SPExcelServiceApplication object. 
 If the object returned by this cmdlet is changed, the change affects all instances of the specified Excel Services Application Web service application in the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication "MyExcelServices"
+Get-SPExcelServiceApplication "MyExcelServices"
 ```
 
 This example displays the Excel Services Application Web service application named MyExcelServices.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication
+Get-SPExcelServiceApplication
 ```
 
 This example displays every Excel Services Application Web service application that runs in the farm.
 
 ### --------------EXAMPLE 3-------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | format-list *
+Get-SPExcelServiceApplication -Identity "MyExcelService" | format-list *
 ```
 
 This example displays Excel Services Application Web service application named MyExcelService, and then displays all of its settings in a list format.
@@ -89,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

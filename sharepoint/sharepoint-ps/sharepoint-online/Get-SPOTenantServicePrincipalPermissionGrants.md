@@ -1,25 +1,31 @@
 ---
-external help file:
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantserviceprincipalpermissiongrants
 applicable: SharePoint Online
+title: Get-SPOTenantServicePrincipalPermissionGrants
 schema: 2.0.0
+author: trent-green
+ms.author: trgreen
+ms.reviewer:
 ---
 
 # Get-SPOTenantServicePrincipalPermissionGrants
 
 ## SYNOPSIS
-Gets the collection of permission grants for the "SharePoint Online Client" service principal
 
-> [!NOTE] 
-> This is a preview feature and should not be used in production.
+Gets the collection of permission grants for the "SharePoint Online Client" service principal
 
 ## SYNTAX
 
 ### Default
+
 ```powershell
 Get-SPOTenantServicePrincipalPermissionGrants
 ```
 
 ## DESCRIPTION
+
 Gets the collection of permission grants for the "SharePoint Online Client" service principal.
 
 A permission grant contains the following properties:
@@ -39,6 +45,7 @@ A permission grant contains the following properties:
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+
 ```powershell
 Get-SPOTenantServicePrincipalPermissionGrants
 ```

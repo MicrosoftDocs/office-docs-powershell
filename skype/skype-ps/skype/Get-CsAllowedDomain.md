@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csalloweddomain
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAllowedDomain
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Get-CsAllowedDomain
@@ -41,7 +46,6 @@ Conversely, the blocked list represents domains that users are expressly forbidd
 
 The Get-CsAllowedDomain cmdlet provides a way for you to return information about all the domains on the allowed domains list.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -66,21 +70,19 @@ Get-CsAllowedDomain -Filter *fabrikam*
 ```
 
 The command shown in Example 3 returns a collection of all the allowed domains that have the string value "fabrikam" anywhere in their Identity.
-To do this, the command uses the Filter parameter and the filter value "*fabrikam*".
+To do this, the command uses the Filter parameter and the filter value "\*fabrikam\*".
 This filter value tells the Get-CsAllowedDomain cmdlet to return only those domains where the Identity (the only property you can filter on) includes the string value "fabrikam".
 Domains such as fabrikam.com, fabrikam.net, and africa.fabrikam.org will all be returned by this command.
 
 ### -------------------------- Example 4 --------------------------
 ```
-Where-Object {$_.ProxyFqdn -ne $Null}
-
 Get-CsAllowedDomain | Where-Object {$_.ProxyFqdn -eq $Null}
 ```
 
 In Example 4, the Get-CsAllowedDomain cmdlet and the Where-Object cmdlet are used to return a collection of all the domains where no value has been entered for the ProxyFqdn property.
 To carry out this task, the Get-CsAllowedDomain cmdlet is first called without any additional parameters in order to return a collection of all the allowed domains.
 This collection is then piped to the Where-Object cmdlet, which selects only those allowed domains where the ProxyFqdn property is equal to a null value; a null value means that no value has been entered for ProxyFqdn.
-To find all the domains that have a value of some kind configured for the ProxyFqdn property, use this syntax instead:
+To find all the domains that have a value of some kind configured for the ProxyFqdn property, use this syntax instead: `Where-Object {$_.ProxyFqdn -ne $Null}`.
 
 ### -------------------------- Example 5 --------------------------
 ```
@@ -90,7 +92,6 @@ Get-CsAllowedDomain | Where-Object {$_.MarkForMonitoring -eq $True}
 Example 5 returns all the allowed domains that have their health status checked by the Monitoring Server.
 To do this, the Get-CsAllowedDomain cmdlet is first used to return a collection of all the domains on the allowed domains list.
 That collection is then piped to the Where-Object cmdlet, which picks out only those domains where the MarkForMonitoring property is equal to True.
-
 
 ## PARAMETERS
 
@@ -122,7 +123,7 @@ To return all of the domains that have an Identity that begins with the letter "
 
 To return all of the domains that have an Identity that ends with ".net", use this syntax: `-Filter "*.net"`
 
-To return all of the domains that have an Identity that begins with the letter "r" or with the letter "g", use this syntax: `-Filter \[rg\]*`
+To return all of the domains that have an Identity that begins with the letter "r" or with the letter "g", use this syntax: `-Filter [rg]*`
 
 ```yaml
 Type: String
@@ -154,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS

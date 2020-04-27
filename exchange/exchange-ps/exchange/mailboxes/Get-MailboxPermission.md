@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxpermission
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxPermission
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxPermission
@@ -13,20 +17,29 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxPermission cmdlet to retrieve permissions on a mailbox.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxPermission cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### Owner
 ```
-Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Owner] [-ReadFromDomainController] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Owner]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set1
+### AccessRights
 ```
-Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-User <SecurityPrincipalIdParameter>]
+Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipalIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -57,26 +70,26 @@ By default, the following permissions are assigned to user mailboxes:
 
 By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Office 365).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-MailboxPermission -Identity john@contoso.com | Format-List
 ```
 
 This example returns permissions on the mailbox by its SMTP address john@contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxPermission -Identity john@contoso.com -User "Ayla"
 ```
 
 This example returns permissions that the user Ayla has on John's mailbox.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-MailboxPermission -Identity Room222 -Owner
 ```
 
@@ -85,29 +98,34 @@ This example returns the owner information for the resource mailbox Room222.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter identifies the mailbox. You can use one of the following values:
+The Identity parameter specifies the mailbox you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
 
-- ADObjectID
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -116,15 +134,16 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The Credential parameter specifies the user name and password to use to access Active Directory.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +160,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -150,15 +170,16 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter returns the owner information for the mailbox identified in the Identity parameter.
+The Owner switch returns the owner information for the mailbox that's specified by the Identity parameter. You don't need to specify a value with this switch.
 
-This parameter can't be used with the User parameter.
+You can't use this switch with the User parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Owner
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -179,7 +200,8 @@ By default, the recipient scope is set to the domain that hosts your servers tha
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -188,13 +210,14 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of recipient objects returned.
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -203,15 +226,26 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the UPN, domain\\user, or the alias of the user.
+The User parameter returns information about the user who has permissions to the mailbox specified by the Identity parameter.
 
-This parameter can't be used with the Owner parameter.
+The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- GUID
+
+You can't use this parameter with the Owner parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -220,20 +254,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/56bcc678-1598-4c9b-8b4f-4fa11c89ec41.aspx)

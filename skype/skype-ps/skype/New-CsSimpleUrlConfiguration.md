@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-cssimpleurlconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSimpleUrlConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # New-CsSimpleUrlConfiguration
@@ -101,7 +106,8 @@ That syntax causes the URLs stored in the object references $simpleUrl and $simp
 ### -Identity
 
 Unique identifier for the new simple URL configuration collection.
-Because new collections can only be created at the site scope, the Identity must be the prefix "site:" followed by the name of the site.
+If there isn't a simple URL Configuration at Global level at the time the cmdlet is run, and if this parameter isn't specified, it will default to Global level, thus making this parameter optional in that case.
+Because new collections after Global level can only be created at the site scope, the Identity must be the prefix "site:" followed by the name of the site, thus making this parameter mandatory.
 For example, this syntax creates a new collection for the Redmond site:
 
 `-Identity "site:Redmond"`
@@ -236,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

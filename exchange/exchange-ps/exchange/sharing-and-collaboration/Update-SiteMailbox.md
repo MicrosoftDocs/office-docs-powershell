@@ -1,44 +1,53 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/update-sitemailbox
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-SiteMailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Update-SiteMailbox
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange. Site mailboxes were removed from Exchange Online and SharePoint Online in 2017.
 
 Use the Update-SiteMailbox cmdlet to trigger a Microsoft SharePoint synchronization. This command synchronizes document content membership and permissions into Microsoft Exchange. You may need to perform this action when troubleshooting document or membership synchronization issues.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Update-SiteMailbox [-Identity] <RecipientIdParameter> [-BypassOwnerCheck] [-Confirm] [-FullSync]
+Update-SiteMailbox [-Identity] <RecipientIdParameter>
+ [-BypassOwnerCheck]
+ [-Confirm]
+ [-FullSync]
+ [-Organization <OrganizationIdParameter>]
  [-Server <String>]
- [-Target <All | Document | Membership | Maintenance>] [-WhatIf] [<CommonParameters>]
+ [-Target <TargetType>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 If you are running this command against a site mailbox in which you aren't the owner, you need to use the BypassOwnerCheck parameter to run this cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Update-SiteMailbox -BypassOwnerCheck -Identity "MarketingEvents 2013"
 ```
 
 This example updates the site mailbox MarketingEvents 2013. If you don't specify the target, this triggers both document and membership synchronization. Because the BypassOwnerCheck parameter is used, it isn't necessary to be an owner or member of the site mailbox to run this cmdlet.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Update-SiteMailbox -BypassOwnerCheck -Identity WinterHoliday@tailspintoys.com -FullSync
 ```
 
@@ -47,13 +56,17 @@ This example updates the site mailbox WinterHoliday@tailspintoys.com and perform
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the site mailbox. This parameter accepts the following values:
-
-- DisplayName
-
-- SMTP address
+The Identity parameter specifies the site mailbox that you want to update. You can use any value that uniquely identifies the site mailbox. For example:
 
 - Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
 
 - GUID
 
@@ -61,7 +74,8 @@ The Identity parameter specifies the identity of the site mailbox. This paramete
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -76,7 +90,8 @@ The BypassOwnerCheck parameter specifies that the user running the command in th
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +110,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +126,24 @@ The FullSync parameter specifies full sync is expensive and will have a performa
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -119,15 +152,14 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available only in on-premises Exchange.
-
 The Server parameter specifies the fully qualified domain name (FQDN) or the Microsoft SharePoint server on which the site mailbox is located.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -147,10 +179,11 @@ The Target parameter specifies whether to update the SharePoint documents, the s
 If you don't specify this parameter when you run the cmdlet, this parameter value defaults to ALL.
 
 ```yaml
-Type: All | Document | Membership | Maintenance
+Type: TargetType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +198,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -174,20 +208,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/b0b73d6f-be39-4c36-8eeb-7774d08c19cb.aspx)

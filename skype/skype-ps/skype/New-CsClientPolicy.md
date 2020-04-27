@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csclientpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsClientPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # New-CsClientPolicy
@@ -18,45 +23,47 @@ This cmdlet was introduced in Lync Server 2010.
 ## SYNTAX
 
 ```
-New-CsClientPolicy [-Identity] <XdsIdentity> [-AddressBookAvailability <AddressBookAvailability>]
- [-AttendantSafeTransfer <Boolean>] [-AutoDiscoveryRetryInterval <TimeSpan>]
- [-BlockConversationFromFederatedContacts <Boolean>] [-CalendarStatePublicationInterval <UInt32>]
- [-ConferenceIMIdleTimeout <TimeSpan>] [-CustomizedHelpUrl <String>] [-CustomLinkInErrorMessages <String>]
- [-CustomStateUrl <String>] [-Description <String>] [-DGRefreshInterval <TimeSpan>]
+New-CsClientPolicy [-Tenant <Guid>] [-PolicyEntry <>] [-Description <String>]
+ [-AddressBookAvailability <AddressBookAvailability>] [-AttendantSafeTransfer <Boolean>]
+ [-AutoDiscoveryRetryInterval <TimeSpan>] [-BlockConversationFromFederatedContacts <Boolean>]
+ [-CalendarStatePublicationInterval <UInt32>] [-CustomizedHelpUrl <String>]
+ [-CustomLinkInErrorMessages <String>] [-CustomStateUrl <String>] [-DGRefreshInterval <TimeSpan>]
  [-DisableCalendarPresence <Boolean>] [-DisableContactCardOrganizationTab <Boolean>]
  [-DisableEmailComparisonCheck <Boolean>] [-DisableEmoticons <Boolean>]
- [-DisableFederatedPromptDisplayName <Boolean>] [-DisableFeedsTab <Boolean>] [-DisableFreeBusyInfo <Boolean>]
- [-DisableHandsetOnLockedMachine <Boolean>] [-DisableHtmlIm <Boolean>] [-DisableICE <Boolean>]
- [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>] [-DisableOnlineContextualSearch <Boolean>]
- [-DisablePhonePresence <Boolean>] [-DisablePICPromptDisplayName <Boolean>]
- [-DisablePoorDeviceWarnings <Boolean>] [-DisablePoorNetworkWarnings <Boolean>]
- [-DisablePresenceNote <Boolean>] [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>]
- [-DisplayPhoto <DisplayPhoto>] [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
- [-EnableClientMusicOnHold <Boolean>] [-EnableConversationWindowTabs <Boolean>]
- [-EnableEnterpriseCustomizedHelp <Boolean>] [-EnableEventLogging <Boolean>]
- [-EnableExchangeContactSync <Boolean>] [-EnableExchangeDelegateSync <Boolean>]
- [-EnableFullScreenVideo <Boolean>] [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
- [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
+ [-DisableFeedsTab <Boolean>] [-DisableFederatedPromptDisplayName <Boolean>]
+ [-DisableFreeBusyInfo <Boolean>] [-DisableHandsetOnLockedMachine <Boolean>]
+ [-DisableMeetingSubjectAndLocation <Boolean>] [-DisableHtmlIm <Boolean>]
+ [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>]
+ [-DisableOnlineContextualSearch <Boolean>] [-DisablePhonePresence <Boolean>]
+ [-DisablePICPromptDisplayName <Boolean>] [-DisablePoorDeviceWarnings <Boolean>]
+ [-DisablePoorNetworkWarnings <Boolean>] [-DisablePresenceNote <Boolean>]
+ [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>] [-DisplayPhoto <DisplayPhoto>]
+ [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
+ [-EnableClientAutoPopulateWithTeam <Boolean>] [-EnableClientMusicOnHold <Boolean>]
+ [-EnableConversationWindowTabs <Boolean>] [-EnableEnterpriseCustomizedHelp <Boolean>]
+ [-EnableEventLogging <Boolean>] [-EnableExchangeContactSync <Boolean>]
+ [-EnableExchangeDelegateSync <Boolean>] [-EnableExchangeContactsFolder <Boolean>]
+ [-EnableFullScreenVideo <Boolean>] [-EnableHighPerformanceConferencingAppSharing <Boolean>]
+ [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
+ [-EnableMediaRedirection <Boolean>] [-EnableMeetingEngagement <Boolean>]
+ [-EnableNotificationForNewSubscribers <Boolean>] [-EnableServerConversationHistory <Boolean>]
+ [-EnableSkypeUI <Boolean>] [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>]
+ [-EnableURL <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
  [-EnableVOIPCallDefault <Boolean>] [-ExcludedContactFolders <String>] [-HotdeskingTimeout <TimeSpan>]
  [-IMWarning <String>] [-MAPIPollInterval <TimeSpan>] [-MaximumDGsAllowedInContactList <UInt32>]
- [-MaximumNumberOfContacts <UInt16>] [-MusicOnHoldAudioFile <String>]
- [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-PlayAbbreviatedDialTone <Boolean>]
- [-PolicyEntry <PSListModifier>] [-SearchPrefixFlags <UInt16>] [-ShowManagePrivacyRelationships <Boolean>]
- [-ShowRecentContacts <Boolean>] [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchCenterExternalURL <String>]
- [-SPSearchCenterInternalURL <String>] [-SPSearchExternalURL <String>] [-SPSearchInternalURL <String>]
- [-TabURL <String>] [-WebServicePollInterval <TimeSpan>] [-Force] [-InMemory] [-WhatIf] [-Confirm]
- [-DisableMeetingSubjectAndLocation <Boolean>] [-EnableNotificationForNewSubscribers <Boolean>]
- [-EnableURL <Boolean>] [-MaxPhotoSizeKB <UInt32>] [-EnableMediaRedirection <Boolean>]
- [-HelpEnvironment <String>] [-TracingLevel <TracingLevel>] [-BypassDualWrite <Object>]
- [-EnableClientAutoPopulateWithTeam <Object>] [-EnableExchangeContactsFolder <Object>]
- [-EnableHighPerformanceConferencingAppSharing <Object>] [-EnableHighPerformanceP2PAppSharing <Object>]
- [-EnableMeetingEngagement <Object>] [-EnableOnlineFeedback <Object>]
- [-EnableOnlineFeedbackScreenshots <Object>] [-EnableServerConversationHistory <Object>]
- [-EnableSkypeUI <Object>] [-EnableViewBasedSubscriptionMode <Object>] [-IMLatencyErrorThreshold <Object>]
- [-IMLatencySpinnerDelay <Object>] [-PublicationBatchDelay <Object>]
- [-RateMyCallAllowCustomUserFeedback <Object>] [-RateMyCallDisplayPercentage <Object>]
- [-RequireContentPin <Object>] [-SupportModernFilePicker <Object>] [-TelemetryTier <Object>] [-Tenant <Object>]
- [-AsJob] [<CommonParameters>]
+ [-MaximumNumberOfContacts <UInt16>] [-MaxPhotoSizeKB <UInt32>] [-MusicOnHoldAudioFile <String>]
+ [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-EnableHighPerformanceP2PAppSharing <Boolean>]
+ [-PlayAbbreviatedDialTone <Boolean>] [-RequireContentPin <String>] [-SearchPrefixFlags <UInt16>]
+ [-ShowRecentContacts <Boolean>] [-ShowManagePrivacyRelationships <Boolean>]
+ [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchInternalURL <String>] [-SPSearchExternalURL <String>]
+ [-SPSearchCenterInternalURL <String>] [-SPSearchCenterExternalURL <String>] [-TabURL <String>]
+ [-TracingLevel <TracingLevel>] [-TelemetryTier <String>] [-PublicationBatchDelay <UInt32>]
+ [-EnableViewBasedSubscriptionMode <Boolean>] [-WebServicePollInterval <TimeSpan>]
+ [-HelpEnvironment <String>] [-RateMyCallDisplayPercentage <UInt16>]
+ [-RateMyCallAllowCustomUserFeedback <Boolean>] [-IMLatencySpinnerDelay <UInt32>]
+ [-IMLatencyErrorThreshold <UInt32>] [-SupportModernFilePicker <Boolean>] [-EnableOnlineFeedback <Boolean>]
+ [-EnableOnlineFeedbackScreenshots <Boolean>] [-ConferenceIMIdleTimeout <TimeSpan>]
+ [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,8 +86,6 @@ The following parameters are not applicable to Skype for Business Online: Addres
 
 ### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server)
 ```
-
-
 New-CsClientPolicy -Identity RedmondClientPolicy -DisableCalendarPresence $True -DisablePhonePresence $True -DisplayPhoto "PhotosFromADOnly"
 ```
 
@@ -89,7 +94,6 @@ In addition to specifying the Identity, this command also includes three optiona
 
 ### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server)
 ```
-
 $x = New-CsClientPolicy -Identity RedmondClientPolicy -InMemory
 
 $x.DisableCalendarPresence = $True
@@ -121,8 +125,6 @@ To create a new site policy, use the prefix "site:" and the name of the site as 
 For example, use this syntax to create a new policy for the Redmond site: `-Identity site:Redmond.`
 To create a new per-user policy, use an identity similar to this: `-Identity SalesClientPolicy.`
 
-
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
@@ -137,7 +139,6 @@ Accept wildcard characters: False
 ```
 
 ### -AddressBookAvailability
-
 Indicates how users are allowed to access information by using the Address Book Web Query service and/or by downloading a copy of the Address Book to their local computer).
 AddressBookAvailability must be set to one of the following values:
 
@@ -146,7 +147,6 @@ WebSearchAndFileDownload
 WebSearchOnly
 
 FileDownloadOnly
-
 
 ```yaml
 Type: AddressBookAvailability
@@ -162,12 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -AttendantSafeTransfer
-
 When set to True, Attendant operates in "safe transfer" mode; this means that transferred calls that do not reach the intended recipient will reappear in the incoming area along with a "Failed Transfer" notice.
 When set to False, transferred calls that fail to reach the intended recipient will not reappear in the incoming area.
-
-
-
 
 ```yaml
 Type: Boolean
@@ -183,14 +179,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDiscoveryRetryInterval
-
 After a failed connection attempt, specifies the amount of time Skype for Business waits before trying again to connect to Skype for Business Server.
 The AutoDiscoveryRetryInterval can be set to value between 1 second and 60 minutes (1 hour), inclusive.
 
 When specifying the AutoDiscoveryRetryInterval you must use the format hours:minutes:seconds.
 For example, to set the interval to 25 minutes use this syntax: `- AutoDiscoveryRetryInterval 00:25:00`
-
-
 
 ```yaml
 Type: TimeSpan
@@ -206,12 +199,9 @@ Accept wildcard characters: False
 ```
 
 ### -BlockConversationFromFederatedContacts
-
 When set to True, contacts from outside your organization will not be allowed to initiate instant messaging conversations with any user that this policy applies to.
 However, outside users will be able to participate in conversations as long as the internal user initiates that conversation.
 When set to False, outside contacts are allowed to send unsolicited instant messages to users in your organization.
-
-
 
 ```yaml
 Type: Boolean
@@ -227,14 +217,11 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarStatePublicationInterval
-
 Specifies the amount of time, in seconds, that Skype for Business waits before retrieving calendar information from Microsoft Outlook and adding this data to your presence information.
 
 For example, to set the CalendarStatePublicationInterval to 10 minutes (600 seconds) use this syntax:
 
 `- CalendarStatePublicationInterval 600`
-
-
 
 ```yaml
 Type: UInt32
@@ -250,17 +237,12 @@ Accept wildcard characters: False
 ```
 
 ### -ConferenceIMIdleTimeout
-
 Indicates the number of minutes that a user can remain in an instant messaging session without either sending or receiving an instant message.
 
 The ConferenceIMIdleTimeout must be less than or equal to 1 hour, and must be specified using the format hours:minutes:seconds.
 For example, this syntax sets the timeout value to 45 minutes:
 
 `-ConferenceIMIdleTimeout 00:45:00`
-
-
-
-
 
 ```yaml
 Type: TimeSpan
@@ -276,15 +258,12 @@ Accept wildcard characters: False
 ```
 
 ### -CustomizedHelpUrl
-
 URL for custom help set up by an organization.
 This help, rather than the default product help, will be displayed any time a user clicks the Help menu in Skype for Business.
 
 Customized help will not be available unless you also set EnableEnterpriseCustomizedHelp to True.
 
 This parameter has been deprecated for use with Skype for Business Server.
-
-
 
 ```yaml
 Type: String
@@ -300,12 +279,9 @@ Accept wildcard characters: False
 ```
 
 ### -CustomLinkInErrorMessages
-
 URL for the website that can be added to error messages that appear in Skype for Business.
 If a URL is specified, that URL will appear at the bottom of any error message that occurs in Skype for Business.
 Users can then click that link and be taken to a custom website that contains additional information, such as troubleshooting tips.
-
-
 
 ```yaml
 Type: String
@@ -321,11 +297,8 @@ Accept wildcard characters: False
 ```
 
 ### -CustomStateUrl
-
 Specifies the location of the XML file used to add custom presence states to Skype for Business.
 (Skype for Business allows up to four custom presence states in addition to the built-in states such as Available, Busy, and Do Not Disturb.) The location of the XML file should be specified using the HTTPS protocol.
-
-
 
 ```yaml
 Type: String
@@ -341,12 +314,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
 Allows administrators to provide additional information about a policy.
 For example, the Description might indicate which users the policy should be assigned to.
-
-
-
 
 ```yaml
 Type: String
@@ -362,12 +331,9 @@ Accept wildcard characters: False
 ```
 
 ### -DGRefreshInterval
-
 Indicates the amount of time Skype for Business waits before automatically refreshing the membership list of any distribution group that has been "expanded" in the Contacts list.
 (Expanding a distribution group means displaying all the members in that group.) DGRefreshInterval can be set to any integer value between 30 seconds and 28,800 seconds (8 hours), inclusive.
 The default value is 28,800 seconds.
-
-
 
 ```yaml
 Type: TimeSpan
@@ -383,13 +349,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCalendarPresence
-
 When set to True, calendar data taken from Microsoft Outlook will not be included in your presence information.
 When set to False, calendar data will be included in your presence information.
 For example, free/busy information will be reported in your contact card.
 Likewise, your status will automatically be set to Busy any time Outlook shows that you are in a meeting.
-
-
 
 ```yaml
 Type: Boolean
@@ -405,11 +368,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableContactCardOrganizationTab
-
 When set to True, the contact card Organization tab is not visible within the Skype for Business user interface.
 When set to False, the contact card Organization tab is available in Skype for Business.
-
-
 
 ```yaml
 Type: Boolean
@@ -425,14 +385,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEmailComparisonCheck
-
 When set to True, Skype for Business will not attempt to verify that any currently running instance of Microsoft Outlook belongs to the same user running Skype for Business; for example, the software will not verify that both Outlook and Skype for Business are running under Ken Myer's user account.
 Instead, it will be assumed that the two applications are running under the same account and, in turn, will include contact and calendar data in Outlook with Skype for Business.
 
 When set to False, Skype for Business will use SMTP addresses to verify that Outlook and Skype for Business are running under the same account.
 If the SMTP addresses do not match, then contact and calendar data in Outlook will not be incorporated into Skype for Business.
-
-
 
 ```yaml
 Type: Boolean
@@ -448,15 +405,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEmoticons
-
 When set to True, users will not be able to send or receive emoticons in their instant messages; instead they will be see the text equivalent of those emoticons.
 For example, instead of seeing a graphical "smiley face," users will see the text equivalent:
 
 : )
 
 When set to False, users will be able to include emoticons in their instant messages, and to view emoticons in instant messages they receive.
-
-
 
 ```yaml
 Type: Boolean
@@ -472,11 +426,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFederatedPromptDisplayName
-
 When set to True, any notification dialog box generated when you are added to a federated user's Contacts list will use the federated user's SIP address (for example, sip:kenmyer@fabrikam.com).
 When set to False, the notification dialog box will use the federated user's display name (for example, Ken Myer) instead.
-
-
 
 ```yaml
 Type: Boolean
@@ -492,11 +443,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFeedsTab
-
 When set to True, the activity feeds tab will not be displayed in Skype for Business.
 When set to False, the feeds tab will be available within Skype for Business.
-
-
 
 ```yaml
 Type: Boolean
@@ -512,14 +460,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFreeBusyInfo
-
 When set to True, free/busy information retrieved from Microsoft Outlook will not be displayed in your contact card.
 When set to False, free/busy information is displayed in your contact card.
 For example, your contact card might include a note similar to this:
 
 Calendar: Free until 2:00 PM
-
-
 
 ```yaml
 Type: Boolean
@@ -535,13 +480,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableHandsetOnLockedMachine
-
 When set to True, users will not be able to use their Polycom handset if the computer that the handset is connected to is locked.
 To use the handset, users will first have to unlock the computer.
 
 When set to False, users will be allowed to use their Polycom handset even if the computer the handset is connected to is locked.
-
-
 
 ```yaml
 Type: Boolean
@@ -557,14 +499,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableHtmlIm
-
 When set to True, any HTML text copied from a webpage will be converted to plain text when pasted into an instant message.
 When set to False, HTML formatting (such as font size and color, drop-down lists, and buttons) will be retained when pasted into an instant message.
 
 Note that, even when set to False, scripts and other potentially malicious items (such as tags that play a sound) will not be copied into an instant message.
 You can copy and paste buttons and other controls into a message, but any scripts attached to those controls will automatically be removed.
-
-
 
 ```yaml
 Type: Boolean
@@ -599,11 +538,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableInkIM
-
 When set to True, users will not be allowed to receive instant messages containing Tablet PC ink.
 (Ink is a technology that enables you to insert handwritten notes into a document.) When set to False, users will be allowed to receive messages that contain Tablet PC ink.
-
-
 
 ```yaml
 Type: Boolean
@@ -619,12 +555,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableOneNote12Integration
-
 When set to True, the ability to start Microsoft OneNote from within Skype for Business (and the ability to automatically link instant messaging sessions and OneNote notes) is disabled.
 When set to False, the option Take Notes Using OneNote is enabled in Skype for Business.
 In addition, if you locate an instant message transcript in Microsoft Outlook's Conversation History, you can retrieve any OneNote notes associated with that conversation just by clicking the Edit conversation notes button.
-
-
 
 ```yaml
 Type: Boolean
@@ -640,7 +573,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableOnlineContextualSearch
-
 When set to True, disables the Find Previous Conversations menu option that appears when you right-click a user in your Contacts list.
 (This option enables you to search the Microsoft Outlook Conversation History folder for previous instant messaging sessions involving the user in question.) When set to False, the Find Previous Conversations option will be available when you right-click a user in your Contacts list.
 
@@ -648,8 +580,6 @@ Note that this setting only applies to users who are not running Microsoft Outlo
 That's because any searches conducted by those users must take place on Microsoft Exchange Server, and administrators might want to limit the network traffic generated by these searches.
 If you are running Outlook in cached mode, searches take place on a user's locally-cached copy of his or her Inbox.
 Cached searches are not affected by this setting.
-
-
 
 ```yaml
 Type: Boolean
@@ -665,12 +595,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePhonePresence
-
 When set to True, Skype for Business does not take phone calls into consideration when determining your current status.
 When set to False, phone calls are taken into consideration when determining your status.
 For example, any time you are on the phone your status will automatically be set to Busy.
-
-
 
 ```yaml
 Type: Boolean
@@ -686,11 +613,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePICPromptDisplayName
-
 When set to True, any notification dialog box generated when you are added to the Contacts list of a user with an account on a public instant messaging service such as MSN will display that person's SIP address (for example, sip:kenmyer@litwareinc.com).
 When set to False, the notification dialog box will use the person's display name (for example, Ken Myer) instead.
-
-
 
 ```yaml
 Type: Boolean
@@ -1384,7 +1308,7 @@ Provides a way to add settings not covered by the default parameters.
 For example, when testing pre-release versions of Lync 2010 it was possible to add a Send Feedback option to the user interface.
 That was done by using code similar to this:
 
-`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "http://www.litwareinc.com/feedback"Set-CsClientPolicy -Identity global -PolicyEntry @{Add=$x}`
+`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "https://www.litwareinc.com/feedback"Set-CsClientPolicy -Identity global -PolicyEntry @{Add=$x}`
 
 For more details and examples, see the New-CsClientPolicyEntry cmdlet help topic.
 
@@ -1814,11 +1738,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMediaRedirection
-
 When set to True ($True) allows audio and video streams to be separated from other network traffic; in turn, this allows client devices to do encoding and decoding of audio and video locally.
 Media redirection typically results in lower bandwidth usage, higher server scalability, and a more-optimal user experience compared to similar techniques such as device remoting or codec compression.
-
-
 
 ```yaml
 Type: Boolean
@@ -1834,12 +1755,9 @@ Accept wildcard characters: False
 ```
 
 ### -HelpEnvironment
-
 When set to Office 365, the Skype for Business Online client help documentation for Skype for Business will be shown to users rather than the on-premises help shown by default.
 You can either set HelpEnvironment to Office 365 or to a null value ($Null).
 If set to a null value (the default value) then the on-premises help will be shown to users.
-
-
 
 ```yaml
 Type: String
@@ -1855,7 +1773,6 @@ Accept wildcard characters: False
 ```
 
 ### -TracingLevel
-
 Enables Administrators to manage event tracing and logging in Skype for Business.
 Allowed values are:
 
@@ -1866,7 +1783,6 @@ Light - Minimal tracing is performed, and the user cannot change this setting.
 Full - Verbose tracing is performed, and the user cannot change this setting.
 
 By default TracingLevel is set to Light.
-
 
 
 ```yaml
@@ -1882,27 +1798,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableClientAutoPopulateWithTeam
-
 When set to true, allows a user's Skype client to be autopopulated with members of his or her immediate team.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1915,11 +1815,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeContactsFolder
-
 When set to false, this allows admins to hide Skype for Business contacts from showing up in users' Outlook and Outlook on the Web clients.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1932,14 +1831,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHighPerformanceConferencingAppSharing
-
 When set to True, enables better performance in applications (such as CAD/CAM applications) that have a high screen refresh rate.
 However, this improved performance will reduce the system resources and network bandwidth available to other applications.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1952,14 +1848,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHighPerformanceP2PAppSharing
-
 When set to True, allows a peer-to-peer application sharing session to exceed the maximum frame rate of 2.5 frames per second.
 The default value is False.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1975,7 +1868,7 @@ Accept wildcard characters: False
 {{Fill EnableMeetingEngagement Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1988,11 +1881,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedback
-
 When set to true, allows users to provide feedback through the "help->report a problem" menu options in the client.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2008,7 +1900,7 @@ Accept wildcard characters: False
 When set to true, allows users to provide screenshots of their clients when reporting problems.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2021,16 +1913,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableServerConversationHistory
-
 When set to True ($True), allows conversation histories, missed call notifications, and missed IM notifications to be stored on the server instead of in client mailboxes.
 This makes it easier for users to retrieve that information from a mobile device.
 
 The default value is False ($False).
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2043,13 +1932,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSkypeUI
-
 When set to True ($True), this parameter allows administrators to enable the Skype for Business user interface instead of the Lync interface for the Skype for Business client.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2065,7 +1951,7 @@ Accept wildcard characters: False
 {{Fill EnableViewBasedSubscriptionMode Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2078,13 +1964,10 @@ Accept wildcard characters: False
 ```
 
 ### -IMLatencyErrorThreshold
-
 If IM latency is greater than the threshold value (in milliseconds), the client will submit a CER.
 
-
-
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2097,13 +1980,10 @@ Accept wildcard characters: False
 ```
 
 ### -IMLatencySpinnerDelay
-
 Amount of time, in milliseconds, to wait before showing the spinner in the client when IM message delivery is delayed.
 
-
-
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2119,7 +1999,7 @@ Accept wildcard characters: False
 {{Fill PublicationBatchDelay Description}}
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2132,13 +2012,10 @@ Accept wildcard characters: False
 ```
 
 ### -RateMyCallAllowCustomUserFeedback
-
-PARAMVALUE: $true | $false
-
-
+When set to True, a free-text input field will be displayed in the Rate My Call window for users to submit custom feedback.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2151,13 +2028,10 @@ Accept wildcard characters: False
 ```
 
 ### -RateMyCallDisplayPercentage
-
-PARAMVALUE: UInt16
-
-
+This parameter controls how often the form is shown.
 
 ```yaml
-Type: Object
+Type: UInt16
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2173,7 +2047,7 @@ Accept wildcard characters: False
 {{Fill RequireContentPin Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2189,7 +2063,7 @@ Accept wildcard characters: False
 {{Fill SupportModernFilePicker Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2205,7 +2079,7 @@ Accept wildcard characters: False
 {{Fill TelemetryTier Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2218,7 +2092,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the new client policy is being created.
 For example:
 
@@ -2228,10 +2101,8 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
-
-
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2259,7 +2130,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchmetadatacrawledpropertymapping
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: Remove-FASTSearchMetadataCrawledPropertyMapping
 ---
 
@@ -25,17 +30,17 @@ The cmdlet parameters are both objects, and must be retrieved separately.
 
 The content must be recrawled/re-fed for the search index to reflect that the mapping was removed.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>$title = Get-FASTSearchMetadataManagedProperty -name title
-PS C:\>$crawledproperties = $title.GetCrawledPropertyMappings()
-PS C:\>$crawledproperties # To List the output before the removal
-PS C:\>Remove-FASTSearchMetadataCrawledPropertyMapping -managedproperty $title -crawledproperty $crawledproperties[4]
-PS C:\>$crawledproperties # To list the output after the removal
+$title = Get-FASTSearchMetadataManagedProperty -name title
+$crawledproperties = $title.GetCrawledPropertyMappings()
+$crawledproperties # To List the output before the removal
+Remove-FASTSearchMetadataCrawledPropertyMapping -managedproperty $title -crawledproperty $crawledproperties[4]
+$crawledproperties # To list the output after the removal
 ```
 
 This example removes the mapping of the crawled property "sitemap.title" to the managed property "title".
@@ -134,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

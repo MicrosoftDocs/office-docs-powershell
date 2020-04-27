@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+online version: https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/new-managementrole
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-ManagementRole
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # New-ManagementRole
@@ -13,21 +17,28 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-ManagementRole cmdlet to create a management role based on an existing role or create an unscoped management role.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set1
+### NewDerivedRole
 ```
-New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Force] [-WhatIf]
- [-EnabledCmdlets <String[]>] [<CommonParameters>]
+New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-EnabledCmdlets <String[]>]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### UnScopedTopLevelRole
 ```
-New-ManagementRole [-Name] <String> [-UnScopedTopLevel] [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
+New-ManagementRole [-Name] <String> [-UnScopedTopLevel]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,18 +46,18 @@ You can either create a management role based on an existing role, or you can cr
 
 An unscoped role doesn't have any scope restrictions applied. Scripts or third-party cmdlets included in an unscoped role can view or modify any object in the Exchange organization.
 
-The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the Unscoped Role Management management role to a role group you're a member of. For more information about how to create an unscoped management role, see Create an unscoped role (https://technet.microsoft.com/library/dd876886.aspx).
+The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the Unscoped Role Management management role to a role group you're a member of. For more information about how to create an unscoped management role, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 After you create a role, you can change the management role entries on the role and assign the role with a management scope to a user or universal security group (USG).
 
-For more information about management roles, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
+For more information about management roles, see [Understanding management roles](https://docs.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | Remove-ManagementRoleEntry -WhatIf
 ```
 
@@ -58,12 +69,12 @@ After confirmation that the command removes the correct role entries, the second
 
 For more information about pipelining and the Where cmdlet, see the following topics:
 
-- Pipelining (https://technet.microsoft.com/library/aa998260.aspx)
+- [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
 
-- Working with command output (https://technet.microsoft.com/library/bb123533.aspx)
+- [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help)
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-ManagementRole -Name "In-house scripts" -UnScopedTopLevel
 ```
 
@@ -78,7 +89,8 @@ The Name parameter specifies the name of the role. The maximum length of the nam
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -91,9 +103,10 @@ The Parent parameter specifies the identity of the role to copy. If the name of 
 
 ```yaml
 Type: RoleIdParameter
-Parameter Sets: Set1
+Parameter Sets: NewDerivedRole
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -104,17 +117,20 @@ Accept wildcard characters: False
 ### -UnScopedTopLevel
 This parameter is available on in on-premises Exchange.
 
-By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-The UnScopedTopLevel switch specifies that the role should be a custom, empty role. You don't need to specify a value with this switch.
+The UnScopedTopLevel switch specifies that the role new role is an unscoped top-level management role (a custom, empty role). You don't need to specify a value with this switch.
 
-If you use this switch, you can't use the Parent parameter.
+You can only add custom scripts or non-Exchange cmdlets to an unscoped top-level management role. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
+
+You can't use this switch with the Parent parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: UnScopedTopLevelRole
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -133,7 +149,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +165,8 @@ The Description parameter specifies the description that's displayed when the ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -165,39 +183,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -Force
-This parameter is available only in the cloud-based service.
-
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -212,9 +199,10 @@ You can only use this parameter with the Parent parameter when you copy a role.
 
 ```yaml
 Type: String[]
-Parameter Sets: Set1
+Parameter Sets: NewDerivedRole
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -222,21 +210,53 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Force
+This parameter is available only in the cloud-based service.
+
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/76367e39-a387-430f-b3a5-1df20dd31201.aspx)

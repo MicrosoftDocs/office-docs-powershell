@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchresource
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: Remove-FASTSearchResource
 ---
 
@@ -20,13 +25,13 @@ Remove-FASTSearchResource [-Path] <String> [<CommonParameters>]
 This cmdlet deletes a specified file located in the Microsoft FAST Search Server 2010 for SharePoint resource store.
 The location of the resource store is typically specified in %FASTSEARCH%/etc/Admin.config (where %FASTSEARCH% is the FAST Search Server 2010 for SharePoint installation folder.)
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchResource dictionaries\spellcheck\check_en.aut
+Remove-FASTSearchResource dictionaries\spellcheck\check_en.aut
 ```
 
 This example deletes the resource dictionaries\spellcheck\check_en.aut from the resource store.
@@ -50,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

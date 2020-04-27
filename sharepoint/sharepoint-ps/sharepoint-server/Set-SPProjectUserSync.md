@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersync
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectUserSync
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectUserSync
@@ -23,16 +28,16 @@ When users are granted permissions to Project Server entities, permissions are g
 By using this cmdlet, administrators can control the behavior of WSS User sync.
 They can choose to disable WSS User sync, enable it only for the Project Web App site, enable it only for connected SharePoint sites, or enable for both.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
 ```
-C:\PS>Set-SPProjectUserSync http://localhost/pwa EnablePWA
+Set-SPProjectUserSync https://localhost/pwa EnablePWA
 ```
 
-In this example, WSS User sync is enabled for the Project Web App site at http://localhost/pwa.
+In this example, WSS User sync is enabled for the Project Web App site at https://localhost/pwa.
 
 
 ## PARAMETERS
@@ -44,7 +49,7 @@ Specifies the URL of the Project Web App instance to set the Project User Sync s
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 2
@@ -60,7 +65,7 @@ Disabled completely disables WSS User Sync; EnablePWA enables WSS User sync for 
 Type: UserSyncParameterValues[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 3
@@ -82,7 +87,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -92,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

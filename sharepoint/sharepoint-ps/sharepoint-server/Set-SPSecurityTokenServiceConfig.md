@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spsecuritytokenserviceconfig
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSecurityTokenServiceConfig
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPSecurityTokenServiceConfig
@@ -70,7 +75,7 @@ Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The `Set-SPSecurityTokenServiceConfig` cmdlet updates the settings of the SharePoint security token service (STS) identity provider.
 If a certificate file is used, the certificate must be an X509 certificate with private keys, otherwise an exception is raised.
@@ -78,14 +83,14 @@ If a certificate file is used, the certificate must be an X509 certificate with 
 This cmdlet operates only with certificates that can be exported.
 To create a certificate which can be used in this cmdlet specify the X509KeyStorageFlags.Exportable bit in the keyStorageFlags parameter of the x509Certificate2 object constructor.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
 ```
-C:\PS>Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint "2796BAE63F1801E277261BA0D77770028F20EEE4"
+Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint "2796BAE63F1801E277261BA0D77770028F20EEE4"
 ```
 
 This example updates the signing certificate of the SharePoint security token service (STS) identity provider with a certificate that has been deployed in the certificate store.
@@ -93,9 +98,8 @@ This example updates the signing certificate of the SharePoint security token se
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
-
-C:\PS>Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
+$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
+Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
 ```
 
 This example imports the signing certificate for the SharePoint STS identity provider.
@@ -104,13 +108,13 @@ This example imports the signing certificate for the SharePoint STS identity pro
 ## PARAMETERS
 
 ### -QueueSigningCertificateThumbprint
-{{ Fill QueueSigningCertificateThumbprint Description }}
+Sets the certificate with the provided thumbprint as the queued signing certificate.
 
 ```yaml
 Type: String
 Parameter Sets: QueueSigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -123,7 +127,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -133,13 +137,13 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificateThumbprint
-{{ Fill RevokeSigningCertificateThumbprint Description }}
+Revoke the signing certificate with the provided thumbprint.
 
 ```yaml
 Type: String
 Parameter Sets: RevokeSigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -157,7 +161,7 @@ The type must be a valid identity of a signing certificate; for example 2796BAE6
 Type: String
 Parameter Sets: SigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -179,7 +183,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -196,7 +200,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -215,7 +219,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -233,7 +237,7 @@ The type must be a name of a valid X.509 certificate; for example, Certificate1.
 Type: X509Certificate2
 Parameter Sets: SigningCertificateImport
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -244,7 +248,7 @@ Accept wildcard characters: False
 
 ### -MaxLogonTokenCacheItems
 Specifies the maximum number of entries for the in-memory logon token cache.
-The default value is 10000 entries.
+The default value is 250 entries.
 
 The type must be a valid integer.
 
@@ -252,7 +256,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -263,7 +267,7 @@ Accept wildcard characters: False
 
 ### -MaxServiceTokenCacheItems
 Specifies the maximum number of entries for the in-memory service token cache.
-The default value is 10000 entries.
+The default value is 250 entries.
 
 The type must be a valid integer.
 
@@ -271,7 +275,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -281,13 +285,13 @@ Accept wildcard characters: False
 ```
 
 ### -QueueSigningCertificate
-{{ Fill QueueSigningCertificate Description }}
+Sets the provided certificate as the queued signing certificate.
 
 ```yaml
 Type: X509Certificate2
 Parameter Sets: SigningCertificateQueue
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -297,13 +301,13 @@ Accept wildcard characters: False
 ```
 
 ### -QueueSigningCertificateStoreName
-{{ Fill QueueSigningCertificateStoreName Description }}
+The store to search in when looking up a certificate to be set as the queued signing certificate by its thumbprint. Required if QueueSigningCertificateThumbprint was specified.
 
 ```yaml
 Type: String
 Parameter Sets: QueueSigningCertificateReference, SigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -313,13 +317,13 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificate
-{{ Fill RevokeSigningCertificate Description }}
+Revokes the signing certificate that matches the provided certificate.
 
 ```yaml
 Type: X509Certificate2
 Parameter Sets: SigningCertificateRevoke
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -329,13 +333,13 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificateStoreName
-{{ Fill RevokeSigningCertificateStoreName Description }}
+The store to search when looking up a certificate to be revoked by its thumbprint. Required if the QueueSigningCertificateThumbprint was specified.
 
 ```yaml
 Type: String
 Parameter Sets: RevokeSigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -354,7 +358,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -373,7 +377,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -392,7 +396,7 @@ The type must be a valid identity of a signing certificate store; for example Id
 Type: String
 Parameter Sets: SigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -409,7 +413,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -428,7 +432,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -438,7 +442,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

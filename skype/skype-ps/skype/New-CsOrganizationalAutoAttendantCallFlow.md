@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csorganizationalautoattendantcallflow
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantCallFlow
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # New-CsOrganizationalAutoAttendantCallFlow
@@ -13,7 +18,8 @@ Use the New-CsOrganizationalAutoAttendantCallFlow cmdlet to create a new call fl
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantCallFlow -Name <String> [-Greetings <List>] -Menu <Menu> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +35,7 @@ $menu = New-CsOrganizationalAutoAttendantMenu -Name "Default Menu" -Prompts @($m
 $callFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu
 ```
 
-This example creates a new call flow that renders the “Default Menu” menu.
+This example creates a new call flow that renders the "Default Menu" menu.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -39,7 +45,7 @@ $greeting = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "Welcome
 $callFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu -Greetings $greeting
 ```
 
-This example creates a new call flow that plays a greeting before rendering the “Default Menu” menu.
+This example creates a new call flow that plays a greeting before rendering the "Default Menu" menu.
 
 ## PARAMETERS
 
@@ -47,7 +53,7 @@ This example creates a new call flow that plays a greeting before rendering the 
 The Name parameter represents a unique friendly name for the call flow.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -64,9 +70,8 @@ The Menu parameter identifies the menu to render when the call flow is executed.
 
 You can create a new menu by using the New-CsOrganizationalAutoAttendantMenu cmdlet.
 
-
 ```yaml
-Type: System.Object
+Type: Menu
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -79,13 +84,12 @@ Accept wildcard characters: False
 ```
 
 ### -Greetings
-If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow’s menu is rendered.
+If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow's menu is rendered.
 
 You can create prompts by using the New-CsOrganizationalAutoAttendantPrompt cmdlet.
 
-
 ```yaml
-Type: System.Collections.Generic.List
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -100,7 +104,7 @@ Accept wildcard characters: False
 ### -Tenant
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -113,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

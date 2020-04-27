@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-cstenantpublicprovider
 applicable: Skype for Business Online
 title: Set-CsTenantPublicProvider
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Set-CsTenantPublicProvider
@@ -14,7 +19,7 @@ When enabled, Skype for Business Online users will be able to exchange IM and pr
 ## SYNTAX
 
 ```
-Set-CsTenantPublicProvider [-Confirm] [-Provider <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Set-CsTenantPublicProvider [-Provider <String[]>] [-Tenant <Guid>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -122,7 +127,7 @@ You can enable multiple providers by separating the provider names by using comm
 `-Provider "AOL","WindowsLive"`
 
 ```yaml
-Type: Object
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -145,7 +150,7 @@ You can return your tenant ID by running this command
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -173,24 +178,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

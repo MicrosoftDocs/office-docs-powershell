@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsitesubscriptionfeaturepackmember
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPSiteSubscriptionFeaturePackMember
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPSiteSubscriptionFeaturePackMember
@@ -30,12 +35,12 @@ Remove-SPSiteSubscriptionFeaturePackMember [-Identity] <SPSiteSubscriptionFeatur
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
-The `Remove-SPSiteSubscriptionFeaturePackMember` cmdlet removes the provided FeatureDefintion parameter from the feature set specified by the Identity parameter.
+The `Remove-SPSiteSubscriptionFeaturePackMember` cmdlet removes the provided FeatureDefinition parameter from the feature set specified by the Identity parameter.
 If the AllFeatureDefinitions flag is provided, all feature definitions are removed from the given Feature set.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
@@ -44,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$FS = Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a"
 
-C:\PS>Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
+Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
 ```
 
 This example removes the PublishingSite feature from the Feature set that has ID 30daa535-b0fe-4d10-84b0-fb04029d161a.
@@ -52,7 +57,7 @@ This example removes the PublishingSite feature from the Feature set that has ID
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a" | Remove-SPSiteSubscriptionFeaturePackMember -AllFeatureDefinitions
+Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a" | Remove-SPSiteSubscriptionFeaturePackMember -AllFeatureDefinitions
 ```
 
 This example removes all features from the Feature set 30daa535-b0fe-4d10-84b0-fb04029d161a.
@@ -69,7 +74,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPSiteSubscriptionFeaturePackPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -85,7 +90,7 @@ Clears all features from the Feature set.
 Type: SwitchParameter
 Parameter Sets: AllFeatureDefinitions
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -101,7 +106,7 @@ Specifies the feature definition to be removed.
 Type: SPFeatureDefinitionPipeBind
 Parameter Sets: SingleFeatureDefinition
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -123,7 +128,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -140,7 +145,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -157,7 +162,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -167,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

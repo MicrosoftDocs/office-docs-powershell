@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/start-cspool
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Start-CsPool
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Start-CsPool
@@ -129,8 +134,8 @@ Use this parameter if one or more of the front end servers cannot be started.
 Note that there is a minimum number of servers required for the pool to be functional.
 The cmdlet will check for those conditions while trying to implement this parameter.
 
-For example, to specify a single server use the following syntax: `-SkipServer "AtlServerOne"`.
-To specify more than one server use the syntax: `-SkipServer "AtlServerOne","AtlServerTwo"`
+For example, to specify a single server use the following syntax: `-SkipServer "AtlServerOne.litwareinc.com"`.
+To specify more than one server use the syntax: `-SkipServer "AtlServerOne.litwareinc.com","AtlServerTwo.litwareinc.com"`
 
 ```yaml
 Type: String[]
@@ -162,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

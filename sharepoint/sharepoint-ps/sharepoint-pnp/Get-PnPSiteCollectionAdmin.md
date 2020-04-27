@@ -1,12 +1,15 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitecollectionadmin
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPSiteCollectionAdmin
 ---
+
 # Get-PnPSiteCollectionAdmin
 
 ## SYNOPSIS
-Returns the current site collection administrators of the site colleciton in the current context
+Returns the current site collection administrators of the site collection in the current context
 
 ## SYNTAX 
 
@@ -55,4 +58,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

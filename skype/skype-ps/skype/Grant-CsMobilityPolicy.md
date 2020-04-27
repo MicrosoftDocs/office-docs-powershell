@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/grant-csmobilitypolicy
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsMobilityPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Grant-CsMobilityPolicy
@@ -16,12 +21,11 @@ Mobility policies can also be used to require Wi-Fi connections when making or r
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
 
-
 ## SYNTAX
 
 ```
-Grant-CsMobilityPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-Confirm]
- [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Grant-CsMobilityPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,12 +65,10 @@ Alternatively, you can use a command similar to this one to view just the displa
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Grant-CsMobilityPolicy cmdlet locally: RTCUniversalServerAdmins.
 
 
-
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 Grant-CsMobilityPolicy -Identity "Ken Myer" -PolicyName "RedmondMobilityPolicy"
 ```
 
@@ -75,7 +77,6 @@ The command shown in Example 1 assigns the per-user mobility policy RedmondMobil
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 Get-CsUser -Filter {MobilityPolicy -eq "NorthAmericaMobilityPolicy"} | Grant-CsMobilityPolicy -PolicyName "RedmondMobilityPolicy"
 ```
 
@@ -86,7 +87,6 @@ After retrieving the collection of user accounts, those accounts are then piped 
 
 ### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-
 Get-CsUser -LdapFilter "l=Redmond" | Grant-CsMobilityPolicy -PolicyName "RedmondMobilityPolicy"
 ```
 
@@ -97,7 +97,6 @@ To perform this task, the command first calls the Get-CsUser cmdlet along with t
 
 ### -------------------------- EXAMPLE 4 -------------------------- 
 ```
-
 Get-CsUser -Filter {RegistrarPool -eq "atl-cs-001.litwareinc.com"} | Grant-CsMobilityPolicy -PolicyName "RedmondMobilityPolicy"
 ```
 
@@ -109,16 +108,12 @@ After retrieving the collection of user accounts, those accounts are then piped 
 ## PARAMETERS
 
 ### -Identity
-
 Indicates the Identity of the user account to be assigned the per-user mobility policy.
 User Identities are typically specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
 User Identities can also be specified by using the user's Active Directory distinguished name.
 
 In addition, you can use the asterisk (*) wildcard character when using the Display Name as the user Identity.
 For example, the Identity "* Smith" will assign the policy to all the users who have a display name that ends with the string value " Smith".
-
-
-
 
 ```yaml
 Type: UserIdParameter
@@ -134,11 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
-
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -154,11 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
 Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified then the Grant-CsMobilityPolicy cmdlet will contact the first available domain controller.
-
-
 
 ```yaml
 Type: Fqdn
@@ -174,10 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
 Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
 By default, the Grant-CsMobilityPolicy cmdlet does not pass objects through the pipeline.
-
 
 ```yaml
 Type: SwitchParameter
@@ -193,7 +179,6 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix).
 For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; a policy with the Identity tag:RedmondUsersMobilityPolicy has a PolicyName equal to RedmondUsersMobilityPolicy.
@@ -204,9 +189,6 @@ To assign a per-user policy use syntax like this:
 To unassign a per-user policy previously assigned to a user, set the PolicyName to a null value ($Null):
 
 `-PolicyName $Null`
-
-
-
 
 ```yaml
 Type: String
@@ -222,10 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Describes what would happen if you executed the command without actually executing the command.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -244,7 +223,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -273,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

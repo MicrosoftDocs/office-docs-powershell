@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-logonstatistics
 applicable: Exchange Server 2010, Exchange Server 2013
 title: Get-LogonStatistics
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013"
 ---
 
@@ -13,30 +17,26 @@ This cmdlet is available only in on-premises Exchange and is only functional in 
 
 The Get-LogonStatistics cmdlet has been deprecated and is no longer used.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### Database
 ```
-Get-LogonStatistics -Database <DatabaseIdParameter> [-DomainController <Fqdn>]
- [[-Identity] <LogonableObjectIdParameter>] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-LogonStatistics [-Identity] <LogonableObjectIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-LogonStatistics -Database <DatabaseIdParameter>
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set3
+### Identity
 ```
-Get-LogonStatistics -Server <ServerIdParameter> [-DomainController <Fqdn>] -Database <DatabaseIdParameter>
- [<CommonParameters>]
+Get-LogonStatistics [-Identity] <LogonableObjectIdParameter>
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set4
+### Server
 ```
-Get-LogonStatistics -Server <ServerIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-LogonStatistics -Server <ServerIdParameter>
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,8 +48,8 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-LogonStatistics -Server Server01
 ```
 
@@ -58,19 +58,24 @@ This example returns logon statistics for all users connected to the server Serv
 ## PARAMETERS
 
 ### -Database
-The Database parameter specifies the name of the mailbox database. When you specify a value for the Database parameter, the Exchange Management Shell returns logon statistics for all the mailboxes in the database specified.
+The Database parameter specifies the mailbox database to get logon statistics from (all mailboxes in the specified database). You can use any value that uniquely identifies the mailbox database. For example:
 
-You can use the following value:
+- Name
 
-- Database
+- Distinguished name (DN)
+
+- GUID
 
 This parameter accepts pipeline input from the Get-MailboxDatabase command.
 
+You can't use this parameter with the Identity or Server parameters.
+
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: Database
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: True
 Position: Named
 Default value: None
@@ -79,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies a mailbox for which you want to obtain logon statistics. You can use one of the following values:
+The Identity parameter specifies the mailbox to get logon statistics from. You can use one of the following values to identify the mailbox:
 
 - GUID
 
@@ -97,23 +102,14 @@ The Identity parameter specifies a mailbox for which you want to obtain logon st
 
 This parameter accepts pipeline input from the Get-Mailbox command.
 
-```yaml
-Type: LogonableObjectIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
+You can't use this parameter with the Database or Server parameters.
 
 ```yaml
 Type: LogonableObjectIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: True
 Position: 1
 Default value: None
@@ -122,21 +118,22 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the server from which you want to obtain logon statistics. You can use one of the following values:
+The Server parameter specifies the Mailbox server to get logon statistics from (all mailboxes on all databases, including recovery databases, on the specified server). You can use one of the following values to identify the server:
 
 - Fully qualified domain name (FQDN)
 
 - NetBIOS name
 
-When you specify a value for the Server parameter, the command returns logon statistics for all the mailboxes on all the databases, including recovery databases, on the specified server. If you don't specify this parameter, the command returns logon statistics for the local server.
-
 This parameter accepts pipeline input from the Get-ExchangeServer and Get-MailboxServer commands.
+
+You can't use this parameter with the Database or Identity parameters.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set3, Set4
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: True
 Position: Named
 Default value: None
@@ -152,6 +149,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -160,20 +158,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/c06f202e-2302-4122-a514-9d11b6ad2c47.aspx)

@@ -1,14 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceuser
 applicable: Skype for Business Online
 title: Get-CsOnlineVoiceUser
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer:
 ---
 
 # Get-CsOnlineVoiceUser
 
 ## SYNOPSIS
-Use the Get-CsOnlineVoiceUser cmdlet to retrieve a voice user's telephone number and location.
+Use the `Get-CsOnlineVoiceUser` cmdlet to retrieve a voice user's telephone number and location.
 
 ## SYNTAX
 
@@ -190,7 +195,7 @@ Accept wildcard characters: False
 
 ### -LocationId
 Specifies the location identity of the location whose users will be returned.
-You can find location identifiers by using the Get-CsOnlineLisLocation cmdlet.
+You can find location identifiers by using the `Get-CsOnlineLisLocation` cmdlet.
 
 ```yaml
 Type: LocationID
@@ -311,9 +316,9 @@ Accept wildcard characters: False
 ### -AsJob
 Indicates that this cmdlet runs as a background job.
 
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the `Receive-Job` cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -329,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## INPUTS
@@ -346,6 +351,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsOnlineVoiceUser](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceuser?view=skype-ps)
+[Set-CsOnlineVoiceUser](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceuser?view=skype-ps)
 
-[Set-CsOnlineVoiceUserBulk](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceuserbulk?view=skype-ps)
+[Set-CsOnlineVoiceUserBulk](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceuserbulk?view=skype-ps)

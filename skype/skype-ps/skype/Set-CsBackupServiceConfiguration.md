@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csbackupserviceconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsBackupServiceConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsBackupServiceConfiguration
@@ -20,7 +25,7 @@ This cmdlet was introduced in Lync Server 2013.
 Set-CsBackupServiceConfiguration [[-Identity] <XdsIdentity>] [-AuthorizedLocalAccounts <String>]
  [-AuthorizedUniversalGroups <String>] [-Confirm] [-Force] [-MaxBatchesPerCmsSync <Int32>]
  [-MaxBatchesPerUserStoreSync <Int32>] [-MaxConcurrentCalls <Int32>] [-MaxDataConfPackageSizeKB <Int32>]
- [-SyncInterval <TimeSpan>] [-WhatIf] [-MaxHighPriQueuePercentagePerUserStoreSync <Int32>] [<CommonParameters>]
+ [-SyncInterval <TimeSpan>] [-WhatIf] [-MaxHighPriQueuePercentagePerUserStoreSync <Int32>] [-EnableRgsBackupService <Boolean>]  [<CommonParameters>]
 ```
 
 ### Instance
@@ -28,7 +33,7 @@ Set-CsBackupServiceConfiguration [[-Identity] <XdsIdentity>] [-AuthorizedLocalAc
 Set-CsBackupServiceConfiguration [-AuthorizedLocalAccounts <String>] [-AuthorizedUniversalGroups <String>]
  [-Confirm] [-Force] [-Instance <PSObject>] [-MaxBatchesPerCmsSync <Int32>]
  [-MaxBatchesPerUserStoreSync <Int32>] [-MaxConcurrentCalls <Int32>] [-MaxDataConfPackageSizeKB <Int32>]
- [-SyncInterval <TimeSpan>] [-WhatIf] [-MaxHighPriQueuePercentagePerUserStoreSync <Int32>] [<CommonParameters>]
+ [-SyncInterval <TimeSpan>] [-WhatIf] [-MaxHighPriQueuePercentagePerUserStoreSync <Int32>] [-EnableRgsBackupService <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -290,8 +295,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableRgsBackupService
+Indicates whether the backup service for RGS has been enabled or not. If it is set to true RGSBackupService will start syncing RGS data on paired pools
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

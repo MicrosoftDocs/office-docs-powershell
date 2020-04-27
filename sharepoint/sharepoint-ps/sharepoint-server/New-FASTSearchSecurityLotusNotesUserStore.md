@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsecuritylotusnotesuserstore
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchSecurityLotusNotesUserStore
 ---
 
@@ -27,13 +32,13 @@ This cmdlet configures FAST Search Server 2010 for SharePoint security for Lotus
 A Lotus Notes security user store uses a user-dependent query filter that is applied to each query to enforce the defined access control policies based on indexed values.
 The Lotus Notes security user store search filter requires that the user has read access to both the item and the database to view a specific item.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>new-FASTSearchSecurityLotusNotesUserStore ln1
+new-FASTSearchSecurityLotusNotesUserStore ln1
 ```
 
 This example creates a new security Lotus Notes user store with a user store identity of "ln1".
@@ -42,7 +47,7 @@ This example uses default values for all parameters except the required Identity
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1 | New-FASTSearchSecurityLotusNotesUserStore -Identity ln3 -UseViewSecurity $true
+Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1 | New-FASTSearchSecurityLotusNotesUserStore -Identity ln3 -UseViewSecurity $true
 ```
 
 This example creates a new Lotus Notes user store with an identity of "ln3" and enables view level security.
@@ -264,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csmediaconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsMediaConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # New-CsMediaConfiguration
@@ -81,13 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableQoS
-
-QoS monitors the quality of voice signals over a network.
-The EnableIncallQoS attribute enables or disables the ability of Skype for Business clients to send the raw data that's required to generate IncallQuality messages.
-
-Default: False
-
-
+QoS monitors the quality of voice signals over a network. When set to True, enables call Quality of Service (QoS) settings.
 
 ```yaml
 Type: Boolean
@@ -97,7 +96,7 @@ Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, 
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -125,7 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionLevel
-
 The level of encryption between unified communications devices.
 
 Valid values:
@@ -198,7 +196,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
 
@@ -301,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInCallQoS
-When set to True, enables call Quality of Service (QoS) settings.
+Enables or disables the ability of Skype for Business clients to send the raw data that's required to generate InCallQuality messages.
 
 ```yaml
 Type: Boolean
@@ -317,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRtpRtcpMultiplexing
-PARAMVALUE: $true | $false
+Enables or disables the use of RTP/RTCP Multiplexing, if enabled, when negotiating, only one candidate will be used for both RTP and RTCP.
 
 ```yaml
 Type: Boolean
@@ -349,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVideoBasedSharing
-{{Fill EnableVideoBasedSharing Description}}
+Enables the use of Video Based Sharing, for more information, see [Video based Screen Sharing for Skype for Business Server](https://docs.microsoft.com/skypeforbusiness/manage/video-based-screen-sharing) 
 
 ```yaml
 Type: Boolean
@@ -365,7 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csweblink
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsWebLink
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # New-CsWebLink
@@ -42,19 +47,19 @@ When you install Skype for Business Server a global collection of settings will 
 
 Managing Autodiscover configuration settings typically means adding Autodiscover URLs.
 These URLs must be created using the `New-CsWebLink` cmdlet, with the resulting URL stored in a variable and then added to a collection of Autodiscover configuration settings.
-Autodiscover URLs are based on the SIP domains used in your organization; administrators will typically create one URL for use by users outside the organization's firewall (for example, http://LyncDiscover.litwareinc.com) and a second URL (for example, http://LyncDiscoverInternal.litwareinc.com) for use by users inside the firewall.
+Autodiscover URLs are based on the SIP domains used in your organization; administrators will typically create one URL for use by users outside the organization's firewall (for example, https://LyncDiscover.litwareinc.com) and a second URL (for example, https://LyncDiscoverInternal.litwareinc.com) for use by users inside the firewall.
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-$Link1 = New-CsWebLink -Token "Fabrikam" -Href "http://LyncDiscover.fabrikam.com"
+$Link1 = New-CsWebLink -Token "Fabrikam" -Href "https://LyncDiscover.fabrikam.com"
 
 Set-CsAutoDiscoverConfiguration -Identity "site:Redmond" -WebLinks @{Add=$Link1}
 ```
 
-The commands shown in Example 1 add a new Autodiscover URL (http://LyncDiscover.fabrikam.com) to the Autodiscover configuration settings assigned to the Redmond site.
+The commands shown in Example 1 add a new Autodiscover URL (https://LyncDiscover.fabrikam.com) to the Autodiscover configuration settings assigned to the Redmond site.
 To do this, the first command in the example uses the `New-CsWebLink` cmdlet to create a new Autodiscover URL; that URL is stored in a variable named $Link1.
 After that, the `Set-CsAutoDiscoverConfiguration` cmdlet is used to add the new URL to any URLs already assigned to these settings.
 This is done by using the WebLinks parameter and the parameter value @{Add=$Link1}.
@@ -62,14 +67,14 @@ This is done by using the WebLinks parameter and the parameter value @{Add=$Link
 
 ### -------------------------- Example 2 --------------------------
 ```
-$Link1 = New-CsWebLink -Token "Fabrikam" -Href "http://LyncDiscover.fabrikam.com"
+$Link1 = New-CsWebLink -Token "Fabrikam" -Href "https://LyncDiscover.fabrikam.com"
 
-$Link2 = New-CsWebLink -Token "Fabrikam" -Href "http://LyncDiscoverInternal.fabrikam.com"
+$Link2 = New-CsWebLink -Token "Fabrikam" -Href "https://LyncDiscoverInternal.fabrikam.com"
 
 Set-CsAutoDiscoverConfiguration -Identity "site:Redmond" -WebLinks @{Add=$Link1,$Link2}
 ```
 
-The commands in Example 2 assign a pair of Autodiscover URLs (http://LyncDiscover.fabrikam.com and http://LyncDiscoverInternal.fabrikam.com) to the Autodiscover configuration settings assigned to the Redmond site..
+The commands in Example 2 assign a pair of Autodiscover URLs (https://LyncDiscover.fabrikam.com and https://LyncDiscoverInternal.fabrikam.com) to the Autodiscover configuration settings assigned to the Redmond site..
 In order to carry out this task, the first two commands use the `New-CsWebLink` cmdlet to create the two Autodiscover URLs; the newly-created URLs are then stored in variables named $Link1 and $Link2.
 After the two URLs are created, the third command uses the `Set-CsAutoDiscoverConfiguration` cmdlet to assign the two URLs to the Redmond site.
 To do this, the WebLinks parameter is included along with the parameter value @{Add=$Link1,$Link2}.
@@ -81,7 +86,7 @@ That syntax causes the values stored in the variables $Link1 and $Link2 to be ad
 ### -Href
 URL for the Autodiscover service, For example:
 
-`-Href "http://LyncDiscover.fabrikam.com"`
+`-Href "https://LyncDiscover.fabrikam.com"`
 
 ```yaml
 Type: String
@@ -116,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

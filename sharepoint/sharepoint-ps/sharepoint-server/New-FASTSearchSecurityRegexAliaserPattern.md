@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsecurityregexaliaserpattern
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchSecurityRegexAliaserPattern
 ---
 
@@ -23,13 +28,13 @@ New-FASTSearchSecurityRegexAliaserPattern [-Regex] <String> [-MapToUsername] <St
 This cmdlet creates a new regular expression pattern that can be added to the list of patterns for a regular expression based principal aliaser.
 This cmdlet creates a regular expression pattern that is used by and input to the New-FASTSearchSecurityRegexAliaser and Set-FASTSearchSecurityRegexAliaser cmdlets.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchSecurityRegexAliaserPattern -Regex .* -InputPropertyName mail -MapToUsername "\1"
+New-FASTSearchSecurityRegexAliaserPattern -Regex .* -InputPropertyName mail -MapToUsername "\1"
 ```
 
 This example creates a regular expression pattern that can be used to map the "mail" property of a Microsoft user store to identities in other user stores.
@@ -118,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

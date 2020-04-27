@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectpermissionmode
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectPermissionMode
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectPermissionMode
@@ -23,13 +28,13 @@ The `Set-SPProjectPermissionMode` cmdlet changes the permission mode for the spe
 
 Switching security modes deletes all permissions configuration information for the specified Project Web App instance and reverts to the default settings for the specified mode.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-------------------
 ```
-C:\PS>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode ProjectServer
+Set-SPPRojectPermissionMode -Url https://AppServer/pwa -Mode ProjectServer
 ```
 
 This example shows the syntax for transitioning a server into Project Server permission mode.
@@ -37,7 +42,7 @@ This example shows the syntax for transitioning a server into Project Server per
 
 ### --------------EXAMPLE 2-------------------
 ```
-C:\PS>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode SharePoint
+Set-SPPRojectPermissionMode -Url https://AppServer/pwa -Mode SharePoint
 ```
 
 This example shows the syntax for transitioning a server into SharePoint permission mode.
@@ -48,13 +53,13 @@ This example shows the syntax for transitioning a server into SharePoint permiss
 ### -Url
 Specifies the URL of the Project Web App instance for which the permission mode is to be changed.
 
-The type must be a valid URL, in the form http://\<ServerName\>/\<PWAName\>.
+The type must be a valid URL, in the form https://\<ServerName\>/\<PWAName\>.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -72,7 +77,7 @@ The type must be a valid permission mode, in the form SharePoint or ProjectServe
 Type: PermissionMode
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 2
@@ -94,7 +99,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -104,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

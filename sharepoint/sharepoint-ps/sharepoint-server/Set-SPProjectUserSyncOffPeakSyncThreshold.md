@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersyncoffpeaksyncthreshold
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectUserSyncOffPeakSyncThreshold
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Set-SPProjectUserSyncOffPeakSyncThreshold
@@ -26,16 +31,16 @@ Set it to a negative value to reset to the default of no threshold configured.
 
 This cmdlet only works in Project Server Permission mode.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>Set-SPProjectUserSyncOffPeakSyncThreshold -URL http://contoso/PWA -Threshold 900000
+Set-SPProjectUserSyncOffPeakSyncThreshold -URL https://contoso/PWA -Threshold 900000
 ```
 
-This example sets the sync off-peak threshold for the Project Web App instance at http//contoso-AppSrv/PWA to 900000.
+This example sets the sync off-peak threshold for the Project Web App instance at https://contoso-AppSrv/PWA to 900000.
 
 
 ## PARAMETERS
@@ -47,7 +52,7 @@ The URL of the Project Web App instance where you want to set the threshold.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 2
@@ -63,7 +68,7 @@ A whole number consisting of the number of projects multiplied by the number of 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 3
@@ -85,7 +90,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -95,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

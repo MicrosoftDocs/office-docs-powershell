@@ -1,52 +1,63 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-retentioncompliancerule
 applicable: Office 365 Security & Compliance Center
 title: New-RetentionComplianceRule
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
 # New-RetentionComplianceRule
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the New-RetentionComplianceRule cmdlet to create new retention rules in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### ComplianceTag
 ```
-New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParameter> [-Confirm]
- [-ContentContainsSensitiveInformation <PswsHashtable[]>] [-ContentMatchQuery <String>]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm]
- [-ContentMatchQuery <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-ExpirationDateOption <String>]
- [-RetentionComplianceAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionDurationDisplayHint <Days | Months | Years>] [-WhatIf] [<CommonParameters>]
+New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParameter> [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-Confirm]
+ [-ContentMatchQuery <String>]
+ [-ExpirationDateOption <String>]
+ [-RetentionComplianceAction <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Default
+```
+New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-RetentionDuration <Unlimited>] [-RetentionDurationDisplayHint <HoldDurationHint>]
+ [-Confirm]
+ [-ContentMatchQuery <String>]
+ [-ExpirationDateOption <String>]
+ [-RetentionComplianceAction <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### PublishComplianceTag
 ```
 New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <String> [-Confirm]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-WhatIf] [<CommonParameters>]
+ [-ExpirationDateOption <String>]
+ [-RetentionComplianceAction <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The retention rule must be added to an existing retention policy using the Policy parameter. Only one rule can be added to each retention policy.
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-RetentionComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -RetentionDuration Unlimited
 ```
 
@@ -63,9 +74,10 @@ You can't use this parameter with the Name or PublishComplianceTag parameters.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ComplianceTag
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -80,9 +92,10 @@ You can't use this parameter with the ApplyComplianceTag or PublishComplianceTag
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -98,6 +111,7 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -114,9 +128,10 @@ You can't use this parameter with the Name or ApplyComplianceTag parameters.
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: PublishComplianceTag
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: Named
 Default value: None
@@ -129,9 +144,10 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +167,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -163,15 +180,16 @@ The ContentContainsSensitiveInformation parameter specifies a condition for the 
 
 This parameter uses the basic syntax @(@{Name="\<SensitiveInformationType1\>";[minCount="\<Value\>"],@{Name="\<SensitiveInformationType2\>";[minCount="\<Value\>"],...). For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
 
-Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see Sensitive information types inventory (https://go.microsoft.com/fwlink/p/?LinkId=529420).
+Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://go.microsoft.com/fwlink/p/?LinkId=529420).
 
 You can use this parameter with the ApplyComplianceTag parameter.
 
 ```yaml
 Type: PswsHashtable[]
-Parameter Sets: Set2
+Parameter Sets: ComplianceTag
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -182,13 +200,14 @@ Accept wildcard characters: False
 ### -ContentMatchQuery
 The ContentMatchQuery parameter specifies a content search filter.
 
-This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
+This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://go.microsoft.com/fwlink/p/?linkid=269603).
 
 ```yaml
 Type: String
-Parameter Sets: Set2, Set1
+Parameter Sets: ComplianceTag, Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -219,9 +238,10 @@ You can specify multiple item class values by using the syntax "Value1","Value2"
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -241,6 +261,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -262,6 +283,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -278,9 +300,10 @@ The RetentionDuration parameter specifies the hold duration for the retention ru
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -300,10 +323,11 @@ The RetentionDurationDisplayHint parameter specifies the units that are used to 
 For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
 
 ```yaml
-Type: Days | Months | Years
-Parameter Sets: Set1
+Type: HoldDurationHint
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -312,13 +336,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -327,20 +352,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/9ad613ff-dbb4-4a86-9f4c-ab212e68603a.aspx)

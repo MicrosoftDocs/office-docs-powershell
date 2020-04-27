@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsecurityxmlaliaser
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 title: New-FASTSearchSecurityXMLAliaser
 ---
 
@@ -21,13 +26,13 @@ New-FASTSearchSecurityXMLAliaser [-InputUserStoreId] <String> [-OutputUserStoreI
 ## DESCRIPTION
 This cmdlet creates an XML aliaser to map users and groups from one user store to users and groups in other user stores, based on an XML mapping file.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchSecurityXMLAliaser -InputUserStoreId win -OutputUserStoreIds ln3 -InputPropertyName mail
+New-FASTSearchSecurityXMLAliaser -InputUserStoreId win -OutputUserStoreIds ln3 -InputPropertyName mail
 ```
 
 This example creates an XML principal aliaser to map the mail property of a Microsoft user store to users and groups in another user store.
@@ -36,7 +41,7 @@ Use the Set-FASTSearchSecurityXMLAliaser cmdlet to upload the XML mapping file.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchSecurityAliaser xmlalias2 | New-FASTSearchSecurityXMLAliaser -Identity myxmlalias -OutputUserStoreIds ln2
+Get-FASTSearchSecurityAliaser xmlalias2 | New-FASTSearchSecurityXMLAliaser -Identity myxmlalias -OutputUserStoreIds ln2
 ```
 
 This example creates an XML principal aliaser based on an existing XML aliaser but sets the output user store IDs to 'ln2'.
@@ -140,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/stop-csclslogging
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Stop-CsClsLogging
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Stop-CsClsLogging
@@ -101,7 +106,7 @@ Multiple servers can be specified by separating the computer FQDNs using commas:
 
 `-Computers "atl-server-001.litwareinc.com","red-server-002.litwareinc.com"`
 
-If you do not include the Computers parameter or the Pools parameter, the `Stop-CsClsLogging` cmdlet will run the command against all pools in the topology.
+If you do not include the Computers parameter or the Pools parameter, the `Stop-CsClsLogging` cmdlet will automatically run against the server you are connected to.
 
 
 ```yaml
@@ -142,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

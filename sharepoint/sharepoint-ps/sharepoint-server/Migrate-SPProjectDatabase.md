@@ -1,14 +1,19 @@
 ---
-external help file: 
-applicable: Project Server 2016
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/migrate-spprojectdatabase
+applicable: Project Server 2016, Project Server 2019
 title: Migrate-SPProjectDatabase
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Migrate-SPProjectDatabase
 
 ## SYNOPSIS
-Copies the data from the Project Server 2013 database into the corresponding SharePoint Server 2016 content database containing the migrated site collection.
+Copies the data from the Project Server 2013 database into the corresponding SharePoint Server 2016, SharePoint Server 2019 content database containing the migrated site collection.
 
 ## SYNTAX
 
@@ -19,18 +24,18 @@ Migrate-SPProjectDatabase [-AssignmentCollection <SPAssignmentCollection>] [-Con
 ```
 
 ## DESCRIPTION
-Copies the data from the Project Server 2013 database into the corresponding SharePoint Server 2016 content database containing the migrated site collection.
+Copies the data from the Project Server 2013 database into the corresponding SharePoint Server 2016, SharePoint Server 2019 content database containing the migrated site collection.
 
-Both the Project Server 2013 database and the SharePoint Server 2016 database must be on the same instance of SQL
+Both the Project Server 2013 database and the SharePoint Server 2016, SharePoint Server 2019 database must be on the same instance of SQL
 Server and the SharePoint farm account must have full access to the Project Server 2013 database. During the migration process the Project Server 2013 database will be modified and cannot be mounted back to a Project Server 2013.
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\>Migrate-SPProjectDatabase -Name ProjectDB1 -SiteCollection "http://contoso1/sites/PWA"
+Migrate-SPProjectDatabase -Name ProjectDB1 -SiteCollection "https://contoso1/sites/PWA"
 ```
 
-This example will look for a Project Server 2013 database named ProjectDB1 on the same instance of SQL Server where the content database containing http://contoso1/sites/PWA is located. The data will be upgraded and copied into the site collection.
+This example will look for a Project Server 2013 database named ProjectDB1 on the same instance of SQL Server where the content database containing https://contoso1/sites/PWA is located. The data will be upgraded and copied into the site collection.
 
 ## PARAMETERS
 
@@ -43,7 +48,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -59,7 +64,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -75,7 +80,7 @@ The name of the Project Server 2013 database.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -91,7 +96,7 @@ The name of the instance of SQL Server hosting the Project Server 2013 database.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -107,7 +112,7 @@ The name of the SQL Server failover partner for the Project Server 2013 database
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -123,7 +128,7 @@ Specifies to overwrite any Project data from previous attempts.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -139,7 +144,7 @@ SQL Server authentication credentials if needed.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -155,7 +160,7 @@ The URL of the site collection to which you want to copy the Project data.
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -172,7 +177,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -182,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

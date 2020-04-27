@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csnetworkconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsNetworkConfiguration
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsNetworkConfiguration
@@ -15,31 +20,20 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsNetworkConfiguration [[-Identity] <XdsIdentity>] [-BWPolicyProfiles <PSListModifier>]
- [-EnableBandwidthPolicyCheck <Boolean>] [-InterNetworkRegionRoutes <PSListModifier>]
- [-InterNetworkSitePolicies <PSListModifier>] [-MediaBypassSettings <MediaBypassSettingsType>]
- [-NetworkRegionLinks <PSListModifier>] [-NetworkRegions <PSListModifier>] [-NetworkSites <PSListModifier>]
- [-Subnets <PSListModifier>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsNetworkConfiguration [-Tenant <Guid>] [-MediaBypassSettings <MediaBypassSettingsType>]
+ [-BWPolicyProfiles <PSListModifier>] [-NetworkRegions <PSListModifier>] [-NetworkRegionLinks <PSListModifier>] [-InterNetworkRegionRoutes <PSListModifier>]
+ [-NetworkSites <PSListModifier>] [-InterNetworkSitePolicies <PSListModifier>] [-Subnets <PSListModifier>] [-EnableBandwidthPolicyCheck <Boolean>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsNetworkConfiguration [-Instance <PSObject>] [-BWPolicyProfiles <PSListModifier>]
- [-EnableBandwidthPolicyCheck <Boolean>] [-InterNetworkRegionRoutes <PSListModifier>]
- [-InterNetworkSitePolicies <PSListModifier>] [-MediaBypassSettings <MediaBypassSettingsType>]
- [-NetworkRegionLinks <PSListModifier>] [-NetworkRegions <PSListModifier>] [-NetworkSites <PSListModifier>]
- [-Subnets <PSListModifier>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsNetworkConfiguration [[-Identity] <Object>] [-BWPolicyProfiles <Object>] [-BypassDualWrite <Object>]
- [-Confirm] [-EnableBandwidthPolicyCheck <Object>] [-Force] [-Instance <Object>]
- [-InterNetworkRegionRoutes <Object>] [-InterNetworkSitePolicies <Object>] [-MediaBypassSettings <Object>]
- [-NetworkRegionLinks <Object>] [-NetworkRegions <Object>] [-NetworkSites <Object>] [-Subnets <Object>]
- [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsNetworkConfiguration [-Tenant <Guid>] [-MediaBypassSettings <MediaBypassSettingsType>]
+ [-BWPolicyProfiles <PSListModifier>] [-NetworkRegions <PSListModifier>] [-NetworkRegionLinks <PSListModifier>] [-InterNetworkRegionRoutes <PSListModifier>]
+ [-NetworkSites <PSListModifier>] [-InterNetworkSitePolicies <PSListModifier>] [-Subnets <PSListModifier>] [-EnableBandwidthPolicyCheck <Boolean>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,19 +88,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Instance
 A reference to a network configuration object.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.NetworkConfigurationSettings, which can be retrieved by calling the `Get-CsNetworkConfiguration` cmdlet.
@@ -115,19 +96,6 @@ This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.Net
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -362,43 +330,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -411,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

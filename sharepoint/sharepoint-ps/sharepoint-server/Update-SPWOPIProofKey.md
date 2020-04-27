@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spwopiproofkey
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPWOPIProofKey
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Update-SPWOPIProofKey
@@ -21,15 +26,15 @@ Update-SPWOPIProofKey [-AssignmentCollection <SPAssignmentCollection>] [-ServerN
 ## DESCRIPTION
 The `Update-SPWOPIProofKey` cmdlet updates the public key that is used to connect to the WOPI application (which could be a server that runs Office Web Apps Server) on the current SharePoint farm where this cmdlet is run.
 You may want to use this cmdlet if the keys become unsynchronized between the SharePoint farm and the WOPI application.
-If the keys are unsynchronized, documents may not open in the browser and messages such as "Invalid Proof Signature for file…" or "Invalid Proof Signature for folder..." are found in the Unified Logging System (ULS) logs.
+If the keys are unsynchronized, documents may not open in the browser and messages such as "Invalid Proof Signature for file..." or "Invalid Proof Signature for folder..." are found in the Unified Logging System (ULS) logs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE-----------------
 ```
-C:\PS>Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
+Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
 ```
 
 This example obtains the current public key from the WOPI application (such as a server that runs Office Web Apps Server) and updates the key that is stored on the SharePoint farm.
@@ -49,7 +54,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -67,7 +72,7 @@ If this parameter is missing, public keys for all WOPI applications which are co
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -77,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

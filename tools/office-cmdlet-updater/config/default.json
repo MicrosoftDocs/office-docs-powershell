@@ -1,0 +1,77 @@
+{
+	"name": "Office cmdlet updater",
+	"description": "Update documentation for modules in this repository. Available Modules: teams, skype, sharepoint, whiteboard, exchange, staffhub",
+	"version": "0.0.3",
+	"platyPS": {
+		"credentials": {
+			"login": "",
+			"pass": ""
+		},
+		"docs": [
+			{
+				"name": "teams",
+				"path": "..\\..\\teams\\teams-ps\\teams",
+				"metaTags": []
+			},
+			{
+				"name": "skype",
+				"path": "..\\..\\skype\\skype-ps\\skype",
+				"metaTags": ["Skype for Business Online"]
+			},
+			{
+				"name": "sharepoint",
+				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
+				"metaTags": []
+			},
+			{
+				"name": "staffhub",
+				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
+				"metaTags": []
+			},
+			{
+				"name": "whiteboard",
+				"path": "..\\..\\whiteboard\\whiteboard-ps\\whiteboard",
+				"metaTags": []
+			},
+			{
+				"name": "exchange",
+				"path": "..\\..\\exchange\\exchange-ps\\exchange",
+				"metaTags": []
+			}
+		],
+		"ignoreFiles": [
+			"..\\..\\teams\\teams-ps\\teams\\teams.md",
+			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md",
+			"..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online\\sharepoint-online.md",
+			"..\\..\\staffhub\\staffhub-ps\\staffhub\\staffhub.md"
+		],
+		"tempFolderPath": ".\\.local\\temp"
+	},
+	"sendgrid": {
+		"apiKey": "<API_KEY>",
+		"emailSettings": {
+			"from": "no-replay@outlook.com",
+			"to": "test@gmail.com",
+			"subject": "Test subject"
+		}
+	},
+	"github": {
+		"token": "<TOKEN>",
+		"login": "<LOGIN>",
+		"pass": "<PASSWORD>",
+		"name": "Bot",
+		"email": "bot@example.com",
+		"commitMessage": "Automatically created commit with cmdlets updates",
+		"repositoryName": "office-docs-powershell",
+		"repositoryLocalPath": "..\\..\\",
+		"remoteName": "origin",
+		"head": "refs/heads/tools",
+		"base": "refs/heads/tools",
+		"pullRequest": {
+			"title": "Automatically created commit with cmdlets updates",
+			"body": "Last cmdlets updates",
+			"head": "tools",
+			"base": "master"
+		}
+	}
+}

@@ -1,8 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsClientPolicy
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsClientPolicy
@@ -15,119 +20,94 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsClientPolicy [[-Identity] <XdsIdentity>] [-AddressBookAvailability <AddressBookAvailability>]
- [-AttendantSafeTransfer <Boolean>] [-AutoDiscoveryRetryInterval <TimeSpan>]
- [-BlockConversationFromFederatedContacts <Boolean>] [-CalendarStatePublicationInterval <UInt32>]
- [-ConferenceIMIdleTimeout <TimeSpan>] [-CustomizedHelpUrl <String>] [-CustomLinkInErrorMessages <String>]
- [-CustomStateUrl <String>] [-Description <String>] [-DGRefreshInterval <TimeSpan>]
+Set-CsClientPolicy [-Tenant <Guid>] [-PolicyEntry <PSListModifier>] [-Description <String>]
+ [-AddressBookAvailability <AddressBookAvailability>] [-AttendantSafeTransfer <Boolean>]
+ [-AutoDiscoveryRetryInterval <TimeSpan>] [-BlockConversationFromFederatedContacts <Boolean>]
+ [-CalendarStatePublicationInterval <UInt32>] [-CustomizedHelpUrl <String>]
+ [-CustomLinkInErrorMessages <String>] [-CustomStateUrl <String>] [-DGRefreshInterval <TimeSpan>]
  [-DisableCalendarPresence <Boolean>] [-DisableContactCardOrganizationTab <Boolean>]
  [-DisableEmailComparisonCheck <Boolean>] [-DisableEmoticons <Boolean>]
- [-DisableFederatedPromptDisplayName <Boolean>] [-DisableFeedsTab <Boolean>] [-DisableFreeBusyInfo <Boolean>]
- [-DisableHandsetOnLockedMachine <Boolean>] [-DisableHtmlIm <Boolean>] [-DisableICE <Boolean>]
- [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>] [-DisableOnlineContextualSearch <Boolean>]
- [-DisablePhonePresence <Boolean>] [-DisablePICPromptDisplayName <Boolean>]
- [-DisablePoorDeviceWarnings <Boolean>] [-DisablePoorNetworkWarnings <Boolean>]
- [-DisablePresenceNote <Boolean>] [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>]
- [-DisplayPhoto <DisplayPhoto>] [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
- [-EnableClientMusicOnHold <Boolean>] [-EnableConversationWindowTabs <Boolean>]
- [-EnableEnterpriseCustomizedHelp <Boolean>] [-EnableEventLogging <Boolean>]
- [-EnableExchangeContactSync <Boolean>] [-EnableExchangeDelegateSync <Boolean>]
- [-EnableFullScreenVideo <Boolean>] [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
- [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
+ [-DisableFeedsTab <Boolean>] [-DisableFederatedPromptDisplayName <Boolean>]
+ [-DisableFreeBusyInfo <Boolean>] [-DisableHandsetOnLockedMachine <Boolean>]
+ [-DisableMeetingSubjectAndLocation <Boolean>] [-DisableHtmlIm <Boolean>]
+ [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>]
+ [-DisableOnlineContextualSearch <Boolean>] [-DisablePhonePresence <Boolean>]
+ [-DisablePICPromptDisplayName <Boolean>] [-DisablePoorDeviceWarnings <Boolean>]
+ [-DisablePoorNetworkWarnings <Boolean>] [-DisablePresenceNote <Boolean>]
+ [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>] [-DisplayPhoto <DisplayPhoto>]
+ [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
+ [-EnableClientAutoPopulateWithTeam <Boolean>] [-EnableClientMusicOnHold <Boolean>]
+ [-EnableConversationWindowTabs <Boolean>] [-EnableEnterpriseCustomizedHelp <Boolean>]
+ [-EnableEventLogging <Boolean>] [-EnableExchangeContactSync <Boolean>]
+ [-EnableExchangeDelegateSync <Boolean>] [-EnableExchangeContactsFolder <Boolean>]
+ [-EnableFullScreenVideo <Boolean>] [-EnableHighPerformanceConferencingAppSharing <Boolean>]
+ [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
+ [-EnableMediaRedirection <Boolean>] [-EnableMeetingEngagement <Boolean>]
+ [-EnableNotificationForNewSubscribers <Boolean>] [-EnableServerConversationHistory <Boolean>]
+ [-EnableSkypeUI <Boolean>] [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>]
+ [-EnableURL <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
  [-EnableVOIPCallDefault <Boolean>] [-ExcludedContactFolders <String>] [-HotdeskingTimeout <TimeSpan>]
  [-IMWarning <String>] [-MAPIPollInterval <TimeSpan>] [-MaximumDGsAllowedInContactList <UInt32>]
- [-MaximumNumberOfContacts <UInt16>] [-MusicOnHoldAudioFile <String>]
- [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-PlayAbbreviatedDialTone <Boolean>]
- [-PolicyEntry <PSListModifier>] [-SearchPrefixFlags <UInt16>] [-ShowManagePrivacyRelationships <Boolean>]
- [-ShowRecentContacts <Boolean>] [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchCenterExternalURL <String>]
- [-SPSearchCenterInternalURL <String>] [-SPSearchExternalURL <String>] [-SPSearchInternalURL <String>]
- [-TabURL <String>] [-WebServicePollInterval <TimeSpan>] [-Force] [-WhatIf] [-Confirm]
- [-DisableMeetingSubjectAndLocation <Boolean>] [-EnableNotificationForNewSubscribers <Boolean>]
- [-EnableURL <Boolean>] [-MaxPhotoSizeKB <UInt32>] [-EnableMediaRedirection <Boolean>]
- [-HelpEnvironment <String>] [-TracingLevel <TracingLevel>]
- [-EnableHighPerformanceConferencingAppSharing <Boolean>] [-EnableHighPerformanceP2PAppSharing <Boolean>]
- [-EnableServerConversationHistory <Boolean>] [-EnableSkypeUI <Boolean>] [-IMLatencyErrorThreshold <UInt32>]
- [-IMLatencySpinnerDelay <UInt32>] [-RateMyCallAllowCustomUserFeedback <Boolean>]
- [-RateMyCallDisplayPercentage <UInt16>] [-Tenant <Guid>] [<CommonParameters>]
+ [-MaximumNumberOfContacts <UInt16>] [-MaxPhotoSizeKB <UInt32>] [-MusicOnHoldAudioFile <String>]
+ [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-EnableHighPerformanceP2PAppSharing <Boolean>]
+ [-PlayAbbreviatedDialTone <Boolean>] [-RequireContentPin <String>] [-SearchPrefixFlags <UInt16>]
+ [-ShowRecentContacts <Boolean>] [-ShowManagePrivacyRelationships <Boolean>]
+ [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchInternalURL <String>] [-SPSearchExternalURL <String>]
+ [-SPSearchCenterInternalURL <String>] [-SPSearchCenterExternalURL <String>] [-TabURL <String>]
+ [-TracingLevel <TracingLevel>] [-TelemetryTier <String>] [-PublicationBatchDelay <UInt32>]
+ [-EnableViewBasedSubscriptionMode <Boolean>] [-WebServicePollInterval <TimeSpan>]
+ [-HelpEnvironment <String>] [-RateMyCallDisplayPercentage <UInt16>]
+ [-RateMyCallAllowCustomUserFeedback <Boolean>] [-IMLatencySpinnerDelay <UInt32>]
+ [-IMLatencyErrorThreshold <UInt32>] [-SupportModernFilePicker <Boolean>] [-EnableOnlineFeedback <Boolean>]
+ [-EnableOnlineFeedbackScreenshots <Boolean>] [-ConferenceIMIdleTimeout <TimeSpan>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsClientPolicy [-Instance <PSObject>] [-AddressBookAvailability <AddressBookAvailability>]
- [-AttendantSafeTransfer <Boolean>] [-AutoDiscoveryRetryInterval <TimeSpan>]
- [-BlockConversationFromFederatedContacts <Boolean>] [-CalendarStatePublicationInterval <UInt32>]
- [-ConferenceIMIdleTimeout <TimeSpan>] [-CustomizedHelpUrl <String>] [-CustomLinkInErrorMessages <String>]
- [-CustomStateUrl <String>] [-Description <String>] [-DGRefreshInterval <TimeSpan>]
+Set-CsClientPolicy [-Tenant <Guid>] [-PolicyEntry <PSListModifier>] [-Description <String>]
+ [-AddressBookAvailability <AddressBookAvailability>] [-AttendantSafeTransfer <Boolean>]
+ [-AutoDiscoveryRetryInterval <TimeSpan>] [-BlockConversationFromFederatedContacts <Boolean>]
+ [-CalendarStatePublicationInterval <UInt32>] [-CustomizedHelpUrl <String>]
+ [-CustomLinkInErrorMessages <String>] [-CustomStateUrl <String>] [-DGRefreshInterval <TimeSpan>]
  [-DisableCalendarPresence <Boolean>] [-DisableContactCardOrganizationTab <Boolean>]
  [-DisableEmailComparisonCheck <Boolean>] [-DisableEmoticons <Boolean>]
- [-DisableFederatedPromptDisplayName <Boolean>] [-DisableFeedsTab <Boolean>] [-DisableFreeBusyInfo <Boolean>]
- [-DisableHandsetOnLockedMachine <Boolean>] [-DisableHtmlIm <Boolean>] [-DisableICE <Boolean>]
- [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>] [-DisableOnlineContextualSearch <Boolean>]
- [-DisablePhonePresence <Boolean>] [-DisablePICPromptDisplayName <Boolean>]
- [-DisablePoorDeviceWarnings <Boolean>] [-DisablePoorNetworkWarnings <Boolean>]
- [-DisablePresenceNote <Boolean>] [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>]
- [-DisplayPhoto <DisplayPhoto>] [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
- [-EnableClientMusicOnHold <Boolean>] [-EnableConversationWindowTabs <Boolean>]
- [-EnableEnterpriseCustomizedHelp <Boolean>] [-EnableEventLogging <Boolean>]
- [-EnableExchangeContactSync <Boolean>] [-EnableExchangeDelegateSync <Boolean>]
- [-EnableFullScreenVideo <Boolean>] [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
- [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
+ [-DisableFeedsTab <Boolean>] [-DisableFederatedPromptDisplayName <Boolean>]
+ [-DisableFreeBusyInfo <Boolean>] [-DisableHandsetOnLockedMachine <Boolean>]
+ [-DisableMeetingSubjectAndLocation <Boolean>] [-DisableHtmlIm <Boolean>]
+ [-DisableInkIM <Boolean>] [-DisableOneNote12Integration <Boolean>]
+ [-DisableOnlineContextualSearch <Boolean>] [-DisablePhonePresence <Boolean>]
+ [-DisablePICPromptDisplayName <Boolean>] [-DisablePoorDeviceWarnings <Boolean>]
+ [-DisablePoorNetworkWarnings <Boolean>] [-DisablePresenceNote <Boolean>]
+ [-DisableRTFIM <Boolean>] [-DisableSavingIM <Boolean>] [-DisplayPhoto <DisplayPhoto>]
+ [-EnableAppearOffline <Boolean>] [-EnableCallLogAutoArchiving <Boolean>]
+ [-EnableClientAutoPopulateWithTeam <Boolean>] [-EnableClientMusicOnHold <Boolean>]
+ [-EnableConversationWindowTabs <Boolean>] [-EnableEnterpriseCustomizedHelp <Boolean>]
+ [-EnableEventLogging <Boolean>] [-EnableExchangeContactSync <Boolean>]
+ [-EnableExchangeDelegateSync <Boolean>] [-EnableExchangeContactsFolder <Boolean>]
+ [-EnableFullScreenVideo <Boolean>] [-EnableHighPerformanceConferencingAppSharing <Boolean>]
+ [-EnableHotdesking <Boolean>] [-EnableIMAutoArchiving <Boolean>]
+ [-EnableMediaRedirection <Boolean>] [-EnableMeetingEngagement <Boolean>]
+ [-EnableNotificationForNewSubscribers <Boolean>] [-EnableServerConversationHistory <Boolean>]
+ [-EnableSkypeUI <Boolean>] [-EnableSQMData <Boolean>] [-EnableTracing <Boolean>]
+ [-EnableURL <Boolean>] [-EnableUnencryptedFileTransfer <Boolean>]
  [-EnableVOIPCallDefault <Boolean>] [-ExcludedContactFolders <String>] [-HotdeskingTimeout <TimeSpan>]
  [-IMWarning <String>] [-MAPIPollInterval <TimeSpan>] [-MaximumDGsAllowedInContactList <UInt32>]
- [-MaximumNumberOfContacts <UInt16>] [-MusicOnHoldAudioFile <String>]
- [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-PlayAbbreviatedDialTone <Boolean>]
- [-PolicyEntry <PSListModifier>] [-SearchPrefixFlags <UInt16>] [-ShowManagePrivacyRelationships <Boolean>]
- [-ShowRecentContacts <Boolean>] [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchCenterExternalURL <String>]
- [-SPSearchCenterInternalURL <String>] [-SPSearchExternalURL <String>] [-SPSearchInternalURL <String>]
- [-TabURL <String>] [-WebServicePollInterval <TimeSpan>] [-Force] [-WhatIf] [-Confirm]
- [-DisableMeetingSubjectAndLocation <Boolean>] [-EnableNotificationForNewSubscribers <Boolean>]
- [-EnableURL <Boolean>] [-MaxPhotoSizeKB <UInt32>] [-EnableMediaRedirection <Boolean>]
- [-HelpEnvironment <String>] [-TracingLevel <TracingLevel>]
- [-EnableHighPerformanceConferencingAppSharing <Boolean>] [-EnableHighPerformanceP2PAppSharing <Boolean>]
- [-EnableServerConversationHistory <Boolean>] [-EnableSkypeUI <Boolean>] [-IMLatencyErrorThreshold <UInt32>]
- [-IMLatencySpinnerDelay <UInt32>] [-RateMyCallAllowCustomUserFeedback <Boolean>]
- [-RateMyCallDisplayPercentage <UInt16>] [-Tenant <Guid>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsClientPolicy [[-Identity] <Object>] [-AddressBookAvailability <Object>] [-AttendantSafeTransfer <Object>]
- [-AutoDiscoveryRetryInterval <Object>] [-BlockConversationFromFederatedContacts <Object>]
- [-BypassDualWrite <Object>] [-CalendarStatePublicationInterval <Object>] [-ConferenceIMIdleTimeout <Object>]
- [-Confirm] [-CustomLinkInErrorMessages <Object>] [-CustomStateUrl <Object>] [-CustomizedHelpUrl <Object>]
- [-DGRefreshInterval <Object>] [-Description <Object>] [-DisableCalendarPresence <Object>]
- [-DisableContactCardOrganizationTab <Object>] [-DisableEmailComparisonCheck <Object>]
- [-DisableEmoticons <Object>] [-DisableFederatedPromptDisplayName <Object>] [-DisableFeedsTab <Object>]
- [-DisableFreeBusyInfo <Object>] [-DisableHandsetOnLockedMachine <Object>] [-DisableHtmlIm <Object>]
- [-DisableInkIM <Object>] [-DisableMeetingSubjectAndLocation <Object>] [-DisableOneNote12Integration <Object>]
- [-DisableOnlineContextualSearch <Object>] [-DisablePICPromptDisplayName <Object>]
- [-DisablePhonePresence <Object>] [-DisablePoorDeviceWarnings <Object>] [-DisablePoorNetworkWarnings <Object>]
- [-DisablePresenceNote <Object>] [-DisableRTFIM <Object>] [-DisableSavingIM <Object>] [-DisplayPhoto <Object>]
- [-EnableAppearOffline <Object>] [-EnableCallLogAutoArchiving <Object>]
- [-EnableClientAutoPopulateWithTeam <Object>] [-EnableClientMusicOnHold <Object>]
- [-EnableConversationWindowTabs <Object>] [-EnableEnterpriseCustomizedHelp <Object>]
- [-EnableEventLogging <Object>] [-EnableExchangeContactSync <Object>] [-EnableExchangeContactsFolder <Object>]
- [-EnableExchangeDelegateSync <Object>] [-EnableFullScreenVideo <Object>]
- [-EnableHighPerformanceConferencingAppSharing <Object>] [-EnableHighPerformanceP2PAppSharing <Object>]
- [-EnableHotdesking <Object>] [-EnableIMAutoArchiving <Object>] [-EnableMediaRedirection <Object>]
- [-EnableMeetingEngagement <Object>] [-EnableNotificationForNewSubscribers <Object>]
- [-EnableOnlineFeedback <Object>] [-EnableOnlineFeedbackScreenshots <Object>] [-EnableSQMData <Object>]
- [-EnableServerConversationHistory <Object>] [-EnableSkypeUI <Object>] [-EnableTracing <Object>]
- [-EnableURL <Object>] [-EnableUnencryptedFileTransfer <Object>] [-EnableVOIPCallDefault <Object>]
- [-EnableViewBasedSubscriptionMode <Object>] [-ExcludedContactFolders <Object>] [-Force]
- [-HelpEnvironment <Object>] [-HotdeskingTimeout <Object>] [-IMLatencyErrorThreshold <Object>]
- [-IMLatencySpinnerDelay <Object>] [-IMWarning <Object>] [-Instance <Object>] [-MAPIPollInterval <Object>]
- [-MaxPhotoSizeKB <Object>] [-MaximumDGsAllowedInContactList <Object>] [-MaximumNumberOfContacts <Object>]
- [-MusicOnHoldAudioFile <Object>] [-P2PAppSharingEncryption <Object>] [-PlayAbbreviatedDialTone <Object>]
- [-PolicyEntry <Object>] [-PublicationBatchDelay <Object>] [-RateMyCallAllowCustomUserFeedback <Object>]
- [-RateMyCallDisplayPercentage <Object>] [-RequireContentPin <Object>] [-SPSearchCenterExternalURL <Object>]
- [-SPSearchCenterInternalURL <Object>] [-SPSearchExternalURL <Object>] [-SPSearchInternalURL <Object>]
- [-SearchPrefixFlags <Object>] [-ShowManagePrivacyRelationships <Object>] [-ShowRecentContacts <Object>]
- [-ShowSharepointPhotoEditLink <Object>] [-SupportModernFilePicker <Object>] [-TabURL <Object>]
- [-TelemetryTier <Object>] [-Tenant <Object>] [-TracingLevel <Object>] [-WebServicePollInterval <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+ [-MaximumNumberOfContacts <UInt16>] [-MaxPhotoSizeKB <UInt32>] [-MusicOnHoldAudioFile <String>]
+ [-P2PAppSharingEncryption <P2PAppSharingEncryption>] [-EnableHighPerformanceP2PAppSharing <Boolean>]
+ [-PlayAbbreviatedDialTone <Boolean>] [-RequireContentPin <String>] [-SearchPrefixFlags <UInt16>]
+ [-ShowRecentContacts <Boolean>] [-ShowManagePrivacyRelationships <Boolean>]
+ [-ShowSharepointPhotoEditLink <Boolean>] [-SPSearchInternalURL <String>] [-SPSearchExternalURL <String>]
+ [-SPSearchCenterInternalURL <String>] [-SPSearchCenterExternalURL <String>] [-TabURL <String>]
+ [-TracingLevel <TracingLevel>] [-TelemetryTier <String>] [-PublicationBatchDelay <UInt32>]
+ [-EnableViewBasedSubscriptionMode <Boolean>] [-WebServicePollInterval <TimeSpan>]
+ [-HelpEnvironment <String>] [-RateMyCallDisplayPercentage <UInt16>]
+ [-RateMyCallAllowCustomUserFeedback <Boolean>] [-IMLatencySpinnerDelay <UInt32>]
+ [-IMLatencyErrorThreshold <UInt32>] [-SupportModernFilePicker <Boolean>] [-EnableOnlineFeedback <Boolean>]
+ [-EnableOnlineFeedbackScreenshots <Boolean>] [-ConferenceIMIdleTimeout <TimeSpan>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -138,7 +118,7 @@ You can even create a custom policy that gets assigned to a single user.
 Client policies can be configured at the global, site and per-user scopes.
 The `Set-CsClientPolicy` cmdlet enables you to modify any (or all) of the client policies that have been configured for use in your organization.
 
-Keep in mind that client policies differ from many other policies in that most of the policy settings do not have default values.
+Keep in mind that client policies differ from many other policies in that most of the policy settings do not have default values. When setting is null/none just means that server in band provisioning does not override default client value. Basically, default values are set by client for these cases.
 
 The following parameters are not applicable to Skype for Business Online: AddressBookAvailability, AsJob, AttendantSafeTransfer, AutoDiscoveryRetryInterval, BlockConversationFromFederatedContacts, CalendarStatePublicationInterval, ConferenceIMIdleTimeout, CustomizedHelpUrl, CustomLinkInErrorMessages, CustomStateUrl, Description, DGRefreshInterval, DisableContactCardOrganizationTab, DisableFederatedPromptDisplayName, DisableFeedsTab, DisableMeetingSubjectAndLocation, DisableOneNote12Integration, DisableOnlineContextualSearch, DisablePhonePresence, DisablePICPromptDisplayName, EnableEventLogging, EnableExchangeContactsFolder, EnableExchangeDelegateSync, EnableFullScreenVideo, EnableHighPerformanceConferencingAppSharing, EnableHighPerformanceP2PAppSharing, EnableMediaRedirection, EnableMeetingEngagement, EnableNotificationForNewSubscribers, EnableOnlineFeedback, EnableOnlineFeedbackScreenshots, EnableSQMData, EnableTracing, EnableViewBasedSubscriptionMode, EnableVOIPCallDefault, Force, HelpEnvironment, Identity, IMLatencyErrorThreshold, IMLatencySpinnerDelay, Instance, MAPIPollInterval, MaximumDGsAllowedInContactList, MaximumNumberOfContacts, MaxPhotoSizeKB, P2PAppSharingEncryption, PipelineVariable, PolicyEntry, PublicationBatchDelay, RateMyCallAllowCustomUserFeedback, RequireContentPin, SearchPrefixFlags, SPSearchCenterExternalURL, SPSearchCenterInternalURL, SPSearchExternalURL, SPSearchInternalURL, SupportModernFilePicker, TabURL, TelemetryTier, Tenant, and WebServicePollInterval
 
@@ -191,20 +171,6 @@ To reference the global policy, use this syntax: `-Identity global`.
 To reference a site policy, use the prefix "site:" and the name of the site as your Identity; for example: `-Identity site:Redmond`.
 To reference a per-user policy, use syntax similar to this: `-Identity SalesClientPolicy`.
 
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
@@ -225,19 +191,6 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -1372,7 +1325,7 @@ Provides a way to add settings not covered by the default parameters.
 For example, when testing pre-release versions Microsoft Lync Server 2010 it was possible to add a Send Feedback option to Microsoft Lync 2010.
 That was done by using code similar to this:
 
-`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "http://www.litwareinc.com/feedback"`
+`$x = New-CsClientPolicyEntry -Name "OnlineFeedbackURL" -Value "https://www.litwareinc.com/feedback"`
 
 `Set-CsClientPolicy -Identity global -PolicyEntry @{Add=$x}`
 
@@ -1807,27 +1760,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableClientAutoPopulateWithTeam
 
 When set to true, allows a user's Skype client to be autopopulated with members of his or her immediate team.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1844,7 +1782,7 @@ Accept wildcard characters: False
 When set to false, this allows admins to hide Skype for Business contacts from showing up in users' Outlook and Outlook on the Web clients.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1862,7 +1800,7 @@ However, this improved performance will reduce the system resources and network 
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1881,7 +1819,7 @@ The default value is False.
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1894,10 +1832,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMeetingEngagement
-{{Fill EnableMeetingEngagement Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1914,7 +1852,7 @@ Accept wildcard characters: False
 When set to true, allows users to provide feedback through the "help->report a problem" menu options in the client.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1931,7 +1869,7 @@ Accept wildcard characters: False
 When set to true, allows users to provide screenshots of their clients when reporting problems.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1951,7 +1889,7 @@ The default value is False ($False).
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1968,7 +1906,7 @@ When set to True ($True), this parameter allows administrators to enable the Sky
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1981,10 +1919,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableViewBasedSubscriptionMode
-{{Fill EnableViewBasedSubscriptionMode Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2001,7 +1939,7 @@ If IM latency is greater than the threshold value (in milliseconds), the client 
 
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2018,7 +1956,7 @@ Amount of time, in milliseconds, to wait before showing the spinner in the clien
 
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2031,10 +1969,10 @@ Accept wildcard characters: False
 ```
 
 ### -PublicationBatchDelay
-{{Fill PublicationBatchDelay Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2051,7 +1989,7 @@ When set to True ($True), enables a text box for users to type feedback when pro
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2071,7 +2009,7 @@ When set to 100, users will get prompted after every call.
 
 
 ```yaml
-Type: Object
+Type: UInt16
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2084,10 +2022,10 @@ Accept wildcard characters: False
 ```
 
 ### -RequireContentPin
-{{Fill RequireContentPin Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2100,10 +2038,10 @@ Accept wildcard characters: False
 ```
 
 ### -SupportModernFilePicker
-{{Fill SupportModernFilePicker Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2116,10 +2054,10 @@ Accept wildcard characters: False
 ```
 
 ### -TelemetryTier
-{{Fill TelemetryTier Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2143,7 +2081,7 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2155,23 +2093,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

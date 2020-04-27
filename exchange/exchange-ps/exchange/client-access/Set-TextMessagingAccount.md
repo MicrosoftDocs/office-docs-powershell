@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/set-textmessagingaccount
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-TextMessagingAccount
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-TextMessagingAccount
@@ -13,32 +17,39 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 The Set-TextMessagingAccount cmdlet allows a user to configure the text messaging settings on their own mailbox. An administrator can't use this cmdlet to configure the text messaging settings on another user's mailbox.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-TextMessagingAccount [-Identity] <MailboxIdParameter> [-Confirm] [-CountryRegionId <RegionInfo>]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-MobileOperatorId <Int32>]
- [-NotificationPhoneNumber <E164Number>] [-WhatIf] [<CommonParameters>]
+Set-TextMessagingAccount [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-CountryRegionId <RegionInfo>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-MobileOperatorId <Int32>]
+ [-NotificationPhoneNumber <E164Number>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-TextMessagingAccount cmdlet configures a user's account for text messaging notifications. You can configure several settings, including the mobile phone number and country or region ID.
+When text messaging notifications are enabled on a mailbox, you can configure calendar notifications, voice mail notifications, and email notifications using an inbox rule.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+To clear the text messaging settings from your own mailbox, use the Clear-TextMessagingAccount parameter.
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-TextMessagingAccount -Identity 'JeffHay' -NotificationPhoneNumber 4255550100
 ```
 
 This example sets the notification phone number for the text messaging account for Jeff Hay.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-TextMessagingAccount -Identity 'JeffHay' -CountryRegionId US -MobileOperatorId 15001 -NotificationPhoneNumber +14255550199
 ```
 
@@ -47,13 +58,9 @@ This example sets the region, mobile operator and notification phone number for 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the target mailbox. You can use any value that uniquely identifies the mailbox.
-
-For example:
+The Identity parameter specifies the target mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
-- Display name
 
 - Alias
 
@@ -77,7 +84,8 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -96,7 +104,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -105,15 +114,22 @@ Accept wildcard characters: False
 ```
 
 ### -CountryRegionId
-The CountryRegionId parameter specifies the country or region in which the user's mobile operator resides.
+The CountryRegionId parameter specifies the country that your mobile phone is registered in. Although this parameter accepts any valid ISO 3166-1 alpha-2 country code value, the following values correspond to the country selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
+- US
+
+- CA
+
+- RO
+
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
 
 ```yaml
 Type: RegionInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -130,7 +146,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -151,7 +168,8 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -160,13 +178,34 @@ Accept wildcard characters: False
 ```
 
 ### -MobileOperatorId
-The MobileOperatorId parameter specifies the mobile operator ID for the user.
+The MobileOperatorId parameter specifies the mobile operator (carrier) for your phone. Although this parameter accepts any random number, the following values correspond to the country and mobile operator selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
+
+United States:
+
+- AT&T: 15001
+
+- Sprint PCS: 15004
+
+- T-Mobile: 15005
+
+- Verizon Wireless: 15006
+
+Canada:
+
+- Bell: 17001
+
+- Telus Mobility: 17002
+
+Romania:
+
+- Orange Romania: 18001
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -175,13 +214,14 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationPhoneNumber
-The NotificationPhoneNumber parameter specifies the telephone number to use for text messaging notifications.
+The NotificationPhoneNumber parameter specifies the telephone number to use for your text messaging notifications. This parameter uses the E.164 format: +\<CountryCode\>\<CompleteTelephoneNumber\> (for example, +15551234567).
 
 ```yaml
 Type: E164Number
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -196,7 +236,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -205,20 +246,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/dea91ccf-5572-40f1-a133-859c6aa58095.aspx)

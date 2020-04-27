@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpoffice365grouptosite
 applicable: SharePoint Online
 schema: 2.0.0
+title: Add-PnPOffice365GroupToSite
 ---
+
 # Add-PnPOffice365GroupToSite
 
 ## SYNOPSIS
@@ -18,6 +21,8 @@ Add-PnPOffice365GroupToSite -Url <String>
                             [-Classification <String>]
                             [-IsPublic [<SwitchParameter>]]
                             [-KeepOldHomePage [<SwitchParameter>]]
+                            [-HubSiteId <GuidPipeBind>]
+                            [-Owners <String[]>]
                             [-Connection <SPOnlineConnection>]
 ```
 
@@ -83,6 +88,18 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -HubSiteId
+If specified the site will be associated to the hubsite as identified by this id
+
+```yaml
+Type: GuidPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -IsPublic
 Specifies if the group is public. Defaults to false.
 
@@ -100,6 +117,18 @@ Specifies if the current site home page is kept. Defaults to false.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Owners
+The array UPN values of the group's owners.
+
+```yaml
+Type: String[]
 Parameter Sets: (All)
 
 Required: False
@@ -133,4 +162,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

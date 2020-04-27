@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csaddressbooknormalizationconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAddressBookNormalizationConfiguration
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Set-CsAddressBookNormalizationConfiguration
@@ -47,7 +52,7 @@ The commands shown in Example 1 remove the Address Book normalization rule LongD
 In order to carry out this task, the first command in the example uses the `Get-CsAddressBookNormalizationRule` cmdlet to create an object reference to the normalization rule with the Identity global/LongDistanceRule.
 The resulting object reference is stored in a variable named $x.
 
-The second command in the example then uses the `Set-CsAddressBookNormalizationConfiguraton` cmdlet to remove the rule global/LongDistanceRule from the global collection.
+The second command in the example then uses the `Set-CsAddressBookNormalizationConfiguration` cmdlet to remove the rule global/LongDistanceRule from the global collection.
 This is done by including the AddressBookNormalizationRules parameter and the syntax @{Remove=$x}.
 
 `$x = Get-CsAddressBookNormalizationRule -Identity "global/LongDistanceRule"`
@@ -191,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

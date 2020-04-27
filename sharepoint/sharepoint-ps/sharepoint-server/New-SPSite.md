@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spsite
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # New-SPSite
@@ -28,23 +33,23 @@ New-SPSite [-Url] <String> -OwnerAlias <SPUserPipeBind> [-AdministrationSiteType
 The `New-SPSite` cmdlet creates a new site collection with the URL and owner that the Url and OwnerAlias parameters.
 This cmdlet can create site collections in either the SharePoint Server mode which uses the legacy versions of templates and features, or can be created in SharePoint Server mode which uses the new versions of templates and features.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>New-SPSite http://<site name>/sites/test -OwnerAlias "DOMAIN\JDoe" -Language 1033 -Template STS#0
+New-SPSite https://webApp/sites/test -OwnerAlias "DOMAIN\JDoe" -Language 1033 -Template STS#0
 ```
 
-This example creates an English site collection at http://\<site name\>/sites/test that is owned by user DOMAIN\Jdow.
+This example creates an English site collection at https://\<site name\>/sites/test that is owned by user DOMAIN\Jdow.
 
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>$w = Get-SPWebApplication http://<site name>
-PS C:\>New-SPSite http://www.contoso.com -OwnerAlias "DOMAIN\jdow" -HostHeaderWebApplication $w -Name "Contoso" -Template STS#0
+$w = Get-SPWebApplication https://webApp
+New-SPSite https://www.contoso.com -OwnerAlias "DOMAIN\jdow" -HostHeaderWebApplication $w -Name "Contoso" -Template STS#0
 ```
 
 This example creates a host-named site collection.
@@ -53,7 +58,7 @@ Because the template is provided, the root web of this site collection will be c
 
 ### ------------------EXAMPLE 3-----------------------
 ```
-PS C:\>Get-SPWebTemplate | Where{ $_.Title -eq "Team Site" } | ForEach-Object{ New-SPSite http://<site name</sites/test -OwnerAlias DOMAIN\jdow -Template $_ }
+Get-SPWebTemplate | Where{ $_.Title -eq "Team Site" } | ForEach-Object{ New-SPSite https://<site name</sites/test -OwnerAlias DOMAIN\jdow -Template $_ }
 ```
 
 This example creates a site collection by using the "Team Site" Web template.
@@ -61,10 +66,10 @@ This example creates a site collection by using the "Team Site" Web template.
 
 ### ------------------EXAMPLE 4-----------------------
 ```
-PS C:\>New-SPSite -URL http://<site name>/sites/testsite -OwnerAlias "DOMAIN\JDow" -Language 1033 -CompatibilityLevel 14 -Template STS#0
+New-SPSite -URL https://webApp/sites/testsite -OwnerAlias "DOMAIN\JDow" -Language 1033 -CompatibilityLevel 14 -Template STS#0
 ```
 
-This example creates an English 14 mode site collection by using the Team site template at http://\<site name\>/sites/testsite that is owned by user DOMAIN\Jdow
+This example creates an English 14 mode site collection by using the Team site template at https://\<site name\>/sites/testsite that is owned by user DOMAIN\Jdow
 
 
 ## PARAMETERS
@@ -78,7 +83,7 @@ If the URL is not a host header site, the URL must start with the web applicatio
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -96,7 +101,7 @@ The type must be a valid user alias, in the form, Domain\username.
 Type: SPUserPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -114,7 +119,7 @@ Valid values are None or TentantAdministration.
 Type: SPAdministrationSiteType
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -136,7 +141,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -157,7 +162,7 @@ When this parameter is not specified, the CompatibilityLevel will default to the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -174,7 +179,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -192,7 +197,7 @@ The type must be a valid database name in the form, SiteContent1212, or a GUID i
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -210,7 +215,7 @@ If no value is specified, the value is left blank.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -228,7 +233,7 @@ The type must be a valid name in one of the following forms:
 
 --A WebApplication
 
---A URL (for example, http://server_name)
+--A URL (for example, https://server_name)
 
 --A GUID (for example, 1234-5678-9876-0987)
 
@@ -237,7 +242,7 @@ The type must be a valid name in one of the following forms:
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -257,7 +262,7 @@ This must be a valid language identifier (LCID).
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -275,7 +280,7 @@ If no name is specified, the default name is applied.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -293,7 +298,7 @@ The valid values are True or False.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -312,7 +317,7 @@ The type must be a email address in the form, someone@example.com.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -330,7 +335,7 @@ If no template is specified, no quota is applied.
 Type: SPQuotaTemplatePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -348,7 +353,7 @@ The type must be a email address, in the form, someone@example.com.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -368,7 +373,7 @@ The type must be a valid user alias, in the form, Domain\username.
 Type: SPUserPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -384,7 +389,7 @@ Specifies the Site Group to get site collections.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -404,7 +409,7 @@ If no template is specified, no template is provisioned.
 Type: SPWebTemplatePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -421,7 +426,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -439,7 +444,7 @@ The valid values are True or False.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -449,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

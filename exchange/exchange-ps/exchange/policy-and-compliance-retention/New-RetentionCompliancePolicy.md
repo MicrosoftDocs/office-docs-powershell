@@ -1,43 +1,74 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-retentioncompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: New-RetentionCompliancePolicy
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "o365scc-ps"
 ---
 
 # New-RetentionCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 Use the New-RetentionCompliancePolicy cmdlet to create new retention policies in the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
+### Default
 ```
-New-RetentionCompliancePolicy [-Name] <String> [-Comment <String>] [-Confirm] [-Enabled <$true | $false>]
- [-ExchangeLocation <MultiValuedProperty>] [-ExchangeLocationException <MultiValuedProperty>] [-Force]
- [-ModernGroupLocation <MultiValuedProperty>] [-ModernGroupLocationException <MultiValuedProperty>]
- [-OneDriveLocation <MultiValuedProperty>] [-OneDriveLocationException <MultiValuedProperty>]
- [-PublicFolderLocation <MultiValuedProperty>] [-RestrictiveRetention <$true | $false>]
- [-SharePointLocation <MultiValuedProperty>] [-SharePointLocationException <MultiValuedProperty>]
- [-SkypeLocation <MultiValuedProperty>] [-SkypeLocationException <MultiValuedProperty>] [-WhatIf]
- [<CommonParameters>]
+New-RetentionCompliancePolicy [-Name] <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-DynamicScopeLocation <MultiValuedProperty>]
+ [-Enabled <Boolean>]
+ [-ExchangeLocation <MultiValuedProperty>]
+ [-ExchangeLocationException <MultiValuedProperty>]
+ [-Force]
+ [-ModernGroupLocation <MultiValuedProperty>]
+ [-ModernGroupLocationException <MultiValuedProperty>]
+ [-OneDriveLocation <MultiValuedProperty>]
+ [-OneDriveLocationException <MultiValuedProperty>]
+ [-PublicFolderLocation <MultiValuedProperty>]
+ [-RestrictiveRetention <Boolean>]
+ [-SharePointLocation <MultiValuedProperty>]
+ [-SharePointLocationException <MultiValuedProperty>]
+ [-SkypeLocation <MultiValuedProperty>]
+ [-SkypeLocationException <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### TeamLocation
+```
+New-RetentionCompliancePolicy [-Name] <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-RestrictiveRetention <Boolean>]
+ [-TeamsChannelLocation <MultiValuedProperty>]
+ [-TeamsChannelLocationException <MultiValuedProperty>]
+ [-TeamsChatLocation <MultiValuedProperty>]
+ [-TeamsChatLocationException <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-New policies are not valid and will not be applied until a retention rule is added to the policy. In addtion, at least one location parameter must be defined to create a retention policy.
+New policies are not valid and will not be applied until a retention rule is added to the policy. In addition, at least one location parameter must be defined to create a retention policy.
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "http://contoso.sharepoint.com/sites/teams/finance"
+### Example 1
+```powershell
+New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "https://contoso.sharepoint.com/sites/teams/finance"
 ```
 
 This example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
@@ -52,6 +83,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: True
 Position: 1
 Default value: None
@@ -67,6 +99,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +119,23 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DynamicScopeLocation
+{{Fill DynamicScopeLocation Description}}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -101,10 +151,11 @@ The Enabled parameter specifies whether the policy is enabled or disabled. Valid
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -137,9 +188,10 @@ If no mailboxes are specified, then no mailboxes are placed on hold.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -168,9 +220,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -186,6 +239,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -214,9 +268,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -241,9 +296,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -258,9 +314,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -275,9 +332,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -290,9 +348,10 @@ The PublicFolderLocation parameter specifies that you want to include all public
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -312,10 +371,11 @@ After a policy has been locked, no one can turn off or disable it, or remove con
 Therefore, before you lock a retention policy, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -332,9 +392,10 @@ SharePoint Online sites can't be added to the policy until they have been indexe
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -349,9 +410,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -376,9 +438,10 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -391,9 +454,114 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelLocation
+The TeamsChannelLocation parameter specifies the Teams to include in the policy.
+
+You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelLocationException
+The TeamsChannelLocationException parameter specifies the Teams to exclude when you use the value All for the TeamsChannelLocation parameter. You can use any value that uniquely identifies the team. For example:
+
+- Name
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChatLocation
+The TeamsChatLocation parameter specifies the Teams users to include in the policy.
+
+You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChatLocationException
+The TeamsChatLocationException parameter specifies the Teams users to exclude when you use the value All for the TeamsChatLocation parameter. You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -402,13 +570,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
+
 Required: False
 Position: Named
 Default value: None
@@ -417,20 +586,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/2711442f-22bb-4a35-9938-575d24608e43.aspx)

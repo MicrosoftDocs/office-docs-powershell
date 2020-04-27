@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+online version: https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/get-managementrole
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Get-ManagementRole
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Get-ManagementRole
@@ -13,85 +17,85 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-ManagementRole cmdlet to view management roles that have been created in your organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set3
+### GetChildren
 ```
-Get-ManagementRole [-Identity] <RoleIdParameter> [-GetChildren] [-DomainController <Fqdn>]
-  [-RoleType <Custom | UnScoped | OrganizationManagement | RecipientManagement | ViewOnlyOrganizationManagement | DistributionGroupManagement | MyDistributionGroups | MyDistributionGroupMembership | UmManagement | RecordsManagement | MyBaseOptions | UmRecipientManagement | HelpdeskRecipientManagement | GALSynchronizationManagement | ApplicationImpersonation | UMPromptManagement | PartnerDelegatedTenantManagement | DiscoveryManagement | CentralAdminManagement | UnScopedRoleManagement | MyContactInformation | MyProfileInformation | MyVoiceMail | MyTextMessaging | MyMailSubscriptions | MyRetentionPolicies | MyOptions | MailRecipients | FederatedSharing | DatabaseAvailabilityGroups | Databases | PublicFolders | AddressLists | RecipientPolicies | DisasterRecovery | Monitoring | DatabaseCopies | UnifiedMessaging | Journaling | RemoteAndAcceptedDomains | EmailAddressPolicies | TransportRules | SendConnectors | EdgeSubscriptions | OrganizationTransportSettings | ExchangeServers | ExchangeVirtualDirectories | ExchangeServerCertificates | POP3AndIMAP4Protocols | ReceiveConnectors | UMMailboxes | UserOptions | SecurityGroupCreationAndMembership | MailRecipientCreation | MessageTracking | RoleManagement | ViewOnlyRecipients | ViewOnlyConfiguration | DistributionGroups | MailEnabledPublicFolders | MoveMailboxes | ResetPassword | AuditLogs | RetentionManagement | SupportDiagnostics | MailboxSearch | LegalHold | MailTips | PublicFolderReplication | ActiveDirectoryPermissions | UMPrompts | Migration | DataCenterOperations | TransportHygiene | TransportQueues | Supervision | CmdletExtensionAgents | OrganizationConfiguration | OrganizationClientAccess | ExchangeConnectors | MailboxImportExport | ViewOnlyCentralAdminManagement | ViewOnlyCentralAdminSupport | ViewOnlyRoleManagement | Reporting | ViewOnlyAuditLogs | TransportAgents | DataCenterDestructiveOperations | InformationRightsManagement | LawEnforcementRequests | MyDiagnostics | MyMailboxDelegation>]
- [-Script <String>] [-ScriptParameters <String[]>] [-Recurse] [<CommonParameters>]
-```
-
-### Set2
-```
-Get-ManagementRole [-Identity] <RoleIdParameter> [-Recurse] [-DomainController <Fqdn>]
- [-RoleType <Custom | UnScoped | OrganizationManagement | RecipientManagement | ViewOnlyOrganizationManagement | DistributionGroupManagement | MyDistributionGroups | MyDistributionGroupMembership | UmManagement | RecordsManagement | MyBaseOptions | UmRecipientManagement | HelpdeskRecipientManagement | GALSynchronizationManagement | ApplicationImpersonation | UMPromptManagement | PartnerDelegatedTenantManagement | DiscoveryManagement | CentralAdminManagement | UnScopedRoleManagement | MyContactInformation | MyProfileInformation | MyVoiceMail | MyTextMessaging | MyMailSubscriptions | MyRetentionPolicies | MyOptions | MailRecipients | FederatedSharing | DatabaseAvailabilityGroups | Databases | PublicFolders | AddressLists | RecipientPolicies | DisasterRecovery | Monitoring | DatabaseCopies | UnifiedMessaging | Journaling | RemoteAndAcceptedDomains | EmailAddressPolicies | TransportRules | SendConnectors | EdgeSubscriptions | OrganizationTransportSettings | ExchangeServers | ExchangeVirtualDirectories | ExchangeServerCertificates | POP3AndIMAP4Protocols | ReceiveConnectors | UMMailboxes | UserOptions | SecurityGroupCreationAndMembership | MailRecipientCreation | MessageTracking | RoleManagement | ViewOnlyRecipients | ViewOnlyConfiguration | DistributionGroups | MailEnabledPublicFolders | MoveMailboxes | ResetPassword | AuditLogs | RetentionManagement | SupportDiagnostics | MailboxSearch | LegalHold | MailTips | PublicFolderReplication | ActiveDirectoryPermissions | UMPrompts | Migration | DataCenterOperations | TransportHygiene | TransportQueues | Supervision | CmdletExtensionAgents | OrganizationConfiguration | OrganizationClientAccess | ExchangeConnectors | MailboxImportExport | ViewOnlyCentralAdminManagement | ViewOnlyCentralAdminSupport | ViewOnlyRoleManagement | Reporting | ViewOnlyAuditLogs | TransportAgents | DataCenterDestructiveOperations | InformationRightsManagement | LawEnforcementRequests | MyDiagnostics | MyMailboxDelegation>]
- [-Script <String>] [-ScriptParameters <String[]>] [<CommonParameters>]
+Get-ManagementRole [-Identity] <RoleIdParameter> [-GetChildren]
+ [-DomainController <Fqdn>]
+ [-RoleType <RoleType>] [<CommonParameters>]
 ```
 
-### Set1
+### Recurse
+```
+Get-ManagementRole [-Identity] <RoleIdParameter> [-Recurse]
+ [-DomainController <Fqdn>]
+ [-RoleType <RoleType>] [<CommonParameters>]
+```
+
+### Identity
 ```
 Get-ManagementRole [[-Identity] <RoleIdParameter>] [-Cmdlet <String>] [-CmdletParameters <String[]>]
- [-DomainController <Fqdn>] [-RoleType <Custom | UnScoped | OrganizationManagement | RecipientManagement | ViewOnlyOrganizationManagement | DistributionGroupManagement | MyDistributionGroups | MyDistributionGroupMembership | UmManagement | RecordsManagement | MyBaseOptions | UmRecipientManagement | HelpdeskRecipientManagement | GALSynchronizationManagement | ApplicationImpersonation | UMPromptManagement | PartnerDelegatedTenantManagement | DiscoveryManagement | CentralAdminManagement | UnScopedRoleManagement | MyContactInformation | MyProfileInformation | MyVoiceMail | MyTextMessaging | MyMailSubscriptions | MyRetentionPolicies | MyOptions | MailRecipients | FederatedSharing | DatabaseAvailabilityGroups | Databases | PublicFolders | AddressLists | RecipientPolicies | DisasterRecovery | Monitoring | DatabaseCopies | UnifiedMessaging | Journaling | RemoteAndAcceptedDomains | EmailAddressPolicies | TransportRules | SendConnectors | EdgeSubscriptions | OrganizationTransportSettings | ExchangeServers | ExchangeVirtualDirectories | ExchangeServerCertificates | POP3AndIMAP4Protocols | ReceiveConnectors | UMMailboxes | UserOptions | SecurityGroupCreationAndMembership | MailRecipientCreation | MessageTracking | RoleManagement | ViewOnlyRecipients | ViewOnlyConfiguration | DistributionGroups | MailEnabledPublicFolders | MoveMailboxes | ResetPassword | AuditLogs | RetentionManagement | SupportDiagnostics | MailboxSearch | LegalHold | MailTips | PublicFolderReplication | ActiveDirectoryPermissions | UMPrompts | Migration | DataCenterOperations | TransportHygiene | TransportQueues | Supervision | CmdletExtensionAgents | OrganizationConfiguration | OrganizationClientAccess | ExchangeConnectors | MailboxImportExport | ViewOnlyCentralAdminManagement | ViewOnlyCentralAdminSupport | ViewOnlyRoleManagement | Reporting | ViewOnlyAuditLogs | TransportAgents | DataCenterDestructiveOperations | InformationRightsManagement | LawEnforcementRequests | MyDiagnostics | MyMailboxDelegation>]
- [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [-RoleType <RoleType>] [<CommonParameters>]
 ```
 
-### Set4
+### Script
 ```
-Get-ManagementRole [[-Identity] <RoleIdParameter>] [-DomainController <Fqdn>]
- [-Script <String>] [-ScriptParameters <String[]>] [-GetChildren]
- [-RoleType <Custom | UnScoped | OrganizationManagement | RecipientManagement | ViewOnlyOrganizationManagement | DistributionGroupManagement | MyDistributionGroups | MyDistributionGroupMembership | UmManagement | RecordsManagement | MyBaseOptions | UmRecipientManagement | HelpdeskRecipientManagement | GALSynchronizationManagement | ApplicationImpersonation | UMPromptManagement | PartnerDelegatedTenantManagement | DiscoveryManagement | CentralAdminManagement | UnScopedRoleManagement | MyContactInformation | MyProfileInformation | MyVoiceMail | MyTextMessaging | MyMailSubscriptions | MyRetentionPolicies | MyOptions | MailRecipients | FederatedSharing | DatabaseAvailabilityGroups | Databases | PublicFolders | AddressLists | RecipientPolicies | DisasterRecovery | Monitoring | DatabaseCopies | UnifiedMessaging | Journaling | RemoteAndAcceptedDomains | EmailAddressPolicies | TransportRules | SendConnectors | EdgeSubscriptions | OrganizationTransportSettings | ExchangeServers | ExchangeVirtualDirectories | ExchangeServerCertificates | POP3AndIMAP4Protocols | ReceiveConnectors | UMMailboxes | UserOptions | SecurityGroupCreationAndMembership | MailRecipientCreation | MessageTracking | RoleManagement | ViewOnlyRecipients | ViewOnlyConfiguration | DistributionGroups | MailEnabledPublicFolders | MoveMailboxes | WorkloadManagement | ResetPassword | AuditLogs | RetentionManagement | SupportDiagnostics | MailboxSearch | LegalHold | MailTips | PublicFolderReplication | ActiveDirectoryPermissions | UMPrompts | Migration | DataCenterOperations | TransportHygiene | TransportQueues | Supervision | CmdletExtensionAgents | OrganizationConfiguration | OrganizationClientAccess | ExchangeConnectors | MailboxImportExport | ViewOnlyCentralAdminManagement | ViewOnlyCentralAdminSupport | ViewOnlyRoleManagement | Reporting | ViewOnlyAuditLogs | TransportAgents | DataCenterDestructiveOperations | InformationRightsManagement | LawEnforcementRequests | MyDiagnostics | MyMailboxDelegation | TeamMailboxes | MyTeamMailboxes | ActiveMonitoring | DataLossPrevention | MyFacebookEnabled | MyLinkedInEnabled | UserApplication | ArchiveApplication | LegalHoldApplication | OfficeExtensionApplication | TeamMailboxLifecycleApplication | CentralAdminCredentialManagement | PersonallyIdentifiableInformation | MailboxSearchApplication | MyMarketplaceApps | MyCustomApps | OrgMarketplaceApps | OrgCustomApps | ExchangeCrossServiceIntegration | NetworkingManagement | AccessToCustomerDataDCOnly | DatacenterOperationsDCOnly | MyReadWriteMailboxApps>]
+Get-ManagementRole [[-Identity] <RoleIdParameter>] [-Script <String>] [-ScriptParameters <String[]>]
+ [-DomainController <Fqdn>]
+ [-RoleType <RoleType>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can view management roles in several ways, from listing all the roles in your organization to listing only the child roles of a specified parent role. You can also view the details of a specific role by piping the output of the Get-ManagementRole cmdlet to the Format-List cmdlet.
 
-For more information about management roles, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
+For more information about management roles, see [Understanding management roles](https://docs.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-ManagementRole
 ```
 
 This example lists all the roles that have been created in your organization.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-ManagementRole "Mail Recipients" -Recurse
 ```
 
 This example lists all the roles that are children of the Mail Recipients management role. The command performs a recursive query of all the child roles of the specified parent role. This recursive query finds every child role from the immediate children of the parent to the last child role in the hierarchy. In a recursive list, the parent role is also returned in the list.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-ManagementRole -CmdletParameters Identity, Database
 ```
 
 This example lists all the roles that contain both the Identity and Database parameters. Roles that contain only one parameter or the other aren't returned.
 
-### -------------------------- Example 4 --------------------------
-```
+### Example 4
+```powershell
 Get-ManagementRole -RoleType UnScopedTopLevel
 ```
 
 This example lists all the roles that have a type of UnScopedTopLevel. These roles contain custom scripts or non-Exchange cmdlets.
 
-### -------------------------- Example 5 --------------------------
-```
+### Example 5
+```powershell
 Get-ManagementRole "Transport Rules" | Format-List Name, RoleType
 ```
 
-This example retrieves only the Transport Rules role and passes the output of the Get-ManagementRole cmdlet to the Format-List cmdlet. The Format-List cmdlet then shows only the Name and RoleType properties of the Transport Rules role. For more information about pipelining and the Format-List cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
+This example retrieves only the Transport Rules role and passes the output of the Get-ManagementRole cmdlet to the Format-List cmdlet. The Format-List cmdlet then shows only the Name and RoleType properties of the Transport Rules role. For more information about pipelining and the Format-List cmdlet, see [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines) and [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
-### -------------------------- Example 6 --------------------------
-```
+### Example 6
+```powershell
 Get-ManagementRole "Mail Recipients" -GetChildren
 ```
 
@@ -99,14 +103,44 @@ This example lists the immediate children of the Mail Recipients role. Only the 
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the role you want to view. If the role you want to view contains spaces, enclose the name in quotation marks ("). You can use the wildcard character (\*) and a partial role name to match multiple roles.
+
+```yaml
+Type: RoleIdParameter
+Parameter Sets: GetChildren, Recurse
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+```yaml
+Type: RoleIdParameter
+Parameter Sets: Identity, Script
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -GetChildren
 The GetChildren parameter retrieves a list of all the roles that were created based on the parent role specified in the Identity parameter. Only the immediate child roles of the parent role are included. The GetChildren parameter can only be used with the Identity and RoleType parameters.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set4
+Parameter Sets: GetChildren
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -119,9 +153,10 @@ The Recurse parameter retrieves a list of all the roles that were created based 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set2
+Parameter Sets: Recurse
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -134,9 +169,10 @@ The Cmdlet parameter returns a list of all roles that include the specified cmdl
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -149,9 +185,10 @@ The CmdletParameters parameter returns a list of all roles that include the spec
 
 ```yaml
 Type: String[]
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -168,7 +205,8 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -176,41 +214,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the role you want to view. If the role you want to view contains spaces, enclose the name in quotation marks ("). You can use the wildcard character (\*) and a partial role name to match multiple roles.
-
-```yaml
-Type: RoleIdParameter
-Parameter Sets: Set3, Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: RoleIdParameter
-Parameter Sets: Set1, Set4
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -RoleType
-The RoleType parameter returns a list of roles that match the specified role type. For a list of valid role types, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
+The RoleType parameter returns a list of roles that match the specified role type. For a list of valid role types, see [Understanding management roles](https://docs.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
 ```yaml
-Type: Custom | UnScoped | OrganizationManagement | RecipientManagement | ViewOnlyOrganizationManagement | DistributionGroupManagement | MyDistributionGroups | MyDistributionGroupMembership | UmManagement | RecordsManagement | MyBaseOptions | UmRecipientManagement | HelpdeskRecipientManagement | GALSynchronizationManagement | ApplicationImpersonation | UMPromptManagement | PartnerDelegatedTenantManagement | DiscoveryManagement | CentralAdminManagement | UnScopedRoleManagement | MyContactInformation | MyProfileInformation | MyVoiceMail | MyTextMessaging | MyMailSubscriptions | MyRetentionPolicies | MyOptions | MailRecipients | FederatedSharing | DatabaseAvailabilityGroups | Databases | PublicFolders | AddressLists | RecipientPolicies | DisasterRecovery | Monitoring | DatabaseCopies | UnifiedMessaging | Journaling | RemoteAndAcceptedDomains | EmailAddressPolicies | TransportRules | SendConnectors | EdgeSubscriptions | OrganizationTransportSettings | ExchangeServers | ExchangeVirtualDirectories | ExchangeServerCertificates | POP3AndIMAP4Protocols | ReceiveConnectors | UMMailboxes | UserOptions | SecurityGroupCreationAndMembership | MailRecipientCreation | MessageTracking | RoleManagement | ViewOnlyRecipients | ViewOnlyConfiguration | DistributionGroups | MailEnabledPublicFolders | MoveMailboxes | ResetPassword | AuditLogs | RetentionManagement | SupportDiagnostics | MailboxSearch | LegalHold | MailTips | PublicFolderReplication | ActiveDirectoryPermissions | UMPrompts | Migration | DataCenterOperations | TransportHygiene | TransportQueues | Supervision | CmdletExtensionAgents | OrganizationConfiguration | OrganizationClientAccess | ExchangeConnectors | MailboxImportExport | ViewOnlyCentralAdminManagement | ViewOnlyCentralAdminSupport | ViewOnlyRoleManagement | Reporting | ViewOnlyAuditLogs | TransportAgents | DataCenterDestructiveOperations | InformationRightsManagement | LawEnforcementRequests | MyDiagnostics | MyMailboxDelegation
+Type: RoleType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -223,9 +235,10 @@ The Script parameter returns a list of all roles that include the specified scri
 
 ```yaml
 Type: String
-Parameter Sets: Set3, Set2, Set4
+Parameter Sets: Script
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -238,9 +251,10 @@ The ScriptParameters parameter returns a list of all roles that include the spec
 
 ```yaml
 Type: String[]
-Parameter Sets: Set3, Set2, Set4
+Parameter Sets: Script
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -249,20 +263,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/c3a48baa-ee7d-4615-88e3-5798443dee35.aspx)

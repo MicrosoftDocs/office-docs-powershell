@@ -1,0 +1,169 @@
+  { 
+  "redirections": [ 
+    {
+       "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-dlp/New-DlpEdmSschema.md",
+       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpedmschema",
+       "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/Get-TeamsRetentionCompliancePolicy.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-retentioncompliancepolicy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/Get-TeamsRetentionComplianceRule.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-retentioncompliancerule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/New-TeamsRetentionCompliancePolicy.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-retentioncompliancepolicy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/New-TeamsRetentionComplianceRule.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-retentioncompliancerule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/Remove-TeamsRetentionCompliancePolicy.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-retentioncompliancepolicy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/Remove-TeamsRetentionComplianceRule.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-retentioncompliancerule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/Set-TeamsRetentionCompliancePolicy.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-retentioncompliancepolicy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/Set-TeamsRetentionComplianceRule.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-retentioncompliancerule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-dlp/Get-DlpComplianceRuleV2.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpcompliancerule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-dlp/New-DlpComplianceRuleV2.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpcompliancerule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-dlp/Remove-DlpComplianceRuleV2.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dlpcompliancerule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-dlp/Set-DlpComplianceRuleV2.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpcompliancerule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/exchange-ps-v2-module/connect-exchangeonline.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/unified-messaging/Test-ExchangeUMCallFlow.md",
+      "redirect_url": "https://www.microsoft.com/download/details.aspx?id=20839",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Get-ConnectSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Get-HotmailSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Get-ImapSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Get-PopSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Get-SendAddress.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Get-Subscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/New-ConnectSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/New-HotmailSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/New-ImapSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/New-PopSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/New-Subscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Remove-ConnectSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Remove-Subscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Set-ConnectSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Set-HotmailSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Set-ImapSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/connected-accounts/Set-PopSubscription.md",
+      "redirect_url": "https://support.office.com/article/5cc526bf-e928-4a99-8b9f-5e089df7d887",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "sharepoint/docs-conceptual/overview.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/sharepoint",
+      "redirect_document_id": true
+    }
+   ] 
+  }

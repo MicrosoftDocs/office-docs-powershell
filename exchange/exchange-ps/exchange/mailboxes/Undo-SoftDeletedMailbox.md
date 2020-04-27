@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/undo-softdeletedmailbox
 applicable: Exchange Online
 title: Undo-SoftDeletedMailbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
@@ -13,40 +17,47 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Undo-SoftDeletedMailbox cmdlet to recover a mailbox that has been deleted. Mailboxes can be recovered within 30 days of being deleted.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Set2
+### PublicFolder
 ```
-Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-PublicFolder] [-Confirm]
- [-DisplayName <String>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-DisplayName <String>] [-PublicFolder]
+ [-Confirm]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### SoftDeletedMailbox
 ```
-Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-Confirm] [-DisplayName <String>]
- [-Name <String>] [-Password <SecureString>] [-WhatIf] [-WindowsLiveID <WindowsLiveId>] [<CommonParameters>]
+Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-Password <SecureString>] [-WindowsLiveID <WindowsLiveId>]
+ [-Confirm] [-DisplayName <String>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Undo-SoftDeletedMailbox cmdlet to recover a mailbox that has been deleted. When a mailbox is deleted with the Remove-Mailbox cmdlet, it's not actually deleted. It's hidden in Exchange and moved in Active Directory to the organizational unit (OU) Soft Deleted Objects. This enables administrators to recover deleted mailboxes for up to 30 days after deletion.
+Use the Undo-SoftDeletedMailbox cmdlet to recover a mailbox that has been deleted. When a mailbox is deleted with the Remove-Mailbox or Disable-Mailbox cmdlet, it's not actually deleted. It's hidden in Exchange and moved in Active Directory to the organizational unit (OU) Soft Deleted Objects. This enables administrators to recover deleted mailboxes for up to 30 days after deletion.
 
 If the Microsoft account (formerly known as a Windows Live ID) wasn't deleted when the mailbox was deleted, you have to specify a new Microsoft account and password when you use the Undo-SoftDeletedMailbox cmdlet to recover a mailbox.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Undo-SoftDeletedMailbox -SoftDeletedObject florencef
 ```
 
 This example recovers the deleted mailbox for the user Florence Flipo. When this mailbox was deleted, the associated Windows Live ID was also deleted.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Undo-SoftDeletedMailbox bjohnson@contoso.edu -WindowsLiveID brianj@contoso.edu -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
 ```
 
@@ -55,13 +66,16 @@ This example recovers the deleted mailbox for the user Brian Johnson. When this 
 ## PARAMETERS
 
 ### -PublicFolder
-The PublicFolder switch specifies that the deleted mailbox you want to recover is a public folder mailbox. You don't need to specify a value with this switch.
+The PublicFolder switch is required to recover public folder mailboxes. You don't need to specify a value with this switch.
+
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: PublicFolder
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -70,13 +84,14 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedObject
-The SoftDeletedObject parameter specifies the identity of the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
+The SoftDeletedObject parameter specifies the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -96,6 +111,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +127,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +143,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -136,15 +154,16 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies a new password for the mailbox.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
 
 You have to include the Password parameter to recover a deleted mailbox with an existing Microsoft account (formerly known as a Windows Live ID) that wasn't deleted with the mailbox.
 
 ```yaml
 Type: SecureString
-Parameter Sets: Set1
+Parameter Sets: SoftDeletedMailbox
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +179,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -170,13 +190,14 @@ Accept wildcard characters: False
 ### -WindowsLiveID
 The WindowsLiveID parameter specifies a new Microsoft account (formerly known as a Windows Live ID) and primary SMTP for the mailbox. The previous Microsoft account is retained as a proxy address for the mailbox.
 
-You have to include the WindowsLiveID parameter to recover a deleted mailbox with an existing Microsoft account (formerly known as a Windows Live ID) that wasn't deleted with the mailbox.
+You have to include the WindowsLiveID parameter to recover a deleted mailbox with an existing Microsoft account that wasn't deleted with the mailbox.
 
 ```yaml
 Type: WindowsLiveId
-Parameter Sets: Set1
+Parameter Sets: SoftDeletedMailbox
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -185,20 +206,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/e12b0c43-06c7-45f9-9890-eaac56745573.aspx)

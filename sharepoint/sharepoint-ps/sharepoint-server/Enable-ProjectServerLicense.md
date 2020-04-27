@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-projectserverlicense
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Enable-ProjectServerLicense
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 ---
 
 # Enable-ProjectServerLicense
@@ -24,7 +29,7 @@ Enables Project Server functionality on the farm.
 
 ### Example 1 
 ```
-PS C:\>Enable-ProjectServerLicense -Key XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+Enable-ProjectServerLicense -Key XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 ```
 
 This example enables all Project Server functionality in the farm. The type of license being enabled (full or trial) depends on the key that is passed in.
@@ -40,7 +45,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -56,7 +61,7 @@ License key (trial or full).
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 0
@@ -66,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

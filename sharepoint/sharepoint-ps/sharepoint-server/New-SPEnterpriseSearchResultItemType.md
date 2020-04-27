@@ -1,6 +1,8 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchresultitemtype
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchResultItemType
 schema: 2.0.0
 ---
@@ -48,23 +50,23 @@ Example use cases:
 - Change the look of results from a particular author.
 - Add a result action to results from a particular result source as part of a custom search application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
-PS C:\>$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
-PS C:\>$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
-PS C:\>$ruleCollection.Add($rule)
-PS C:\>$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
+$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
+$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
+$ruleCollection.Add($rule)
+$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
 $displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
-PS C:\>$web = Get-SPWeb http://webUrl
-PS C:\>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
-PS C:\>$proxy = Get-SPEnterpriseSearchServiceApplicationProxy
-PS C:\>New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $proxy `
+$web = Get-SPWeb https://webUrl
+$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
+$proxy = Get-SPEnterpriseSearchServiceApplicationProxy
+New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $proxy `
 >> -Name "CustomResultType" `
 >> -Rules $ruleCollection `
 >> -RulePriority 1 `
@@ -88,7 +90,7 @@ Specifies the name of the result item type.
 Type: String
 Parameter Sets: New
 Aliases: n
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 2
@@ -101,7 +103,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Copy
 Aliases: n
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 2
@@ -117,7 +119,7 @@ Specifies the collection of rules to evaluate the result properties against.
 Type: PropertyRuleCollection
 Parameter Sets: New
 Aliases: rule
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 3
@@ -130,7 +132,7 @@ Accept wildcard characters: False
 Type: PropertyRuleCollection
 Parameter Sets: Copy
 Aliases: rule
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 3
@@ -146,7 +148,7 @@ Specifies which priority the collection of rules has compared to other rules.
 Type: Int32
 Parameter Sets: (All)
 Aliases: priority
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 4
@@ -162,7 +164,7 @@ Specifies which result properties to display.
 Type: String
 Parameter Sets: (All)
 Aliases: dp
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 5
@@ -179,7 +181,7 @@ Leave this parameter blank to apply to all result sources.
 Type: Guid
 Parameter Sets: (All)
 Aliases: sid
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 6
@@ -196,7 +198,7 @@ Specify an absolute URL.
 Type: String
 Parameter Sets: New
 Aliases: url
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 7
@@ -209,7 +211,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Copy
 Aliases: url
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 7
@@ -225,7 +227,7 @@ Specifies an existing result item type to which new rules or displayed propertie
 Type: ResultItemTypePipeBind
 Parameter Sets: Copy
 Aliases: copy
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -241,7 +243,7 @@ Specifies the search object owner that defines the scope at which an existing re
 Type: SearchObjectOwner
 Parameter Sets: Copy
 Aliases: eo
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -257,7 +259,7 @@ Specifies the search object owner that defines the scope at which the result ite
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -279,7 +281,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -296,7 +298,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -313,7 +315,7 @@ This will improve performance as long as it is only enabled on the most frequent
 Type: Boolean
 Parameter Sets: (All)
 Aliases: opt
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -330,7 +332,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -347,7 +349,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -364,7 +366,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -374,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,7 +1,12 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatacategory
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer:
 title: Get-FASTSearchMetadataCategory
 ---
 
@@ -22,13 +27,13 @@ If no name is specified, it retrieves all categories in the system.
 
 A category contains several crawled properties that are grouped together for setting properties that are common to them all.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchMetadataCategory
+Get-FASTSearchMetadataCategory
 ```
 
 This example returns all available categories.
@@ -36,14 +41,14 @@ This is the default behavior if you do not specify any parameters.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchMetadataCategory -Name SharePoint
+Get-FASTSearchMetadataCategory -Name SharePoint
 ```
 
 This example returns one specific category, the "SharePoint" category.
 
 ### ---------------EXAMPLE 3-----------------
 ```
-PS C:\>Get-FASTSearchMetadataCategory -Name m*
+Get-FASTSearchMetadataCategory -Name m*
 ```
 
 This example returns all categories with a name that begins with "m".
@@ -51,8 +56,8 @@ Matching is case-insensitive.
 
 ### ---------------EXAMPLE 4-----------------
 ```
-PS C:\>$category = Get-FASTSearchMetadataCategory -Name &quot;Enterprise Crawler&quot;
-PS C:\>$category.GetAllCrawledProperties()|ForEach-Object {$_.Name}
+$category = Get-FASTSearchMetadataCategory -Name &quot;Enterprise Crawler&quot;
+$category.GetAllCrawledProperties()|ForEach-Object {$_.Name}
 ```
 
 This example returns all crawled properties that are mapped to the category named "Enterprise Crawler".
@@ -79,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

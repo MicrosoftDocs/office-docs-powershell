@@ -1,9 +1,13 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboximportrequest
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailboxImportRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-MailboxImportRequest
@@ -13,53 +17,58 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxImportRequest cmdlet to change import request options after the request has been created. You can use the Set-MailboxImportRequest cmdlet to recover from failed import requests.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-###  (Default)
+### Rehome
 ```
-Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-AcceptLargeDataLoss]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-Confirm] [-DomainController <Fqdn>]
- [-Priority <Normal | High>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-RehomeRequest] [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-AzureSharedAccessSignatureToken <String>]
- [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
+Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-RehomeRequest]
+ [-AzureSharedAccessSignatureToken <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-AcceptLargeDataLoss]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RemoteCredential <PSCredential>] [-RemoteHostName <Fqdn>] [-SkipMerging <SkippableMergeComponent[]>]
- [-WhatIf] [-AzureSharedAccessSignatureToken <String>] [-RequestExpiryInterval <Unlimited>]
- [<CommonParameters>]
+Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
+ [-AcceptLargeDataLoss]
+ [-AzureSharedAccessSignatureToken <String>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-Priority <RequestPriority>]
+ [-RemoteCredential <PSCredential>]
+ [-RemoteHostName <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can pipeline the Set-MailboxImportRequest cmdlet from the Get-MailboxImportRequest cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MailboxImportRequest -Identity "Kweku\Import" -BadItemLimit 5
 ```
 
 This example changes the import request Kweku\\Import to accept up to five corrupted mailbox items.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-MailboxImportRequest -Status Suspended | Set-MailboxImportRequest -BatchName April14
 ```
 
@@ -74,7 +83,8 @@ The Identity parameter specifies the identity of the import request. By default,
 Type: MailboxImportRequestIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -83,13 +93,36 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptLargeDataLoss
-The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You need to use this switch if you set either the BadItemLimit or LargeItemLimit parameters to a value of 51 or higher. Otherwise, the command will fail.
+The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
+
+In Exchange 2013 or later or Exchange Online, you need to use this switch if you set the LargeItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
+
+In Exchange 2010, you need to use this switch if you set the BadItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureSharedAccessSignatureToken
+This parameter is available only in the cloud-based service.
+
+PARAMVALUE: String
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -102,13 +135,16 @@ The BadItemLimit parameter specifies the maximum number of bad items that are al
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
 
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -121,9 +157,26 @@ The BatchName parameter specifies the name of the batch.
 
 ```yaml
 Type: String
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompletedRequestAgeLimit
+The CompletedRequestAgeLimit parameter specifies how long the request is kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit parameter value is 30 days.
+
+```yaml
+Type: Unlimited
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +195,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +213,54 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InternalFlags
+This parameter is available only in on-premises Exchange.
+
+The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
+
+```yaml
+Type: InternalMrsFlag[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LargeItemLimit
+The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
+
+For more information about maximum message size values, see the following topics:
+
+- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
+
+- Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
+
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
+
+If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+
+```yaml
+Type: Unlimited
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -189,25 +290,11 @@ The Priority parameter specifies the order in which the request should be proces
 - Emergency
 
 ```yaml
-Type: Normal | High
-Parameter Sets: (All), Set1
+Type: RequestPriority
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -222,67 +309,11 @@ The RehomeRequest parameter specifies to the Microsoft Exchange Mailbox Replicat
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Rehome
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompletedRequestAgeLimit
-The CompletedRequestAgeLimit parameter specifies how long the request is kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit parameter value is 30 days.
-
-```yaml
-Type: Unlimited
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InternalFlags
-This parameter is available only in on-premises Exchange.
-
-The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
-
-```yaml
-Type: InternalMrsFlag[]
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LargeItemLimit
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
-
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
-
-- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
-
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-```yaml
-Type: Unlimited
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -292,13 +323,16 @@ Accept wildcard characters: False
 ### -RemoteCredential
 This parameter is available only in on-premises Exchange.
 
-The RemoteCredential parameter specifies an administrator who has permission to perform the mailbox import request. For example, Administrator@ humongousinsurance.com.
+The RemoteCredential parameter specifies the username and password an administrator who has permission to perform the mailbox import request.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -313,41 +347,10 @@ The RemoteHostName parameter specifies the FQDN of the cross-forest organization
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-### -SkipMerging
-The SkipMerging parameter specifies the steps in the import that should be skipped. This parameter is used primarily for debugging purposes.
-
-```yaml
-Type: SkippableMergeComponent[]
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureSharedAccessSignatureToken
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: Set2, Set1
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -368,9 +371,42 @@ When you use the value Unlimited, the completed request isn't automatically remo
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set2, Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipMerging
+The SkipMerging parameter specifies the steps in the import that should be skipped. This parameter is used primarily for debugging purposes.
+
+```yaml
+Type: SkippableMergeComponent[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -379,20 +415,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/7802e75f-e7db-424f-b68f-751cdabb324b.aspx)

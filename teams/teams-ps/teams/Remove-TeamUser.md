@@ -1,41 +1,37 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
-title: Remove-TeamUser
-online version: 
+online version: https://docs.microsoft.com/powershell/module/teams/remove-teamuser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-TeamUser
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 
-Remove an owner or member from a team,
-and to the unified group which backs the team. 
+Remove an owner or member from a team, and from the unified group which backs the team.
 
-Note: the command will return immediately, but the Teams application will not reflect the update immediately. The Teams application may need to be open for up to an hour before changes are reflected.
+Note: the command will return immediately, but the Teams application will not reflect the update immediately.
+The Teams application may need to be open for up to an hour before changes are reflected.
 
 Note: last owner cannot be removed from the team.
-
-To turn an existing Member into an Owner, 
-first Add-TeamUser -Role Owner -User foo,
-then Remove-TeamUser -User foo to remove them from the members list.
 
 ## SYNTAX
 
 ```
-Remove-TeamUser -GroupId <String> -User <String>
+Remove-TeamUser -GroupId <String> -User <String> [-Role <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+### Example 1
 ```
-Remove-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com
+Remove-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com -Role Owner
 ```
 
 ## PARAMETERS
@@ -47,7 +43,6 @@ GroupId of the team
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -64,7 +59,6 @@ johndoe@example.com)
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -73,6 +67,27 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Role
+Specify the role of the user you are removing from the team. Accepts "Owner" and "Member" as possible values.
+If cmdlet is called with -Role parameter as "Member" then the specified user is removed from the Team completely even if they were the owner of the Team. If "Owner" is specified in the -Role parameter then the specified user is removed as an owner of the team but stays as a team member. 
+Note: The last owner cannot be removed from the team.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
@@ -80,4 +95,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,8 +1,13 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsite
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPSite
 schema: 2.0.0
+author: techwriter40
+ms.author: kirks
+ms.reviewer: 
 ---
 
 # Remove-SPSite
@@ -14,29 +19,28 @@ Completely deletes an existing site collection and all subsites.
 ## SYNTAX
 
 ```
-Remove-SPSite [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
- [-DeleteADAccounts] [-GradualDelete] [-WhatIf] [<CommonParameters>]
+Remove-SPSite  [-Identity] <SPSitePipeBind> [-DeleteADAccounts] [-GradualDelete]
+ [-CheckComplianceFlags <Boolean>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Remove-SPSite` cmdlet completely deletes an existing site collection and all subsites.
+The **Remove-SPSite** cmdlet completely deletes an existing site collection and all subsites.
 This operation cannot be undone.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Remove-SPSite -Identity 'http://sitename' -GradualDelete -Confirm:$False
+Remove-SPSite -Identity 'https://sitename' -GradualDelete -Confirm:$False
 ```
 
 This example removes the given site collection and all included sites by using GradualDelete which places the site in the site recycle bin; confirmation has been suppressed.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Remove-SPSite -Identity 'http://sitename'
+Remove-SPSite -Identity 'https://sitename'
 ```
 
 This example immediately deletes the site and it's contents from the farm.
@@ -45,18 +49,47 @@ This example immediately deletes the site and it's contents from the farm.
 
 ### -Identity
 Specifies the identity of the site to delete.
-The identity can be either a valid URL, in the form http://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an SPSite object.
+The identity can be either a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an SPSite object.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+### -DeleteADAccounts
+Forces deletion of user accounts from Active Directory Domain Services (AD DS).
+This applies when in AD DS account creation mode and the value of this parameter is True, AD DS accounts associated with the site collection are also deleted from AD DS.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable:  SharePoint Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -CheckComplianceFlags
+Specifies if compliance flags are enabled. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable:  SharePoint Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -69,7 +102,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -86,7 +119,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -104,7 +137,7 @@ This applies when in AD DS account creation mode and the value of this parameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -122,7 +155,7 @@ This operation is strongly recommended for deleting very large sites. This optio
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -139,7 +172,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

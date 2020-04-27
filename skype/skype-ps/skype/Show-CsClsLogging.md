@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/show-csclslogging
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Show-CsClsLogging
 schema: 2.0.0
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
+ms.reviewer:
 ---
 
 # Show-CsClsLogging
@@ -40,7 +45,7 @@ The `Show-CsClsLogging` cmdlet returns information about all the scenarios curre
 Show-CsClsLogging
 ```
 
-The command shown in Example 1 returns information about the scenarios currently being logged on all the Computers in the topology.
+The command shown in Example 1 returns information about the scenarios currently being logged on the server where this cmdlet is run.
 
 
 ### -------------------------- Example 2 --------------------------
@@ -48,7 +53,7 @@ The command shown in Example 1 returns information about the scenarios currently
 Show-CsClsLogging -Pools "atl-cs-001.litwareinc.com"
 ```
 
-In Example 2, logging information is returned for all the servers in the pool `atl-cs-001…litwareinc.com…`
+In Example 2, logging information is returned for all the servers in the pool `atl-cs-001...litwareinc.com...`
 
 
 ## PARAMETERS
@@ -121,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
