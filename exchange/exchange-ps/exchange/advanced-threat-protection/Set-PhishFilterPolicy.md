@@ -128,17 +128,17 @@ There are two basic options for the CSV file:
 
 - **Block or allow all spoofed mail from the source**: You want to block or allow any and all spoofed messages from the specified message source, regardless of the spoofed email address. You can get the CSV file by running the command `Get-PhishFilterPolicy -Detailed | Export-CSV "<PathAndFileName>.csv"`. The important header fields (column headers) are:
 
-  **Sender**: The domain of the source email server from DNS records, or the IP address if there aren't any DNS records.
+  **Sender**: The domain of the source email server from reverse DNS lookup (PTR records), or the IP address if there aren't any PTR records.
 
   **AllowedToSpoof**: Indicates whether the message source is allowed to send spoofed messages. Valid values are Yes or No.
 
-- **Block or allow some spoofed mail from the source**: You want to block or allow some spoofed messages from the specified message source, but not others. You can get the CSV file by running the command `Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "<PathAndFileName>.csv"`. The important header fields (column headers) are:
+- **Block or allow some spoofed mail from the source**: You want to block or allow some spoofed messages from the specified message source, but not others. You can get the CSV file by running the command `Get-PhishFilterPolicy -Detailed | Export-CSV "<PathAndFileName>.csv"`. The important header fields (column headers) are:
 
-  **Sender**: The domain of the source email server from DNS records, or the IP address if there aren't any DNS records.
+  **Sender**
 
   **SpoofedUser**: The spoofed email address in your organization that the messages appear to be coming from.
 
-  **AllowedToSpoof**: Indicates whether messages that contain the spoofed sender from the source email server are allowed. Valid values are Yes or No.
+  **AllowedToSpoof**
 
 ```yaml
 Type: String

@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Adds a Site Collection scoped App Catalog to a site
+Adds a Site Collection scoped App Catalog to a site.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Add-SPOSiteCollectionAppCatalog -Site <SpoSitePipeBind> [-WhatIf] [-Confirm] [<C
 
 ## DESCRIPTION
 
-.
+Use this cmdlet to add a site collection scoped app catalog to the specified site.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ Add-SPOSiteCollectionAppCatalog -Site <SpoSitePipeBind> [-WhatIf] [-Confirm] [<C
 Add-SPOSiteCollectionAppCatalog -Site "https://contoso.sharepoint.com/sites/FinanceTeamsite"
 ```
 
-This will add a SiteCollection app catalog to the specified site
+This example adds a SiteCollection app catalog to the specified site.
 
 ## PARAMETERS
 

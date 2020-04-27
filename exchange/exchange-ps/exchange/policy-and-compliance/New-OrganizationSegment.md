@@ -50,7 +50,7 @@ In this example, we defined a segment called NotSales that includes everyone who
 
 ### Example 3
 ```powershell
-New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" and "Position -ne 'Temporary'"
+New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" -and "Position -ne 'Temporary'"
 ```
 
 In this example, we defined a segment called LocalFTE that includes people who are locally located and whose positions are not listed as Temporary.

@@ -28,35 +28,35 @@ You can use this cmdlet to create a new number manipulation rule. The rule can b
 
 ### Example 1
 ```powershell
-PS C:\> New-CsTeamsTranslationRule -Identity AddPlus1 -Pattern ^(\d{10})$ -Translation +$1
+PS C:\> New-CsTeamsTranslationRule -Identity 'AddPlus1' -Pattern '^(\d{10})$' -Translation '+$1'
 ```
 
 This example creates a rule that adds +1 to any ten digits number. For example, 2065555555 will be translated to +1206555555
 
 ### Example 2
 ```powershell
-PS C:\> New-CsTeamsTranslationRule -Identity StripPlus1 -Pattern ^+1(\d{10})$ -Translation $1
+PS C:\> New-CsTeamsTranslationRule -Identity 'StripPlus1' -Pattern '^\+1(\d{10})$' -Translation '$1'
 ```
 
 This example creates a rule that strips +1 from any E.164 eleven digits number. For example, +12065555555 will be translated to 206555555
 
 ### Example 3
 ```powershell
-PS C:\> New-CsTeamsTranslationRule -Identity AddE164SeattleAreaCode -Pattern ^(\d{4})$ -Translation +120655$1
+PS C:\> New-CsTeamsTranslationRule -Identity 'AddE164SeattleAreaCode' -Pattern '^(\d{4})$' -Translation '+120655$1'
 ```
 
 This example creates a rule that adds +1206555 to any four digits number (converts it to E.164number). For example, 5555 will be translated to +1206555555
 
 ### Example 4
 ```powershell
-PS C:\> New-CsTeamsTranslationRule -Identity AddSeattleAreaCode -Pattern ^(\d{4})$ -Translation 425555$1
+PS C:\> New-CsTeamsTranslationRule -Identity 'AddSeattleAreaCode' -Pattern '^(\d{4})$' -Translation '425555$1'
 ```
 
 This example creates a rule that adds 425555 to any four digits number (converts to non-E.164 ten digits number). For example, 5555 will be translated to 4255555555
 
 ### Example 5
 ```powershell
-PS C:\> New-CsTeamsTranslationRule -Identity StripE164SeattleAreaCode -Pattern ^+1206555(\d{4})$ -Translation $1
+PS C:\> New-CsTeamsTranslationRule -Identity 'StripE164SeattleAreaCode' -Pattern  '^\+1206555(\d{4})$' -Translation '$1'
 ```
 
 This example creates a rule that strips +1206555 from any E.164 ten digits number. For example, +12065555555 will be translated to 5555
