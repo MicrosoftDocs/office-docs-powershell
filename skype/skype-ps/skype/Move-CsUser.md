@@ -21,7 +21,7 @@ Moves one or more user accounts enabled for Skype for Business Server to a new R
 ### (Default)
 
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-UseOAuth] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-MoveConferenceData] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-UseOAuth] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-ProxyPool <Fqdn>] [-MoveConferenceData] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -238,6 +238,23 @@ This is an optional parameter that if, specified, pre-populates the username of 
 Type: UserIdParameter
 Aliases:
 Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyPool
+
+This parameter has been deprecated and should not be used.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
 Required: False
 Position: Named
 Default value: None
