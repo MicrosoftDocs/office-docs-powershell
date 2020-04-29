@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateMeetingsToTeams
-Specifies whether to move existing Skype for Business meetings organized by the user to Teams. This parameter can only be true if the mode of the specified policy instance is either TeamsOnly or SfBWithTeamsCollabAndMeetings, and if the policy instance is being granted to a specific user.  It not possible to trigger meeting migration when granting TeamsUpgradePolicy to the entire tenant. For more details, see [Using the meeting migration service](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
+Specifies whether to move existing Skype for Business meetings organized by the user to Teams. This parameter can only be true if the mode of the specified policy instance is either TeamsOnly or SfBWithTeamsCollabAndMeetings, and if the policy instance is being granted to a specific user.  It is not possible to trigger meeting migration when granting TeamsUpgradePolicy to the entire tenant. For more details, see [Using the meeting migration service](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 
 
