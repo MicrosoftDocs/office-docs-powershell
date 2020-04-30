@@ -1,17 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/remove-cscallinglineidentity
 applicable: Skype for Business Online
 title: Remove-CsCallingLineIdentity
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # Remove-CsCallingLineIdentity
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the `Remove-CsCallingLineIdentity` cmdlet to remove a Caller ID policy from your organization.
 
 ## SYNTAX
 
@@ -21,22 +23,22 @@ Remove-CsCallingLineIdentity [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can modify a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+PS C:\> Remove-CsCallingLineIdentity -Identity Anonymous
 ```
 
-Insert descriptive text for example 1.
+This example removes a Caller ID policy.
 
 
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: XdsIdentity
+The Identity parameter identifies the Caller ID policy.
 
 ```yaml
 Type: XdsIdentity
@@ -52,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-PARAMVALUE: SwitchParameter
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -68,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -100,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter

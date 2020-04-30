@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/enable-pnpsiteclassification
 applicable: SharePoint Online
 schema: 2.0.0
+title: Enable-PnPSiteClassification
 ---
+
 # Enable-PnPSiteClassification
 
 ## SYNOPSIS
@@ -29,7 +32,7 @@ Enables Site Classifications for your tenant and provides three classification v
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-Enable-PnPSiteClassification -Classifications "HBI","LBI","Top Secret" -UsageGuidelinesUrl http://aka.ms/sppnp
+Enable-PnPSiteClassification -Classifications "HBI","LBI","Top Secret" -UsageGuidelinesUrl https://aka.ms/sppnp
 ```
 
 Enables Site Classifications for your tenant and provides three classification values. The usage guideliness will be set to the specified URL.

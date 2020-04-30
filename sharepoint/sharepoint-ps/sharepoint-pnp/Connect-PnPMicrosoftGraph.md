@@ -1,14 +1,16 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/connect-pnpmicrosoftgraph
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
 ---
+
 # Connect-PnPMicrosoftGraph
 
 ## SYNOPSIS
 Connect to the Microsoft Graph
 
-## SYNTAX 
+## SYNTAX
 
 ### Scope
 ```powershell
@@ -32,7 +34,7 @@ Uses the Microsoft Authentication Library (Preview) to connect to Azure AD and t
 Connect-PnPMicrosoftGraph -Scopes $arrayOfScopes
 ```
 
-Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://developer.microsoft.com/en-us/graph/docs/authorization/permission_scopes
+Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://graph.microsoft.io/en-us/docs/authorization/permission_scopes
 
 ### ------------------EXAMPLE 2------------------
 ```powershell

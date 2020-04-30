@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-transportrule
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-TransportRule
 schema: 2.0.0
@@ -18,16 +19,16 @@ Use the Set-TransportRule cmdlet to modify existing transport rules (mail flow r
 
 If you delete all conditions and exceptions from a rule, the rule action is applied to all messages. This can have unintended consequences. For example, if the rule action is to delete the message, removing the conditions and exceptions could cause the rule to delete all inbound and outbound messages for the entire organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-TransportRule [-Identity] <RuleIdParameter>
  [-ActivationDate <DateTime>]
- [-ADComparisonAttribute <DisplayName | FirstName | Initials | LastName | Office | PhoneNumber | OtherPhoneNumber | Email | Street | POBox | City | State | ZipCode | Country | UserLogonName | HomePhoneNumber | OtherHomePhoneNumber | PagerNumber | MobileNumber | FaxNumber | OtherFaxNumber | Notes | Title | Department | Company | Manager | CustomAttribute1 | CustomAttribute2 | CustomAttribute3 | CustomAttribute4 | CustomAttribute5 | CustomAttribute6 | CustomAttribute7 | CustomAttribute8 | CustomAttribute9 | CustomAttribute10 | CustomAttribute11 | CustomAttribute12 | CustomAttribute13 | CustomAttribute14 | CustomAttribute15>]
- [-ADComparisonOperator <Equal | NotEqual>]
- [-AddManagerAsRecipientType <To | Cc | Bcc | Redirect>]
+ [-ADComparisonAttribute <ADAttribute>]
+ [-ADComparisonOperator <Evaluation>]
+ [-AddManagerAsRecipientType <AddedRecipientType>]
  [-AddToRecipients <RecipientIdParameter []>]
  [-AnyOfCcHeader <RecipientIdParameter []>]
  [-AnyOfCcHeaderMemberOf <RecipientIdParameter []>]
@@ -38,19 +39,19 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-AnyOfToHeader <RecipientIdParameter []>]
  [-AnyOfToHeaderMemberOf <RecipientIdParameter []>]
  [-ApplyClassification <String>]
- [-ApplyHtmlDisclaimerFallbackAction <Wrap | Ignore | Reject>]
- [-ApplyHtmlDisclaimerLocation <Append | Prepend>]
+ [-ApplyHtmlDisclaimerFallbackAction <DisclaimerFallbackAction>]
+ [-ApplyHtmlDisclaimerLocation <DisclaimerLocation>]
  [-ApplyHtmlDisclaimerText <DisclaimerText>]
- [-ApplyOME <$true | $false>]
+ [-ApplyOME <Boolean>]
  [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>]
  [-AttachmentContainsWords <Word []>]
  [-AttachmentExtensionMatchesWords <Word []>]
- [-AttachmentHasExecutableContent <$true | $false>]
- [-AttachmentIsPasswordProtected <$true | $false>]
- [-AttachmentIsUnsupported <$true | $false>]
+ [-AttachmentHasExecutableContent <Boolean>]
+ [-AttachmentIsPasswordProtected <Boolean>]
+ [-AttachmentIsUnsupported <Boolean>]
  [-AttachmentMatchesPatterns <Pattern []>]
  [-AttachmentNameMatchesPatterns <Pattern []>]
- [-AttachmentProcessingLimitExceeded <$true | $false>]
+ [-AttachmentProcessingLimitExceeded <Boolean>]
  [-AttachmentPropertyContainsWords <Word []>]
  [-AttachmentSizeOver <ByteQuantifiedSize>]
  [-BetweenMemberOf1 <RecipientIdParameter []>]
@@ -60,12 +61,12 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-Confirm]
  [-ContentCharacterSetContainsWords <Word []>]
  [-CopyTo <RecipientIdParameter []>]
- [-DeleteMessage <$true | $false>]
- [-Disconnect <$true | $false>]
+ [-DeleteMessage <Boolean>]
+ [-Disconnect <Boolean>]
  [-DlpPolicy <String>]
  [-DomainController <Fqdn>]
- [-ExceptIfADComparisonAttribute <DisplayName | FirstName | Initials | LastName | Office | PhoneNumber | OtherPhoneNumber | Email | Street | POBox | City | State | ZipCode | Country | UserLogonName | HomePhoneNumber | OtherHomePhoneNumber | PagerNumber | MobileNumber | FaxNumber | OtherFaxNumber | Notes | Title | Department | Company | Manager | CustomAttribute1 | CustomAttribute2 | CustomAttribute3 | CustomAttribute4 | CustomAttribute5 | CustomAttribute6 | CustomAttribute7 | CustomAttribute8 | CustomAttribute9 | CustomAttribute10 | CustomAttribute11 | CustomAttribute12 | CustomAttribute13 | CustomAttribute14 | CustomAttribute15>]
- [-ExceptIfADComparisonOperator <Equal | NotEqual>]
+ [-ExceptIfADComparisonAttribute <ADAttribute>]
+ [-ExceptIfADComparisonOperator <Evaluation>]
  [-ExceptIfAnyOfCcHeader <RecipientIdParameter []>]
  [-ExceptIfAnyOfCcHeaderMemberOf <RecipientIdParameter []>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <Word []>]
@@ -76,12 +77,12 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-ExceptIfAnyOfToHeaderMemberOf <RecipientIdParameter []>]
  [-ExceptIfAttachmentContainsWords <Word []>]
  [-ExceptIfAttachmentExtensionMatchesWords <Word []>]
- [-ExceptIfAttachmentHasExecutableContent <$true | $false>]
- [-ExceptIfAttachmentIsPasswordProtected <$true | $false>]
- [-ExceptIfAttachmentIsUnsupported <$true | $false>]
+ [-ExceptIfAttachmentHasExecutableContent <Boolean>]
+ [-ExceptIfAttachmentIsPasswordProtected <Boolean>]
+ [-ExceptIfAttachmentIsUnsupported <Boolean>]
  [-ExceptIfAttachmentMatchesPatterns <Pattern []>]
  [-ExceptIfAttachmentNameMatchesPatterns <Pattern []>]
- [-ExceptIfAttachmentProcessingLimitExceeded <$true | $false>]
+ [-ExceptIfAttachmentProcessingLimitExceeded <Boolean>]
  [-ExceptIfAttachmentPropertyContainsWords <Word []>]
  [-ExceptIfAttachmentSizeOver <ByteQuantifiedSize>]
  [-ExceptIfBetweenMemberOf1 <RecipientIdParameter []>]
@@ -91,20 +92,20 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-ExceptIfFromAddressContainsWords <Word []>]
  [-ExceptIfFromAddressMatchesPatterns <Pattern []>]
  [-ExceptIfFromMemberOf <RecipientIdParameter []>]
- [-ExceptIfFromScope <InOrganization | NotInOrganization>]
+ [-ExceptIfFromScope <FromUserScope>]
  [-ExceptIfHasClassification <String>]
- [-ExceptIfHasNoClassification <$true | $false>]
- [-ExceptIfHasSenderOverride <$true | $false>]
+ [-ExceptIfHasNoClassification <Boolean>]
+ [-ExceptIfHasSenderOverride <Boolean>]
  [-ExceptIfHeaderContainsMessageHeader <HeaderName>]
  [-ExceptIfHeaderContainsWords <Word []>]
  [-ExceptIfHeaderMatchesMessageHeader <HeaderName>]
  [-ExceptIfHeaderMatchesPatterns <Pattern []>]
  [-ExceptIfManagerAddresses <RecipientIdParameter []>]
- [-ExceptIfManagerForEvaluatedUser <Sender | Recipient>]
+ [-ExceptIfManagerForEvaluatedUser <EvaluatedUser>]
  [-ExceptIfMessageContainsAllDataClassifications <Hashtable []>]
  [-ExceptIfMessageContainsDataClassifications <Hashtable []>]
  [-ExceptIfMessageSizeOver <ByteQuantifiedSize>]
- [-ExceptIfMessageTypeMatches <OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt>]
+ [-ExceptIfMessageTypeMatches <MessageType>]
  [-ExceptIfRecipientADAttributeContainsWords <Word []>]
  [-ExceptIfRecipientADAttributeMatchesPatterns <Pattern []>]
  [-ExceptIfRecipientAddressContainsWords <Word []>]
@@ -117,47 +118,47 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-ExceptIfSenderDomainIs <Word []>]
  [-ExceptIfSenderInRecipientList <Word []>]
  [-ExceptIfSenderIpRanges <MultiValuedProperty>]
- [-ExceptIfSenderManagementRelationship <Manager | DirectReport>]
+ [-ExceptIfSenderManagementRelationship <ManagementRelationship>]
  [-ExceptIfSentTo <RecipientIdParameter []>]
  [-ExceptIfSentToMemberOf <RecipientIdParameter []>]
- [-ExceptIfSentToScope <InOrganization | NotInOrganization | ExternalPartner | ExternalNonPartner>]
+ [-ExceptIfSentToScope <ToUserScope>]
  [-ExceptIfSubjectContainsWords <Word []>]
  [-ExceptIfSubjectMatchesPatterns <Pattern []>]
  [-ExceptIfSubjectOrBodyContainsWords <Word []>]
  [-ExceptIfSubjectOrBodyMatchesPatterns <Pattern []>]
- [-ExceptIfWithImportance <Low | Normal | High>]
+ [-ExceptIfWithImportance <Importance>]
  [-ExpiryDate <DateTime>]
  [-From <RecipientIdParameter []>]
  [-FromAddressContainsWords <Word []>]
  [-FromAddressMatchesPatterns <Pattern []>]
  [-FromMemberOf <RecipientIdParameter []>]
- [-FromScope <InOrganization | NotInOrganization>]
+ [-FromScope <FromUserScope>]
  [-GenerateIncidentReport <RecipientIdParameter>]
  [-GenerateNotification <DisclaimerText>]
  [-HasClassification <String>]
- [-HasNoClassification <$true | $false>]
- [-HasSenderOverride <$true | $false>]
+ [-HasNoClassification <Boolean>]
+ [-HasSenderOverride <Boolean>]
  [-HeaderContainsMessageHeader <HeaderName>]
  [-HeaderContainsWords <Word []>]
  [-HeaderMatchesMessageHeader <HeaderName>]
  [-HeaderMatchesPatterns <Pattern []>]
  [-IncidentReportContent <IncidentReportContent []>]
- [-IncidentReportOriginalMail <IncludeOriginalMail | DoNotIncludeOriginalMail>]
+ [-IncidentReportOriginalMail <IncidentReportOriginalMail>]
  [-LogEventText <EventLogText>]
  [-ManagerAddresses <RecipientIdParameter []>]
- [-ManagerForEvaluatedUser <Sender | Recipient>]
+ [-ManagerForEvaluatedUser <EvaluatedUser>]
  [-MessageContainsAllDataClassifications <Hashtable []>]
  [-MessageContainsDataClassifications <Hashtable []>]
  [-MessageSizeOver <ByteQuantifiedSize>]
- [-MessageTypeMatches <OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt>]
- [-Mode <Audit | AuditAndNotify | Enforce>]
- [-ModerateMessageByManager <$true | $false>]
+ [-MessageTypeMatches <MessageType>]
+ [-Mode <RuleMode>]
+ [-ModerateMessageByManager <Boolean>]
  [-ModerateMessageByUser <RecipientIdParameter []>]
  [-Name <String>]
- [-NotifySender <NotifyOnly | RejectMessage | RejectUnlessFalsePositiveOverride | RejectUnlessSilentOverride | RejectUnlessExplicitOverride>]
+ [-NotifySender <NotifySenderType>]
  [-PrependSubject <SubjectPrefix>]
  [-Priority <Int32>]
- [-Quarantine <$true | $false>]
+ [-Quarantine <Boolean>]
  [-RecipientADAttributeContainsWords <Word []>]
  [-RecipientADAttributeMatchesPatterns <Pattern []>]
  [-RecipientAddressContainsWords <Word []>]
@@ -168,36 +169,36 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-RejectMessageEnhancedStatusCode <RejectEnhancedStatus>]
  [-RejectMessageReasonText <RejectText>]
  [-RemoveHeader <HeaderName>]
- [-RemoveOME <$true | $false>]
- [-RemoveOMEv2 <$true | $false>]
+ [-RemoveOME <Boolean>]
+ [-RemoveOMEv2 <Boolean>]
  [-RouteMessageOutboundConnector <OutboundConnectorIdParameter>]
- [-RouteMessageOutboundRequireTls <$true | $false>]
- [-RuleErrorAction <Ignore | Defer>]
- [-RuleSubType <None | Dlp>]
+ [-RouteMessageOutboundRequireTls <Boolean>]
+ [-RuleErrorAction <RuleErrorAction>]
+ [-RuleSubType <RuleSubType>]
  [-SCLOver <SclValue>]
  [-SenderADAttributeContainsWords <Word []>]
  [-SenderADAttributeMatchesPatterns <Pattern []>]
- [-SenderAddressLocation <Header | Envelope | HeaderOrEnvelope>]
+ [-SenderAddressLocation <SenderAddressLocation>]
  [-SenderDomainIs <Word []>]
  [-SenderInRecipientList <Word []>]
  [-SenderIpRanges <MultiValuedProperty>]
- [-SenderManagementRelationship <Manager | DirectReport>]
+ [-SenderManagementRelationship <ManagementRelationship>]
  [-SentTo <RecipientIdParameter []>]
  [-SentToMemberOf <RecipientIdParameter []>]
- [-SentToScope <InOrganization | NotInOrganization | ExternalPartner | ExternalNonPartner>]
+ [-SentToScope <ToUserScope>]
  [-SetAuditSeverity <String>]
  [-SetHeaderName <HeaderName>]
  [-SetHeaderValue <HeaderValue>]
  [-SetSCL <SclValue>]
  [-SmtpRejectMessageRejectStatusCode <RejectStatusCode>]
  [-SmtpRejectMessageRejectText <RejectText>]
- [-StopRuleProcessing <$true | $false>]
+ [-StopRuleProcessing <Boolean>]
  [-SubjectContainsWords <Word []>]
  [-SubjectMatchesPatterns <Pattern []>]
  [-SubjectOrBodyContainsWords <Word []>]
  [-SubjectOrBodyMatchesPatterns <Pattern []>]
  [-WhatIf]
- [-WithImportance <Low | Normal | High>]
+ [-WithImportance <Importance>]
  [<CommonParameters>]
 ```
 
@@ -206,12 +207,12 @@ In on-premises Exchange organizations, rules created on Mailbox servers are stor
 
 The search for words or text patterns in the subject or other header fields in the message occurs after the message has been decoded from the MIME content transfer encoding method that was used to transmit the binary message between SMTP servers in ASCII text. You can't use conditions or exceptions to search for the raw (typically, Base64) encoded values of the subject or other header fields in messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-TransportRule "Sales Team Disclaimer" -FromMemberOf "Sales Department"
 ```
 
@@ -235,6 +236,7 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -252,6 +254,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -325,10 +328,11 @@ You can use any of the following Active Directory attributes:
 If you don't use the ADComparisonOperator parameter, the default comparison operator Equal is used.
 
 ```yaml
-Type: DisplayName | FirstName | Initials | LastName | Office | PhoneNumber | OtherPhoneNumber | Email | Street | POBox | City | State | ZipCode | Country | UserLogonName | HomePhoneNumber | OtherHomePhoneNumber | PagerNumber | MobileNumber | FaxNumber | OtherFaxNumber | Notes | Title | Department | Company | Manager | CustomAttribute1 | CustomAttribute2 | CustomAttribute3 | CustomAttribute4 | CustomAttribute5 | CustomAttribute6 | CustomAttribute7 | CustomAttribute8 | CustomAttribute9 | CustomAttribute10 | CustomAttribute11 | CustomAttribute12 | CustomAttribute13 | CustomAttribute14 | CustomAttribute15
+Type: ADAttribute
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -348,10 +352,11 @@ The ADComparisonOperator parameter specifies the comparison operator for the ADC
 - NotEqual
 
 ```yaml
-Type: Equal | NotEqual
+Type: Evaluation
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -377,10 +382,11 @@ The AddManagerAsRecipientType parameter specifies an action that delivers or red
 This action only works if the sender's Manager attribute is defined.
 
 ```yaml
-Type: To | Cc | Bcc | Redirect
+Type: AddedRecipientType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -414,6 +420,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -451,6 +458,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -488,6 +496,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -511,6 +520,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -534,6 +544,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -571,6 +582,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -608,6 +620,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -645,6 +658,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -682,6 +696,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -703,6 +718,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -726,10 +742,11 @@ The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML
 If you don't use this parameter with the ApplyHtmlDisclaimerText parameter, the default value Wrap is used.
 
 ```yaml
-Type: Wrap | Ignore | Reject
+Type: DisclaimerFallbackAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -751,10 +768,11 @@ The ApplyHtmlDisclaimerLocation parameter specifies where to insert the HTML dis
 If you don't use this parameter with the ApplyHtmlDisclaimerText parameter, the default value Append is used.
 
 ```yaml
-Type: Append | Prepend
+Type: DisclaimerLocation
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -776,6 +794,7 @@ Type: DisclaimerText
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -795,10 +814,11 @@ The ApplyOME parameter specifies an action that encrypts messages and their atta
 - $false: The message and attachments aren't encrypted.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -817,13 +837,14 @@ To use this action, you need to have an Active Directory Rights Management Servi
 
 Use the Get-RMSTemplate cmdlet to see the RMS templates that are available.
 
-For more information, see Transport protection rules (https://technet.microsoft.com/library/dd298166.aspx).
+For more information, see [Transport protection rules](https://docs.microsoft.com/exchange/transport-protection-rules-exchange-2013-help).
 
 ```yaml
 Type: RmsTemplateIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -845,6 +866,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -864,6 +886,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -883,10 +906,11 @@ The AttachmentHasExecutableContent parameter specifies a condition that looks fo
 - $false: Don't look for executable content in message attachments.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -906,10 +930,11 @@ The AttachmentIsPasswordProtected parameter specifies a condition that looks for
 - $false: Don't look for password protected attachments.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -928,13 +953,14 @@ The AttachmentIsUnsupported parameter specifies a condition that looks for unsup
 
 - $false: Don't look for unsupported file types in messages.
 
-For more information, see Register Filter Pack IFilters with Exchange (https://technet.microsoft.com/library/jj837174.aspx).
+For more information, see [Register Filter Pack IFilters with Exchange 2013](https://docs.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -958,6 +984,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -977,6 +1004,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -998,10 +1026,11 @@ The AttachmentProcessingLimitExceeded parameter specifies a condition that looks
 You use this condition to create rules that work together with other attachment processing rules to handle messages where the content can't be fully scanned.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1053,6 +1082,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1086,6 +1116,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1119,6 +1150,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1152,6 +1184,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1185,6 +1218,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1200,6 +1234,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1219,6 +1254,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1240,6 +1276,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1273,6 +1310,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1292,10 +1330,11 @@ The DeleteMessage parameter specifies an action that silently drops messages wit
 - $false: Don't silently drop the message.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1315,10 +1354,11 @@ The Disconnect parameter specifies an action that ends the SMTP connection betwe
 - $false: Don't silently end the SMTP session.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1327,13 +1367,14 @@ Accept wildcard characters: False
 ```
 
 ### -DlpPolicy
-The DlpPolicy parameter specifies the data loss prevention (DLP) policy that's associated with the rule. Each DLP policy is enforced using a set of mail flow rules (transport rules). To learn more about DLP, see Data loss prevention (https://technet.microsoft.com/library/jj150527.aspx).
+The DlpPolicy parameter specifies the data loss prevention (DLP) policy that's associated with the rule. Each DLP policy is enforced using a set of mail flow rules (transport rules). To learn more about DLP, see [Data loss prevention in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/data-loss-prevention).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1353,6 +1394,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -1426,10 +1468,11 @@ You can use any of the following Active Directory attributes:
 If you don't use the ExceptIfADComparisonOperator parameter, the default comparison operator Equal is used.
 
 ```yaml
-Type: DisplayName | FirstName | Initials | LastName | Office | PhoneNumber | OtherPhoneNumber | Email | Street | POBox | City | State | ZipCode | Country | UserLogonName | HomePhoneNumber | OtherHomePhoneNumber | PagerNumber | MobileNumber | FaxNumber | OtherFaxNumber | Notes | Title | Department | Company | Manager | CustomAttribute1 | CustomAttribute2 | CustomAttribute3 | CustomAttribute4 | CustomAttribute5 | CustomAttribute6 | CustomAttribute7 | CustomAttribute8 | CustomAttribute9 | CustomAttribute10 | CustomAttribute11 | CustomAttribute12 | CustomAttribute13 | CustomAttribute14 | CustomAttribute15
+Type: ADAttribute
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1449,10 +1492,11 @@ The ExceptIfADComparisonOperator parameter specifies the comparison operator for
 - NotEqual
 
 ```yaml
-Type: Equal | NotEqual
+Type: Evaluation
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1490,6 +1534,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1527,6 +1572,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1550,6 +1596,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1573,6 +1620,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1610,6 +1658,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1647,6 +1696,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1684,6 +1734,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1721,6 +1772,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1742,6 +1794,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1761,6 +1814,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1780,10 +1834,11 @@ The ExceptIfAttachmentHasExecutableContent parameter specifies an exception that
 - $false: Don't look for executable content in message attachments.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1803,10 +1858,11 @@ The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that 
 - $false: Don't look for password protected attachments.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1825,13 +1881,14 @@ The ExceptIfAttachmentIsUnsupported parameter specifies an exception that looks 
 
 - $false: Don't look for unsupported file types in messages.
 
-For more information, see Register Filter Pack IFilters with Exchange (https://technet.microsoft.com/library/jj837174.aspx).
+For more information, see [Register Filter Pack IFilters with Exchange 2013](https://docs.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1855,6 +1912,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1874,6 +1932,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1895,10 +1954,11 @@ The ExceptIfAttachmentProcessingLimitExceeded parameter specifies an exception t
 You use this exception to create rules that work together with other attachment processing rules to handle messages where the content can't be fully scanned.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1950,6 +2010,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -1983,6 +2044,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2016,6 +2078,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2049,6 +2112,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2070,6 +2134,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2105,6 +2170,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2126,6 +2192,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2147,6 +2214,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2182,6 +2250,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2201,10 +2270,11 @@ The ExceptIfFromScope parameter specifies an exception that looks for the locati
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
-Type: InOrganization | NotInOrganization
+Type: FromUserScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2230,6 +2300,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2249,10 +2320,11 @@ The ExceptIfHasNoClassification parameter specifies an exception that looks for 
 - $false: Look for messages that have one or more message classifications.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2272,10 +2344,11 @@ The ExceptIfHasSenderOverride parameter specifies an exception that looks for me
 - $false: Don't look for messages where the sender took action to override a DLP policy.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2295,6 +2368,7 @@ Type: HeaderName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2318,6 +2392,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2337,6 +2412,7 @@ Type: HeaderName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2358,6 +2434,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2393,6 +2470,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2414,10 +2492,11 @@ The ExceptIfManagerForEvaluatedUser parameter specifies an exception that looks 
 You specify the users to look for by using the ExceptIfManagerAddresses parameter.
 
 ```yaml
-Type: Sender | Recipient
+Type: EvaluatedUser
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2435,6 +2514,7 @@ Type: Hashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2451,13 +2531,14 @@ The ExceptIfMessageContainsDataClassifications parameter specifies an exception 
 
 This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
 
-For a list of sensitive information types available, see Sensitive information types (https://technet.microsoft.com/library/jj150541.aspx).
+For a list of sensitive information types available, see [Sensitive information types in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types).
 
 ```yaml
 Type: Hashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2491,6 +2572,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2524,10 +2606,11 @@ The ExceptIfMessageTypeMatches parameter specifies an exception that looks for m
 - ReadReceipt: Read receipts.
 
 ```yaml
-Type: OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt
+Type: MessageType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2609,6 +2692,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2688,6 +2772,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2707,6 +2792,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2728,6 +2814,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2749,6 +2836,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2766,6 +2854,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2774,9 +2863,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
+This condition is available on Mailbox servers and Edge Transport servers. This condition is not available or functional in the cloud-based service due to how the service filtering stack works.
 
 The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value of messages. Valid values are:
 
@@ -2790,7 +2881,8 @@ The rule looks for messages with an SCL value that's greater than or equal to th
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -2872,6 +2964,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2951,6 +3044,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2974,6 +3068,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -2991,6 +3086,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3018,6 +3114,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3037,10 +3134,11 @@ The ExceptIfSenderManagementRelationship parameter specifies an exception that l
 - DirectReport: A recipient is the manager of the sender.
 
 ```yaml
-Type: Manager | DirectReport
+Type: ManagementRelationship
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3074,6 +3172,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3103,6 +3202,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3126,10 +3226,11 @@ The ExceptIfSentToScope parameter specifies an exception that looks for the loca
 - ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
 
 ```yaml
-Type: InOrganization | NotInOrganization | ExternalPartner | ExternalNonPartner
+Type: ToUserScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3151,6 +3252,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3170,6 +3272,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3191,6 +3294,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3210,6 +3314,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3231,10 +3336,11 @@ The ExceptIfWithImportance parameter specifies an exception that looks for messa
 - High
 
 ```yaml
-Type: Low | Normal | High
+Type: Importance
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3254,6 +3360,7 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3289,6 +3396,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3310,6 +3418,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3331,6 +3440,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3366,6 +3476,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3385,10 +3496,11 @@ The FromScope parameter specifies a condition that looks for the location of mes
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
-Type: InOrganization | NotInOrganization
+Type: FromUserScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3422,6 +3534,7 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3455,6 +3568,7 @@ Type: DisclaimerText
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3480,6 +3594,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3499,10 +3614,11 @@ The HasNoClassification parameter specifies a condition that looks for messages 
 - $false: Look for messages that have one or more message classifications.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3522,10 +3638,11 @@ The HasSenderOverride parameter specifies a condition that looks for messages wh
 - $false: Don't look for messages where the sender took action to override a DLP policy.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3545,6 +3662,7 @@ Type: HeaderName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3568,6 +3686,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3587,6 +3706,7 @@ Type: HeaderName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3608,6 +3728,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3657,6 +3778,7 @@ Type: IncidentReportContent[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3680,10 +3802,11 @@ The IncidentReportOriginalMail parameter specifies whether to include the origin
 - DoNotIncludeOriginalMail (this is the default value)
 
 ```yaml
-Type: IncludeOriginalMail | DoNotIncludeOriginalMail
+Type: IncidentReportOriginalMail
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013
+
 Required: False
 Position: Named
 Default value: None
@@ -3715,6 +3838,7 @@ Type: EventLogText
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -3750,6 +3874,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3771,10 +3896,11 @@ The ManagerForEvaluatedUser parameter specifies a condition that looks for users
 You specify the users to look for by using the ManagerAddresses parameter.
 
 ```yaml
-Type: Sender | Recipient
+Type: EvaluatedUser
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3792,6 +3918,7 @@ Type: Hashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3808,7 +3935,7 @@ The MessageContainsDataClassifications parameter specifies a condition that look
 
 This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
 
-For a list of sensitive information types available, see Sensitive information types (https://technet.microsoft.com/library/jj150541.aspx).
+For a list of sensitive information types available, see [Sensitive information types in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types).
 
 You can specify the notification options by using the NotifySender parameter.
 
@@ -3817,6 +3944,7 @@ Type: Hashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3850,6 +3978,7 @@ Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3883,10 +4012,11 @@ The MessageTypeMatches parameter specifies a condition that looks for messages o
 - ReadReceipt: Read receipts.
 
 ```yaml
-Type: OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt
+Type: MessageType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3904,10 +4034,11 @@ The Mode parameter specifies how the rule operates. Valid values are:
 - Enforce: All actions specified in the rule are taken. This is the default value.
 
 ```yaml
-Type: Audit | AuditAndNotify | Enforce
+Type: RuleMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3929,10 +4060,11 @@ The ModerateMessageByManager parameter specifies an action that forwards message
 This action only works if the sender's Manager attribute is defined.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3968,6 +4100,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -3983,6 +4116,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4012,10 +4146,11 @@ For all values except NotifyOnly, you can specify an enhanced status code and a 
 If you use this parameter, you also need to specify a condition that looks for sensitive information types in messages by using the MessageContainsDataClassifications parameter.
 
 ```yaml
-Type: NotifyOnly | RejectMessage | RejectUnlessFalsePositiveOverride | RejectUnlessSilentOverride | RejectUnlessExplicitOverride
+Type: NotifySenderType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4037,6 +4172,7 @@ Type: SubjectPrefix
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4062,6 +4198,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4081,10 +4218,11 @@ The Quarantine parameter specifies an action that quarantines messages.
 - In Office 365, messages are delivered to the hosted quarantine.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -4166,6 +4304,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4245,6 +4384,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4264,6 +4404,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4285,6 +4426,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4306,6 +4448,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4323,6 +4466,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -4356,6 +4500,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4381,6 +4526,7 @@ Type: RejectEnhancedStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4406,6 +4552,7 @@ Type: RejectText
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4425,6 +4572,7 @@ Type: HeaderName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4444,10 +4592,11 @@ The RemoveOME parameter specifies an action that removes the previous version of
 - $false: The message and attachments aren't decrypted.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4467,7 +4616,7 @@ The RemoveOMEv2 parameter specifies an action that removes Office 365 Message En
 - $false: The message and attachments aren't decrypted.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -4497,6 +4646,7 @@ Type: OutboundConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4516,10 +4666,11 @@ The RouteMessageOutboundRequireTls parameter specifies an action that uses Trans
 - $false: A TLS encrypted channel isn't required to deliver the messages.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4535,10 +4686,11 @@ The RuleErrorAction parameter specifies what to do if rule processing can't be c
 - Defer: The message is deferred so the rules engine can attempt to process the message again.
 
 ```yaml
-Type: Ignore | Defer
+Type: RuleErrorAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4554,10 +4706,11 @@ The RuleSubType parameter specifies the rule type. Valid values are:
 - None: The rule is a regular rule that isn't associated with a DLP policy.
 
 ```yaml
-Type: None | Dlp
+Type: RuleSubType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4566,9 +4719,11 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
+This parameter is available or functional only in on-premises Exchange.
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
+This condition is available on Mailbox servers and Edge Transport servers. This condition is not available or functional in the cloud-based service due to how the service filtering stack works.
 
 The SCLOver parameter specifies a condition that looks for the SCL value of messages. Valid values are:
 
@@ -4582,7 +4737,8 @@ The rule looks for messages with an SCL value that's greater than or equal to th
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -4664,6 +4820,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4743,6 +4900,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4772,10 +4930,11 @@ Note that message envelope searching is only available for the following conditi
 - SenderDomainIs and ExceptIfSenderDomainIs
 
 ```yaml
-Type: Header | Envelope | HeaderOrEnvelope
+Type: SenderAddressLocation
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4799,6 +4958,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4816,6 +4976,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -4843,6 +5004,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4862,10 +5024,11 @@ The SenderManagementRelationship parameter specifies a condition that looks for 
 - DirectReport: A recipient is the manager of the sender.
 
 ```yaml
-Type: Manager | DirectReport
+Type: ManagementRelationship
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4899,6 +5062,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4934,6 +5098,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4957,10 +5122,11 @@ The SentToScope parameter specifies a condition that looks for the location of r
 - ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
 
 ```yaml
-Type: InOrganization | NotInOrganization | ExternalPartner | ExternalNonPartner
+Type: ToUserScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -4988,6 +5154,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5007,6 +5174,7 @@ Type: HeaderName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5026,6 +5194,7 @@ Type: HeaderValue
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5049,6 +5218,7 @@ Type: SclValue
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5070,6 +5240,7 @@ Type: RejectStatusCode
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -5091,6 +5262,7 @@ Type: RejectText
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -5110,10 +5282,11 @@ The StopRuleProcessing parameter specifies an action that stops processing more 
 - $false: Continue processing more rules after this one.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5135,6 +5308,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5154,6 +5328,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5175,6 +5350,7 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5194,6 +5370,7 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5209,6 +5386,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5230,10 +5408,11 @@ The WithImportance parameter specifies a condition that looks for messages with 
 - High
 
 ```yaml
-Type: Low | Normal | High
+Type: Importance
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -5242,20 +5421,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/8328125b-e166-436f-95e6-1afafdbdb89a.aspx)

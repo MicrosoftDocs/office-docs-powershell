@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spcontentdatabase
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPContentDatabase
 schema: 2.0.0
@@ -37,6 +39,12 @@ Remove-SPContentDatabase WSS_Content
 
 This example deletes the content database named 'WSS_Content'.
 
+### -----------------EXAMPLE---------------------
+```
+Remove-SPContentDatabase WSS_Content -Confirm:$false -Force
+```
+
+This example deletes the content database named 'WSS_Content' without asking any confirmation.
 
 ## PARAMETERS
 

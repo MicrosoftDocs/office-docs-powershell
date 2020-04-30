@@ -1,5 +1,7 @@
 ﻿---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spo365linksettings
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPO365LinkSettings
 schema: 2.0.0
@@ -22,21 +24,18 @@ Get-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] [<Common
 ## DESCRIPTION
 Use the **Get-SPO365LinkSettings** cmdlet to display current hybrid configurations in the farm.
 
-
-
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```powershell
 $gc = Start-SPAssignment
-Get-SPO365LinkSettings – AssignmentCollection $gc
+Get-SPO365LinkSettings -AssignmentCollection $gc
 Stop-SPAssignment $gc
-
 ```
+
 This example returns all hybrid configurations.
 
 ## PARAMETERS
-
 
 ### -AssignmentCollection
 Manages objects for the purpose of proper disposal.
@@ -63,8 +62,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
-
 
 ## RELATED LINKS
 

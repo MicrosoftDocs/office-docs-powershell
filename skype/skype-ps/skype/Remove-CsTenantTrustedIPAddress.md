@@ -1,16 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/remove-cstenanttrustedipaddress
 applicable: Skype for Business Online
 title: Remove-CsTenantTrustedIPAddress
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # Remove-CsTenantTrustedIPAddress
 
 ## SYNOPSIS
+Use the `Remove-CsTenantTrustedIPAddress` cmdlet to remove a tenant trusted IP address.
 
 ## SYNTAX
 
@@ -20,16 +23,18 @@ Remove-CsTenantTrustedIPAddress [-Tenant <System.Guid>] [-Identity] <XdsGlobalRe
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The `Remove-CsTenantTrustedIPAddress` cmdlet removes an existing tenant trusted IP address.
+
+External trusted IPs are the Internet external IPs of the enterprise network and are used to determine if the user's endpoint is inside the corporate network before checking for a specific site match. If the user's external IP matches one defined in the trusted list, then Location-Based Routing will check to determine which internal subnet the user's endpoint is located. If the user's external IP doesn't match one defined in the trusted list, the endpoint will be classified as being at an unknown and any PSTN calls to/from an LBR enabled user are blocked.
 
 ## EXAMPLES
 
-### Example 1
+###-------------------------- Example 1 --------------------------
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-CsTenantTrustedIPAddress -Identity "192.168.0.1"
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 removes '192.168.0.1'.
 
 ## PARAMETERS
 
@@ -49,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the trusted IP address to be removed.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -79,7 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose trusted IP address are being removed. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 ```yaml
 Type: System.Guid

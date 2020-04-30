@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/apply-pnpprovisioningtemplate
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Apply-PnPProvisioningTemplate
 ---
+
 # Apply-PnPProvisioningTemplate
 
 ## SYNOPSIS
@@ -13,24 +16,7 @@ Applies a site template to a web
 ### Instance
 ```powershell
 Apply-PnPProvisioningTemplate [-InputInstance <ProvisioningTemplate>]
-                              [-ResourceFolder <String>]
-                              [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
-                              [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
-                              [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
-                              [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
-                              [-ClearNavigation [<SwitchParameter>]]
-                              [-Parameters <Hashtable>]
-                              [-Handlers <Handlers>]
-                              [-ExcludeHandlers <Handlers>]
-                              [-ExtensibilityHandlers <ExtensibilityHandler[]>]
-                              [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
-                              [-Web <WebPipeBind>]
-                              [-Connection <SPOnlineConnection>]
-```
-
-### Gallery
-```powershell
-Apply-PnPProvisioningTemplate [-GalleryTemplateId <Guid>]
+                              [-TemplateId <String>]
                               [-ResourceFolder <String>]
                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
@@ -49,6 +35,7 @@ Apply-PnPProvisioningTemplate [-GalleryTemplateId <Guid>]
 ### Path
 ```powershell
 Apply-PnPProvisioningTemplate -Path <String>
+                              [-TemplateId <String>]
                               [-ResourceFolder <String>]
                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
@@ -114,7 +101,7 @@ Applies a site template from a pnp package stored in a library to the current we
 ```powershell
 
 $handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
-$handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
+$handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler2
 Apply-PnPProvisioningTemplate -Path NewTemplate.xml -ExtensibilityHandlers $handler1,$handler2
 ```
 
@@ -126,6 +113,13 @@ Apply-PnPProvisioningTemplate -Path .\ -InputInstance $template
 ```
 
 Applies a site template from an in-memory instance of a ProvisioningTemplate type of the PnP Core Component, reading the supporting files, if any, from the current (.\) path. The syntax can be used together with any other supported parameters.
+
+### ------------------EXAMPLE 9------------------
+```powershell
+Apply-PnPProvisioningTemplate -Path .\template.xml -TemplateId "MyTemplate"
+```
+
+Applies the ProvisioningTemplate with the ID "MyTemplate" located in the template definition file template.xml.
 
 ## PARAMETERS
 
@@ -165,20 +159,8 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -GalleryTemplateId
-
-
-```yaml
-Type: Guid
-Parameter Sets: Gallery
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Handlers
-Allows you to only process a specific part of the template. Notice that this might fail, as some of the handlers require other artifacts in place if they are not part of what your applying.
+Allows you to only process a specific part of the template. Notice that this might fail, as some of the handlers require other artifacts in place if they are not part of what your applying. Visit https://docs.microsoft.com/dotnet/api/officedevpnp.core.framework.provisioning.model.handlers for possible values.
 
 ```yaml
 Type: Handlers
@@ -275,6 +257,18 @@ Accept pipeline input: False
 
 ### -ResourceFolder
 Root folder where resources/files that are being referenced in the template are located. If not specified the same folder as where the provisioning template is located will be used.
+
+```yaml
+Type: String
+Parameter Sets: __AllParameterSets
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -TemplateId
+ID of the template to use from the xml file containing the provisioning template. If not specified and multiple ProvisioningTemplate elements exist, the last one will be used.
 
 ```yaml
 Type: String

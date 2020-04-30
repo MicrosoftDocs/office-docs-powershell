@@ -1,11 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csvideointeropserviceprovider
 applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: Set-CsVideoInteropServiceProvider
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -39,10 +41,10 @@ Use the Set-CsVideoInteropServiceProvider to update information about a supporte
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsVideoInteropServiceProvider -Identity cviprovider -AllowAppGuestJoinsAsAuthenticated $true
 ```
 
-{{ Add example description here }}
+This example enables a VTC device joining anonymously to shown in the meeting as authenticated, for a supported CVI partner your organization uses.
 
 ## PARAMETERS
 

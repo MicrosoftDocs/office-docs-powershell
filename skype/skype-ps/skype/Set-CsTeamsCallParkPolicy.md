@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamscallparkpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsCallParkPolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -32,8 +34,6 @@ Set-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [-I
 
 ## DESCRIPTION
 The TeamsCallParkPolicy controls whether or not users are able to leverage the call park feature in Microsoft Teams.  Call park allows enterprise voice customers to place a call on hold and then perform a number of actions on that call: transfer to another department, retrieve via the same phone, or retrieve via a different phone.  The Set-CsTeamsCallParkPolicy cmdlet lets you update a policy that has already been created for your organization.
-
-NOTE: the call park feature currently only available in desktop and web clients.  Call Park functionality is currently completely disabled in mobile clients.
 
 ## EXAMPLES
 

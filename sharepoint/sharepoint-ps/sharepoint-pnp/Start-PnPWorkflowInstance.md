@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/start-pnpworkflowinstance
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Start-PnPWorkflowInstance
 ---
+
 # Start-PnPWorkflowInstance
 
 ## SYNOPSIS
@@ -21,14 +24,14 @@ Start-PnPWorkflowInstance -Subscription <WorkflowSubscriptionPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Start-PnPWorkflowInstance -Name 'WorkflowName' -ListItem $item 
+Start-PnPWorkflowInstance -Subscription $subscription -ListItem $item 
 ```
 
 Starts a workflow instance on the specified list item
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Start-PnPWorkflowInstance -Name 'WorkflowName' -ListItem 2 
+Start-PnPWorkflowInstance -Subscription $subscription -ListItem 2 
 ```
 
 Starts a workflow instance on the specified list item

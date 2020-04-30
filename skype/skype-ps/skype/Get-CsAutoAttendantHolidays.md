@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csautoattendantholidays
 applicable: Skype for Business Online
 title: Get-CsAutoAttendantHolidays
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -40,7 +42,7 @@ In this example, the Get-CsAutoAttendantHolidays cmdlet is used to get all holid
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-CsAutoAttendantHolidays -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093" –Years @(2017) -Name @("Christmas")
+Get-CsAutoAttendantHolidays -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093" -Years @(2017) -Name @("Christmas")
 ```
 
 In this example, the Get-CsAutoAttendantHolidays cmdlet is used to get holiday named Christmas in the year 2017 in an auto attendant with Identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.

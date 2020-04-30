@@ -1,11 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csclientpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsClientPolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Get-CsClientPolicy
@@ -119,8 +121,8 @@ Accept wildcard characters: False
 
 ### -Filter
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
-For example, to return all the policies configured at the site scope use this syntax: -Filter "site:*".
-To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
+For example, to return all the policies configured at the site scope use this syntax: -Filter "site:\*".
+To return a collection of all the per-user policies, use this syntax: -Filter "tag:\*".
 
 ```yaml
 Type: String

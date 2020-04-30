@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Set-PnPClientSidePage
 ---
+
 # Set-PnPClientSidePage
 
 ## SYNOPSIS
@@ -24,6 +27,7 @@ Set-PnPClientSidePage -Identity <ClientSidePagePipeBind>
                       [-Publish [<SwitchParameter>]]
                       [-HeaderType <ClientSidePageHeaderType>]
                       [-ContentType <ContentTypePipeBind>]
+                      [-ThumbnailUrl <String>]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
 ```
@@ -91,7 +95,7 @@ Accept pipeline input: False
 ### -ContentType
 Specify either the name, ID or an actual content type.
 
-Only applicable to: SharePoint Online
+Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: ContentTypePipeBind
@@ -159,7 +163,7 @@ Accept pipeline input: False
 ```
 
 ### -PromoteAs
-Allows to promote the page for a specific purpose (HomePage | NewsPage)
+Allows to promote the page for a specific purpose (None | HomePage | NewsArticle | Template)
 
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
@@ -197,6 +201,20 @@ Parameter Sets: Custom Header
 
 Required: False
 Position: 0
+Accept pipeline input: False
+```
+
+### -ThumbnailUrl
+Thumbnail Url
+
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
 Accept pipeline input: False
 ```
 

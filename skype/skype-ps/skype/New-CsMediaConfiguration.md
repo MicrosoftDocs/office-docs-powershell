@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csmediaconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsMediaConfiguration
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -312,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRtpRtcpMultiplexing
-PARAMVALUE: $true | $false
+Enables or disables the use of RTP/RTCP Multiplexing, if enabled, when negotiating, only one candidate will be used for both RTP and RTCP.
 
 ```yaml
 Type: Boolean
@@ -344,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVideoBasedSharing
-Use this parameter to enable video based sharing.
+Enables the use of Video Based Sharing, for more information, see [Video based Screen Sharing for Skype for Business Server](https://docs.microsoft.com/skypeforbusiness/manage/video-based-screen-sharing) 
 
 ```yaml
 Type: Boolean

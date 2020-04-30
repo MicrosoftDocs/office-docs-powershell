@@ -1,10 +1,11 @@
 ---
-external help file: New-CsCallQueue.xml
+external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-cscallqueue
 applicable: Skype for Business Online
 title: New-CsCallQueue
-author: waseemhashem
-ms.author: waseemh
-manager: msekaran
+author: tomkau
+ms.author: tomkau
+manager: bulenteg
 ms.reviewer:
 schema: 2.0.0
 ---
@@ -21,7 +22,7 @@ New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>
 [-Tenant <Guid>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-MusicOnHoldAudioFileId <Guid>] 
 [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] 
 [-TimeoutAction <Object>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] 
-[-RoutingMethod <Object>] [<CommonParameters>]
+[-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-Users <List>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +43,7 @@ New-CsCallQueue -Name "Help desk" -RoutingMethod Attendant -DistributionLists @(
 
 ```
 
-This example creates a Call Queue for the organization named "Help Desk" and uses default music on hold files
+This example creates a Call Queue for the organization named "Help Desk" with music on hold and welcome music audio files.
 
 
 ## PARAMETERS
@@ -267,6 +268,38 @@ The WelcomeMusicAudioFileId parameter represents the audio file to play when cal
 
 ```yaml
 Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PresenceBasedRouting
+The PresenceBasedRouting parameter indicates whether or not presence based routing will be applied while call being routed to Call Queue agents. When set to False, calls will be routed to agents who have opted in to receive calls, regardless of their presence state. When set to True, opted-in agents will receive calls only when their presence state is Available.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Users
+The Users parameter lets you add agents to the Call Queue. This parameter expects a list of user unique identifiers (GUID).
+
+```yaml
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

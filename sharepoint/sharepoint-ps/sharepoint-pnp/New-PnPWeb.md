@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpweb
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: New-PnPWeb
 ---
+
 # New-PnPWeb
 
 ## SYNOPSIS
@@ -106,7 +109,7 @@ Accept pipeline input: False
 ```
 
 ### -Url
-The URL of the new web relative to the site collection
+The URL of the new web
 
 ```yaml
 Type: String

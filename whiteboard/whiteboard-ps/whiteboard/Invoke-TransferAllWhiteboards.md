@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Whiteboard.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftWhiteboard
+online version: https://docs.microsoft.com/powershell/module/whiteboard/invoke-transferallwhiteboards
 applicable: Microsoft Whiteboard
 title: Set-WhiteboardOwner
-online version:
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -19,7 +19,7 @@ Transfer ownership of all Whiteboards owned by a user to another user.
 ## SYNTAX
 
 ```powershell
-Invoke-TransferAllWhiteboards [[-Token] <AuthenticationResult>] [-OwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-TransferAllWhiteboards [-OwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,20 +46,6 @@ Transfer (and prompt before performing any write actions).
 
 
 ## PARAMETERS
-
-### -Token
-
-The Azure AD bearer token corresponding to the specified credentials. If unspecified, a new token will be generated.
-
-```yaml
-Type:                        Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationResult
-Required:                    false
-Position:                    1
-Default value:               None
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
-```
 
 ### -OldOwnerId
 

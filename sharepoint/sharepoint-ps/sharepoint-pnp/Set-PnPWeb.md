@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpweb
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPWeb
 ---
+
 # Set-PnPWeb
 
 ## SYNOPSIS
@@ -17,6 +20,8 @@ Set-PnPWeb [-SiteLogoUrl <String>]
            [-Description <String>]
            [-MasterUrl <String>]
            [-CustomMasterUrl <String>]
+           [-HeaderLayout <HeaderLayoutType>]
+           [-HeaderEmphasis <SPVariantThemeType>]
            [-Web <WebPipeBind>]
            [-Connection <SPOnlineConnection>]
 ```
@@ -62,6 +67,34 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -HeaderEmphasis
+
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SPVariantThemeType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -HeaderLayout
+
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: HeaderLayoutType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -MasterUrl
 
 
@@ -75,7 +108,7 @@ Accept pipeline input: False
 ```
 
 ### -SiteLogoUrl
-Sets the logo of the web to the current url. If you want to set the logo to a modern team site, use Set-PnPSite -SiteLogoPath
+Sets the logo of the web to the current url. If you want to set the logo to a modern team site, use Set-PnPSite -LogoFilePath.
 
 ```yaml
 Type: String

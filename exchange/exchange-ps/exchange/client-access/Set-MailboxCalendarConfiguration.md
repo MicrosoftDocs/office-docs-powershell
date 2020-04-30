@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/set-mailboxcalendarconfiguration
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailboxCalendarConfiguration
 schema: 2.0.0
@@ -16,48 +17,48 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxCalendarConfiguration cmdlet to modify mailbox calendar settings for Outlook on the web. This affects how the user's calendar looks and how reminders work in Outlook on the web. This also affects settings that define how meeting invitations, responses, and notifications are sent to the user.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
- [-AgendaMailEnabled <$true | $false>]
- [-AgendaPaneEnabled <$true | $false>]
+ [-AgendaMailEnabled <Boolean>]
+ [-AgendaPaneEnabled <Boolean>]
  [-CalendarFeedsPreferredLanguage <String>]
  [-CalendarFeedsPreferredRegion <String>]
  [-CalendarFeedsRootPageId <String>]
  [-Confirm]
- [-ConversationalSchedulingEnabled <$true | $false>]
- [-CreateEventsFromEmailAsPrivate <$true | $false>]
- [-DailyAgendaMailSchedule <Default | AM | PM>]
+ [-ConversationalSchedulingEnabled <Boolean>]
+ [-CreateEventsFromEmailAsPrivate <Boolean>]
+ [-DailyAgendaMailSchedule <AgendaMailSchedule>]
  [-DefaultMeetingDuration <Int32>]
  [-DefaultReminderTime <TimeSpan>]
- [-DiningEventsFromEmailEnabled <$true | $false>]
+ [-DiningEventsFromEmailEnabled <Boolean>]
  [-DomainController <Fqdn>]
- [-EntertainmentEventsFromEmailEnabled <$true | $false>]
- [-EventsFromEmailEnabled <$true | $false>]
- [-FirstWeekOfYear <LegacyNotSet | FirstDay | FirstFourDayWeek | FirstFullWeek>]
- [-FlightEventsFromEmailEnabled <$true | $false>]
- [-HotelEventsFromEmailEnabled <$true | $false>]
- [-InvoiceEventsFromEmailEnabled <$true | $false>]
- [-LocalEventsEnabled <FirstRun | Disabled | Enabled>]
+ [-EntertainmentEventsFromEmailEnabled <Boolean>]
+ [-EventsFromEmailEnabled <Boolean>]
+ [-FirstWeekOfYear <FirstWeekRules>]
+ [-FlightEventsFromEmailEnabled <Boolean>]
+ [-HotelEventsFromEmailEnabled <Boolean>]
+ [-InvoiceEventsFromEmailEnabled <Boolean>]
+ [-LocalEventsEnabled <LocalEventsEnabledStatus>]
  [-LocalEventsLocation <LocalEventsLocation>]
- [-PackageDeliveryEventsFromEmailEnabled <$true | $false>]
- [-ReminderSoundEnabled <$true | $false>]
- [-RemindersEnabled <$true | $false>]
- [-RentalCarEventsFromEmailEnabled <$true | $false>]
- [-ShowWeekNumbers <$true | $false>]
- [-SkipAgendaMailOnFreeDays <$true | $false>]
- [-TimeIncrement <FifteenMinutes | ThirtyMinutes>]
- [-UseBrightCalendarColorThemeInOwa <$true | $false>]
- [-WeatherEnabled <$true | $false>]
+ [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
+ [-ReminderSoundEnabled <Boolean>]
+ [-RemindersEnabled <Boolean>]
+ [-RentalCarEventsFromEmailEnabled <Boolean>]
+ [-ShowWeekNumbers <Boolean>]
+ [-SkipAgendaMailOnFreeDays <Boolean>]
+ [-TimeIncrement <HourIncrement>]
+ [-UseBrightCalendarColorThemeInOwa <Boolean>]
+ [-WeatherEnabled <Boolean>]
  [-WeatherLocationBookmark <Int32>]
  [-WeatherLocations <MultiValuedProperty>]
- [-WeatherUnit <Default | Celsius | Fahrenheit>]
- [-WeekStartDay <Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday>]
+ [-WeatherUnit <WeatherTemperatureUnit>]
+ [-WeekStartDay <DayOfWeek>]
  [-WhatIf]
- [-WorkDays <None | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Weekdays | WeekendDays | AllDays>]
+ [-WorkDays <DaysOfWeek>]
  [-WorkingHoursEndTime <TimeSpan>]
  [-WorkingHoursStartTime <TimeSpan>]
  [-WorkingHoursTimeZone <ExTimeZoneValue>]
@@ -67,26 +68,26 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 The Set-MailboxCalendarConfiguration cmdlet primarily allows users to manage their own calendar settings in Outlook on the web Options. However, administrators who have the Organization Management or Recipient Management management roles may configure the calendar settings for users by using this cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-MailboxCalendarConfiguration -Identity peter@contoso.com -RemindersEnabled $false
 ```
 
 This example disables the calendar reminders for the calendar of the user peter@contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-MailboxCalendarConfiguration -Identity peter@contoso.com -WorkingHoursTimeZone "Pacific Standard Time"
 ```
 
 This example sets the time zone of the work hours' start and end times to Pacific Standard Time for the calendar of the user peter@contoso.com.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Set-MailboxCalendarConfiguration -Identity Tony -WorkingHoursStartTime 07:00:00
 ```
 
@@ -122,6 +123,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -135,10 +137,11 @@ This parameter is available only in the cloud-based service.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -152,10 +155,11 @@ This parameter is available only in the cloud-based service.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +177,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +195,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +213,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -226,6 +233,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -241,10 +249,11 @@ The ConversationalSchedulingEnabled parameter specifies whether to enable or dis
 - $false: Conversational scheduling is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -262,10 +271,11 @@ The CreateEventsFromEmailAsPrivate parameter specifies whether to create events 
 - $false: Events from email are created as Normal (public).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -277,10 +287,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Default | AM | PM
+Type: AgendaMailSchedule
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -296,6 +307,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -349,6 +361,7 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -368,10 +381,11 @@ The DiningEventsFromEmailEnabled parameter specifies whether to create dining re
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -389,6 +403,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -408,10 +423,11 @@ The EntertainmentEventsFromEmailEnabled parameter specifies whether to create en
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -443,10 +459,11 @@ When this setting is enabled, you can enable or disable creating specific types 
 - RentalCarEventsFromEmailEnabled
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: True
@@ -466,10 +483,11 @@ The FlightEventsFromEmailEnabled parameter specifies whether to create flight re
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -491,10 +509,11 @@ The FirstWeekOfYear parameter specifies the first week of the year. Valid values
 You configure the first day of the week by using the WeekStartDay parameter.
 
 ```yaml
-Type:
+Type: FirstWeekRules
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -514,10 +533,11 @@ The HotelEventsFromEmailEnabled parameter specifies whether to create hotel rese
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -535,10 +555,11 @@ The InvoiceEventsFromEmailEnabled parameter specifies whether to allow creating 
 - $false: Creating invoices from messages is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -550,10 +571,11 @@ Accept wildcard characters: False
 PARAMVALUE: FirstRun | Disabled | Enabled
 
 ```yaml
-Type: FirstRun | Disabled | Enabled
+Type: LocalEventsEnabledStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -569,6 +591,7 @@ Type: LocalEventsLocation
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -588,10 +611,11 @@ The PackageDeliveryEventsFromEmailEnabled parameter specifies whether to create 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -609,10 +633,11 @@ The RemindersEnabled parameter enables or disables reminders for calendar items.
 When the reminder is first displayed is controlled by the DefaultReminderTime parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -630,10 +655,11 @@ The ReminderSoundEnabled parameter specifies whether a sound is played along wit
 This parameter is ignored when the RemindersEnabled parameter is set to $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -653,10 +679,11 @@ The RentalCarEventsFromEmailEnabled parameter specifies whether to create rental
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -672,10 +699,11 @@ The ShowWeekNumbers parameter specifies whether the week number is displayed in 
 - $false: The week number isn't displayed. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -687,10 +715,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -706,10 +735,11 @@ The TimeIncrement parameter specifies the scale that the Outlook on the web cale
 - ThirtyMinutes (This is the default value)
 
 ```yaml
-Type: FifteenMinutes | ThirtyMinutes
+Type: HourIncrement
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -725,10 +755,11 @@ The UseBrightCalendarColorThemeInOwa parameter specifies whether to use light co
 - $false: Use light colors in the calendar. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -754,10 +785,11 @@ The WeekStartDay parameter specifies the first day of the week. Valid values are
 - Saturday
 
 ```yaml
-Type: Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday
+Type: DayOfWeek
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -777,10 +809,11 @@ The WeatherEnabled specifies whether weather is displayed in the calendar in Out
 - Enabled: Show weather on the calendar.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -800,6 +833,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -827,6 +861,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -846,10 +881,11 @@ The WeatherUnit parameter specifies the temperature scale that's used to display
 - Fahrenheit
 
 ```yaml
-Type: Default | Celsius | Fahrenheit
+Type: WeatherTemperatureUnit
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -865,6 +901,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -900,10 +937,11 @@ The WorkDays parameter specifies the work days in the calendar. Valid values are
 You can specify multiple values separated by commas, but redundant values are ignored. For example, entering Weekdays,Monday results in the value Weekdays.
 
 ```yaml
-Type: None | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Weekdays | WeekendDays | AllDays
+Type: DaysOfWeek
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -923,6 +961,7 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -942,6 +981,7 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -954,7 +994,7 @@ The WorkingHoursTimeZone parameter specifies the time zone that's used by the Wo
 
 A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
 
-To see the available values, run the following command: $TimeZone = Get-ChildItem "HKLM:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display
+To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
 If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
 
@@ -963,6 +1003,7 @@ Type: ExTimeZoneValue
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -971,20 +1012,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/092aa4db-3f0f-4b17-b7b1-1987a8268760.aspx)

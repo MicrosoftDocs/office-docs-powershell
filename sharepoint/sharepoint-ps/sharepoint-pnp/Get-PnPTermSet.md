@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptermset
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPTermSet
 ---
+
 # Get-PnPTermSet
 
 ## SYNOPSIS
@@ -37,7 +40,7 @@ Returns the termset named "Departments" from the termgroup called "Corporate" fr
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Get-PnPTermSet -Identity ab2af486-e097-4b4a-9444-527b251f1f8d -TermGroup "Corporate"
+Get-PnPTermSet -Identity ab2af486-e097-4b4a-9444-527b251f1f8d -TermGroup "Corporate
 ```
 
 Returns the termset with the given id from the termgroup called "Corporate" from the site collection termstore

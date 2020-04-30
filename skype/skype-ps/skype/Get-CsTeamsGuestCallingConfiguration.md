@@ -2,11 +2,11 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 title: Get-CsTeamsGuestCallingConfiguration
-online version:
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
-ms.reviewer:
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: 
 ---
 
 # Get-CsTeamsGuestCallingConfiguration

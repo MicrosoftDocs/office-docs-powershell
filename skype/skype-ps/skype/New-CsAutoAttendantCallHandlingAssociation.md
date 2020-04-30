@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csautoattendantcallhandlingassociation
 applicable: Skype for Business Online
 title: New-CsAutoAttendantCallHandlingAssociation
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -72,7 +74,7 @@ $scheduleId = $schedule.Id
 
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "We are closed for Christmas. Please call back later."
 $menuOption = New-CsAutoAttendantMenuOption -DtmfResponse Automatic -Action DisconnectCall
-$menu = New-CsAutoAttendantMenu -Name "Christmas Menu" -MenuOptions @($menuOption)
+$menu = New-CsAutoAttendantMenu -Name "Christmas Menu" -Prompts @($menuPrompt) -MenuOptions @($menuOption)
 $callFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @($greeting) -Menu $menu
 $callFlowId = $callFlow.Id
 

@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprofileserviceapplicationsecurity
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPProfileServiceApplicationSecurity
 schema: 2.0.0
@@ -34,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### --------------------EXAMPLE 1---------------------
 ```
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 $security = Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy
@@ -45,6 +47,16 @@ Set-SPProfileServiceApplicationSecurity -Identity $security -ProfileServiceAppli
 
 This example revokes the right 'Create Personal Site' from All Authenticated Users.
 
+### --------------------EXAMPLE 2---------------------
+```
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+$security = Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy
+$everyone = New-SPClaimsPrincipal -Identity 'c:0(.s|true' -IdentityType EncodedClaim
+Grant-SPObjectSecurity -Identity $security -Principal $everyone -Rights 'All'
+Set-SPProfileServiceApplicationSecurity -Identity $security -ProfileServiceApplicationProxy $proxy
+```
+
+This example grants the right 'All' to All Authenticated Users.
 
 ## PARAMETERS
 

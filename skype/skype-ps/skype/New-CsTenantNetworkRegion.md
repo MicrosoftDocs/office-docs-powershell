@@ -1,16 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-cstenantnetworkregion
 applicable: Skype for Business Online
 title: New-CsTenantNetworkRegion
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # New-CsTenantNetworkRegion
 
 ## SYNOPSIS
+As an Admin, you can use the Windows PowerShell command, New-CsTenantNetworkRegion to define network regions. A network region interconnects various parts of a network across multiple geographic areas. The RegionID parameter is a logical name that represents the geography of the region, and has no dependencies or restrictions. Tenant network region is used for Location Based Routing.
 
 ## SYNTAX
 
@@ -28,21 +31,30 @@ New-CsTenantNetworkRegion -NetworkRegionID <String> [-Tenant <System.Guid>] [-De
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Location-Based Routing leverages the same network regions, sites, and subnets concept that is available in Skype for Business Server. A network region contains a collection of network sites. For example, if your organization has many sites located in Redmond, then you may choose to designate "Redmond" as a network region.
 
 ## EXAMPLES
 
-### Example 1
+###-------------------------- Example 1 --------------------------
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> New-CsTenantNetworkRegion -NetworkRegionID "RegionA"
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 created the network region 'RegionA' with no description. Identity and CentralSite will both be set identical with NetworkRegionID.
+
+Previously in Skype for Business there was an additional required parameter `-CentralSite <site ID>`, however it is now optional.
+
+###-------------------------- Example 2 --------------------------
+```powershell
+PS C:\> New-CsTenantNetworkRegion -NetworkRegionID "RegionRedmond" -Description "Redmond region" -CentralSite "Central site 1"
+```
+
+The command shown in Example 2 created the network region 'RegionRedmond' with description 'Redmond region'. CentralSite is set to "Central site 1".
 
 ## PARAMETERS
 
 ### -BypassID
-{{Fill BypassID Description}}
+Bypass ID was not required and not used in current commands.
 
 ```yaml
 Type: String
@@ -57,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -CentralSite
-{{Fill CentralSite Description}}
+This parameter is optional.
 
 ```yaml
 Type: String
@@ -87,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+Provide a description of the network region to identify purpose of creating it.
 
 ```yaml
 Type: String
@@ -102,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the network region to be created.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -132,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-{{Fill InMemory Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkRegionID
-{{Fill NetworkRegionID Description}}
+The name of the network region. This must be a string that is unique. You cannot specify an NetworkRegionID and an Identity at the same time.
 
 ```yaml
 Type: String
@@ -162,7 +174,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose network regions are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 ```yaml
 Type: System.Guid

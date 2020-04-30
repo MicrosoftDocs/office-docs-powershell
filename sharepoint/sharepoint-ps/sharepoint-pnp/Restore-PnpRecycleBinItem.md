@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/restore-pnprecyclebinitem
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Restore-PnPRecycleBinItem
 ---
+
 # Restore-PnPRecycleBinItem
 
 ## SYNOPSIS
@@ -35,7 +38,7 @@ Restores the recycle bin item with Id 72e4d749-d750-4989-b727-523d6726e442 to it
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPRecycleBinItem | ? FileLeafName -like "*.docx" | Restore-PnpRecycleBinItem
+Get-PnPRecycleBinItem | ? -Property LeafName -like "*.docx" | Restore-PnpRecycleBinItem
 ```
 
 Restores all the items in the first and second stage recycle bins to their original location of which the filename ends with the .docx extension

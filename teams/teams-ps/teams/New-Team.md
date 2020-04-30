@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/new-team
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith
@@ -15,7 +15,9 @@ This cmdlet lets you provision a new Team for use in Microsoft Teams and will cr
 Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default. 
 If you want these groups to appear in Outlook clients, you can use the Set-UnifiedGroup (https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps) cmdlet in the Exchange Powershell Module to set the parameter HiddenFromExchangeClients to $false.
 
-Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected. 
+Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected.
+
+IMPORTANT: Using this cmdlet to create a new team using a template is still in preview. You can install and use the preview module from the PowerShell test gallery. For instructions on installing and using the Teams PowerShell preview module, see https://docs.microsoft.com/MicrosoftTeams/private-channels-life-cycle-management#install-the-latest-teams-powershell-module-from-the-powershell-test-gallery. 
 
 ## SYNTAX
 
@@ -28,7 +30,8 @@ New-Team -DisplayName <String> [-Description <String>] [-MailNickName <String>] 
  [-AllowCreateUpdateChannels <Boolean>] [-AllowDeleteChannels <Boolean>] [-AllowAddRemoveApps <Boolean>]
  [-AllowCreateUpdateRemoveTabs <Boolean>] [-AllowCreateUpdateRemoveConnectors <Boolean>]
  [-AllowUserEditMessages <Boolean>] [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>]
- [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
+ [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] 
+ [-RetainCreatedGroup <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### MigrateGroup
@@ -39,7 +42,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
  [-AllowAddRemoveApps <Boolean>] [-AllowCreateUpdateRemoveTabs <Boolean>]
  [-AllowCreateUpdateRemoveConnectors <Boolean>] [-AllowUserEditMessages <Boolean>]
  [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>] [-AllowTeamMentions <Boolean>]
- [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
+ [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [-RetainCreatedGroup <SwitchParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -459,6 +462,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RetainCreatedGroup
+Switch Parameter allowing toggle of group cleanup if team creation fails. The default value of this parameter is $false to retain with current functionality where the unified group is deleted if the step of adding a team to the group fails. Set it to $true to retain the unified group created even if team creation fails to allow self-retry of team creation or self-cleanup of group as appropriate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
@@ -474,7 +491,9 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Get-Team]()
+[Remove-Team](remove-team.md)
 
-[Set-Team]()
+[Get-Team](get-team.md)
+
+[Set-Team](set-team.md)
 

@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/invoke-cscomputerfailover
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsComputerFailOver
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -86,6 +88,8 @@ Accept wildcard characters: False
 
 ### -Force
 If the Force parameter is specified, the server is failed over without verifying the pool's capacity to absorb the failed over server's workload.
+
+**Note:** If you run this parameter together with -WhatIf parameter, it will be ignored and a server failover will be started.
 
 ```yaml
 Type: SwitchParameter
@@ -187,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipFabricHealthCheck
-{{Fill SkipFabricHealthCheck Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter

@@ -3,7 +3,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Get-TeamMessagingSettings
-online version: 
+online version: https://docs.microsoft.com/powershell/module/teams/get-teammessagingsettings
 schema: 2.0.0
 author: kenwith
 ms.author: kenwith

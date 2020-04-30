@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchadministrationcomponent
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchAdministrationComponent
 schema: 2.0.0
@@ -30,7 +32,7 @@ For permissions and the most current information about search cmdlets, see the o
 ### Example 1 
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-et-SPEnterpriseSearchAdministrationComponent -SearchApplication $ssa
+Get-SPEnterpriseSearchAdministrationComponent -SearchApplication $ssa
 ```
 
 This example obtains an object reference to the administration component of a search service application named Search Service Application.

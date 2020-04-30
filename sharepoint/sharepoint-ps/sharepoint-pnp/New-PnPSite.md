@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpsite
 applicable: SharePoint Online
 schema: 2.0.0
+title: New-PnPSite
 ---
+
 # New-PnPSite
 
 ## SYNOPSIS
-Creates a new site collection
+Creates either a communication site or an Office 365 group-connected team site
 
 ## SYNTAX 
 
@@ -17,10 +20,12 @@ New-PnPSite -Title <String>
             -Type <SiteType>
             [-Description <String>]
             [-Classification <String>]
+            [-Owner <String>]
             [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
             [-SiteDesign <CommunicationSiteDesign>]
             [-Lcid <UInt32>]
             [-HubSiteId <GuidPipeBind>]
+            [-Wait [<SwitchParameter>]]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -35,6 +40,7 @@ New-PnPSite -Title <String>
             [-IsPublic <String>]
             [-Owners <String[]>]
             [-HubSiteId <GuidPipeBind>]
+            [-Wait [<SwitchParameter>]]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -46,14 +52,16 @@ New-PnPSite -Title <String>
             -Type <SiteType>
             [-Description <String>]
             [-Classification <String>]
+            [-Owner <String>]
             [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
             [-Lcid <UInt32>]
             [-HubSiteId <GuidPipeBind>]
+            [-Wait [<SwitchParameter>]]
             [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
-The New-PnPSite cmdlet creates a new site collection for the current tenant. Currently only 'modern' sites like Communication Site and the Modern Team Site are supported. If you want to create a classic site, use New-PnPTenantSite.
+The New-PnPSite cmdlet creates a new site collection for the current tenant. Currently only 'modern' sites like Communication Site and the Modern Office 365 group-connected team sites are supported. If you want to create a classic site, use New-PnPTenantSite.
 
 ## EXAMPLES
 
@@ -94,7 +102,7 @@ This will create a new Communications Site collection with the title 'Contoso' a
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Lcid 1044
+New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Lcid 1040
 ```
 
 This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' and sets the default language to Italian.
@@ -123,7 +131,7 @@ This will create a new Modern Team Site collection with the title 'Team Contoso'
 ## PARAMETERS
 
 ### -Alias
-Specifies the alias of the new site collection which represents the part of the URL that will be assigned to the site behind 'https://tenant.sharepoint.com/sites/' or 'https://tenant.sharepoint.com/teams/' based on the managed path configuration in the SharePoint Online Admin portal
+Specifies the alias of the new site collection which represents the part of the URL that will be assigned to the site behind 'https://tenant.sharepoint.com/sites/' or 'https://tenant.sharepoint.com/teams/' based on the managed path configuration in the SharePoint Online Admin portal, this parameter only applies to Modern Team Sites
 
 ```yaml
 Type: String
@@ -206,6 +214,18 @@ Position: 0
 Accept pipeline input: False
 ```
 
+### -Owner
+Specifies the owner of the site. Specify the value as a string array: "user@domain.com"
+
+```yaml
+Type: String
+Parameter Sets: Communication Site with Built-In Site Design
+
+Required: False
+Position: 0
+Accept pipeline input: False
+```
+
 ### -Owners
 Specifies the owners of the site. Specify the value as a string array: "user@domain.com","anotheruser@domain.com"
 
@@ -267,7 +287,7 @@ Accept pipeline input: False
 ```
 
 ### -Url
-Specifies the full url of the new site collection
+Specifies the full url of the new site collection, this parameter only applies to Communications Sites
 
 ```yaml
 Type: String
@@ -275,6 +295,18 @@ Parameter Sets: Communication Site with Built-In Site Design
 
 Required: True
 Position: 0
+Accept pipeline input: False
+```
+
+### -Wait
+If specified the cmdlet will wait until the site has been fully created and all site artifacts have been provisioned by SharePoint. Notice that this can take a while.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
 Accept pipeline input: False
 ```
 

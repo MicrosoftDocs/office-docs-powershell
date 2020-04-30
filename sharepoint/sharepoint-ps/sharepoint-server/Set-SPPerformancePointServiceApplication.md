@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spperformancepointserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPPerformancePointServiceApplication
 schema: 2.0.0

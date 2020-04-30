@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnprecyclebinitem
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPRecycleBinItem
 ---
+
 # Get-PnPRecycleBinItem
 
 ## SYNOPSIS
@@ -19,12 +22,20 @@ Get-PnPRecycleBinItem [-Identity <GuidPipeBind>]
 ### FirstStage
 ```powershell
 Get-PnPRecycleBinItem [-FirstStage [<SwitchParameter>]]
+                      [-RowLimit <Int>]
                       [-Connection <SPOnlineConnection>]
 ```
 
 ### SecondStage
 ```powershell
 Get-PnPRecycleBinItem [-SecondStage [<SwitchParameter>]]
+                      [-RowLimit <Int>]
+                      [-Connection <SPOnlineConnection>]
+```
+
+### All
+```powershell
+Get-PnPRecycleBinItem [-RowLimit <Int>]
                       [-Connection <SPOnlineConnection>]
 ```
 
@@ -64,6 +75,13 @@ Get-PnPRecycleBinItem -SecondStage
 
 Returns all items in only the second stage recycle bin in the current site collection
 
+### ------------------EXAMPLE 5------------------
+```powershell
+Get-PnPRecycleBinItem -RowLimit 10000
+```
+
+Returns items in recycle bin limited by number of results
+
 ## PARAMETERS
 
 ### -FirstStage
@@ -99,6 +117,20 @@ Parameter Sets: (All)
 
 Required: False
 Position: 0
+Accept pipeline input: False
+```
+
+### -RowLimit
+Limits return results to specified amount
+
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
+
+```yaml
+Type: Int
+Parameter Sets: FirstStage, SecondStage, All
+
+Required: False
+Position: Named
 Accept pipeline input: False
 ```
 

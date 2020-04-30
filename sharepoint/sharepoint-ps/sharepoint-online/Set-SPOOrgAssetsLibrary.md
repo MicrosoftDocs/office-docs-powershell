@@ -1,13 +1,13 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spoorgassetslibrary
 applicable: SharePoint Online
-title: Add-SPOOrgAssetsLibrary
-author: maesfaha@microsoft.com
-ms.author: maesfaha@microsoft.com
-ms.reviewer: 
-manager: paulac@microsoft.com
-online version:
+title: Set-SPOOrgAssetsLibrary
+author: Maralesfahanpoor
+ms.author: maesfaha
+ms.reviewer:
+manager: paulac
 schema: 2.0.0
 ---
 
@@ -31,10 +31,18 @@ The Set-SPOOrgAssetsLibrary cmdlet updates information for a library that is des
 
 ### Example 1
 
-This example updates the thumbnail publicly displayed for the library to contosologo2.jpg.
+This example updates the thumbnail URL publicly displayed for the library to contosologo2.jpg.
 
 ```powershell
-Set-SPOOrgAssetsLibrary -LibraryURL Assets -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Assets/contosologo2.jpg
+Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Assets -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Assets/contosologo2.jpg
+```
+
+### Example 2
+
+This example removes the thumbnail URL that was previously set for the library.
+
+```powershell
+Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Assets -ThumbnailURL ""
 ```
 
 ## PARAMETERS
@@ -70,6 +78,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

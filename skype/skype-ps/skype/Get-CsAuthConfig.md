@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csauthconfig
 applicable: Skype for Business Server 2019
 title: Get-CsAuthConfig
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -21,10 +23,15 @@ Get-CsAuthConfig [[-Pool] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## DESCRIPTION
 Use the Get-CsAuthConfig cmdlet to retrieve the authentication configuration for your organization.
-This cmdlet gets authentication configuration from two server roles - Registrar and WebServices.
+
+This cmdlet gets authentication configuration from two server roles: Registrar and WebServices.
+
 It is meant to only be run at the global level.
-If you do run it at the pool level and only one of the roles are present on the pool, the cmdlet will return the setting that corresponds to the role that exists on the pool and the global settings for the role that doesn’t exist on the pool.
+
+If you do run it at the pool level and only one of the roles are present on the pool, the cmdlet will return the setting that corresponds to the role that exists on the pool and the global settings for the role that doesn't exist on the pool.
+
 If neither role is present on the pool, it will return an error.
+
 If both roles are present for the pool, but policies are not defined at the pool level, the cmdlet will return an error.
 
 ## EXAMPLES
@@ -45,7 +52,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -60,7 +67,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: 0
 Default value: None
@@ -76,7 +83,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None

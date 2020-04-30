@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csmediaconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMediaConfiguration
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: rogupta
+author: hirenshah1
+ms.author: hirshah
 ms.reviewer:
 ---
 
@@ -23,7 +25,7 @@ Set-CsMediaConfiguration [[-Identity] <XdsIdentity>] [-EnableQoS <Boolean>] [-En
  [-EncryptionLevel <EncryptionLevel>] [-MaxVideoRateAllowed <MaxVideoRateAllowed>] [-Force] [-WhatIf]
  [-Confirm] [-EnableAdaptiveBandWidthEstimation <Boolean>] [-EnableG722StereoCodec <Boolean>]
  [-EnableH264Codec <Boolean>] [-EnableInCallQoS <Boolean>] [-EnableRtpRtcpMultiplexing <Boolean>]
- [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilk <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [<CommonParameters>]
+ [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [<CommonParameters>]
 ```
 
 ### Instance
@@ -32,7 +34,7 @@ Set-CsMediaConfiguration [-Instance <PSObject>] [-EnableQoS <Boolean>] [-EnableS
  [-EncryptionLevel <EncryptionLevel>] [-MaxVideoRateAllowed <MaxVideoRateAllowed>] [-Force] [-WhatIf]
  [-Confirm] [-EnableAdaptiveBandWidthEstimation <Boolean>] [-EnableG722StereoCodec <Boolean>]
  [-EnableH264Codec <Boolean>] [-EnableInCallQoS <Boolean>] [-EnableRtpRtcpMultiplexing <Boolean>]
- [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilk <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [<CommonParameters>]
+ [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -242,7 +244,7 @@ Accept wildcard characters: False
 
 ### -EnableAdaptiveBandWidthEstimation
 When set to True (the default value) Microsoft Lync Server will select the bandwidth rate at which to play a video stream.
-This selection will be based on such factors as the network congestion and the client's quality of the client's current network connection.
+This selection will be based on such factors as the network congestion and the client's quality of the client's current network connection. This parameter was removed starting Lync Server Cumulative Update 3.
 
 ```yaml
 Type: Boolean
@@ -308,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRtpRtcpMultiplexing
-PARAMVALUE: $true | $false
+Enables or disables the use of RTP/RTCP Multiplexing, if enabled, when negotiating, only one candidate will be used for both RTP and RTCP.
 
 ```yaml
 Type: Boolean
@@ -318,7 +320,7 @@ Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -340,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVideoBasedSharing
-{{Fill EnableVideoBasedSharing Description}}
+Enables the use of Video Based Sharing, for more information, see [Video based Screen Sharing for Skype for Business Server](https://docs.microsoft.com/skypeforbusiness/manage/video-based-screen-sharing) 
 
 ```yaml
 Type: Boolean
@@ -371,8 +373,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableSilk
-Enables the use of SILK codec
+### -EnableSilkForAudioVideoConferences
+Enables the use of SILK codec for A/V conferences
 
 ```yaml
 Type: Boolean

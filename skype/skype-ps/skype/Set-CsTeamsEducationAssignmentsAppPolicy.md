@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamseducationassignmentsapppolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsEducationAssignmentsAppPolicy
 schema: 2.0.0
+ms.reviewer:
+manager: bulenteg
+ms.author: tomkau
+author: tomkau
 ---
 
 # Set-CsTeamsEducationAssignmentsAppPolicy

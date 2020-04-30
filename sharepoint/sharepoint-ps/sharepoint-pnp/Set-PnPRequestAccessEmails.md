@@ -1,20 +1,27 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnprequestaccessemails
 applicable: SharePoint Online
 schema: 2.0.0
+title: Set-PnPRequestAccessEmails
 ---
+
 # Set-PnPRequestAccessEmails
 
 ## SYNOPSIS
-Sets Request Access Emails on a web
+Sets Request Access Email on a web
 
 ## SYNTAX 
 
 ```powershell
-Set-PnPRequestAccessEmails -Emails <String[]>
+Set-PnPRequestAccessEmails [-Emails <String[]>]
+                           [-Disabled [<SwitchParameter>]]
                            [-Web <WebPipeBind>]
                            [-Connection <SPOnlineConnection>]
 ```
+
+## DESCRIPTION
+Enables or disables access requests to be sent and configures which e-mail address should receive these requests. The web you apply this on must have unique rights.
 
 ## EXAMPLES
 
@@ -23,25 +30,44 @@ Set-PnPRequestAccessEmails -Emails <String[]>
 Set-PnPRequestAccessEmails -Emails someone@example.com 
 ```
 
-This will update the request access e-mail address
+This will enable requesting access and send the requests to the provided e-mail address
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Set-PnPRequestAccessEmails -Emails @( someone@example.com; someoneelse@example.com )
+Set-PnPRequestAccessEmails -Disabled
 ```
 
-This will update multiple request access e-mail addresses
+This will disable the ability to request access to the site
+
+### ------------------EXAMPLE 3------------------
+```powershell
+Set-PnPRequestAccessEmails -Disabled:$false
+```
+
+This will enable the ability to request access to the site and send the requests to the default owners of the site
 
 ## PARAMETERS
 
+### -Disabled
+Enables or disables access to be requested
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Emails
-Email address(es) to set the RequestAccessEmails to
+Email address to send the access requests to
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 
-Required: True
+Required: False
 Position: Named
 Accept pipeline input: False
 ```

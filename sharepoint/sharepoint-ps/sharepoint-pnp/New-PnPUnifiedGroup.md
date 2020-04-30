@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpunifiedgroup
 applicable: SharePoint Online
 schema: 2.0.0
+title: New-PnPUnifiedGroup
 ---
+
 # New-PnPUnifiedGroup
 
 ## SYNOPSIS
-Creates a new Office 365 Group (aka Unified Group)
+Creates a new Office 365 Group (aka Unified Group). Requires the Azure Active Directory application permission 'Group.ReadWrite.All'.
 
 ## SYNTAX 
 
@@ -18,6 +21,7 @@ New-PnPUnifiedGroup -DisplayName <String>
                     [-Members <String[]>]
                     [-IsPrivate [<SwitchParameter>]]
                     [-GroupLogoPath <String>]
+                    [-CreateTeam [<SwitchParameter>]]
                     [-Force [<SwitchParameter>]]
 ```
 
@@ -52,6 +56,18 @@ New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNic
 Creates a private Office 365 Group with all the required properties, and with a custom list of Owners and a custom list of Members
 
 ## PARAMETERS
+
+### -CreateTeam
+Creates a MS Teams team associated with created group.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Description
 The Description of the Office 365 Group.

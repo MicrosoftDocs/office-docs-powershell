@@ -1,17 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/unregister-csonlinedialinconferencingservicenumber
 applicable: Skype for Business Online
 title: Unregister-CsOnlineDialInConferencingServiceNumber
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # Unregister-CsOnlineDialInConferencingServiceNumber
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Unassigns the previously assigned service number as default Conference Bridge number.
 
 ## SYNTAX
 
@@ -22,16 +24,16 @@ Unregister-CsOnlineDialInConferencingServiceNumber [-Identity] <String> [-Bridge
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Unassigns the previously assigned service number as default Conference Bridge number.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Unregister-CsOnlineDialInConferencingServiceNumber -BridgeName "Conference Bridge" -RemoveDefaultServiceNumber 1234 
 ```
 
-Insert descriptive text for example 1.
+Unassigns the 1234 Service Number to the given Conference Bridge.
 
 
 ## PARAMETERS

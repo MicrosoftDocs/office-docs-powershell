@@ -1,16 +1,19 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-cstenantnetworkregion
 applicable: Skype for Business Online
 title: Get-CsTenantNetworkRegion
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
 # Get-CsTenantNetworkRegion
 
 ## SYNOPSIS
+Returns information about the network region setting in the tenant. Tenant network region is used for Location Based Routing.
 
 ## SYNTAX
 
@@ -26,21 +29,34 @@ Get-CsTenantNetworkRegion [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+A network region interconnects various parts of a network across multiple geographic areas. 
+
+A network region contains a collection of network sites. For example, if your organization has many sites located in India, then you may choose to designate "India" as a network region.
+
+Location Based Routing is a feature which allows PSTN toll bypass to be restricted for users based upon policy and the user's geographic location at the time of an incoming or outgoing PSTN call. 
+
+Location-Based Routing leverages the same network regions, sites, and subnets concept that is available in Skype for Business Server. It is now available in O365 for Teams clients. For toll bypass restricted locations, each IP subnet and PSTN gateway for that location are associated to a network site by the administrator. A user's location is determined by the IP subnet which the user's Teams endpoint(s) is connected to at the time of a PSTN call. A user may have multiple Teams clients located at different sites, in which case Location-Based Routing will enforce each client's routing separately depending on the location of its endpoint.
 
 ## EXAMPLES
 
-### Example 1
+###-------------------------- Example 1 --------------------------
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsTenantNetworkRegion
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 returns the list of network regions for the current tenant.
+
+###-------------------------- Example 2 --------------------------
+```powershell
+PS C:\> Get-CsTenantNetworkRegion -Identity RedmondRegion
+```
+
+The command shown in Example 2 returns the network region within the scope of RedmondRegion.
 
 ## PARAMETERS
 
 ### -Filter
-{{Fill Filter Description}}
+The Filter parameter allows you to limit the number of results based on filters you specify.
 
 ```yaml
 Type: String
@@ -55,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+The Identity parameter is a unique identifier that designates the scope. It specifies the collection of tenant network region to be returned.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -70,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
@@ -85,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose network regions are being returned.
 
 ```yaml
 Type: System.Guid

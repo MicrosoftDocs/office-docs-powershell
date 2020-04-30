@@ -1,13 +1,13 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spoorgassetslibrary
 applicable: SharePoint Online
-title: Add-SPOOrgAssetsLibrary
-author: maesfaha@microsoft.com
-ms.author: maesfaha@microsoft.com
-ms.reviewer: 
-manager: paulac@microsoft.com
-online version:
+title: Get-SPOOrgAssetsLibrary
+author: Maralesfahanpoor
+ms.author: maesfaha
+ms.reviewer:
+manager: paulac
 schema: 2.0.0
 ---
 
@@ -27,13 +27,13 @@ Get-SPOOrgAssetsLibrary [<CommonParameters>]
 
 The Get-SPOOrgAssetsLibrary cmdlet displays information about all libraries designated as locations for organization assets.
 
-Once this cmdlet is run, it will display the name and URL of the site where assets are originally stored, as well as the display name, server relative library URL, list ID, and thumbnail URL for any associated libraries.
+Once this cmdlet is run, it will display the name and URL of the site where assets are originally stored, as well as the display name, server relative library URL, list ID, OrgAssetType and thumbnail URL for any associated libraries.
 
 ## EXAMPLES
 
 ### Example 1
 
-This example displays the name and URL of the site where assets are originally stored. It also provides a list of any associated libraries and shows the respective display name, server relative library URL, list ID, and thumbnail URL.
+This example displays the name and URL of the site where assets are originally stored. It also provides a list of any associated libraries and shows the respective display name, server relative library URL, list ID, OrgAssetType and thumbnail URL.
 
 ```powershell
 Get-SPOOrgAssetsLibrary

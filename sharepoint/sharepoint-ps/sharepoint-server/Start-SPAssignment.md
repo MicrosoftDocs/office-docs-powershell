@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/start-spassignment
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Start-SPAssignment
 schema: 2.0.0
-author: techwriter40
-ms.author: kirks
+author: kenwith
+ms.author: kenwith
 ms.reviewer:
 ---
 
@@ -60,7 +62,7 @@ Ensure that you run `Stop-SPAssignment` before you attempt any iterations of mul
 $gc = Start-SPAssignment
 $web = $gc | Get-SPWeb https://MyWeb
 $web | Set-SPWeb -title "Accounting"
-Stop-SPAssignment -Identity $gc
+Stop-SPAssignment -SemiGlobal $gc
 ```
 
 This example sets the title of the SPWeb object in multiple lines and controls the rate of disposal.

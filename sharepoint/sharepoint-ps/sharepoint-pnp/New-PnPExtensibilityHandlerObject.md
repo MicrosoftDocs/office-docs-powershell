@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpextensibilityhandlerobject
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: New-PnPExtensibilityHandlerObject
 ---
+
 # New-PnPExtensibilityHandlerObject
 
 ## SYNOPSIS
-Creates an ExtensibilityHandler Object, to be used by the Get-SPOProvisioningTemplate cmdlet
+Creates an ExtensibilityHandler Object, to be used by the Get-PnPProvisioningTemplate cmdlet
 
 ## SYNTAX 
 

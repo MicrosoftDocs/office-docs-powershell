@@ -282,7 +282,7 @@ Most of the attributes and values are generated automatically by platyPS. The on
 - **Default value** and **Accept wildcard characters**: These attributes are present, but the values are never truthfully populated by platyPS (they're always None and False, respectively). You can correct the values if you think it's important. Otherwise, leave them as is.
 
 ### Step 8: Add the new cmdlet topic files to the repository
-When you're done editing the topics, upload them to GitHub.
+When you're done editing the topics, upload them to GitHub. Note that you need to fork, upload your files to your fork, then submit a Pull Request.
 
 1. Go to the correct location in the appropriate GitHub repository:
 

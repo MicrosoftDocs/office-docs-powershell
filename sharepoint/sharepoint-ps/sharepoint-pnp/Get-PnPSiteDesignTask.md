@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitedesigntask
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPSiteDesignTask
 ---
+
 # Get-PnPSiteDesignTask
 
 ## SYNOPSIS
-Used to retrieve a scheduled site design script. It takes the ID of the scheduled site design and the URL for the site where the site design is scheduled to be applied. 
+Used to retrieve a scheduled site design script. It takes the ID of the scheduled site design task and the URL for the site where the site design is scheduled to be applied.
 
 ## SYNTAX 
 
@@ -31,19 +34,19 @@ This example retrieves a site design task given the provided site design task id
 Get-PnPSiteDesignTask
 ```
 
-This example retrieves all site design tasks currently scheduled on the current site.
+This example retrieves all site design tasks currently scheduled on the current site
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Get-PnPSiteDesignTask -WebUrl "https://contoso.sharepoint.com/sites/project"
 ```
 
-This example retrieves all site design tasks currently scheduled on the provided site.
+This example retrieves all site design tasks currently scheduled on the provided site
 
 ## PARAMETERS
 
 ### -Identity
-The ID of the site design to apply.
+The ID of the site design task to retrieve.
 
 ```yaml
 Type: TenantSiteDesignTaskPipeBind
@@ -55,7 +58,7 @@ Accept pipeline input: False
 ```
 
 ### -WebUrl
-The URL of the site collection where the site design will be applied. If not specified the design will be applied to the site you connected to with Connect-PnPOnline.
+The URL of the site collection where the site design will be applied. If not specified the site design tasks will be returned for the site you connected to with Connect-PnPOnline.
 
 ```yaml
 Type: String

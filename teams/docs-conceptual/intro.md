@@ -1,5 +1,6 @@
 ---
 localization_priority: Normal
+title: Microsoft Teams cmdlet reference
 ---
 
 # Microsoft Teams cmdlet reference

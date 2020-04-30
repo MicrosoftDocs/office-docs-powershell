@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroutingpolicy
 applicable: Skype for Business Online
-title: Get-CsOnlineUser
+title: New-CsOnlineVoiceRoutingPolicy
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -22,22 +24,22 @@ New-CsOnlineVoiceRoutingPolicy [-Tenant <Guid>] [-OnlinePstnUsages <PSListModifi
 ```
 
 ## DESCRIPTION
-Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
+Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Teams users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
 
-Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via Skype for Business Online or Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
+Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via  Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> New-CsOnlineVoiceRoutingPolicy -Identity "RedmondOnlineVoiceRoutingPolicy" -Name "RedmondOnlineVoiceRoutingPolicy" -OnlinePstnUsages "Long Distance"
+PS C:\> New-CsOnlineVoiceRoutingPolicy -Identity "RedmondOnlineVoiceRoutingPolicy" -OnlinePstnUsages "Long Distance"
 ```
 
 The command shown in Example 1 creates a new online per-user voice routing policy with the Identity RedmondOnlineVoiceRoutingPolicy. This policy is assigned a single online PSTN usage: Long Distance.
 
 ### -------------------------- Example 2 --------------------------
 ```
-PS C:\> New-CsOnlineVoiceRoutingPolicy -Identity "RedmondOnlineVoiceRoutingPolicy" -Name "RedmondOnlineVoiceRoutingPolicy" -OnlinePstnUsages "Long Distance", "Local", "Internal"
+PS C:\> New-CsOnlineVoiceRoutingPolicy -Identity "RedmondOnlineVoiceRoutingPolicy" -OnlinePstnUsages "Long Distance", "Local", "Internal"
 ```
 
 Example 2 is a variation of the command shown in Example 1; in this case, however, the new policy is assigned three online PSTN usages: Long Distance; Local; Internal. Multiple usages can be assigned simply by separating each usage using a comma.
@@ -105,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnlinePstnUsages
-A list of online PSTN usages (such as Local or Long Distance) that can be applied to this online voice routing policy. The online PSTN usage must be an existing usage. (PSTN usages can be retrieved by calling the `Get-CsOnlinePstnUsage` cmdlet.)
+A list of online PSTN usages (such as Local or Long Distance) that can be applied to this online voice routing policy. The online PSTN usage must be an existing usage (PSTN usages can be retrieved by calling the `Get-CsOnlinePstnUsage` cmdlet).
 
 ```yaml
 Type: PSListModifier

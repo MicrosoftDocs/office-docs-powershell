@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpview
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPView
 ---
+
 # Add-PnPView
 
 ## SYNOPSIS
@@ -20,6 +23,7 @@ Add-PnPView -List <ListPipeBind>
             [-Personal [<SwitchParameter>]]
             [-SetAsDefault [<SwitchParameter>]]
             [-Paged [<SwitchParameter>]]
+            [-Aggregations <String>]
             [-Web <WebPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
@@ -40,7 +44,26 @@ Add-PnPView -List "Demo List" -Title "Demo View" -Fields "Title","Address" -Page
 
 Adds a view named "Demo view" to the "Demo List" list and makes sure there's paging on this view.
 
+### ------------------EXAMPLE 3------------------
+```powershell
+Add-PnPView -List "Demo List" -Title "Demo View" -Fields "Title","Address" -Aggregations "<FieldRef Name='Title' Type='COUNT'/>"
+```
+
+Adds a view named "Demo view" to the "Demo List" list and sets the totals (aggregations) to Count on the Title field.
+
 ## PARAMETERS
+
+### -Aggregations
+A valid XML fragment containing one or more Aggregations
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Fields
 A list of fields to add.

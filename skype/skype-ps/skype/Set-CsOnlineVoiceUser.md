@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceuser
 applicable: Skype for Business Online
 title: Set-CsOnlineVoiceUser
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
 ms.reviewer:
 ---
 
@@ -163,8 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch causes the command to simulate its results.
-By using this switch, you can view what changes would occur without having to commit those changes.
+The WhatIf parameter is not implemented for this cmdlet.
 
 ```yaml
 Type: SwitchParameter
