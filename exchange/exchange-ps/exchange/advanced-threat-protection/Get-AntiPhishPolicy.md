@@ -83,6 +83,8 @@ The Advanced switch filters the properties that are returned to the advanced set
 
 You don't need to specify a value with this switch.
 
+Advanced settings are only available in ATP anti-phishing policies.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -120,6 +122,8 @@ The Impersonation switch filters the properties that are returned to the imperso
 - TargetedUsersToProtect
 
 You don't need to specify a value with this switch.
+
+Impersonation settings are only available in ATP anti-phishing policies.
 
 ```yaml
 Type: SwitchParameter
