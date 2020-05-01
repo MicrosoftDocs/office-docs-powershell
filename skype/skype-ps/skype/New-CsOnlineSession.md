@@ -45,18 +45,17 @@ In this session, Skype for Business Online administrator can run Skype for Busin
 
 ### EXAMPLE 1
 ```
-New-CsOnlineSession -Credential User@Domain.com
+New-CsOnlineSession -UserName admin@contoso.com
 ```
 
-Establishes a Skype for Business Online Remote PowerShell Session, supplying the credentials of a Skype for Business Online administrator account.
+Establishes a Skype for Business Online Remote PowerShell session, supplying the credentials of a Skype for Business Online administrator account.
 
 ### EXAMPLE 2
 ```
-New-CsOnlineSession -Credential User@Domain.com -OverrideAdminDomain contoso.onmicrosoft.com
+New-CsOnlineSession -UserName admin@contoso.com -OverrideAdminDomain fabrikam.onmicrosoft.com
 ```
 
-Establishes a Skype for Business Online Remote PowerShell Session, with a Skype for Business Online administrator account that has permission to manage the tenant contoso.onmicrosoft.com.
-Please change the OverrideAdminDomain to your default tenant domain.
+Establishes a Skype for Business Online Remote PowerShell session, with a Skype for Business Online administrator account that has permission to manage the tenant fabrikam.onmicrosoft.com that was specified using the optional OverrideAdminDomain parameter.
 
 ### EXAMPLE 3
 ```
@@ -64,7 +63,7 @@ $sfbSession = New-CsOnlineSession
 Import-PSSession $sfbSession
 ```
 
-Establishes a Skype for Business Online Remote PowerShell Session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication).
+Establishes a Skype for Business Online Remote PowerShell session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication).
 
 ## PARAMETERS
 
@@ -86,7 +85,7 @@ Accept wildcard characters: False
 ### -Credential
 Specifies a Skype for Business Online administrator, or Syndicated Partner administrator account.
 
-Type a Skype for Business Online administrator account name, such as "User@Domain.com", or enter a PSCredential object, such as one returned by the Get-Credential cmdlet.
+Type a Skype for Business Online administrator account name, such as "admin@contoso.com", or enter a PSCredential object, such as one returned by the Get-Credential cmdlet.
 
 When you type an account name, you will be prompted for a password.
 
@@ -103,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -OAuthAccessToken
-Specifies access token acquired already by the Skype for Business Online administrator, or Syndicated Partner Administrator.
+Specifies an access token already acquired by the Skype for Business Online administrator, or Syndicated Partner administrator.
 
 ```yaml
 Type: SecureString
@@ -118,8 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideAdminDomain
-Specifies a default domain to be managed.
-Optional.
+Specifies the domain of the tenant to be managed. This is used when the administrator has permissions to manage more than one tenant. For example, Syndicated Partner administrators commonly manage several tenants. 
 
 ```yaml
 Type: String
