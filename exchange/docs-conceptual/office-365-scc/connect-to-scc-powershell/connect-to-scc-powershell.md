@@ -96,13 +96,15 @@ For more information about the Security & Compliance Center, see [Office 365 Sec
 
    - For Office 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
 
-   - If you want to connect to Security & Compliance Center PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add the Prefix parameter and value (for example, `-Prefix "CC"`) to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
-
 3. Run the following command:
 
    ```PowerShell
    Import-PSSession $Session -DisableNameChecking
    ```
+   
+   **Notes**:
+
+   - If you want to connect to Security & Compliance Center PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add the Prefix parameter and value (for example, `-Prefix "CC"`) to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
