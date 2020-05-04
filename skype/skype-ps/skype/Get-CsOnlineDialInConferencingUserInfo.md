@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
