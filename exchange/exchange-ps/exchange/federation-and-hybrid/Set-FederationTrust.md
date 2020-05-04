@@ -63,19 +63,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-FederationTrust -Identity "Microsoft Federation Gateway" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
+Set-FederationTrust -Identity "Azure AD Authentication" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
 ```
 
 This example configures the federation trust Microsoft Federation Gateway to use the certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17 as the next certificate.
 
 ### Example 2
 ```powershell
-Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
+Set-FederationTrust -Identity "Azure AD Authentication" -PublishFederationCertificate
 ```
 
 This example configures the federation trust Microsoft Federation Gateway to use the next certificate as the current certificate.
 
+
+### Example 3
+```powershell
+Set-FederationTrust -Identity "Azure AD Authentication" -MetadataUrl https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml
+```
+
+This example updates the configuration if the tenant is hosted in Office 365 U.S. Government GCC High or DoD environment.
+
 Before you configure a federation trust to use the next certificate as the current certificate, you need to use the Test-FederationTrust cmdlet to verify that the certificate is available on all Exchange servers.
+
 
 ## PARAMETERS
 
@@ -94,6 +103,7 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
+>[NOTE] For Office 365 or Exchange online tenants, use "Azure AD Authentication" as the input value
 
 ### -ApplicationUri
 The ApplicationUri parameter specifies the primary domain used for the federation organization identifier.
@@ -182,6 +192,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+>[NOTE] If the tenant is hosted in Office 365 U.S. Government GCC High or DoD environment, MetadataUrl should be https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml
 
 ### -Name
 The Name parameter specifies a name for the federation trust.
