@@ -94,7 +94,8 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
-
+    Note: For Office 365 or Exchange online tenants, use "Azure AD Authentication" as the input value
+    
 ### -ApplicationUri
 The ApplicationUri parameter specifies the primary domain used for the federation organization identifier.
 
@@ -182,6 +183,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+    Note: If the tenant is hosted in Office 365 U.S. Government GCC High or DoD environment, MetadataUrl should be https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml
 
 ### -Name
 The Name parameter specifies a name for the federation trust.
