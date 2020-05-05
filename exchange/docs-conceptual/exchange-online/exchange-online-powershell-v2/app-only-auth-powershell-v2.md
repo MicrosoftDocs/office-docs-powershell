@@ -37,7 +37,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 - Connect using a certificate thumbprint:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" -RoutingHintUPN "admin_exo@contosoelectronics.com"
+  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" 
   ```
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
 
@@ -90,6 +90,8 @@ For a detailed visual flow bout creating applications in Azure AD, see <https://
    - Security reader
    - Security administrator
    - Helpdesk administrator
+   - Exchange Service administrator
+   - Global Reader
 
 ## Appendix
 
