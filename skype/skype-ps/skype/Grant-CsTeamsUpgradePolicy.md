@@ -108,7 +108,7 @@ After running these lines will create an  HTML  file on the Desktop of the curre
 ```
 Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
 ```
-This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
+This will create a CSV  file on the Desktop of the current user with the name "TeamsUpgrade.csv"
 
 ### Example 8 Get a report on existing TeamsUpgradePolicy users (HTML Report - Oneliner Version)
 ```
