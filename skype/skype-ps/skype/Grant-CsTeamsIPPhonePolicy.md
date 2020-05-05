@@ -56,6 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+Microsoft Internal Use Only.
 
 ```yaml
 Type: Object
@@ -161,6 +162,9 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
 
 ```yaml
 Type: SwitchParameter
