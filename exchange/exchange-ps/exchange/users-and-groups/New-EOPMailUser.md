@@ -26,9 +26,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-EOPMailUser -MicrosoftOnlineServicesID <WindowsLiveId> -Name <String> -Password <String> [-Alias <String>]
- [-DisplayName <String>] [-ExternalEmailAddress <ProxyAddress>] [-FirstName <String>] [-Initials <String>]
- [-LastName <String>] [<CommonParameters>]
+New-EOPMailUser -MicrosoftOnlineServicesID <WindowsLiveId> -Name <String> -Password <String>
+ [-Alias <String>]
+ [-DisplayName <String>]
+ [-ExternalEmailAddress <ProxyAddress>]
+ [-FirstName <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

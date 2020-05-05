@@ -44,7 +44,10 @@ This example replaces the current members of the Security Team distribution grou
 
 ### Example 2
 ```powershell
-$CurrentMemberObjects = Get-DistributionGroupMember "Security Team"; $CurrentMemberNames = $CurrentMemberObjects | % {$_.name}; $CurrentMemberNames += "Tyson Fawcett"; Update-EOPDistributionGroupMember -Identity "Security Team" -Members $CurrentMemberNames
+$CurrentMemberObjects = Get-DistributionGroupMember "Security Team"
+$CurrentMemberNames = $CurrentMemberObjects | % {$_.name}
+$CurrentMemberNames += "Tyson Fawcett"
+Update-EOPDistributionGroupMember -Identity "Security Team" -Members $CurrentMemberNames
 ```
 
 This example adds a new user named Tyson Fawcett to the distribution group named Security Team while preserving the current members of the group. The current member objects are retrieved in a collection, the collection is filtered to extract the names, the user "Tyson Fawcett" is added, and the updated name list replaces the current membership of the distribution group.

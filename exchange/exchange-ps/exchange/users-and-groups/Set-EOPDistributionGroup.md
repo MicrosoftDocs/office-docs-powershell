@@ -26,8 +26,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-EOPDistributionGroup [-Alias <String>] [-DisplayName <String>] [-ExternalDirectoryObjectId <String>]
- [-Identity <DistributionGroupIdParameter>] [-ManagedBy <String[]>] [-PrimarySmtpAddress <SmtpAddress>]
+Set-EOPDistributionGroup
+ [-Alias <String>]
+ [-DisplayName <String>]
+ [-ExternalDirectoryObjectId <String>]
+ [-Identity <DistributionGroupIdParameter>]
+ [-ManagedBy <String[]>]
+ [-PrimarySmtpAddress <SmtpAddress>]
  [<CommonParameters>]
 ```
 

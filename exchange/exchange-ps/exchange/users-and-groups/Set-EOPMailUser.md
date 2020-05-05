@@ -24,9 +24,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-EOPMailUser [-Alias <String>] [-DisplayName <String>] [-EmailAddresses <ProxyAddressCollection>]
- [-ExternalDirectoryObjectId <String>] [-Identity <MailUserIdParameter>]
- [-MicrosoftOnlineServicesID <SmtpAddress>] [-Password <String>] [<CommonParameters>]
+Set-EOPMailUser
+ [-Alias <String>]
+ [-DisplayName <String>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-ExternalDirectoryObjectId <String>]
+ [-Identity <MailUserIdParameter>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-Password <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
