@@ -152,7 +152,7 @@ For example:
 
 - GUID
 
-This parameter only accepts recipients that are security principals (users or groups that can have permissions assigned to them). The following types of recipients are not security principals, so you can't use them with this parameter::
+This parameter only accepts recipients that are security principals (users or groups that can have permissions assigned to them). The following types of recipients are not security principals, so you can't use them with this parameter:
 
 - Discovery mailboxes  
 

@@ -466,6 +466,14 @@ Connect-PnPOnline -ClientId <id> -Certificate $cert -CertificatePassword (Conver
 
 Connects using an Azure Active Directory registered application using a certificate instance containing a private key. See https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread for a sample on how to get started.
 
+### ------------------EXAMPLE 25------------------
+```powershell
+Connect-PnPOnline -Url https://contoso.sharepoint.com -ClientId '<id>' -Tenant 'contoso.onmicrosoft.com' -Thumbprint 34CFAA860E5FB8C44335A38A097C1E41EEA206AA -TenantAdminUrl $tenantAdminUrl
+```
+
+Connects to SharePoint using app-only tokens via an app's declared permission scopes. Pass the TenantAdminUrl parameter to perform admin activities like adding Site Collection administrators etc. See https://github.com/SharePoint/PnP-PowerShell/tree/master/Samples/SharePoint.ConnectUsingAppPermissions for a sample on how to get started.
+
+
 ## PARAMETERS
 
 ### -AADDomain
