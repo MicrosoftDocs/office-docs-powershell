@@ -27,7 +27,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
- [-Title <String>] [-WhatIf] [-BlockDownloadOfNonViewableFiles <Boolean>]
+ [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
@@ -476,25 +476,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowLimitedAccess
+### -AllowDownloadingNonWebViewableFiles
 
-{{Fill AllowLimitedAccess Description}}
-
-```yaml
-Type: Boolean
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BlockDownloadOfNonViewableFiles
-
-{{Fill BlockDownloadOfNonViewableFiles Description}}
+Specifies if non web viewable files can be downloaded.
 
 ```yaml
 Type: Boolean
