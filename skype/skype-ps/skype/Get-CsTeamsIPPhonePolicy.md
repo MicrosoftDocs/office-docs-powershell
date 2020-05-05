@@ -4,8 +4,8 @@ Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsipphonepolicy
 applicable: Skype for Business Online
 title: Get-CSTeamsIPPhonePolicy
-author: kruthikaponnusamy
-ms.author: kponnus
+author: tonywoodruff
+ms.author: anwoodru
 ms.reviewer: kponnus
 manager: sandrao
 schema: 2.0.0

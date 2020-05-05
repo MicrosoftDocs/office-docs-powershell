@@ -4,8 +4,8 @@ Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsipphonepolicy
 applicable: Skype for Business Online
 title: New-CSTeamsIPPhonePolicy
-author: kruthikaponnusamy
-ms.author: kponnus
+author: tonywoodruff
+ms.author: anwoodru
 ms.reviewer: kponnus
 manager: sandrao
 schema: 2.0.0
@@ -161,9 +161,9 @@ Accept wildcard characters: False
 ### -SignInMode
 Determines the sign in mode for the device when signing in to Teams.
 Possible Values:
-- UserSignIn: Enables the individual user's Teams experience on the phone
-- CommonAreaPhoneSignIn: Enables a Common Area Phone experience on the phone
-- MeetingSignIn: Enables the meeting/conference room experience on the phone
+- 'UserSignIn: Enables the individual user's Teams experience on the phone'
+- 'CommonAreaPhoneSignIn: Enables a Common Area Phone experience on the phone'
+- 'MeetingSignIn: Enables the meeting/conference room experience on the phone'
 
 ```yaml
 Type: Object
