@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use the Remove-CSTeamsIPPhonePolicy cmdlet to remove a custom policy that's been created for controling Teams phone experiences.
+Use the Remove-CSTeamsIPPhonePolicy cmdlet to remove a custom policy that's been created for controlling Teams phone experiences.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Remove-CsTeamsIPPhonePolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant
 ```
 
 ## DESCRIPTION
-Use the Remove-CSTeamsIPPhonePolicy cmdlet to remove a custom policy that's been created for controling Teams IP Phones experiences.
+Use the Remove-CSTeamsIPPhonePolicy cmdlet to remove a custom policy that's been created for controlling Teams IP Phones experiences.
 
 ## EXAMPLES
 

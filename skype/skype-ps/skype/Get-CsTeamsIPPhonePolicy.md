@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Get-CSTeamsIPPhonePolicy allows IT Admins to view all the settings of the Teams phone policy.  Teams IP phone policies define the Teams features that are available to the user accounts signed into the phones.
+Get-CSTeamsIPPhonePolicy allows IT Admins to view policies for IP Phone experiences in Microsoft Teams 
 
 ## SYNTAX
 
@@ -24,7 +24,8 @@ Get-CsTeamsIPPhonePolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>]
 ```
 
 ## DESCRIPTION
-Returns information about the Teams phone policies configured for use in your organization. Teams phone policies enable you to configure the different sign-in experiences based upon the function the device is performing; example: phones deployed as a common area phone 
+
+Returns information about the Teams IP Phone Policies configured for use in your organization. Teams IP phone policies enable you to configure the different sign-in experiences based upon the function the device is performing; example: common area phone. 
 
 ## EXAMPLES
 
@@ -33,7 +34,7 @@ Returns information about the Teams phone policies configured for use in your or
 PS C:\> Get-CsTeamsIPPhonePolicy -identity CommonAreaPhone
 ```
 
-Retrieves the Teams phone policy with name "CommonAreaPhone"
+Retrieves the IP Phone Policy with name "CommonAreaPhone"
 
 ## PARAMETERS
 

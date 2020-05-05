@@ -41,7 +41,7 @@ PS C:\>  Set-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAr
 ## PARAMETERS
 
 ### -AllowHotDesking
-Determines if the hot desking feature is enabled or not. Set this to TRUE to enable. Set this to FALSE to disable host desking mode. 
+Determines if the hot desking feature is enabled or not. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode. 
 
 ```yaml
 Type: Object
@@ -160,10 +160,10 @@ Accept wildcard characters: False
 
 ### -SignInMode
 Determines the sign in mode for the device when signing in to Teams.
-Possible Values:
-	• UserSignIn: Enables the individual user's Teams experience on the phone
-	• CommonAreaPhoneSignIn: Enables a Common Area Phone experience on the phone
-    • MeetingSignIn: Enables the meeting/conference room experience on the phone
+Possible Values: 
+- UserSignIn: Enables the individual user's Teams experience on the phone
+- CommonAreaPhoneSignIn: Enables a Common Area Phone experience on the phone
+- MeetingSignIn: Enables the meeting/conference room experience on the phone
 
 ```yaml
 Type: Object

@@ -40,7 +40,7 @@ This example shows a new policy being created called "CommonAreaPhone" setting t
 ## PARAMETERS
 
 ### -AllowHotDesking
-Determines whether hot desking mode is enabled. Set this to TRUE to enable. Set this to FALSE to disable host desking mode. 
+Determines whether hot desking mode is enabled. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode. 
 
 ```yaml
 Type: Object
@@ -161,9 +161,9 @@ Accept wildcard characters: False
 ### -SignInMode
 Determines the sign in mode for the device when signing in to Teams.
 Possible Values:
-	• UserSignIn - User Account UI
-	• CommonAreaPhoneSignIn - Common Area Phone UI
-    • MeetingSignIn - Meeting Room UI
+- UserSignIn: Enables the individual user's Teams experience on the phone
+- CommonAreaPhoneSignIn: Enables a Common Area Phone experience on the phone
+- MeetingSignIn: Enables the meeting/conference room experience on the phone
 
 ```yaml
 Type: Object
