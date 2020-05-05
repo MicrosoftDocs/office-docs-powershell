@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -CopyEvents
-Specifies if events need to be copied.
+Specifies if events of the EventCache table need to be copied to the destination Content Database.
 
 The valid values are True or False.
 
@@ -196,7 +196,7 @@ The valid values are True or False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
