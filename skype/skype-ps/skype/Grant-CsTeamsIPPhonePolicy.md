@@ -37,7 +37,8 @@ Note: Assigning a per user policy will override any global policy taking effect 
 PS C:\> Grant-CsTeamsIPPhonePolicy -Identity Foyer1@contoso.com -PolicyName CommonAreaPhone
 ```
 
-This example shows assignment of the CommonAreaPhone policy to user account Foyer1@contoso.com
+This example shows assignment of the CommonAreaPhone policy to user account Foyer1@contoso.com.
+
 
 ## PARAMETERS
 
