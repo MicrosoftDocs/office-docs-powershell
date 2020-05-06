@@ -164,6 +164,8 @@ This parameter only accepts recipients that are security principals (users or gr
 
 To verify that a recipient is a security principal, use the syntax `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal`.
 
+If you need to scope the policy to shared mailboxes, you can add them to a mail enabled security group.
+
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
