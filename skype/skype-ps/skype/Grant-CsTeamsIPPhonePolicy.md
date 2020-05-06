@@ -21,8 +21,8 @@ Use the Grant-CSTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policie
 ## SYNTAX
 
 ```
-Grant-CsTeamsIPPhonePolicy [-PassThru] [-Confirm] [[-PolicyName] <Object>] [[-Identity] <Object>] [-Global]
- [-Tenant <Object>] [-DomainController <Object>] [-WhatIf] [-AsJob]
+Grant-CsTeamsIPPhonePolicy [-PassThru] [-Confirm] [[-PolicyName] <XdsIdentity>] [[-Identity] <Object>] [-Global]
+ [-Tenant <Guid>] [-DomainController <Object>] [-WhatIf] [-AsJob]
 ```
 
 ## DESCRIPTION
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 The Identity of the Teams phone  policy to apply to the user.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Microsoft internal usage only.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -186,6 +186,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

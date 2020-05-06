@@ -20,8 +20,8 @@ New-CSTeamsIPPhonePolicy allows you to create a policy to manage features relate
 ## SYNTAX
 
 ```
-New-CsTeamsIPPhonePolicy [-Description <Object>] [-HotDeskingIdleTimeoutInMinutes <Object>]
- [-AllowHotDesking <Object>] [[-Identity] <Object>] [-Tenant <Object>] [-InMemory] [-SignInMode <Object>]
+New-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <String>]
+ [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-InMemory] [-SignInMode <Object>]
  [-WhatIf] [-Confirm] [-Force] [-SearchOnCommonAreaPhoneMode <Object>] [-AsJob]
 ```
 
@@ -35,7 +35,7 @@ The New-CSTeamsIPPhonePolicy cmdlet allows you to create a policy to manage feat
 ```powershell
 PS C:\> New-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAreaPhoneSignin
 ```
-This example shows a new policy being created called "CommonAreaPhone" setting the SignInMode as CommonAreaPhoneSignIn.
+This example shows a new policy being created called "CommonAreaPhone" setting the SignInMode as "CommonAreaPhoneSignIn".
 
 ## PARAMETERS
 
@@ -43,7 +43,7 @@ This example shows a new policy being created called "CommonAreaPhone" setting t
 Determines whether hot desking mode is enabled. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode. 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Free form text that can be used by administrators as desired. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Determines the idle timeout value in minutes for the signed in user account. When the timeout is reached, the account is logged out. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -118,11 +118,11 @@ Accept wildcard characters: False
 The identity of the policy that you want to create. 
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Internal Microsoft use only.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -218,6 +218,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

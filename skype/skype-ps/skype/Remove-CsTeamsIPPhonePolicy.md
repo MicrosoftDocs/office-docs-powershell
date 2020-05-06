@@ -20,11 +20,13 @@ Use the Remove-CSTeamsIPPhonePolicy cmdlet to remove a custom policy that's been
 ## SYNTAX
 
 ```
-Remove-CsTeamsIPPhonePolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force] [-AsJob]
+Remove-CsTeamsIPPhonePolicy [-WhatIf] [-Confirm] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Force] [-AsJob]
 ```
 
 ## DESCRIPTION
 Use the Remove-CSTeamsIPPhonePolicy cmdlet to remove a custom policy that's been created for controlling Teams IP Phones experiences.
+
+Note: Ensure the policy is not assigned to any users or the policy deletion will fail.
 
 ## EXAMPLES
 
@@ -33,8 +35,6 @@ Use the Remove-CSTeamsIPPhonePolicy cmdlet to remove a custom policy that's been
 PS C:\> Remove-CsTeamsIPPhonePolicy -Identity CommonAreaPhone
 ```
 This example shows the deletion of the policy CommonAreaPhone. 
-
-Note: Ensure the policy is not assigned to any users or the policy deletion will fail.
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 Specify the name of the TeamsIPPhonePolicy that you would like to remove.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Internal Microsoft use only.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -137,6 +137,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

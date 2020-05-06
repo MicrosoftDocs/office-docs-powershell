@@ -20,8 +20,8 @@ Set-CSTeamsIPPhonePolicy enables you to modify the properties of an existing Tea
 ## SYNTAX
 
 ```
-Set-CsTeamsIPPhonePolicy [-Description <Object>] [-HotDeskingIdleTimeoutInMinutes <Object>]
- [-SearchOnCommonAreaPhoneMode <Object>] [-AllowHotDesking <Object>] [[-Identity] <Object>] [-Tenant <Object>]
+Set-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <String>
+ [-SearchOnCommonAreaPhoneMode <Object>] [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>]
  [-SignInMode <Object>] [-WhatIf] [-Confirm] [-Force] [-Instance <Object>] [-AsJob]
 ```
 
@@ -35,8 +35,7 @@ Set-CSTeamsIPPhonePolicy enables you to modify the properties of an existing Tea
 ```powershell
 PS C:\>  Set-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAreaPhoneSignin
 ```
-
-{{ Add example description here }}
+This example shows the SignInMode "CommonAreaPhoneSignIn" being set against the policy named "CommonAreaPhone".
 
 ## PARAMETERS
 
@@ -44,7 +43,7 @@ PS C:\>  Set-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAr
 Determines if the hot desking feature is enabled or not. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode. 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -74,7 +73,7 @@ Accept wildcard characters: False
 Free form text that can be used by administrators as desired. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -103,7 +102,7 @@ Accept wildcard characters: False
 Determines the idle timeout value in minutes for the signed in user account. When the timeout is reached, the account is logged out. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -118,7 +117,7 @@ Accept wildcard characters: False
 The identity of the policy. To specify the global policy for the organization, use "global". To specify any other policy provide the name of that policy.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -167,7 +166,7 @@ Accept wildcard characters: False
 Internal Microsoft use only.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -217,6 +216,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

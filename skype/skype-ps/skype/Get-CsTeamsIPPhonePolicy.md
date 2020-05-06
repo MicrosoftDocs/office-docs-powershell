@@ -20,7 +20,7 @@ Get-CSTeamsIPPhonePolicy allows IT Admins to view policies for IP Phone experien
 ## SYNTAX
 
 ```
-Get-CsTeamsIPPhonePolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsIPPhonePolicy [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Filter <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
@@ -58,11 +58,11 @@ Accept wildcard characters: False
 Specify the unique name of the TeamsIPPhonePolicy that you would like to retrieve.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Internal Microsoft use only.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -123,6 +123,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
