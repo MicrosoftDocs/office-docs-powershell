@@ -29,7 +29,7 @@ Used to modify an user’s team members list.
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsUserTeamMembers -Identity "Ken.Myer@contoso.com" @{add='ChewDavid@contoso.com','dmx@contoso.com'}
+PS C:\> Set-CsUserTeamMembers -User "Ken.Myer@contoso.com" -Team @{add='ChewDavid@contoso.com','dmx@contoso.com'}
 ```
 
 This cmdlet adds two other users to the specified user’s team members list, returns an object that contains the team member list and displays the object on the screen, in case of success. In case of failure, an appropriate error message will be shown.
