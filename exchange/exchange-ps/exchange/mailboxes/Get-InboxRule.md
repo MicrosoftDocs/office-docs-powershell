@@ -23,12 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-InboxRule [[-Identity] <InboxRuleIdParameter>]
+ [-BypassScopeCheck]
  [-DescriptionTimeFormat <String>]
  [-DescriptionTimeZone <ExTimeZoneValue>]
  [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>]
  [-IncludeHidden]
- [-BypassScopeCheck]
+ [-Mailbox <MailboxIdParameter>]
  [-SweepRules]
  [<CommonParameters>]
 ```
@@ -55,6 +55,22 @@ Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat
 This example retrieves the Inbox rule ReceivedLastYear from the mailbox joe@contoso.com on which the ReceivedBeforeDate parameter was set when the rule was created. The DescriptionTimeFormat and DescriptionTimeZone parameters are used in this example to specify formatting of the time and the time zone used in the rule's Description property.
 
 ## PARAMETERS
+
+### -BypassScopeCheck
+The BypassScopeCheck switch specifies whether to bypass the scope check for the user that's running the command. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DescriptionTimeFormat
 The DescriptionTimeFormat parameter specifies the format for time values in the rule description. For example:
@@ -138,6 +154,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -IncludeHidden
+This parameter works only in on-premises Exchange.
+
+The IncludeHidden switch specifies whether to include hidden Inbox rules in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Mailbox
 The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -174,41 +208,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IncludeHidden
+### -SweepRules
 This parameter is available only in on-premises Exchange.
 
-The IncludeHidden switch specifies whether to include hidden Inbox rules in the results. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassScopeCheck
-The BypassScopeCheck switch specifies whether to bypass the scope check for the user that's running the command. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SweepRules
 The SweepRules switch specifies whether to return only Sweep rules in the results. You don't need to specify a value with this switch.
 
 Sweep rules run at regular intervals to help keep your Inbox clean.
@@ -217,7 +219,7 @@ Sweep rules run at regular intervals to help keep your Inbox clean.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
