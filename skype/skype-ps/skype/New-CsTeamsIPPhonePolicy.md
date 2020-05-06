@@ -154,7 +154,8 @@ Possible Values:
 - 'MeetingSignIn: Enables the meeting/conference room experience on the phone'
 
 ```yaml
-Type: Object
+Type: String
+
 Parameter Sets: (All)
 Aliases:
 
