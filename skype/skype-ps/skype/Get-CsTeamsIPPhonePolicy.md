@@ -20,7 +20,8 @@ Get-CSTeamsIPPhonePolicy allows IT Admins to view policies for IP Phone experien
 ## SYNTAX
 
 ```
-Get-CsTeamsIPPhonePolicy [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsIPPhonePolicy [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Filter <String>] [-AsJob]
+
 ```
 
 ## DESCRIPTION
