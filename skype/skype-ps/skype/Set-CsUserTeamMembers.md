@@ -13,26 +13,26 @@ ms.reviewer:
 # Set-CsUserTeamMembers
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Used to modify an user’s team members list.
 
 ## SYNTAX
 
 ```
-Set-CsUserTeamMembers -Team <System.Management.Automation.PSListModifier`1[System.String]> [-User] <String>
+Set-CsUserTeamMembers -Team <PSListModifier> [-User] <String>
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Used to modify an user’s team members list.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsUserTeamMembers -Identity "Ken.Myer@contoso.com" @{add='ChewDavid@contoso.com','dmx@contoso.com'}
 ```
 
-{{ Add example description here }}
+This cmdlet adds two other users to the specified user’s team members list, returns an object that contains the team member list and displays the object on the screen, in case of success. In case of failure, an appropriate error message will be shown.
 
 ## PARAMETERS
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
 Type: SwitchParameter
@@ -67,10 +67,10 @@ Accept wildcard characters: False
 ```
 
 ### -Team
-{{ Fill Team Description }}
+Specifies list of team members. The add and remove switches will add and remove specified users from the Team Members list. The replace parameter will set the list to the specified list, wiping out the previous list. Add and remove can be used together, but neither of them can be used along with replace. Acceptable input formats for add/remove/replace list: The inputs can be a single user address (in one of the below formats), or a comma separated list of user addresses, in the 4 standard formats that Identity parameter accepts.
 
 ```yaml
-Type: System.Management.Automation.PSListModifier`1[System.String]
+Type: PSListModifier
 Parameter Sets: (All)
 Aliases:
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-{{ Fill User Description }}
+Indicates the Identity of the user account to be modified. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
 
 ```yaml
 Type: String
