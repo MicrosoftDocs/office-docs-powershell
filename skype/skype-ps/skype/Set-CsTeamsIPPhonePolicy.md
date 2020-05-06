@@ -21,7 +21,8 @@ Set-CSTeamsIPPhonePolicy enables you to modify the properties of an existing Tea
 
 ```
 Set-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <String>
- [-SearchOnCommonAreaPhoneMode <Object>] [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>]
+ [-SearchOnCommonAreaPhoneMode <String>] [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>]
+
  [-SignInMode <Object>] [-WhatIf] [-Confirm] [-Force] [-Instance <Object>] [-AsJob]
 ```
 
