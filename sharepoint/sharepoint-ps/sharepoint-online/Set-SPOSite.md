@@ -25,8 +25,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
  [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+ [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
- [-Title <String>] [-WhatIf] [-BlockDownloadOfNonViewableFiles <Boolean>]
+ [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
@@ -371,6 +372,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockDownloadLinksFileType
+
+The valid values are:  
+
+- WebPreviewableFiles
+- ServerRenderedFilesOnly
+
+The site's value is compared with the tenant level setting and the stricter one wins. For example, if the tenant is set to ServerRenderedFilesOnly then that will be used even if the site is set to WebPreviewableFiles.
+
+```yaml
+Type: BlockDownloadLinksFileTypes
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SharingCapability
 
 Determines what level of sharing is available for the site.
@@ -454,25 +476,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowLimitedAccess
+### -AllowDownloadingNonWebViewableFiles
 
-{{Fill AllowLimitedAccess Description}}
-
-```yaml
-Type: Boolean
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BlockDownloadOfNonViewableFiles
-
-{{Fill BlockDownloadOfNonViewableFiles Description}}
+Specifies if non web viewable files can be downloaded.
 
 ```yaml
 Type: Boolean
