@@ -13,26 +13,26 @@ ms.reviewer:
 # Set-CsUserDelegates
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Used to modify an user’s delegates list.
 
 ## SYNTAX
 
 ```
-Set-CsUserDelegates -Delegates <System.Management.Automation.PSListModifier`1[System.String]> [-User] <String>
+Set-CsUserDelegates -Delegates <PSListModifier> [-User] <String>
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Used to modify an user’s delegates list.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsUserDelegates -Delegates @{add='ChewDavid@contoso.com','dmx@contoso.com'} -User "Ken.Myer@contoso.com"
 ```
 
-{{ Add example description here }}
+In this example, two users are added as delegates for Ken Myer.
 
 ## PARAMETERS
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Delegates
-{{ Fill Delegates Description }}
+Specifies list of delegates. The add and remove switches will add and remove specified users from the delegates list. The replace parameter will set the list to the specified list, wiping out the previous list. Add and remove can be used together, but neither of them can be used along with replace. Acceptable input formats for add/remove/replace list: The inputs can be a single user address (in one of the below formats), or a comma separated list of user addresses, in the 4 standard formats that Identity parameter accepts.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
 Type: SwitchParameter
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-{{ Fill User Description }}
+Indicates the Identity of the user account to be modified. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
 
 ```yaml
 Type: String
