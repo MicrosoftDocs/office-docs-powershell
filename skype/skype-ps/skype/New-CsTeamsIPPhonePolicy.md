@@ -22,7 +22,8 @@ New-CSTeamsIPPhonePolicy allows you to create a policy to manage features relate
 ```
 New-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>]
 
- [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-InMemory] [-SignInMode <Object>]
+ [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-InMemory] [-SignInMode <String>]
+
  [-WhatIf] [-Confirm] [-Force] [-SearchOnCommonAreaPhoneMode <Object>] [-AsJob]
 ```
 
