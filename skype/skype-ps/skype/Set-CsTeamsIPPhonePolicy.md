@@ -20,12 +20,9 @@ Set-CSTeamsIPPhonePolicy enables you to modify the properties of an existing Tea
 ## SYNTAX
 
 ```
-Set-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>
-
+Set-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>]
  [-SearchOnCommonAreaPhoneMode <String>] [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>]
-
- [-SignInMode <String>] [-WhatIf] [-Confirm] [-Force] [-Instance <PSObject>] [-AsJob]
-
+ [-SignInMode <String>] [-WhatIf] [-Confirm] [-Force] [-Instance <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
@@ -106,7 +103,6 @@ Determines the idle timeout value in minutes for the signed in user account. Whe
 
 ```yaml
 Type: Int
-
 Parameter Sets: (All)
 Aliases:
 
@@ -137,7 +133,6 @@ Determines whether a user can look up contacts from the tenant's global address 
 
 ```yaml
 Type: String
-
 Parameter Sets: (All)
 Aliases:
 
@@ -157,7 +152,6 @@ Possible Values:
 
 ```yaml
 Type: String
-
 Parameter Sets: (All)
 Aliases:
 
@@ -167,20 +161,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
 
 ### -Tenant
 Internal Microsoft use only.
