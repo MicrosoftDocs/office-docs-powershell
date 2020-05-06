@@ -168,7 +168,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
+### -Instance
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+```yaml
+Type: PSObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 Internal Microsoft use only.
 
 ```yaml
