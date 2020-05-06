@@ -80,9 +80,7 @@ Before you configure a federation trust to use the next certificate as the curre
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name of the federation trust being modified.
-
-For Exchange Online tenants, use the value "Azure AD Authentication".
+The Identity parameter specifies the name of the federation trust being modified. <br/><br/>**Note**: For Exchange Online tenants, use the value "Azure AD Authentication".
 
 ```yaml
 Type: FederationTrustIdParameter
@@ -170,9 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataUrl
-The MetadataUrl parameter specifies the URL where WS-FederationMetadata is published by the Microsoft Federation Gateway.
-
-For GCC High or DoD tenants, use the value https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml.
+The MetadataUrl parameter specifies the URL where WS-FederationMetadata is published by the Microsoft Federation Gateway. <br/><br/> **Note**: For GCC High or DoD tenants, use the value https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml.
 
 ```yaml
 Type: Uri
