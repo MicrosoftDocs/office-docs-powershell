@@ -44,7 +44,8 @@ Retrieves the IP Phone Policy with name "CommonAreaPhone".
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned. To return a collection of all the policies, use this syntax: -Filter "tag:*".
 
 ```yaml
-Type: Object
+Type: String
+
 Parameter Sets: (All)
 Aliases:
 
