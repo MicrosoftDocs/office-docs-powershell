@@ -50,21 +50,21 @@ The following parameters are considered precanned filters:
 
 Precanned filters are available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](../../../exchange-ps/exchange/new-dynamicdistributiongroup.md)
+- [New-DynamicDistributionGroup](../../../exchange-ps/exchange/New-DynamicDistributionGroup.md)
 
-- [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/set-dynamicdistributiongroup.md)
+- [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/Set-DynamicDistributionGroup.md)
 
-- [New-EmailAddressPolicy](../../../exchange-ps/exchange/new-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](../../../exchange-ps/exchange/New-EmailAddressPolicy.md)
 
-- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/set-emailaddresspolicy.md)
+- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/Set-EmailAddressPolicy.md)
 
-- [New-AddressList](../../../exchange-ps/exchange/new-addresslist.md)
+- [New-AddressList](../../../exchange-ps/exchange/New-AddressList.md)
 
-- [Set-AddressList](../../../exchange-ps/exchange/set-addresslist.md)
+- [Set-AddressList](../../../exchange-ps/exchange/Set-AddressList.md)
 
-- [New-GlobalAddressList](../../../exchange-ps/exchange/new-globaladdresslist.md)
+- [New-GlobalAddressList](../../../exchange-ps/exchange/New-GlobalAddressList.md)
 
-- [Set-GlobalAddressList](../../../exchange-ps/exchange/set-globaladdresslist.md)
+- [Set-GlobalAddressList](../../../exchange-ps/exchange/Set-GlobalAddressList.md)
 
 ### Precanned filter example
 
