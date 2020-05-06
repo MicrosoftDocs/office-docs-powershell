@@ -20,7 +20,8 @@ New-CSTeamsIPPhonePolicy allows you to create a policy to manage features relate
 ## SYNTAX
 
 ```
-New-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <String>]
+New-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>]
+
  [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-InMemory] [-SignInMode <Object>]
  [-WhatIf] [-Confirm] [-Force] [-SearchOnCommonAreaPhoneMode <Object>] [-AsJob]
 ```
