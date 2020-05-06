@@ -34,7 +34,8 @@ Returns information about the Teams IP Phone Policies configured for use in your
 PS C:\> Get-CsTeamsIPPhonePolicy -identity CommonAreaPhone
 ```
 
-Retrieves the IP Phone Policy with name "CommonAreaPhone"
+Retrieves the IP Phone Policy with name "CommonAreaPhone".
+
 
 ## PARAMETERS
 
