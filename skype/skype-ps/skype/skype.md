@@ -3305,8 +3305,6 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
 
-### [Set-CsTenantBlockedCallingNumbers](Set-CsTenantBlockedCallingNumbers)
-
 ### [Get-CSTeamsIPPhonePolicy](Get-CSTeamsIPPhonePolicy.md)
 
 ### [Grant-CSTeamsIPPhonePolicy](Grant-CSTeamsIPPhonePolicy.md)
