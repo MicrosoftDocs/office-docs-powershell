@@ -75,14 +75,14 @@ Set-FederationTrust -Identity "Azure AD Authentication" -PublishFederationCertif
 
 This example configures the federation trust Microsoft Federation Gateway to use the next certificate as the current certificate.
 
-Before you configure a federation trust to use the next certificate as the current certificate, you need to use the Test-FederationTrust cmdlet to verify that the certificate is available on all Exchange servers.
-
 ### Example 3
 ```powershell
 Set-FederationTrust -Identity "Azure AD Authentication" -MetadataUrl https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml
 ```
 
 This example updates the configuration if the tenant is hosted in Office 365 U.S. Government GCC High or DoD environment.
+
+Before you configure a federation trust to use the next certificate as the current certificate, you need to use the Test-FederationTrust cmdlet to verify that the certificate is available on all Exchange servers.
 
 ## PARAMETERS
 
