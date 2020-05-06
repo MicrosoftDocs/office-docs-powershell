@@ -105,7 +105,8 @@ Accept wildcard characters: False
 Determines the idle timeout value in minutes for the signed in user account. When the timeout is reached, the account is logged out. 
 
 ```yaml
-Type: String
+Type: Int
+
 Parameter Sets: (All)
 Aliases:
 
