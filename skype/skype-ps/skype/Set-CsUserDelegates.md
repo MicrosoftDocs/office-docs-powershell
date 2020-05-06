@@ -23,7 +23,7 @@ Set-CsUserDelegates -Delegates <PSListModifier> [-User] <String>
 ```
 
 ## DESCRIPTION
-Used to modify an user’s delegates list.
+The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (Secondary Extension Feature Activation) enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user. The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below: CsAdministrator - Get and Set for all cmdlets, CsVoiceAdministrator - Get and Set for all cmdlets, CsServerAdministrator - Get and Set for all cmdlets, CsHelpDesk - Get for all cmdlets Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets. For more information see [Using SEFAUtil functionality via PowerShell in Skype for Business Server 2019](https://docs.microsoft.com/en-us/skypeforbusiness/sefautil-functionality).
 
 ## EXAMPLES
 
