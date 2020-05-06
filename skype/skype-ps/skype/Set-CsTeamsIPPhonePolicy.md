@@ -135,7 +135,8 @@ Accept wildcard characters: False
 Determines whether a user can look up contacts from the tenant's global address book when the phone is signed into the Common Area Phone Mode. Set this to ENABLED to enable the feature. Set this to DISABLED to disable the feature.
 
 ```yaml
-Type: Object
+Type: String
+
 Parameter Sets: (All)
 Aliases:
 
