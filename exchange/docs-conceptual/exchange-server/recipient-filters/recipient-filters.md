@@ -97,21 +97,21 @@ If precanned filters don't meet your needs for creating or modifying dynamic dis
 
 The recipient filter parameter is available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](../../../exchange-ps/exchange/new-dynamicdistributiongroup.md)
+- [New-DynamicDistributionGroup](../../../exchange-ps/exchange/New-DynamicDistributionGroup.md)
 
-- [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/set-dynamicdistributiongroup.md)
+- [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/Set-DynamicDistributionGroup.md)
 
-- [New-EmailAddressPolicy](../../../exchange-ps/exchange/new-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](../../../exchange-ps/exchange/New-EmailAddressPolicy.md)
 
-- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/set-emailaddresspolicy.md)
+- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/Set-EmailAddressPolicy.md)
 
-- [New-AddressList](../../../exchange-ps/exchange/new-addresslist.md)
+- [New-AddressList](../../../exchange-ps/exchange/New-AddressList.md)
 
-- [Set-AddressList](../../../exchange-ps/exchange/set-addresslist.md)
+- [Set-AddressList](../../../exchange-ps/exchange/Set-AddressList.md)
 
-- [New-GlobalAddressList](../../../exchange-ps/exchange/new-globaladdresslist.md)
+- [New-GlobalAddressList](../../../exchange-ps/exchange/New-GlobalAddressList.md)
 
-- [Set-GlobalAddressList](../../../exchange-ps/exchange/set-globaladdresslist.md)
+- [Set-GlobalAddressList](../../../exchange-ps/exchange/Set-GlobalAddressList.md)
 
 For more information about the filterable properties you can use with the _RecipientFilter_ parameter, see [Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md).
 
@@ -139,33 +139,33 @@ Get-Mailbox -Identity Ayla | Format-List
 
 The _Filter_ parameter is available for the following recipient cmdlets:
 
-- [Get-CASMailbox](../../../exchange-ps/exchange/get-casmailbox.md)
+- [Get-CASMailbox](../../../exchange-ps/exchange/Get-CASMailbox.md)
 
-- [Get-Contact](../../../exchange-ps/exchange/get-contact.md)
+- [Get-Contact](../../../exchange-ps/exchange/Get-Contact.md)
 
-- [Get-DistributionGroup](../../../exchange-ps/exchange/get-distributiongroup.md)
+- [Get-DistributionGroup](../../../exchange-ps/exchange/Get-DistributionGroup.md)
 
-- [Get-DynamicDistributionGroup](../../../exchange-ps/exchange/get-dynamicdistributiongroup.md)
+- [Get-DynamicDistributionGroup](../../../exchange-ps/exchange/Get-DynamicDistributionGroup.md)
 
-- [Get-Group](../../../exchange-ps/exchange/get-group.md)
+- [Get-Group](../../../exchange-ps/exchange/Get-Group.md)
 
-- [Get-Mailbox](../../../exchange-ps/exchange/get-mailbox.md)
+- [Get-Mailbox](../../../exchange-ps/exchange/Get-Mailbox.md)
 
-- [Get-MailContact](../../../exchange-ps/exchange/get-mailcontact.md)
+- [Get-MailContact](../../../exchange-ps/exchange/Get-MailContact.md)
 
-- [Get-MailPublicFolder](../../../exchange-ps/exchange/get-mailpublicfolder.md)
+- [Get-MailPublicFolder](../../../exchange-ps/exchange/Get-MailPublicFolder.md)
 
-- [Get-MailUser](../../../exchange-ps/exchange/get-mailuser.md)
+- [Get-MailUser](../../../exchange-ps/exchange/Get-MailUser.md)
 
-- [Get-Recipient](../../../exchange-ps/exchange/get-recipient.md)
+- [Get-Recipient](../../../exchange-ps/exchange/Get-Recipient.md)
 
-- [Get-RemoteMailbox](../../../exchange-ps/exchange/get-remotemailbox.md)
+- [Get-RemoteMailbox](../../../exchange-ps/exchange/Get-RemoteMailbox.md)
 
-- [Get-SecurityPrincipal](../../../exchange-ps/exchange/get-securityprincipal.md)
+- [Get-SecurityPrincipal](../../../exchange-ps/exchange/Get-SecurityPrincipal.md)
 
-- [Get-UMMailbox](../../../exchange-ps/exchange/get-ummailbox.md)
+- [Get-UMMailbox](../../../exchange-ps/exchange/Get-UMMailbox.md)
 
-- [Get-User](../../../exchange-ps/exchange/get-user.md)
+- [Get-User](../../../exchange-ps/exchange/Get-User.md)
 
 - [Get-UnifiedGroup](../../../exchange-ps/exchange/Get-UnifiedGroup.md)
 
