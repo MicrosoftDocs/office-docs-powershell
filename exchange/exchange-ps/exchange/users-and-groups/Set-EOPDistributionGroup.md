@@ -26,11 +26,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-EOPDistributionGroup
+Set-EOPDistributionGroup [-Identity <DistributionGroupIdParameter>]
  [-Alias <String>]
  [-DisplayName <String>]
  [-ExternalDirectoryObjectId <String>]
- [-Identity <DistributionGroupIdParameter>]
  [-ManagedBy <String[]>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [<CommonParameters>]
@@ -49,6 +48,34 @@ Set-EOPDistributionGroup -Identity "Security Team" -PrimarySmtpAddress NewSecTea
 This example changes the current SMTP address of the Security Team EOP distribution group to "NewSecTeamId@Contoso.com".
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+```yaml
+Type: DistributionGroupIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Alias
 The Alias parameter specifies the alias of the distribution group.
@@ -97,34 +124,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the distribution group or mail-enabled security group that you want to modify. You can use any value that uniquely identifies the group. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- Email address
-
-- GUID
-
-```yaml
-Type: DistributionGroupIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

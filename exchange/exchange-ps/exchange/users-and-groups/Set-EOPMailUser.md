@@ -24,12 +24,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-EOPMailUser
+Set-EOPMailUser [-Identity <MailUserIdParameter>]
  [-Alias <String>]
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExternalDirectoryObjectId <String>]
- [-Identity <MailUserIdParameter>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
  [-Password <String>]
  [<CommonParameters>]
@@ -48,6 +47,42 @@ Set-EOPMailUser -Identity "Edward Meadows" -DisplayName "Ed Meadows"
 This example changes the display name for the mail user Edward Meadows to "Ed Meadows."
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mail user that you want to modify. You can use any value that uniquely identifies the mail user. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailUserIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Alias
 The Alias parameter specifies the alias of the mail user.
@@ -117,44 +152,8 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the mail user that you want to modify. You can use any value that uniquely identifies the mail user. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailUserIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MicrosoftOnlineServicesID
-The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service. It isn't available for on-premises deployments.
+The MicrosoftOnlineServicesID parameter specifies the user account for the mail user.
 
 ```yaml
 Type: SmtpAddress
