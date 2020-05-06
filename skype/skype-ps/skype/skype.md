@@ -3307,3 +3307,12 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Set-CsTenantBlockedCallingNumbers](Set-CsTenantBlockedCallingNumbers)
 
+### [Get-CSTeamsIPPhonePolicy](Get-CSTeamsIPPhonePolicy.md)
+
+### [Grant-CSTeamsIPPhonePolicy](Grant-CSTeamsIPPhonePolicy.md)
+
+### [New-CSTeamsIPPhonePolicy](New-CSTeamsIPPhonePolicy.md)
+
+### [Remove-CSTeamsIPPhonePolicy](Remove-CSTeamsIPPhonePolicy.md)
+
+### [Set-CsTeamsIPPhonePolicy](Set-CsTeamsIPPhonePolicy.md)
