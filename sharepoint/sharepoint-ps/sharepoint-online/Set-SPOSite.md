@@ -398,7 +398,7 @@ Accept wildcard characters: False
 Determines what level of sharing is available for the site.
 The possible values are: Disabled - don't allow sharing outside your organization, ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory, ExternalUserSharingOnly - allow external users who accept sharing invitations and sign in as authenticated users, or ExternalUserAndGuestSharing - allow sharing with all external users, and by using anonymous access links.
 
-For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off).>
+For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off>).
 
 ```yaml
 Type: SharingCapabilities
