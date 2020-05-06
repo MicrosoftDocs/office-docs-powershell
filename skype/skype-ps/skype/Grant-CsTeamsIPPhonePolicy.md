@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use the Grant-CSTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policies to a user account. Teams phone policies determine the features that are available to users of Teams phones. For example, you might enable the hot desking feature for some users while disabling it for others.
+Use the Grant-CSTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policies to a user account or group of user accounts. Teams phone policies determine the features that are available to users of Teams phones. For example, you might enable the hot desking feature for some users while disabling it for others.
 
 
 ## SYNTAX
