@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Filters to return teams with a full match to the provided displayname.  As displayname is not unique, this acts as a filter rather than an exact match.
+Filters to return teams with a full match to the provided displayname.  As displayname is not unique, this acts as a filter rather than an exact match. Note that this filter value is case-sensitive.
 
 ```yaml
 Type: String

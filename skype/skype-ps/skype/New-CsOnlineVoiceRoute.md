@@ -49,10 +49,10 @@ The command in this example creates a new online voice route with an Identity of
 
 ### -------------------------- Example 2 --------------------------
 ```
-PS C:\> New-CsOnlineVoiceRoute -Identity Route1 -OnlinePstnUsages @{add="Long Distance"} -OnlinePstnGatewayList @{add="OnlinePstnGateway:sbc1.litwareinc.com"}
+PS C:\> New-CsOnlineVoiceRoute -Identity Route1 -OnlinePstnUsages @{add="Long Distance"} -OnlinePstnGatewayList @{add="sbc1.litwareinc.com"}
 ```
 
-The command in this example creates a new online voice route with an Identity of Route1. It also adds the online PSTN usage Long Distance to the list of usages and the service ID PstnGateway:sbc1.litwareinc.com to the list of online PSTN gateways.
+The command in this example creates a new online voice route with an Identity of Route1. It also adds the online PSTN usage Long Distance to the list of usages and the service ID PstnGateway sbc1.litwareinc.com to the list of online PSTN gateways.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnlinePstnGatewayList
-This parameter contains a list of online gateways associated with this online voice route. Each member of this list must be the service Identity of the online PSTN gateway. The service Identity is a string in the format OnlinePstnGateway:<FQDN>, where FQDN is the fully qualified domain name (FQDN) of the pool or the IP address of the server. For example, OnlinePstnGateway:redmondpool.litwareinc.com.
+This parameter contains a list of online gateways associated with this online voice route. Each member of this list must be the service Identity of the online PSTN gateway. The service Identity is the fully qualified domain name (FQDN) of the pool or the IP address of the server. For example, redmondpool.litwareinc.com.
 
 By default this list is empty. However, if you leave this parameter blank when creating a new voice route, you'll receive a warning message.
 

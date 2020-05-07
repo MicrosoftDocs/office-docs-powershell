@@ -3,12 +3,13 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantappcatalogurl
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPTenantAppCatalogUrl
 ---
 
 # Get-PnPTenantAppCatalogUrl
 
 ## SYNOPSIS
-Retrieves the url of the tenant scoped app catalog.
+Retrieves the url of the tenant scoped app catalog
 
 ## SYNTAX 
 

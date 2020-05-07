@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsOnlineVoiceUserBulk
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Note: **This cmdlet has been deprecated and no longer used.**
 
 ## SYNTAX
 

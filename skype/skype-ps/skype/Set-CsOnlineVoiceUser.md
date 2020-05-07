@@ -165,8 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch causes the command to simulate its results.
-By using this switch, you can view what changes would occur without having to commit those changes.
+The WhatIf parameter is not implemented for this cmdlet.
 
 ```yaml
 Type: SwitchParameter
