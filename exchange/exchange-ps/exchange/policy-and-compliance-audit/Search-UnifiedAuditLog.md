@@ -291,7 +291,7 @@ The RecordType parameter filters the log entries by record type. Valid values ar
 
 - Kaizala
 
-- LabelExplorer
+- LabelContentExplorer
 
 - MailSubmission
 

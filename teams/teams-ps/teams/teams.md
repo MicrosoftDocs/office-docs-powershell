@@ -2,14 +2,15 @@
 Module Name: Microsoft Teams PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: teams
-Locale: en-US
 ---
 
 # Microsoft Teams PowerShell
+
 ## Description
 The following cmdlet references are for Microsoft Teams.
 
 ## Microsoft Teams Cmdlets
+
 ### [Add-TeamChannelUser](Add-TeamChannelUser.md)
 {{Manually Enter Add-TeamChannelUser Description Here}}
 

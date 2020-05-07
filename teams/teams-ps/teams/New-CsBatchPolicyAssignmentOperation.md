@@ -27,7 +27,7 @@ When a policy is assigned to a batch of users, the assignments are performed as 
 
 Users can be specified by their object ID (guid) or by their UPN/SIP/email (user@contoso.com).
 
-A batch may contain up to 20,000 users.
+A batch may contain up to 20,000 users. If you submit a batch that includes duplicate users, the duplicates will be removed from the batch before processing and status will only be provided for the unique users remaining in the batch.
 
 Batch policy assignment is currently limited to the following policy types:
 CallingLineIdentity, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsEmergencyCallingPolicy, TeamsMeetingBroadcastPolicy, TeamsEmergencyCallRoutingPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan

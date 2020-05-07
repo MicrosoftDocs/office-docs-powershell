@@ -13,7 +13,7 @@ ms.reviewer:
 # Unregister-CsOnlineDialInConferencingServiceNumber
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Unassigns the previously assigned service number as default Conference Bridge number.
 
 ## SYNTAX
 
@@ -24,16 +24,16 @@ Unregister-CsOnlineDialInConferencingServiceNumber [-Identity] <String> [-Bridge
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Unassigns the previously assigned service number as default Conference Bridge number.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Unregister-CsOnlineDialInConferencingServiceNumber -BridgeName "Conference Bridge" -RemoveDefaultServiceNumber 1234 
 ```
 
-Insert descriptive text for example 1.
+Unassigns the 1234 Service Number to the given Conference Bridge.
 
 
 ## PARAMETERS

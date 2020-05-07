@@ -1,5 +1,5 @@
 ---
-title: Property sets in Exchange Online PowerShell V2 cmdlets"
+title: Property sets in Exchange Online PowerShell V2 cmdlets
 ms.author: chrisda
 author: chrisda
 manager: dansimp

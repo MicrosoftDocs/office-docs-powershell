@@ -25,8 +25,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
  [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+ [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
- [-Title <String>] [-WhatIf] [-BlockDownloadOfNonViewableFiles <Boolean>]
+ [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
@@ -34,7 +35,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [<CommonParameters>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>][<CommonParameters>]
 ```
 
 ### ParamSet2
@@ -339,6 +340,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SensitivityLabel
+
+Used to specify the unique identifier (GUID) of the SensitivityLabel.
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SandboxedCodeActivationCapability
 
 PARAMVALUE: Unknown | Check | Disabled | Enabled
@@ -355,12 +372,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockDownloadLinksFileType
+
+The valid values are:  
+
+- WebPreviewableFiles
+- ServerRenderedFilesOnly
+
+The site's value is compared with the tenant level setting and the stricter one wins. For example, if the tenant is set to ServerRenderedFilesOnly then that will be used even if the site is set to WebPreviewableFiles.
+
+```yaml
+Type: BlockDownloadLinksFileTypes
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SharingCapability
 
 Determines what level of sharing is available for the site.
 The possible values are: Disabled - don't allow sharing outside your organization, ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory, ExternalUserSharingOnly - allow external users who accept sharing invitations and sign in as authenticated users, or ExternalUserAndGuestSharing - allow sharing with all external users, and by using anonymous access links.
 
-For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off).>
+For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off>).
 
 ```yaml
 Type: SharingCapabilities
@@ -438,25 +476,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowLimitedAccess
+### -AllowDownloadingNonWebViewableFiles
 
-{{Fill AllowLimitedAccess Description}}
-
-```yaml
-Type: Boolean
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BlockDownloadOfNonViewableFiles
-
-{{Fill BlockDownloadOfNonViewableFiles Description}}
+Specifies if non web viewable files can be downloaded.
 
 ```yaml
 Type: Boolean
@@ -473,7 +495,8 @@ Accept wildcard characters: False
 
 ### -CommentsOnSitePagesDisabled
 
-PARAMVALUE: $true | $false
+Use this parameter to disable Comments section on Site Pages.
+The parameter can't be used for Groups Site Collections.
 
 ```yaml
 Type: Boolean

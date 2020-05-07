@@ -830,7 +830,7 @@ Accept wildcard characters: False
 ### -MaxRecipientEnvelopeLimit
 This parameter is available only in on-premises Exchange.
 
-The MaxRecipientEnvelopeLimit parameter specifies the maximum number of recipients in a message. The default value is 5000. The valid input range for this parameter is from 0 through 2147483647. If you enter a value of Unlimited, no limit is imposed on the number of recipients in a message. Exchange treats an unexpanded distribution group as one recipient.
+The MaxRecipientEnvelopeLimit parameter specifies the maximum number of recipients in a message. The default value is 500. The valid input range for this parameter is from 0 through 2147483647. If you enter a value of Unlimited, no limit is imposed on the number of recipients in a message. Exchange treats an unexpanded distribution group as one recipient.
 
 ```yaml
 Type: Unlimited

@@ -18,7 +18,7 @@ description: "Learn how to connect to Exchange Online PowerShell by using multi-
 If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
 > [!NOTE]
-> • The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect. <br/><br/>• To use the new Exchange Online PowerShell V2 module (which also supports MFA), see [Use the Exchange Online PowerShell V2 module](../exchange-online-powershell-v2/exchange-online-powershell-v2.md).)
+> The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect. <br/><br/> To use the new Exchange Online PowerShell V2 module (which also supports MFA), see [Use the Exchange Online PowerShell V2 module](../exchange-online-powershell-v2/exchange-online-powershell-v2.md).)
 
 ## What do you need to know before you begin?
 
@@ -40,7 +40,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-    <sup>*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - The Exchange Online Remote PowerShell Module needs to be installed on your computer. You need to do the following steps in a browser that supports ClickOnce (for example, Internet Explorer or Edge):
 
