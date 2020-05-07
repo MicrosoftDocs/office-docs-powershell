@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-routinggroupconnector
 applicable: Exchange Server 2010
 title: Set-RoutingGroupConnector
 schema: 2.0.0
@@ -16,14 +17,14 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Set-RoutingGroupConnector cmdlet to modify the properties of an existing routing group connector between a Microsoft Exchange Server 2010 routing group and an Exchange Server 2003 routing group. You can also use this cmdlet to configure the maximum message size that can pass across a routing group connector.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-RoutingGroupConnector [-Identity] <RoutingGroupConnectorIdParameter> [-Confirm] [-Cost <Int32>]
  [-DomainController <Fqdn>] [-MaxMessageSize <Unlimited>] [-Name <String>]
- [-PublicFolderReferralsEnabled <$true | $false>] [-SourceTransportServers <MultiValuedProperty>]
+ [-PublicFolderReferralsEnabled <Boolean>] [-SourceTransportServers <MultiValuedProperty>]
  [-TargetTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -32,12 +33,12 @@ The Set-RoutingGroupConnector cmdlet modifies the properties of an existing rout
 
 The Exchange 2003 source servers specified in this cmdlet are automatically added to the ExchangeLegacyInterop universal security group. By default, the Exchange 2010 system grants Send to and Receive from permissions on the Hub Transport servers to members of this group. The source and target servers must be computers that have the Exchange 2010 Hub Transport server role installed, or Exchange 2003 bridgehead servers.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-RoutingGroupConnector -Identity "Exchange Administrative Group (FYDIBOHF23SPDLT)\Exchange Routing Group (DWBGZMFD01QNBJR)\Ex2010 to Ex2003 RGC" -Cost 70 -MaxMessageSize 10MB -SourceTransportServers 2010Hub1.contoso.com -TargetTransportServers 2003BH1.contoso.com
 ```
 
@@ -59,6 +60,7 @@ Type: RoutingGroupConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: True
 Position: 1
 Default value: None
@@ -78,6 +80,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -93,6 +96,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +112,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +138,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +154,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -159,10 +166,11 @@ Accept wildcard characters: False
 The PublicFolderReferralsEnabled parameter specifies whether users can use this routing group connector to access a public folder replica located in the routing group of the target servers when an instance of that public folder isn't available in the same routing group as the user's mailbox. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -171,13 +179,14 @@ Accept wildcard characters: False
 ```
 
 ### -SourceTransportServers
-The SourceTransportServers parameter specifies the host name or FQDN of the transport servers that are used to send messages to the target transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see Modifying Multivalued Properties.
+The SourceTransportServers parameter specifies the host name or FQDN of the transport servers that are used to send messages to the target transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see [Modifying Multivalued Properties](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb684908(v=exchg.141)).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -186,13 +195,14 @@ Accept wildcard characters: False
 ```
 
 ### -TargetTransportServers
-The TargetTransportServers parameter specifies the host name or FQDN of the transport servers that receive messages from the source transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see Modifying Multivalued Properties.
+The TargetTransportServers parameter specifies the host name or FQDN of the transport servers that receive messages from the source transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see [Modifying Multivalued Properties](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb684908(v=exchg.141)).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -208,6 +218,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -216,20 +227,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/63311a62-c2b6-46a3-91ba-c9fa9af16573.aspx)

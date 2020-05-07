@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/new-applicationaccesspolicy
 applicable: Exchange Online
 title: New-ApplicationAccessPolicy
 schema: 2.0.0
@@ -14,28 +15,31 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### Set1
 ```
-New-ApplicationAccessPolicy -AccessRight <RestrictAccess | DenyAccess> -AppId <String[]> -PolicyScopeGroupId <RecipientIdParameter>
+New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <String[]> -PolicyScopeGroupId <RecipientIdParameter>
  [-Confirm]
  [-Description <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook Rest APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
 
 While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn’t have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
 
-Every API request using the Outlook Rest APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
+Every API request using the Outlook REST APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 
 1. If there are multiple application access policies for the same Application and Target Mailbox pair, DenyAccess policy is prioritized over a RestrictAccess policy.
 
@@ -49,9 +53,9 @@ Every API request using the Outlook Rest APIs or Microsoft Graph APIs to a targe
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5,6ac794ca-2697-4137-8754-d2a78ae47d93 -PolicyScopeGroupId "Engineering Staff" -Description "Engineering Group Policy"
+### Example 1
+```powershell
+New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId "3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5", "6ac794ca-2697-4137-8754-d2a78ae47d93" -PolicyScopeGroupId "Engineering Staff" -Description "Engineering Group Policy"
 ```
 
 This example creates a new application access policy with the following settings:
@@ -64,9 +68,9 @@ This example creates a new application access policy with the following settings
 
 - Description: Engineering Group Policy
 
-### -------------------------- Example 2 --------------------------
-```
-New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers."
+### Example 2
+```powershell
+New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers."
 ```
 
 This example creates a new application access policy with the following settings:
@@ -79,11 +83,9 @@ This example creates a new application access policy with the following settings
 
 - Description: Restrict this app to members of security group EvenUsers.
 
-
-
-### -------------------------- Example 3 --------------------------
-```
-New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of security group OddUsers."
+### Example 3
+```powershell
+New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId OddUsers@AppPolicyTest2.com -Description "Deny this app access to members of security group OddUsers."
 ```
 
 This example creates a new application access policy with the following settings:
@@ -110,6 +112,7 @@ Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -127,6 +130,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -148,11 +152,26 @@ For example:
 
 - GUID
 
+This parameter only accepts recipients that are security principals (users or groups that can have permissions assigned to them). The following types of recipients are not security principals, so you can't use them with this parameter:
+
+- Discovery mailboxes  
+
+- Dynamic distribution groups
+
+- Distribution groups
+
+- Shared mailboxes
+
+To verify that a recipient is a security principal, use the syntax `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal`.
+
+If you need to scope the policy to shared mailboxes, you can add them to a mail enabled security group.
+
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -172,6 +191,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -187,6 +207,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -195,13 +216,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch doesn’t work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -210,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -223,5 +245,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/new-applicationaccesspolicy)

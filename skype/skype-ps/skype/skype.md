@@ -4,7 +4,6 @@ Module Guid: 01dfdcd9-c48d-46a9-b09a-587ca5c4829a
 Help Version:  17.0.15229.2100
 Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/skype/
 title: skype
-Locale: en-US
 Additional Locale: de-DE,es-ES,fr-FR,it-IT,ja-JP,ko-KR,pt-BR,ru-RU,zh-CN,zh-TW
 de-DE Version: 17.0.15229.2100
 es-ES Version: 17.0.15229.2100
@@ -752,6 +751,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
 {{Manually Enter Get-CsTeamsCallingPolicy Description Here}}
 
+### [Get-CsTeamsMobilityPolicy](Get-CsTeamsMobilityPolicy.md)
+{{Manually Enter Get-CsTeamsMobilityPolicy Description Here}}
+
 ### [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md)
 {{Manually Enter Get-CsTeamsMeetingPolicy Description Here}}
 
@@ -994,6 +996,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
 {{Manually Enter Grant-CsTeamsCallingPolicy Description Here}}
+
+### [Grant-CsTeamsMobilityPolicy](Grant-CsTeamsMobilityPolicy.md)
+{{Manually Enter Grant-CsTeamsMobilityPolicy Description Here}}
 
 ### [Grant-CsTeamsEmergencyCallingPolicy](Grant-CsTeamsEmergencyCallingPolicy.md)
 {{Manually Enter Grant-CsTeamsEmergencyCallingPolicy Description Here}}
@@ -2699,6 +2704,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
 {{Manually Enter Set-CsTeamsCallingPolicy Description Here}}
 
+### [Set-CsTeamsMobilityPolicy](Set-CsTeamsMobilityPolicy.md)
+{{Manually Enter Set-CsTeamsMobilityPolicy Description Here}}
+
 ### [Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md)
 {{Manually Enter Set-CsTeamsMeetingPolicy Description Here}}
 
@@ -3170,6 +3178,12 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
 
+### [Get-CsTeamsMobilityPolicy](Get-CsTeamsMobilityPolicy.md)
+
+### [Set-CsTeamsMobilityPolicy](Set-CsTeamsMobilityPolicy.md)
+
+### [Grant-CsTeamsMobilityPolicy](Grant-CsTeamsMobilityPolicy.md)
+
 ### [Set-CsTeamsMeetingBroadcastConfiguration](Set-CsTeamsMeetingBroadcastConfiguration.md)
 
 ### [Get-CsTeamsMeetingBroadcastConfiguration](Get-CsTeamsMeetingBroadcastConfiguration.md)
@@ -3194,6 +3208,8 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 
+### [Get-CsTeamsMobilityPolicy](Get-CsTeamsMobilityPolicy.md)
+
 ### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
 
 ### [Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
@@ -3203,6 +3219,24 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Grant-CsTeamsCallParkPolicy](Grant-CsTeamsCallParkPolicy.md)
 
 ### [Remove-CsTeamsCallParkPolicy](Remove-CsTeamsCallParkPolicy.md)
+
+### [Get-CsTeamsComplianceRecordingPolicy](Get-CsTeamsComplianceRecordingPolicy.md)
+
+### [Set-CsTeamsComplianceRecordingPolicy](Set-CsTeamsComplianceRecordingPolicy.md)
+
+### [New-CsTeamsComplianceRecordingPolicy](New-CsTeamsComplianceRecordingPolicy.md)
+
+### [Remove-CsTeamsComplianceRecordingPolicy](Remove-CsTeamsComplianceRecordingPolicy.md)
+
+### [Grant-CsTeamsComplianceRecordingPolicy](Grant-CsTeamsComplianceRecordingPolicy.md)
+
+### [Get-CsTeamsComplianceRecordingApplication](Get-CsTeamsComplianceRecordingApplication.md)
+
+### [Set-CsTeamsComplianceRecordingApplication](Set-CsTeamsComplianceRecordingApplication.md)
+
+### [New-CsTeamsComplianceRecordingApplication](New-CsTeamsComplianceRecordingApplication.md)
+
+### [Remove-CsTeamsComplianceRecordingApplication](Remove-CsTeamsComplianceRecordingApplication.md)
 
 ### [Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
 
@@ -3250,3 +3284,33 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Get-CsTeamsUpgradeStatus](Get-CsTeamsUpgradeStatus.md)
 {{Manually Enter Get-CsTeamsUpgradeStatus Description Here}}
+
+### [New-CsTeamsTranslationRule](New-CsTeamsTranslationRuley.md)
+
+### [Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRuley.md)
+
+### [Get-CsTeamsTranslationRule](Get-CsTeamsTranslationRuley.md)
+
+### [Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRuley.md)
+
+### [Get-CsInboundBlockedNumberPattern](Get-CsInboundBlockedNumberPattern.md)
+
+### [New-CsInboundBlockedNumberPattern](New-CsInboundBlockedNumberPattern.md)
+
+### [Remove-CsInboundBlockedNumberPattern](Remove-CsInboundBlockedNumberPattern.md)
+
+### [Set-CsInboundBlockedNumberPattern](Set-CsInboundBlockedNumberPattern.md)
+
+### [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
+
+### [Get-CsTenantBlockedCallingNumbers](Get-CsTenantBlockedCallingNumbers.md)
+
+### [Get-CSTeamsIPPhonePolicy](Get-CSTeamsIPPhonePolicy.md)
+
+### [Grant-CSTeamsIPPhonePolicy](Grant-CSTeamsIPPhonePolicy.md)
+
+### [New-CSTeamsIPPhonePolicy](New-CSTeamsIPPhonePolicy.md)
+
+### [Remove-CSTeamsIPPhonePolicy](Remove-CSTeamsIPPhonePolicy.md)
+
+### [Set-CsTeamsIPPhonePolicy](Set-CsTeamsIPPhonePolicy.md)

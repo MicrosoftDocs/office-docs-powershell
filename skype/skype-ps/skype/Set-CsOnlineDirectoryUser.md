@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinedirectoryuser
 applicable: Skype for Business Online
 title: Set-CsOnlineDirectoryUser
 schema: 2.0.0
@@ -38,7 +39,16 @@ Insert descriptive text for example 1.
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: UserIdParameter
+Specifies the identity of the target user.
+Acceptable values include:
+
+Example: jphillips@contoso.com
+
+Example: sip:jphillips@contoso.com
+
+Example: 98403f08-577c-46dd-851a-f0460a13b03d
+
+You can use the `Get-CsOnlineUser` cmdlet to identify the users you want to modify.
 
 ```yaml
 Type: UserIdParameter

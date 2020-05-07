@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/client-access/test-clientaccessrule
 applicable: Exchange Server 2019, Exchange Online
 title: Test-ClientAccessRule
 schema: 2.0.0
@@ -16,14 +17,14 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Test-ClientAccessRule cmdlet to test how client access rules affect access to your organization. If any of the client properties you specify for this cmdlet match any client access rules, the rules are returned in the results.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Test-ClientAccessRule
- -AuthenticationType <BasicAuthentication | NonBasicAuthentication | AdfsAuthentication | CertificateBasedAuthentication | OAuthAuthentication>
- -Protocol <ExchangeWebServices | RemotePowerShell | OutlookAnywhere | POP3 | IMAP4 | OutlookWebApp | ExchangeAdminCenter | ExchangeActiveSync | OfflineAddressBook | PowerShellWebServices | REST> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter> [-Confirm]
+ -AuthenticationType <ClientAccessAuthenticationMethod>
+ -Protocol <ClientAccessProtocol> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter> [-Confirm]
  [-OAuthClaims <Hashtable>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -40,12 +41,12 @@ Note: Currently, not all authentication types are supported for all protocols. T
 
 - ExchangeActiveSync:BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Test-ClientAccessRule -AuthenticationType BasicAuthentication -Protocol OutlookWebApp -RemoteAddress 172.17.17.26 -RemotePort 443 -User julia@contoso.com
 ```
 
@@ -81,10 +82,11 @@ Valid values for this parameter are:
 In client access rules, authentication types are defined by the AnyOfAuthenticationTypes and ExceptAnyOfAuthenticationTypes parameters.
 
 ```yaml
-Type: BasicAuthentication | NonBasicAuthentication | AdfsAuthentication | CertificateBasedAuthentication | OAuthAuthentication
+Type: ClientAccessAuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -122,10 +124,11 @@ Valid values for this parameter are:
 In client access rules, protocol types are defined by the AnyOfProtocols and ExceptAnyOfProtocols parameters.
 
 ```yaml
-Type: ExchangeWebServices | RemotePowerShell | OutlookAnywhere | POP3 | IMAP4 | OutlookWebApp | ExchangeAdminCenter | ExchangeActiveSync | OfflineAddressBook | PowerShellWebServices | REST
+Type: ClientAccessProtocol
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -143,6 +146,7 @@ Type: IPAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -158,6 +162,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -195,6 +200,7 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -214,6 +220,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -229,6 +236,7 @@ Type: Hashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +252,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -252,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -265,5 +274,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/d17ee6d8-e5f4-4b5d-977c-85e8dadeaf48.aspx)

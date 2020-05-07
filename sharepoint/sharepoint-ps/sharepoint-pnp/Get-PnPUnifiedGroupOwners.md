@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpunifiedgroupowners
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPUnifiedGroupOwners
 ---
+
 # Get-PnPUnifiedGroupOwners
 
 ## SYNOPSIS
-Gets owners of a particular Office 365 Group (aka Unified Group)
+Gets owners of a particular Office 365 Group (aka Unified Group). Requires the Azure Active Directory application permissions 'Group.Read.All' and 'User.Read.All'.
 
 ## SYNTAX 
 
@@ -41,7 +44,7 @@ Parameter Sets: (All)
 
 Required: True
 Position: Named
-Accept pipeline input: False
+Accept pipeline input: True
 ```
 
 ## RELATED LINKS

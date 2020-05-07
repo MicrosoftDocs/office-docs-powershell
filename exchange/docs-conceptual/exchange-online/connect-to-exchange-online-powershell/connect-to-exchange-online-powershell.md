@@ -42,7 +42,7 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-    <sup>*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -55,9 +55,28 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
   ```
 
   You need to configure this setting only once on your computer, not every time you connect.
+  
+- Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
+
+  ```
+  winrm get winrm/config/client/auth
+  ```
+
+  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
+
+  ```
+  winrm set winrm/config/client/auth @{Basic="true"}
+  ```
+
+  If Basic authentication is disabled, you'll get this error when you try to connect:
+
+  `The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
+
+> [!IMPORTANT]
+> On October 13th, 2020 we will retire Basic Authentication for Remote PowerShell (RPS) in Exchange Online.
 
 ## Connect to Exchange Online
 

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-sendconnector
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-SendConnector
 schema: 2.0.0
@@ -16,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-SendConnector cmdlet to create a new Send connector.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -24,42 +25,42 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 New-SendConnector -Name <String> -AddressSpaces <MultiValuedProperty>
  [-AuthenticationCredential <PSCredential>]
- [-CloudServicesMailEnabled <$true | $false>]
+ [-CloudServicesMailEnabled <Boolean>]
  [-Comment <String>]
  [-Confirm]
  [-ConnectionInactivityTimeOut <EnhancedTimeSpan>]
- [-ConnectorType <Default | XPremises>]
+ [-ConnectorType <TenantConnectorType>]
  [-Custom]
- [-DNSRoutingEnabled <$true | $false>]
+ [-DNSRoutingEnabled <Boolean>]
  [-DomainController <Fqdn>]
- [-DomainSecureEnabled <$true | $false>]
- [-Enabled <$true | $false>]
- [-ErrorPolicies <Default | DowngradeDnsFailures | DowngradeCustomFailures | UpgradeCustomFailures>]
+ [-DomainSecureEnabled <Boolean>]
+ [-Enabled <Boolean>]
+ [-ErrorPolicies <ErrorPolicies>]
  [-Force]
- [-ForceHELO <$true | $false>]
+ [-ForceHELO <Boolean>]
  [-Fqdn <Fqdn>]
- [-FrontendProxyEnabled <$true | $false>]
- [-IgnoreSTARTTLS <$true | $false>]
+ [-FrontendProxyEnabled <Boolean>]
+ [-IgnoreSTARTTLS <Boolean>]
  [-Internal]
  [-Internet]
- [-IsCoexistenceConnector <$true | $false>]
- [-IsScopedConnector <$true | $false>]
+ [-IsCoexistenceConnector <Boolean>]
+ [-IsScopedConnector <Boolean>]
  [-MaxMessageSize <Unlimited>]
  [-Partner]
  [-Port <Int32>]
- [-ProtocolLoggingLevel <None | Verbose>]
- [-RequireOorg <$true | $false>]
- [-RequireTLS <$true | $false>]
- [-SmartHostAuthMechanism <None | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative>]
+ [-ProtocolLoggingLevel <ProtocolLoggingLevel>]
+ [-RequireOorg <Boolean>]
+ [-RequireTLS <Boolean>]
+ [-SmartHostAuthMechanism <AuthMechanisms>]
  [-SmartHosts <MultiValuedProperty>]
  [-SmtpMaxMessagesPerConnection <Int32>]
  [-SourceIPAddress <IPAddress>]
  [-SourceTransportServers <MultiValuedProperty>]
- [-TlsAuthLevel <EncryptionOnly | CertificateValidation | DomainValidation>]
+ [-TlsAuthLevel <TlsAuthLevel>]
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomain <SmtpDomainWithSubdomains>]
- [-Usage <Custom | Internal | Internet | Partner>]
- [-UseExternalDNSServersEnabled <$true | $false>]
+ [-Usage <UsageType>]
+ [-UseExternalDNSServersEnabled <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -71,43 +72,43 @@ New-SendConnector [-Name] <String> [-LinkedReceiveConnector <ReceiveConnectorIdP
  [-Confirm]
  [-ConnectionInactivityTimeOut <EnhancedTimeSpan>]
  [-Custom]
- [-DNSRoutingEnabled <$true | $false>]
+ [-DNSRoutingEnabled <Boolean>]
  [-DomainController <Fqdn>]
- [-DomainSecureEnabled <$true | $false>]
- [-Enabled <$true | $false>]
- [-ErrorPolicies <Default | DowngradeAuthFailures | DowngradeDnsFailures>]
+ [-DomainSecureEnabled <Boolean>]
+ [-Enabled <Boolean>]
+ [-ErrorPolicies <ErrorPolicies>]
  [-Force]
- [-ForceHELO <$true | $false>]
+ [-ForceHELO <Boolean>]
  [-Fqdn <Fqdn>]
- [-IgnoreSTARTTLS <$true | $false>]
+ [-IgnoreSTARTTLS <Boolean>]
  [-Internal]
  [-Internet]
- [-IsCoexistenceConnector <$true | $false>]
+ [-IsCoexistenceConnector <Boolean>]
  [-MaxMessageSize <Unlimited>]
  [-Partner]
  [-Port <Int32>]
- [-ProtocolLoggingLevel <None | Verbose>]
- [-RequireOorg <$true | $false>]
- [-RequireTLS <$true | $false>]
- [-SmartHostAuthMechanism <None | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative>]
+ [-ProtocolLoggingLevel <ProtocolLoggingLevel>]
+ [-RequireOorg <Boolean>]
+ [-RequireTLS <Boolean>]
+ [-SmartHostAuthMechanism <AuthMechanisms>]
  [-SmartHosts <MultiValuedProperty>]
  [-SmtpMaxMessagesPerConnection <Int32>]
  [-SourceIPAddress <IPAddress>]
  [-SourceTransportServers <MultiValuedProperty>]
- [-TlsAuthLevel <EncryptionOnly | CertificateValidation | DomainValidation>]
+ [-TlsAuthLevel <TlsAuthLevel>]
  [-TlsDomain <SmtpDomainWithSubdomains>]
- [-Usage <Custom | Internal | Internet | Partner>]
- [-UseExternalDNSServersEnabled <$true | $false>]
+ [-Usage <UsageType>]
+ [-UseExternalDNSServersEnabled <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-SendConnector -Internet -Name MySendConnector -AddressSpaces contoso.com,fabrikam.com
 ```
 
@@ -117,8 +118,8 @@ This example creates the Send connector named MySendConnector with the following
 
 - It processes messages addressed only to Contoso.com and Fabrikam.com domains.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 $CredentialObject = Get-Credential; New-SendConnector -Name "Secure Email to Contoso.com" -AddressSpaces contoso.com -AuthenticationCredential $CredentialObject -SmartHostAuthMechanism BasicAuth
 ```
 
@@ -142,6 +143,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -176,13 +178,14 @@ If you specify a non-SMTP address space type on a Send connector configured in t
 
 - The DNSRoutingEnabled parameter must be set to $false.
 
-Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see Foreign connectors (https://technet.microsoft.com/library/aa996779.aspx).
+Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see [Foreign connectors](https://docs.microsoft.com/exchange/foreign-connectors-exchange-2013-help).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: AddressSpaces
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -193,13 +196,14 @@ Accept wildcard characters: False
 ### -AuthenticationCredential
 The AuthenticationCredential parameter specifies the username and password that's required to use the connector.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudServicesMailEnabled
-Note: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see Hybrid Configuration wizard (https://technet.microsoft.com/library/hh529921.aspx).
+Note: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-configuration-wizard).
 
 The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft Office 365. Specifically, this parameter controls how certain internal X-MS-Exchange-Organization-\* message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
 
@@ -219,10 +223,11 @@ Valid values are:
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: AddressSpaces
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +243,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -257,6 +263,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -276,6 +283,7 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -291,10 +299,11 @@ The ConnectorType parameter specifies whether the connector is used in hybrid de
 - XPremises: The connector is used to send messages to Office 365.
 
 ```yaml
-Type: Default | XPremises
+Type: TenantConnectorType
 Parameter Sets: AddressSpaces
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -313,13 +322,14 @@ The Custom parameter specifies the Custom usage type. The usage type specifies t
 
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -331,10 +341,11 @@ Accept wildcard characters: False
 The DNSRoutingEnabled parameter specifies whether the Send connector uses Domain Name System (DNS) to route mail. Valid values for this parameter are $true or $false. The default value is $true. If you specify a SmartHosts parameter, the DNSRoutingEnabled parameter must be $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -352,6 +363,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -379,10 +391,11 @@ The default value for the DomainSecureEnabled parameter is $false for the follow
 The default value is $true for a default Send connector defined on an Edge server.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -394,10 +407,11 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether to enable the Send connector to process email messages. Valid values are $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -421,10 +435,11 @@ Multiple values can be specified for this parameter, separated by commas.
 Specify a value other than Default for this parameter only if this Send connector is used to send messages over a reliable and well-defined communication channel where communication errors aren't expected. For example, consider specifying a value other than Default if this Send connector is used to send messages to a partner.
 
 ```yaml
-Type: Default | DowngradeAuthFailures | DowngradeDnsFailures
+Type: ErrorPolicies
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -440,6 +455,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -451,10 +467,11 @@ Accept wildcard characters: False
 The ForceHELO parameter specifies whether HELO is sent instead of the default EHLO. Valid values are $true or $false. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -478,6 +495,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -489,10 +507,11 @@ Accept wildcard characters: False
 The FrontendProxyEnabled parameter routes outbound messages through the CAS server, where destination specific routing, such as DNS or IP address, is set, when the parameter is set to $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: AddressSpaces
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -504,10 +523,11 @@ Accept wildcard characters: False
 The IgnoreSTARTTLS parameter specifies whether to ignore the StartTLS option offered by a remote sending server. This parameter is used with remote domains. This parameter must be set to $false if the RequireTLS parameter is set to $true. Valid values for this parameter are $true or $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -526,13 +546,14 @@ The Internal parameter specifies the Internal usage type. The usage type specifi
 
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -551,13 +572,14 @@ The Internet parameter specifies the Internet usage type. The usage type specifi
 
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -571,10 +593,11 @@ This parameter is available or functional only in Exchange Server 2010.
 The IsCoexistenceConnector parameter specifies whether this Send connector is used for secure mail flow between your on-premises deployment and your Microsoft Office 365 organization. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -586,10 +609,11 @@ Accept wildcard characters: False
 The IsScopedConnector parameter specifies the availability of the connector to other Mailbox servers with the Transport service. When the value of this parameter is $false, the connector can be used by all Mailbox servers in the Exchange organization. When the value of this parameter is $true, the connector can only be used by Transport service on Mailbox servers in the same Active Directory site. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: AddressSpaces
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -625,6 +649,7 @@ Type: ReceiveConnectorIdParameter
 Parameter Sets: LinkedReceiveConnector
 Aliases:
 Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None
@@ -656,6 +681,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -674,13 +700,14 @@ The Partner parameter specifies the Partner usage type. The usage type specifies
 
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -696,6 +723,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -707,10 +735,11 @@ Accept wildcard characters: False
 The ProtocolLoggingLevel parameter specifies whether to enable protocol logging. Verbose enables protocol logging. None disables protocol logging. The location of the Send connector protocol logs for all Send connectors configured in the Transport service on a Mailbox server or on an Edge server is specified with the SendProtocolLogPath parameter of the Set-TransportService cmdlet.
 
 ```yaml
-Type: None | Verbose
+Type: ProtocolLoggingLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -722,10 +751,11 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -737,10 +767,11 @@ Accept wildcard characters: False
 The RequireTLS parameter specifies whether all messages sent through this connector must be transmitted using TLS. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -752,10 +783,11 @@ Accept wildcard characters: False
 The SmartHostAuthMechanism parameter specifies the smart host authentication mechanism to use for authentication with a remote server. Use this parameter only when a smart host is configured and the DNSRoutingEnabled parameter is set to $false. Valid values are None, BasicAuth, BasicAuthRequireTLS, ExchangeServer, and ExternalAuthoritative. All values are mutually exclusive. If you select BasicAuth or BasicAuthRequireTLS, you must use the AuthenticationCredential parameter to specify the authentication credential.
 
 ```yaml
-Type: None | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative
+Type: AuthMechanisms
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -773,6 +805,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -788,6 +821,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -803,6 +837,7 @@ Type: IPAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -820,6 +855,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -839,10 +875,11 @@ The TlsAuthLevel parameter specifies the TLS authentication level that is used f
 You can't specify a value for this parameter if the IgnoreSTARTTLS parameter is set to $true, or if the RequireTLS parameter is set to $false.
 
 ```yaml
-Type: EncryptionOnly | CertificateValidation | DomainValidation
+Type: TlsAuthLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -858,6 +895,7 @@ Type: SmtpX509Identifier
 Parameter Sets: AddressSpaces
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -881,6 +919,7 @@ Type: SmtpDomainWithSubdomains
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -901,13 +940,14 @@ If you use the Usage parameter, you can't use any of the following parameters:
 
 - Partner
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
-Type: Custom | Internal | Internet | Partner
+Type: UsageType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -919,10 +959,11 @@ Accept wildcard characters: False
 The UseExternalDNSServersEnabled parameter specifies whether this Send connector uses the external DNS list specified by the ExternalDNSServers parameter of the Set-TransportService cmdlet. The default value is $false.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -938,6 +979,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -946,20 +988,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/7b315ab0-8778-4835-a252-fb94129d7a8e.aspx)

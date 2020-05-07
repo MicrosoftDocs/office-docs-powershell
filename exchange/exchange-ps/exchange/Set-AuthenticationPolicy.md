@@ -1,22 +1,26 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-authenticationpolicy
 applicable: Exchange Online
 title: Set-AuthenticationPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
+monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-AuthenticationPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-AuthenticationPolicy cmdlet to modify authentication policies in Exchange Online.
+Use the Set-AuthenticationPolicy cmdlet to modify authentication policies in your organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -34,21 +38,36 @@ Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
  [-AllowBasicAuthRpc]
  [-AllowBasicAuthSmtp]
  [-AllowBasicAuthWebServices]
+ [-BlockLegacyAuthActiveSync]
+ [-BlockLegacyAuthAutodiscover]
+ [-BlockLegacyAuthImap]
+ [-BlockLegacyAuthMapi]
+ [-BlockLegacyAuthOfflineAddressBook]
+ [-BlockLegacyAuthPop]
+ [-BlockLegacyAuthRpc]
+ [-BlockLegacyAuthWebServices]
  [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Set-AuthenticationPolicy -Identity "Engineering Group" -AllowBasicAuthReportingWebServices
 ```
 
-This example modifies the authentication policy named Engineering Group to all Basic authentication for Exchange Reporting Web Services.
+In Exchange Online, this example modifies the authentication policy named Engineering Group to allow Basic authentication for Exchange Reporting Web Services.
+
+### Example 2
+```powershell
+Set-AuthenticationPolicy -Identity "Research and Development Group" -BlockLegacyAuthReportingWebServices:$false
+```
+
+In Exchange 2019, this example re-enables Basic authentication for Exchange Reporting Web Services in the authentication policy named Research and Development Group.
 
 ## PARAMETERS
 
@@ -65,7 +84,8 @@ The Identity parameter specifies the authentication policy you want to modify. Y
 Type: AuthPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 0
 Default value: None
@@ -74,17 +94,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthActiveSync
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthActiveSync switch specifies whether to allow Basic authentication with Exchange Active Sync.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthActiveSync:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthActiveSync:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -93,17 +116,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthAutodiscover
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthAutodiscover switch specifies whether to allow Basic authentication with Autodiscover.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthAutodiscover:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthAutodiscover:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -112,17 +138,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthImap
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthImap switch specifies whether to allow Basic authentication with IMAP.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthImap:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthImap:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -131,17 +160,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthMapi
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthMapi switch specifies whether to allow Basic authentication with MAPI.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAutMapi:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAutMapi:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -150,17 +182,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthOfflineAddressBook
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthOfflineAddressBook switch specifies whether to allow Basic authentication with Offline Address Books.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthOfflineAddressBook:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthOfflineAddressBook:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -169,17 +204,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthOutlookService
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthOutlookService switch specifies whether to allow Basic authentication with the Outlook service.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthOutlookService:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthOutlookService:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -188,17 +226,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthPop
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthPop switch specifies whether to allow Basic authentication with POP.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthPop:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthPop:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -207,17 +248,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthPowershell
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthPowerShell switch specifies whether to allow Basic authentication with PowerShell.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthPowershell:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthPowershell:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -226,17 +270,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthReportingWebServices
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthReporting Web Services switch specifies whether to allow Basic authentication with reporting web services.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthReportingWebServices:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthReportingWebServices:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -245,17 +292,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthRpc
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthRpc switch specifies whether to allow Basic authentication with RPC.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthRpc:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthRpc:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -264,17 +314,20 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthSmtp
+This parameter is available only in the cloud-based service.
+
 The AllowBasicAuthSmtp switch specifies whether to allow Basic authentication with SMTP.
 
-- To change the value to $true, use this switch without a value.
+- To allow Basic authentication for the protocol, use this switch without a value.
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthSmtp:$false.
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthSmtp:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
@@ -283,20 +336,199 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthWebServices
-The AllowBasicAuthWebServices switch specifies whether to allow Basic authentication with Exchange Web Services (EWS). You don't need to specify a value with this switch.
+This parameter is available only in the cloud-based service.
 
-- To change the value to $true, use this switch without a value.
+The AllowBasicAuthWebServices switch specifies whether to allow Basic authentication with Exchange Web Services (EWS).
 
-- To change the value to $false, use this exact syntax: -AllowBasicAuthWebServices:$false.
+- To allow Basic authentication for the protocol, use this switch without a value.
+
+- To block Basic authentication for the protocol, use this exact syntax: -AllowBasicAuthWebServices:$false.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthActiveSync
+This parameter is available only in on-premises Exchange.
+
+The BlockLegacyAuthActiveSync switch specifies whether to allow only Modern authentication with Exchange ActiveSync in Exchange 2019 CU2 or later hybrid environments.
+
+- To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for ActiveSync, use this switch without a value.
+
+- To allow legacy authentication methods for ActiveSync, use this exact syntax: -BlockLegacyAuthActiveSync:$false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthAutodiscover
+This parameter is available only in on-premises Exchange.
+
+The BlockLegacyAuthAutodiscover switch specifies whether to allow only Modern authentication with Autodiscover in Exchange 2019 CU2 or later hybrid environments.
+
+- To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for Autodiscover, use this switch without a value.
+
+- To allow legacy authentication methods for Autodiscover, use this exact syntax: -BlockLegacyAuthAutodiscover:$false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthImap
+This parameter is available only in on-premises Exchange.
+
+The BlockLegacyAuthImap switch specifies whether to allow only Modern authentication with IMAP in Exchange 2019 CU2 or later hybrid environments.
+
+- To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for IMAP, use this switch without a value.
+
+- To allow legacy authentication methods for IMAP, use this exact syntax: -BlockLegacyAuthImap:$false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthMapi
+This parameter is available only in on-premises Exchange.
+
+The BlockLegacyAuthMapi switch specifies whether to allow only Modern authentication with MAPI in Exchange 2019 CU2 or later hybrid environments.
+
+- To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for MAPI, use this switch without a value.
+
+- To allow legacy authentication methods for MAPI, use this exact syntax: -BlockLegacyAuthMapi:$false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthOfflineAddressBook
+This parameter is available only in on-premises Exchange.
+
+The BlockLegacyAuthOfflineAddressBook switch specifies whether to allow only Modern authentication with Offline Address Books in Exchange 2019 CU2 or later hybrid environments.
+
+- To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for Offline Address Books, use this switch without a value.
+
+- To allow legacy authentication methods for OfflineAddressBooks, use this exact syntax: -BlockLegacyAuthOfflineAddressBook:$false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthPop
+This parameter is available only in on-premises Exchange.
+
+The BlockLegacyAuthPop switch specifies whether to allow only Modern authentication with POP in Exchange 2019 CU2 or later hybrid environments.
+
+- To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for POP, use this switch without a value.
+
+- To allow legacy authentication methods for POP, use this exact syntax: -BlockLegacyAuthPop:$false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthRpc
+This parameter is available only in on-premises Exchange.
+
+The BlockLegacyAuthRpc switch specifies whether to allow only Modern authentication with RPC in Exchange 2019 CU2 or later hybrid environments.
+
+- To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for RPC, use this switch without a value.
+
+- To allow legacy authentication methods for RPC, use this exact syntax: -BlockLegacyAuthRpc:$false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthWebServices
+This parameter is available only in on-premises Exchange.
+
+The BlockLegacyAuthWebServices switch specifies whether to allow only Modern authentication with Exchange Web Services (EWS) in Exchange 2019 CU2 or later hybrid environments.
+
+- To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for EWS, use this switch without a value.
+
+- To allow legacy authentication methods for EWS, use this exact syntax: -BlockLegacyAuthWebServices:$false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -312,7 +544,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -327,7 +560,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -336,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -349,5 +583,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/set-authenticationpolicy)

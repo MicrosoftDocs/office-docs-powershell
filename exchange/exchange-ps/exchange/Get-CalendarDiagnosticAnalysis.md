@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-calendardiagnosticanalysis
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-CalendarDiagnosticAnalysis
 schema: 2.0.0
@@ -16,25 +17,25 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-CalendarDiagnosticAnalysis cmdlet to troubleshoot calendar-related reliability issues. You can use this cmdlet to analyze calendar item data that's recorded in the Calendar Diagnostic logs. You provide the calendar item data to this cmdlet by using the Get-CalendarDiagnosticLog cmdlet.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### DefaultSet
 ```
 Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]>
- [-DetailLevel <Basic | Advanced>]
+ [-DetailLevel <AnalysisDetailLevel>]
  [-GlobalObjectId <String>]
- [-OutputAs <HTML | CSV | XML>]
+ [-OutputAs <OutputType>]
  [<CommonParameters>]
 ```
 
 ### LocationSet
 ```
 Get-CalendarDiagnosticAnalysis -LogLocation <String[]>
- [-DetailLevel <Basic | Advanced>]
+ [-DetailLevel <AnalysisDetailLevel>]
  [-GlobalObjectId <String>]
- [-OutputAs <HTML | CSV | XML>]
+ [-OutputAs <OutputType>]
  [<CommonParameters>]
 ```
 
@@ -75,12 +76,12 @@ The following properties of the calendar item are returned in the default output
 
 - SentRepresentingDisplayName
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 $logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F; Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced | Set-Content -Path "C:\My Documents\Oscar Evans Analysis.csv"
 ```
 
@@ -88,8 +89,8 @@ This example gets the specified calendar item from Oscar Evans' mailbox, stores 
 
 For basic analysis of the item, don't include the DetailLevel parameter, or use the value Basic instead of Advanced.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-CalendarDiagnosticAnalysis -LogLocation "C:\My Documents\Exported Calendar Logs\jkozma@contoso.com" -DetailLevel Advanced -OutputAs HTML | Set-Content -Path "C:\My Documents\Jasen Kozma Analysis.html"
 ```
 
@@ -113,6 +114,7 @@ Type: CalendarLog[]
 Parameter Sets: DefaultSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +134,7 @@ Type: String[]
 Parameter Sets: LocationSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -147,10 +150,11 @@ The DetailLevel parameter specifies the level of detail you want to see in the a
 - Advanced: 37 additional calendar item properties are returned. You should use this value only for detailed debugging information.
 
 ```yaml
-Type: Basic | Advanced
+Type: AnalysisDetailLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +172,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -185,10 +190,11 @@ The OutputAs parameter specifies the output format of the command. Valid values 
 - XML
 
 ```yaml
-Type: HTML | CSV | XML
+Type: OutputType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -197,20 +203,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/1ccb3442-1101-45c5-8508-599af6e56076.aspx)

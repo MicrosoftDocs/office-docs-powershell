@@ -1,12 +1,12 @@
 ---
-title: Getting started with SharePoint Online Management Shell
+title: Get started with the SharePoint Online Management Shell
 ---
 
-# Getting started with SharePoint Online Management Shell #
+# Get started with SharePoint Online Management Shell #
 
-Before you get started using PowerShell to manage SharePoint Online, make sure that the SharePoint Online Management Shell is installed and you have connected to SharePoint Online.
+To get started using PowerShell to manage SharePoint Online, you need to install the latest SharePoint Online Management Shell is installed and connect to SharePoint Online.
 
-Install the SharePoint Online Management Shell by downloading and running the [SharePoint Online Management Shell](https://go.microsoft.com/fwlink/p/?LinkId=255251) or installing module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell/). Once installed, the module is available for use, and you do not need to install it again until you need features introduced in a later version. For example, you may need to install a new version for TLS 1.2 negotiation after October 2018.  
+Install the SharePoint Online Management Shell by downloading and running the [SharePoint Online Management Shell](https://go.microsoft.com/fwlink/p/?LinkId=255251) or installing the module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell/). Once installed, the module is available for use, and you do not need to install it again until you need features introduced in a later version. For example, you may need to install a new version for TLS 1.2 negotiation after October 2018.  
 
 First you can check if you have already installed SharePoint Online Management Shell by running the following command in administrative mode in PowerShell.
 
@@ -14,7 +14,7 @@ First you can check if you have already installed SharePoint Online Management S
 Get-Module -Name Microsoft.Online.SharePoint.PowerShell -ListAvailable | Select Name,Version
 ```
 
-If your operating system is using PowerShell 5 or newer, you can install Sharepoint Online Management Shell also by running following command in administrative mode.
+If your operating system is using PowerShell 5 or newer, you can install the SharePoint Online Management Shell also by running the following command in administrative mode.
 
 ```ps
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
@@ -38,9 +38,9 @@ Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $userC
 
 ```
 
-2. When prompted with the Windows PowerShell credential request dialog box, type the password for the SharePoint Online SharePoint administrator account.
+2. When prompted with the Windows PowerShell credential request dialog box, type the password for the SharePoint admin account.
 
-To make a user account a SharePoint administrator, see [Assign admin roles in Office 365 for business](https://support.office.com/en-us/article/Assign-admin-roles-in-Office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504?ui=en-US&rs=en-US&ad=US) or [Assign roles to user accounts with Office 365 PowerShell](https://technet.microsoft.com/library/mt736914.aspx).
+To assign a user the SharePoint admin role, see [Assign admin roles](/microsoft-365/admin/add-users/assign-admin-roles) or [Assign roles to user accounts with Office 365 PowerShell](/office365/enterprise/powershell/assign-roles-to-user-accounts-with-office-365-powershell).
 
 ## To connect with multifactor authentication (MFA) ##
 
@@ -55,3 +55,6 @@ Connect-SPOService -Url https://$orgName-admin.sharepoint.com
 3. Follow the instructions in the **Microsoft SharePoint Online Management Shell** dialog box to provide the additional authentication information, such as a verification code, and then click **Sign in**.
 
 You are now ready to use SharePoint Online commands.
+
+> [!NOTE]
+> If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](/sharepoint/troubleshoot/security/cannot-force-modern-authentication)

@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpfile
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPFile
 ---
+
 # Get-PnPFile
 
 ## SYNOPSIS
@@ -13,6 +16,7 @@ Downloads a file.
 ### Return as file object
 ```powershell
 Get-PnPFile -Url <String>
+            [-AsFileObject [<SwitchParameter>]]
             [-Web <WebPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
@@ -99,6 +103,18 @@ Type: SwitchParameter
 Parameter Sets: Save to local path
 
 Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -AsFileObject
+Retrieve the file contents as a file object.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Return as file object
+
+Required: False
 Position: Named
 Accept pipeline input: False
 ```

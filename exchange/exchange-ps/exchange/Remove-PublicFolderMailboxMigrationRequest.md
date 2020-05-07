@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/remove-publicfoldermailboxmigrationrequest
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-PublicFolderMailboxMigrationRequest
 schema: 2.0.0
@@ -16,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-PublicFolderMailboxMigrationRequest cmdlet to remove individual jobs from public folder migration batches that were created by using the New-MigrationBatch cmdlet.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -38,32 +39,32 @@ Remove-PublicFolderMailboxMigrationRequest -RequestGuid <Guid> -RequestQueue <Da
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-PublicFolderMailboxMigrationRequest -Identity \PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e
 ```
 
 This example removes the specified public folder mailbox migration request.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null}
 ```
 
-This example returns public folder mailbox migration requests that don't have a target mailbox. To remove these orphaned migration requests, add " | Remove-PublicFolderMailboxMigrationRequest" to the end of the command.
+This example returns public folder mailbox migration requests that don't have a target mailbox. To remove these orphaned migration requests, add ` | Remove-PublicFolderMailboxMigrationRequest` to the end of the command.
 
-### -------------------------- Example 3 --------------------------
-```
-Get-PublicFolderMailboxMigrationRequest | group TargetMailbox |?{$_.Count -gt 1}
+### Example 3
+```powershell
+Get-PublicFolderMailboxMigrationRequest | group TargetMailbox | ?{$_.Count -gt 1}
 ```
 
 This example returns duplicate public folder migration requests (requests created for the same target mailbox). If the command returns no results, then there are no duplicate migration requests.
 
-A sample script is provided here: (https://gallery.technet.microsoft.com/scriptcenter/Remove-Duplicate-public-055f0e5e) to detect duplicate or orphaned public folder mailbox migration requests and also remove them.
+The sample script [Remove Duplicate public folder MRS Requests](https://gallery.technet.microsoft.com/scriptcenter/Remove-Duplicate-public-055f0e5e) detects duplicate or orphaned public folder mailbox migration requests and also removes them.
 
 ## PARAMETERS
 
@@ -77,6 +78,7 @@ Type: PublicFolderMailboxMigrationRequestIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: 1
 Default value: None
@@ -94,6 +96,7 @@ Type: Guid
 Parameter Sets: MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -117,6 +120,7 @@ Type: DatabaseIdParameter
 Parameter Sets: MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -136,6 +140,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +158,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +174,7 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +190,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -204,5 +212,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/3921f9da-77c9-4943-b184-436a1a9875b3.aspx)

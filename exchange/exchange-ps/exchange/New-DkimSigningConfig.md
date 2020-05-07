@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/new-dkimsigningconfig
 applicable: Exchange Online, Exchange Online Protection
 title: New-DkimSigningConfig
 schema: 2.0.0
@@ -16,25 +17,32 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-DkimSigningConfig cmdlet to create the DomainKeys Identified Mail (DKIM) signing policy settings for domains in a cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-DkimSigningConfig [-DomainName] <SmtpDomainWithSubdomains> [-Enabled] <$true | $false>
- [-AdminDisplayName <String>] [-BodyCanonicalization <Simple | Relaxed>] [-Confirm]
- [-HeaderCanonicalization <Simple | Relaxed>] [-KeySize <UInt16>] [-WhatIf] [<CommonParameters>]
+New-DkimSigningConfig [-DomainName] <SmtpDomainWithSubdomains> [-Enabled] <Boolean>
+ [-AdminDisplayName <String>]
+ [-BodyCanonicalization <CanonicalizationType>]
+ [-Confirm]
+ [-HeaderCanonicalization <CanonicalizationType>]
+ [-KeySize <UInt16>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 DKIM in Microsoft Office 365 is an email authentication method that uses a public key infrastructure (PKI), message headers, and CNAME records in DNS to authenticate the message sender, which is stamped in the DKIM-Signature header field. DKIM helps prevent forged sender email addresses (also known as spoofing) by verifying that the domain in the From address matches the domain in the DKIM-Signature header field.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-DkimSigningConfig -DomainName contoso.com -Enabled $true
 ```
 
@@ -54,6 +62,7 @@ Type: SmtpDomainWithSubdomains
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -69,10 +78,11 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 - $false: The policy is disabled.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 2
 Default value: None
@@ -88,6 +98,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -103,10 +114,11 @@ The BodyCanonicalization parameter specifies the canonicalization algorithm that
 - Simple: Only changes in empty lines at the end of the message body are tolerated.
 
 ```yaml
-Type: Simple | Relaxed
+Type: CanonicalizationType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +138,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -141,10 +154,11 @@ The HeaderCanonicalization parameter specifies the canonicalization algorithm th
 - Simple: No changes to the header fields are tolerated.
 
 ```yaml
-Type: Simple | Relaxed
+Type: CanonicalizationType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -153,13 +167,16 @@ Accept wildcard characters: False
 ```
 
 ### -KeySize
-The KeySize parameter specifies the size in bits of the public key that's used in the DKIM signing policy. The only available value is 1024.
+The KeySize parameter specifies the size in bits of the public key that's used in the DKIM signing policy. Valid values are 1024 or 2048.
+
+RSA keys are supported; Ed25519 keys aren't supported.
 
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -175,6 +192,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -183,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -196,5 +214,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/d33f240d-2bea-47d9-98d7-ce84bb75bc78.aspx)

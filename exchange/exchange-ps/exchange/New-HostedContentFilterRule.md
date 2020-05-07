@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/new-hostedcontentfilterrule
 applicable: Exchange Online, Exchange Online Protection
 title: New-HostedContentFilterRule
 schema: 2.0.0
@@ -14,9 +15,12 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-HostedContentFilterRule cmdlet to create content filter rules in your cloud-based organization.
+Use the New-HostedContentFilterRule cmdlet to create spam filter rules (content filter rules) in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -24,7 +28,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 New-HostedContentFilterRule [-Name] <String> -HostedContentFilterPolicy <HostedContentFilterPolicyIdParameter>
  [-Comments <String>]
  [-Confirm]
- [-Enabled <$true | $false>]
+ [-Enabled <Boolean>]
  [-ExceptIfRecipientDomainIs <Word[]>]
  [-ExceptIfSentTo <RecipientIdParameter[]>]
  [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
@@ -36,31 +40,38 @@ New-HostedContentFilterRule [-Name] <String> -HostedContentFilterPolicy <HostedC
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-New-HostedContentFilterRule -Name "Contoso Recipients" -HostedContentFilterPolicy "Contoso Content Filter Policy" -RecipientDomainIs contoso.com
+### Example 1
+```powershell
+New-HostedContentFilterRule -Name "Contoso Recipients" -HostedContentFilterPolicy "Contoso Spam Filter Policy" -RecipientDomainIs contoso.com
 ```
 
-This example creates a new content filter rule named Contoso Recipients with the following settings: If the recipient is in the domain contoso.com, apply the content filter policy named Contoso Content Filter Policy.
+This example creates a new spam filter rule named Contoso Recipients with the following settings: If the recipient is in the domain contoso.com, apply the spam filter policy named Contoso Spam Filter Policy.
 
 ## PARAMETERS
 
 ### -HostedContentFilterPolicy
-The HostedContentFilterPolicy parameter specifies the content filter policy to apply to messages that match the conditions defined by this content filter rule.
+The HostedContentFilterPolicy parameter specifies the spam filter policy (content filter policy) that's associated with the rule.
 
-You can use any value that uniquely identifies the policy. For example, you can specify the name, GUID, or distinguished name (DN) of the content filter policy.
+You can use any value that uniquely identifies the policy. For example:
 
-You can't specify the default content filter policy. And, you can't specify a content filter policy that's already associated with another content filter rule.
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can't specify the default spam filter policy, and you can't specify a spam filter policy that's already associated with another spam filter rule.
 
 ```yaml
 Type: HostedContentFilterPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -69,15 +80,16 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the content filter rule. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the spam filter rule. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
-The value itself can't contain the following characters: \\, %, &, \*, +, /, =, ?, {, }, \|, \<, \>, (, ), ;, :, [, ], comma (,), or double-quotation mark (").
+Don't use the following characters in the name value: \\, %, &, \*, +, /, =, ?, {, }, \|, \<, \>, (, ), ;, :, [, ], comma (,), or double quotation mark (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: 1
 Default value: None
@@ -93,6 +105,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -112,6 +125,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -123,10 +137,11 @@ Accept wildcard characters: False
 The Enabled parameter enables or disables the rule. Valid input for this parameter is $true or $false. The default value is $true.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -135,13 +150,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The ExceptIfRecipientDomainIs parameter specifies an exception for the rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -150,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentTo
-The ExceptIfSentTo parameter specifies an exception that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+The ExceptIfSentTo parameter specifies an exception for the rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -171,6 +187,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -179,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentToMemberOf
-The ExceptIfSentToMemberOf parameter specifies an exception that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
+The ExceptIfSentToMemberOf parameter specifies an exception for the rule that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
@@ -202,6 +219,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -210,15 +228,15 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and rules can't have the same priority value.
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
 Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
 
 - Valid priority values for the existing 8 rules are from 0 through 7.
 
-- Valid priority values for a new rule (the 9th rule) are from 0 through 8.
+- Valid priority values for a 9th new rule are from 0 through 8.
 
-- The default value for a new rule (the 9th rule) is 8.
+- The default value for the new 9th rule is 8.
 
 If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
 
@@ -227,6 +245,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -235,13 +254,14 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientDomainIs
-The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The RecipientDomainIs parameter specifies a condition for the rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies a condition that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+The SentTo parameter specifies a condition for the rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -271,6 +291,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -279,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
+The SentToMemberOf parameter specifies a condition for the rule that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 
@@ -302,6 +323,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -317,6 +339,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -325,20 +348,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/2df13ba9-1eb0-4da3-bd72-a79d5fa15e26.aspx)

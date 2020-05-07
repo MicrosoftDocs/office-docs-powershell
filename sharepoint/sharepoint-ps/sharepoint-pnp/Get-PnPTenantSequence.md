@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantsequence
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPTenantSequence
 ---
+
 # Get-PnPTenantSequence
 
 ## SYNOPSIS
@@ -19,14 +22,14 @@ Get-PnPTenantSequence -Template <ProvisioningHierarchy>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPTenantSequence -Template $myhierarchy
+Get-PnPTenantSequence -Template $myTemplateObject
 ```
 
 Returns all sequences from the specified tenant template
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPTenantSequence -Template $myhierarchy -Identity "mysequence"
+Get-PnPTenantSequence -Template $myTemplateObject -Identity "mysequence"
 ```
 
 Returns the specified sequence from the specified tenant template
@@ -48,7 +51,7 @@ Accept pipeline input: True
 ```
 
 ### -Template
-The hierarchy to retrieve the sequence from
+The template to retrieve the sequence from
 
 Only applicable to: SharePoint Online
 

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-cscallqueue
 applicable: Skype for Business Online
 title: Get-CsCallQueue
 schema: 2.0.0
@@ -75,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-The First parameter gets the first N Call Queues
+The First parameter gets the first N Call Queues. The default behavior is to return the first 100 number of queues. It is intended to be used for pagination purposes.
 
 ```yaml
 Type: Int32
@@ -91,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-The Skip parameter skips the first N Call Queues
+The Skip parameter skips the first N Call Queues. It is intended to be used for pagination purposes.
 
 ```yaml
 Type: Int32
@@ -101,7 +102,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: 0
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

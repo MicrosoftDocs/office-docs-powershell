@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/measure-pnpweb
 applicable: SharePoint Online, SharePoint 2016, SharePoint 2019
 schema: 2.0.0
+title: Measure-PnPWeb
 ---
+
 # Measure-PnPWeb
 
 ## SYNOPSIS

@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/test-pnpoffice365groupaliasisused
 applicable: SharePoint Online
 schema: 2.0.0
+title: Test-PnPOffice365GroupAliasIsUsed
 ---
+
 # Test-PnPOffice365GroupAliasIsUsed
 
 ## SYNOPSIS

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/get-publicfoldermigrationrequest
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-PublicFolderMigrationRequest
 schema: 2.0.0
@@ -16,9 +17,9 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-PublicFolderMigrationRequest cmdlet to view information about serial public folder migration requests (requests created by the New-PublicFolderMigrationRequest cmdlet).
 
-**Note**: Serial public folder migration cmdlets are no longer available in Exchange Online.
+**Note**: Support for serial migration of public folders ended in Exchange 2013 Cumulative Update 8 (CU8), and the cmdlets are no longer available in Exchange Online. Instead, use the corresponding **\*-MigrationBatch** and **\*-PublicFolderMailboxMigration\*** cmdlets.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,12 +28,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Get-PublicFolderMigrationRequest
  [-BatchName <String>]
  [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>]
+ [-HighPriority <Boolean>]
  [-Name <String>]
  [-RequestQueue <DatabaseIdParameter>]
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
- [-Suspend <$true | $false>]
+ [-Suspend <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -45,19 +46,19 @@ Get-PublicFolderMigrationRequest [[-Identity] <PublicFolderMigrationRequestIdPar
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-PublicFolderMigrationRequest
 ```
 
 This example returns the status of in-progress migration requests.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-PublicFolderMigrationRequest -Identity "PFMigrate10_11_12" | Format-List Suspended,AutoSuspended
 ```
 
@@ -75,6 +76,7 @@ Type: String
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -90,6 +92,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -107,10 +110,11 @@ The HighPriority parameter filters the results based on the Priority value that 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +136,7 @@ Type: PublicFolderMigrationRequestIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: 1
 Default value: None
@@ -149,6 +154,7 @@ Type: String
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +178,7 @@ Type: DatabaseIdParameter
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -187,6 +194,7 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -224,6 +232,7 @@ Type: RequestStatus
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -237,10 +246,11 @@ The Suspend parameter specifies whether to return requests that have been suspen
 You can't use this parameter with the Identity parameter.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -249,20 +259,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/df474db6-7408-4aac-b703-424c9f36560e.aspx)

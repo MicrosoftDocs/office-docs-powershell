@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsmeetingpolicy
 applicable: Skype for Business Online
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
@@ -23,8 +24,8 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
- [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-Identity] <XdsIdentity> [-InMemory] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-PreferredMeetingProviderForIslandsMode <string>]
+ [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -193,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPowerPointSharing
-Determines whether Powerpoint sharing is allowed in a user’s meetings. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether Powerpoint sharing is allowed in a user's meetings. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
 Type: Boolean
@@ -253,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWhiteboard
-Determines whether whiteboard is allowed in a user’s meetings. Set this to TRUE to allow. Set this to FALSE to prohibit
+Determines whether whiteboard is allowed in a user's meetings. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
 Type: Boolean
@@ -413,6 +414,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreferredMeetingProviderForIslandsMode
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TeamsAndSfb
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

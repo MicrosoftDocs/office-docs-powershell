@@ -1,5 +1,6 @@
 ﻿---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-supervisoryreviewactivity
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-SupervisoryReviewActivity
 schema: 2.0.0
@@ -16,7 +17,10 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-SupervisoryReviewActivity cmdlet to view all activities performed by a reviewer for a specific supervision policy. This information may be useful if reviewer activities are required in regulatory compliance audits or in litigation.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,12 +30,12 @@ Get-SupervisoryReviewActivity -EndDate <ExDateTime> -PolicyId <String> -StartDat
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-SupervisoryReviewActivity -PolicyId $policyId -StartDate $startDate -EndDate $endDate | Sort-Object Timestamp -Descending | fl
 PolicyId,ItemSubject,ActivityId,Timestamp,ActionType,ActionAppliedBy,ItemStatusAfterAction
 ```
@@ -39,7 +43,7 @@ PolicyId,ItemSubject,ActivityId,Timestamp,ActionType,ActionAppliedBy,ItemStatusA
 This example returns all the supervisory review activities for specified supervision policy.
 
 ### Example 2
-```
+```powershell
 Get-SupervisoryReviewActivity -PolicyId $policyId -StartDate $startDate -EndDate $endDate | Sort-Object Timestamp -Descending | select-object PolicyId,ItemSubject,ActivityId,Timestamp,ActionType,ActionAppliedBy,ItemStatusAfterAction | Export-csv 'C:\Temp\SupervisoryReviewActivity.csv'
 ```
 
@@ -57,6 +61,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -72,6 +77,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -89,6 +95,7 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
 Required: True
 Position: Named
 Default value: None
@@ -97,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -110,5 +117,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://docs.microsoft.compowershell/module/exchange/get-supervisoryreviewactivity)

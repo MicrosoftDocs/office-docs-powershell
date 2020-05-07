@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/import-csorganizationalautoattendantholidays
 applicable: Skype for Business Online
 title: Import-CsOrganizationalAutoAttendantHolidays
 schema: 2.0.0
@@ -28,7 +29,7 @@ The Export-CsOrganizationalAutoAttendantHolidays cmdlet returns the holiday sche
 **NOTE**
 - Each line in the CSV file used by Export-CsOrganizationalAutoAttendantHolidays and Import-CsOrganizationalAutoAttendantHolidays cmdlet should be of the following format:
 
-   `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,…,StartDateTime10,EndDateTime10`
+   `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,...,StartDateTime10,EndDateTime10`
 
     where 
     - HolidayName is the name of the holiday to be imported.
@@ -46,7 +47,7 @@ $bytes = [System.IO.File]::ReadAllBytes("C:\Imports\Holidays.csv")
 Import-CsOrganizationalAutoAttendantHolidays -PrimaryUri sip:mainoaa@contoso.com -Input $bytes
 ```
 
-In this example, the Import-CsOrganizationalAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path “C:\Imports\Holidays.csv” to an auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In this example, the Import-CsOrganizationalAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path "C:\Imports\Holidays.csv" to an auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -54,7 +55,7 @@ $bytes = [System.IO.File]::ReadAllBytes("C:\Imports\Holidays.csv")
 Import-CsOrganizationalAutoAttendantHolidays -PrimaryUri sip:mainoaa@contoso.com -Input $bytes | Format-Table -Wrap -AutoSize
 ```
 
-In this example, the Import-CsOrganizationalAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path “C:\Imports\Holidays.csv” to an auto attendant with Primary URI of sip:mainoaa@contoso.com. The result of the import process is formatted as a table.
+In this example, the Import-CsOrganizationalAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path "C:\Imports\Holidays.csv" to an auto attendant with Primary URI of sip:mainoaa@contoso.com. The result of the import process is formatted as a table.
 
 ## PARAMETERS
 

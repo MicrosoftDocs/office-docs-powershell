@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsupgradepolicy
 applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
@@ -107,7 +108,7 @@ After running these lines will create an  HTML  file on the Desktop of the curre
 ```
 Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
 ```
-This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
+This will create a CSV  file on the Desktop of the current user with the name "TeamsUpgrade.csv"
 
 ### Example 8 Get a report on existing TeamsUpgradePolicy users (HTML Report - Oneliner Version)
 ```
@@ -166,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateMeetingsToTeams
-Specifies whether to move existing Skype for Business meetings organized by the user to Teams. This parameter can only be true if the mode of the specified policy instance is either TeamsOnly or SfBWithTeamsCollabAndMeetings, and if the policy instance is being granted to a specific user.  It not possible to trigger meeting migration when granting TeamsUpgradePolicy to the entire tenant. For more details, see [Using the meeting migration service](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
+Specifies whether to move existing Skype for Business meetings organized by the user to Teams. This parameter can only be true if the mode of the specified policy instance is either TeamsOnly or SfBWithTeamsCollabAndMeetings, and if the policy instance is being granted to a specific user.  It is not possible to trigger meeting migration when granting TeamsUpgradePolicy to the entire tenant. For more details, see [Using the meeting migration service](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 
 

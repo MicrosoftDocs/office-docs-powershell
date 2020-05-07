@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpsitecollectiontermstore
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPSiteCollectionTermStore
 ---
+
 # Get-PnPSiteCollectionTermStore
 
 ## SYNOPSIS

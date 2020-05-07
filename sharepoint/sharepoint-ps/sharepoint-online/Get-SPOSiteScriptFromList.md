@@ -1,5 +1,7 @@
 ---
 external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositescriptfromlist
 applicable: SharePoint Online
 title: Get-SPOSiteScriptFromList
 schema: 2.0.0
@@ -17,14 +19,12 @@ Creates site script syntax from an existing SharePoint list.
 ## SYNTAX
 
 ```powershell
-Get-SPOSiteScriptFromList
-  -ListUrl <string>
-  [<CommonParameters>]
+Get-SPOSiteScriptFromList -ListUrl <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Uses an existing SharePoint list to output a JSON blob that can be used to create a site script for use in a site design. 
+Uses an existing SharePoint list to output a JSON blob that can be used to create a site script for use in a site design.
 
 ## EXAMPLES
 
@@ -33,8 +33,8 @@ Uses an existing SharePoint list to output a JSON blob that can be used to creat
 This example creates the site script output from an existing list - and writes it to a variable. This variable is then referenced to create a site script.
 
 ```powershell
-C:\> $extracted = Get-SPOSiteScriptFromList -ListUrl "https://contoso.sharepoint.com/sites/strategy/customer-contacts"
-C:\> Add-SPOSiteScript `
+$extracted = Get-SPOSiteScriptFromList -ListUrl "https://contoso.sharepoint.com/sites/strategy/customer-contacts"
+Add-SPOSiteScript `
     -Title "Contoso Customer Tracker"
     -Description "This creates a customer contact list"
     -Content $extracted
@@ -43,16 +43,21 @@ C:\> Add-SPOSiteScript `
 ## PARAMETERS
 
 ### -ListUrl
+
 The url of the list to be referenced for the JSON output.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False 
+Accept wildcard characters: False
 ```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

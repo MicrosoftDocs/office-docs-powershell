@@ -1,12 +1,13 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Online, Exchange Online Protection
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/set-antiphishrule
+Applicable: Exchange Online
 title: Set-AntiPhishRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
+monikerRange: "exchonline-ps"
 ---
 
 # Set-AntiPhishRule
@@ -14,9 +15,12 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-AntiPhishRule cmdlet to modify antiphishing rules in your cloud-based organization.
+Use the Set-AntiPhishRule cmdlet to modify antiphish rules in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -37,21 +41,21 @@ Set-AntiPhishRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-AntiPhishRule -Identity "Engineering Department Phishing Rule" -ExceptIfRecipientDomainIs fabrikam.com
 ```
 
-This example modifies the existing antiphishing rule named Engineering Department Phishing Rule to exclude messages sent to the fabrikam.com domain.
+This example modifies the existing antiphish rule named Engineering Department Phishing Rule to exclude messages sent to the fabrikam.com domain.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the antiphishing rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
+The Identity parameter specifies the antiphish rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
 - Name
 
@@ -63,7 +67,8 @@ The Identity parameter specifies the antiphishing rule that you want to modify. 
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: True
 Position: 0
 Default value: None
@@ -72,9 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -AntiPhishPolicy
-The AntiPhishPolicy parameter specifies the antiphishing policy that's associated with the antiphishing rule. The rule defines the conditions, and the policy defines the actions.
-
-You can use any value that uniquely identifies the policy. For example:
+The AntiPhishPolicy parameter specifies the antiphish policy that's associated with the antiphish rule. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -86,7 +89,8 @@ You can use any value that uniquely identifies the policy. For example:
 Type: AntiPhishPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +105,8 @@ The Comments parameter specifies informative comments for the rule, such as what
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +125,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +141,8 @@ The ExceptIfRecipientDomainIs parameter specifies an exception that looks for re
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -164,7 +171,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +201,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -202,13 +211,14 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the antiphishing rule. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the antiphish rule. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +243,8 @@ If you modify the priority value of a rule, the position of the rule in the list
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -248,7 +259,8 @@ The RecipientDomainIs parameter specifies a condition that looks for recipients 
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +289,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -305,10 +318,11 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.
 
 ```yaml
-Type:
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -323,7 +337,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -332,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -345,5 +360,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online version](https://technet.microsoft.com/library/b9bbb572-f8d9-4a3c-9471-19b91a07acba.aspx)

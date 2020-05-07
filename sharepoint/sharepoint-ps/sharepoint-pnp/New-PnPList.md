@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnplist
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: New-PnPList
 ---
+
 # New-PnPList
 
 ## SYNOPSIS
@@ -33,17 +36,17 @@ Create a new announcements list
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-New-PnPList -Title "Demo List" -Url "DemoList" -Template Announcements
+New-PnPList -Title "Demo List" -Url "lists/DemoList" -Template Announcements
 ```
 
-Create a list with a title that is different from the url
+Create an announcements list with a title that is different from the url
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 New-PnPList -Title HiddenList -Template GenericList -Hidden
 ```
 
-Create a new custom list and hides it from the SharePoint UI.
+Create a new custom list and hides it from the SharePoint UI
 
 ## PARAMETERS
 

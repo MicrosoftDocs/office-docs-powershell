@@ -1,9 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinelissubnet
 applicable: Skype for Business Online
 title: Get-CsOnlineLisSubnet
 schema: 2.0.0
-author: junya
+author: kaishuipinggai
 ms.author: junya
 ms.reviewer:
 ---

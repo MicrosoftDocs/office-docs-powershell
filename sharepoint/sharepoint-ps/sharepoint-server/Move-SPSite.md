@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/move-spsite
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPSite
 schema: 2.0.0
@@ -186,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -CopyEvents
-Specifies if events need to be copied.
+Specifies if events of the EventCache table need to be copied to the destination Content Database.
 
 The valid values are True or False.
 
@@ -194,7 +196,7 @@ The valid values are True or False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Online, Exchange Online Protection
+online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/remove-antiphishpolicy
+applicable: Exchange Online
 title: Remove-AntiPhishPolicy
 schema: 2.0.0
 author: chrisda
@@ -14,9 +15,12 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-AntiPhishPolicy cmdlet to remove antiphishing policies from your cloud-based organization.
+Use the Remove-AntiPhishPolicy cmdlet to remove antiphish policies from your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,21 +30,21 @@ Remove-AntiPhishPolicy [-Identity] <AntiPhishPolicyIdParameter> [-Confirm] [-For
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-AntiPhishPolicy -Identity "Quarantine Policy"
 ```
 
-This example removes the antiphishing policy named Quarantine Policy.
+This example removes the antiphish policy named Quarantine Policy.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the antiphishing policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the antiphish policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -52,7 +56,8 @@ The Identity parameter specifies the antiphishing policy that you want to remove
 Type: AntiPhishPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: True
 Position: 0
 Default value: None
@@ -71,7 +76,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +92,8 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +108,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
+
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,5 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online version](https://technet.microsoft.com/library/5d497eed-c33c-4280-a5fe-945546ab1492.aspx)

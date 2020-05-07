@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguserdefaultnumber
 applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingUserDefaultNumber
 schema: 2.0.0
@@ -12,7 +13,7 @@ ms.reviewer:
 # Set-CsOnlineDialInConferencingUserDefaultNumber
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Replace the default toll or toll-free number for all users.
 
 ## SYNTAX
 
@@ -46,16 +47,17 @@ Provide the detailed description here.
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Set-CsOnlineDialInConferencingUserDefaultNumber -FromNumber 14255550100 -ToNumber 14255550101 -NumberType Toll -RescheduleMeetings -BridgeId 9884626f-dcfb-49f4-8025-912f5bc68fdc
 ```
 
-Insert descriptive text for example 1.
+This example replaces the default toll or toll-free number for all users who have the number 14255550100 as a default number to the number 14255550101 and starts the process of rescheduling their meetings.
 
 
 ## PARAMETERS
 
 ### -BridgeId
-PARAMVALUE: Guid
+The Bridge Id results from running [Get-CsOnlineDialInConferencingBridge](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
+For example "9884626f-dcfb-49f4-8025-912f5bc68fdc". You can either specify BridgeName or BridgeId.
 
 ```yaml
 Type: Guid
@@ -71,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
-PARAMVALUE: String
+The Bridge Name results from running [Get-CsOnlineDialInConferencingBridge](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
+For example "Conference Bridge". You can either specify BridgeName or BridgeId.
 
 ```yaml
 Type: String
@@ -87,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -CountryOrRegion
-PARAMVALUE: String
+A String representing the Country or Region this Dial In Conferencing Default number belongs to.
 
 ```yaml
 Type: String
@@ -103,7 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -FromNumber
-PARAMVALUE: String
+The current default number defined.
+$null if no number defined.
 
 ```yaml
 Type: String
@@ -119,7 +123,11 @@ Accept wildcard characters: False
 ```
 
 ### -NumberType
-PARAMVALUE: String
+The type of number this Dial In Conferencing Default number has.
+Valid values are
+
+- Toll
+- TollFree
 
 ```yaml
 Type: String
@@ -135,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -ToNumber
-PARAMVALUE: String
+The new number to assign, without the + sign, for example 14255550101.
 
 ```yaml
 Type: String
@@ -151,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -AreaOrState
-PARAMVALUE: String
+A String representing the Area or State this Dial In Conferencing Default number belongs to.
 
 ```yaml
 Type: String
@@ -167,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -CapitalOrMajorCity
-PARAMVALUE: String
+A String representing the Capital or Major City this Dial In Conferencing Default number belongs to.
 
 ```yaml
 Type: String
@@ -183,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-PARAMVALUE: SwitchParameter
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -199,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
@@ -215,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -231,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -RescheduleMeetings
-PARAMVALUE: SwitchParameter
+Sends e-mail notifications to Meeting attendes with the updated settings.
 
 ```yaml
 Type: SwitchParameter
@@ -247,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -263,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantDomain
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -279,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter

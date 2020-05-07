@@ -1,14 +1,17 @@
 ---
 external help file:
-applicable: SharePoint Online
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpwebtemplates
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPWebTemplates
 ---
+
 # Get-PnPWebTemplates
 
 ## SYNOPSIS
-Returns the available web templates.
+Returns the available web templates
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Get-PnPWebTemplates [-Lcid <UInt32>]
@@ -17,7 +20,7 @@ Get-PnPWebTemplates [-Lcid <UInt32>]
 ```
 
 ## DESCRIPTION
-Will list all available templates one can use to create a classic site.
+Will list all available templates one can use to create a site
 
 ## EXAMPLES
 
@@ -57,7 +60,7 @@ Accept pipeline input: False
 ```
 
 ### -Lcid
-The language ID. For instance: 1033 for English
+The language ID. For instance: 1033 for English.
 
 ```yaml
 Type: UInt32
@@ -86,4 +89,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](https://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](http://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)

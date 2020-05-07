@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/set-ipallowlistprovider
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-IPAllowListProvider
 schema: 2.0.0
@@ -16,13 +17,13 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Set-IPAllowListProvider cmdlet to modify IP Allow list providers that are used by the Connection Filtering agent on Edge Transport servers.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-IPAllowListProvider [-Identity] <IPAllowListProviderIdParameter> [-AnyMatch <$true | $false>]
- [-BitmaskMatch <IPAddress>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
+Set-IPAllowListProvider [-Identity] <IPAllowListProviderIdParameter> [-AnyMatch <Boolean>]
+ [-BitmaskMatch <IPAddress>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
  [-IPAddressesMatch <MultiValuedProperty>] [-LookupDomain <SmtpDomain>] [-Name <String>] [-Priority <Int32>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -32,15 +33,15 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-IPAllowListProvider Contoso.com -AnyMatch $true
 ```
 
 This example configures the IP Allow list provider named Contoso.com to allow connections from an IP address if any IP address status codes are returned.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-IPAllowListProvider Contoso.com -Priority 1
 ```
 
@@ -62,6 +63,7 @@ Type: IPAllowListProviderIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -73,10 +75,11 @@ Accept wildcard characters: False
 The AnyMatch parameter specifies whether any response by the allow list provider is treated as a match. Valid input for this parameter is $true or $false. The default value is $false. When this parameter is set to $true, and connection filtering sends the IP address of the connecting SMTP server to the allow list provider, any response code returned by the allow list provider causes connection filtering to allow messages from that source.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +95,7 @@ Type: IPAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +115,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +133,7 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -139,10 +145,11 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the Connection Filtering agent queries the IP Allow list provider according to the priority set for this IP Allow list provider configuration. Valid input for this parameter is $true or $false. The default value is $true. By default, the Connection Filtering agent queries the IP Allow list provider according to the priority set for this IP Allow list provider configuration.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +169,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +185,7 @@ Type: SmtpDomain
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +201,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +219,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -224,6 +235,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -232,20 +244,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/a89b0d3d-028e-44e6-82ed-a457a8129497.aspx)

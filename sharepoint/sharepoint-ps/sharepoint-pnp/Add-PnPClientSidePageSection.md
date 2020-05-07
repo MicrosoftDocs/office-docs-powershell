@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpclientsidepagesection
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Add-PnPClientSidePageSection
 ---
+
 # Add-PnPClientSidePageSection
 
 ## SYNOPSIS

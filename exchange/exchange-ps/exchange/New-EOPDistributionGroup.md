@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-eopdistributiongroup
 applicable: Exchange Online Protection
 title: New-EOPDistributionGroup
 schema: 2.0.0
@@ -20,13 +21,18 @@ Typically, EOP standalone customers that also have on-premises Active Directory 
 
 This cmdlet uses a batch processing method that results in a propagation delay of a few minutes before the results of the cmdlet are visible.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-EOPDistributionGroup -Name <String> [-Alias <String>] [-DisplayName <String>] [-ManagedBy <String[]>]
- [-Members <String[]>] [-Notes <String>] [-PrimarySmtpAddress <SmtpAddress>] [-Type <Distribution | Security>]
+New-EOPDistributionGroup -Name <String> -ManagedBy <String[]>
+ [-Alias <String>]
+ [-DisplayName <String>]
+ [-Members <String[]>]
+ [-Notes <String>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-Type <GroupType>]
  [<CommonParameters>]
 ```
 
@@ -39,19 +45,19 @@ You can use the New-EOPDistributionGroup cmdlet to create the following types of
 
 Distribution groups are used to consolidate groups of recipients into a single point of contact for email messages. Security groups are used to grant permissions to multiple users.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 New-EOPDistributionGroup -Name Managers -Type Security -ManagedBy "Kitty Petersen"
 ```
 
 This example creates a mail-enabled universal security group named Managers that's managed by Kitty Petersen.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 New-EOPDistributionGroup -Name "Security Team" -ManagedBy "Tyson Fawcett" -Alias SecurityTeamThree -DisplayName "Security Team" -Notes "Security leads from each division" -PrimarySmtpAddress SecTeamThree@contoso.com -Type Distribution -Members @("Tyson Fawcett","Kitty Petersen")
 ```
 
@@ -69,6 +75,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -76,40 +83,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Alias
-The Alias parameter specifies the email alias of the distribution group. The Alias parameter value is used to generate the primary SMTP email address if you don't use the PrimarySmtpAddress parameter.
-
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisplayName
-The DisplayName parameter specifies the name of the distribution group in the Exchange admin center (EAC). If the DisplayName parameter isn't specified, the value of the Name parameter is used for the DisplayName parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ManagedBy
-The ManagedBy parameter specifies a user who owns the group. In Exchange Online Protection, you need to use this parameter to specify at least one group owner. You can use any value that uniquely identifies the user. For example:
+The ManagedBy parameter specifies a user who owns the group. You need to use this parameter to specify at least one group owner. You can use any value that uniquely identifies the user. For example:
 
 - Name
 
@@ -132,6 +107,43 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Alias
+The Alias parameter specifies the email alias of the distribution group. The Alias parameter value is used to generate the primary SMTP email address if you don't use the PrimarySmtpAddress parameter.
+
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+
+If you don't use the Alias parameter when you create a group, the value of the Name parameter is used for the alias. This value is also used in the primary SMTP email address. Spaces are removed and unsupported characters are converted to question marks (?).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayName
+The DisplayName parameter specifies the name of the distribution group in the Exchange admin center (EAC). If the DisplayName parameter isn't specified, the value of the Name parameter is used for the DisplayName parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +181,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -184,6 +197,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +213,7 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -207,13 +222,18 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The Type parameter specifies the group type. Valid values are Distribution or Security.
+The Type parameter specifies the group type. Valid values are:
+
+- Distribution (This is the default value).
+
+- Security
 
 ```yaml
-Type: Distribution | Security
+Type: GroupType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -222,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -235,5 +255,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/4610dfe5-fca8-4ba8-be3c-535d1753e0f4.aspx)

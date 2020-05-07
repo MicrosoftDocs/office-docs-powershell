@@ -1,12 +1,15 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnplabel
 applicable: SharePoint Online
 schema: 2.0.0
+title: Set-PnPLabel
 ---
+
 # Set-PnPLabel
 
 ## SYNOPSIS
-Sets a label/tag on the specified list or library
+Sets a label/tag on the specified list or library. Use Reset-PnPLabel to remove the label again.
 
 ## SYNTAX 
 

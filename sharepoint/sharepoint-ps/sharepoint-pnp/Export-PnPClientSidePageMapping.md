@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/export-pnpclientsidepagemapping
 applicable: SharePoint Online
 schema: 2.0.0
+title: Export-PnPClientSidePageMapping
 ---
+
 # Export-PnPClientSidePageMapping
 
 ## SYNOPSIS
@@ -18,6 +21,7 @@ Export-PnPClientSidePageMapping [-BuiltInWebPartMapping [<SwitchParameter>]]
                                 [-AnalyzeOOBPageLayouts [<SwitchParameter>]]
                                 [-Folder <String>]
                                 [-Overwrite [<SwitchParameter>]]
+                                [-Logging [<SwitchParameter>]]
                                 [-Web <WebPipeBind>]
                                 [-Connection <SPOnlineConnection>]
 ```
@@ -100,6 +104,18 @@ The folder to created the mapping file(s) in
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Logging
+Outputs analyser logging to the console
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False

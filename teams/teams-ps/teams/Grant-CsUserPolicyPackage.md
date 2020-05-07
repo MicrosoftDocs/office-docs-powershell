@@ -7,7 +7,7 @@ author: etgottli
 ms.author: etgottli
 ms.reviewer: icchan
 manager: amitar
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/grant-csuserpolicypackage
 schema: 2.0.0
 ---
 
@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet supports applying a policy package to users in a tenant.
+This cmdlet supports applying a policy package to users in a tenant. Note that there is a limit of 20 users you can apply the package to at a time.
 
 ## SYNTAX
 
@@ -41,7 +41,7 @@ Applies the Education_PrimaryStudent policy package to two users in the tenant.
 
 ### -Identity
 
-A list of one or more users in the tenant. Note that we recommend applying a policy package to no more than 15 users at once.
+A list of one or more users in the tenant. Note that there is a limit of 20 users you can apply the package to at a time.
 
 ```yaml
 Type: String[]

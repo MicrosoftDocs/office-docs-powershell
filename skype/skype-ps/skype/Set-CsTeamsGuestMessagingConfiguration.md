@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsguestmessagingconfiguration
 applicable: Skype for Business Online
 title: Set-CsTeamsGuestMessagingConfiguration
 schema: 2.0.0
@@ -166,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -GiphyRatingType
-Determines Giphy content restrictions. Default value is "Moderate", other option is "Strict"
+Determines Giphy content restrictions. Default value is "Moderate", other options are "NoRestriction" and "Strict"
 
 ```yaml
 Type: String

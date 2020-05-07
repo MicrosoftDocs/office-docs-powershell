@@ -1,5 +1,6 @@
  ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/release-quarantinemessage
 applicable: Exchange Online, Exchange Online Protection
 title: Release-QuarantineMessage
 schema: 2.0.0
@@ -18,7 +19,10 @@ Use the Release-QuarantineMessage cmdlet to release messages from quarantine in 
 
 For files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, you can unblock the files in the respective team sites and document libraries by using the Release-QuarantineMessage cmdlet so users can access, share, and download the files.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+> [!NOTE]
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -64,42 +68,42 @@ Release-QuarantineMessage -Identity <QuarantineMessageIdentity>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Get-QuarantineMessage -MessageID "<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com>" | Release-QuarantineMessage -User julia@contoso.com
 ```
 
-This example uses the Get-QuarantineMessage cmdlet to release the quarantined message with the Message-ID value \<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com\> to an original recipient julia@contoso.com.
+This example uses the Get-QuarantineMessage cmdlet to release the quarantined message with the Message-ID value `<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com>` to an original recipient julia@contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Release-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7 -ReleaseToAll
 ```
 
 This example releases the quarantined message with the specified Identity value to all original recipients.
 
-### -------------------------- Example 3 --------------------------
-```
+### Example 3
+```powershell
 Get-QuarantineMessage | Release-QuarantineMessage -ReleaseToAll
 ```
 
 This example releases all messages to all original recipients.
 
-### -------------------------- Example 4 --------------------------
-```
-$q = Get-QuarantineMessage -QuarantineTypes SPOMalware; $q[-1] | Release-QuarantineMessage -Organization -ReleaseToAll
+### Example 4
+```powershell
+$q = Get-QuarantineMessage -QuarantineTypes SPOMalware; $q[-1] | Release-QuarantineMessage -ReleaseToAll
 ```
 
-This example releases a file that was quarantined as part of Office 365 Advanced Threat Protection. The first command stores all SharePoint Online, OneDrive for Business and Microsoft Teams quarantined files in the variable $q. The second command releases the last file in the list. For more information about elements in arrays and index numbers, see Accessing and Using Array Elements (https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays#accessing-and-using-array-elements).
+This example releases a file that was quarantined as part of Office 365 Advanced Threat Protection. The first command stores all SharePoint Online, OneDrive for Business and Microsoft Teams quarantined files in the variable $q. The second command releases the last file in the list. For more information about elements in arrays and index numbers, see [Accessing and Using Array Elements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays#accessing-and-using-array-elements).
 
 ## PARAMETERS
 
 ### -Identities
-The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: value1,value2,...valueN. The value is a unique quarantined message identifier in the format GUID1\\GUID2 (for example c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7).
+The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: `value1,value2,...valueN`. The value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
 
 You can find the identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
 
@@ -110,6 +114,7 @@ Type: QuarantineMessageIdentity[]
 Parameter Sets: Identities
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -122,6 +127,7 @@ Type: QuarantineMessageIdentity[]
 Parameter Sets: OrgReleaseToAll, OrgReleaseToUser
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -130,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the quarantined message that you want to release. The value is a unique quarantined message identifier in the format GUID1\\GUID2 (for example c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7).
+The Identity parameter specifies the quarantined message that you want to release. The value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
 
 You can find the Identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
 
@@ -139,6 +145,7 @@ Type: QuarantineMessageIdentity
 Parameter Sets: Identities, OrgReleaseToAll, OrgReleaseToUser
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +158,7 @@ Type: QuarantineMessageIdentity
 Parameter Sets: IdentityOnly
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -159,11 +167,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReleaseToAll
-The ReleaseToAll switch releases the quarantined message to all original recipients. You don't have to specify a value with this switch.
+The ReleaseToAll switch releases the quarantined message to all original recipients. You don't need to specify a value with this switch.
 
 This parameter is required for the quarantine type SPOMalware.
 
-If you previously used the User parameter or the ReleaseToAll switch to release the quarantined message to some or all of the original recipients, those recipients are skipped when you use the ReleaseToAll parameter again. You don't have to specify a value with the ReleaseToAll switch.
+If you previously used the User parameter or the ReleaseToAll switch to release the quarantined message to some or all of the original recipients, those recipients are skipped when you use the ReleaseToAll switch again.
 
 You can't use the ReleaseToAll switch and the User parameter in the same command.
 
@@ -172,6 +180,7 @@ Type: SwitchParameter
 Parameter Sets: OrgReleaseToAll
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -191,6 +200,7 @@ Type: String[]
 Parameter Sets: OrgReleaseToUser
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: True
 Position: Named
 Default value: None
@@ -208,6 +218,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -227,6 +238,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -244,6 +256,7 @@ Type: SwitchParameter
 Parameter Sets: OrgReleaseToAll
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -261,6 +274,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -278,6 +292,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -293,6 +308,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
+
 Required: False
 Position: Named
 Default value: None
@@ -301,20 +317,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/4a3aa05c-238f-46f2-b8dd-b0e3c38eab3e.aspx)

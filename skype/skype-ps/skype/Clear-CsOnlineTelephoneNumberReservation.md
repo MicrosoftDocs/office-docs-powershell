@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+online version: https://docs.microsoft.com/powershell/module/skype/clear-csonlinetelephonenumberreservation
 applicable: Skype for Business Online
 title: Clear-CsOnlineTelephoneNumberReservation
 schema: 2.0.0
@@ -141,5 +142,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online version:](https://docs.microsoft.com/powershell/module/skype/Clear-CsOnlineTelephoneNumberReservation?view=skype-ps)

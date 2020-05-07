@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
+online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/set-searchdocumentformat
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-SearchDocumentFormat
 schema: 2.0.0
@@ -18,24 +19,24 @@ Use the Set-SearchDocumentFormat cmdlet to enable or disable the file format for
 
 When you disable a file format for content indexing by Exchange Search, contents of the file become unsearchable by Exchange Search clients such as Outlook on the web, Microsoft Outlook in online mode and In-Place eDiscovery.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Enabled <$true | $false> [-Confirm]
+Set-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Enabled <Boolean> [-Confirm]
  [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Exchange Search includes built-in support for indexing many file formats. If you disable indexing for a supported file format, items containing an attachment of that file type aren't considered unsearchable. When you perform an In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx) search and you select the option to include unsearchable items, only items that are actually unsearchable are returned. Items that weren't searched because the associated file format is set as unsearchable aren't returned.
+Exchange Search includes built-in support for indexing many file formats. If you disable indexing for a supported file format, items containing an attachment of that file type aren't considered unsearchable. When you perform an [In-Place eDiscovery in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery) search and you select the option to include unsearchable items, only items that are actually unsearchable are returned. Items that weren't searched because the associated file format is set as unsearchable aren't returned.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-SearchDocumentFormat ZIP -Enabled $false
 ```
 
@@ -47,10 +48,11 @@ This command disables the Zip file format for indexing by Exchange Search.
 The Enabled parameter specifies whether the file format is enabled. Set the parameter to $false to disable the format for content indexing.
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: Named
 Default value: None
@@ -66,6 +68,7 @@ Type: SearchDocumentFormatId
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: True
 Position: 1
 Default value: None
@@ -85,6 +88,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +114,7 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +130,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
 Required: False
 Position: Named
 Default value: None
@@ -133,20 +139,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](https://technet.microsoft.com/library/d4aa8525-32de-4816-82d5-dfa3396d5006.aspx)

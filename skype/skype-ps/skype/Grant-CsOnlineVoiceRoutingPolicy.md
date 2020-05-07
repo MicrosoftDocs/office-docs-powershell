@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoiceroutingpolicy
 applicable: Skype for Business Online
-title: Get-CsOnlineUser
+title: Grant-CsOnlineVoiceRoutingPolicy
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
@@ -29,9 +30,9 @@ Grant-CsOnlineVoiceRoutingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-Domai
 ```
 
 ## DESCRIPTION
-Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
+Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Teams users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
 
-Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via Skype for Business Online or Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
+Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
 
 ## EXAMPLES
 
@@ -55,6 +56,13 @@ PS C:\> Get-CsOnlineUser | Grant-CsOnlineVoiceRoutingPolicy -PolicyName "Redmond
 ```
 
 Example 3 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to all the users in the tenant. To do this, the command first calls the `Get-CsOnlineUser` cmdlet to get all user accounts enabled for Skype for Business Online. Those user accounts are then piped to the `Grant-CsOnlineVoiceRoutingPolicy` cmdlet, which assigns each user the online voice routing policy RedmondOnlineVoiceRoutingPolicy.
+
+### -------------------------- Example 4 --------------------------
+```
+PS C:\> Grant-CsOnlineVoiceRoutingPolicy -PolicyName "RedmondOnlineVoiceRoutingPolicy" -Global
+```
+
+Example 4 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to all the users in the tenant, except any that have an explicit policy assignment.
 
 ## PARAMETERS
 
@@ -89,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant, except any that have an explicit policy assignment. To skip a warning when you do this operation, specify this parameter.
 
 ```yaml
 Type: SwitchParameter

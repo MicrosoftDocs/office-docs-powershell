@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://docs.microsoft.com/powershell/module/teams/remove-teamchanneluser
 schema: 2.0.0
 ---
 
-# Remove-TeamChannelUser (available in private preview)
+# Remove-TeamChannelUser
 
 ## SYNOPSIS
 Note: the command will return immediately, but the Teams application will not reflect the update immediately, please refresh the members page to see the update.
@@ -22,6 +22,9 @@ Remove-TeamChannelUser -GroupId <String> -DisplayName <String> -User <String> [-
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
 
 ## EXAMPLES
 

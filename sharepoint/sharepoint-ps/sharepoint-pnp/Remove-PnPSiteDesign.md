@@ -1,8 +1,11 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpsitedesign
 applicable: SharePoint Online
 schema: 2.0.0
+title: Remove-PnPSiteDesign
 ---
+
 # Remove-PnPSiteDesign
 
 ## SYNOPSIS

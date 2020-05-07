@@ -1,14 +1,17 @@
 ---
 external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenant
 applicable: SharePoint Online
 schema: 2.0.0
+title: Set-PnPTenant
 ---
+
 # Set-PnPTenant
 
 ## SYNOPSIS
 Sets organization-level site collection properties
 
-## SYNTAX
+## SYNTAX 
 
 ```powershell
 Set-PnPTenant [-MinCompatibilityLevel <Int>]
@@ -69,6 +72,7 @@ Set-PnPTenant [-MinCompatibilityLevel <Int>]
               [-EmailAttestationRequired <Boolean>]
               [-EmailAttestationReAuthDays <Int>]
               [-HideDefaultThemes <Boolean>]
+              [-DisabledWebPartIds <Guid[]>]
               [-Connection <SPOnlineConnection>]
 ```
 
@@ -76,7 +80,7 @@ Set-PnPTenant [-MinCompatibilityLevel <Int>]
 Sets organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota,
 ResourceQuotaAllocated, and SiteCreationMode.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must have the SharePoint Online admin or Global admin role to run the cmdlet.
 
 ## EXAMPLES
 
@@ -228,6 +232,18 @@ The values are: None Direct Internal AnonymousAccess
 
 ```yaml
 Type: SharingLinkType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DisabledWebPartIds
+Guids of out of the box modern web part id's to hide
+
+```yaml
+Type: Guid[]
 Parameter Sets: (All)
 
 Required: False
@@ -793,7 +809,7 @@ The valid values are:
 ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled. Disabled - External user sharing (share by email) and guest link sharing are both disabled.
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 
-For more information about sharing, see Manage external sharing for your SharePoint online environment (https://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
 
 ```yaml
 Type: SharingCapabilities

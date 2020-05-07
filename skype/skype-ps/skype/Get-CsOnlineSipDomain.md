@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinesipdomain
 applicable: Skype for Business Online
 title: Get-CsOnlineSipDomain
 schema: 2.0.0
@@ -48,14 +49,13 @@ A specific domain to get the status of.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Skype for Business Online
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -DomainStatus
 This indicates the status of an online sip domain, which can be either enabled or disabled.
@@ -65,14 +65,13 @@ Type: DomainStatus
 Parameter Sets: (All)
 Aliases:
 Accepted values: All, Enabled, Disabled
-applicable: Skype for Business Online
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
@@ -85,10 +84,13 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.Provision.OSD.OnlineSipDomainBase+DomainState
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
-[Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md) 
+
+[Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md)
+
 [Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)

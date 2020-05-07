@@ -1,5 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Sharepoint.Powershell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spappprincipalpermission
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPAppPrincipalPermission
 schema: 2.0.0
@@ -36,8 +38,8 @@ $clientID = "11111111-2222-3333-4444-555555555555"
 $site = Get-SPSite http://siteUrl
 $realm = Get-SPAuthenticationRealm -ServiceContext $site
 $appIdentifier = $clientID + "@" + $realm
-$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Web $site.RootWeb
-Remove-AppPrincipalPermission -AppPrincipal $appPrincipal -site $site.RootWeb -Scope Site
+$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Site $site.RootWeb
+Remove-AppPrincipalPermission -AppPrincipal $appPrincipal -Site $site.RootWeb -Scope Site
 ```
 
 This example removes the App Principal permission from the site collection scope.
