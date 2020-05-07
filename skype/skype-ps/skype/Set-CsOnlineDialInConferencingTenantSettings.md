@@ -343,6 +343,8 @@ For example, "KenMyer@Contoso.com" or "Admin@Contoso.com".
 
 The SendEmailFromAddress value is used only if the SendEmailFromDisplayName setting is specified, and the SendEmailFromOverride setting is $true.
 
+Note: The parameter has been deprecated and may be removed in future versions.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -360,6 +362,8 @@ Accept wildcard characters: False
 Specifies the display name to use in the "From" contact information on emails that are sent to users to notify them of their dial-in conferencing settings, or when their settings change.
 
 The SendEmailFromDisplayName value is used only if the SendEmailFromDisplayName setting is specified, and the SendEmailFromOverride setting is $true.
+
+Note: The parameter has been deprecated and may be removed in future versions.
 
 ```yaml
 Type: String
@@ -383,6 +387,8 @@ The default is $false.
 SendEmailFromOverride can't be $true if SendEmailFromAddress and SendEmailFromDisplayName aren't specified.
 
 If you want to change the email address information, you need to make sure that your inbound email policies allow for emails that come from the address specified by the SendEmailFromAddress parameter.
+
+Note: The parameter has been deprecated and may be removed in future versions.
 
 ```yaml
 Type: Boolean
