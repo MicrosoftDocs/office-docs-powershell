@@ -23,7 +23,7 @@ Set-CsUserTeamMembers -Team <PSListModifier> [-User] <String>
 ```
 
 ## DESCRIPTION
-The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (Secondary Extension Feature Activation) enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user. The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below: CsAdministrator - Get and Set for all cmdlets, CsVoiceAdministrator - Get and Set for all cmdlets, CsServerAdministrator - Get and Set for all cmdlets, CsHelpDesk - Get for all cmdlets Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets. For more information see [Using SEFAUtil functionality via PowerShell in Skype for Business Server 2019](https://docs.microsoft.com/skypeforbusiness/sefautil-functionality).
+The feature enables the use of SEFAUtil (Secondary Extension Feature Activation) functionality in PowerShell. SEFAUtil enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user. The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below: CsAdministrator - Get and Set for all cmdlets, CsVoiceAdministrator - Get and Set for all cmdlets, CsServerAdministrator - Get and Set for all cmdlets, CsHelpDesk - Get for all cmdlets Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets. For more information see [Using SEFAUtil functionality via PowerShell in Skype for Business Server 2019](https://docs.microsoft.com/skypeforbusiness/sefautil-functionality).
 
 ## EXAMPLES
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-Indicates the Identity of the user account to be modified. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
+Indicates the Identity of the user account to be modified. User Identities can be specified using one of four formats: 1) the SIP address; 2) the user principal name (UPN); 3) the domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
 
 ```yaml
 Type: String
