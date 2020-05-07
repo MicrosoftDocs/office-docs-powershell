@@ -2,7 +2,6 @@
 Module Name: SharePoint Online PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-online
-Locale: en-US
 author: trent-green
 ms.author: trgreen
 ms.reviewer:
@@ -399,10 +398,6 @@ The following cmdlet references are for SharePoint Online.
 ### [Restore-SPODeletedSite](Restore-SPODeletedSite.md)
 
 {{Manually Enter Restore-SPODeletedSite Description Here}}
-
-### [Revoke-SPObjectSecurity](Revoke-SPObjectSecurity.md)
-
-{{Manually Enter Revoke-SPObjectSecurity Description Here}}
 
 ### [Revoke-SPOHubSiteRights](Revoke-SPOHubSiteRights.md)
 

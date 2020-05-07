@@ -4,7 +4,7 @@ online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinel
 applicable: Skype for Business Online
 title: Set-CsOnlineLisSubnet
 schema: 2.0.0
-author: junya
+author: kaishuipinggai
 ms.author: junya
 ms.reviewer:
 ---

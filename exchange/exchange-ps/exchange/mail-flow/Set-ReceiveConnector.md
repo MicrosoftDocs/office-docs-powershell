@@ -1171,6 +1171,8 @@ This parameter uses the following syntax:
 
 The available \<capability\> values are:
 
+- AcceptCloudServicesMail (Exchange 2013 or later)
+
 - AcceptOorgProtocol
 
 - AcceptOorgHeader

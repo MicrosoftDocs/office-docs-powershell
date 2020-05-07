@@ -26,8 +26,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-EOPGroup [-ExternalDirectoryObjectId <String>] [-Identity <GroupIdParameter>] [-ManagedBy <String[]>]
- [-Notes <String>] [<CommonParameters>]
+Set-EOPGroup [-ExternalDirectoryObjectId <String>]
+ [-Identity <GroupIdParameter>]
+ [-ManagedBy <String[]>]
+ [-Notes <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-antiphishrule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-AntiPhishRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
+monikerRange: "exchonline-ps"
 ---
 
 # Get-AntiPhishRule
@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-AntiPhishRule cmdlet to view antiphishing rules in your cloud-based organization.
+Use the Get-AntiPhishRule cmdlet to view antiphish rules in your cloud-based organization.
 
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
@@ -35,22 +35,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-AntiPhishRule
+Get-AntiPhishRule | Format-Table Name,Priority,State
 ```
 
-This example returns a summary list of all antiphishing rules in your organization.
+This example returns a summary list of all antiphish rules in your organization.
 
 ### Example 2
 ```powershell
-Get-AntiPhishRule -Identity "Research Department Phishing Rule" | Format-List
+Get-AntiPhishRule -Identity "Research Department Phishing Rule"
 ```
 
-This example returns detailed information about the antiphishing rule named Research Department Phishing Rule.
+This example returns detailed information about the antiphish rule named Research Department Phishing Rule.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the antiphishing rule that you want to view. You can use any value that uniquely identifies the rule. For example:
+The Identity parameter specifies the antiphish rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
 
@@ -62,7 +62,7 @@ The Identity parameter specifies the antiphishing rule that you want to view. Yo
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 0
@@ -78,7 +78,7 @@ The State parameter filters the results by the state of the rule. Valid values a
 Type: RuleState
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

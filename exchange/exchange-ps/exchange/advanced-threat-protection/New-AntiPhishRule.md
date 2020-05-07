@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/new-antiphishrule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: New-AntiPhishRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
+monikerRange: "exchonline-ps"
 ---
 
 # New-AntiPhishRule
@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-AntiPhishRule cmdlet to view antiphishing rules in your cloud-based organization.
+Use the New-AntiPhishRule cmdlet to create antiphish rules in your cloud-based organization.
 
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
@@ -39,7 +39,7 @@ New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String>
 ```
 
 ## DESCRIPTION
-You need to add the antiphishing rule to an existing policy by using the AntiPhishPolicy parameter. You create antiphishing policies by using the New-AntiPhishPolicy cmdlet.
+You need to add the antiphish rule to an existing policy by using the AntiPhishPolicy parameter. You create antiphish policies by using the New-AntiPhishPolicy cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
@@ -47,27 +47,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-AntiPhishRule -Name "Research Department Phishing Rule" -AntiPhishPolicy "Research Quarantine" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
+New-AntiPhishRule -Name "Research Department" -AntiPhishPolicy "Research Quarantine" -SentToMemberOf "Research Department"
 ```
 
-This example creates an antiphishing rule named Research Department Phishing Rule with the following conditions:
+This example creates an antiphish rule named Research Department with the following settings:
 
-- The rule is associated with the antiphishing policy named Research Quarantine.
-
+- The rule is associated with the antiphish policy named Research Quarantine.
 - The rule applies to members of the group named Research Department.
-
-- The rule doesn't apply to members of the group named Research Department Managers.
 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies a unique name for the antiphishing rule. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the antiphish rule. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 0
@@ -77,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -AntiPhishPolicy
-The AntiPhishPolicy parameter specifies the antiphishing policy that's associated with the antiphishing rule. The rule defines the conditions, and the policy defines the actions.
+The AntiPhishPolicy parameter specifies the antiphish policy that's associated with the antiphish rule.
 
 You can use any value that uniquely identifies the policy. For example:
 
@@ -87,11 +84,13 @@ You can use any value that uniquely identifies the policy. For example:
 
 - GUID
 
+You can't specify the default antiphish policy. And, you can't specify an antiphish policy that's already associated with another antiphish rule.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -107,7 +106,7 @@ The Comments parameter specifies informative comments for the rule, such as what
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -127,7 +126,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -149,7 +148,7 @@ In the properties of the rule, the value of this parameter is visible in the Sta
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -165,7 +164,7 @@ The ExceptIfRecipientDomainIs parameter specifies an exception that looks for re
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -195,7 +194,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -227,7 +226,7 @@ If you remove the group after you create the rule, no exception is made for mess
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -253,7 +252,7 @@ If you modify the priority value of a rule, the position of the rule in the list
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -269,7 +268,7 @@ The RecipientDomainIs parameter specifies a condition that looks for recipients 
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -299,7 +298,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -331,7 +330,7 @@ If you remove the group after you create the rule, no action is taken on message
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -347,7 +346,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

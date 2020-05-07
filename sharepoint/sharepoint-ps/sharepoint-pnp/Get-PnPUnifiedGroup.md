@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpunifiedgroup
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPUnifiedGroup
 ---
 
 # Get-PnPUnifiedGroup
@@ -16,6 +17,7 @@ Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups. Re
 Get-PnPUnifiedGroup [-Identity <UnifiedGroupPipeBind>]
                     [-ExcludeSiteUrl [<SwitchParameter>]]
                     [-IncludeClassification [<SwitchParameter>]]
+                    [-IncludeHasTeam [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
@@ -55,6 +57,13 @@ Get-PnPUnifiedGroup -Identity $group
 
 Retrieves a specific Office 365 Group based on its object instance
 
+### ------------------EXAMPLE 6------------------
+```powershell
+Get-PnPUnifiedGroup -IncludeIfHasTeam
+```
+
+Retrieves all the Office 365 Groups and checks for each of them if it has a Microsoft Team provisioned for it
+
 ## PARAMETERS
 
 ### -ExcludeSiteUrl
@@ -83,6 +92,18 @@ Accept pipeline input: False
 
 ### -IncludeClassification
 Include Classification value of Office 365 Groups.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -IncludeHasTeam
+Include a flag for every Office 365 Group if it has a Microsoft Team provisioned for it. This will slow down the retrieval of Office 365 Groups so only use it if you need it.
 
 ```yaml
 Type: SwitchParameter

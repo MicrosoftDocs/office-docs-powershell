@@ -2,7 +2,6 @@
 Module Name: SharePoint PnP PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-pnp
-Locale: en-US
 ---
 
 # SharePoint PnP PowerShell

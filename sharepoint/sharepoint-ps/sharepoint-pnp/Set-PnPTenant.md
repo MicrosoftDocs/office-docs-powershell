@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenant
 applicable: SharePoint Online
 schema: 2.0.0
+title: Set-PnPTenant
 ---
 
 # Set-PnPTenant
@@ -79,7 +80,7 @@ Set-PnPTenant [-MinCompatibilityLevel <Int>]
 Sets organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota,
 ResourceQuotaAllocated, and SiteCreationMode.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must have the SharePoint Online admin or Global admin role to run the cmdlet.
 
 ## EXAMPLES
 

@@ -2,14 +2,16 @@
 Module Name: Microsoft StaffHub PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: staffhub
-Locale: en-US
 ---
 
 # Microsoft StaffHub PowerShell
+
 ## Description
+
 The following cmdlet references are for Microsoft StaffHub.
 
-## staffhub Cmdlets
+## StaffHub Cmdlets
+
 ### [Add-StaffHubMember](Add-StaffHubMember.md)
 {{Manually Enter Add-StaffHubMember Description Here}}
 
@@ -48,4 +50,3 @@ The following cmdlet references are for Microsoft StaffHub.
 
 ### [Remove-StaffHubUser](Remove-StaffHubUser.md)
 {{Manually Enter Remove-StaffHubUser Description Here}}
-

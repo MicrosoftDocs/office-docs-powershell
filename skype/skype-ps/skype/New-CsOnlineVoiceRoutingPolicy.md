@@ -2,7 +2,7 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroutingpolicy
 applicable: Skype for Business Online
-title: Get-CsOnlineUser
+title: New-CsOnlineVoiceRoutingPolicy
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
@@ -32,14 +32,14 @@ Note that simply assigning a user an online voice routing policy will not enable
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> New-CsOnlineVoiceRoutingPolicy -Identity "RedmondOnlineVoiceRoutingPolicy" -Name "RedmondOnlineVoiceRoutingPolicy" -OnlinePstnUsages "Long Distance"
+PS C:\> New-CsOnlineVoiceRoutingPolicy -Identity "RedmondOnlineVoiceRoutingPolicy" -OnlinePstnUsages "Long Distance"
 ```
 
 The command shown in Example 1 creates a new online per-user voice routing policy with the Identity RedmondOnlineVoiceRoutingPolicy. This policy is assigned a single online PSTN usage: Long Distance.
 
 ### -------------------------- Example 2 --------------------------
 ```
-PS C:\> New-CsOnlineVoiceRoutingPolicy -Identity "RedmondOnlineVoiceRoutingPolicy" -Name "RedmondOnlineVoiceRoutingPolicy" -OnlinePstnUsages "Long Distance", "Local", "Internal"
+PS C:\> New-CsOnlineVoiceRoutingPolicy -Identity "RedmondOnlineVoiceRoutingPolicy" -OnlinePstnUsages "Long Distance", "Local", "Internal"
 ```
 
 Example 2 is a variation of the command shown in Example 1; in this case, however, the new policy is assigned three online PSTN usages: Long Distance; Local; Internal. Multiple usages can be assigned simply by separating each usage using a comma.
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnlinePstnUsages
-A list of online PSTN usages (such as Local or Long Distance) that can be applied to this online voice routing policy. The online PSTN usage must be an existing usage. (PSTN usages can be retrieved by calling the `Get-CsOnlinePstnUsage` cmdlet.)
+A list of online PSTN usages (such as Local or Long Distance) that can be applied to this online voice routing policy. The online PSTN usage must be an existing usage (PSTN usages can be retrieved by calling the `Get-CsOnlinePstnUsage` cmdlet).
 
 ```yaml
 Type: PSListModifier
