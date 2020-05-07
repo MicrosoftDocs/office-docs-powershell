@@ -108,9 +108,6 @@ In this example, the application is made resilient by pairing it with another ap
 Separate invites are sent to the paired applications for the same call or meeting.
 Please refer to the documentation of the ComplianceRecordingPairedApplications parameter for more information.
 
-**Integration of this example into the policy-based recording workflows is still a work in progress.**
-**This warning will be removed once the integration is complete.**
-
 ## PARAMETERS
 
 ### -Identity
@@ -293,9 +290,6 @@ If multiple invites are accepted and at least one of the instances remains in th
 Note that application resiliency can be achieved either by sending multiple invites to the same application using ConcurrentInvitationCount or by sending invites to separate paired applications using ComplianceRecordingPairedApplications.
 However, you cannot do both.
 Please work with your Microsoft certified policy-based recording application provider to determine if application resiliency is needed for your workflows and how best to achieve application resiliency.
-
-**Integration of this parameter into the policy-based recording workflows is still a work in progress.**
-**This warning will be removed once the integration is complete.**
 
 ```yaml
 Type: ComplianceRecordingPairedApplication[]

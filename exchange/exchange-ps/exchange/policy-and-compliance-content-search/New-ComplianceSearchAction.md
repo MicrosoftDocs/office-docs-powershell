@@ -484,7 +484,7 @@ The PurgeType parameter specifies how to remove items when the action is Purge. 
 
 - SoftDelete: Purged items are recoverable by users until the deleted item retention period expires.
 
-- HardDelete: Purged items are marked for permanent removal from the mailbox and will be permanently removed the next time the mailbox is processed by the Managed Folder Assistant. If single item recovery is enabled on the mailbox, purged items will be permanently removed after the deleted item retention period expires.
+- HardDelete (cloud only): Purged items are marked for permanent removal from the mailbox and will be permanently removed the next time the mailbox is processed by the Managed Folder Assistant. If single item recovery is enabled on the mailbox, purged items will be permanently removed after the deleted item retention period expires.
 
 ```yaml
 Type: ComplianceDestroyType

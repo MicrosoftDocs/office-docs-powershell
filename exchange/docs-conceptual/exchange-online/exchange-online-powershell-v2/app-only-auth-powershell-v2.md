@@ -17,7 +17,7 @@ robots: noindex,nofollow
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks."
 ---
 
-# App-only authentication in Exchange Online PowerShell (Preview)
+# Automate tasks in Exchange Online using PowerShell (Preview)
 
 > [!NOTE]
 > The features described in this topic are in Preview, are not available to everyone, and are subject to change.
@@ -31,15 +31,15 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 - Connect using a local certificate:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" -RoutingHintUPN "admin_exo@contosoelectronics.com"
+  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com"
   ```
-  The _RoutingHintUPN_ value is an admin email address in the tenant, and is used for efficient routing of requests. The email address of any admin in the organization works for app-only authentication scenarios.
-
+ 
 - Connect using a certificate thumbprint:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" -RoutingHintUPN "admin_exo@contosoelectronics.com"
+  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" 
   ```
+  When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
 
 - Connect using an existing service principal and client-secret:
 
@@ -90,18 +90,8 @@ For a detailed visual flow bout creating applications in Azure AD, see <https://
    - Security reader
    - Security administrator
    - Helpdesk administrator
-
-## Roadmap
-
-App-only authentication is currently supported for the legacy remote PowerShell cmdlets that you access by using the **Connect-ExchangeOnline** cmdlet in the EXO V2 module. It doesn't work with the 9 new EXO V2 cmdlets in the module (for example, Get-EXOMailbox), nor does it work with Office 365 Security & Compliance Center PowerShell cmdlets that you access by using the **ConnectIPPSSession** cmdlet.
-
-The following list describes other items that we're working on:
-
-- Support for passing the certificate as a byte array.
-- Support for more built-in RBAC roles (Exchange Service Admin, Global Reader, Recipient Admin)
-- Custom RBAC and mailbox scoping using Azure AD administrative units.
-- Delegation support in app-only scenarios
-
+   - Exchange Service administrator
+   - Global Reader
 
 ## Appendix
 

@@ -33,6 +33,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-AllowOfflineOn <AllowOfflineOnEnum>]
  [-BlockedFileTypes <MultiValuedProperty>]
  [-BlockedMimeTypes <MultiValuedProperty>]
+ [-BookingsMailboxCreationEnabled <Boolean>]
  [-CalendarEnabled <Boolean>]
  [-ChangePasswordEnabled <Boolean>]
  [-ClassicAttachmentsEnabled <Boolean>]
@@ -456,6 +457,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BookingsMailboxCreationEnabled
+This parameter is available only in the cloud-based service.
+
+The BookingsMailboxCreationEnabled parameter allows you disable Microsoft Bookings.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CalendarEnabled
 This parameter is functional only in on-premises Exchange.
 
@@ -753,6 +772,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExplicitLogonEnabled
+This parameter is available only in on-premises Exchange.
+
 The ExplicitLogonEnabled parameter specifies whether to allow a user to open someone else's mailbox in Outlook on the web (provided that user has permissions to the mailbox). Valid values are:
 
 - $true: A user with the required permissions is able to open someone else's mailbox in Outlook on the web. This is the default value.
@@ -763,7 +784,7 @@ The ExplicitLogonEnabled parameter specifies whether to allow a user to open som
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
