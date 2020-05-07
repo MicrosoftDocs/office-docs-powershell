@@ -24,7 +24,7 @@ Get-SPOTenantSyncClientRestriction [<CommonParameters>]
 
 ## DESCRIPTION
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator to run the cmdlet.
 
 Requires a valid `Connect-SPOService` context to identify the tenant. For information on how to connect to the tenant, see `Connect-SPOService`.
 

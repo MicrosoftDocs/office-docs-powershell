@@ -27,7 +27,7 @@ Get-SPOWebTemplate [[-LocaleId] <UInt32>] [-CompatibilityLevel <Int32>] [-Name <
 
 The `Get-SPOWebTemplate` cmdlet displays all site templates that match the given identity and are available in SharePoint Online.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832.>
 

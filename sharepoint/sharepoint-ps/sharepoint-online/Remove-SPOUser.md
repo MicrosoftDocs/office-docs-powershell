@@ -24,7 +24,7 @@ Remove-SPOUser [-Group <String>] -LoginName <String> -Site <SpoSitePipeBind> [<C
 
 ## DESCRIPTION
 
-You must be a SharePoint Online global administrator and a site collection administrator to run the `Remove-SPOUser` cmdlet.
+You must be a SharePoint Online administrator and a site collection administrator to run the `Remove-SPOUser` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 

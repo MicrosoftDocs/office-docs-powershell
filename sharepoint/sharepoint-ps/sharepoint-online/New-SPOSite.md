@@ -29,7 +29,7 @@ New-SPOSite [-CompatibilityLevel <Int32>] [-LocaleId <UInt32>] [-NoWait] -Owner 
 The `New-SPOSite` cmdlet creates a new site collection for the current company.
 However, creating a new SharePoint Online site collection fails if a deleted site with the same URL exists in the Recycle Bin.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832>.
 

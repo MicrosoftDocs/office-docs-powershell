@@ -32,7 +32,7 @@ The cmdlet reports the health check rules with a summary of the results.
 The rules might not support automatic repair.
 Tests without repair mode can be initiated by running the `Test-SPOSite` cmdlet.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 

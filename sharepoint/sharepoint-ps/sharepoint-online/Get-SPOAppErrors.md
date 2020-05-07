@@ -34,7 +34,7 @@ Date time values that are older than 50 years or later than 20 years from today 
 Each error includes the error message, time in UTC that error happened, the site where the error happened, and the error type.
 Values for error type are as follows: 0 - None, 1 - Install Error, 2 - Upgrade Error, 3 - Runtime Error.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
