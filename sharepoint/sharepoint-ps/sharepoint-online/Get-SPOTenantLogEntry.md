@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Retrieves SharePoint Online company logs.
+Retrieves SharePoint Online company logs. This cmdlet is reserved for internal Microsoft use.
 
 ## SYNTAX
 

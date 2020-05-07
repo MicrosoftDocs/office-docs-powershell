@@ -3,12 +3,13 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/apply-pnptenanttemplate
 applicable: SharePoint Online
 schema: 2.0.0
+title: Apply-PnPTenantTemplate
 ---
 
 # Apply-PnPTenantTemplate
 
 ## SYNOPSIS
-Applies a tenant template to the current tenant. You must be a SharePoint Online global administrator to run the cmdlet.
+Applies a tenant template to the current tenant. You must have the **Office 365 Global Admin** administrative role to run this cmdlet successfully.
 
 ## SYNTAX 
 

@@ -25,16 +25,31 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MessageTrace [-EndDate <DateTime>] [-Expression <Expression>] [-FromIP <String>]
- [-MessageId <MultiValuedProperty>] [-MessageTraceId <Guid>] [-Page <Int32>] [-PageSize <Int32>]
- [-ProbeTag <String>] [-RecipientAddress <MultiValuedProperty>] [-SenderAddress <MultiValuedProperty>]
- [-StartDate <DateTime>] [-Status <MultiValuedProperty>] [-ToIP <String>] [<CommonParameters>]
+Get-MessageTrace
+ [-EndDate <DateTime>]
+ [-Expression <Expression>]
+ [-FromIP <String>]
+ [-MessageId <MultiValuedProperty>]
+ [-MessageTraceId <Guid>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-RecipientAddress <MultiValuedProperty>]
+ [-SenderAddress <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [-Status <MultiValuedProperty>]
+ [-ToIP <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use this cmdlet to search message data for the last 10 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
 
-If you enter a time period that's older than 10 days, you won't receive an error, but the command will return no results. To search for message data that's between 10 and 90 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
+If you enter a start date that is greater than 10 days and less than or equal to 30 days, only 10 days of data will be returned.
+
+If you enter a start date that is older than 30 days, you will receive an error and the command will return no results.
+
+To search for message data that is greater than 10 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
 
 This cmdlet returns a maximum of 1000000 results, and will timeout on very large queries. If your query returns too many results, consider splitting it up using smaller StartDate and EndDate intervals.
 
@@ -236,6 +251,8 @@ The Status parameter filters the results by the delivery status of the message. 
 
 - None: The message has no delivery status because it was rejected or redirected to a different recipient.
 
+- GettingStatus: The message is waiting for status update.
+
 - Failed: Message delivery was attempted and it failed or the message was filtered as spam or malware, or by transport rules.
 
 - Pending: Message delivery is underway or was deferred and is being retried.
@@ -243,6 +260,10 @@ The Status parameter filters the results by the delivery status of the message. 
 - Delivered: The message was delivered to its destination.
 
 - Expanded: There was no message delivery because the message was addressed to a distribution group and the membership of the distribution was expanded.
+
+- Quarantined: The message was quarantined.
+
+- FilteredAsSpam: The message was marked as spam.
 
 ```yaml
 Type: MultiValuedProperty

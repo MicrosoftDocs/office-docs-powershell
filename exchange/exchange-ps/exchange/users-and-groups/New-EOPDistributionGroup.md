@@ -26,8 +26,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-EOPDistributionGroup -Name <String> [-Alias <String>] [-DisplayName <String>] [-ManagedBy <String[]>]
- [-Members <String[]>] [-Notes <String>] [-PrimarySmtpAddress <SmtpAddress>] [-Type <GroupType>]
+New-EOPDistributionGroup -Name <String> -ManagedBy <String[]>
+ [-Alias <String>]
+ [-DisplayName <String>]
+ [-Members <String[]>]
+ [-Notes <String>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-Type <GroupType>]
  [<CommonParameters>]
 ```
 
@@ -78,42 +83,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Alias
-The Alias parameter specifies the email alias of the distribution group. The Alias parameter value is used to generate the primary SMTP email address if you don't use the PrimarySmtpAddress parameter.
-
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisplayName
-The DisplayName parameter specifies the name of the distribution group in the Exchange admin center (EAC). If the DisplayName parameter isn't specified, the value of the Name parameter is used for the DisplayName parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ManagedBy
-The ManagedBy parameter specifies a user who owns the group. In Exchange Online Protection, you need to use this parameter to specify at least one group owner. You can use any value that uniquely identifies the user. For example:
+The ManagedBy parameter specifies a user who owns the group. You need to use this parameter to specify at least one group owner. You can use any value that uniquely identifies the user. For example:
 
 - Name
 
@@ -133,6 +104,42 @@ The users you specify with this parameter aren't automatically added to the grou
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Alias
+The Alias parameter specifies the email alias of the distribution group. The Alias parameter value is used to generate the primary SMTP email address if you don't use the PrimarySmtpAddress parameter.
+
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+
+If you don't use the Alias parameter when you create a group, the value of the Name parameter is used for the alias. This value is also used in the primary SMTP email address. Spaces are removed and unsupported characters are converted to question marks (?).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayName
+The DisplayName parameter specifies the name of the distribution group in the Exchange admin center (EAC). If the DisplayName parameter isn't specified, the value of the Name parameter is used for the DisplayName parameter.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
@@ -215,7 +222,11 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The Type parameter specifies the group type. Valid values are Distribution or Security.
+The Type parameter specifies the group type. Valid values are:
+
+- Distribution (This is the default value).
+
+- Security
 
 ```yaml
 Type: GroupType

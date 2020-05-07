@@ -35,6 +35,8 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 The Set-CsTeamsMobilityPolicy cmdlet allows administrators to update teams mobility policies.
 
+NOTE: Please note that this cmdlet was deprecated and then removed from this PowerShell module. This reference will continue to be listed here for legacy purposes.
+
 ## EXAMPLES
 
 ### Example 1

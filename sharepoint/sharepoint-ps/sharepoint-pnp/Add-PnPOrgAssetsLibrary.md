@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnporgassetslibrary
 applicable: SharePoint Online
 schema: 2.0.0
+title: Add-PnPOrgAssetsLibrary
 ---
 
 # Add-PnPOrgAssetsLibrary
