@@ -26,8 +26,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-EOPDistributionGroupMember [-ExternalDirectoryObjectId <String>]
- [-Identity <DistributionGroupIdParameter>] [-Members <String[]>] [<CommonParameters>]
+Update-EOPDistributionGroupMember [-Identity <DistributionGroupIdParameter>]
+ [-ExternalDirectoryObjectId <String>]
+ [-Members <String[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,28 +46,15 @@ This example replaces the current members of the Security Team distribution grou
 
 ### Example 2
 ```powershell
-$CurrentMemberObjects = Get-DistributionGroupMember "Security Team"; $CurrentMemberNames = $CurrentMemberObjects | % {$_.name}; $CurrentMemberNames += "Tyson Fawcett"; Update-EOPDistributionGroupMember -Identity "Security Team" -Members $CurrentMemberNames
+$CurrentMemberObjects = Get-DistributionGroupMember "Security Team"
+$CurrentMemberNames = $CurrentMemberObjects | % {$_.name}
+$CurrentMemberNames += "Tyson Fawcett"
+Update-EOPDistributionGroupMember -Identity "Security Team" -Members $CurrentMemberNames
 ```
 
 This example adds a new user named Tyson Fawcett to the distribution group named Security Team while preserving the current members of the group. The current member objects are retrieved in a collection, the collection is filtered to extract the names, the user "Tyson Fawcett" is added, and the updated name list replaces the current membership of the distribution group.
 
 ## PARAMETERS
-
-### -ExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the distribution group or mail-enabled security group that you want to update. You can use any value that uniquely identifies the group. For example:
@@ -92,6 +81,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalDirectoryObjectId
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -738,6 +738,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsOptimizedForAccessibility
+This parameter is available only in on-premises Exchange.
+
 The IsOptimizedForAccessibility parameter specifies whether the mailbox is configured to use the light version of Outlook on the web. Valid values are:
 
 - $true: The mailbox is configured to use the light version of Outlook on the web.
@@ -748,7 +750,7 @@ The IsOptimizedForAccessibility parameter specifies whether the mailbox is confi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

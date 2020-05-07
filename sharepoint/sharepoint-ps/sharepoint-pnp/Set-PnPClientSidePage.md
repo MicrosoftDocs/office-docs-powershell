@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Set-PnPClientSidePage
 ---
 
 # Set-PnPClientSidePage
@@ -162,7 +163,7 @@ Accept pipeline input: False
 ```
 
 ### -PromoteAs
-Allows to promote the page for a specific purpose (HomePage | NewsPage)
+Allows to promote the page for a specific purpose (None | HomePage | NewsArticle | Template)
 
 Only applicable to: SharePoint Online, SharePoint Server 2019
 

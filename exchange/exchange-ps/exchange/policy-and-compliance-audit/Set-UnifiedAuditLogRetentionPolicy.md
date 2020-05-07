@@ -240,7 +240,7 @@ The RecordTypes parameter specifies the audit logs of a specific record type tha
 
 - Kaizala
 
-- LabelExplorer
+- LabelContentExplorer
 
 - MIPLabel
 
