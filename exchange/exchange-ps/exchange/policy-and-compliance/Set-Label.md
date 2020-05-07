@@ -25,15 +25,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
+ [-Conditions <MultiValuedProperty>]
  [-Confirm]
  [-Disabled <Boolean>]
  [-DisplayName <String>]
+ [-LabelActions <MultiValuedProperty>]
  [-LocaleSettings <MultiValuedProperty>]
+ [-MigrationId <String>]
  [-NextLabel <ComplianceRuleIdParameter>]
  [-ParentId <ComplianceRuleIdParameter>]
  [-PreviousLabel <ComplianceRuleIdParameter>]
  [-Priority <Int32>]
+ [-Setting <PswsHashtable>]
+ [-Settings <PswsHashtable>]
  [-Tooltip <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -268,6 +274,22 @@ The ToolTip parameter specifies the default tooltip and sensitivity label descri
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Office 365 Security & Compliance Center
 
 Required: False

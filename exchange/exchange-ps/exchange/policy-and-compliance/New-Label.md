@@ -24,11 +24,58 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-Label [-Name] <String> -DisplayName <String>
  [-AdvancedSettings <PswsHashtable>]
+ [-ApplyContentMarkingFooterAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
+ [-ApplyContentMarkingFooterEnabled <System.Boolean>]
+ [-ApplyContentMarkingFooterFontColor <String>]
+ [-ApplyContentMarkingFooterFontName <String>]
+ [-ApplyContentMarkingFooterFontSize <System.Int32>]
+ [-ApplyContentMarkingFooterMargin <System.Int32>]
+ [-ApplyContentMarkingFooterText <String>]
+ [-ApplyContentMarkingHeaderAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
+ [-ApplyContentMarkingHeaderEnabled <System.Boolean>]
+ [-ApplyContentMarkingHeaderFontColor <String>]
+ [-ApplyContentMarkingHeaderFontName <String>]
+ [-ApplyContentMarkingHeaderFontSize <System.Int32>]
+ [-ApplyContentMarkingHeaderMargin <System.Int32>]
+ [-ApplyContentMarkingHeaderText <String>]
+ [-ApplyWaterMarkingEnabled <System.Boolean>]
+ [-ApplyWaterMarkingFontColor <String>]
+ [-ApplyWaterMarkingFontName <String>]
+ [-ApplyWaterMarkingFontSize <System.Int32>]
+ [-ApplyWaterMarkingLayout <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout>]
+ [-ApplyWaterMarkingText <String>]
  [-Comment <String>]
+ [-Conditions <MultiValuedProperty>]
  [-Confirm]
+ [-EncryptionAipTemplateScopes <String>]
+ [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
+ [-EncryptionDoNotForward <System.Boolean>]
+ [-EncryptionDoubleKeyEncryptionUrl <String>]
+ [-EncryptionEnabled <System.Boolean>]
+ [-EncryptionEncryptOnly <System.Boolean>]
+ [-EncryptionLinkedTemplateId <String>]
+ [-EncryptionOfflineAccessDays <System.Int32>]
+ [-EncryptionPromptUser <System.Boolean>]
+ [-EncryptionProtectionType <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType>]
+ [-EncryptionRightsDefinitions <String>]
+ [-EncryptionRightsUrl <String>]
+ [-EncryptionTemplateId <String>]
+ [-Identity <MasterIdParameter>]
+ [-LabelActions <MultiValuedProperty>]
  [-LocaleSettings <<MultiValuedProperty>]
+ [-MigrationId <String>]
  [-ParentId <ComplianceRuleIdParameter>]
+ [-Setting <PswsHashtable>]
+ [-Settings <PswsHashtable>]
+ [-SiteAndGroupProtectionAllowAccessToGuestUsers <System.Boolean>]
+ [-SiteAndGroupProtectionAllowEmailFromGuestUsers <System.Boolean>]
+ [-SiteAndGroupProtectionAllowFullAccess <System.Boolean>]
+ [-SiteAndGroupProtectionAllowLimitedAccess <System.Boolean>]
+ [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
+ [-SiteAndGroupProtectionEnabled <System.Boolean>]
+ [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType>]
  [-Tooltip <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -179,6 +226,22 @@ The ToolTip parameter specifies the default tooltip and sensitivity label descri
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Office 365 Security & Compliance Center
 
 Required: False
