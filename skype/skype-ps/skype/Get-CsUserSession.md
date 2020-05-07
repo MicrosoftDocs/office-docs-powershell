@@ -12,10 +12,6 @@ ms.reviewer:
 
 # Get-CsUserSession
 
-## Deprecation Notice
-We will be retiring this feature and cmdlet from Skype for Business Online beginning 5/30/2020. Instead we recommend the utilization of MS Graph Call Records API, which is where we will continue to invest our development resources.
-https://docs.microsoft.com/en-us/graph/api/resources/callrecords-api-overview?view=graph-rest-beta
-
 ## SYNOPSIS
 Use the Get-CsUserSession cmdlet to retrieve user session information within a specified date range within the past 30 days.
 
@@ -26,6 +22,10 @@ Get-CsUserSession -StartTime <DateTimeOffset> -User <String> [-EndTime <DateTime
 ```
 
 ## DESCRIPTION
+**Deprecation Notice**
+We will be retiring this feature and cmdlet from Skype for Business Online beginning 5/30/2020. Instead we recommend the utilization of MS Graph Call Records API, which is where we will continue to invest our development resources.
+https://docs.microsoft.com/graph/api/resources/callrecords-api-overview?view=graph-rest-beta
+
 Use the Get-CsUserSession cmdlet to retrieve session information for users within a specified date range within the past 30 days.
 
 You have to be assigned Skype For Business admin role to run this cmdlet.
