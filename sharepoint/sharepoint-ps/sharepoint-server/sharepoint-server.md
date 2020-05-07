@@ -4,7 +4,6 @@ Module Guid: 01dfdcd9-c48d-46a9-b09a-587ca5c4829a
 Help Version:  17.0.15229.2100
 Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/sharepoint/
 title: sharepoint-server
-Locale: en-US
 Additional Locale: de-DE,es-ES,fr-FR,it-IT,ja-JP,ko-KR,pt-BR,ru-RU,zh-CN,zh-TW
 de-DE Version: 17.0.15229.2100
 es-ES Version: 17.0.15229.2100
@@ -2226,6 +2225,9 @@ Removes the trusted security token service object. Platform: SharePoint Server 2
 
 #### [Remove-SPTrustedServiceTokenIssuer](Remove-SPTrustedServiceTokenIssuer.md)
 Deletes the object that represents the farm trust. Platform: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019.
+
+### [Revoke-SPObjectSecurity](Revoke-SPObjectSecurity.md)
+Removes a security principal from a SPObjectSecurity object.
 
 #### [Set-SPSecurityTokenServiceConfig](Set-SPSecurityTokenServiceConfig.md)
 Updates the settings of the SharePoint security token service (STS) identity provider. Platform: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019.

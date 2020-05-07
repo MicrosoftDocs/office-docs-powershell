@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpprovisioningtemplate
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPProvisioningTemplate
 ---
 
 # Get-PnPProvisioningTemplate
@@ -85,7 +86,7 @@ Extracts a provisioning template in Office Open XML from the current web and inc
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-Get-PnPProvisioningTemplate -Out template.pnp -PersistComposedLookFiles
+Get-PnPProvisioningTemplate -Out template.pnp -PersistBrandingFiles
 ```
 
 Extracts a provisioning template in Office Open XML from the current web and saves the files that make up the composed look to the same folder as where the template is saved.

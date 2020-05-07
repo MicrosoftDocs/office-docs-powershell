@@ -3,22 +3,23 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/enable-pnpcommsite
 applicable: SharePoint Online
 schema: 2.0.0
+title: Enable-PnPCommSite
 ---
 
 # Enable-PnPCommSite
 
 ## SYNOPSIS
-Enable communication site on the root site of a tenant
+Enables the modern communication site experience on a classic team site.
 
 ## SYNTAX 
 
 ```powershell
-Enable-PnPCommSite [-SiteUrl <String>]
+Enable-PnPCommSite [-DesignPackageId <String>]
                    [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
-The Enable-PnPCommSite cmdlet converts the root site of a tenant to be a communication site. This action is not reversible.
+This command will enable the modern site experience on a classic team site. The site must be the root site of the site collection.
 
 ## EXAMPLES
 
@@ -27,27 +28,27 @@ The Enable-PnPCommSite cmdlet converts the root site of a tenant to be a communi
 Enable-PnPCommSite
 ```
 
-This will convert the root site collection to become a communication site
+Enables the modern communication site experience on a classic team site
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Enable-PnPCommSite -SiteUrl https://tenant.sharepoint.com
+Enable-PnPCommSite -DesignPackageId 6142d2a0-63a5-4ba0-aede-d9fefca2c767
 ```
 
-This will convert the root site collection to become a communication site
+Enables the modern communication site experience on a classic team site, allowing to specify the design package to be applied
 
 ## PARAMETERS
 
-### -SiteUrl
-Specifies the full URL of the new site collection. It must be in a valid managed path in the company's site. For example, for company contoso, valid managed paths are https://contoso.sharepoint.com/sites and https://contoso.sharepoint.com/teams.
+### -DesignPackageId
+The id (guid) of the design package to apply: 96c933ac-3698-44c7-9f4a-5fd17d71af9e (Topic = default), 6142d2a0-63a5-4ba0-aede-d9fefca2c767 (Showcase) or f6cc5403-0d63-442e-96c0-285923709ffc (Blank)
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 
 Required: False
-Position: Named
-Accept pipeline input: False
+Position: 0
+Accept pipeline input: True
 ```
 
 ### -Connection

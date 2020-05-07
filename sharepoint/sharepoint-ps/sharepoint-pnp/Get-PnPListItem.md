@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnplistitem
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPListItem
 ---
 
 # Get-PnPListItem
@@ -34,6 +35,7 @@ Get-PnPListItem -List <ListPipeBind>
 ```powershell
 Get-PnPListItem -List <ListPipeBind>
                 [-Query <String>]
+                [-FolderServerRelativeUrl <String>]
                 [-PageSize <Int>]
                 [-ScriptBlock <ScriptBlock>]
                 [-Web <WebPipeBind>]
@@ -43,6 +45,7 @@ Get-PnPListItem -List <ListPipeBind>
 ### All Items
 ```powershell
 Get-PnPListItem -List <ListPipeBind>
+                [-FolderServerRelativeUrl <String>]
                 [-Fields <String[]>]
                 [-PageSize <Int>]
                 [-ScriptBlock <ScriptBlock>]
@@ -101,6 +104,13 @@ Get-PnPListItem -List Tasks -PageSize 1000 -ScriptBlock { Param($items) $items.C
 
 Retrieves all list items from the Tasks list in pages of 1000 items and breaks permission inheritance on each item
 
+### ------------------EXAMPLE 8------------------
+```powershell
+Get-PnPListItem -List Samples -FolderServerRelativeUrl "/sites/contosomarketing/Lists/Samples/Demo"
+```
+
+Retrieves all list items from the Demo folder in the Samples list located in the contosomarketing site collection
+
 ## PARAMETERS
 
 ### -Fields
@@ -109,6 +119,18 @@ The fields to retrieve. If not specified all fields will be loaded in the return
 ```yaml
 Type: String[]
 Parameter Sets: All Items, By Id, By Unique Id
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -FolderServerRelativeUrl
+The server relative URL of a list folder from which results will be returned.
+
+```yaml
+Type: String
+Parameter Sets: By Query, All Items
 
 Required: False
 Position: Named

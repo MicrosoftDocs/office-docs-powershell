@@ -22,7 +22,7 @@ Add-TeamUser -GroupId <String> -User <String> [-Role <String>] [<CommonParameter
 This cmdlet adds an owner or member to the team, and to the unified group which backs the team.
 
 > [!Note]
-> The command will return immediately, but the Teams application will not reflect the update immediately. The Teams application may need to be open for up to several hours before changes are reflected.
+> The command will return immediately, but the Teams application will not reflect the update immediately. The change can take between 24 and 48 hours to appear within the Teams client. 
 
 ## EXAMPLES
 

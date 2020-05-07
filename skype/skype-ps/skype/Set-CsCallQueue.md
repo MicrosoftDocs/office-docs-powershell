@@ -13,13 +13,12 @@ author: tomkau
 # Set-CsCallQueue
 
 ## SYNOPSIS
-Updates a Call Queue in your Skype for Business Online organization.
+Updates a Call Queue in your Skype for Business Online or Teams organization.
 
 ## SYNTAX
 
 ```
-Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-MusicOnHoldAudioFileId <Guid>] [-Name <String>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] 
-[-OverflowThreshold <Int16>] [-RoutingMethod <Object>] [-TimeoutAction <Object>] [-Tenant <Guid>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-PresenceBasedRouting <Boolean>] [<CommonParameters>]
+Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-MusicOnHoldAudioFileId <Guid>] [-Name <String>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] [-RoutingMethod <Object>] [-TimeoutAction <Object>] [-Tenant <Guid>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-PresenceBasedRouting <Boolean>] [-Users <List>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,6 +26,8 @@ Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolea
 Set-CsCallQueue cmdlet provides a way for you to modify the properties of an existing Call Queue; for example, you can change the name for the Call Queue, the distribution lists associated with the Call Queue, or the welcome audio file. 
 
 The Set-CsCallQueue cmdlet may suggest additional steps required to complete the Call Queue setup.
+
+Note that this cmdlet is in the Skype for Business Online PowerShell module and also affects Teams. The reason the "Applies To:" is stated as Skype for Business Online is because it must match the actual module name of the cmdlet. To learn how this cmdlet is used with Skype for Business Online and Teams, see https://docs.microsoft.com/microsoftteams/create-a-phone-system-call-queue.
 
 ## EXAMPLES
 
@@ -39,11 +40,10 @@ This example updates the Call Queue with identity e7e00636-47da-449c-a36b-1b3d6e
 
 ### -------------------------- Example 2 -------------------------- 
 ```
-Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldAudioFileId 4d7361c1-5b46-4f69-b125-cf35a098a341
+Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldAudioFileId 4d7361c1-5b46-4f69-b125-cf35a098a341
 ```
 
 This example updates the Call Queue with new distribution lists and references a new music on hold audio file.
-
 
 ## PARAMETERS
 
@@ -310,6 +310,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Users
+The Users parameter lets you add agents to the Call Queue. This parameter expects a list of user unique identifiers (GUID).
+
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tenant
 This parameter is reserved for Microsoft internal use only.
 
@@ -338,4 +354,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

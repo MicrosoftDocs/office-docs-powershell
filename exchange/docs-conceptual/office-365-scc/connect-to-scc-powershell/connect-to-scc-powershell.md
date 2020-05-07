@@ -18,7 +18,7 @@ description: "Learn how to connect to Security & Compliance Center PowerShell."
 Office 365 Security & Compliance Center PowerShell allows you to manage your Office 365 Security & Compliance Center settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to the Security & Compliance Center. It's a simple three-step process where you enter your Office 365 credentials, provide the required connection settings, and then import the Security & Compliance Center cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!NOTE]
-> The procedures in this topic won't work if: <br/>• Your account uses multi-factor authentication (MFA). <br/>• Your organization uses federated authentication. <br/>• A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs. <br/> In these scenarions, you need to download and use the Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md). <br/><br/> Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](../../exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
+> The procedures in this topic won't work if: <br/>* Your account uses multi-factor authentication (MFA). <br/>* Your organization uses federated authentication. <br/>* A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs. <br/> In these scenarions, you need to download and use the Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md). <br/><br/> Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](../../exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
 
 For more information about the Security & Compliance Center, see [Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627054).
 
@@ -44,7 +44,7 @@ For more information about the Security & Compliance Center, see [Office 365 Sec
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-    <sup>*</sup> For older versions of Windows, you need to install the Microsoft.NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -96,13 +96,15 @@ For more information about the Security & Compliance Center, see [Office 365 Sec
 
    - For Office 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
 
-   - If you want to connect to Security & Compliance Center PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add the Prefix parameter and value (for example, `-Prefix "CC"`) to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
-
 3. Run the following command:
 
    ```PowerShell
    Import-PSSession $Session -DisableNameChecking
    ```
+   
+   **Notes**:
+
+   - If you want to connect to Security & Compliance Center PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add the Prefix parameter and value (for example, `-Prefix "CC"`) to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
