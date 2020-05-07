@@ -26,11 +26,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-EOPUser [-City <String>] [-Company <String>] [-CountryOrRegion <CountryInfo>] [-Department <String>]
- [-DisplayName <String>] [-ExternalDirectoryObjectId <String>] [-Fax <String>] [-FirstName <String>]
- [-HomePhone <String>] [-Identity <UserIdParameter>] [-Initials <String>] [-LastName <String>]
- [-MobilePhone <String>] [-Notes <String>] [-Office <String>] [-Phone <String>] [-PostalCode <String>]
- [-StateOrProvince <String>] [-StreetAddress <String>] [-Title <String>] [-WebPage <String>]
+Set-EOPUser [-Identity <UserIdParameter>]
+ [-City <String>]
+ [-Company <String>]
+ [-CountryOrRegion <CountryInfo>]
+ [-Department <String>]
+ [-DisplayName <String>]
+ [-ExternalDirectoryObjectId <String>]
+ [-Fax <String>]
+ [-FirstName <String>]
+ [-HomePhone <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MobilePhone <String>]
+ [-Notes <String>]
+ [-Office <String>]
+ [-Phone <String>]
+ [-PostalCode <String>]
+ [-StateOrProvince <String>]
+ [-StreetAddress <String>]
+ [-Title <String>]
+ [-WebPage <String>]
  [<CommonParameters>]
 ```
 
@@ -47,6 +63,30 @@ Set-EOPUser -Identity "Kitty Petersen" -Company Contoso -DisplayName "Kitty Pete
 This example sets the company, display name, and title properties for the user Kitty Petersen.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the user object that you want to modify. You can use any value that uniquely identifies the user. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- GUID
+
+```yaml
+Type: UserIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -City
 The City parameter specifies the user's city.
@@ -181,30 +221,6 @@ The HomePhone parameter specifies the user's home telephone number.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the user object that you want to modify. You can use any value that uniquely identifies the user. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- GUID
-
-```yaml
-Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection

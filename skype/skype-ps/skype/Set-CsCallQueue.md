@@ -13,7 +13,7 @@ author: tomkau
 # Set-CsCallQueue
 
 ## SYNOPSIS
-Updates a Call Queue in your Skype for Business Online organization.
+Updates a Call Queue in your Skype for Business Online or Teams organization.
 
 ## SYNTAX
 
@@ -26,6 +26,8 @@ Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolea
 Set-CsCallQueue cmdlet provides a way for you to modify the properties of an existing Call Queue; for example, you can change the name for the Call Queue, the distribution lists associated with the Call Queue, or the welcome audio file. 
 
 The Set-CsCallQueue cmdlet may suggest additional steps required to complete the Call Queue setup.
+
+Note that this cmdlet is in the Skype for Business Online PowerShell module and also affects Teams. The reason the "Applies To:" is stated as Skype for Business Online is because it must match the actual module name of the cmdlet. To learn how this cmdlet is used with Skype for Business Online and Teams, see https://docs.microsoft.com/microsoftteams/create-a-phone-system-call-queue.
 
 ## EXAMPLES
 
