@@ -21,35 +21,47 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## active-directory Cmdlets
 ### [Add-ADPermission](Add-ADPermission.md)
 
-### [Get-ADPermission](Get-ADPermission.md)
+### [Dump-ProvisioningCache](Dump-ProvisioningCache.md)
 
-### [Remove-ADPermission](Remove-ADPermission.md)
+### [Get-ADPermission](Get-ADPermission.md)
 
 ### [Get-ADServerSettings](Get-ADServerSettings.md)
 
-### [Set-ADServerSettings](Set-ADServerSettings.md)
-
 ### [Get-ADSite](Get-ADSite.md)
 
-### [Set-ADSite](Set-ADSite.md)
-
 ### [Get-AdSiteLink](Get-AdSiteLink.md)
-
-### [Set-AdSiteLink](Set-AdSiteLink.md)
 
 ### [Get-DomainController](Get-DomainController.md)
 
 ### [Get-OrganizationalUnit](Get-OrganizationalUnit.md)
 
-### [Dump-ProvisioningCache](Dump-ProvisioningCache.md)
-
-### [Reset-ProvisioningCache](Reset-ProvisioningCache.md)
-
 ### [Get-Trust](Get-Trust.md)
 
 ### [Get-UserPrincipalNamesSuffix](Get-UserPrincipalNamesSuffix.md)
 
+### [Remove-ADPermission](Remove-ADPermission.md)
+
+### [Reset-ProvisioningCache](Reset-ProvisioningCache.md)
+
+### [Set-ADServerSettings](Set-ADServerSettings.md)
+
+### [Set-ADSite](Set-ADSite.md)
+
+### [Set-AdSiteLink](Set-AdSiteLink.md)
+
 ## advanced-threat-protection Cmdlets
+### [Disable-AntiPhishRule](Disable-AntiPhishRule.md)
+
+### [Disable-SafeAttachmentRule](Disable-SafeAttachmentRule.md)
+
+### [Disable-SafeLinksRule](Disable-SafeLinksRule.md)
+
+### [Enable-AntiPhishRule](Enable-AntiPhishRule.md)
+
+### [Enable-SafeAttachmentRule](Enable-SafeAttachmentRule.md)
+
+### [Enable-SafeLinksRule](Enable-SafeLinksRule.md)
+
 ### [Get-AdvancedThreatProtectionDocumentDetail](Get-AdvancedThreatProtectionDocumentDetail.md)
 
 ### [Get-AdvancedThreatProtectionDocumentReport](Get-AdvancedThreatProtectionDocumentReport.md)
@@ -58,27 +70,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AntiPhishPolicy](Get-AntiPhishPolicy.md)
 
-### [New-AntiPhishPolicy](New-AntiPhishPolicy.md)
-
-### [Remove-AntiPhishPolicy](Remove-AntiPhishPolicy.md)
-
-### [Set-AntiPhishPolicy](Set-AntiPhishPolicy.md)
-
-### [Disable-AntiPhishRule](Disable-AntiPhishRule.md)
-
-### [Enable-AntiPhishRule](Enable-AntiPhishRule.md)
-
 ### [Get-AntiPhishRule](Get-AntiPhishRule.md)
 
-### [New-AntiPhishRule](New-AntiPhishRule.md)
-
-### [Remove-AntiPhishRule](Remove-AntiPhishRule.md)
-
-### [Set-AntiPhishRule](Set-AntiPhishRule.md)
-
 ### [Get-AtpPolicyForO365](Get-AtpPolicyForO365.md)
-
-### [Set-AtpPolicyForO365](Set-AtpPolicyForO365.md)
 
 ### [Get-MailDetailATPReport](Get-MailDetailATPReport.md)
 
@@ -86,261 +80,322 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-PhishFilterPolicy](Get-PhishFilterPolicy.md)
 
-### [Set-PhishFilterPolicy](Set-PhishFilterPolicy.md)
-
 ### [Get-SafeAttachmentPolicy](Get-SafeAttachmentPolicy.md)
-
-### [New-SafeAttachmentPolicy](New-SafeAttachmentPolicy.md)
-
-### [Remove-SafeAttachmentPolicy](Remove-SafeAttachmentPolicy.md)
-
-### [Set-SafeAttachmentPolicy](Set-SafeAttachmentPolicy.md)
-
-### [Disable-SafeAttachmentRule](Disable-SafeAttachmentRule.md)
-
-### [Enable-SafeAttachmentRule](Enable-SafeAttachmentRule.md)
 
 ### [Get-SafeAttachmentRule](Get-SafeAttachmentRule.md)
 
-### [New-SafeAttachmentRule](New-SafeAttachmentRule.md)
-
-### [Remove-SafeAttachmentRule](Remove-SafeAttachmentRule.md)
-
-### [Set-SafeAttachmentRule](Set-SafeAttachmentRule.md)
-
 ### [Get-SafeLinksPolicy](Get-SafeLinksPolicy.md)
 
-### [New-SafeLinksPolicy](New-SafeLinksPolicy.md)
-
-### [Remove-SafeLinksPolicy](Remove-SafeLinksPolicy.md)
-
-### [Set-SafeLinksPolicy](Set-SafeLinksPolicy.md)
-
-### [Disable-SafeLinksRule](Disable-SafeLinksRule.md)
-
-### [Enable-SafeLinksRule](Enable-SafeLinksRule.md)
-
 ### [Get-SafeLinksRule](Get-SafeLinksRule.md)
-
-### [New-SafeLinksRule](New-SafeLinksRule.md)
-
-### [Remove-SafeLinksRule](Remove-SafeLinksRule.md)
-
-### [Set-SafeLinksRule](Set-SafeLinksRule.md)
 
 ### [Get-SpoofMailReport](Get-SpoofMailReport.md)
 
 ### [Get-UrlTrace](Get-UrlTrace.md)
 
+### [New-AntiPhishPolicy](New-AntiPhishPolicy.md)
+
+### [New-AntiPhishRule](New-AntiPhishRule.md)
+
+### [New-SafeAttachmentPolicy](New-SafeAttachmentPolicy.md)
+
+### [New-SafeAttachmentRule](New-SafeAttachmentRule.md)
+
+### [New-SafeLinksPolicy](New-SafeLinksPolicy.md)
+
+### [New-SafeLinksRule](New-SafeLinksRule.md)
+
+### [Remove-AntiPhishPolicy](Remove-AntiPhishPolicy.md)
+
+### [Remove-AntiPhishRule](Remove-AntiPhishRule.md)
+
+### [Remove-SafeAttachmentPolicy](Remove-SafeAttachmentPolicy.md)
+
+### [Remove-SafeAttachmentRule](Remove-SafeAttachmentRule.md)
+
+### [Remove-SafeLinksPolicy](Remove-SafeLinksPolicy.md)
+
+### [Remove-SafeLinksRule](Remove-SafeLinksRule.md)
+
+### [Set-AntiPhishPolicy](Set-AntiPhishPolicy.md)
+
+### [Set-AntiPhishRule](Set-AntiPhishRule.md)
+
+### [Set-AtpPolicyForO365](Set-AtpPolicyForO365.md)
+
+### [Set-PhishFilterPolicy](Set-PhishFilterPolicy.md)
+
+### [Set-SafeAttachmentPolicy](Set-SafeAttachmentPolicy.md)
+
+### [Set-SafeAttachmentRule](Set-SafeAttachmentRule.md)
+
+### [Set-SafeLinksPolicy](Set-SafeLinksPolicy.md)
+
+### [Set-SafeLinksRule](Set-SafeLinksRule.md)
+
 ## antispam-antimalware Cmdlets
-### [Get-AgentLog](Get-AgentLog.md)
-
-### [Enable-AntispamUpdates](Enable-AntispamUpdates.md)
-
 ### [Add-AttachmentFilterEntry](Add-AttachmentFilterEntry.md)
-
-### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
-
-### [Remove-AttachmentFilterEntry](Remove-AttachmentFilterEntry.md)
-
-### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
-
-### [Set-AttachmentFilterListConfig](Set-AttachmentFilterListConfig.md)
-
-### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
-
-### [Remove-BlockedSenderAddress](Remove-BlockedSenderAddress.md)
-
-### [Get-ContentFilterConfig](Get-ContentFilterConfig.md)
-
-### [Set-ContentFilterConfig](Set-ContentFilterConfig.md)
 
 ### [Add-ContentFilterPhrase](Add-ContentFilterPhrase.md)
 
-### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
-
-### [Remove-ContentFilterPhrase](Remove-ContentFilterPhrase.md)
-
-### [Get-DkimSigningConfig](Get-DkimSigningConfig.md)
-
-### [New-DkimSigningConfig](New-DkimSigningConfig.md)
-
-### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
-
-### [Set-DkimSigningConfig](Set-DkimSigningConfig.md)
-
-### [Get-HostedConnectionFilterPolicy](Get-HostedConnectionFilterPolicy.md)
-
-### [Set-HostedConnectionFilterPolicy](Set-HostedConnectionFilterPolicy.md)
-
-### [Get-HostedContentFilterPolicy](Get-HostedContentFilterPolicy.md)
-
-### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
-
-### [Remove-HostedContentFilterPolicy](Remove-HostedContentFilterPolicy.md)
-
-### [Set-HostedContentFilterPolicy](Set-HostedContentFilterPolicy.md)
-
-### [Disable-HostedContentFilterRule](Disable-HostedContentFilterRule.md)
-
-### [Enable-HostedContentFilterRule](Enable-HostedContentFilterRule.md)
-
-### [Get-HostedContentFilterRule](Get-HostedContentFilterRule.md)
-
-### [New-HostedContentFilterRule](New-HostedContentFilterRule.md)
-
-### [Remove-HostedContentFilterRule](Remove-HostedContentFilterRule.md)
-
-### [Set-HostedContentFilterRule](Set-HostedContentFilterRule.md)
-
-### [Get-HostedOutboundSpamFilterPolicy](Get-HostedOutboundSpamFilterPolicy.md)
-
-### [New-HostedOutboundSpamFilterPolicy](New-HostedOutboundSpamFilterPolicy.md)
-
-### [Remove-HostedOutboundSpamFilterPolicy](Remove-HostedOutboundSpamFilterPolicy.md)
-
-### [Set-HostedOutboundSpamFilterPolicy](Set-HostedOutboundSpamFilterPolicy.md)
-
-### [Disable-HostedOutboundSpamFilterRule](Disable-HostedOutboundSpamFilterRule.md)
-
-### [Enable-HostedOutboundSpamFilterRule](Enable-HostedOutboundSpamFilterRule.md)
-
-### [Get-HostedOutboundSpamFilterRule](Get-HostedOutboundSpamFilterRule.md)
-
-### [New-HostedOutboundSpamFilterRule](New-HostedOutboundSpamFilterRule.md)
-
-### [Remove-HostedOutboundSpamFilterRule](Remove-HostedOutboundSpamFilterRule.md)
-
-### [Set-HostedOutboundSpamFilterRule](Set-HostedOutboundSpamFilterRule.md)
-
-### [Get-IPAllowListConfig](Get-IPAllowListConfig.md)
-
-### [Set-IPAllowListConfig](Set-IPAllowListConfig.md)
-
 ### [Add-IPAllowListEntry](Add-IPAllowListEntry.md)
-
-### [Get-IPAllowListEntry](Get-IPAllowListEntry.md)
-
-### [Remove-IPAllowListEntry](Remove-IPAllowListEntry.md)
 
 ### [Add-IPAllowListProvider](Add-IPAllowListProvider.md)
 
-### [Get-IPAllowListProvider](Get-IPAllowListProvider.md)
-
-### [Remove-IPAllowListProvider](Remove-IPAllowListProvider.md)
-
-### [Set-IPAllowListProvider](Set-IPAllowListProvider.md)
-
-### [Test-IPAllowListProvider](Test-IPAllowListProvider.md)
-
-### [Get-IPAllowListProvidersConfig](Get-IPAllowListProvidersConfig.md)
-
-### [Set-IPAllowListProvidersConfig](Set-IPAllowListProvidersConfig.md)
-
-### [Get-IPBlockListConfig](Get-IPBlockListConfig.md)
-
-### [Set-IPBlockListConfig](Set-IPBlockListConfig.md)
-
 ### [Add-IPBlockListEntry](Add-IPBlockListEntry.md)
-
-### [Get-IPBlockListEntry](Get-IPBlockListEntry.md)
-
-### [Remove-IPBlockListEntry](Remove-IPBlockListEntry.md)
 
 ### [Add-IPBlockListProvider](Add-IPBlockListProvider.md)
 
-### [Get-IPBlockListProvider](Get-IPBlockListProvider.md)
+### [Delete-QuarantineMessage](Delete-QuarantineMessage.md)
 
-### [Remove-IPBlockListProvider](Remove-IPBlockListProvider.md)
+### [Disable-HostedContentFilterRule](Disable-HostedContentFilterRule.md)
 
-### [Set-IPBlockListProvider](Set-IPBlockListProvider.md)
-
-### [Test-IPBlockListProvider](Test-IPBlockListProvider.md)
-
-### [Get-IPBlockListProvidersConfig](Get-IPBlockListProvidersConfig.md)
-
-### [Set-IPBlockListProvidersConfig](Set-IPBlockListProvidersConfig.md)
-
-### [Get-MailboxJunkEmailConfiguration](Get-MailboxJunkEmailConfiguration.md)
-
-### [Set-MailboxJunkEmailConfiguration](Set-MailboxJunkEmailConfiguration.md)
-
-### [Get-MalwareFilteringServer](Get-MalwareFilteringServer.md)
-
-### [Set-MalwareFilteringServer](Set-MalwareFilteringServer.md)
-
-### [Get-MalwareFilterPolicy](Get-MalwareFilterPolicy.md)
-
-### [New-MalwareFilterPolicy](New-MalwareFilterPolicy.md)
-
-### [Remove-MalwareFilterPolicy](Remove-MalwareFilterPolicy.md)
-
-### [Set-MalwareFilterPolicy](Set-MalwareFilterPolicy.md)
+### [Disable-HostedOutboundSpamFilterRule](Disable-HostedOutboundSpamFilterRule.md)
 
 ### [Disable-MalwareFilterRule](Disable-MalwareFilterRule.md)
 
+### [Enable-AntispamUpdates](Enable-AntispamUpdates.md)
+
+### [Enable-HostedContentFilterRule](Enable-HostedContentFilterRule.md)
+
+### [Enable-HostedOutboundSpamFilterRule](Enable-HostedOutboundSpamFilterRule.md)
+
 ### [Enable-MalwareFilterRule](Enable-MalwareFilterRule.md)
-
-### [Get-MalwareFilterRule](Get-MalwareFilterRule.md)
-
-### [New-MalwareFilterRule](New-MalwareFilterRule.md)
-
-### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
-
-### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
-
-### [Delete-QuarantineMessage](Delete-QuarantineMessage.md)
 
 ### [Export-QuarantineMessage](Export-QuarantineMessage.md)
 
+### [Get-AgentLog](Get-AgentLog.md)
+
+### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
+
+### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
+
+### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
+
+### [Get-ContentFilterConfig](Get-ContentFilterConfig.md)
+
+### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
+
+### [Get-DkimSigningConfig](Get-DkimSigningConfig.md)
+
+### [Get-HostedConnectionFilterPolicy](Get-HostedConnectionFilterPolicy.md)
+
+### [Get-HostedContentFilterPolicy](Get-HostedContentFilterPolicy.md)
+
+### [Get-HostedContentFilterRule](Get-HostedContentFilterRule.md)
+
+### [Get-HostedOutboundSpamFilterPolicy](Get-HostedOutboundSpamFilterPolicy.md)
+
+### [Get-HostedOutboundSpamFilterRule](Get-HostedOutboundSpamFilterRule.md)
+
+### [Get-IPAllowListConfig](Get-IPAllowListConfig.md)
+
+### [Get-IPAllowListEntry](Get-IPAllowListEntry.md)
+
+### [Get-IPAllowListProvider](Get-IPAllowListProvider.md)
+
+### [Get-IPAllowListProvidersConfig](Get-IPAllowListProvidersConfig.md)
+
+### [Get-IPBlockListConfig](Get-IPBlockListConfig.md)
+
+### [Get-IPBlockListEntry](Get-IPBlockListEntry.md)
+
+### [Get-IPBlockListProvider](Get-IPBlockListProvider.md)
+
+### [Get-IPBlockListProvidersConfig](Get-IPBlockListProvidersConfig.md)
+
+### [Get-MailboxJunkEmailConfiguration](Get-MailboxJunkEmailConfiguration.md)
+
+### [Get-MalwareFilteringServer](Get-MalwareFilteringServer.md)
+
+### [Get-MalwareFilterPolicy](Get-MalwareFilterPolicy.md)
+
+### [Get-MalwareFilterRule](Get-MalwareFilterRule.md)
+
 ### [Get-QuarantineMessage](Get-QuarantineMessage.md)
-
-### [Preview-QuarantineMessage](Preview-QuarantineMessage.md)
-
-### [Release-QuarantineMessage](Release-QuarantineMessage.md)
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
 
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
 
-### [Set-RecipientFilterConfig](Set-RecipientFilterConfig.md)
-
-### [Update-SafeList](Update-SafeList.md)
-
 ### [Get-SenderFilterConfig](Get-SenderFilterConfig.md)
-
-### [Set-SenderFilterConfig](Set-SenderFilterConfig.md)
-
-### [Test-SenderId](Test-SenderId.md)
 
 ### [Get-SenderIdConfig](Get-SenderIdConfig.md)
 
-### [Set-SenderIdConfig](Set-SenderIdConfig.md)
-
 ### [Get-SenderReputationConfig](Get-SenderReputationConfig.md)
+
+### [New-DkimSigningConfig](New-DkimSigningConfig.md)
+
+### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
+
+### [New-HostedContentFilterRule](New-HostedContentFilterRule.md)
+
+### [New-HostedOutboundSpamFilterPolicy](New-HostedOutboundSpamFilterPolicy.md)
+
+### [New-HostedOutboundSpamFilterRule](New-HostedOutboundSpamFilterRule.md)
+
+### [New-MalwareFilterPolicy](New-MalwareFilterPolicy.md)
+
+### [New-MalwareFilterRule](New-MalwareFilterRule.md)
+
+### [Preview-QuarantineMessage](Preview-QuarantineMessage.md)
+
+### [Release-QuarantineMessage](Release-QuarantineMessage.md)
+
+### [Remove-AttachmentFilterEntry](Remove-AttachmentFilterEntry.md)
+
+### [Remove-BlockedSenderAddress](Remove-BlockedSenderAddress.md)
+
+### [Remove-ContentFilterPhrase](Remove-ContentFilterPhrase.md)
+
+### [Remove-HostedContentFilterPolicy](Remove-HostedContentFilterPolicy.md)
+
+### [Remove-HostedContentFilterRule](Remove-HostedContentFilterRule.md)
+
+### [Remove-HostedOutboundSpamFilterPolicy](Remove-HostedOutboundSpamFilterPolicy.md)
+
+### [Remove-HostedOutboundSpamFilterRule](Remove-HostedOutboundSpamFilterRule.md)
+
+### [Remove-IPAllowListEntry](Remove-IPAllowListEntry.md)
+
+### [Remove-IPAllowListProvider](Remove-IPAllowListProvider.md)
+
+### [Remove-IPBlockListEntry](Remove-IPBlockListEntry.md)
+
+### [Remove-IPBlockListProvider](Remove-IPBlockListProvider.md)
+
+### [Remove-MalwareFilterPolicy](Remove-MalwareFilterPolicy.md)
+
+### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
+
+### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
+
+### [Set-AttachmentFilterListConfig](Set-AttachmentFilterListConfig.md)
+
+### [Set-ContentFilterConfig](Set-ContentFilterConfig.md)
+
+### [Set-DkimSigningConfig](Set-DkimSigningConfig.md)
+
+### [Set-HostedConnectionFilterPolicy](Set-HostedConnectionFilterPolicy.md)
+
+### [Set-HostedContentFilterPolicy](Set-HostedContentFilterPolicy.md)
+
+### [Set-HostedContentFilterRule](Set-HostedContentFilterRule.md)
+
+### [Set-HostedOutboundSpamFilterPolicy](Set-HostedOutboundSpamFilterPolicy.md)
+
+### [Set-HostedOutboundSpamFilterRule](Set-HostedOutboundSpamFilterRule.md)
+
+### [Set-IPAllowListConfig](Set-IPAllowListConfig.md)
+
+### [Set-IPAllowListProvider](Set-IPAllowListProvider.md)
+
+### [Set-IPAllowListProvidersConfig](Set-IPAllowListProvidersConfig.md)
+
+### [Set-IPBlockListConfig](Set-IPBlockListConfig.md)
+
+### [Set-IPBlockListProvider](Set-IPBlockListProvider.md)
+
+### [Set-IPBlockListProvidersConfig](Set-IPBlockListProvidersConfig.md)
+
+### [Set-MailboxJunkEmailConfiguration](Set-MailboxJunkEmailConfiguration.md)
+
+### [Set-MalwareFilteringServer](Set-MalwareFilteringServer.md)
+
+### [Set-MalwareFilterPolicy](Set-MalwareFilterPolicy.md)
+
+### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
+
+### [Set-RecipientFilterConfig](Set-RecipientFilterConfig.md)
+
+### [Set-SenderFilterConfig](Set-SenderFilterConfig.md)
+
+### [Set-SenderIdConfig](Set-SenderIdConfig.md)
 
 ### [Set-SenderReputationConfig](Set-SenderReputationConfig.md)
 
-## client-access Cmdlets
-### [Export-AutoDiscoverConfig](Export-AutoDiscoverConfig.md)
+### [Test-IPAllowListProvider](Test-IPAllowListProvider.md)
 
-### [Test-CalendarConnectivity](Test-CalendarConnectivity.md)
+### [Test-IPBlockListProvider](Test-IPBlockListProvider.md)
+
+### [Test-SenderId](Test-SenderId.md)
+
+### [Update-SafeList](Update-SafeList.md)
+
+
+## client-access Cmdlets
+### [Clear-TextMessagingAccount](Clear-TextMessagingAccount.md)
+
+### [Compare-TextMessagingVerificationCode](Compare-TextMessagingVerificationCode.md)
+
+### [Disable-PushNotificationProxy](Disable-PushNotificationProxy.md)
+
+### [Enable-PushNotificationProxy](Enable-PushNotificationProxy.md)
+
+### [Export-AutoDiscoverConfig](Export-AutoDiscoverConfig.md)
 
 ### [Get-CASMailbox](Get-CASMailbox.md)
 
-### [Set-CASMailbox](Set-CASMailbox.md)
-
 ### [Get-CASMailboxPlan](Get-CASMailboxPlan.md)
-
-### [set-CASMailboxPlan](set-CASMailboxPlan.md)
 
 ### [Get-ClientAccessRule](Get-ClientAccessRule.md)
 
+### [Get-ImapSettings](Get-ImapSettings.md)
+
+### [Get-MailboxCalendarConfiguration](Get-MailboxCalendarConfiguration.md)
+
+### [Get-MailboxMessageConfiguration](Get-MailboxMessageConfiguration.md)
+
+### [Get-MailboxRegionalConfiguration](Get-MailboxRegionalConfiguration.md)
+
+### [Get-MailboxSpellingConfiguration](Get-MailboxSpellingConfiguration.md)
+
+### [Get-OutlookProvider](Get-OutlookProvider.md)
+
+### [Get-OwaMailboxPolicy](Get-OwaMailboxPolicy.md)
+
+### [Get-PopSettings](Get-PopSettings.md)
+
+### [Get-TextMessagingAccount](Get-TextMessagingAccount.md)
+
 ### [New-ClientAccessRule](New-ClientAccessRule.md)
+
+### [New-OutlookProvider](New-OutlookProvider.md)
+
+### [New-OwaMailboxPolicy](New-OwaMailboxPolicy.md)
 
 ### [Remove-ClientAccessRule](Remove-ClientAccessRule.md)
 
+### [Remove-OutlookProvider](Remove-OutlookProvider.md)
+
+### [Remove-OwaMailboxPolicy](Remove-OwaMailboxPolicy.md)
+
+### [Send-TextMessagingVerificationCode](Send-TextMessagingVerificationCode.md)
+
+### [Set-CASMailbox](Set-CASMailbox.md)
+
+### [set-CASMailboxPlan](set-CASMailboxPlan.md)
+
 ### [Set-ClientAccessRule](Set-ClientAccessRule.md)
+
+### [Set-ImapSettings](Set-ImapSettings.md)
+
+### [Set-MailboxCalendarConfiguration](Set-MailboxCalendarConfiguration.md)
+
+### [Set-MailboxMessageConfiguration](Set-MailboxMessageConfiguration.md)
+
+### [Set-MailboxRegionalConfiguration](Set-MailboxRegionalConfiguration.md)
+
+### [Set-MailboxSpellingConfiguration](Set-MailboxSpellingConfiguration.md)
+
+### [Set-OutlookProvider](Set-OutlookProvider.md)
+
+### [Set-OwaMailboxPolicy](Set-OwaMailboxPolicy.md)
+
+### [Set-PopSettings](Set-PopSettings.md)
+
+### [Set-TextMessagingAccount](Set-TextMessagingAccount.md)
+
+### [Test-CalendarConnectivity](Test-CalendarConnectivity.md)
 
 ### [Test-ClientAccessRule](Test-ClientAccessRule.md)
 
@@ -348,483 +403,410 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-ImapConnectivity](Test-ImapConnectivity.md)
 
-### [Get-ImapSettings](Get-ImapSettings.md)
-
-### [Set-ImapSettings](Set-ImapSettings.md)
-
-### [Get-MailboxCalendarConfiguration](Get-MailboxCalendarConfiguration.md)
-
-### [Set-MailboxCalendarConfiguration](Set-MailboxCalendarConfiguration.md)
-
-### [Get-MailboxMessageConfiguration](Get-MailboxMessageConfiguration.md)
-
-### [Set-MailboxMessageConfiguration](Set-MailboxMessageConfiguration.md)
-
-### [Get-MailboxRegionalConfiguration](Get-MailboxRegionalConfiguration.md)
-
-### [Set-MailboxRegionalConfiguration](Set-MailboxRegionalConfiguration.md)
-
-### [Get-MailboxSpellingConfiguration](Get-MailboxSpellingConfiguration.md)
-
-### [Set-MailboxSpellingConfiguration](Set-MailboxSpellingConfiguration.md)
-
 ### [Test-OutlookConnectivity](Test-OutlookConnectivity.md)
-
-### [Get-OutlookProvider](Get-OutlookProvider.md)
-
-### [New-OutlookProvider](New-OutlookProvider.md)
-
-### [Remove-OutlookProvider](Remove-OutlookProvider.md)
-
-### [Set-OutlookProvider](Set-OutlookProvider.md)
 
 ### [Test-OutlookWebServices](Test-OutlookWebServices.md)
 
 ### [Test-OwaConnectivity](Test-OwaConnectivity.md)
 
-### [Get-OwaMailboxPolicy](Get-OwaMailboxPolicy.md)
-
-### [New-OwaMailboxPolicy](New-OwaMailboxPolicy.md)
-
-### [Remove-OwaMailboxPolicy](Remove-OwaMailboxPolicy.md)
-
-### [Set-OwaMailboxPolicy](Set-OwaMailboxPolicy.md)
-
 ### [Test-PopConnectivity](Test-PopConnectivity.md)
 
-### [Get-PopSettings](Get-PopSettings.md)
-
-### [Set-PopSettings](Set-PopSettings.md)
-
 ### [Test-PowerShellConnectivity](Test-PowerShellConnectivity.md)
-
-### [Disable-PushNotificationProxy](Disable-PushNotificationProxy.md)
-
-### [Enable-PushNotificationProxy](Enable-PushNotificationProxy.md)
-
-### [Clear-TextMessagingAccount](Clear-TextMessagingAccount.md)
-
-### [Get-TextMessagingAccount](Get-TextMessagingAccount.md)
-
-### [Set-TextMessagingAccount](Set-TextMessagingAccount.md)
-
-### [Compare-TextMessagingVerificationCode](Compare-TextMessagingVerificationCode.md)
-
-### [Send-TextMessagingVerificationCode](Send-TextMessagingVerificationCode.md)
 
 ### [Test-WebServicesConnectivity](Test-WebServicesConnectivity.md)
 
 ## client-access-servers Cmdlets
-### [Get-ActiveSyncVirtualDirectory](Get-ActiveSyncVirtualDirectory.md)
-
-### [New-ActiveSyncVirtualDirectory](New-ActiveSyncVirtualDirectory.md)
-
-### [Remove-ActiveSyncVirtualDirectory](Remove-ActiveSyncVirtualDirectory.md)
-
-### [Set-ActiveSyncVirtualDirectory](Set-ActiveSyncVirtualDirectory.md)
-
-### [Get-AuthRedirect](Get-AuthRedirect.md)
-
-### [New-AuthRedirect](New-AuthRedirect.md)
-
-### [Remove-AuthRedirect](Remove-AuthRedirect.md)
-
-### [Set-AuthRedirect](Set-AuthRedirect.md)
-
-### [Get-AutodiscoverVirtualDirectory](Get-AutodiscoverVirtualDirectory.md)
-
-### [New-AutodiscoverVirtualDirectory](New-AutodiscoverVirtualDirectory.md)
-
-### [Remove-AutodiscoverVirtualDirectory](Remove-AutodiscoverVirtualDirectory.md)
-
-### [Set-AutodiscoverVirtualDirectory](Set-AutodiscoverVirtualDirectory.md)
-
-### [Get-ClientAccessArray](Get-ClientAccessArray.md)
-
-### [New-ClientAccessArray](New-ClientAccessArray.md)
-
-### [Remove-ClientAccessArray](Remove-ClientAccessArray.md)
-
-### [Set-ClientAccessArray](Set-ClientAccessArray.md)
-
-### [Get-ClientAccessServer](Get-ClientAccessServer.md)
-
-### [Set-ClientAccessServer](Set-ClientAccessServer.md)
-
-### [Get-ClientAccessService](Get-ClientAccessService.md)
-
-### [Set-ClientAccessService](Set-ClientAccessService.md)
-
-### [Get-EcpVirtualDirectory](Get-EcpVirtualDirectory.md)
-
-### [New-EcpVirtualDirectory](New-EcpVirtualDirectory.md)
-
-### [Remove-EcpVirtualDirectory](Remove-EcpVirtualDirectory.md)
-
-### [Set-EcpVirtualDirectory](Set-EcpVirtualDirectory.md)
-
-### [Get-MapiVirtualDirectory](Get-MapiVirtualDirectory.md)
-
-### [New-MapiVirtualDirectory](New-MapiVirtualDirectory.md)
-
-### [Remove-MapiVirtualDirectory](Remove-MapiVirtualDirectory.md)
-
-### [Set-MapiVirtualDirectory](Set-MapiVirtualDirectory.md)
-
 ### [Disable-OutlookAnywhere](Disable-OutlookAnywhere.md)
 
 ### [Enable-OutlookAnywhere](Enable-OutlookAnywhere.md)
 
-### [Get-OutlookAnywhere](Get-OutlookAnywhere.md)
+### [Get-ActiveSyncVirtualDirectory](Get-ActiveSyncVirtualDirectory.md)
 
-### [Set-OutlookAnywhere](Set-OutlookAnywhere.md)
+### [Get-AuthRedirect](Get-AuthRedirect.md)
+
+### [Get-AutodiscoverVirtualDirectory](Get-AutodiscoverVirtualDirectory.md)
+
+### [Get-ClientAccessArray](Get-ClientAccessArray.md)
+
+### [Get-ClientAccessServer](Get-ClientAccessServer.md)
+
+### [Get-ClientAccessService](Get-ClientAccessService.md)
+
+### [Get-EcpVirtualDirectory](Get-EcpVirtualDirectory.md)
+
+### [Get-MapiVirtualDirectory](Get-MapiVirtualDirectory.md)
+
+### [Get-OutlookAnywhere](Get-OutlookAnywhere.md)
 
 ### [Get-OwaVirtualDirectory](Get-OwaVirtualDirectory.md)
 
-### [New-OwaVirtualDirectory](New-OwaVirtualDirectory.md)
-
-### [Remove-OwaVirtualDirectory](Remove-OwaVirtualDirectory.md)
-
-### [Set-OwaVirtualDirectory](Set-OwaVirtualDirectory.md)
-
 ### [Get-PowerShellVirtualDirectory](Get-PowerShellVirtualDirectory.md)
-
-### [New-PowerShellVirtualDirectory](New-PowerShellVirtualDirectory.md)
-
-### [Remove-PowerShellVirtualDirectory](Remove-PowerShellVirtualDirectory.md)
-
-### [Set-PowerShellVirtualDirectory](Set-PowerShellVirtualDirectory.md)
 
 ### [Get-RpcClientAccess](Get-RpcClientAccess.md)
 
-### [New-RpcClientAccess](New-RpcClientAccess.md)
-
-### [Remove-RpcClientAccess](Remove-RpcClientAccess.md)
-
-### [Set-RpcClientAccess](Set-RpcClientAccess.md)
-
 ### [Get-WebServicesVirtualDirectory](Get-WebServicesVirtualDirectory.md)
+
+### [New-ActiveSyncVirtualDirectory](New-ActiveSyncVirtualDirectory.md)
+
+### [New-AuthRedirect](New-AuthRedirect.md)
+
+### [New-AutodiscoverVirtualDirectory](New-AutodiscoverVirtualDirectory.md)
+
+### [New-ClientAccessArray](New-ClientAccessArray.md)
+
+### [New-EcpVirtualDirectory](New-EcpVirtualDirectory.md)
+
+### [New-MapiVirtualDirectory](New-MapiVirtualDirectory.md)
+
+### [New-OwaVirtualDirectory](New-OwaVirtualDirectory.md)
+
+### [New-PowerShellVirtualDirectory](New-PowerShellVirtualDirectory.md)
+
+### [New-RpcClientAccess](New-RpcClientAccess.md)
 
 ### [New-WebServicesVirtualDirectory](New-WebServicesVirtualDirectory.md)
 
+### [Remove-ActiveSyncVirtualDirectory](Remove-ActiveSyncVirtualDirectory.md)
+
+### [Remove-AuthRedirect](Remove-AuthRedirect.md)
+
+### [Remove-AutodiscoverVirtualDirectory](Remove-AutodiscoverVirtualDirectory.md)
+
+### [Remove-ClientAccessArray](Remove-ClientAccessArray.md)
+
+### [Remove-EcpVirtualDirectory](Remove-EcpVirtualDirectory.md)
+
+### [Remove-MapiVirtualDirectory](Remove-MapiVirtualDirectory.md)
+
+### [Remove-OwaVirtualDirectory](Remove-OwaVirtualDirectory.md)
+
+### [Remove-PowerShellVirtualDirectory](Remove-PowerShellVirtualDirectory.md)
+
+### [Remove-RpcClientAccess](Remove-RpcClientAccess.md)
+
 ### [Remove-WebServicesVirtualDirectory](Remove-WebServicesVirtualDirectory.md)
+
+### [Set-ActiveSyncVirtualDirectory](Set-ActiveSyncVirtualDirectory.md)
+
+### [Set-AuthRedirect](Set-AuthRedirect.md)
+
+### [Set-AutodiscoverVirtualDirectory](Set-AutodiscoverVirtualDirectory.md)
+
+### [Set-ClientAccessArray](Set-ClientAccessArray.md)
+
+### [Set-ClientAccessServer](Set-ClientAccessServer.md)
+
+### [Set-ClientAccessService](Set-ClientAccessService.md)
+
+### [Set-EcpVirtualDirectory](Set-EcpVirtualDirectory.md)
+
+### [Set-MapiVirtualDirectory](Set-MapiVirtualDirectory.md)
+
+### [Set-OutlookAnywhere](Set-OutlookAnywhere.md)
+
+### [Set-OwaVirtualDirectory](Set-OwaVirtualDirectory.md)
+
+### [Set-PowerShellVirtualDirectory](Set-PowerShellVirtualDirectory.md)
+
+### [Set-RpcClientAccess](Set-RpcClientAccess.md)
 
 ### [Set-WebServicesVirtualDirectory](Set-WebServicesVirtualDirectory.md)
 
+
 ## database-availability-groups Cmdlets
-### [Move-ActiveMailboxDatabase](Move-ActiveMailboxDatabase.md)
+### [Add-DatabaseAvailabilityGroupServer](Add-DatabaseAvailabilityGroupServer.md)
+
+### [Add-MailboxDatabaseCopy](Add-MailboxDatabaseCopy.md)
 
 ### [Get-DatabaseAvailabilityGroup](Get-DatabaseAvailabilityGroup.md)
 
+### [Get-DatabaseAvailabilityGroupNetwork](Get-DatabaseAvailabilityGroupNetwork.md)
+
+### [Get-MailboxDatabaseCopyStatus](Get-MailboxDatabaseCopyStatus.md)
+
+### [Move-ActiveMailboxDatabase](Move-ActiveMailboxDatabase.md)
+
 ### [New-DatabaseAvailabilityGroup](New-DatabaseAvailabilityGroup.md)
+
+### [New-DatabaseAvailabilityGroupNetwork](New-DatabaseAvailabilityGroupNetwork.md)
 
 ### [Remove-DatabaseAvailabilityGroup](Remove-DatabaseAvailabilityGroup.md)
 
+### [Remove-DatabaseAvailabilityGroupNetwork](Remove-DatabaseAvailabilityGroupNetwork.md)
+
+### [Remove-DatabaseAvailabilityGroupServer](Remove-DatabaseAvailabilityGroupServer.md)
+
+### [Remove-MailboxDatabaseCopy](Remove-MailboxDatabaseCopy.md)
+
 ### [Restore-DatabaseAvailabilityGroup](Restore-DatabaseAvailabilityGroup.md)
 
+### [Resume-MailboxDatabaseCopy](Resume-MailboxDatabaseCopy.md)
+
 ### [Set-DatabaseAvailabilityGroup](Set-DatabaseAvailabilityGroup.md)
+
+### [Set-DatabaseAvailabilityGroupNetwork](Set-DatabaseAvailabilityGroupNetwork.md)
+
+### [Set-MailboxDatabaseCopy](Set-MailboxDatabaseCopy.md)
 
 ### [Start-DatabaseAvailabilityGroup](Start-DatabaseAvailabilityGroup.md)
 
 ### [Stop-DatabaseAvailabilityGroup](Stop-DatabaseAvailabilityGroup.md)
 
-### [Get-DatabaseAvailabilityGroupNetwork](Get-DatabaseAvailabilityGroupNetwork.md)
-
-### [New-DatabaseAvailabilityGroupNetwork](New-DatabaseAvailabilityGroupNetwork.md)
-
-### [Remove-DatabaseAvailabilityGroupNetwork](Remove-DatabaseAvailabilityGroupNetwork.md)
-
-### [Set-DatabaseAvailabilityGroupNetwork](Set-DatabaseAvailabilityGroupNetwork.md)
-
-### [Add-DatabaseAvailabilityGroupServer](Add-DatabaseAvailabilityGroupServer.md)
-
-### [Remove-DatabaseAvailabilityGroupServer](Remove-DatabaseAvailabilityGroupServer.md)
-
-### [Add-MailboxDatabaseCopy](Add-MailboxDatabaseCopy.md)
-
-### [Remove-MailboxDatabaseCopy](Remove-MailboxDatabaseCopy.md)
-
-### [Resume-MailboxDatabaseCopy](Resume-MailboxDatabaseCopy.md)
-
-### [Set-MailboxDatabaseCopy](Set-MailboxDatabaseCopy.md)
-
 ### [Suspend-MailboxDatabaseCopy](Suspend-MailboxDatabaseCopy.md)
-
-### [Update-MailboxDatabaseCopy](Update-MailboxDatabaseCopy.md)
-
-### [Get-MailboxDatabaseCopyStatus](Get-MailboxDatabaseCopyStatus.md)
 
 ### [Test-ReplicationHealth](Test-ReplicationHealth.md)
 
-## devices Cmdlets
-### [Test-ActiveSyncConnectivity](Test-ActiveSyncConnectivity.md)
+### [Update-MailboxDatabaseCopy](Update-MailboxDatabaseCopy.md)
 
+## devices Cmdlets
 ### [Clear-ActiveSyncDevice](Clear-ActiveSyncDevice.md)
 
-### [Get-ActiveSyncDevice](Get-ActiveSyncDevice.md)
-
-### [Remove-ActiveSyncDevice](Remove-ActiveSyncDevice.md)
-
-### [Get-ActiveSyncDeviceAccessRule](Get-ActiveSyncDeviceAccessRule.md)
-
-### [New-ActiveSyncDeviceAccessRule](New-ActiveSyncDeviceAccessRule.md)
-
-### [Remove-ActiveSyncDeviceAccessRule](Remove-ActiveSyncDeviceAccessRule.md)
-
-### [Set-ActiveSyncDeviceAccessRule](Set-ActiveSyncDeviceAccessRule.md)
-
-### [Get-ActiveSyncDeviceAutoblockThreshold](Get-ActiveSyncDeviceAutoblockThreshold.md)
-
-### [Set-ActiveSyncDeviceAutoblockThreshold](Set-ActiveSyncDeviceAutoblockThreshold.md)
-
-### [Get-ActiveSyncDeviceClass](Get-ActiveSyncDeviceClass.md)
-
-### [Remove-ActiveSyncDeviceClass](Remove-ActiveSyncDeviceClass.md)
-
-### [Get-ActiveSyncDeviceStatistics](Get-ActiveSyncDeviceStatistics.md)
+### [Clear-MobileDevice](Clear-MobileDevice.md)
 
 ### [Export-ActiveSyncLog](Export-ActiveSyncLog.md)
 
+### [Get-ActiveSyncDevice](Get-ActiveSyncDevice.md)
+
+### [Get-ActiveSyncDeviceAccessRule](Get-ActiveSyncDeviceAccessRule.md)
+
+### [Get-ActiveSyncDeviceAutoblockThreshold](Get-ActiveSyncDeviceAutoblockThreshold.md)
+
+### [Get-ActiveSyncDeviceClass](Get-ActiveSyncDeviceClass.md)
+
+### [Get-ActiveSyncDeviceStatistics](Get-ActiveSyncDeviceStatistics.md)
+
 ### [Get-ActiveSyncMailboxPolicy](Get-ActiveSyncMailboxPolicy.md)
-
-### [New-ActiveSyncMailboxPolicy](New-ActiveSyncMailboxPolicy.md)
-
-### [Remove-ActiveSyncMailboxPolicy](Remove-ActiveSyncMailboxPolicy.md)
-
-### [Set-ActiveSyncMailboxPolicy](Set-ActiveSyncMailboxPolicy.md)
 
 ### [Get-ActiveSyncOrganizationSettings](Get-ActiveSyncOrganizationSettings.md)
 
-### [Set-ActiveSyncOrganizationSettings](Set-ActiveSyncOrganizationSettings.md)
-
 ### [Get-DeviceConditionalAccessPolicy](Get-DeviceConditionalAccessPolicy.md)
-
-### [New-DeviceConditionalAccessPolicy](New-DeviceConditionalAccessPolicy.md)
-
-### [Remove-DeviceConditionalAccessPolicy](Remove-DeviceConditionalAccessPolicy.md)
-
-### [Set-DeviceConditionalAccessPolicy](Set-DeviceConditionalAccessPolicy.md)
 
 ### [Get-DeviceConditionalAccessRule](Get-DeviceConditionalAccessRule.md)
 
-### [New-DeviceConditionalAccessRule](New-DeviceConditionalAccessRule.md)
-
-### [Remove-DeviceConditionalAccessRule](Remove-DeviceConditionalAccessRule.md)
-
-### [Set-DeviceConditionalAccessRule](Set-DeviceConditionalAccessRule.md)
-
 ### [Get-DeviceConfigurationPolicy](Get-DeviceConfigurationPolicy.md)
 
-### [New-DeviceConfigurationPolicy](New-DeviceConfigurationPolicy.md)
-
-### [Remove-DeviceConfigurationPolicy](Remove-DeviceConfigurationPolicy.md)
-
-### [Set-DeviceConfigurationPolicy](Set-DeviceConfigurationPolicy.md)
-
 ### [Get-DeviceConfigurationRule](Get-DeviceConfigurationRule.md)
-
-### [New-DeviceConfigurationRule](New-DeviceConfigurationRule.md)
-
-### [Remove-DeviceConfigurationRule](Remove-DeviceConfigurationRule.md)
-
-### [Set-DeviceConfigurationRule](Set-DeviceConfigurationRule.md)
 
 ### [Get-DevicePolicy](Get-DevicePolicy.md)
 
 ### [Get-DeviceTenantPolicy](Get-DeviceTenantPolicy.md)
 
-### [New-DeviceTenantPolicy](New-DeviceTenantPolicy.md)
-
-### [Remove-DeviceTenantPolicy](Remove-DeviceTenantPolicy.md)
-
-### [Set-DeviceTenantPolicy](Set-DeviceTenantPolicy.md)
-
 ### [Get-DeviceTenantRule](Get-DeviceTenantRule.md)
-
-### [New-DeviceTenantRule](New-DeviceTenantRule.md)
-
-### [Remove-DeviceTenantRule](Remove-DeviceTenantRule.md)
-
-### [Set-DeviceTenantRule](Set-DeviceTenantRule.md)
-
-### [Clear-MobileDevice](Clear-MobileDevice.md)
 
 ### [Get-MobileDevice](Get-MobileDevice.md)
 
-### [Remove-MobileDevice](Remove-MobileDevice.md)
-
 ### [Get-MobileDeviceMailboxPolicy](Get-MobileDeviceMailboxPolicy.md)
-
-### [New-MobileDeviceMailboxPolicy](New-MobileDeviceMailboxPolicy.md)
-
-### [Remove-MobileDeviceMailboxPolicy](Remove-MobileDeviceMailboxPolicy.md)
-
-### [Set-MobileDeviceMailboxPolicy](Set-MobileDeviceMailboxPolicy.md)
 
 ### [Get-MobileDeviceStatistics](Get-MobileDeviceStatistics.md)
 
+### [New-ActiveSyncDeviceAccessRule](New-ActiveSyncDeviceAccessRule.md)
+
+### [New-ActiveSyncMailboxPolicy](New-ActiveSyncMailboxPolicy.md)
+
+### [New-DeviceConditionalAccessPolicy](New-DeviceConditionalAccessPolicy.md)
+
+### [New-DeviceConditionalAccessRule](New-DeviceConditionalAccessRule.md)
+
+### [New-DeviceConfigurationPolicy](New-DeviceConfigurationPolicy.md)
+
+### [New-DeviceConfigurationRule](New-DeviceConfigurationRule.md)
+
+### [New-DeviceTenantPolicy](New-DeviceTenantPolicy.md)
+
+### [New-DeviceTenantRule](New-DeviceTenantRule.md)
+
+### [New-MobileDeviceMailboxPolicy](New-MobileDeviceMailboxPolicy.md)
+
+### [Remove-ActiveSyncDevice](Remove-ActiveSyncDevice.md)
+
+### [Remove-ActiveSyncDeviceAccessRule](Remove-ActiveSyncDeviceAccessRule.md)
+
+### [Remove-ActiveSyncDeviceClass](Remove-ActiveSyncDeviceClass.md)
+
+### [Remove-ActiveSyncMailboxPolicy](Remove-ActiveSyncMailboxPolicy.md)
+
+### [Remove-DeviceConditionalAccessPolicy](Remove-DeviceConditionalAccessPolicy.md)
+
+### [Remove-DeviceConditionalAccessRule](Remove-DeviceConditionalAccessRule.md)
+
+### [Remove-DeviceConfigurationPolicy](Remove-DeviceConfigurationPolicy.md)
+
+### [Remove-DeviceConfigurationRule](Remove-DeviceConfigurationRule.md)
+
+### [Remove-DeviceTenantPolicy](Remove-DeviceTenantPolicy.md)
+
+### [Remove-DeviceTenantRule](Remove-DeviceTenantRule.md)
+
+### [Remove-MobileDevice](Remove-MobileDevice.md)
+
+### [Remove-MobileDeviceMailboxPolicy](Remove-MobileDeviceMailboxPolicy.md)
+
+### [Set-ActiveSyncDeviceAccessRule](Set-ActiveSyncDeviceAccessRule.md)
+
+### [Set-ActiveSyncDeviceAutoblockThreshold](Set-ActiveSyncDeviceAutoblockThreshold.md)
+
+### [Set-ActiveSyncMailboxPolicy](Set-ActiveSyncMailboxPolicy.md)
+
+### [Set-ActiveSyncOrganizationSettings](Set-ActiveSyncOrganizationSettings.md)
+
+### [Set-DeviceConditionalAccessPolicy](Set-DeviceConditionalAccessPolicy.md)
+
+### [Set-DeviceConditionalAccessRule](Set-DeviceConditionalAccessRule.md)
+
+### [Set-DeviceConfigurationPolicy](Set-DeviceConfigurationPolicy.md)
+
+### [Set-DeviceConfigurationRule](Set-DeviceConfigurationRule.md)
+
+### [Set-DeviceTenantPolicy](Set-DeviceTenantPolicy.md)
+
+### [Set-DeviceTenantRule](Set-DeviceTenantRule.md)
+
+### [Set-MobileDeviceMailboxPolicy](Set-MobileDeviceMailboxPolicy.md)
+
+### [Test-ActiveSyncConnectivity](Test-ActiveSyncConnectivity.md)
+
 ## email-addresses-and-address-books Cmdlets
-### [Get-AddressBookPolicy](Get-AddressBookPolicy.md)
-
-### [New-AddressBookPolicy](New-AddressBookPolicy.md)
-
-### [Remove-AddressBookPolicy](Remove-AddressBookPolicy.md)
-
-### [Set-AddressBookPolicy](Set-AddressBookPolicy.md)
-
-### [Get-AddressList](Get-AddressList.md)
-
-### [Move-AddressList](Move-AddressList.md)
-
-### [New-AddressList](New-AddressList.md)
-
-### [Remove-AddressList](Remove-AddressList.md)
-
-### [Set-AddressList](Set-AddressList.md)
-
-### [Update-AddressList](Update-AddressList.md)
-
+## encryption-and-certificates Cmdlets
 ### [Disable-AddressListPaging](Disable-AddressListPaging.md)
 
 ### [Enable-AddressListPaging](Enable-AddressListPaging.md)
-
-### [Get-DetailsTemplate](Get-DetailsTemplate.md)
-
-### [Restore-DetailsTemplate](Restore-DetailsTemplate.md)
-
-### [Set-DetailsTemplate](Set-DetailsTemplate.md)
-
-### [Get-EmailAddressPolicy](Get-EmailAddressPolicy.md)
-
-### [New-EmailAddressPolicy](New-EmailAddressPolicy.md)
-
-### [Remove-EmailAddressPolicy](Remove-EmailAddressPolicy.md)
-
-### [Set-EmailAddressPolicy](Set-EmailAddressPolicy.md)
-
-### [Update-EmailAddressPolicy](Update-EmailAddressPolicy.md)
-
-### [Get-GlobalAddressList](Get-GlobalAddressList.md)
-
-### [New-GlobalAddressList](New-GlobalAddressList.md)
-
-### [Remove-GlobalAddressList](Remove-GlobalAddressList.md)
-
-### [Set-GlobalAddressList](Set-GlobalAddressList.md)
-
-### [Update-GlobalAddressList](Update-GlobalAddressList.md)
-
-### [Get-OabVirtualDirectory](Get-OabVirtualDirectory.md)
-
-### [New-OabVirtualDirectory](New-OabVirtualDirectory.md)
-
-### [Remove-OabVirtualDirectory](Remove-OabVirtualDirectory.md)
-
-### [Set-OabVirtualDirectory](Set-OabVirtualDirectory.md)
-
-### [Get-OfflineAddressBook](Get-OfflineAddressBook.md)
-
-### [Move-OfflineAddressBook](Move-OfflineAddressBook.md)
-
-### [New-OfflineAddressBook](New-OfflineAddressBook.md)
-
-### [Remove-OfflineAddressBook](Remove-OfflineAddressBook.md)
-
-### [Set-OfflineAddressBook](Set-OfflineAddressBook.md)
-
-### [Update-OfflineAddressBook](Update-OfflineAddressBook.md)
-
-## encryption-and-certificates Cmdlets
-### [Get-DataEncryptionPolicy](Get-DataEncryptionPolicy.md)
-
-### [New-DataEncryptionPolicy](New-DataEncryptionPolicy.md)
-
-### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
 
 ### [Enable-ExchangeCertificate](Enable-ExchangeCertificate.md)
 
 ### [Export-ExchangeCertificate](Export-ExchangeCertificate.md)
 
+### [Get-AddressBookPolicy](Get-AddressBookPolicy.md)
+
+### [Get-AddressList](Get-AddressList.md)
+
+### [Get-DataEncryptionPolicy](Get-DataEncryptionPolicy.md)
+
+### [Get-DetailsTemplate](Get-DetailsTemplate.md)
+
+### [Get-EmailAddressPolicy](Get-EmailAddressPolicy.md)
+
 ### [Get-ExchangeCertificate](Get-ExchangeCertificate.md)
 
-### [Import-ExchangeCertificate](Import-ExchangeCertificate.md)
-
-### [New-ExchangeCertificate](New-ExchangeCertificate.md)
-
-### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
+### [Get-GlobalAddressList](Get-GlobalAddressList.md)
 
 ### [Get-IRMConfiguration](Get-IRMConfiguration.md)
 
-### [Set-IRMConfiguration](Set-IRMConfiguration.md)
+### [Get-OabVirtualDirectory](Get-OabVirtualDirectory.md)
 
-### [Test-IRMConfiguration](Test-IRMConfiguration.md)
+### [Get-OfflineAddressBook](Get-OfflineAddressBook.md)
 
 ### [Get-OMEConfiguration](Get-OMEConfiguration.md)
-
-### [New-OMEConfiguration](New-OMEConfiguration.md)
-
-### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
-
-### [Set-OMEConfiguration](Set-OMEConfiguration.md)
-
-### [Set-OMEMessageRevocation](Set-OMEMessageRevocation.md)
 
 ### [Get-OMEMessageStatus](Get-OMEMessageStatus.md)
 
 ### [Get-RMSTemplate](Get-RMSTemplate.md)
 
-### [Set-RMSTemplate](Set-RMSTemplate.md)
-
 ### [Get-RMSTrustedPublishingDomain](Get-RMSTrustedPublishingDomain.md)
-
-### [Import-RMSTrustedPublishingDomain](Import-RMSTrustedPublishingDomain.md)
-
-### [Remove-RMSTrustedPublishingDomain](Remove-RMSTrustedPublishingDomain.md)
-
-### [Set-RMSTrustedPublishingDomain](Set-RMSTrustedPublishingDomain.md)
 
 ### [Get-SmimeConfig](Get-SmimeConfig.md)
 
+### [Import-ExchangeCertificate](Import-ExchangeCertificate.md)
+
+### [Import-RMSTrustedPublishingDomain](Import-RMSTrustedPublishingDomain.md)
+
+### [Move-AddressList](Move-AddressList.md)
+
+### [Move-OfflineAddressBook](Move-OfflineAddressBook.md)
+
+### [New-AddressBookPolicy](New-AddressBookPolicy.md)
+
+### [New-AddressList](New-AddressList.md)
+
+### [New-DataEncryptionPolicy](New-DataEncryptionPolicy.md)
+
+### [New-EmailAddressPolicy](New-EmailAddressPolicy.md)
+
+### [New-ExchangeCertificate](New-ExchangeCertificate.md)
+
+### [New-GlobalAddressList](New-GlobalAddressList.md)
+
+### [New-OabVirtualDirectory](New-OabVirtualDirectory.md)
+
+### [New-OfflineAddressBook](New-OfflineAddressBook.md)
+
+### [New-OMEConfiguration](New-OMEConfiguration.md)
+
+### [Remove-AddressBookPolicy](Remove-AddressBookPolicy.md)
+
+### [Remove-AddressList](Remove-AddressList.md)
+
+### [Remove-EmailAddressPolicy](Remove-EmailAddressPolicy.md)
+
+### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
+
+### [Remove-GlobalAddressList](Remove-GlobalAddressList.md)
+
+### [Remove-OabVirtualDirectory](Remove-OabVirtualDirectory.md)
+
+### [Remove-OfflineAddressBook](Remove-OfflineAddressBook.md)
+
+### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
+
+### [Remove-RMSTrustedPublishingDomain](Remove-RMSTrustedPublishingDomain.md)
+
+### [Restore-DetailsTemplate](Restore-DetailsTemplate.md)
+
+### [Set-AddressBookPolicy](Set-AddressBookPolicy.md)
+
+### [Set-AddressList](Set-AddressList.md)
+
+### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
+
+### [Set-DetailsTemplate](Set-DetailsTemplate.md)
+
+### [Set-EmailAddressPolicy](Set-EmailAddressPolicy.md)
+
+### [Set-GlobalAddressList](Set-GlobalAddressList.md)
+
+### [Set-IRMConfiguration](Set-IRMConfiguration.md)
+
+### [Set-OabVirtualDirectory](Set-OabVirtualDirectory.md)
+
+### [Set-OfflineAddressBook](Set-OfflineAddressBook.md)
+
+### [Set-OMEConfiguration](Set-OMEConfiguration.md)
+
+### [Set-OMEMessageRevocation](Set-OMEMessageRevocation.md)
+
+### [Set-RMSTemplate](Set-RMSTemplate.md)
+
+### [Set-RMSTrustedPublishingDomain](Set-RMSTrustedPublishingDomain.md)
+
 ### [Set-SmimeConfig](Set-SmimeConfig.md)
+
+### [Test-IRMConfiguration](Test-IRMConfiguration.md)
+
+### [Update-AddressList](Update-AddressList.md)
+
+### [Update-EmailAddressPolicy](Update-EmailAddressPolicy.md)
+
+### [Update-GlobalAddressList](Update-GlobalAddressList.md)
+
+### [Update-OfflineAddressBook](Update-OfflineAddressBook.md)
 
 ## federation-and-hybrid Cmdlets
 ### [Add-FederatedDomain](Add-FederatedDomain.md)
 
-### [Remove-FederatedDomain](Remove-FederatedDomain.md)
+### [Disable-RemoteMailbox](Disable-RemoteMailbox.md)
+
+### [Enable-RemoteMailbox](Enable-RemoteMailbox.md)
 
 ### [Get-FederatedDomainProof](Get-FederatedDomainProof.md)
 
 ### [Get-FederatedOrganizationIdentifier](Get-FederatedOrganizationIdentifier.md)
 
-### [Set-FederatedOrganizationIdentifier](Set-FederatedOrganizationIdentifier.md)
-
 ### [Get-FederationInformation](Get-FederationInformation.md)
 
 ### [Get-FederationTrust](Get-FederationTrust.md)
 
-### [New-FederationTrust](New-FederationTrust.md)
-
-### [Remove-FederationTrust](Remove-FederationTrust.md)
-
-### [Set-FederationTrust](Set-FederationTrust.md)
-
-### [Test-FederationTrust](Test-FederationTrust.md)
-
-### [Test-FederationTrustCertificate](Test-FederationTrustCertificate.md)
-
 ### [Get-HybridConfiguration](Get-HybridConfiguration.md)
 
-### [New-HybridConfiguration](New-HybridConfiguration.md)
-
-### [Remove-HybridConfiguration](Remove-HybridConfiguration.md)
-
-### [Set-HybridConfiguration](Set-HybridConfiguration.md)
-
-### [Update-HybridConfiguration](Update-HybridConfiguration.md)
-
 ### [Get-HybridMailflow](Get-HybridMailflow.md)
-
-### [Set-HybridMailflow](Set-HybridMailflow.md)
 
 ### [Get-HybridMailflowDatacenterIPs](Get-HybridMailflowDatacenterIPs.md)
 
@@ -832,111 +814,153 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-IntraOrganizationConnector](Get-IntraOrganizationConnector.md)
 
-### [New-IntraOrganizationConnector](New-IntraOrganizationConnector.md)
-
-### [Remove-IntraOrganizationConnector](Remove-IntraOrganizationConnector.md)
-
-### [Set-IntraOrganizationConnector](Set-IntraOrganizationConnector.md)
-
 ### [Get-OnPremisesOrganization](Get-OnPremisesOrganization.md)
-
-### [New-OnPremisesOrganization](New-OnPremisesOrganization.md)
-
-### [Remove-OnPremisesOrganization](Remove-OnPremisesOrganization.md)
-
-### [Set-OnPremisesOrganization](Set-OnPremisesOrganization.md)
 
 ### [Get-PendingFederatedDomain](Get-PendingFederatedDomain.md)
 
-### [Set-PendingFederatedDomain](Set-PendingFederatedDomain.md)
-
-### [Update-Recipient](Update-Recipient.md)
-
-### [Disable-RemoteMailbox](Disable-RemoteMailbox.md)
-
-### [Enable-RemoteMailbox](Enable-RemoteMailbox.md)
-
 ### [Get-RemoteMailbox](Get-RemoteMailbox.md)
+
+### [New-FederationTrust](New-FederationTrust.md)
+
+### [New-HybridConfiguration](New-HybridConfiguration.md)
+
+### [New-IntraOrganizationConnector](New-IntraOrganizationConnector.md)
+
+### [New-OnPremisesOrganization](New-OnPremisesOrganization.md)
 
 ### [New-RemoteMailbox](New-RemoteMailbox.md)
 
+### [Remove-FederatedDomain](Remove-FederatedDomain.md)
+
+### [Remove-FederationTrust](Remove-FederationTrust.md)
+
+### [Remove-HybridConfiguration](Remove-HybridConfiguration.md)
+
+### [Remove-IntraOrganizationConnector](Remove-IntraOrganizationConnector.md)
+
+### [Remove-OnPremisesOrganization](Remove-OnPremisesOrganization.md)
+
 ### [Remove-RemoteMailbox](Remove-RemoteMailbox.md)
+
+### [Set-FederatedOrganizationIdentifier](Set-FederatedOrganizationIdentifier.md)
+
+### [Set-FederationTrust](Set-FederationTrust.md)
+
+### [Set-HybridConfiguration](Set-HybridConfiguration.md)
+
+### [Set-HybridMailflow](Set-HybridMailflow.md)
+
+### [Set-IntraOrganizationConnector](Set-IntraOrganizationConnector.md)
+
+### [Set-OnPremisesOrganization](Set-OnPremisesOrganization.md)
+
+### [Set-PendingFederatedDomain](Set-PendingFederatedDomain.md)
 
 ### [Set-RemoteMailbox](Set-RemoteMailbox.md)
 
+### [Test-FederationTrust](Test-FederationTrust.md)
+
+### [Test-FederationTrustCertificate](Test-FederationTrustCertificate.md)
+
+### [Update-HybridConfiguration](Update-HybridConfiguration.md)
+
+### [Update-Recipient](Update-Recipient.md)
+
 ## mailbox-databases-and-servers Cmdlets
-### [Test-AssistantHealth](Test-AssistantHealth.md)
+### [Clean-MailboxDatabase](Clean-MailboxDatabase.md)
+
+### [Disable-MailboxQuarantine](Disable-MailboxQuarantine.md)
+
+### [Disable-MetaCacheDatabase](Disable-MetaCacheDatabase.md)
 
 ### [Dismount-Database](Dismount-Database.md)
+
+### [Enable-MailboxQuarantine](Enable-MailboxQuarantine.md)
+
+### [Enable-MetaCacheDatabase](Enable-MetaCacheDatabase.md)
+
+### [Get-FailedContentIndexDocuments](Get-FailedContentIndexDocuments.md)
+
+### [Get-MailboxDatabase](Get-MailboxDatabase.md)
+
+### [Get-MailboxRepairRequest](Get-MailboxRepairRequest.md)
+
+### [Get-MailboxServer](Get-MailboxServer.md)
+
+### [Get-SearchDocumentFormat](Get-SearchDocumentFormat.md)
+
+### [Get-StoreUsageStatistics](Get-StoreUsageStatistics.md)
 
 ### [Mount-Database](Mount-Database.md)
 
 ### [Move-DatabasePath](Move-DatabasePath.md)
 
-### [Update-DatabaseSchema](Update-DatabaseSchema.md)
-
-### [Test-ExchangeSearch](Test-ExchangeSearch.md)
-
-### [Get-FailedContentIndexDocuments](Get-FailedContentIndexDocuments.md)
-
-### [Update-FileDistributionService](Update-FileDistributionService.md)
-
-### [Clean-MailboxDatabase](Clean-MailboxDatabase.md)
-
-### [Get-MailboxDatabase](Get-MailboxDatabase.md)
-
 ### [New-MailboxDatabase](New-MailboxDatabase.md)
-
-### [Remove-MailboxDatabase](Remove-MailboxDatabase.md)
-
-### [Set-MailboxDatabase](Set-MailboxDatabase.md)
-
-### [Disable-MailboxQuarantine](Disable-MailboxQuarantine.md)
-
-### [Enable-MailboxQuarantine](Enable-MailboxQuarantine.md)
-
-### [Get-MailboxRepairRequest](Get-MailboxRepairRequest.md)
 
 ### [New-MailboxRepairRequest](New-MailboxRepairRequest.md)
 
-### [Remove-MailboxRepairRequest](Remove-MailboxRepairRequest.md)
-
-### [Get-MailboxServer](Get-MailboxServer.md)
-
-### [Set-MailboxServer](Set-MailboxServer.md)
-
-### [Disable-MetaCacheDatabase](Disable-MetaCacheDatabase.md)
-
-### [Enable-MetaCacheDatabase](Enable-MetaCacheDatabase.md)
-
-### [Test-MRSHealth](Test-MRSHealth.md)
-
-### [Get-SearchDocumentFormat](Get-SearchDocumentFormat.md)
-
 ### [New-SearchDocumentFormat](New-SearchDocumentFormat.md)
+
+### [Remove-MailboxDatabase](Remove-MailboxDatabase.md)
+
+### [Remove-MailboxRepairRequest](Remove-MailboxRepairRequest.md)
 
 ### [Remove-SearchDocumentFormat](Remove-SearchDocumentFormat.md)
 
+### [Remove-StoreMailbox](Remove-StoreMailbox.md)
+
+### [Set-MailboxDatabase](Set-MailboxDatabase.md)
+
+### [Set-MailboxServer](Set-MailboxServer.md)
+
 ### [Set-SearchDocumentFormat](Set-SearchDocumentFormat.md)
 
-### [Remove-StoreMailbox](Remove-StoreMailbox.md)
+### [Test-AssistantHealth](Test-AssistantHealth.md)
+
+### [Test-ExchangeSearch](Test-ExchangeSearch.md)
+
+### [Test-MRSHealth](Test-MRSHealth.md)
+
+### [Update-DatabaseSchema](Update-DatabaseSchema.md)
+
+### [Update-FileDistributionService](Update-FileDistributionService.md)
 
 ### [Update-StoreMailboxState](Update-StoreMailboxState.md)
 
-### [Get-StoreUsageStatistics](Get-StoreUsageStatistics.md)
-
 ## mailboxes Cmdlets
+### [Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
+
+### [Add-MailboxPermission](Add-MailboxPermission.md)
+
+### [Add-RecipientPermission](Add-RecipientPermission.md)
+
+### [Connect-Mailbox](Connect-Mailbox.md)
+
 ### [Disable-App](Disable-App.md)
+
+### [Disable-InboxRule](Disable-InboxRule.md)
+
+### [Disable-Mailbox](Disable-Mailbox.md)
+
+### [Disable-ServiceEmailChannel](Disable-ServiceEmailChannel.md)
+
+### [Disable-SweepRule](Disable-SweepRule.md)
 
 ### [Enable-App](Enable-App.md)
 
+### [Enable-InboxRule](Enable-InboxRule.md)
+
+### [Enable-Mailbox](Enable-Mailbox.md)
+
+### [Enable-ServiceEmailChannel](Enable-ServiceEmailChannel.md)
+
+### [Enable-SweepRule](Enable-SweepRule.md)
+
+### [Export-MailboxDiagnosticLogs](Export-MailboxDiagnosticLogs.md)
+
+### [Export-RecipientDataProperty](Export-RecipientDataProperty.md)
+
 ### [Get-App](Get-App.md)
-
-### [New-App](New-App.md)
-
-### [Remove-App](Remove-App.md)
-
-### [Set-App](Set-App.md)
 
 ### [Get-CalendarDiagnosticAnalysis](Get-CalendarDiagnosticAnalysis.md)
 
@@ -944,280 +968,204 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-CalendarDiagnosticObjects](Get-CalendarDiagnosticObjects.md)
 
-### [Remove-CalendarEvents](Remove-CalendarEvents.md)
-
 ### [Get-CalendarNotification](Get-CalendarNotification.md)
-
-### [Set-CalendarNotification](Set-CalendarNotification.md)
 
 ### [Get-CalendarProcessing](Get-CalendarProcessing.md)
 
-### [Set-CalendarProcessing](Set-CalendarProcessing.md)
-
 ### [Get-Clutter](Get-Clutter.md)
-
-### [Set-Clutter](Set-Clutter.md)
-
-### [Import-ContactList](Import-ContactList.md)
 
 ### [Get-FocusedInbox](Get-FocusedInbox.md)
 
-### [Set-FocusedInbox](Set-FocusedInbox.md)
-
-### [Disable-InboxRule](Disable-InboxRule.md)
-
-### [Enable-InboxRule](Enable-InboxRule.md)
-
 ### [Get-InboxRule](Get-InboxRule.md)
-
-### [New-InboxRule](New-InboxRule.md)
-
-### [Remove-InboxRule](Remove-InboxRule.md)
-
-### [Set-InboxRule](Set-InboxRule.md)
-
-### [Connect-Mailbox](Connect-Mailbox.md)
-
-### [Disable-Mailbox](Disable-Mailbox.md)
-
-### [Enable-Mailbox](Enable-Mailbox.md)
 
 ### [Get-Mailbox](Get-Mailbox.md)
 
-### [New-Mailbox](New-Mailbox.md)
-
-### [Remove-Mailbox](Remove-Mailbox.md)
-
-### [Restore-Mailbox](Restore-Mailbox.md)
-
-### [Search-Mailbox](Search-Mailbox.md)
-
-### [Set-Mailbox](Set-Mailbox.md)
-
 ### [Get-MailboxAutoReplyConfiguration](Get-MailboxAutoReplyConfiguration.md)
-
-### [Set-MailboxAutoReplyConfiguration](Set-MailboxAutoReplyConfiguration.md)
 
 ### [Get-MailboxCalendarFolder](Get-MailboxCalendarFolder.md)
 
-### [Set-MailboxCalendarFolder](Set-MailboxCalendarFolder.md)
-
-### [Export-MailboxDiagnosticLogs](Export-MailboxDiagnosticLogs.md)
-
 ### [Get-MailboxExportRequest](Get-MailboxExportRequest.md)
-
-### [New-MailboxExportRequest](New-MailboxExportRequest.md)
-
-### [Remove-MailboxExportRequest](Remove-MailboxExportRequest.md)
-
-### [Resume-MailboxExportRequest](Resume-MailboxExportRequest.md)
-
-### [Set-MailboxExportRequest](Set-MailboxExportRequest.md)
-
-### [Suspend-MailboxExportRequest](Suspend-MailboxExportRequest.md)
 
 ### [Get-MailboxExportRequestStatistics](Get-MailboxExportRequestStatistics.md)
 
 ### [Get-MailboxFolder](Get-MailboxFolder.md)
 
-### [New-MailboxFolder](New-MailboxFolder.md)
-
-### [Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
-
 ### [Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
-
-### [Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
-
-### [Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
 
 ### [Get-MailboxFolderStatistics](Get-MailboxFolderStatistics.md)
 
 ### [Get-MailboxImportRequest](Get-MailboxImportRequest.md)
 
-### [New-MailboxImportRequest](New-MailboxImportRequest.md)
-
-### [Remove-MailboxImportRequest](Remove-MailboxImportRequest.md)
-
-### [Resume-MailboxImportRequest](Resume-MailboxImportRequest.md)
-
-### [Set-MailboxImportRequest](Set-MailboxImportRequest.md)
-
-### [Suspend-MailboxImportRequest](Suspend-MailboxImportRequest.md)
-
 ### [Get-MailboxImportRequestStatistics](Get-MailboxImportRequestStatistics.md)
 
 ### [Get-MailboxLocation](Get-MailboxLocation.md)
 
-### [Add-MailboxPermission](Add-MailboxPermission.md)
-
 ### [Get-MailboxPermission](Get-MailboxPermission.md)
-
-### [Remove-MailboxPermission](Remove-MailboxPermission.md)
 
 ### [Get-MailboxPlan](Get-MailboxPlan.md)
 
-### [Set-MailboxPlan](Set-MailboxPlan.md)
-
 ### [Get-MailboxRestoreRequest](Get-MailboxRestoreRequest.md)
-
-### [New-MailboxRestoreRequest](New-MailboxRestoreRequest.md)
-
-### [Remove-MailboxRestoreRequest](Remove-MailboxRestoreRequest.md)
-
-### [Resume-MailboxRestoreRequest](Resume-MailboxRestoreRequest.md)
-
-### [Set-MailboxRestoreRequest](Set-MailboxRestoreRequest.md)
-
-### [Suspend-MailboxRestoreRequest](Suspend-MailboxRestoreRequest.md)
 
 ### [Get-MailboxRestoreRequestStatistics](Get-MailboxRestoreRequestStatistics.md)
 
 ### [Get-MailboxSentItemsConfiguration](Get-MailboxSentItemsConfiguration.md)
 
-### [Set-MailboxSentItemsConfiguration](Set-MailboxSentItemsConfiguration.md)
-
 ### [Get-MailboxStatistics](Get-MailboxStatistics.md)
 
 ### [Get-MailboxUserConfiguration](Get-MailboxUserConfiguration.md)
-
-### [Remove-MailboxUserConfiguration](Remove-MailboxUserConfiguration.md)
-
-### [New-MailMessage](New-MailMessage.md)
-
-### [Test-MAPIConnectivity](Test-MAPIConnectivity.md)
 
 ### [Get-MessageCategory](Get-MessageCategory.md)
 
 ### [Get-Place](Get-Place.md)
 
-### [Set-Place](Set-Place.md)
-
-### [Export-RecipientDataProperty](Export-RecipientDataProperty.md)
-
-### [Import-RecipientDataProperty](Import-RecipientDataProperty.md)
-
-### [Add-RecipientPermission](Add-RecipientPermission.md)
-
 ### [Get-RecipientPermission](Get-RecipientPermission.md)
-
-### [Remove-RecipientPermission](Remove-RecipientPermission.md)
 
 ### [Get-RecoverableItems](Get-RecoverableItems.md)
 
-### [Restore-RecoverableItems](Restore-RecoverableItems.md)
-
 ### [Get-ResourceConfig](Get-ResourceConfig.md)
-
-### [Set-ResourceConfig](Set-ResourceConfig.md)
-
-### [Disable-ServiceEmailChannel](Disable-ServiceEmailChannel.md)
-
-### [Enable-ServiceEmailChannel](Enable-ServiceEmailChannel.md)
-
-### [New-SiteMailbox](New-SiteMailbox.md)
-
-### [Undo-SoftDeletedMailbox](Undo-SoftDeletedMailbox.md)
-
-### [Disable-SweepRule](Disable-SweepRule.md)
-
-### [Enable-SweepRule](Enable-SweepRule.md)
 
 ### [Get-SweepRule](Get-SweepRule.md)
 
+### [Get-UserPhoto](Get-UserPhoto.md)
+
+### [Import-ContactList](Import-ContactList.md)
+
+### [Import-RecipientDataProperty](Import-RecipientDataProperty.md)
+
+### [New-App](New-App.md)
+
+### [New-InboxRule](New-InboxRule.md)
+
+### [New-Mailbox](New-Mailbox.md)
+
+### [New-MailboxExportRequest](New-MailboxExportRequest.md)
+
+### [New-MailboxFolder](New-MailboxFolder.md)
+
+### [New-MailboxImportRequest](New-MailboxImportRequest.md)
+
+### [New-MailboxRestoreRequest](New-MailboxRestoreRequest.md)
+
+### [New-MailMessage](New-MailMessage.md)
+
+### [New-SiteMailbox](New-SiteMailbox.md)
+
 ### [New-SweepRule](New-SweepRule.md)
+
+### [Remove-App](Remove-App.md)
+
+### [Remove-CalendarEvents](Remove-CalendarEvents.md)
+
+### [Remove-InboxRule](Remove-InboxRule.md)
+
+### [Remove-Mailbox](Remove-Mailbox.md)
+
+### [Remove-MailboxExportRequest](Remove-MailboxExportRequest.md)
+
+### [Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+
+### [Remove-MailboxImportRequest](Remove-MailboxImportRequest.md)
+
+### [Remove-MailboxPermission](Remove-MailboxPermission.md)
+
+### [Remove-MailboxRestoreRequest](Remove-MailboxRestoreRequest.md)
+
+### [Remove-MailboxUserConfiguration](Remove-MailboxUserConfiguration.md)
+
+### [Remove-RecipientPermission](Remove-RecipientPermission.md)
 
 ### [Remove-SweepRule](Remove-SweepRule.md)
 
-### [Set-SweepRule](Set-SweepRule.md)
-
-### [Get-UserPhoto](Get-UserPhoto.md)
-
 ### [Remove-UserPhoto](Remove-UserPhoto.md)
+
+### [Restore-Mailbox](Restore-Mailbox.md)
+
+### [Restore-RecoverableItems](Restore-RecoverableItems.md)
+
+### [Resume-MailboxExportRequest](Resume-MailboxExportRequest.md)
+
+### [Resume-MailboxImportRequest](Resume-MailboxImportRequest.md)
+
+### [Resume-MailboxRestoreRequest](Resume-MailboxRestoreRequest.md)
+
+### [Search-Mailbox](Search-Mailbox.md)
+
+### [Set-App](Set-App.md)
+
+### [Set-CalendarNotification](Set-CalendarNotification.md)
+
+### [Set-CalendarProcessing](Set-CalendarProcessing.md)
+
+### [Set-Clutter](Set-Clutter.md)
+
+### [Set-FocusedInbox](Set-FocusedInbox.md)
+
+### [Set-InboxRule](Set-InboxRule.md)
+
+### [Set-Mailbox](Set-Mailbox.md)
+
+### [Set-MailboxAutoReplyConfiguration](Set-MailboxAutoReplyConfiguration.md)
+
+### [Set-MailboxCalendarFolder](Set-MailboxCalendarFolder.md)
+
+### [Set-MailboxExportRequest](Set-MailboxExportRequest.md)
+
+### [Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+
+### [Set-MailboxImportRequest](Set-MailboxImportRequest.md)
+
+### [Set-MailboxPlan](Set-MailboxPlan.md)
+
+### [Set-MailboxRestoreRequest](Set-MailboxRestoreRequest.md)
+
+### [Set-MailboxSentItemsConfiguration](Set-MailboxSentItemsConfiguration.md)
+
+### [Set-Place](Set-Place.md)
+
+### [Set-ResourceConfig](Set-ResourceConfig.md)
+
+### [Set-SweepRule](Set-SweepRule.md)
 
 ### [Set-UserPhoto](Set-UserPhoto.md)
 
+### [Suspend-MailboxExportRequest](Suspend-MailboxExportRequest.md)
+
+### [Suspend-MailboxImportRequest](Suspend-MailboxImportRequest.md)
+
+### [Suspend-MailboxRestoreRequest](Suspend-MailboxRestoreRequest.md)
+
+### [Test-MAPIConnectivity](Test-MAPIConnectivity.md)
+
+### [Undo-SoftDeletedMailbox](Undo-SoftDeletedMailbox.md)
+
 ## mail-flow Cmdlets
-### [Get-AcceptedDomain](Get-AcceptedDomain.md)
+### [Add-ResubmitRequest](Add-ResubmitRequest.md)
 
-### [New-AcceptedDomain](New-AcceptedDomain.md)
+### [Disable-TransportAgent](Disable-TransportAgent.md)
 
-### [Remove-AcceptedDomain](Remove-AcceptedDomain.md)
-
-### [Set-AcceptedDomain](Set-AcceptedDomain.md)
-
-### [Get-AddressRewriteEntry](Get-AddressRewriteEntry.md)
-
-### [New-AddressRewriteEntry](New-AddressRewriteEntry.md)
-
-### [Remove-AddressRewriteEntry](Remove-AddressRewriteEntry.md)
-
-### [Set-AddressRewriteEntry](Set-AddressRewriteEntry.md)
-
-### [Get-DeliveryAgentConnector](Get-DeliveryAgentConnector.md)
-
-### [New-DeliveryAgentConnector](New-DeliveryAgentConnector.md)
-
-### [Remove-DeliveryAgentConnector](Remove-DeliveryAgentConnector.md)
-
-### [Set-DeliveryAgentConnector](Set-DeliveryAgentConnector.md)
-
-### [Get-EdgeSubscription](Get-EdgeSubscription.md)
-
-### [New-EdgeSubscription](New-EdgeSubscription.md)
-
-### [Remove-EdgeSubscription](Remove-EdgeSubscription.md)
-
-### [Start-EdgeSynchronization](Start-EdgeSynchronization.md)
-
-### [Test-EdgeSynchronization](Test-EdgeSynchronization.md)
-
-### [Get-EdgeSyncServiceConfig](Get-EdgeSyncServiceConfig.md)
-
-### [New-EdgeSyncServiceConfig](New-EdgeSyncServiceConfig.md)
-
-### [Set-EdgeSyncServiceConfig](Set-EdgeSyncServiceConfig.md)
-
-### [Get-ForeignConnector](Get-ForeignConnector.md)
-
-### [New-ForeignConnector](New-ForeignConnector.md)
-
-### [Remove-ForeignConnector](Remove-ForeignConnector.md)
-
-### [Set-ForeignConnector](Set-ForeignConnector.md)
-
-### [Get-FrontendTransportService](Get-FrontendTransportService.md)
-
-### [Set-FrontendTransportService](Set-FrontendTransportService.md)
-
-### [Start-HistoricalSearch](Start-HistoricalSearch.md)
-
-### [Stop-HistoricalSearch](Stop-HistoricalSearch.md)
-
-### [Get-InboundConnector](Get-InboundConnector.md)
-
-### [New-InboundConnector](New-InboundConnector.md)
-
-### [Remove-InboundConnector](Remove-InboundConnector.md)
-
-### [Set-InboundConnector](Set-InboundConnector.md)
-
-### [Get-MailboxTransportService](Get-MailboxTransportService.md)
-
-### [Set-MailboxTransportService](Set-MailboxTransportService.md)
-
-### [Test-Mailflow](Test-Mailflow.md)
+### [Enable-TransportAgent](Enable-TransportAgent.md)
 
 ### [Export-Message](Export-Message.md)
 
+### [Get-AcceptedDomain](Get-AcceptedDomain.md)
+
+### [Get-AddressRewriteEntry](Get-AddressRewriteEntry.md)
+
+### [Get-DeliveryAgentConnector](Get-DeliveryAgentConnector.md)
+
+### [Get-EdgeSubscription](Get-EdgeSubscription.md)
+
+### [Get-EdgeSyncServiceConfig](Get-EdgeSyncServiceConfig.md)
+
+### [Get-ForeignConnector](Get-ForeignConnector.md)
+
+### [Get-FrontendTransportService](Get-FrontendTransportService.md)
+
+### [Get-InboundConnector](Get-InboundConnector.md)
+
+### [Get-MailboxTransportService](Get-MailboxTransportService.md)
+
 ### [Get-Message](Get-Message.md)
-
-### [Redirect-Message](Redirect-Message.md)
-
-### [Remove-Message](Remove-Message.md)
-
-### [Resume-Message](Resume-Message.md)
-
-### [Suspend-Message](Suspend-Message.md)
 
 ### [Get-MessageTrace](Get-MessageTrace.md)
 
@@ -1227,263 +1175,310 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MessageTrackingReport](Get-MessageTrackingReport.md)
 
-### [Search-MessageTrackingReport](Search-MessageTrackingReport.md)
-
 ### [Get-NetworkConnectionInfo](Get-NetworkConnectionInfo.md)
 
 ### [Get-OutboundConnector](Get-OutboundConnector.md)
 
-### [New-OutboundConnector](New-OutboundConnector.md)
-
-### [Remove-OutboundConnector](Remove-OutboundConnector.md)
-
-### [Set-OutboundConnector](Set-OutboundConnector.md)
-
-### [Validate-OutboundConnector](Validate-OutboundConnector.md)
-
 ### [Get-Queue](Get-Queue.md)
-
-### [Resume-Queue](Resume-Queue.md)
-
-### [Retry-Queue](Retry-Queue.md)
-
-### [Suspend-Queue](Suspend-Queue.md)
 
 ### [Get-QueueDigest](Get-QueueDigest.md)
 
 ### [Get-ReceiveConnector](Get-ReceiveConnector.md)
 
-### [New-ReceiveConnector](New-ReceiveConnector.md)
-
-### [Remove-ReceiveConnector](Remove-ReceiveConnector.md)
-
-### [Set-ReceiveConnector](Set-ReceiveConnector.md)
-
 ### [Get-RemoteDomain](Get-RemoteDomain.md)
-
-### [New-RemoteDomain](New-RemoteDomain.md)
-
-### [Remove-RemoteDomain](Remove-RemoteDomain.md)
-
-### [Set-RemoteDomain](Set-RemoteDomain.md)
-
-### [Add-ResubmitRequest](Add-ResubmitRequest.md)
 
 ### [Get-ResubmitRequest](Get-ResubmitRequest.md)
 
-### [Remove-ResubmitRequest](Remove-ResubmitRequest.md)
-
-### [Set-ResubmitRequest](Set-ResubmitRequest.md)
-
 ### [Get-RoutingGroupConnector](Get-RoutingGroupConnector.md)
-
-### [New-RoutingGroupConnector](New-RoutingGroupConnector.md)
-
-### [Remove-RoutingGroupConnector](Remove-RoutingGroupConnector.md)
-
-### [Set-RoutingGroupConnector](Set-RoutingGroupConnector.md)
 
 ### [Get-SendConnector](Get-SendConnector.md)
 
-### [New-SendConnector](New-SendConnector.md)
-
-### [Remove-SendConnector](Remove-SendConnector.md)
-
-### [Set-SendConnector](Set-SendConnector.md)
-
-### [Test-SmtpConnectivity](Test-SmtpConnectivity.md)
-
 ### [Get-SystemMessage](Get-SystemMessage.md)
-
-### [New-SystemMessage](New-SystemMessage.md)
-
-### [Remove-SystemMessage](Remove-SystemMessage.md)
-
-### [Set-SystemMessage](Set-SystemMessage.md)
-
-### [Disable-TransportAgent](Disable-TransportAgent.md)
-
-### [Enable-TransportAgent](Enable-TransportAgent.md)
 
 ### [Get-TransportAgent](Get-TransportAgent.md)
 
-### [Install-TransportAgent](Install-TransportAgent.md)
-
-### [Set-TransportAgent](Set-TransportAgent.md)
-
-### [Uninstall-TransportAgent](Uninstall-TransportAgent.md)
-
 ### [Get-TransportConfig](Get-TransportConfig.md)
-
-### [Set-TransportConfig](Set-TransportConfig.md)
 
 ### [Get-TransportPipeline](Get-TransportPipeline.md)
 
 ### [Get-TransportServer](Get-TransportServer.md)
 
-### [Set-TransportServer](Set-TransportServer.md)
-
 ### [Get-TransportService](Get-TransportService.md)
-
-### [Set-TransportService](Set-TransportService.md)
 
 ### [Get-X400AuthoritativeDomain](Get-X400AuthoritativeDomain.md)
 
+### [Install-TransportAgent](Install-TransportAgent.md)
+
+### [New-AcceptedDomain](New-AcceptedDomain.md)
+
+### [New-AddressRewriteEntry](New-AddressRewriteEntry.md)
+
+### [New-DeliveryAgentConnector](New-DeliveryAgentConnector.md)
+
+### [New-EdgeSubscription](New-EdgeSubscription.md)
+
+### [New-EdgeSyncServiceConfig](New-EdgeSyncServiceConfig.md)
+
+### [New-ForeignConnector](New-ForeignConnector.md)
+
+### [New-InboundConnector](New-InboundConnector.md)
+
+### [New-OutboundConnector](New-OutboundConnector.md)
+
+### [New-ReceiveConnector](New-ReceiveConnector.md)
+
+### [New-RemoteDomain](New-RemoteDomain.md)
+
+### [New-RoutingGroupConnector](New-RoutingGroupConnector.md)
+
+### [New-SendConnector](New-SendConnector.md)
+
+### [New-SystemMessage](New-SystemMessage.md)
+
 ### [New-X400AuthoritativeDomain](New-X400AuthoritativeDomain.md)
+
+### [Redirect-Message](Redirect-Message.md)
+
+### [Remove-AcceptedDomain](Remove-AcceptedDomain.md)
+
+### [Remove-AddressRewriteEntry](Remove-AddressRewriteEntry.md)
+
+### [Remove-DeliveryAgentConnector](Remove-DeliveryAgentConnector.md)
+
+### [Remove-EdgeSubscription](Remove-EdgeSubscription.md)
+
+### [Remove-ForeignConnector](Remove-ForeignConnector.md)
+
+### [Remove-InboundConnector](Remove-InboundConnector.md)
+
+### [Remove-Message](Remove-Message.md)
+
+### [Remove-OutboundConnector](Remove-OutboundConnector.md)
+
+### [Remove-ReceiveConnector](Remove-ReceiveConnector.md)
+
+### [Remove-RemoteDomain](Remove-RemoteDomain.md)
+
+### [Remove-ResubmitRequest](Remove-ResubmitRequest.md)
+
+### [Remove-RoutingGroupConnector](Remove-RoutingGroupConnector.md)
+
+### [Remove-SendConnector](Remove-SendConnector.md)
+
+### [Remove-SystemMessage](Remove-SystemMessage.md)
 
 ### [Remove-X400AuthoritativeDomain](Remove-X400AuthoritativeDomain.md)
 
+### [Resume-Message](Resume-Message.md)
+
+### [Resume-Queue](Resume-Queue.md)
+
+### [Retry-Queue](Retry-Queue.md)
+
+### [Search-MessageTrackingReport](Search-MessageTrackingReport.md)
+
+### [Set-AcceptedDomain](Set-AcceptedDomain.md)
+
+### [Set-AddressRewriteEntry](Set-AddressRewriteEntry.md)
+
+### [Set-DeliveryAgentConnector](Set-DeliveryAgentConnector.md)
+
+### [Set-EdgeSyncServiceConfig](Set-EdgeSyncServiceConfig.md)
+
+### [Set-ForeignConnector](Set-ForeignConnector.md)
+
+### [Set-FrontendTransportService](Set-FrontendTransportService.md)
+
+### [Set-InboundConnector](Set-InboundConnector.md)
+
+### [Set-MailboxTransportService](Set-MailboxTransportService.md)
+
+### [Set-OutboundConnector](Set-OutboundConnector.md)
+
+### [Set-ReceiveConnector](Set-ReceiveConnector.md)
+
+### [Set-RemoteDomain](Set-RemoteDomain.md)
+
+### [Set-ResubmitRequest](Set-ResubmitRequest.md)
+
+### [Set-RoutingGroupConnector](Set-RoutingGroupConnector.md)
+
+### [Set-SendConnector](Set-SendConnector.md)
+
+### [Set-SystemMessage](Set-SystemMessage.md)
+
+### [Set-TransportAgent](Set-TransportAgent.md)
+
+### [Set-TransportConfig](Set-TransportConfig.md)
+
+### [Set-TransportServer](Set-TransportServer.md)
+
+### [Set-TransportService](Set-TransportService.md)
+
 ### [Set-X400AuthoritativeDomain](Set-X400AuthoritativeDomain.md)
+
+### [Start-EdgeSynchronization](Start-EdgeSynchronization.md)
+
+### [Start-HistoricalSearch](Start-HistoricalSearch.md)
+
+### [Stop-HistoricalSearch](Stop-HistoricalSearch.md)
+
+### [Suspend-Message](Suspend-Message.md)
+
+### [Suspend-Queue](Suspend-Queue.md)
+
+### [Test-EdgeSynchronization](Test-EdgeSynchronization.md)
+
+### [Test-Mailflow](Test-Mailflow.md)
+
+### [Test-SmtpConnectivity](Test-SmtpConnectivity.md)
+
+### [Uninstall-TransportAgent](Uninstall-TransportAgent.md)
+
+### [Validate-OutboundConnector](Validate-OutboundConnector.md)
 
 ## move-and-migration Cmdlets
 ### [Complete-MigrationBatch](Complete-MigrationBatch.md)
 
+### [Export-MigrationReport](Export-MigrationReport.md)
+
 ### [Get-MigrationBatch](Get-MigrationBatch.md)
-
-### [New-MigrationBatch](New-MigrationBatch.md)
-
-### [Remove-MigrationBatch](Remove-MigrationBatch.md)
-
-### [Set-MigrationBatch](Set-MigrationBatch.md)
-
-### [Start-MigrationBatch](Start-MigrationBatch.md)
-
-### [Stop-MigrationBatch](Stop-MigrationBatch.md)
 
 ### [Get-MigrationConfig](Get-MigrationConfig.md)
 
-### [Set-MigrationConfig](Set-MigrationConfig.md)
-
 ### [Get-MigrationEndpoint](Get-MigrationEndpoint.md)
-
-### [New-MigrationEndpoint](New-MigrationEndpoint.md)
-
-### [Remove-MigrationEndpoint](Remove-MigrationEndpoint.md)
-
-### [Set-MigrationEndpoint](Set-MigrationEndpoint.md)
-
-### [Export-MigrationReport](Export-MigrationReport.md)
-
-### [Test-MigrationServerAvailability](Test-MigrationServerAvailability.md)
 
 ### [Get-MigrationStatistics](Get-MigrationStatistics.md)
 
 ### [Get-MigrationUser](Get-MigrationUser.md)
 
-### [Remove-MigrationUser](Remove-MigrationUser.md)
-
-### [Set-MigrationUser](Set-MigrationUser.md)
-
-### [Start-MigrationUser](Start-MigrationUser.md)
-
-### [Stop-MigrationUser](Stop-MigrationUser.md)
-
 ### [Get-MigrationUserStatistics](Get-MigrationUserStatistics.md)
 
 ### [Get-MoveRequest](Get-MoveRequest.md)
-
-### [New-MoveRequest](New-MoveRequest.md)
-
-### [Remove-MoveRequest](Remove-MoveRequest.md)
-
-### [Resume-MoveRequest](Resume-MoveRequest.md)
-
-### [Set-MoveRequest](Set-MoveRequest.md)
-
-### [Suspend-MoveRequest](Suspend-MoveRequest.md)
 
 ### [Get-MoveRequestStatistics](Get-MoveRequestStatistics.md)
 
 ### [Get-PublicFolderMailboxMigrationRequest](Get-PublicFolderMailboxMigrationRequest.md)
 
-### [Remove-PublicFolderMailboxMigrationRequest](Remove-PublicFolderMailboxMigrationRequest.md)
-
-### [Suspend-PublicFolderMailboxMigrationRequest](Suspend-PublicFolderMailboxMigrationRequest.md)
-
 ### [Get-PublicFolderMailboxMigrationRequestStatistics](Get-PublicFolderMailboxMigrationRequestStatistics.md)
 
 ### [Get-PublicFolderMigrationRequest](Get-PublicFolderMigrationRequest.md)
-
-### [New-PublicFolderMigrationRequest](New-PublicFolderMigrationRequest.md)
-
-### [Remove-PublicFolderMigrationRequest](Remove-PublicFolderMigrationRequest.md)
-
-### [Resume-PublicFolderMigrationRequest](Resume-PublicFolderMigrationRequest.md)
-
-### [Set-PublicFolderMigrationRequest](Set-PublicFolderMigrationRequest.md)
-
-### [Suspend-PublicFolderMigrationRequest](Suspend-PublicFolderMigrationRequest.md)
 
 ### [Get-PublicFolderMigrationRequestStatistics](Get-PublicFolderMigrationRequestStatistics.md)
 
 ### [Get-PublicFolderMoveRequest](Get-PublicFolderMoveRequest.md)
 
+### [Get-PublicFolderMoveRequestStatistics](Get-PublicFolderMoveRequestStatistics.md)
+
+### [New-MigrationBatch](New-MigrationBatch.md)
+
+### [New-MigrationEndpoint](New-MigrationEndpoint.md)
+
+### [New-MoveRequest](New-MoveRequest.md)
+
+### [New-PublicFolderMigrationRequest](New-PublicFolderMigrationRequest.md)
+
 ### [New-PublicFolderMoveRequest](New-PublicFolderMoveRequest.md)
+
+### [Remove-MigrationBatch](Remove-MigrationBatch.md)
+
+### [Remove-MigrationEndpoint](Remove-MigrationEndpoint.md)
+
+### [Remove-MigrationUser](Remove-MigrationUser.md)
+
+### [Remove-MoveRequest](Remove-MoveRequest.md)
+
+### [Remove-PublicFolderMailboxMigrationRequest](Remove-PublicFolderMailboxMigrationRequest.md)
+
+### [Remove-PublicFolderMigrationRequest](Remove-PublicFolderMigrationRequest.md)
 
 ### [Remove-PublicFolderMoveRequest](Remove-PublicFolderMoveRequest.md)
 
+### [Resume-MoveRequest](Resume-MoveRequest.md)
+
+### [Resume-PublicFolderMigrationRequest](Resume-PublicFolderMigrationRequest.md)
+
 ### [Resume-PublicFolderMoveRequest](Resume-PublicFolderMoveRequest.md)
+
+### [Set-MigrationBatch](Set-MigrationBatch.md)
+
+### [Set-MigrationConfig](Set-MigrationConfig.md)
+
+### [Set-MigrationEndpoint](Set-MigrationEndpoint.md)
+
+### [Set-MigrationUser](Set-MigrationUser.md)
+
+### [Set-MoveRequest](Set-MoveRequest.md)
+
+### [Set-PublicFolderMigrationRequest](Set-PublicFolderMigrationRequest.md)
 
 ### [Set-PublicFolderMoveRequest](Set-PublicFolderMoveRequest.md)
 
+### [Start-MigrationBatch](Start-MigrationBatch.md)
+
+### [Start-MigrationUser](Start-MigrationUser.md)
+
+### [Stop-MigrationBatch](Stop-MigrationBatch.md)
+
+### [Stop-MigrationUser](Stop-MigrationUser.md)
+
+### [Suspend-MoveRequest](Suspend-MoveRequest.md)
+
+### [Suspend-PublicFolderMailboxMigrationRequest](Suspend-PublicFolderMailboxMigrationRequest.md)
+
+### [Suspend-PublicFolderMigrationRequest](Suspend-PublicFolderMigrationRequest.md)
+
 ### [Suspend-PublicFolderMoveRequest](Suspend-PublicFolderMoveRequest.md)
 
-### [Get-PublicFolderMoveRequestStatistics](Get-PublicFolderMoveRequestStatistics.md)
+### [Test-MigrationServerAvailability](Test-MigrationServerAvailability.md)
 
 ## organization Cmdlets
-### [Get-AccessToCustomerDataRequest](Get-AccessToCustomerDataRequest.md)
-
-### [Set-AccessToCustomerDataRequest](Set-AccessToCustomerDataRequest.md)
-
-### [Get-ApplicationAccessPolicy](Get-ApplicationAccessPolicy.md)
-
-### [New-ApplicationAccessPolicy](New-ApplicationAccessPolicy.md)
-
-### [Remove-ApplicationAccessPolicy](Remove-ApplicationAccessPolicy.md)
-
-### [Set-ApplicationAccessPolicy](Set-ApplicationAccessPolicy.md)
-
-### [Test-ApplicationAccessPolicy](Test-ApplicationAccessPolicy.md)
-
-### [Get-AuthConfig](Get-AuthConfig.md)
-
-### [Set-AuthConfig](Set-AuthConfig.md)
-
-### [Get-AuthenticationPolicy](Get-AuthenticationPolicy.md)
-
-### [New-AuthenticationPolicy](New-AuthenticationPolicy.md)
-
-### [Remove-AuthenticationPolicy](Remove-AuthenticationPolicy.md)
-
-### [Set-AuthenticationPolicy](Set-AuthenticationPolicy.md)
-
-### [Get-AuthServer](Get-AuthServer.md)
-
-### [New-AuthServer](New-AuthServer.md)
-
-### [Remove-AuthServer](Remove-AuthServer.md)
-
-### [Set-AuthServer](Set-AuthServer.md)
-
+## policy-and-compliance Cmdlets
 ### [Disable-CmdletExtensionAgent](Disable-CmdletExtensionAgent.md)
+
+### [Disable-JournalArchiving](Disable-JournalArchiving.md)
+
+### [Disable-JournalRule](Disable-JournalRule.md)
+
+### [Disable-OutlookProtectionRule](Disable-OutlookProtectionRule.md)
+
+### [Disable-TransportRule](Disable-TransportRule.md)
 
 ### [Enable-CmdletExtensionAgent](Enable-CmdletExtensionAgent.md)
 
-### [Get-CmdletExtensionAgent](Get-CmdletExtensionAgent.md)
+### [Enable-JournalRule](Enable-JournalRule.md)
 
-### [Set-CmdletExtensionAgent](Set-CmdletExtensionAgent.md)
+### [Enable-OrganizationCustomization](Enable-OrganizationCustomization.md)
+
+### [Enable-OutlookProtectionRule](Enable-OutlookProtectionRule.md)
+
+### [Enable-TransportRule](Enable-TransportRule.md)
+
+### [Export-JournalRuleCollection](Export-JournalRuleCollection.md)
+
+### [Export-TransportRuleCollection](Export-TransportRuleCollection.md)
+
+### [Get-AccessToCustomerDataRequest](Get-AccessToCustomerDataRequest.md)
+
+### [Get-ActivityAlert](Get-ActivityAlert.md)
+
+### [Get-AdministrativeUnit](Get-AdministrativeUnit.md)
+
+### [Get-ApplicationAccessPolicy](Get-ApplicationAccessPolicy.md)
+
+### [Get-AuthConfig](Get-AuthConfig.md)
+
+### [Get-AuthenticationPolicy](Get-AuthenticationPolicy.md)
+
+### [Get-AuthServer](Get-AuthServer.md)
+
+### [Get-CmdletExtensionAgent](Get-CmdletExtensionAgent.md)
 
 ### [Get-ExchangeAssistanceConfig](Get-ExchangeAssistanceConfig.md)
 
-### [Set-ExchangeAssistanceConfig](Set-ExchangeAssistanceConfig.md)
-
 ### [Get-ExchangeDiagnosticInfo](Get-ExchangeDiagnosticInfo.md)
 
-### [Update-ExchangeHelp](Update-ExchangeHelp.md)
-
 ### [Get-ExchangeServer](Get-ExchangeServer.md)
-
-### [Set-ExchangeServer](Set-ExchangeServer.md)
 
 ### [Get-ExchangeServerAccessLicense](Get-ExchangeServerAccessLicense.md)
 
@@ -1491,305 +1486,290 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ExchangeSettings](Get-ExchangeSettings.md)
 
-### [New-ExchangeSettings](New-ExchangeSettings.md)
+### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
 
-### [Set-ExchangeSettings](Set-ExchangeSettings.md)
+### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
+
+### [Get-InformationBarrierRecipientStatus](Get-InformationBarrierRecipientStatus.md)
+
+### [Get-JournalRule](Get-JournalRule.md)
+
+### [Get-Label](Get-Label.md)
+
+### [Get-LabelPolicy](Get-LabelPolicy.md)
+
+### [Get-MessageClassification](Get-MessageClassification.md)
 
 ### [Get-Notification](Get-Notification.md)
 
-### [Set-Notification](Set-Notification.md)
-
-### [Test-OAuthConnectivity](Test-OAuthConnectivity.md)
-
 ### [Get-OrganizationConfig](Get-OrganizationConfig.md)
 
-### [Set-OrganizationConfig](Set-OrganizationConfig.md)
+### [Get-OrganizationSegment](Get-OrganizationSegment.md)
 
-### [Enable-OrganizationCustomization](Enable-OrganizationCustomization.md)
+### [Get-OutlookProtectionRule](Get-OutlookProtectionRule.md)
 
 ### [Get-PartnerApplication](Get-PartnerApplication.md)
 
-### [New-PartnerApplication](New-PartnerApplication.md)
-
-### [Remove-PartnerApplication](Remove-PartnerApplication.md)
-
-### [Set-PartnerApplication](Set-PartnerApplication.md)
-
 ### [Get-PerimeterConfig](Get-PerimeterConfig.md)
 
-### [Set-PerimeterConfig](Set-PerimeterConfig.md)
+### [Get-ProtectionAlert](Get-ProtectionAlert.md)
 
 ### [Get-SettingOverride](Get-SettingOverride.md)
 
-### [New-SettingOverride](New-SettingOverride.md)
+### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
 
-### [Remove-SettingOverride](Remove-SettingOverride.md)
+### [Get-SupervisoryReviewRule](Get-SupervisoryReviewRule.md)
 
-### [Set-SettingOverride](Set-SettingOverride.md)
+### [Get-TransportRule](Get-TransportRule.md)
 
-### [Test-SystemHealth](Test-SystemHealth.md)
+### [Get-TransportRuleAction](Get-TransportRuleAction.md)
 
-## policy-and-compliance Cmdlets
-### [Get-ActivityAlert](Get-ActivityAlert.md)
+### [Get-TransportRulePredicate](Get-TransportRulePredicate.md)
+
+### [Import-JournalRuleCollection](Import-JournalRuleCollection.md)
+
+### [Import-TransportRuleCollection](Import-TransportRuleCollection.md)
+
+### [Install-UnifiedCompliancePrerequisite](Install-UnifiedCompliancePrerequisite.md)
 
 ### [New-ActivityAlert](New-ActivityAlert.md)
 
+### [New-ApplicationAccessPolicy](New-ApplicationAccessPolicy.md)
+
+### [New-AuthenticationPolicy](New-AuthenticationPolicy.md)
+
+### [New-AuthServer](New-AuthServer.md)
+
+### [New-ExchangeSettings](New-ExchangeSettings.md)
+
+### [New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
+
+### [New-JournalRule](New-JournalRule.md)
+
+### [New-Label](New-Label.md)
+
+### [New-LabelPolicy](New-LabelPolicy.md)
+
+### [New-MessageClassification](New-MessageClassification.md)
+
+### [New-OrganizationSegment](New-OrganizationSegment.md)
+
+### [New-OutlookProtectionRule](New-OutlookProtectionRule.md)
+
+### [New-PartnerApplication](New-PartnerApplication.md)
+
+### [New-ProtectionAlert](New-ProtectionAlert.md)
+
+### [New-SettingOverride](New-SettingOverride.md)
+
+### [New-SupervisoryReviewPolicyV2](New-SupervisoryReviewPolicyV2.md)
+
+### [New-SupervisoryReviewRule](New-SupervisoryReviewRule.md)
+
+### [New-TransportRule](New-TransportRule.md)
+
 ### [Remove-ActivityAlert](Remove-ActivityAlert.md)
+
+### [Remove-ApplicationAccessPolicy](Remove-ApplicationAccessPolicy.md)
+
+### [Remove-AuthenticationPolicy](Remove-AuthenticationPolicy.md)
+
+### [Remove-AuthServer](Remove-AuthServer.md)
+
+### [Remove-InformationBarrierPolicy](Remove-InformationBarrierPolicy.md)
+
+### [Remove-JournalRule](Remove-JournalRule.md)
+
+### [Remove-Label](Remove-Label.md)
+
+### [Remove-LabelPolicy](Remove-LabelPolicy.md)
+
+### [Remove-MessageClassification](Remove-MessageClassification.md)
+
+### [Remove-OrganizationSegment](Remove-OrganizationSegment.md)
+
+### [Remove-OutlookProtectionRule](Remove-OutlookProtectionRule.md)
+
+### [Remove-PartnerApplication](Remove-PartnerApplication.md)
+
+### [Remove-ProtectionAlert](Remove-ProtectionAlert.md)
+
+### [Remove-SettingOverride](Remove-SettingOverride.md)
+
+### [Remove-SupervisoryReviewPolicyV2](Remove-SupervisoryReviewPolicyV2.md)
+
+### [Remove-TransportRule](Remove-TransportRule.md)
+
+### [Set-AccessToCustomerDataRequest](Set-AccessToCustomerDataRequest.md)
 
 ### [Set-ActivityAlert](Set-ActivityAlert.md)
 
-### [Get-AdministrativeUnit](Get-AdministrativeUnit.md)
+### [Set-ApplicationAccessPolicy](Set-ApplicationAccessPolicy.md)
 
-### [Test-ArchiveConnectivity](Test-ArchiveConnectivity.md)
+### [Set-AuthConfig](Set-AuthConfig.md)
+
+### [Set-AuthenticationPolicy](Set-AuthenticationPolicy.md)
+
+### [Set-AuthServer](Set-AuthServer.md)
+
+### [Set-CmdletExtensionAgent](Set-CmdletExtensionAgent.md)
+
+### [Set-ExchangeAssistanceConfig](Set-ExchangeAssistanceConfig.md)
+
+### [Set-ExchangeServer](Set-ExchangeServer.md)
+
+### [Set-ExchangeSettings](Set-ExchangeSettings.md)
+
+### [Set-InformationBarrierPolicy](Set-InformationBarrierPolicy.md)
+
+### [Set-JournalRule](Set-JournalRule.md)
+
+### [Set-Label](Set-Label.md)
+
+### [Set-LabelPolicy](Set-LabelPolicy.md)
+
+### [Set-MessageClassification](Set-MessageClassification.md)
+
+### [Set-Notification](Set-Notification.md)
+
+### [Set-OrganizationConfig](Set-OrganizationConfig.md)
+
+### [Set-OrganizationSegment](Set-OrganizationSegment.md)
+
+### [Set-OutlookProtectionRule](Set-OutlookProtectionRule.md)
+
+### [Set-PartnerApplication](Set-PartnerApplication.md)
+
+### [Set-PerimeterConfig](Set-PerimeterConfig.md)
+
+### [Set-ProtectionAlert](Set-ProtectionAlert.md)
+
+### [Set-SettingOverride](Set-SettingOverride.md)
+
+### [Set-SupervisoryReviewPolicyV2](Set-SupervisoryReviewPolicyV2.md)
+
+### [Set-SupervisoryReviewRule](Set-SupervisoryReviewRule.md)
+
+### [Set-TransportRule](Set-TransportRule.md)
 
 ### [Start-InformationBarrierPoliciesApplication](Start-InformationBarrierPoliciesApplication.md)
 
 ### [Stop-InformationBarrierPoliciesApplication](Stop-InformationBarrierPoliciesApplication.md)
 
-### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
+### [Test-ApplicationAccessPolicy](Test-ApplicationAccessPolicy.md)
 
-### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
+### [Test-ArchiveConnectivity](Test-ArchiveConnectivity.md)
 
-### [New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
+### [Test-OAuthConnectivity](Test-OAuthConnectivity.md)
 
-### [Remove-InformationBarrierPolicy](Remove-InformationBarrierPolicy.md)
+### [Test-SystemHealth](Test-SystemHealth.md)
 
-### [Set-InformationBarrierPolicy](Set-InformationBarrierPolicy.md)
-
-### [Get-InformationBarrierRecipientStatus](Get-InformationBarrierRecipientStatus.md)
-
-### [Disable-JournalArchiving](Disable-JournalArchiving.md)
-
-### [Disable-JournalRule](Disable-JournalRule.md)
-
-### [Enable-JournalRule](Enable-JournalRule.md)
-
-### [Get-JournalRule](Get-JournalRule.md)
-
-### [New-JournalRule](New-JournalRule.md)
-
-### [Remove-JournalRule](Remove-JournalRule.md)
-
-### [Set-JournalRule](Set-JournalRule.md)
-
-### [Export-JournalRuleCollection](Export-JournalRuleCollection.md)
-
-### [Import-JournalRuleCollection](Import-JournalRuleCollection.md)
-
-### [Get-Label](Get-Label.md)
-
-### [New-Label](New-Label.md)
-
-### [Remove-Label](Remove-Label.md)
-
-### [Set-Label](Set-Label.md)
-
-### [Get-LabelPolicy](Get-LabelPolicy.md)
-
-### [New-LabelPolicy](New-LabelPolicy.md)
-
-### [Remove-LabelPolicy](Remove-LabelPolicy.md)
-
-### [Set-LabelPolicy](Set-LabelPolicy.md)
-
-### [Get-MessageClassification](Get-MessageClassification.md)
-
-### [New-MessageClassification](New-MessageClassification.md)
-
-### [Remove-MessageClassification](Remove-MessageClassification.md)
-
-### [Set-MessageClassification](Set-MessageClassification.md)
-
-### [Get-OrganizationSegment](Get-OrganizationSegment.md)
-
-### [New-OrganizationSegment](New-OrganizationSegment.md)
-
-### [Remove-OrganizationSegment](Remove-OrganizationSegment.md)
-
-### [Set-OrganizationSegment](Set-OrganizationSegment.md)
-
-### [Disable-OutlookProtectionRule](Disable-OutlookProtectionRule.md)
-
-### [Enable-OutlookProtectionRule](Enable-OutlookProtectionRule.md)
-
-### [Get-OutlookProtectionRule](Get-OutlookProtectionRule.md)
-
-### [New-OutlookProtectionRule](New-OutlookProtectionRule.md)
-
-### [Remove-OutlookProtectionRule](Remove-OutlookProtectionRule.md)
-
-### [Set-OutlookProtectionRule](Set-OutlookProtectionRule.md)
-
-### [Get-ProtectionAlert](Get-ProtectionAlert.md)
-
-### [New-ProtectionAlert](New-ProtectionAlert.md)
-
-### [Remove-ProtectionAlert](Remove-ProtectionAlert.md)
-
-### [Set-ProtectionAlert](Set-ProtectionAlert.md)
-
-### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
-
-### [New-SupervisoryReviewPolicyV2](New-SupervisoryReviewPolicyV2.md)
-
-### [Remove-SupervisoryReviewPolicyV2](Remove-SupervisoryReviewPolicyV2.md)
-
-### [Set-SupervisoryReviewPolicyV2](Set-SupervisoryReviewPolicyV2.md)
-
-### [Get-SupervisoryReviewRule](Get-SupervisoryReviewRule.md)
-
-### [New-SupervisoryReviewRule](New-SupervisoryReviewRule.md)
-
-### [Set-SupervisoryReviewRule](Set-SupervisoryReviewRule.md)
-
-### [Disable-TransportRule](Disable-TransportRule.md)
-
-### [Enable-TransportRule](Enable-TransportRule.md)
-
-### [Get-TransportRule](Get-TransportRule.md)
-
-### [New-TransportRule](New-TransportRule.md)
-
-### [Remove-TransportRule](Remove-TransportRule.md)
-
-### [Set-TransportRule](Set-TransportRule.md)
-
-### [Get-TransportRuleAction](Get-TransportRuleAction.md)
-
-### [Export-TransportRuleCollection](Export-TransportRuleCollection.md)
-
-### [Import-TransportRuleCollection](Import-TransportRuleCollection.md)
-
-### [Get-TransportRulePredicate](Get-TransportRulePredicate.md)
-
-### [Install-UnifiedCompliancePrerequisite](Install-UnifiedCompliancePrerequisite.md)
+### [Update-ExchangeHelp](Update-ExchangeHelp.md)
 
 ## policy-and-compliance-audit Cmdlets
-### [Search-AdminAuditLog](Search-AdminAuditLog.md)
-
-### [Write-AdminAuditLog](Write-AdminAuditLog.md)
-
 ### [Get-AdminAuditLogConfig](Get-AdminAuditLogConfig.md)
-
-### [Set-AdminAuditLogConfig](Set-AdminAuditLogConfig.md)
-
-### [New-AdminAuditLogSearch](New-AdminAuditLogSearch.md)
 
 ### [Get-AuditConfig](Get-AuditConfig.md)
 
-### [Set-AuditConfig](Set-AuditConfig.md)
-
 ### [Get-AuditConfigurationPolicy](Get-AuditConfigurationPolicy.md)
 
-### [New-AuditConfigurationPolicy](New-AuditConfigurationPolicy.md)
-
-### [Remove-AuditConfigurationPolicy](Remove-AuditConfigurationPolicy.md)
-
 ### [Get-AuditConfigurationRule](Get-AuditConfigurationRule.md)
-
-### [New-AuditConfigurationRule](New-AuditConfigurationRule.md)
-
-### [Remove-AuditConfigurationRule](Remove-AuditConfigurationRule.md)
-
-### [Set-AuditConfigurationRule](Set-AuditConfigurationRule.md)
 
 ### [Get-AuditLogSearch](Get-AuditLogSearch.md)
 
 ### [Get-MailboxAuditBypassAssociation](Get-MailboxAuditBypassAssociation.md)
 
-### [Set-MailboxAuditBypassAssociation](Set-MailboxAuditBypassAssociation.md)
+### [Get-UnifiedAuditLogRetentionPolicy](Get-UnifiedAuditLogRetentionPolicy.md)
 
-### [Search-MailboxAuditLog](Search-MailboxAuditLog.md)
+### [New-AdminAuditLogSearch](New-AdminAuditLogSearch.md)
+
+### [New-AuditConfigurationPolicy](New-AuditConfigurationPolicy.md)
+
+### [New-AuditConfigurationRule](New-AuditConfigurationRule.md)
 
 ### [New-MailboxAuditLogSearch](New-MailboxAuditLogSearch.md)
 
-### [Search-UnifiedAuditLog](Search-UnifiedAuditLog.md)
-
-### [Get-UnifiedAuditLogRetentionPolicy](Get-UnifiedAuditLogRetentionPolicy.md)
-
 ### [New-UnifiedAuditLogRetentionPolicy](New-UnifiedAuditLogRetentionPolicy.md)
+
+### [Remove-AuditConfigurationPolicy](Remove-AuditConfigurationPolicy.md)
+
+### [Remove-AuditConfigurationRule](Remove-AuditConfigurationRule.md)
 
 ### [Remove-UnifiedAuditLogRetentionPolicy](Remove-UnifiedAuditLogRetentionPolicy.md)
 
+### [Search-AdminAuditLog](Search-AdminAuditLog.md)
+
+### [Search-MailboxAuditLog](Search-MailboxAuditLog.md)
+
+### [Search-UnifiedAuditLog](Search-UnifiedAuditLog.md)
+
+### [Set-AdminAuditLogConfig](Set-AdminAuditLogConfig.md)
+
+### [Set-AuditConfig](Set-AuditConfig.md)
+
+### [Set-AuditConfigurationRule](Set-AuditConfigurationRule.md)
+
+### [Set-MailboxAuditBypassAssociation](Set-MailboxAuditBypassAssociation.md)
+
 ### [Set-UnifiedAuditLogRetentionPolicy](Set-UnifiedAuditLogRetentionPolicy.md)
+
+### [Write-AdminAuditLog](Write-AdminAuditLog.md)
 
 ## policy-and-compliance-search Cmdlets
 ### [Get-ComplianceSearch](Get-ComplianceSearch.md)
 
-### [New-ComplianceSearch](New-ComplianceSearch.md)
-
-### [Remove-ComplianceSearch](Remove-ComplianceSearch.md)
-
-### [Set-ComplianceSearch](Set-ComplianceSearch.md)
-
-### [Start-ComplianceSearch](Start-ComplianceSearch.md)
-
-### [Stop-ComplianceSearch](Stop-ComplianceSearch.md)
-
 ### [Get-ComplianceSearchAction](Get-ComplianceSearchAction.md)
-
-### [New-ComplianceSearchAction](New-ComplianceSearchAction.md)
-
-### [Remove-ComplianceSearchAction](Remove-ComplianceSearchAction.md)
-
-### [Set-ComplianceSearchAction](Set-ComplianceSearchAction.md)
-
-### [Invoke-ComplianceSearchActionStep](Invoke-ComplianceSearchActionStep.md)
 
 ### [Get-ComplianceSecurityFilter](Get-ComplianceSecurityFilter.md)
 
-### [New-ComplianceSecurityFilter](New-ComplianceSecurityFilter.md)
-
-### [Remove-ComplianceSecurityFilter](Remove-ComplianceSecurityFilter.md)
-
-### [Set-ComplianceSecurityFilter](Set-ComplianceSecurityFilter.md)
-
 ### [Get-MailboxSearch](Get-MailboxSearch.md)
+
+### [Invoke-ComplianceSearchActionStep](Invoke-ComplianceSearchActionStep.md)
+
+### [New-ComplianceSearch](New-ComplianceSearch.md)
+
+### [New-ComplianceSearchAction](New-ComplianceSearchAction.md)
+
+### [New-ComplianceSecurityFilter](New-ComplianceSecurityFilter.md)
 
 ### [New-MailboxSearch](New-MailboxSearch.md)
 
+### [Remove-ComplianceSearch](Remove-ComplianceSearch.md)
+
+### [Remove-ComplianceSearchAction](Remove-ComplianceSearchAction.md)
+
+### [Remove-ComplianceSecurityFilter](Remove-ComplianceSecurityFilter.md)
+
 ### [Remove-MailboxSearch](Remove-MailboxSearch.md)
+
+### [Set-ComplianceSearch](Set-ComplianceSearch.md)
+
+### [Set-ComplianceSearchAction](Set-ComplianceSearchAction.md)
+
+### [Set-ComplianceSecurityFilter](Set-ComplianceSecurityFilter.md)
 
 ### [Set-MailboxSearch](Set-MailboxSearch.md)
 
+### [Start-ComplianceSearch](Start-ComplianceSearch.md)
+
 ### [Start-MailboxSearch](Start-MailboxSearch.md)
+
+### [Stop-ComplianceSearch](Stop-ComplianceSearch.md)
 
 ### [Stop-MailboxSearch](Stop-MailboxSearch.md)
 
 ## policy-and-compliance-dlp Cmdlets
+### [Export-DlpPolicyCollection](Export-DlpPolicyCollection.md)
+
 ### [Get-ClassificationRuleCollection](Get-ClassificationRuleCollection.md)
 
-### [New-ClassificationRuleCollection](New-ClassificationRuleCollection.md)
-
-### [Remove-ClassificationRuleCollection](Remove-ClassificationRuleCollection.md)
-
-### [Set-ClassificationRuleCollection](Set-ClassificationRuleCollection.md)
-
 ### [Get-DataClassification](Get-DataClassification.md)
-
-### [New-DataClassification](New-DataClassification.md)
-
-### [Remove-DataClassification](Remove-DataClassification.md)
-
-### [Set-DataClassification](Set-DataClassification.md)
 
 ### [Get-DataClassificationConfig](Get-DataClassificationConfig.md)
 
 ### [Get-DlpCompliancePolicy](Get-DlpCompliancePolicy.md)
 
-### [New-DlpCompliancePolicy](New-DlpCompliancePolicy.md)
-
-### [Remove-DlpCompliancePolicy](Remove-DlpCompliancePolicy.md)
-
-### [Set-DlpCompliancePolicy](Set-DlpCompliancePolicy.md)
-
 ### [Get-DlpComplianceRule](Get-DlpComplianceRule.md)
-
-### [New-DlpComplianceRule](New-DlpComplianceRule.md)
-
-### [Remove-DlpComplianceRule](Remove-DlpComplianceRule.md)
-
-### [Set-DlpComplianceRule](Set-DlpComplianceRule.md)
 
 ### [Get-DlpDetailReport](Get-DlpDetailReport.md)
 
@@ -1797,131 +1777,139 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DlpEdmSchema](Get-DlpEdmSchema.md)
 
-### [New-DlpEdmSchema](New-DlpEdmSchema.md)
-
-### [Remove-DlpEdmSchema](Remove-DlpEdmSchema.md)
-
-### [Set-DlpEdmSchema](Set-DlpEdmSchema.md)
-
-### [New-DlpFingerprint](New-DlpFingerprint.md)
-
 ### [Get-DlpKeywordDictionary](Get-DlpKeywordDictionary.md)
-
-### [New-DlpKeywordDictionary](New-DlpKeywordDictionary.md)
-
-### [Remove-DlpKeywordDictionary](Remove-DlpKeywordDictionary.md)
-
-### [Set-DlpKeywordDictionary](Set-DlpKeywordDictionary.md)
 
 ### [Get-DlpPolicy](Get-DlpPolicy.md)
 
-### [New-DlpPolicy](New-DlpPolicy.md)
-
-### [Remove-DlpPolicy](Remove-DlpPolicy.md)
-
-### [Set-DlpPolicy](Set-DlpPolicy.md)
-
-### [Export-DlpPolicyCollection](Export-DlpPolicyCollection.md)
-
-### [Import-DlpPolicyCollection](Import-DlpPolicyCollection.md)
-
 ### [Get-DlpPolicyTemplate](Get-DlpPolicyTemplate.md)
-
-### [Import-DlpPolicyTemplate](Import-DlpPolicyTemplate.md)
-
-### [Remove-DlpPolicyTemplate](Remove-DlpPolicyTemplate.md)
 
 ### [Get-DlpSensitiveInformationType](Get-DlpSensitiveInformationType.md)
 
-### [New-DlpSensitiveInformationType](New-DlpSensitiveInformationType.md)
-
-### [Remove-DlpSensitiveInformationType](Remove-DlpSensitiveInformationType.md)
-
-### [Set-DlpSensitiveInformationType](Set-DlpSensitiveInformationType.md)
-
 ### [Get-DlpSensitiveInformationTypeRulePackage](Get-DlpSensitiveInformationTypeRulePackage.md)
-
-### [New-DlpSensitiveInformationTypeRulePackage](New-DlpSensitiveInformationTypeRulePackage.md)
-
-### [Remove-DlpSensitiveInformationTypeRulePackage](Remove-DlpSensitiveInformationTypeRulePackage.md)
-
-### [Set-DlpSensitiveInformationTypeRulePackage](Set-DlpSensitiveInformationTypeRulePackage.md)
 
 ### [Get-DlpSiDetectionsReport](Get-DlpSiDetectionsReport.md)
 
-### [New-Fingerprint](New-Fingerprint.md)
-
 ### [Get-PolicyTipConfig](Get-PolicyTipConfig.md)
+
+### [Import-DlpPolicyCollection](Import-DlpPolicyCollection.md)
+
+### [Import-DlpPolicyTemplate](Import-DlpPolicyTemplate.md)
+
+### [New-ClassificationRuleCollection](New-ClassificationRuleCollection.md)
+
+### [New-DataClassification](New-DataClassification.md)
+
+### [New-DlpCompliancePolicy](New-DlpCompliancePolicy.md)
+
+### [New-DlpComplianceRule](New-DlpComplianceRule.md)
+
+### [New-DlpEdmSchema](New-DlpEdmSchema.md)
+
+### [New-DlpFingerprint](New-DlpFingerprint.md)
+
+### [New-DlpKeywordDictionary](New-DlpKeywordDictionary.md)
+
+### [New-DlpPolicy](New-DlpPolicy.md)
+
+### [New-DlpSensitiveInformationType](New-DlpSensitiveInformationType.md)
+
+### [New-DlpSensitiveInformationTypeRulePackage](New-DlpSensitiveInformationTypeRulePackage.md)
+
+### [New-Fingerprint](New-Fingerprint.md)
 
 ### [New-PolicyTipConfig](New-PolicyTipConfig.md)
 
+### [Remove-ClassificationRuleCollection](Remove-ClassificationRuleCollection.md)
+
+### [Remove-DataClassification](Remove-DataClassification.md)
+
+### [Remove-DlpCompliancePolicy](Remove-DlpCompliancePolicy.md)
+
+### [Remove-DlpComplianceRule](Remove-DlpComplianceRule.md)
+
+### [Remove-DlpEdmSchema](Remove-DlpEdmSchema.md)
+
+### [Remove-DlpKeywordDictionary](Remove-DlpKeywordDictionary.md)
+
+### [Remove-DlpPolicy](Remove-DlpPolicy.md)
+
+### [Remove-DlpPolicyTemplate](Remove-DlpPolicyTemplate.md)
+
+### [Remove-DlpSensitiveInformationType](Remove-DlpSensitiveInformationType.md)
+
+### [Remove-DlpSensitiveInformationTypeRulePackage](Remove-DlpSensitiveInformationTypeRulePackage.md)
+
 ### [Remove-PolicyTipConfig](Remove-PolicyTipConfig.md)
+
+### [Set-ClassificationRuleCollection](Set-ClassificationRuleCollection.md)
+
+### [Set-DataClassification](Set-DataClassification.md)
+
+### [Set-DlpCompliancePolicy](Set-DlpCompliancePolicy.md)
+
+### [Set-DlpComplianceRule](Set-DlpComplianceRule.md)
+
+### [Set-DlpEdmSchema](Set-DlpEdmSchema.md)
+
+### [Set-DlpKeywordDictionary](Set-DlpKeywordDictionary.md)
+
+### [Set-DlpPolicy](Set-DlpPolicy.md)
+
+### [Set-DlpSensitiveInformationType](Set-DlpSensitiveInformationType.md)
+
+### [Set-DlpSensitiveInformationTypeRulePackage](Set-DlpSensitiveInformationTypeRulePackage.md)
 
 ### [Set-PolicyTipConfig](Set-PolicyTipConfig.md)
 
 ## policy-and-compliance-ediscovery Cmdlets
-### [Get-CaseHoldPolicy](Get-CaseHoldPolicy.md)
-
-### [New-CaseHoldPolicy](New-CaseHoldPolicy.md)
-
-### [Remove-CaseHoldPolicy](Remove-CaseHoldPolicy.md)
-
-### [Set-CaseHoldPolicy](Set-CaseHoldPolicy.md)
-
-### [Get-CaseHoldRule](Get-CaseHoldRule.md)
-
-### [New-CaseHoldRule](New-CaseHoldRule.md)
-
-### [Remove-CaseHoldRule](Remove-CaseHoldRule.md)
-
-### [Set-CaseHoldRule](Set-CaseHoldRule.md)
-
-### [Get-ComplianceCase](Get-ComplianceCase.md)
-
-### [New-ComplianceCase](New-ComplianceCase.md)
-
-### [Remove-ComplianceCase](Remove-ComplianceCase.md)
-
-### [Set-ComplianceCase](Set-ComplianceCase.md)
-
 ### [Add-ComplianceCaseMember](Add-ComplianceCaseMember.md)
-
-### [Get-ComplianceCaseMember](Get-ComplianceCaseMember.md)
-
-### [Remove-ComplianceCaseMember](Remove-ComplianceCaseMember.md)
-
-### [Update-ComplianceCaseMember](Update-ComplianceCaseMember.md)
 
 ### [Add-eDiscoveryCaseAdmin](Add-eDiscoveryCaseAdmin.md)
 
+### [Get-CaseHoldPolicy](Get-CaseHoldPolicy.md)
+
+### [Get-CaseHoldRule](Get-CaseHoldRule.md)
+
+### [Get-ComplianceCase](Get-ComplianceCase.md)
+
+### [Get-ComplianceCaseMember](Get-ComplianceCaseMember.md)
+
 ### [Get-eDiscoveryCaseAdmin](Get-eDiscoveryCaseAdmin.md)
 
+### [New-CaseHoldPolicy](New-CaseHoldPolicy.md)
+
+### [New-CaseHoldRule](New-CaseHoldRule.md)
+
+### [New-ComplianceCase](New-ComplianceCase.md)
+
+### [Remove-CaseHoldPolicy](Remove-CaseHoldPolicy.md)
+
+### [Remove-CaseHoldRule](Remove-CaseHoldRule.md)
+
+### [Remove-ComplianceCase](Remove-ComplianceCase.md)
+
+### [Remove-ComplianceCaseMember](Remove-ComplianceCaseMember.md)
+
 ### [Remove-eDiscoveryCaseAdmin](Remove-eDiscoveryCaseAdmin.md)
+
+### [Set-CaseHoldPolicy](Set-CaseHoldPolicy.md)
+
+### [Set-CaseHoldRule](Set-CaseHoldRule.md)
+
+### [Set-ComplianceCase](Set-ComplianceCase.md)
+
+### [Update-ComplianceCaseMember](Update-ComplianceCaseMember.md)
 
 ### [Update-eDiscoveryCaseAdmin](Update-eDiscoveryCaseAdmin.md)
 
 ## policy-and-compliance-retention Cmdlets
-### [Get-ComplianceRetentionEvent](Get-ComplianceRetentionEvent.md)
+### [Enable-ComplianceTagStorage](Enable-ComplianceTagStorage.md)
 
-### [New-ComplianceRetentionEvent](New-ComplianceRetentionEvent.md)
+### [Get-ComplianceRetentionEvent](Get-ComplianceRetentionEvent.md)
 
 ### [Get-ComplianceRetentionEventType](Get-ComplianceRetentionEventType.md)
 
-### [New-ComplianceRetentionEventType](New-ComplianceRetentionEventType.md)
-
-### [Remove-ComplianceRetentionEventType](Remove-ComplianceRetentionEventType.md)
-
-### [Set-ComplianceRetentionEventType](Set-ComplianceRetentionEventType.md)
-
 ### [Get-ComplianceTag](Get-ComplianceTag.md)
-
-### [New-ComplianceTag](New-ComplianceTag.md)
-
-### [Remove-ComplianceTag](Remove-ComplianceTag.md)
-
-### [Set-ComplianceTag](Set-ComplianceTag.md)
-
-### [Enable-ComplianceTagStorage](Enable-ComplianceTagStorage.md)
 
 ### [Get-ComplianceTagStorage](Get-ComplianceTagStorage.md)
 
@@ -1929,83 +1917,97 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-HoldCompliancePolicy](Get-HoldCompliancePolicy.md)
 
-### [New-HoldCompliancePolicy](New-HoldCompliancePolicy.md)
-
-### [Remove-HoldCompliancePolicy](Remove-HoldCompliancePolicy.md)
-
-### [Set-HoldCompliancePolicy](Set-HoldCompliancePolicy.md)
-
 ### [Get-HoldComplianceRule](Get-HoldComplianceRule.md)
-
-### [New-HoldComplianceRule](New-HoldComplianceRule.md)
-
-### [Remove-HoldComplianceRule](Remove-HoldComplianceRule.md)
-
-### [Set-HoldComplianceRule](Set-HoldComplianceRule.md)
 
 ### [Get-ManagedContentSettings](Get-ManagedContentSettings.md)
 
-### [New-ManagedContentSettings](New-ManagedContentSettings.md)
-
-### [Remove-ManagedContentSettings](Remove-ManagedContentSettings.md)
-
-### [Set-ManagedContentSettings](Set-ManagedContentSettings.md)
-
 ### [Get-ManagedFolder](Get-ManagedFolder.md)
-
-### [New-ManagedFolder](New-ManagedFolder.md)
-
-### [Remove-ManagedFolder](Remove-ManagedFolder.md)
-
-### [Set-ManagedFolder](Set-ManagedFolder.md)
-
-### [Start-ManagedFolderAssistant](Start-ManagedFolderAssistant.md)
-
-### [Stop-ManagedFolderAssistant](Stop-ManagedFolderAssistant.md)
 
 ### [Get-ManagedFolderMailboxPolicy](Get-ManagedFolderMailboxPolicy.md)
 
-### [New-ManagedFolderMailboxPolicy](New-ManagedFolderMailboxPolicy.md)
-
-### [Remove-ManagedFolderMailboxPolicy](Remove-ManagedFolderMailboxPolicy.md)
-
-### [Set-ManagedFolderMailboxPolicy](Set-ManagedFolderMailboxPolicy.md)
-
-### [Start-RetentionAutoTagLearning](Start-RetentionAutoTagLearning.md)
-
 ### [Get-RetentionCompliancePolicy](Get-RetentionCompliancePolicy.md)
 
-### [New-RetentionCompliancePolicy](New-RetentionCompliancePolicy.md)
-
-### [Remove-RetentionCompliancePolicy](Remove-RetentionCompliancePolicy.md)
-
-### [Set-RetentionCompliancePolicy](Set-RetentionCompliancePolicy.md)
-
 ### [Get-RetentionComplianceRule](Get-RetentionComplianceRule.md)
-
-### [New-RetentionComplianceRule](New-RetentionComplianceRule.md)
-
-### [Remove-RetentionComplianceRule](Remove-RetentionComplianceRule.md)
-
-### [Set-RetentionComplianceRule](Set-RetentionComplianceRule.md)
 
 ### [Get-RetentionEvent](Get-RetentionEvent.md)
 
 ### [Get-RetentionPolicy](Get-RetentionPolicy.md)
 
-### [New-RetentionPolicy](New-RetentionPolicy.md)
-
-### [Remove-RetentionPolicy](Remove-RetentionPolicy.md)
-
-### [Set-RetentionPolicy](Set-RetentionPolicy.md)
-
 ### [Get-RetentionPolicyTag](Get-RetentionPolicyTag.md)
+
+### [New-ComplianceRetentionEvent](New-ComplianceRetentionEvent.md)
+
+### [New-ComplianceRetentionEventType](New-ComplianceRetentionEventType.md)
+
+### [New-ComplianceTag](New-ComplianceTag.md)
+
+### [New-HoldCompliancePolicy](New-HoldCompliancePolicy.md)
+
+### [New-HoldComplianceRule](New-HoldComplianceRule.md)
+
+### [New-ManagedContentSettings](New-ManagedContentSettings.md)
+
+### [New-ManagedFolder](New-ManagedFolder.md)
+
+### [New-ManagedFolderMailboxPolicy](New-ManagedFolderMailboxPolicy.md)
+
+### [New-RetentionCompliancePolicy](New-RetentionCompliancePolicy.md)
+
+### [New-RetentionComplianceRule](New-RetentionComplianceRule.md)
+
+### [New-RetentionPolicy](New-RetentionPolicy.md)
 
 ### [New-RetentionPolicyTag](New-RetentionPolicyTag.md)
 
+### [Remove-ComplianceRetentionEventType](Remove-ComplianceRetentionEventType.md)
+
+### [Remove-ComplianceTag](Remove-ComplianceTag.md)
+
+### [Remove-HoldCompliancePolicy](Remove-HoldCompliancePolicy.md)
+
+### [Remove-HoldComplianceRule](Remove-HoldComplianceRule.md)
+
+### [Remove-ManagedContentSettings](Remove-ManagedContentSettings.md)
+
+### [Remove-ManagedFolder](Remove-ManagedFolder.md)
+
+### [Remove-ManagedFolderMailboxPolicy](Remove-ManagedFolderMailboxPolicy.md)
+
+### [Remove-RetentionCompliancePolicy](Remove-RetentionCompliancePolicy.md)
+
+### [Remove-RetentionComplianceRule](Remove-RetentionComplianceRule.md)
+
+### [Remove-RetentionPolicy](Remove-RetentionPolicy.md)
+
 ### [Remove-RetentionPolicyTag](Remove-RetentionPolicyTag.md)
 
+### [Set-ComplianceRetentionEventType](Set-ComplianceRetentionEventType.md)
+
+### [Set-ComplianceTag](Set-ComplianceTag.md)
+
+### [Set-HoldCompliancePolicy](Set-HoldCompliancePolicy.md)
+
+### [Set-HoldComplianceRule](Set-HoldComplianceRule.md)
+
+### [Set-ManagedContentSettings](Set-ManagedContentSettings.md)
+
+### [Set-ManagedFolder](Set-ManagedFolder.md)
+
+### [Set-ManagedFolderMailboxPolicy](Set-ManagedFolderMailboxPolicy.md)
+
+### [Set-RetentionCompliancePolicy](Set-RetentionCompliancePolicy.md)
+
+### [Set-RetentionComplianceRule](Set-RetentionComplianceRule.md)
+
+### [Set-RetentionPolicy](Set-RetentionPolicy.md)
+
 ### [Set-RetentionPolicyTag](Set-RetentionPolicyTag.md)
+
+### [Start-ManagedFolderAssistant](Start-ManagedFolderAssistant.md)
+
+### [Start-RetentionAutoTagLearning](Start-RetentionAutoTagLearning.md)
+
+### [Stop-ManagedFolderAssistant](Stop-ManagedFolderAssistant.md)
 
 ### [Validate-RetentionRuleQuery](Validate-RetentionRuleQuery.md)
 
@@ -2137,85 +2139,77 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-TenantAnalyticsConfig](Get-TenantAnalyticsConfig.md)
 
-### [Set-TenantAnalyticsConfig](Set-TenantAnalyticsConfig.md)
-
 ### [Get-UserAnalyticsConfig](Get-UserAnalyticsConfig.md)
+
+### [Set-TenantAnalyticsConfig](Set-TenantAnalyticsConfig.md)
 
 ### [Set-UserAnalyticsConfig](Set-UserAnalyticsConfig.md)
 
 ## role-based-access-control Cmdlets
-### [Get-ManagementRole](Get-ManagementRole.md)
-
-### [New-ManagementRole](New-ManagementRole.md)
-
-### [Remove-ManagementRole](Remove-ManagementRole.md)
-
-### [Get-ManagementRoleAssignment](Get-ManagementRoleAssignment.md)
-
-### [New-ManagementRoleAssignment](New-ManagementRoleAssignment.md)
-
-### [Remove-ManagementRoleAssignment](Remove-ManagementRoleAssignment.md)
-
-### [Set-ManagementRoleAssignment](Set-ManagementRoleAssignment.md)
-
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)
-
-### [Get-ManagementRoleEntry](Get-ManagementRoleEntry.md)
-
-### [Remove-ManagementRoleEntry](Remove-ManagementRoleEntry.md)
-
-### [Set-ManagementRoleEntry](Set-ManagementRoleEntry.md)
-
-### [Get-ManagementScope](Get-ManagementScope.md)
-
-### [New-ManagementScope](New-ManagementScope.md)
-
-### [Remove-ManagementScope](Remove-ManagementScope.md)
-
-### [Set-ManagementScope](Set-ManagementScope.md)
-
-### [Get-RoleAssignmentPolicy](Get-RoleAssignmentPolicy.md)
-
-### [New-RoleAssignmentPolicy](New-RoleAssignmentPolicy.md)
-
-### [Remove-RoleAssignmentPolicy](Remove-RoleAssignmentPolicy.md)
-
-### [Set-RoleAssignmentPolicy](Set-RoleAssignmentPolicy.md)
-
-### [Get-RoleGroup](Get-RoleGroup.md)
-
-### [New-RoleGroup](New-RoleGroup.md)
-
-### [Remove-RoleGroup](Remove-RoleGroup.md)
-
-### [Set-RoleGroup](Set-RoleGroup.md)
 
 ### [Add-RoleGroupMember](Add-RoleGroupMember.md)
 
+### [Get-ManagementRole](Get-ManagementRole.md)
+
+### [Get-ManagementRoleAssignment](Get-ManagementRoleAssignment.md)
+
+### [Get-ManagementRoleEntry](Get-ManagementRoleEntry.md)
+
+### [Get-ManagementScope](Get-ManagementScope.md)
+
+### [Get-RoleAssignmentPolicy](Get-RoleAssignmentPolicy.md)
+
+### [Get-RoleGroup](Get-RoleGroup.md)
+
 ### [Get-RoleGroupMember](Get-RoleGroupMember.md)
 
+### [New-ManagementRole](New-ManagementRole.md)
+
+### [New-ManagementRoleAssignment](New-ManagementRoleAssignment.md)
+
+### [New-ManagementScope](New-ManagementScope.md)
+
+### [New-RoleAssignmentPolicy](New-RoleAssignmentPolicy.md)
+
+### [New-RoleGroup](New-RoleGroup.md)
+
+### [Remove-ManagementRole](Remove-ManagementRole.md)
+
+### [Remove-ManagementRoleAssignment](Remove-ManagementRoleAssignment.md)
+
+### [Remove-ManagementRoleEntry](Remove-ManagementRoleEntry.md)
+
+### [Remove-ManagementScope](Remove-ManagementScope.md)
+
+### [Remove-RoleAssignmentPolicy](Remove-RoleAssignmentPolicy.md)
+
+### [Remove-RoleGroup](Remove-RoleGroup.md)
+
 ### [Remove-RoleGroupMember](Remove-RoleGroupMember.md)
+
+### [Set-ManagementRoleAssignment](Set-ManagementRoleAssignment.md)
+
+### [Set-ManagementRoleEntry](Set-ManagementRoleEntry.md)
+
+### [Set-ManagementScope](Set-ManagementScope.md)
+
+### [Set-RoleAssignmentPolicy](Set-RoleAssignmentPolicy.md)
+
+### [Set-RoleGroup](Set-RoleGroup.md)
 
 ### [Update-RoleGroupMember](Update-RoleGroupMember.md)
 
 ## server-health-and-performance Cmdlets
+### [Add-GlobalMonitoringOverride](Add-GlobalMonitoringOverride.md)
+
+### [Add-ServerMonitoringOverride](Add-ServerMonitoringOverride.md)
+
 ### [Get-AvailabilityReportOutage](Get-AvailabilityReportOutage.md)
-
-### [New-AvailabilityReportOutage](New-AvailabilityReportOutage.md)
-
-### [Remove-AvailabilityReportOutage](Remove-AvailabilityReportOutage.md)
-
-### [Set-AvailabilityReportOutage](Set-AvailabilityReportOutage.md)
 
 ### [Get-EventLogLevel](Get-EventLogLevel.md)
 
-### [Set-EventLogLevel](Set-EventLogLevel.md)
-
-### [Add-GlobalMonitoringOverride](Add-GlobalMonitoringOverride.md)
-
 ### [Get-GlobalMonitoringOverride](Get-GlobalMonitoringOverride.md)
-
-### [Remove-GlobalMonitoringOverride](Remove-GlobalMonitoringOverride.md)
 
 ### [Get-HealthReport](Get-HealthReport.md)
 
@@ -2223,359 +2217,367 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MonitoringItemIdentity](Get-MonitoringItemIdentity.md)
 
-### [Invoke-MonitoringProbe](Invoke-MonitoringProbe.md)
-
 ### [Get-ServerComponentState](Get-ServerComponentState.md)
-
-### [Set-ServerComponentState](Set-ServerComponentState.md)
 
 ### [Get-ServerHealth](Get-ServerHealth.md)
 
-### [Set-ServerMonitor](Set-ServerMonitor.md)
-
-### [Add-ServerMonitoringOverride](Add-ServerMonitoringOverride.md)
-
 ### [Get-ServerMonitoringOverride](Get-ServerMonitoringOverride.md)
-
-### [Remove-ServerMonitoringOverride](Remove-ServerMonitoringOverride.md)
-
-### [Test-ServiceHealth](Test-ServiceHealth.md)
 
 ### [Get-ThrottlingPolicy](Get-ThrottlingPolicy.md)
 
+### [Get-ThrottlingPolicyAssociation](Get-ThrottlingPolicyAssociation.md)
+
+### [Invoke-MonitoringProbe](Invoke-MonitoringProbe.md)
+
+### [New-AvailabilityReportOutage](New-AvailabilityReportOutage.md)
+
 ### [New-ThrottlingPolicy](New-ThrottlingPolicy.md)
+
+### [Remove-AvailabilityReportOutage](Remove-AvailabilityReportOutage.md)
+
+### [Remove-GlobalMonitoringOverride](Remove-GlobalMonitoringOverride.md)
+
+### [Remove-ServerMonitoringOverride](Remove-ServerMonitoringOverride.md)
 
 ### [Remove-ThrottlingPolicy](Remove-ThrottlingPolicy.md)
 
+### [Set-AvailabilityReportOutage](Set-AvailabilityReportOutage.md)
+
+### [Set-EventLogLevel](Set-EventLogLevel.md)
+
+### [Set-ServerComponentState](Set-ServerComponentState.md)
+
+### [Set-ServerMonitor](Set-ServerMonitor.md)
+
 ### [Set-ThrottlingPolicy](Set-ThrottlingPolicy.md)
 
-### [Get-ThrottlingPolicyAssociation](Get-ThrottlingPolicyAssociation.md)
-
 ### [Set-ThrottlingPolicyAssociation](Set-ThrottlingPolicyAssociation.md)
+
+### [Test-ServiceHealth](Test-ServiceHealth.md)
 
 ## sharing-and-collaboration Cmdlets
 ### [Add-AvailabilityAddressSpace](Add-AvailabilityAddressSpace.md)
 
-### [Get-AvailabilityAddressSpace](Get-AvailabilityAddressSpace.md)
+### [Add-PublicFolderAdministrativePermission](Add-PublicFolderAdministrativePermission.md)
 
-### [Remove-AvailabilityAddressSpace](Remove-AvailabilityAddressSpace.md)
-
-### [Get-AvailabilityConfig](Get-AvailabilityConfig.md)
-
-### [New-AvailabilityConfig](New-AvailabilityConfig.md)
-
-### [Remove-AvailabilityConfig](Remove-AvailabilityConfig.md)
-
-### [Set-AvailabilityConfig](Set-AvailabilityConfig.md)
+### [Add-PublicFolderClientPermission](Add-PublicFolderClientPermission.md)
 
 ### [Disable-MailPublicFolder](Disable-MailPublicFolder.md)
 
 ### [Enable-MailPublicFolder](Enable-MailPublicFolder.md)
 
-### [Get-MailPublicFolder](Get-MailPublicFolder.md)
+### [Get-AvailabilityAddressSpace](Get-AvailabilityAddressSpace.md)
 
-### [Set-MailPublicFolder](Set-MailPublicFolder.md)
+### [Get-AvailabilityConfig](Get-AvailabilityConfig.md)
+
+### [Get-MailPublicFolder](Get-MailPublicFolder.md)
 
 ### [Get-OrganizationRelationship](Get-OrganizationRelationship.md)
 
-### [New-OrganizationRelationship](New-OrganizationRelationship.md)
-
-### [Remove-OrganizationRelationship](Remove-OrganizationRelationship.md)
-
-### [Set-OrganizationRelationship](Set-OrganizationRelationship.md)
-
-### [Test-OrganizationRelationship](Test-OrganizationRelationship.md)
-
 ### [Get-PublicFolder](Get-PublicFolder.md)
-
-### [New-PublicFolder](New-PublicFolder.md)
-
-### [Remove-PublicFolder](Remove-PublicFolder.md)
-
-### [Set-PublicFolder](Set-PublicFolder.md)
-
-### [Update-PublicFolder](Update-PublicFolder.md)
-
-### [Add-PublicFolderAdministrativePermission](Add-PublicFolderAdministrativePermission.md)
 
 ### [Get-PublicFolderAdministrativePermission](Get-PublicFolderAdministrativePermission.md)
 
-### [Remove-PublicFolderAdministrativePermission](Remove-PublicFolderAdministrativePermission.md)
-
-### [Add-PublicFolderClientPermission](Add-PublicFolderClientPermission.md)
-
 ### [Get-PublicFolderClientPermission](Get-PublicFolderClientPermission.md)
-
-### [Remove-PublicFolderClientPermission](Remove-PublicFolderClientPermission.md)
 
 ### [Get-PublicFolderDatabase](Get-PublicFolderDatabase.md)
 
-### [New-PublicFolderDatabase](New-PublicFolderDatabase.md)
-
-### [Remove-PublicFolderDatabase](Remove-PublicFolderDatabase.md)
-
-### [Set-PublicFolderDatabase](Set-PublicFolderDatabase.md)
-
-### [New-PublicFolderDatabaseRepairRequest](New-PublicFolderDatabaseRepairRequest.md)
-
-### [Update-PublicFolderHierarchy](Update-PublicFolderHierarchy.md)
-
 ### [Get-PublicFolderItemStatistics](Get-PublicFolderItemStatistics.md)
 
-### [Update-PublicFolderMailbox](Update-PublicFolderMailbox.md)
-
 ### [Get-PublicFolderMailboxDiagnostics](Get-PublicFolderMailboxDiagnostics.md)
-
-### [Resume-PublicFolderReplication](Resume-PublicFolderReplication.md)
-
-### [Suspend-PublicFolderReplication](Suspend-PublicFolderReplication.md)
 
 ### [Get-PublicFolderStatistics](Get-PublicFolderStatistics.md)
 
 ### [Get-SharingPolicy](Get-SharingPolicy.md)
 
-### [New-SharingPolicy](New-SharingPolicy.md)
-
-### [Remove-SharingPolicy](Remove-SharingPolicy.md)
-
-### [Set-SharingPolicy](Set-SharingPolicy.md)
-
 ### [Get-SiteMailbox](Get-SiteMailbox.md)
-
-### [Set-SiteMailbox](Set-SiteMailbox.md)
-
-### [Test-SiteMailbox](Test-SiteMailbox.md)
-
-### [Update-SiteMailbox](Update-SiteMailbox.md)
 
 ### [Get-SiteMailboxDiagnostics](Get-SiteMailboxDiagnostics.md)
 
 ### [Get-SiteMailboxProvisioningPolicy](Get-SiteMailboxProvisioningPolicy.md)
 
+### [New-AvailabilityConfig](New-AvailabilityConfig.md)
+
+### [New-OrganizationRelationship](New-OrganizationRelationship.md)
+
+### [New-PublicFolder](New-PublicFolder.md)
+
+### [New-PublicFolderDatabase](New-PublicFolderDatabase.md)
+
+### [New-PublicFolderDatabaseRepairRequest](New-PublicFolderDatabaseRepairRequest.md)
+
+### [New-SharingPolicy](New-SharingPolicy.md)
+
 ### [New-SiteMailboxProvisioningPolicy](New-SiteMailboxProvisioningPolicy.md)
-
-### [Remove-SiteMailboxProvisioningPolicy](Remove-SiteMailboxProvisioningPolicy.md)
-
-### [Set-SiteMailboxProvisioningPolicy](Set-SiteMailboxProvisioningPolicy.md)
 
 ### [New-SyncMailPublicFolder](New-SyncMailPublicFolder.md)
 
+### [Remove-AvailabilityAddressSpace](Remove-AvailabilityAddressSpace.md)
+
+### [Remove-AvailabilityConfig](Remove-AvailabilityConfig.md)
+
+### [Remove-OrganizationRelationship](Remove-OrganizationRelationship.md)
+
+### [Remove-PublicFolder](Remove-PublicFolder.md)
+
+### [Remove-PublicFolderAdministrativePermission](Remove-PublicFolderAdministrativePermission.md)
+
+### [Remove-PublicFolderClientPermission](Remove-PublicFolderClientPermission.md)
+
+### [Remove-PublicFolderDatabase](Remove-PublicFolderDatabase.md)
+
+### [Remove-SharingPolicy](Remove-SharingPolicy.md)
+
+### [Remove-SiteMailboxProvisioningPolicy](Remove-SiteMailboxProvisioningPolicy.md)
+
 ### [Remove-SyncMailPublicFolder](Remove-SyncMailPublicFolder.md)
 
+### [Resume-PublicFolderReplication](Resume-PublicFolderReplication.md)
+
+### [Set-AvailabilityConfig](Set-AvailabilityConfig.md)
+
+### [Set-MailPublicFolder](Set-MailPublicFolder.md)
+
+### [Set-OrganizationRelationship](Set-OrganizationRelationship.md)
+
+### [Set-PublicFolder](Set-PublicFolder.md)
+
+### [Set-PublicFolderDatabase](Set-PublicFolderDatabase.md)
+
+### [Set-SharingPolicy](Set-SharingPolicy.md)
+
+### [Set-SiteMailbox](Set-SiteMailbox.md)
+
+### [Set-SiteMailboxProvisioningPolicy](Set-SiteMailboxProvisioningPolicy.md)
+
+### [Suspend-PublicFolderReplication](Suspend-PublicFolderReplication.md)
+
+### [Test-OrganizationRelationship](Test-OrganizationRelationship.md)
+
+### [Test-SiteMailbox](Test-SiteMailbox.md)
+
+### [Update-PublicFolder](Update-PublicFolder.md)
+
+### [Update-PublicFolderHierarchy](Update-PublicFolderHierarchy.md)
+
+### [Update-PublicFolderMailbox](Update-PublicFolderMailbox.md)
+
+### [Update-SiteMailbox](Update-SiteMailbox.md)
+
 ## unified-messaging Cmdlets
+### [Disable-UMAutoAttendant](Disable-UMAutoAttendant.md)
+
+### [Disable-UMCallAnsweringRule](Disable-UMCallAnsweringRule.md)
+
+### [Disable-UMIPGateway](Disable-UMIPGateway.md)
+
+### [Disable-UMMailbox](Disable-UMMailbox.md)
+
+### [Disable-UMServer](Disable-UMServer.md)
+
+### [Disable-UMService](Disable-UMService.md)
+
+### [Enable-UMAutoAttendant](Enable-UMAutoAttendant.md)
+
+### [Enable-UMCallAnsweringRule](Enable-UMCallAnsweringRule.md)
+
+### [Enable-UMIPGateway](Enable-UMIPGateway.md)
+
+### [Enable-UMMailbox](Enable-UMMailbox.md)
+
+### [Enable-UMServer](Enable-UMServer.md)
+
+### [Enable-UMService](Enable-UMService.md)
+
+### [Export-UMCallDataRecord](Export-UMCallDataRecord.md)
+
+### [Export-UMPrompt](Export-UMPrompt.md)
+
 ### [Get-OnlineMeetingConfiguration](Get-OnlineMeetingConfiguration.md)
 
 ### [Get-UMActiveCalls](Get-UMActiveCalls.md)
 
-### [Disable-UMAutoAttendant](Disable-UMAutoAttendant.md)
-
-### [Enable-UMAutoAttendant](Enable-UMAutoAttendant.md)
-
 ### [Get-UMAutoAttendant](Get-UMAutoAttendant.md)
 
-### [New-UMAutoAttendant](New-UMAutoAttendant.md)
-
-### [Remove-UMAutoAttendant](Remove-UMAutoAttendant.md)
-
-### [Set-UMAutoAttendant](Set-UMAutoAttendant.md)
-
-### [Disable-UMCallAnsweringRule](Disable-UMCallAnsweringRule.md)
-
-### [Enable-UMCallAnsweringRule](Enable-UMCallAnsweringRule.md)
-
 ### [Get-UMCallAnsweringRule](Get-UMCallAnsweringRule.md)
-
-### [New-UMCallAnsweringRule](New-UMCallAnsweringRule.md)
-
-### [Remove-UMCallAnsweringRule](Remove-UMCallAnsweringRule.md)
-
-### [Set-UMCallAnsweringRule](Set-UMCallAnsweringRule.md)
-
-### [Export-UMCallDataRecord](Export-UMCallDataRecord.md)
 
 ### [Get-UMCallDataRecord](Get-UMCallDataRecord.md)
 
 ### [Get-UMCallRouterSettings](Get-UMCallRouterSettings.md)
 
-### [Set-UMCallRouterSettings](Set-UMCallRouterSettings.md)
-
 ### [Get-UMCallSummaryReport](Get-UMCallSummaryReport.md)
-
-### [Test-UMConnectivity](Test-UMConnectivity.md)
 
 ### [Get-UMDialPlan](Get-UMDialPlan.md)
 
-### [New-UMDialPlan](New-UMDialPlan.md)
-
-### [Remove-UMDialPlan](Remove-UMDialPlan.md)
-
-### [Set-UMDialPlan](Set-UMDialPlan.md)
-
 ### [Get-UMHuntGroup](Get-UMHuntGroup.md)
-
-### [New-UMHuntGroup](New-UMHuntGroup.md)
-
-### [Remove-UMHuntGroup](Remove-UMHuntGroup.md)
-
-### [Disable-UMIPGateway](Disable-UMIPGateway.md)
-
-### [Enable-UMIPGateway](Enable-UMIPGateway.md)
 
 ### [Get-UMIPGateway](Get-UMIPGateway.md)
 
-### [New-UMIPGateway](New-UMIPGateway.md)
-
-### [Remove-UMIPGateway](Remove-UMIPGateway.md)
-
-### [Set-UMIPGateway](Set-UMIPGateway.md)
-
-### [Disable-UMMailbox](Disable-UMMailbox.md)
-
-### [Enable-UMMailbox](Enable-UMMailbox.md)
-
 ### [Get-UMMailbox](Get-UMMailbox.md)
-
-### [Set-UMMailbox](Set-UMMailbox.md)
 
 ### [Get-UMMailboxPIN](Get-UMMailboxPIN.md)
 
-### [Set-UMMailboxPIN](Set-UMMailboxPIN.md)
-
 ### [Get-UMMailboxPolicy](Get-UMMailboxPolicy.md)
-
-### [New-UMMailboxPolicy](New-UMMailboxPolicy.md)
-
-### [Remove-UMMailboxPolicy](Remove-UMMailboxPolicy.md)
-
-### [Set-UMMailboxPolicy](Set-UMMailboxPolicy.md)
-
-### [Export-UMPrompt](Export-UMPrompt.md)
-
-### [Import-UMPrompt](Import-UMPrompt.md)
-
-### [Disable-UMServer](Disable-UMServer.md)
-
-### [Enable-UMServer](Enable-UMServer.md)
 
 ### [Get-UmServer](Get-UmServer.md)
 
-### [Set-UmServer](Set-UmServer.md)
-
-### [Disable-UMService](Disable-UMService.md)
-
-### [Enable-UMService](Enable-UMService.md)
-
 ### [Get-UMService](Get-UMService.md)
+
+### [Import-UMPrompt](Import-UMPrompt.md)
+
+### [New-UMAutoAttendant](New-UMAutoAttendant.md)
+
+### [New-UMCallAnsweringRule](New-UMCallAnsweringRule.md)
+
+### [New-UMDialPlan](New-UMDialPlan.md)
+
+### [New-UMHuntGroup](New-UMHuntGroup.md)
+
+### [New-UMIPGateway](New-UMIPGateway.md)
+
+### [New-UMMailboxPolicy](New-UMMailboxPolicy.md)
+
+### [Remove-UMAutoAttendant](Remove-UMAutoAttendant.md)
+
+### [Remove-UMCallAnsweringRule](Remove-UMCallAnsweringRule.md)
+
+### [Remove-UMDialPlan](Remove-UMDialPlan.md)
+
+### [Remove-UMHuntGroup](Remove-UMHuntGroup.md)
+
+### [Remove-UMIPGateway](Remove-UMIPGateway.md)
+
+### [Remove-UMMailboxPolicy](Remove-UMMailboxPolicy.md)
+
+### [Set-UMAutoAttendant](Set-UMAutoAttendant.md)
+
+### [Set-UMCallAnsweringRule](Set-UMCallAnsweringRule.md)
+
+### [Set-UMCallRouterSettings](Set-UMCallRouterSettings.md)
+
+### [Set-UMDialPlan](Set-UMDialPlan.md)
+
+### [Set-UMIPGateway](Set-UMIPGateway.md)
+
+### [Set-UMMailbox](Set-UMMailbox.md)
+
+### [Set-UMMailboxPIN](Set-UMMailboxPIN.md)
+
+### [Set-UMMailboxPolicy](Set-UMMailboxPolicy.md)
+
+### [Set-UmServer](Set-UmServer.md)
 
 ### [Set-UMService](Set-UMService.md)
 
-## users-and-groups Cmdlets
-### [Get-Contact](Get-Contact.md)
+### [Test-UMConnectivity](Test-UMConnectivity.md)
 
-### [Set-Contact](Set-Contact.md)
+## users-and-groups Cmdlets
+### [Add-DistributionGroupMember](Add-DistributionGroupMember.md)
+
+### [Add-UnifiedGroupLinks](Add-UnifiedGroupLinks.md)
 
 ### [Disable-DistributionGroup](Disable-DistributionGroup.md)
 
-### [Enable-DistributionGroup](Enable-DistributionGroup.md)
-
-### [Get-DistributionGroup](Get-DistributionGroup.md)
-
-### [New-DistributionGroup](New-DistributionGroup.md)
-
-### [Remove-DistributionGroup](Remove-DistributionGroup.md)
-
-### [Set-DistributionGroup](Set-DistributionGroup.md)
-
-### [Upgrade-DistributionGroup](Upgrade-DistributionGroup.md)
-
-### [Add-DistributionGroupMember](Add-DistributionGroupMember.md)
-
-### [Get-DistributionGroupMember](Get-DistributionGroupMember.md)
-
-### [Remove-DistributionGroupMember](Remove-DistributionGroupMember.md)
-
-### [Update-DistributionGroupMember](Update-DistributionGroupMember.md)
-
-### [Get-DynamicDistributionGroup](Get-DynamicDistributionGroup.md)
-
-### [New-DynamicDistributionGroup](New-DynamicDistributionGroup.md)
-
-### [Remove-DynamicDistributionGroup](Remove-DynamicDistributionGroup.md)
-
-### [Set-DynamicDistributionGroup](Set-DynamicDistributionGroup.md)
-
-### [Get-EligibleDistributionGroupForMigration](Get-EligibleDistributionGroupForMigration.md)
-
-### [New-EOPDistributionGroup](New-EOPDistributionGroup.md)
-
-### [Remove-EOPDistributionGroup](Remove-EOPDistributionGroup.md)
-
-### [Set-EOPDistributionGroup](Set-EOPDistributionGroup.md)
-
-### [Update-EOPDistributionGroupMember](Update-EOPDistributionGroupMember.md)
-
-### [Set-EOPGroup](Set-EOPGroup.md)
-
-### [New-EOPMailUser](New-EOPMailUser.md)
-
-### [Remove-EOPMailUser](Remove-EOPMailUser.md)
-
-### [Set-EOPMailUser](Set-EOPMailUser.md)
-
-### [Set-EOPUser](Set-EOPUser.md)
-
-### [Get-Group](Get-Group.md)
-
-### [Set-Group](Set-Group.md)
-
-### [Get-LinkedUser](Get-LinkedUser.md)
-
-### [Set-LinkedUser](Set-LinkedUser.md)
-
 ### [Disable-MailContact](Disable-MailContact.md)
-
-### [Enable-MailContact](Enable-MailContact.md)
-
-### [Get-MailContact](Get-MailContact.md)
-
-### [New-MailContact](New-MailContact.md)
-
-### [Remove-MailContact](Remove-MailContact.md)
-
-### [Set-MailContact](Set-MailContact.md)
 
 ### [Disable-MailUser](Disable-MailUser.md)
 
+### [Enable-DistributionGroup](Enable-DistributionGroup.md)
+
+### [Enable-MailContact](Enable-MailContact.md)
+
 ### [Enable-MailUser](Enable-MailUser.md)
 
+### [Get-Contact](Get-Contact.md)
+
+### [Get-DistributionGroup](Get-DistributionGroup.md)
+
+### [Get-DistributionGroupMember](Get-DistributionGroupMember.md)
+
+### [Get-DynamicDistributionGroup](Get-DynamicDistributionGroup.md)
+
+### [Get-EligibleDistributionGroupForMigration](Get-EligibleDistributionGroupForMigration.md)
+
+### [Get-Group](Get-Group.md)
+
+### [Get-LinkedUser](Get-LinkedUser.md)
+
+### [Get-MailContact](Get-MailContact.md)
+
 ### [Get-MailUser](Get-MailUser.md)
-
-### [New-MailUser](New-MailUser.md)
-
-### [Remove-MailUser](Remove-MailUser.md)
-
-### [Set-MailUser](Set-MailUser.md)
 
 ### [Get-Recipient](Get-Recipient.md)
 
 ### [Get-SecurityPrincipal](Get-SecurityPrincipal.md)
 
-### [Undo-SoftDeletedUnifiedGroup](Undo-SoftDeletedUnifiedGroup.md)
-
 ### [Get-UnifiedGroup](Get-UnifiedGroup.md)
-
-### [New-UnifiedGroup](New-UnifiedGroup.md)
-
-### [Remove-UnifiedGroup](Remove-UnifiedGroup.md)
-
-### [Set-UnifiedGroup](Set-UnifiedGroup.md)
-
-### [Add-UnifiedGroupLinks](Add-UnifiedGroupLinks.md)
 
 ### [Get-UnifiedGroupLinks](Get-UnifiedGroupLinks.md)
 
-### [Remove-UnifiedGroupLinks](Remove-UnifiedGroupLinks.md)
-
 ### [Get-User](Get-User.md)
 
+### [New-DistributionGroup](New-DistributionGroup.md)
+
+### [New-DynamicDistributionGroup](New-DynamicDistributionGroup.md)
+
+### [New-EOPDistributionGroup](New-EOPDistributionGroup.md)
+
+### [New-EOPMailUser](New-EOPMailUser.md)
+
+### [New-MailContact](New-MailContact.md)
+
+### [New-MailUser](New-MailUser.md)
+
+### [New-UnifiedGroup](New-UnifiedGroup.md)
+
+### [Remove-DistributionGroup](Remove-DistributionGroup.md)
+
+### [Remove-DistributionGroupMember](Remove-DistributionGroupMember.md)
+
+### [Remove-DynamicDistributionGroup](Remove-DynamicDistributionGroup.md)
+
+### [Remove-EOPDistributionGroup](Remove-EOPDistributionGroup.md)
+
+### [Remove-EOPMailUser](Remove-EOPMailUser.md)
+
+### [Remove-MailContact](Remove-MailContact.md)
+
+### [Remove-MailUser](Remove-MailUser.md)
+
+### [Remove-UnifiedGroup](Remove-UnifiedGroup.md)
+
+### [Remove-UnifiedGroupLinks](Remove-UnifiedGroupLinks.md)
+
+### [Set-Contact](Set-Contact.md)
+
+### [Set-DistributionGroup](Set-DistributionGroup.md)
+
+### [Set-DynamicDistributionGroup](Set-DynamicDistributionGroup.md)
+
+### [Set-EOPDistributionGroup](Set-EOPDistributionGroup.md)
+
+### [Set-EOPGroup](Set-EOPGroup.md)
+
+### [Set-EOPMailUser](Set-EOPMailUser.md)
+
+### [Set-EOPUser](Set-EOPUser.md)
+
+### [Set-Group](Set-Group.md)
+
+### [Set-LinkedUser](Set-LinkedUser.md)
+
+### [Set-MailContact](Set-MailContact.md)
+
+### [Set-MailUser](Set-MailUser.md)
+
+### [Set-UnifiedGroup](Set-UnifiedGroup.md)
+
 ### [Set-User](Set-User.md)
+
+### [Undo-SoftDeletedUnifiedGroup](Undo-SoftDeletedUnifiedGroup.md)
+
+### [Update-DistributionGroupMember](Update-DistributionGroupMember.md)
+
+### [Update-EOPDistributionGroupMember](Update-EOPDistributionGroupMember.md)
+
+### [Upgrade-DistributionGroup](Upgrade-DistributionGroup.md)
