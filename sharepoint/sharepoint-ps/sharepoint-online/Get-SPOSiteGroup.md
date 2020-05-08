@@ -26,7 +26,7 @@ Get-SPOSiteGroup [-Group <String>] [-Limit <Int32>] -Site <SpoSitePipeBind> [<Co
 
 Use the `Get-SPOSiteGroup` cmdlet to get all the groups on the specified site collection by using the Site parameter.
 
-You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
+You must be a SharePoint Online administrator and a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [SharePoint Online PowerShell](https://docs.microsoft.com/powershell/module/sharepoint-online/index).
 
