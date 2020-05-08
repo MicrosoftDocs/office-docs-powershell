@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Note: Currently this cmdlet is part of pre-release functionality and may not function in your tenant.
 
 ## SYNTAX
 

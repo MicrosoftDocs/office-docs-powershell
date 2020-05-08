@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-antiphishrule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-AntiPhishRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
+monikerRange: "exchonline-ps"
 ---
 
 # Get-AntiPhishRule
@@ -15,8 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-AntiPhishRule cmdlet to view antiphish rules in your Office 365 Advanced Threat Protection (ATP) organization. There are no antiphish rules in Exchange Online Protection (EOP).
-
+Use the Get-AntiPhishRule cmdlet to view antiphish rules in your cloud-based organization.
 
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
@@ -63,7 +62,7 @@ The Identity parameter specifies the antiphish rule that you want to view. You c
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 0
@@ -79,7 +78,7 @@ The State parameter filters the results by the state of the rule. Valid values a
 Type: RuleState
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

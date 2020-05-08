@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-Place cmdlet to update room mailboxes with additional metadata, which provides a better search and room suggestion experience.
+Use the Set-Place cmdlet to update room mailboxes with additional metadata, which provides a better search and room suggestion experience. Note that this cmdlet works only on room mailboxes that were created in the cloud (not on synchronized room mailboxes).
 
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
