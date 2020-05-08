@@ -32,7 +32,7 @@ Set-SPOSiteOffice365Group
 
 ## DESCRIPTION
 
-Connects a top-level SPO site collection to a new Office 365 Group.  You must be a SharePoint Online administrator to run the cmdlet.
+Connects a top-level SPO site collection to a new Office 365 Group.  You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
 > [!IMPORTANT]
 > This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.

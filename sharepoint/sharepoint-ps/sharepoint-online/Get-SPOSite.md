@@ -52,7 +52,7 @@ The Detailed parameter has been deprecated. It will continue to work with earlie
 > [!NOTE]
 > Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.  
 
-You need to be a SharePoint Online administrator and a site collection administrator to run the cmdlet.
+You need to be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 

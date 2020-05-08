@@ -102,7 +102,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
 You can use the `Set-SPOTenant` cmdlet to enable external services and to specify the versions in which site collections can be created.
 You can also use the `Set-SPOSite` cmdlet together with the `Set-SPOTenant` cmdlet to block access to a site in your organization and redirect traffic to another site.
 
-You must be a SharePoint Online administrator to run the cmdlet.
+You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
 ## EXAMPLES
 
