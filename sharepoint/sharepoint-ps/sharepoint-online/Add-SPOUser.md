@@ -24,7 +24,7 @@ Add-SPOUser -Group <String> -LoginName <String> -Site <SpoSitePipeBind> [<Common
 
 ## DESCRIPTION
 
-Along with the group memberships that are normally required to run Windows PowerShell, you must be a SharePoint Online global administrator and a site collection administrator to use the `Add-SPOUser` cmdlet.
+Along with the group memberships that are normally required to run Windows PowerShell, you must have the SharePoint Admin role or Global Administrator role and be a site collection administrator to use the `Add-SPOUser` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
