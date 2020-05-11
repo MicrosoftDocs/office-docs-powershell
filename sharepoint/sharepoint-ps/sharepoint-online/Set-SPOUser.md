@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateUserTypeFromAzureAD
-If the UserType property of an User is changed in AzureAD from Member to Guest and vice-versa , this parameter can be used to update it in SharePoint Online.
+If the UserType property of an User is changed in AzureAD from Member to Guest and vice-versa, this parameter can be used to update it in SharePoint Online.
 For more information, see [Convert UserType](https://docs.microsoft.com/azure/active-directory/b2b/user-properties#convert-usertype).
 
 ```yaml
