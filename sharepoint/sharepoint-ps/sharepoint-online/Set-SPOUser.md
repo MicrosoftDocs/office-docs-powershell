@@ -91,6 +91,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UpdateUserTypeFromAzureAD
+If the UserType property of an User is changed in AzureAD from Member to Guest and vice-versa , this parameter can be used to update it in SharePoint Online.
+For more information, see [Convert UserType](https://docs.microsoft.com/azure/active-directory/b2b/user-properties#convert-usertype).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
