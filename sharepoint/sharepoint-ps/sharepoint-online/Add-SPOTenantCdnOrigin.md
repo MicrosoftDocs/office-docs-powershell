@@ -26,7 +26,7 @@ Add-SPOTenantCdnOrigin -CdnType <SPOTenantCdnType> [-Confirm] -OriginUrl <String
 
 Configures a new origin to public or private CDN, on either Tenant level or on a single Site level. Effectively, a tenant admin points out to a document library, or a folder in the document library and requests that content in that library should be retrievable by using a CDN.
 
-You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
+You must have the SharePoint Admin role or Global Administrator role and be a site collection administrator to run the cmdlet.
 
 ## EXAMPLES
 
