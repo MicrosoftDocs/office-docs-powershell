@@ -526,7 +526,7 @@ Determines the background effects that a user can configure in the Teams client.
 - NoFilters: No filters are available.
 - BlurOnly: Background blur is the only option available (requires a processor with AVX2 support, see [Hardware requirements for Microsoft Teams](https://docs.microsoft.com/microsoftteams/hardware-requirements-for-the-teams-app) for more information).
 - BlurAndDefaultBackgrounds: Background blur and a list of pre-selected images are available.
-- AllFilters: All filters are available, including custom images. This is the default value.
+- AllFilters: All filters are available, including custom images.
 
 ```yaml
 Type: String
@@ -535,7 +535,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: AllFilters
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
