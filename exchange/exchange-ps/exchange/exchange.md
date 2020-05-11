@@ -8,6 +8,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 # Exchange PowerShell
 
 ## Description
+
 Exchange PowerShell is built on Windows PowerShell technology and provides a powerful command-line interface that enables automation of administrative tasks. The following PowerShell environments are available in Exchange:
 
 - [Exchange Server PowerShell (Exchange Management Shell)](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-management-shell)
@@ -19,6 +20,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-eop/exchange-online-protection-powershell)
 
 ## active-directory Cmdlets
+
 ### [Add-ADPermission](Add-ADPermission.md)
 
 ### [Dump-ProvisioningCache](Dump-ProvisioningCache.md)
@@ -50,6 +52,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-AdSiteLink](Set-AdSiteLink.md)
 
 ## advanced-threat-protection Cmdlets
+
 ### [Disable-AntiPhishRule](Disable-AntiPhishRule.md)
 
 ### [Disable-SafeAttachmentRule](Disable-SafeAttachmentRule.md)
@@ -133,6 +136,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-SafeLinksRule](Set-SafeLinksRule.md)
 
 ## antispam-antimalware Cmdlets
+
 ### [Add-AttachmentFilterEntry](Add-AttachmentFilterEntry.md)
 
 ### [Add-ContentFilterPhrase](Add-ContentFilterPhrase.md)
@@ -321,8 +325,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-SafeList](Update-SafeList.md)
 
-
 ## client-access Cmdlets
+
 ### [Clear-TextMessagingAccount](Clear-TextMessagingAccount.md)
 
 ### [Compare-TextMessagingVerificationCode](Compare-TextMessagingVerificationCode.md)
@@ -416,6 +420,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Test-WebServicesConnectivity](Test-WebServicesConnectivity.md)
 
 ## client-access-servers Cmdlets
+
 ### [Disable-OutlookAnywhere](Disable-OutlookAnywhere.md)
 
 ### [Enable-OutlookAnywhere](Enable-OutlookAnywhere.md)
@@ -512,8 +517,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-WebServicesVirtualDirectory](Set-WebServicesVirtualDirectory.md)
 
-
 ## database-availability-groups Cmdlets
+
 ### [Add-DatabaseAvailabilityGroupServer](Add-DatabaseAvailabilityGroupServer.md)
 
 ### [Add-MailboxDatabaseCopy](Add-MailboxDatabaseCopy.md)
@@ -559,6 +564,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Update-MailboxDatabaseCopy](Update-MailboxDatabaseCopy.md)
 
 ## devices Cmdlets
+
 ### [Clear-ActiveSyncDevice](Clear-ActiveSyncDevice.md)
 
 ### [Clear-MobileDevice](Clear-MobileDevice.md)
@@ -666,34 +672,88 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Test-ActiveSyncConnectivity](Test-ActiveSyncConnectivity.md)
 
 ## email-addresses-and-address-books Cmdlets
-## encryption-and-certificates Cmdlets
+
 ### [Disable-AddressListPaging](Disable-AddressListPaging.md)
 
 ### [Enable-AddressListPaging](Enable-AddressListPaging.md)
-
-### [Enable-ExchangeCertificate](Enable-ExchangeCertificate.md)
-
-### [Export-ExchangeCertificate](Export-ExchangeCertificate.md)
 
 ### [Get-AddressBookPolicy](Get-AddressBookPolicy.md)
 
 ### [Get-AddressList](Get-AddressList.md)
 
-### [Get-DataEncryptionPolicy](Get-DataEncryptionPolicy.md)
-
 ### [Get-DetailsTemplate](Get-DetailsTemplate.md)
 
 ### [Get-EmailAddressPolicy](Get-EmailAddressPolicy.md)
 
-### [Get-ExchangeCertificate](Get-ExchangeCertificate.md)
-
 ### [Get-GlobalAddressList](Get-GlobalAddressList.md)
-
-### [Get-IRMConfiguration](Get-IRMConfiguration.md)
 
 ### [Get-OabVirtualDirectory](Get-OabVirtualDirectory.md)
 
 ### [Get-OfflineAddressBook](Get-OfflineAddressBook.md)
+
+### [Move-AddressList](Move-AddressList.md)
+
+### [Move-OfflineAddressBook](Move-OfflineAddressBook.md)
+
+### [New-AddressBookPolicy](New-AddressBookPolicy.md)
+
+### [New-AddressList](New-AddressList.md)
+
+### [New-EmailAddressPolicy](New-EmailAddressPolicy.md)
+
+### [New-GlobalAddressList](New-GlobalAddressList.md)
+
+### [New-OabVirtualDirectory](New-OabVirtualDirectory.md)
+
+### [New-OfflineAddressBook](New-OfflineAddressBook.md)
+
+### [Remove-AddressBookPolicy](Remove-AddressBookPolicy.md)
+
+### [Remove-AddressList](Remove-AddressList.md)
+
+### [Remove-EmailAddressPolicy](Remove-EmailAddressPolicy.md)
+
+### [Remove-GlobalAddressList](Remove-GlobalAddressList.md)
+
+### [Remove-OabVirtualDirectory](Remove-OabVirtualDirectory.md)
+
+### [Remove-OfflineAddressBook](Remove-OfflineAddressBook.md)
+
+### [Restore-DetailsTemplate](Restore-DetailsTemplate.md)
+
+### [Set-AddressBookPolicy](Set-AddressBookPolicy.md)
+
+### [Set-AddressList](Set-AddressList.md)
+
+### [Set-DetailsTemplate](Set-DetailsTemplate.md)
+
+### [Set-EmailAddressPolicy](Set-EmailAddressPolicy.md)
+
+### [Set-GlobalAddressList](Set-GlobalAddressList.md)
+
+### [Set-OabVirtualDirectory](Set-OabVirtualDirectory.md)
+
+### [Set-OfflineAddressBook](Set-OfflineAddressBook.md)
+
+### [Update-AddressList](Update-AddressList.md)
+
+### [Update-EmailAddressPolicy](Update-EmailAddressPolicy.md)
+
+### [Update-GlobalAddressList](Update-GlobalAddressList.md)
+
+### [Update-OfflineAddressBook](Update-OfflineAddressBook.md)
+
+## encryption-and-certificates Cmdlets
+
+### [Enable-ExchangeCertificate](Enable-ExchangeCertificate.md)
+
+### [Export-ExchangeCertificate](Export-ExchangeCertificate.md)
+
+### [Get-DataEncryptionPolicy](Get-DataEncryptionPolicy.md)
+
+### [Get-ExchangeCertificate](Get-ExchangeCertificate.md)
+
+### [Get-IRMConfiguration](Get-IRMConfiguration.md)
 
 ### [Get-OMEConfiguration](Get-OMEConfiguration.md)
 
@@ -709,65 +769,21 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Import-RMSTrustedPublishingDomain](Import-RMSTrustedPublishingDomain.md)
 
-### [Move-AddressList](Move-AddressList.md)
-
-### [Move-OfflineAddressBook](Move-OfflineAddressBook.md)
-
-### [New-AddressBookPolicy](New-AddressBookPolicy.md)
-
-### [New-AddressList](New-AddressList.md)
-
 ### [New-DataEncryptionPolicy](New-DataEncryptionPolicy.md)
-
-### [New-EmailAddressPolicy](New-EmailAddressPolicy.md)
 
 ### [New-ExchangeCertificate](New-ExchangeCertificate.md)
 
-### [New-GlobalAddressList](New-GlobalAddressList.md)
-
-### [New-OabVirtualDirectory](New-OabVirtualDirectory.md)
-
-### [New-OfflineAddressBook](New-OfflineAddressBook.md)
-
 ### [New-OMEConfiguration](New-OMEConfiguration.md)
 
-### [Remove-AddressBookPolicy](Remove-AddressBookPolicy.md)
-
-### [Remove-AddressList](Remove-AddressList.md)
-
-### [Remove-EmailAddressPolicy](Remove-EmailAddressPolicy.md)
-
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
-
-### [Remove-GlobalAddressList](Remove-GlobalAddressList.md)
-
-### [Remove-OabVirtualDirectory](Remove-OabVirtualDirectory.md)
-
-### [Remove-OfflineAddressBook](Remove-OfflineAddressBook.md)
 
 ### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
 
 ### [Remove-RMSTrustedPublishingDomain](Remove-RMSTrustedPublishingDomain.md)
 
-### [Restore-DetailsTemplate](Restore-DetailsTemplate.md)
-
-### [Set-AddressBookPolicy](Set-AddressBookPolicy.md)
-
-### [Set-AddressList](Set-AddressList.md)
-
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
 
-### [Set-DetailsTemplate](Set-DetailsTemplate.md)
-
-### [Set-EmailAddressPolicy](Set-EmailAddressPolicy.md)
-
-### [Set-GlobalAddressList](Set-GlobalAddressList.md)
-
 ### [Set-IRMConfiguration](Set-IRMConfiguration.md)
-
-### [Set-OabVirtualDirectory](Set-OabVirtualDirectory.md)
-
-### [Set-OfflineAddressBook](Set-OfflineAddressBook.md)
 
 ### [Set-OMEConfiguration](Set-OMEConfiguration.md)
 
@@ -781,15 +797,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-IRMConfiguration](Test-IRMConfiguration.md)
 
-### [Update-AddressList](Update-AddressList.md)
-
-### [Update-EmailAddressPolicy](Update-EmailAddressPolicy.md)
-
-### [Update-GlobalAddressList](Update-GlobalAddressList.md)
-
-### [Update-OfflineAddressBook](Update-OfflineAddressBook.md)
-
 ## federation-and-hybrid Cmdlets
+
 ### [Add-FederatedDomain](Add-FederatedDomain.md)
 
 ### [Disable-RemoteMailbox](Disable-RemoteMailbox.md)
@@ -867,6 +876,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Update-Recipient](Update-Recipient.md)
 
 ## mailbox-databases-and-servers Cmdlets
+
 ### [Clean-MailboxDatabase](Clean-MailboxDatabase.md)
 
 ### [Disable-MailboxQuarantine](Disable-MailboxQuarantine.md)
@@ -928,6 +938,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Update-StoreMailboxState](Update-StoreMailboxState.md)
 
 ## mailboxes Cmdlets
+
 ### [Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
 
 ### [Add-MailboxPermission](Add-MailboxPermission.md)
@@ -1139,6 +1150,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Undo-SoftDeletedMailbox](Undo-SoftDeletedMailbox.md)
 
 ## mail-flow Cmdlets
+
 ### [Add-ResubmitRequest](Add-ResubmitRequest.md)
 
 ### [Disable-TransportAgent](Disable-TransportAgent.md)
@@ -1338,6 +1350,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Validate-OutboundConnector](Validate-OutboundConnector.md)
 
 ## move-and-migration Cmdlets
+
 ### [Complete-MigrationBatch](Complete-MigrationBatch.md)
 
 ### [Export-MigrationReport](Export-MigrationReport.md)
@@ -1433,44 +1446,22 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Test-MigrationServerAvailability](Test-MigrationServerAvailability.md)
 
 ## organization Cmdlets
-## policy-and-compliance Cmdlets
+
 ### [Disable-CmdletExtensionAgent](Disable-CmdletExtensionAgent.md)
-
-### [Disable-JournalArchiving](Disable-JournalArchiving.md)
-
-### [Disable-JournalRule](Disable-JournalRule.md)
-
-### [Disable-OutlookProtectionRule](Disable-OutlookProtectionRule.md)
-
-### [Disable-TransportRule](Disable-TransportRule.md)
 
 ### [Enable-CmdletExtensionAgent](Enable-CmdletExtensionAgent.md)
 
-### [Enable-JournalRule](Enable-JournalRule.md)
-
 ### [Enable-OrganizationCustomization](Enable-OrganizationCustomization.md)
 
-### [Enable-OutlookProtectionRule](Enable-OutlookProtectionRule.md)
-
-### [Enable-TransportRule](Enable-TransportRule.md)
-
-### [Export-JournalRuleCollection](Export-JournalRuleCollection.md)
-
-### [Export-TransportRuleCollection](Export-TransportRuleCollection.md)
-
 ### [Get-AccessToCustomerDataRequest](Get-AccessToCustomerDataRequest.md)
-
-### [Get-ActivityAlert](Get-ActivityAlert.md)
-
-### [Get-AdministrativeUnit](Get-AdministrativeUnit.md)
 
 ### [Get-ApplicationAccessPolicy](Get-ApplicationAccessPolicy.md)
 
 ### [Get-AuthConfig](Get-AuthConfig.md)
 
-### [Get-AuthenticationPolicy](Get-AuthenticationPolicy.md)
-
 ### [Get-AuthServer](Get-AuthServer.md)
+
+### [Get-AuthenticationPolicy](Get-AuthenticationPolicy.md)
 
 ### [Get-CmdletExtensionAgent](Get-CmdletExtensionAgent.md)
 
@@ -1478,139 +1469,55 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ExchangeDiagnosticInfo](Get-ExchangeDiagnosticInfo.md)
 
-### [Get-ExchangeServer](Get-ExchangeServer.md)
+### [Get-ExchangeServerAccessLicenseUser](Get-ExchangeServerAccessLicenseUser.md)
 
 ### [Get-ExchangeServerAccessLicense](Get-ExchangeServerAccessLicense.md)
 
-### [Get-ExchangeServerAccessLicenseUser](Get-ExchangeServerAccessLicenseUser.md)
+### [Get-ExchangeServer](Get-ExchangeServer.md)
 
 ### [Get-ExchangeSettings](Get-ExchangeSettings.md)
-
-### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
-
-### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
-
-### [Get-InformationBarrierRecipientStatus](Get-InformationBarrierRecipientStatus.md)
-
-### [Get-JournalRule](Get-JournalRule.md)
-
-### [Get-Label](Get-Label.md)
-
-### [Get-LabelPolicy](Get-LabelPolicy.md)
-
-### [Get-MessageClassification](Get-MessageClassification.md)
 
 ### [Get-Notification](Get-Notification.md)
 
 ### [Get-OrganizationConfig](Get-OrganizationConfig.md)
 
-### [Get-OrganizationSegment](Get-OrganizationSegment.md)
-
-### [Get-OutlookProtectionRule](Get-OutlookProtectionRule.md)
-
 ### [Get-PartnerApplication](Get-PartnerApplication.md)
 
 ### [Get-PerimeterConfig](Get-PerimeterConfig.md)
 
-### [Get-ProtectionAlert](Get-ProtectionAlert.md)
-
 ### [Get-SettingOverride](Get-SettingOverride.md)
-
-### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
-
-### [Get-SupervisoryReviewRule](Get-SupervisoryReviewRule.md)
-
-### [Get-TransportRule](Get-TransportRule.md)
-
-### [Get-TransportRuleAction](Get-TransportRuleAction.md)
-
-### [Get-TransportRulePredicate](Get-TransportRulePredicate.md)
-
-### [Import-JournalRuleCollection](Import-JournalRuleCollection.md)
-
-### [Import-TransportRuleCollection](Import-TransportRuleCollection.md)
-
-### [Install-UnifiedCompliancePrerequisite](Install-UnifiedCompliancePrerequisite.md)
-
-### [New-ActivityAlert](New-ActivityAlert.md)
 
 ### [New-ApplicationAccessPolicy](New-ApplicationAccessPolicy.md)
 
-### [New-AuthenticationPolicy](New-AuthenticationPolicy.md)
-
 ### [New-AuthServer](New-AuthServer.md)
+
+### [New-AuthenticationPolicy](New-AuthenticationPolicy.md)
 
 ### [New-ExchangeSettings](New-ExchangeSettings.md)
 
-### [New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
-
-### [New-JournalRule](New-JournalRule.md)
-
-### [New-Label](New-Label.md)
-
-### [New-LabelPolicy](New-LabelPolicy.md)
-
-### [New-MessageClassification](New-MessageClassification.md)
-
-### [New-OrganizationSegment](New-OrganizationSegment.md)
-
-### [New-OutlookProtectionRule](New-OutlookProtectionRule.md)
-
 ### [New-PartnerApplication](New-PartnerApplication.md)
-
-### [New-ProtectionAlert](New-ProtectionAlert.md)
 
 ### [New-SettingOverride](New-SettingOverride.md)
 
-### [New-SupervisoryReviewPolicyV2](New-SupervisoryReviewPolicyV2.md)
-
-### [New-SupervisoryReviewRule](New-SupervisoryReviewRule.md)
-
-### [New-TransportRule](New-TransportRule.md)
-
-### [Remove-ActivityAlert](Remove-ActivityAlert.md)
-
 ### [Remove-ApplicationAccessPolicy](Remove-ApplicationAccessPolicy.md)
-
-### [Remove-AuthenticationPolicy](Remove-AuthenticationPolicy.md)
 
 ### [Remove-AuthServer](Remove-AuthServer.md)
 
-### [Remove-InformationBarrierPolicy](Remove-InformationBarrierPolicy.md)
-
-### [Remove-JournalRule](Remove-JournalRule.md)
-
-### [Remove-Label](Remove-Label.md)
-
-### [Remove-LabelPolicy](Remove-LabelPolicy.md)
-
-### [Remove-MessageClassification](Remove-MessageClassification.md)
-
-### [Remove-OrganizationSegment](Remove-OrganizationSegment.md)
-
-### [Remove-OutlookProtectionRule](Remove-OutlookProtectionRule.md)
+### [Remove-AuthenticationPolicy](Remove-AuthenticationPolicy.md)
 
 ### [Remove-PartnerApplication](Remove-PartnerApplication.md)
 
-### [Remove-ProtectionAlert](Remove-ProtectionAlert.md)
-
 ### [Remove-SettingOverride](Remove-SettingOverride.md)
 
-### [Remove-SupervisoryReviewPolicyV2](Remove-SupervisoryReviewPolicyV2.md)
-
-### [Remove-TransportRule](Remove-TransportRule.md)
-
 ### [Set-AccessToCustomerDataRequest](Set-AccessToCustomerDataRequest.md)
-
-### [Set-ActivityAlert](Set-ActivityAlert.md)
 
 ### [Set-ApplicationAccessPolicy](Set-ApplicationAccessPolicy.md)
 
 ### [Set-AuthConfig](Set-AuthConfig.md)
 
-### [Set-AuthenticationPolicy](Set-AuthenticationPolicy.md)
-
 ### [Set-AuthServer](Set-AuthServer.md)
+
+### [Set-AuthenticationPolicy](Set-AuthenticationPolicy.md)
 
 ### [Set-CmdletExtensionAgent](Set-CmdletExtensionAgent.md)
 
@@ -1620,31 +1527,147 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-ExchangeSettings](Set-ExchangeSettings.md)
 
-### [Set-InformationBarrierPolicy](Set-InformationBarrierPolicy.md)
-
-### [Set-JournalRule](Set-JournalRule.md)
-
-### [Set-Label](Set-Label.md)
-
-### [Set-LabelPolicy](Set-LabelPolicy.md)
-
-### [Set-MessageClassification](Set-MessageClassification.md)
-
 ### [Set-Notification](Set-Notification.md)
 
 ### [Set-OrganizationConfig](Set-OrganizationConfig.md)
-
-### [Set-OrganizationSegment](Set-OrganizationSegment.md)
-
-### [Set-OutlookProtectionRule](Set-OutlookProtectionRule.md)
 
 ### [Set-PartnerApplication](Set-PartnerApplication.md)
 
 ### [Set-PerimeterConfig](Set-PerimeterConfig.md)
 
-### [Set-ProtectionAlert](Set-ProtectionAlert.md)
-
 ### [Set-SettingOverride](Set-SettingOverride.md)
+
+### [Test-ApplicationAccessPolicy](Test-ApplicationAccessPolicy.md)
+
+### [Test-OAuthConnectivity](Test-OAuthConnectivity.md)
+
+### [Test-SystemHealth](Test-SystemHealth.md)
+
+### [Update-ExchangeHelp](Update-ExchangeHelp.md)
+
+## policy-and-compliance Cmdlets
+
+### [Disable-JournalArchiving](Disable-JournalArchiving.md)
+
+### [Disable-JournalRule](Disable-JournalRule.md)
+
+### [Disable-OutlookProtectionRule](Disable-OutlookProtectionRule.md)
+
+### [Disable-TransportRule](Disable-TransportRule.md)
+
+### [Enable-JournalRule](Enable-JournalRule.md)
+
+### [Enable-OutlookProtectionRule](Enable-OutlookProtectionRule.md)
+
+### [Enable-TransportRule](Enable-TransportRule.md)
+
+### [Export-JournalRuleCollection](Export-JournalRuleCollection.md)
+
+### [Export-TransportRuleCollection](Export-TransportRuleCollection.md)
+
+### [Get-ActivityAlert](Get-ActivityAlert.md)
+
+### [Get-AdministrativeUnit](Get-AdministrativeUnit.md)
+
+### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
+
+### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
+
+### [Get-InformationBarrierRecipientStatus](Get-InformationBarrierRecipientStatus.md)
+
+### [Get-JournalRule](Get-JournalRule.md)
+
+### [Get-LabelPolicy](Get-LabelPolicy.md)
+
+### [Get-Label](Get-Label.md)
+
+### [Get-MessageClassification](Get-MessageClassification.md)
+
+### [Get-OrganizationSegment](Get-OrganizationSegment.md)
+
+### [Get-OutlookProtectionRule](Get-OutlookProtectionRule.md)
+
+### [Get-ProtectionAlert](Get-ProtectionAlert.md)
+
+### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
+
+### [Get-SupervisoryReviewRule](Get-SupervisoryReviewRule.md)
+
+### [Get-TransportRuleAction](Get-TransportRuleAction.md)
+
+### [Get-TransportRulePredicate](Get-TransportRulePredicate.md)
+
+### [Get-TransportRule](Get-TransportRule.md)
+
+### [Import-JournalRuleCollection](Import-JournalRuleCollection.md)
+
+### [Import-TransportRuleCollection](Import-TransportRuleCollection.md)
+
+### [Install-UnifiedCompliancePrerequisite](Install-UnifiedCompliancePrerequisite.md)
+
+### [New-ActivityAlert](New-ActivityAlert.md)
+
+### [New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
+
+### [New-JournalRule](New-JournalRule.md)
+
+### [New-LabelPolicy](New-LabelPolicy.md)
+
+### [New-Label](New-Label.md)
+
+### [New-MessageClassification](New-MessageClassification.md)
+
+### [New-OrganizationSegment](New-OrganizationSegment.md)
+
+### [New-OutlookProtectionRule](New-OutlookProtectionRule.md)
+
+### [New-ProtectionAlert](New-ProtectionAlert.md)
+
+### [New-SupervisoryReviewPolicyV2](New-SupervisoryReviewPolicyV2.md)
+
+### [New-SupervisoryReviewRule](New-SupervisoryReviewRule.md)
+
+### [New-TransportRule](New-TransportRule.md)
+
+### [Remove-ActivityAlert](Remove-ActivityAlert.md)
+
+### [Remove-InformationBarrierPolicy](Remove-InformationBarrierPolicy.md)
+
+### [Remove-JournalRule](Remove-JournalRule.md)
+
+### [Remove-LabelPolicy](Remove-LabelPolicy.md)
+
+### [Remove-Label](Remove-Label.md)
+
+### [Remove-MessageClassification](Remove-MessageClassification.md)
+
+### [Remove-OrganizationSegment](Remove-OrganizationSegment.md)
+
+### [Remove-OutlookProtectionRule](Remove-OutlookProtectionRule.md)
+
+### [Remove-ProtectionAlert](Remove-ProtectionAlert.md)
+
+### [Remove-SupervisoryReviewPolicyV2](Remove-SupervisoryReviewPolicyV2.md)
+
+### [Remove-TransportRule](Remove-TransportRule.md)
+
+### [Set-ActivityAlert](Set-ActivityAlert.md)
+
+### [Set-InformationBarrierPolicy](Set-InformationBarrierPolicy.md)
+
+### [Set-JournalRule](Set-JournalRule.md)
+
+### [Set-LabelPolicy](Set-LabelPolicy.md)
+
+### [Set-Label](Set-Label.md)
+
+### [Set-MessageClassification](Set-MessageClassification.md)
+
+### [Set-OrganizationSegment](Set-OrganizationSegment.md)
+
+### [Set-OutlookProtectionRule](Set-OutlookProtectionRule.md)
+
+### [Set-ProtectionAlert](Set-ProtectionAlert.md)
 
 ### [Set-SupervisoryReviewPolicyV2](Set-SupervisoryReviewPolicyV2.md)
 
@@ -1656,17 +1679,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Stop-InformationBarrierPoliciesApplication](Stop-InformationBarrierPoliciesApplication.md)
 
-### [Test-ApplicationAccessPolicy](Test-ApplicationAccessPolicy.md)
-
 ### [Test-ArchiveConnectivity](Test-ArchiveConnectivity.md)
 
-### [Test-OAuthConnectivity](Test-OAuthConnectivity.md)
-
-### [Test-SystemHealth](Test-SystemHealth.md)
-
-### [Update-ExchangeHelp](Update-ExchangeHelp.md)
-
 ## policy-and-compliance-audit Cmdlets
+
 ### [Get-AdminAuditLogConfig](Get-AdminAuditLogConfig.md)
 
 ### [Get-AuditConfig](Get-AuditConfig.md)
@@ -1716,6 +1732,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Write-AdminAuditLog](Write-AdminAuditLog.md)
 
 ## policy-and-compliance-search Cmdlets
+
 ### [Get-ComplianceSearch](Get-ComplianceSearch.md)
 
 ### [Get-ComplianceSearchAction](Get-ComplianceSearchAction.md)
@@ -1759,6 +1776,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Stop-MailboxSearch](Stop-MailboxSearch.md)
 
 ## policy-and-compliance-dlp Cmdlets
+
 ### [Export-DlpPolicyCollection](Export-DlpPolicyCollection.md)
 
 ### [Get-ClassificationRuleCollection](Get-ClassificationRuleCollection.md)
@@ -1862,6 +1880,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-PolicyTipConfig](Set-PolicyTipConfig.md)
 
 ## policy-and-compliance-ediscovery Cmdlets
+
 ### [Add-ComplianceCaseMember](Add-ComplianceCaseMember.md)
 
 ### [Add-eDiscoveryCaseAdmin](Add-eDiscoveryCaseAdmin.md)
@@ -1903,6 +1922,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Update-eDiscoveryCaseAdmin](Update-eDiscoveryCaseAdmin.md)
 
 ## policy-and-compliance-retention Cmdlets
+
 ### [Enable-ComplianceTagStorage](Enable-ComplianceTagStorage.md)
 
 ### [Get-ComplianceRetentionEvent](Get-ComplianceRetentionEvent.md)
@@ -2012,6 +2032,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Validate-RetentionRuleQuery](Validate-RetentionRuleQuery.md)
 
 ## powershell-v2-module Cmdlets
+
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
 ### [Get-EXOCasMailbox](Get-EXOCasMailbox.md)
@@ -2033,6 +2054,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-EXORecipientPermission](Get-EXORecipientPermission.md)
 
 ## reporting Cmdlets
+
 ### [Get-ConnectionByClientTypeDetailReport](Get-ConnectionByClientTypeDetailReport.md)
 
 ### [Get-ConnectionByClientTypeReport](Get-ConnectionByClientTypeReport.md)
@@ -2146,6 +2168,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-UserAnalyticsConfig](Set-UserAnalyticsConfig.md)
 
 ## role-based-access-control Cmdlets
+
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)
 
 ### [Add-RoleGroupMember](Add-RoleGroupMember.md)
@@ -2201,6 +2224,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Update-RoleGroupMember](Update-RoleGroupMember.md)
 
 ## server-health-and-performance Cmdlets
+
 ### [Add-GlobalMonitoringOverride](Add-GlobalMonitoringOverride.md)
 
 ### [Add-ServerMonitoringOverride](Add-ServerMonitoringOverride.md)
@@ -2256,6 +2280,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Test-ServiceHealth](Test-ServiceHealth.md)
 
 ## sharing-and-collaboration Cmdlets
+
 ### [Add-AvailabilityAddressSpace](Add-AvailabilityAddressSpace.md)
 
 ### [Add-PublicFolderAdministrativePermission](Add-PublicFolderAdministrativePermission.md)
@@ -2365,6 +2390,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Update-SiteMailbox](Update-SiteMailbox.md)
 
 ## unified-messaging Cmdlets
+
 ### [Disable-UMAutoAttendant](Disable-UMAutoAttendant.md)
 
 ### [Disable-UMCallAnsweringRule](Disable-UMCallAnsweringRule.md)
@@ -2472,6 +2498,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Test-UMConnectivity](Test-UMConnectivity.md)
 
 ## users-and-groups Cmdlets
+
 ### [Add-DistributionGroupMember](Add-DistributionGroupMember.md)
 
 ### [Add-UnifiedGroupLinks](Add-UnifiedGroupLinks.md)

@@ -1211,7 +1211,7 @@
   "Set-UmServer.md": "unified-messaging",
   "Set-UMService.md": "unified-messaging",
   "Test-UMConnectivity.md": "unified-messaging",
-  "Set-User.md": "users-and-groups"
+  "Set-User.md": "users-and-groups",
   "Add-DistributionGroupMember.md": "users-and-groups",
   "Add-UnifiedGroupLinks.md": "users-and-groups",
   "Disable-DistributionGroup.md": "users-and-groups",
