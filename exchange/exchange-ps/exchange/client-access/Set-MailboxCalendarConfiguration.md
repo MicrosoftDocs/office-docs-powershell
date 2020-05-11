@@ -603,11 +603,11 @@ Accept wildcard characters: False
 ### -OnlineMeetingsByDefaultEnabled
 This parameter is available only in the cloud-based service.
 
-The OnlineMeetingsByDefaultEnabled parameter . Valid values are:
+The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as online by default for the mailbox. Valid values are:
 
-- $true: 
+- $true: All meetings are online by default.
 
-- $false: 
+- $false: All meetings are not online by default.
 
 - $null: The value of the OnlineMeetingsByDefaultEnabled parameter on the Set-OrganizationConfig cmdlet (the organizational setting) is used.
 
