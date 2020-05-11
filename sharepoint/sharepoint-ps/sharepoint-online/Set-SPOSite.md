@@ -462,7 +462,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-PARAMVALUE: SwitchParameter
+The WhatIf switch doesn't work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter
