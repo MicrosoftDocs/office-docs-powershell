@@ -24,8 +24,9 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
- [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-PreferredMeetingProviderForIslandsMode <string>]
- [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-PreferredMeetingProviderForIslandsMode <String>]
+ [-VideoFiltersMode <String>] [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -299,7 +300,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
 Enables administrators to provide explanatory text about the meeting policy.
 For example, the Description might indicate the users the policy should be assigned to.
 
@@ -316,6 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -345,6 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
+Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet’s matching Set-.
 
 ```yaml
 Type: SwitchParameter
@@ -359,7 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### -MediaBitRateKb
-Determines the media bit rate for audio/video/app sharing transmissions in meetings 
+Determines the media bit rate for audio/video/app sharing transmissions in meetings.
 
 ```yaml
 Type: UInt32
@@ -389,6 +391,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -429,6 +432,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: TeamsAndSfb
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VideoFiltersMode
+Determines the background effects that a user can configure in the Teams client. Possible values are:
+
+- NoFilters: No filters are available.
+- BlurOnly: Background blur is the only option available (requires a processor with AVX2 support, see [Hardware requirements for Microsoft Teams](https://docs.microsoft.com/microsoftteams/hardware-requirements-for-the-teams-app) for more information).
+- BlurAndDefaultBackgrounds: Background blur and a list of pre-selected images are available.
+- AllFilters: All filters are available, including custom images. This is the default value.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: AllFilters
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
