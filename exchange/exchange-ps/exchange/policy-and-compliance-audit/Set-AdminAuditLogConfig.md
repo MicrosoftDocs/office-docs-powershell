@@ -52,7 +52,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets * -AdminAuditLogParameters *
+Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets * -AdminAuditLogParameters * -AdminAuditLogExcludedCmdlets Get-*
 ```
 
 This example enables administrator audit logging for every cmdlet and every parameter in the organization, with the exception of Get cmdlets.
