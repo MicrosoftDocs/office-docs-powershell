@@ -64,7 +64,7 @@ Example 1 returns all user or security group accounts from the site collection <
 Get-SPOUser -Site https://contoso.sharepoint.com/sites/finance -LoginName melissa.kerr@contoso.com
 ```
 
-Example 2 returns one user or security group account whose user name is HYPERLINK "mailto:melissa.kerr@contoso.com" melissa.kerr@contoso.com from the site collection <https://contoso.sharepoint.com/sites/finance>.
+Example 2 returns one user or security group account whose user name is "melissa.kerr@contoso.com" from the site collection <https://contoso.sharepoint.com/sites/finance>.
 
 ### -----------------------EXAMPLE 3-----------------------------
 
