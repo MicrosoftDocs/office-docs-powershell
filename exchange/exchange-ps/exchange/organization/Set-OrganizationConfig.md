@@ -80,6 +80,7 @@ Set-OrganizationConfig
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
+ [-OnlineMeetingsByDefaultEnabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
  [-OutlookMobileHelpShiftEnabled <Boolean>]
  [-OutlookMobileSingleAccountEnabled <Boolean>]
@@ -1931,6 +1932,28 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Ex
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OnlineMeetingsByDefaultEnabled
+This parameter is available only in the cloud-based service.
+
+The OnlineMeetingsByDefaultEnabled parameter . Valid values are:
+
+- $true: 
+
+- $false: 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
