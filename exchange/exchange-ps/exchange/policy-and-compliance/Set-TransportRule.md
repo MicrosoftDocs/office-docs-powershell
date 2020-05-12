@@ -43,6 +43,7 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-ApplyHtmlDisclaimerLocation <DisclaimerLocation>]
  [-ApplyHtmlDisclaimerText <DisclaimerText>]
  [-ApplyOME <Boolean>]
+ [-ApplyRightsProtectionCustomizationTemplate <OMEConfigurationIdParameter>]
  [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>]
  [-AttachmentContainsWords <Word []>]
  [-AttachmentExtensionMatchesWords <Word []>]
@@ -815,6 +816,26 @@ The ApplyOME parameter specifies an action that encrypts messages and their atta
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyRightsProtectionCustomizationTemplate
+This parameter is available only in the cloud-based service.
+
+This parameter specifies an action or part of an action for the rule.
+
+The ApplyRightsProtectionCustomizationTemplate parameter specifies an action that applies a custom branding template for OME encrypted messages. You identify the custom branding template by name. If the name contains spaces, enclose the name in quotation marks (").
+
+```yaml
+Type: OMEConfigurationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
