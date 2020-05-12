@@ -1731,7 +1731,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Write-AdminAuditLog](Write-AdminAuditLog.md)
 
-## policy-and-compliance-search Cmdlets
+## policy-and-compliance-content-search Cmdlets
 
 ### [Get-ComplianceSearch](Get-ComplianceSearch.md)
 
