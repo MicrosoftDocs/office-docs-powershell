@@ -34,7 +34,7 @@ A no-access lock is applied to the site collection to prevent users from alterin
 
 Once the move is complete, the site collection is returned to its original lock state. 
 
-An IIS reset is required on all Front-End servers for the site move to take effect. This is not required for SharePoint Server 2019.
+An IIS reset is required on any server running the Microsoft SharePoint Foundation Web Application service for the site move to take effect. This is not required for SharePoint Server 2019.
 
 The destination content database specified must already exist, must be attached to the same SQL Server as the site collection's current content database, and must be attached to the site collection's current Web application.
 
