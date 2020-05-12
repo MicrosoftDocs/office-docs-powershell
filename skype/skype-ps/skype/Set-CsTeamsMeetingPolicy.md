@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSharedNotes
-Determines whether users are allowed to take shared notes.  Set this to TRUE to allow. Set this to FALSE to prohibit.
+Determines whether users are allowed to take shared Meeting notes.  Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
