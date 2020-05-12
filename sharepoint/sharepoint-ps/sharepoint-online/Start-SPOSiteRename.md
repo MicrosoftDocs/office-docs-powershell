@@ -69,7 +69,7 @@ Starts the **simulation** rename of the SPO site with name "samplesite" to "rena
 
 ### -Identity
 
-Specifies the URL of the site collection to update.
+Specifies the original URL of the site collection.
 
 ```yaml
 Type: String
