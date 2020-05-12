@@ -28,8 +28,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
- [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
+ [-VideoFiltersMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -43,8 +43,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
- [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
+ [-VideoFiltersMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSharedNotes
-Determines whether users are allowed to take shared notes.  Set this to TRUE to allow. Set this to FALSE to prohibit.
+Determines whether users are allowed to take shared Meeting notes.  Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -301,7 +301,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
 Enables administrators to provide explanatory text about the meeting policy.
 For example, the Description might indicate the users the policy should be assigned to.
 
@@ -318,6 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -446,7 +446,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingChatEnabledType
-Specify if users will be able to chat in meetings. Possible values are: Disabled,Enabled.
+Specify if users will be able to chat in meetings. Possible values are: Disabled, Enabled.
 
 ```yaml
 Type: String
@@ -516,6 +516,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: DisabledUserOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VideoFiltersMode
+Determines the background effects that a user can configure in the Teams client. Possible values are:
+
+- NoFilters: No filters are available.
+- BlurOnly: Background blur is the only option available (requires a processor with AVX2 support, see [Hardware requirements for Microsoft Teams](https://docs.microsoft.com/microsoftteams/hardware-requirements-for-the-teams-app) for more information).
+- BlurAndDefaultBackgrounds: Background blur and a list of pre-selected images are available.
+- AllFilters: All filters are available, including custom images.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

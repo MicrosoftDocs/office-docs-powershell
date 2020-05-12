@@ -86,6 +86,9 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 
 - Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
 
+  > [!NOTE]
+  > WinRM is not enabled by default on Windows 7, 8.1 and 10. To enable it, you should run the "winrm quickconfig" command in a Command Prompt.
+
   ```
   winrm get winrm/config/client/auth
   ```
