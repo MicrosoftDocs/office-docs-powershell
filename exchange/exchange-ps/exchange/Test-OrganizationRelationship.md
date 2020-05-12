@@ -22,9 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>]
- -UserIdentity <RecipientIdParameter> [-Confirm] [-DomainController <Fqdn>]
-  [-WhatIf] [<CommonParameters>]
+Test-OrganizationRelationship -UserIdentity <RecipientIdParameter>
+ [[-Identity] <OrganizationRelationshipIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,10 +40,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Test-OrganizationRelationship -UserIdentity katherine@contoso.com -Identity contoso.com -Confirm
+Test-OrganizationRelationship -UserIdentity katherine@fabrikam.com -Identity contoso.com -Confirm
 ```
 
-This example validates the organization relationship deployed in the Exchange organization and checks whether a delegation token can be retrieved for a mailbox for the external organization domain contoso.com.
+This example validates the organization relationship deployed in the fabrikam.com on-premises Exchange organization and checks whether a delegation token can be retrieved for a mailbox in the external organization domain contoso.com.
 
 ## PARAMETERS
 
