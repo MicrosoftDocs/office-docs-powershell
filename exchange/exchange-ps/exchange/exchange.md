@@ -149,11 +149,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Disable-HostedContentFilterRule](Disable-HostedContentFilterRule.md)
 
+### [Disable-HostedOutboundSpamFilterRule](Disable-HostedOutboundSpamFilterRule.md)
+
 ### [Disable-MalwareFilterRule](Disable-MalwareFilterRule.md)
 
 ### [Enable-AntispamUpdates](Enable-AntispamUpdates.md)
 
 ### [Enable-HostedContentFilterRule](Enable-HostedContentFilterRule.md)
+
+### [Enable-HostedOutboundSpamFilterRule](Enable-HostedOutboundSpamFilterRule.md)
 
 ### [Enable-MalwareFilterRule](Enable-MalwareFilterRule.md)
 
@@ -164,6 +168,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
+
+### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
 
 ### [Get-ContentFilterConfig](Get-ContentFilterConfig.md)
 
@@ -178,6 +184,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-HostedContentFilterRule](Get-HostedContentFilterRule.md)
 
 ### [Get-HostedOutboundSpamFilterPolicy](Get-HostedOutboundSpamFilterPolicy.md)
+
+### [Get-HostedOutboundSpamFilterRule](Get-HostedOutboundSpamFilterRule.md)
 
 ### [Get-IPAllowListConfig](Get-IPAllowListConfig.md)
 
@@ -221,6 +229,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-HostedContentFilterRule](New-HostedContentFilterRule.md)
 
+### [New-HostedOutboundSpamFilterPolicy](New-HostedOutboundSpamFilterPolicy.md)
+
+### [New-HostedOutboundSpamFilterRule](New-HostedOutboundSpamFilterRule.md)
+
 ### [New-MalwareFilterPolicy](New-MalwareFilterPolicy.md)
 
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
@@ -231,11 +243,17 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-AttachmentFilterEntry](Remove-AttachmentFilterEntry.md)
 
+### [Remove-BlockedSenderAddress](Remove-BlockedSenderAddress.md)
+
 ### [Remove-ContentFilterPhrase](Remove-ContentFilterPhrase.md)
 
 ### [Remove-HostedContentFilterPolicy](Remove-HostedContentFilterPolicy.md)
 
 ### [Remove-HostedContentFilterRule](Remove-HostedContentFilterRule.md)
+
+### [Remove-HostedOutboundSpamFilterPolicy](Remove-HostedOutboundSpamFilterPolicy.md)
+
+### [Remove-HostedOutboundSpamFilterRule](Remove-HostedOutboundSpamFilterRule.md)
 
 ### [Remove-IPAllowListEntry](Remove-IPAllowListEntry.md)
 
@@ -264,6 +282,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-HostedContentFilterRule](Set-HostedContentFilterRule.md)
 
 ### [Set-HostedOutboundSpamFilterPolicy](Set-HostedOutboundSpamFilterPolicy.md)
+
+### [Set-HostedOutboundSpamFilterRule](Set-HostedOutboundSpamFilterRule.md)
 
 ### [Set-IPAllowListConfig](Set-IPAllowListConfig.md)
 
@@ -490,41 +510,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-RpcClientAccess](Set-RpcClientAccess.md)
 
 ### [Set-WebServicesVirtualDirectory](Set-WebServicesVirtualDirectory.md)
-
-## connected-accounts Cmdlets
-### [Get-ConnectSubscription](Get-ConnectSubscription.md)
-
-### [Get-HotmailSubscription](Get-HotmailSubscription.md)
-
-### [Get-ImapSubscription](Get-ImapSubscription.md)
-
-### [Get-PopSubscription](Get-PopSubscription.md)
-
-### [Get-SendAddress](Get-SendAddress.md)
-
-### [Get-Subscription](Get-Subscription.md)
-
-### [New-ConnectSubscription](New-ConnectSubscription.md)
-
-### [New-HotmailSubscription](New-HotmailSubscription.md)
-
-### [New-ImapSubscription](New-ImapSubscription.md)
-
-### [New-PopSubscription](New-PopSubscription.md)
-
-### [New-Subscription](New-Subscription.md)
-
-### [Remove-ConnectSubscription](Remove-ConnectSubscription.md)
-
-### [Remove-Subscription](Remove-Subscription.md)
-
-### [Set-ConnectSubscription](Set-ConnectSubscription.md)
-
-### [Set-HotmailSubscription](Set-HotmailSubscription.md)
-
-### [Set-ImapSubscription](Set-ImapSubscription.md)
-
-### [Set-PopSubscription](Set-PopSubscription.md)
 
 ## database-availability-groups Cmdlets
 ### [Add-DatabaseAvailabilityGroupServer](Add-DatabaseAvailabilityGroupServer.md)
@@ -1692,6 +1677,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailboxAuditBypassAssociation](Get-MailboxAuditBypassAssociation.md)
 
+### [Get-UnifiedAuditLogRetentionPolicy](Get-UnifiedAuditLogRetentionPolicy.md)
+
 ### [New-AdminAuditLogSearch](New-AdminAuditLogSearch.md)
 
 ### [New-AuditConfigurationPolicy](New-AuditConfigurationPolicy.md)
@@ -1700,9 +1687,13 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-MailboxAuditLogSearch](New-MailboxAuditLogSearch.md)
 
+### [New-UnifiedAuditLogRetentionPolicy](New-UnifiedAuditLogRetentionPolicy.md)
+
 ### [Remove-AuditConfigurationPolicy](Remove-AuditConfigurationPolicy.md)
 
 ### [Remove-AuditConfigurationRule](Remove-AuditConfigurationRule.md)
+
+### [Remove-UnifiedAuditLogRetentionPolicy](Remove-UnifiedAuditLogRetentionPolicy.md)
 
 ### [Search-AdminAuditLog](Search-AdminAuditLog.md)
 
@@ -1717,6 +1708,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-AuditConfigurationRule](Set-AuditConfigurationRule.md)
 
 ### [Set-MailboxAuditBypassAssociation](Set-MailboxAuditBypassAssociation.md)
+
+### [Set-UnifiedAuditLogRetentionPolicy](Set-UnifiedAuditLogRetentionPolicy.md)
 
 ### [Write-AdminAuditLog](Write-AdminAuditLog.md)
 
@@ -1776,8 +1769,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DlpComplianceRule](Get-DlpComplianceRule.md)
 
-### [Get-DlpComplianceRuleV2](Get-DlpComplianceRuleV2.md)
-
 ### [Get-DlpDetailReport](Get-DlpDetailReport.md)
 
 ### [Get-DlpDetectionsReport](Get-DlpDetectionsReport.md)
@@ -1810,11 +1801,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-DlpComplianceRule](New-DlpComplianceRule.md)
 
-### [New-DlpComplianceRuleV2](New-DlpComplianceRuleV2.md)
-
 ### [New-DlpEdmSchema](New-DlpEdmSchema.md)
-
-### [New-DlpEdmSschema](New-DlpEdmSschema.md)
 
 ### [New-DlpFingerprint](New-DlpFingerprint.md)
 
@@ -1838,8 +1825,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-DlpComplianceRule](Remove-DlpComplianceRule.md)
 
-### [Remove-DlpComplianceRuleV2](Remove-DlpComplianceRuleV2.md)
-
 ### [Remove-DlpEdmSchema](Remove-DlpEdmSchema.md)
 
 ### [Remove-DlpKeywordDictionary](Remove-DlpKeywordDictionary.md)
@@ -1861,8 +1846,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DlpCompliancePolicy](Set-DlpCompliancePolicy.md)
 
 ### [Set-DlpComplianceRule](Set-DlpComplianceRule.md)
-
-### [Set-DlpComplianceRuleV2](Set-DlpComplianceRuleV2.md)
 
 ### [Set-DlpEdmSchema](Set-DlpEdmSchema.md)
 
@@ -1950,10 +1933,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-RetentionPolicyTag](Get-RetentionPolicyTag.md)
 
-### [Get-TeamsRetentionCompliancePolicy](Get-TeamsRetentionCompliancePolicy.md)
-
-### [Get-TeamsRetentionComplianceRule](Get-TeamsRetentionComplianceRule.md)
-
 ### [New-ComplianceRetentionEvent](New-ComplianceRetentionEvent.md)
 
 ### [New-ComplianceRetentionEventType](New-ComplianceRetentionEventType.md)
@@ -1978,10 +1957,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-RetentionPolicyTag](New-RetentionPolicyTag.md)
 
-### [New-TeamsRetentionCompliancePolicy](New-TeamsRetentionCompliancePolicy.md)
-
-### [New-TeamsRetentionComplianceRule](New-TeamsRetentionComplianceRule.md)
-
 ### [Remove-ComplianceRetentionEventType](Remove-ComplianceRetentionEventType.md)
 
 ### [Remove-ComplianceTag](Remove-ComplianceTag.md)
@@ -2004,10 +1979,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-RetentionPolicyTag](Remove-RetentionPolicyTag.md)
 
-### [Remove-TeamsRetentionCompliancePolicy](Remove-TeamsRetentionCompliancePolicy.md)
-
-### [Remove-TeamsRetentionComplianceRule](Remove-TeamsRetentionComplianceRule.md)
-
 ### [Set-ComplianceRetentionEventType](Set-ComplianceRetentionEventType.md)
 
 ### [Set-ComplianceTag](Set-ComplianceTag.md)
@@ -2029,10 +2000,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-RetentionPolicy](Set-RetentionPolicy.md)
 
 ### [Set-RetentionPolicyTag](Set-RetentionPolicyTag.md)
-
-### [Set-TeamsRetentionCompliancePolicy](Set-TeamsRetentionCompliancePolicy.md)
-
-### [Set-TeamsRetentionComplianceRule](Set-TeamsRetentionComplianceRule.md)
 
 ### [Start-ManagedFolderAssistant](Start-ManagedFolderAssistant.md)
 
@@ -2499,8 +2466,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-UmServer](Set-UmServer.md)
 
 ### [Set-UMService](Set-UMService.md)
-
-### [Test-ExchangeUMCallFlow](Test-ExchangeUMCallFlow.md)
 
 ### [Test-UMConnectivity](Test-UMConnectivity.md)
 
