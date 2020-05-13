@@ -166,6 +166,81 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Add-ADPermission.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/add-adpermission",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Dump-ProvisioningCache.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/dump-provisioningcache",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Get-ADPermission.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-adpermission",
+      "redirect_document_id": true
+    },    
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Get-ADServerSettings.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-adserversettings",
+      "redirect_document_id": true
+    },    
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Get-ADSite.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-adsite",
+      "redirect_document_id": true
+    },    
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Get-AdSiteLink.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-adsitelink",
+      "redirect_document_id": true
+    },   
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Get-DomainController.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-domaincontroller",
+      "redirect_document_id": true
+    },    
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Get-OrganizationalUnit.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-organizationalunit",
+      "redirect_document_id": true
+    },    
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Get-Trust.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-trust",
+      "redirect_document_id": true
+    },    
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Get-UserPrincipalNamesSuffix.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/get-userprincipalnamessuffix",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Remove-ADPermission.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/remove-adpermission",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Reset-ProvisioningCache.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/reset-provisioningcache",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Set-ADServerSettings.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/set-adserversettings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Set-ADSite.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/set-adsite",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/active-directory/Set-AdSiteLink.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/set-adsitelink",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "exchange/virtual-folder/exchange/advanced-threat-protection/Disable-AntiPhishRule.md",
       "redirect_url": "https://docs.microsoft.com/powershell/module/exchange/disable-antiphishrule",
       "redirect_document_id": true
