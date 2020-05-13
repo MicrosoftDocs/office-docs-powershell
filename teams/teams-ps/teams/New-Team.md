@@ -13,7 +13,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team. 
 Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default. 
-If you want these groups to appear in Outlook clients, you can use the Set-UnifiedGroup (https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps) cmdlet in the Exchange Powershell Module to set the parameter HiddenFromExchangeClients to $false.
+If you want these groups to appear in Outlook clients, you can use the Set-UnifiedGroup (https://docs.microsoft.com/en-us/powershell/module/exchange/set-unifiedgroup?view=exchange-ps) cmdlet in the Exchange Powershell Module to set the parameter HiddenFromExchangeClients to $false.
 
 Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected.
 
@@ -79,7 +79,7 @@ The MailNickName parameter specifies the alias for the associated Office 365 Gro
 This value will be used for the mail enabled object and will be used as PrimarySmtpAddress for this Office 365 Group.
 The value of the MailNickName parameter has to be unique across your tenant.
 
-For more details about the naming conventions see here: New-UnifiedGroup, Parameter: -Alias (https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-groups/new-unifiedgroup?view=exchange-ps#optional-parameters).
+For more details about the naming conventions see here: New-UnifiedGroup, Parameter: -Alias (https://docs.microsoft.com/en-us/powershell/module/exchange/new-unifiedgroup?view=exchange-ps#optional-parameters).
 
 ```yaml
 Type: String
