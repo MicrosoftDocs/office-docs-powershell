@@ -15,9 +15,9 @@ monikerRange: "eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Online Protection.
 
-Use the Set-EOPMailUser cmdlet to modify mail users, also known as mail-enabled users, in Microsoft Exchange Online Protection (EOP) standalone. This cmdlet isn't available in Exchange Enterprise CAL with Services (EOP Premium). In EOP Premium, use the Set-MailUser cmdlet.
+Use the Set-EOPMailUser cmdlet to modify mail users, also known as mail-enabled users, in standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes. This cmdlet isn't available in EOP that's included with Exchange Enterprise CAL with Services licenses in on-premises Exchange; use the Set-MailUser cmdlet instead.
 
-Typically, EOP standalone customers that also have on-premises Active Directory organizations would use directory synchronization to create users and groups in EOP. However, if you can't use directory synchronization, then you can use cmdlets to create and manage users and groups in EOP.
+Typically, standalone EOP organizations that also have on-premises Active Directory use directory synchronization to create users and groups in EOP. However, if you can't use directory synchronization, then you can use cmdlets to create and manage users and groups in EOP.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
