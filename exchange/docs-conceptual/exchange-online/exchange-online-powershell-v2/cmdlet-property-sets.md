@@ -47,9 +47,9 @@ The available property sets for the **Get-EXOCasMailbox** cmdlet and the propert
 
 For more information, see:
 
-- [Get-EXOCASMailbox](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exocasmailbox)
+- [Get-EXOCASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exocasmailbox)
 
-- [Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)
+- [Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-casmailbox)
 
 ## Get-EXOMailbox property sets
 
