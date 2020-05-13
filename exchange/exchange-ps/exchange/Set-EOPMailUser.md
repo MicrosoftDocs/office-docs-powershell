@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-eopmailuser
+online version: https://docs.microsoft.com/powershell/module/exchange/set-eopmailuser
 applicable: Exchange Online Protection
 title: Set-EOPMailUser
 schema: 2.0.0

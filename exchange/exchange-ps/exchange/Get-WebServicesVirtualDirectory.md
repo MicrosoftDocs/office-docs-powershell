@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-webservicesvirtualdirectory
+online version: https://docs.microsoft.com/powershell/module/exchange/get-webservicesvirtualdirectory
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-WebServicesVirtualDirectory
 schema: 2.0.0

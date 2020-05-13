@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-mailboxtransportservice
+online version: https://docs.microsoft.com/powershell/module/exchange/set-mailboxtransportservice
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-MailboxTransportService
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/disable-journalarchiving
+online version: https://docs.microsoft.com/powershell/module/exchange/disable-journalarchiving
 applicable: Exchange Online
 title: Disable-JournalArchiving
 schema: 2.0.0

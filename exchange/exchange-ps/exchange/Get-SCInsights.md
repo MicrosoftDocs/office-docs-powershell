@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-scinsights
+online version: https://docs.microsoft.com/powershell/module/exchange/get-scinsights
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-SCInsights
 schema: 2.0.0

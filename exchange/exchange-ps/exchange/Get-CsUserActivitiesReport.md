@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-csuseractivitiesreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-csuseractivitiesreport
 applicable: Exchange Online
 title: Get-CsUserActivitiesReport
 schema: 2.0.0

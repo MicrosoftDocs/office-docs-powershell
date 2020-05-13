@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-umserver
+online version: https://docs.microsoft.com/powershell/module/exchange/get-umserver
 applicable: Exchange Server 2010
 title: Get-UmServer
 schema: 2.0.0

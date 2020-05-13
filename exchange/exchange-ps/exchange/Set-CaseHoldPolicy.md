@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/set-caseholdpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/set-caseholdpolicy
 applicable: Office 365 Security & Compliance Center
 title: Set-CaseHoldPolicy
 schema: 2.0.0

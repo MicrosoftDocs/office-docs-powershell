@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dataclassification
+online version: https://docs.microsoft.com/powershell/module/exchange/set-dataclassification
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-DataClassification
 schema: 2.0.0
@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [Set-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
+In Exchange Online, this cmdlet has been replaced by the [Set-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/set-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
 
 Use the Set-DataClassification cmdlet to modify data classification rules that use document fingerprints.
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fingerprints
-The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the data classification rule. For instructions on how to import documents to use as templates for fingerprints, see [New-Fingerprint](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-fingerprint) or the Examples section. For instructions on how to add and remove document fingerprints from an existing data classification rule, see the Examples section.
+The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the data classification rule. For instructions on how to import documents to use as templates for fingerprints, see [New-Fingerprint](https://docs.microsoft.com/powershell/module/exchange/new-fingerprint) or the Examples section. For instructions on how to add and remove document fingerprints from an existing data classification rule, see the Examples section.
 
 ```yaml
 Type: MultiValuedProperty

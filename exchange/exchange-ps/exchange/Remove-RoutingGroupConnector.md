@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-routinggroupconnector
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-routinggroupconnector
 applicable: Exchange Server 2010
 title: Remove-RoutingGroupConnector
 schema: 2.0.0

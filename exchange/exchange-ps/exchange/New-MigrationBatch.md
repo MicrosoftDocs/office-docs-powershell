@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-migrationbatch
+online version: https://docs.microsoft.com/powershell/module/exchange/new-migrationbatch
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MigrationBatch
 schema: 2.0.0

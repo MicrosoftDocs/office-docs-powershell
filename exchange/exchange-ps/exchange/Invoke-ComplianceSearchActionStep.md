@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/invoke-compliancesearchactionstep
+online version: https://docs.microsoft.com/powershell/module/exchange/invoke-compliancesearchactionstep
 applicable: Office 365 Security & Compliance Center
 title: Invoke-ComplianceSearchActionStep
 schema: 2.0.0

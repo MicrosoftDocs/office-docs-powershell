@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-cspstnconferencetimereport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-cspstnconferencetimereport
 applicable: Exchange Online
 title: Get-CsPSTNConferenceTimeReport
 schema: 2.0.0

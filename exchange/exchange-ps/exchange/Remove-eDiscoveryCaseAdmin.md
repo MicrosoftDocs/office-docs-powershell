@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/remove-ediscoverycaseadmin
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-ediscoverycaseadmin
 applicable: Office 365 Security & Compliance Center
 title: Remove-eDiscoveryCaseAdmin
 schema: 2.0.0

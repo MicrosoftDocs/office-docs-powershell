@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-spoofmailreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-spoofmailreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-SpoofMailReport
 schema: 2.0.0

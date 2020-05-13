@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-exchangesettings
+online version: https://docs.microsoft.com/powershell/module/exchange/set-exchangesettings
 applicable: Exchange Server 2016, Exchange Server 2019
 title: Set-ExchangeSettings
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-unifiedgrouplinks
+online version: https://docs.microsoft.com/powershell/module/exchange/get-unifiedgrouplinks
 applicable: Exchange Online
 title: Get-UnifiedGroupLinks
 schema: 2.0.0

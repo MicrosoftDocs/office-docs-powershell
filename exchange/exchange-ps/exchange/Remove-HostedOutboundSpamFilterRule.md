@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/remove-hostedoutboundspamfilterrule
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-hostedoutboundspamfilterrule
 applicable: Exchange Online, Exchange Online Protection
 title: Remove-HostedOutboundSpamFilterRule
 schema: 2.0.0

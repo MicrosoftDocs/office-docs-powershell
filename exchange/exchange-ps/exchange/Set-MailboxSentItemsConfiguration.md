@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboxsentitemsconfiguration
+online version: https://docs.microsoft.com/powershell/module/exchange/set-mailboxsentitemsconfiguration
 applicable: Exchange Server 2010
 title: Set-MailboxSentItemsConfiguration
 schema: 2.0.0

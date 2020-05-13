@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-stalemailboxdetailreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-stalemailboxdetailreport
 applicable: Exchange Online
 title: Get-StaleMailboxDetailReport
 schema: 2.0.0

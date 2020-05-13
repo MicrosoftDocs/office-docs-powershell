@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/suspend-publicfoldermailboxmigrationrequest
+online version: https://docs.microsoft.com/powershell/module/exchange/suspend-publicfoldermailboxmigrationrequest
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Suspend-PublicFolderMailboxMigrationRequest
 schema: 2.0.0

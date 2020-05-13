@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-migrationbatch
+online version: https://docs.microsoft.com/powershell/module/exchange/set-migrationbatch
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MigrationBatch
 schema: 2.0.0
@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-MigrationBatch cmdlet to update a migration request for a batch of users. For more information, see [New-MigrationBatch](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-migrationbatch).
+Use the Set-MigrationBatch cmdlet to update a migration request for a batch of users. For more information, see [New-MigrationBatch](https://docs.microsoft.com/powershell/module/exchange/new-migrationbatch).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 

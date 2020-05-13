@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/set-useranalyticsconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/set-useranalyticsconfig
 applicable: Exchange Online
 title: Set-UserAnalyticsConfig
 schema: 2.0.0

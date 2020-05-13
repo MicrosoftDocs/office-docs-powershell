@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/set-eventloglevel
+online version: https://docs.microsoft.com/powershell/module/exchange/set-eventloglevel
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-EventLogLevel
 schema: 2.0.0
@@ -38,7 +38,7 @@ Set-EventLogLevel -Identity "Exchange01\MSExchangeTransport\SmtpReceive" -Level 
 
 This example sets the event log level to High for the MSExchangeTransport\\SmtpReceive event logging category on the Exchange server Exchange01.
 
-Note: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see [Get-EventLogLevel](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-eventloglevel).
+Note: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see [Get-EventLogLevel](https://docs.microsoft.com/powershell/module/exchange/get-eventloglevel).
 
 ## PARAMETERS
 

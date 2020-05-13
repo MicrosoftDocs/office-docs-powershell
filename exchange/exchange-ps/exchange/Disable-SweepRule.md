@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/disable-sweeprule
+online version: https://docs.microsoft.com/powershell/module/exchange/disable-sweeprule
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Disable-SweepRule
 schema: 2.0.0

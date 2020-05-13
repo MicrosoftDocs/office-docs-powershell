@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/enable-remotemailbox
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-remotemailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-RemoteMailbox
 schema: 2.0.0

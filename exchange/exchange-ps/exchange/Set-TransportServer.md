@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-transportserver
+online version: https://docs.microsoft.com/powershell/module/exchange/set-transportserver
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-TransportServer
 schema: 2.0.0

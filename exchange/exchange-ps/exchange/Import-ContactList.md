@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/import-contactlist
+online version: https://docs.microsoft.com/powershell/module/exchange/import-contactlist
 applicable: Exchange Online
 title: Import-ContactList
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/active-directory/dump-provisioningcache
+online version: https://docs.microsoft.com/powershell/module/exchange/dump-provisioningcache
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Dump-ProvisioningCache
 schema: 2.0.0

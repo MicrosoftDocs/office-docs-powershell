@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/enable-umserver
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-umserver
 applicable: Exchange Server 2010
 title: Enable-UMServer
 schema: 2.0.0

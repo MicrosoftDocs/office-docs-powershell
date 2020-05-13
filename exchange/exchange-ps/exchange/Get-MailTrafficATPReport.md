@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-mailtrafficatpreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-mailtrafficatpreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficATPReport
 schema: 2.0.0

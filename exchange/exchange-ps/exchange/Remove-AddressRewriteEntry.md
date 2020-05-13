@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/remove-addressrewriteentry
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-addressrewriteentry
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-AddressRewriteEntry
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/devices/remove-devicetenantpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-devicetenantpolicy
 applicable: Office 365 Security & Compliance Center
 title: Remove-DeviceTenantPolicy
 schema: 2.0.0

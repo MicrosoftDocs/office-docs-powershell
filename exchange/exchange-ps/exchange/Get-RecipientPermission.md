@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-recipientpermission
+online version: https://docs.microsoft.com/powershell/module/exchange/get-recipientpermission
 applicable: Exchange Online
 title: Get-RecipientPermission
 schema: 2.0.0

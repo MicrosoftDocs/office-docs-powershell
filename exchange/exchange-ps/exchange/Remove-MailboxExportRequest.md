@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-mailboxexportrequest
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-mailboxexportrequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-MailboxExportRequest
 schema: 2.0.0

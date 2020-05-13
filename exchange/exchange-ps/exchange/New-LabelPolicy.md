@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-labelpolicy
 applicable: Office 365 Security & Compliance Center
 title: New-LabelPolicy
 schema: 2.0.0

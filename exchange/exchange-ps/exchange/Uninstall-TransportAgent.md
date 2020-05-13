@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/uninstall-transportagent
+online version: https://docs.microsoft.com/powershell/module/exchange/uninstall-transportagent
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Uninstall-TransportAgent
 schema: 2.0.0

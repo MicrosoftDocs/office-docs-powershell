@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxfolderpermission
+online version: https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission
 applicable: Exchange Online
 title: Get-EXOMailboxFolderPermission
 schema: 2.0.0

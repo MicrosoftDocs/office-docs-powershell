@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/devices/clear-mobiledevice
+online version: https://docs.microsoft.com/powershell/module/exchange/clear-mobiledevice
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Clear-MobileDevice
 schema: 2.0.0

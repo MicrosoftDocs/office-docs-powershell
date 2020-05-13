@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-perimeterconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/set-perimeterconfig
 applicable: Exchange Online
 title: Set-PerimeterConfig
 schema: 2.0.0

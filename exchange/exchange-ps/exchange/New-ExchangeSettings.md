@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/new-exchangesettings
+online version: https://docs.microsoft.com/powershell/module/exchange/new-exchangesettings
 applicable: Exchange Server 2016, Exchange Server 2019
 title: New-ExchangeSettings
 schema: 2.0.0

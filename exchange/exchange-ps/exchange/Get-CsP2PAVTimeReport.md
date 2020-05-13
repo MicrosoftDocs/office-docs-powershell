@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-csp2pavtimereport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-csp2pavtimereport
 applicable: Exchange Online
 title: Get-CsP2PAVTimeReport
 schema: 2.0.0

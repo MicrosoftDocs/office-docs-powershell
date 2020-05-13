@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/enable-mailcontact
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-mailcontact
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-MailContact
 schema: 2.0.0

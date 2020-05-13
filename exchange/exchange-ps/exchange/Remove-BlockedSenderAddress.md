@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/remove-blockedsenderaddress
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-blockedsenderaddress
 applicable: Exchange Online, Exchange Online Protection
 title: Remove-BlockedSenderAddress
 schema: 2.0.0

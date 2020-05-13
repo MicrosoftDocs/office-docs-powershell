@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/remove-hostedcontentfilterpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-hostedcontentfilterpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Remove-HostedContentFilterPolicy
 schema: 2.0.0

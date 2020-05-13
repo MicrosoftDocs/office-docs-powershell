@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-urltrace
+online version: https://docs.microsoft.com/powershell/module/exchange/get-urltrace
 applicable: Exchange Online, Exchange Online Protection
 title: Get-UrlTrace
 schema: 2.0.0

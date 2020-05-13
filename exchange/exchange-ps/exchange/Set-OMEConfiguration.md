@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-omeconfiguration
+online version: https://docs.microsoft.com/powershell/module/exchange/set-omeconfiguration
 applicable: Exchange Online
 title: Set-OMEConfiguration
 schema: 2.0.0

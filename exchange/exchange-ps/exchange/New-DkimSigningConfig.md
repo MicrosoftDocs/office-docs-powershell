@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/new-dkimsigningconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/new-dkimsigningconfig
 applicable: Exchange Online, Exchange Online Protection
 title: New-DkimSigningConfig
 schema: 2.0.0

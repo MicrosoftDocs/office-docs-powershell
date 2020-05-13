@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/new-caseholdrule
+online version: https://docs.microsoft.com/powershell/module/exchange/new-caseholdrule
 applicable: Office 365 Security & Compliance Center
 title: New-CaseHoldRule
 schema: 2.0.0

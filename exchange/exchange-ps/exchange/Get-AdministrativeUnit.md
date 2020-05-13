@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-administrativeunit
+online version: https://docs.microsoft.com/powershell/module/exchange/get-administrativeunit
 applicable: Exchange Online
 title: Get-AdministrativeUnit
 schema: 2.0.0

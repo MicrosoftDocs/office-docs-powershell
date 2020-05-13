@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/set-hostedcontentfilterrule
+online version: https://docs.microsoft.com/powershell/module/exchange/set-hostedcontentfilterrule
 applicable: Exchange Online, Exchange Online Protection
 title: Set-HostedContentFilterRule
 schema: 2.0.0

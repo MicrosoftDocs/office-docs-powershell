@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/validate-outboundconnector
+online version: https://docs.microsoft.com/powershell/module/exchange/validate-outboundconnector
 applicable: Exchange Online, Exchange Online Protection
 title: Validate-OutboundConnector
 schema: 2.0.0

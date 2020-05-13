@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/get-authenticationpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/get-authenticationpolicy
 applicable: Exchange Server 2019, Exchange Online
 title: Get-AuthenticationPolicy
 schema: 2.0.0

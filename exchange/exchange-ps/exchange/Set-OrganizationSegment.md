@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-organizationsegment
+online version: https://docs.microsoft.com/powershell/module/exchange/set-organizationsegment
 applicable: Office 365 Security & Compliance Center
 title: Set-OrganizationSegment
 schema: 2.0.0
@@ -108,4 +108,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Define policies for information barriers](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies)
 
-[New-InformationBarrierPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-informationbarrierpolicy)
+[New-InformationBarrierPolicy](https://docs.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy)

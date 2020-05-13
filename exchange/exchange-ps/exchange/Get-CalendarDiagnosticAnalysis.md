@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-calendardiagnosticanalysis
+online version: https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticanalysis
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-CalendarDiagnosticAnalysis
 schema: 2.0.0

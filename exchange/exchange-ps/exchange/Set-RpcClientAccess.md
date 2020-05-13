@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-rpcclientaccess
+online version: https://docs.microsoft.com/powershell/module/exchange/set-rpcclientaccess
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-RpcClientAccess
 schema: 2.0.0

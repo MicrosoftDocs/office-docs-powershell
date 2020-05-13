@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-rmstrustedpublishingdomain
+online version: https://docs.microsoft.com/powershell/module/exchange/set-rmstrustedpublishingdomain
 applicable: Exchange Online
 title: Set-RMSTrustedPublishingDomain
 schema: 2.0.0

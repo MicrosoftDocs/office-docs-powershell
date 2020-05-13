@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/set-inboundconnector
+online version: https://docs.microsoft.com/powershell/module/exchange/set-inboundconnector
 applicable: Exchange Online, Exchange Online Protection
 title: Set-InboundConnector
 schema: 2.0.0

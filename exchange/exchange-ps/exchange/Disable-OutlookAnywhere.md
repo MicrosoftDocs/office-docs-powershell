@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/disable-outlookanywhere
+online version: https://docs.microsoft.com/powershell/module/exchange/disable-outlookanywhere
 applicable: Exchange Server 2010
 title: Disable-OutlookAnywhere
 schema: 2.0.0

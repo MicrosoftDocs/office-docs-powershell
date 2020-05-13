@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/start-historicalsearch
+online version: https://docs.microsoft.com/powershell/module/exchange/start-historicalsearch
 applicable: Exchange Online, Exchange Online Protection
 title: Start-HistoricalSearch
 schema: 2.0.0

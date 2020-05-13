@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-supervisoryreviewpolicyreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewpolicyreport
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-SupervisoryReviewPolicyReport
 schema: 2.0.0

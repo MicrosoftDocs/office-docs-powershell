@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-powershellvirtualdirectory
+online version: https://docs.microsoft.com/powershell/module/exchange/new-powershellvirtualdirectory
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-PowerShellVirtualDirectory
 schema: 2.0.0

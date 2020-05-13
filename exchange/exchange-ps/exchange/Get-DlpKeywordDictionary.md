@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpkeyworddictionary
+online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpkeyworddictionary
 applicable: Office 365 Security & Compliance Center
 title: Get-DlpKeywordDictionary
 schema: 2.0.0

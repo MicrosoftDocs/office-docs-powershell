@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/validate-retentionrulequery
+online version: https://docs.microsoft.com/powershell/module/exchange/validate-retentionrulequery
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Validate-RetentionRuleQuery
 schema: 2.0.0

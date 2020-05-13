@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-rpcclientaccess
+online version: https://docs.microsoft.com/powershell/module/exchange/new-rpcclientaccess
 applicable: Exchange Server 2010
 title: New-RpcClientAccess
 schema: 2.0.0

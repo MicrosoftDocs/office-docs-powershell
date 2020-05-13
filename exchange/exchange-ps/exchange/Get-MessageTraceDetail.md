@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-messagetracedetail
+online version: https://docs.microsoft.com/powershell/module/exchange/get-messagetracedetail
 applicable: Exchange Online
 title: Get-MessageTraceDetail
 schema: 2.0.0

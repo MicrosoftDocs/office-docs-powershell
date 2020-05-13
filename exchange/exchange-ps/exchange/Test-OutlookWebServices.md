@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/test-outlookwebservices
+online version: https://docs.microsoft.com/powershell/module/exchange/test-outlookwebservices
 applicable: Exchange Server 2010
 title: Test-OutlookWebServices
 schema: 2.0.0

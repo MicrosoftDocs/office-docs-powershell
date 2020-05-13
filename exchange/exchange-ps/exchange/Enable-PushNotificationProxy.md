@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/enable-pushnotificationproxy
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-pushnotificationproxy
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-PushNotificationProxy
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox
+online version: https://docs.microsoft.com/powershell/module/exchange/get-exomailbox
 applicable: Exchange Online
 title: Get-EXOMailbox
 schema: 2.0.0

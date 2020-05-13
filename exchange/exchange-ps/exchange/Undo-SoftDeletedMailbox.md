@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/undo-softdeletedmailbox
+online version: https://docs.microsoft.com/powershell/module/exchange/undo-softdeletedmailbox
 applicable: Exchange Online
 title: Undo-SoftDeletedMailbox
 schema: 2.0.0

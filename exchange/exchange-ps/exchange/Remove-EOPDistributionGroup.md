@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/remove-eopdistributiongroup
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-eopdistributiongroup
 applicable: Exchange Online Protection
 title: Remove-EOPDistributionGroup
 schema: 2.0.0

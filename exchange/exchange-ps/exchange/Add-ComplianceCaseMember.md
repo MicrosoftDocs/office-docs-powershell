@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/add-compliancecasemember
+online version: https://docs.microsoft.com/powershell/module/exchange/add-compliancecasemember
 applicable: Office 365 Security & Compliance Center
 title: Add-ComplianceCaseMember
 schema: 2.0.0

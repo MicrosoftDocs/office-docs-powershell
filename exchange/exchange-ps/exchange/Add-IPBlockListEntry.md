@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/add-ipblocklistentry
+online version: https://docs.microsoft.com/powershell/module/exchange/add-ipblocklistentry
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Add-IPBlockListEntry
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/new-partnerapplication
+online version: https://docs.microsoft.com/powershell/module/exchange/new-partnerapplication
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-PartnerApplication
 schema: 2.0.0

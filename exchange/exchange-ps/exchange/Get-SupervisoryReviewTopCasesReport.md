@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-supervisoryreviewtopcasesreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewtopcasesreport
 applicable: Office 365 Security & Compliance Center
 title: Get-SupervisoryReviewTopCasesReport
 schema: 2.0.0

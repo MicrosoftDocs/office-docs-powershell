@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/set-federatedorganizationidentifier
+online version: https://docs.microsoft.com/powershell/module/exchange/set-federatedorganizationidentifier
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-FederatedOrganizationIdentifier
 schema: 2.0.0

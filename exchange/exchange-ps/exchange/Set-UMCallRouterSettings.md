@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/set-umcallroutersettings
+online version: https://docs.microsoft.com/powershell/module/exchange/set-umcallroutersettings
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-UMCallRouterSettings
 schema: 2.0.0

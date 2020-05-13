@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/new-publicfolderdatabase
+online version: https://docs.microsoft.com/powershell/module/exchange/new-publicfolderdatabase
 applicable: Exchange Server 2010
 title: New-PublicFolderDatabase
 schema: 2.0.0

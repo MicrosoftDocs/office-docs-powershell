@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-securityprincipal
+online version: https://docs.microsoft.com/powershell/module/exchange/get-securityprincipal
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Get-SecurityPrincipal
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-managedfoldermailboxpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/get-managedfoldermailboxpolicy
 applicable: Exchange Server 2010
 title: Get-ManagedFolderMailboxPolicy
 schema: 2.0.0

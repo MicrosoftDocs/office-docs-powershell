@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailtrafficsummaryreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-mailtrafficsummaryreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficSummaryReport
 schema: 2.0.0

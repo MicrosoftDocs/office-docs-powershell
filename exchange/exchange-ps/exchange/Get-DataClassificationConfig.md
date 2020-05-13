@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dataclassificationconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/get-dataclassificationconfig
 applicable: Exchange Online
 title: Get-DataClassificationConfig
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-policytipconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-policytipconfig
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-PolicyTipConfig
 schema: 2.0.0

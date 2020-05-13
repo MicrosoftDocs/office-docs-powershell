@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-servicedeliveryreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-servicedeliveryreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-ServiceDeliveryReport
 schema: 2.0.0

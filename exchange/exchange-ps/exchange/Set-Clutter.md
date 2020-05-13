@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-clutter
+online version: https://docs.microsoft.com/powershell/module/exchange/set-clutter
 applicable: Exchange Online
 title: Set-Clutter
 schema: 2.0.0

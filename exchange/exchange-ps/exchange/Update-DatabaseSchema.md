@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/update-databaseschema
+online version: https://docs.microsoft.com/powershell/module/exchange/update-databaseschema
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-DatabaseSchema
 schema: 2.0.0

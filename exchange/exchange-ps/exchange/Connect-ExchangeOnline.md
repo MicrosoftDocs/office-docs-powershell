@@ -1,7 +1,7 @@
 ---
 external help file: ExchangeOnlineManagement-help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/connect-exchangeonline
+online version: https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline
 applicable: Exchange Online
 title: Connect-ExchangeOnline
 schema: 2.0.0

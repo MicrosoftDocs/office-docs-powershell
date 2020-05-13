@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/set-publicfolderdatabase
+online version: https://docs.microsoft.com/powershell/module/exchange/set-publicfolderdatabase
 applicable: Exchange Server 2010
 title: Set-PublicFolderDatabase
 schema: 2.0.0

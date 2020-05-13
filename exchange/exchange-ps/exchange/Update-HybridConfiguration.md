@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/update-hybridconfiguration
+online version: https://docs.microsoft.com/powershell/module/exchange/update-hybridconfiguration
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Update-HybridConfiguration
 schema: 2.0.0

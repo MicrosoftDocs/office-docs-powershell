@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/get-sitemailboxdiagnostics
+online version: https://docs.microsoft.com/powershell/module/exchange/get-sitemailboxdiagnostics
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-SiteMailboxDiagnostics
 schema: 2.0.0

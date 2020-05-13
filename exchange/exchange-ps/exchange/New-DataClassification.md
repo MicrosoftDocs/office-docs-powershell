@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dataclassification
+online version: https://docs.microsoft.com/powershell/module/exchange/new-dataclassification
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-DataClassification
 schema: 2.0.0
@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [New-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
+In Exchange Online, this cmdlet has been replaced by the [New-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
 
 Use the New-DataClassification cmdlet to create data classification rules that use document fingerprints.
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fingerprints
-The Fingerprints parameter specifies the byte-encoded files to use as document fingerprints. You can use multiple document fingerprints separated by commas. For instructions on how to import documents to use as templates for fingerprints, see [New-Fingerprint](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-fingerprint) or the Examples section.
+The Fingerprints parameter specifies the byte-encoded files to use as document fingerprints. You can use multiple document fingerprints separated by commas. For instructions on how to import documents to use as templates for fingerprints, see [New-Fingerprint](https://docs.microsoft.com/powershell/module/exchange/new-fingerprint) or the Examples section.
 
 ```yaml
 Type: MultiValuedProperty

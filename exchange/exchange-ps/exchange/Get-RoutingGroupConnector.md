@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-routinggroupconnector
+online version: https://docs.microsoft.com/powershell/module/exchange/get-routinggroupconnector
 applicable: Exchange Server 2010
 title: Get-RoutingGroupConnector
 schema: 2.0.0

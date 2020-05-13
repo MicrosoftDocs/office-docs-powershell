@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/remove-recipientpermission
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-recipientpermission
 applicable: Exchange Online
 title: Remove-RecipientPermission
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/get-intraorganizationconnector
+online version: https://docs.microsoft.com/powershell/module/exchange/get-intraorganizationconnector
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-IntraOrganizationConnector
 schema: 2.0.0

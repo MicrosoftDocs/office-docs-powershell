@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dataclassification
+online version: https://docs.microsoft.com/powershell/module/exchange/get-dataclassification
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-DataClassification
 schema: 2.0.0
@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [Get-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
+In Exchange Online, this cmdlet has been replaced by the [Get-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/get-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
 
 Use the Get-DataClassification cmdlet to view the data classification rules in your organization. This cmdlet shows built-in data classification rules and rules that you created that use document fingerprints.
 

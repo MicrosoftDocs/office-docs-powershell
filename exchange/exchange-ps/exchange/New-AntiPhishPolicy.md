@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/new-antiphishpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-antiphishpolicy
 applicable: Exchange Online
 title: New-AntiPhishPolicy
 schema: 2.0.0

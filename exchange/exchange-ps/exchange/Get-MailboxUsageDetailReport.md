@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailboxusagedetailreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-mailboxusagedetailreport
 applicable: Exchange Online
 title: Get-MailboxUsageDetailReport
 schema: 2.0.0

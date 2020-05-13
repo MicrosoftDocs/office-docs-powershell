@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-maildetaildlppolicyreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-maildetaildlppolicyreport
 applicable: Exchange Online
 title: Get-MailDetailDlpPolicyReport
 schema: 2.0.0

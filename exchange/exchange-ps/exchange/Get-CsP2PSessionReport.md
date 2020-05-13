@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-csp2psessionreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-csp2psessionreport
 applicable: Exchange Online
 title: Get-CsP2PSessionReport
 schema: 2.0.0

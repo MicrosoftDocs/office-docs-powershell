@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/delete-quarantinemessage
+online version: https://docs.microsoft.com/powershell/module/exchange/delete-quarantinemessage
 applicable: Exchange Online, Exchange Online Protection
 title: Delete-QuarantineMessage
 schema: 2.0.0

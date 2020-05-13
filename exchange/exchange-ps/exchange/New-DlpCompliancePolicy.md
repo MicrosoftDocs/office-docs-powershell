@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpcompliancepolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-dlpcompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: New-DlpCompliancePolicy
 schema: 2.0.0

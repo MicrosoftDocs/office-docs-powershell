@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-messagetrackingreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-messagetrackingreport
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MessageTrackingReport
 schema: 2.0.0
@@ -32,7 +32,7 @@ Get-MessageTrackingReport [-Identity] <MessageTrackingReportId> [-BypassDelegate
 ```
 
 ## DESCRIPTION
-This cmdlet requires the ID for the message tracking report that you want to view. Therefore, first you need to use the Search-MessageTrackingReport cmdlet to find the message tracking report ID for a specific message, and then pass the results to this cmdlet. For more information, see [Search-MessageTrackingReport](https://docs.microsoft.com/powershell/module/exchange/mail-flow/search-messagetrackingreport).
+This cmdlet requires the ID for the message tracking report that you want to view. Therefore, first you need to use the Search-MessageTrackingReport cmdlet to find the message tracking report ID for a specific message, and then pass the results to this cmdlet. For more information, see [Search-MessageTrackingReport](https://docs.microsoft.com/powershell/module/exchange/search-messagetrackingreport).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 

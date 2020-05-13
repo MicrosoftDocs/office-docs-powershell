@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/update-filedistributionservice
+online version: https://docs.microsoft.com/powershell/module/exchange/update-filedistributionservice
 applicable: Exchange Server 2010
 title: Update-FileDistributionService
 schema: 2.0.0

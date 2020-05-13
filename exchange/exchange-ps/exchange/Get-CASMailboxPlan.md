@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailboxplan
+online version: https://docs.microsoft.com/powershell/module/exchange/get-casmailboxplan
 applicable: Exchange Online
 title: Get-CASMailboxPlan
 schema: 2.0.0

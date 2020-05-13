@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/test-federationtrust
+online version: https://docs.microsoft.com/powershell/module/exchange/test-federationtrust
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-FederationTrust
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-managedfolder
+online version: https://docs.microsoft.com/powershell/module/exchange/new-managedfolder
 applicable: Exchange Server 2010
 title: New-ManagedFolder
 schema: 2.0.0

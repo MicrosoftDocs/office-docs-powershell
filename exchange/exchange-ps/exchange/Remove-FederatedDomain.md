@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/remove-federateddomain
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-federateddomain
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-FederatedDomain
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/new-onpremisesorganization
+online version: https://docs.microsoft.com/powershell/module/exchange/new-onpremisesorganization
 applicable: Exchange Online
 title: New-OnPremisesOrganization
 schema: 2.0.0

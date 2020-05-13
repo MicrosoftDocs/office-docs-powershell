@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-focusedinbox
+online version: https://docs.microsoft.com/powershell/module/exchange/set-focusedinbox
 applicable: Exchange Online
 title: Set-FocusedInbox
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-connectionbyclienttypedetailreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-connectionbyclienttypedetailreport
 applicable: Exchange Online
 title: Get-ConnectionByClientTypeDetailReport
 schema: 2.0.0

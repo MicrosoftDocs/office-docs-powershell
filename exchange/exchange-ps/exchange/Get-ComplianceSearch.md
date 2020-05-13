@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/get-compliancesearch
+online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancesearch
 applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 title: Get-ComplianceSearch
 schema: 2.0.0

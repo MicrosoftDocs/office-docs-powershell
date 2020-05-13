@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-csusersblockedreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-csusersblockedreport
 applicable: Exchange Online
 title: Get-CsUsersBlockedReport
 schema: 2.0.0

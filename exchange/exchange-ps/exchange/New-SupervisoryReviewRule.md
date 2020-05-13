@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-supervisoryreviewrule
+online version: https://docs.microsoft.com/powershell/module/exchange/new-supervisoryreviewrule
 applicable: Office 365 Security & Compliance Center
 title: New-SupervisoryReviewRule
 schema: 2.0.0

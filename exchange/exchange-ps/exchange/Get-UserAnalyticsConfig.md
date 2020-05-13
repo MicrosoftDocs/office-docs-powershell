@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-useranalyticsconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/get-useranalyticsconfig
 applicable: Exchange Online
 title: Get-UserAnalyticsConfig
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/resume-mailboximportrequest
+online version: https://docs.microsoft.com/powershell/module/exchange/resume-mailboximportrequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Resume-MailboxImportRequest
 schema: 2.0.0

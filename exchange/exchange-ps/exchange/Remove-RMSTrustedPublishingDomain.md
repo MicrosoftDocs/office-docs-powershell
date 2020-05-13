@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/remove-rmstrustedpublishingdomain
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-rmstrustedpublishingdomain
 applicable: Exchange Online
 title: Remove-RMSTrustedPublishingDomain
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/get-quarantinemessageheader
+online version: https://docs.microsoft.com/powershell/module/exchange/get-quarantinemessageheader
 applicable: Exchange Online, Exchange Online Protection
 title: Get-QuarantineMessageHeader
 schema: 2.0.0

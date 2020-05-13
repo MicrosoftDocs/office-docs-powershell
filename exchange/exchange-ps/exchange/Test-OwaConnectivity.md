@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/test-owaconnectivity
+online version: https://docs.microsoft.com/powershell/module/exchange/test-owaconnectivity
 applicable: Exchange Server 2010
 title: Test-OwaConnectivity
 schema: 2.0.0

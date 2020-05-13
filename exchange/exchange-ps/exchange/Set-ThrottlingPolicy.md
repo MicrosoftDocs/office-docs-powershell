@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/set-throttlingpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/set-throttlingpolicy
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ThrottlingPolicy
 schema: 2.0.0
@@ -651,7 +651,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryMaxKeywords
-The DiscoveryMaxKeywords parameter specifies the maximum number of keywords that a user can include in a discovery search. For more information, see [Search-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/search-mailbox).
+The DiscoveryMaxKeywords parameter specifies the maximum number of keywords that a user can include in a discovery search. For more information, see [Search-Mailbox](https://docs.microsoft.com/powershell/module/exchange/search-mailbox).
 
 ```yaml
 Type: Unlimited

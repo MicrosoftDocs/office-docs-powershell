@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/enable-exchangecertificate
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-exchangecertificate
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-ExchangeCertificate
 schema: 2.0.0
@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Enable-ExchangeCertificate cmdlet to enable an existing certificate on the Exchange server for Exchange services such as Internet Information Services (IIS), SMTP, POP, IMAP and Unified Messaging (UM). Once you enable a certificate for a service, you can't disable it.
 
-To see the existing certificates that are used for Exchange services, use [Get-ExchangeCertificate](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-exchangecertificate).
+To see the existing certificates that are used for Exchange services, use [Get-ExchangeCertificate](https://docs.microsoft.com/powershell/module/exchange/get-exchangecertificate).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 

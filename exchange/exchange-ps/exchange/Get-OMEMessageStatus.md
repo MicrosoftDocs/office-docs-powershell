@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-omemessagestatus
+online version: https://docs.microsoft.com/powershell/module/exchange/get-omemessagestatus
 applicable: Exchange Online
 title: Get-OMEMessageStatus
 schema: 2.0.0

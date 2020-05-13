@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-managedfoldermailboxpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-managedfoldermailboxpolicy
 applicable: Exchange Server 2010
 title: Remove-ManagedFolderMailboxPolicy
 schema: 2.0.0

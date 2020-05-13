@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-sposkydriveprodeployedreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-sposkydriveprodeployedreport
 applicable: Exchange Online
 title: Get-SPOSkyDriveProDeployedReport
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-csclientdevicereport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-csclientdevicereport
 applicable: Exchange Online
 title: Get-CsClientDeviceReport
 schema: 2.0.0

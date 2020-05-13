@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-o365clientbrowserreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-o365clientbrowserreport
 applicable: Exchange Online
 title: Get-O365ClientBrowserReport
 schema: 2.0.0

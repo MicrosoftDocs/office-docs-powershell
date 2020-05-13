@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/test-applicationaccesspolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/test-applicationaccesspolicy
 applicable: Exchange Online
 title: Test-ApplicationAccessPolicy
 schema: 2.0.0

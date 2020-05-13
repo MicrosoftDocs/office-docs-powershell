@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/rotate-dkimsigningconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/rotate-dkimsigningconfig
 applicable: Exchange Online, Exchange Online Protection
 title: Rotate-DkimSigningConfig
 schema: 2.0.0

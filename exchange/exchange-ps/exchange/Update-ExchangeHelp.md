@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/update-exchangehelp
+online version: https://docs.microsoft.com/powershell/module/exchange/update-exchangehelp
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-ExchangeHelp
 schema: 2.0.0

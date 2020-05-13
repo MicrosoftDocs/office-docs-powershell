@@ -1,6 +1,6 @@
 ﻿---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-supervisoryreviewactivity
+online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewactivity
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-SupervisoryReviewActivity
 schema: 2.0.0

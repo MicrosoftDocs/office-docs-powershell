@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/start-retentionautotaglearning
+online version: https://docs.microsoft.com/powershell/module/exchange/start-retentionautotaglearning
 applicable: Exchange Server 2010
 title: Start-RetentionAutoTagLearning
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/get-availabilityaddressspace
+online version: https://docs.microsoft.com/powershell/module/exchange/get-availabilityaddressspace
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-AvailabilityAddressSpace
 schema: 2.0.0

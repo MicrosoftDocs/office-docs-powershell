@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/get-federationinformation
+online version: https://docs.microsoft.com/powershell/module/exchange/get-federationinformation
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-FederationInformation
 schema: 2.0.0

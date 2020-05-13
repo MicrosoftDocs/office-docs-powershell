@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/new-auditconfigurationpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-auditconfigurationpolicy
 applicable: Office 365 Security & Compliance Center
 title: New-AuditConfigurationPolicy
 schema: 2.0.0

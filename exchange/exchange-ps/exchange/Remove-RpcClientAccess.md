@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/remove-rpcclientaccess
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-rpcclientaccess
 applicable: Exchange Server 2010
 title: Remove-RpcClientAccess
 schema: 2.0.0

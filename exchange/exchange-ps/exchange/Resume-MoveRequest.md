@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/resume-moverequest
+online version: https://docs.microsoft.com/powershell/module/exchange/resume-moverequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Resume-MoveRequest
 schema: 2.0.0

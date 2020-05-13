@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dataclassification
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-dataclassification
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-DataClassification
 schema: 2.0.0
@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [Remove-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
+In Exchange Online, this cmdlet has been replaced by the [Remove-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/remove-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
 
 Use the Remove-DataClassification cmdlet to remove data classification rules that use document fingerprints. You can't use this cmdlet to remove built-in data classification rules.
 

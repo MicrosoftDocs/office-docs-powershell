@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/stop-historicalsearch
+online version: https://docs.microsoft.com/powershell/module/exchange/stop-historicalsearch
 applicable: Exchange Online, Exchange Online Protection
 title: Stop-HistoricalSearch
 schema: 2.0.0

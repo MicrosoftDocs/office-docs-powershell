@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpsensitiveinformationtype
+online version: https://docs.microsoft.com/powershell/module/exchange/set-dlpsensitiveinformationtype
 applicable: Office 365 Security & Compliance Center
 title: Set-DlpSensitiveInformationType
 schema: 2.0.0
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fingerprints
-The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the sensitive information type rule. For instructions on how to import documents to use as templates for fingerprints, see [New-DlpFingerprint](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpfingerprint) or the Examples section. For instructions on how to add and remove document fingerprints from an existing sensitive information type rule, see the Examples section.
+The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the sensitive information type rule. For instructions on how to import documents to use as templates for fingerprints, see [New-DlpFingerprint](https://docs.microsoft.com/powershell/module/exchange/new-dlpfingerprint) or the Examples section. For instructions on how to add and remove document fingerprints from an existing sensitive information type rule, see the Examples section.
 
 ```yaml
 Type: MultiValuedProperty

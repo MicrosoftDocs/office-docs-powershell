@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/new-availabilityconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/new-availabilityconfig
 applicable: Exchange Online
 title: New-AvailabilityConfig
 schema: 2.0.0

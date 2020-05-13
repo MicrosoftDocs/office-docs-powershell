@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/get-monitoringitemidentity
+online version: https://docs.microsoft.com/powershell/module/exchange/get-monitoringitemidentity
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MonitoringItemIdentity
 schema: 2.0.0

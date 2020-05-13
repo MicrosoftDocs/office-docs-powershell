@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-dataretentionreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-dataretentionreport
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-DataRetentionReport
 schema: 2.0.0

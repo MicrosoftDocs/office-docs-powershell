@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-logonstatistics
+online version: https://docs.microsoft.com/powershell/module/exchange/get-logonstatistics
 applicable: Exchange Server 2010, Exchange Server 2013
 title: Get-LogonStatistics
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-mailfilterlistreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-mailfilterlistreport
 applicable: Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Get-MailFilterListReport
 schema: 2.0.0

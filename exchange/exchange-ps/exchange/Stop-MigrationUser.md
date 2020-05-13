@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/stop-migrationuser
+online version: https://docs.microsoft.com/powershell/module/exchange/stop-migrationuser
 applicable: Exchange Online
 title: Stop-MigrationUser
 schema: 2.0.0

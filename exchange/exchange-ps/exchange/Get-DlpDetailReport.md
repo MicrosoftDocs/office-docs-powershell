@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpdetailreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpdetailreport
 applicable: Exchange Online
 title: Get-DlpDetailReport
 schema: 2.0.0
@@ -66,7 +66,7 @@ The Get-DlpDetailReport cmdlet returns detailed information about specific DLP r
 
 - ObjectId
 
-To see DLP detection data that's aggregated per day, use the [Get-DlpDetectionsReport](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpdetectionsreport) cmdlet.
+To see DLP detection data that's aggregated per day, use the [Get-DlpDetectionsReport](https://docs.microsoft.com/powershell/module/exchange/get-dlpdetectionsreport) cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 

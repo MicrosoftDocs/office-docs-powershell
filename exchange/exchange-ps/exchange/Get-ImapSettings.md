@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/get-imapsettings
+online version: https://docs.microsoft.com/powershell/module/exchange/get-imapsettings
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-ImapSettings
 schema: 2.0.0

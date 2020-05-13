@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/new-applicationaccesspolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-applicationaccesspolicy
 applicable: Exchange Online
 title: New-ApplicationAccessPolicy
 schema: 2.0.0

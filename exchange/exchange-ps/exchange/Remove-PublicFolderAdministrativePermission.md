@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-publicfolderadministrativepermission
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-publicfolderadministrativepermission
 applicable: Exchange Server 2010
 title: Remove-PublicFolderAdministrativePermission
 schema: 2.0.0

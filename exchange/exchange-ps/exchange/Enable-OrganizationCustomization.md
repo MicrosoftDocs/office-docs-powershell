@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/enable-organizationcustomization
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-organizationcustomization
 applicable: Exchange Online, Exchange Online Protection
 title: Enable-OrganizationCustomization
 schema: 2.0.0

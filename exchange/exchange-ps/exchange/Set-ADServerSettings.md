@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/active-directory/set-adserversettings
+online version: https://docs.microsoft.com/powershell/module/exchange/set-adserversettings
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ADServerSettings
 schema: 2.0.0
