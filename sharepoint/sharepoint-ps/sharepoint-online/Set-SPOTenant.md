@@ -812,13 +812,11 @@ Accept wildcard characters: False
 
 ### -DisabledWebPartIds
 
-PARAMVALUE: <Guid>[,<Guid>,...]
-
 Allows administrators prevent certain, specific web parts from being added to pages or rendering on pages on which they were previously added. Currently, only Amazon Kindle, YouTube and Twitter web parts can be disabled in such a manner.
 
 To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4). If you are looking for a GUID for any other web part, easiest way to achieve is to place the web part on a SharePoint page and move to maintenance mode. See more details around the [web part maintenance mode from Microsoft Support](https://support.office.com/en-us/article/Open-and-use-the-Web-Part-Maintenance-Page-EFF9CE22-D04A-44DD-AE83-AC29A5E396C2).
 
-You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
+You can enter in multiple GUIDs by using a comma to separate them, for example Set-SPOTenant -DisabledWebPartIds 46698648-fcd5-41fc-9526-c7f7b2ace919,544dd15b-cf3c-441b-96da-004d5a8cea1d. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
 
 To re-enable some disabled web parts, use the Set-SPOTenant with the -DisabledWebPartIds parameter and corresponding GUIDs that you still want to keep disabling. To re-enable all disabled web parts, use Set-SPOTenant -DisabledWebPartIds @().
 
