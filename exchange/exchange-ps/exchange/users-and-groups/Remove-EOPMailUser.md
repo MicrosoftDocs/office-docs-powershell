@@ -15,9 +15,9 @@ monikerRange: "eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Online Protection.
 
-Use the Remove-EOPMailUser cmdlet to remove Exchange Online Protection mail users, also known as mail-enabled users, from Microsoft Exchange Online Protection (EOP) standalone. This cmdlet isn't available in Exchange Enterprise CAL with Services (EOP Premium). In EOP Premium, use the Remove-MailUser cmdlet.
+Use the Remove-EOPMailUser cmdlet to remove mail users, also known as mail-enabled users, from standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes. This cmdlet isn't available in EOP that's included with Exchange Enterprise CAL with Services licenses in on-premises Exchange; use the Remove-MailUser cmdlet instead.
 
-Typically, EOP standalone customers that also have on-premises Active Directory organizations would use directory synchronization to create users and groups in EOP. However, if you can't use directory synchronization, then you can use cmdlets to create and manage users and groups in EOP.
+Typically, standalone EOP organizations that also have on-premises Active Directory use directory synchronization to create users and groups in EOP. However, if you can't use directory synchronization, then you can use cmdlets to create and manage users and groups in EOP.
 
 This cmdlet uses a batch processing method that results in a propagation delay of a few minutes before the results of the cmdlet are visible.
 
