@@ -1,5 +1,5 @@
 ---
-title: "Connect to Office 365 Security & Compliance Center PowerShell"
+title: "Connect to Security & Compliance Center PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -13,20 +13,20 @@ search.appverid: MET150
 description: "Learn how to connect to Security & Compliance Center PowerShell."
 ---
 
-# Connect to Office 365 Security & Compliance Center PowerShell
+# Connect to Security & Compliance Center PowerShell
 
-Office 365 Security & Compliance Center PowerShell allows you to manage your Office 365 Security & Compliance Center settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to the Security & Compliance Center. It's a simple three-step process where you enter your Office 365 credentials, provide the required connection settings, and then import the Security & Compliance Center cmdlets into your local Windows PowerShell session so that you can use them.
+Security & Compliance Center PowerShell allows you to manage your Security & Compliance Center settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to the Security & Compliance Center. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Security & Compliance Center cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!NOTE]
-> The procedures in this topic won't work if: <br/>* Your account uses multi-factor authentication (MFA). <br/>* Your organization uses federated authentication. <br/>* A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs. <br/> In these scenarions, you need to download and use the Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md). <br/><br/> Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](../../exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
+> The procedures in this topic won't work if: <br/>* Your account uses multi-factor authentication (MFA). <br/>* Your organization uses federated authentication. <br/>* A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs. <br/> In these scenarios, you need to download and use the Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md). <br/><br/> Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](../../exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
 
-For more information about the Security & Compliance Center, see [Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627054).
+For more information about the Security & Compliance Center, see [Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627054).
 
 ## What do you need to know before you begin?
 
 - Estimated time to complete: 5 minutes
 
-- Office 365 global admins have access to the Security & Compliance Center, but everyone else needs to have their access configured for them. For details, see [Give users access to the Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627057).
+- Microsoft 365 global admins have access to the Security & Compliance Center, but everyone else needs to have their access configured for them. For details, see [Give users access to the Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627057).
 
 - You can use the following versions of Windows:
 
@@ -56,23 +56,29 @@ For more information about the Security & Compliance Center, see [Office 365 Sec
   Set-ExecutionPolicy RemoteSigned
   ```
 
-  You need to configure this setting only once on your computer, not every time you connect.
+- Windows Remote Management (WinRM) needs to be enabled (it's not enabled by default in Windows 7, 8.1 and 10). To enable it, run this command **in a Command Prompt**:
 
-- Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
-
+  ```dos
+  winrm quickconfig
   ```
+
+- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+
+  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
+
+  ```dos
   winrm get winrm/config/client/auth
   ```
 
   If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
 
-  ```
+  ```dos
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
 
-  If Basic authentication is disabled, you'll get this error when you try to connect:
+  If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
 
-  > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.`
+  > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
 ## Connect to the Security & Compliance Center
 
@@ -94,17 +100,15 @@ For more information about the Security & Compliance Center, see [Office 365 Sec
 
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`.
 
-   - For Office 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
+   - For Microsoft 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
 
 3. Run the following command:
 
    ```PowerShell
    Import-PSSession $Session -DisableNameChecking
    ```
-   
-   **Notes**:
 
-   - If you want to connect to Security & Compliance Center PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add the Prefix parameter and value (for example, `-Prefix "CC"`) to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
+   If you want to connect to Security & Compliance Center PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add the Prefix parameter and value (for example, `-Prefix "CC"`) to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
@@ -121,11 +125,11 @@ If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
 
-- Verify that your account has permission to access the Security & Compliance Center. For details, see [Give users access to the Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627057).
+- Verify that your account has permission to access the Security & Compliance Center. For details, see [Give users access to the Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627057).
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to the Security & Compliance Center.
 
-- TCP port 80 traffic needs to be open between your local computer and Office 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
+- TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 
 - The **New-PSSession** command (Step 2) might fail to connect if your client IP address changes during the connection request. This can happen if your organization uses a source network address translation (SNAT) pool that contains multiple IP addresses. The connection error looks like this:
 
