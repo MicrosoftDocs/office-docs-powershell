@@ -33,12 +33,13 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```powershell
   Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com"
   ```
- 
+
 - Connect using a certificate thumbprint:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" 
+  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com"
   ```
+
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
 
 - Connect using an existing service principal and client-secret:
@@ -59,7 +60,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 
 ## How does it work?
 
-The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id & certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
+The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id, and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
 
 ## Setup app-only authentication
 
