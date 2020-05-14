@@ -29,7 +29,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
- [-VideoFiltersMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-Force] [-WhatIf] [-Confirm] 
+ [<CommonParameters>]
 ```
 
 ### Instance
@@ -44,7 +45,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
- [-VideoFiltersMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -529,6 +531,21 @@ Determines the background effects that a user can configure in the Teams client.
 - BlurOnly: Background blur is the only option available (requires a processor with AVX2 support, see [Hardware requirements for Microsoft Teams](https://docs.microsoft.com/microsoftteams/hardware-requirements-for-the-teams-app) for more information).
 - BlurAndDefaultBackgrounds: Background blur and a list of pre-selected images are available.
 - AllFilters: All filters are available, including custom images.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEngagementReport
+Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
 
 ```yaml
 Type: String
