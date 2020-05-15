@@ -141,11 +141,347 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplyContentMarkingFooterAlignment
+{{ Fill ApplyContentMarkingFooterAlignment Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingFooterEnabled
+{{ Fill ApplyContentMarkingFooterEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingFooterFontColor
+{{ Fill ApplyContentMarkingFooterFontColor Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingFooterFontName
+{{ Fill ApplyContentMarkingFooterFontName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingFooterFontSize
+{{ Fill ApplyContentMarkingFooterFontSize Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingFooterMargin
+{{ Fill ApplyContentMarkingFooterMargin Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingFooterText
+{{ Fill ApplyContentMarkingFooterText Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingHeaderAlignment
+{{ Fill ApplyContentMarkingHeaderAlignment Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingHeaderEnabled
+{{ Fill ApplyContentMarkingHeaderEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingHeaderFontColor
+{{ Fill ApplyContentMarkingHeaderFontColor Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingHeaderFontName
+{{ Fill ApplyContentMarkingHeaderFontName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingHeaderFontSize
+{{ Fill ApplyContentMarkingHeaderFontSize Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingHeaderMargin
+{{ Fill ApplyContentMarkingHeaderMargin Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyContentMarkingHeaderText
+{{ Fill ApplyContentMarkingHeaderText Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyWaterMarkingEnabled
+{{ Fill ApplyWaterMarkingEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyWaterMarkingFontColor
+{{ Fill ApplyWaterMarkingFontColor Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyWaterMarkingFontName
+{{ Fill ApplyWaterMarkingFontName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyWaterMarkingFontSize
+{{ Fill ApplyWaterMarkingFontSize Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyWaterMarkingLayout
+{{ Fill ApplyWaterMarkingLayout Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyWaterMarkingText
+{{ Fill ApplyWaterMarkingText Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Conditions
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -177,6 +513,246 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EncryptionAipTemplateScopes
+{{ Fill EncryptionAipTemplateScopes Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionContentExpiredOnDateInDaysOrNever
+{{ Fill EncryptionContentExpiredOnDateInDaysOrNever Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionDoNotForward
+{{ Fill EncryptionDoNotForward Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionDoubleKeyEncryptionUrl
+{{ Fill EncryptionDoubleKeyEncryptionUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionEnabled
+{{ Fill EncryptionEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionEncryptOnly
+{{ Fill EncryptionEncryptOnly Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionLinkedTemplateId
+{{ Fill EncryptionLinkedTemplateId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionOfflineAccessDays
+{{ Fill EncryptionOfflineAccessDays Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionPromptUser
+{{ Fill EncryptionPromptUser Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionProtectionType
+{{ Fill EncryptionProtectionType Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionRightsDefinitions
+{{ Fill EncryptionRightsDefinitions Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionRightsUrl
+{{ Fill EncryptionRightsUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionTemplateId
+{{ Fill EncryptionTemplateId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+{{ Fill Identity Description }}
+
+```yaml
+Type: MasterIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabelActions
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LocaleSettings
 The LocaleSettings parameter specifies one or more localized label name or label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax:
 
@@ -186,6 +762,22 @@ The LocaleSettings parameter specifies one or more localized label name or label
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrationId
+{{ Fill MigrationId Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -208,6 +800,150 @@ The ParentId parameter specifies the parent label that you want this label to be
 
 ```yaml
 Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Setting
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Settings
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAndGroupProtectionAllowAccessToGuestUsers
+{{ Fill SiteAndGroupProtectionAllowAccessToGuestUsers Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAndGroupProtectionAllowEmailFromGuestUsers
+{{ Fill SiteAndGroupProtectionAllowEmailFromGuestUsers Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAndGroupProtectionAllowFullAccess
+{{ Fill SiteAndGroupProtectionAllowFullAccess Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAndGroupProtectionAllowLimitedAccess
+{{ Fill SiteAndGroupProtectionAllowLimitedAccess Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAndGroupProtectionBlockAccess
+{{ Fill SiteAndGroupProtectionBlockAccess Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAndGroupProtectionEnabled
+{{ Fill SiteAndGroupProtectionEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAndGroupProtectionPrivacy
+{{ Fill SiteAndGroupProtectionPrivacy Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
