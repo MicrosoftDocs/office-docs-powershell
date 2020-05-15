@@ -603,7 +603,7 @@ Accept wildcard characters: False
 ### -OnlineMeetingsByDefaultEnabled
 This parameter is available only in the cloud-based service.
 
-The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as online by default for the mailbox. Valid values are:
+The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
 
 - $true: All meetings are online by default.
 
