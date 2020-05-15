@@ -266,7 +266,9 @@ Accept wildcard characters: False
 
 
 ### -PSSessionOption
-The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$Options = New-PSSessionOption <Settings>`), and you use the variable name as the value for this parameter (for example, $Options).
+The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
+`$Options = New-PSSessionOption <Settings>`
+And you use the variable name as the value for this parameter (for example, $Options).
 
 ```yaml
 Type: PSSessionOption
