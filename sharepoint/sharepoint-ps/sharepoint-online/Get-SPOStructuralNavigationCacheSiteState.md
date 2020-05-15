@@ -3,6 +3,11 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
+applicable: SharePoint Online
+title: Get-SPOStructuralNavigationCacheSiteState
+author: paramveersisodia
+ms.author: paramsis
+ms.reviewer:
 ---
 
 # Get-SPOStructuralNavigationCacheSiteState
@@ -17,7 +22,7 @@ Get-SPOStructuralNavigationCacheSiteState -SiteUrl <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-SPOStructuralNavigationCacheSiteState cmdlet can be used to determine if structural navigation caching is enabled or disabled for a site collection. [Learn more](https://support.office.com/en-us/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43). 
+The Get-SPOStructuralNavigationCacheSiteState cmdlet can be used to determine if structural navigation caching is enabled or disabled for a site collection. [Learn more](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43). 
 
 ## EXAMPLES
 
@@ -66,8 +71,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
  
 ## RELATED LINKS
-Get-SPOStructuralNavigationCacheWebState 
+[Get-SPOStructuralNavigationCacheWebState](Get-SPOStructuralNavigationCacheWebState.md)
 
-Set-SPOStructuralNavigationCacheWebState 
+[Set-SPOStructuralNavigationCacheWebState](Set-SPOStructuralNavigationCacheWebState.md)
 
-Set-SPOStructuralNavigationCacheSiteState 
+[Set-SPOStructuralNavigationCacheSiteState](Set-SPOStructuralNavigationCacheSiteState.md)
