@@ -193,11 +193,11 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOStructuralNavigationCacheSiteState](Get-SPOStructuralNavigationCacheSiteState.md)
 
-{{Manually Enter Get-SPOSiteScript Description Here}}
+{{Manually Enter Get-SPOStructuralNavigationCacheSiteState Description Here}}
 
 ### [Get-SPOStructuralNavigationCacheWebState](Get-SPOStructuralNavigationCacheWebState.md)
 
-{{Manually Enter Get-SPOSiteScript Description Here}}
+{{Manually Enter Get-SPOStructuralNavigationCacheWebState Description Here}}
 
 ### [Get-SPOTenant](Get-SPOTenant.md)
 
@@ -469,11 +469,11 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Set-SPOStructuralNavigationCacheSiteState](Set-SPOStructuralNavigationCacheSiteState.md)
 
-{{Manually Enter Set-SPOSiteScript Description Here}}
+{{Manually Enter Set-SPOStructuralNavigationCacheSiteState Description Here}}
 
 ### [Set-SPOStructuralNavigationCacheWebState](Set-SPOStructuralNavigationCacheWebState.md)
 
-{{Manually Enter Set-SPOSiteScript Description Here}}
+{{Manually Enter Set-SPOStructuralNavigationCacheWebState Description Here}}
 
 ### [Set-SPOTenant](Set-SPOTenant.md)
 
