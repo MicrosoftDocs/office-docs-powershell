@@ -7,6 +7,7 @@ applicable: SharePoint Online
 title: Get-SPOStructuralNavigationCacheSiteState
 author: paramveersisodia
 ms.author: paramsis
+manager: suyog
 ms.reviewer:
 ---
 
@@ -42,7 +43,7 @@ Specifies the absolute URL for the site collection's root web being checked for 
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: SharePoint Online
 Required: True
 Position: Named
 Default value: None
