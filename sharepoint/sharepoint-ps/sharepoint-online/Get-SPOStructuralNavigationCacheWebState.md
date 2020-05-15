@@ -7,6 +7,7 @@ applicable: SharePoint Online
 title: Get-SPOStructuralNavigationCacheWebState
 author: paramveersisodia
 ms.author: paramsis
+manager: suyog
 ms.reviewer:
 ---
 
@@ -42,7 +43,7 @@ Specifies the absolute URL for the web being checked for its caching state.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: SharePoint Online
 Required: True
 Position: Named
 Default value: None
