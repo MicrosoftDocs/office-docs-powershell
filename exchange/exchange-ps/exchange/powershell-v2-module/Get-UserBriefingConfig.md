@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
-Use the Get-UserBriefingConfig cmdlet to view
+Use the Get-UserBriefingConfig cmdlet to view the daily briefing configuration in a mailbox.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -33,15 +33,15 @@ Get-UserBriefingConfig -Identity <String>
 
 ### Example 1
 ```powershell
-Get-UserBriefingConfig -Identity
+Get-UserBriefingConfig -Identity lila@contoso.onmicrosoft.com
 ```
 
-This example returns
+This example returns the daily briefing message configuration for the user lila@contoso.onmicrosoft.com.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies
+The Identity parameter specifies the mailbox that you want to view. You identify the mailbox by its UPN (for example, lila@contoso.onmicrosoft.com).
 
 ```yaml
 Type: String
