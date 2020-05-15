@@ -7,6 +7,7 @@ applicable: SharePoint Online
 title: Set-SPOStructuralNavigationCacheSiteState
 author: paramveersisodia
 ms.author: paramsis
+manager: suyog
 ms.reviewer:
 ---
 
@@ -49,7 +50,7 @@ $true to enable caching, $false to disable caching.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
+Applicable: SharePoint Online
 Required: True
 Position: Named
 Default value: None
@@ -64,7 +65,7 @@ Specifies the absolute URL for the site collection's root web that needs its cac
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+Applicable: SharePoint Online
 Required: True
 Position: Named
 Default value: None
