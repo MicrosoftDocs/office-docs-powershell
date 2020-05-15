@@ -3,6 +3,11 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
+applicable: SharePoint Online
+title: Set-SPOStructuralNavigationCacheWebState
+author: paramveersisodia
+ms.author: paramsis
+ms.reviewer:
 ---
 
 # Set-SPOStructuralNavigationCacheWebState
@@ -17,7 +22,7 @@ Set-SPOStructuralNavigationCacheWebState -WebUrl <String> -IsEnabled <Boolean> [
 ```
 
 ## DESCRIPTION
-The Set-SPOStructuralNavigationCacheWebState cmdlet can be used to enable or disable caching for a web in a site collection.[Learn more](https://support.office.com/en-us/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43). 
+The Set-SPOStructuralNavigationCacheWebState cmdlet can be used to enable or disable caching for a web in a site collection. [Learn more](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43). 
 
 ## EXAMPLES
 
@@ -86,8 +91,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
     For online help, type: "get-help Set-SPOStructuralNavigationCacheWebState -online" 
     
 ## RELATED LINKS
-Get-SPOStructuralNavigationCacheWebState 
+[Get-SPOStructuralNavigationCacheWebState](Get-SPOStructuralNavigationCacheWebState.md)
 
-Get-SPOStructuralNavigationCacheSiteState 
+[Get-SPOStructuralNavigationCacheSiteState](Get-SPOStructuralNavigationCacheSiteState.md)
 
-Set-SPOStructuralNavigationCacheSiteState 
+[Set-SPOStructuralNavigationCacheSiteState](Set-SPOStructuralNavigationCacheSiteState.md)
