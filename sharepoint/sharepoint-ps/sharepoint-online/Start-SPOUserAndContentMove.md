@@ -36,23 +36,23 @@ In a multi-geo company, this cmdlet requires a multi-geo tenant to work, and ena
 Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
-This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
+This example moves the user username@contoso.com from the current location, to the European location (EUR).
 
 ### EXAMPLE 2
 
 ```powershell
-Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation JPN
 ```
 
-This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
+This example moves the user username@contoso.com from the current location, to the Japanese location (JPN).
 
 ### EXAMPLE 3
 
 ```powershell
-Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12))
 ```
 
-This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
+This example moves the user username@contoso.com from the current location, to the European location (EUR), preferred to start 1 hour ahead from now, until 12 hours to that relative time.
 
 ## PARAMETERS
 

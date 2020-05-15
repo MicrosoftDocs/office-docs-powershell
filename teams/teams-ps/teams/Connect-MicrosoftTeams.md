@@ -41,6 +41,13 @@ Connect-MicrosoftTeams [-TenantId <String>] -AadAccessToken <String> [-MsAccessT
 
 ### Example 1
 ```powershell
+PS C:\> Connect-MicrosoftTeams
+```
+
+Prompts for user credentials to connect and manage a Microsoft Teams environment.
+
+### Example 2
+```powershell
 PS C:\> Connect-MicrosoftTeams -TeamsEnvironmentName TeamsGCCH
 ```
 

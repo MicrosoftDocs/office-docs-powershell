@@ -18,7 +18,7 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 
 # Use the Exchange Online PowerShell V2 module
 
-The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Office 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online and its features.
+The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Microsoft 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online and its features.
 
 ## Report bugs and issues
 
@@ -60,7 +60,7 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
 
 > [!NOTE]
-> The latest version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.1. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon. This also implies that EXO PowerShell V2 module won't work in Linux or Mac as of now. Support for Linux and Mac is a work in progress and will be announced soon.
+> The only version of PowerShell that's currently supported for the EXO V2 module is PowerShell 5.1. Support for PowerShell 6.0 or later is currently a work in progress and will be released soon. This also implies that EXO PowerShell V2 module won't work in Linux or Mac as of now. Support for Linux and Mac is a work in progress and will be announced soon.
 
 ### What do you need to know before you begin?
 
@@ -82,44 +82,37 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-- Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
+- Windows Remote Management (WinRM) needs to be enabled (it's not enabled by default in Windows 7, 8.1 and 10). To enable it, run this command **in a Command Prompt**:
 
+  ```dos
+  winrm quickconfig
   ```
+
+- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+
+  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
+
+  ```dos
   winrm get winrm/config/client/auth
   ```
 
   If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
 
-  ```
+  ```dos
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
 
-  If Basic authentication is disabled, you'll get this error when you try to connect:
+  If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
 
   > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
-
-  > [!NOTE]
-  > We don't send the username and password combination here, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
 ### Install the EXO V2 module
 
 To install the EXO V2 module for the first time, run the following commands:
 
-1. On your local computer, run the **one** of the following commands from an elevated Windows PowerShell session (a Windows PowerShell window you open by selecting **Run as administrator**):
-
-   - Install the PowerShellGet module for the first time *or* run your current version of the PowerShellGet module side-by-side with the latest version:
-
-     ```PowerShell
-     Install-Module PowershellGet -Force
-     ```
-
-   - Update your existing version of the PowerShellGet module to the latest version:
-
-     ```PowerShell
-     Update-Module PowershellGet
-     ```
+1. Install or update the PowerShellGet module as described in [Installing PowerShellGet](https://docs.microsoft.com/powershell/scripting/gallery/installing-psget).
 
 2. Windows PowerShell needs to be configured to run scripts, and by default, it isn't. To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window:
 
@@ -302,7 +295,7 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 #### Version 0.4368.1
 
-- Added support for Office 365 Security & Compliance Center PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
+- Added support for Security & Compliance Center PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
 
 - Hide the announcement banner using the _ShowBanner_ switch. Run the following command to hide the banner:
 

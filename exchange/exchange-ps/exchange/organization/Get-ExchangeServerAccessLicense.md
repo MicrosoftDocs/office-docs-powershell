@@ -28,13 +28,13 @@ Get-ExchangeServerAccessLicense [<CommonParameters>]
 ## DESCRIPTION
 The Get-ExchangeServerAccessLicense cmdlet returns a collection of these license names:
 
-- Exchange Server 2016 Standard CAL
+- Exchange Server Standard CAL
 
-- Exchange Server 2016 Enterprise CAL
+- Exchange Server Enterprise CAL
 
-- Exchange Server 2016 Standard Edition
+- Exchange Server Standard Edition
 
-- Exchange Server 2016 Enterprise Edition
+- Exchange Server Enterprise Edition
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 
@@ -45,7 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-ExchangeServerAccessLicense
 ```
 
-This example retrieves a list of Exchange 2016 licenses in your organization.
+This example retrieves a list of Exchange licenses in your organization.
 
 ## PARAMETERS
 
