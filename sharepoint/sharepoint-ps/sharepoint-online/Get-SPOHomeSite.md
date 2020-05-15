@@ -31,7 +31,7 @@ Use this cmdlet to get the home site url for your tenant.
 ### Example 1
 
 ```powershell
-Get-PnPHomeSite
+Get-SPOHomeSite
 ```
 
 This example returns the home site url for your tenant.

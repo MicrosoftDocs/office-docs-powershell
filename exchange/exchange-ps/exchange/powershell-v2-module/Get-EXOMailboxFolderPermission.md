@@ -40,14 +40,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports
+Get-EXOMailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports
 ```
 
 This example returns the current list of user permissions for the Reports subfolder in the Marketing folder in John's mailbox.
 
 ### Example 2
 ```powershell
-Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -User Kim@contoso.com
+Get-EXOMailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -User Kim@contoso.com
 ```
 
 This example returns the permissions for the same folder in John's mailbox, but only for the user Kim.

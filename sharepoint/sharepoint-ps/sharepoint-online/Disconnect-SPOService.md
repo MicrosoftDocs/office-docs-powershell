@@ -32,7 +32,7 @@ For more information, see `Connect-SPOService`.
 Even after a connection is terminated, operations that were started before the connection is terminated will run to completion.
 In other words, long-running operations will not be terminated by running the `Disconnect-SPOService` cmdlet or the `Connect-SPOService` cmdlet.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
 
