@@ -142,7 +142,13 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingFooterAlignment
-{{ Fill ApplyContentMarkingFooterAlignment Description }}
+The ApplyContentMarkingFooterAlignment parameter specifies the footer alignment. Valid values are:
+
+-Left
+-Center
+-Right
+
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
@@ -158,7 +164,11 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingFooterEnabled
-{{ Fill ApplyContentMarkingFooterEnabled Description }}
+The ApplyContentMarkingFooterEnabled parameter enables or disables the Apply Content Marking Footer action for the label. Valid values are:
+
+- $true: The Apply Content Marking Footer action is enabled.
+
+- $false: The Apply Content Marking Footer action is disabled.
 
 ```yaml
 Type: System.Boolean
@@ -174,7 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingFooterFontColor
-{{ Fill ApplyContentMarkingFooterFontColor Description }}
+The ApplyContentMarkingFooterFontColor parameter specifies the color of the footer text. This parameter accepts a hexadecimal color code value in the format `#xxxxxx`. The default value is `#000000`.
+
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
 
 ```yaml
 Type: String
@@ -190,7 +202,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingFooterFontName
-{{ Fill ApplyContentMarkingFooterFontName Description }}
+The ApplyContentMarkingFooterFontName parameter specifies the font of the footer text. If the value contains spaces, enclose the value in quotation marks ("). For example `"Courier New"`.
+
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
 
 ```yaml
 Type: String
@@ -206,7 +220,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingFooterFontSize
-{{ Fill ApplyContentMarkingFooterFontSize Description }}
+The ApplyContentMarkingFooterFontSize parameter specifies the font size (in points) of the footer text.
+
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
 
 ```yaml
 Type: System.Int32
@@ -222,7 +238,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingFooterMargin
-{{ Fill ApplyContentMarkingFooterMargin Description }}
+The ApplyContentMarkingFooterMargin parameter specifies the size (in points) of the footer margin.
+
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
 
 ```yaml
 Type: System.Int32
@@ -238,7 +256,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingFooterText
-{{ Fill ApplyContentMarkingFooterText Description }}
+The ApplyContentMarkingFooterText parameter specifies the footer text. If the value contains spaces, enclose the value in quotation marks (").
+
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
 
 ```yaml
 Type: String
@@ -254,7 +274,13 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingHeaderAlignment
-{{ Fill ApplyContentMarkingHeaderAlignment Description }}
+The ApplyContentMarkingHeaderAlignment parameter specifies the header alignment. Valid values are:
+
+-Left
+-Center
+-Right
+
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
@@ -270,7 +296,11 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingHeaderEnabled
-{{ Fill ApplyContentMarkingHeaderEnabled Description }}
+The ApplyContentMarkingHeaderEnabled parameter enables or disables the Apply Content Marking Header action for the label. Valid values are:
+
+- $true: The Apply Content Marking Header action is enabled.
+
+- $false: The Apply Content Marking Header action is disabled.
 
 ```yaml
 Type: System.Boolean
@@ -286,7 +316,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingHeaderFontColor
-{{ Fill ApplyContentMarkingHeaderFontColor Description }}
+The ApplyContentMarkingHeaderFontColor parameter specifies the color of the header text. This parameter accepts a hexadecimal color code value in the format `#xxxxxx`. The default value is `#000000`.
+
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
 
 ```yaml
 Type: String
@@ -302,7 +334,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingHeaderFontName
-{{ Fill ApplyContentMarkingHeaderFontName Description }}
+The ApplyContentMarkingHeaderFontName parameter specifies the font of the header text. If the value contains spaces, enclose the value in quotation marks ("). For example `"Courier New"`.
+
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
 
 ```yaml
 Type: String
@@ -318,7 +352,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingHeaderFontSize
-{{ Fill ApplyContentMarkingHeaderFontSize Description }}
+The ApplyContentMarkingHeaderFontSize parameter specifies the font size (in points) of the header text.
+
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
 
 ```yaml
 Type: System.Int32
@@ -334,7 +370,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingHeaderMargin
-{{ Fill ApplyContentMarkingHeaderMargin Description }}
+The ApplyContentMarkingHeaderMargin parameter specifies the size (in points) of the header margin.
+
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
 
 ```yaml
 Type: System.Int32
@@ -350,7 +388,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyContentMarkingHeaderText
-{{ Fill ApplyContentMarkingHeaderText Description }}
+The ApplyContentMarkingHeaderText parameter specifies the header text. If the value contains spaces, enclose the value in quotation marks (").
+
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
 
 ```yaml
 Type: String
@@ -366,7 +406,11 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyWaterMarkingEnabled
-{{ Fill ApplyWaterMarkingEnabled Description }}
+The ApplyWaterMarkingEnabled parameter enables or disables the Apply Watermarking Header action for the label. Valid values are:
+
+- $true: The Apply Watermarking Header action is enabled.
+
+- $false: The Apply Watermarking Header action is disabled.
 
 ```yaml
 Type: System.Boolean
@@ -382,7 +426,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyWaterMarkingFontColor
-{{ Fill ApplyWaterMarkingFontColor Description }}
+The ApplyWaterMarkingFontColor parameter specifies the color of the watermark text. This parameter accepts a hexadecimal color code value in the format `#xxxxxx`. The default value is `#000000`.
+
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
 
 ```yaml
 Type: String
@@ -398,7 +444,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyWaterMarkingFontName
-{{ Fill ApplyWaterMarkingFontName Description }}
+The ApplyWaterMarkingFontName parameter specifies the font of the watermark text. If the value contains spaces, enclose the value in quotation marks ("). For example `"Courier New"`.
+
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
 
 ```yaml
 Type: String
@@ -414,7 +462,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyWaterMarkingFontSize
-{{ Fill ApplyWaterMarkingFontSize Description }}
+The ApplyWaterMarkingFontSize parameter specifies the font size (in points) of the watermark text.
+
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
 
 ```yaml
 Type: System.Int32
@@ -430,7 +480,12 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyWaterMarkingLayout
-{{ Fill ApplyWaterMarkingLayout Description }}
+The ApplyWaterMarkingAlignment parameter specifies the watermark alignment. Valid values are:
+
+-Horizontal
+-Diagonal
+
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout
@@ -446,8 +501,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyWaterMarkingText
-{{ Fill ApplyWaterMarkingText Description }}
+The ApplyWaterMarkingText parameter specifies the watermark text. If the value contains spaces, enclose the value in quotation marks (").
 
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -514,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionAipTemplateScopes
-{{ Fill EncryptionAipTemplateScopes Description }}
+???
 
 ```yaml
 Type: String
@@ -530,7 +586,10 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionContentExpiredOnDateInDaysOrNever
-{{ Fill EncryptionContentExpiredOnDateInDaysOrNever Description }}
+The EncryptionContentExpiredOnDateInDaysOrNever parameter specifies when the encrypted content expires. Valid values are:
+
+- An integer (number of days)
+- The value `Never`
 
 ```yaml
 Type: String
@@ -546,7 +605,11 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionDoNotForward
-{{ Fill EncryptionDoNotForward Description }}
+The EncryptionDoNotForward parameter specifies whether the Do Not Forward template is applied. Valid values are:
+
+- $true: The Do Not Forward template is applied.
+
+- $false: The Do Not Forward template is not applied.
 
 ```yaml
 Type: System.Boolean
@@ -562,7 +625,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionDoubleKeyEncryptionUrl
-{{ Fill EncryptionDoubleKeyEncryptionUrl Description }}
+???
 
 ```yaml
 Type: String
@@ -578,7 +641,11 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionEnabled
-{{ Fill EncryptionEnabled Description }}
+The EncryptionEnabled parameter specifies whether encryption in enabled. Value values are:
+
+- $true: Encryption is enabled.
+
+- $false: Encryption is disabled.
 
 ```yaml
 Type: System.Boolean
@@ -594,7 +661,11 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionEncryptOnly
-{{ Fill EncryptionEncryptOnly Description }}
+The EncryptionEncryptOnly parameter specifies whether the Encrypt Only template is applied. Value values are:
+
+- $true: The Encrypt Only template is applied.
+
+- $false: The Encrypt Only template is no applied.
 
 ```yaml
 Type: System.Boolean
@@ -610,7 +681,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionLinkedTemplateId
-{{ Fill EncryptionLinkedTemplateId Description }}
+???
 
 ```yaml
 Type: String
@@ -626,7 +697,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionOfflineAccessDays
-{{ Fill EncryptionOfflineAccessDays Description }}
+The EncryptionOfflineAccessDays parameter specifies the number of days that offline access is allowed.
 
 ```yaml
 Type: System.Int32
@@ -642,7 +713,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionPromptUser
-{{ Fill EncryptionPromptUser Description }}
+???
 
 ```yaml
 Type: System.Boolean
@@ -658,7 +729,11 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionProtectionType
-{{ Fill EncryptionProtectionType Description }}
+The EncryptionProtectionType parameter specifies the protection type for encryption. Valid values are:
+
+- Template
+- RemoveProtection
+- UserDefined
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType
@@ -674,7 +749,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionRightsDefinitions
-{{ Fill EncryptionRightsDefinitions Description }}
+???
 
 ```yaml
 Type: String
@@ -690,7 +765,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionRightsUrl
-{{ Fill EncryptionRightsUrl Description }}
+???
 
 ```yaml
 Type: String
@@ -706,7 +781,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionTemplateId
-{{ Fill EncryptionTemplateId Description }}
+???
 
 ```yaml
 Type: String
@@ -722,7 +797,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MasterIdParameter
@@ -774,7 +849,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationId
-{{ Fill MigrationId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -844,7 +919,13 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAndGroupProtectionAllowAccessToGuestUsers
-{{ Fill SiteAndGroupProtectionAllowAccessToGuestUsers Description }}
+The SiteAndGroupProtectionAllowAccessToGuestUsers parameter enables or disables access to guest users. Valid values are:
+
+- $true: Guest access is enabled.
+
+- $false: Guest access is disabled.
+
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
 
 ```yaml
 Type: System.Boolean
@@ -860,7 +941,13 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAndGroupProtectionAllowEmailFromGuestUsers
-{{ Fill SiteAndGroupProtectionAllowEmailFromGuestUsers Description }}
+The SiteAndGroupProtectionAllowEmailFromGuestUsers parameter enables or disables email from guest users. Valid values are:
+
+- $true: Email from guest users is enabled.
+
+- $false: Email from guest users is disabled.
+
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
 
 ```yaml
 Type: System.Boolean
@@ -876,7 +963,13 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAndGroupProtectionAllowFullAccess
-{{ Fill SiteAndGroupProtectionAllowFullAccess Description }}
+The SiteAndGroupProtectionAllowFullAccess parameter enables or disables full access. Valid values are:
+
+- $true: Full access is enabled.
+
+- $false: Full access is disabled.
+
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
 
 ```yaml
 Type: System.Boolean
@@ -892,7 +985,13 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAndGroupProtectionAllowLimitedAccess
-{{ Fill SiteAndGroupProtectionAllowLimitedAccess Description }}
+The SiteAndGroupProtectionAllowLimitedAccess parameter enables or disables limited access. Valid values are:
+
+- $true: Limited access is enabled.
+
+- $false: Limited access is disabled.
+
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
 
 ```yaml
 Type: System.Boolean
@@ -908,7 +1007,13 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAndGroupProtectionBlockAccess
-{{ Fill SiteAndGroupProtectionBlockAccess Description }}
+The SiteAndGroupProtectionBlockAccess parameter blocks access. Valid values are:
+
+- $true: Access is blocked.
+
+- $false: Access is allowed.
+
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
 
 ```yaml
 Type: System.Boolean
@@ -924,7 +1029,11 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAndGroupProtectionEnabled
-{{ Fill SiteAndGroupProtectionEnabled Description }}
+The SiteAndGroupProtectionEnabled parameter enables or disables the Site and Group Protection action for the label. Valid values are:
+
+- $true: The Site and Group Protection action is enabled.
+
+- $false: The Site and Group Protection action is disabled.
 
 ```yaml
 Type: System.Boolean
@@ -940,7 +1049,12 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAndGroupProtectionPrivacy
-{{ Fill SiteAndGroupProtectionPrivacy Description }}
+The SiteAndGroupProtectionPrivacy parameter specifies the privacy level for the labe. Valid values are:
+
+- Public
+- Private
+
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
