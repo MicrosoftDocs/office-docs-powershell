@@ -38,7 +38,8 @@ Example 1 creates the Location Information Server (LIS) switch with Chassis ID "
 ## PARAMETERS
 
 ### -ChassisID
-If the sub type of ChassisID is MAC Address (default settings for ChassisID) then this value must be a string in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. Otherwise, this value is the string that is set on the switch for used the sub-type (for example Interface Name or IP address).  
+If ChassisID sub type is a MAC Address then this value must be in a string format in the following representation nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. 
+Otherwise, (different sub type, such as Interface Name), then this value must be in a string format as set on the switch
 
 ```yaml
 Type: String

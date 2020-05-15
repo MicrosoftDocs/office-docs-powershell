@@ -3,7 +3,7 @@ title: "Connect to Exchange servers using remote PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 12/20/2016
+ms.date:
 ms.audience: ITPro
 ms.topic: article
 ms.prod: exchange-server-itpro
@@ -19,7 +19,7 @@ description: "Use Windows PowerShell on a local computer to connect to an Exchan
 If you don't have the Exchange management tools installed on your local computer, you can use Windows PowerShell to create a remote PowerShell session to an Exchange server. It's a simple three-step process, where you enter your credentials, provide the required connection settings, and then import the Exchange cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!NOTE]
-> We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You'll get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md). <br/><br/> Get-ExchangeCertificate does not fully support remote PowerShell. We recommend that you use the Exchange Management Shell instead to get all the properties of this cmdlet.
+> We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You'll get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md). <br/><br/> The **Get-ExchangeCertificate** cmdlet does not fully support remote PowerShell. We recommend that you use the Exchange Management Shell instead to get all the properties of this cmdlet.
 
 ## What do you need to know before you begin?
 
@@ -56,7 +56,7 @@ If you don't have the Exchange management tools installed on your local computer
     You need to configure this setting only once on your computer, not every time you connect.
 
 > [!TIP]
-> Having problems? Ask for help in the Exchange forums. Visit the forums at [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612).
+> Having problems? Ask for help in the [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) forum.
 
 ## Connect to a remote Exchange server
 
