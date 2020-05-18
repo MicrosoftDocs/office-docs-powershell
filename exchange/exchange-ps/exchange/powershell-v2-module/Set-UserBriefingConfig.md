@@ -46,7 +46,7 @@ The Identity parameter specifies the user that you want to modify (for example, 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: None
+Aliases:
 Applicable: Exchange Online
 
 Required: True
@@ -66,7 +66,7 @@ The Enabled parameter specifies whether to enable or disable the Briefing email 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: None
+Aliases:
 Applicable: Exchange Online
 
 Required: True
@@ -77,12 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize	
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.	
+This parameter is reserved for internal Microsoft use.
 
 ```yaml	
 Type: Unlimited	
 Parameter Sets: (All)	
-Aliases:	
+Aliases:
 Applicable: Exchange Online	
 Required: False	
 Position: Named	
