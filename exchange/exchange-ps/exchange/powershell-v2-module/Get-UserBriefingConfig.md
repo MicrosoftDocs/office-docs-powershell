@@ -57,11 +57,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-Not applicable
-
 ## OUTPUTS
-
-Not applicable
 
 ## Related links
 
