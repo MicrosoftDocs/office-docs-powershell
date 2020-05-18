@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
-Use the Get-UserBriefingConfig cmdlet to get the current state of the Briefing email flag for the specified user. To enable or disable the Briefing email for a user, use the Set-UserBriefingConfig cmdlet. For more details about configuring the Briefing email, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin).
+Use the Get-UserBriefingConfig cmdlet to get the current state of the Briefing email flag for the specified user. For more details about configuring the Briefing email, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin).
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ This example returns the Briefing configuration for the user lila@contoso.com.
 
 ### -Identity
 
-The Identity parameter specifies the mailbox that you want to view. You identify the mailbox by its UPN (for example, lila@contoso.com).
+The Identity parameter specifies the user that you want to look up (for example, lila@contoso.com).
 
 ```yaml
 Type: String
@@ -49,7 +49,7 @@ Applicable: Exchange Online
 
 Required: True
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
