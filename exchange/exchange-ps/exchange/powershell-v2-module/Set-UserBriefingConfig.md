@@ -27,14 +27,14 @@ Set-UserBriefingConfig -Identity <String> [-Enabled [<$true | $false>]
 
 ## DESCRIPTION
 
-To enable or disable Briefing email for a specific user, use the Exchange Online PowerShell V2 module and this command line, where the string is the applicable username and organization.
+To enable or disable Briefing email for a specific user, use the Exchange Online PowerShell V2 module and this command line, where the string is the applicable username.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Set-UserBriefingConfig -Enabled $true -Identity lila@contoso.com
+Set-UserBriefingConfig -Identity lila@contoso.com -Enabled $true
 ```
 
 This example enables the Briefing email for lila@contoso.com.
@@ -42,6 +42,7 @@ This example enables the Briefing email for lila@contoso.com.
 ## PARAMETERS
 
 ### -Enabled
+
 The Enabled parameter specifies whether to enable or disable the Briefing email for a specified user's mailbox. Valid values are:
 
 - $true: The daily briefing message is enabled. This is the default value.
@@ -56,13 +57,13 @@ Applicable: Exchange Online
 
 Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You identify the mailbox by its UPN (for example, lila@contoso.onmicrosoft.com).
+The Identity parameter specifies the user that you want to modify (for example, lila@contoso.onmicrosoft.com).
 
 ```yaml
 Type: String
@@ -72,7 +73,7 @@ Applicable: Exchange Online
 
 Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
