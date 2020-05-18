@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UserBriefingConfig -Identity <String> [-Enabled [<$true | $false>] [-ResultSize <Unlimited>] [<CommonParameters>]
+Set-UserBriefingConfig -Identity <String> [-Enabled [<$true | $false>] [-ResultSize <Unlimited>]
 ```
 
 ## DESCRIPTION
@@ -90,9 +90,6 @@ Default value: None
 Accept pipeline input: False	Accept pipeline input: False
 Accept wildcard characters: False	Accept wildcard characters: False
 ```
-
-### CommonParameters	
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
