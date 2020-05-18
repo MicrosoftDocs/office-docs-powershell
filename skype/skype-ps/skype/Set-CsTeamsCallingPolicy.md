@@ -20,7 +20,7 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
  [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
   [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
  [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>][[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -48,6 +48,21 @@ PS C:\> Set-CsTeamsCallingPolicy -Identity Global -AllowPrivateCalling $true
 Sets the value of the parameter AllowPrivateCalling, which controls whether or not users can leverage calling functionality in Microsoft Teams, in the global (default) tenant CallingPolicy.
 
 ## PARAMETERS
+
+### -AllowWebPSTNCalling
+Allows web PSTN calling.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowCalling
 Controls interop calling capabilities.
@@ -291,6 +306,25 @@ Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -SafeTransferEnabled
+Possible values
+- Enabled
+- Disabled
+- UserOverride
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
