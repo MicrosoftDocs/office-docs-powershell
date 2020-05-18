@@ -45,11 +45,14 @@ The Identity parameter specifies the mailbox that you want to view. You identify
 
 ```yaml
 Type: String
+Parameter Sets: None
+Aliases: None
+Applicable: Exchange Online
+Required: True
 Position: Named
 Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: Exchange Online
 ```
 
 ## INPUTS
