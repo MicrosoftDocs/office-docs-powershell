@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/set-userbriefingconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/set-userbriefingconfig
 applicable: Exchange Online
 title: Set-UserBriefingConfig
 schema: 2.0.0
