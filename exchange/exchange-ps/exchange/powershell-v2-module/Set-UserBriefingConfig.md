@@ -15,53 +15,33 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
-Use the Set-UserBriefingConfig cmdlet to enable or disable the daily briefing message in a mailbox.
+Use the Set-UserBriefingConfig cmdlet to enable or disable the Briefing for a user. For more details about configuring the Briefing, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin). 
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-UserBriefingConfig -Enabled <Boolean> -Identity <String>
- [-ResultSize <Unlimited>] [<CommonParameters>]
+Set-UserBriefingConfig -Identity <String> [-Enabled [<$true | $false>] [-ResultSize <Unlimited>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+To enable or disable Briefing email for a specific user, use the Exchange Online PowerShell V2 module and this command line, where the string is the applicable username.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-Set-UserBriefingConfig -Enabled $false -Identity lila@contoso.onmicrosoft.com
+Set-UserBriefingConfig -Identity lila@contoso.com -Enabled $true
 ```
 
-This example disables the daily briefing message configuration for the user lila@contoso.onmicrosoft.com.
+This example enables the Briefing email for lila@contoso.com.
 
 ## PARAMETERS
 
-### -Enabled
-The Enabled parameter specifies whether to enable or disable the daily briefing message in the mailbox. Valid values are:
-
-- $true: The daily briefing message is enabled. This is the default value.
-
-- $false: The daily briefing message is disabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You identify the mailbox by its UPN (for example, lila@contoso.onmicrosoft.com).
+The Identity parameter specifies the user that you want to modify (for example, lila@contoso.onmicrosoft.com).
 
 ```yaml
 Type: String
@@ -76,24 +56,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+### -Enabled
+The Enabled parameter specifies whether to enable or disable the Briefing email for a specified user's mailbox. Valid values are:
+
+- $true: The daily briefing message is enabled.
+
+- $false: The daily briefing message is disabled. This is the default value.
 
 ```yaml
-Type: Unlimited
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
-Required: False
+Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+### -ResultSize	
+This parameter is reserved for internal Microsoft use.
+
+```yaml	
+Type: Unlimited	
+Parameter Sets: (All)	
+Aliases:
+Applicable: Exchange Online	
+Required: False	
+Position: Named	
+Default value: None	
+Accept pipeline input: False	Accept pipeline input: False
+Accept wildcard characters: False	Accept wildcard characters: False
+```
 
 ## INPUTS
 
@@ -103,6 +99,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 
-## NOTES
-
 ## RELATED LINKS
+
+[Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin)
