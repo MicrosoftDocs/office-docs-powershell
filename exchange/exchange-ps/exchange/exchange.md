@@ -1629,6 +1629,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ProtectionAlert](Remove-ProtectionAlert.md)
 
+### [Remove-RecordLabel](Remove-RecordLabel.md)
+
 ### [Remove-SupervisoryReviewPolicyV2](Remove-SupervisoryReviewPolicyV2.md)
 
 ### [Remove-TransportRule](Remove-TransportRule.md)
