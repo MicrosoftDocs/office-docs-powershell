@@ -69,7 +69,7 @@ Starts the **simulation** rename of the SPO site with name "samplesite" to "rena
 
 ### -Identity
 
-PARAMVALUE: String
+Specifies the original URL of the site collection.
 
 ```yaml
 Type: String
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -NewSiteUrl
 
-PARAMVALUE: String
+Specifies the new desired URL.
 
 ```yaml
 Type: String
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -NewSiteTitle
 
-PARAMVALUE: String
+Specifies the new Title of the site.
 
 ```yaml
 Type: String
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -SuppressMarketplaceAppCheck
 
-PARAMVALUE: SwitchParameter
+Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated site.
 
 ```yaml
 Type: SwitchParameter
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -SuppressWorkflow2013Check
 
-PARAMVALUE: SwitchParameter
+Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated site.
 
 ```yaml
 Type: SwitchParameter

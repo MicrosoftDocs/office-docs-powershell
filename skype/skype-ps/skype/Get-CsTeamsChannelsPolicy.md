@@ -36,10 +36,10 @@ The CsTeamsChannelsPolicy allows you to manage features related to the Teams & C
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsCallParkPolicy
+PS C:\> Get-CsTeamsChannelsPolicy
 ```
 
-Retrieve all policies that are available in your organization.
+Retrieves all policies related to Teams & Channels that are available in your organization.
 
 
 ## PARAMETERS

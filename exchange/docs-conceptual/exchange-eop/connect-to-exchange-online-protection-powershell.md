@@ -9,18 +9,18 @@ ms.topic: article
 ms.service: eop
 localization_priority: Normal
 ms.assetid: 054e0fd7-d465-4572-93f8-a00a9136e4d1
-description: "Use remote PowerShell to connect to an Exchange Online Protection organization"
+description: "Use remote PowerShell to connect to a standalone Exchange Online Protection (EOP) organization without mailboxes in Exchange Online."
 ---
 
 # Connect to Exchange Online Protection PowerShell
 
-Exchange Online Protection PowerShell allows you to manage your Exchange Online Protection organization from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online Protection. It's a simple three-step process where you enter your Office 365 credentials, provide the required connection settings, and then import the Exchange Online Protection cmdlets into your local Windows PowerShell session so that you can use them.
+In standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, standalone EOP PowerShell allows you to manage your EOP organization from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to EOP. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the EOP cmdlets into your local Windows PowerShell session so that you can use them.
 
 ## What do you need to know before you begin?
 
 - Estimated time to complete: 5 minutes
 
-- Exchange Online Protection PowerShell is only used in *standalone* EOP organizations (for example, you have a standalone EOP subscription to protect your on-premises email environment). If you have an Office 365 subscription that includes EOP (E3, E5, etc.), you don't use Exchange Online Protection PowerShell; the same features are available in [Exchange Online PowerShell](../exchange-online/exchange-online-powershell.md).
+- The instructions in this topic are for organizations without Exchange Online mailboxes (for example, you have a standalone EOP subscription to protect your on-premises email environment). If you have a Microsoft 365 subscription that includes Exchange Online mailboxes, the same features are available in [Exchange Online PowerShell](../exchange-online/exchange-online-powershell.md).
 
 - You can use the following versions of Windows:
 
@@ -40,20 +40,42 @@ Exchange Online Protection PowerShell allows you to manage your Exchange Online 
 
   <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-  - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
+- Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
-    > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
+  > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
-    To require all scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
+  To require all scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-    ```PowerShell
-    Set-ExecutionPolicy RemoteSigned
-    ```
+  ```PowerShell
+  Set-ExecutionPolicy RemoteSigned
+  ```
 
-    You need to configure this setting only once on your computer, not every time you connect.
+- Windows Remote Management (WinRM) needs to be enabled (it's not enabled by default in Windows 7, 8.1 and 10). To enable it, run this command **in a Command Prompt**:
+
+  ```dos
+  winrm quickconfig
+  ```
+
+- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+
+  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
+
+  ```dos
+  winrm get winrm/config/client/auth
+  ```
+
+  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
+
+  ```dos
+  winrm set winrm/config/client/auth @{Basic="true"}
+  ```
+
+  If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
+
+  > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 
 > [!TIP]
-> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
+> Having problems? Ask for help in the [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351) forum.
 
 ## Connect to Exchange Online Protection
 
@@ -75,7 +97,7 @@ Exchange Online Protection PowerShell allows you to manage your Exchange Online 
 
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.protection.outlook.de/powershell-liveid/`
 
-   - For Exchange Online Protection subscriptions that are Exchange Enterprise CAL with Services (includes data loss prevention (DLP) and reporting using web services), use the _ConnectionUri_ value: `https://outlook.office365.com/powershell-liveid/`
+   - For on-premises Exchange organization with Exchange Enterprise CAL with Services licenses, use the _ConnectionUri_ value: `https://outlook.office365.com/powershell-liveid/`
 
 3. Run the following command:
 
@@ -100,7 +122,7 @@ If you receive errors, check the following requirements:
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to your Exchange Online Protection organization.
 
-- TCP port 80 traffic needs to be open between your local computer and Office 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
+- TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 
 - The account you use to connect to Exchange Online Protection PowerShell must be represented as a [mail user in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/manage-mail-users-in-eop) (created manually or by directory synchronization). If the account is not visible in the Exchange admin center (EAC) as a mail user at **Recipients** \> **Contacts**, you'll receive the following error when you try to connect:
 
