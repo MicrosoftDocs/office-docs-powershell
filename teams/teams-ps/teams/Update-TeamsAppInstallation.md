@@ -40,12 +40,14 @@ Update a Teams App in Microsoft Teams.
 PS C:\> Update-TeamsAppInstallation -AppId b9cc7986-dd56-4b57-ab7d-9c4e5288b775 -TeamId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df
 ```
 
+This example updates a Teams App in Microsoft Teams specifying its AppId and TeamId.
+
 ### Example 2
 ```powershell
 PS C:\> Update-TeamsAppInstallation -AppId b9cc7986-dd56-4b57-ab7d-9c4e5288b775 -TeamId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -Permissions "TeamSettings.Read.Group ChannelMessage.Read.Group"
 ```
 
-This example updates a Teams App in Microsoft Teams specifying its AppId and TeamId.
+This example updates a Teams App in Microsoft Teams specifying its AppId and TeamId and RSC Permissions.
 
 ## PARAMETERS
 
