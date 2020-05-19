@@ -997,6 +997,8 @@
   "Get-EXOMobileDeviceStatistics": "powershell-v2-module",
   "Get-EXORecipient": "powershell-v2-module",
   "Get-EXORecipientPermission": "powershell-v2-module",
+  "Get-UserBriefingConfig": "powershell-v2-module",
+  "Set-UserBriefingConfig": "powershell-v2-module",
   "Get-ConnectionByClientTypeDetailReport": "reporting",
   "Get-ConnectionByClientTypeReport": "reporting",
   "Get-CsActiveUserReport": "reporting",
