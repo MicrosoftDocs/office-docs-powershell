@@ -174,6 +174,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
 
+### [Get-CustomizedUserSubmission](Get-CustomizedUserSubmission.md)
+
 ### [Get-DkimSigningConfig](Get-DkimSigningConfig.md)
 
 ### [Get-HostedConnectionFilterPolicy](Get-HostedConnectionFilterPolicy.md)
@@ -216,6 +218,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
 
+### [Get-ReportSubmissionPolicy](Get-ReportSubmissionPolicy.md)
+
 ### [Get-SenderFilterConfig](Get-SenderFilterConfig.md)
 
 ### [Get-SenderIdConfig](Get-SenderIdConfig.md)
@@ -235,6 +239,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-MalwareFilterPolicy](New-MalwareFilterPolicy.md)
 
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
+
+### [New-ReportSubmissionPolicy](New-ReportSubmissionPolicy.md)
 
 ### [Preview-QuarantineMessage](Preview-QuarantineMessage.md)
 
@@ -265,6 +271,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-MalwareFilterPolicy](Remove-MalwareFilterPolicy.md)
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
+
+### [Remove-ReportSubmissionPolicy](Remove-ReportSubmissionPolicy.md)
 
 ### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
 
@@ -305,6 +313,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
 
 ### [Set-RecipientFilterConfig](Set-RecipientFilterConfig.md)
+
+### [Set-ReportSubmissionPolicy](Set-ReportSubmissionPolicy.md)
 
 ### [Set-SenderFilterConfig](Set-SenderFilterConfig.md)
 

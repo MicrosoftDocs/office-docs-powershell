@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/remove-reportsubmissionpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-reportsubmissionpolicy
 applicable: Exchange Online
 title: Remove-ReportSubmissionPolicy
 schema: 2.0.0

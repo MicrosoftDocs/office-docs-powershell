@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/new-reportsubmissionpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-reportsubmissionpolicy
 applicable: Exchange Online
 title: New-ReportSubmissionPolicy
 schema: 2.0.0

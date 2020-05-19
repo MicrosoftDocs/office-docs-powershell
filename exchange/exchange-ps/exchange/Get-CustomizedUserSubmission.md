@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/get-customizedusersubmission
+online version: https://docs.microsoft.com/powershell/module/exchange/get-customizedusersubmission
 applicable: Exchange Online
 title: Get-CustomizedUserSubmission
 schema: 2.0.0
