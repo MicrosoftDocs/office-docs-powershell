@@ -25,15 +25,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
+ [-Conditions <MultiValuedProperty>]
  [-Confirm]
  [-Disabled <Boolean>]
  [-DisplayName <String>]
+ [-LabelActions <MultiValuedProperty>]
  [-LocaleSettings <MultiValuedProperty>]
  [-NextLabel <ComplianceRuleIdParameter>]
  [-ParentId <ComplianceRuleIdParameter>]
  [-PreviousLabel <ComplianceRuleIdParameter>]
  [-Priority <Int32>]
+ [-Setting <PswsHashtable>]
+ [-Settings <PswsHashtable>]
  [-Tooltip <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -105,6 +110,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Conditions
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type:
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -150,6 +171,22 @@ The DisplayName parameter specifies the display name for the sensitivity label. 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabelActions
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -261,6 +298,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Setting
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Settings
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tooltip
 The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
 
@@ -268,6 +337,22 @@ The ToolTip parameter specifies the default tooltip and sensitivity label descri
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Office 365 Security & Compliance Center
 
 Required: False
