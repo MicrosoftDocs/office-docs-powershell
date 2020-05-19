@@ -31,7 +31,7 @@ Sets the owner for a Whiteboard.
 ### -------------------------- EXAMPLE 1 --------------------------
 
 ```
-PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
+PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhiteboardId 00000000-0000-0000-0000-000000000003
 ```
 
 Move a Whiteboard from one user to another.

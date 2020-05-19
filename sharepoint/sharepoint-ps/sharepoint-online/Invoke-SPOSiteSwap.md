@@ -160,6 +160,9 @@ Accept wildcard characters: False
 ### -Force
 
 Overrides and ignores any warnings that have been identified by the Page Diagnostic Tool that are preventing a swap from being initiated.
+
+For example, if you receive the warning "Invoke-SPOSiteSwap : Errors: 0; Warnings: 1; Details: The site is not a communications site or it has the classic publishing feature enabled." then this warning can be overriden and ignored using this parameter.
+
 Any errors identified by the Page Diagnostic Tool will still always prevent a swap from being initiated regardless of this parameter.
 
 ```yaml
