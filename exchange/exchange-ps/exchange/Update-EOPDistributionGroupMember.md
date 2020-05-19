@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/update-eopdistributiongroupmember
+online version: https://docs.microsoft.com/powershell/module/exchange/update-eopdistributiongroupmember
 applicable: Exchange Online Protection
 title: Update-EOPDistributionGroupMember
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-place
+online version: https://docs.microsoft.com/powershell/module/exchange/set-place
 applicable: Exchange Online
 title: Set-Place
 schema: 2.0.0

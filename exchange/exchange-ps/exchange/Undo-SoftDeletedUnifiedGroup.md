@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/undo-softdeletedunifiedgroup
+online version: https://docs.microsoft.com/powershell/module/exchange/undo-softdeletedunifiedgroup
 applicable: Exchange Online
 title: Undo-SoftDeletedUnifiedGroup
 schema: 2.0.0

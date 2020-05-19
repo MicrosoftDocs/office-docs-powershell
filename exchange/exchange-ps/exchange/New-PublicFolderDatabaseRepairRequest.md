@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/new-publicfolderdatabaserepairrequest
+online version: https://docs.microsoft.com/powershell/module/exchange/new-publicfolderdatabaserepairrequest
 applicable: Exchange Server 2010
 title: New-PublicFolderDatabaseRepairRequest
 schema: 2.0.0

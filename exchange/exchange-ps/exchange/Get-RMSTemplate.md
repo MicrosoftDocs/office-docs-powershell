@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-rmstemplate
+online version: https://docs.microsoft.com/powershell/module/exchange/get-rmstemplate
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-RMSTemplate
 schema: 2.0.0

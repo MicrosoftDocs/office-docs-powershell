@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-dynamicdistributiongroup
+online version: https://docs.microsoft.com/powershell/module/exchange/set-dynamicdistributiongroup
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-DynamicDistributionGroup
 schema: 2.0.0

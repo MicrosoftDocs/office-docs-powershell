@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-groupactivityreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-groupactivityreport
 applicable: Exchange Online
 title: Get-GroupActivityReport
 schema: 2.0.0

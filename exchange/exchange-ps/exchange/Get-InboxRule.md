@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-inboxrule
+online version: https://docs.microsoft.com/powershell/module/exchange/get-inboxrule
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-InboxRule
 schema: 2.0.0

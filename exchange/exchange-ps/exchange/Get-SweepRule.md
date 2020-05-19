@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-sweeprule
+online version: https://docs.microsoft.com/powershell/module/exchange/get-sweeprule
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-SweepRule
 schema: 2.0.0

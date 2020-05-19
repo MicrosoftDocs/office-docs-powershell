@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/get-accesstocustomerdatarequest
+online version: https://docs.microsoft.com/powershell/module/exchange/get-accesstocustomerdatarequest
 applicable: Exchange Online
 title: Get-AccessToCustomerDataRequest
 schema: 2.0.0

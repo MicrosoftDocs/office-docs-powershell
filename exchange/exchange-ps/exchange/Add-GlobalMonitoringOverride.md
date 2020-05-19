@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/add-globalmonitoringoverride
+online version: https://docs.microsoft.com/powershell/module/exchange/add-globalmonitoringoverride
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Add-GlobalMonitoringOverride
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/remove-auditconfigurationrule
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-auditconfigurationrule
 applicable: Office 365 Security & Compliance Center
 title: Remove-AuditConfigurationRule
 schema: 2.0.0

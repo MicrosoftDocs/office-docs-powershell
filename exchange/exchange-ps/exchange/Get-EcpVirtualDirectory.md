@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/get-ecpvirtualdirectory
+online version: https://docs.microsoft.com/powershell/module/exchange/get-ecpvirtualdirectory
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-EcpVirtualDirectory
 schema: 2.0.0

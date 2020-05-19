@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-holdcompliancepolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/get-holdcompliancepolicy
 applicable: Office 365 Security & Compliance Center
 title: Get-HoldCompliancePolicy
 schema: 2.0.0

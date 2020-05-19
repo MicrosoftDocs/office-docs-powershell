@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/remove-eopmailuser
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-eopmailuser
 applicable: Exchange Online Protection
 title: Remove-EOPMailUser
 schema: 2.0.0

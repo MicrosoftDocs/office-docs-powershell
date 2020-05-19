@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-eopmailuser
+online version: https://docs.microsoft.com/powershell/module/exchange/new-eopmailuser
 applicable: Exchange Online Protection
 title: New-EOPMailUser
 schema: 2.0.0

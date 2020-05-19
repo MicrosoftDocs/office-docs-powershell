@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/get-ediscoverycaseadmin
+online version: https://docs.microsoft.com/powershell/module/exchange/get-ediscoverycaseadmin
 applicable: Office 365 Security & Compliance Center
 title: Get-eDiscoveryCaseAdmin
 schema: 2.0.0

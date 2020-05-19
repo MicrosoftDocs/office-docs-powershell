@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dataclassification
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-dataclassification
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-DataClassification
 schema: 2.0.0

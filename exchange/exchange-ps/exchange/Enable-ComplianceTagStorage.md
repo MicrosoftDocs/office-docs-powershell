@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/enable-compliancetagstorage
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-compliancetagstorage
 applicable: Office 365 Security & Compliance Center
 title: Enable-ComplianceTagStorage
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-holdcompliancerule
+online version: https://docs.microsoft.com/powershell/module/exchange/new-holdcompliancerule
 applicable: Office 365 Security & Compliance Center
 title: New-HoldComplianceRule
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/enable-safelinksrule
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-safelinksrule
 applicable: Exchange Online, Exchange Online Protection
 title: Enable-SafeLinksRule
 schema: 2.0.0

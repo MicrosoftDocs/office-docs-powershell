@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/connect-mailbox
+online version: https://docs.microsoft.com/powershell/module/exchange/connect-mailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Connect-Mailbox
 schema: 2.0.0

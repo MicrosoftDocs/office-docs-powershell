@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-safeattachmentpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/get-safeattachmentpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Get-SafeAttachmentPolicy
 schema: 2.0.0

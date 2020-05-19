@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-spotenantstoragemetricreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-spotenantstoragemetricreport
 applicable: Exchange Online
 title: Get-SPOTenantStorageMetricReport
 schema: 2.0.0

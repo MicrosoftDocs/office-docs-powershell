@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/install-transportagent
+online version: https://docs.microsoft.com/powershell/module/exchange/install-transportagent
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Install-TransportAgent
 schema: 2.0.0

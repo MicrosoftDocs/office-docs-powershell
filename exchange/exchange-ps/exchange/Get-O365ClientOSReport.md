@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-o365clientosreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-o365clientosreport
 applicable: Exchange Online
 title: Get-O365ClientOSReport
 schema: 2.0.0

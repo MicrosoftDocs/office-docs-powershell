@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/remove-authenticationpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-authenticationpolicy
 applicable: Exchange Online
 title: Remove-AuthenticationPolicy
 schema: 2.0.0

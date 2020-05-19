@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-focusedinbox
+online version: https://docs.microsoft.com/powershell/module/exchange/get-focusedinbox
 applicable: Exchange Online
 title: Get-FocusedInbox
 schema: 2.0.0

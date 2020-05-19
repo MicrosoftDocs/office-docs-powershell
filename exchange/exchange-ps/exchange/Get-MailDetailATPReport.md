@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-maildetailatpreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-maildetailatpreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailDetailATPReport
 schema: 2.0.0

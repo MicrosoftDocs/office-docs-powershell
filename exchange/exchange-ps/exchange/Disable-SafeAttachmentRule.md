@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/disable-safeattachmentrule
+online version: https://docs.microsoft.com/powershell/module/exchange/disable-safeattachmentrule
 applicable: Exchange Online, Exchange Online Protection
 title: Disable-SafeAttachmentRule
 schema: 2.0.0

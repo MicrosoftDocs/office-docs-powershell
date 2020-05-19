@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxlocation
+online version: https://docs.microsoft.com/powershell/module/exchange/get-mailboxlocation
 applicable: Exchange Online
 title: Get-MailboxLocation
 schema: 2.0.0

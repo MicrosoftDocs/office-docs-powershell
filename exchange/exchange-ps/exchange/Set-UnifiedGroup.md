@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-unifiedgroup
+online version: https://docs.microsoft.com/powershell/module/exchange/set-unifiedgroup
 applicable: Exchange Online
 title: Set-UnifiedGroup
 schema: 2.0.0

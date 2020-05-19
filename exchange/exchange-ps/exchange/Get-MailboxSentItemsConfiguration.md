@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxsentitemsconfiguration
+online version: https://docs.microsoft.com/powershell/module/exchange/get-mailboxsentitemsconfiguration
 applicable: Exchange Server 2010
 title: Get-MailboxSentItemsConfiguration
 schema: 2.0.0

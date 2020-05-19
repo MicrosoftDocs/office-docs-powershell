@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/remove-unifiedgroup
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-unifiedgroup
 applicable: Exchange Online
 title: Remove-UnifiedGroup
 schema: 2.0.0

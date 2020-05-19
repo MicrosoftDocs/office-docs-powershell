@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/get-onlinemeetingconfiguration
+online version: https://docs.microsoft.com/powershell/module/exchange/get-onlinemeetingconfiguration
 applicable: Exchange Online
 title: Get-OnlineMeetingConfiguration
 schema: 2.0.0

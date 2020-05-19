@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/remove-compliancecasemember
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-compliancecasemember
 applicable: Office 365 Security & Compliance Center
 title: Remove-ComplianceCaseMember
 schema: 2.0.0

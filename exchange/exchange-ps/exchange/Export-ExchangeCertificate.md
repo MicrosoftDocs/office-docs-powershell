@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/export-exchangecertificate
+online version: https://docs.microsoft.com/powershell/module/exchange/export-exchangecertificate
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Export-ExchangeCertificate
 schema: 2.0.0

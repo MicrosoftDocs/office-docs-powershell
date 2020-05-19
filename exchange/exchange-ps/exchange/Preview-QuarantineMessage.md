@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/preview-quarantinemessage
+online version: https://docs.microsoft.com/powershell/module/exchange/preview-quarantinemessage
 applicable: Exchange Online, Exchange Online Protection
 title: Preview-QuarantineMessage
 schema: 2.0.0

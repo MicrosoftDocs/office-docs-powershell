@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/get-hybridmailflowdatacenterips
+online version: https://docs.microsoft.com/powershell/module/exchange/get-hybridmailflowdatacenterips
 applicable: Exchange Online
 title: Get-HybridMailflowDatacenterIPs
 schema: 2.0.0

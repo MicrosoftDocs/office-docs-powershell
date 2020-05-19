@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-protectionalert
+online version: https://docs.microsoft.com/powershell/module/exchange/set-protectionalert
 applicable: Office 365 Security & Compliance Center
 title: Set-ProtectionAlert
 schema: 2.0.0

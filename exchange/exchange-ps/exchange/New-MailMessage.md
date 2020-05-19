@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-mailmessage
+online version: https://docs.microsoft.com/powershell/module/exchange/new-mailmessage
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailMessage
 schema: 2.0.0

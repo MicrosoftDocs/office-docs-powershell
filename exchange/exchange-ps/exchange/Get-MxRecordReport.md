@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-mxrecordreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-mxrecordreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MxRecordReport
 schema: 2.0.0

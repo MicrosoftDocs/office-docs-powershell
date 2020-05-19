@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/remove-exchangecertificate
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-exchangecertificate
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-ExchangeCertificate
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/set-tenantanalyticsconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/set-tenantanalyticsconfig
 applicable: Exchange Online
 title: Set-TenantAnalyticsConfig
 schema: 2.0.0

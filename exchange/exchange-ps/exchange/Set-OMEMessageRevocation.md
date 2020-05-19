@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-omemessagerevocation
+online version: https://docs.microsoft.com/powershell/module/exchange/set-omemessagerevocation
 applicable: Exchange Online
 title: Set-OMEMessageRevocation
 schema: 2.0.0

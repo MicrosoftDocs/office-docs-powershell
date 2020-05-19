@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/suspend-publicfolderreplication
+online version: https://docs.microsoft.com/powershell/module/exchange/suspend-publicfolderreplication
 applicable: Exchange Server 2010
 title: Suspend-PublicFolderReplication
 schema: 2.0.0

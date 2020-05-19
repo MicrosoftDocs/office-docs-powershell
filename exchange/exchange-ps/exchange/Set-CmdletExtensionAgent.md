@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-cmdletextensionagent
+online version: https://docs.microsoft.com/powershell/module/exchange/set-cmdletextensionagent
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-CmdletExtensionAgent
 schema: 2.0.0

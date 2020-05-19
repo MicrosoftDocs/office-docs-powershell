@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-csconferencereport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-csconferencereport
 applicable: Exchange Online
 title: Get-CsConferenceReport
 schema: 2.0.0

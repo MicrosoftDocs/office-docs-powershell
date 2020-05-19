@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/get-attachmentfilterentry
+online version: https://docs.microsoft.com/powershell/module/exchange/get-attachmentfilterentry
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-AttachmentFilterEntry
 schema: 2.0.0
@@ -26,7 +26,7 @@ Get-AttachmentFilterEntry [[-Identity] <String>] [-DomainController <Fqdn>] [<Co
 ```
 
 ## DESCRIPTION
-On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see [Set-AttachmentFilterListConfig](https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/set-attachmentfilterlistconfig).
+On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see [Set-AttachmentFilterListConfig](https://docs.microsoft.com/powershell/module/exchange/set-attachmentfilterlistconfig).
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 

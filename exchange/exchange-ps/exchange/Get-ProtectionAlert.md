@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-protectionalert
+online version: https://docs.microsoft.com/powershell/module/exchange/get-protectionalert
 applicable: Office 365 Security & Compliance Center
 title: Get-ProtectionAlert
 schema: 2.0.0

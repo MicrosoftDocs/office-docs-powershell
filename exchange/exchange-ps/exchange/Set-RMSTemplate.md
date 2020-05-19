@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-rmstemplate
+online version: https://docs.microsoft.com/powershell/module/exchange/set-rmstemplate
 applicable: Exchange Online
 title: Set-RMSTemplate
 schema: 2.0.0

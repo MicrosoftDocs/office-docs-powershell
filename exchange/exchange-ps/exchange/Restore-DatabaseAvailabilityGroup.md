@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/database-availability-groups/restore-databaseavailabilitygroup
+online version: https://docs.microsoft.com/powershell/module/exchange/restore-databaseavailabilitygroup
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Restore-DatabaseAvailabilityGroup
 schema: 2.0.0

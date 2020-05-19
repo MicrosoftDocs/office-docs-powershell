@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/start-migrationuser
+online version: https://docs.microsoft.com/powershell/module/exchange/start-migrationuser
 applicable: Exchange Online
 title: Start-MigrationUser
 schema: 2.0.0

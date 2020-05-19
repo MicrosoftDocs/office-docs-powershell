@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/devices/remove-deviceconditionalaccessrule
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-deviceconditionalaccessrule
 applicable: Office 365 Security & Compliance Center
 title: Remove-DeviceConditionalAccessRule
 schema: 2.0.0

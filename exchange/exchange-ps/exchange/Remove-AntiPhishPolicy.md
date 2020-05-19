@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/remove-antiphishpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-antiphishpolicy
 applicable: Exchange Online
 title: Remove-AntiPhishPolicy
 schema: 2.0.0

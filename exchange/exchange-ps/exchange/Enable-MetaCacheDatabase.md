@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/enable-metacachedatabase
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-metacachedatabase
 applicable: Exchange Server 2019
 title: Enable-MetaCacheDatabase
 schema: 2.0.0

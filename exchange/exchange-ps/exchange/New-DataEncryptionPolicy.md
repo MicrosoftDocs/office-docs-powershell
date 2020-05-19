@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/new-dataencryptionpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-dataencryptionpolicy
 applicable: Exchange Online
 title: New-DataEncryptionPolicy
 schema: 2.0.0

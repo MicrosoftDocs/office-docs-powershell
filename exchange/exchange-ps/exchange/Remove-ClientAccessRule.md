@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/remove-clientaccessrule
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-clientaccessrule
 applicable: Exchange Server 2019, Exchange Online
 title: Remove-ClientAccessRule
 schema: 2.0.0

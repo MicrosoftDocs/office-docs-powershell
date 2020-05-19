@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-place
+online version: https://docs.microsoft.com/powershell/module/exchange/get-place
 applicable: Exchange Online
 title: Get-Place
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-spoactiveuserreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-spoactiveuserreport
 applicable: Exchange Online
 title: Get-SPOActiveUserReport
 schema: 2.0.0

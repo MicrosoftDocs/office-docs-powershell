@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-policytipconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/get-policytipconfig
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PolicyTipConfig
 schema: 2.0.0

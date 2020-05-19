@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/clean-mailboxdatabase
+online version: https://docs.microsoft.com/powershell/module/exchange/clean-mailboxdatabase
 applicable: Exchange Server 2010
 title: Clean-MailboxDatabase
 schema: 2.0.0

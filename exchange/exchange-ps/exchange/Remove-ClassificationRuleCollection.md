@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-classificationrulecollection
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-classificationrulecollection
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-ClassificationRuleCollection
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/get-exchangeserveraccesslicense
+online version: https://docs.microsoft.com/powershell/module/exchange/get-exchangeserveraccesslicense
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-ExchangeServerAccessLicense
 schema: 2.0.0

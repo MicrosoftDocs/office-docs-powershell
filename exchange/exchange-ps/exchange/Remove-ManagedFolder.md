@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-managedfolder
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-managedfolder
 applicable: Exchange Server 2010
 title: Remove-ManagedFolder
 schema: 2.0.0

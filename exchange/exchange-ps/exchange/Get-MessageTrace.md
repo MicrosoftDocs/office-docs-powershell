@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/get-messagetrace
+online version: https://docs.microsoft.com/powershell/module/exchange/get-messagetrace
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MessageTrace
 schema: 2.0.0

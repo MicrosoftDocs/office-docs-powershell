@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/install-unifiedcomplianceprerequisite
+online version: https://docs.microsoft.com/powershell/module/exchange/install-unifiedcomplianceprerequisite
 applicable: Office 365 Security & Compliance Center
 title: Install-UnifiedCompliancePrerequisite
 schema: 2.0.0

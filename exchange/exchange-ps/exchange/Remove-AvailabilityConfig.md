@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/remove-availabilityconfig
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-availabilityconfig
 applicable: Exchange Online
 title: Remove-AvailabilityConfig
 schema: 2.0.0

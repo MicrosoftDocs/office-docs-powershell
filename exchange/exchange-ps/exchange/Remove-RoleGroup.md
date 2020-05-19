@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/role-based-access-control/remove-rolegroup
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-rolegroup
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Remove-RoleGroup
 schema: 2.0.0

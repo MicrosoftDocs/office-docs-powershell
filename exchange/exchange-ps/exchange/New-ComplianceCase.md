@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-ediscovery/new-compliancecase
+online version: https://docs.microsoft.com/powershell/module/exchange/new-compliancecase
 applicable: Office 365 Security & Compliance Center
 title: New-ComplianceCase
 schema: 2.0.0

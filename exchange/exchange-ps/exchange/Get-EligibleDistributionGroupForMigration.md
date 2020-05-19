@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-eligibledistributiongroupformigration
+online version: https://docs.microsoft.com/powershell/module/exchange/get-eligibledistributiongroupformigration
 applicable: Exchange Online
 title: Get-EligibleDistributionGroupForMigration
 schema: 2.0.0

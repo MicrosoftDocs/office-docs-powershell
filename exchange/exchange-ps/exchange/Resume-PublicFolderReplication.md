@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/resume-publicfolderreplication
+online version: https://docs.microsoft.com/powershell/module/exchange/resume-publicfolderreplication
 applicable: Exchange Server 2010
 title: Resume-PublicFolderReplication
 schema: 2.0.0

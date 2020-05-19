@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/restore-mailbox
+online version: https://docs.microsoft.com/powershell/module/exchange/restore-mailbox
 applicable: Exchange Server 2010
 title: Restore-Mailbox
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/new-outboundconnector
+online version: https://docs.microsoft.com/powershell/module/exchange/new-outboundconnector
 applicable: Exchange Online, Exchange Online Protection
 title: New-OutboundConnector
 schema: 2.0.0

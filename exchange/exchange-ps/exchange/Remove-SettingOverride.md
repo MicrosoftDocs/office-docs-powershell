@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/remove-settingoverride
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-settingoverride
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-SettingOverride
 schema: 2.0.0

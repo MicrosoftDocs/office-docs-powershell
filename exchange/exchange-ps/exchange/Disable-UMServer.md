@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/disable-umserver
+online version: https://docs.microsoft.com/powershell/module/exchange/disable-umserver
 applicable: Exchange Server 2010
 title: Disable-UMServer
 schema: 2.0.0

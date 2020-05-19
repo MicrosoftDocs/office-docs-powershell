@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/send-textmessagingverificationcode
+online version: https://docs.microsoft.com/powershell/module/exchange/send-textmessagingverificationcode
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Send-TextMessagingVerificationCode
 schema: 2.0.0

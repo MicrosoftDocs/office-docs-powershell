@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-labelpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-labelpolicy
 applicable: Office 365 Security & Compliance Center
 title: Remove-LabelPolicy
 schema: 2.0.0

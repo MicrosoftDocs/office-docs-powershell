@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/test-clientaccessrule
+online version: https://docs.microsoft.com/powershell/module/exchange/test-clientaccessrule
 applicable: Exchange Server 2019, Exchange Online
 title: Test-ClientAccessRule
 schema: 2.0.0

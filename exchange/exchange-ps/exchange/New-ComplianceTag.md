@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-compliancetag
+online version: https://docs.microsoft.com/powershell/module/exchange/new-compliancetag
 applicable: Office 365 Security & Compliance Center
 title: New-ComplianceTag
 schema: 2.0.0

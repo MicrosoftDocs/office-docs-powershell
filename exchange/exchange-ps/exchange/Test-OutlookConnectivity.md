@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/test-outlookconnectivity
+online version: https://docs.microsoft.com/powershell/module/exchange/test-outlookconnectivity
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-OutlookConnectivity
 schema: 2.0.0
@@ -88,7 +88,7 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -WSTestType <Virtual
 ## DESCRIPTION
 Running the Test-OutlookConnectivity cmdlet validates an Outlook connection defined by the provided parameters. The command is able to validate a single mailbox.
 
-The Test-OutlookConnectivity cmdlet runs the same process as the monitoring probes. The Microsoft Exchange Health Manager (MSExchangeHM) service must be running and have created the Outlook probes on the machine that will be tested. You need to select one of the Outlook probe identities to run the test. Use the [Get-MonitoringItemIdentity](https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/Get-MonitoringItemIdentity) cmdlet to see what probes are active.
+The Test-OutlookConnectivity cmdlet runs the same process as the monitoring probes. The Microsoft Exchange Health Manager (MSExchangeHM) service must be running and have created the Outlook probes on the machine that will be tested. You need to select one of the Outlook probe identities to run the test. Use the [Get-MonitoringItemIdentity](https://docs.microsoft.com/powershell/module/exchange/Get-MonitoringItemIdentity) cmdlet to see what probes are active.
 
 This example lists the probes running in the backend services on a Mailbox server: `Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook.protocol | ?{$_.Name -like '*probe'}`.
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access/set-casmailboxplan
+online version: https://docs.microsoft.com/powershell/module/exchange/set-casmailboxplan
 applicable: Exchange Online
 title: Set-CASMailboxPlan
 schema: 2.0.0

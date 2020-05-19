@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/get-settingoverride
+online version: https://docs.microsoft.com/powershell/module/exchange/get-settingoverride
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-SettingOverride
 schema: 2.0.0

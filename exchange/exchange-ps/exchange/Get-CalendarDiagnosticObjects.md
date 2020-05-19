@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-calendardiagnosticobjects
+online version: https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticobjects
 applicable: Exchange Online
 title: Get-CalendarDiagnosticObjects
 schema: 2.0.0

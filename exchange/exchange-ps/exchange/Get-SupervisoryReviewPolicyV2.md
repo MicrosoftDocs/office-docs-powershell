@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-supervisoryreviewpolicyv2
+online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewpolicyv2
 applicable: Office 365 Security & Compliance Center
 title: Get-SupervisoryReviewPolicyV2
 schema: 2.0.0

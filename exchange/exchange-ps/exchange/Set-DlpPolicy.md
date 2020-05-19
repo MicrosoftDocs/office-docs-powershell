@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlppolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/set-dlppolicy
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-DlpPolicy
 schema: 2.0.0

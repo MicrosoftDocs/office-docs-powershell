@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/client-access-servers/new-clientaccessarray
+online version: https://docs.microsoft.com/powershell/module/exchange/new-clientaccessarray
 applicable: Exchange Server 2010
 title: New-ClientAccessArray
 schema: 2.0.0

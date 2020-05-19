@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-advancedthreatprotectiondocumentreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-advancedthreatprotectiondocumentreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-AdvancedThreatProtectionDocumentReport
 schema: 2.0.0

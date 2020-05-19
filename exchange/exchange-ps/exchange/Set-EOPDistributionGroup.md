@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-eopdistributiongroup
+online version: https://docs.microsoft.com/powershell/module/exchange/set-eopdistributiongroup
 applicable: Exchange Online Protection
 title: Set-EOPDistributionGroup
 schema: 2.0.0

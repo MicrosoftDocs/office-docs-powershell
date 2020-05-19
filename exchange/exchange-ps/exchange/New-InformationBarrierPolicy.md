@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-informationbarrierpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy
 applicable: Office 365 Security & Compliance Center
 title: New-InformationBarrierPolicy
 schema: 2.0.0

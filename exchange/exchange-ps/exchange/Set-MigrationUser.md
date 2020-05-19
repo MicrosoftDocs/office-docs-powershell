@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/move-and-migration/set-migrationuser
+online version: https://docs.microsoft.com/powershell/module/exchange/set-migrationuser
 applicable: Exchange Online
 title: Set-MigrationUser
 schema: 2.0.0

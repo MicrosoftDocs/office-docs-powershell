@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/new-safelinkspolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-safelinkspolicy
 applicable: Exchange Online, Exchange Online Protection
 title: New-SafeLinksPolicy
 schema: 2.0.0

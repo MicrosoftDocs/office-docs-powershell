@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/devices/remove-activesyncdeviceaccessrule
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-activesyncdeviceaccessrule
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-ActiveSyncDeviceAccessRule
 schema: 2.0.0

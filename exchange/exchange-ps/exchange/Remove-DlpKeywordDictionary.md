@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dlpkeyworddictionary
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-dlpkeyworddictionary
 applicable: Office 365 Security & Compliance Center
 title: Remove-DlpKeywordDictionary
 schema: 2.0.0

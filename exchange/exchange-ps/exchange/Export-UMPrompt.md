@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/export-umprompt
+online version: https://docs.microsoft.com/powershell/module/exchange/export-umprompt
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Export-UMPrompt
 schema: 2.0.0

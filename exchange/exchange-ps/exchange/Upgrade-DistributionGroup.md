@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/users-and-groups/upgrade-distributiongroup
+online version: https://docs.microsoft.com/powershell/module/exchange/upgrade-distributiongroup
 applicable: Exchange Online
 title: Upgrade-DistributionGroup
 schema: 2.0.0

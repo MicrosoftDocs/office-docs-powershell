@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/remove-authserver
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-authserver
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-AuthServer
 schema: 2.0.0

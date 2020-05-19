@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/devices/export-activesynclog
+online version: https://docs.microsoft.com/powershell/module/exchange/export-activesynclog
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Export-ActiveSyncLog
 schema: 2.0.0

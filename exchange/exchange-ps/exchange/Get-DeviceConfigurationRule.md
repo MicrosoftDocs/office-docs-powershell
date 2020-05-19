@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/devices/get-deviceconfigurationrule
+online version: https://docs.microsoft.com/powershell/module/exchange/get-deviceconfigurationrule
 applicable: Office 365 Security & Compliance Center
 title: Get-DeviceConfigurationRule
 schema: 2.0.0

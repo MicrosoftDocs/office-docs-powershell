@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-recipientstatisticsreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-recipientstatisticsreport
 applicable: Exchange Online
 title: Get-RecipientStatisticsReport
 schema: 2.0.0

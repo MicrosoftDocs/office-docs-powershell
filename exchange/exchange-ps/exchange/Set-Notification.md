@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/set-notification
+online version: https://docs.microsoft.com/powershell/module/exchange/set-notification
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-Notification
 schema: 2.0.0

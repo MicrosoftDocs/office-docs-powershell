@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxplan
+online version: https://docs.microsoft.com/powershell/module/exchange/get-mailboxplan
 applicable: Exchange Online
 title: Get-MailboxPlan
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/unified-messaging/disable-ummailbox
+online version: https://docs.microsoft.com/powershell/module/exchange/disable-ummailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Disable-UMMailbox
 schema: 2.0.0

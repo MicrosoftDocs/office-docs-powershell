@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/enable-antiphishrule
+online version: https://docs.microsoft.com/powershell/module/exchange/enable-antiphishrule
 applicable: Exchange Online
 title: Enable-AntiPhishRule
 schema: 2.0.0

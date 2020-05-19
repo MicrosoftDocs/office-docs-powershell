@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-organizationsegment
+online version: https://docs.microsoft.com/powershell/module/exchange/new-organizationsegment
 applicable: Office 365 Security & Compliance Center
 title: New-OrganizationSegment
 schema: 2.0.0

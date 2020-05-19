@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-advancedthreatprotectiontrafficreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-advancedthreatprotectiontrafficreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-AdvancedThreatProtectionTrafficReport
 schema: 2.0.0

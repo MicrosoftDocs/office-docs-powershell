@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-managedcontentsettings
+online version: https://docs.microsoft.com/powershell/module/exchange/new-managedcontentsettings
 applicable: Exchange Server 2010
 title: New-ManagedContentSettings
 schema: 2.0.0

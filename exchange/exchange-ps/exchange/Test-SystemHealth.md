@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/test-systemhealth
+online version: https://docs.microsoft.com/powershell/module/exchange/test-systemhealth
 applicable: Exchange Server 2010
 title: Test-SystemHealth
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/get-hybridmailflow
+online version: https://docs.microsoft.com/powershell/module/exchange/get-hybridmailflow
 applicable: Exchange Online
 title: Get-HybridMailflow
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/add-publicfolderadministrativepermission
+online version: https://docs.microsoft.com/powershell/module/exchange/add-publicfolderadministrativepermission
 applicable: Exchange Server 2010
 title: Add-PublicFolderAdministrativePermission
 schema: 2.0.0

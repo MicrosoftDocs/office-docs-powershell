@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/remove-onpremisesorganization
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-onpremisesorganization
 applicable: Exchange Online
 title: Remove-OnPremisesOrganization
 schema: 2.0.0

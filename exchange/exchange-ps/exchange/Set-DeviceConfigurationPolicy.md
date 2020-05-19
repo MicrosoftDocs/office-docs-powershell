@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/devices/set-deviceconfigurationpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/set-deviceconfigurationpolicy
 applicable: Office 365 Security & Compliance Center
 title: Set-DeviceConfigurationPolicy
 schema: 2.0.0

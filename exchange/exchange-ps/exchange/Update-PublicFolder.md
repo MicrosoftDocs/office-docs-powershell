@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/sharing-and-collaboration/update-publicfolder
+online version: https://docs.microsoft.com/powershell/module/exchange/update-publicfolder
 applicable: Exchange Server 2010
 title: Update-PublicFolder
 schema: 2.0.0

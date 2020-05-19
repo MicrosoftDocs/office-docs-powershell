@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.Management-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-clutter
+online version: https://docs.microsoft.com/powershell/module/exchange/get-clutter
 applicable: Exchange Online
 title: Get-Clutter
 schema: 2.0.0

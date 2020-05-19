@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/redirect-message
+online version: https://docs.microsoft.com/powershell/module/exchange/redirect-message
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Redirect-Message
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/New-OMEConfiguration
+online version: https://docs.microsoft.com/powershell/module/exchange/New-OMEConfiguration
 applicable: Exchange Online
 title: New-OMEConfiguration
 schema: 2.0.0

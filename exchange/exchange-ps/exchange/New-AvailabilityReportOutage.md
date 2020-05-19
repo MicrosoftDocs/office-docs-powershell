@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/server-health-and-performance/new-availabilityreportoutage
+online version: https://docs.microsoft.com/powershell/module/exchange/new-availabilityreportoutage
 applicable: Exchange Server 2010
 title: New-AvailabilityReportOutage
 schema: 2.0.0

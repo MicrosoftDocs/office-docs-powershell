@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/disable-hostedcontentfilterrule
+online version: https://docs.microsoft.com/powershell/module/exchange/disable-hostedcontentfilterrule
 applicable: Exchange Online, Exchange Online Protection
 title: Disable-HostedContentFilterRule
 schema: 2.0.0

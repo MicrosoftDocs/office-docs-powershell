@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/remove-safelinkspolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-safelinkspolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Remove-SafeLinksPolicy
 schema: 2.0.0

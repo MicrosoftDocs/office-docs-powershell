@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipient
+online version: https://docs.microsoft.com/powershell/module/exchange/get-exorecipient
 applicable: Exchange Online
 title: Get-EXORecipient
 schema: 2.0.0

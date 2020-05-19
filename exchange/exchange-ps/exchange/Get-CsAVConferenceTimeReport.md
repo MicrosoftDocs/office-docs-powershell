@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-csavconferencetimereport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-csavconferencetimereport
 applicable: Exchange Online
 title: Get-CsAVConferenceTimeReport
 schema: 2.0.0

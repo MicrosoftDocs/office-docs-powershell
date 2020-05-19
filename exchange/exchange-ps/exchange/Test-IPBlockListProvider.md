@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/test-ipblocklistprovider
+online version: https://docs.microsoft.com/powershell/module/exchange/test-ipblocklistprovider
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-IPBlockListProvider
 schema: 2.0.0

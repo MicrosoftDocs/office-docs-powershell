@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/disable-metacachedatabase
+online version: https://docs.microsoft.com/powershell/module/exchange/disable-metacachedatabase
 applicable: Exchange Server 2019
 title: Disable-MetaCacheDatabase
 schema: 2.0.0

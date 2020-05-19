@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mail-flow/start-edgesynchronization
+online version: https://docs.microsoft.com/powershell/module/exchange/start-edgesynchronization
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Start-EdgeSynchronization
 schema: 2.0.0

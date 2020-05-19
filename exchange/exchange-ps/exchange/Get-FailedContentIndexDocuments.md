@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/mailbox-databases-and-servers/get-failedcontentindexdocuments
+online version: https://docs.microsoft.com/powershell/module/exchange/get-failedcontentindexdocuments
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-FailedContentIndexDocuments
 schema: 2.0.0

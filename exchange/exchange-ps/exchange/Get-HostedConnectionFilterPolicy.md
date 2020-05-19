@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/get-hostedconnectionfilterpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/get-hostedconnectionfilterpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Get-HostedConnectionFilterPolicy
 schema: 2.0.0

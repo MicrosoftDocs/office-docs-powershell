@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/organization/new-authenticationpolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/new-authenticationpolicy
 applicable: Exchange Online
 title: New-AuthenticationPolicy
 schema: 2.0.0

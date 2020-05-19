@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-managedcontentsettings
+online version: https://docs.microsoft.com/powershell/module/exchange/set-managedcontentsettings
 applicable: Exchange Server 2010
 title: Set-ManagedContentSettings
 schema: 2.0.0
@@ -35,7 +35,7 @@ Set-ManagedContentSettings [-Identity] <ELCContentSettingsIdParameter>
 ## DESCRIPTION
 Managed content settings are settings that you apply to managed folders to control the lifespan of items in users' mailboxes. For more information about managed content settings, see [Messaging Records Management](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123507(v=exchg.141)).
 
-Although the New-ManagedContentSettings cmdlet has the MessageClass parameter, the Set-ManagedContentSettings cmdlet doesn't. If you want to change the message type to which content settings apply, you must delete and then re-create the content settings. For more information about the MessageClass parameter, see [New-ManagedContentSettings](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-managedcontentsettings).
+Although the New-ManagedContentSettings cmdlet has the MessageClass parameter, the Set-ManagedContentSettings cmdlet doesn't. If you want to change the message type to which content settings apply, you must delete and then re-create the content settings. For more information about the MessageClass parameter, see [New-ManagedContentSettings](https://docs.microsoft.com/powershell/module/exchange/new-managedcontentsettings).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
 

@@ -1,6 +1,6 @@
  ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/release-quarantinemessage
+online version: https://docs.microsoft.com/powershell/module/exchange/release-quarantinemessage
 applicable: Exchange Online, Exchange Online Protection
 title: Release-QuarantineMessage
 schema: 2.0.0

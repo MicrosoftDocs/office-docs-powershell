@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-outboundconnectorreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-outboundconnectorreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-OutboundConnectorReport
 schema: 2.0.0

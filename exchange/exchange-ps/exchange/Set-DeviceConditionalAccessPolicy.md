@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/devices/set-deviceconditionalaccesspolicy
+online version: https://docs.microsoft.com/powershell/module/exchange/set-deviceconditionalaccesspolicy
 applicable: Office 365 Security & Compliance Center
 title: Set-DeviceConditionalAccessPolicy
 schema: 2.0.0

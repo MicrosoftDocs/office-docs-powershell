@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-licensevsusagesummaryreport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-licensevsusagesummaryreport
 applicable: Exchange Online
 title: Get-LicenseVsUsageSummaryReport
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reporting/get-sposkydriveprostoragereport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-sposkydriveprostoragereport
 applicable: Exchange Online
 title: Get-SPOSkyDriveProStorageReport
 schema: 2.0.0
