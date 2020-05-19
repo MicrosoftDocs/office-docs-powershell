@@ -1,26 +1,26 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/import-fileplanproperty
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-fileplanpropertyauthority
 applicable: Office 365 Security & Compliance Center
-title: Import-FilePlanProperty
+title: Remove-FilePlanPropertyAuthority
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Import-FilePlanProperty
+# Remove-FilePlanPropertyAuthority
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Import-FilePlanProperty cmdlet to
+Use the Remove-FilePlanPropertyAuthority cmdlet to
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Import-FilePlanProperty [-RawCsv] <String> [-Confirm] [-DomainController <Fqdn>] [-Force] [-ValidateOnly]
- [-WhatIf] [<CommonParameters>]
+Remove-FilePlanPropertyAuthority [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,24 +57,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-{{Fill Force Description}}
+### -ForceDeletion
+{{Fill ForceDeletion Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -89,11 +73,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RawCsv
-{{Fill RawCsv Description}}
+### -Identity
+{{Fill Identity Description}}
 
 ```yaml
-Type: String
+Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -101,23 +85,7 @@ Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ValidateOnly
-{{Fill ValidateOnly Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

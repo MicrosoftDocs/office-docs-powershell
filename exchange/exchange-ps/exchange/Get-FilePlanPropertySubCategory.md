@@ -1,25 +1,25 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-fileplanpropertycitation
+online version: https://docs.microsoft.com/powershell/module/exchange/get-fileplanpropertysubcategory
 applicable: Office 365 Security & Compliance Center
-title: Get-FilePlanPropertyCitation
+title: Get-FilePlanPropertySubCategory
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Get-FilePlanPropertyCitation
+# Get-FilePlanPropertySubCategory
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Get-FilePlanPropertyCitation cmdlet to
+Use the Get-FilePlanPropertySubCategory cmdlet to
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-FilePlanPropertyCitation [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
+Get-FilePlanPropertySubCategory [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

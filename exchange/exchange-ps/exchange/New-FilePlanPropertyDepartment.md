@@ -1,25 +1,25 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-fileplanpropertyauthority
+online version: https://docs.microsoft.com/powershell/module/exchange/new-fileplanpropertydepartment
 applicable: Office 365 Security & Compliance Center
-title: New-FilePlanPropertyAuthority
+title: New-FilePlanPropertyDepartment
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# New-FilePlanPropertyAuthority
+# New-FilePlanPropertyDepartment
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the New-FilePlanPropertyAuthority cmdlet to
+Use the New-FilePlanPropertyDepartment cmdlet to
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-FilePlanPropertyAuthority [-Name] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+New-FilePlanPropertyDepartment [-Name] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

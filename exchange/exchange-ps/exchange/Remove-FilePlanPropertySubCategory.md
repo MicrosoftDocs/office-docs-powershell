@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-fileplanpropertysubcategory
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-fileplanpropertysubcategory
 applicable: Office 365 Security & Compliance Center
 title: Remove-FilePlanPropertySubCategory
 schema: 2.0.0

@@ -1,25 +1,25 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-fileplanpropertyreferenceid
+online version: https://docs.microsoft.com/powershell/module/exchange/new-fileplanpropertysubcategory
 applicable: Office 365 Security & Compliance Center
-title: Remove-FilePlanPropertyReferenceId
+title: New-FilePlanPropertySubCategory
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Remove-FilePlanPropertyReferenceId
+# New-FilePlanPropertySubCategory
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the New-FilePlanPropertyReferenceId cmdlet to
+Use the New-FilePlanPropertySubCategory cmdlet to
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-FilePlanPropertyReferenceId [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf]
+New-FilePlanPropertySubCategory [-Name] <String> [-Confirm] -ParentId <ComplianceRuleIdParameter> [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -57,27 +57,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceDeletion
-{{Fill ForceDeletion Description}}
+### -Name
+{{Fill Name Description}}
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{Fill Identity Description}}
-
-```yaml
-Type: PolicyIdParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -85,7 +69,23 @@ Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentId
+{{Fill ParentId Description}}
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

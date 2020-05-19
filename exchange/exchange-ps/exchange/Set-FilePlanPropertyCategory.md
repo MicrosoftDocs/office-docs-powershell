@@ -1,24 +1,25 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-fileplanpropertyreferenceid
+online version: https://docs.microsoft.com/powershell/module/exchange/set-fileplanpropertycategory
 applicable: Office 365 Security & Compliance Center
-title: Set-FilePlanPropertyReferenceId
+title: Set-FilePlanPropertyCategory
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Set-FilePlanPropertyReferenceId
+# Set-FilePlanPropertyCategory
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Set
+Use the Set-FilePlanPropertyCategory cmdlet to
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-FilePlanPropertyReferenceId [-Identity] <ComplianceRuleIdParameter> [-Confirm] [-DisplayName <String>]
+Set-FilePlanPropertyCategory [-Identity] <ComplianceRuleIdParameter> [-Confirm] [-DisplayName <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 

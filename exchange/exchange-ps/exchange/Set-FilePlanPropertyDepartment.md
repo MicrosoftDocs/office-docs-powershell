@@ -1,30 +1,30 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-fileplanpropertycategory
+online version: https://docs.microsoft.com/powershell/module/exchange/set-fileplanpropertydepartment
 applicable: Office 365 Security & Compliance Center
-title: Set-FilePlanPropertyCategory
+title: Set-FilePlanPropertyDepartment
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Set-FilePlanPropertyCategory
+# Set-FilePlanPropertyDepartment
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Set-FilePlanPropertyCategory cmdlet to
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
-
 ## SYNTAX
 
 ```
-Set-FilePlanPropertyCategory [-Identity] <ComplianceRuleIdParameter> [-Confirm] [-DisplayName <String>]
+Set-FilePlanPropertyDepartment [-Identity] <ComplianceRuleIdParameter> [-Confirm] [-DisplayName <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+
+Use the Set-FilePlanPropertyDepartment cmdlet to
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## EXAMPLES
 

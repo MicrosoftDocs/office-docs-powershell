@@ -1,25 +1,25 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-fileplanpropertyauthority
+https://docs.microsoft.com/powershell/module/exchange/get-fileplanpropertycategory
 applicable: Office 365 Security & Compliance Center
-title: Get-FilePlanPropertyAuthority
+title: Get-FilePlanPropertyCategory
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Get-FilePlanPropertyAuthority
+# Get-FilePlanPropertyCategory
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Get-FilePlanPropertyAuthority cmdlet to
+Use the Fet-FilePlanPropertyCategory cmdlet to
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-FilePlanPropertyAuthority [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
+Get-FilePlanPropertyCategory [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

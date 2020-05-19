@@ -1,26 +1,26 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-fileplanpropertydepartment
+online version: https://docs.microsoft.com/powershell/module/exchange/set-fileplanpropertyauthority
 applicable: Office 365 Security & Compliance Center
-title: Remove-FilePlanPropertyDepartment
+title: Set-FilePlanPropertyAuthority
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Remove-FilePlanPropertyDepartment
+# Set-FilePlanPropertyAuthority
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Removet-FilePlanPropertyDepartment cmdlet to
+Use the Set-FilePlanPropertyAuthority cmdlet to
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-FilePlanPropertyDepartment [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf]
- [<CommonParameters>]
+Set-FilePlanPropertyAuthority [-Identity] <ComplianceRuleIdParameter> [-Confirm] [-DisplayName <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,11 +57,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceDeletion
-{{Fill ForceDeletion Description}}
+### -DisplayName
+{{Fill DisplayName Description}}
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 {{Fill Identity Description}}
 
 ```yaml
-Type: PolicyIdParameter
+Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

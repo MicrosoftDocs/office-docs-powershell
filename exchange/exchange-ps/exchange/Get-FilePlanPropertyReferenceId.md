@@ -1,25 +1,25 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-fileplanpropertydepartment
+online version: https://docs.microsoft.com/powershell/module/exchange/get-fileplanpropertyreferenceid
 applicable: Office 365 Security & Compliance Center
-title: Get-FilePlanPropertyDepartment
+title: Get-FilePlanPropertyReferenceId
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Get-FilePlanPropertyDepartment
+# Get-FilePlanPropertyReferenceId
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Get-FilePlanPropertyDepartment cmdlet to
+Use the Get-FilePlanPropertyReferenceId cmdlet to
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-FilePlanPropertyDepartment [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
+Get-FilePlanPropertyReferenceId [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -1,26 +1,25 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-fileplanpropertysubcategory
+online version: https://docs.microsoft.com/powershell/module/exchange/new-fileplanpropertycategor
 applicable: Office 365 Security & Compliance Center
-title: Set-FilePlanPropertySubCategory
+title: New-FilePlanPropertyCategory
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Set-FilePlanPropertySubCategory
+# New-FilePlanPropertyCategory
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Set-FilePlanPropertySubCategory cmdlet to
+Use the New-FilePlanPropertyCategory cmdlet to
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-FilePlanPropertySubCategory [-Identity] <ComplianceRuleIdParameter> [-Confirm] [-DisplayName <String>]
- [-WhatIf] [<CommonParameters>]
+New-FilePlanPropertyCategory [-Name] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,8 +56,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisplayName
-{{Fill DisplayName Description}}
+### -Name
+{{Fill Name Description}}
 
 ```yaml
 Type: String
@@ -66,26 +65,10 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{Fill Identity Description}}
-
-```yaml
-Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

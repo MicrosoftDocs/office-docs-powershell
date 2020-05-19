@@ -1,25 +1,25 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/get-fileplanpropertystructure
+online version: https://docs.microsoft.com/powershell/module/exchange/set-fileplanpropertycitation
 applicable: Office 365 Security & Compliance Center
-title: Get-FilePlanPropertyStructure
+title: Get-FilePlanPropertyCitation
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Get-FilePlanPropertyStructure
+# Get-FilePlanPropertyCitation
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Get-FilePlanPropertyStructure cmdlet to
+Use the Get-FilePlanPropertyCitation cmdlet to
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-FilePlanPropertyStructure [-IncludeAdditionalInfo] [<CommonParameters>]
+Get-FilePlanPropertyCitation [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,19 +36,19 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## PARAMETERS
 
-### -IncludeAdditionalInfo
-{{Fill IncludeAdditionalInfo Description}}
+### -Identity
+{{Fill Identity Description}}
 
 ```yaml
-Type: SwitchParameter
+Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 
 Required: False
-Position: Named
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
