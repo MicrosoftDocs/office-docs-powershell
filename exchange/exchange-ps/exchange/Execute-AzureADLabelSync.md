@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/execute-azureadlabelsync
+online version: https://docs.microsoft.com/powershell/module/exchange/execute-azureadlabelsync
 applicable: Office 365 Security & Compliance Center
 title: Execute-AzureADLabelSync
 schema: 2.0.0
