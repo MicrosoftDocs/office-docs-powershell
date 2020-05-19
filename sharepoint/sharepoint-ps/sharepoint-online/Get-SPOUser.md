@@ -44,7 +44,7 @@ For more information about how to use parameter sets, see [Cmdlet Parameter Sets
 
 The `Get-SPOUser` cmdlet matches one and only one user or security group.
 
-You must be a SharePoint Online global administrator and a site collection administrator to run the `Get-SPOUser` cmdlet.
+You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the `Get-SPOUser` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832>.
 
@@ -64,7 +64,7 @@ Example 1 returns all user or security group accounts from the site collection <
 Get-SPOUser -Site https://contoso.sharepoint.com/sites/finance -LoginName melissa.kerr@contoso.com
 ```
 
-Example 2 returns one user or security group account whose user name is HYPERLINK "mailto:melissa.kerr@contoso.com" melissa.kerr@contoso.com from the site collection <https://contoso.sharepoint.com/sites/finance>.
+Example 2 returns one user or security group account whose user name is "melissa.kerr@contoso.com" from the site collection <https://contoso.sharepoint.com/sites/finance>.
 
 ### -----------------------EXAMPLE 3-----------------------------
 

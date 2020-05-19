@@ -47,9 +47,9 @@ The available property sets for the **Get-EXOCasMailbox** cmdlet and the propert
 
 For more information, see:
 
-- [Get-EXOCASMailbox](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exocasmailbox)
+- [Get-EXOCASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exocasmailbox)
 
-- [Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)
+- [Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-casmailbox)
 
 ## Get-EXOMailbox property sets
 
@@ -90,9 +90,9 @@ The available property sets for the **Get-EXOMailbox** cmdlet and the properties
 
 For more information, see:
 
-- [Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailbox)
+- [Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exomailbox)
 
-- [Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)
+- [Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/get-mailbox)
 
 ## Get-EXORecipient property sets
 
@@ -113,9 +113,9 @@ The available property sets for the **Get-EXORecipient** cmdlet and the properti
 
 For more information, see:
 
-- [Get-EXORecipient](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exorecipient)
+- [Get-EXORecipient](https://docs.microsoft.com/powershell/module/exchange/get-exorecipient)
 
-- [Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)
+- [Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/get-recipient)
 
 ### Get-EXOMailboxStatistics property sets
 
@@ -129,7 +129,6 @@ The available property sets for the **Get-EXOMailboxStatistics** cmdlet and the 
 
 For more information, see:
 
-- [Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/powershell-v2-module/get-exomailboxstatistics)
+- [Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxstatistics)
 
-- [Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxstatistics)
-
+- [Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-mailboxstatistics)
