@@ -190,11 +190,11 @@ Note: Do not use prepend a $ character when specifying the variable name.
 
 To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
+`$TestOutput.ToHTML() > C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
+`$TestOutput.ToXML() > C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String

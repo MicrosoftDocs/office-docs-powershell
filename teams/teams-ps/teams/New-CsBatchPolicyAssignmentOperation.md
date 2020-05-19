@@ -14,7 +14,7 @@ ms.reviewer:
 
 **Note:** This cmdlet is currently in public preview. 
 
-This cmdlet is used to assign a policy to a batch of users.
+This cmdlet is used to assign or unassign a policy to a batch of users.
 
 ## SYNTAX
 
@@ -27,15 +27,15 @@ When a policy is assigned to a batch of users, the assignments are performed as 
 
 Users can be specified by their object ID (guid) or by their UPN/SIP/email (user@contoso.com).
 
-A batch may contain up to 20,000 users. If you submit a batch that includes duplicate users, the duplicates will be removed from the batch before processing and status will only be provided for the unique users remaining in the batch.
+A batch may contain up to 5,000 users. If a batch includes duplicate users, the duplicates will be removed from the batch before processing and status will only be provided for the unique users remaining in the batch. For best results, do not submit more than a few batches at a time.  Allow batches to complete processing before submitting more batches.
 
 Batch policy assignment is currently limited to the following policy types:
-CallingLineIdentity, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsEmergencyCallingPolicy, TeamsMeetingBroadcastPolicy, TeamsEmergencyCallRoutingPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
+CallingLineIdentity, ExternalAccessPolicy, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsEmergencyCallingPolicy, TeamsMeetingBroadcastPolicy, TeamsEmergencyCallRoutingPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
 
 ## EXAMPLES
 
 ### Example 1
-In this example, the batch of users is specified as an array of user email addresses.
+In this example, the batch of users is specified as an array of user SIP addresses.
 
 ```
 $users_ids = @("psmith@contoso.com","tsanchez@contoso.com","bharvest@contoso.com")
@@ -43,6 +43,14 @@ New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName 
 ```
 
 ### Example 2
+In this example, a policy is removed from a batch of users by passing $null as the policy name.
+
+```
+$users_ids = @("2bdb15a9-2cf1-4b27-b2d5-fcc1d13eebc9", "d928e0fc-c957-4685-991b-c9e55a3534c7", "967cc9e4-4139-4057-9b84-1af80f4856fc")
+New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName $null -Identity $users_ids -OperationName "Batch unassign meeting policy"
+```
+
+### Example 3
 In this example, the batch of users is read from a text file containing user object IDs (guids).
 
 ```
@@ -50,7 +58,7 @@ $user_ids = Get-Content .\users_ids.txt
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Batch assign Kiosk"
 ```
 
-### Example 3
+### Example 4
 In this example, the batch of users is obtained by connecting to Azure AD and retrieving a collection of users and then referencing their user principal names.
 
 ```
@@ -77,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The name of the policy to be assigned to the users.
+The name of the policy to be assigned to the users. To remove the currently assigned policy, use $null or an empty string "".
 
 ```yaml
 Type: String
