@@ -40,6 +40,13 @@ PS C:\> Add-TeamsAppInstallation -AppId b9cc7986-dd56-4b57-ab7d-9c4e5288b775 -Te
 
 This example adds a Teams App to Microsoft Teams.
 
+### Example 2
+```powershell
+PS C:\> Add-TeamsAppInstallation -AppId b9cc7986-dd56-4b57-ab7d-9c4e5288b775 -TeamId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -Permissions "TeamSettings.Read.Group ChannelMessage.Read.Group"
+```
+
+This example adds a Teams App to Microsoft Teams with RSC Permissions.
+
 ## PARAMETERS
 
 ### -AppId
