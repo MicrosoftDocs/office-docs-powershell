@@ -17,10 +17,7 @@ robots: noindex,nofollow
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks."
 ---
 
-# Automate tasks in Exchange Online using PowerShell (Preview)
-
-> [!NOTE]
-> The features described in this topic are in Preview, are not available to everyone, and are subject to change.
+# Automate tasks in Exchange Online using PowerShell with Modern Authentication
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses Modern authentication, the credentials are stored in a local file or a secret vault that's access at run-time.
 
