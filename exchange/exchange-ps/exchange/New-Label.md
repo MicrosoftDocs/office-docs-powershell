@@ -137,6 +137,8 @@ The LocaleSettings parameter specifies one or more localized label name or label
 
 - Label Tooltips: {"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}
 
+The languages you use in the display name and Tooltip must mach. For example, you can't have a German display name without a corresponding German ToolTip.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)

@@ -44,10 +44,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailDetailATPReport -StartDate 7/1/2018 -EndDate 7/31/2018
+Get-MailDetailATPReport -StartDate 7/22/2018 -EndDate 7/31/2018
 ```
 
-This example returns the Advanced Threat Protection actions for July, 2018.
+This example returns the Advanced Threat Protection actions for the last 10 days in July, 2018. (Note: Customers with Advanced Threat Protection subscription will be able to get up to 30 days of data.)
 
 ## PARAMETERS
 
