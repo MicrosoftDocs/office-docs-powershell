@@ -81,6 +81,8 @@ Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false -
 
 ### -Identity
 
+Specifies the name of the theme. This must uniquely identify the theme. 
+
 ```yaml
 Type: SpoThemePalettePipeBind
 Parameter Sets: (All)
@@ -94,6 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsInverted
+
+Specifies whether the theme is inverted, with a dark background and a light foreground. 
 
 ```yaml
 Type: Boolean
@@ -109,6 +113,8 @@ Accept wildcard characters: False
 
 ### -Overwrite
 
+Overwrites a theme of the same name in case it exists.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -122,6 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -Palette
+
+Specifies the palette of colors in the theme, as a dictionary of theme slot values. 
 
 ```yaml
 Type: SpoThemePalettePipeBind
