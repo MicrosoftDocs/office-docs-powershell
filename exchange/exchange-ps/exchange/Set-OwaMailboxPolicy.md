@@ -1176,9 +1176,9 @@ Accept wildcard characters: False
 ### -IsDefault
 The IsDefault switch specifies whether the Outlook on the web policy is the default policy that's used to configure the Outlook on the web settings for new mailboxes. You don't need to specify a value with this switch.
 
- If another policy is currently set as the default, this switch replaces the old default policy with this policy.
+If another policy is currently set as the default, this switch replaces the old default policy with this policy.
 
-**Note**: In Exchange Online - and excluding resource mailboxes - this value will be superseded by the **OwaMailboxPolicy** parameter in each organization's [CASMailboxPlan](https://docs.microsoft.com/en-us/powershell/module/exchange/set-casmailboxplan?view=exchange-ps). That value will instead be applied per each mailbox's SKU.
+**Note**: In Exchange Online - and excluding resource mailboxes - this value will be superseded by the **OwaMailboxPolicy** parameter in each organization's [CASMailboxPlan](https://docs.microsoft.com/powershell/module/exchange/set-casmailboxplan). That value will instead be applied per each mailbox's SKU.
 
 
 ```yaml
