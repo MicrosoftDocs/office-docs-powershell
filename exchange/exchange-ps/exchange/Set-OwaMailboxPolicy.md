@@ -1178,6 +1178,9 @@ The IsDefault switch specifies whether the Outlook on the web policy is the defa
 
  If another policy is currently set as the default, this switch replaces the old default policy with this policy.
 
+**Note**: In Exchange Online - and excluding resource mailboxes - this value will be superseded by the **OwaMailboxPolicy** parameter in each organization's [CASMailboxPlan](https://docs.microsoft.com/en-us/powershell/module/exchange/set-casmailboxplan?view=exchange-ps). That value will instead be applied per each mailbox's SKU.
+
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
