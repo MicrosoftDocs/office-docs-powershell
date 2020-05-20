@@ -79,6 +79,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+>This parameter is no longer available for use
 
 ### -AllowPrivateCalling
 Controls all calling capabilities in Teams.
@@ -324,6 +325,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+>This parameter is not available for consumption
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
