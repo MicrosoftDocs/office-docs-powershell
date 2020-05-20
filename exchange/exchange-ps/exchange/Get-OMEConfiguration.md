@@ -25,7 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OMEConfiguration [<CommonParameters>]
+Get-OMEConfiguration [[-Identity] <OMEConfigurationIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,6 +48,22 @@ Get-OMEConfiguration | Format-List
 This example returns detailed information for all OME configurations in the organization.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the OME configuration that you want to get. The default OME configuration has the Identity value "OME Configuration".
+
+```yaml
+Type: OMEConfigurationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
