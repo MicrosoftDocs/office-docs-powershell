@@ -986,6 +986,8 @@
   "Stop-ManagedFolderAssistant": "policy-and-compliance-retention",
   "Validate-RetentionRuleQuery": "policy-and-compliance-retention",
   "Connect-ExchangeOnline": "powershell-v2-module",
+  "Connect-IPPSSession": "powershell-v2-module",
+  "Disconnect-ExchangeOnline": "powershell-v2-module",
   "Get-EXOCasMailbox": "powershell-v2-module",
   "Get-EXOMailbox": "powershell-v2-module",
   "Get-EXOMailboxFolderPermission": "powershell-v2-module",
