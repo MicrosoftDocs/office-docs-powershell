@@ -37,6 +37,7 @@ Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter>
  [-PrivacyStatementUrl <String>]
  [-ReadButtonText <String>]
  [-SocialIdSignIn <Boolean>]
+ [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -55,7 +56,7 @@ This example configures the specified values for the default OME configuration n
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the OME configuration that you want to modify. The default OME configuration has the Identity value "OME Configuration". You can also use "default".
+The Identity parameter specifies the OME configuration that you want to modify. The default OME configuration has the Identity value "OME Configuration".
 
 ```yaml
 Type: OMEConfigurationIdParameter
@@ -132,6 +133,8 @@ Accept wildcard characters: False
 This parameter is only available with a Microsoft 365 Advanced Message Encryption subscription.
 
 The ExternalMailExpiryInDays parameter specifies the number of days that the encrypted message is available to external recipients in the Microsoft 365 portal. A valid value is an integer from 0 to 730. The value 0 means the messages will never expire. The default value is 0.
+
+ExternalMailExpiryInDays cannot be updated in the default OME configuration. Create a customized configuration to apply ExternalMailExpiryInDays.
 
 ```yaml
 Type: String
@@ -275,6 +278,26 @@ The SocialIdSignIn parameter specifies whether a user is allowed to view an encr
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Exchange Online
 
 Required: False
