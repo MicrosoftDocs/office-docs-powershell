@@ -40,7 +40,7 @@ $content = Get-Content "C:\Media\MOH.wav" -Encoding byte -ReadCount 0
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "HuntGroup" -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue] (https://docs.microsoft.com/en-us/powershell/module/skype/set-cscallqueue?view=skype-ps) to provide the audio file id. 
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue] (https://docs.microsoft.com/powershell/module/skype/set-cscallqueue) to provide the audio file id. 
 
 
 ## PARAMETERS
@@ -112,5 +112,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-
 
