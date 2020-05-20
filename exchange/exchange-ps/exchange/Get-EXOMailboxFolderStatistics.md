@@ -160,6 +160,10 @@ The Identity parameter specifies the identity of the mailbox or mail user. You c
 
 - User Principal Name (UPN)
 
+- Name
+
+- Alias
+
 ```yaml
 Type: String
 Parameter Sets: (All)
