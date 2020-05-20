@@ -64,9 +64,14 @@
       }
     ],
     "versions": {
-      "exchange-ps": {
-        "dest": "exchange-ps"
-      }
+      "exchange-ps": { "dest": "exchange-ps" },
+      "exchserver-ps-2010": { "dest": "exchserver-ps-2010" },
+      "exchserver-ps-2013": { "dest": "exchserver-ps-2013" },
+      "exchserver-ps-2016": { "dest": "exchserver-ps-2016" },
+      "exchserver-ps-2019": { "dest": "exchserver-ps-2019" },
+      "exchonline-ps": { "dest": "exchonline-ps" },
+      "o365scc-ps": { "dest": "o365scc-ps" },
+      "eop-ps": { "dest": "eop-ps" }
     },
     "overwrite": [],
     "externalReference": [],
