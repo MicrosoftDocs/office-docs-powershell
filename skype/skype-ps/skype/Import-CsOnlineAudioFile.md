@@ -32,7 +32,16 @@ $content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants.
+This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example: [New-CsAutoAttendantPrompt] (https://docs.microsoft.com/en-us/powershell/module/skype/new-csautoattendantprompt?view=skype-ps)
+
+### -------------------------- Example 2 --------------------------
+```powershell
+$content = Get-Content "C:\Media\MOH.wav" -Encoding byte -ReadCount 0
+$audioFile = Import-CsOnlineAudioFile -ApplicationId "HuntGroup" -FileName "MOH.wav" -Content $content
+```
+
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue] (https://docs.microsoft.com/en-us/powershell/module/skype/set-cscallqueue?view=skype-ps) to provide the audio file id. 
+
 
 ## PARAMETERS
 
