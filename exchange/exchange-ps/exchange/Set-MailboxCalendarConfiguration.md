@@ -44,6 +44,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-InvoiceEventsFromEmailEnabled <Boolean>]
  [-LocalEventsEnabled <LocalEventsEnabledStatus>]
  [-LocalEventsLocation <LocalEventsLocation>]
+ [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
  [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
  [-ReminderSoundEnabled <Boolean>]
  [-RemindersEnabled <Boolean>]
@@ -591,6 +592,30 @@ Type: LocalEventsLocation
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OnlineMeetingsByDefaultEnabled
+This parameter is available only in the cloud-based service.
+
+The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
+
+- $true: All meetings are online by default.
+
+- $false: All meetings are not online by default.
+
+- $null: The value of the OnlineMeetingsByDefaultEnabled parameter on the Set-OrganizationConfig cmdlet (the organizational setting) is used.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
