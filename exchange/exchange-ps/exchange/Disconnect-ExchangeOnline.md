@@ -28,9 +28,9 @@ Disconnect-ExchangeOnline [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Connect-ExchangeOnline establishes a connection the Exchage Online organization of the logged in admin user. This cmdlet is a counterpart to Connect-ExchangeOnline cmdlet.
+The Connect-ExchangeOnline cmdlet establishes a connection to the Exchage Online organization of the logged-in admin user. This cmdlet is the counterpart to Connect-ExchangeOnline.
 
-Disconnect-ExchangeOnline closes any active session and clears cache. Post successful disconnect, you can't run any of the V2 cmdlets or the older Remote PowerShell cmdlets.
+Disconnect-ExchangeOnline closes any active session and clears cache. After a successful disconnect, you can't run any of the V2 cmdlets or older remote PowerShell cmdlets.
 
 ## EXAMPLES
 
@@ -38,14 +38,14 @@ Disconnect-ExchangeOnline closes any active session and clears cache. Post succe
 ```powershell
 Disconnect-ExchangeOnline
 ```
-This example asks for confirmation and when confirmation is passed, it disconnects the current PowerShell session with Exchange Online.
+This example asks for confirmation before disconnecting the current PowerShell session with Exchange Online.
 
 
 ### Example 2
 ```powershell
 Disconnect-ExchangeOnline -Confirm:$false
 ```
-This example disconnects the current PowerShell session with Exchange Online silently and doesn't ask for confirmation.
+This example disconnects the current PowerShell session with Exchange Online silently and without a confirmation prompt.
 
 
 ## PARAMETERS
