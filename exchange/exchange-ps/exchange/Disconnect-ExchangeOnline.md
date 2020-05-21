@@ -28,7 +28,9 @@ Disconnect-ExchangeOnline [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet in the Exchange Online PowerShell V2 module to disconnect from Exchange Online.
+The Connect-ExchangeOnline cmdlet establishes a connection to the Exchage Online organization of the logged-in admin user. This cmdlet is the counterpart to Connect-ExchangeOnline.
+
+Disconnect-ExchangeOnline closes any active session and clears cache. After a successful disconnect, you can't run any of the V2 cmdlets or older remote PowerShell cmdlets.
 
 ## EXAMPLES
 
@@ -36,8 +38,15 @@ Use this cmdlet in the Exchange Online PowerShell V2 module to disconnect from E
 ```powershell
 Disconnect-ExchangeOnline
 ```
+This example asks for confirmation before disconnecting the current PowerShell session with Exchange Online.
 
-This example disconnects the current PowerShell session with Exchange Online.
+
+### Example 2
+```powershell
+Disconnect-ExchangeOnline -Confirm:$false
+```
+This example disconnects the current PowerShell session with Exchange Online silently and without a confirmation prompt.
+
 
 ## PARAMETERS
 
