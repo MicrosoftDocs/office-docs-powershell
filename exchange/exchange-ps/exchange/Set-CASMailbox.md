@@ -205,7 +205,9 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveSyncEnabled
-The ActiveSyncEnabled parameter enables or disables Exchange ActiveSync for the mailbox. Valid input for this parameter is $true or $false. The default value is $true. When you set this parameter to $false, the other Exchange ActiveSync settings in this cmdlet are ignored.
+The ActiveSyncEnabled parameter enables or disables Exchange ActiveSync for the mailbox. Valid input for this parameter is $true or $false. The default value is $true. When you set this parameter to $false, the other Exchange ActiveSync settings in this cmdlet are ignored. 
+
+For more information, see [Enable or disable Exchange ActiveSync for a mailbox](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync), or [Enable or disable Exchange ActiveSync access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/exchange-activesync/activesync-mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -584,6 +586,8 @@ The ImapEnabled parameter enables or disables access to the mailbox by using IMA
 
 Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other IMAP4 settings in this cmdlet are ignored.
 
+For more information, see [Enable or Disable POP3 or IMAP4 access for a user](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -858,6 +862,8 @@ The MAPIEnabled parameter enables or disables access to the mailbox by using MAP
 
 Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other MAPI settings in this cmdlet are ignored.
 
+For more information, see[Enable or disable MAPI for a mailbox](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-mapi), or [Enable or disable MAPI access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/mapi-mailbox-access).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -940,6 +946,8 @@ The OWAEnabled parameter enables or disables access to the mailbox by using Outl
 
 Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other Outlook on the web settings in this cmdlet are ignored.
 
+For more information, see [Enable or disable Outlook on the web for a mailbox](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-outlook-web-app), or [Enable or disable Outlook on the web access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/outlook-on-the-web/mailbox-access).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -999,6 +1007,8 @@ Accept wildcard characters: False
 The PopEnabled parameter enables or disables access to the mailbox by using POP3 clients.
 
 Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other POP3 settings in this cmdlet are ignored.
+
+For more information, see [Enable or Disable POP3 or IMAP4 access for a user](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
 
 ```yaml
 Type: Boolean

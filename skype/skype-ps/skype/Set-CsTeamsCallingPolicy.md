@@ -50,7 +50,7 @@ Sets the value of the parameter AllowPrivateCalling, which controls whether or n
 ## PARAMETERS
 
 ### -AllowWebPSTNCalling
-Allows web PSTN calling.
+Allows PSTN calling from the Team web client.
 
 ```yaml
 Type: Object
