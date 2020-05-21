@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-PARAMVALUE: SwitchParameter
+Prompts you for confirmation before executing the command. For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
