@@ -1408,7 +1408,7 @@ Notes on the value Shared:
 
 - Shared is available only in Exchange 2013 CU21 or later and Exchange 2016 CU10 or later. To use this value, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605/cmdlets-to-create-modify-remote-shared-mailbox-in-on-premises-exchange).
 
-- You can only use Shared on a mailbox that was originally created in Exchange Online. If the mailbox was originally created in on-premises Exchange and then migrated to Exchange Online, take the action described on Step 3., from Resolution section described on https://support.microsoft.com/en-us/help/2710029/shared-mailboxes-are-unexpectedly-converted-to-user-mailboxes-after-di.
+- You can only use Shared on a mailbox that was originally created in Exchange Online. If the mailbox was originally created in on-premises Exchange and then migrated to Exchange Online, take the action described in Step 3 in the Resolution section in [KB2710029](https://support.microsoft.com/help/2710029/shared-mailboxes-are-unexpectedly-converted-to-user-mailboxes-after-di).
 
 ```yaml
 Type: ConvertibleRemoteMailboxSubType
