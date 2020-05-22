@@ -61,7 +61,7 @@ Settings=@(
 Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSettings -Depth 3 -Compress),(ConvertTo-Json $TooltipLocaleSettings -Depth 3 -Compress)
 ```
 
-This example sets the localized label name for "Public" in different languages (French, Italy, and German).
+This example sets the localized label name for "Public" in different languages (French, Italian, and German).
 
 ## PARAMETERS
 
