@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas.
 
 For more information about the available properties, see [Get-EXOCasMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exocasmailbox-property-sets).
 
@@ -245,7 +245,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 - All
 
-You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+You can specify multiple values separated by commas.
 
 For more information about the properties that are included in each property set, see [Get-EXOCasMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exocasmailbox-property-sets).
 
