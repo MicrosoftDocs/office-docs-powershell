@@ -13,6 +13,7 @@ monikerRange: "exchonline-ps"
 # Remove-OMEConfiguration
 
 ## SYNOPSIS
+
 This cmdlet is available only in the cloud-based service.
 
 Use the Remove-OMEConfiguration cmdlet to remove custom Microsoft Office 365 Message Encryption (OME) configurations. You can't use this cmdlet to remove the default OME configuration.
@@ -36,6 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Remove-OMEConfiguration -Identity "Contoso Marketing"
 ```
@@ -45,6 +47,7 @@ This example removes the custom OME configuration named Contoso Marketing.
 ## PARAMETERS
 
 ### -Identity
+
 The Identity parameter specifies the custom OME configuration that you want to remove. You can use the Get-OMEConfiguration cmdlet to see the available values. If the value contains spaces, enclose the value in quotation marks
 
 ```yaml
@@ -61,6 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
@@ -81,6 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
@@ -97,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
