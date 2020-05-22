@@ -25,11 +25,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter> [-AdminDisplayName <String>]
- [-AllowClickThrough <Boolean>] [-Confirm] [-DoNotAllowClickThrough <Boolean>]
- [-DoNotRewriteUrls <MultiValuedProperty>] [-DoNotTrackUserClicks <Boolean>] [-Enabled <Boolean>]
- [-EnableForInternalSenders <Boolean>] [-ExcludedUrls <String[]>] [-IsEnabled <Boolean>]
- [-ScanUrls <Boolean>] [-TrackClicks <Boolean>] [-WhatIf] [-WhiteListedUrls <String>]
+Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
+ [-AdminDisplayName <String>]
+ [-AllowClickThrough <Boolean>]
+ [-Confirm]
+ [-DeliverMessageAfterScan <Boolean>
+ [-DoNotAllowClickThrough <Boolean>]
+ [-DoNotRewriteUrls <MultiValuedProperty>]
+ [-DoNotTrackUserClicks <Boolean>]
+ [-EnableForInternalSenders <Boolean>]
+ [-EnableSafeLinksForTeams <Boolean>]
+ [-ExcludedUrls <String[]>]
+ [-IsEnabled <Boolean>]
+ [-ScanUrls <Boolean>]
+ [-TrackClicks <Boolean>]
+ [-WhatIf]
+ [-WhiteListedUrls <String>]
  [<CommonParameters>]
 ```
 
@@ -125,12 +136,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeliverMessageAfterScan
+The DeliverMessageAfterScan parameter specifies whether to deliver email messages only after Safe Links scanning is complete. Valid values are:
+
+- $true: Wait until Safe Links scanning is complete before delivering the message.
+
+- $false: If Safe Links scanning can't complete, deliver the message anyway. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DoNotAllowClickThrough
 The DoNotAllowClickThrough parameter specifies whether to allow users to click through to the original URL. Valid values are:
 
-- $true: The user isn't allowed to click through to the original URL. This is the default value.
+- $true: The user isn't allowed to click through to the original URL.
 
-- $false: The user is allowed to click through to the original URL.
+- $false: The user is allowed to click through to the original URL. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -164,29 +195,9 @@ Accept wildcard characters: False
 ### -DoNotTrackUserClicks
 The DoNotTrackUserClicks parameter specifies whether to track user clicks related to links in email messages. Valid values are:
 
-- $true: User clicks aren't tracked. This is the default value.
+- $true: User clicks aren't tracked.
 
-- $false: User clicks are tracked.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Enabled
-The Enabled parameter specifies whether the policy is enabled. Valid values are:
-
-- $true: The policy is enabled.
-
-- $false: The policy is disabled.
+- $false: User clicks are tracked. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -221,6 +232,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSafeLinksForTeams
+The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
+
+- $true: Safe Links is enabled for Teams.
+
+- $false: Safe Links isn't enabled for Teams.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExcludedUrls
 The ExcludedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the ExcludedUrls parameter, update them to use the DoNotRewriteUrls parameter.
 
@@ -238,11 +269,11 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+The IsEnabled parameter specifies whether to rewrite URLs and check against a list of known malicious links whenever a user clicks on a link in email messages. Valid values are:
 
-- $true: The rule or policy is enabled.
+- $true: Rewrite URLs and check against a list of known malicious links whenever a user clicks on a link.
 
-- $false: The rule or policy is disabled. This is the default value.
+- $false: Don't rewrite URLs. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -258,11 +289,11 @@ Accept wildcard characters: False
 ```
 
 ### -ScanUrls
-The ScanUrls parameter specifies whether to enable or disable the scanning of links in email messages. Valid values are:
+The ScanUrls parameter specifies whether to enable or disable real-time scanning of links in email messages. Valid values are:
 
-- $true: Scanning links in email messages is enabled.
+- $true: Real-time scanning links in email messages is enabled.
 
-- $false: Scanning links in email messages is disabled. This is the default value.
+- $false: Real-time scanning links in email messages is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
