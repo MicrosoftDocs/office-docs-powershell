@@ -26,7 +26,7 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-PreferredMeetingProviderForIslandsMode <String>]
  [-VideoFiltersMode <String>] [-Identity] <XdsIdentity> [-AllowEngagementReport <String>]
- [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowNDIStreaming <Boolean>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -469,6 +469,21 @@ Determines whether users are allowed to download the attendee engagement report.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNDIStreaming
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
