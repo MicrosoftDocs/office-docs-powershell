@@ -101,8 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
