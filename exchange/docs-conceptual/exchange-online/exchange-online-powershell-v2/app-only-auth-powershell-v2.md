@@ -13,7 +13,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-robots: NOINDEX, NOFOLLOW
+ROBOTS: NOINDEX, NOFOLLOW
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks."
 ---
 
