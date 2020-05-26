@@ -51,7 +51,7 @@ Sends an e-mail via a custom SMTP server and requires a from address and passwor
 ## PARAMETERS
 
 ### -Body
-Body of the email
+Body of the email. Accepts simple HTML as `<h1></h1>`, `<br/>` etc. 
 
 ```yaml
 Type: String
