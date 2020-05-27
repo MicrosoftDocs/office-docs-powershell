@@ -51,10 +51,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-TenantAllowBlockListItems -ListType Url -Action Block
 ```
 
-{{ Add example description here }}
+This example returns all blocked URLs.
+
+### Example 2
+```powershell
+Get-TenantAllowBlockListItems -ListType FileHash -Entry "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+```
+
+This example returns information for the specified file hash value.
 
 ## PARAMETERS
 
@@ -97,7 +104,11 @@ Accept wildcard characters: False
 ```
 
 ### -Entry
-{{ Fill Entry Description }}
+The Entry parameter filters the results by the specified URL or file hash value:
+
+- The exact URL entry value.
+
+- The exact SHA256 file hash value.
 
 ```yaml
 Type: String

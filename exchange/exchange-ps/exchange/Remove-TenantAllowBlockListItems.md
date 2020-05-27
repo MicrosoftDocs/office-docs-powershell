@@ -35,15 +35,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-TenantAllowBlockListItems -Ids RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0 -ListType Url
 ```
 
-{{ Add example description here }}
+This example removes the specified URL entry from the Allow/Block List.
 
 ## PARAMETERS
 
 ### -Ids
-{{ Fill Ids Description }}
+The Ids parameter specifies the entry that you want to remove. The easiest way to find this value is to use the Get-TenantAllowBlockListItems cmdlet and the more user-friendly Entry property value (a URL or a file hash). An example value is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
