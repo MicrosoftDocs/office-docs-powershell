@@ -13,8 +13,7 @@ ms.reviewer:
 # Set-CsOnlineNumberPortOutOrderPin
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+This cmdlet is reserved for Microsoft internal use only.
 
 ## SYNTAX
 
@@ -24,7 +23,7 @@ Set-CsOnlineNumberPortOutOrderPin [-Tenant <Guid>] [-PortOrderPin <String>] [-Do
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet is reserved for Microsoft internal use only.
 
 ## EXAMPLES
 
@@ -38,7 +37,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-{{Fill DomainController Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
@@ -70,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortOrderPin
-{{Fill PortOrderPin Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -102,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -118,8 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
