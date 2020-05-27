@@ -23,10 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-EXOMailboxFolderPermission
+Get-EXOMailboxFolderPermission [[-Identity] <String>]
  [-User <String>]
  [-GroupMailbox]
- [[-Identity] <String>]
  [-ExternalDirectoryObjectId <Guid>]
  [-UserPrincipalName <String>]
  [<CommonParameters>]
@@ -52,8 +51,37 @@ Get-EXOMailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -Us
 
 This example returns the permissions for the same folder in John's mailbox, but only for the user Kim.
 
-
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mailbox folder that you want to view. This parameter uses the syntax: `<Mailbox>:\<Folder>`. For the best performance, we recommend using the user ID or user principal name (UPN) to identify the mailbox.
+
+Otherwise, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Email address
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
 
 ### -ExternalDirectoryObjectId
 The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
@@ -84,26 +112,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox folder that you want to view. This parameter uses the syntax: `<Mailbox>:\<Folder>`. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
-
-- `<UPN>:<FolderPath>` (for example`john@contoso.com:\Calendar` or `John:\Marketing\Reports`).
-
-- `<ExternalDirectoryObjectId>:<FolderPath>`
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

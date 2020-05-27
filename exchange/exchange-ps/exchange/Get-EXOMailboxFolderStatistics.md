@@ -153,15 +153,19 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
+The Identity parameter specifies the identity of the mailbox or mail user. For the best performance, we recommend using the user ID or user principal name (UPN) to identify the mailbox.
 
-- GUID
-
-- User Principal Name (UPN)
+Otherwise, you can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
 
 - Alias
+
+- Distinguished name (DN)
+
+- LegacyExchangeDN
+
+- SamAccountName
 
 ```yaml
 Type: String
