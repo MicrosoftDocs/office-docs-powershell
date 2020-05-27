@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -CountryOrRegion
-The CountryOrRegion parameter specifies the room's country or region.
+The CountryOrRegion parameter specifies the room's country or region. A valid value is a valid ISO 3166-1 two-letter country code (for example, AU for Australia) or the corresponding friendly name for the country (which might be different from the official ISO 3166 Maintenance Agency short name). The friendly name is returned in the CountryOrRegion property value by the Get-Place cmdlet, but you can use either the friendly name or the two-letter country code in filter operations.
 
 ```yaml
 Type: CountryInfo

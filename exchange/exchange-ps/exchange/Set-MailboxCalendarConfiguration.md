@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ### -CalendarFeedsPreferredRegion
 This parameter is available only in the cloud-based service.
 
-The CalendarFeedsPreferredRegion specifies the preferred region for calendar feeds. A valid value is an ISO 3166-1 uppercase two-letter country code (for example, US for the United States).
+The CalendarFeedsPreferredRegion specifies the preferred region for calendar feeds. A valid value is an ISO 3166-1 two-letter country code (for example, AU for Australia).
 
 ```yaml
 Type: String
