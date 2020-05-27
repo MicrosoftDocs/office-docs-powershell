@@ -14,7 +14,11 @@ monikerRange: "exchonline-ps"
 # Connect-IPPSSession
 
 ## SYNOPSIS
-Security & Compliance Center PowerShell allows you to manage your Security & Compliance Center settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to the Security & Compliance Center.
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell V2 module to connect to Security & Compliance Center PowerShell.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -30,7 +34,7 @@ Connect-IPPSSession [[-ConnectionUri] <String>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to create a Remote PowerShell session to Security & Compliance center 
+This cmdlet allows you to create a remote PowerShell session to the Security & Compliance center.
 
 ## EXAMPLES
 
