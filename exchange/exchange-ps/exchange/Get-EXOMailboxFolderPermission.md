@@ -122,6 +122,8 @@ The User parameter filters the results by the specified mailbox, mail user, or m
 
 - GUID
 
+*Note* - This cmdlet will throw exception if the User doesn't have permission to access the provided MailboxFolder.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
