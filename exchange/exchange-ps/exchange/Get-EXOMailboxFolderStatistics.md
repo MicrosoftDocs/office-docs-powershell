@@ -28,7 +28,6 @@ Get-EXOMailboxFolderStatistics
  [-ExternalDirectoryObjectId <Guid>]
  [-Folderscope <ElcFolderType>]
  [-Identity <String>]
- [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
  [-ResultSize <Unlimited>]
@@ -174,24 +173,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IncludeAnalysis
-The IncludeAnalysis switch specifies whether to scan all items within a folder and return statistics related to the folder and item size. You don't need to specify a value with this switch.
-
-You should use this switch for troubleshooting purposes, because the command might take a long time to complete.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
