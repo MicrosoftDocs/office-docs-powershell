@@ -24,20 +24,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Default (Default)
 ```
-Get-EXORecipientPermission [-Trustee <String>]
+Get-EXORecipientPermission
  [-AccessRights <MultiValuedProperty>]
  [-ResultSize <Unlimited>]
+ [-Trustee <String>]
  [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-EXORecipientPermission [-Trustee <String>]
+Get-EXORecipientPermission [[-Identity] <String>]
  [-AccessRights <MultiValuedProperty>]
- [[-Identity] <String>]
  [-ExternalDirectoryObjectId <Guid>]
- [-UserPrincipalName <String>]
  [-ResultSize <Unlimited>]
+ [-Trustee <String>]
  [<CommonParameters>]
 ```
 
@@ -53,6 +53,56 @@ Get-EXORecipientPermission -ResultSize 100
 Above example returns recipient permission for first 100 mailbox users in the name sorted order.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter filters the results by the target recipient. The user or group specified by the Trustee parameter can operate on this recipient.
+
+You can specify any type of recipient, for example:
+
+- Mailboxes
+
+- Mail users
+
+- External contacts
+
+- Distribution groups
+
+- Dynamic distribution groups
+
+For the best performance, we recommend using the following values to identify the recipient:
+
+- User ID or user principal name (UPN)
+
+- GUID
+
+Otherwise, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
 
 ### -AccessRights
 The AccessRights parameter filters the results by permission.
@@ -85,40 +135,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter filters the results by the target recipient. The user or group specified by the Trustee parameter can operate on this recipient.
-
-You can specify any type of recipient, for example:
-
-- Mailboxes
-
-- Mail users
-
-- External contacts
-
-- Distribution groups
-
-- Dynamic distribution groups
-
-You can use any value that uniquely identifies the recipient. For example:
-
-- External Directory Object ID
-
-- User Principal Name
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
