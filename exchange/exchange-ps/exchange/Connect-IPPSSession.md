@@ -14,7 +14,7 @@ monikerRange: "exchonline-ps"
 # Connect-IPPSSession
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Security & Compliance Center PowerShell allows you to manage your Security & Compliance Center settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to the Security & Compliance Center.
 
 ## SYNTAX
 
@@ -30,16 +30,21 @@ Connect-IPPSSession [[-ConnectionUri] <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet allows you to create a Remote PowerShell session to Security & Compliance center 
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+$UserCredential = Get-Credential
+Connect-IPPSSession -Credential $UserCredential
 ```
 
-{{ Add example description here }}
+The first command gets the user credentials and stores them in the $UserCredential variable.
+
+The second command connects the current PowerShell session using the credentials in the $UserCredential, which isn't MFA enabled. Note that after the second command is complete, the password key in the $UserCredential variable becomes empty.
+
+After the Connect-IPPSSession command is successful, you can run Security & Compliance cmdlets.
 
 ## PARAMETERS
 
