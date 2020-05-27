@@ -28,7 +28,6 @@ Get-EXOMailboxFolderStatistics
  [-ExternalDirectoryObjectId <Guid>]
  [-Folderscope <ElcFolderType>]
  [-Identity <String>]
- [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
  [-ResultSize <Unlimited>]
