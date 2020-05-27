@@ -14,7 +14,11 @@ monikerRange: "exchonline-ps"
 # Connect-IPPSSession
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+
+Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell V2 module to connect to Security & Compliance Center PowerShell.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -30,16 +34,21 @@ Connect-IPPSSession [[-ConnectionUri] <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet allows you to create a remote PowerShell session to the Security & Compliance center.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+$UserCredential = Get-Credential
+Connect-IPPSSession -Credential $UserCredential
 ```
 
-{{ Add example description here }}
+The first command gets the user credentials and stores them in the $UserCredential variable.
+
+The second command connects the current PowerShell session using the credentials in the $UserCredential, which isn't MFA enabled. Note that after the second command is complete, the password key in the $UserCredential variable becomes empty.
+
+After the Connect-IPPSSession command is successful, you can run Security & Compliance cmdlets.
 
 ## PARAMETERS
 
