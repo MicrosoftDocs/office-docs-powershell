@@ -30,7 +30,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DesignatedPresenterRoleMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -46,7 +46,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DesignatedPresenterRoleMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -564,6 +564,27 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DesignatedPresenterRoleMode
+Determines if users can change the default value of the _Who can present?_ setting in Meeting options in the Teams client. This policy setting affects all meetings, including Meet Now meetings.
+
+Possible values are:
+- EveryoneUserOverride: All meeting participants can be presenters. This is the default value. This parameter corresponds to the _Everyone_ setting in Teams.
+- EveryoneInCompanyUserOverride: Authenticated users in the organization, including guest users, can be presenters. This parameter corresponds to the _People in my organization_ setting in Teams.
+- EveryoneInSameAndFederatedCompanyUserOverride: Authenticated users in the organization, including guest users and users from federated organizations, can be presenters. This parameter corresponds to the _People in my organization and trusted organizations_ setting in Teams.
+- OrganizerOnlyUserOverride: Only the meeting organizer can be a presenter and all meeting participants are designated as attendees. This parameter corresponds to the _Only me_ setting in Teams.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
