@@ -29,8 +29,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
- [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-Force] [-WhatIf] [-Confirm] 
- [<CommonParameters>]
+ [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -45,8 +45,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
- [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -549,6 +549,21 @@ Determines whether users are allowed to download the attendee engagement report.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNDIStreaming
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
