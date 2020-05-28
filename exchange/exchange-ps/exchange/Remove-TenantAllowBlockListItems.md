@@ -13,6 +13,8 @@ monikerRange: "exchonline-ps || eop-ps"
 # Remove-TenantAllowBlockListItems
 
 ## SYNOPSIS
+**Note**: The features described in this topic are in Preview, are subject to change, and are not available in all organizations.
+
 This cmdlet is available only in the cloud-based service.
 
 Use the Remove-TenantAllowBlockListItems cmdlet to remove entries from the Allowed/Blocked List in the Security & Compliance Center.

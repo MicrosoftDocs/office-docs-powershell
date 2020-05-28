@@ -13,6 +13,8 @@ monikerRange: "exchonline-ps || eop-ps"
 # Get-TenantAllowBlockListItems
 
 ## SYNOPSIS
+**Note**: The features described in this topic are in Preview, are subject to change, and are not available in all organizations.
+
 This cmdlet is available only in the cloud-based service.
 
 Use the Get-TenantAllowBlockListItems cmdlet to view entries in the Allowed/Blocked List in the Security & Compliance Center.
