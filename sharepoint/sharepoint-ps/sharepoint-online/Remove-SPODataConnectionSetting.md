@@ -37,7 +37,7 @@ Remove-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name
 
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (<https://go.microsoft.com/fwlink/?LinkID=187810).>
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 Use the `Remove-SPODataConnectionSetting` cmdlet to remove a Business Connectivity Services connection for a particular Business Connectivity Services service application in the farm.
 
@@ -46,7 +46,7 @@ The metadata object associated with the Business Connectivity Services connectio
 This cmdlet applies to an on-premises environment only.
 You cannot use this command in the SharePoint Online Management Shell.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251831> (<https://go.microsoft.com/fwlink/p/?LinkId=251831).>
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
@@ -204,8 +204,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPODataConnectionSetting](Get-SPODataConnectionSetting.md)
+[Get-SPODataConnectionSetting](../sharepoint-server/Get-SPODataConnectionSetting.md)
 
-[New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
+[New-SPODataConnectionSetting](../sharepoint-server/New-SPODataConnectionSetting.md)
 
-[Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
+[Set-SPODataConnectionSetting](../sharepoint-server/Set-SPODataConnectionSetting.md)
