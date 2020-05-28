@@ -264,7 +264,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -PSSessionOption
 The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
 
