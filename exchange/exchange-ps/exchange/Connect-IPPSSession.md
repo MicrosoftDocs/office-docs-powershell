@@ -16,7 +16,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
-Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell V2 module to connect to Security & Compliance Center PowerShell.
+Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell V2 module to connect to Security & Compliance Center PowerShell or standalone Exchange Online Protection PowerShell.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -34,7 +34,7 @@ Connect-IPPSSession [[-ConnectionUri] <String>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to create a remote PowerShell session to the Security & Compliance center.
+This cmdlet allows you to create a remote PowerShell session to Exchange-related PowerShell environments other than Exchange Online PowerShell. For example, Security & Compliance Center PowerShell or standalone Exchange Online Protection PowerShell (for organizations without Exchange Online mailboxes).
 
 ## EXAMPLES
 
@@ -44,16 +44,27 @@ $UserCredential = Get-Credential
 Connect-IPPSSession -Credential $UserCredential
 ```
 
+This example connects to Security & Compliance Center PowerShell in a Microsoft 365 organization.
+
 The first command gets the user credentials and stores them in the $UserCredential variable.
 
 The second command connects the current PowerShell session using the credentials in the $UserCredential, which isn't MFA enabled. Note that after the second command is complete, the password key in the $UserCredential variable becomes empty.
 
-After the Connect-IPPSSession command is successful, you can run Security & Compliance cmdlets.
+After the Connect-IPPSSession command is successful, you can run Security & Compliance Center cmdlets.
+
+### Example 2
+```powershell
+Connect-IPPSSession -Credential (Get-Credential) -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/
+```
+
+This example connects to standalone Exchange Online Protection PowerShell in an organization that doesn't have Exchange Online mailboxes.
 
 ## PARAMETERS
 
 ### -AzureADAuthorizationEndpointUri
 The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens.
+
+In Office 365 Germany for Security & Compliance Center PowerShell, use the value <https://login.microsoftonline.de/common> for this parameter.
 
 ```yaml
 Type: String
@@ -85,6 +96,10 @@ Accept wildcard characters: False
 
 ### -ConnectionUri
 The ConnectionUri parameter specifies the connection endpoint for the remote PowerShell session.
+
+In standalone Exchange Online Protection organizations without Exchange Online mailboxes, use the value <https://ps.protection.outlook.com/powershell-liveid/> for this parameter.
+
+In Office 365 Germany for Security & Compliance Center PowerShell, use the value <https://ps.compliance.protection.outlook.de/PowerShell-LiveID> for this parameter.
 
 ```yaml
 Type: String
