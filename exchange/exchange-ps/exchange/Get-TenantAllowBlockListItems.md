@@ -162,7 +162,9 @@ Accept wildcard characters: False
 ```
 
 ### -OutputJson
-{{ Fill OutputJson Description }}
+The OutputJson switch specifies whether to return all entries in a single JSON value. You don't need to specify a value with this switch.
+
+You use this switch to prevent the command from halting on the first entry that contains a syntax error.
 
 ```yaml
 Type: SwitchParameter

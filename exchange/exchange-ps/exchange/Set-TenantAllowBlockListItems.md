@@ -51,10 +51,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-TenantAllowBlockListItems -ListType Url -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSRAAAA" -ExpirationDate (Get-Date "5/30/2020 9:30 AM").ToUniversalTime()
 ```
 
-{{ Add example description here }}
+This example changes the expiration date of the specified entry.
 
 ## PARAMETERS
 
@@ -102,7 +102,11 @@ Accept wildcard characters: False
 ```
 
 ### -Ids
-{{ Fill Ids Description }}
+The Ids parameter specifies the entry that you want to modify. To find this value, use the Get-TenantAllowBlockListItems cmdlet and the Entry property value (a URL or a file hash).
+
+An example value for this parameter is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
@@ -171,7 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -OutputJson
-{{ Fill OutputJson Description }}
+The OutputJson switch specifies whether to return all entries in a single JSON value. You don't need to specify a value with this switch.
+
+You use this switch to prevent the command from halting on the first entry that contains a syntax error.
 
 ```yaml
 Type: SwitchParameter

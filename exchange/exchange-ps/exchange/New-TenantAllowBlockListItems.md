@@ -49,10 +49,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-TenantAllowBlockListItem -ListType Url -Action Block -Entries ~contoso.com~
 ```
 
-{{ Add example description here }}
+This example adds a URL block entry for contoso.com and all subdomains (for example, contoso.com, www.contoso.com, xyz.abc.contoso.com, and www.contoso.com/b). Because we didn't use the ExpirationDate or NoExpiration parameters, the entry expires after 30 days.
+
+### Example 2
+```powershell
+New-TenantAllowBlockListItem -ListType FileHash -Action Allow -Entries "768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3","2c0a35409ff0873cfa28b70b8224e9aca2362241c1f0ed6f622fef8d4722fd9a" -NoExpiration
+```
+
+This example adds a file allow entry for the specified files that never expires.
 
 ## PARAMETERS
 
@@ -76,7 +83,15 @@ Accept wildcard characters: False
 ```
 
 ### -Entries
-{{ Fill Entries Description }}
+The Entries parameter specifies the URL or files that you want to add to the Allowed/Blocked List based on the value of the ListType parameter:
+
+- URLs: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Allowed/Blocked List](https://docs.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list##url-syntax-for-the-allowedblocked-list).
+
+- Files: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
+
+To enter multiple values, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+You can't mix URL and file values or allow and block actions in the same command. You can't modify existing URL or file values after you create the entry (there's no Entries parameter on the Set-TenantAllowBlockListItems cmdlet).
 
 ```yaml
 Type: String[]
@@ -169,7 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -OutputJson
-{{ Fill OutputJson Description }}
+The OutputJson switch specifies whether to return all entries in a single JSON value. You don't need to specify a value with this switch.
+
+You use this switch to prevent the command from halting on the first entry that contains a syntax error.
 
 ```yaml
 Type: SwitchParameter

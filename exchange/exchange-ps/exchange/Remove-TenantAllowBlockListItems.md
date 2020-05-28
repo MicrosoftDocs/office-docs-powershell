@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-TenantAllowBlockListItems -Ids RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0 -ListType Url
+Remove-TenantAllowBlockListItems -ListType Url -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0l"
 ```
 
 This example removes the specified URL entry from the Allow/Block List.
@@ -43,7 +43,9 @@ This example removes the specified URL entry from the Allow/Block List.
 ## PARAMETERS
 
 ### -Ids
-The Ids parameter specifies the entry that you want to remove. The easiest way to find this value is to use the Get-TenantAllowBlockListItems cmdlet and the more user-friendly Entry property value (a URL or a file hash). An example value is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
+The Ids parameter specifies the entry that you want to modify. To find this value, use the Get-TenantAllowBlockListItems cmdlet and the Entry property value (a URL or a file hash).
+
+An example value for this parameter is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
 
 You can specify multiple values separated by commas.
 
@@ -80,7 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -OutputJson
-{{ Fill OutputJson Description }}
+The OutputJson switch specifies whether to return all entries in a single JSON value. You don't need to specify a value with this switch.
+
+You use this switch to prevent the command from halting on the first entry that contains a syntax error.
 
 ```yaml
 Type: SwitchParameter
