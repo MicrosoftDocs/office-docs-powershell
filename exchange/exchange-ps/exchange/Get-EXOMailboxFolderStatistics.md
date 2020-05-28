@@ -28,7 +28,6 @@ Get-EXOMailboxFolderStatistics
  [-ExternalDirectoryObjectId <Guid>]
  [-Folderscope <ElcFolderType>]
  [-Identity <String>]
- [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
  [-ResultSize <Unlimited>]
@@ -154,11 +153,19 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
+The Identity parameter specifies the identity of the mailbox or mail user. For the best performance, we recommend using the user ID or user principal name (UPN) to identify the mailbox.
 
-- GUID
+Otherwise, you can use any value that uniquely identifies the mailbox or mail user. For example:
 
-- User Principal Name (UPN)
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- LegacyExchangeDN
+
+- SamAccountName
 
 ```yaml
 Type: String
@@ -170,24 +177,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IncludeAnalysis
-The IncludeAnalysis switch specifies whether to scan all items within a folder and return statistics related to the folder and item size. You don't need to specify a value with this switch.
-
-You should use this switch for troubleshooting purposes, because the command might take a long time to complete.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
