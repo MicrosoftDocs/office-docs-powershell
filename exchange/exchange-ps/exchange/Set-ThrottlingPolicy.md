@@ -635,7 +635,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryMaxConcurrency
-The DiscoveryMaxConcurrency parameter specifies the number of concurrent discovery search executions that a user can have at the same time.
+The DiscoveryMaxConcurrency parameter specifies the number of concurrent discovery search executions that a user can have at the same time. To modify the discovery throttling parameters, create a new policy and name it as "DiscoveryThrottlingPolicy" only
 
 ```yaml
 Type: Unlimited
