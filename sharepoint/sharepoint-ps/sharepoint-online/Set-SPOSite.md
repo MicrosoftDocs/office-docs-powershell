@@ -850,6 +850,38 @@ Default value: WebPreviewableFiles
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -AddInformationSegment
+
+This parameter allows you to add segment to a SharePoint site.This parameter is only applicable for tenants who have enabled M365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
+
+[!NOTE] This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+
+```yaml
+Type: GUID
+Required: False
+Position: Named
+Default value: None
+```
+
+Example: Set-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] -AddInformationSegment [a17efb47-e3c9-4d85-a188-1cd59c83de32]
+
+In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is added to the site. 
+
+### -RemoveInformationSegment
+This parameter allows you to remove segment from a SharePoint site.This parameter is only applicable for tenants who have enabled M365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
+
+[!NOTE] This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+
+```yaml
+Type: GUID
+Required: False
+Position: Named
+Default value: None
+```
+
+Example: Set-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] -RemoveInformationSegment [a17efb47-e3c9-4d85-a188-1cd59c83de32]
+
+In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
 
 ### CommonParameters
 
