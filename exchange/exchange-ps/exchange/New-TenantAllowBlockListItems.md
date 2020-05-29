@@ -85,9 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Entries
-The Entries parameter specifies the URL or files that you want to add to the Allowed/Blocked List based on the value of the ListType parameter:
+The Entries parameter specifies the URL or files that you want to add to the Tenant Allow/Block List based on the value of the ListType parameter:
 
-- URLs: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Allowed/Blocked List](https://docs.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list##url-syntax-for-the-allowedblocked-list).
+- URLs: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://docs.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list#url-syntax-for-the-tenant-allowedblocked-list).
 
 - Files: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
 
