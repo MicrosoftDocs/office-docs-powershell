@@ -132,6 +132,21 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingDomainR
 
 Example 7 sets the Sharing Capability to allow external users who accept sharing invitations and sign in as authenticated users, and then specifies an email domain that is allowed for sharing with the external collaborators.
 
+### -----------------------EXAMPLE 8-----------------------------
+
+```powershell
+Set-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] -AddInformationSegment [a17efb47-e3c9-4d85-a188-1cd59c83de32]
+```
+
+This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the site. 
+
+### -----------------------EXAMPLE 9-----------------------------
+
+```powershell
+Set-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] -RemoveInformationSegment [a17efb47-e3c9-4d85-a188-1cd59c83de32]
+```
+
+In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
 
 ## PARAMETERS
 
@@ -833,11 +848,12 @@ Accept wildcard characters: False
 ### -LimitedAccessFileType
 
 The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting.
--OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
--LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
--LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
 
-PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+- OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+
+- LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+
+- LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
 
 ```yaml
 Type: SPOLimitedAccessFileType
@@ -854,7 +870,7 @@ Accept wildcard characters: False
 
 This parameter allows you to add segment to a SharePoint site.This parameter is only applicable for tenants who have enabled M365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
 
-[!NOTE] This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+**Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
 ```yaml
 Type: GUID
@@ -862,15 +878,11 @@ Required: False
 Position: Named
 Default value: None
 ```
-
-Example: Set-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] -AddInformationSegment [a17efb47-e3c9-4d85-a188-1cd59c83de32]
-
-In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is added to the site. 
 
 ### -RemoveInformationSegment
 This parameter allows you to remove segment from a SharePoint site.This parameter is only applicable for tenants who have enabled M365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
 
-[!NOTE] This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+**Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
 ```yaml
 Type: GUID
@@ -878,10 +890,6 @@ Required: False
 Position: Named
 Default value: None
 ```
-
-Example: Set-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] -RemoveInformationSegment [a17efb47-e3c9-4d85-a188-1cd59c83de32]
-
-In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
 
 ### CommonParameters
 
