@@ -95,7 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox you want to view. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the mailbox you want to view. For the best performance, we recommend using the user ID or user principal name (UPN) to identify the mailbox.
+
+Otherwise, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -103,19 +105,9 @@ The Identity parameter specifies the mailbox you want to view. You can use any v
 
 - Distinguished name (DN)
 
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
 - LegacyExchangeDN
 
 - SamAccountName
-
-- User ID or user principal name (UPN)
 
 ```yaml
 Type: String

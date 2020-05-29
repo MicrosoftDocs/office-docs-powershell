@@ -37,6 +37,7 @@ This cmdlet has been deprecated and no longer used.
 ```powershell
 Get-TenantAnalyticsConfig
 ```
+
 This cmdlet has been deprecated and no longer used.
 
 ## PARAMETERS

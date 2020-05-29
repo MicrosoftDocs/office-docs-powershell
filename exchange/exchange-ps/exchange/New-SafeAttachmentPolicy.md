@@ -25,9 +25,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SafeAttachmentPolicy [-Name] <String> [-Action <SafeAttachmentAction>]
- [-ActionOnError <Boolean>] [-AdminDisplayName <String>] [-Confirm] [-Enable <Boolean>]
- [-Redirect <Boolean>] [-RedirectAddress <SmtpAddress>] [-WhatIf] [<CommonParameters>]
+New-SafeAttachmentPolicy [-Name] <String>
+ [-Action <SafeAttachmentAction>]
+ [-ActionOnError <Boolean>]
+ [-AdminDisplayName <String>]
+ [-Confirm]
+ [-Enable <Boolean>]
+ [-Redirect <Boolean>]
+ [-RedirectAddress <SmtpAddress>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
