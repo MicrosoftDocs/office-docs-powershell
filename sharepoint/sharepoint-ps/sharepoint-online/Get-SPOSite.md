@@ -101,7 +101,7 @@ Get-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -detailed |
 
 This example gets quota details for a Group Site.
 
-###
+### -----------------------EXAMPLE 6-----------------------------
 
 ```powershell
 Get-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] | Select InformationSegment
