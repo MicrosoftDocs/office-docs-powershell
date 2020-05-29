@@ -206,6 +206,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-SPODataConnectionSetting](../sharepoint-server/Get-SPODataConnectionSetting.md)
 
-[New-SPODataConnectionSetting](../sharepoint-server/New-SPODataConnectionSetting.md)
+[New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 
-[Set-SPODataConnectionSetting](../sharepoint-server/Set-SPODataConnectionSetting.md)
+[Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
