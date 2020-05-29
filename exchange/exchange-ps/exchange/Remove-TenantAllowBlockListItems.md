@@ -1,21 +1,24 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-hostedcontentfilterrule
+online version: https://docs.microsoft.com/powershell/module/exchange/remove-tenantallowblocklistitems
 applicable: Exchange Online, Exchange Online Protection
-title: Get-HostedContentFilterRule
+title: Remove-TenantAllowBlockListItems
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 monikerRange: "exchonline-ps || eop-ps"
+ROBOTS: NOINDEX, NOFOLLOW
 ---
 
-# Get-HostedContentFilterRule
+# Remove-TenantAllowBlockListItems
 
 ## SYNOPSIS
+**Note**: The features described in this topic are in Preview, are subject to change, and are not available in all organizations.
+
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-HostedContentFilterRule cmdlet to view spam filter rules (content filter rules) in your cloud-based organization.
+Use the Remove-TenantAllowBlockListItems cmdlet to remove entries from the Tenant Allow/Block List in the Security & Compliance Center.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
@@ -24,7 +27,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-HostedContentFilterRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
+Remove-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType> [-OutputJson] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,51 +37,59 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-HostedContentFilterRule
+Remove-TenantAllowBlockListItems -ListType Url -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0l"
 ```
 
-This example shows a summary list of all the spam filter rules in your cloud-based organization.
-
-### Example 2
-```powershell
-Get-HostedContentFilterRule "Contoso Recipients" | Format-List
-```
-
-This example retrieves details about the spam filter rule named Contoso Recipients.
+This example removes the specified URL entry from the Allow/Block List.
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the spam filter rule that you want to view. You can use any value that uniquely identifies the rule. For example:
+### -Ids
+The Ids parameter specifies the entry that you want to modify. To find this value, use the Get-TenantAllowBlockListItems cmdlet and the Entry property value (a URL or a file hash).
 
-- Name
+An example value for this parameter is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
 
-- Distinguished name (DN)
-
-- GUID
+You can specify multiple values separated by commas.
 
 ```yaml
-Type: RuleIdParameter
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
-Required: False
-Position: 1
+Required: True
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -State
-The State parameter filters the results by the state of the rule. Valid values are:
+### -ListType
+The ListType parameter specifies the type of entry to remove. Valid values are:
 
-- Enabled: The command returns only enabled rules.
-
-- Disabled: The command returns only disabled rules.
+- FileHash
+- Url
 
 ```yaml
-Type: RuleState
+Type: ListType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutputJson
+The OutputJson switch specifies whether to return all entries in a single JSON value. You don't need to specify a value with this switch.
+
+You use this switch to prevent the command from halting on the first entry that contains a syntax error.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -96,12 +107,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
