@@ -26,14 +26,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity (Default)
 ```
-New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>] [-MailboxRegion <String>]
+New-UnifiedGroup [-DisplayName <String>]
+ [-AccessType <ModernGroupTypeInfo>]
+ [-MailboxRegion <String>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AutoSubscribeNewMembers]
  [-Classification <String>]
  [-Confirm]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
- [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExecutingUser <RecipientIdParameter>]
  [-ExoErrorAsWarning]
@@ -52,14 +53,14 @@ New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>] [-MailboxRegion <String>]
 
 ### ProvisioningOptions
 ```
-New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>]
+New-UnifiedGroup [-DisplayName <String>]
+ [-AccessType <ModernGroupTypeInfo>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AutoSubscribeNewMembers]
  [-Classification <String>]
  [-Confirm]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
- [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExecutingUser <RecipientIdParameter>]
  [-ExoErrorAsWarning]
@@ -78,14 +79,14 @@ New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>]
 
 ### SegmentationOption
 ```
-New-UnifiedGroup [-AccessType <ModernGroupTypeInfo>] [-SubscriptionEnabled]
+New-UnifiedGroup [-DisplayName <String>] [-SubscriptionEnabled]
+ [-AccessType <ModernGroupTypeInfo>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
  [-AutoSubscribeNewMembers]
  [-Classification <String>]
  [-Confirm]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
- [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExecutingUser <RecipientIdParameter>]
  [-ExoErrorAsWarning]
@@ -128,6 +129,24 @@ New-UnifiedGroup -DisplayName "Engineering Department" -Alias engineering
 This example creates a new Office 365 Group named Engineering Department.
 
 ## PARAMETERS
+
+### -DisplayName
+The DisplayName parameter specifies the name of the Office 365 Group. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+For Office 365 Groups, the DisplayName value is used in the unique Name property. However, because the DisplayName value doesn't need to be unique, the DisplayName value is appended with an underscore character (\_) and a short GUID value when it's used for the Name property.
+
+```yaml
+Type: String
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DlIdentity
 The DlIdentity parameter specifies the distribution group (also known as a distribution list or DL) that you want to migrate to an Office 365 Group. The distribution group must be a universal distribution group (the RecipientTypeDetails property value is MailUniversalDistributionGroup). You can use any value that uniquely identifies the distribution group. For example:
@@ -192,9 +211,9 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 
 The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create an Office 365 Group without using the EmailAddresses parameter, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+If you don't use the Alias parameter when you create an Office 365 Group, the value of the DisplayName parameter is used for the Alias value. Spaces are removed, unsupported characters are converted to question marks (?), and numbers may be added to maintain the uniqueness of the Alias value.
 
-If you don't use the Alias parameter when you create an Office 365 Group, the value of the DisplayName parameter is used. Spaces are removed, unsupported characters are converted to question marks (?), and numbers may be added to maintain the uniqueness of the Alias value.
+When you create an Office 365 Group without using the EmailAddresses parameter, the Alias value is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Office 365 Group ("Alias\_\<ExternalDirectoryObjectId\>"\).
 
@@ -341,24 +360,6 @@ You can only use this switch with the DlIdentity parameter.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DlMigration
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisplayName
-The DisplayName parameter specifies the name of the Office 365 Group. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-For Office 365 Groups, the DisplayName value is used in the unique Name property. However, because the DisplayName value doesn't need to be unique, the DisplayName value is appended with an underscore character (\_) and a short GUID value when it's used for the Name property.
-
-```yaml
-Type: String
-Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 
