@@ -17,7 +17,7 @@ monikerRange: "exchonline-ps || eop-ps"
 
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-TenantAllowBlockListItems cmdlet to modify entries in the Allowed/Blocked List in the Security & Compliance Center.
+Use the Set-TenantAllowBlockListItems cmdlet to modify entries in the Tenant Allow/Block List in the Security & Compliance Center.
 
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
