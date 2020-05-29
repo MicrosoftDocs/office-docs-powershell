@@ -101,6 +101,14 @@ Get-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -detailed |
 
 This example gets quota details for a Group Site.
 
+###
+
+```powershell
+Get-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] | Select InformationSegment
+```
+
+This example returns the InformationSegments associated to the site.
+
 ## PARAMETERS
 
 ### -Detailed
@@ -256,7 +264,7 @@ This parameter displays the segments associated with a site.
 
 It is applicable for tenants who have enabled M365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
 
-[!NOTE] This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+**Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
 ```yaml
 Type: Collection of GUIDs
@@ -265,9 +273,6 @@ Required: False
 Position: Named
 Default value: None
 ```
-Example: Get-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] | Select InformationSegment
-
-In the example, it returns the InformationSegments associated to the site.
 
 ### CommonParameters
 
