@@ -251,6 +251,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### InformationSegment
+This parameter displays the segments associated with a site. 
+
+It is applicable for tenants who have enabled M365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
+
+[!NOTE] This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+
+```yaml
+Type: Collection of GUIDs
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+```
+Example: Get-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] | Select InformationSegment
+
+In the example, it returns the InformationSegments associated to the site.
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
