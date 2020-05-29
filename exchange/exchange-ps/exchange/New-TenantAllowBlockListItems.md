@@ -17,7 +17,7 @@ monikerRange: "exchonline-ps"
 
 This cmdlet is available only in the cloud-based service.
 
-Use the New-TenantAllowBlockListItems cmdlet to add entries to the Allowed/Blocked List in the Security & Compliance Center.
+Use the New-TenantAllowBlockListItems cmdlet to add entries to the Tenant Allow/Block List in the Security & Compliance Center.
 
 > [!NOTE]
 > We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
