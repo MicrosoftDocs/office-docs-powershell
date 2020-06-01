@@ -595,6 +595,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -VideoFiltersMode
+Determines what background effects a user can use in scheduled calls and meetings. 
+
+```yaml
+Type: Enum
+Position: Named
+Default value: AllFilters
+Accept pipeline input: False
+Accept wildcard characters: False
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
