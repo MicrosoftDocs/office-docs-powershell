@@ -27,7 +27,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-EXORecipientPermission
  [-AccessRights <MultiValuedProperty>]
  [-ResultSize <Unlimited>]
- [-Trustee <String>]
  [<CommonParameters>]
 ```
 
@@ -36,8 +35,10 @@ Get-EXORecipientPermission
 Get-EXORecipientPermission [[-Identity] <String>]
  [-AccessRights <MultiValuedProperty>]
  [-ExternalDirectoryObjectId <Guid>]
+ [-PrimarySmtpAddress <String>
  [-ResultSize <Unlimited>]
  [-Trustee <String>]
+ [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
 
@@ -138,6 +139,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PrimarySmtpAddress
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -185,7 +202,7 @@ You can use any value that uniquely identifies the user or group. For example:
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -193,6 +210,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserPrincipalName
+The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
