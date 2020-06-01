@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -ReplicatedContentTypes
 
-{{Fill ReplicatedContentTypes Description}}
+Specifies a comma separated list of content types that should be replicated.
 
 ```yaml
 Type: String[]
