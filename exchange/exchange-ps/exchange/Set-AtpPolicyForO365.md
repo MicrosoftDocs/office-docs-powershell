@@ -23,8 +23,7 @@ Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (AT
 
 - ATP to protect files in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
-> [!NOTE]
-> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -38,7 +37,7 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-Confirm]
  [-EnableATPForSPOTeamsODB <Boolean>]
  [-EnableSafeDocs <Boolean>]
- [-EnableSafeLinksForClients <Boolean>]
+ [-EnableSafeLinksForO365Clients <Boolean>]
  [-TrackClicks <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -155,11 +154,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableATPForSPOTeamsODB
-The EnableATPForSPOTeamsODB parameter specifies whether ATP is enabled for SharePoint Online, OneDrive for Business and Microsoft Teams. Valid values are:
+The EnableATPForSPOTeamsODB parameter specifies whether Safe Attachments is enabled for SharePoint Online, OneDrive for Business and Microsoft Teams. Valid values are:
 
-- $true: ATP is enabled for SharePoint Online, OneDrive for Business and Microsoft Teams.
+- $true: Safe Attachments is enabled for SharePoint Online, OneDrive for Business and Microsoft Teams.
 
-- $false: ATP is disabled for SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.
+- $false: Safe Attachments is disabled for SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -194,14 +193,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableSafeLinksForClients
-The EnableSafeLinksForClients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop clients and on the web. Valid values are:
+### -EnableSafeLinksForO365Clients
+The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop clients and on the web. Valid values are:
 
 - $true: Safe Links are enabled for Office 365 apps. This is the default value.
 
 - $false: Safe Links are disabled for Office 365 apps.
-
-This parameter is being replaced by EnableSafeLinksForO365Clients with the same functionality. Use which ever one is currently available in your tenant.
 
 ```yaml
 Type: Boolean

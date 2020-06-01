@@ -17,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Enable-Mailbox cmdlet to create mailboxes for existing users who don't already have mailboxes. You can also use this cmdlet to create In-Place archives for existing mailboxes.
 
-Note: In Exchange Online, this cmdlet doesn't activate/enable a mailbox the same way it does in on-premises Exchange. To add a mailbox for an existing Azure AD account, you can simply add a license to the account by using the Set-MsolUserLicense cmdlet.
+**Note**: In Exchange Online, you use this cmdlet to add archive mailboxes for existing users and to enable auto-expanding archives. To add a mailbox for an existing Azure AD account, you need to add a license to the account as described in [Assign licenses to user accounts](https://docs.microsoft.com/office365/enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -347,6 +347,8 @@ Accept wildcard characters: False
 ```
 
 ### -Discovery
+This parameter is available only in on-premises Exchange.
+
 The Discovery switch is required to mailbox-enable Discovery mailboxes. You don't need to specify a value with this switch.
 
 Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be converted to another type of mailbox. For more information, see [In-Place eDiscovery in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
@@ -355,7 +357,7 @@ Discovery mailboxes are created as target mailboxes for Discovery searches. Afte
 Type: SwitchParameter
 Parameter Sets: Discovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -637,13 +639,15 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveGuid
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -759,6 +763,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
+This parameter is available only in on-premises Exchange.
+
 The DisplayName parameter specifies the display name of the mailbox. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 If you don't use DisplayName parameter, the value of the Name property is used for the display name.
@@ -767,7 +773,7 @@ If you don't use DisplayName parameter, the value of the Name property is used f
 Type: String
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -957,7 +963,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleAssignmentPolicy
-The RoleAssignmentPolicy parameter specifies the management role assignment policy that's assign to the mailbox. You can use any value that uniquely identifies the policy. For example:
+The RoleAssignmentPolicy parameter specifies the management role assignment policy that's assigned to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 

@@ -83,7 +83,8 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited	
 Parameter Sets: (All)	
 Aliases:
-Applicable: Exchange Online	
+Applicable: Exchange Online
+
 Required: False	
 Position: Named	
 Default value: None	
