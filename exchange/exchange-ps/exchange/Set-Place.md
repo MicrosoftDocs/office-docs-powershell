@@ -58,6 +58,13 @@ Set-Place -Identity "Conference Room 01" -IsWheelChairAccessible $true -AudioDev
 
 The example adds the specified metadata to the room mailbox named Conference Room 01.
 
+### Example 2
+```powershell
+Set-Place -Identity "Conference Room 02" -Building "Building 02" -Capacity 5 -CountryOrRegion ES -Floor 3 -FloorLabel "Human Resources" -Label Interviews
+```
+
+The example adds the specified metadata to the room mailbox named Conference Room 02.
+
 ## PARAMETERS
 
 ### -Identity
