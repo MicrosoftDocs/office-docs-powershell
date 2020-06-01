@@ -87,6 +87,9 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
+  
+  > [!NOTE]
+  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
 
   ```dos
   winrm get winrm/config/client/auth
