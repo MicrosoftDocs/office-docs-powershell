@@ -120,6 +120,8 @@ The CountryRegionId parameter specifies the country that your mobile phone is re
 - CA
 - RO
 
+A reference for two-letter country codes is available at [Country Codes List](https://www.nationsonline.org/oneworld/country_code_list.htm).
+
 ```yaml
 Type: RegionInfo
 Parameter Sets: (All)
