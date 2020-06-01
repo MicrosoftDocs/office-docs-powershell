@@ -87,15 +87,12 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 
   <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-- Windows Remote Management (WinRM) needs to be enabled (it's not enabled by default in Windows 7, 8.1 and 10). To enable it, run this command **in a Command Prompt**:
-
-  ```dos
-  winrm quickconfig
-  ```
-
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
+  
+  > [!NOTE]
+  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
 
   ```dos
   winrm get winrm/config/client/auth
