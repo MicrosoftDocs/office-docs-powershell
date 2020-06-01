@@ -15,7 +15,9 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-Place cmdlet to update room mailboxes with additional metadata, which provides a better search and room suggestion experience. Note that this cmdlet works only on room mailboxes that were created in the cloud (not on synchronized room mailboxes).
+Use the Set-Place cmdlet to update room mailboxes with additional metadata, which provides a better search and room suggestion experience.
+
+**Note**: In hybrid environments, this cmdlet doesn't work on the following properties on synchronized room mailboxes: City, CountryOrRegion, GeoCoordinates, Phone, PostalCode, State, and Street. To modify these properties on synchronized room mailboxes, use the Set-User or Set-Mailbox cmdlets in on-premises Exchange.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
@@ -57,6 +59,13 @@ Set-Place -Identity "Conference Room 01" -IsWheelChairAccessible $true -AudioDev
 ```
 
 The example adds the specified metadata to the room mailbox named Conference Room 01.
+
+### Example 2
+```powershell
+Set-Place -Identity "Conference Room 02" -Building "Building 02" -Capacity 5 -CountryOrRegion ES -Floor 3 -FloorLabel "Human Resources" -Label Interviews
+```
+
+The example adds the specified metadata to the room mailbox named Conference Room 02.
 
 ## PARAMETERS
 
@@ -175,7 +184,11 @@ Accept wildcard characters: False
 ```
 
 ### -CountryOrRegion
-The CountryOrRegion parameter specifies the room's country or region. A valid value is a valid ISO 3166-1 two-letter country code (for example, AU for Australia) or the corresponding friendly name for the country (which might be different from the official ISO 3166 Maintenance Agency short name). The friendly name is returned in the CountryOrRegion property value by the Get-Place cmdlet, but you can use either the friendly name or the two-letter country code in filter operations.
+The CountryOrRegion parameter specifies the room's country or region. A valid value is a valid ISO 3166-1 two-letter country code (for example, AU for Australia) or the corresponding friendly name for the country (which might be different from the official ISO 3166 Maintenance Agency short name).
+
+A reference for two-letter country codes is available at [Country Codes List](https://www.nationsonline.org/oneworld/country_code_list.htm).
+
+The friendly name is returned in the CountryOrRegion property value by the Get-Place cmdlet, but you can use either the friendly name or the two-letter country code in filter operations.
 
 ```yaml
 Type: CountryInfo
