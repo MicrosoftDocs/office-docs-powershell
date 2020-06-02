@@ -179,9 +179,9 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingMethod
-The RoutingMethod defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel.
+The RoutingMethod defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel. If routing method is set to RoundRobin, the agents will be called using Round Robin strategy so that all agents share the call-load equally. If routing method is set to LongestIdle, the agents will be called based on their idle time, i.e., the agent that has been idle for the longest period will be called.
 
-PARAMVALUE: Attendant | Serial | RoundRobin
+PARAMVALUE: Attendant | Serial | RoundRobin | LongestIdle
 
 ```yaml
 Type: Object
