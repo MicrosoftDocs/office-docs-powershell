@@ -34,17 +34,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -AllWebApplications
+New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -Default
 ```
 
-This example registers a claim provider in the farm.
-
-### ------------------EXAMPLE 2------------------ 
-```
-New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -Scope (Get-SPWebApplication https://test)
-```
-
-This example registers a claim provider scoped to a given Web application.
+This example registers a claim provider to all Web applications and zones.
 
 ## PARAMETERS
 
