@@ -754,6 +754,7 @@
   "Enable-JournalRule": "policy-and-compliance",
   "Enable-OutlookProtectionRule": "policy-and-compliance",
   "Enable-TransportRule": "policy-and-compliance",
+  "Execute-AzureADLabelSync": "policy-and-compliance",
   "Export-JournalRuleCollection": "policy-and-compliance",
   "Export-TransportRuleCollection": "policy-and-compliance",
   "Get-ActivityAlert": "policy-and-compliance",
