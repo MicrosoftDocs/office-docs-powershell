@@ -55,7 +55,7 @@ In Skype for Business Online and Skype for Business Server, conferences are mana
  - In Skype for Business Online, conferencing policy is managed on a per-user basis.  Skype for Business Online provides several built-in conferencing policy instances, and if needed administrators, can create their own policy instances as well, using the New-CsConferencingPolicy cmdlet.
  - In Skype for Business Server, conferencing policies can be created at either the site or the per-user scope. If you need to modify  property values of the global conferencing policy, use the Set-CsConferencingPolicy cmdlet.
 
-The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AsJob, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, InMemory, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb.
+The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, InMemory, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb.
 
 
 
@@ -1069,21 +1069,6 @@ Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named

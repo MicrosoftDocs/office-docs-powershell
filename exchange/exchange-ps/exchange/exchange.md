@@ -1543,6 +1543,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Enable-TransportRule](Enable-TransportRule.md)
 
+### [Execute-AzureADLabelSync](Execute-AzureADLabelSync.md)
+
 ### [Export-JournalRuleCollection](Export-JournalRuleCollection.md)
 
 ### [Export-TransportRuleCollection](Export-TransportRuleCollection.md)

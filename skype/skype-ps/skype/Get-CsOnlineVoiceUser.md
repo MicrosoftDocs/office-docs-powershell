@@ -18,7 +18,7 @@ Use the `Get-CsOnlineVoiceUser` cmdlet to retrieve a voice user's telephone numb
 ## SYNTAX
 
 ```
-Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <Fqdn>] [-EnterpriseVoiceStatus <MultiValuedProperty>] [-ExpandLocation] [-First <Unlimited>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <UserIdParameter>] [-LocationId <LocationID>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <MultiValuedProperty>] [-SearchQuery <String>] [-Skip <Unlimited>] [-Tenant <Guid>] [-AsJob]
+Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <Fqdn>] [-EnterpriseVoiceStatus <MultiValuedProperty>] [-ExpandLocation] [-First <Unlimited>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <UserIdParameter>] [-LocationId <LocationID>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <MultiValuedProperty>] [-SearchQuery <String>] [-Skip <Unlimited>] [-Tenant <Guid>]
  [<CommonParameters>]
 ```
 
@@ -302,26 +302,6 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the `Receive-Job` cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
