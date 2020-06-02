@@ -35,7 +35,7 @@ Set-CsExternalUserCommunicationPolicy [-Tenant <Guid>] [-EnableFileTransfer <Boo
 
 ## DESCRIPTION
 
-The following parameters are not applicable to Skype for Business Online: AllowPresenceVisibility, AllowTitleVisibility, AsJob, EnableFileTransfer, Force, Identity, Instance, PipelineVariable, and Tenant
+The following parameters are not applicable to Skype for Business Online: AllowPresenceVisibility, AllowTitleVisibility, EnableFileTransfer, Force, Identity, Instance, PipelineVariable, and Tenant
 
 ## EXAMPLES
 

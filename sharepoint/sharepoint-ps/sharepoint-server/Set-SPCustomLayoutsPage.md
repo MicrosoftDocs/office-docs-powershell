@@ -35,7 +35,7 @@ Set-SPCustomLayoutsPage -Identity <SPCustomPage> [-Reset] -WebApplication <SPWeb
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Set-SPCustomLayoutsPage` cmdlet maps a new path for a custom layouts page in a Web application.
 To remove the mapping for a custom layouts page, use the Reset parameter instead of the RelativePath parameter.
