@@ -31,7 +31,7 @@ This list describes the properties that are displayed by default.
 
 - Name: The unique name of the policy.
 
-- Workload: Where the policy is applied. For example, SharePoint or Exchange.
+- Workload: At the moment it will show all workloads (Exchange, SharePoint, OneDriveForBusiness, Skype, ModernGroup) and it will not show the actual workload on which the policy is applied.
 
 - Enabled: The value True means the policy is enabled.
 
