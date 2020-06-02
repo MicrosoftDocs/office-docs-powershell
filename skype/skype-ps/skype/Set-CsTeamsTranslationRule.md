@@ -19,7 +19,7 @@ Cmdlet to modify an existing normalization rule.
 
 ```
 Set-CsTeamsTranslationRule [-Description <string>] [-Pattern <string>] [-WhatIf] [-Translation <string>]
- [-Identity <string>] [-Tenant <string>] [-Confirm] [-Force] [-Instance <Object>] [-AsJob]
+ [-Identity <string>] [-Tenant <string>] [-Confirm] [-Force] [-Instance <Object>]
 ```
 
 ## DESCRIPTION
