@@ -597,6 +597,7 @@ Accept wildcard characters: False
 
 ### -VideoFiltersMode
 Determines what background effects a user can use in scheduled calls and meetings. 
+Possible values: NoFilters, BlurOnly, BlurAndDefaultBackgrounds, AllFilters.
 
 ```yaml
 Type: Enum
@@ -617,4 +618,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
