@@ -107,11 +107,27 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox you want to return statistics for. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the mailbox you want to return statistics for. For the best performance, we recommend using the following values to identify the mailbox:
 
-- User Principal Name (UPN)
+- User ID or user principal name (UPN)
 
-- External Directory Object Id.
+- GUID
+
+Otherwise, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- LegacyExchangeDN
+
+- SamAccountName
 
 ```yaml
 Type: String
