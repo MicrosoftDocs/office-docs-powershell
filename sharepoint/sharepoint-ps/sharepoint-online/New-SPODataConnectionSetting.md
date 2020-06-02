@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -ExtensionProvider
 
-{{Fill ExtensionProvider Description}}
+Specifies the ODataExtensionProvider for the Business Connectivity Services connection.
 
 ```yaml
 Type: String
