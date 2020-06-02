@@ -74,7 +74,7 @@ Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Set-SPEnterpriseSearchCrawlContentSource` cmdlet updates the rules of a crawl content source when the search functionality is initially configured and after any new content source is added.
 This cmdlet is called once to set the incremental crawl schedule for a content source and it is called again to set a full crawl schedule.
