@@ -24,8 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity (Default)
 ```
-Get-EXOCasMailbox
- [[-Identity] <String>]
+Get-EXOCasMailbox [[-Identity] <String>]
  [-Filter <String>]
  [-ExternalDirectoryObjectId <Guid>]
  [-OrganizationalUnit <String>]
@@ -39,8 +38,7 @@ Get-EXOCasMailbox
 
 ### Anr
 ```
-Get-EXOCasMailbox
- [-Anr <String>]
+Get-EXOCasMailbox [-Anr <String>]
  [-Filter <String>]
  [-OrganizationalUnit <String>]
  [-Properties <String[]>]
@@ -77,6 +75,44 @@ This example returns the values of the following client access settings for the 
 - ECPEnabled
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mailbox you want to view. For the best performance, we recommend using the following values to identify the mailbox:
+
+- User ID or user principal name (UPN)
+
+- GUID
+
+Otherwise, you can use any other value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+You can't use this parameter with the Anr parameter.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
 
 ### -Anr
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
@@ -148,42 +184,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the mailbox you want to view. You can use any value that uniquely identifies the mailbox. For example:
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-**Note**: This parameter doesn't support Name or Alias values.
-
-You can't use this parameter with the Anr parameter.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -OrganizationalUnit
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas.
 
 For more information about the available properties, see [Get-EXOCasMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exocasmailbox-property-sets).
 
@@ -245,7 +245,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 - All
 
-You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+You can specify multiple values separated by commas.
 
 For more information about the properties that are included in each property set, see [Get-EXOCasMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exocasmailbox-property-sets).
 

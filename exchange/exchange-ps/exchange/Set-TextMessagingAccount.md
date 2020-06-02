@@ -114,15 +114,13 @@ Accept wildcard characters: False
 ```
 
 ### -CountryRegionId
-The CountryRegionId parameter specifies the country that your mobile phone is registered in. Although this parameter accepts any valid ISO 3166-1 alpha-2 country code value, the following values correspond to the country selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
+The CountryRegionId parameter specifies the country that your mobile phone is registered in. Although this parameter accepts any valid ISO 3166-1 two-letter country code value (for example, AU for Australia), the following values correspond to the country selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
 
 - US
-
 - CA
-
 - RO
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
+A reference for two-letter country codes is available at [Country Codes List](https://www.nationsonline.org/oneworld/country_code_list.htm).
 
 ```yaml
 Type: RegionInfo
