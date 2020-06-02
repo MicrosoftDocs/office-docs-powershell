@@ -2011,6 +2011,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## powershell-v2-module Cmdlets
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
+### [Connect-IPPSSession](Connect-IPPSSession.md)
+
+### [Disconnect-ExchangeOnline](Disconnect-ExchangeOnline.md)
+
 ### [Get-EXOCasMailbox](Get-EXOCasMailbox.md)
 
 ### [Get-EXOMailbox](Get-EXOMailbox.md)
@@ -2029,9 +2033,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EXORecipientPermission](Get-EXORecipientPermission.md)
 
-### Get-UserBriefingConfig](Get-UserBriefingConfig.md)
+### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
-### Set-UserBriefingConfig](Set-UserBriefingConfig.md)
+### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
 
 ## reporting Cmdlets
 ### [Get-ConnectionByClientTypeDetailReport](Get-ConnectionByClientTypeDetailReport.md)

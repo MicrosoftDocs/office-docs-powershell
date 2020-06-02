@@ -13,7 +13,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 # Get-FailedContentIndexDocuments
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+Although this cmdlet is available in on-premises Exchange and in the cloud-based service, it only works in Exchange Server 2016 or earlier.
 
 Use the Get-FailedContentIndexDocuments cmdlet to retrieve a list of documents for a mailbox, mailbox database, or Mailbox server that couldn't be indexed by Exchange Search.
 
