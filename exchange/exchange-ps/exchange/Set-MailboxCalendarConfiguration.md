@@ -191,6 +191,8 @@ This parameter is available only in the cloud-based service.
 
 The CalendarFeedsPreferredRegion specifies the preferred region for calendar feeds. A valid value is an ISO 3166-1 two-letter country code (for example, AU for Australia).
 
+A reference for two-letter country codes is available at [Country Codes List](https://www.nationsonline.org/oneworld/country_code_list.htm).
+
 ```yaml
 Type: String
 Parameter Sets: (All)
