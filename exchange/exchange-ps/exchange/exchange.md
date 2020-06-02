@@ -971,6 +971,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-Clutter](Get-Clutter.md)
 
+### [Get-EventsFromEmailConfiguration](Get-EventsFromEmailConfiguration.md)
+
 ### [Get-FocusedInbox](Get-FocusedInbox.md)
 
 ### [Get-InboxRule](Get-InboxRule.md)
@@ -1094,6 +1096,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-CalendarProcessing](Set-CalendarProcessing.md)
 
 ### [Set-Clutter](Set-Clutter.md)
+
+### [Set-EventsFromEmailConfiguration](Set-EventsFromEmailConfiguration.md)
 
 ### [Set-FocusedInbox](Set-FocusedInbox.md)
 
@@ -1631,6 +1635,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ProtectionAlert](Remove-ProtectionAlert.md)
 
+### [Remove-RecordLabel](Remove-RecordLabel.md)
+
 ### [Remove-SupervisoryReviewPolicyV2](Remove-SupervisoryReviewPolicyV2.md)
 
 ### [Remove-TransportRule](Remove-TransportRule.md)
@@ -1924,6 +1930,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ManagedFolderMailboxPolicy](Get-ManagedFolderMailboxPolicy.md)
 
+### [Get-RegulatoryComplianceUI](Get-RegulatoryComplianceUI.md)
+
 ### [Get-RetentionCompliancePolicy](Get-RetentionCompliancePolicy.md)
 
 ### [Get-RetentionComplianceRule](Get-RetentionComplianceRule.md)
@@ -1993,6 +2001,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-ManagedFolder](Set-ManagedFolder.md)
 
 ### [Set-ManagedFolderMailboxPolicy](Set-ManagedFolderMailboxPolicy.md)
+
+### [Set-RegulatoryComplianceUI](Set-RegulatoryComplianceUI.md)
 
 ### [Set-RetentionCompliancePolicy](Set-RetentionCompliancePolicy.md)
 
