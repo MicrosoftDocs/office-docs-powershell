@@ -80,6 +80,7 @@ Set-OrganizationConfig
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
+ [-OnlineMeetingsByDefaultEnabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
  [-OutlookMobileHelpShiftEnabled <Boolean>]
  [-OutlookMobileSingleAccountEnabled <Boolean>]
@@ -1931,6 +1932,30 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Ex
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OnlineMeetingsByDefaultEnabled
+This parameter is available only in the cloud-based service.
+
+The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
+
+- $true: All meetings are online by default.
+
+- $false: All meetings are not online by default. This is the default value.
+
+You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
