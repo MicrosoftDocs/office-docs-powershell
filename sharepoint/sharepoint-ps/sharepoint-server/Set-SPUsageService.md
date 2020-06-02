@@ -183,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -UsageLogMaxSpaceGB
-The parameter is not used in SharePoint Server.
+The maximum amount of space (measured in gigabytes) allowed for usage logs.
+Althought the parameter is present in later SharePoint Server versions, it is applicable only to SharePoint Server 2010.
 
 ```yaml
 Type: UInt32
