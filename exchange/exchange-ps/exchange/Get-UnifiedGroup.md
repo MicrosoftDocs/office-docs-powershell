@@ -149,6 +149,8 @@ The Identity parameter specifies the Office 365 Group that you want to view. You
 
 - GUID
 
+**Note**: You can use the DisplayName value to identify the Office 365 group, but the results aren't guaranteed to be unique. If you must return a singular and unique result, use a unique identifier for the Office 365 Group.
+
 ```yaml
 Type: UnifiedGroupIdParameter
 Parameter Sets: Identity
