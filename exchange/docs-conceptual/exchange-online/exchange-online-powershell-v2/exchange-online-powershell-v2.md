@@ -273,6 +273,8 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 > [!NOTE]
 > We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the required properties.
 
+For more information about filtering in the EXO V2 module, see [Filters in the Exchange Online V2 module](filters-v2.md).
+
 ## Release notes
 
 ### Current release: Version 0.4578.0
