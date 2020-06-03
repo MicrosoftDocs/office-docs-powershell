@@ -104,7 +104,7 @@ This example gets quota details for a Group Site.
 ### -----------------------EXAMPLE 6-----------------------------
 
 ```powershell
-Get-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] | Select InformationSegment
+Get-SPOSite -Identity https://contoso.sharepoint.com/sites/research | Select InformationSegment
 ```
 
 This example returns the InformationSegments associated to the site.
