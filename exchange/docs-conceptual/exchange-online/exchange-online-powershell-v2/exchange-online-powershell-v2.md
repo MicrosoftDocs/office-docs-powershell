@@ -52,7 +52,6 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 |[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
 |[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell)|
 
-
 ## Install and maintain the Exchange Online PowerShell V2 module
 
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
@@ -267,6 +266,8 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 > [!NOTE]
 > We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the required properties.
+
+For more information about filtering in the EXO V2 module, see [Filters in the Exchange Online V2 module](filters-v2.md).
 
 ## Release notes
 
