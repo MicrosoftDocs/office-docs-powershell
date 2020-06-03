@@ -143,7 +143,7 @@ This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to t
 ### -----------------------EXAMPLE 9-----------------------------
 
 ```powershell
-Set-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] -RemoveInformationSegment [a17efb47-e3c9-4d85-a188-1cd59c83de32]
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -RemoveInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
 ```
 
 In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
