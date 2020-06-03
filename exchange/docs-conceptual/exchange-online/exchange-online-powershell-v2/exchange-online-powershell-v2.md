@@ -271,16 +271,16 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 ## Release notes
 
 ### Current release: Version 1.0.1
-    
-    - This is the General Availability (GA) version of EXO PowerShell V2 Module. It is stable and ready for being used in production environments.
-    
-    - Get-ExoMobileDeviceStatistics cmdlet now supports Identity parameter.
-    
-    - Improved reliability of session auto-reconnect in certain cases where script was executing for ~50minutes and threw "Cmdlet not found" error due to a bug in auto-reconnect logic.
-    
-    - Fixed data-type issues of two commonly used attributed "User" and "MailboxFolderUser" for easy migration of scripts.
-    
-    - Enhanced support for filters as it now supports 4 more operators - endswith, contains, not and notlike support. Please check online documentation for attributes which are not supported in filter string.
+
+- This is the General Availability (GA) version of the EXO PowerShell V2 Module. It is stable and ready for use in production environments.
+
+- Get-ExoMobileDeviceStatistics cmdlet now supports Identity parameter.
+
+- Improved reliability of session auto-reconnect in certain cases where a script was running for ~50 minutes and threw a "Cmdlet not found" error due to a bug in auto-reconnect logic.
+
+- Fixed data-type issues of two commonly used "User" and "MailboxFolderUser" attributes for easy migration of scripts.
+
+- Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not and NotLike support. Check online documentation for attributes that aren't supported in filters.
 
 ### Previous releases
 
