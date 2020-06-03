@@ -21,12 +21,7 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Microsoft 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online and its features.
 
 ## Report bugs and issues
-
-The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
-
-When you report an issue, be sure to include the log files in your email message.
-
-To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
+When you report an issue, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
 ```PowerShell
 Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
@@ -275,7 +270,21 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 
 ## Release notes
 
-### Current release: Version 0.4578.0
+### Current release: Version 1.0.1
+
+- This is the General Availability (GA) version of the EXO PowerShell V2 Module. It is stable and ready for use in production environments.
+
+- Get-ExoMobileDeviceStatistics cmdlet now supports Identity parameter.
+
+- Improved reliability of session auto-reconnect in certain cases where a script was running for ~50 minutes and threw a "Cmdlet not found" error due to a bug in auto-reconnect logic.
+
+- Fixed data-type issues of two commonly used "User" and "MailboxFolderUser" attributes for easy migration of scripts.
+
+- Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not and NotLike support. Check online documentation for attributes that aren't supported in filters.
+
+### Previous releases
+
+#### Version 0.4578.0
 
 - Added support for configuring the Briefing Email for your organization at the user level with **Set-UserBriefingConfig** and **Get-UserBriefingConfig** cmdlets.
 
@@ -290,8 +299,6 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 - Improved reliability of **Get-EXOMailboxStatistics** as certain request routing errors which led to failures have been resolved.
 
 - Optimized memory usage when a session is created by re-using any existing module with a new session instead of creating a new one every time session is imported.
-
-### Previous releases
 
 #### Version 0.4368.1
 
