@@ -44,6 +44,17 @@ PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
 
 Get all of a user's Whiteboards.
 
+## EXAMPLES
+
+### -------------------------- EXAMPLE 1 --------------------------
+
+```
+PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId 00000000-0000-0000-0000-000000000002
+```
+
+Get detail of a user's specific .
+
+
 
 ## PARAMETERS
 

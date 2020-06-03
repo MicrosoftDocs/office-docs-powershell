@@ -19,7 +19,7 @@ Transfer ownership of all Whiteboards owned by a user to another user.
 ## SYNTAX
 
 ```powershell
-Invoke-TransferAllWhiteboards [-OwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-TransferAllWhiteboards [-OldOwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
