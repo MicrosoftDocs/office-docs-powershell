@@ -880,7 +880,7 @@ Default value: None
 ```
 
 ### -RemoveInformationSegment
-This parameter allows you to remove segment from a SharePoint site.This parameter is only applicable for tenants who have enabled M365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
+This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
 
 **Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
