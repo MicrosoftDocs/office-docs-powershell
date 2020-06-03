@@ -66,6 +66,8 @@ The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorizati
 
 In Office 365 Germany for Security & Compliance Center PowerShell, use the value <https://login.microsoftonline.de/common> for this parameter.
 
+In Microsoft 365 GCC High and Microsoft 365 DoD for Security & Compliance Center PowerShell, use the value <https://login.microsoftonline.us/common> for this parameter.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -100,6 +102,10 @@ The ConnectionUri parameter specifies the connection endpoint for the remote Pow
 In standalone Exchange Online Protection organizations without Exchange Online mailboxes, use the value <https://ps.protection.outlook.com/powershell-liveid/> for this parameter.
 
 In Office 365 Germany for Security & Compliance Center PowerShell, use the value <https://ps.compliance.protection.outlook.de/PowerShell-LiveID> for this parameter.
+
+In Microsoft 365 GCC High for Security & Compliance Center PowerShell, use the value <https://outlook.office365.us/powershell-liveid> for this parameter.
+
+In Microsoft 365 DoD for Security & Compliance Center PowerShell, use the value <https://webmail.apps.mil/powershell-liveid> for this parameter.
 
 ```yaml
 Type: String

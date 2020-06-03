@@ -33,7 +33,7 @@ MusicOnHoldFileName and MusicOnHoldFileContent cannot be empty so you must speci
 
 The New-CsHuntGroup cmdlet may suggest additional steps required to complete the Call Queue setup.
 
-The following parameters are not applicable to Skype for Business Online: AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, PipelineVariable, and Ring.
+The following parameters are not applicable to Skype for Business Online: ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, PipelineVariable, and Ring.
 
 
 ## EXAMPLES
@@ -341,22 +341,6 @@ The WelcomeMusicFileName parameter represents audio file to play when callers ar
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-This parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

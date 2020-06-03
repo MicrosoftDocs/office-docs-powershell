@@ -24,7 +24,7 @@ This cmdlet was introduced in Lync Server 2010.
 
 ```
 Grant-CsDialPlan [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-DomainController <Fqdn>] [-PassThru]
- [-WhatIf] [-Confirm] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

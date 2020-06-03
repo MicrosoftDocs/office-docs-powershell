@@ -21,7 +21,7 @@ This cmdlet was introduced in Lync Server 2010.
 
 ```
 Remove-CsUserAcp [-Identity] <UserIdParameter> [-Name <String>] [-TollNumber <String>] [-PassThru] [-WhatIf]
- [-Confirm] [-ParticipantPasscode <String>] [-AsJob] [<CommonParameters>]
+ [-Confirm] [-ParticipantPasscode <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -213,22 +213,6 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
