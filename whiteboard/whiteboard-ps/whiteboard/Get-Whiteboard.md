@@ -50,13 +50,12 @@ Get all of a user's Whiteboards.
 PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId 00000000-0000-0000-0000-000000000002
 ```
 
-Get detail of a user's specific Whiteboard.
+Get user's specific Whiteboard.
 
 
-##### Response
+#### Response
 
-```
-{
+```yaml
   baseApi                  : baseApi-value
   id                       : whiteboardId-value
   userId                   : userId-value
@@ -67,14 +66,13 @@ Get detail of a user's specific Whiteboard.
   ownerTenantId            : ownerTenantId-value
   isShared                 : isShared-value
   createdTime              : createdTime-value
-  invitedTime              :invitedTime-value
+  invitedTime              : invitedTime-value
   personalLastModifiedTime : personalLastModifiedTime-value
   lastModifiedTime         : lastModifiedTime-value
   globalLastViewedTime     : globalLastViewedTime-value
   lastViewedTime           : lastViewedTime-value
   meetingId                : meetingId-value
   eTag                     : eTag-value
-}
 ```
 
 
