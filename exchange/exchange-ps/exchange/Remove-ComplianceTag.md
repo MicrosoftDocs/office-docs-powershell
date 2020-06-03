@@ -32,7 +32,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```powershell
-IRemove-ComplianceTag -Identity "HR Content"
+Remove-ComplianceTag -Identity "HR Content"
 ```
 
 This example removes the label named HR Content.

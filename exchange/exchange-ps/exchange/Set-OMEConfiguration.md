@@ -17,8 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-OMEConfiguration cmdlet to configure Microsoft Office 365 Message Encryption (OME).
 
-> [!NOTE]
-> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -134,7 +133,9 @@ This parameter is only available with a Microsoft 365 Advanced Message Encryptio
 
 The ExternalMailExpiryInDays parameter specifies the number of days that the encrypted message is available to external recipients in the Microsoft 365 portal. A valid value is an integer from 0 to 730. The value 0 means the messages will never expire. The default value is 0.
 
-ExternalMailExpiryInDays cannot be updated in the default OME configuration. Create a customized configuration to apply ExternalMailExpiryInDays.
+You can't update the value of this parameter in the default OME configuration. You can only modify this value in a customized configuration.
+
+In the output of the Get-OMEConfiguration cmdlet, the value of this parameter is displayed in the ExternalMailExpiryInterval property.
 
 ```yaml
 Type: String

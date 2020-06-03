@@ -22,12 +22,12 @@ This cmdlet was introduced in Lync Server 2013.
 
 ### Identity (Default)
 ```
-Get-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
+Get-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsOAuthConfiguration [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
+Get-CsOAuthConfiguration [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 
@@ -126,26 +126,6 @@ You can return the tenant ID for each of your tenants by running this command:
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

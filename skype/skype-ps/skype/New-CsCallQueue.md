@@ -22,7 +22,7 @@ New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>
 [-Tenant <Guid>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-MusicOnHoldAudioFileId <Guid>] 
 [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] 
 [-TimeoutAction <Object>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] 
-[-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-Users <List>] [<CommonParameters>]
+[-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-Users <List>] [LanguageId <String>] [LineUri <String>] [EnableOverflowSharedVoicemailTranscription <Boolean>] [OverflowSharedVoicemailTextToSpeechPrompt <String>] [OverflowSharedVoicemailAudioFilePrompt <Guid>] [EnableTimeoutSharedVoicemailTranscription <Boolean>] [TimeoutSharedVoicemailTextToSpeechPrompt <String>] [TimeoutSharedVoicemailAudioFilePrompt <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -AgentAlertTime
-The AgentAlertTime parameter represents the time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent. The AgentAlertTime can be set to any integer value between 30 and 180 seconds (3 minutes), inclusive. The default value is 30 seconds.
+The AgentAlertTime parameter represents the time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent. The AgentAlertTime can be set to any integer value between 15 and 180 seconds (3 minutes), inclusive. The default value is 30 seconds.
 
 ```yaml
 Type: Int16
@@ -179,9 +179,9 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingMethod
-The RoutingMethod defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel.
+The RoutingMethod defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel. If routing method is set to RoundRobin, the agents will be called using Round Robin strategy so that all agents share the call-load equally. If routing method is set to LongestIdle, the agents will be called based on their idle time, i.e., the agent that has been idle for the longest period will be called.
 
-PARAMVALUE: Attendant | Serial | RoundRobin
+PARAMVALUE: Attendant | Serial | RoundRobin | LongestIdle
 
 ```yaml
 Type: Object
@@ -328,6 +328,134 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LanguageId
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LineUri
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableOverflowSharedVoicemailTranscription
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverflowSharedVoicemailTextToSpeechPrompt
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverflowSharedVoicemailAudioFilePrompt
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTimeoutSharedVoicemailTranscription
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutSharedVoicemailTextToSpeechPrompt
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutSharedVoicemailAudioFilePrompt
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml

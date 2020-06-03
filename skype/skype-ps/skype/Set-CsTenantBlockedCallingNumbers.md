@@ -18,7 +18,7 @@ Use the Set-CsTenantBlockedCallingNumbers cmdlet to set tenant blocked calling n
 ```
 Set-CsTenantBlockedCallingNumbers [-Force] [-Name <Object>] [-WhatIf] [-Confirm] [[-Identity] <Object>]
  [-InboundExemptNumberPatterns <Object>] [-Tenant <Object>] [-InboundBlockedNumberPatterns <Object>]
- [-Enabled <Object>] [-Instance <Object>] [-AsJob]
+ [-Enabled <Object>] [-Instance <Object>]
 ```
 
 ## DESCRIPTION
@@ -209,23 +209,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named

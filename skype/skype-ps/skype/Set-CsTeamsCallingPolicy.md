@@ -68,6 +68,8 @@ Accept wildcard characters: False
 Controls interop calling capabilities.
 Turning this on will allow Skype for Business users to have one-on-one calls with Teams users and vice-versa.
 
+[!NOTE] This parameter is disabled.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -312,6 +314,8 @@ Possible values
 - Enabled
 - Disabled
 - UserOverride
+
+[!NOTE] This parameter is not available for use.
 
 ```yaml
 Type: Object
