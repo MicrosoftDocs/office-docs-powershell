@@ -59,6 +59,7 @@ Set-OrganizationConfig
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-ElcProcessingDisabled <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
+ [-ExternalInOutlookEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -1429,6 +1430,28 @@ The ExchangeNotificationRecipients parameter specifies the recipients for Exchan
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalInOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+The ExternalInOutlookEnabled parameter specifies whether to add notification text to the subject line for messages from external senders. Valid values are:
+
+- $true: The text "[EXTERNAL]" is added to the beginning of the subject line for messages from external senders.
+
+- $false: No additional text is added to the subject line for messages from external senders. This is the default value.
+
+```yaml
+Type: Boolean
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
