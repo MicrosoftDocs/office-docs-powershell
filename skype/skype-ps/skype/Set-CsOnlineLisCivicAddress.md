@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -CityAlias
-PARAMVALUE: String
+Short form of the city name.
 
 ```yaml
 Type: String
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyTaxId
-PARAMVALUE: String
+Used to store TaxId for regulatory reasons. 
 
 ```yaml
 Type: String
@@ -363,7 +363,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationStatus
-PARAMVALUE: String
+Microsoft internal use only
 
 ```yaml
 Type: String
