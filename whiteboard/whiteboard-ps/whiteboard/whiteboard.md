@@ -8,7 +8,7 @@ title: Microsoft Whiteboard
 
 ## Description
 
-The following cmdlet references are for Microsoft Whiteboard. See [Overview](../../docs-conceptual/overview.md) for details on installing the module.
+The following cmdlet references are for Microsoft Whiteboard. See [Overview](../../../whiteboard/docs-conceptual/overview.md) for details on installing the module.
 
 ### [Get-Whiteboard](Get-Whiteboard.md)
 
