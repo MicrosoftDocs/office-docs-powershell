@@ -53,7 +53,7 @@ PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId
 Get user's specific Whiteboard.
 
 
-#### Response
+### Response
 
 ```yaml
   baseApi                  : baseApi-value
