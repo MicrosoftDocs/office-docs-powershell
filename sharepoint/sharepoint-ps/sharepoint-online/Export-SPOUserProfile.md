@@ -26,7 +26,7 @@ Export-SPOUserProfile -LoginName <String> -OutputFolder <String> [<CommonParamet
 
 Export user profile data to csv file.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
@@ -42,7 +42,7 @@ Example 1 exports user data who has the e-mail address joe.healy@contoso.com to 
 
 ### -LoginName
 
-Specifies the login name of the user who's data is exported.
+Specifies the login name of the user whose data is exported.
 
 ```yaml
 Type: String

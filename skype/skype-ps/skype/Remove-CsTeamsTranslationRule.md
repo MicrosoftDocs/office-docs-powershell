@@ -18,7 +18,7 @@ Cmdlet to remove an existing number manipulation rule (or list of rules).
 ## SYNTAX
 
 ```
-Remove-CsTeamsTranslationRule [-Confirm] [-WhatIf] [-Identity <string>] [-Tenant <string>] [-Force] [-AsJob]
+Remove-CsTeamsTranslationRule [-Confirm] [-WhatIf] [-Identity <string>] [-Tenant <string>] [-Force]
 ```
 
 ## DESCRIPTION

@@ -54,6 +54,9 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 |[Get-EXOMailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderstatistics)|
 |[Get-EXOMailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)|
 |[Get-EXOMobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)|
+|[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
+|[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell)|
+
 
 ## Install and maintain the Exchange Online PowerShell V2 module
 
@@ -84,15 +87,12 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 
   <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-- Windows Remote Management (WinRM) needs to be enabled (it's not enabled by default in Windows 7, 8.1 and 10). To enable it, run this command **in a Command Prompt**:
-
-  ```dos
-  winrm quickconfig
-  ```
-
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
+  
+  > [!NOTE]
+  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
 
   ```dos
   winrm get winrm/config/client/auth
