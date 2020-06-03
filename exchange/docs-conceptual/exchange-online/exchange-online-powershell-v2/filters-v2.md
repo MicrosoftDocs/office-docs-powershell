@@ -35,22 +35,22 @@ Although the EXO V2 module supports the majority of filterable attributes, the f
 ||||
 |---|---|---|
 |**Cmdlet**|**Attribute**|**LDAP Display Name**|
-|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-casmailbox)|MemberOfGroup|memberOf|
-|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/get-mailbox)|DeletedItemFlags <br/><br/> LanguagesRaw <br/><br/> MasterAccountSid <br/><br/> MemberOfGroup <br/><br/> RequireAllSendersAreAuthenticated <br/><br/> SCLDeleteThresholdInt <br/><br/> SCLJunkThresholdInt <br/><br/> SCLQuarantineThresholdInt <br/><br/> SCLRejectThresholdInt|deletedItemFlags <br/><br/> msExchUserCulture <br/><br/> msExchMasterAccountSid <br/><br/> memberOf <br/><br/> msExchRequireAuthToSendTo <br/><br/> msExchMessageHygieneSCLDeleteThreshold <br/><br/> msExchMessageHygieneSCLJunkThreshold <br/><br/> msExchMessageHygieneSCLQuarantineThreshold <br/><br/> msExchMessageHygieneSCLRejectThreshold|
-|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/get-recipient)|CountryCode <br/><br/> MasterAccountSid <br/><br/> MemberOfGroup <br/><br/> Members|countryCode <br/><br/> msExchMasterAccountSid <br/><br/> memberOf <br/><br/> member|
+|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-casmailbox)|MemberOfGroup <br/><br/> ExternalDirectoryObjectId|memberOf <br/><br/> msExchExternalDirectoryObjectId|
+|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/get-mailbox)|DeletedItemFlags <br/><br/> ExternalDirectoryObjectId <br/><br/> LanguagesRaw <br/><br/> MasterAccountSid <br/><br/> MemberOfGroup <br/><br/> RequireAllSendersAreAuthenticated <br/><br/> SCLDeleteThresholdInt <br/><br/> SCLJunkThresholdInt <br/><br/> SCLQuarantineThresholdInt <br/><br/> SCLRejectThresholdInt|deletedItemFlags <br/><br/> msExchExternalDirectoryObjectId <br/><br/> msExchUserCulture <br/><br/> msExchMasterAccountSid <br/><br/> memberOf <br/><br/> msExchRequireAuthToSendTo <br/><br/> msExchMessageHygieneSCLDeleteThreshold <br/><br/> msExchMessageHygieneSCLJunkThreshold <br/><br/> msExchMessageHygieneSCLQuarantineThreshold <br/><br/> msExchMessageHygieneSCLRejectThreshold|
+|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/get-recipient)|CountryCode <br/><br/> ExternalDirectoryObjectId <br/><br/> MasterAccountSid <br/><br/> MemberOfGroup <br/><br/> Members|countryCode <br/><br/> msExchExternalDirectoryObjectId <br/><br/> msExchMasterAccountSid <br/><br/> memberOf <br/><br/> member|
 |
 
 ## Supported and unsupported operators
 
 The following operators are fully supported for all string formats in the EXO V2 module:
 
--eq
--and
--ne
--or
--not
--lt
--gt
+- -eq
+- -and
+- -ne
+- -or
+- -not
+- -lt
+- -gt
 
 The -like and -notlike operators are limited in using wildcards (*). Specifically, you can only use wildcards at the beginning of a string value, at the end of a string value, or both.
 
