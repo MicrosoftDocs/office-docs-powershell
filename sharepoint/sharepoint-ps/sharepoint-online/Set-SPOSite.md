@@ -135,7 +135,7 @@ Example 7 sets the Sharing Capability to allow external users who accept sharing
 ### -----------------------EXAMPLE 8-----------------------------
 
 ```powershell
-Set-SPOSite -Identity [https://contoso.sharepoint.com/sites/research] -AddInformationSegment [a17efb47-e3c9-4d85-a188-1cd59c83de32]
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -AddInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
 ```
 
 This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the site. 
