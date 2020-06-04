@@ -1444,11 +1444,13 @@ Accept wildcard characters: False
 ### -ExternalInOutlookEnabled
 This parameter is available only in the cloud-based service.
 
-The ExternalInOutlookEnabled parameter specifies whether to add notification text to the subject line for messages from external senders. Valid values are:
+The ExternalInOutlookEnabled parameter specifies whether to add identifiers to messages from external senders in Outlook on the web (formerly known as Outlook Web App). Valid values are:
 
-- $true: The text "[EXTERNAL]" is added to the beginning of the subject line for messages from external senders.
+- $true: External senders are identified as external in list view and the reading pane.
 
-- $false: No additional text is added to the subject line for messages from external senders. This is the default value.
+- $false: External senders are not identified as external. This is the default value.
+
+Whether the sender's domain is considered internal or external is controlled by the Set-AcceptedDomain cmdlet.
 
 ```yaml
 Type: Boolean
