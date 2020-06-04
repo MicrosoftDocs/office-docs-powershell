@@ -36,6 +36,7 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-Prefix <String>]
  [[-PSSessionOption] <PSSessionOption>]
+ [ShowBanner]
  [-ShowProgress <Boolean>]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
@@ -284,6 +285,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShowBanner
+The ShowBanner switch shows or hides the banner message that's displayed when you run Connect-ExchangeOnline. You don't need to specify a value with this switch.
+
+To show the banner, you don't need to use this switch (the banner is displayed by default).
+
+To hide the banner, use this exact syntax: `-ShowBanner:$false`.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: $true
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ShowProgress
 The ShowProgress parameter shows a visual progress bar in the PowerShell client module. The progress bar shows number of objects received and total number of objects requested. Valid values are:
 
@@ -352,23 +373,6 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowBanner
-Use this parameter to hide the banner message shown when Connect-ExchangeOnline cmdlet is executed.
-Default value for this parameter is True which implies that banner will be shown even when you don't pass this parameter.
-If you want to hide the banner, pass False for this parameter as -ShowBanner:$false
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: $true
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
