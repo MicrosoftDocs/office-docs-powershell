@@ -89,7 +89,14 @@
           "**/obj/**",
           "**/includes/**"
         ]
-      }
+      },
+      { "files": ["**/*.png", "**/*.jpg"], "version": "exchserver-ps-2010", "exclude": ["**/obj/**", "**/includes/**"] },
+      { "files": ["**/*.png", "**/*.jpg"], "version": "exchserver-ps-2013", "exclude": ["**/obj/**", "**/includes/**"] },
+      { "files": ["**/*.png", "**/*.jpg"], "version": "exchserver-ps-2016", "exclude": ["**/obj/**", "**/includes/**"] },
+      { "files": ["**/*.png", "**/*.jpg"], "version": "exchserver-ps-2019", "exclude": ["**/obj/**", "**/includes/**"] },
+      { "files": ["**/*.png", "**/*.jpg"], "version": "exchonline-ps", "exclude": ["**/obj/**", "**/includes/**"] },
+      { "files": ["**/*.png", "**/*.jpg"], "version": "o365scc-ps", "exclude": ["**/obj/**", "**/includes/**"] },
+      { "files": ["**/*.png", "**/*.jpg"], "version": "eop-ps", "exclude": ["**/obj/**", "**/includes/**"] }
     ],
     "versions": {
       "exchange-ps": { "dest": "exchange-ps" },
