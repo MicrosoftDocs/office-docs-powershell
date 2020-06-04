@@ -422,6 +422,7 @@ Accept wildcard characters: False
 
 ### -GroupId
 Specify a GroupId to convert to a Team.  If specified, you cannot provide the other values that are already specified by the existing group, namely: Visibility, Alias, Description, or DisplayName.
+If, for example, you need to create a Team from an existing Microsoft 365 Group, use the _ExternalDirectoryObjectId_ property value returned by [Get-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/get-unifiedgroup?view=exchange-ps).
 
 ```yaml
 Type: String
