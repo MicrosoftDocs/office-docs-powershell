@@ -36,6 +36,7 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-Prefix <String>]
  [[-PSSessionOption] <PSSessionOption>]
+ [ShowBanner]
  [-ShowProgress <Boolean>]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
@@ -280,6 +281,26 @@ Applicable: Exchange Online
 Required: False
 Position: 4
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowBanner
+The ShowBanner switch shows or hides the banner message that's displayed when you run Connect-ExchangeOnline. You don't need to specify a value with this switch.
+
+To show the banner, you don't need to use this switch (the banner is displayed by default).
+
+To hide the banner, use this exact syntax: `-ShowBanner:$false`.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: $true
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
