@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Simulation of what would happened if you run the script without modifying anything.
+Simulation of what would happen if you run the script without modifying anything.
 
 ```yaml
 Type: String

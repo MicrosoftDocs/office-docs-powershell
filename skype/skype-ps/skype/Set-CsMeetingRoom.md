@@ -26,7 +26,7 @@ Set-CsMeetingRoom [-Identity] <UserIdParameter>
  [-AudioVideoDisabled <Boolean>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
  [-EnterpriseVoiceEnabled <Boolean>] [-ExchangeArchivingPolicy <ExchangeArchivingPolicyOptionsEnum>]
  [-HostedVoiceMail <Boolean>] [-LineServerURI <String>] [-LineURI <String>] [-PassThru] [-PrivateLine <String>]
- [-RemoteCallControlTelephonyEnabled <Boolean>] [-SipAddress <String>] [-WhatIf] [-AsJob] [<CommonParameters>]
+ [-RemoteCallControlTelephonyEnabled <Boolean>] [-SipAddress <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -416,22 +416,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named

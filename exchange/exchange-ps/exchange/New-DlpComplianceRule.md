@@ -254,6 +254,8 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 
 - PerUser: Block access to external users.
 
+- PerAnonymousUser: Block access to people through the "Anyone with the link" option in SharePoint and OneDrive.
+
 ```yaml
 Type: BlockAccessScope
 Parameter Sets: (All)

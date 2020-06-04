@@ -21,12 +21,7 @@ description: "Learn how to download and use the Exchange Online PowerShell V2 mo
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Microsoft 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online and its features.
 
 ## Report bugs and issues
-
-The Exchange Online PowerShell V2 module is currently in Preview. If you have any feedback, concerns, or are facing any issues with the EXO V2 module, contact us at exocmdletpreview[at]service[dot]microsoft[dot]com (email address intentionally obscured to help prevent spam).
-
-When you report an issue, be sure to include the log files in your email message.
-
-To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
+When you report an issue, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
 ```PowerShell
 Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store log file> -LogLevel All
@@ -54,6 +49,8 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 |[Get-EXOMailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderstatistics)|
 |[Get-EXOMailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)|
 |[Get-EXOMobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)|
+|[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
+|[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell)|
 
 ## Install and maintain the Exchange Online PowerShell V2 module
 
@@ -84,15 +81,12 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 
   <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-- Windows Remote Management (WinRM) needs to be enabled (it's not enabled by default in Windows 7, 8.1 and 10). To enable it, run this command **in a Command Prompt**:
-
-  ```dos
-  winrm quickconfig
-  ```
-
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
+  
+  > [!NOTE]
+  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
 
   ```dos
   winrm get winrm/config/client/auth
@@ -273,9 +267,25 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 > [!NOTE]
 > We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the required properties.
 
+For more information about filtering in the EXO V2 module, see [Filters in the Exchange Online V2 module](filters-v2.md).
+
 ## Release notes
 
-### Current release: Version 0.4578.0
+### Current release: Version 1.0.1
+
+- This is the General Availability (GA) version of the EXO PowerShell V2 Module. It is stable and ready for use in production environments.
+
+- Get-ExoMobileDeviceStatistics cmdlet now supports Identity parameter.
+
+- Improved reliability of session auto-reconnect in certain cases where a script was running for ~50 minutes and threw a "Cmdlet not found" error due to a bug in auto-reconnect logic.
+
+- Fixed data-type issues of two commonly used "User" and "MailboxFolderUser" attributes for easy migration of scripts.
+
+- Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not and NotLike support. Check online documentation for attributes that aren't supported in filters.
+
+### Previous releases
+
+#### Version 0.4578.0
 
 - Added support for configuring the Briefing Email for your organization at the user level with **Set-UserBriefingConfig** and **Get-UserBriefingConfig** cmdlets.
 
@@ -290,8 +300,6 @@ Get-EXOMailbox -ResultSize 10 -PropertySets All
 - Improved reliability of **Get-EXOMailboxStatistics** as certain request routing errors which led to failures have been resolved.
 
 - Optimized memory usage when a session is created by re-using any existing module with a new session instead of creating a new one every time session is imported.
-
-### Previous releases
 
 #### Version 0.4368.1
 
