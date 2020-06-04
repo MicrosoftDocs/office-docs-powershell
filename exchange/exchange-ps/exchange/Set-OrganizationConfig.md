@@ -59,6 +59,7 @@ Set-OrganizationConfig
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-ElcProcessingDisabled <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
+ [-ExternalInOutlookEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -1429,6 +1430,30 @@ The ExchangeNotificationRecipients parameter specifies the recipients for Exchan
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalInOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+The ExternalInOutlookEnabled parameter specifies whether to add identifiers to messages from external senders in Outlook on the web (formerly known as Outlook Web App). Valid values are:
+
+- $true: External senders are identified as external in list view and the reading pane.
+
+- $false: External senders are not identified as external. This is the default value.
+
+Whether the sender's domain is considered internal or external is controlled by the Set-AcceptedDomain cmdlet.
+
+```yaml
+Type: Boolean
 Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
