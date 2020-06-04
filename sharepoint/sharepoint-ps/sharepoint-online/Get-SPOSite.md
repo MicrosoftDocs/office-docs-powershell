@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ### InformationSegment
 This parameter displays the segments associated with a site. 
 
-It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
+It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers in SharePoint Online.
 
 **Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
