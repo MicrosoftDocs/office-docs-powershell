@@ -356,6 +356,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShowBanner
+Use this parameter to hide the banner message shown when Connect-ExchangeOnline cmdlet is executed.
+Default value for this parameter is True which implies that banner will be shown even when you don't pass this parameter.
+If you want to hide the banner, pass False for this parameter as -ShowBanner:$false
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: $true
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
