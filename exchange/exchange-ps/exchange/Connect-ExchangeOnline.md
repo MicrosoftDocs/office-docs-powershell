@@ -57,7 +57,7 @@ Connect-ExchangeOnline -Credential $UserCredential
 
 The first command gets the user credentials and stores them in the $UserCredential variable.
 
-The second command connects the current PowerShell session using the credentials in the $UserCredential, which isn't MFA enabled. Note that after the second command is complete, the password key in the $UserCredential variable becomes empty.
+The second command connects the current PowerShell session using the credentials in the $UserCredential, which isn't MFA enabled.
 
 After the Connect-ExchangeOnline command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
 
