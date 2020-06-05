@@ -18,7 +18,7 @@ Enables Skype for Business Online federation with all domains except for those d
 ## SYNTAX
 
 ```
-New-CsEdgeAllowAllKnownDomains [-AsJob] [<CommonParameters>]
+New-CsEdgeAllowAllKnownDomains [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,22 +65,6 @@ In the second command, the Set-CsTenantFederationConfiguration cmdlet is called 
 
 
 ## PARAMETERS
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`

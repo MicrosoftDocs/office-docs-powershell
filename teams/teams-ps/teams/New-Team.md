@@ -13,11 +13,11 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team. 
 Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default. 
-If you want these groups to appear in Outlook clients, you can use the Set-UnifiedGroup (https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps) cmdlet in the Exchange Powershell Module to set the parameter HiddenFromExchangeClients to $false.
+If you want these groups to appear in Outlook clients, you can use the [Set-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/set-unifiedgroup) cmdlet in the Exchange Powershell Module to set the parameter HiddenFromExchangeClients to $false.
 
 Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected.
 
-IMPORTANT: Using this cmdlet to create a new team using a template is still in preview. You can install and use the preview module from the PowerShell test gallery. For instructions on installing and using the Teams PowerShell preview module, see https://docs.microsoft.com/MicrosoftTeams/private-channels-life-cycle-management#install-the-latest-teams-powershell-module-from-the-powershell-test-gallery. 
+IMPORTANT: Using this cmdlet to create a new team using a template is still in preview. You can install and use the preview module from the PowerShell test gallery. For instructions on installing and using the Teams PowerShell preview module, see [Install the pre-release version of the Teams PowerShell module](https://docs.microsoft.com/microsoftteams/install-prerelease-teams-powershell-module). 
 
 ## SYNTAX
 
@@ -46,7 +46,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
 ```
 
 ## DESCRIPTION
-Creates a new team with user specified settings, and returns a Group object with a GroupID property.  Note that Templates are not yet supported in our 1.0 PowerShell release.
+Creates a new team with user specified settings, and returns a Group object with a GroupID property. Note that Templates are not yet supported in our 1.0 PowerShell release.
 
 ## EXAMPLES
 
@@ -55,14 +55,17 @@ Creates a new team with user specified settings, and returns a Group object with
 New-Team -DisplayName "Tech Reads"
 ```
 
+This example creates a team with all parameters with their default values.
+
 ### Example 2
 ```
 New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -Visibility Public
 ```
 
+This example creates a team with a specific description and public visibility.
+
 ### Example 3
 ```
-Connect-MicrosoftTeams -AccountId myaccount@example.com
 $group = New-Team -MailNickname "TestTeam" -displayname "Test Teams" -Visibility "private"
 Add-TeamUser -GroupId $group.GroupId -User "fred@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "john@example.com"
@@ -72,6 +75,8 @@ New-TeamChannel -GroupId $group.GroupId -DisplayName "Exec status"
 New-TeamChannel -GroupId $group.GroupId -DisplayName "Contracts"
 ```
 
+This example creates a team, adds three members to it, and creates three channels within it.
+
 ## PARAMETERS
 
 ### -MailNickName
@@ -79,7 +84,7 @@ The MailNickName parameter specifies the alias for the associated Office 365 Gro
 This value will be used for the mail enabled object and will be used as PrimarySmtpAddress for this Office 365 Group.
 The value of the MailNickName parameter has to be unique across your tenant.
 
-For more details about the naming conventions see here: New-UnifiedGroup, Parameter: -Alias (https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-groups/new-unifiedgroup?view=exchange-ps#optional-parameters).
+For more details about the naming conventions see here: [New-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/new-unifiedgroup#parameters), Parameter: -Alias.
 
 ```yaml
 Type: String
@@ -109,8 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Team description.
-Team Description Characters Limit - 1024.
+Team description. Characters Limit - 1024.
 
 ```yaml
 Type: String
@@ -125,8 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Team display name.
-Team Name Characters Limit - 256.
+Team display name. Characters Limit - 256.
 
 ```yaml
 Type: String
@@ -187,7 +190,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -202,7 +205,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -217,7 +220,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -232,7 +235,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -247,7 +250,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -262,7 +265,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -277,7 +280,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -292,7 +295,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -307,7 +310,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -322,7 +325,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -337,7 +340,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -352,7 +355,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -367,7 +370,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -382,7 +385,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -397,7 +400,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -412,13 +415,14 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Moderate
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -GroupId
 Specify a GroupId to convert to a Team.  If specified, you cannot provide the other values that are already specified by the existing group, namely: Visibility, Alias, Description, or DisplayName.
+If, for example, you need to create a Team from an existing Microsoft 365 Group, use the _ExternalDirectoryObjectId_ property value returned by [Get-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/get-unifiedgroup?view=exchange-ps).
 
 ```yaml
 Type: String
@@ -433,7 +437,7 @@ Accept wildcard characters: False
 ```
 
 ### -Visibility
-Set to Public to allow all users in your organization to join the group by default.  Set to Private to require that an owner approve the join request.
+Set to Public to allow all users in your organization to join the group by default. Set to Private to require that an owner approve the join request.
 
 ```yaml
 Type: String
@@ -442,7 +446,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Private
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -457,7 +461,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

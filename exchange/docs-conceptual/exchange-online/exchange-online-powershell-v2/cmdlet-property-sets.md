@@ -20,6 +20,8 @@ description: "Learn about the available property sets in the Exchange Online Pow
 
 This topic describes the property sets that are available in the new cmdlets in the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md). For more information about property sets, see [Properties and property sets in the EXO V2 module](exchange-online-powershell-v2.md#properties-and-property-sets-in-the-exo-v2-module).
 
+For more information about filtering in the EXO V2 module, see [Filters in the Exchange Online V2 module](filters-v2.md).
+
 ## Get-EXOCasMailbox property sets
 
 The available property sets for the **Get-EXOCasMailbox** cmdlet and the properties they contain are described in the following table:

@@ -18,7 +18,7 @@ Updates a Call Queue in your Skype for Business Online or Teams organization.
 ## SYNTAX
 
 ```
-Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-MusicOnHoldAudioFileId <Guid>] [-Name <String>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] [-RoutingMethod <Object>] [-TimeoutAction <Object>] [-Tenant <Guid>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-Users <List>] [<CommonParameters>]
+Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-MusicOnHoldAudioFileId <Guid>] [-Name <String>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] [-RoutingMethod <Object>] [-TimeoutAction <Object>] [-Tenant <Guid>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-Users <List>] [LanguageId <String>] [LineUri <String>] [EnableOverflowSharedVoicemailTranscription <Boolean>] [OverflowSharedVoicemailTextToSpeechPrompt <String>] [OverflowSharedVoicemailAudioFilePrompt <Guid>] [EnableTimeoutSharedVoicemailTranscription <Boolean>] [TimeoutSharedVoicemailTextToSpeechPrompt <String>] [TimeoutSharedVoicemailAudioFilePrompt <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,10 +40,10 @@ This example updates the Call Queue with identity e7e00636-47da-449c-a36b-1b3d6e
 
 ### -------------------------- Example 2 -------------------------- 
 ```
-Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldAudioFileId 4d7361c1-5b46-4f69-b125-cf35a098a341
+Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldAudioFileId $audioFile.Id
 ```
 
-This example updates the Call Queue with new distribution lists and references a new music on hold audio file.
+This example updates the Call Queue with new distribution lists and references a new music on hold audio file using the audio file ID  from the stored variable $audioFile created with the [Import-CsOnlineAudioFile cmdlet](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
 
 ## PARAMETERS
 
@@ -194,9 +194,9 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingMethod
-The RoutingMethod defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel.
+The RoutingMethod defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel. If routing method is set to RoundRobin, the agents will be called using Round Robin strategy so that all agents share the call-load equally. If routing method is set to LongestIdle, the agents will be called based on their idle time, i.e., the agent that has been idle for the longest period will be called.
 
-PARAMVALUE: Attendant | Serial | RoundRobin
+PARAMVALUE: Attendant | Serial | RoundRobin | LongestIdle
 
 ```yaml
 Type: Object
@@ -343,6 +343,134 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LanguageId
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LineUri
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableOverflowSharedVoicemailTranscription
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverflowSharedVoicemailTextToSpeechPrompt
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverflowSharedVoicemailAudioFilePrompt
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTimeoutSharedVoicemailTranscription
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutSharedVoicemailTextToSpeechPrompt
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutSharedVoicemailAudioFilePrompt
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml

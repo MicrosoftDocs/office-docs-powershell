@@ -19,7 +19,7 @@ Use this cmdlet to control whether users in your organization can send feedback 
 
 ```
 New-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-InMemory]
- [-UserInitiatedMode <Object>] [-ReceiveSurveysMode <Object>] [-Force] [-AsJob]
+ [-UserInitiatedMode <Object>] [-ReceiveSurveysMode <Object>] [-Force]
 ```
 
 ## DESCRIPTION
@@ -150,23 +150,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named

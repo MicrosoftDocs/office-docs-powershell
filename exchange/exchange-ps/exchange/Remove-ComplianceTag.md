@@ -32,7 +32,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```powershell
-IRemove-ComplianceTag -Identity "HR Content"
+Remove-ComplianceTag -Identity "HR Content"
 ```
 
 This example removes the label named HR Content.
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
