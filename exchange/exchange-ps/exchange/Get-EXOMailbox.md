@@ -335,11 +335,11 @@ Accept wildcard characters: False
 ### -PropertySets
 The PropertySets parameter specifies a logical grouping of properties that are returned in the output of this cmdlet. Valid values are:
 
+- All
+
 - Minimum (this is the default value)
 
 - AddressList
-
-- Audit
 
 - Archive
 
@@ -371,7 +371,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 - StatisticsSeed
 
-You can specify multiple values separated by commas. Wildcards ( * ) are supported.
+You can specify multiple values separated by commas.
 
 For more information about the properties that are included in each property set, see [Get-EXOMailbox property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exomailbox-property-sets).
 
