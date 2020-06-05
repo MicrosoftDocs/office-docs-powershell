@@ -19,7 +19,7 @@ Transfer ownership of all Whiteboards owned by a user to another user.
 ## SYNTAX
 
 ```powershell
-Invoke-TransferAllWhiteboards [-OwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-TransferAllWhiteboards [-OldOwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -123,6 +123,6 @@ Applicable: Microsoft Whiteboard
 
 ## NOTES
 
-For details on user IDs, see the [overview page](whiteboard.md).
+For details on user IDs, see the [overview page](../../docs-conceptual/overview.md).
 
 ## RELATED LINKS

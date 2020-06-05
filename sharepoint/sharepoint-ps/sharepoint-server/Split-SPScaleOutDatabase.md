@@ -37,7 +37,7 @@ Split-SPScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 Use the `Split-SPScaleOutDatabase` cmdlet to move a specified percentage of partitions from a source database to an existing target database or to a new database that you create with the specified parameters.
 

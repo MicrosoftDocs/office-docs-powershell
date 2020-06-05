@@ -1,4 +1,3 @@
-
 - name: Home
   href: index.md
   items:
@@ -46,8 +45,10 @@
   - name: Exchange Online PowerShell V2
     href: exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2.md
     items:
-    - name: Property sets in cmdlets
+    - name: Property sets in V2 cmdlets
       href: exchange-online/exchange-online-powershell-v2/cmdlet-property-sets.md
+    - name: Filters in the V2 module
+      href: exchange-online/exchange-online-powershell-v2/filters-v2.md
   - name: Office 365 Security & Compliance Center PowerShell
     href: office-365-scc/office-365-scc-powershell.md
     items:

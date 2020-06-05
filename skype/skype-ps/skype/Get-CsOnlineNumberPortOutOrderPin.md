@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsOnlineNumberPortOutOrderPin
 
 ## SYNOPSIS
-
+This cmdlet is reserved for Microsoft internal use only.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-CsOnlineNumberPortOutOrderPin [-Tenant <Guid>] [-DomainController <Fqdn>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet is reserved for Microsoft internal use only.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ Get-CsOnlineNumberPortOutOrderPin [-Tenant <Guid>] [-DomainController <Fqdn>] [-
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-{{Fill DomainController Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -101,29 +101,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

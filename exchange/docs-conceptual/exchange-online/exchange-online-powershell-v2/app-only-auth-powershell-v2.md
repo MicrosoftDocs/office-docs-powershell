@@ -13,7 +13,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-robots: noindex,nofollow
+ROBOTS: NOINDEX, NOFOLLOW
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks."
 ---
 
@@ -30,12 +30,13 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```powershell
   Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com"
   ```
- 
+
 - Connect using a certificate thumbprint:
 
   ```powershell
   Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -TenantID "contosoelectronics.onmicrosoft.com" 
   ```
+
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
 
 - Connect using an existing service principal and client-secret:

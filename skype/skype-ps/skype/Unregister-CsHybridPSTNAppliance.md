@@ -19,7 +19,7 @@ Use the `Unregister-CsHybridPSTNAppliance` cmdlet to unregister a previously spe
 
 ```
 Unregister-CsHybridPSTNAppliance [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
- [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+ [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -150,22 +150,6 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

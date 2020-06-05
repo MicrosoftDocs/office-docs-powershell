@@ -33,6 +33,11 @@ Invoke-SPOSiteSwap
 
 Swaps the location of a source site with a target site while archiving the original target site.
 
+Please note, the target site must be either:
+
+- The root site, for example https://tenant-name.sharepoint.com; or
+- The search center site, for example https://tenant-name.sharepoint.com/search.
+
 When the swap is initiated, the target site is moved to the archive location and the source site is moved to the target location. By default, a site redirect is created at the source location that will redirect traffic to the target location.
 
 If the target is the root site at <https://tenant-name.sharepoint.com,> then the following preparation activities should be performed prior to performing the swap:

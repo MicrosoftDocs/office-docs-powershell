@@ -20,7 +20,7 @@ These policies also manage a user's ability to employ Call via Work, a feature t
 Mobility policies can also be used to require Wi-Fi connections when making or receiving IP video/screen share calls.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, EncryptAppData, Force, Identity, InMemory, PipelineVariable, RequireIntune, Tenant, and VoiceSettings
+The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, Description, EncryptAppData, Force, Identity, InMemory, PipelineVariable, RequireIntune, Tenant, and VoiceSettings
 
 ## SYNTAX
 
@@ -518,27 +518,6 @@ Controls how audio is connected by a mobile device joining a meeting or a peer-t
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online

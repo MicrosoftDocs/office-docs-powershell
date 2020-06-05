@@ -17,8 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-UnifiedGroup cmdlet to view Office 365 Groups in your cloud-based organization. To view members, owners and subscribers for Office 365 Groups, use the Get-UnifiedGroupLinks cmdlet.
 
-> [!NOTE]
-> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
@@ -149,6 +148,8 @@ The Identity parameter specifies the Office 365 Group that you want to view. You
 - Email address
 
 - GUID
+
+**Note**: You can use the DisplayName value to identify the Office 365 group, but the results aren't guaranteed to be unique. If you must return a singular and unique result, use a unique identifier for the Office 365 Group.
 
 ```yaml
 Type: UnifiedGroupIdParameter

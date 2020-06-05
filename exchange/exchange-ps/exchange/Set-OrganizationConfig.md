@@ -59,6 +59,7 @@ Set-OrganizationConfig
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-ElcProcessingDisabled <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
+ [-ExternalInOutlookEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -80,6 +81,7 @@ Set-OrganizationConfig
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
+ [-OnlineMeetingsByDefaultEnabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
  [-OutlookMobileHelpShiftEnabled <Boolean>]
  [-OutlookMobileSingleAccountEnabled <Boolean>]
@@ -1439,6 +1441,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalInOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+The ExternalInOutlookEnabled parameter specifies whether to add identifiers to messages from external senders in Outlook on the web (formerly known as Outlook Web App). Valid values are:
+
+- $true: External senders are identified as external in list view and the reading pane.
+
+- $false: External senders are not identified as external. This is the default value.
+
+Whether the sender's domain is considered internal or external is controlled by the Set-AcceptedDomain cmdlet.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FocusedInboxOn
 This parameter is available only in the cloud-based service.
 
@@ -1931,6 +1957,30 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Ex
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OnlineMeetingsByDefaultEnabled
+This parameter is available only in the cloud-based service.
+
+The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
+
+- $true: All meetings are online by default.
+
+- $false: All meetings are not online by default. This is the default value.
+
+You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
