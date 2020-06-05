@@ -335,11 +335,11 @@ Accept wildcard characters: False
 ### -PropertySets
 The PropertySets parameter specifies a logical grouping of properties that are returned in the output of this cmdlet. Valid values are:
 
+- All
+
 - Minimum (this is the default value)
 
 - AddressList
-
-- Audit
 
 - Archive
 
