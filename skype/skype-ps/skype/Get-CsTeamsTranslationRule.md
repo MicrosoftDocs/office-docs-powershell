@@ -18,7 +18,7 @@ Cmdlet to get an existing number manipulation rule (or list of rules).
 ## SYNTAX
 
 ```
-Get-CsTeamsTranslationRule [-LocalStore] [-Filter <Object>] [-Tenant <string>] [[-Identity] <string>] [-AsJob]
+Get-CsTeamsTranslationRule [-LocalStore] [-Filter <Object>] [-Tenant <string>] [[-Identity] <string>]
 ```
 
 ## DESCRIPTION

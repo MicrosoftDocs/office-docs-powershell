@@ -22,7 +22,7 @@ This cmdlet was introduced in Lync Server 2010.
 ```
 Set-CsUserAcp [-Identity] <UserIdParameter> -Domain <String> -Name <String> -ParticipantPasscode <String>
  -TollNumber <String> [-IsDefault <Boolean>] [-TollFreeNumbers <String[]>] [-Url <String>] [-PassThru]
- [-WhatIf] [-Confirm] [-AsJob] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -292,22 +292,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
