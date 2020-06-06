@@ -2,63 +2,63 @@
   href: index.md
   items:
   - name: Exchange Server PowerShell
-    href: exchange-server/exchange-management-shell.md
+    href: exchange-management-shell.md
     items:
     - name: Open the Exchange Management Shell
-      href: exchange-server/open-the-exchange-management-shell.md
+      href: open-the-exchange-management-shell.md
     - name: Connect to Exchange servers using remote PowerShell
-      href: exchange-server/connect-to-exchange-servers-using-remote-powershell.md
+      href: connect-to-exchange-servers-using-remote-powershell.md
     - name: Control remote PowerShell access to Exchange servers
-      href: exchange-server/control-remote-powershell-access-to-exchange-servers.md
+      href: control-remote-powershell-access-to-exchange-servers.md
     - name: Find the permissions required to run any Exchange cmdlet
-      href: exchange-server/find-exchange-cmdlet-permissions.md
+      href: find-exchange-cmdlet-permissions.md
     - name: Exchange cmdlet syntax
-      href: exchange-server/exchange-cmdlet-syntax.md
+      href: exchange-cmdlet-syntax.md
     - name: Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers
-      href: exchange-server/use-update-exchangehelp.md
-    - name: Recipient filters in Exchange PowerShell commands
-      href: exchange-server/recipient-filters/recipient-filters.md
+      href: use-update-exchangehelp.md
+    - name: Recipient filters in Exchange Management Shell commands
+      href: recipient-filters.md
       items:
       - name: Filterable properties for the Filter parameter
-        href: exchange-server/recipient-filters/filter-properties.md
+        href: recipient-filters/filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
-        href: exchange-server/recipient-filters/recipientfilter-properties.md   
+        href: recipient-filters/recipientfilter-properties.md   
   - name: Exchange Online PowerShell
-    href: exchange-online/exchange-online-powershell.md
+    href: exchange-online-powershell.md
     items:
     - name: Connect to Exchange Online PowerShell
-      href: exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md
+      href: connect-to-exchange-online-powershell.md
       items:
       - name: Connect to Exchange Online PowerShell using multi-factor authentication
-        href: exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell.md
+        href: mfa-connect-to-exchange-online-powershell.md
     - name: Find the permissions required to run any Exchange cmdlet
-      href: exchange-server/find-exchange-cmdlet-permissions.md
+      href: find-exchange-cmdlet-permissions.md
     - name: Enable or disable access to Exchange Online PowerShell
-      href: exchange-online/disable-access-to-exchange-online-powershell.md
-    - name: Recipient filters in Exchange Management Shell commands
-      href: exchange-server/recipient-filters/recipient-filters.md
+      href: disable-access-to-exchange-online-powershell.md
+    - name: Recipient filters in Exchange PowerShell commands
+      href: recipient-filters.md
       items:
       - name: Filterable properties for the Filter parameter
-        href: exchange-server/recipient-filters/filter-properties.md
+        href: recipient-filters/filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
-        href: exchange-server/recipient-filters/recipientfilter-properties.md
+        href: recipient-filters/recipientfilter-properties.md
   - name: Exchange Online PowerShell V2
-    href: exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2.md
+    href: exchange-online-powershell-v2.md
     items:
     - name: Property sets in V2 cmdlets
-      href: exchange-online/exchange-online-powershell-v2/cmdlet-property-sets.md
+      href: cmdlet-property-sets.md
     - name: Filters in the V2 module
-      href: exchange-online/exchange-online-powershell-v2/filters-v2.md
-  - name: Office 365 Security & Compliance Center PowerShell
-    href: office-365-scc/office-365-scc-powershell.md
+      href: filters-v2.md
+  - name: Security & Compliance Center PowerShell
+    href: scc-powershell.md
     items:
-    - name: Connect to Office 365 Security & Compliance Center PowerShell
-      href: office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell.md
+    - name: Connect to Security & Compliance Center PowerShell
+      href: connect-to-scc-powershell.md
       items:
-      - name: Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication
-        href: office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell.md
+      - name: Connect to Security & Compliance Center PowerShell using multi-factor authentication
+        href: mfa-connect-to-scc-powershell.md
   - name: Exchange Online Protection PowerShell
-    href: exchange-eop/exchange-online-protection-powershell.md
+    href: exchange-online-protection-powershell.md
     items:
     - name: Connect to Exchange Online Protection PowerShell
-      href: exchange-eop/connect-to-exchange-online-protection-powershell.md
+      href: connect-to-exchange-online-protection-powershell.md
