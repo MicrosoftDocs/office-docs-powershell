@@ -314,4 +314,4 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 Exchange 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Need-help-converting-your-LDAP-filters-to-OPATH/ba-p/595108).
 
-For more information about the syntax that can be used within OPATH filters, see [Exchange cmdlet syntax](../exchange-cmdlet-syntax.md).
+For more information about the syntax that can be used within OPATH filters, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).

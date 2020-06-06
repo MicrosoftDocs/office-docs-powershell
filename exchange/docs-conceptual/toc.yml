@@ -20,9 +20,9 @@
       href: recipient-filters.md
       items:
       - name: Filterable properties for the Filter parameter
-        href: recipient-filters/filter-properties.md
+        href: filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
-        href: recipient-filters/recipientfilter-properties.md   
+        href: recipientfilter-properties.md   
   - name: Exchange Online PowerShell
     href: exchange-online-powershell.md
     items:
@@ -39,9 +39,9 @@
       href: recipient-filters.md
       items:
       - name: Filterable properties for the Filter parameter
-        href: recipient-filters/filter-properties.md
+        href: filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
-        href: recipient-filters/recipientfilter-properties.md
+        href: recipientfilter-properties.md
   - name: Exchange Online PowerShell V2
     href: exchange-online-powershell-v2.md
     items:
