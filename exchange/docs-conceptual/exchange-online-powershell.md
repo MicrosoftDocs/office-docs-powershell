@@ -17,7 +17,7 @@ description: "Learn about using PowerShell in Exchange Online"
 
 Exchange Online PowerShell is the administrative interface that enables you to manage your Microsoft Exchange Online organization from the command line.  For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following topics provide information about using Exchange Online PowerShell:
 
-- To create a remote PowerShell session to your Exchange Online organization, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
+- To create a remote PowerShell session to your Exchange Online organization, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 - To prevent or allow connections to connect to your Exchange Online organization using remote PowerShell, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
@@ -27,6 +27,6 @@ Exchange Online PowerShell is the administrative interface that enables you to m
 
   [Use Remote PowerShell in EOP](https://videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=9cb28006-c2cb-45b6-b72e-eeed8767dee7&AutoPlayVideo=false)
 
-- To find the permissions you need to run a specific cmdlet, or one or more parameters on the cmdlet, see [Find the permissions required to run any Exchange cmdlet](../exchange-server/find-exchange-cmdlet-permissions.md).
+- To find the permissions you need to run a specific cmdlet, or one or more parameters on the cmdlet, see [Find the permissions required to run any Exchange cmdlet](find-exchange-cmdlet-permissions.md).
 
-- To learn about recipient filters in Exchange Online PowerShell, see [Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands](../exchange-server/recipient-filters/recipient-filters.md).
+- To learn about recipient filters in Exchange Online PowerShell, see [Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands](recipient-filters.md).

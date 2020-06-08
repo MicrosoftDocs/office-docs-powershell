@@ -1,6 +1,6 @@
 ---
 title: Exchange PowerShell
-description: Learn about the Exchange PowerShell environments that are available in on-premises Exchange and Office 365.
+description: Learn about the Exchange PowerShell environments that are available in on-premises Exchange and Microsoft 365.
 services: exchange-online
 author: chrisda
 manager: dansimp
@@ -15,11 +15,11 @@ ms.author: chrisda
 ---
 # Exchange PowerShell
 
-Exchange PowerShell enables you to manage your Exchange Server and Office 365 organizations from the command line. For more information, select your environment:
+Exchange PowerShell enables you to manage your Exchange Server and Microsoft 365 organizations from the command line. For more information, select your environment:
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/powershell/exchange/exchange-server/exchange-management-shell">
+        <a href="/powershell/exchange/exchange-management-shell">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -37,7 +37,7 @@ Exchange PowerShell enables you to manage your Exchange Server and Office 365 or
         </a>
     </li>
     <li>
-        <a href="/powershell/exchange/exchange-online/exchange-online-powershell">
+        <a href="/powershell/exchange/exchange-online-powershell">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -55,7 +55,7 @@ Exchange PowerShell enables you to manage your Exchange Server and Office 365 or
         </a>
     </li>
     <li>
-        <a href="/powershell/exchange/office-365-scc/office-365-scc-powershell">
+        <a href="/powershell/exchange/scc-powershell">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -65,7 +65,7 @@ Exchange PowerShell enables you to manage your Exchange Server and Office 365 or
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Office 365 Security &amp; Compliance Center PowerShell</h3>
+                        <h3>Security &amp; Compliance Center PowerShell</h3>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@ Exchange PowerShell enables you to manage your Exchange Server and Office 365 or
         </a>
     </li>
     <li>
-        <a href="/powershell/exchange/exchange-eop/exchange-online-protection-powershell">
+        <a href="/powershell/exchange/exchange-online-protection-powershell">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

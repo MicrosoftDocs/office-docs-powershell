@@ -18,7 +18,17 @@ description: "Learn how to connect to Security & Compliance Center PowerShell."
 Security & Compliance Center PowerShell allows you to manage your Security & Compliance Center settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to the Security & Compliance Center. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Security & Compliance Center cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!NOTE]
-> The procedures in this topic won't work if: <br/>* Your account uses multi-factor authentication (MFA). <br/>* Your organization uses federated authentication. <br/>* A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs. <br/> In these scenarios, you need to download and use the Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md). <br/><br/> Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](../../exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
+> The procedures in this topic won't work if:
+> 
+> - Your account uses multi-factor authentication (MFA).
+> 
+> - Your organization uses federated authentication.
+> 
+> - A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs.
+> 
+> In these scenarios, you need to download and use the Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md).
+> 
+> Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 For more information about the Security & Compliance Center, see [Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627054).
 

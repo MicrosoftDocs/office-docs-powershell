@@ -14,10 +14,10 @@ description: "Learn about using PowerShell in Exchange Online Protection"
 
 # Exchange Online Protection PowerShell
 
-Exchange Online Protection PowerShell is the administrative interface that enables you to manage your Exchange Online Protection (EOP) organization from the command line. For example, you can use Exchange Online Protection PowerShell to configure mail flow rules (also known as transport rules) and connectors.
+Exchange Online Protection PowerShell is the administrative interface that enables you to manage your standalone Exchange Online Protection (EOP) organization from the command line. For example, you can use Exchange Online Protection PowerShell to configure mail flow rules (also known as transport rules) and connectors.
 
 > [!NOTE]
-> Exchange Online Protection PowerShell is only used in *standalone* EOP organizations (for example, you have a standalone EOP subscription to protect your on-premises email environment). If you have an Office 365 subscription that includes EOP (E3, E5, etc.), you don't use Exchange Online Protection PowerShell; the same features are available in [Exchange Online PowerShell](../exchange-online/exchange-online-powershell.md).
+> Exchange Online Protection PowerShell is only used in *standalone* EOP organizations (for example, your Microsoft 365 subscription includes only standalone EOP without Exchange Online mailboxes to protect your on-premises email environment). If you have a Microsoft subscription that includes Exchnge Online mailboxes (E3, E5, etc.), you don't use Exchange Online Protection PowerShell; the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
 
 The following topics provide information about using Exchange Online Protection PowerShell:
 
@@ -27,6 +27,6 @@ The following topics provide information about using Exchange Online Protection 
 
 - The following introductory video shows you how to connect to and use Exchange Online Protection PowerShell.
 
-  **Note:** This video applies to Exchange Online and standalone EOP organizations. When you connect to your organization, be sure to specify the correct URL (_ConnectionUri_ value). The required URL is different for Exchange Online and standalone EOP organizations.
+  **Note:** This video applies to Exchange Online and standalone EOP organizations. When you connect to your organization, be sure to specify the correct URL (the _ConnectionUri_ value). The required URL is different for Exchange Online and standalone EOP organizations.
 
   [Use Remote PowerShell in EOP](https://videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=9cb28006-c2cb-45b6-b72e-eeed8767dee7&AutoPlayVideo=false)
