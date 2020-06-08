@@ -19,7 +19,7 @@ Use the Remove-ActiveSyncDevice cmdlet to remove mobile device partnerships that
 
 Note: In Exchange 2013 or later, use the Remove-MobileDevice cmdlet instead. If you have scripts that use Remove-ActiveSyncDevice, update them to use Remove-MobileDevice.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Remove-ActiveSyncDevice [-Identity] <ActiveSyncDeviceIdParameter> [-Confirm] [-D
 ## DESCRIPTION
 The Remove-ActiveSyncDevice cmdlet is useful for removing mobile devices that no longer synchronize successfully with the server.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

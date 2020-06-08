@@ -19,7 +19,7 @@ Use the New-HoldComplianceRule cmdlet to create new preservation rules in the Se
 
 Note: The New-HoldComplianceRule cmdlet has been replaced by the New-RetentionComplianceRule cmdlet. If you have scripts that use New-HoldComplianceRule, update them to use New-RetentionComplianceRule.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

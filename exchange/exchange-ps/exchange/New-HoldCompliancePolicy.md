@@ -19,7 +19,7 @@ Use the New-HoldCompliancePolicy cmdlet to create new preservation policies in t
 
 Note: The New-HoldCompliancePolicy cmdlet has been replaced by the New-RetentionCompliancePolicy cmdlet. If you have scripts that use New-HoldCompliancePolicy, update them to use New-RetentionCompliancePolicy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

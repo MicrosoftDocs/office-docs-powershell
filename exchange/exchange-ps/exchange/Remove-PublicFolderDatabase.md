@@ -17,7 +17,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Remove-PublicFolderDatabase cmdlet to delete public folder databases.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ Remove-PublicFolderDatabase [-Identity] <DatabaseIdParameter> [-Confirm] [-Domai
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 Removing a public folder database can have a broad range of serious consequences. (This is particularly true when removing the last public folder database in the organization.) For more information, see [Remove Public Folder Databases](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd876883(v=exchg.141)).
 

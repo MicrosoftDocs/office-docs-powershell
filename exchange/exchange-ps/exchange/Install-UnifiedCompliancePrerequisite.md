@@ -19,7 +19,7 @@ Use the Install-UnifiedCompliancePrerequisite cmdlet to view, create, or configu
 
 Typically, you don't need to run this cmdlet. You use this cmdlet for troubleshooting and diagnostics.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
