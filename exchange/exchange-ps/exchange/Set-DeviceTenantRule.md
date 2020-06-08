@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Set-DeviceTenantRule
 
 ## SYNOPSIS
-This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
 Use the Set-DeviceTenantRule cmdlet to modify your organization's mobile device tenant rule in the Security & Compliance Center.
 
