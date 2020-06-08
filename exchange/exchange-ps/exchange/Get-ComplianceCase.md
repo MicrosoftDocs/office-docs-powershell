@@ -17,7 +17,7 @@ This cmdlet is available only in Office 365 Security & Compliance Center PowerSh
 
 Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Security & Compliance Center and Microsoft 365 compliance center. See the CaseType parameter for a list of these case types.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

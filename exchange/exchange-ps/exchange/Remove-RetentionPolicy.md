@@ -17,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-RetentionPolicy cmdlet to remove a retention policy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Retention policies are used to apply message retention settings to folders and i
 
 If you remove a retention policy that's assigned to users and they don't have another retention policy assigned, messages in those mailboxes may never expire. This may be a violation of the organization's messaging retention policies. When you attempt to remove a policy that's assigned to users, Microsoft Exchange displays a confirmation message indicating that the policy is assigned to users. Note that this message is in addition to the confirmation prompt displayed when removing a retention policy.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

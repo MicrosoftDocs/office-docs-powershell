@@ -17,7 +17,7 @@ This cmdlet is available only in Office 365 Security & Compliance Center PowerSh
 
 Use the Get-InformationBarrierRecipientStatus cmdlet to return information about recipients and their relationship to information barrier policies.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

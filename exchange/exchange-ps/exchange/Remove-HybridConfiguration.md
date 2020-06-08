@@ -17,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-HybridConfiguration cmdlet to delete the HybridConfigurationActive Directory object for your on-premises Exchange organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Remove-HybridConfiguration [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<Com
 ## DESCRIPTION
 Removing a HybridConfiguration object should typically only be performed in circumstances where the hybrid deployment state is corrupt and under the direction of Microsoft Customer Service and Support. After removing the HybridConfiguration object, your existing hybrid deployment configuration settings aren't disabled or removed. However, when the Hybrid Configuration wizard is run again after removing the HybridConfiguration object, the wizard won't have a hybrid configuration reference point for your existing feature settings. As a result, it will automatically create a HybridConfiguration object and record the new hybrid deployment configuration feature values defined in the wizard. The feature settings associated with the hybrid deployment, such as organization relationship or Send and Receive connector parameters, which were configured with the HybridConfiguration object that's removed, aren't removed or modified until the Hybrid Configuration wizard is run again.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

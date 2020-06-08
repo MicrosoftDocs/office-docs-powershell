@@ -19,7 +19,7 @@ Use the New-PublicFolderMoveRequest cmdlet to begin the process of moving public
 
 Be aware that the target public folder mailbox will be locked while the move request is active. See the Detailed Description section below for more details.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -38,7 +38,7 @@ The New-PublicFolderMoveRequest cmdlet moves public folders from a source public
 
 To move the public folder mailbox to another mailbox database, use the New-MoveRequest cmdlet. To ensure that this folder is already in the target public folder mailbox, run the Update-PublicFolderMailbox cmdlet against the target public folder mailbox. You can only perform one move request at a time. You can also move public folders by using the Move-PublicFolderBranch.ps1 script.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

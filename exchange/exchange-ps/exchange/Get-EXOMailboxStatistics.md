@@ -14,11 +14,11 @@ monikerRange: "exchonline-ps"
 # Get-EXOMailboxStatistics
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
 Use the Get-EXOMailboxStatistics cmdlet to return information about a mailbox, such as the size of the mailbox, the number of messages it contains, and the last time it was accessed.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ### -Properties
 The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas.
 
-For more information about the available properties, see [Get-EXOMailboxStatistics property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
+For more information about the available properties, see [Get-EXOMailboxStatistics property sets](https://docs.microsoft.com/powershell/exchange/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
 
 ```yaml
 Type: String[]
@@ -187,7 +187,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 You can specify multiple values separated by commas.
 
-For more information about the properties that are included in each property set, see [Get-EXOMailboxStatistics property sets](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
+For more information about the properties that are included in each property set, see [Get-EXOMailboxStatistics property sets](https://docs.microsoft.com/powershell/exchange/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
 
 ```yaml
 Type: PropertySet[]

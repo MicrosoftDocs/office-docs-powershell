@@ -17,7 +17,7 @@ This cmdlet is available only in Office 365 Security & Compliance Center PowerSh
 
 Use the Remove-HoldCompliancePolicy cmdlet to remove retention policies from the Security & Compliance Center. This cmdlet also removes the corresponding retention rule.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

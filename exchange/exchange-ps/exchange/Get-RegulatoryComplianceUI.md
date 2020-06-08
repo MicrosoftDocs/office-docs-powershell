@@ -15,7 +15,7 @@ This cmdlet is available only in the Office 365 Security & Compliance Center. Fo
 
 Use the Get-RegulatoryComplianceUI cmdlet to view the status of the regulatory compliance UI in the Office 365 Security & Compliance Center (whether the preservation lock checkbox is displayed for retention policies and the immutable label checkbox is displayed for retention labels).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

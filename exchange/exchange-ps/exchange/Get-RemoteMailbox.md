@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-RemoteMailbox cmdlet to retrieve the mail-related attributes of users in the on-premises organization that have associated mailboxes in the cloud-based service.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ Get-RemoteMailbox [[-Identity] <RemoteMailboxIdParameter>]
 ## DESCRIPTION
 The Get-RemoteMailbox cmdlet retrieves the mail-related attributes of a mail user in the on-premises Active Directory. It doesn't retrieve the attributes of the associated cloud-based mailbox. Most of the mail-related attributes of the on-premises mail user and the associated cloud-based mailbox should be the same. However, the cloud-based mailbox has additional attributes that you can't view by using this cmdlet. To view the attributes of the cloud-based mailbox, you need to use the Exchange admin center in the cloud-based service, or use remote PowerShell to connect to your cloud-based organization and run the Get-Mailbox cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -162,7 +162,7 @@ The Filter parameter uses OPath syntax to filter the results by the specified pr
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 
-- Property is a filterable property. For more information about the filterable properties, see [Filterable properties for the Filter parameter](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/filter-properties).
+- Property is a filterable property. For more information about the filterable properties, see [Filterable properties for the Filter parameter](https://docs.microsoft.com/powershell/exchange/filter-properties).
 
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
@@ -170,7 +170,7 @@ The Filter parameter uses OPath syntax to filter the results by the specified pr
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
 
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/exchange-server/recipient-filters/recipient-filters#additional-opath-syntax-information).
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String

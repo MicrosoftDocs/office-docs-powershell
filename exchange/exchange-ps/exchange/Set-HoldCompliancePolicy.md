@@ -19,7 +19,7 @@ Use the Set-HoldCompliancePolicy cmdlet to modify existing preservation policies
 
 Note: The Set-HoldCompliancePolicy cmdlet has been replaced by the Set-RetentionCompliancePolicy cmdlet. If you have scripts that use Set-HoldCompliancePolicy, update them to use Set-RetentionCompliancePolicy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

@@ -20,7 +20,7 @@ Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a spec
 > [!NOTE]
 > In cloud-based environments, the Search-Mailbox cmdlet is being deprecated in favor of [New-ComplianceSearch](https://docs.microsoft.com/powershell/module/exchange/new-compliancesearch) and related eDiscovery cmdlets. <br/><br/> By default, Search-Mailbox is available only in the Mailbox Search or Mailbox Import Export roles, and these roles aren't assigned to *any* role groups. To use this cmdlet, you need to add one or both of the roles to a role group (for example, the Organization Management role group). Only the Mailbox Import Export role gives you access to the DeleteContent parameter. For more information about adding roles to role groups, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
