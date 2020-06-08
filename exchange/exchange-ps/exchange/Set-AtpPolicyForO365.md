@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (ATP) policy in Office 365. The ATP policy enables the following protections:
 
-- Safe Links for Office 365 ProPlus desktop clients and Office Mobile apps.
+- Safe Links for Office 365 ProPlus desktop clients, web, and mobile apps.
 
 - Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
 
@@ -38,6 +38,7 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-EnableATPForSPOTeamsODB <Boolean>]
  [-EnableSafeDocs <Boolean>]
  [-EnableSafeLinksForO365Clients <Boolean>]
+ [-EnableSafeLinksForWebAccessCompanion <Boolean>]
  [-TrackClicks <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -194,11 +195,31 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForO365Clients
-The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop clients and on the web. Valid values are:
+The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop and mobile clients. Valid values are:
 
-- $true: Safe Links are enabled for Office 365 apps. This is the default value.
+- $true: Safe Links are enabled for Office 365 desktop and mobile apps. This is the default value.
 
-- $false: Safe Links are disabled for Office 365 apps.
+- $false: Safe Links are disabled for Office 365 desktop and mobile apps.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSafeLinksForWebAccessCompanion
+The EnableSafeLinksForWebAccessCompanion parameter specifies whether Safe Links is enabled for Office 365 apps on the web. Valid values are:
+
+- $true: Safe Links are enabled for Office 365 web apps. This is the default value.
+
+- $false: Safe Links are disabled for Office 365 web apps.
 
 ```yaml
 Type: Boolean
