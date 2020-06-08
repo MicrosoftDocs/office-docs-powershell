@@ -53,26 +53,26 @@ PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId
 Get user's specific Whiteboard.
 
 
-### Response
+### Output
 
 ```yaml
-  baseApi                  : baseApi-value
-  id                       : whiteboardId-value
-  userId                   : userId-value
-  folioId                  : folioId-value
-  title                    : title-value
-  createdBy                : createdBy-value
-  ownerId                  : ownerId-value
-  ownerTenantId            : ownerTenantId-value
-  isShared                 : isShared-value
-  createdTime              : createdTime-value
-  invitedTime              : invitedTime-value
-  personalLastModifiedTime : personalLastModifiedTime-value
-  lastModifiedTime         : lastModifiedTime-value
-  globalLastViewedTime     : globalLastViewedTime-value
-  lastViewedTime           : lastViewedTime-value
-  meetingId                : meetingId-value
-  eTag                     : eTag-value
+baseApi:                   baseApi-value
+id:                        whiteboardId-value
+userId:                    userId-value
+folioId:                   folioId-value
+title:                     title-value
+createdBy:                 createdBy-value
+ownerId:                   ownerId-value
+ownerTenantId:             ownerTenantId-value
+isShared:                  isShared-value
+createdTime:               createdTime-value
+invitedTime:               invitedTime-value
+personalLastModifiedTime:  personalLastModifiedTime-value
+lastModifiedTime:          lastModifiedTime-value
+globalLastViewedTime:      globalLastViewedTime-value
+lastViewedTime:            lastViewedTime-value
+meetingId:                 meetingId-value
+eTag:                      eTag-value
 ```
 
 
