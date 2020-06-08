@@ -115,6 +115,13 @@ In Exchange Online, after using the Get-RecoverableItems cmdlet to verify the ex
 
 - Number of mailboxes processed simultaneously: 2
 
+### Example 4
+```powershell
+Get-RecoverableItems administrator | Restore-RecoverableItems 
+```
+
+This example bulk restores all the recoverable items for administrator.
+
 ## PARAMETERS
 
 ### -Identity
