@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Remove-ComplianceCaseMember
 
 ## SYNOPSIS
-This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
 Use the Remove-ComplianceCaseMember cmdlet to remove a single member from an eDiscovery search in Security & Compliance Center. To replace all existing members, use the Update-ComplianceCaseMember cmdlet.
 
