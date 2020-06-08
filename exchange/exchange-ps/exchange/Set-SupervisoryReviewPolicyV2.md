@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Set-SupervisoryReviewPolicyV2
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-SupervisoryReviewPolicyV2 cmdlet to modify supervisory review policies in the Office 365 Security & Compliance Center.
 

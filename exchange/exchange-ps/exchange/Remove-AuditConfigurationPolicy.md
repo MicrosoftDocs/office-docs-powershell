@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Remove-AuditConfigurationPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-AuditConfigurationPolicy cmdlet to remove audit configuration policies from the Security & Compliance Center.
 

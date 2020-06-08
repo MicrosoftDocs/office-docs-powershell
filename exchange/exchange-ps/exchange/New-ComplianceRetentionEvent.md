@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # New-ComplianceRetentionEvent
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-ComplianceRetentionEvent cmdlet to create compliance retention events in your organization.
 

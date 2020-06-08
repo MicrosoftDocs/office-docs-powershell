@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Remove-DlpKeywordDictionary
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-DlpKeywordDictionary cmdlet to remove data loss prevention (DLP) keyword dictionaries from the Security & Compliance Center.
 

@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # New-OrganizationSegment
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-OrganizationSegment cmdlet to create organization segments for use with information barrier policies in the Office 365 Security & Compliance Center. Organization Segments are not in effect until you [apply information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies#part-3-apply-information-barrier-policies).
 

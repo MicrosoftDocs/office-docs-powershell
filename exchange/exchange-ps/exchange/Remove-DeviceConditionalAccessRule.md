@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Remove-DeviceConditionalAccessRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-DeviceConditionalAccessRule cmdlet to remove mobile device conditional access rules from the Security & Compliance Center.
 

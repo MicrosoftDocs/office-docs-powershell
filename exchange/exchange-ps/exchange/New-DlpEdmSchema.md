@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # New-DlpEdmSchema
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-DlpEdmSchema cmdlet to create exact data match (EDM)-based classification schemas in the Security & Compliance Center. Such schemas can be used with data loss prevention (DLP) policies.
 
