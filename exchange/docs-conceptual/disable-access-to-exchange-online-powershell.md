@@ -15,17 +15,17 @@ description: "Admins can learn how to enable or disable access to Exchange Onlin
 
 # Enable or disable access to Exchange Online PowerShell
 
-Exchange Online PowerShell enables you to manage your Exchange Online organization from the command line. By default, all accounts you create in Office 365 are allowed to use Exchange Online PowerShell. Administrators can use Exchange Online PowerShell to enable or disable a user's ability to connect to Exchange Online PowerShell. Note that access to Exchange Online PowerShell doesn't give users extra administrative powers in your organization. A user's capabilities in Exchange Online PowerShell are still defined by role based access control (RBAC) and the roles that are assigned to them.
+Exchange Online PowerShell enables you to manage your Exchange Online organization from the command line. By default, all accounts you create in Microsoft 365 are allowed to use Exchange Online PowerShell. Administrators can use Exchange Online PowerShell to enable or disable a user's ability to connect to Exchange Online PowerShell. Note that access to Exchange Online PowerShell doesn't give users extra administrative powers in your organization. A user's capabilities in Exchange Online PowerShell are still defined by role based access control (RBAC) and the roles that are assigned to them.
 
 ## What do you need to know before you begin?
 
 - Estimated time to complete each procedure: less than 5 minutes
 
-- Office 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this topic to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions).
+- Microsoft 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this topic to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions).
 
-- You can only use Exchange Online PowerShell to perform this procedure. To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
+- You can only use Exchange Online PowerShell to perform this procedure. To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
-- For detailed information about OPath filter syntax in Exchange Online, see [Additional OPATH syntax information](../exchange-server/recipient-filters/recipient-filters.md#additional-opath-syntax-information).
+- For detailed information about OPath filter syntax in Exchange Online, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).

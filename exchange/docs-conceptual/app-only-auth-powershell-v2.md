@@ -113,7 +113,7 @@ If you encounter problems, check the [required permssions](https://docs.microsof
 
      Note that you can't create credentials for [native applications](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
 
-   ![Register an application](../../media/app-only-auth-register-app.png)
+   ![Register an application](media/app-only-auth-register-app.png)
 
    When you're finished, click **Register**.
 
@@ -129,13 +129,13 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 3. In the flyout that appears, select **Exchange**.
 
-   ![Select Exchange API permssions](../../media/app-only-auth-exchange-api-perms.png)
+   ![Select Exchange API permssions](media/app-only-auth-exchange-api-perms.png)
 
 4. In the flyout that appears, click **Application permissions**.
 
 5. In the **Select permissions** section that appears on the page, expand **Exchange** and select **Exchange.ManageAsApp**
 
-   ![Select Exchange API permssions](../../media/app-only-auth-exchange-manageasapp.png)
+   ![Select Exchange API permssions](media/app-only-auth-exchange-manageasapp.png)
 
    When you're finished, click **Add permissions**.
 
@@ -169,7 +169,7 @@ After you register the certificate with your application, you can use the public
 
 5. On the **Certificates & secrets** page that opens, click **Upload certificate**.
 
-   ![Click Upload certificate](../../media/app-only-auth-upload-cert.png)
+   ![Click Upload certificate](media/app-only-auth-upload-cert.png)
 
 6. In the dialog that appears, browse to the self-signed certificate you created in the previous Step, and then click **Add**.
 
@@ -191,4 +191,4 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 
 4. In the **Add assignments** flyout that appears, find and select the application, and then click **Add**.
 
-   ![Add a role assignment](../../media/app-only-auth-role-assignment.png)
+   ![Add a role assignment](media/app-only-auth-role-assignment.png)
