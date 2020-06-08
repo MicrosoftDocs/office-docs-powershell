@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-FederatedDomainProof cmdlet to generate a cryptographically secure string for the domain used for federated sharing in your Exchange organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Get-FederatedDomainProof -DomainName <SmtpDomain> [-DomainController <Fqdn>] [-T
 ## DESCRIPTION
 The Get-FederatedDomainProof cmdlet generates a cryptographically secure string for the domain used for federated sharing. The resulting string is used to manually configure a text (TXT) record in the Domain Name System (DNS) zone for the domain used by the administrator when running the cmdlet. A TXT record needs to be added to DNS for all accepted domains used for federated sharing. If the thumbprint of a certificate isn't provided, the task generates strings for all the certificates currently configured for the federation trust. Upon initial configuration of federated sharing, the proof string generated for the current certificate needs to be put into the TXT record for the federated domain in DNS. We recommend you update the TXT records whenever a new certificate is configured for the federation trust.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

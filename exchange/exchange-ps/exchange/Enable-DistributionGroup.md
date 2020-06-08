@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Enable-DistributionGroup cmdlet to mail-enable existing universal security groups and universal distribution groups that aren't already mail-enabled.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Enable-DistributionGroup [-Identity] <GroupIdParameter> [-Alias <String>] [-Conf
 ## DESCRIPTION
 The Enable-DistributionGroup cmdlet mail-enables existing universal security groups and universal distribution groups by adding the email attributes that are required by Exchange. Mail-enabled security groups and distribution groups are visible to the other \*-DistributionGroup cmdlets and to the \*-DistributionGroupMember cmdlets.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

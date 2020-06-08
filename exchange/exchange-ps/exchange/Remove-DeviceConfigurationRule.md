@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Remove-DeviceConfigurationRule cmdlet to remove mobile device configuration rules from the Security & Compliance Center.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
