@@ -1,5 +1,5 @@
 ---
-title: "Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication"
+title: "Connect to Security & Compliance Center PowerShell using multi-factor authentication"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -13,9 +13,9 @@ search.appverid: MET150
 description: "Learn how to connect to Security & Compliance Center PowerShell by using multi-factor authentication (MFA) or federated authentication."
 ---
 
-# Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication
+# Connect to Security & Compliance Center PowerShell using multi-factor authentication
 
-If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Connect to Office 365 Security & Compliance Center PowerShell](connect-to-scc-powershell.md) to use remote PowerShell to connect to the Office 365 Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
+If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md) to use remote PowerShell to connect to the Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
 
 > [!NOTE]
 > Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication. <br/><br/> The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
@@ -76,11 +76,11 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 2. In the EAC, go to **Hybrid** > **Setup** and click the appropriate **Configure** button to download the Exchange Online Remote PowerShell Module for multi-factor authentication.
 
-   ![Download the Exchange Online PowerShell Module from the Hybrid tab in the EAC](../../media/24645e56-8b11-4c0f-ace4-09bdb2703562.png)
+   ![Download the Exchange Online PowerShell Module from the Hybrid tab in the EAC](media/24645e56-8b11-4c0f-ace4-09bdb2703562.png)
 
 3. In the **Application Install** window that opens, click **Install**.
 
-   ![Click Install in the Exchange Online PowerShell Module window](../../media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
+   ![Click Install in the Exchange Online PowerShell Module window](media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
 
 ## Connect to Security & Compliance Center PowerShell by using MFA or federated authentication
 
@@ -92,9 +92,9 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
    Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
    ```
 
-   - _\<UPN\>_ is your Office 365 work or school account.
+   - _\<UPN\>_ is your Microsoft 365 work or school account.
 
-   - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the location of your Office 365 organization as described in the following table:
+   - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the location of your Microsoft 365 organization as described in the following table:
 
    |**Microsoft 365 offering**|**_ConnectionUri_ parameter value**|**_AzureADAuthorizationEndPointUri_ parameter value**|
    |:-----|:-----|:-----|
@@ -115,13 +115,13 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
 
-   ![Enter your password in the Exchange Online Remote PowerShell window](../../media/b85d80d9-1043-4c7c-8f14-d87d8d56b188.png)
+   ![Enter your password in the Exchange Online Remote PowerShell window](media/b85d80d9-1043-4c7c-8f14-d87d8d56b188.png)
 
    For MFA, a verification code is generated and delivered based on the verification response option that's configured for your account (for example, a text message or the Azure Authenticator app on your mobile phone).
 
 4. **(MFA only)**: In the verification window that opens, enter the verification code, and then click **Sign in**.
 
-   ![Enter your verification code in the Exchange Online Remote PowerShell window](../../media/d3a405ce-5364-4732-a7bb-2cc9c678da2d.png)
+   ![Enter your verification code in the Exchange Online Remote PowerShell window](media/d3a405ce-5364-4732-a7bb-2cc9c678da2d.png)
 
 5. **(Optional)**: If you want to connect to an Exchange Online PowerShell module session in the same window, you need to run
 
@@ -143,9 +143,9 @@ If you receive errors, check the following requirements:
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to the Security & Compliance Center.
 
-- The account you use to connect to the Security & Compliance Center must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](../../exchange-online/disable-access-to-exchange-online-powershell.md).
+- The account you use to connect to the Security & Compliance Center must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
-- TCP port 80 traffic needs to be open between your local computer and Office 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
+- TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 
 - The **Connect-IPPSSession** command (Step 2) might fail to connect if your client IP address changes during the connection request. This can happen if your organization uses a source network address translation (SNAT) pool that contains multiple IP addresses. The connection error looks like this:
 

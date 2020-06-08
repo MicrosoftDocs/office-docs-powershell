@@ -24,9 +24,9 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 - Basically, you need to be an administrator to complete this procedure. Specifically, you need access to the **Get-ManagementRole** and **Get-ManagementRoleAssignment** cmdlets. By default, access to these cmdlets is granted by the View-Only Configuration or Role Management roles, which are assigned to the View-Only Organization Management and Organization Management role groups.
 
-- The procedures in this topic don't work in the Office 365 Security & Compliance Center. For more information about permissions in the Security & Compliance Center, see [Permissions in Office 365 Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+- The procedures in this topic don't work in Security & Compliance Center PowerShell. For more information about permissions in the Security & Compliance Center, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
-- The procedures in this topic don't work in Exchange Online Protection (EOP). For more information about permissions in EOP, see [Feature permissions in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/feature-permissions-in-eop).
+- The procedures in this topic don't work in standalone Exchange Online Protection (EOP) PowerShell (Microsoft 365 organizations without Exchange Online mailboxes). For more information about permissions in standalone EOP, see [Feature permissions in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/feature-permissions-in-eop).
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) or [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542).
@@ -35,7 +35,7 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 1. Open the PowerShell environment where you want to run the cmdlet.
 
-   - To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online PowerShell](../exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md).
+   - To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
    - To learn how to open the Exchange Management Shell in your on-premises Exchange organization, see [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
 

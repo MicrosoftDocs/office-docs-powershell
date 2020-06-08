@@ -39,18 +39,18 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 
 |**New cmdlet in the EXO V2 module**|**Older related cmdlet**|
 |:-----|:-----|
-|[Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell) <br/> or <br/> [New-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389621)|
-|[Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exomailbox)|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailbox)|
-|[Get-EXORecipient](https://docs.microsoft.com/powershell/module/exchange/get-exorecipient)|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/get-recipient)|
-|[Get-EXOCASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exocasmailbox)|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/client-access/get-casmailbox)|
-|[Get-EXOMailboxPermission](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxpermission)|[Get-MailboxPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxpermission)|
-|[Get-EXORecipientPermission](https://docs.microsoft.com/powershell/module/exchange/get-exorecipientpermission)|[Get-RecipientPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-recipientpermission)|
-|[Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxstatistics)|[Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxstatistics)|
-|[Get-EXOMailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderstatistics)|
-|[Get-EXOMailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/get-mailboxfolderpermission)|
-|[Get-EXOMobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/devices/get-mobiledevicestatistics)|
-|[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
-|[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell)|
+|[Connect-ExchangeOnline](../exchange-ps/exchange/Connect-ExchangeOnline.md)|[Connect-EXOPSSession](mfa-connect-to-exchange-online-powershell.md) <br/> or <br/> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
+|[Get-EXOMailbox](../exchange-ps/exchange/Get-EXOMailbox.md)|[Get-Mailbox](../exchange-ps/exchange/Get-Mailbox.md)|
+|[Get-EXORecipient](../exchange-ps/exchange/Get-EXORecipient.md)|[Get-Recipient](../exchange-ps/exchange/Get-Recipient.md)|
+|[Get-EXOCasMailbox](../exchange-ps/exchange/Get-EXOCasMailbox.md)|[Get-CASMailbox](../exchange-ps/exchange/Get-CASMailbox.md)|
+|[Get-EXOMailboxPermission](../exchange-ps/exchange/Get-EXOMailboxPermission.md)|[Get-MailboxPermission](../exchange-ps/exchange/Get-MailboxPermission.md)|
+|[Get-EXORecipientPermission](../exchange-ps/exchange/Get-EXORecipientPermission.md)|[Get-RecipientPermission](../exchange-ps/exchange/Get-RecipientPermission.md)|
+|[Get-EXOMailboxStatistics](../exchange-ps/exchange/Get-EXOMailboxStatistics.md)|[Get-MailboxStatistics](../exchange-ps/exchange/Get-MailboxStatistics.md)|
+|[Get-EXOMailboxFolderStatistics](../exchange-ps/exchange/Get-EXOMailboxFolderStatistics.md)|[Get-MailboxFolderStatistics](../exchange-ps/exchange/Get-MailboxFolderStatistics.md)|
+|[Get-EXOMailboxFolderPermission](../exchange-ps/exchange/Get-EXOMailboxFolderPermission.md)|[Get-MailboxFolderPermission](../exchange-ps/exchange/Get-MailboxFolderPermission.md)|
+|[Get-EXOMobileDeviceStatistics](../exchange-ps/exchange/Get-EXOMobileDeviceStatistics.md)|[Get-MobileDeviceStatistics](../exchange-ps/exchange/Get-MobileDeviceStatistics.md)|
+|[Disconnect-ExchangeOnline](../exchange-ps/exchange/Disconnect-ExchangeOnline.md)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
+|[Connect-IPPSSession](../exchange-ps/exchange/Connect-IPPSSession.md)|[Connect-IPPSSession](mfa-connect-to-scc-powershell.md)|
 
 ## Install and maintain the Exchange Online PowerShell V2 module
 

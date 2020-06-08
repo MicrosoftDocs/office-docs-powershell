@@ -20,7 +20,7 @@ In standalone Exchange Online Protection (EOP) organizations without Exchange On
 
 - Estimated time to complete: 5 minutes
 
-- The instructions in this topic are for organizations without Exchange Online mailboxes (for example, you have a standalone EOP subscription to protect your on-premises email environment). If you have a Microsoft 365 subscription that includes Exchange Online mailboxes, the same features are available in [Exchange Online PowerShell](../exchange-online/exchange-online-powershell.md).
+- The instructions in this topic are for organizations without Exchange Online mailboxes (for example, you have a standalone EOP subscription to protect your on-premises email environment). If you have a Microsoft 365 subscription that includes Exchange Online mailboxes, the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
 
 - You can use the following versions of Windows:
 
