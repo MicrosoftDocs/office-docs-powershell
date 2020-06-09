@@ -17,7 +17,7 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Remove-AddressRewriteEntry cmdlet to remove an existing address rewrite entry that's no longer needed on an Edge Transport server.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

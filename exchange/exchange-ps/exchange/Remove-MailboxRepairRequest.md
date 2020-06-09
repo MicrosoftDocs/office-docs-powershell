@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-MailboxRepairRequest cmdlet to remove mailbox repair requests from a mailbox database that were created using the New-MailboxRepairRequest cmdlet.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Remove-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter> [-Co
 ## DESCRIPTION
 You can run the Remove-MailboxRepairRequest cmdlet to remove all mailbox repair requests for a specific database, for a group of related mailbox repair requests, or for a specific mailbox repair request. Mailbox repair requests are identified by a complex GUID with the following format: \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\>. The DatabaseGuid identifies the mailbox database where the mailbox being repaired is located. The RequestGuid identifies related requests that may contain more than one job if the request runs more than one task or targets more than one mailbox. The JobGuid identifies a unique job. See the examples to remove all requests on a mailbox database, remove a group of related requests that share the same RequestGuid, or remove a specific request by specifying the complete \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\> value.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
