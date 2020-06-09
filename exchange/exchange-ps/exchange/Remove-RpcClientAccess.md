@@ -17,7 +17,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Remove-RpcClientAccess cmdlet to remove the configuration information that allows RPC access through the Client Access server role on Microsoft Exchange Server 2010. After you remove the configuration information, the Exchange RPC Client Access service stops and no longer starts.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Remove-RPCClientAccess -Server <ServerIdParameter>
 ## DESCRIPTION
 Disabling RPC client access on a server blocks all RPC access through the specified Client Access server. Therefore, RPC clients (for example, clients running Microsoft Office Outlook 2007) with mailboxes on any mailbox databases configured to use the specified Client Access server won't be able to connect.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

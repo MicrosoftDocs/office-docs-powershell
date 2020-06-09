@@ -13,11 +13,11 @@ monikerRange: "o365scc-ps"
 # Update-ComplianceCaseMember
 
 ## SYNOPSIS
-This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Update-ComplianceCaseMember cmdlet to replace all members of eDiscovery cases in the Security & Compliance Center. To add or remove existing members, use the Add-ComplianceCaseMember and Remove-ComplianceCaseMember cmdlets.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

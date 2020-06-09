@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Update-Recipient cmdlet to add Microsoft Exchange attributes to recipient objects created by the global address list (GAL) synchronization management agent in Microsoft Forefront Identity Manager (FIM) 2010. The recipient objects you modify using this cmdlet must reside on a server running Microsoft Exchange Server 2010 or later.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ In Exchange, before you can run the Update-Recipient cmdlet to convert an Active
 
 If you're using MIIS 2003, you must run various cmdlets to complete the provisioning process of the mail contacts created by the GAL synchronization management agent. The Update-Recipient cmdlet provides an alternate and more efficient method to do this. You can run the Update-Recipient cmdlet against the recipient objects created by the MIIS 2003 GAL synchronization management agent to complete the provisioning process.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

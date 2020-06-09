@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-AuthRedirect cmdlet to create OAuth redirection objects that are used for legacy Microsoft Exchange 2010 Client Access servers in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ New-AuthRedirect -AuthScheme <AuthScheme> -TargetUrl <String> [-Confirm] [-Domai
 ## DESCRIPTION
 Exchange 2010 Client Access servers don't support OAuth authentication requests. Use this cmdlet to redirect OAuth authentication requests to Exchange servers that are running later versions of Exchange. This cmdlet is only useful if your organization has Exchange 2010 Client Access servers.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

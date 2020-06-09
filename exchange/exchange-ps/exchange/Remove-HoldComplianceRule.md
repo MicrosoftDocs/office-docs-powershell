@@ -13,13 +13,13 @@ monikerRange: "o365scc-ps"
 # Remove-HoldComplianceRule
 
 ## SYNOPSIS
-This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-HoldComplianceRule cmdlet to remove preservation rules from the Security & Compliance Center.
 
 Note: The Remove-HoldComplianceRule cmdlet has been replaced by the Remove-RetentionComplianceRule cmdlet. If you have scripts that use Remove-HoldComplianceRule, update them to use Remove-RetentionComplianceRule.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

@@ -17,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxFolderPermission cmdlet to modify folder-level permissions for users in mailboxes. This cmdlet differs from the Add-MailboxFolderPermission cmdlet in that it modifies existing permission entries. To configure calendar publishing or sharing settings for a mailbox so calendar information is visible to external users, use the Set-MailboxCalendarFolder cmdlet.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ Set-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights
 ## DESCRIPTION
 In Office 365, if you don't use the SendNotificationToUser or SharingPermissionFlags parameters, there are no changes to the functionality of the cmdlet. For example, if the user is an existing delegate, and you change their permissions to Editor without using the SendNotificationToUser or SharingPermissionFlags parameters, the user remains a delegate. But, if you use the SendNotificationToUser parameter ($true or $false), the SharingPermissionFlags parameter has the default value None, which can affect delegate access for existing users. For example, you change an existing delegate's permission to Editor, and you use SendNotificationToUser with the value $true. The user will no longer be a delegate and will only have Editor permissions to the folder.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

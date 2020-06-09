@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange and is only functional in 
 
 The Get-LogonStatistics cmdlet has been deprecated and is no longer used.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

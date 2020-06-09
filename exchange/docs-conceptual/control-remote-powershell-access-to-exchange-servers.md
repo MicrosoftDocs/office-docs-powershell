@@ -26,7 +26,7 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
 
 - By default, all user accounts have access to remote PowerShell. However, to actually use remote PowerShell to connect to an Exchange server, the user needs to be a member of a management role group, or be directly assigned a management role that enables the user to run Exchange cmdlets. For more information about role groups and management roles, see [Exchange Server permissions](https://docs.microsoft.com/Exchange/permissions/permissions).
 
-- For detailed information about OPath filter syntax in Exchange, see [Additional OPATH syntax information](../exchange-server/recipient-filters/recipient-filters.md#additional-opath-syntax-information).
+- For detailed information about OPath filter syntax in Exchange, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
 - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Remote PowerShell" entry in the [Exchange infrastructure and PowerShell permissions](https://docs.microsoft.com/Exchange/permissions/feature-permissions/infrastructure-permissions) topic.
 
