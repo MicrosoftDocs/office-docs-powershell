@@ -95,7 +95,7 @@ The FileData parameter specifies the contents of the certificate file that you w
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
 
-You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>).
+You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (`\\<Server>\<Share>`).
 
 If the value contains spaces, enclose the value in quotation marks (").
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ### -FileName
 The FileName parameter specifies the certificate file that you want to import. Typically, you use this parameter for PKCS #12 binary certificate files that have .cer, .crt, .der, .p12, or .pfx filename extensions. This type of binary certificate file is protected by a password when the file contains the private key or chain of trust.
 
-You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>).
+You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (`\\<Server>\<Share>`).
 
 If the value contains spaces, enclose the value in quotation marks (").
 
