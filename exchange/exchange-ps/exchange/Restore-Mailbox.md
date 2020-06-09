@@ -19,7 +19,7 @@ Use the Restore-Mailbox cmdlet to extract mailbox content from a restored databa
 
 Note: In Exchange Server 2010 Service Pack 1 (SP1) or later, use the New-MailboxRestoreRequest cmdlet instead of the Restore-Mailbox cmdlet to extract mailbox content from a restored database.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ Restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdPa
 ## DESCRIPTION
 The Restore-Mailbox cmdlet copies end-user data from any server running Microsoft Exchange Server 2010 to a mailbox on an Exchange 2010 Mailbox server in the same organization that has adequate space and resources to support the mailbox. The Restore-Mailbox cmdlet can only use disconnected mailboxes on a server as a source of data, and the cmdlet can only use connected mailboxes as a target for data.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

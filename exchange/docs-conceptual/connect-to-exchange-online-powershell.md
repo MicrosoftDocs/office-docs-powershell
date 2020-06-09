@@ -18,12 +18,12 @@ description: "Learn how to use remote PowerShell to connect to Exchange Online."
 # Connect to Exchange Online PowerShell
 
 > [!NOTE]
-> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](../exchange-online-powershell-v2/exchange-online-powershell-v2.md).
+> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
 
 Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!IMPORTANT]
-> If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md). <br/><br/> If you're a standalone Exchange Online Protection (EOP) customer (for example, you're using EOP to protect your on-premises email environment), use the connection instructions in [Connect to Exchange Online Protection PowerShell](../../exchange-eop/connect-to-exchange-online-protection-powershell.md). If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, EOP is one of the included services, and the connection instructions in this topic will work for you.
+> If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md). <br/><br/> If you're a standalone Exchange Online Protection (EOP) customer (for example, you're using EOP to protect your on-premises email environment), use the connection instructions in [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md). If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, EOP is one of the included services, and the connection instructions in this topic will work for you.
 
 ## What do you need to know before you begin?
 
@@ -134,7 +134,7 @@ If you receive errors, check the following requirements:
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to your Exchange Online organization.
 
-- The account you use to connect to Exchange Online must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](../disable-access-to-exchange-online-powershell.md).
+- The account you use to connect to Exchange Online must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 
