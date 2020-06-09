@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-Use the Set-UserBriefingConfig cmdlet to enable or disable the Briefing for a user. For more details about configuring the Briefing, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin). 
+Use the Set-UserBriefingConfig cmdlet to enable or disable the Briefing for a user. For more details about configuring the Briefing, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -26,7 +26,7 @@ Set-UserBriefingConfig -Identity <String> [-Enabled [<$true | $false>] [-ResultS
 ```
 
 ## DESCRIPTION
-To enable or disable Briefing email for a specific user, use the Exchange Online PowerShell V2 module and this command line, where the string is the applicable username.
+This cmdlet requires the .NET Framework 4.7.2 or later. Also, you need to be a member of the Organization Management role group (Global admins).
 
 ## EXAMPLES
 
@@ -79,17 +79,17 @@ Accept wildcard characters: False
 ### -ResultSize	
 This parameter is reserved for internal Microsoft use.
 
-```yaml	
-Type: Unlimited	
-Parameter Sets: (All)	
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
-Required: False	
-Position: Named	
-Default value: None	
-Accept pipeline input: False	Accept pipeline input: False
-Accept wildcard characters: False	Accept wildcard characters: False
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## INPUTS

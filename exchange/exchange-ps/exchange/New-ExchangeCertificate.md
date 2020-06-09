@@ -440,7 +440,7 @@ Accept wildcard characters: False
 ### -RequestFile
 The RequestFile parameter specifies the name and path of the certificate request file. The file contains the same information that's displayed on-screen when you generate a Base64 encoded certificate request (you don't use the BinaryEncoded switch).
 
-You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>). If the value contains spaces, enclose the value in quotation marks (").
+You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (`\\<Server>\<Share>`). If the value contains spaces, enclose the value in quotation marks (").
 
 You can use this parameter only when you use the GenerateRequest switch.
 

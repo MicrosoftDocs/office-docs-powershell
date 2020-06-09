@@ -90,7 +90,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -294,7 +294,7 @@ The ContentContainsSensitiveInformation parameter specifies a condition for the 
 
 This parameter uses the basic syntax @(@{Name="\<SensitiveInformationType1\>";[minCount="\<Value\>"],@{Name="\<SensitiveInformationType2\>";[minCount="\<Value\>"],...). For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
 
-Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://go.microsoft.com/fwlink/p/?LinkId=529420).
+Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
 ```yaml
 Type: PswsHashtable[]
@@ -536,7 +536,7 @@ The ExceptIfContentContainsSensitiveInformation parameter specifies an exception
 
 This parameter uses the basic syntax @(@{Name="\<SensitiveInformationType1\>";[minCount="\<Value\>"],@{Name="\<SensitiveInformationType2\>";[minCount="\<Value\>"],...). For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
 
-Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://go.microsoft.com/fwlink/p/?LinkId=529420).
+Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
 ```yaml
 Type: PswsHashtable[]

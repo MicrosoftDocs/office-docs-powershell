@@ -135,7 +135,7 @@ In the cloud-based service, if you specify a date/time value without a time zone
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 In the results of this cmdlet, the date/time when the change was made (the cmdlet was run) is returned in the property named **RunDate**.
 
@@ -265,7 +265,7 @@ In the cloud-based service, if you specify a date/time value without a time zone
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 In the results of this cmdlet, the date/time when the change was made (the cmdlet was run) is returned in the property named **RunDate**.
 
