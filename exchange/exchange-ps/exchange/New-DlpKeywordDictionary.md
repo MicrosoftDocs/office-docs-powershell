@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # New-DlpKeywordDictionary
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-DlpKeywordDictionary cmdlet to create data loss prevention (DLP) keyword dictionaries in the Security & Compliance Center.
 

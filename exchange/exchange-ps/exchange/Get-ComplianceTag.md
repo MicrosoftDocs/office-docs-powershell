@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps || o365scc-ps"
 # Get-ComplianceTag
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-ComplianceTag cmdlet to view labels in the Security & Compliance Center. Labels apply retention settings to content.
 

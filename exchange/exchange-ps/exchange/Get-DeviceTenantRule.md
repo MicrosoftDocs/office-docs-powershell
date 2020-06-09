@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Get-DeviceTenantRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-DeviceTenantRule cmdlet to view your organization's mobile device tenant rule in the Security & Compliance Center.
 

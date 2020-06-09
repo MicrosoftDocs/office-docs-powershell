@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps || o365scc-ps"
 # Get-ComplianceTagStorage
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-ComplianceTagStorage cmdlet to confirm that you've created the label policy by using the Enable-ComplianceTagStorage cmdlet. Labels apply retention settings to content.
 

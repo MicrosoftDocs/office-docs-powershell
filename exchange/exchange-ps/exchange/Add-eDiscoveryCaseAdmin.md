@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Add-eDiscoveryCaseAdmin
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Add-eDiscoveryCaseAdmin cmdlet to add an eDiscovery Administrator in the Security & Compliance Center. To replace all existing eDiscovery Administrators, use the Update-eDiscoveryCaseAdmin cmdlet.
 

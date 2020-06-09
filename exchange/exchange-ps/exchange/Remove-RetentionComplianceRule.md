@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Remove-RetentionComplianceRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-RetentionComplianceRule cmdlet to remove retention rules from the Security & Compliance Center.
 
