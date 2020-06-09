@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Set-ComplianceCase
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-ComplianceCase cmdlet to modify eDiscovery cases in the Security & Compliance Center.
 

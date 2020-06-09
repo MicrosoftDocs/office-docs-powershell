@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Remove-UnifiedAuditLogRetentionPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-UnifiedAuditLogRetentionPolicy cmdlet to delete audit log retention policies. It might take up to 30 minutes for the policy to be completely removed. For more information, see [Manage audit log retention policies](https://docs.microsoft.com/microsoft-365/compliance/audit-log-retention-policies).
 

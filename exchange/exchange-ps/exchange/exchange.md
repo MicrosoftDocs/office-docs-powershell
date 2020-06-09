@@ -13,7 +13,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 - [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell)
 
-- [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell)
+- [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
 
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
