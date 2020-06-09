@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-label
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label
 applicable: Office 365 Security & Compliance Center
 title: Set-Label
 schema: 2.0.0
@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Set-Label
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
 Use the Set-Label cmdlet to modify sensitivity labels in your organization.
 
@@ -31,6 +31,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-DisplayName <String>]
  [-LabelActions <MultiValuedProperty>]
  [-LocaleSettings <MultiValuedProperty>]
+ [-MigrationId <String>]
  [-NextLabel <ComplianceRuleIdParameter>]
  [-ParentId <ComplianceRuleIdParameter>]
  [-PreviousLabel <ComplianceRuleIdParameter>]
@@ -49,24 +50,10 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```powershell
-$Languages = @("fr-fr","it-it","de-de")
-$DisplayNames=@("Publique","Publico","Oeffentlich")
-$Tooltips = @("Texte Français","Testo italiano","Deutscher text")
-$label = "Public"
-$DisplayNameLocaleSettings = [PSCustomObject]@{LocaleKey='DisplayName';
-Settings=@(
-@{key=$Languages[0];Value=$DisplayNames[0];}
-@{key=$Languages[1];Value=$DisplayNames[1];}
-@{key=$Languages[2];Value=$DisplayNames[2];})}
-$TooltipLocaleSettings = [PSCustomObject]@{LocaleKey='Tooltip';
-Settings=@(
-@{key=$Languages[0];Value=$Tooltips[0];}
-@{key=$Languages[1];Value=$Tooltips[1];}
-@{key=$Languages[2];Value=$Tooltips[2];})}
-Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSettings -Depth 3 -Compress),(ConvertTo-Json $TooltipLocaleSettings -Depth 3 -Compress)
+Set-Label -Identity General -LocaleSettings '{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}'
 ```
 
-This example sets the localized label name for "Public" in different languages (French, Italian, and German).
+This example sets the localized label name for "General" in different languages (English, German, and Spanish).
 
 ## PARAMETERS
 
@@ -113,22 +100,6 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Conditions
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -196,30 +167,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LabelActions
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LocaleSettings
 The LocaleSettings parameter specifies one or more localized label name or label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
 
-- Label display names: `{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}`
+- Label display names: {"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}
 
-- Label Tooltips: `{"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de","Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}`
-
-The languages you use in the display name and Tooltip must mach. For example, you can't have a German display name without a corresponding German ToolTip.
+- Label Tooltips: {"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de","Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}
 
 ```yaml
 Type: MultiValuedProperty
@@ -303,38 +256,6 @@ If you modify the priority value of a sensitivity label, the position of the lab
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Setting
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PswsHashtable
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Settings
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

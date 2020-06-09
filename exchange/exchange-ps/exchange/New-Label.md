@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-label
+online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label
 applicable: Office 365 Security & Compliance Center
 title: New-Label
 schema: 2.0.0
@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # New-Label
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
 Use the New-Label cmdlet to create sensitivity labels in your organization.
 
@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-Label [-Name] <String> -DisplayName <String>
-[-AdvancedSettings <PswsHashtable>]
+ [-AdvancedSettings <PswsHashtable>]
  [-ApplyContentMarkingFooterAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
  [-ApplyContentMarkingFooterEnabled <System.Boolean>]
  [-ApplyContentMarkingFooterFontColor <String>]
@@ -780,6 +780,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EncryptionTemplateId
+???
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MasterIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LabelActions
 This parameter is reserved for internal Microsoft use.
 
@@ -802,8 +834,6 @@ The LocaleSettings parameter specifies one or more localized label name or label
 - Label display names: {"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en español"}]}
 
 - Label Tooltips: {"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}
-
-The languages you use in the display name and Tooltip must mach. For example, you can't have a German display name without a corresponding German ToolTip.
 
 ```yaml
 Type: MultiValuedProperty
