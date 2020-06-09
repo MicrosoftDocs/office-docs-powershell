@@ -10,7 +10,7 @@ monikerRange: "o365scc-ps"
 # Set-RegulatoryComplianceUI
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell)
+This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
 .
 
 Use the Set-RegulatoryComplianceUI cmdlet to enable or disable regulatory compliance UI in the Office 365 Security & Compliance Center (enable or disable the preservation lock checkbox for retention policies and the immutable label checkbox for retention labels).
@@ -24,7 +24,7 @@ Set-RegulatoryComplianceUI -Enabled <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 

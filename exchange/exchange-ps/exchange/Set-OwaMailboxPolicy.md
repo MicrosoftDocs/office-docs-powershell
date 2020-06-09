@@ -372,7 +372,7 @@ The AllowOfflineOn parameter specifies when Outlook Web App in offline mode is a
 
 - AllComputers: Offline mode is available for public and private computer sessions. This is the default value.
 
-When offline mode is available, users can turn offline mode on or off themselves in Outlook Web App. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
+When offline mode is available, users can turn offline mode on or off themselves in Outlook Web App. For more information, see [Use offline settings in Outlook on the web](https://support.microsoft.com/office/a34c9d9d-16ac-4020-b730-ffa7c7540ae7).
 
 ```yaml
 Type: AllowOfflineOnEnum

@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps || eop-ps"
 # Get-AdvancedThreatProtectionDocumentDetail
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service. Use the Get-AdvancedThreatProtectionDocumentDetailReport cmdlet to view the results of Office 365 Advanced Threat Protection (ATP) actions for files in SharePoint Online, OneDrive for Business and Microsoft Teams in your cloud-based organization. For more information about this feature, see article at: https://go.microsoft.com/fwlink/?linkid=857638
+This cmdlet is available only in the cloud-based service. Use the Get-AdvancedThreatProtectionDocumentDetailReport cmdlet to view the results of Office 365 Advanced Threat Protection (ATP) actions for files in SharePoint Online, OneDrive for Business and Microsoft Teams in your cloud-based organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -30,24 +30,17 @@ Get-AdvancedThreatProtectionDocumentDetail [-Action <MultiValuedProperty>] [-Dom
 For the reporting period and organization you specify, the cmdlet returns the following information:
 
 - Action
-
 - Document Id
-
 - Domain
-
 - Event Type
-
 - File Hash
-
 - File Name
-
 - File Path
-
 - Size
-
 - Timestamp
-
 - Workload
+
+For more information about this feature, see [ATP for SharePoint, OneDrive, and Microsoft Teams](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
