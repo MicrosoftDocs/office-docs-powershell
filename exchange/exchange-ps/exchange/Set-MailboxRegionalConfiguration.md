@@ -150,7 +150,7 @@ The DateFormat parameter specifies a valid date format based on the current or s
 
 - dd-MMM-yy
 
-For more information about the date format strings, see [Standard Date and Time Format Strings](https://go.microsoft.com/fwlink/p/?LinkId=784852).
+For more information about the date format strings, see [Standard Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings).
 
 ```yaml
 Type: String
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ### -Language
 The Language parameter specifies the language for the mailbox.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
@@ -228,7 +228,7 @@ The TimeFormat parameter specifies a valid time format based on the current or s
 
 - HH:mm
 
-For more information about the time format strings, see [Standard Date and Time Format Strings](https://go.microsoft.com/fwlink/p/?LinkId=784852).
+For more information about the time format strings, see [Standard Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings).
 
 ```yaml
 Type: String

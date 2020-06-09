@@ -30,13 +30,11 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 > 
 > Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
-For more information about the Security & Compliance Center, see [Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627054).
-
 ## What do you need to know before you begin?
 
 - Estimated time to complete: 5 minutes
 
-- Microsoft 365 global admins have access to the Security & Compliance Center, but everyone else needs to have their access configured for them. For details, see [Give users access to the Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627057).
+- Microsoft 365 global admins have access to the Security & Compliance Center, but everyone else needs to have their access configured for them. For details, see [Give users access to the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
 
 - You can use the following versions of Windows:
 
@@ -54,7 +52,7 @@ For more information about the Security & Compliance Center, see [Security & Com
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595), [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -132,7 +130,7 @@ If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
 
-- Verify that your account has permission to access the Security & Compliance Center. For details, see [Give users access to the Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627057).
+- Verify that your account has permission to access the Security & Compliance Center. For details, see [Give users access to the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to the Security & Compliance Center.
 
@@ -148,12 +146,12 @@ If you receive errors, check the following requirements:
 
 The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more information about these cmdlets, see the following topics.
 
-- [Get-Credential](https://go.microsoft.com/fwlink/p/?LinkId=389618)
+- [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential)
 
-- [New-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389621)
+- [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)
 
-- [Import-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389619)
+- [Import-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession)
 
-- [Remove-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389620)
+- [Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)
 
-- [Set-ExecutionPolicy](https://go.microsoft.com/fwlink/p/?LinkId=389623)
+- [Set-ExecutionPolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
