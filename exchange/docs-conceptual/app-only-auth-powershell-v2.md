@@ -19,6 +19,9 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 
 # Automate tasks in Exchange Online using PowerShell with Modern Authentication
 
+> [!NOTE]
+> The features described in this topic are currently in Preview, are subject to change, and aren't available to everyone.
+
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses Modern authentication, the credentials are stored in a local file or a secret vault that's access at run-time.
 
 Because storing user credentials locally is not a good security practice, we're releasing this feature to support authentication for app-only scenarios using AzureAD applications and self-signed certificates.
