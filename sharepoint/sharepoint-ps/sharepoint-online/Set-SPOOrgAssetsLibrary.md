@@ -20,12 +20,12 @@ Updates information for a library that is designated as a location for organizat
 ## SYNTAX
 
 ```powershell
-Set-SPOOrgAssetsLibrary -LibraryUrl <String> -ThumbnailUrl <String>  [<CommonParameters>]
+Set-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAssetType <OrgAssetType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The Set-SPOOrgAssetsLibrary cmdlet updates information for a library that is designated as a location for organization assets. Updating the thumbnail URL is currently supported.
+The Set-SPOOrgAssetsLibrary cmdlet updates information for a library that is designated as a location for organization assets. Updating the thumbnail URL and OrgAssetType are currently supported.
 
 ## EXAMPLES
 
@@ -45,6 +45,22 @@ This example removes the thumbnail URL that was previously set for the library.
 Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Assets -ThumbnailURL ""
 ```
 
+### Example 3
+
+This example change the OrgAssetType to OfficeTemplateLibrary.
+
+```powershell
+Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Templates -OrgAssetType OfficeTemplateLibrary
+```
+
+### Example 4
+
+This example change the OrgAssetType to "ImageDocumentLibrary,OfficeTemplateLibrary".
+
+```powershell
+Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Templates -OrgAssetType ImageDocumentLibrary,OfficeTemplateLibrary
+```
+
 ## PARAMETERS
 
 ### -LibraryUrl
@@ -57,6 +73,28 @@ Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OrgAssetType
+
+Indicates the type of content in this library. Currently supported values are "ImageDocumentLibrary" and "OfficeTemplateLibrary".
+
+ImageDocumentLibrary is the default OrgAssetType and is best used for images. You can access the contents of this library from any site or page in the SharePoint filepicker.
+OfficeTemplateLibrary is the suggested type for Office files and will show up in the UI of all Office desktop apps and Office online in the templates section.
+
+In order to benefit from both UIs you can choose "ImageDocumentLibrary,OfficeTemplateLibrary" as OrgAssetType.
+
+```yaml
+Type: OrgAssetType
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Accepted values: ImageDocumentLibrary, OfficeTemplateLibrary
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
