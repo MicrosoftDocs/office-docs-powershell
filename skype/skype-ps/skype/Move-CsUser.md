@@ -98,7 +98,7 @@ To carry out this task, the command first uses the Get-CsUser cmdlet and the OU 
 Move-CsUser -UserList C:\Folder1\Folder2\file1.txt -Target "atl-cs-001.litwareinc.com" -Report C:\Folder1\Folder2\out.csv
 ```
 
-In Example 5, all the users listed in file1.txt are move to the the Registrar pool atl-cs-001.litwareinc.com.
+In Example 5, all the users listed in file1.txt are moved to the the Registrar pool atl-cs-001.litwareinc.com.
 Also, a detailed report is created in the out.csv file.
 
 ## PARAMETERS
