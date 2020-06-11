@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Delegates
-Specifies list of delegates that calls will be forwarded to. This parameter can only be used with EnableForwarding and EnableSimulRing parameters.
+Specifies the list of delegates that calls will be forwarded to. This parameter can only be used with EnableForwarding and EnableSimulRing parameters.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -196,8 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Team
-Specifies list of team members that calls will be forwarded to. The add and remove switches will add and remove specified users from the Team Members list. The replace parameter will set the list to the specified list, wiping out the previous list. Add and remove can be used together, but neither of them can be used along with replace.
-o	Acceptable input formats for add/remove/replace list: The inputs can be a single user address (in one of the below formats), or a comma separated list of user addresses, in the 4 standard formats that Identity parameter accepts.
+Specifies list of team members that calls will be forwarded to. The add and remove switches will add and remove specified users from the Team Members list. The replace parameter will set the list to the specified list, wiping out the previous list. Add and remove can be used together, but neither of them can be used along with replace. Acceptable input formats for add/remove/replace list: The inputs can be a single user address (in one of the below formats), or a comma separated list of user addresses, in the 4 standard formats that Identity parameter accepts.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -229,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnansweredToOther
-Specified that unanswered calls will be send to other user or phone number.
+Specifies that unanswered calls will be send to other user or phone number.
 
 ```yaml
 Type: String
@@ -245,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnansweredToVoicemail
-Specified that unanswered calls will be send to voicemail.
+Specifies that unanswered calls will be send to voicemail.
 
 ```yaml
 Type: SwitchParameter
