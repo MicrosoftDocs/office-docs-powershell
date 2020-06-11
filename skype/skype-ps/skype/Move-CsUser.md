@@ -21,7 +21,13 @@ Moves one or more user accounts enabled for Skype for Business Server to a new R
 ### (Default)
 
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-UseOAuth] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-ProxyPool <Fqdn>] [-MoveConferenceData] [-UserList <String>] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-UseOAuth] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-ProxyPool <Fqdn>] [-MoveConferenceData] [-Report <String>] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
+```
+
+### UserList
+
+```
+Move-CsUser -UserList <String> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-UseOAuth] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-ProxyPool <Fqdn>] [-MoveConferenceData] [-Report <String>] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,9 +42,9 @@ The Move-CsUser cmdlet affects only the user's Skype for Business Server account
 
 When moving a user to or from Office 365 (either Skype for Business Online or Teams):
 
-- Skype for Business hybrid must be configured. For more information, see [Deploy hybrid connectivity between Skype for Business Server and Skype for Business Online](https://docs.microsoft.com/en-us/SkypeForBusiness/skype-for-business-hybrid-solutions/deploy-hybrid-connectivity/deploy-hybrid-connectivity).
-- To move a user to Office 365, specify the ProxyFqdn of the hosting provider as the Target. In most cases, this is "sipfed.online.lync.com" but in specialized environments there will be variants of this address. For more details, see [Move users between on-premises and cloud](https://docs.microsoft.com/en-us/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud).
-- When migrating from on-premises to the cloud, meetings are migrated from Skype for Business Server to online. If the `MoveToTeams` switch is specified, the meetings will be migrated to Teams meetings. Otherwise, meetings are migrated to Skype for Business Online. Teams-only users can still join meetings hosted in Skype for Business. For details see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/en-us/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
+- Skype for Business hybrid must be configured. For more information, see [Deploy hybrid connectivity between Skype for Business Server and Skype for Business Online](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/deploy-hybrid-connectivity/deploy-hybrid-connectivity).
+- To move a user to Office 365, specify the ProxyFqdn of the hosting provider as the Target. In most cases, this is "sipfed.online.lync.com" but in specialized environments there will be variants of this address. For more details, see [Move users between on-premises and cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud).
+- When migrating from on-premises to the cloud, meetings are migrated from Skype for Business Server to online. If the `MoveToTeams` switch is specified, the meetings will be migrated to Teams meetings. Otherwise, meetings are migrated to Skype for Business Online. Teams-only users can still join meetings hosted in Skype for Business. For details see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 - Moving a user to Teams is achieved by specifying the MoveToTeams switch. This performs the same operations as a move to Skype for Business Online (without the specifying -MoveToTeams) and also performs the following actions:
 
     - TeamsUpgradePolicy with Mode=TeamsOnly is assigned to the online user account.
@@ -48,9 +54,6 @@ When moving a user to or from Office 365 (either Skype for Business Online or Te
 
 > [!NOTE]
 > <ul><li>The MoveToTeams switch is only available on Skype for Business Server 2019 and CU8 for Skype for Business Server 2015. Organizations using other versions of Skype for Business Server must first move the user to Skype for Business Online, and then apply TeamsUpgradePolicy.</li><li>If you are using Skype for Business Server 2015 with CU8 or later, we recommend you pass the `-UseOAuth` switch, which ensures the on-premises code authenticates using OAuth, instead of Legacy LiveID authentication. In Skype for Business Server 2019 and later versions, OAuth is always used hence the switch is not relevant on those versions.</li></ul>
-
-
-
 
 ## EXAMPLES
 
@@ -88,6 +91,15 @@ Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Move-CsUser -Target "atl-cs-0
 
 In Example 4, all the user accounts in the Finance organizational unit (OU) are moved to the Registrar pool atl-cs-001.litwareinc.com.
 To carry out this task, the command first uses the Get-CsUser cmdlet and the OU parameter to retrieve a collection of all the user accounts in the Finance OU. After the data has been retrieved, the information is piped to the Move-CsUser cmdlet, which moves each account in the collection to the Registrar pool atl-cs-001.litwareinc.com.
+
+### --------- EXAMPLE 5: Move multiple users listed in a file ---------------------------
+
+```powershell
+Move-CsUser -UserList C:\Folder1\Folder2\file1.txt -Target "atl-cs-001.litwareinc.com" -Report C:\Folder1\Folder2\out.csv
+```
+
+In Example 5, all the users listed in file1.txt are moved to the the Registrar pool atl-cs-001.litwareinc.com.
+Also, a detailed report is created in the out.csv file.
 
 ## PARAMETERS
 
@@ -298,7 +310,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Confirm
 
 Enables you to bypass the confirmation prompt that would otherwise appear when you attempt to move a user.
@@ -325,7 +336,7 @@ Accept wildcard characters: False
 
 ### -Report
 
-PARAMVALUE: String
+A CSV file to be created with detailed information about the move. You can supply the file name if you want to create the file in the current folder, or an absolute path.
 
 ```yaml
 Type: String
@@ -342,7 +353,7 @@ Accept wildcard characters: False
 
 ### -UserList
 
-A List of users to be moved, in the following format example: "sip:user1@contoso.com,sip:user2@contoso.com,sip:user3@contoso.com".
+A text file with a list of users to be moved, in the following format example: "sip:user1@contoso.com,sip:user2@contoso.com,sip:user3@contoso.com". You can supply the file name if it's located in the current folder, or the absolute path to the file.
 
 ```yaml
 Type: String
