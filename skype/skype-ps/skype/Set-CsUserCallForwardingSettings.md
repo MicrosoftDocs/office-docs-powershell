@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSimulRing
-This is a switch parameter that enables forwarding to the specified destination. Cannot be used along with the DisableForwarding and EnableForwarding parameters. SimulRingDestination can be a phone number, delegates, or team call group.	Acceptable input formats: "<phone number>", Team, Delegates.
+This is a switch parameter that enables forwarding to the specified destination. Cannot be used along with the DisableForwarding and EnableForwarding parameters. SimulRingDestination can be a phone number, delegates, or team call group. Acceptable input formats: "<phone number>", Team, Delegates.
 
 
 ```yaml
