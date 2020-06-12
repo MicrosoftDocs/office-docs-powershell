@@ -55,7 +55,7 @@ Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Templates -OrgAssetType Offic
 
 ### Example 4
 
-This example change the OrgAssetType to "ImageDocumentLibrary,OfficeTemplateLibrary".
+This example changes the OrgAssetType to "ImageDocumentLibrary,OfficeTemplateLibrary".
 
 ```powershell
 Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Templates -OrgAssetType ImageDocumentLibrary,OfficeTemplateLibrary
