@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csexternalaccesspolicy
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Teams, Skype for Business Online, Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsExternalAccessPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -14,9 +14,8 @@ ms.reviewer: rogupta
 
 ## SYNOPSIS
 
-Enables you to assign an external access policy to a user or a group of users.
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as MSN; and, 3) access Skype for Business Server over the Internet, without having to log on to your internal network.
-This cmdlet was introduced in Lync Server 2010.
+Enables you to assign an external access policy to a user. ExternalAccessPolicy is used in Teams, Skype for Business Online, as well as Skype for Business Server to manage federation between organizations as well as between an organization and public instant messaging providers (such as Skype for consumers).  ExternalAccessPolicy also allows you to manage whether users in an organization access Skype for Business Online or Skype for Business Server from over the internet, without having to log on to your internal network.
+
 
 
 ## SYNTAX
