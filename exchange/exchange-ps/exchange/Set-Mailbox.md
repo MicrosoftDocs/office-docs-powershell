@@ -1698,8 +1698,6 @@ The AuditDelegate parameter specifies the mailbox operations to log for delegate
 
 - Update (Enabled by default only in the cloud-based service.)
 
-- UpdateCalendarDelegation (Available only in the cloud-based service.)
-
 - UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
 - UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
