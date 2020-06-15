@@ -23,7 +23,7 @@ This cmdlet was introduced in Lync Server 2010.
 
 ```
 New-CsHostedVoicemailPolicy [-Identity] <XdsIdentity> [-Description <String>] [-Destination <String>]
- [-Organization <String>] [-Force] [-InMemory] [-WhatIf] [-Confirm] [-Tenant <Guid>] [<CommonParameters>]
+ [-Organization <String>] [-Force] [-InMemory] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,22 +52,6 @@ This command creates a new hosted voice mail policy named ExRedmond.
 In addition, the Skype for Business Server users of this policy can be spread across the corp1 and corp2 organizations of litwareinc.
 This policy is described as (has a Description parameter value of) "Hosted voice mail property for Redmond users."
 
-
-
-### -------------------------- Example 2 -------------------------- 
-```
-$x = New-CsHostedVoiceMailPolicy -Identity global -Tenant "73d355dd-ce5d-4ab9-bf49-7b822c18dd98" -Destination ExUM.fabrikam.com -Description "Hosted voicemail policy for Redmond users." -Organization "corp1.litwareinc.com, corp2.litwareinc.com"
-
-Set-CsHostedVoiceMailPolicy -Instance $x -Tenant "73d355dd-ce5d-4ab9-bf49-7b822c18dd98"
-
-```
-
-The commands shown in Example 2 are a variation of the command shown in Example 1; in this case, however, the new hosted voicemail policy is assigned to the Skype for Business Online tenant with the tenant ID 73d355dd-ce5d-4ab9-bf49-7b822c18dd98.
-To create a new policy for a Skype for Business Online tenant you must include the InMemory parameter and store the resulting policy in a variable.
-That's what happens in the first command, with the new policy stored in a variable named $x.
-Note, too that you must set the Identity to Global and the Tenant parameter to the appropriate tenant ID.
-
-To create the new policy, the second command then calls the Set-CsHostedVoiceMailPolicy cmdlet along with the Instance parameter and the Tenant parameter.
 
 
 ## PARAMETERS
@@ -209,32 +193,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-
-Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new hosted voicemail policy is being created.
-For example:
-
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
-
-You can return the tenant ID for each of your tenants by running this command:
-
-`Get-CsTenant | Select-Object DisplayName, TenantID`
-
-
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
