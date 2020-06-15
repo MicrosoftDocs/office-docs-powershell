@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/staffhub/add-staffh
 applicable: Microsoft StaffHub
 title: Add-StaffHubTeam
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 
