@@ -34,7 +34,7 @@ Get-CompromisedUserDetailReport
 ```
 
 ## DESCRIPTION
-The output of this cmdlet returns the following information:
+This cmdlet returns the following information:
 
 - Date
 - UserCount

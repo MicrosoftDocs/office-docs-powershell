@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-compromiseduseraggregatereport
+online version: https://docs.microsoft.com/powershell/module/exchange/get-safelinksdetailreport
 applicable: Exchange Online
-title: Get-CompromisedUserAggregateReport
+title: Get-SafeLinksDetailReport
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -10,12 +10,12 @@ ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
-# Get-CompromisedUserAggregateReport
+# Get-SafeLinksDetailReport
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-CompromisedUserAggregateReport to return general data about compromised users.
+Use the Get-SafeLinksAggregateReport to return to return detailed information about Safe Links.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -24,21 +24,37 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CompromisedUserAggregateReport
+Get-SafeLinksDetailReport [-Action <MultiValuedProperty>]
  [-Action <MultiValuedProperty>]
+ [-AppNameList <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
  [-EndDate <System.DateTime>]
  [-Page <Int32>]
  [-PageSize <Int32>]
+ [-RecipientAddress <MultiValuedProperty>]
  [-StartDate <System.DateTime>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites.
+
 This cmdlet returns the following information:
 
-- Date
-- UserCount
+- ClickTime
+- InternalMessageId
+- ClientMessageId
+- SenderAddress
+- RecipientAddress
+- Url
+- UrlDomain
 - Action
+- AppName
+- SourceId
+- Organization
+- DetectedBy (ATP Safe Links)
+- UrlType (currently empty)
+- Flags (0: Allowed 1: Blocked 2: ClickedEvenBlocked 3: ClickedDuringScan)
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -46,18 +62,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailFlowStatusReport -StartDate 06-01-2020 -EndDate 06-10-2020 -Action Restricted
+Get-SafeLinksDetailReport -StartDate 06-07-2020 -EndDate 06-10-2020 -Action Allowed,Blocked -AppNameList "Email Client","Teams"  -Domain google.com,teams.com -RecipientAddress faith@contoso.com,chris@contoso.com
 ```
 
-This example returns all restricted user accounts for the specified date range.
+This example returns filters the results by the following information:
+
+- Date range: June 7, 2020 to June 10, 2020
+- Action: Allowed and Blocked
+- AppNameList: Email Client and Teams
+- URL domain: google.com and teams.com
+- Recipient email address: faith@contoso.com and chris@contoso.com
 
 ## PARAMETERS
 
 ### -Action
-The Action parameter filters the results by the compromised user status. Valid values are:
+The Action parameter filters the results by action. Valid values are:
 
-- Restricted
-- Suspicious
+- Allowed
+- Blocked
+- ClickedEvenBlocked
+- ClickedDuringScan
 
 You can specify multiple values separated by commas.
 
@@ -71,6 +95,52 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppNameList
+The AppNameList parameter filters the results by the app where the link was found. Valid values are:
+
+- Email Client
+- Excel
+- OneNote
+- Others
+- Outlook
+- PowerPoint
+- Teams
+- Visio
+- Word
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Domain
+The Domain parameter filters the results by the domain in the URL.
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -121,6 +191,23 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientAddress
+The RecipientAddress parameter filters the results by the recipient's email address.
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
