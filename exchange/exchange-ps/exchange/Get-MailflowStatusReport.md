@@ -80,9 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-The Domain parameter filters the results by one or more accepted domains in the organization. You can find the valid domain values by running the Get-AcceptedDomain cmdlet.
-
-You can specify multiple values separated by commas.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -141,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Page
-The Page parameter specifies the page number of the results you want to view. Valid input for this parameter is an integer between 1 and 1000. The default value is 1.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
@@ -157,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageSize
-The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 1000.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
