@@ -102,8 +102,6 @@ Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicr
 
 This example mail-enables an existing on-premises user and creates an associated mailbox in the service.
 
-To mail-enable an existing user and create an associated mailbox in the service, run the New-RemoteMailbox cmdlet and specify the identity of the existing user.
-
 After the user is mail-enabled, directory synchronization synchronizes the mail-enabled user to the service and the associated mailbox is created.
 
 ### Example 2
