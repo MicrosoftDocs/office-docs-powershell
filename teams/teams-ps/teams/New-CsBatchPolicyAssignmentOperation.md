@@ -43,11 +43,11 @@ New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName 
 ```
 
 ### Example 2
-In this example, a policy is removed from a batch of users by passing $null as the policy name.
+In this example, a policy is removed from a batch of users by passing empty string "" as the policy name.
 
 ```
 $users_ids = @("2bdb15a9-2cf1-4b27-b2d5-fcc1d13eebc9", "d928e0fc-c957-4685-991b-c9e55a3534c7", "967cc9e4-4139-4057-9b84-1af80f4856fc")
-New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName $null -Identity $users_ids -OperationName "Batch unassign meeting policy"
+New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName "" -Identity $users_ids -OperationName "Batch unassign meeting policy"
 ```
 
 ### Example 3
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The name of the policy to be assigned to the users. To remove the currently assigned policy, use $null or an empty string "".
+The name of the policy to be assigned to the users. To remove the currently assigned policy, use an empty string "".
 
 ```yaml
 Type: String
