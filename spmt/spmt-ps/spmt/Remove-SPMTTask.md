@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/spmt/remove-spmttas
 applicable: SharePoint Migration Tool
 title: Remove-SPMTTask
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 
