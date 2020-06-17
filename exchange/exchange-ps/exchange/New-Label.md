@@ -148,7 +148,7 @@ The ApplyContentMarkingFooterAlignment parameter specifies the footer alignment.
 -Center
 -Right
 
-This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingFooterFontColor
 The ApplyContentMarkingFooterFontColor parameter specifies the color of the footer text. This parameter accepts a hexadecimal color code value in the format `#xxxxxx`. The default value is `#000000`.
 
-This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingFooterFontName
 The ApplyContentMarkingFooterFontName parameter specifies the font of the footer text. If the value contains spaces, enclose the value in quotation marks ("). For example `"Courier New"`.
 
-This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingFooterFontSize
 The ApplyContentMarkingFooterFontSize parameter specifies the font size (in points) of the footer text.
 
-This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: System.Int32
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingFooterMargin
 The ApplyContentMarkingFooterMargin parameter specifies the size (in points) of the footer margin.
 
-This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: System.Int32
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingFooterText
 The ApplyContentMarkingFooterText parameter specifies the footer text. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -280,7 +280,7 @@ The ApplyContentMarkingHeaderAlignment parameter specifies the header alignment.
 -Center
 -Right
 
-This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingHeaderFontColor
 The ApplyContentMarkingHeaderFontColor parameter specifies the color of the header text. This parameter accepts a hexadecimal color code value in the format `#xxxxxx`. The default value is `#000000`.
 
-This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingHeaderFontName
 The ApplyContentMarkingHeaderFontName parameter specifies the font of the header text. If the value contains spaces, enclose the value in quotation marks ("). For example `"Courier New"`.
 
-This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingHeaderFontSize
 The ApplyContentMarkingHeaderFontSize parameter specifies the font size (in points) of the header text.
 
-This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: System.Int32
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingHeaderMargin
 The ApplyContentMarkingHeaderMargin parameter specifies the size (in points) of the header margin.
 
-This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: System.Int32
@@ -390,7 +390,7 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingHeaderText
 The ApplyContentMarkingHeaderText parameter specifies the header text. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -428,7 +428,7 @@ Accept wildcard characters: False
 ### -ApplyWaterMarkingFontColor
 The ApplyWaterMarkingFontColor parameter specifies the color of the watermark text. This parameter accepts a hexadecimal color code value in the format `#xxxxxx`. The default value is `#000000`.
 
-This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -446,7 +446,7 @@ Accept wildcard characters: False
 ### -ApplyWaterMarkingFontName
 The ApplyWaterMarkingFontName parameter specifies the font of the watermark text. If the value contains spaces, enclose the value in quotation marks ("). For example `"Courier New"`.
 
-This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -464,7 +464,7 @@ Accept wildcard characters: False
 ### -ApplyWaterMarkingFontSize
 The ApplyWaterMarkingFontSize parameter specifies the font size (in points) of the watermark text.
 
-This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: System.Int32
@@ -485,7 +485,7 @@ The ApplyWaterMarkingAlignment parameter specifies the watermark alignment. Vali
 -Horizontal
 -Diagonal
 
-This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout
@@ -503,7 +503,7 @@ Accept wildcard characters: False
 ### -ApplyWaterMarkingText
 The ApplyWaterMarkingText parameter specifies the watermark text. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is $true.
+This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -572,6 +572,8 @@ Accept wildcard characters: False
 ### -EncryptionAipTemplateScopes
 ???
 
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -590,6 +592,8 @@ The EncryptionContentExpiredOnDateInDaysOrNever parameter specifies when the enc
 
 - An integer (number of days)
 - The value `Never`
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -611,6 +615,8 @@ The EncryptionDoNotForward parameter specifies whether the Do Not Forward templa
 
 - $false: The Do Not Forward template is not applied.
 
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -626,6 +632,8 @@ Accept wildcard characters: False
 
 ### -EncryptionDoubleKeyEncryptionUrl
 ???
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -667,6 +675,8 @@ The EncryptionEncryptOnly parameter specifies whether the Encrypt Only template 
 
 - $false: The Encrypt Only template is no applied.
 
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -682,6 +692,8 @@ Accept wildcard characters: False
 
 ### -EncryptionLinkedTemplateId
 ???
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -699,6 +711,8 @@ Accept wildcard characters: False
 ### -EncryptionOfflineAccessDays
 The EncryptionOfflineAccessDays parameter specifies the number of days that offline access is allowed.
 
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
@@ -714,6 +728,8 @@ Accept wildcard characters: False
 
 ### -EncryptionPromptUser
 ???
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: System.Boolean
@@ -735,6 +751,8 @@ The EncryptionProtectionType parameter specifies the protection type for encrypt
 - RemoveProtection
 - UserDefined
 
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType
 Parameter Sets: (All)
@@ -750,6 +768,8 @@ Accept wildcard characters: False
 
 ### -EncryptionRightsDefinitions
 ???
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -767,6 +787,8 @@ Accept wildcard characters: False
 ### -EncryptionRightsUrl
 ???
 
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -782,6 +804,8 @@ Accept wildcard characters: False
 
 ### -EncryptionTemplateId
 ???
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -925,7 +949,7 @@ The SiteAndGroupProtectionAllowAccessToGuestUsers parameter enables or disables 
 
 - $false: Guest access is disabled.
 
-This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
 Type: System.Boolean
@@ -947,7 +971,7 @@ The SiteAndGroupProtectionAllowEmailFromGuestUsers parameter enables or disables
 
 - $false: Email from guest users is disabled.
 
-This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
 Type: System.Boolean
@@ -969,7 +993,7 @@ The SiteAndGroupProtectionAllowFullAccess parameter enables or disables full acc
 
 - $false: Full access is disabled.
 
-This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
 Type: System.Boolean
@@ -991,7 +1015,7 @@ The SiteAndGroupProtectionAllowLimitedAccess parameter enables or disables limit
 
 - $false: Limited access is disabled.
 
-This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
 Type: System.Boolean
@@ -1013,7 +1037,7 @@ The SiteAndGroupProtectionBlockAccess parameter blocks access. Valid values are:
 
 - $false: Access is allowed.
 
-This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
 Type: System.Boolean
@@ -1054,7 +1078,7 @@ The SiteAndGroupProtectionPrivacy parameter specifies the privacy level for the 
 - Public
 - Private
 
-This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true.
+This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
