@@ -83,6 +83,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SafeAttachmentRule](Get-SafeAttachmentRule.md)
 
+### [Get-SafeLinksAggregateReport](Get-SafeLinksAggregateReport.md)
+
+### [Get-SafeLinksDetailReport](Get-SafeLinksDetailReport.md)
+
 ### [Get-SafeLinksPolicy](Get-SafeLinksPolicy.md)
 
 ### [Get-SafeLinksRule](Get-SafeLinksRule.md)
@@ -2050,6 +2054,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
 
 ## reporting Cmdlets
+### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)
+
+### [Get-CompromisedUserDetailReport](Get-CompromisedUserDetailReport.md)
+
 ### [Get-ConnectionByClientTypeDetailReport](Get-ConnectionByClientTypeDetailReport.md)
 
 ### [Get-ConnectionByClientTypeReport](Get-ConnectionByClientTypeReport.md)
@@ -2099,6 +2107,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-MailDetailTransportRuleReport](Get-MailDetailTransportRuleReport.md)
 
 ### [Get-MailFilterListReport](Get-MailFilterListReport.md)
+
+### [Get-MailflowStatusReport](Get-MailflowStatusReport.md)
 
 ### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
 

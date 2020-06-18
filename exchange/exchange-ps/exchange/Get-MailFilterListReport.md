@@ -24,8 +24,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailFilterListReport [-Domain <MultiValuedProperty>] [-Expression <Expression>] [-ProbeTag <String>]
- [-SelectionTarget <MultiValuedProperty>] [<CommonParameters>]
+Get-MailFilterListReport
+ [-Domain <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-ProbeTag <String>]
+ [-SelectionTarget <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,7 +95,15 @@ Accept wildcard characters: False
 ```
 
 ### -SelectionTarget
-The SelectionTarget parameter filters the report information by object type. Valid values for this parameter are: Actions, DlpPolicy, DlpRule, Domain, EventTypes, FindOnPremConnector or TransportRule.
+The SelectionTarget parameter filters the report information by object type. Valid values are:
+
+- Actions
+- DlpPolicy
+- DlpRule
+- Domain
+- EventTypes
+- FindOnPremConnector
+- TransportRule
 
 ```yaml
 Type: MultiValuedProperty
