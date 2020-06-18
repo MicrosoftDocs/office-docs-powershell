@@ -6527,7 +6527,7 @@
     },
     {
       "source_path": "exchange/docs-conceptual/exchange-server/exchange-cmdlet-syntax.md",
-      "redirect_url": "https://docs.microsoft.com/powershell/exchange-cmdlet-syntax",
+      "redirect_url": "https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax",
       "redirect_document_id": true
     },
     {
