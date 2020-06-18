@@ -102,8 +102,6 @@ Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicr
 
 This example mail-enables an existing on-premises user and creates an associated mailbox in the service.
 
-To mail-enable an existing user and create an associated mailbox in the service, run the New-RemoteMailbox cmdlet and specify the identity of the existing user.
-
 After the user is mail-enabled, directory synchronization synchronizes the mail-enabled user to the service and the associated mailbox is created.
 
 ### Example 2
@@ -193,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -Shared
-**Note**: This switch is available only in Exchange 2013 CU21 or later and Exchange 2016 CU10 or later. To use this switch, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605/cmdlets-to-create-modify-remote-shared-mailbox-in-on-premises-exchange).
+**Note**: This switch is available only in Exchange 2013 CU21 or later and Exchange 2016 CU10 or later. To use this switch, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605).
 
 The Shared switch specifies that the mailbox in the service should be created as a shared mailbox. You don't need to specify a value with this switch.
 
