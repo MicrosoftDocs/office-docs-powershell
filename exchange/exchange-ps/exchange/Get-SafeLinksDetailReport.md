@@ -38,7 +38,7 @@ Get-SafeLinksDetailReport [-Action <MultiValuedProperty>]
 
 ## DESCRIPTION
 Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites.
-
+The Get-SafeLinksDetailReport cmdlet returns information about url clicks for the last 7 days. 
 This cmdlet returns the following information:
 
 - ClickTime
