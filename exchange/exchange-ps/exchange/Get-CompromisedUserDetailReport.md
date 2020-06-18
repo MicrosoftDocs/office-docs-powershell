@@ -129,6 +129,8 @@ The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
 
+A value for this parameter can´t be older than 30 days.
+
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
