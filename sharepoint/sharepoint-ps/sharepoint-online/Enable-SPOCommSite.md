@@ -12,7 +12,9 @@ ms.reviewer:
 
 # Enable-SPOCommSite
 
-Enables the modern communication site experience on an existing site. Please read instructions in [modernize classic team site](https://docs.microsoft.com/en-us/sharepoint/modernize-classic-team-site) before attempting to execute this cmdlet.
+## SYNOPSIS
+
+Enables the modern communication site experience on an existing site. Please read instructions in [modernize classic team site](https://docs.microsoft.com/sharepoint/modernize-classic-team-site) before attempting to execute this cmdlet.
 
 ## SYNTAX
 
@@ -23,7 +25,6 @@ Enable-SPOCommSite [-SiteUrl] <string> [-DesignPackageId] <GUID>
 ## DESCRIPTION
 
 Use this cmdlet to enable the modern communication site experience in classic  site of your tenant. You must use the SharePoint admin powershell version 20122.1200 or greater. Use of this cmdlet is subject to rollout of capability to your tenant.
-
 
 ## EXAMPLES
 
@@ -50,31 +51,31 @@ Enable-SPOCommSite -SiteUrl $rootSiteURL
 
 If the SharePoint admin user credentials is wrong or invalid, you will see this error:
 
->*Connect-SPOService : The sign-in name or password does not match one in the Microsoft account system.*
+> *Connect-SPOService : The sign-in name or password does not match one in the Microsoft account system.*
 
 **Error case 2: Feature is not yet enabled for your tenant**
 
 The use of this cmdlet is subject to the feature rollout. If the feature is not yet available for your tenant, the cmdlet will not execute and will show this error:
 
->*Enable-SPOCommSite : The requested operation is part of an experimental feature that is not supported in the current environment.*
+> *Enable-SPOCommSite : The requested operation is part of an experimental feature that is not supported in the current environment.*
 
 **Error case 3: Site URL input is not of root site**
 
 Currently only the root site of a tenant is supported for this cmdlet. IF the site URL input is wrong, you will see this error:
 
->*Enable-SPOCommSite : The site provided is not the root site collection. Please provide a valid root site URL.*
+> *Enable-SPOCommSite : The site provided is not the root site collection. Please provide a valid root site URL.*
 
 **Error case 4: Site URL input is invalid**
 
 If the site URL input points to a site that does not exist, you will see the following error message:
 
->*Enable-SPOCommSite : File Not Found.*
+> *Enable-SPOCommSite : File Not Found.*
 
 **Error case 5: Classic publishing feature is currently enabled**
 
 We do not support root site that currently have or have had in the past enabled the classic publishing features. If you see this error, your root site is not eligible for this feature enablement
 
->*Enable-SPOCommSite : The operation cannot be performed because the Publishing feature is enabled on the site.*
+> *Enable-SPOCommSite : The operation cannot be performed because the Publishing feature is enabled on the site.*
 
 ## PARAMETERS
 
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 
 ### -DesignPackageId
 
-GUID identifying the [communication site design](https://support.office.com/article/what-is-a-sharepoint-communication-site-94a33429-e580-45c3-a090-5512a8070732). **This is not a required input.** If no input is provided, the topic design will be applied to the new home page. here are the IDs for the supported design packages:
+GUID identifying the [communication site design](https://support.microsoft.com/office/what-is-a-sharepoint-communication-site-94a33429-e580-45c3-a090-5512a8070732). **This is not a required input.** If no input is provided, the topic design will be applied to the new home page. here are the IDs for the supported design packages:
 
 1. Topic: 96c933ac-3698-44c7-9f4a-5fd17d71af9e
 2. Showcase: 6142d2a0-63a5-4ba0-aede-d9fefca2c767
