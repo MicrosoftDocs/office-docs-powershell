@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/staffhub/remove-sta
 applicable: Microsoft StaffHub
 title: Remove-StaffHubMember
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 

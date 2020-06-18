@@ -495,7 +495,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMeetingProviderForIslandsMode
-This parameter is reserved for internal Microsoft use.
+Determines the Outlook meeting add-in available to users on Islands mode. By default, this is set to TeamsAndSfb, and the users sees both the Skype for Business and Teams add-ins. Set this to Teams to remove the Skype for Business add-in and only show the Teams add-in.
 
 ```yaml
 Type: String
