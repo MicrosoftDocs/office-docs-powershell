@@ -109,7 +109,7 @@ Accept pipeline input: True
 ### -SystemUpdate
 Update the item without creating a new version.
 
-Only applicable to: SharePoint Online
+Only applicable to: SharePoint 2013, SharePoint 2016 and SharePoint 2019
 
 ```yaml
 Type: SwitchParameter

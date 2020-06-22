@@ -168,7 +168,7 @@ Accept pipeline input: False
 ### -SystemUpdate
 Update the item permissions without creating a new version or triggering MS Flow.
 
-Only applicable to: SharePoint Online
+Only applicable to: SharePoint 2013, SharePoint 2016 and SharePoint 2019
 
 ```yaml
 Type: SwitchParameter
