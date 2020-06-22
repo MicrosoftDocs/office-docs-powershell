@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Remove-Label [-Identity] <ComplianceRuleIdParameter>
  [-Confirm]
- [-ForceDeletion]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -76,22 +75,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ForceDeletion
-The ForceDeletion switch forces the removal of the label. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 Applicable: Office 365 Security & Compliance Center
 
 Required: False
