@@ -144,9 +144,9 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowAction
-The OverflowAction parameter designates the action to take if the overflow threshold is reached. The OverflowAction property must be set to one of the following three values: DisconnectWithBusy, Forward, and Voicemail.
+The OverflowAction parameter designates the action to take if the overflow threshold is reached. The OverflowAction property must be set to one of the following values: DisconnectWithBusy, Forward, Voicemail, and SharedVoicemail. The default value is DisconnectWithBusy.
 
-PARAMVALUE: DisconnectWithBusy | Forward | Voicemail
+PARAMVALUE: DisconnectWithBusy | Forward | Voicemail | SharedVoicemail
 
 ```yaml
 Type: Object
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowActionTarget
-The OverflowActionTarget parameter represents the target of the overflow action. If the OverFlowAction is set to Forward, this parameter must be set to a Guid. Otherwise, this parameter is optional.
+The OverflowActionTarget parameter represents the target of the overflow action. If the OverFlowAction is set to Forward, this parameter must be set to a Guid. If the OverflowAction is set to SharedVoicemail, this parameter must be set to an Office 365 Group ID. Otherwise, this parameter is optional.
 
 ```yaml
 Type: Guid
@@ -212,9 +212,9 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutAction
-The TimeoutAction parameter defines the action to take if the timeout threshold is reached. The TimeoutAction property must be set to one of the following three values: Disconnect, Forward, and Voicemail. The default value is Disconnect.
+The TimeoutAction parameter defines the action to take if the timeout threshold is reached. The TimeoutAction property must be set to one of the following values: Disconnect, Forward, Voicemail, and SharedVoicemail. The default value is Disconnect.
 
-PARAMVALUE: Disconnect | Forward | Voicemail
+PARAMVALUE: Disconnect | Forward | Voicemail | SharedVoicemail
 
 ```yaml
 Type: Object
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutActionTarget
-The TimeoutActionTarget represents the target of the timeout action. If the TimeoutAction is set to Forward, this parameter must be set to a Guid. Otherwise, this field is optional.
+The TimeoutActionTarget represents the target of the timeout action. If the TimeoutAction is set to Forward, this parameter must be set to a Guid. If the TimeoutAction is set to SharedVoicemail, this parameter must be set to an Office 365 Group ID. Otherwise, this field is optional.
 
 ```yaml
 Type: Guid
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### -LanguageId
-This parameter is reserved for Microsoft internal use only.
+The LanguageId parameter indicates the language that is used to play shared voicemail prompts. This parameter becomes a required parameter If either OverflowAction or TimeoutAction is set to SharedVoicemail.
 
 ```yaml
 Type: String
@@ -391,7 +391,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOverflowSharedVoicemailTranscription
-This parameter is reserved for Microsoft internal use only.
+The EnableOverflowSharedVoicemailTranscription parameter is used to turn on transcription for voicemails left by a caller on overflow. This parameter is only applicable when OverflowAction is set to SharedVoicemail.
 
 ```yaml
 Type: Boolean
@@ -401,13 +401,13 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -OverflowSharedVoicemailTextToSpeechPrompt
-This parameter is reserved for Microsoft internal use only.
+The OverflowSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is to be played as a greeting to the caller when transferred to shared voicemail on overflow. This parameter becomes a required parameter when OverflowAction is SharedVoicemail and OverflowSharedVoicemailAudioFilePrompt is null.
 
 ```yaml
 Type: String
@@ -423,7 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowSharedVoicemailAudioFilePrompt
-This parameter is reserved for Microsoft internal use only.
+The OverflowSharedVoicemailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is to be played as a greeting to the caller when transferred to shared voicemail on overflow. This parameter becomes a required parameter when OverflowAction is SharedVoicemail and OverflowSharedVoicemailTextToSpeechPrompt is null.
 
 ```yaml
 Type: Guid
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTimeoutSharedVoicemailTranscription
-This parameter is reserved for Microsoft internal use only.
+The EnableTimeoutSharedVoicemailTranscription parameter is used to turn on transcription for voicemails left by a caller on timeout. This parameter is only applicable when TimeoutAction is set to SharedVoicemail.
 
 ```yaml
 Type: Boolean
@@ -449,13 +449,13 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -TimeoutSharedVoicemailTextToSpeechPrompt
-This parameter is reserved for Microsoft internal use only.
+The TimeoutSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is to be played as a greeting to the caller when transferred to shared voicemail on timeout. This parameter becomes a required parameter when TimeoutAction is SharedVoicemail and TimeoutSharedVoicemailAudioFilePrompt is null.
 
 ```yaml
 Type: String
@@ -471,7 +471,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutSharedVoicemailAudioFilePrompt
-This parameter is reserved for Microsoft internal use only.
+The TimeoutSharedVoicemailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is to be played as a greeting to the caller when transferred to shared voicemail on timeout. This parameter becomes a required parameter when TimeoutAction is SharedVoicemail and TimeoutSharedVoicemailTextToSpeechPrompt is null.
 
 ```yaml
 Type: Guid
