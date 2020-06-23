@@ -70,21 +70,6 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <
  [-WhatIf] [<CommonParameters>]
 ```
 
-### ElevationOfPrivilegeAuditAlert
-```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Type <AlertType>
- [-Category <AlertRuleCategory>]
- [-Confirm]
- [-Description <String>]
- [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
- [-EmailCulture <CultureInfo>]
- [-RecordType <AuditRecordType>]
- [-Severity <RuleSeverity>]
- [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
@@ -235,7 +220,7 @@ The Type parameter specifies the type alert. Valid values are:
 
 - Custom: An alert is created for the activities you specify with the Operation parameter. Typically, you don't need to use this value (if you don't use the Type parameter, and you specify the activities with the Operations parameter, the value Custom is automatically added to the Type property).
 
-- ElevationOfPrivilege: An alert is created for a predefined list of elevation of privilege activities (Operation parameter values). The activities are Add-RoleGroupMember, New-ManagementRoleAssignment, Add member to role., Update-RoleGroupMember, New-RoleGroup, Set-RoleGroup, Set-Mailbox, and Set-ManagementRoleEntry. You can't use the Operation parameter when you use the ElevationOfPrivilege value (on the New-ActivityAlert or Set-ActivityAlert cmdlets).
+- ElevationOfPrivilege: This value is being retired and if you use it no alert will be created.
 
 - SimpleAggregation: An alert is created based on the activities defined by the Operation and Condition parameters, the number of activities specified by the Threshold parameter, and the time period specified by the TimeWindow parameter.
 
@@ -245,7 +230,7 @@ Note: You can't change the Type value in an existing activity alert.
 
 ```yaml
 Type: AlertType
-Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert, ElevationOfPrivilegeAuditAlert
+Parameter Sets: Custom, AnomalousOperationAuditAlert, SimpleAggregationAuditAlert, ElevationOfPrivilegeAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 
