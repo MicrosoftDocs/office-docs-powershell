@@ -226,6 +226,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SenderReputationConfig](Get-SenderReputationConfig.md)
 
+### [Get-TenantAllowBlockListItems](Get-TenantAllowBlockListItems.md)
+
 ### [New-DkimSigningConfig](New-DkimSigningConfig.md)
 
 ### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
@@ -239,6 +241,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-MalwareFilterPolicy](New-MalwareFilterPolicy.md)
 
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
+
+### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
 
 ### [Preview-QuarantineMessage](Preview-QuarantineMessage.md)
 
@@ -269,6 +273,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-MalwareFilterPolicy](Remove-MalwareFilterPolicy.md)
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
+
+### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
 
 ### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
 
@@ -315,6 +321,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-SenderIdConfig](Set-SenderIdConfig.md)
 
 ### [Set-SenderReputationConfig](Set-SenderReputationConfig.md)
+
+### [Set-TenantAllowBlockListItems](Set-TenantAllowBlockListItems.md)
 
 ### [Test-IPAllowListProvider](Test-IPAllowListProvider.md)
 
