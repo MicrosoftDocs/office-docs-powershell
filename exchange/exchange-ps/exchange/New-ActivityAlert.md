@@ -220,7 +220,7 @@ The Type parameter specifies the type alert. Valid values are:
 
 - Custom: An alert is created for the activities you specify with the Operation parameter. Typically, you don't need to use this value (if you don't use the Type parameter, and you specify the activities with the Operations parameter, the value Custom is automatically added to the Type property).
 
-- ElevationOfPrivilege: This value is being retired and if you use it no alert will be created.
+- ElevationOfPrivilege: This value is being retired.
 
 - SimpleAggregation: An alert is created based on the activities defined by the Operation and Condition parameters, the number of activities specified by the Threshold parameter, and the time period specified by the TimeWindow parameter.
 
