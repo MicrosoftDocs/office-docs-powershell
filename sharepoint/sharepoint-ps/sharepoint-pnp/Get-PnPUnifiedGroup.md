@@ -9,7 +9,7 @@ title: Get-PnPUnifiedGroup
 # Get-PnPUnifiedGroup
 
 ## SYNOPSIS
-Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups. Requires the Azure Active Directory application permission 'Group.Read.All'.
+Gets one Microsoft 365 Group (aka Unified Group) or a list of Microsoft 365 Groups. Requires the Azure Active Directory application permission 'Group.Read.All'.
 
 ## SYNTAX 
 
@@ -27,47 +27,47 @@ Get-PnPUnifiedGroup [-Identity <UnifiedGroupPipeBind>]
 Get-PnPUnifiedGroup
 ```
 
-Retrieves all the Office 365 Groups
+Retrieves all the Microsoft 365 Groups
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Get-PnPUnifiedGroup -Identity $groupId
 ```
 
-Retrieves a specific Office 365 Group based on its ID
+Retrieves a specific Microsoft 365 Group based on its ID
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Get-PnPUnifiedGroup -Identity $groupDisplayName
 ```
 
-Retrieves a specific or list of Office 365 Groups that start with the given DisplayName
+Retrieves a specific or list of Microsoft 365 Groups that start with the given DisplayName
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
 Get-PnPUnifiedGroup -Identity $groupSiteMailNickName
 ```
 
-Retrieves a specific or list of Office 365 Groups for which the email starts with the provided mail nickName
+Retrieves a specific or list of Microsoft 365 Groups for which the email starts with the provided mail nickName
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
 Get-PnPUnifiedGroup -Identity $group
 ```
 
-Retrieves a specific Office 365 Group based on its object instance
+Retrieves a specific Microsoft 365 Group based on its object instance
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
 Get-PnPUnifiedGroup -IncludeIfHasTeam
 ```
 
-Retrieves all the Office 365 Groups and checks for each of them if it has a Microsoft Team provisioned for it
+Retrieves all the Microsoft 365 Groups and checks for each of them if it has a Microsoft Team provisioned for it
 
 ## PARAMETERS
 
 ### -ExcludeSiteUrl
-Exclude fetching the site URL for Office 365 Groups. This speeds up large listings.
+Exclude fetching the site URL for Microsoft 365 Groups. This speeds up large listings.
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +79,7 @@ Accept pipeline input: False
 ```
 
 ### -Identity
-The Identity of the Office 365 Group.
+The Identity of the Microsoft 365 Group.
 
 ```yaml
 Type: UnifiedGroupPipeBind
