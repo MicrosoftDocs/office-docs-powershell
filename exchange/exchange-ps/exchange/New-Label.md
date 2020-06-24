@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The DisplayName parameter specifies the display name for the sensitivity label. The display name appears in the Microsoft Office and is used by Outlook users to select the appropriate sensitivity label before they send a message.
+The DisplayName parameter specifies the display name for the sensitivity label. The display name appears in any client that supports sensitivity labels. This includes Word, Excel, PowerPoint, Outlook, SharePoint, Teams, and Power BI.
 
 ```yaml
 Type: String
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
 ```yaml
 Type: PswsHashtable
@@ -570,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionAipTemplateScopes
-???
+{{ Fill EncryptionAipTemplateScopes Description }}
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
@@ -631,9 +631,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionDoubleKeyEncryptionUrl
-???
-
-This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -669,13 +667,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionEncryptOnly
-The EncryptionEncryptOnly parameter specifies whether the Encrypt Only template is applied. Value values are:
-
-- $true: The Encrypt Only template is applied.
-
-- $false: The Encrypt Only template is no applied.
-
-This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.Boolean
@@ -691,7 +683,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionLinkedTemplateId
-???
+{{ Fill EncryptionLinkedTemplateId Description }}
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
@@ -727,7 +719,11 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionPromptUser
-???
+The EncryptionPromptUser parameter specifies whether set the label with user defined permissions. Valid values are:
+
+- $true: The label is set with user defined permissions in Word, Excel and PowerPoint.
+
+- $false: The label is not set with user defined permissions in Word, Excel and PowerPoint.
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
@@ -767,9 +763,16 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionRightsDefinitions
-???
+The EncryptionRightsDefinitions parameter specifies the rights users have when accessing protected. Valid values are:
 
-This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+- Viewer
+- Reviewer
+- Co-Author
+- Co-Owner
+
+For more information, see [Rights included in permissions levels](https://docs.microsoft.com/azure/information-protection/configure-usage-rights#rights-included-in-permissions-levels).
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false and the EncryptionProtectionType parameter value is Template.
 
 ```yaml
 Type: String
@@ -785,7 +788,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionRightsUrl
-???
+The EncryptionRightsUrl parameter specifies the URL for hold your own key (HYOK) protection.
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
@@ -803,9 +806,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionTemplateId
-???
-
-This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -821,7 +822,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-This parameter is reserved for internal Microsoft use.
+The Identity parameter is used to migrate an existing Azure Information Protection label by specifying a GUID value.
 
 ```yaml
 Type: MasterIdParameter
