@@ -39,7 +39,7 @@ When you open the Exchange Management Shell you can perform administrative tasks
   LaunchEMS
   ```
 
-- **Edge Transport servers**: Run the following commands from a Command Prompt. Note that these are two separate commands on one line for ease of copying:
+- **Edge Transport servers**: Run the following commands from a Command Prompt. Note that these are two separate commands on one line for ease of copying and running:
 
   ```dos
   exshell.psc1 & exchange.ps1
