@@ -1,11 +1,9 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
 title: Get-CsPolicyPackage
-author: etgottli
-ms.author: etgottli
-ms.reviewer: icchan
+author: icchan
+ms.author: icchan
 manager: amitar
 online version: https://docs.microsoft.com/powershell/module/teams/get-cspolicypackage
 schema: 2.0.0
