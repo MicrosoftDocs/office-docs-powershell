@@ -38,21 +38,6 @@ New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedPr
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Default
-```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <AlertType>]
- [-Category <AlertRuleCategory>]
- [-Confirm]
- [-Description <String>]
- [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
- [-EmailCulture <CultureInfo>]
- [-RecordType <AuditRecordType>]
- [-Severity <RuleSeverity>]
- [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
-```
-
 ### SimpleAggregationAuditAlert
 ```
 New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
@@ -65,6 +50,21 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <
  [-EmailCulture <CultureInfo>]
  [-RecordType <AuditRecordType>]
  [-ScopeLevel <AlertScopeLevel>]
+ [-Severity <RuleSeverity>]
+ [-UserId <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Default
+```
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <AlertType>]
+ [-Category <AlertRuleCategory>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <Boolean>]
+ [-DomainController <Fqdn>]
+ [-EmailCulture <CultureInfo>]
+ [-RecordType <AuditRecordType>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
@@ -230,7 +230,7 @@ Note: You can't change the Type value in an existing activity alert.
 
 ```yaml
 Type: AlertType
-Parameter Sets: Custom, AnomalousOperationAuditAlert, SimpleAggregationAuditAlert, ElevationOfPrivilegeAuditAlert
+Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 
