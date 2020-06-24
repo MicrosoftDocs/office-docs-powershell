@@ -77,7 +77,7 @@ The BackgroundColor parameter specifies the background color. Valid values are:
 
 - $null \(blank\). This is the default value.
 
-For the list of available hex and text values, see [Background colors for Office 365 Message Encryption](https://support.office.com/article/1508cb35-c5ff-4523-b579-947b21d5515f).
+For more information, see [Add your organization's brand to your encrypted messages](https://docs.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages).
 
 ```yaml
 Type: String

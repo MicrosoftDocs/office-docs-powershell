@@ -470,7 +470,7 @@ This parameter is available only in on-premises Exchange.
 
 The AdfsSignCertificateThumbprints parameter specifies one or more X.509 token-signing certificates that are used for AD FS claims-based authentication. This parameter uses certificate thumbprint values (GUIDs) to identify the certificates.
 
-To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see [Get-ADFSCertificate](https://go.microsoft.com/fwlink/p/?linkid=392706).
+To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see [Get-ADFSCertificate](https://docs.microsoft.com/powershell/module/adfs/get-adfscertificate).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -750,7 +750,7 @@ The ConnectorsActionableMessagesEnabled parameter specifies whether to enable or
 
 - $false: Action buttons in connector cards are disabled.
 
-For more information about actionable messages in connected apps, see [Connect apps to your inbox in Outlook on the web](https://go.microsoft.com/fwlink/p/?LinkId=845310).
+For more information about actionable messages in connected apps, see [Connect apps to your inbox in Outlook on the web](https://support.microsoft.com/office/3d41b99c-bf8d-47d4-bc7a-97758b74689d).
 
 ```yaml
 Type: Boolean
@@ -798,7 +798,7 @@ The ConnectorsEnabledForOutlook parameter specifies whether to enable or disable
 
 To enable and disable the ability to use connectors on specific Office 365 groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
 
-For more information about connectors for Outlook on the web, see [Connect apps to your inbox in Outlook on the web](https://go.microsoft.com/fwlink/p/?LinkId=845310).
+For more information about connectors for Outlook on the web, see [Connect apps to your inbox in Outlook on the web](https://support.microsoft.com/office/3d41b99c-bf8d-47d4-bc7a-97758b74689d).
 
 ```yaml
 Type: Boolean
@@ -2076,7 +2076,7 @@ Accept wildcard characters: False
 ### -OutlookPayEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookPayEnabled parameter enables or disables [Payments in Outlook](https://support.office.com/article/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Office 365 organization. Valid values are:
+The OutlookPayEnabled parameter enables or disables [Pay bills and invoices in Outlook using Microsoft Pay](https://support.microsoft.com/office/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Office 365 organization. Valid values are:
 
 - $true: Payments in Outlook are enabled.
 

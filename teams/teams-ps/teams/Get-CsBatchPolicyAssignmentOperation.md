@@ -132,7 +132,13 @@ Contains the status for each user in the batch.
 
 **Id:** The ID of the user as specified when the batch was submitted.  Either the user object ID (guid) or UPN/SIP/email.
 
-**result:** The result of the assignment operation for the user: Success or an error.
+**result:** The result of the assignment operation for the user: Success or an error. Some common errors include:
+- User not found. Check the ID or SIP address of the user to confirm it is correct. If the UPN or email address was used, but it does not match the SIP address, then the user will not be found.
+- Multiple users found with a given SIP address. This is typically a result of on-prem to cloud sync.  Check your directory and update the affected users.
+- User invalid. If you are syncing users from on-prem to the cloud, some users might not have been synced properly and are in an invalid state. Check the sync status for the user.
+- User ineligible for the policy or missing a necessary license.  Check the documentation for the specific policy type being assigned to understand the requirements and update the user accordingly.
+- The policy settings are incorrect.  Check the documentation for the specific policy type being assigned to understand the requirements and update the policy accordingly.
+- Unknown errors. In rare cases, there can be transient system errors that failed on all initial retry attempts during batch process.  Resubmit these users in a separate batch.
 
 **state:** The status for the user: NotStarted, InProgress, Completed
 
