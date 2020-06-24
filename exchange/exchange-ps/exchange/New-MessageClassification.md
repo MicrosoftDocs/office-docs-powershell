@@ -111,7 +111,7 @@ This parameter is available or functional on in on-premises Exchange.
 
 The Locale parameter specifies a locale-specific version of an existing message classification. You use the -Name parameter to identify the existing message classification, and the SenderDescription parameter to specify the descriptive text in another language.
 
-A valid value for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class (for example, da-DK for Danish or ja-JP for Japanese). For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
+A valid value for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class (for example, da-DK for Danish or ja-JP for Japanese). For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo

@@ -53,10 +53,31 @@ Server auto-discovery needs to be enabled. There are no additional licensing req
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsUserCallForwardingSettings -User user@contoso.com -DisableForwarding
 ```
 
-{{ Add example description here }}
+This example disables the user’s call forwarding settings.
+
+### Example 2
+```powershell
+PS C:\> Set-CsUserCallForwardingSettings -User user@contoso.com -EnableForwarding +4721956666
+```
+
+This example modifies the user’s call forwarding settings, activating call forwarding to a specific phone number.
+
+### Example 3
+```powershell
+PS C:\> Set-CsUserCallForwardingSettings -User user1@contoso.com -EnableSimulRing Team -Team user2@contoso.com,user2@contoso.com -TeamDelegateRingWaitTime 5
+```
+
+This example modifies the SimulRing settings, activating simultaneous ring for the users listed in the Team parameter.
+
+### Example 4
+```powershell
+PS C:\> Set-CsUserCallForwardingSettings -User user@contoso.com -DisableForwarding -UnansweredToVoicemail -UnansweredWaitTime 30
+```
+
+This example sends unanswered calls to voicemail after 30 seconds.
 
 ## PARAMETERS
 
@@ -77,8 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateRingWaitTime
-Specifies the time, in seconds, to wait before ringing delegates.
-Acceptable inputs: 0, 5, 10
+Specifies the time, in seconds, to wait before ringing delegates. Acceptable inputs: 0, 5, 10.
 
 
 ```yaml
@@ -95,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Delegates
-Specifies list of delegates that calls will be forwarded to. This parameter can only be used with EnableForwarding and EnableSimulRing parameters.
+Specifies the list of delegates that calls will be forwarded to. This parameter can only be used with EnableForwarding and EnableSimulRing parameters.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -143,9 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSimulRing
-This is a switch parameter that enables forwarding to the specified destination. Cannot be used along with the DisableForwarding and EnableForwarding parameters.
-oSimulRingDestination can be a phone number, delegates, or team call group.
-	Acceptable input formats: "<phone number>", Team, Delegates
+This is a switch parameter that enables forwarding to the specified destination. Cannot be used along with the DisableForwarding and EnableForwarding parameters. SimulRingDestination can be a phone number, delegates, or team call group. Acceptable input formats: "<phone number>", Team, Delegates.
 
 
 ```yaml
@@ -178,9 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Team
-Specifies list of team members that calls will be forwarded to. The add and remove switches will add and remove specified users from the Team Members list. The replace parameter will set the list to the specified list, wiping out the previous list. Add and remove can be used together, but neither of them can be used along with replace.
-o	Acceptable input formats for add/remove/replace list: The inputs can be a single user address (in one of the below formats), or a comma separated list of user addresses, in the 4 standard formats that Identity parameter accepts.
-
+Specifies list of team members that calls will be forwarded to. The add and remove switches will add and remove specified users from the Team Members list. The replace parameter will set the list to the specified list, wiping out the previous list. Add and remove can be used together, but neither of them can be used along with replace. Acceptable input formats for add/remove/replace list: The inputs can be a single user address (in one of the below formats), or a comma separated list of user addresses, in the 4 standard formats that Identity parameter accepts.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -196,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamDelegateRingWaitTime
-{{ Fill TeamDelegateRingWaitTime Description }}
+Specifies the time, in seconds, to wait before ringing team members.
 
 ```yaml
 Type: Int32
@@ -212,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnansweredToOther
-{{ Fill UnansweredToOther Description }}
+Specifies that unanswered calls will be send to other user or phone number.
 
 ```yaml
 Type: String
@@ -228,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnansweredToVoicemail
-{{ Fill UnansweredToVoicemail Description }}
+Specifies that unanswered calls will be send to voicemail.
 
 ```yaml
 Type: SwitchParameter
@@ -244,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnansweredWaitTime
-{{ Fill UnansweredWaitTime Description }}
+Specifies the time, in seconds, to wait before send unanswered calls to voicemail.
 
 ```yaml
 Type: Int32
@@ -260,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-{{ Fill User Description }}
+Specifies the SIP address of the user whose call forwarding settings will be modified.
 
 ```yaml
 Type: String

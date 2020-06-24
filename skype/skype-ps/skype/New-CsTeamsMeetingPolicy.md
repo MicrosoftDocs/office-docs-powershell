@@ -26,8 +26,8 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-PreferredMeetingProviderForIslandsMode <String>]
  [-VideoFiltersMode <String>] [-Identity] <XdsIdentity> [-AllowEngagementReport <String>]
- [-AllowNDIStreaming <Boolean>] [-DesignatedPresenterRoleMode <String>] [-InMemory] [-Force] [-WhatIf] 
- [-Confirm] [<CommonParameters>]
+ [-AllowNDIStreaming <Boolean>] [-DesignatedPresenterRoleMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
+ [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMeetingProviderForIslandsMode
-This parameter is reserved for internal Microsoft use.
+Determines the Outlook meeting add-in available to users on Islands mode. By default, this is set to TeamsAndSfb, and the users sees both the Skype for Business and Teams add-ins. Set this to Teams to remove the Skype for Business add-in and only show the Teams add-in.
 
 ```yaml
 Type: String
@@ -512,6 +512,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: EveryoneUserOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPSTNUsersToBypassLobby
+Determines whether a PSTN user joining the meeting is allowed or not to bypass the lobby. If you set this parameter to True, PSTN users are allowed to bypass the lobby as long as an authenticated user is joined to the meeting.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

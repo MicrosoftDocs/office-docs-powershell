@@ -371,7 +371,7 @@ This parameter is available only in on-premises Exchange.
 
 The RefreshServerCertificates switch clears all Rights Account Certificates (RACs), Computer Licensor Certificates (CLCs), and cached AD RMS templates from all Exchange servers in the organization. You don't need to specify a value with this switch.
 
-Clearing RACs, CLCs, and cached templates might be required during troubleshooting or after changing keys on the AD RMS cluster in your organization. For more information about RACs and CLCs, see [Understanding AD RMS Certificates](https://go.microsoft.com/fwlink/p/?linkId=197118).
+Clearing RACs, CLCs, and cached templates might be required during troubleshooting or after changing keys on the AD RMS cluster in your organization. For more information about RACs and CLCs, see [Understanding AD RMS Certificates](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753886(v=ws.11)).
 
 ```yaml
 Type: SwitchParameter

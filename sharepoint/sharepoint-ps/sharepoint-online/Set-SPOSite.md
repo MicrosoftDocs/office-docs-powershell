@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ### -LocaleId
 
 Specifies the language of this site collection.
-For more information, see Locale IDs Assigned by Microsoft (<https://go.microsoft.com/fwlink/p/?LinkId=242911).>
+For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911).
 
 ```yaml
 Type: UInt32
@@ -614,7 +614,7 @@ Accept wildcard characters: False
 
 Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
-For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
 
 ```yaml
 Type: String
@@ -632,7 +632,7 @@ Accept wildcard characters: False
 
 Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
-For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
 
 ```yaml
 Type: String
@@ -880,7 +880,7 @@ Default value: None
 ```
 
 ### -RemoveInformationSegment
-This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read (https://<kaarin to provide the link ) documentation to understand Information barriers with SharePoint Online.
+This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers with SharePoint Online.
 
 **Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
