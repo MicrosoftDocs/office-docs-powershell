@@ -9,7 +9,7 @@ title: Get-PnPUnifiedGroupMembers
 # Get-PnPUnifiedGroupMembers
 
 ## SYNOPSIS
-Gets members of a particular Office 365 Group (aka Unified Group). Requires the Azure Active Directory application permissions 'Group.Read.All' and 'User.Read.All'.
+Gets members of a particular Microsoft 365 Group (aka Unified Group). Requires the Azure Active Directory application permissions 'Group.Read.All' and 'User.Read.All'.
 
 ## SYNTAX 
 
@@ -24,19 +24,19 @@ Get-PnPUnifiedGroupMembers -Identity <UnifiedGroupPipeBind>
 Get-PnPUnifiedGroupMembers -Identity $groupId
 ```
 
-Retrieves all the members of a specific Office 365 Group based on its ID
+Retrieves all the members of a specific Microsoft 365 Group based on its ID
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Get-PnPUnifiedGroupMembers -Identity $group
 ```
 
-Retrieves all the members of a specific Office 365 Group based on the group's object instance
+Retrieves all the members of a specific Microsoft 365 Group based on the group's object instance
 
 ## PARAMETERS
 
 ### -Identity
-The Identity of the Office 365 Group.
+The Identity of the Microsoft 365 Group.
 
 ```yaml
 Type: UnifiedGroupPipeBind
