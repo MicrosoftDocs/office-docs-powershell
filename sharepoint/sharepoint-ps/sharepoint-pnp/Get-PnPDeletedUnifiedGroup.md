@@ -9,7 +9,7 @@ title: Get-PnPDeletedUnifiedGroup
 # Get-PnPDeletedUnifiedGroup
 
 ## SYNOPSIS
-Gets one deleted Office 365 Group (aka Unified Group) or a list of deleted Office 365 Groups
+Gets one deleted Microsoft 365 Group (aka Unified Group) or a list of deleted Microsoft 365 Groups
 
 ## SYNTAX 
 
@@ -24,19 +24,19 @@ Get-PnPDeletedUnifiedGroup [-Identity <UnifiedGroupPipeBind>]
 Get-PnPDeletedUnifiedGroup
 ```
 
-Retrieves all deleted Office 365 Groups
+Retrieves all deleted Microsoft 365 Groups
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Get-PnPDeletedUnifiedGroup -Identity 38b32e13-e900-4d95-b860-fb52bc07ca7f
 ```
 
-Retrieves a specific deleted Office 365 Group based on its ID
+Retrieves a specific deleted Microsoft 365 Group based on its ID
 
 ## PARAMETERS
 
 ### -Identity
-The Identity of the Office 365 Group.
+The Identity of the Microsoft 365 Group.
 
 ```yaml
 Type: UnifiedGroupPipeBind
