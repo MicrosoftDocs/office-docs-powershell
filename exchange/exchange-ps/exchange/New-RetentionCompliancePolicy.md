@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ### -ModernGroupLocation
 The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. Valid values are:
 
-- An Microsoft 365 Group
+- A Microsoft 365 Group
 
 - The value All for all Microsoft 365 Groups. You can only use this value by itself.
 
@@ -570,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

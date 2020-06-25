@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-OMEMessageRevocation cmdlet to revoke Microsoft Office 365 Message Encryption (OME) for a message. Revoking encryption prevents the recipient from viewing the message in the Office 365 Message Encryption portal.
+Use the Set-OMEMessageRevocation cmdlet to revoke Microsoft 365 Message Encryption (OME) for a message. Revoking encryption prevents the recipient from viewing the message in the Office 365 Message Encryption portal.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -48,7 +48,7 @@ This example revokes encryption for the specified message.
 ### -MessageId
 The MessageId parameter specifies the message based on the value the Message-ID header field. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
 
-You can find the Message ID for a message in Message Trace or the Message Encryption Report in the Office 365 Security & Compliance Center.
+You can find the Message ID for a message in Message Trace or the Message Encryption Report in the Security & Compliance Center.
 
 ```yaml
 Type: String

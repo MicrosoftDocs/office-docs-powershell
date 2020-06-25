@@ -29,7 +29,7 @@ Undo-SoftDeletedUnifiedGroup [-SoftDeletedObject] <UnifiedGroupIdParameter> [-Co
 ```
 
 ## DESCRIPTION
-Microsoft 365 Groups are group objects that are available across Office 365 services.
+Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
 Soft-deleted Microsoft 365 Groups are groups that have been deleted, but can be restored within 30 days of being deleted. All of the group contents can be restored within this period. After 30 days, soft-deleted Microsoft 365 Groups are marked for permanent deletion and can't be restored.
 

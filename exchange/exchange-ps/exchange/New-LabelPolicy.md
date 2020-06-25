@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label policy. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label policy. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
 ```yaml
 Type: PswsHashtable
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ### -ModernGroupLocation
 The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. Valid values are:
 
-- An Microsoft 365 Group
+- A Microsoft 365 Group
 
 - The value All for all Microsoft 365 Groups. You can only use this value by itself.
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

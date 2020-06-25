@@ -2006,13 +2006,13 @@ Accept wildcard characters: False
 ### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Office 365 US Government Community Cloud (GCC) customers. Valid values are:
+The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Microsoft 365 US Government Community Cloud (GCC) customers. Valid values are:
 
 - $true: Disable features that aren't FedRAMP compliant for GCC customers. This is the default value for all GCC customers.
 
 - $false: Enable features that aren't FedRAMP compliant for GCC customers.
 
-The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Office 365 US Government customers include:
+The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Microsoft 365 US Government customers include:
 
 - Multi-account support
 
@@ -2020,7 +2020,7 @@ The Outlook for iOS and Android feature and services that are not FedRAMP compli
 
 - HelpShift and in-app support
 
-- Any Microsoft services that are outside the Office 365 US Government Community Cloud (for example, Bing and Cortana).
+- Any Microsoft services that are outside the Microsoft 365 US Government Community Cloud (for example, Bing and Cortana).
 
  For a full list of Features and services that are not FedRAMP compliant for GCC customers, see [Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
 
@@ -2076,7 +2076,7 @@ Accept wildcard characters: False
 ### -OutlookPayEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookPayEnabled parameter enables or disables [Pay bills and invoices in Outlook using Microsoft Pay](https://support.microsoft.com/office/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Office 365 organization. Valid values are:
+The OutlookPayEnabled parameter enables or disables [Pay bills and invoices in Outlook using Microsoft Pay](https://support.microsoft.com/office/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Microsoft 365 organization. Valid values are:
 
 - $true: Payments in Outlook are enabled.
 

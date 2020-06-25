@@ -625,7 +625,7 @@ You can specify multiple email address templates separated by commas: "SMTP:\<Pr
 
 You can't use this parameter with the EnabledPrimarySMTPAddressTemplate parameter.
 
-In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
+In Exchange Online PowerShell, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
 
 ```yaml
 Type: ProxyAddressTemplateCollection
@@ -647,7 +647,7 @@ Valid syntax for this parameter is a domain or subdomain that's configured as an
 
 You can't use this parameter with the EnabledEmailAddressTemplates parameter.
 
-In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
+In Exchange Online PowerShell, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
 
 ```yaml
 Type: String

@@ -184,15 +184,15 @@ The New-MigrationEndpoint cmdlet configures the connection settings for differen
 
 - Cross-forest move: Move mailboxes between two different on-premises Exchange forests. Cross-forest moves require the use of a Remote Move endpoint.
 
-- Remote move migration: In a hybrid deployment, a remote move migration involves onboarding or offboarding migrations. Remote move migrations also require the use of an Exchange remote move endpoint. Onboarding moves mailboxes from an on-premises Exchange organization to Exchange Online in Office 365, and uses a remote move endpoint as the source endpoint of the migration batch. Offboarding moves mailboxes from Exchange Online in Office 365 to an on-premises Exchange organization and uses a remote move endpoint as the target endpoint of the migration batch.
+- Remote move migration: In a hybrid deployment, a remote move migration involves onboarding or offboarding migrations. Remote move migrations also require the use of an Exchange remote move endpoint. Onboarding moves mailboxes from an on-premises Exchange organization to Exchange Online, and uses a remote move endpoint as the source endpoint of the migration batch. Offboarding moves mailboxes from Exchange Online to an on-premises Exchange organization and uses a remote move endpoint as the target endpoint of the migration batch.
 
-- Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online in Office 365. A cutover Exchange migration requires the use of an Outlook Anywhere migration endpoint.
+- Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online. A cutover Exchange migration requires the use of an Outlook Anywhere migration endpoint.
 
-- Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online in Office 365. A staged Exchange migration requires the use of an Outlook Anywhere migration endpoint.
+- Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. A staged Exchange migration requires the use of an Outlook Anywhere migration endpoint.
 
-- IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online in Office 365. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
+- IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
 
-- G Suite migration: Migration mailbox data from a G Suite tenant to Exchange Online in Office 365.  For a G Suite migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data.  G Suite migrations require the use of a Gmail endpoint.
+- G Suite migration: Migration mailbox data from a G Suite tenant to Exchange Online.  For a G Suite migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data.  G Suite migrations require the use of a Gmail endpoint.
 
 Moving mailboxes between different servers or databases within a single on-premises Exchange forest (called a local move) doesn't require a migration endpoint.
 

@@ -82,7 +82,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
 ```
 
 ## DESCRIPTION
-Microsoft 365 Groups are group objects that are available across Office 365 services.
+Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
 The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Microsoft 365 Group group.
 
@@ -861,7 +861,7 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromExchangeClientsEnabled
-The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 Group is hidden from Outlook clients connected to Office 365.
+The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 Group is hidden from Outlook clients connected to Microsoft 365.
 
 - To enable this setting, you don't need to specify a value with this switch. The Microsoft 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't be visible in the global address list (GAL). The group name won't resolve during the creation a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. Additionally, the HiddenFromAddressListsEnabled property will also be set to true to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
 
