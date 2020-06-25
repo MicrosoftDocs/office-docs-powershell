@@ -58,6 +58,7 @@ Set-OrganizationConfig
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EnableAuthAdminReadSession <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
  [-ExternalInOutlookEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
@@ -1241,6 +1242,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAuthAdminReadSession 
+This parameter is available only in the Cumulative Update 17 for Exchange Server 2016 or later, and the Cumulative Update 6 for Exchange Server 2019 or later.
+
+EnableAuthAdminReadSession parameter enables a recipient read session.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
