@@ -29,7 +29,7 @@ Set-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-CompanyName <String>] [-Com
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify an existing civic address which has not been validated. Validated civic addresses cannot be modified.
 
 
 ## EXAMPLES
