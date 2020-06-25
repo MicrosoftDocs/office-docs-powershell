@@ -36,7 +36,7 @@ Add-SPOGeoAdministrator [-ObjectId] <Guid> [<CommonParameters>]
 ## DESCRIPTION
 
 This cmdlet requires a connection to a multi-geo tenant to run correctly.
-You must be a SharePoint Online global Administrator to run this cmdlet.
+You must be a SharePoint Online administrator or Global Administrator to run this cmdlet.
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ Adds the user **admin\@contoso.onmicrosoft.com** as administrator to the SharePo
 
 ### -GroupAlias
 
-Use this parameter to add a security group or a mail-enabled security group as a geo admin. (Distribution groups and Microsoft 365 Groups are not supported.).
+Use this parameter to add a security group or a mail-enabled security group as a geo admin. (Distribution groups and Microsoft 365 Groups are not supported).
 
 ```yaml
 Type: String

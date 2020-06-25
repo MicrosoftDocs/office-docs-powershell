@@ -49,6 +49,8 @@
       href: cmdlet-property-sets.md
     - name: Filters in the V2 module
       href: filters-v2.md
+    - name: App-only authentication
+      href: app-only-auth-powershell-v2.md
   - name: Security & Compliance Center PowerShell
     href: scc-powershell.md
     items:
