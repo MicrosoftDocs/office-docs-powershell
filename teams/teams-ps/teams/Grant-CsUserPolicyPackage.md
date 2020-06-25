@@ -55,7 +55,7 @@ Accept wildcard characters: False
 
 ### -PackageName
 
-The name of a specific policy package to apply. All possible policy package names can be found by running Get-CsPolicyPackage. To remove the currently assigned package, use $null or an empty string "". This will not remove any policy assignments.
+The name of a specific policy package to apply. All possible policy package names can be found by running Get-CsPolicyPackage. To remove the currently assigned package, use $null or an empty string "". This will not remove any policy assignments, just the package assigned value.
 
 ```yaml
 Type: String
