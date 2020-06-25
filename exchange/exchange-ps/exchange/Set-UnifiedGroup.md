@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-UnifiedGroup cmdlet to modify Office 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Office 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
+Use the Set-UnifiedGroup cmdlet to modify Microsoft 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Microsoft 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
 
 **IMPORTANT**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the group. There must be at least one MOERA address attached to a group at any given point of time. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357).
 
@@ -82,9 +82,9 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
 ```
 
 ## DESCRIPTION
-Office 365 Groups are group objects that are available across Office 365 services.
+Microsoft 365 Groups are group objects that are available across Office 365 services.
 
-The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Office 365 Group group.
+The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Microsoft 365 Group group.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -95,23 +95,23 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-UnifiedGroup -Identity "Marketing Department" -PrimarySmtpAddress marketing@contoso.com -RequireSenderAuthenticationEnabled $false
 ```
 
-This example makes the following changes to the Office 365 Group named Marketing Department:
+This example makes the following changes to the Microsoft 365 Group named Marketing Department:
 
 - The primary email address is changed to marketing@contoso.com.
 
-- The Office 365 Group is allowed to receive mail from unauthenticated (external) senders.
+- The Microsoft 365 Group is allowed to receive mail from unauthenticated (external) senders.
 
 ### Example 2
 ```powershell
 Set-UnifiedGroup -Identity "Legal Department" -AccessType Private
 ```
 
-This example changes the Office 365 Group named Legal Department from a public group to a private group.
+This example changes the Microsoft 365 Group named Legal Department from a public group to a private group.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to modify. You can use any value that uniquely identifies the Office 365 Group. For example:
+The Identity parameter specifies the Microsoft 365 Group that you want to modify. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessType
-The AccessType parameter specifies the privacy type for the Office 365 Group. Valid values are:
+The AccessType parameter specifies the privacy type for the Microsoft 365 Group. Valid values are:
 
 - Public: The group content and conversations are available to everyone, and anyone can join the group without approval from a group owner.
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Office 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
+The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Microsoft 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
 The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlwaysSubscribeMembersToCalendarEvents
-The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Office 365 Group. Changing this setting doesn't affect existing group members.
+The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group. Changing this setting doesn't affect existing group members.
 
 - If you use this switch without a value, all future members that are added to the group will have their subscriptions set to ReplyAndEvents.
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuditLogAgeLimit
-The AuditLogAgeLimit parameter specifies the maximum age of audit log entries for the Office 365 Group. Log entries older than the specified value are removed. The default value is 90 days.
+The AuditLogAgeLimit parameter specifies the maximum age of audit log entries for the Microsoft 365 Group. Log entries older than the specified value are removed. The default value is 90 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSubscribeNewMembers
-The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Office 365 Group to conversations and calendar events. Only users that are added to the group after you enable this setting are automatically subscribed to the group..
+The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Microsoft 365 Group to conversations and calendar events. Only users that are added to the group after you enable this setting are automatically subscribed to the group..
 
 - To subscribe new members to conversations and calendar events, use the AutoSubscribeNewMembers switch without a value.
 
@@ -279,13 +279,13 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarMemberReadOnly
-The CalendarMemberReadOnly switch specifies whether to set read-only Calendar permissions to the Office 365 Group for members of the group.
+The CalendarMemberReadOnly switch specifies whether to set read-only Calendar permissions to the Microsoft 365 Group for members of the group.
 
 - To set read-only Calendar permissions, use the CalendarMemberReadOnly switch without a value.
 
 - To remove read-only Calendar permissions, use this exact syntax: -CalendarMemberReadOnly:$false.
 
-To view the current value of the CalendarMemberReadOnly property on an Office 365 Group, replace \<EmailAddress\> with the email address of the group, and run this command: Get-UnifiedGroup -Identity \<EmailAddress\> -IncludeAllProperties | Format-List \*Calendar\*.
+To view the current value of the CalendarMemberReadOnly property on a Microsoft 365 Group, replace \<EmailAddress\> with the email address of the group, and run this command: Get-UnifiedGroup -Identity \<EmailAddress\> -IncludeAllProperties | Format-List \*Calendar\*.
 
 ```yaml
 Type: SwitchParameter
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-The Classification parameter specifies the classification for the Office 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see [Azure Active Directory cmdlets for configuring group settings](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets).
+The Classification parameter specifies the classification for the Microsoft 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see [Azure Active Directory cmdlets for configuring group settings](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets).
 
 ```yaml
 Type: String
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorsEnabled
-The ConnectorsEnabled specifies whether to enable the ability to use connectors for the Office 365 Group.
+The ConnectorsEnabled specifies whether to enable the ability to use connectors for the Microsoft 365 Group.
 
 - To enable connectors, use the ConnectorsEnabled switch without a value.
 
@@ -345,7 +345,7 @@ The ConnectorsEnabled specifies whether to enable the ability to use connectors 
 
 To use this switch, the value of the ConnectorsEnabled parameter on the Set-OrganizationConfig cmdlet must be set to $true (which is the default value).
 
-For more information about connectors for Office 365 Groups, see [Connect apps to your groups in Outlook](https://support.microsoft.com/office/ed0ce547-038f-4902-b9b3-9e518ae6fbab).
+For more information about connectors for Microsoft 365 Groups, see [Connect apps to your groups in Outlook](https://support.microsoft.com/office/ed0ce547-038f-4902-b9b3-9e518ae6fbab).
 
 ```yaml
 Type: SwitchParameter
@@ -601,7 +601,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataEncryptionPolicy
-The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Office 365 Group. You can use any value that uniquely identifies the policy. For example:
+The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Microsoft 365 Group. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -625,7 +625,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The DisplayName parameter specifies the name of the Office 365 Group. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+The DisplayName parameter specifies the name of the Microsoft 365 Group. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -797,7 +797,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this Office 365 Group. Although messages that are sent on behalf of the group clearly show the sender in the From field (\<Sender\> on behalf of \<Office365Group\>), replies to these messages are delivered to the group, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this Microsoft 365 Group. Although messages that are sent on behalf of the group clearly show the sender in the From field (\<Sender\> on behalf of \<Office365Group\>), replies to these messages are delivered to the group, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 
@@ -825,7 +825,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-By default, this parameter is blank, which means no one else has permission to send on behalf of this Office 365 Group group.
+By default, this parameter is blank, which means no one else has permission to send on behalf of this Microsoft 365 Group group.
 
 ```yaml
 Type: MultiValuedProperty
@@ -841,11 +841,11 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromAddressListsEnabled
-The HiddenFromAddressListsEnabled parameter specifies whether the Office 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
+The HiddenFromAddressListsEnabled parameter specifies whether the Microsoft 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
 
-- $true: The Office 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Office 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is **NOT** enabled.
+- $true: The Microsoft 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Microsoft 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is **NOT** enabled.
 
-- $false: The Office 365 Group is visible in the GAL and other address lists. This is the default value.
+- $false: The Microsoft 365 Group is visible in the GAL and other address lists. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -861,11 +861,11 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromExchangeClientsEnabled
-The HiddenFromExchangeClientsEnabled switch specifies whether the Office 365 Group is hidden from Outlook clients connected to Office 365.
+The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 Group is hidden from Outlook clients connected to Office 365.
 
-- To enable this setting, you don't need to specify a value with this switch. The Office 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't be visible in the global address list (GAL). The group name won't resolve during the creation a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. Additionally, the HiddenFromAddressListsEnabled property will also be set to true to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
+- To enable this setting, you don't need to specify a value with this switch. The Microsoft 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't be visible in the global address list (GAL). The group name won't resolve during the creation a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. Additionally, the HiddenFromAddressListsEnabled property will also be set to true to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
 
-- To disable this setting, use this exact syntax: -HiddenFromExchangeClientsEnabled:$false. The Office 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
+- To disable this setting, use this exact syntax: -HiddenFromExchangeClientsEnabled:$false. The Microsoft 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
 
 ```yaml
 Type: SwitchParameter
@@ -881,7 +881,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-The Language parameter specifies language preference for the Office 365 Group.
+The Language parameter specifies language preference for the Microsoft 365 Group.
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
@@ -1079,7 +1079,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
-The Notes parameter specifies the description of the Office 365 Group. If the value contains spaces, enclose the value in quotation marks.
+The Notes parameter specifies the description of the Microsoft 365 Group. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: String
@@ -1171,7 +1171,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionEnabled
-The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Office 365 Group.
+The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Microsoft 365 Group.
 
 - To change the value to $true, use this switch without a value.
 
@@ -1191,7 +1191,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnifiedGroupWelcomeMessageEnabled
-The UnifiedGroupWelcomeMessageEnabled switch specifies whether to enable or disable sending system-generated welcome messages to users who are added as members to the Office 365 Group.
+The UnifiedGroupWelcomeMessageEnabled switch specifies whether to enable or disable sending system-generated welcome messages to users who are added as members to the Microsoft 365 Group.
 
 - To enable this setting, you don't need to specify a value with this switch.
 

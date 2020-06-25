@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-UnifiedGroupLinks cmdlet to view membership and ownership information for Office 365 groups in your cloud-based organization. To view other properties for Office 365 groups, use the Get-UnifiedGroup cmdlet.
+Use the Get-UnifiedGroupLinks cmdlet to view membership and ownership information for Microsoft 365 Groups in your cloud-based organization. To view other properties for Microsoft 365 Groups, use the Get-UnifiedGroup cmdlet.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -30,7 +30,7 @@ Get-UnifiedGroupLinks [-Identity] <UnifiedGroupIdParameter> -LinkType <LinkType>
 ```
 
 ## DESCRIPTION
-Office 365 groups are group objects that are available across Office 365 services.
+Microsoft 365 Groups are group objects that are available across Office 365 services.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -41,12 +41,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-UnifiedGroupLinks -Identity "Human Resources Department" -LinkType Members
 ```
 
-This example show the members of the Office 365 Group named Human Resources Department
+This example show the members of the Microsoft 365 Group named Human Resources Department
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to view. You can use any value that uniquely identifies the Office 365 Group. For example:
+The Identity parameter specifies the Microsoft 365 Group that you want to view. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -LinkType
-The LinkType parameter specifies the Office 365 Group property that you want to view. Valid values are:
+The LinkType parameter specifies the Microsoft 365 Group property that you want to view. Valid values are:
 
 - Members
 

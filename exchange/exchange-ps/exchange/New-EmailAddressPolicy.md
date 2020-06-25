@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ### -IncludeUnifiedGroupRecipients
 This parameter is available only in the cloud-based service.
 
-The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies to Office 365 groups. You don't need to specify a value with this switch.
+The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -791,7 +791,7 @@ Accept wildcard characters: False
 ### -ManagedByFilter
 This parameter is available only in the cloud-based service.
 
-The ManagedByFilter parameter specifies the email address policies to apply to Office 365 groups based on the properties of the users who create the Office 365 groups.
+The ManagedByFilter parameter specifies the email address policies to apply to Microsoft 365 Groups based on the properties of the users who create the Microsoft 365 Groups.
 
 This parameter is an OPath filter that's based on the value of any available recipient property (for example, `"Department -eq 'Sales'"`). You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 

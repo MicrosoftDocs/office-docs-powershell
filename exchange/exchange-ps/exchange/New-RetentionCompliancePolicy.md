@@ -248,13 +248,13 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocation
-The ModernGroupLocation parameter specifies the Office 365 groups to include in the policy. Valid values are:
+The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. Valid values are:
 
-- An Office 365 Group
+- An Microsoft 365 Group
 
-- The value All for all Office 365 groups. You can only use this value by itself.
+- The value All for all Microsoft 365 Groups. You can only use this value by itself.
 
-To identify the Office 365 Group, you can use any value that uniquely identifies it. For example:
+To identify the Microsoft 365 Group, you can use any value that uniquely identifies it. For example:
 
 - Name
 
@@ -280,9 +280,9 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocationException
-The ModernGroupLocationException parameter specifies the Office 365 groups to exclude when you're using the value All for the ModernGroupLocation parameter.
+The ModernGroupLocationException parameter specifies the Microsoft 365 Groups to exclude when you're using the value All for the ModernGroupLocation parameter.
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 

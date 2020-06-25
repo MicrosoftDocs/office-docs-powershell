@@ -1054,11 +1054,11 @@ Accept wildcard characters: False
 ### -GroupCreationEnabled
 This parameter is available or functional only in the cloud-based service.
 
-The GroupCreationEnabled parameter specifies whether Office 365 group creation is available in Outlook and Outlook on the web. Valid values are:
+The GroupCreationEnabled parameter specifies whether Microsoft 365 Group creation is available in Outlook and Outlook on the web. Valid values are:
 
-- $true: Users can create Office 365 groups in Outlook and Outlook on the web. This is the default value.
+- $true: Users can create Microsoft 365 Groups in Outlook and Outlook on the web. This is the default value.
 
-- $false: Users can't create Office 365 groups in Outlook and Outlook on the web.
+- $false: Users can't create Microsoft 365 Groups in Outlook and Outlook on the web.
 
 ```yaml
 Type: Boolean
@@ -1865,11 +1865,11 @@ Accept wildcard characters: False
 ### -SkipCreateUnifiedGroupCustomSharepointClassification
 This parameter is available only in the cloud-based service.
 
-The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Office 365 Groups in Outlook web app. Valid values are:
+The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Microsoft 365 Groups in Outlook web app. Valid values are:
 
-- $true: The custom SharePoint page is skipped when a user creates an Office 365 group in Outlook on the web. This is the default value.
+- $true: The custom SharePoint page is skipped when a user creates a Microsoft 365 Group in Outlook on the web. This is the default value.
 
-- $false: The custom SharePoint page is shown when a user creates an Office 365 group in Outlook on the web.
+- $false: The custom SharePoint page is shown when a user creates a Microsoft 365 Group in Outlook on the web.
 
 ```yaml
 Type: Boolean

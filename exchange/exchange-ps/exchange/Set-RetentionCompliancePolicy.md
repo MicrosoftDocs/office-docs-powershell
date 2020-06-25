@@ -204,9 +204,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocation
-The AddModernGroupLocation parameter specifies the Office 365 groups to add to the list of included Office 365 groups when you aren't using the value All for the ModernGroupLocation parameter.
+The AddModernGroupLocation parameter specifies the Microsoft 365 Groups to add to the list of included Microsoft 365 Groups when you aren't using the value All for the ModernGroupLocation parameter.
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 
@@ -232,9 +232,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocationException
-The AddModernGroupLocationException parameter specifies the Office 365 groups to add to the list of excluded Office 365 groups when you're using the value All for the ModernGroupLocation parameter.
+The AddModernGroupLocationException parameter specifies the Microsoft 365 Groups to add to the list of excluded Microsoft 365 Groups when you're using the value All for the ModernGroupLocation parameter.
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 
@@ -632,9 +632,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocation
-The RemoveModernGroupLocation parameter specifies the Office 365 groups to remove from the list of included groups when you aren't using the value All for the ModernGroupLocation parameter.
+The RemoveModernGroupLocation parameter specifies the Microsoft 365 Groups to remove from the list of included groups when you aren't using the value All for the ModernGroupLocation parameter.
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 
@@ -660,9 +660,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocationException
-The RemoveModernGroupLocationException parameter specifies the Office 365 groups to remove from the list of excluded groups when you're using the value All for the ModernGroupLocation parameter.
+The RemoveModernGroupLocationException parameter specifies the Microsoft 365 Groups to remove from the list of excluded groups when you're using the value All for the ModernGroupLocation parameter.
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 

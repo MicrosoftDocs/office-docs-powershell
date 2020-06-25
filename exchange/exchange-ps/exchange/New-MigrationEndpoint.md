@@ -477,7 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderToUnifiedGroup
-The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public folders to Office 365 groups. You don't need to specify a value with this switch.
+The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public folders to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
