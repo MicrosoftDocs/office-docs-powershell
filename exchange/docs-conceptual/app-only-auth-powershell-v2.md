@@ -14,19 +14,16 @@ ms.custom:
 ms.assetid:
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
-description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks."
+description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks with Modern Authentication and app-only authentication."
 ---
 
-# Automate tasks in Exchange Online using PowerShell with Modern Authentication
-
-> [!NOTE]
-> The features described in this topic are currently in Preview, are subject to change, and aren't available to everyone.
+# App-only authentication in the EXO V2 module
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses Modern authentication, the credentials are stored in a local file or a secret vault that's access at run-time.
 
-Because storing user credentials locally is not a good security practice, we're releasing this feature to support authentication for app-only scenarios using AzureAD applications and self-signed certificates.
+Because storing user credentials locally is not a safe practice, we're releasing this feature to support authentication for unattended scripts (automation) scenarios using AzureAD applications and self-signed certificates.
 
-The following examples show how to use the Exchange Online PowerShell V2 module with app-only authentication
+The following examples show how to use the Exchange Online PowerShell V2 module with app-only authentication:
 
 - Connect using a local certificate:
 
@@ -37,7 +34,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 - Connect using a certificate thumbprint:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -Organization "contosoelectronics.onmicrosoft.com" 
+  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -Organization "contosoelectronics.onmicrosoft.com"
   ```
 
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.

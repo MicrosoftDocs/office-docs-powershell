@@ -136,9 +136,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Get-CsGroupPolicyAssignment]()
+[New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md)
 
-[Set-CsGroupPolicyAssignment]()
+[Get-CsGroupPolicyAssignment](Get-CsGroupPolicyAssignment.md)
 
-[Remove-CsGroupPolicyAssignment]()
-
+[Remove-CsGroupPolicyAssignment](Remove-CsGroupPolicyAssignment.md)
