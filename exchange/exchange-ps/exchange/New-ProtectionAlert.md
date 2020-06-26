@@ -44,7 +44,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 New-ProtectionAlert -Name "Content search deleted" -Category Others -NotifyUser admin@contoso.com -ThreatType Activity -Operation SearchRemoved -Description "Custom alert policy to track when content searches are deleted" -AggregationType None
 ```
 
-This example creates an alert policy that triggers an alert whenever anyone in the organization deletes a Content Search in the Office 365 Security & Compliance Center.
+This example creates an alert policy that triggers an alert whenever anyone in the organization deletes a Content Search in the Security & Compliance Center.
 
 ## PARAMETERS
 
@@ -139,7 +139,7 @@ The AggregationType parameter specifies the how the alert policy triggers alerts
 
 - SimpleAggregation: Alerts are triggered based on the volume of activity in a given time window (the values of the Threshold and TimeWindow parameters). This is the default value.
 
-- AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Office 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
+- AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Microsoft 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
 
 ```yaml
 Type: AlertAggregationType
@@ -545,7 +545,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

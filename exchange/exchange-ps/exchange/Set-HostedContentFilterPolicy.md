@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ### -AllowedSenderDomains
 The AllowedSenderDomains parameter specifies trusted domains that aren't processed by the spam filter. Messages from senders in these domains are stamped with `SFV:SKA` in the `X-Forefront-Antispam-Report header` and receive a spam confidence level (SCL) of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP domains.
 
-**Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
+**Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ### -AllowedSenders
 The AllowedSenders parameter specifies a list of trusted senders that skip spam filtering. Messages from these senders are stamped with SFV:SKA in the X-Forefront-Antispam-Report header and receive an SCL of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP email addresses.
 
-**Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
+**Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ### -BlockedSenderDomains
 The BlockedSenderDomains parameter specifies domains that are always marked as spam sources. Messages from senders in these domains are stamped with `SFV:SKB` value in the `X-Forefront-Antispam-Report` header and receive an SCL of 9 (high confidence spam). Valid values are one or more SMTP domains.
 
-**Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
+**Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ### -BlockedSenders
 The BlockedSenders parameter specifies senders that are always marked as spam sources. Messages from these senders are stamped with `SFV:SKB` in the `X-Forefront-Antispam-Report` header and receive an SCL of 9 (high confidence spam). Valid values are one or more SMTP email addresses.
 
-**Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
+**Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -267,7 +267,7 @@ The BulkSpamAction parameter specifies the action to take on messages that are m
 
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 
 - NoAction
 
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -BulkThreshold
-The BulkThreshold parameter specifies the BCL that triggers the BulkSpamAction on the message (greater than the specified value, not greater than or equal to). A valid value is an integer from 1 to 9, and the default value is 7. A higher value indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk compliant level (BCL) in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
+The BulkThreshold parameter specifies the BCL that triggers the BulkSpamAction on the message (greater than the specified value, not greater than or equal to). A valid value is an integer from 1 to 9, and the default value is 7. A higher value indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk compliant level (BCL) in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
 
 ```yaml
 Type: Int32
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 ### -HighConfidencePhishAction
 The HighConfidencePhishAction parameter specifies the action to take on messages that are marked as high confidence phishing (not phishing). Phishing messages use fraudulent links or spoofed domains to get personal information. Valid values are:
 
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
@@ -543,7 +543,7 @@ The HighConfidenceSpamAction parameter specifies the action to take on messages 
 
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 
 - Quarantine: Move the message to the quarantine. The quarantined message is only available to admins.
 
@@ -1037,7 +1037,7 @@ The PhishSpamAction parameter specifies the action to take on messages that are 
 
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
 
 - Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is available to the intended recipients (as of April, 2020) and admins.
 
@@ -1169,7 +1169,7 @@ The SpamAction parameter specifies the action to take on messages that are marke
 
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 
 - Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
 

@@ -4241,7 +4241,7 @@ The Quarantine parameter specifies an action that quarantines messages.
 
 - In on-premises Exchange, messages are delivered to the quarantine mailbox that you've configured as part of Content filtering. If the quarantine mailbox isn't configured, the message is returned to the sender in an NDR.
 
-- In Office 365, messages are delivered to the hosted quarantine.
+- In Microsoft 365, messages are delivered to the hosted quarantine.
 
 ```yaml
 Type: Boolean
@@ -4659,7 +4659,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter specifies an action or part of an action for the rule.
 
-The RouteMessageOutboundConnector parameter specifies an action that routes messages through the specified Outbound connector in Office 365. You can use any value that uniquely identifies the connector. For example:
+The RouteMessageOutboundConnector parameter specifies an action that routes messages through the specified Outbound connector in Microsoft 365. You can use any value that uniquely identifies the connector. For example:
 
 - Name
 

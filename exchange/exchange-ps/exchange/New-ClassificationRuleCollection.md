@@ -17,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-ClassificationRuleCollection cmdlet to import new classification rule collections into your organization.
 
-In the Office 365 Security & Compliance Center, use the New-DlpSensitiveInformationTypeRulePackage cmdlet.
+In the Security & Compliance Center, use the New-DlpSensitiveInformationTypeRulePackage cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

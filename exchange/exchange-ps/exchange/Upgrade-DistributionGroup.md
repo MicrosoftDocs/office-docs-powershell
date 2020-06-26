@@ -15,9 +15,9 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Upgrade-DistributionGroup cmdlet to upgrade distribution groups to Office 365 groups. This cmdlet only works on distribution groups, not mail-enabled security groups.
+Use the Upgrade-DistributionGroup cmdlet to upgrade distribution groups to Microsoft 365 Groups. This cmdlet only works on distribution groups, not mail-enabled security groups.
 
-Note: Before you use this cmdlet, verify there are no email address policies that you created with the IncludeUnifiedGroupRecipients parameter; otherwise the command will fail. Remove and recreate the email address policies after you upgrade your distribution groups to Office 365 groups.
+Note: Before you use this cmdlet, verify there are no email address policies that you created with the IncludeUnifiedGroupRecipients parameter; otherwise the command will fail. Remove and recreate the email address policies after you upgrade your distribution groups to Microsoft 365 Groups.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -40,12 +40,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Upgrade-DistributionGroup -DlIdentities hr@contoso.com,finance@contoso.com
 ```
 
-This example upgrades the specified distribution groups to Office 365 groups.
+This example upgrades the specified distribution groups to Microsoft 365 Groups.
 
 ## PARAMETERS
 
 ### -DlIdentities
-The DlIdentities parameter specifies the email address of the distribution group that you want to upgrade to an Office 365 Group.
+The DlIdentities parameter specifies the email address of the distribution group that you want to upgrade to a Microsoft 365 Group.
 
 You can specify multiple values separated by commas.
 
