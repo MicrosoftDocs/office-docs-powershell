@@ -28,9 +28,9 @@ Get-OnPremisesOrganization [[-Identity] <OnPremisesOrganizationIdParameter>] [<C
 ```
 
 ## DESCRIPTION
-The OnPremisesOrganization object represents an on-premises Exchange organization configured for hybrid deployment with a Microsoft Office 365 tenant organization. It's used with the Hybrid Configuration wizard and is typically created automatically when the hybrid deployment is initially configured by the wizard. You can use the Get-OnPremisesOrganization cmdlet to view the properties of the OnPremisesOrganization object in the Office 365 tenant.
+The OnPremisesOrganization object represents an on-premises Exchange organization configured for hybrid deployment with a Microsoft 365 organization. It's used with the Hybrid Configuration wizard and is typically created automatically when the hybrid deployment is initially configured by the wizard. You can use the Get-OnPremisesOrganization cmdlet to view the properties of the OnPremisesOrganization object in the Microsoft 365 organization.
 
-Manual modification of this object may result in hybrid deployment misconfiguration. We strongly recommend that you use the Hybrid Configuration wizard to modify this object in the Office 365 tenant.
+Manual modification of this object may result in hybrid deployment misconfiguration. We strongly recommend that you use the Hybrid Configuration wizard to modify this object in the Microsoft 365 organization.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
