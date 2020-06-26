@@ -57,9 +57,9 @@ Mail traffic summary
 
 - Malware: Messages that were marked as malware.
 
--	Receive: Messages successfully received by the service.
+- Receive: Messages successfully received by the service.
 
--	SpoofMail: Messages that were marked as spoofed by the Office 365 anti-spoofing protection.
+- SpoofMail: Messages that were marked as spoofed by anti-spoofing protection.
 
 - TransportRuleHits: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
 
