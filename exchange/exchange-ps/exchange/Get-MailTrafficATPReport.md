@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Advanced Threat Protection (ATP) detections in your cloud-based organization.
+Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Advanced Threat Protection (ATP) detections in your cloud-based organization for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
