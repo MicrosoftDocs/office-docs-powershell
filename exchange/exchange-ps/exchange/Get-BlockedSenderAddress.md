@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-BlockedSenderAddress cmdlet to view users in your Office 365 organization that are impacted by the protection system. These users sent multiple messages that were classified as spam, so they're blocked from sending messages.
+Use the Get-BlockedSenderAddress cmdlet to view users in your Microsoft 365 organization that are impacted by the protection system. These users sent multiple messages that were classified as spam, so they're blocked from sending messages.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

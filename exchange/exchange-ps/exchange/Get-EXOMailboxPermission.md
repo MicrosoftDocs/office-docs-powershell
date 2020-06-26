@@ -65,7 +65,7 @@ FullAccess is inherited by NT AUTHORITY\SYSTEM and ReadPermission is inherited b
 
 FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are inherited by Exchange Trusted Subsystem and ReadPermission is inherited by Managed Availability Servers.
 
-By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Office 365).
+By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Microsoft 365).
 
 ## EXAMPLES
 

@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-UnifiedGroup cmdlet to create Office 365 Groups in your cloud-based organization. To add members, owners, and subscribers to Office 365 Groups, use the Add-UnifiedGroupLinks cmdlet.
+Use the New-UnifiedGroup cmdlet to create Microsoft 365 Groups in your cloud-based organization. To add members, owners, and subscribers to Microsoft 365 Groups, use the Add-UnifiedGroupLinks cmdlet.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -114,7 +114,7 @@ New-UnifiedGroup -DlIdentity <DistributionGroupIdParameter> [-ConvertClosedDlToP
 ```
 
 ## DESCRIPTION
-Office 365 Groups are group objects that are available across Office 365 services.
+Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -125,14 +125,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-UnifiedGroup -DisplayName "Engineering Department" -Alias engineering
 ```
 
-This example creates a new Office 365 Group named Engineering Department.
+This example creates a new Microsoft 365 Group named Engineering Department.
 
 ## PARAMETERS
 
 ### -DisplayName
-The DisplayName parameter specifies the name of the Office 365 Group. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+The DisplayName parameter specifies the name of the Microsoft 365 Group. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
-For Office 365 Groups, the DisplayName value is used in the unique Name property. However, because the DisplayName value doesn't need to be unique, the DisplayName value is appended with an underscore character (\_) and a short GUID value when it's used for the Name property.
+For Microsoft 365 Groups, the DisplayName value is used in the unique Name property. However, because the DisplayName value doesn't need to be unique, the DisplayName value is appended with an underscore character (\_) and a short GUID value when it's used for the Name property.
 
 ```yaml
 Type: String
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -DlIdentity
-The DlIdentity parameter specifies the distribution group (also known as a distribution list or DL) that you want to migrate to an Office 365 Group. The distribution group must be a universal distribution group (the RecipientTypeDetails property value is MailUniversalDistributionGroup). You can use any value that uniquely identifies the distribution group. For example:
+The DlIdentity parameter specifies the distribution group (also known as a distribution list or DL) that you want to migrate to a Microsoft 365 Group. The distribution group must be a universal distribution group (the RecipientTypeDetails property value is MailUniversalDistributionGroup). You can use any value that uniquely identifies the distribution group. For example:
 
 - Name
 
@@ -162,11 +162,11 @@ The DlIdentity parameter specifies the distribution group (also known as a distr
 
 - GUID
 
-All the properties and membership of the distribution group are copied to the Office 365 Group.
+All the properties and membership of the distribution group are copied to the Microsoft 365 Group.
 
-The alias and proxy addresses of the distribution group are moved to the Office 365 Group, and are replaced on the distribution group by the values DLMigrated\_\<GUID\>. The original proxy addresses are copied to the ExtensionCustomAttribute5 property of the distribution group.
+The alias and proxy addresses of the distribution group are moved to the Microsoft 365 Group, and are replaced on the distribution group by the values DLMigrated\_\<GUID\>. The original proxy addresses are copied to the ExtensionCustomAttribute5 property of the distribution group.
 
-Office 365 Groups don't have ReportToManager and ReportToOriginator parameters, so the values of these parameters aren't migrated from the distribution group to the Office 365 Group. The Office 365 Group behaves as if the default values of these parameters were set (ReportToManager is $false and ReportToOriginator is $true). In other words, delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the message sender and not to the owner of the Office 365 Group.
+Microsoft 365 Groups don't have ReportToManager and ReportToOriginator parameters, so the values of these parameters aren't migrated from the distribution group to the Microsoft 365 Group. The Microsoft 365 Group behaves as if the default values of these parameters were set (ReportToManager is $false and ReportToOriginator is $true). In other words, delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the message sender and not to the owner of the Microsoft 365 Group.
 
 ```yaml
 Type: DistributionGroupIdParameter
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessType
-The AccessType parameter specifies the privacy type for the Office 365 Group. Valid values are:
+The AccessType parameter specifies the privacy type for the Microsoft 365 Group. Valid values are:
 
 - Public: The group content and conversations are available to everyone, and anyone can join the group without approval from a group owner. This is the default value.
 
@@ -206,15 +206,15 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Office 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
+The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Microsoft 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
 The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-If you don't use the Alias parameter when you create an Office 365 Group, the value of the DisplayName parameter is used for the Alias value. Spaces are removed, unsupported characters are converted to question marks (?), and numbers may be added to maintain the uniqueness of the Alias value.
+If you don't use the Alias parameter when you create a Microsoft 365 Group, the value of the DisplayName parameter is used for the Alias value. Spaces are removed, unsupported characters are converted to question marks (?), and numbers may be added to maintain the uniqueness of the Alias value.
 
-When you create an Office 365 Group without using the EmailAddresses parameter, the Alias value is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a Microsoft 365 Group without using the EmailAddresses parameter, the Alias value is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
-The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Office 365 Group ("Alias\_\<ExternalDirectoryObjectId\>"\).
+The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Microsoft 365 Group ("Alias\_\<ExternalDirectoryObjectId\>"\).
 
 ```yaml
 Type: String
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlwaysSubscribeMembersToCalendarEvents
-The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Office 365 Group.
+The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group.
 
 - If you use this switch without a value, all future members that are added to the group will have their subscriptions set to ReplyAndEvents.
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSubscribeNewMembers
-The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Office 365 Group to conversations and calendar events. You don't need to specify a value with this switch.
+The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Microsoft 365 Group to conversations and calendar events. You don't need to specify a value with this switch.
 
 You need to use this switch with the SubscriptionEnabled switch.
 
@@ -308,11 +308,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConvertClosedDlToPrivateGroup
-The ConvertClosedDlToPrivateGroup switch specifies whether to migrate the closed distribution group to a private Office 365 Group. You don't need to specify a value with this switch.
+The ConvertClosedDlToPrivateGroup switch specifies whether to migrate the closed distribution group to a private Microsoft 365 Group. You don't need to specify a value with this switch.
 
 By default, this switch is always applied when migrating closed distribution groups, and is no longer required.
 
-If the distribution group has the value Closed for the MemberDepartRestriction or MemberJoinRestriction parameters, the distribution group will always be migrated to a private Office 365 Group. For open distribution groups, the migrated Office 365 Group is always public, not private.
+If the distribution group has the value Closed for the MemberDepartRestriction or MemberJoinRestriction parameters, the distribution group will always be migrated to a private Microsoft 365 Group. For open distribution groups, the migrated Microsoft 365 Group is always public, not private.
 
 You can only use this switch with the DlIdentity parameter.
 
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataEncryptionPolicy
-The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Office 365 Group. You can use any value that uniquely identifies the policy. For example:
+The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Microsoft 365 Group. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteDlAfterMigration
-The DeleteDlAfterMigration switch specifies whether to delete the distribution group after it's migrated to an Office 365 Group. You don't need to specify a value with this switch.
+The DeleteDlAfterMigration switch specifies whether to delete the distribution group after it's migrated to a Microsoft 365 Group. You don't need to specify a value with this switch.
 
 You can only use this switch with the DlIdentity parameter.
 
@@ -424,9 +424,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExoErrorAsWarning
-The ExoErrorAsWarning switch specifies that Exchange Online errors that you encounter while creating the Office 365 Group are treated as warnings, not errors. You don't need to specify a value with this switch.
+The ExoErrorAsWarning switch specifies that Exchange Online errors that you encounter while creating the Microsoft 365 Group are treated as warnings, not errors. You don't need to specify a value with this switch.
 
-Creating Office 365 Groups involves background operations in Azure Active Directory and Exchange Online. Errors that you might encounter in Exchange Online don't prevent the creation of the group (and therefore aren't really errors), because the group object in Azure Active Directory is synchronized back to Exchange Online.
+Creating Microsoft 365 Groups involves background operations in Azure Active Directory and Exchange Online. Errors that you might encounter in Exchange Online don't prevent the creation of the group (and therefore aren't really errors), because the group object in Azure Active Directory is synchronized back to Exchange Online.
 
 ```yaml
 Type: SwitchParameter
@@ -442,9 +442,9 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenGroupMembershipEnabled
-The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the Office 365 Group from users who aren't members of the group. You don't need to specify a value with this switch.
+The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the Microsoft 365 Group from users who aren't members of the group. You don't need to specify a value with this switch.
 
-You can use this setting to help comply with regulations that require you to hide group membership from outsiders (for example, an Office 365 Group group that represents students enrolled in a class).
+You can use this setting to help comply with regulations that require you to hide group membership from outsiders (for example, a Microsoft 365 Group group that represents students enrolled in a class).
 
 Note: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group.
 
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-The Language parameter specifies the language preference for the Office 365 Group.
+The Language parameter specifies the language preference for the Microsoft 365 Group.
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
@@ -512,7 +512,7 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the recipients (mail-enabled objects) that are members of the Office 365 Group. You can use any value that uniquely identifies the recipient. For example:
+The Members parameter specifies the recipients (mail-enabled objects) that are members of the Microsoft 365 Group. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 
@@ -544,7 +544,7 @@ Accept wildcard characters: False
 ### -Name
 This parameter has been deprecated and is no longer used.
 
-Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Office 365 Group \("Name\_\<RandomGUID\>"\). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value ("Alias\_\<ExternalDirectoryObjectId\>"\).
+Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Microsoft 365 Group \("Name\_\<RandomGUID\>"\). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value ("Alias\_\<ExternalDirectoryObjectId\>"\).
 
 ```yaml
 Type: String
@@ -560,7 +560,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
-The Notes parameter specifies the description of the Office 365 Group. If the value contains spaces, enclose the value in quotation marks.
+The Notes parameter specifies the description of the Microsoft 365 Group. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: String
@@ -576,7 +576,7 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter specifies the for the Office 365 Group. An owner is a group member who has certain privileges, such as the ability to edit group properties.
+The Owner parameter specifies the for the Microsoft 365 Group. An owner is a group member who has certain privileges, such as the ability to edit group properties.
 
 The owner you specify for this parameter must be a mailbox or mail user (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
@@ -642,7 +642,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionEnabled
-The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Office 365 Group. You don't need to specify a value with this switch.
+The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Microsoft 365 Group. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

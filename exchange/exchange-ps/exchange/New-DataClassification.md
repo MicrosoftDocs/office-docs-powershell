@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [New-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
+In Exchange Online, this cmdlet has been replaced by the [New-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtype) cmdlet in Security & Compliance Center PowerShell.
 
 Use the New-DataClassification cmdlet to create data classification rules that use document fingerprints.
 
