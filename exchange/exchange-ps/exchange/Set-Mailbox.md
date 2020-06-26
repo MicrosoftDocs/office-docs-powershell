@@ -2660,7 +2660,7 @@ Accept wildcard characters: False
 ### -ExcludeFromAllOrgHolds
 This parameter is available only in Exchange Online.
 
-The ExcludeFromAllOrgHolds switch excludes the mailbox from all organization-wide Office 365 retention policies. This switch can only be used for inactive mailboxes. You don't need to specify a value with this switch.
+The ExcludeFromAllOrgHolds switch excludes the mailbox from all organization-wide Microsoft 365 retention policies. This switch can only be used for inactive mailboxes. You don't need to specify a value with this switch.
 
 When you use this switch, use the DistinguishedName or ExchangeGuid property value for the identity of the inactive mailbox (those are the only values that guarantee uniqueness).
 
@@ -2680,7 +2680,7 @@ Accept wildcard characters: False
 ### -ExcludeFromOrgHolds
 This parameter is available only in Exchange Online.
 
-The ExcludeFromOrgHolds parameter excludes the mailbox from one or more organization-wide Office 365 retention policies. This parameter can only be used for inactive mailboxes. A valid value for this parameter is the GUID of the organization-wide Office 365 retention policy that the inactive mailbox is excluded from. To find the GUID values of organization-wide Office 365 retention policies, run the command Get-OrganizationConfig | Format-List InplaceHolds. Note that retention policies assigned to mailboxes are prefaced by 'mbx'.
+The ExcludeFromOrgHolds parameter excludes the mailbox from one or more organization-wide Microsoft 365 retention policies. This parameter can only be used for inactive mailboxes. A valid value for this parameter is the GUID of the organization-wide Microsoft 365 retention policy that the inactive mailbox is excluded from. To find the GUID values of organization-wide Microsoft 365 retention policies, run the command Get-OrganizationConfig | Format-List InplaceHolds. Note that retention policies assigned to mailboxes are prefaced by 'mbx'.
 
 You can specify multiple values by using the syntax: "GUID1","GUID2",..."GUIDX".
 
@@ -3338,7 +3338,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
+In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to $true, the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -3738,9 +3738,9 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
 
-In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
+In Exchange Online, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
 
-In Office 365, you use this parameter to configure the MaxReceiveSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxReceiveSize value for all new mailboxes that you create in the future.
+In Exchange Online, you use this parameter to configure the MaxReceiveSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxReceiveSize value for all new mailboxes that you create in the future.
 
 In on-premises Exchange, the default value unlimited indicates the maximum receive size for the mailbox is imposed elsewhere (for example, organization, server, or connector limits).
 
@@ -3794,9 +3794,9 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
 
-In Office 365, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
+In Exchange Online, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
 
-In Office 365, you use this parameter to configure the MaxSendSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxSendSize value for all new mailboxes that you create in the future.
+In Exchange Online, you use this parameter to configure the MaxSendSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxSendSize value for all new mailboxes that you create in the future.
 
 In on-premises Exchange, the default value unlimited indicates the maximum send size for the mailbox is imposed elsewhere (for example, organization, server, or connector limits).
 
@@ -4154,7 +4154,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, you need to be a member of one of the following role groups:
 
-- Office 365: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see [Connect to Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell). To change a another user's password in the Microsoft 365 admin center, see [Reset Office 365 business passwords](https://docs.microsoft.com/microsoft-365/admin/add-users/reset-passwords).
+- Exchange Online: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell). To change a another user's password in the Microsoft 365 admin center, see [Reset Microsoft 365 for business passwords](https://docs.microsoft.com/microsoft-365/admin/add-users/reset-passwords).
 
 - On-premises Exchange: The Organization Management or Help Desk role groups via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
@@ -4214,7 +4214,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The ProhibitSendQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
+In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -4250,7 +4250,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The value must be greater than or equal to the ProhibitSendQuota or IssueWarningQuota values.
 
-In Office 365, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, but you can't exceed the maximum value that's allowed by the subscription or license. In Office 365, you can't use this parameter on public folder mailboxes.
+In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value of the this parameter is ignored, and the mailbox uses the ProhibitSendReceiveQuota value on the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -4767,7 +4767,7 @@ The ResetPasswordOnNextLogon parameter specifies whether the user is required to
 
 - $false: The user isn't required to change their password the next time they log on to their mailbox. This is the default value.
 
-In Office 365, administrators can require users to reset their password the next time they log on by using the ResetPasswordOnNextLogon parameter on the Set-User cmdlet.
+In Exchange Online, administrators can require users to reset their password the next time they log on by using the ResetPasswordOnNextLogon parameter on the Set-User cmdlet.
 
 ```yaml
 Type: Boolean
@@ -4837,9 +4837,9 @@ Before the deleted item retention period expires, users can recover soft-deleted
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
-The default value is 14 days (14.00:00:00). In Office 365, you can increase the value to a maximum of 30 days.
+The default value is 14 days (14.00:00:00). In Exchange Online, you can increase the value to a maximum of 30 days.
 
-In Office 365, you use this parameter to configure the RetainDeletedItemsFor value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
+In Exchange Online, you use this parameter to configure the RetainDeletedItemsFor value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
 
 In on-premises Exchange, the default value is configured by the value of the DeletedItemRetention parameter on mailbox database. To override the default value, enter a value for the RetainDeletedItemsFor parameter on the mailbox.
 
@@ -4975,7 +4975,7 @@ The RoleAssignmentPolicy parameter specifies the role assignment policy that's a
 
 - GUID
 
-In Office 365, a role assignment policy must be assigned to the mailbox. In on-premises Exchange, to configure the mailbox so there's no role assignment policy assigned, use the value $null.
+In Exchange Online, a role assignment policy must be assigned to the mailbox. In on-premises Exchange, to configure the mailbox so there's no role assignment policy assigned, use the value $null.
 
 Use the Get-RoleAssignmentPolicy cmdlet to see the available role assignment policies. For more information, see [Understanding management role assignment policies](https://docs.microsoft.com/exchange/understanding-management-role-assignment-policies-exchange-2013-help).
 
@@ -5575,7 +5575,7 @@ The UseDatabaseQuotaDefaults parameter specifies whether the mailbox uses the ap
 
 - $false: The mailbox uses its own values for the applicable quota values. Any of those quota values on the mailbox database are ignored.
 
-In Office 365, the default value is $false. In on-premises Exchange, the default value is $true.
+In Exchange Online, the default value is $false. In on-premises Exchange, the default value is $true.
 
 The applicable quota values are:
 
