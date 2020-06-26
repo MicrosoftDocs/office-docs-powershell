@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Disable-JournalArchiving cmdlet to disable journal archiving for specific users. Microsoft Office 365 journal archiving uses mailboxes in Exchange Online to record or journal messages for mailboxes in on-premises organizations.
+Use the Disable-JournalArchiving cmdlet to disable journal archiving for specific users. Microsoft 365 journal archiving uses mailboxes in Exchange Online to record or journal messages for mailboxes in on-premises organizations.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -29,7 +29,7 @@ Disable-JournalArchiving [-Identity] <MailboxIdParameter> [-Confirm] [-PreserveM
 ```
 
 ## DESCRIPTION
-For each on-premise mailbox that's configured for journal archiving in Office 365, a mail user (also known as a mail-enabled user) and a journal archive mailbox are created in Exchange Online. The mail user routes the incoming journaled messages from the on-premises organization, and the journal archive mailbox stores the journaled messages in the cloud.
+For each on-premise mailbox that's configured for journal archiving in Microsoft 365, a mail user (also known as a mail-enabled user) and a journal archive mailbox are created in Exchange Online. The mail user routes the incoming journaled messages from the on-premises organization, and the journal archive mailbox stores the journaled messages in the cloud.
 
 The Disable-JournalArchiving cmdlet removes the mail user and converts the journal archive mailbox into an inactive mailbox. The inactive mailbox remains fully available for In-place eDiscovery.
 

@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-MailUser cmdlet to view mail users and also guest users for Office 365 groups in cloud environments.
+Use the Get-MailUser cmdlet to view mail users and also guest users for Microsoft 365 Groups in cloud environments.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

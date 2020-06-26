@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-OnPremisesOrganization cmdlet to create an OnPremisesOrganization object in a Microsoft Office 365 tenant.
+Use the New-OnPremisesOrganization cmdlet to create an OnPremisesOrganization object in a Microsoft 365 organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -31,7 +31,7 @@ New-OnPremisesOrganization [-Name] <String> -HybridDomains <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-The OnPremisesOrganization object represents an on-premises Microsoft Exchange organization configured for hybrid deployment with an Office 365 tenant organization. It's used with the Hybrid Configuration wizard and is typically created automatically when the hybrid deployment is initially configured by the wizard. Manual modification of this object may result in hybrid deployment misconfiguration; therefore, we strongly recommend that you use the Hybrid Configuration wizard to update this object in the Office 365 tenant.
+The OnPremisesOrganization object represents an on-premises Microsoft Exchange organization configured for hybrid deployment with a Microsoft 365 organization. It's used with the Hybrid Configuration wizard and is typically created automatically when the hybrid deployment is initially configured by the wizard. Manual modification of this object may result in hybrid deployment misconfiguration; therefore, we strongly recommend that you use the Hybrid Configuration wizard to update this object in the Microsoft 365 organization.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -42,12 +42,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-OnPremisesOrganization -Name "ExchangeMail" -OrganizationGuid "a1bc23cb-3456-bcde-abcd-feb363cacc88" -HybridDomains contoso.com, sales.contoso.com -InboundConnector "Inbound to ExchangeMail" -OutboundConnector "Outbound to ExchangeMail"
 ```
 
-This example creates the OnPremisesOrganization object ExchangeMail in an Office 365 tenant for the hybrid domains contoso.com and sales.contoso.com.
+This example creates the OnPremisesOrganization object ExchangeMail in a Microsoft 365 organization for the hybrid domains contoso.com and sales.contoso.com.
 
 ## PARAMETERS
 
 ### -HybridDomains
-The HybridDomains parameter specifies the domains that are configured in the hybrid deployment between an Office 365 tenant and an on-premises Exchange organization. The domains specified in this parameter must match the domains listed in the HybridConfiguration object for the on-premises Exchange organization configured by the Hybrid Configuration wizard. Multiple domains may be listed and must be separated by a comma, for example, "contoso.com, sales.contoso.com".
+The HybridDomains parameter specifies the domains that are configured in the hybrid deployment between a Microsoft 365 organization and an on-premises Exchange organization. The domains specified in this parameter must match the domains listed in the HybridConfiguration object for the on-premises Exchange organization configured by the Hybrid Configuration wizard. Multiple domains may be listed and must be separated by a comma, for example, "contoso.com, sales.contoso.com".
 
 ```yaml
 Type: MultiValuedProperty
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a friendly name for the on-premises Exchange organization object in the Office 365 tenant.
+The Name parameter specifies a friendly name for the on-premises Exchange organization object in the Microsoft 365 organization.
 
 ```yaml
 Type: String
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationGuid
-The OrganizationGuid parameter specifies the globally unique identifier (GUID) of the on-premises Exchange organization object in the Office 365 tenant.
+The OrganizationGuid parameter specifies the globally unique identifier (GUID) of the on-premises Exchange organization object in the Microsoft 365 organization.
 
 ```yaml
 Type: Guid
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationRelationship
-The OrganizationRelationship parameter specifies the organization relationship configured by the Hybrid Configuration wizard on the Office 365 tenant as part of a hybrid deployment with an on-premises Exchange organization. This organization relationship defines the federated sharing features enabled on the Office 365 tenant.
+The OrganizationRelationship parameter specifies the organization relationship configured by the Hybrid Configuration wizard on the Microsoft 365 organization as part of a hybrid deployment with an on-premises Exchange organization. This organization relationship defines the federated sharing features enabled on the Microsoft 365 organization.
 
 ```yaml
 Type: OrganizationRelationshipIdParameter

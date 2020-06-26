@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-QuarantineMessage cmdlet to view quarantined messages and files in your cloud-based organization.
 
-**Not**: Quarantined files are files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams.
+**Note**: Quarantined files are files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -252,6 +252,8 @@ The QuarantineTypes parameter filters the results by what caused the message to 
 - Bulk
 
 - HighConfPhish
+
+- Malware
 
 - Phish
 

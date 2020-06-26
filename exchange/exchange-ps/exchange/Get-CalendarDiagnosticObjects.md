@@ -94,7 +94,7 @@ This example returns diagnostic information for meetings with the subject Team L
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox or Office 365 Group whose calendar you want to view. You can use any value that uniquely identifies the mailbox or Office 365 Group. For example:
+The Identity parameter specifies the mailbox or Microsoft 365 Group whose calendar you want to view. You can use any value that uniquely identifies the mailbox or Microsoft 365 Group. For example:
 
 - Name
 
