@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SCInsights cmdlet to view Office 365 insights information.
+Use the Get-SCInsights cmdlet to view Microsoft 365 insights information.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -30,7 +30,7 @@ Get-SCInsights [-EndDate <DateTime>] [<CommonParameters>]
 ## DESCRIPTION
 This cmdlet returns the following output:
 
-- Organization: The Office 365 domain.
+- Organization: The Microsoft 365 domain.
 
 - Date: The date of the even in Coordinated Universal Time (UTC).
 

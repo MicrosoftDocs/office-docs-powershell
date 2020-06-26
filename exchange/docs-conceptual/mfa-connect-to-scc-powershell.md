@@ -18,7 +18,10 @@ description: "Learn how to connect to Security & Compliance Center PowerShell by
 If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md) to use remote PowerShell to connect to the Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
 
 > [!NOTE]
-> Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication. <br/><br/> The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+> 
+> - Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
+> 
+> - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
 
 ## What do you need to know before you begin?
 
