@@ -20,7 +20,7 @@ Use the Get-Recipient cmdlet to view existing recipient objects in your organiza
 > [!NOTE]
 > In Exchange Online PowerShell, we recommend that you use the Get-EXORecipient cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-In cloud environments, to return Office 365 groups, you need to use the RecipientTypeDetails parameter with the value GroupMailbox.
+In cloud environments, to return Microsoft 365 Groups, you need to use the RecipientTypeDetails parameter with the value GroupMailbox.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
