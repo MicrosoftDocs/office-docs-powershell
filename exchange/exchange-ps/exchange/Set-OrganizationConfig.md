@@ -58,7 +58,6 @@ Set-OrganizationConfig
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-ElcProcessingDisabled <Boolean>]
- [-EnableAuthAdminReadSession <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
  [-ExternalInOutlookEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
@@ -1253,13 +1252,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAuthAdminReadSession 
-This parameter is available only in the Cumulative Update 17 for Exchange Server 2016 or later, and the Cumulative Update 6 for Exchange Server 2019 or later.
+This parameter is available only in on-premises Exchange.
 
-EnableAuthAdminReadSession parameter enables a recipient read session.
+The EnableAuthAdminReadSession switch enables a recipient read session in Exchange 2016 CU17 or later, or in Exchange 2019 CU6 or later. You don't need to specify a value with this switch.
 
 ```yaml
-Type: Boolean
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 
