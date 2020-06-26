@@ -36,7 +36,7 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-Prefix <String>]
  [[-PSSessionOption] <PSSessionOption>]
- [ShowBanner]
+ [-ShowBanner]
  [-ShowProgress <Boolean>]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
