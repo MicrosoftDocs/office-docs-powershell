@@ -24,7 +24,7 @@ Get-CsUserPolicyPackage [-Identity] <String> [<CommonParameters>]
 ## DESCRIPTION
 
 This cmdlet supports retrieving the policy package that's assigned to a user. Provide the identity of a user to retrieve the definition of their assigned policy package.
-For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages
+For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 

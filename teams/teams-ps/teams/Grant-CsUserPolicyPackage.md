@@ -24,7 +24,7 @@ Grant-CsUserPolicyPackage [-Identity] <String[]> [-PackageName] <String> [<Commo
 ## DESCRIPTION
 
 This cmdlet supports applying a policy package to users in a tenant. Provide one or more user identities to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. The recommended policy package for each user can be found by running Get-CsUserPolicyPackageRecommendation.
-For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages
+For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
