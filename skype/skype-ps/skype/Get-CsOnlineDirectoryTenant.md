@@ -22,20 +22,7 @@ Get-CsOnlineDirectoryTenant [[-Tenant] <Guid>] [-DomainController <Fqdn>] [-Forc
 ```
 
 ## DESCRIPTION
-The following is an example of the Get-CsOnlineDirectoryTenant cmdlet's console output:
-
-RunspaceId            : 27655c26-8142-4f23-a7a7-0c18303b809f
-Id                    : f71eaa50-9e75-4058-8c39-dba6fdd51b28
-AnnouncementsDisabled : False
-NameRecordingDisabled : False
-ServiceNumberCount    : 0
-SubscriberNumberCount : 0
-DefaultPoolFqdn       :
-DefaultBridge         : ae9ae5d8-c440-4ccd-8960-42792a9bcb0d
-Bridges               : {Id = [ae9ae5d8-c440-4ccd-8960-42792a9bcb0d], Name = [Conference Bridge], DefaultServiceNumber = [],      IsDefaultBridge = [True], IsShared = [False], Region = [NOAM]}
-Domains               : {}
-Pools                 : {sippoolsn44a06.infra.lync.com}
-TnmAccountId          :
+Use the Get-CsOnlineDirectoryTenant cmdlet to retrieve tenant parameters like AnnouncementsDisabled, NameRecordingDisabled and Bridges from the Business Voice Directory.
 
 ## EXAMPLES
 
