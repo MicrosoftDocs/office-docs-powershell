@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label policy. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label policy. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
 ```yaml
 Type: PswsHashtable
@@ -206,13 +206,13 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocation
-The ModernGroupLocation parameter specifies the Office 365 groups to include in the policy. Valid values are:
+The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. Valid values are:
 
-- An Office 365 Group
+- A Microsoft 365 Group
 
-- The value All for all Office 365 groups. You can only use this value by itself.
+- The value All for all Microsoft 365 Groups. You can only use this value by itself.
 
-To identify the Office 365 Group, you can use any value that uniquely identifies it. For example:
+To identify the Microsoft 365 Group, you can use any value that uniquely identifies it. For example:
 
 - Name
 
@@ -238,9 +238,9 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocationException
-The ModernGroupLocationException parameter specifies the Office 365 groups to exclude when you're using the value All for the ModernGroupLocation parameter.
+The ModernGroupLocationException parameter specifies the Microsoft 365 Groups to exclude when you're using the value All for the ModernGroupLocation parameter.
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
