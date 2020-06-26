@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch is required to return Office 365 groups in the results. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to return Microsoft 365 Groups in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
