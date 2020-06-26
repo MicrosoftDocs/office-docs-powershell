@@ -167,7 +167,7 @@ The EventType parameter filters the report by the event type. Valid values are:
 
 Email phish EventTypes:
 
-- Advanced phish filter (Indicates a message caught by the Office 365 machine learning model.)
+- Advanced phish filter (Indicates a message caught by the machine learning model.)
 
 - Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
 
@@ -177,17 +177,17 @@ Email phish EventTypes:
 
 - User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
 
-- Brand impersonation (Indicates a message caught by Office 365 phish filters as impersonating a known brand.)
+- Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
 
-- General phish filter (Indicates a message caught by basic Office 365 phish protection.)
+- General phish filter (Indicates a message caught by basic phish protection.)
 
-- Malicious URL reputation (Indicates a message with a known malicious URL caught by Office 365 phish filters.)
+- Malicious URL reputation (Indicates a message with a known malicious URL caught by phish filters.)
 
 - Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
 
 Email malware EventTypes:
 
-- Anti-malware engine (Indicates a message caught by the Office 365 anti-malware engine.)
+- Anti-malware engine (Indicates a message caught by the anti-malware engine.)
 
 - ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
 
@@ -203,7 +203,7 @@ Content malware EventTypes:
 
 - AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
 
-- AvDocumentMalware (Indicates malware found by the Office 365 anti-malware engine. Reporting requires ATP/E5.)
+- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP/E5.)
 
 \* These features require a standalone Office 365 ATP or E5 subscription.
 
