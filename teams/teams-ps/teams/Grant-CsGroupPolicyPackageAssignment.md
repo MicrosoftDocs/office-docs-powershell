@@ -25,7 +25,7 @@ Grant-CsUserPolicyPackage -GroupId <String> -PackageName <String> [-Rank <String
 
 ## DESCRIPTION
 
-This cmdlet applies a policy package to a group in a tenant. Provide a group id to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. Rank can be optionally specified to determine which policies in a package will be applied to the user in case they belong to two or more groups. If rank is not specified, the group's package assignment will be ranked last. If a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on rank and group policy assignments, please review [this section](New-CsGroupPolicyAssignment.md#description). For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages.
+This cmdlet applies a policy package to a group in a tenant. Provide a group id to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. Rank can be optionally specified to determine which policies in a package will be applied to the user in case they belong to two or more groups. If rank is not specified, the group's package assignment will be ranked last. If a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on rank and group policy assignments, please review [this section](New-CsGroupPolicyAssignment.md#description). For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 

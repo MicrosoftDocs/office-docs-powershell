@@ -24,7 +24,7 @@ Get-CsUserPolicyPackageRecommendation [-Identity] <String> [<CommonParameters>]
 ## DESCRIPTION
 
 This cmdlet supports retrieving recommendations for which policy packages are best suited for a given user. This recommendation is based on tenant and user information such as license types.
-For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages.
+For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
