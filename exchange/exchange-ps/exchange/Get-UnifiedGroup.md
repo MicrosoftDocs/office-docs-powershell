@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-UnifiedGroup cmdlet to view Office 365 Groups in your cloud-based organization. To view members, owners and subscribers for Office 365 Groups, use the Get-UnifiedGroupLinks cmdlet.
+Use the Get-UnifiedGroup cmdlet to view Microsoft 365 Groups in your cloud-based organization. To view members, owners and subscribers for Microsoft 365 Groups, use the Get-UnifiedGroupLinks cmdlet.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -44,7 +44,7 @@ Get-UnifiedGroup [-Anr <String>]
 ```
 
 ## DESCRIPTION
-Office 365 Groups are group objects that are available across Office 365 services.
+Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -55,14 +55,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-UnifiedGroup
 ```
 
-This example returns a summary list of all Office 365 Groups.
+This example returns a summary list of all Microsoft 365 Groups.
 
 ### Example 2
 ```powershell
 Get-UnifiedGroup | Format-List DisplayName,EmailAddresses,Notes,ManagedBy,AccessType
 ```
 
-This example returns the following information about all Office 365 Groups:
+This example returns the following information about all Microsoft 365 Groups:
 
 - Display name
 
@@ -79,14 +79,14 @@ This example returns the following information about all Office 365 Groups:
 Get-UnifiedGroup -Identity "Marketing Department" | Format-List
 ```
 
-This example returns detailed information about the Office 365 Group named Marketing Department.
+This example returns detailed information about the Microsoft 365 Group named Marketing Department.
 
 ### Example 4
 ```powershell
 Get-UnifiedGroup | Where-Object {-Not $_.ManagedBy}
 ```
 
-This example returns Office 365 Groups that do not have an owner.
+This example returns Microsoft 365 Groups that do not have an owner.
 
 ## PARAMETERS
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to view. You can use any value that uniquely identifies the Office 365 Group. For example:
+The Identity parameter specifies the Microsoft 365 Group that you want to view. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 
@@ -149,7 +149,7 @@ The Identity parameter specifies the Office 365 Group that you want to view. You
 
 - GUID
 
-**Note**: You can use the DisplayName value to identify the Office 365 group, but the results aren't guaranteed to be unique. If you must return a singular and unique result, use a unique identifier for the Office 365 Group.
+**Note**: You can use the DisplayName value to identify the Microsoft 365 Group, but the results aren't guaranteed to be unique. If you must return a singular and unique result, use a unique identifier for the Microsoft 365 Group.
 
 ```yaml
 Type: UnifiedGroupIdParameter
@@ -183,9 +183,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSoftDeletedGroups
-The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Office 365 groups in the results. You don't need to specify a value with this switch.
+The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Microsoft 365 Groups in the results. You don't need to specify a value with this switch.
 
-Soft-deleted Office 365 groups are deleted groups that are still recoverable.
+Soft-deleted Microsoft 365 Groups are deleted groups that are still recoverable.
 
 ```yaml
 Type: SwitchParameter
