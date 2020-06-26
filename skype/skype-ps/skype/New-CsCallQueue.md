@@ -346,6 +346,8 @@ Accept wildcard characters: False
 ### -LanguageId
 The LanguageId parameter indicates the language that is used to play shared voicemail prompts. This parameter becomes a required parameter If either OverflowAction or TimeoutAction is set to SharedVoicemail.
 
+You can query the supported languages using the Get-CsAutoAttendantSupportedLanguage cmdlet.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
