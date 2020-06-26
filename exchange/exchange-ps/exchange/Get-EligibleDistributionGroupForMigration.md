@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-EligibleDistributionGroupForMigration cmdlet to identify distribution groups that can be upgraded to Office 365 groups. You can't upgrade mail-enabled security groups to Office 365 groups.
+Use the Get-EligibleDistributionGroupForMigration cmdlet to identify distribution groups that can be upgraded to Microsoft 365 Groups. You can't upgrade mail-enabled security groups to Microsoft 365 Groups.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -47,12 +47,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-EligibleDistributionGroupForMigration -ResultSize unlimited
 ```
 
-This example returns a summary list of all distribution groups that can be upgraded to Office 365 groups.
+This example returns a summary list of all distribution groups that can be upgraded to Microsoft 365 Groups.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter filters the results by the email address of the specified distribution group. If no results are returned for the specified email address, the group can't be upgraded to an Office 365 Group.
+The Identity parameter filters the results by the email address of the specified distribution group. If no results are returned for the specified email address, the group can't be upgraded to a Microsoft 365 Group.
 
 You can't use this parameter with the ManagedBy parameter.
 
