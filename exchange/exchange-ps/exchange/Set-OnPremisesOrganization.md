@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-OnPremisesOrganization cmdlet to modify the parameters of the OnPremisesOrganization object on the Microsoft Office 365 tenant.
+Use the Set-OnPremisesOrganization cmdlet to modify the parameters of the OnPremisesOrganization object on the Microsoft 365 tenant.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -31,7 +31,7 @@ Set-OnPremisesOrganization [-Identity] <OnPremisesOrganizationIdParameter> [-Com
 ```
 
 ## DESCRIPTION
-The OnPremisesOrganization object represents an on-premises Exchange organization configured for hybrid deployment with an Office 365 tenant organization. Typically, this object is only modified and updated by the Hybrid Configuration wizard. Manual modification of this object may result in hybrid deployment misconfiguration; therefore, we strongly recommend that you use the Hybrid Configuration wizard to update this object in the Office 365 tenant.
+The OnPremisesOrganization object represents an on-premises Exchange organization configured for hybrid deployment with a Microsoft 365 organization. Typically, this object is only modified and updated by the Hybrid Configuration wizard. Manual modification of this object may result in hybrid deployment misconfiguration; therefore, we strongly recommend that you use the Hybrid Configuration wizard to update this object in the Microsoft 365 organization.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -42,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-OnPremisesOrganization -Identity "ExchangeMail" -HybridDomains contoso.com, sales.contoso.com, legal.contoso.com
 ```
 
-This example adds a third domain legal.contoso.com to the ExchangeMail OnPremisesOrganization object on the Office 365 tenant, which already has the contoso.com and sales.contoso.com domains.
+This example adds a third domain legal.contoso.com to the ExchangeMail OnPremisesOrganization object on the Microsoft 365 organization, which already has the contoso.com and sales.contoso.com domains.
 
 ## PARAMETERS
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -HybridDomains
-The HybridDomains parameter specifies the domains that are configured in the hybrid deployment between an Office 365 tenant and an on-premises Exchange organization. The domains specified in this parameter must match the domains listed in the HybridConfiguration Active Directory object for the on-premises Exchange organization configured by the Hybrid Configuration wizard. Multiple domains may be listed and must be separated by a comma, for example, "contoso.com, sales.contoso.com".
+The HybridDomains parameter specifies the domains that are configured in the hybrid deployment between a Microsoft 365 organization and an on-premises Exchange organization. The domains specified in this parameter must match the domains listed in the HybridConfiguration Active Directory object for the on-premises Exchange organization configured by the Hybrid Configuration wizard. Multiple domains may be listed and must be separated by a comma, for example, "contoso.com, sales.contoso.com".
 
 ```yaml
 Type: MultiValuedProperty
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationRelationship
-The OrganizationRelationship parameter specifies the organization relationship configured by the Hybrid Configuration wizard on the Office 365 tenant as part of a hybrid deployment with an on-premises Exchange organization. This organization relationship defines the federated sharing features enabled on the Office 365 tenant.
+The OrganizationRelationship parameter specifies the organization relationship configured by the Hybrid Configuration wizard on the Microsoft 365 organization as part of a hybrid deployment with an on-premises Exchange organization. This organization relationship defines the federated sharing features enabled on the Microsoft 365 organization.
 
 ```yaml
 Type: OrganizationRelationshipIdParameter
