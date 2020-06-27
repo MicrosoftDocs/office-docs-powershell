@@ -355,7 +355,8 @@ This parameter is available only in the cloud-based service.
 
 The IncludeSoftDeletedRecipients switch specifies whether to include soft deleted mailboxes in the results. You don't need to specify a value with this switch.
 
-Soft-deleted mailboxes are deleted recipients that are still recoverable.
+Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity
