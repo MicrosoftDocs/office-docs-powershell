@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailDetailTransportRuleReport cmdlet to view the details of messages that matched the conditions defined by any transport rules for the last 30 days.
+Use the Get-MailDetailTransportRuleReport cmdlet to view the details of messages that matched the conditions defined by any transport rules for the last 10 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
