@@ -39,7 +39,7 @@ In this example, the user "dmx" is removed the role Owner but stays as a team me
 ```
 Remove-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com
 ```
-In this example, the user "dmx" is removed from the team.
+In this example, the user "dmx" is removed as an member from the team but the owner rights are still active. You need to run also "example 1" to completely remove the user from the team. 
 
 ## PARAMETERS
 
