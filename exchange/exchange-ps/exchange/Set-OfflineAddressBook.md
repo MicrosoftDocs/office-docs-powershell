@@ -450,7 +450,7 @@ Here are some examples:
 
 - "Sun.1:15 AM-Monday.23:00"
 
-Note: In Office 365, the read only value of this property is displayed in Coordinated Universal Time (UTC).
+Note: In Exchange Online, the read only value of this property is displayed in Coordinated Universal Time (UTC).
 
 ```yaml
 Type: Schedule
