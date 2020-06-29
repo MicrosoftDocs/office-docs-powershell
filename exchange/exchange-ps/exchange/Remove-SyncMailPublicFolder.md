@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-The Remove-SyncMailPublicFolder cmdlet is used by the Sync-MailPublicFolders.ps1 script to remove mail-enabled public folder recipient objects from Exchange Online in Office 365 (the script synchronizes mail-enabled public folder objects from the source on-premises Exchange organization to Office 365). Don't use this cmdlet unless you are directed to do so by Microsoft Customer Service and Support or by specific documentation.
+The Remove-SyncMailPublicFolder cmdlet is used by the Sync-MailPublicFolders.ps1 script to remove mail-enabled public folder recipient objects from Exchange Online (the script synchronizes mail-enabled public folder objects from the source on-premises Exchange organization to Exchange Online). Don't use this cmdlet unless you are directed to do so by Microsoft Customer Service and Support or by specific documentation.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,7 +43,7 @@ This cmdlet is only used by the Sync-MailPublicFolders.ps1 script. Don't run thi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mail-enabled public folder object that you want to remove from Exchange Online in Office 365. For example:
+The Identity parameter specifies the mail-enabled public folder object that you want to remove from Exchange Online. For example:
 
 - Name
 

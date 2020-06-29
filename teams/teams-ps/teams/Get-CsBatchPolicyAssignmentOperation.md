@@ -146,4 +146,4 @@ Contains the status for each user in the batch.
 
 ## RELATED LINKS
 
-[New-CsBatchPolicyAssignmentOperation]()
+[New-CsBatchPolicyAssignmentOperation](New-CsBatchPolicyAssignmentOperation.md)

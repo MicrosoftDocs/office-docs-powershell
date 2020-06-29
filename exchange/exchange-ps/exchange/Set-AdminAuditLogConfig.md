@@ -310,11 +310,11 @@ Accept wildcard characters: False
 ### -UnifiedAuditLogIngestionEnabled
 This parameter is available only in the cloud-based service.
 
-The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or disable the recording of user and admin activities in the Office 365 audit log. Valid values are:
+The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or disable the recording of user and admin activities in the Microsoft 365 audit log. Valid values are:
 
-- $true: User and admin activities are recorded in the Office 365 audit log, and you can search the Office 365 audit log.
+- $true: User and admin activities are recorded in the Microsoft 365 audit log, and you can search the Microsoft 365 audit log.
 
-- $false: User and admin activities aren't recorded in the Office 365 audit log, and you can't search the Office 365 audit log. This is the default value.
+- $false: User and admin activities aren't recorded in the Microsoft 365 audit log, and you can't search the Microsoft 365 audit log. This is the default value.
 
 ```yaml
 Type: Boolean

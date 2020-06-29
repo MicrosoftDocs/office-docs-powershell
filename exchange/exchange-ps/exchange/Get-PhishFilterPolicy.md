@@ -48,9 +48,9 @@ The Get-PhishFilterPolicy cmdlet returns the following information:
 
 - AuthenticationResult: Indicates whether the message has passed any type of email authentication (SPF, DKIM, or DMARC) (explicit or implicit).
 
-- LastSeen: The date when the sending email address or domain was last seen by Office 365.
+- LastSeen: The date when the sending email address or domain was last seen by Microsoft 365.
 
-- DecisionSetBy: Specifies whether Office 365 set the spoofing policy as allowed or not allowed to spoof, or if it was set by an admin.
+- DecisionSetBy: Specifies whether Microsoft 365 set the spoofing policy as allowed or not allowed to spoof, or if it was set by an admin.
 
 - AllowedToSpoof: The three possible values are Yes (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server), No (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server), and Partial (messages that contain some spoofed sender email addresses in your organization are allowed from the source email server).
 
