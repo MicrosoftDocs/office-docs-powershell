@@ -31,6 +31,20 @@ When you open the Exchange Management Shell you can perform administrative tasks
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) forums.
 
+## Open the Exchange Management Shell in Windows Server 2019 Core
+
+- **Mailbox servers**: Run the following command from a Command Prompt:
+
+  ```dos
+  LaunchEMS
+  ```
+
+- **Edge Transport servers**: Run the following commands from a Command Prompt. Note that these are two separate commands on one line for ease of copying and running:
+
+  ```dos
+  exshell.psc1 & exchange.ps1
+  ```
+  
 ## Open the Exchange Management Shell in Windows Server 2016 or Windows 10
 
 Click **Start** > **Microsoft Exchange Server 2016 \>** **Exchange Management Shell**.

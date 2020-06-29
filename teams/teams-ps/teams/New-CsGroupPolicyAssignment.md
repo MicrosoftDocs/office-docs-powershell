@@ -32,7 +32,7 @@ It’s helpful to think of rank as determining the position of each policy assig
 Group policy assignment allows you to easily manage policies across different subsets of users within your organization. Group policy assignment is recommended for groups of up to 50000 users, but it will also work with larger groups. Group policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
 
 Group policy assignment is currently limited to the following policy types:
-TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy
+TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsAppSetupPolicy, and TeamsComplianceRecordingPolicy.
 
 ## EXAMPLES
 
@@ -159,9 +159,9 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Get-CsGroupPolicyAssignment]()
+[Get-CsGroupPolicyAssignment](Get-CsGroupPolicyAssignment.md)
 
-[Set-CsGroupPolicyAssignment]()
+[Set-CsGroupPolicyAssignment](Set-CsGroupPolicyAssignment.md)
 
-[Remove-CsGroupPolicyAssignment]()
+[Remove-CsGroupPolicyAssignment](Remove-CsGroupPolicyAssignment.md)
 
