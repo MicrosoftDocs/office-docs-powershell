@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ### -OrganizationDomain
 This parameter is available only in the cloud-based service.
 
-The OrganizationDomain parameter specifies the domain name of the Office 365 organization. For example, contoso.com.
+The OrganizationDomain parameter specifies the domain name of the Microsoft 365 organization. For example, contoso.com.
 
 ```yaml
 Type: String

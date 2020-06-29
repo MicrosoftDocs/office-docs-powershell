@@ -80,14 +80,16 @@ This example configures the federation trust Microsoft Federation Gateway to use
 Set-FederationTrust -Identity "Azure AD Authentication" -MetadataUrl https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml
 ```
 
-This example updates the configuration if the tenant is hosted in Office 365 U.S. Government GCC High or DoD environment.
+This example updates the configuration if the tenant is hosted in Microsoft 365 U.S. Government GCC High or DoD environment.
 
 Before you configure a federation trust to use the next certificate as the current certificate, you need to use the Test-FederationTrust cmdlet to verify that the certificate is available on all Exchange servers.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name of the federation trust being modified. <br/><br/>**Note**: For Exchange Online tenants, use the value "Azure AD Authentication".
+The Identity parameter specifies the name of the federation trust being modified.
+
+**Note**: For Exchange Online organizations, use the value "Azure AD Authentication".
 
 ```yaml
 Type: FederationTrustIdParameter

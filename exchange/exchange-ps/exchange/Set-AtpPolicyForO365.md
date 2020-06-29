@@ -195,11 +195,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForO365Clients
-The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Office 365 apps on desktop and mobile clients. Valid values are:
+The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Microsoft 365 apps on desktop and mobile clients. Valid values are:
 
-- $true: Safe Links are enabled for Office 365 desktop and mobile apps. This is the default value.
+- $true: Safe Links are enabled for Microsoft 365 desktop and mobile apps. This is the default value.
 
-- $false: Safe Links are disabled for Office 365 desktop and mobile apps.
+- $false: Safe Links are disabled for Microsoft 365 desktop and mobile apps.
 
 ```yaml
 Type: Boolean
@@ -215,11 +215,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForWebAccessCompanion
-The EnableSafeLinksForWebAccessCompanion parameter specifies whether Safe Links is enabled for Office 365 apps on the web. Valid values are:
+The EnableSafeLinksForWebAccessCompanion parameter specifies whether Safe Links is enabled for Microsoft 365 apps on the web. Valid values are:
 
-- $true: Safe Links are enabled for Office 365 web apps. This is the default value.
+- $true: Safe Links are enabled for Microsoft 365 web apps. This is the default value.
 
-- $false: Safe Links are disabled for Office 365 web apps.
+- $false: Safe Links are disabled for Microsoft 365 web apps.
 
 ```yaml
 Type: Boolean
