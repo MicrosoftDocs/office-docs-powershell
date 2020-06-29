@@ -295,7 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch is required to modify Office 365 groups. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to modify Microsoft 365 Groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
