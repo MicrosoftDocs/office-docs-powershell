@@ -45,14 +45,14 @@ This example grants the Owner role to Ed on the Marketing folder in Ayla's mailb
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User julia@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate
 ```
 
-In Office 365, this example adds Julia as a calendar delegate to Ayla's mailbox, but without access to private items.
+In Exchange Online, this example adds Julia as a calendar delegate to Ayla's mailbox, but without access to private items.
 
 ### Example 3
 ```powershell
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User laura@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate,CanViewPrivateItems
 ```
 
-In Office 365, this example adds Laura as a calendar delegate to Ayla's mailbox with access to private items.
+In Exchange Online, this example adds Laura as a calendar delegate to Ayla's mailbox with access to private items.
 
 ## PARAMETERS
 

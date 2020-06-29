@@ -798,7 +798,7 @@ The ConnectorsEnabledForOutlook parameter specifies whether to enable or disable
 
 - $false: Connectors are disabled.
 
-To enable and disable the ability to use connectors on specific Office 365 groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
+To enable and disable the ability to use connectors on specific Microsoft 365 Groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
 
 For more information about connectors for Outlook on the web, see [Connect apps to your inbox in Outlook on the web](https://support.microsoft.com/office/3d41b99c-bf8d-47d4-bc7a-97758b74689d).
 
@@ -946,7 +946,7 @@ Accept wildcard characters: False
 ### -DefaultGroupAccessType
 This parameter is available only in the cloud-based service.
 
-The DefaultGroupAccessType parameter specifies the default access type for Office 365 groups. Valid values are:
+The DefaultGroupAccessType parameter specifies the default access type for Microsoft 365 Groups. Valid values are:
 
 - Public
 
@@ -1116,11 +1116,11 @@ Accept wildcard characters: False
 ### -DirectReportsGroupAutoCreationEnabled
 This parameter is available only in the cloud-based service.
 
-The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Office 365 groups. Valid values are:
+The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Microsoft 365 Groups. Valid values are:
 
-- $true: The automatic creation of direct report Office 365 groups is enabled.
+- $true: The automatic creation of direct report Microsoft 365 Groups is enabled.
 
-- $false: The automatic creation of direct report Office 365 groups is disabled. This is the default value.
+- $false: The automatic creation of direct report Microsoft 365 Groups is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1272,11 +1272,11 @@ Accept wildcard characters: False
 ### -EndUserDLUpgradeFlowsDisabled
 This parameter is available only in the cloud-based service.
 
-The EndUserDLUpgradeFlowsDisabled parameter specifies whether to prevent users from upgrading their own distribution groups to Office 365 groups in an Exchange Online organization. Valid values are:
+The EndUserDLUpgradeFlowsDisabled parameter specifies whether to prevent users from upgrading their own distribution groups to Microsoft 365 Groups in an Exchange Online organization. Valid values are:
 
-- $true: Users can upgrade distribution groups that they own to Office 365 groups.
+- $true: Users can upgrade distribution groups that they own to Microsoft 365 Groups.
 
-- $false: Users can't upgrade distribution groups that they own to Office 365 groups. This is the default value.
+- $false: Users can't upgrade distribution groups that they own to Microsoft 365 Groups. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -2026,13 +2026,13 @@ Accept wildcard characters: False
 ### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Office 365 US Government Community Cloud (GCC) customers. Valid values are:
+The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Microsoft 365 US Government Community Cloud (GCC) customers. Valid values are:
 
 - $true: Disable features that aren't FedRAMP compliant for GCC customers. This is the default value for all GCC customers.
 
 - $false: Enable features that aren't FedRAMP compliant for GCC customers.
 
-The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Office 365 US Government customers include:
+The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Microsoft 365 US Government customers include:
 
 - Multi-account support
 
@@ -2040,7 +2040,7 @@ The Outlook for iOS and Android feature and services that are not FedRAMP compli
 
 - HelpShift and in-app support
 
-- Any Microsoft services that are outside the Office 365 US Government Community Cloud (for example, Bing and Cortana).
+- Any Microsoft services that are outside the Microsoft 365 US Government Community Cloud (for example, Bing and Cortana).
 
  For a full list of Features and services that are not FedRAMP compliant for GCC customers, see [Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
 
@@ -2096,7 +2096,7 @@ Accept wildcard characters: False
 ### -OutlookPayEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookPayEnabled parameter enables or disables [Pay bills and invoices in Outlook using Microsoft Pay](https://support.microsoft.com/office/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Office 365 organization. Valid values are:
+The OutlookPayEnabled parameter enables or disables [Pay bills and invoices in Outlook using Microsoft Pay](https://support.microsoft.com/office/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Microsoft 365 organization. Valid values are:
 
 - $true: Payments in Outlook are enabled.
 
