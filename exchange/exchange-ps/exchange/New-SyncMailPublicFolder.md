@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-The New-SyncMailPublicFolder cmdlet is used by the Import-MailPublicFoldersForMigration.ps1 and Sync-MailPublicFolders.ps1 scripts to create mail-enabled public folder recipient objects in Exchange Online in Office 365 (the scripts synchronize mail-enabled public folder objects from the source on-premises Exchange organization to Office 365). Don't use this cmdlet unless you are directed to do so by Microsoft Customer Service and Support or by specific documentation.
+The New-SyncMailPublicFolder cmdlet is used by the Import-MailPublicFoldersForMigration.ps1 and Sync-MailPublicFolders.ps1 scripts to create mail-enabled public folder recipient objects in Exchange Online (the scripts synchronize mail-enabled public folder objects from the source on-premises Exchange organization to Exchange Online). Don't use this cmdlet unless you are directed to do so by Microsoft Customer Service and Support or by specific documentation.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -767,7 +767,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnPremisesObjectId
-The OnPremisesObjectId parameter specifies the GUID of the on-premises mail-enabled public folder that's used to create the mail-enabled public folder object in Office 365.
+The OnPremisesObjectId parameter specifies the GUID of the on-premises mail-enabled public folder that's used to create the mail-enabled public folder object in Exchange Online.
 
 ```yaml
 Type: Guid

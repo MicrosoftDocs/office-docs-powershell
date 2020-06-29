@@ -135,7 +135,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-In on-premises Exchange, the default Outlook on the web mailbox policy is named Default. In Office 365, the default Outlook on the web mailbox policy is named OwaMailboxPolicy-Default.
+In on-premises Exchange, the default Outlook on the web mailbox policy is named Default. In Exchange Online, the default Outlook on the web mailbox policy is named OwaMailboxPolicy-Default.
 
 Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (Stop-Service WAS -Force and Start-Service W3SVC).
 
@@ -162,14 +162,14 @@ This example disables access to the Tasks folder for the default mailbox policy 
 Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -AllowedFileTypes '.doc', '.pdf'
 ```
 
-This example sets the allowed file type extensions to .doc and .pdf for the default mailbox policy in an Office 365 organization, allowing users to save files with those extensions locally or view them from a web browser.
+This example sets the allowed file type extensions to .doc and .pdf for the default mailbox policy in an Exchange Online organization, allowing users to save files with those extensions locally or view them from a web browser.
 
 ### Example 4
 ```powershell
 Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -UserVoiceEnabled $false
 ```
 
-This example disables Outlook UserVoice for the default mailbox policy in Office 365.
+This example disables Outlook UserVoice for the default mailbox policy in Microsoft 365.
 
 ## PARAMETERS
 
@@ -1054,11 +1054,11 @@ Accept wildcard characters: False
 ### -GroupCreationEnabled
 This parameter is available or functional only in the cloud-based service.
 
-The GroupCreationEnabled parameter specifies whether Office 365 group creation is available in Outlook and Outlook on the web. Valid values are:
+The GroupCreationEnabled parameter specifies whether Microsoft 365 Group creation is available in Outlook and Outlook on the web. Valid values are:
 
-- $true: Users can create Office 365 groups in Outlook and Outlook on the web. This is the default value.
+- $true: Users can create Microsoft 365 Groups in Outlook and Outlook on the web. This is the default value.
 
-- $false: Users can't create Office 365 groups in Outlook and Outlook on the web.
+- $false: Users can't create Microsoft 365 Groups in Outlook and Outlook on the web.
 
 ```yaml
 Type: Boolean
@@ -1865,11 +1865,11 @@ Accept wildcard characters: False
 ### -SkipCreateUnifiedGroupCustomSharepointClassification
 This parameter is available only in the cloud-based service.
 
-The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Office 365 Groups in Outlook web app. Valid values are:
+The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Microsoft 365 Groups in Outlook web app. Valid values are:
 
-- $true: The custom SharePoint page is skipped when a user creates an Office 365 group in Outlook on the web. This is the default value.
+- $true: The custom SharePoint page is skipped when a user creates a Microsoft 365 Group in Outlook on the web. This is the default value.
 
-- $false: The custom SharePoint page is shown when a user creates an Office 365 group in Outlook on the web.
+- $false: The custom SharePoint page is shown when a user creates a Microsoft 365 Group in Outlook on the web.
 
 ```yaml
 Type: Boolean
@@ -2163,7 +2163,7 @@ Accept wildcard characters: False
 ### -UserVoiceEnabled
 This parameter is available only in the cloud-based service.
 
-The UserVoiceEnabled parameter specifies whether to enable or disable Outlook UserVoice in Outlook on the web. Outlook UserVoice is a customer feedback area that's available in Office 365. Valid values are:
+The UserVoiceEnabled parameter specifies whether to enable or disable Outlook UserVoice in Outlook on the web. Outlook UserVoice is a customer feedback area that's available in Microsoft 365. Valid values are:
 
 - $true: Outlook UserVoice is enabled. This is the default value.
 

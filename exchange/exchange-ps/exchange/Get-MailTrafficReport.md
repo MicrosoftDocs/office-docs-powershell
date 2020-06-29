@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailTrafficReport cmdlet to view details about message traffic in your organization for the last 92 days.
+Use the Get-MailTrafficReport cmdlet to view details about message traffic in your organization for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -57,9 +57,9 @@ Mail traffic summary
 
 - Malware: Messages that were marked as malware.
 
--	Receive: Messages successfully received by the service.
+- Receive: Messages successfully received by the service.
 
--	SpoofMail: Messages that were marked as spoofed by the Office 365 anti-spoofing protection.
+- SpoofMail: Messages that were marked as spoofed by anti-spoofing protection.
 
 - TransportRuleHits: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
 
