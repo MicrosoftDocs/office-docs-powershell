@@ -20,6 +20,7 @@ Get-TeamUser -GroupId <String> [-Role <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+Returns an array containing the UPN, UserId, Name and Role of users belonging to an specific GroupId.
 
 ## EXAMPLES
 
@@ -27,6 +28,8 @@ Get-TeamUser -GroupId <String> [-Role <String>] [<CommonParameters>]
 ```
 Get-TeamUser -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -Role Owner
 ```
+This example returns the UPN, UserId, Name, and Role of the owners of the specified GroupId.
+
 
 ## PARAMETERS
 

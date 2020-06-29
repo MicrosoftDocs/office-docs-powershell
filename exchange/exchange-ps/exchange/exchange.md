@@ -13,7 +13,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 - [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell)
 
-- [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
+- [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
 
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
@@ -82,6 +82,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SafeAttachmentPolicy](Get-SafeAttachmentPolicy.md)
 
 ### [Get-SafeAttachmentRule](Get-SafeAttachmentRule.md)
+
+### [Get-SafeLinksAggregateReport](Get-SafeLinksAggregateReport.md)
+
+### [Get-SafeLinksDetailReport](Get-SafeLinksDetailReport.md)
 
 ### [Get-SafeLinksPolicy](Get-SafeLinksPolicy.md)
 
@@ -222,6 +226,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SenderReputationConfig](Get-SenderReputationConfig.md)
 
+### [Get-TenantAllowBlockListItems](Get-TenantAllowBlockListItems.md)
+
 ### [New-DkimSigningConfig](New-DkimSigningConfig.md)
 
 ### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
@@ -235,6 +241,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-MalwareFilterPolicy](New-MalwareFilterPolicy.md)
 
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
+
+### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
 
 ### [Preview-QuarantineMessage](Preview-QuarantineMessage.md)
 
@@ -265,6 +273,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-MalwareFilterPolicy](Remove-MalwareFilterPolicy.md)
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
+
+### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
 
 ### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
 
@@ -311,6 +321,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-SenderIdConfig](Set-SenderIdConfig.md)
 
 ### [Set-SenderReputationConfig](Set-SenderReputationConfig.md)
+
+### [Set-TenantAllowBlockListItems](Set-TenantAllowBlockListItems.md)
 
 ### [Test-IPAllowListProvider](Test-IPAllowListProvider.md)
 
@@ -2050,6 +2062,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
 
 ## reporting Cmdlets
+### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)
+
+### [Get-CompromisedUserDetailReport](Get-CompromisedUserDetailReport.md)
+
 ### [Get-ConnectionByClientTypeDetailReport](Get-ConnectionByClientTypeDetailReport.md)
 
 ### [Get-ConnectionByClientTypeReport](Get-ConnectionByClientTypeReport.md)
@@ -2099,6 +2115,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-MailDetailTransportRuleReport](Get-MailDetailTransportRuleReport.md)
 
 ### [Get-MailFilterListReport](Get-MailFilterListReport.md)
+
+### [Get-MailflowStatusReport](Get-MailflowStatusReport.md)
 
 ### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
 

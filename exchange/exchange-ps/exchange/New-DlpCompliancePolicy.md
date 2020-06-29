@@ -136,7 +136,7 @@ The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-ena
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
 
-You can't use this parameter to specify Office 365 Groups.
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
@@ -156,7 +156,7 @@ The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-ena
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
 
-You can't use this parameter to specify Office 365 Groups.
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
@@ -378,7 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

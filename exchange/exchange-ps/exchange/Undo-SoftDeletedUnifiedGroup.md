@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Undo-SoftDeletedUnifiedGroup cmdlet to restore soft-deleted Office 365 groups in your cloud-based organization.
+Use the Undo-SoftDeletedUnifiedGroup cmdlet to restore soft-deleted Microsoft 365 Groups in your cloud-based organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -29,11 +29,11 @@ Undo-SoftDeletedUnifiedGroup [-SoftDeletedObject] <UnifiedGroupIdParameter> [-Co
 ```
 
 ## DESCRIPTION
-Office 365 groups are group objects that are available across Office 365 services.
+Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
-Soft-deleted Office 365 groups are groups that have been deleted, but can be restored within 30 days of being deleted. All of the group contents can be restored within this period. After 30 days, soft-deleted Office 365 groups are marked for permanent deletion and can't be restored.
+Soft-deleted Microsoft 365 Groups are groups that have been deleted, but can be restored within 30 days of being deleted. All of the group contents can be restored within this period. After 30 days, soft-deleted Microsoft 365 Groups are marked for permanent deletion and can't be restored.
 
-To display all soft-deleted Office 365 groups in your organization, use the Get-AzureADMSDeletedGroup cmdlet in Azure Active Directory PowerShell. To permanently remove (purge) a soft-deleted Office 365 group, use the Remove-AzureADMSDeletedDirectoryObject cmdlet in Azure Active Directory PowerShell. For more information, see [Permanently delete an Office 365 group](https://docs.microsoft.com/microsoft-365/admin/create-groups/restore-deleted-group#permanently-delete-a-microsoft-365-group).
+To display all soft-deleted Microsoft 365 Groups in your organization, use the Get-AzureADMSDeletedGroup cmdlet in Azure Active Directory PowerShell. To permanently remove (purge) a soft-deleted Microsoft 365 Group, use the Remove-AzureADMSDeletedDirectoryObject cmdlet in Azure Active Directory PowerShell. For more information, see [Permanently delete a Microsoft 365 Group](https://docs.microsoft.com/microsoft-365/admin/create-groups/restore-deleted-group#permanently-delete-a-microsoft-365-group).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -44,12 +44,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Undo-SoftDeletedUnifiedGroup -SoftDeletedObject "Marketing Department"
 ```
 
-This example restores the soft-deleted Office 365 Group named Marketing Department.
+This example restores the soft-deleted Microsoft 365 Group named Marketing Department.
 
 ## PARAMETERS
 
 ### -SoftDeletedObject
-The SoftDeletedObject parameter specifies the soft-deleted Office 365 Group that you want to restore. You can use any value that uniquely identifies the Office 365 Group. For example:
+The SoftDeletedObject parameter specifies the soft-deleted Microsoft 365 Group that you want to restore. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 
@@ -71,7 +71,7 @@ The SoftDeletedObject parameter specifies the soft-deleted Office 365 Group that
 
 - User ID or user principal name (UPN)
 
-Note: You might need to use the DistinguishedName or ExchangeGuid property to identify the soft-deleted Office 365 Group, because it's possible for an active Office 365 Group and a soft-deleted Office 365 Group to have the same primary SMTP address.
+Note: You might need to use the DistinguishedName or ExchangeGuid property to identify the soft-deleted Microsoft 365 Group, because it's possible for an active Microsoft 365 Group and a soft-deleted Microsoft 365 Group to have the same primary SMTP address.
 
 ```yaml
 Type: UnifiedGroupIdParameter

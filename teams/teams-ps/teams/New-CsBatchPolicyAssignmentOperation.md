@@ -144,4 +144,4 @@ The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOpe
 
 ## RELATED LINKS
 
-[Get-CsBatchPolicyAssignmentOperation]()
+[Get-CsBatchPolicyAssignmentOperation](Get-CsBatchPolicyAssignmentOperation.md)
