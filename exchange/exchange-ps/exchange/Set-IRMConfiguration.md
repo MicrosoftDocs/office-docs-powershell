@@ -271,11 +271,15 @@ Accept wildcard characters: False
 ### -ExternalLicensingEnabled
 This parameter is available only in on-premises Exchange.
 
-The ExternalLicensingEnabled parameter specifies whether to enable IRM features for messages that are sent to external recipients. Valid values are:
+The ExternalLicensingEnabled parameter is used to avoid Exchange being the victim of a Denial of Service attack. With this setting enabled, Exchange will try to acquire licenses from clusters other than the one it is configured to use.
 
-- $true: IRM features are enabled for external messages.
+The list of allowed clusters is specified with the [LicensingLocation](#LicensingLocation) parameter, which allows external licensing requests only to the specified clusters. Without this setting, Exchange can be attacked if it receives many emails protected with a random key, which will cause Exchange to devote excessive resources to validating the signatures and decrypt the emails even if they are not valid.
 
-- $false: IRM features are disabled for external messages. This is the default value.
+Valid values are:
+
+- $true: Exchange will try to acquire licenses from clusters other than the one it is configured to use.
+
+- $false: Exchange will try to acquire licenses only from clusters that it is configured to use. This is the default value.
 
 ```yaml
 Type: Boolean
