@@ -91,6 +91,17 @@ The command shown in Example 5 returns information for all the online users assi
 To accomplish the task, the command includes the Filter parameter along with the filter value {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}.
 This filter limits the returned data to online users assigned to the tenant "bf19b7db-6960-41e5-a139-2aa373474354".
 
+### -------------------------- Example 6 --------------------------
+```
+$MeetingPolicy="Kiosk"
+$filterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
+Get-CsOnlineUser -Filter $filterString
+```
+
+The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
+To accomplish the task, the filter string is first constructed and resolved locally and then used by the Get-CsOnlineUser cmdlet.
+
+
 
 ## PARAMETERS
 
