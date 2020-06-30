@@ -20,7 +20,7 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowWebPSTNCalling <Boolean>] [-SafeTransferEnabled <Object>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
  [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
   [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
  [-PreventTollBypass <Boolean>] [-BusyOnBusyEnabledType <String>] [-MusicOnHoldEnabledType <Enum>][[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -49,9 +49,26 @@ Sets the value of the parameter AllowPrivateCalling, which controls whether or n
 
 ## PARAMETERS
 
+### -AllowWebPSTNCalling
+Allows PSTN calling from the Team web client.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowCalling
 Controls interop calling capabilities.
 Turning this on will allow Skype for Business users to have one-on-one calls with Teams users and vice-versa.
+
+[!NOTE] This parameter is disabled.
 
 ```yaml
 Type: Boolean
@@ -291,6 +308,27 @@ Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -SafeTransferEnabled
+Possible values
+- Enabled
+- Disabled
+- UserOverride
+
+[!NOTE] This parameter is not available for use.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).

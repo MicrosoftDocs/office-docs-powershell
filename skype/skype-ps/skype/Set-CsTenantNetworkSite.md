@@ -49,10 +49,10 @@ The network region 'RegionRedmond' is created beforehand and 'MicrosoftSite1' wi
 
 ###-------------------------- Example 2 --------------------------
 ```powershell
-PS C:\> Set-CsTenantNetworkSite -Identity "site2" -Description "site 2" -NetworkRegionID "RedmondRegion" -LocationPolicy "TestLocationPolicy" -EnableLocationBasedRouting $true -SiteAddress "One Microsoft way" -OnlineVoiceRoutingPolicy "OVRP1"
+PS C:\> Set-CsTenantNetworkSite -Identity "site2" -Description "site 2" -NetworkRegionID "RedmondRegion" -LocationPolicy "TestLocationPolicy" -EnableLocationBasedRouting $true -SiteAddress "One Microsoft way"
 ```
 
-The command shown in Example 2 set the network site 'site2' with description 'site 2'. This site is enabled for LBR, and associates with network region 'RedmondRegion', with location policy 'TestLocationPolicy', and with OnlineVoiceRoutingPolicy "OVRP1"
+The command shown in Example 2 sets the network site 'site2' with description 'site 2'. This site is enabled for LBR. The example associates the site with network region 'RedmondRegion' and with location policy 'TestLocationPolicy'.
 
 ## PARAMETERS
 
@@ -178,9 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnlineVoiceRoutingPolicy
-This parameter determines the unique name of existing OnlineVoiceRoutingPolicy that the current network site associates to.
-
-OnlineVoiceRoutingPolicy is used to associate a user with the appropriate PSTN usages.
+This parameter is deprecated and should not be used.
 
 ```yaml
 Type: String

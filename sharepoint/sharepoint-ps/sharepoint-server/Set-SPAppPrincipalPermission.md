@@ -39,7 +39,7 @@ $clientID = "11111111-2222-3333-4444-555555555555"
 $site = Get-SPSite https://siteUrl
 $realm = Get-SPAuthenticationRealm -ServiceContext $site
 $appIdentifier = $clientID + "@" + $realm
-$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Web $site.RootWeb
+$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Site $site.RootWeb
 Set-AppPrincipalPermission -AppPrincipal $appPrincipal -Site $site.RootWeb -Scope Site -Level Manage
 ```
 

@@ -46,7 +46,7 @@ Set-SPOTenantSyncClientRestriction [-GrooveBlockOption <String>] [<CommonParamet
 
 This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [Cmdlet Parameter Sets](https://msdn.microsoft.com/library/dd878348(VS.85).aspx).
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
 Requires a valid Connect-SPOService context to identify the tenant. For information on how to connect to the tenant, see [Connect-SPOService](Connect-SPOService.md)
 

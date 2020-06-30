@@ -33,6 +33,11 @@ Invoke-SPOSiteSwap
 
 Swaps the location of a source site with a target site while archiving the original target site.
 
+Please note, the target site must be either:
+
+- The root site, for example https://tenant-name.sharepoint.com; or
+- The search center site, for example https://tenant-name.sharepoint.com/search.
+
 When the swap is initiated, the target site is moved to the archive location and the source site is moved to the target location. By default, a site redirect is created at the source location that will redirect traffic to the target location.
 
 If the target is the root site at <https://tenant-name.sharepoint.com,> then the following preparation activities should be performed prior to performing the swap:
@@ -160,6 +165,9 @@ Accept wildcard characters: False
 ### -Force
 
 Overrides and ignores any warnings that have been identified by the Page Diagnostic Tool that are preventing a swap from being initiated.
+
+For example, if you receive the warning "Invoke-SPOSiteSwap : Errors: 0; Warnings: 1; Details: The site is not a communications site or it has the classic publishing feature enabled." then this warning can be overriden and ignored using this parameter.
+
 Any errors identified by the Page Diagnostic Tool will still always prevent a swap from being initiated regardless of this parameter.
 
 ```yaml

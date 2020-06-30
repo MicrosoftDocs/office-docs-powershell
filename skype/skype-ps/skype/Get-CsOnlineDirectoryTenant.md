@@ -22,20 +22,7 @@ Get-CsOnlineDirectoryTenant [[-Tenant] <Guid>] [-DomainController <Fqdn>] [-Forc
 ```
 
 ## DESCRIPTION
-The following is an example of the Get-CsOnlineDirectoryTenant cmdlet's console output:
-
-RunspaceId            : 27655c26-8142-4f23-a7a7-0c18303b809f
-Id                    : f71eaa50-9e75-4058-8c39-dba6fdd51b28
-AnnouncementsDisabled : False
-NameRecordingDisabled : False
-ServiceNumberCount    : 0
-SubscriberNumberCount : 0
-DefaultPoolFqdn       :
-DefaultBridge         : ae9ae5d8-c440-4ccd-8960-42792a9bcb0d
-Bridges               : {Id = [ae9ae5d8-c440-4ccd-8960-42792a9bcb0d], Name = [Conference Bridge], DefaultServiceNumber = [],      IsDefaultBridge = [True], IsShared = [False], Region = [NOAM]}
-Domains               : {}
-Pools                 : {sippoolsn44a06.infra.lync.com}
-TnmAccountId          :
+Use the Get-CsOnlineDirectoryTenant cmdlet to retrieve tenant parameters like AnnouncementsDisabled, NameRecordingDisabled and Bridges from the Business Voice Directory.
 
 ## EXAMPLES
 
@@ -131,26 +118,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

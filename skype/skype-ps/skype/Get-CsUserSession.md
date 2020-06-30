@@ -18,10 +18,14 @@ Use the Get-CsUserSession cmdlet to retrieve user session information within a s
 ## SYNTAX
 
 ```
-Get-CsUserSession -StartTime <DateTimeOffset> -User <String> [-EndTime <DateTimeOffset>] [-AsJob] [<CommonParameters>]
+Get-CsUserSession -StartTime <DateTimeOffset> -User <String> [-EndTime <DateTimeOffset>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+**Deprecation Notice**
+We will be retiring this feature and cmdlet from Skype for Business Online beginning 5/30/2020. Instead we recommend the utilization of MS Graph Call Records API, which is where we will continue to invest our development resources.
+https://docs.microsoft.com/graph/api/resources/callrecords-api-overview?view=graph-rest-beta
+
 Use the Get-CsUserSession cmdlet to retrieve session information for users within a specified date range within the past 30 days.
 
 You have to be assigned Skype For Business admin role to run this cmdlet.
@@ -76,26 +80,6 @@ Specifies the end date, time and offset of the date range.
 
 ```yaml
 Type: DateTimeOffset
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

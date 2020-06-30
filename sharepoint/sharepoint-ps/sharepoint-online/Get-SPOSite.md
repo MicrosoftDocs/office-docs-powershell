@@ -52,7 +52,7 @@ The Detailed parameter has been deprecated. It will continue to work with earlie
 > [!NOTE]
 > Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.  
 
-You need to be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
+You need to be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
@@ -100,6 +100,14 @@ Get-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -detailed |
 ```
 
 This example gets quota details for a Group Site.
+
+### -----------------------EXAMPLE 6-----------------------------
+
+```powershell
+Get-SPOSite -Identity https://contoso.sharepoint.com/sites/research | Select InformationSegment
+```
+
+This example returns the InformationSegments associated to the site.
 
 ## PARAMETERS
 
@@ -249,6 +257,21 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### InformationSegment
+This parameter displays the segments associated with a site. 
+
+It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/microsoft-365/compliance/information-barriers documentation to understand Information barriers in SharePoint Online.
+
+**Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+
+```yaml
+Type: Collection of GUIDs
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
 ```
 
 ### CommonParameters
