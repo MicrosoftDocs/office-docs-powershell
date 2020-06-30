@@ -570,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionAipTemplateScopes
-{{ Fill EncryptionAipTemplateScopes Description }}
+The EncryptionAipTemplateScopes parameter specifies that the label is still published and usable in the AIP classic client. An example value is `"['allcompany@labelaction.onmicrosoft.com','admin@labelaction.onmicrosoft.com']"`.
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
@@ -683,9 +683,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionLinkedTemplateId
-{{ Fill EncryptionLinkedTemplateId Description }}
-
-This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -719,13 +717,13 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionPromptUser
-The EncryptionPromptUser parameter specifies whether set the label with user defined permissions. Valid values are:
+The EncryptionPromptUser parameter specifies whether to set the label with user defined permission in Word, Excel, and PowerPoint. Valid values are:
 
 - $true: The label is set with user defined permissions in Word, Excel and PowerPoint.
 
 - $false: The label is not set with user defined permissions in Word, Excel and PowerPoint.
 
-This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false, and when the EncryptionProtectionType parameter value is UserDefined.
 
 ```yaml
 Type: System.Boolean
@@ -763,14 +761,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionRightsDefinitions
-The EncryptionRightsDefinitions parameter specifies the rights users have when accessing protected. Valid values are:
-
-- Viewer
-- Reviewer
-- Co-Author
-- Co-Owner
-
-For more information, see [Rights included in permissions levels](https://docs.microsoft.com/azure/information-protection/configure-usage-rights#rights-included-in-permissions-levels).
+The EncryptionRightsDefinitions parameter specifies the rights users have when accessing protected. This parameter uses the syntax `Identity1:Rights1,Rights2;Identity2:Rights3,Rights4`. For example, `john@contoso.com:VIEW,EDIT;microsoft.com:VIEW`.
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false and the EncryptionProtectionType parameter value is Template.
 
@@ -806,7 +797,9 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionTemplateId
-This parameter is reserved for internal Microsoft use.
+The EncryptionTemplateId parameter links an existing Azure RMS template to a new label.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -856,9 +849,9 @@ Accept wildcard characters: False
 ### -LocaleSettings
 The LocaleSettings parameter specifies one or more localized label name or label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax:
 
-- Label display names: {"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en español"}]}
+- Label display names: `{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en español"}]}`
 
-- Label Tooltips: {"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}
+- Label Tooltips: `{"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}`
 
 ```yaml
 Type: MultiValuedProperty
