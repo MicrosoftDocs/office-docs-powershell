@@ -177,11 +177,13 @@ After you register the certificate with your application, you can use the public
 
 Azure AD has more than 50 admin roles available. For app-only authentication in Exchange Online, we currently support the previously mentioned roles:
 
-- Global administrator
-- Compliance administrator
-- Security reader
-- Security administrator
-- Helpdesk administrator
+   - Global administrator
+   - Compliance administrator
+   - Security reader
+   - Security administrator
+   - Helpdesk administrator
+   - Exchange Service administrator
+   - Global Reader
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
 
