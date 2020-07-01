@@ -93,9 +93,9 @@ This filter limits the returned data to online users assigned to the tenant "bf1
 
 ### -------------------------- Example 6 --------------------------
 ```
-$MeetingPolicy="Kiosk"
-$filterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
-Get-CsOnlineUser -Filter $filterString
+PS C:> $MeetingPolicy="Kiosk"
+PS C:> $filterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
+PS C:> Get-CsOnlineUser -Filter $filterString
 ```
 
 The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
