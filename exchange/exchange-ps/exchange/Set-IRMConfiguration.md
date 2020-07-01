@@ -271,15 +271,13 @@ Accept wildcard characters: False
 ### -ExternalLicensingEnabled
 This parameter is available only in on-premises Exchange.
 
-The ExternalLicensingEnabled parameter is used to avoid Exchange being the victim of a Denial of Service attack. With this setting enabled, Exchange will try to acquire licenses from clusters other than the one it is configured to use.
-
-The list of allowed clusters is specified with the *LicensingLocation* parameter, which allows external licensing requests only to the specified clusters. Without this setting, Exchange can be attacked if it receives many emails protected with a random key, which will cause Exchange to devote excessive resources to validating the signatures and decrypt the emails even if they are not valid.
+The ExternalLicensingEnabled parameter specifies whether Exchange will try to acquire licenses from clusters other than the one it is configured to use. Without this setting, if Exchange receives many messages protected with a random key, the server will devote excessive resources to validating signatures and decrypting messages, even if the keys aren't valid.
 
 Valid values are:
 
-- $true: Exchange will try to acquire licenses from clusters other than the one it is configured to use.
+- $true: Exchange will try to acquire licenses from clusters other than the one it is configured to use. This value can help prevent denial of service (DoS) attacks.
 
-- $false: Exchange will try to acquire licenses only from clusters that it is configured to use. This is the default value.
+- $false: Exchange will try to acquire licenses only from clusters that it is configured to use. This is the default value. The *LicensingLocation* parameter specifies the list of allowed clusters. 
 
 ```yaml
 Type: Boolean
