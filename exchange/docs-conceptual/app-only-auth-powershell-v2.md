@@ -19,6 +19,14 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 
 # App-only authentication in the EXO V2 module
 
+**Note**:
+
+This feature is currently in Public Preview, and is available in the Preview release of Exchange Online PowerShell V2 Module. To install the Preview release of the EXO V2 module, run the following command: 
+
+     ```powershell
+     Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
+     ```
+
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses Modern authentication, the credentials are stored in a local file or a secret vault that's access at run-time.
 
 Because storing user credentials locally is not a safe practice, we're releasing this feature to support authentication for unattended scripts (automation) scenarios using AzureAD applications and self-signed certificates.
@@ -58,13 +66,6 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 ## How does it work?
 
 The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id & certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
-
-## How to start using this feature ?
-Please note that this feature is currently in Public Preview and available in the Preview release of EXO PowerShell V2 Module. You need to use below strings to install the Preview version 2.0.3 which contains this feature - 
-
-     ```powershell
-     Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
-     ```
 
 ## Setup app-only authentication
 
