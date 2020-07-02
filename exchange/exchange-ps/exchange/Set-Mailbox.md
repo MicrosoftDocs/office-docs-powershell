@@ -5021,7 +5021,9 @@ A valid value is a number from 32 to 256 kilobytes (32768 to 262144 bytes). When
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-The default value is 64 kilobytes (65536 bytes).
+In Exchange Online, Exchange 2019, Exchange 2016, and Exchange 2013, the default value is 256 kilobytes (262,144 bytes).
+
+In Exchange 2010, the default value is 64 kilobytes (65,536 bytes).
 
 The quota for Inbox rules applies only to enabled rules. There is no restriction on the number of disabled rules a mailbox can have. However, the total size of rules that are enabled or active can't exceed the value specified for this parameter.
 
