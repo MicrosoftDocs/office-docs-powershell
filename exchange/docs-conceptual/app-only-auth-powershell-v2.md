@@ -19,6 +19,21 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 
 # App-only authentication in the EXO V2 module
 
+> [!NOTE]
+> This feature is currently in Public Preview, and is available in the Preview release of Exchange Online PowerShell V2 Module.
+
+To install the Preview release of the EXO V2 module, run the following command:
+
+```powershell
+Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
+```
+
+To update from an earlier version of the of the EXO V2 module, run the following command:
+
+```powershell
+Update-Module -Name ExchangeOnlineManagement -AllowPrerelease
+```
+
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses Modern authentication, the credentials are stored in a local file or a secret vault that's access at run-time.
 
 Because storing user credentials locally is not a safe practice, we're releasing this feature to support authentication for unattended scripts (automation) scenarios using AzureAD applications and self-signed certificates.
@@ -182,6 +197,8 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 - Security reader
 - Security administrator
 - Helpdesk administrator
+- Exchange Service administrator
+- Global Reader
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
 

@@ -38,7 +38,6 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-EnableATPForSPOTeamsODB <Boolean>]
  [-EnableSafeDocs <Boolean>]
  [-EnableSafeLinksForO365Clients <Boolean>]
- [-EnableSafeLinksForWebAccessCompanion <Boolean>]
  [-TrackClicks <Boolean>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -200,26 +199,6 @@ The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enab
 - $true: Safe Links are enabled for Microsoft 365 desktop and mobile apps. This is the default value.
 
 - $false: Safe Links are disabled for Microsoft 365 desktop and mobile apps.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableSafeLinksForWebAccessCompanion
-The EnableSafeLinksForWebAccessCompanion parameter specifies whether Safe Links is enabled for Microsoft 365 apps on the web. Valid values are:
-
-- $true: Safe Links are enabled for Microsoft 365 web apps. This is the default value.
-
-- $false: Safe Links are disabled for Microsoft 365 web apps.
 
 ```yaml
 Type: Boolean
