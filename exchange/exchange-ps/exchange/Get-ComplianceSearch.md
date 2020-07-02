@@ -22,8 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceSearch [[-Identity] <ComplianceSearchIdParameter>] [-Case <String>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-ComplianceSearch [[-Identity] <ComplianceSearchIdParameter>]
+ [-Case <String>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +55,9 @@ This examples show details of the compliance search named Case 1234.
 ## PARAMETERS
 
 ### -Case
-This parameter is reserved for internal Microsoft use.
+The Case parameter filters the results by the name of a Core eDiscovery case that the compliance search is associated with. If the value contains spaces, enclose the value in quotation marks.
+
+You can't use this parameter to view compliance searches associated with Advanced eDiscovery cases.
 
 ```yaml
 Type: String
