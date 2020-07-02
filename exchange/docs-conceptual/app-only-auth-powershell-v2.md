@@ -21,11 +21,11 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 
 **Note**:
 
-This feature is currently in Public Preview, and is available in the Preview release of Exchange Online PowerShell V2 Module. To install the Preview release of the EXO V2 module, run the following command: 
+This feature is currently in Public Preview, and is available in the Preview release of Exchange Online PowerShell V2 Module. To install the Preview release of the EXO V2 module, run the following command:
 
-     ```powershell
-     Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
-     ```
+```powershell
+Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
+```
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses Modern authentication, the credentials are stored in a local file or a secret vault that's access at run-time.
 
@@ -185,13 +185,13 @@ After you register the certificate with your application, you can use the public
 
 Azure AD has more than 50 admin roles available. For app-only authentication in Exchange Online, we currently support the previously mentioned roles:
 
-   - Global administrator
-   - Compliance administrator
-   - Security reader
-   - Security administrator
-   - Helpdesk administrator
-   - Exchange Service administrator
-   - Global Reader
+- Global administrator
+- Compliance administrator
+- Security reader
+- Security administrator
+- Helpdesk administrator
+- Exchange Service administrator
+- Global Reader
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
 
