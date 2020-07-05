@@ -31,7 +31,7 @@ Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -Al
 To update from an earlier version of the of the EXO V2 module, run the following command:
 
 ```powershell
-Update-Module -Name ExchangeOnlineManagement -AllowPrerelease
+Update-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
 ```
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses Modern authentication, the credentials are stored in a local file or a secret vault that's access at run-time.
