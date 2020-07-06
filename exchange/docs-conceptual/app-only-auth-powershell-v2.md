@@ -17,7 +17,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks with Modern Authentication and app-only authentication."
 ---
 
-# App-only authentication in the EXO V2 module
+# App-only authentication for Un-attended Scripts in the EXO V2 module
 
 > [!NOTE]
 > This feature is currently in Public Preview, and is available in the Preview release of Exchange Online PowerShell V2 Module.
