@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Displays information about existing site scripts. When no parameter is provided, this cmdlet returns the **Id**, **Title**, **Description**, and **Version** of each site script. When a site script ID is provided, this cmdlet also returns the **Content**, which is the JSON of the site script.
+Displays information about existing site scripts.
 
 ## SYNTAX
 

@@ -18,12 +18,17 @@ description: "Learn how to use remote PowerShell to connect to Exchange Online."
 # Connect to Exchange Online PowerShell
 
 > [!NOTE]
-> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
+> Since Basic Auth Deprecation has been announced and this method uses Basic Authentication on Server Side, 
 
 Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
 
-> [!IMPORTANT]
-> If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md). <br/><br/> If you're a standalone Exchange Online Protection (EOP) customer (for example, you're using EOP to protect your on-premises email environment), use the connection instructions in [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md). If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, EOP is one of the included services, and the connection instructions in this topic will work for you.
+> [!NOTE]
+> 
+> - We're eventually going to [disable Basic authentication in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), and the connection method described in this topic uses Basic authentication. We recommend that you use the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md) to connect to Exchange Online PowerShell, because it uses Modern authentication in all scenarios.
+> 
+> - The Exchange Online PowerShell V2 module works with multi-factor authentication (MFA). For MFA connection instructions using the older Exchange Online Remote PowerShell Module, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md).
+> 
+> - If you're a standalone Exchange Online Protection (EOP) customer (for example, you're using EOP to protect your on-premises email environment), use the connection instructions in [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md). If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, EOP is one of the included services, and the connection instructions in this topic will work for you.
 
 ## What do you need to know before you begin?
 
@@ -104,7 +109,7 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://outlook.office.de/powershell-liveid/`
 
    - For Microsoft 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://outlook.office365.us/powershell-liveid/`
-   
+
    - For Microsoft 365 DoD, use the _ConnectionUri_ value: `https://webmail.apps.mil/powershell-liveid`
 
    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where the _ProxyAccessType_ value is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
