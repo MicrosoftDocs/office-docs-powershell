@@ -103,7 +103,7 @@ For a detailed visual flow bout creating applications in Azure AD, see <https://
    - Security reader
    - Security administrator
    - Helpdesk administrator
-   - Exchange Service administrator
+   - Exchange administrator
    - Global Reader
 
 ## Appendix
