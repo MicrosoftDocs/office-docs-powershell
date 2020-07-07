@@ -74,7 +74,7 @@ New-Label [-Name] <String> -DisplayName <String>
  [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
  [-SiteAndGroupProtectionEnabled <System.Boolean>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType>]
- [-Tooltip <String>]
+ -Tooltip <String>
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -1096,7 +1096,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
