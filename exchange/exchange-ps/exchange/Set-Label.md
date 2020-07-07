@@ -55,9 +55,6 @@ Set-Label -Identity "Label1" -LocaleSettings '{"localeKey":"DisplayName","Settin
 
 This example sets the localized label name for "Label1" in different languages (English, German, and Spanish).
 
-### Example 1
-```powershell
-
 ## PARAMETERS
 
 ### -Identity
