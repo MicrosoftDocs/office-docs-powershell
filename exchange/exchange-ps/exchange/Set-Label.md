@@ -50,7 +50,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-Set-Label -Identity General -LocaleSettings '{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}'
+Set-Label -Identity "Label1" -LocaleSettings '{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}','{"localeKey":"tooltip","Settings":[{"Key":"en-us","Value":"This is an example label"},{"Key":"de-de","Value":"Dies ist ein Beispieletikett"},{"Key":"es-es","Value":"Esta es una etiqueta de ejemplo"}]}'
 ```
 
 This example sets the localized label name for "General" in different languages (English, German, and Spanish).
