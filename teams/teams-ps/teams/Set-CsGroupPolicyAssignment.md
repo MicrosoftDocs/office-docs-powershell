@@ -10,6 +10,8 @@ ms.reviewer:
 
 # Set-CsGroupPolicyAssignment
 
+**Note:** The cmdlet Set-CsGroupPolicyAssignment will be available soon. In the meantime, to change a group policy assignment you can first remove the current policy assignment from the group and then add a new policy assignment.
+
 ## SYNOPSIS
 
 This cmdlet is used to update a group policy assignment.
