@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -CSVData
-The CSVData parameter specifies the .csv file you want to import. Use the following syntax for this parameter: ([System.IO.File]::ReadAllBytes("\<file name and path\>")). For example, ([System.IO.File]::ReadAllBytes("C:\\My Documents\\Contacts.csv")).
+The CSVData parameter specifies the .csv file you want to import. Use the following syntax for this parameter: `([System.IO.File]::ReadAllBytes("<file name and path>"))`. For example, `([System.IO.File]::ReadAllBytes("C:\My Documents\Contacts.csv"))`.
 
 ```yaml
 Type: Byte[]
