@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-Label [-Name] <String> -DisplayName <String>
+New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-AdvancedSettings <PswsHashtable>]
  [-ApplyContentMarkingFooterAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
  [-ApplyContentMarkingFooterEnabled <System.Boolean>]
@@ -74,7 +74,6 @@ New-Label [-Name] <String> -DisplayName <String>
  [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
  [-SiteAndGroupProtectionEnabled <System.Boolean>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType>]
- -Tooltip <String>
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -111,6 +110,22 @@ Accept wildcard characters: False
 
 ### -DisplayName
 The DisplayName parameter specifies the display name for the sensitivity label. The display name appears in any client that supports sensitivity labels. This includes Word, Excel, PowerPoint, Outlook, SharePoint, Teams, and Power BI.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tooltip
+The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1081,22 +1096,6 @@ Aliases:
 Applicable: Office 365 Security & Compliance Center
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tooltip
-The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
