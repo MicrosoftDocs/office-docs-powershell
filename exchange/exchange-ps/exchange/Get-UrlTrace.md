@@ -211,6 +211,38 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+
+### -ClickAction
+The ClickAction parameter filters the action of a specific click . Valid values are:
+
+None  - un-initialized result
+
+Allowed  -  allow the url click and redirect to clicked url
+
+Blocked - block the page
+
+Pending verdict   - url pending to detonate page render
+
+Block overridden  -  error render
+
+Pending verdict bypassed    - clickthrough to original url from Pending page
+
+Error  - clickthrough to original url from Block page
+
+Failure    -  unknown exception happened
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
