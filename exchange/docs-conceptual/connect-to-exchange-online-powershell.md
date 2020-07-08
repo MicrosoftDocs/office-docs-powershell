@@ -1,5 +1,5 @@
 ---
-title: "Connect to Exchange Online PowerShell"
+title: "Connect to Exchange Online PowerShell with Basic Authentication"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -12,7 +12,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid: c8bea338-6c1a-4bdf-8de0-7895d427ee5b
 search.appverid: MET150
-description: "Learn how to use remote PowerShell to connect to Exchange Online."
+description: "Learn how to use remote PowerShell to connect to Exchange Online with Basic Authentication."
 ---
 
 # Connect to Exchange Online PowerShell
