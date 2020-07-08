@@ -92,7 +92,10 @@ For a detailed visual flow bout creating applications in Azure AD, see <https://
 
    - Create and configure a self-signed X.509 certificate, which will be used to authenticate your Application against Azure AD, while requesting the app-only access token.
 
-   - This is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#appendix) section later in this topic for instructions for generating certificates in PowerShell.
+   - This is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#step-3-generate-a-self-signed-certificate) section later in this topic for instructions for generating certificates in PowerShell.
+   
+     > [!NOTE]
+     > Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You must use a certificate from a CSP key provider. The [Appendix](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 
 4. Assign RBAC roles
 
