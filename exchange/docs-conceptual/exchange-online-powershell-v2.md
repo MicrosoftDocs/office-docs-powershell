@@ -1,5 +1,5 @@
 ---
-title: Exchange Online PowerShell V2
+title: Exchange Online PowerShell with Modern Authentication using V2 Module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -13,10 +13,10 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to download and use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell."
+description: "Learn how to install and use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell with Modern Authentication."
 ---
 
-# Use the Exchange Online PowerShell V2 module
+# Use the Exchange Online PowerShell with Modern Authentication using V2 module
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Microsoft 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online and its features.
 
