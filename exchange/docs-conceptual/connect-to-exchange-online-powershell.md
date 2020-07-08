@@ -15,7 +15,7 @@ search.appverid: MET150
 description: "Learn how to use remote PowerShell to connect to Exchange Online."
 ---
 
-# Connect to Exchange Online PowerShell
+# Connect to Exchange Online PowerShell with Basic Authentication
 
 > [!NOTE]
 > Since Basic Auth Deprecation has been announced and this method uses Basic Authentication on Server Side, 
