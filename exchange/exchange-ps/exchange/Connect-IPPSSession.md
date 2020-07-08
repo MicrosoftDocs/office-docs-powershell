@@ -23,12 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Connect-IPPSSession [[-ConnectionUri] <String>]
+Connect-IPPSSession
+ [[-ConnectionUri] <String>]
  [[-AzureADAuthorizationEndpointUri] <String>]
- [-BypassMailboxAnchoring]
- [-Credential <PSCredential>]
  [[-DelegatedOrganization] <String>]
  [[-PSSessionOption] <PSSessionOption>]
+ [-BypassMailboxAnchoring]
+ [-Credential <PSCredential>]
  [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
@@ -61,51 +62,12 @@ This example connects to standalone Exchange Online Protection PowerShell in an 
 
 ## PARAMETERS
 
-### -AzureADAuthorizationEndpointUri
-The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens.
-
-In Office 365 Germany for Security & Compliance Center PowerShell, use the value <https://login.microsoftonline.de/common> for this parameter.
-
-In Microsoft 365 GCC High and Microsoft 365 DoD for Security & Compliance Center PowerShell, use the value <https://login.microsoftonline.us/common> for this parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassMailboxAnchoring
-The BypassMailboxAnchoring switch bypasses the use of the mailbox anchoring hint. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ConnectionUri
-The ConnectionUri parameter specifies the connection endpoint for the remote PowerShell session.
+The ConnectionUri parameter specifies the connection endpoint for the remote PowerShell session. You don't need to use this parameter for Security & Compliance Center PowerShell in Microsoft 365 worldwide.
 
-In standalone Exchange Online Protection organizations without Exchange Online mailboxes, use the value <https://ps.protection.outlook.com/powershell-liveid/> for this parameter.
-
-In Office 365 Germany for Security & Compliance Center PowerShell, use the value <https://ps.compliance.protection.outlook.de/PowerShell-LiveID> for this parameter.
-
-In Microsoft 365 GCC High for Security & Compliance Center PowerShell, use the value <https://outlook.office365.us/powershell-liveid> for this parameter.
-
-In Microsoft 365 DoD for Security & Compliance Center PowerShell, use the value <https://webmail.apps.mil/powershell-liveid> for this parameter.
+- Security & Compliance Center PowerShell in Office 365 Germany: `https://ps.compliance.protection.outlook.de/PowerShell-LiveID`
+- Security & Compliance Center PowerShell in Microsoft 365 GCC High: `https://ps.compliance.protection.office365.us/powershell-liveid/`
+- Standalone Exchange Online Protection PowerShell: `https://ps.protection.outlook.com/powershell-liveid/`
 
 ```yaml
 Type: String
@@ -120,19 +82,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
-The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+### -AzureADAuthorizationEndpointUri
+The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You don't need to use this parameter in Microsoft 365 worldwide.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+Valid values for other PowerShell environments that require this parameter are:
+
+- Security & Compliance Center PowerShell in Office 365 Germany: `https://login.microsoftonline.de/common`
+- Security & Compliance Center PowerShell in Microsoft 365 GCC High: `https://login.microsoftonline.us/common`
 
 ```yaml
-Type: PSCredential
+Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -161,7 +125,7 @@ The PSSessionOption parameter specifies the PowerShell session options to use in
 
 `$Options = New-PSSessionOption <Settings>`
 
-And you use the variable name as the value for this parameter (for example, $Options).
+And you use the variable name as the value for this parameter (for example, `$Options`).
 
 ```yaml
 Type: PSSessionOption
@@ -171,6 +135,40 @@ Applicable: Exchange Online
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassMailboxAnchoring
+The BypassMailboxAnchoring switch bypasses the use of the mailbox anchoring hint. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Credential
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
