@@ -1,5 +1,5 @@
 ---
-title: Exchange Online PowerShell V2
+title: Exchange Online PowerShell with Modern Authentication using V2 Module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -13,14 +13,15 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to download and use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell."
+description: "Learn how to install and use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell with Modern Authentication."
 ---
 
-# Use the Exchange Online PowerShell V2 module
+# Use the Exchange Online PowerShell with Modern Authentication using V2 module
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Microsoft 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online and its features.
 
 ## Report bugs and issues
+
 When you report an issue, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
 ```PowerShell
@@ -37,8 +38,8 @@ The new cmdlets in the EXO V2 module are meant to replace their older, less effi
 
 The new cmdlets in the EXO V2 module are listed in the following table:
 
-|**New cmdlet in the EXO V2 module**|**Older related cmdlet**|
-|:-----|:-----|
+|New cmdlet in the EXO V2 module|Older related cmdlet|
+|---|---|
 |[Connect-ExchangeOnline](../exchange-ps/exchange/Connect-ExchangeOnline.md)|[Connect-EXOPSSession](mfa-connect-to-exchange-online-powershell.md) <br/> or <br/> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
 |[Get-EXOMailbox](../exchange-ps/exchange/Get-EXOMailbox.md)|[Get-Mailbox](../exchange-ps/exchange/Get-Mailbox.md)|
 |[Get-EXORecipient](../exchange-ps/exchange/Get-EXORecipient.md)|[Get-Recipient](../exchange-ps/exchange/Get-Recipient.md)|
@@ -57,7 +58,7 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 You can download the EXO V2 module from the PowerShell gallery [here](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/).
 
 > [!NOTE]
-> Currently, the latest version of PowerShell that's supported for the EXO V2 module is PowerShell 5.1. Support for later versions of PowerShell (and by definition, support for Linux or Mac) is a work in progress and will be announced soon.
+> Currently, the latest version of PowerShell that's supported for the EXO V2 module is PowerShell 5.1. Support for later versions of PowerShell (and by definition, support for Linux or Mac) is a work in progress.
 
 ### What do you need to know before you begin?
 

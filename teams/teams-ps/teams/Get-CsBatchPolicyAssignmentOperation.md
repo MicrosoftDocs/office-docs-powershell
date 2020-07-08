@@ -12,8 +12,6 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview. 
-
 This cmdlet is used to assign retrieve the status of batch policy assignment operations.
 
 ## SYNTAX
@@ -146,4 +144,4 @@ Contains the status for each user in the batch.
 
 ## RELATED LINKS
 
-[New-CsBatchPolicyAssignmentOperation]()
+[New-CsBatchPolicyAssignmentOperation](New-CsBatchPolicyAssignmentOperation.md)
