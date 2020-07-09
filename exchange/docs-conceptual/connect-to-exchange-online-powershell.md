@@ -21,7 +21,7 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
 > [!NOTE]
 > 
-> - We're eventually going to [disable Basic authentication in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), and the connection method described in this topic uses Basic authentication. We recommend that you use the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md) to connect to Exchange Online PowerShell, because it uses Modern authentication in all scenarios.
+> - We're eventually going to [disable Basic authentication in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), and the connection method described in this topic uses Basic authentication. We recommend that you use the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md) to connect to Exchange Online PowerShell, because it uses modern authentication in all scenarios.
 > 
 > - The Exchange Online PowerShell V2 module works with multi-factor authentication (MFA). For MFA connection instructions using the older Exchange Online Remote PowerShell Module, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md).
 > 
