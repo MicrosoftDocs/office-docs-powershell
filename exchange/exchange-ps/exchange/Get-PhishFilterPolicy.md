@@ -114,32 +114,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConfidenceLevel
-The ConfidenceLevel parameter filters the results by the specified confidence level. Valid values are:
-
--Low
--High
-
-You can only see the ConfidenceLevel value in the results when you include the Detailed switch in the command.
-
-```yaml
-Type: ConfidenceLevel
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DecisionSetBy
 The DecisionSetBy parameter filters the results by who allowed or blocked the spoofed sender. Valid values are:
 
--Admin
--SpoofProtection
+- Admin
+- SpoofProtection
 
 ```yaml
 Type: DecisionSetBy
@@ -159,8 +138,8 @@ The Detailed switch specifies whether to return detailed information in the resu
 
 Specifically, this switch returns the following additional properties:
 
-- ConfidenceLevel
-- DomainPairsCountInCategory
+- **ConfidenceLevel**: Level of signals indicated by spoof intelligence that these domains may be suspicious, based on historical sending patterns and the reputation score of the domains.
+- **DomainPairsCountInCategory**: The spoofed domains displayed are separated into two categories: suspicious domain pairs and non-suspicious domain pairs. Suspicious domain pairs include high-confidence spoof, moderate confidence spoof, and non-suspicious domain pairs.
 
 ```yaml
 Type: SwitchParameter
