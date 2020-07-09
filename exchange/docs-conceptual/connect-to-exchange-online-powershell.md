@@ -1,5 +1,5 @@
 ---
-title: "Connect to Exchange Online PowerShell"
+title: "Connect to Exchange Online PowerShell with Basic authentication"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -12,13 +12,10 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid: c8bea338-6c1a-4bdf-8de0-7895d427ee5b
 search.appverid: MET150
-description: "Learn how to use remote PowerShell to connect to Exchange Online."
+description: "Learn how to use remote PowerShell to connect to Exchange Online with Basic authentication."
 ---
 
-# Connect to Exchange Online PowerShell
-
-> [!NOTE]
-> Since Basic Auth Deprecation has been announced and this method uses Basic Authentication on Server Side, 
+# Connect to Exchange Online PowerShell with Basic authentication
 
 Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
 
