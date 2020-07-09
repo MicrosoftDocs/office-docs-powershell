@@ -47,7 +47,7 @@ Example 2 creayes the association between port "0A-25-55-AB-CD-FF" and LocationI
 Set-CsOnlineLisPort -PortID 12174 -ChassisID 55123 -Description "LisPort 12174" -LocationId efd7273e-3092-4a56-8541-f5c896bb6fee
 ```
 
-Example 3 creayes the association between port "12174" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee". (Note: in this example, ChassisID sub-type  is InterfaceName) 
+Example 3 creates the association between port "12174" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee". (Note: in this example, ChassisID sub-type  is InterfaceName) 
 
 ## PARAMETERS
 
@@ -252,4 +252,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-
