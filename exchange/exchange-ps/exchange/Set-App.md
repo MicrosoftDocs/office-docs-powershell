@@ -33,7 +33,7 @@ The Set-App cmdlet can only be used when configuring the availability of an orga
 
 Default apps in Outlook on the web and apps that you've installed for use by users in your organization are known as organization apps. Organization apps can't be removed by end users, but can be enabled or disabled. If an app is an organization app (scope default or organization), the delete control on the toolbar is disabled for end users. Administrators are able to remove organization apps. Administrators can't remove default apps, but they can disable them for the entire organization.
 
-For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://docs.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of Office 365 add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
+For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://docs.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

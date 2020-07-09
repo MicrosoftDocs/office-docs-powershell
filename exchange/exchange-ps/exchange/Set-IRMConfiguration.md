@@ -101,7 +101,7 @@ This parameter is available only in the cloud-based service.
 
 The AutomaticServiceUpdateEnabled parameter specifies whether to allow the automatic addition of new features within Azure Information Protection for your cloud-based organization. Valid values are:
 
-- $true: New Azure Information Protection features announced through Office 365 message center will be enabled automatically in your cloud-based organization. This is the default value.
+- $true: New Azure Information Protection features announced through Microsoft 365 message center will be enabled automatically in your cloud-based organization. This is the default value.
 
 - $false: Prevents new Azure Information Protection features from automatically being introduced into your tenant organization.
 
@@ -271,11 +271,13 @@ Accept wildcard characters: False
 ### -ExternalLicensingEnabled
 This parameter is available only in on-premises Exchange.
 
-The ExternalLicensingEnabled parameter specifies whether to enable IRM features for messages that are sent to external recipients. Valid values are:
+The ExternalLicensingEnabled parameter specifies whether Exchange will try to acquire licenses from clusters other than the one it is configured to use. Without this setting, if Exchange receives many messages protected with a random key, the server will devote excessive resources to validating signatures and decrypting messages, even if the keys aren't valid.
 
-- $true: IRM features are enabled for external messages.
+Valid values are:
 
-- $false: IRM features are disabled for external messages. This is the default value.
+- $true: Exchange will try to acquire licenses from clusters other than the one it is configured to use. This value can help prevent denial of service (DoS) attacks.
+
+- $false: Exchange will try to acquire licenses only from clusters that it is configured to use. This is the default value. The *LicensingLocation* parameter specifies the list of allowed clusters. 
 
 ```yaml
 Type: Boolean

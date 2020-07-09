@@ -222,7 +222,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_PostOfficeBox_|_postOfficeBox_|String (wildcards accepted).||
 |_PreviousRecipientTypeDetails_|_msExchPreviousRecipientTypeDetails_|For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](../exchange-ps/exchange/get-recipient.md).||
 |_PrimaryGroupId_|_primaryGroupId_|Integer|For domain users, the value of this property is typically 513, which corresponds to the Domain Users group.|
-|_PrimarySmtpAddress_|n/a|String (wildcards accepted).||
+|_PrimarySmtpAddress_|n/a|String (wildcards accepted).|Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property instead. Any filter that uses the _PrimarySmtpAddress_ property will also search values in the _EmailAddresses_ property. For example, if a mailbox has the primary email address dario@contoso.com, and the additional proxy addresses dario2@contoso.com and dario3@contoso.com, all of the following filters will return that mailbox in the result: `"PrimarySmtpAddress -eq 'dario@contoso.com'"`, `"PrimarySmtpAddress -eq 'dario2@contoso.com'"`, or `"PrimarySmtpAddress -eq 'dario3@contoso.com'"`.|
 |_ProhibitSendQuota_|_mDBOverQuotaLimit_|Dynamic distribution groups: A byte quantified size value (for example, `50MB` or `1.5GB`). Unqualified values are treated as bytes. <br/> Others: Blank or non-blank.||
 |_ProhibitSendReceiveQuota_|_mDBOverHardQuotaLimit_|Dynamic distribution groups: A byte quantified size value (for example, `50MB` or `1.5GB`). Unqualified values are treated as bytes. <br/> Others: Blank or non-blank.||
 |_ProtocolSettings_|_protocolSettings_|String (wildcards accepted).||

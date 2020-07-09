@@ -15,9 +15,9 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Enable-PushNotificationProxy cmdlet to enable a push notification proxy between an on-premises Microsoft Exchange organization and a Microsoft Office 365 organization.
+Use the Enable-PushNotificationProxy cmdlet to enable a push notification proxy between an on-premises Microsoft Exchange organization and a Microsoft 365 organization.
 
-In order for event notifications to be successfully delivered, you also need to configure OAuth authentication between your on-premises Exchange organization and your Office 365 organization.
+In order for event notifications to be successfully delivered, you also need to configure OAuth authentication between your on-premises Exchange organization and your Microsoft 365 organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,7 +28,7 @@ Enable-PushNotificationProxy [-Confirm] [-Organization <String>] [-Uri <String>]
 ```
 
 ## DESCRIPTION
-The push notification proxy relays event notifications (for example, new email or calendar updates) for on-premises mailboxes through Office 365 to Outlook on the web for devices on the user's device.
+The push notification proxy relays event notifications (for example, new email or calendar updates) for on-premises mailboxes through Microsoft 365 to Outlook on the web for devices on the user's device.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -46,7 +46,7 @@ This example displays the status of the push notification proxy in the on-premis
 Enable-PushNotificationProxy -Organization contoso.com
 ```
 
-This example enables the push notification proxy in the on-premises Exchange organization by using the Office 365 organization contoso.com.
+This example enables the push notification proxy in the on-premises Exchange organization by using the Microsoft 365 organization contoso.com.
 
 ## PARAMETERS
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the domain name of the Office 365 organization. For example, contoso.com.
+The Organization parameter specifies the domain name of the Microsoft 365 organization. For example, contoso.com.
 
 ```yaml
 Type: String
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-The Uri parameter specifies the push notification service endpoint in Office 365. The default value is https://outlook.office365.com/PushNotifications.
+The Uri parameter specifies the push notification service endpoint in Microsoft 365. The default value is https://outlook.office365.com/PushNotifications.
 
 ```yaml
 Type: String

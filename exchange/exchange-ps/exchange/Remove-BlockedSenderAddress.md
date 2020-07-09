@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Remove-BlockedSenderAddress cmdlet to unblock users in your Microsoft 365 organization that were impacted by the protection system. These users sent multiple messages that were classified as spam, so they were blocked from sending messages.
 
-**Note**: There's a limit to the number of times you can unblock an Microsoft 365 account. If you exceed the unblock limit for a user, you'll receive an error, and you'll need to contact support to unblock the user.
+**Note**: There's a limit to the number of times you can unblock a Microsoft 365 account. If you exceed the unblock limit for a user, you'll receive an error, and you'll need to contact support to unblock the user.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

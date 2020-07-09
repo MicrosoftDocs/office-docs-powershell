@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthMetadataUrl
-The AuthMetadataUrl parameter specifies the URL for the Office 365 authorization server for your cloud-based organization. For details, see the Office 365 documentation.
+The AuthMetadataUrl parameter specifies the URL for the Microsoft 365 authorization server for your cloud-based organization.
 
 ```yaml
 Type: String
