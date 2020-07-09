@@ -38,7 +38,7 @@ Set-CsOnlineLisPort -PortID 12174 -ChassisID 0B-23-CD-16-AA-CC -Description "Lis
 Example 1 creayes the association between port "12174" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee".
 ### -------------------------- Example 2 --------------------------
 ```
-Set-CsOnlineLisPort -PortID 0A-25-55-AB-CD-FF -ChassisID 0B-23-CD-16-AA-CC -Description "LisPort 0A-25-55-AB-CD-FF" -LocationId efd7273e-3092-4a56-8541-f5c896bb6fee
+PS C:\> Set-CsOnlineLisPort -PortID 0A-25-55-AB-CD-FF -ChassisID 0B-23-CD-16-AA-CC -Description "LisPort 0A-25-55-AB-CD-FF" -LocationId efd7273e-3092-4a56-8541-f5c896bb6fee
 ```
 
 Example 2 creayes the association between port "0A-25-55-AB-CD-FF" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee".
