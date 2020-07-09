@@ -26,7 +26,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-PhishFilterPolicy [[-Identity] <HostedConnectionFilterPolicyIdParameter>]
  [-AllowedToSpoof <String>]
- [-ConfidenceLevel <ConfidenceLevel>]
  [-DecisionSetBy <DecisionSetBy>]
  [-Detailed]
  [-SpoofAllowBlockList]
@@ -138,8 +137,8 @@ The Detailed switch specifies whether to return detailed information in the resu
 
 Specifically, this switch returns the following additional properties:
 
-- **ConfidenceLevel**: Level of signals indicated by spoof intelligence that these domains may be suspicious, based on historical sending patterns and the reputation score of the domains.
-- **DomainPairsCountInCategory**: The spoofed domains displayed are separated into two categories: suspicious domain pairs and non-suspicious domain pairs. Suspicious domain pairs include high-confidence spoof, moderate confidence spoof, and non-suspicious domain pairs.
+- ConfidenceLevel: Level of signals indicated by spoof intelligence that these domains may be suspicious, based on historical sending patterns and the reputation score of the domains.
+- DomainPairsCountInCategory: The spoofed domains displayed are separated into two categories: suspicious domain pairs and non-suspicious domain pairs. For more information, see [this topic](https://docs.microsoft.com/microsoft-365/security/office-365-security/walkthrough-spoof-intelligence-insight).
 
 ```yaml
 Type: SwitchParameter
