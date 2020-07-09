@@ -17,6 +17,14 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Release-QuarantineMessage cmdlet to release messages from quarantine in your cloud-based organization. You can release messages to all original recipients, or to specific recipients.
 
+> [!NOTE]
+> john@gmail.com sends to faith@microsoft.com and john@exchange.microsoft.com
+> this message gets bifurcated by gmail as 2 messages and gets routed to quarantine as phish
+> Microsoft admin then goes to quarantine and releases both these messages to admin@microsoft.com
+> the first message that reaches mailbox gets delivered
+> second message that reaches mailbox gets tagged as duplicate and delivery is skipped
+> Store has duplicate detection logic where if message with same message id and received time is delivered to a mailbox - then second one is failed as duplicate
+
 For files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, you can unblock the files in the respective team sites and document libraries by using the Release-QuarantineMessage cmdlet so users can access, share, and download the files.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
