@@ -1,11 +1,9 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
 title: Get-CsPolicyPackage
-author: etgottli
-ms.author: etgottli
-ms.reviewer: icchan
+author: icchan
+ms.author: icchan
 manager: amitar
 online version: https://docs.microsoft.com/powershell/module/teams/get-cspolicypackage
 schema: 2.0.0
@@ -26,7 +24,7 @@ Get-CsPolicyPackage [[-Identity] <String>] [<CommonParameters>]
 ## DESCRIPTION
 
 This cmdlet supports retrieving all the policy packages available on a tenant. Provide the identity of a specific policy package to retrieve its definition, including details on the policies applied with the package.
-For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages
+For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
