@@ -1961,11 +1961,13 @@ Accept wildcard characters: False
 ### -MobileAppEducationEnabled
 This parameter is available only in the cloud-based service.
 
-The MobileAppEducationEnabled specifies whether to show or hide the Outlook for iOS and Android education reminder in Outlook on the web (formerly known as Outlook Web App) and Outlook desktop. Valid values are:
+The MobileAppEducationEnabled specifies whether to show or hide the Outlook for iOS and Android education reminder in Outlook on the web (formerly known as Outlook Web App). Valid values are:
 
 - $true: Outlook on the web and Outlook desktop will show the education reminder to users who aren't using Outlook for iOS and Android to check their company email and calendar events. This is the default value.
 
 - $false: The Outlook for iOS and Android education reminder is disabled.
+
+This setting will affect Outlook desktop at some point in the future.
 
 ```yaml
 Type: Boolean
