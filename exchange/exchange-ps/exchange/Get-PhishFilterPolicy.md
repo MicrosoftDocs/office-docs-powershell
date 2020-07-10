@@ -26,7 +26,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-PhishFilterPolicy [[-Identity] <HostedConnectionFilterPolicyIdParameter>]
  [-AllowedToSpoof <String>]
- [-ConfidenceLevel <ConfidenceLevel>]
  [-DecisionSetBy <DecisionSetBy>]
  [-Detailed]
  [-SpoofAllowBlockList]
@@ -48,9 +47,9 @@ The Get-PhishFilterPolicy cmdlet returns the following information:
 
 - AuthenticationResult: Indicates whether the message has passed any type of email authentication (SPF, DKIM, or DMARC) (explicit or implicit).
 
-- LastSeen: The date when the sending email address or domain was last seen by Office 365.
+- LastSeen: The date when the sending email address or domain was last seen by Microsoft 365.
 
-- DecisionSetBy: Specifies whether Office 365 set the spoofing policy as allowed or not allowed to spoof, or if it was set by an admin.
+- DecisionSetBy: Specifies whether Microsoft 365 set the spoofing policy as allowed or not allowed to spoof, or if it was set by an admin.
 
 - AllowedToSpoof: The three possible values are Yes (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server), No (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server), and Partial (messages that contain some spoofed sender email addresses in your organization are allowed from the source email server).
 
@@ -114,32 +113,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConfidenceLevel
-The ConfidenceLevel parameter filters the results by the specified confidence level. Valid values are:
-
--Low
--High
-
-You can only see the ConfidenceLevel value in the results when you include the Detailed switch in the command.
-
-```yaml
-Type: ConfidenceLevel
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DecisionSetBy
 The DecisionSetBy parameter filters the results by who allowed or blocked the spoofed sender. Valid values are:
 
--Admin
--SpoofProtection
+- Admin
+- SpoofProtection
 
 ```yaml
 Type: DecisionSetBy
@@ -159,8 +137,8 @@ The Detailed switch specifies whether to return detailed information in the resu
 
 Specifically, this switch returns the following additional properties:
 
-- ConfidenceLevel
-- DomainPairsCountInCategory
+- ConfidenceLevel: Level of signals indicated by spoof intelligence that these domains may be suspicious, based on historical sending patterns and the reputation score of the domains.
+- DomainPairsCountInCategory: The spoofed domains displayed are separated into two categories: suspicious domain pairs and non-suspicious domain pairs. For more information, see [this topic](https://docs.microsoft.com/microsoft-365/security/office-365-security/walkthrough-spoof-intelligence-insight).
 
 ```yaml
 Type: SwitchParameter

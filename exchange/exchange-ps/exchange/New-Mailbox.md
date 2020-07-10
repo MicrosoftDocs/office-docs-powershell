@@ -1674,7 +1674,7 @@ The MailboxPlan parameter specifies the mailbox plan to apply to the mailbox. Yo
 
 - GUID
 
-A mailbox plan specifies the permissions and features that are available to a mailbox. In Office 365, mailbox plans correspond to the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center.
+A mailbox plan specifies the permissions and features that are available to a mailbox. In Exchange Online, mailbox plans correspond to the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center.
 
 You can see the available mailbox plans by using the Get-MailboxPlan cmdlet.
 
@@ -1994,7 +1994,7 @@ The RoleAssignmentPolicy parameter specifies the role assignment policy that's a
 
 - GUID
 
-In Office 365, if you don't use this parameter, the default role assignment policy named Default Role Assignment Policy is automatically applied to the mailbox. In on-premises Exchange, no role assignment policy is automatically applied to the mailbox.
+In Exchange Online PowerShell, if you don't use this parameter, the default role assignment policy named Default Role Assignment Policy is automatically applied to the mailbox. In on-premises Exchange, no role assignment policy is automatically applied to the mailbox.
 
 Use the Get-RoleAssignmentPolicy cmdlet to see the available role assignment policies. For more information about assignment policies, see [Understanding management role assignment policies](https://docs.microsoft.com/exchange/understanding-management-role-assignment-policies-exchange-2013-help).
 
@@ -2016,7 +2016,7 @@ Use the RoomMailboxPassword parameter to configure the password for a room mailb
 
 To use this parameter, you need to be a member of one of the following role groups:
 
-- Office 365: The Organization Management role group via the Mail Recipients, Reset Password, and User Options roles, the Help Desk role group via the Reset Password and User Options roles, or the Recipient Management role group via the Mail Recipients and Reset Password roles.
+- Exchange Online: The Organization Management role group via the Mail Recipients, Reset Password, and User Options roles, the Help Desk role group via the Reset Password and User Options roles, or the Recipient Management role group via the Mail Recipients and Reset Password roles.
 
 - On-premises Exchange: The Organization Management role group via the Mail Recipients and User Options roles, the Recipient Management role group via the Mail Recipients role, or the Help Desk role group via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 

@@ -12,8 +12,6 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview. 
-
 This cmdlet is used to assign or unassign a policy to a batch of users.
 
 ## SYNTAX
@@ -144,4 +142,4 @@ The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOpe
 
 ## RELATED LINKS
 
-[Get-CsBatchPolicyAssignmentOperation]()
+[Get-CsBatchPolicyAssignmentOperation](Get-CsBatchPolicyAssignmentOperation.md)

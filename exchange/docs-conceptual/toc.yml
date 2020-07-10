@@ -26,7 +26,7 @@
   - name: Exchange Online PowerShell
     href: exchange-online-powershell.md
     items:
-    - name: Connect to Exchange Online PowerShell
+    - name: Connect to Exchange Online PowerShell - Basic auth
       href: connect-to-exchange-online-powershell.md
       items:
       - name: Connect to Exchange Online PowerShell using multi-factor authentication
@@ -42,13 +42,15 @@
         href: filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
         href: recipientfilter-properties.md
-  - name: Exchange Online PowerShell V2
+  - name: Exchange Online PowerShell V2 - modern auth
     href: exchange-online-powershell-v2.md
     items:
     - name: Property sets in V2 cmdlets
       href: cmdlet-property-sets.md
     - name: Filters in the V2 module
       href: filters-v2.md
+    - name: App-only authentication for unattended scripts
+      href: app-only-auth-powershell-v2.md
   - name: Security & Compliance Center PowerShell
     href: scc-powershell.md
     items:
