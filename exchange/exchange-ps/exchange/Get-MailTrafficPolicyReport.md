@@ -32,6 +32,16 @@ Get-MailTrafficPolicyReport [-Action <MultiValuedProperty>] [-AggregateBy <Strin
 ```
 
 ## DESCRIPTION
+For the reporting period you specify, the cmdlet returns the following information:
+
+- Domain
+- Date
+- DLP Policy
+- Transport Rule
+- Event Type
+- Direction
+- Message Count
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -262,7 +272,16 @@ Accept wildcard characters: False
 ### -SummarizeBy
 The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report, and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
-For the Get-MailTrafficPolicyReport cmdlet, the SummarizeBy parameter accepts the values Action, DLPPolicy, Domain, EventType, and TransportRule. You can specify multiple values separated by commas.
+Valid values are:
+
+- Action
+- Direction
+- DLPPolicy
+- Domain
+- EventType
+- TransportRule
+
+You can specify multiple values separated by commas. When you specify the values DLPPolicy, Domain, EventType, or TransportRule the value is not displayed in the results (the values in the corresponding columns are blank).
 
 ```yaml
 Type: MultiValuedProperty
