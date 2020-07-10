@@ -234,6 +234,8 @@ The ExcludedItemClasses parameter specifies the types of messages to exclude fro
 
 - IPM.Note.Microsoft.Voicemail.UM.CA
 
+Additionally, you can specify [message classes for Exchange items](https://docs.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or third-party message classes. Note that the values specified for this parameter aren't validated, so the parameter will accept any value.
+
 You can specify multiple item class values by using the syntax "Value1","Value2",..."ValueN".
 
 ```yaml
