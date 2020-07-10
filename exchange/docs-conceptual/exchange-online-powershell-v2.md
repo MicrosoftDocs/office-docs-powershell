@@ -1,5 +1,5 @@
 ---
-title: Exchange Online PowerShell with Modern Authentication using V2 Module
+title: Exchange Online PowerShell with modern authentication using V2 Module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -13,10 +13,10 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to install and use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell with Modern Authentication."
+description: "Learn how to install and use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell with modern authentication."
 ---
 
-# Use the Exchange Online PowerShell with Modern Authentication using V2 module
+# Use the Exchange Online PowerShell with modern authentication using V2 module
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) enables admins to connect to their Exchange Online environment in Microsoft 365 to retrieve data, create new objects, update existing objects, remove objects as well as configure Exchange Online and its features.
 
@@ -32,7 +32,7 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 
 The Exchange Online PowerShell V2 module contains a small set of new cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). Until you create a session to connect to your Exchange Online organization, you'll only see these new cmdlets in the module. After you connect to your Exchange Online organization, you'll see all of the older remote PowerShell cmdlets.
 
-The EXO V2 module use Modern authentication for all cmdlets. You can't use Basic authentication in the EXO V2 module; however, you still need to configure the Basic authentication setting in WinRM as described later in this topic.
+The EXO V2 module use modern authentication for all cmdlets. You can't use Basic authentication in the EXO V2 module; however, you still need to configure the Basic authentication setting in WinRM as described later in this topic.
 
 The new cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents. However, the original cmdlets are still available in the EXO V2 module for backwards compatibility **after** you create a session to connect to your Exchange Online organization.
 

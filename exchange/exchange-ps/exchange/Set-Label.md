@@ -290,17 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the sensitivity label that determines the order of label processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and sensitivity labels can't have the same priority value.
-
-Valid values and the default value for this parameter depend on the number of existing sensitivity labels. For example, if there are 8 existing labels:
-
-- Valid priority values for the existing 8 sensitivity labels are from 0 through 7.
-
-- Valid priority values for a new sensitivity label (the 9th label) are from 0 through 8.
-
-- The default value for a new sensitivity label (the 9th label) is 8.
-
-If you modify the priority value of a sensitivity label, the position of the label in the list changes to match the priority value you specify. In other words, if you set the priority value of a sensitivity label to the same value as an existing label, the priority value of the existing sensitivity label and all other lower priority labels after it is increased by 1.
+The Priority parameter specifies a priority value for the sensitivity label that determines the order of label processing. A higher integer value indicates a higher priority.
 
 ```yaml
 Type: Int32
