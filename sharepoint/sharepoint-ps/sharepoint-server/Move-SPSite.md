@@ -34,7 +34,7 @@ A no-access lock is applied to the site collection to prevent users from alterin
 
 Once the move is complete, the site collection is returned to its original lock state. 
 
-An IIS reset is required for the site move to take effect.
+An IIS reset is required on any server running the Microsoft SharePoint Foundation Web Application service for the site move to take effect. This is not required for SharePoint Server 2019.
 
 The destination content database specified must already exist, must be attached to the same SQL Server as the site collection's current content database, and must be attached to the site collection's current Web application.
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -CopyEvents
-Specifies if events need to be copied.
+Specifies if events of the EventCache table need to be copied to the destination Content Database.
 
 The valid values are True or False.
 
@@ -196,7 +196,7 @@ The valid values are True or False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

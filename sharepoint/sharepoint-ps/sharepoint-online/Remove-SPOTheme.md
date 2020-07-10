@@ -33,7 +33,7 @@ The **Remove-SPOTheme** cmdlet removes a theme from your tenant store.
 This example removes the `"Custom Cyan"` theme that was used in the previous examples for the **Add-SPOTheme** and **Get-SPOTheme** cmdlets.
 
 ```powershell
-Remove-SPOTheme -Name "Custom Cyan"
+Remove-SPOTheme -Identity "Custom Cyan"
 ```
 
 ## PARAMETERS
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-{{ Fill Identity Description }}
+Name of the theme to remove.
 
 ```yaml
 Type: SpoThemePipeBind

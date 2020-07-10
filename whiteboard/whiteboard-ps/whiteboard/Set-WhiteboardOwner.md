@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/whiteboard/set-whit
 applicable: Microsoft Whiteboard
 title: Set-WhiteboardOwner
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -31,10 +31,10 @@ Sets the owner for a Whiteboard.
 ### -------------------------- EXAMPLE 1 --------------------------
 
 ```
-PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
+PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhiteboardId 00000000-0000-0000-0000-000000000003
 ```
 
-Move a Whiteboard from one user to another.
+Move Whiteboard ownership from one user to another.
 
 ## PARAMETERS
 
@@ -128,6 +128,6 @@ Applicable: Microsoft Whiteboard
 
 ## NOTES
 
-For details on user IDs, see the [overview page](whiteboard.md).
+For details on user IDs, see the [overview page](../../docs-conceptual/overview.md).
 
 ## RELATED LINKS

@@ -3,8 +3,8 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/add-teamsappinstallation
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -28,6 +28,9 @@ Add-TeamsAppInstallation -AppId <String> -UserId <String> [-Permissions <String>
 ## DESCRIPTION
 Add a Teams App to Microsoft Teams.
 
+> [!IMPORTANT]
+> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
+
 ## EXAMPLES
 
 ### Example 1
@@ -36,6 +39,13 @@ PS C:\> Add-TeamsAppInstallation -AppId b9cc7986-dd56-4b57-ab7d-9c4e5288b775 -Te
 ```
 
 This example adds a Teams App to Microsoft Teams.
+
+### Example 2
+```powershell
+PS C:\> Add-TeamsAppInstallation -AppId b9cc7986-dd56-4b57-ab7d-9c4e5288b775 -TeamId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -Permissions "TeamSettings.Read.Group ChannelMessage.Read.Group"
+```
+
+This example adds a Teams App to Microsoft Teams with RSC Permissions.
 
 ## PARAMETERS
 

@@ -18,14 +18,25 @@ Adds a new SharePoint user or security group as GeoAdministrator to a multi-geo 
 
 ## SYNTAX
 
-```powershell
-Add-SPOGeoAdministrator -UserPrincipalName <string> -GroupAlias <string> -ObjectId <guid> [<CommonParameters>]
+### User (Default)
+```
+Add-SPOGeoAdministrator [-UserPrincipalName] <String> [<CommonParameters>]
+```
+
+### Group
+```
+Add-SPOGeoAdministrator [-GroupAlias] <String> [<CommonParameters>]
+```
+
+### ObjectId
+```
+Add-SPOGeoAdministrator [-ObjectId] <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 This cmdlet requires a connection to a multi-geo tenant to run correctly.
-You must be a SharePoint Online global Administrator to run this cmdlet.
+You must be a SharePoint Online administrator or Global Administrator to run this cmdlet.
 
 ## EXAMPLES
 
@@ -41,7 +52,7 @@ Adds the user **admin\@contoso.onmicrosoft.com** as administrator to the SharePo
 
 ### -GroupAlias
 
-PARAMVALUE: String
+Use this parameter to add a security group or a mail-enabled security group as a geo admin. (Distribution groups and Microsoft 365 Groups are not supported).
 
 ```yaml
 Type: String
@@ -58,7 +69,7 @@ Accept wildcard characters: False
 
 ### -ObjectId
 
-PARAMVALUE: Guid
+Not all security groups have a group alias. If you want to add a security group that does not have an alias, run Get-MsolGroup to retrieve a list of groups, find your security group's ObjectID, and then use this parameter. For more information, see [Add or remove a geo administrator in Microsoft 365 Multi-Geo](https://docs.microsoft.com/office365/enterprise/add-a-sharepoint-geo-admin).
 
 ```yaml
 Type: Guid
@@ -75,7 +86,7 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 
-PARAMVALUE: String
+UserPrincipalName or UPN defined for the specific user on the SharePoint Online tenant.
 
 ```yaml
 Type: String

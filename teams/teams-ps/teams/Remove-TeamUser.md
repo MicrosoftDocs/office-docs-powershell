@@ -3,8 +3,8 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/remove-teamuser
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -33,6 +33,13 @@ Remove-TeamUser -GroupId <String> -User <String> [-Role <String>] [<CommonParame
 ```
 Remove-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com -Role Owner
 ```
+In this example, the user "dmx" is removed the role Owner but stays as a team member.
+
+### Example 2
+```
+Remove-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com
+```
+In this example, the user "dmx" is removed from the team.
 
 ## PARAMETERS
 
@@ -68,8 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Specify the role of the user you are removing from the team. Accepts "Owner" and "Member" as possible values.
-If cmdlet is called with -Role parameter as "Member" then the specified user is removed from the Team completely even if they were the owner of the Team. If "Owner" is specified in the -Role parameter then the specified user is removed as an owner of the team but stays as a team member. 
+If cmdlet is called with -Role parameter as "Owner", the specified user is removed as an owner of the team but stays as a team member.
+
 Note: The last owner cannot be removed from the team.
 
 ```yaml

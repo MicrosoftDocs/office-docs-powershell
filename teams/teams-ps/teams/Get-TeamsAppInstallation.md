@@ -3,8 +3,8 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/get-teamsappinstallation
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -27,6 +27,9 @@ Get-TeamsAppInstallation -UserId <String> [-AppInstallationId <String>] [-AppId 
 
 ## DESCRIPTION
 Get a Teams App installed in Microsoft Teams.
+
+> [!IMPORTANT]
+> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
 
 ## EXAMPLES
 

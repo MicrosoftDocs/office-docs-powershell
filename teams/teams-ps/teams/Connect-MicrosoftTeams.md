@@ -3,8 +3,8 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/connect-microsoftteams
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 # Connect-MicrosoftTeams
@@ -40,6 +40,13 @@ Connect-MicrosoftTeams [-TenantId <String>] -AadAccessToken <String> [-MsAccessT
 ## EXAMPLES
 
 ### Example 1
+```powershell
+PS C:\> Connect-MicrosoftTeams
+```
+
+Prompts for user credentials to connect and manage a Microsoft Teams environment.
+
+### Example 2
 ```powershell
 PS C:\> Connect-MicrosoftTeams -TeamsEnvironmentName TeamsGCCH
 ```

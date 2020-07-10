@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Sets the content delivery network (CDN) policies from the tenant level.
+Sets the content delivery network (CDN) policies at the tenant level.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Set-SPOTenantCdnPolicy -CdnType <SPOTenantCdnType> -PolicyType <SPOTenantCdnPoli
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+Use this cmdlet to set the content delivery network (CDN) policies at the tenant level.
 
 ## EXAMPLES
 
@@ -65,7 +65,13 @@ Accept wildcard characters: False
 
 ### -PolicyType
 
-{{Fill PolicyType Description}}
+The PolicyType specifies the type of policy to set.
+
+Valid values:
+
+- IncludeFileExtensions
+- ExcludeRestrictedSiteClassifications
+- ExcludeIfNoScriptDisabled
 
 ```yaml
 Type: SPOTenantCdnPolicyType
@@ -82,7 +88,7 @@ Accept wildcard characters: False
 
 ### -PolicyValue
 
-{{Fill PolicyValue Description}}
+A String representing the value of the policy type defined by the PolicyType parameter.
 
 ```yaml
 Type: String

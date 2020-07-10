@@ -25,9 +25,9 @@ Set-SPOSiteGroup -Identity <String> [-Name <String>] [-Owner <String>] [-Permiss
 
 ## DESCRIPTION
 
-You must be a SharePoint Online global administrator and a site collection administrator to run the `Set-SPOSiteGroup` cmdlet.
+You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the `Set-SPOSiteGroup` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 Specifies the permission levels to grant to the group.
 
 > [!NOTE]
-> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
+> Permission levels are defined by SharePoint Online administrators from SharePoint Online Administration Center.  
 
 ```yaml
 Type: String[]
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 Specifies the permission levels to remove from the group.
 
 > [!NOTE]
-> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
+> Permission levels are defined by SharePoint Online administrators from SharePoint Online Administration Center.  
 
 ```yaml
 Type: String[]

@@ -35,12 +35,24 @@ If a location with an address exactly matching the address parameters entered he
 Set-CsOnlineLisPort -PortID 12174 -ChassisID 0B-23-CD-16-AA-CC -Description "LisPort 12174" -LocationId efd7273e-3092-4a56-8541-f5c896bb6fee
 ```
 
-Example 1 creayes the association between port "12174" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee".
+Example 1 creates the association between port "12174" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee".
+### -------------------------- Example 2 --------------------------
+```
+PS C:\> Set-CsOnlineLisPort -PortID 0A-25-55-AB-CD-FF -ChassisID 0B-23-CD-16-AA-CC -Description "LisPort 0A-25-55-AB-CD-FF" -LocationId efd7273e-3092-4a56-8541-f5c896bb6fee
+```
+
+Example 2 creates the association between port "0A-25-55-AB-CD-FF" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee".
+### -------------------------- Example 3 --------------------------
+```
+PS C:\> Set-CsOnlineLisPort -PortID 12174 -ChassisID 55123 -Description "LisPort 12174" -LocationId efd7273e-3092-4a56-8541-f5c896bb6fee
+```
+
+Example 3 creates the association between port "12174" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee". (Note: in this example, ChassisID sub-type  is InterfaceName) 
 
 ## PARAMETERS
 
 ### -ChassisID
-The Media Access Control (MAC) address of the port's switch. This value will be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab.
+If ChassisID sub type is a MAC Address then this value must be in a string format in the following representation nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. Otherwise, (different sub type, such as Interface Name), then this value must be in a string format as set on the switch
 
 ```yaml
 Type: String
@@ -154,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortID
-This parameter identifies the ID of the port.
+If PortID sub type is a MAC Address then this value must be in a string format in the following representation nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. Otherwise, (different sub type, such as Interface Name), then this value must be in a string format as set on the switch
 
 ```yaml
 Type: String
@@ -240,4 +252,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-
