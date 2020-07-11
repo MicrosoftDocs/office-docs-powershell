@@ -80,6 +80,7 @@ Set-OrganizationConfig
  [-MailTipsGroupMetricsEnabled <Boolean>]
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
+ [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OnlineMeetingsByDefaultEnabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
@@ -1949,6 +1950,30 @@ Type: RecipientIdParameter
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MobileAppEducationEnabled
+This parameter is available only in the cloud-based service.
+
+The MobileAppEducationEnabled specifies whether to show or hide the Outlook for iOS and Android education reminder in Outlook on the web (formerly known as Outlook Web App). Valid values are:
+
+- $true: Outlook on the web and Outlook desktop will show the education reminder to users who aren't using Outlook for iOS and Android to check their company email and calendar events. This is the default value.
+
+- $false: The Outlook for iOS and Android education reminder is disabled.
+
+This setting will affect Outlook desktop at some point in the future.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
