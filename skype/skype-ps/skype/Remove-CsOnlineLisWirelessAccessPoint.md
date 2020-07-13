@@ -24,6 +24,10 @@ Remove-CsOnlineLisWirelessAccessPoint [[-TenantId] <Guid>] [-BSSID] <String> [-I
 ## DESCRIPTION
 Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet removes a WAP from the location configuration database. Removing the WAP will not remove the location associated with that WAP. Use the \`Remove-CsLisOnlineLocation\` cmdlet to remove a location.
 
+The BSSID (Basic Service Set Identifiers) is used to describe sections of a wireless local area network. It is the MAC of the 802.11 side of the access point. The BSSID in this command is also supporting the wildcard format which is covering all BSSIDs in the range which are sharing the same description and Location ID. The wildcard can be one '*' on either the last one or two character(s).
+
+If a BSSID with wildcard format is already existing, the request for removing a single BSSID which is within this wildcard range and with the same location ID will not be accepted.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -33,11 +37,25 @@ Remove-CsOnlineLisWirelessAccessPoint -BSSID 0B-23-CD-16-AA-CC
 
 Example 1 removes the Location Information Server (LIS) wireless access point with BSS ID "0B-23-CD-16-AA-CC".
 
+### -------------------------- Example 2 --------------------------
+```
+Remove-CsOnlineLisWirelessAccessPoint -BSSID 5C-AA-3D-87-CC-4*
+```
+
+Example 2 removes the Location Information Server (LIS) wireless access point with BSS ID "5C-AA-3D-87-CC-4*".
+
+### -------------------------- Example 3 --------------------------
+```
+Remove-CsOnlineLisWirelessAccessPoint -BSSID DD-FF-BB-66-88-*
+```
+
+Example 3 removes the Location Information Server (LIS) wireless access point with BSS ID "DD-FF-BB-66-88-*".
+
 
 ## PARAMETERS
 
 ### -BSSID
-The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID does exist, that entry will be replaced.
+The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID does exist, that entry will be replaced. It can be presented in wildcard format. The wildcard can be one '*' on either the last one or two character(s).
 
 ```yaml
 Type: String
