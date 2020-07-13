@@ -9,6 +9,11 @@ title: Add-PnPTeamsTab
 # Add-PnPTeamsTab
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Adds a tab to an existing Channel
 
 ## SYNTAX 
@@ -26,10 +31,6 @@ Add-PnPTeamsTab -TeamsAppId <String>
                 -Type <TeamTabType>
                 [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

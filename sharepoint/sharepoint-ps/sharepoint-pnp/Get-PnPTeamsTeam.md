@@ -9,6 +9,11 @@ title: Get-PnPTeamsTeam
 # Get-PnPTeamsTeam
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
+
 Gets one Microsoft Teams Team or a list of Teams.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Gets one Microsoft Teams Team or a list of Teams.
 Get-PnPTeamsTeam [-Identity <TeamsTeamPipeBind>]
                  [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
 
 ## EXAMPLES
 

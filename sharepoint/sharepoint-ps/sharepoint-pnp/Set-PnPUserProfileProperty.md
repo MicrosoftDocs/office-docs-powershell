@@ -9,6 +9,11 @@ title: Set-PnPUserProfileProperty
 # Set-PnPUserProfileProperty
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Office365 only: Uses the tenant API to retrieve site information. You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.
 
 ## SYNTAX 
@@ -28,10 +33,6 @@ Set-PnPUserProfileProperty -Values <String[]>
                            -PropertyName <String>
                            [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Requires a connection to a SharePoint Tenant Admin site.

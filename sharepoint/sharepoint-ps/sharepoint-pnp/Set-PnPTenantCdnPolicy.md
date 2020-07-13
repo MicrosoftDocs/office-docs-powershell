@@ -9,6 +9,11 @@ title: Set-PnPTenantCdnPolicy
 # Set-PnPTenantCdnPolicy
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Sets the CDN Policies for the specified CDN (Public | Private).
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Set-PnPTenantCdnPolicy -CdnType <SPOTenantCdnType>
                        -PolicyValue <String>
                        [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Sets the CDN Policies for the specified CDN (Public | Private).

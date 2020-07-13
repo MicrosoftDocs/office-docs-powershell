@@ -9,6 +9,11 @@ title: Add-PnPMicrosoft365GroupToSite
 # Add-PnPMicrosoft365GroupToSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Groupifies a classic team site by creating a Microsoft 365 group for it and connecting the site with the newly created group
 
 ## SYNTAX 
@@ -25,10 +30,6 @@ Add-PnPMicrosoft365GroupToSite -Url <String>
                                [-Owners <String[]>]
                                [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 This command allows you to add a Microsoft 365 Unified group to an existing classic site collection, also known as groupifying.

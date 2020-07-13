@@ -9,6 +9,11 @@ title: Get-PnPOffice365HistoricalServiceStatus
 # Get-PnPOffice365HistoricalServiceStatus
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Office 365 Management API: ServiceHealth.Read
+
 Gets the historical service status of the Office 365 Services of the last 7 days from the Office 365 Management API
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Gets the historical service status of the Office 365 Services of the last 7 days
 Get-PnPOffice365HistoricalServiceStatus [-Workload <Office365Workload>]
                                         [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Office 365 Management API: ServiceHealth.Read
 
 ## EXAMPLES
 

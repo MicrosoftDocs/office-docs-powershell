@@ -9,6 +9,11 @@ title: Grant-PnPHubSiteRights
 # Grant-PnPHubSiteRights
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Grant additional permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Grant additional permissions to the permissions already in place to associate si
 ```powershell
 Grant-PnPHubSiteRights [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

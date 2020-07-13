@@ -9,6 +9,11 @@ title: Reset-PnPUserOneDriveQuotaToDefault
 # Reset-PnPUserOneDriveQuotaToDefault
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Resets the current quota set on the OneDrive for Business site for a specific user to the tenant default
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Resets the current quota set on the OneDrive for Business site for a specific us
 Reset-PnPUserOneDriveQuotaToDefault -Account <String>
                                     [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 This command allows you to reset the quota set on the OneDrive for Business site of a specific user to the default as set on the tenant. You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet.

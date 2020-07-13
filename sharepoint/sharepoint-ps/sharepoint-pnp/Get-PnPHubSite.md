@@ -9,6 +9,11 @@ title: Get-PnPHubSite
 # Get-PnPHubSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Retrieve all or a specific hubsite.
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Retrieve all or a specific hubsite.
 ```powershell
 Get-PnPHubSite [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

@@ -9,6 +9,11 @@ title: Remove-PnPHubSiteAssociation
 # Remove-PnPHubSiteAssociation
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Disconnects a site from a hubsite.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Disconnects a site from a hubsite.
 Remove-PnPHubSiteAssociation -Site <SitePipeBind>
                              [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Disconnects an site from a hubsite

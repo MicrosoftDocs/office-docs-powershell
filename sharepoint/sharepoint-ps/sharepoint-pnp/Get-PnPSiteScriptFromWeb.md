@@ -9,6 +9,11 @@ title: Get-PnPSiteScriptFromWeb
 # Get-PnPSiteScriptFromWeb
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Generates a Site Script from an existing site
 
 ## SYNTAX 
@@ -32,10 +37,6 @@ Get-PnPSiteScriptFromWeb -Url <String>
                          [-Lists <String[]>]
                          [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 This command allows a Site Script to be generated off of an existing site on your tenant. Connect to your SharePoint Online Admin site before executing this command.

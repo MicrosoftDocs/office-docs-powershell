@@ -9,6 +9,11 @@ title: Get-PnPDeletedMicrosoft365Group
 # Get-PnPDeletedMicrosoft365Group
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
+
 Gets one deleted Microsoft 365 Group or a list of deleted Microsoft 365 Groups
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Gets one deleted Microsoft 365 Group or a list of deleted Microsoft 365 Groups
 Get-PnPDeletedMicrosoft365Group [-Identity <Microsoft365GroupPipeBind>]
                                 [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
 
 ## EXAMPLES
 

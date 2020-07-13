@@ -9,6 +9,11 @@ title: Add-PnPOrgNewsSite
 # Add-PnPOrgNewsSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Adds the site as an organization news source in your tenant
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Adds the site as an organization news source in your tenant
 Add-PnPOrgNewsSite -OrgNewsSiteUrl <SitePipeBind>
                    [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

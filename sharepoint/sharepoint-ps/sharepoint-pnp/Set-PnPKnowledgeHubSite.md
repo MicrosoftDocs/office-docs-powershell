@@ -9,6 +9,11 @@ title: Set-PnPKnowledgeHubSite
 # Set-PnPKnowledgeHubSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Sets the Knowledge Hub Site for your tenant
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Sets the Knowledge Hub Site for your tenant
 Set-PnPKnowledgeHubSite -KnowledgeHubSiteUrl <String>
                         [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

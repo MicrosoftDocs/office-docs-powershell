@@ -9,6 +9,11 @@ title: Set-PnPTenantAppCatalogUrl
 # Set-PnPTenantAppCatalogUrl
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Sets the url of the tenant scoped app catalog
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Sets the url of the tenant scoped app catalog
 Set-PnPTenantAppCatalogUrl -Url <String>
                            [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

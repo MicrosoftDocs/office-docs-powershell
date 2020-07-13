@@ -9,6 +9,11 @@ title: Get-PnPUPABulkImportStatus
 # Get-PnPUPABulkImportStatus
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Get user profile bulk import status.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Get-PnPUPABulkImportStatus [-JobId <GuidPipeBind>]
                            [-IncludeErrorDetails [<SwitchParameter>]]
                            [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Retrieve information about the status of submitted user profile bulk upload jobs.

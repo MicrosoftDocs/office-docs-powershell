@@ -9,6 +9,11 @@ title: Set-PnPUserOneDriveQuota
 # Set-PnPUserOneDriveQuota
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Sets the quota on the OneDrive for Business site for a specific user
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Set-PnPUserOneDriveQuota -Account <String>
                          -QuotaWarning <Int>
                          [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 This command allows you to set the quota on the OneDrive for Business site of a specific user. You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet.

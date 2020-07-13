@@ -9,6 +9,11 @@ title: Remove-PnPSiteDesign
 # Remove-PnPSiteDesign
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a Site Design
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Remove-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>
                      [-Force [<SwitchParameter>]]
                      [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

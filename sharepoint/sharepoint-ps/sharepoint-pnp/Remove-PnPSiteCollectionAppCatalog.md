@@ -9,6 +9,11 @@ title: Remove-PnPSiteCollectionAppCatalog
 # Remove-PnPSiteCollectionAppCatalog
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a Site Collection scoped App Catalog from a site
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Removes a Site Collection scoped App Catalog from a site
 Remove-PnPSiteCollectionAppCatalog -Site <SitePipeBind>
                                    [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Notice that this will not remove the App Catalog list and its contents from the site.

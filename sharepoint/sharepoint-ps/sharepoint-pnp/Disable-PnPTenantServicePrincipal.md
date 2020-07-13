@@ -9,6 +9,11 @@ title: Disable-PnPTenantServicePrincipal
 # Disable-PnPTenantServicePrincipal
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Enables the current tenant's "SharePoint Online Client" service principal.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Enables the current tenant's "SharePoint Online Client" service principal.
 Disable-PnPTenantServicePrincipal [-Force [<SwitchParameter>]]
                                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Enables the current tenant's "SharePoint Online Client" service principal.

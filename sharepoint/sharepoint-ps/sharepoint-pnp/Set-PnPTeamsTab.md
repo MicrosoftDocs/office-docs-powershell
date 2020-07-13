@@ -9,6 +9,11 @@ title: Set-PnPTeamsTab
 # Set-PnPTeamsTab
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Updates Teams Tab settings
 
 ## SYNTAX 
@@ -20,10 +25,6 @@ Set-PnPTeamsTab -Team <TeamsTeamPipeBind>
                 [-DisplayName <String>]
                 [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

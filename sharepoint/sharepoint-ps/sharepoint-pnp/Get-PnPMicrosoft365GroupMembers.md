@@ -9,6 +9,11 @@ title: Get-PnPMicrosoft365GroupMembers
 # Get-PnPMicrosoft365GroupMembers
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All, User.Read.All, User.ReadWrite.All
+
 Gets members of a particular Microsoft 365 Group (aka Unified Group). Requires the Azure Active Directory application permissions 'Group.Read.All' and 'User.Read.All'.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Gets members of a particular Microsoft 365 Group (aka Unified Group). Requires t
 Get-PnPMicrosoft365GroupMembers -Identity <Microsoft365GroupPipeBind>
                                 [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All, User.Read.All, User.ReadWrite.All
 
 ## EXAMPLES
 

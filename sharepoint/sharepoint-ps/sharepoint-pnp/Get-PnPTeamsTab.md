@@ -9,6 +9,11 @@ title: Get-PnPTeamsTab
 # Get-PnPTeamsTab
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
+
 Gets one or all tabs in a channel.
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Get-PnPTeamsTab -Team <TeamsTeamPipeBind>
                 [-Identity <TeamsTabPipeBind>]
                 [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
 
 ## EXAMPLES
 

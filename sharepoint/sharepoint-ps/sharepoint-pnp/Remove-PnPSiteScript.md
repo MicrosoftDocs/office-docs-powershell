@@ -9,6 +9,11 @@ title: Remove-PnPSiteScript
 # Remove-PnPSiteScript
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a Site Script
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Remove-PnPSiteScript -Identity <TenantSiteScriptPipeBind>
                      [-Force [<SwitchParameter>]]
                      [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

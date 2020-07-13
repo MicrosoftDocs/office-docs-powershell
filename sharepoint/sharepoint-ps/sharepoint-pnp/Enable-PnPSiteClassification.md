@@ -9,6 +9,11 @@ title: Enable-PnPSiteClassification
 # Enable-PnPSiteClassification
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Directory.ReadWrite.All
+
 Enables Site Classifications for the tenant
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Enable-PnPSiteClassification -Classifications <String>
                              [-UsageGuidelinesUrl <String>]
                              [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Directory.ReadWrite.All
 
 ## EXAMPLES
 

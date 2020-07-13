@@ -9,6 +9,11 @@ title: Get-PnPSiteDesignRunStatus
 # Get-PnPSiteDesignRunStatus
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Retrieves and displays a list of all site script actions executed for a specifie
 Get-PnPSiteDesignRunStatus -Run <TenantSiteDesignRun>
                            [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

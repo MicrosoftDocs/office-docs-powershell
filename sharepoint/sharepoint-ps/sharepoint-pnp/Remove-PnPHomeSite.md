@@ -9,6 +9,11 @@ title: Remove-PnPHomeSite
 # Remove-PnPHomeSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes the currently set site as the home site
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Removes the currently set site as the home site
 Remove-PnPHomeSite [-Force [<SwitchParameter>]]
                    [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

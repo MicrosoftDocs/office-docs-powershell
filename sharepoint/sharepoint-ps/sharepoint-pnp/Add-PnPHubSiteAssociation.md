@@ -9,6 +9,11 @@ title: Add-PnPHubSiteAssociation
 # Add-PnPHubSiteAssociation
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Connects a site to a hubsite.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Add-PnPHubSiteAssociation -Site <SitePipeBind>
                           -HubSite <SitePipeBind>
                           [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Connects an existing site to a hubsite

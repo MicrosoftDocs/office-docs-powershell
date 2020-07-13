@@ -9,6 +9,11 @@ title: Submit-PnPTeamsChannelMessage
 # Submit-PnPTeamsChannelMessage
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Sends a message to a Microsoft Teams Channel.
 
 ## SYNTAX 
@@ -21,10 +26,6 @@ Submit-PnPTeamsChannelMessage -Team <TeamsTeamPipeBind>
                               [-Important [<SwitchParameter>]]
                               [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

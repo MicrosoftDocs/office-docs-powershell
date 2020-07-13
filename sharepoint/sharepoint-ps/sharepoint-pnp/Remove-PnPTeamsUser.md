@@ -9,6 +9,11 @@ title: Remove-PnPTeamsUser
 # Remove-PnPTeamsUser
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Removes users from a team.
 
 ## SYNTAX 
@@ -20,10 +25,6 @@ Remove-PnPTeamsUser -Team <TeamsTeamPipeBind>
                     [-Force [<SwitchParameter>]]
                     [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

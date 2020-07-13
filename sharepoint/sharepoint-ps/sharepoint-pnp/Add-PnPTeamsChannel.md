@@ -9,6 +9,11 @@ title: Add-PnPTeamsChannel
 # Add-PnPTeamsChannel
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Adds a channel to an existing Microsoft Teams instance.
 
 ## SYNTAX 
@@ -20,10 +25,6 @@ Add-PnPTeamsChannel -Team <TeamsTeamPipeBind>
                     [-Private [<SwitchParameter>]]
                     [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

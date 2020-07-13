@@ -9,6 +9,11 @@ title: Set-PnPTeamsTeamPicture
 # Set-PnPTeamsTeamPicture
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Sets the picture of an existing team.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Set-PnPTeamsTeamPicture -Team <TeamsTeamPipeBind>
                         -Path <String>
                         [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## DESCRIPTION
 Notice that this cmdlet will immediately return but it can take a few hours before the changes are reflected in Microsoft Teams.

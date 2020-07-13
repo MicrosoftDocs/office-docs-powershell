@@ -9,6 +9,11 @@ title: Remove-PnPKnowledgeHubSite
 # Remove-PnPKnowledgeHubSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes the Knowledge Hub Site setting for your tenant
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Removes the Knowledge Hub Site setting for your tenant
 ```powershell
 Remove-PnPKnowledgeHubSite [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

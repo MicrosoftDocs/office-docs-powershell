@@ -9,6 +9,11 @@ title: Remove-PnPMicrosoft365GroupOwner
 # Remove-PnPMicrosoft365GroupOwner
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
+
 Removes owners from a particular Microsoft 365 Group
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Remove-PnPMicrosoft365GroupOwner -Identity <Microsoft365GroupPipeBind>
                                  -Users <String[]>
                                  [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
 
 ## EXAMPLES
 

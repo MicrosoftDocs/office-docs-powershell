@@ -9,6 +9,11 @@ title: Add-PnPMicrosoft365GroupMember
 # Add-PnPMicrosoft365GroupMember
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  *  Microsoft Graph API: All of Group.ReadWrite.All, User.ReadWrite.All
+
 Adds members to a particular Microsoft 365 Group
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Add-PnPMicrosoft365GroupMember -Identity <Microsoft365GroupPipeBind>
                                [-RemoveExisting [<SwitchParameter>]]
                                [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  *  Microsoft Graph API: All of Group.ReadWrite.All, User.ReadWrite.All
 
 ## EXAMPLES
 

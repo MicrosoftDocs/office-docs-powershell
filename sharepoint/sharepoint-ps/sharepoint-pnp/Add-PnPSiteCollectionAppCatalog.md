@@ -9,6 +9,11 @@ title: Add-PnPSiteCollectionAppCatalog
 # Add-PnPSiteCollectionAppCatalog
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Adds a Site Collection scoped App Catalog to a site
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Adds a Site Collection scoped App Catalog to a site
 Add-PnPSiteCollectionAppCatalog -Site <SitePipeBind>
                                 [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

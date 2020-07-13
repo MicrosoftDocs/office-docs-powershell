@@ -9,6 +9,11 @@ title: Get-PnPTenantSite
 # Get-PnPTenantSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Retrieve site information.
 
 ## SYNTAX 
@@ -21,10 +26,6 @@ Get-PnPTenantSite [-Url <String>]
                   [-Filter <String>]
                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Use this cmdlet to retrieve site information from your tenant administration.

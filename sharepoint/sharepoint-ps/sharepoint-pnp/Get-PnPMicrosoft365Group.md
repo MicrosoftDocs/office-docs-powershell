@@ -9,6 +9,11 @@ title: Get-PnPMicrosoft365Group
 # Get-PnPMicrosoft365Group
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All
+
 Gets one Microsoft 365 Group or a list of Microsoft 365 Groups
 
 ## SYNTAX 
@@ -20,10 +25,6 @@ Get-PnPMicrosoft365Group [-Identity <Microsoft365GroupPipeBind>]
                          [-IncludeHasTeam [<SwitchParameter>]]
                          [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All
 
 ## EXAMPLES
 

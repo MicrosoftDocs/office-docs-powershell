@@ -9,6 +9,11 @@ title: New-PnPPersonalSite
 # New-PnPPersonalSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Office365 only: Creates a personal / OneDrive For Business site
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Office365 only: Creates a personal / OneDrive For Business site
 New-PnPPersonalSite -Email <String[]>
                     [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

@@ -9,6 +9,11 @@ title: Grant-PnPTenantServicePrincipalPermission
 # Grant-PnPTenantServicePrincipalPermission
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Explicitly grants a specified permission to the "SharePoint Online Client" service principal
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Grant-PnPTenantServicePrincipalPermission -Scope <String>
                                           -Resource <String>
                                           [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

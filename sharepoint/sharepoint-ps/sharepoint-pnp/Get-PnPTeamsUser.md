@@ -9,6 +9,11 @@ title: Get-PnPTeamsUser
 # Get-PnPTeamsUser
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
+
 Returns owners, members or guests from a team.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Get-PnPTeamsUser -Team <TeamsTeamPipeBind>
                  [-Role <String>]
                  [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
 
 ## EXAMPLES
 

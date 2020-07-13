@@ -9,6 +9,11 @@ title: Get-PnPTeamsChannelMessage
 # Get-PnPTeamsChannelMessage
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Sends a message to a Microsoft Teams Channel.
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Get-PnPTeamsChannelMessage -Team <TeamsTeamPipeBind>
                            [-IncludeDeleted [<SwitchParameter>]]
                            [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

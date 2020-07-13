@@ -9,6 +9,11 @@ title: Add-PnPSiteDesign
 # Add-PnPSiteDesign
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Creates a new Site Design on the current tenant.
 
 ## SYNTAX 
@@ -23,10 +28,6 @@ Add-PnPSiteDesign -Title <String>
                   [-PreviewImageUrl <String>]
                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

@@ -9,6 +9,11 @@ title: Get-PnPTenantCdnPolicies
 # Get-PnPTenantCdnPolicies
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the CDN Policies for the specified CDN (Public | Private).
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Returns the CDN Policies for the specified CDN (Public | Private).
 Get-PnPTenantCdnPolicies -CdnType <SPOTenantCdnType>
                          [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Enables or disabled the public or private Office 365 Content Delivery Network (CDN).

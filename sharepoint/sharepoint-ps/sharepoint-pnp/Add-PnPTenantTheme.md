@@ -9,6 +9,11 @@ title: Add-PnPTenantTheme
 # Add-PnPTenantTheme
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Adds or updates a theme to the tenant.
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Add-PnPTenantTheme -Identity <ThemePipeBind>
                    -IsInverted <Boolean>
                    [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Adds or updates a theme to the tenant.

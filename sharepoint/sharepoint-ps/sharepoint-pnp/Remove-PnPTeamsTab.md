@@ -9,6 +9,11 @@ title: Remove-PnPTeamsTab
 # Remove-PnPTeamsTab
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Removes a Microsoft Teams tab in a channel.
 
 ## SYNTAX 
@@ -20,10 +25,6 @@ Remove-PnPTeamsTab -Team <TeamsTeamPipeBind>
                    [-Force [<SwitchParameter>]]
                    [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

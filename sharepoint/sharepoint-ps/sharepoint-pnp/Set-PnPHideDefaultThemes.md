@@ -9,6 +9,11 @@ title: Set-PnPHideDefaultThemes
 # Set-PnPHideDefaultThemes
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Defines if the default / OOTB themes should be visible to users or not.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Defines if the default / OOTB themes should be visible to users or not.
 Set-PnPHideDefaultThemes -HideDefaultThemes <Boolean>
                          [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Use this cmdlet to hide or show the default themes to users

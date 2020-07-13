@@ -9,6 +9,11 @@ title: Get-PnPMicrosoft365GroupOwners
 # Get-PnPMicrosoft365GroupOwners
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All
+
 Gets owners of a particular Microsoft 365 Group
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Gets owners of a particular Microsoft 365 Group
 Get-PnPMicrosoft365GroupOwners -Identity <Microsoft365GroupPipeBind>
                                [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All
 
 ## EXAMPLES
 

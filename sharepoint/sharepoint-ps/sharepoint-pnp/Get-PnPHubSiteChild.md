@@ -9,6 +9,11 @@ title: Get-PnPHubSiteChild
 # Get-PnPHubSiteChild
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Retrieves all sites linked to a specific hub site
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Retrieves all sites linked to a specific hub site
 Get-PnPHubSiteChild -Identity <HubSitePipeBind>
                     [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Retrieves all sites linked to a specific hub site

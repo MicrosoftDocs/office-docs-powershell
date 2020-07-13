@@ -9,6 +9,11 @@ title: Get-PnPSiteDesignRights
 # Get-PnPSiteDesignRights
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the principals with design rights on a specific Site Design
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Returns the principals with design rights on a specific Site Design
 Get-PnPSiteDesignRights -Identity <TenantSiteDesignPipeBind>
                         [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

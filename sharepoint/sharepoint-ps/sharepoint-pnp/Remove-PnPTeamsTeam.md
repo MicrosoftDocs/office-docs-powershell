@@ -9,6 +9,11 @@ title: Remove-PnPTeamsTeam
 # Remove-PnPTeamsTeam
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Removes a Microsoft Teams Team instance
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Remove-PnPTeamsTeam -Identity <TeamsTeamPipeBind>
                     [-Force [<SwitchParameter>]]
                     [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

@@ -9,6 +9,11 @@ title: Revoke-PnPTenantServicePrincipalPermission
 # Revoke-PnPTenantServicePrincipalPermission
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Revokes a permission that was previously granted to the "SharePoint Online Client" service principal.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Revoke-PnPTenantServicePrincipalPermission -ObjectId <String>
                                            [-Force [<SwitchParameter>]]
                                            [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Revokes a permission that was previously granted to the "SharePoint Online Client" service principal.

@@ -9,6 +9,11 @@ title: Get-PnPOffice365CurrentServiceStatus
 # Get-PnPOffice365CurrentServiceStatus
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Office 365 Management API: ServiceHealth.Read
+
 Gets current service status of the Office 365 Services from the Office 365 Management API
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Gets current service status of the Office 365 Services from the Office 365 Manag
 Get-PnPOffice365CurrentServiceStatus [-Workload <Office365Workload>]
                                      [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Office 365 Management API: ServiceHealth.Read
 
 ## EXAMPLES
 

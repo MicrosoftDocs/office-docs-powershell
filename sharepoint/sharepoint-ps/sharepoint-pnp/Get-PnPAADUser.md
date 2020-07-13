@@ -9,6 +9,11 @@ title: Get-PnPAADUser
 # Get-PnPAADUser
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All
+
 Retrieves users from Azure Active Directory
 
 ## SYNTAX 
@@ -37,10 +42,6 @@ Get-PnPAADUser -Delta [<SwitchParameter>]
                [-DeltaToken <String>]
                [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All
 
 ## EXAMPLES
 

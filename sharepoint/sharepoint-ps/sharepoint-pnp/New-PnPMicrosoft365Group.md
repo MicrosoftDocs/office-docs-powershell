@@ -9,6 +9,11 @@ title: New-PnPMicrosoft365Group
 # New-PnPMicrosoft365Group
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.Create, Group.ReadWrite.All
+
 Creates a new Microsoft 365 Group
 
 ## SYNTAX 
@@ -25,10 +30,6 @@ New-PnPMicrosoft365Group -DisplayName <String>
                          [-Force [<SwitchParameter>]]
                          [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.Create, Group.ReadWrite.All
 
 ## EXAMPLES
 

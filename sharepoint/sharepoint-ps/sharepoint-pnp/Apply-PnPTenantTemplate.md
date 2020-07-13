@@ -9,6 +9,11 @@ title: Apply-PnPTenantTemplate
 # Apply-PnPTenantTemplate
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Applies a tenant template to the current tenant. You must have the Office 365 Global Admin role to run this cmdlet successfully.
 
 ## SYNTAX 
@@ -50,10 +55,6 @@ Apply-PnPTenantTemplate -Template <ProvisioningHierarchy>
                         [-Configuration <ApplyConfigurationPipeBind>]
                         [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

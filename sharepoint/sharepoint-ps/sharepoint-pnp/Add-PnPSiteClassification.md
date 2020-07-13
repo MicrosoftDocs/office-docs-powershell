@@ -9,6 +9,11 @@ title: Add-PnPSiteClassification
 # Add-PnPSiteClassification
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Directory.ReadWrite.All
+
 Adds one ore more site classification values to the list of possible values
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Adds one ore more site classification values to the list of possible values
 Add-PnPSiteClassification -Classifications <String>
                           [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Directory.ReadWrite.All
 
 ## EXAMPLES
 

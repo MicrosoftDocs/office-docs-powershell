@@ -9,6 +9,11 @@ title: Remove-PnPTenantCdnOrigin
 # Remove-PnPTenantCdnOrigin
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes an origin from the Public or Private content delivery network (CDN).
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Remove-PnPTenantCdnOrigin -OriginUrl <String>
                           -CdnType <SPOTenantCdnType>
                           [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Removes an origin from the Public or Private content delivery network (CDN).

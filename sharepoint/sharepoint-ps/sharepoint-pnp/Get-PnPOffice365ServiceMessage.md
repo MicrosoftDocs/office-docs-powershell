@@ -9,6 +9,11 @@ title: Get-PnPOffice365ServiceMessage
 # Get-PnPOffice365ServiceMessage
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Office 365 Management API: ServiceHealth.Read
+
 Gets the service messages regarding services in Office 365 from the Office 365 Management API
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Gets the service messages regarding services in Office 365 from the Office 365 M
 Get-PnPOffice365ServiceMessage [-Workload <Office365Workload>]
                                [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Office 365 Management API: ServiceHealth.Read
 
 ## EXAMPLES
 

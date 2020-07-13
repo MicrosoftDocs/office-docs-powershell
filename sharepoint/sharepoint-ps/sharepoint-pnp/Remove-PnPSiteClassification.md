@@ -9,6 +9,11 @@ title: Remove-PnPSiteClassification
 # Remove-PnPSiteClassification
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Directory.ReadWrite.All
+
 Removes one or more existing site classification values from the list of available values
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Remove-PnPSiteClassification -Classifications <String>
                              [-Confirm [<SwitchParameter>]]
                              [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Directory.ReadWrite.All
 
 ## EXAMPLES
 

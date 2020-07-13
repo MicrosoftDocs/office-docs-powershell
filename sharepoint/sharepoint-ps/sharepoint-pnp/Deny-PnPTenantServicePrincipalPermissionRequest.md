@@ -9,6 +9,11 @@ title: Deny-PnPTenantServicePrincipalPermissionRequest
 # Deny-PnPTenantServicePrincipalPermissionRequest
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Deny-PnPTenantServicePrincipalPermissionRequest -RequestId <GuidPipeBind>
                                                 [-Force [<SwitchParameter>]]
                                                 [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal

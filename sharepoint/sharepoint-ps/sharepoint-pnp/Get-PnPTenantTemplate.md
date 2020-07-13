@@ -9,6 +9,11 @@ title: Get-PnPTenantTemplate
 # Get-PnPTenantTemplate
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Generates a provisioning tenant template from a site. If the site is a hubsite any connected site will be included.
 
 ## SYNTAX 
@@ -29,10 +34,6 @@ Get-PnPTenantTemplate -AsInstance [<SwitchParameter>]
                       [-Configuration <ExtractConfigurationPipeBind>]
                       [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

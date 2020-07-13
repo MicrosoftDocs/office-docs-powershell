@@ -9,6 +9,11 @@ title: Remove-PnPTenantTheme
 # Remove-PnPTenantTheme
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a theme
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Removes a theme
 Remove-PnPTenantTheme -Identity <ThemePipeBind>
                       [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Removes the specified theme from the tenant configuration

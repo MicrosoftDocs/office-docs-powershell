@@ -9,6 +9,11 @@ title: Unregister-PnPHubSite
 # Unregister-PnPHubSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Unregisters a site as a hubsite
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Unregisters a site as a hubsite
 Unregister-PnPHubSite -Site <SitePipeBind>
                       [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Registers a site as a hubsite

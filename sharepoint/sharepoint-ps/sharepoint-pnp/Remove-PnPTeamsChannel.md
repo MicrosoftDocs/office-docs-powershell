@@ -9,6 +9,11 @@ title: Remove-PnPTeamsChannel
 # Remove-PnPTeamsChannel
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Removes a channel from a Microsoft Teams instance.
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Remove-PnPTeamsChannel -Team <TeamsTeamPipeBind>
                        [-Force [<SwitchParameter>]]
                        [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

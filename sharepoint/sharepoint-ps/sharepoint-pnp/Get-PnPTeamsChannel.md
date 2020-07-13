@@ -9,6 +9,11 @@ title: Get-PnPTeamsChannel
 # Get-PnPTeamsChannel
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
+
 Gets the channels for a specified Team.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Get-PnPTeamsChannel -Team <TeamsTeamPipeBind>
                     [-Identity <TeamsChannelPipeBind>]
                     [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
 
 ## EXAMPLES
 

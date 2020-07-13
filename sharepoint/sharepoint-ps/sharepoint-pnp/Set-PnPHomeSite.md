@@ -9,6 +9,11 @@ title: Set-PnPHomeSite
 # Set-PnPHomeSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Sets the home site for your tenant
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Sets the home site for your tenant
 Set-PnPHomeSite -Url <String>
                 [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

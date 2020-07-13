@@ -9,6 +9,11 @@ title: Get-PnPTenantServicePrincipal
 # Get-PnPTenantServicePrincipal
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the current tenant's "SharePoint Online Client" service principal.
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Returns the current tenant's "SharePoint Online Client" service principal.
 ```powershell
 Get-PnPTenantServicePrincipal [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Returns the current tenant's "SharePoint Online Client" service principal.

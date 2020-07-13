@@ -9,6 +9,11 @@ title: Remove-PnPOrgNewsSite
 # Remove-PnPOrgNewsSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a given site from the list of organizational news sites.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Removes a given site from the list of organizational news sites.
 Remove-PnPOrgNewsSite -OrgNewsSiteUrl <SitePipeBind>
                       [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Removes a given site from the list of organizational news sites based on its URL in your Sharepoint Online Tenant.

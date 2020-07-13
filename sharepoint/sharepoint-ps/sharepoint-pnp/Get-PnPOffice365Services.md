@@ -9,6 +9,11 @@ title: Get-PnPOffice365Services
 # Get-PnPOffice365Services
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Office 365 Management API: ServiceHealth.Read
+
 Gets the services available in Office 365 from the Office 365 Management API
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Gets the services available in Office 365 from the Office 365 Management API
 ```powershell
 Get-PnPOffice365Services [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Office 365 Management API: ServiceHealth.Read
 
 ## EXAMPLES
 

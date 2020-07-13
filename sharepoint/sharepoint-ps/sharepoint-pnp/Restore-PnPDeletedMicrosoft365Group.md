@@ -9,6 +9,11 @@ title: Restore-PnPDeletedMicrosoft365Group
 # Restore-PnPDeletedMicrosoft365Group
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Restores one deleted Microsoft 365 Group
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Restores one deleted Microsoft 365 Group
 Restore-PnPDeletedMicrosoft365Group -Identity <Microsoft365GroupPipeBind>
                                     [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

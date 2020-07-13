@@ -9,6 +9,11 @@ title: Clear-PnPTenantRecycleBinItem
 # Clear-PnPTenantRecycleBinItem
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Permanently deletes a site collection from the tenant scoped recycle bin
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Clear-PnPTenantRecycleBinItem -Url <String>
                               [-Force [<SwitchParameter>]]
                               [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 The Clear-PnPTenantRecycleBinItem cmdlet allows a site collection that has been deleted and still exists in the tenant recycle bin to be permanently deleted from the recycle bin as well.

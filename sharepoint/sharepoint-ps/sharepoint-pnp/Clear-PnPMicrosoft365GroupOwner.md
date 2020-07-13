@@ -9,6 +9,11 @@ title: Clear-PnPMicrosoft365GroupOwner
 # Clear-PnPMicrosoft365GroupOwner
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
+
 Removes all current owners from a particular Microsoft 365 Group (aka Unified Group)
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Removes all current owners from a particular Microsoft 365 Group (aka Unified Gr
 Clear-PnPMicrosoft365GroupOwner -Identity <Microsoft365GroupPipeBind>
                                 [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
 
 ## EXAMPLES
 

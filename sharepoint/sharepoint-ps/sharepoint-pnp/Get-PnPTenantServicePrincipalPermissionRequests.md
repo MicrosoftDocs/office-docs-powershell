@@ -9,6 +9,11 @@ title: Get-PnPTenantServicePrincipalPermissionRequests
 # Get-PnPTenantServicePrincipalPermissionRequests
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Gets the collection of permission requests for the "SharePoint Online Client" service principal
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Gets the collection of permission requests for the "SharePoint Online Client" se
 ```powershell
 Get-PnPTenantServicePrincipalPermissionRequests [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Gets the collection of permission requests for the "SharePoint Online Client" service principal.

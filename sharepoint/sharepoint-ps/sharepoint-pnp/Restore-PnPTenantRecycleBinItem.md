@@ -9,6 +9,11 @@ title: Restore-PnPTenantRecycleBinItem
 # Restore-PnPTenantRecycleBinItem
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Restores a site collection from the tenant scoped recycle bin
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Restore-PnPTenantRecycleBinItem -Url <String>
                                 [-Force [<SwitchParameter>]]
                                 [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 The Restore-PnPTenantRecycleBinItem cmdlet allows a site collection that has been deleted and still exists in the tenant recycle bin to be restored to its original location.

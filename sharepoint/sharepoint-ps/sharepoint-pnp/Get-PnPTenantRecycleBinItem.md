@@ -9,6 +9,11 @@ title: Get-PnPTenantRecycleBinItem
 # Get-PnPTenantRecycleBinItem
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns all modern and classic site collections in the tenant scoped recycle bin
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Returns all modern and classic site collections in the tenant scoped recycle bin
 ```powershell
 Get-PnPTenantRecycleBinItem [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 This command will return all the items in the tenant recycle bin for the Office 365 tenant you are connected to. Be sure to connect to the SharePoint Online Admin endpoint (https://yourtenantname-admin.sharepoint.com) in order for this command to work.

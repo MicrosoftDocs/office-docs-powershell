@@ -9,6 +9,11 @@ title: New-PnPTenantSite
 # New-PnPTenantSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Creates a new (classic) site collection for the current tenant
 
 ## SYNTAX 
@@ -29,10 +34,6 @@ New-PnPTenantSite -Title <String>
                   [-Force [<SwitchParameter>]]
                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 The New-PnPTenantSite cmdlet creates a new site collection for the current company. However, creating a new SharePoint

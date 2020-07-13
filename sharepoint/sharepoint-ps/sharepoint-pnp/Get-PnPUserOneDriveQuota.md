@@ -9,6 +9,11 @@ title: Get-PnPUserOneDriveQuota
 # Get-PnPUserOneDriveQuota
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Retrieves the current quota set on the OneDrive for Business site for a specific user
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Retrieves the current quota set on the OneDrive for Business site for a specific
 Get-PnPUserOneDriveQuota -Account <String>
                          [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 This command allows you to request the quota set on the OneDrive for Business site of a specific user. You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet.

@@ -9,6 +9,11 @@ title: Get-PnPTenantTheme
 # Get-PnPTenantTheme
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns all or a specific theme
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Returns all or a specific theme
 Get-PnPTenantTheme [-Name <String>]
                    [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Returns all or a specific tenant theme.

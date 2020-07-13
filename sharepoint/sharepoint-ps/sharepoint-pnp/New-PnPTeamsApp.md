@@ -9,6 +9,11 @@ title: New-PnPTeamsApp
 # New-PnPTeamsApp
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of AppCatalog.ReadWrite.All, Directory.ReadWrite.All
+
 Adds an app to the Teams App Catalog.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Adds an app to the Teams App Catalog.
 New-PnPTeamsApp -Path <String>
                 [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of AppCatalog.ReadWrite.All, Directory.ReadWrite.All
 
 ## EXAMPLES
 

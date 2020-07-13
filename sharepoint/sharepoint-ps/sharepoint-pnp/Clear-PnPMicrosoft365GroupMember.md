@@ -9,6 +9,11 @@ title: Clear-PnPMicrosoft365GroupMember
 # Clear-PnPMicrosoft365GroupMember
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All, GroupMember.ReadWrite.All
+
 Removes all current members from a particular Microsoft 365 Group
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Removes all current members from a particular Microsoft 365 Group
 Clear-PnPMicrosoft365GroupMember -Identity <Microsoft365GroupPipeBind>
                                  [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All, GroupMember.ReadWrite.All
 
 ## EXAMPLES
 

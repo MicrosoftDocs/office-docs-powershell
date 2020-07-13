@@ -9,6 +9,11 @@ title: Set-PnPTenantCdnEnabled
 # Set-PnPTenantCdnEnabled
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Enables or disabled the public or private Office 365 Content Delivery Network (CDN).
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Set-PnPTenantCdnEnabled -Enable <Boolean>
                         -CdnType <CdnType>
                         [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Enables or disabled the public or private Office 365 Content Delivery Network (CDN).

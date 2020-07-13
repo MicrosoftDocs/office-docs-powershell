@@ -9,6 +9,11 @@ title: Set-PnPSiteScript
 # Set-PnPSiteScript
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Updates an existing Site Script on the current tenant.
 
 ## SYNTAX 
@@ -21,10 +26,6 @@ Set-PnPSiteScript -Identity <TenantSiteScriptPipeBind>
                   [-Version <Int>]
                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

@@ -9,6 +9,11 @@ title: Get-PnPWebTemplates
 # Get-PnPWebTemplates
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the available classic web templates
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Get-PnPWebTemplates [-Lcid <UInt32>]
                     [-CompatibilityLevel <Int>]
                     [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Will list all available classic templates one can use to create a site. Modern templates will not be returned.

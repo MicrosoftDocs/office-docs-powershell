@@ -9,6 +9,11 @@ title: Get-PnPTenantCdnOrigin
 # Get-PnPTenantCdnOrigin
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the current registered origins from the public or private content delivery network (CDN).
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Returns the current registered origins from the public or private content delive
 Get-PnPTenantCdnOrigin -CdnType <SPOTenantCdnType>
                        [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Returns the current registered origins from the public or private content delivery network (CDN).

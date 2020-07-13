@@ -9,6 +9,11 @@ title: Set-PnPTenantSyncClientRestriction
 # Set-PnPTenantSyncClientRestriction
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Sets organization-level sync client restriction properties
 
 ## SYNTAX 
@@ -22,10 +27,6 @@ Set-PnPTenantSyncClientRestriction [-BlockMacSync [<SwitchParameter>]]
                                    [-GrooveBlockOption <GrooveBlockOption>]
                                    [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Sets organization-level sync client restriction properties such as BlockMacSync, OptOutOfGroveBlock, and DisableReportProblemDialog.

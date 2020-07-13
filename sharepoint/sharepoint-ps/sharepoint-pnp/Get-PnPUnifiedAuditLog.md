@@ -9,6 +9,11 @@ title: Get-PnPUnifiedAuditLog
 # Get-PnPUnifiedAuditLog
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Office 365 Management API: ActivityFeed.Read
+
 Gets unified audit logs from the Office 365 Management API. Requires the Azure Active Directory application permission 'ActivityFeed.Read'.
 
 ## SYNTAX 
@@ -20,10 +25,6 @@ Get-PnPUnifiedAuditLog [-ContentType <AuditContentType>]
                        [-EndTime <DateTime>]
                        [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Office 365 Management API: ActivityFeed.Read
 
 ## EXAMPLES
 

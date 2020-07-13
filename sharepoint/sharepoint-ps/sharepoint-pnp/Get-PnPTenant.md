@@ -9,6 +9,11 @@ title: Get-PnPTenant
 # Get-PnPTenant
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns organization-level site collection properties
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Returns organization-level site collection properties
 ```powershell
 Get-PnPTenant [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Returns organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota,

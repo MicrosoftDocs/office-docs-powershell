@@ -9,6 +9,11 @@ title: Register-PnPAppCatalogSite
 # Register-PnPAppCatalogSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Creates a new App Catalog Site and sets this site as the Tenant App Catalog
 
 ## SYNTAX 
@@ -20,10 +25,6 @@ Register-PnPAppCatalogSite -Url <String>
                            [-Force [<SwitchParameter>]]
                            [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

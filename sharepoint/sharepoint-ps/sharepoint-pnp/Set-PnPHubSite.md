@@ -9,6 +9,11 @@ title: Set-PnPHubSite
 # Set-PnPHubSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Sets hub site properties
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Set-PnPHubSite [-SiteDesignId <GuidPipeBind>]
                [-RequiresJoinApproval [<SwitchParameter>]]
                [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Allows configuring a hub site

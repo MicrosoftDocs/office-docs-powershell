@@ -9,6 +9,11 @@ title: Grant-PnPSiteDesignRights
 # Grant-PnPSiteDesignRights
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Grants the specified principals rights to use the site design.
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Grant-PnPSiteDesignRights -Identity <TenantSiteDesignPipeBind>
                           [-Rights <TenantSiteDesignPrincipalRights>]
                           [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

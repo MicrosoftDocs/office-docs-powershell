@@ -9,6 +9,11 @@ title: Get-PnPTenantSyncClientRestriction
 # Get-PnPTenantSyncClientRestriction
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns organization-level OneDrive synchronization restriction settings
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Returns organization-level OneDrive synchronization restriction settings
 ```powershell
 Get-PnPTenantSyncClientRestriction [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Returns organization-level OneDrive synchronization restriction properties such as BlockMacSync,

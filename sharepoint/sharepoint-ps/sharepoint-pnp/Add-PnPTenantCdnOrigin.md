@@ -9,6 +9,11 @@ title: Add-PnPTenantCdnOrigin
 # Add-PnPTenantCdnOrigin
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Adds a new origin to the public or private content delivery network (CDN).
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Add-PnPTenantCdnOrigin -OriginUrl <String>
                        -CdnType <SPOTenantCdnType>
                        [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Add a new origin to the public or private CDN, on either Tenant level or on a single Site level. Effectively, a tenant admin points out to a document library, or a folder in the document library and requests that content in that library should be retrievable by using a CDN.

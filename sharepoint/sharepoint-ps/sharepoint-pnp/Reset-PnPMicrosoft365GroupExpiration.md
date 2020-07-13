@@ -9,6 +9,11 @@ title: Reset-PnPMicrosoft365GroupExpiration
 # Reset-PnPMicrosoft365GroupExpiration
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
+
 Renews the Microsoft 365 Group by extending its expiration with the number of days defined in the group expiration policy set on the Azure Active Directory
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Renews the Microsoft 365 Group by extending its expiration with the number of da
 Reset-PnPMicrosoft365GroupExpiration -Identity <Microsoft365GroupPipeBind>
                                      [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
 
 ## DESCRIPTION
 Renews the Microsoft 365 Group by extending its expiration with the number of days defined in the group expiration policy set on the Azure Active Directory

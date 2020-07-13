@@ -9,6 +9,11 @@ title: Update-PnPSiteClassification
 # Update-PnPSiteClassification
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Directory.ReadWrite.All
+
 Updates Site Classifications for the tenant
 
 ## SYNTAX 
@@ -26,10 +31,6 @@ Update-PnPSiteClassification [-Classifications <String>]
 Update-PnPSiteClassification -Settings <SiteClassificationsSettings>
                              [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Directory.ReadWrite.All
 
 ## EXAMPLES
 

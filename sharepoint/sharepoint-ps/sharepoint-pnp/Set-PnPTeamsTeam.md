@@ -9,6 +9,11 @@ title: Set-PnPTeamsTeam
 # Set-PnPTeamsTeam
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Updates an existing Team.
 
 ## SYNTAX 
@@ -38,10 +43,6 @@ Set-PnPTeamsTeam -Identity <TeamsTeamPipeBind>
                  [-Classification <String>]
                  [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

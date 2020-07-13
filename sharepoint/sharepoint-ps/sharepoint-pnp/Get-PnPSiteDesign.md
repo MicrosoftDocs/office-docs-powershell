@@ -9,6 +9,11 @@ title: Get-PnPSiteDesign
 # Get-PnPSiteDesign
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Retrieve Site Designs that have been registered on the current tenant.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Retrieve Site Designs that have been registered on the current tenant.
 Get-PnPSiteDesign [-Identity <TenantSiteDesignPipeBind>]
                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

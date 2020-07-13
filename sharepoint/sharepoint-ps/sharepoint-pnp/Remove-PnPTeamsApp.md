@@ -9,6 +9,11 @@ title: Remove-PnPTeamsApp
 # Remove-PnPTeamsApp
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: AppCatalog.ReadWrite.All
+
 Removes an app from the Teams AppCatalog.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Remove-PnPTeamsApp -Identity <TeamsAppPipeBind>
                    [-Force [<SwitchParameter>]]
                    [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: AppCatalog.ReadWrite.All
 
 ## EXAMPLES
 

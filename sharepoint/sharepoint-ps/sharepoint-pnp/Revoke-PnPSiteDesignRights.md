@@ -9,6 +9,11 @@ title: Revoke-PnPSiteDesignRights
 # Revoke-PnPSiteDesignRights
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Revokes the specified principals rights to use the site design.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Revoke-PnPSiteDesignRights -Identity <TenantSiteDesignPipeBind>
                            -Principals <String[]>
                            [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

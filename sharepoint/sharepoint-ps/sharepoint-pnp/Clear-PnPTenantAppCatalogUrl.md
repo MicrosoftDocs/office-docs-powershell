@@ -9,6 +9,11 @@ title: Clear-PnPTenantAppCatalogUrl
 # Clear-PnPTenantAppCatalogUrl
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes the url of the tenant scoped app catalog. It will not delete the site collection itself.
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Removes the url of the tenant scoped app catalog. It will not delete the site co
 ```powershell
 Clear-PnPTenantAppCatalogUrl [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

@@ -9,6 +9,11 @@ title: Set-PnPSiteDesign
 # Set-PnPSiteDesign
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Updates a Site Design on the current tenant.
 
 ## SYNTAX 
@@ -25,10 +30,6 @@ Set-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>
                   [-Version <Int>]
                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

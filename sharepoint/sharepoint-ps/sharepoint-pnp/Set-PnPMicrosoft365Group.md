@@ -9,6 +9,11 @@ title: Set-PnPMicrosoft365Group
 # Set-PnPMicrosoft365Group
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Sets Microsoft 365 Group properties
 
 ## SYNTAX 
@@ -24,10 +29,6 @@ Set-PnPMicrosoft365Group -Identity <Microsoft365GroupPipeBind>
                          [-CreateTeam [<SwitchParameter>]]
                          [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

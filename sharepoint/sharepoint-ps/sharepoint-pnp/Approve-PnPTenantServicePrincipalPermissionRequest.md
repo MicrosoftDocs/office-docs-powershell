@@ -9,6 +9,11 @@ title: Approve-PnPTenantServicePrincipalPermissionRequest
 # Approve-PnPTenantServicePrincipalPermissionRequest
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Approve-PnPTenantServicePrincipalPermissionRequest -RequestId <GuidPipeBind>
                                                    [-Force [<SwitchParameter>]]
                                                    [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal

@@ -9,6 +9,11 @@ title: Add-PnPSiteScript
 # Add-PnPSiteScript
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Creates a new Site Script on the current tenant.
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Add-PnPSiteScript -Title <String>
                   [-Description <String>]
                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

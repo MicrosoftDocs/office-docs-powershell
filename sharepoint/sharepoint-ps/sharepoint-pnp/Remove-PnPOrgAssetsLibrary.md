@@ -9,6 +9,11 @@ title: Remove-PnPOrgAssetsLibrary
 # Remove-PnPOrgAssetsLibrary
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a given document library as a organizational asset source
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Remove-PnPOrgAssetsLibrary -LibraryUrl <String>
                            [-CdnType <SPOTenantCdnType>]
                            [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Removes a given document library as a organizational asset source based on its server relative URL in your Sharepoint Online Tenant. It will not remove the document library itself. It may take some time before this change will be reflected in the webinterface.

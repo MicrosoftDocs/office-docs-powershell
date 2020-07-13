@@ -9,6 +9,11 @@ title: Set-PnPTenantSite
 # Set-PnPTenantSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Updates settings of a site collection
 
 ## SYNTAX 
@@ -45,10 +50,6 @@ Set-PnPTenantSite -Url <String>
                   [-Wait [<SwitchParameter>]]
                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Allows settings of a site collection to be updated

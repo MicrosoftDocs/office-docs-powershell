@@ -9,6 +9,11 @@ title: Disable-PnPSiteClassification
 # Disable-PnPSiteClassification
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Directory.ReadWrite.All
+
 Disables Site Classifications for the tenant
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Disables Site Classifications for the tenant
 ```powershell
 Disable-PnPSiteClassification [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Directory.ReadWrite.All
 
 ## EXAMPLES
 

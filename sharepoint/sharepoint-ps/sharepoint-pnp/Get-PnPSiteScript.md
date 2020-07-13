@@ -9,6 +9,11 @@ title: Get-PnPSiteScript
 # Get-PnPSiteScript
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Retrieve Site Scripts that have been registered on the current tenant.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Get-PnPSiteScript [-Identity <TenantSiteScriptPipeBind>]
                   [-SiteDesign <TenantSiteDesignPipeBind>]
                   [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

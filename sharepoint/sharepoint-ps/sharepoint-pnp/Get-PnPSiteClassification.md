@@ -9,6 +9,11 @@ title: Get-PnPSiteClassification
 # Get-PnPSiteClassification
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All
+
 Returns the defined Site Classifications for the tenant
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Returns the defined Site Classifications for the tenant
 ```powershell
 Get-PnPSiteClassification [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All
 
 ## EXAMPLES
 

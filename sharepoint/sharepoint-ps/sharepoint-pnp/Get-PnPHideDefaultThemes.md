@@ -9,6 +9,11 @@ title: Get-PnPHideDefaultThemes
 # Get-PnPHideDefaultThemes
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns if the default / OOTB themes should be visible to users or not.
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Returns if the default / OOTB themes should be visible to users or not.
 ```powershell
 Get-PnPHideDefaultThemes [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Returns if the default themes are visible. Use Set-PnPHideDefaultThemes to change this value.

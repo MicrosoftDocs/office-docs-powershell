@@ -9,6 +9,11 @@ title: Get-PnPHomeSite
 # Get-PnPHomeSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the home site url for your tenant
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Returns the home site url for your tenant
 ```powershell
 Get-PnPHomeSite [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

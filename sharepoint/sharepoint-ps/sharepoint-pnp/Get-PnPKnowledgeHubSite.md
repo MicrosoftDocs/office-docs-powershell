@@ -9,6 +9,11 @@ title: Get-PnPKnowledgeHubSite
 # Get-PnPKnowledgeHubSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Gets the Knowledge Hub Site URL for your tenant
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Gets the Knowledge Hub Site URL for your tenant
 ```powershell
 Get-PnPKnowledgeHubSite [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

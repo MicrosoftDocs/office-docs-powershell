@@ -9,6 +9,11 @@ title: Update-PnPTeamsApp
 # Update-PnPTeamsApp
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Updates an existing app in the Teams App Catalog.
 
 ## SYNTAX 
@@ -18,10 +23,6 @@ Update-PnPTeamsApp -Identity <TeamsAppPipeBind>
                    -Path <String>
                    [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

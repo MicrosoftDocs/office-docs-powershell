@@ -9,6 +9,11 @@ title: Get-PnPOrgAssetsLibrary
 # Get-PnPOrgAssetsLibrary
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the list of all the configured organizational asset libraries
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Returns the list of all the configured organizational asset libraries
 ```powershell
 Get-PnPOrgAssetsLibrary [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

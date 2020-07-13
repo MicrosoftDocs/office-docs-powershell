@@ -9,6 +9,11 @@ title: Get-PnPOrgNewsSite
 # Get-PnPOrgNewsSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the list of all the configured organizational news sites.
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Returns the list of all the configured organizational news sites.
 ```powershell
 Get-PnPOrgNewsSite [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

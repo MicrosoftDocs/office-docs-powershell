@@ -9,6 +9,11 @@ title: New-PnPTeamsTeam
 # New-PnPTeamsTeam
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Creates a new Team in Microsoft Teams. The cmdlet will create a Microsoft 365 group and then add a team to the group.
 
 ## SYNTAX 
@@ -65,10 +70,6 @@ New-PnPTeamsTeam -DisplayName <String>
                  [-Classification <String>]
                  [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

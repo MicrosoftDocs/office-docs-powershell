@@ -9,6 +9,11 @@ title: Register-PnPHubSite
 # Register-PnPHubSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Registers a site as a hubsite
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Registers a site as a hubsite
 Register-PnPHubSite -Site <SitePipeBind>
                     [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Registers a site as a hubsite

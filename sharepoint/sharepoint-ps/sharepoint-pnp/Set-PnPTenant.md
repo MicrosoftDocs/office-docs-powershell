@@ -9,6 +9,11 @@ title: Set-PnPTenant
 # Set-PnPTenant
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Sets organization-level site collection properties
 
 ## SYNTAX 
@@ -76,10 +81,6 @@ Set-PnPTenant [-MinCompatibilityLevel <Int>]
               [-EnableAIPIntegration <Boolean>]
               [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Sets organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota,

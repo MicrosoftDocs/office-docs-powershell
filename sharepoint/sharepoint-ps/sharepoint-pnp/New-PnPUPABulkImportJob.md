@@ -9,6 +9,11 @@ title: New-PnPUPABulkImportJob
 # New-PnPUPABulkImportJob
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Submit up a new user profile bulk import job.
 
 ## SYNTAX 
@@ -21,10 +26,6 @@ New-PnPUPABulkImportJob -Folder <String>
                         [-IdType <ImportProfilePropertiesUserIdType>]
                         [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 See https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online for information on the API and how the bulk import process works.

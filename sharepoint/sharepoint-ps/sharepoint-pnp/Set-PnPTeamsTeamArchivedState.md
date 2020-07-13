@@ -9,6 +9,11 @@ title: Set-PnPTeamsTeamArchivedState
 # Set-PnPTeamsTeamArchivedState
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
+
 Sets the archived state of a team.
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Set-PnPTeamsTeamArchivedState -Identity <TeamsTeamPipeBind>
                               [-SetSiteReadOnlyForMembers <Boolean>]
                               [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All
 
 ## EXAMPLES
 

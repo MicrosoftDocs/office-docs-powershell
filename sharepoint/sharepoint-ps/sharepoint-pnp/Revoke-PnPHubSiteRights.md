@@ -9,6 +9,11 @@ title: Revoke-PnPHubSiteRights
 # Revoke-PnPHubSiteRights
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Revoke permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users
 
 ## SYNTAX 
@@ -16,10 +21,6 @@ Revoke permissions to the permissions already in place to associate sites to Hub
 ```powershell
 Revoke-PnPHubSiteRights [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 

@@ -9,6 +9,11 @@ title: Get-PnPTeamsApp
 # Get-PnPTeamsApp
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API : One of AppCatalog.Read.All, Directory.ReadWrite.All
+
 Gets one Microsoft Teams App or a list of all apps.
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Gets one Microsoft Teams App or a list of all apps.
 Get-PnPTeamsApp [-Identity <TeamsAppPipeBind>]
                 [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API : One of AppCatalog.Read.All, Directory.ReadWrite.All
 
 ## EXAMPLES
 

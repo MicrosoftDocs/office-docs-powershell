@@ -9,6 +9,11 @@ title: Remove-PnPMicrosoft365Group
 # Remove-PnPMicrosoft365Group
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Removes one Microsoft 365 Group
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ Removes one Microsoft 365 Group
 Remove-PnPMicrosoft365Group -Identity <Microsoft365GroupPipeBind>
                             [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

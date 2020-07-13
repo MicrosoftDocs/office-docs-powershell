@@ -9,6 +9,11 @@ title: Set-PnPTeamsChannel
 # Set-PnPTeamsChannel
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+  * Microsoft Graph API: Group.ReadWrite.All
+
 Updates an existing Teams Channel
 
 ## SYNTAX 
@@ -20,10 +25,6 @@ Set-PnPTeamsChannel -Team <TeamsTeamPipeBind>
                     [-Description <String>]
                     [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
-
-## REQUIRED PERMISSIONS
-
-  * Microsoft Graph API: Group.ReadWrite.All
 
 ## EXAMPLES
 

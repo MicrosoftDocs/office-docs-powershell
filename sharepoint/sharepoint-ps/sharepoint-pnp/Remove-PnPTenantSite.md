@@ -9,6 +9,11 @@ title: Remove-PnPTenantSite
 # Remove-PnPTenantSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a site collection
 
 ## SYNTAX 
@@ -19,10 +24,6 @@ Remove-PnPTenantSite -Url <String>
                      [-Force [<SwitchParameter>]]
                      [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Removes a site collection which is listed in your tenant administration site.

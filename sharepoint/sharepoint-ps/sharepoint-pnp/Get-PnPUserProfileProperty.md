@@ -9,6 +9,11 @@ title: Get-PnPUserProfileProperty
 # Get-PnPUserProfileProperty
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet. 
 
 ## SYNTAX 
@@ -17,10 +22,6 @@ You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint
 Get-PnPUserProfileProperty -Account <String[]>
                            [-Connection <PnPConnection>]
 ```
-
-## REQUIRED PERMISSIONS
-
-* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Requires a connection to a SharePoint Tenant Admin site.
