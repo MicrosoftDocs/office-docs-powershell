@@ -53,7 +53,14 @@ You need to be assigned permissions in the Security & Compliance Center before y
 Set-Label -Identity "Label1" -LocaleSettings '{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}','{"localeKey":"tooltip","Settings":[{"Key":"en-us","Value":"This is an example label"},{"Key":"de-de","Value":"Dies ist ein Beispieletikett"},{"Key":"es-es","Value":"Esta es una etiqueta de ejemplo"}]}'
 ```
 
-This example sets the localized label name for "Label1" in different languages (English, German, and Spanish).
+This example sets the localized label name and label Tooltips for "Label1" in different languages (English, German, and Spanish).
+
+### Example 2
+```powershell
+Set-Label -Identity "Label1" -LocaleSettings '{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":""},{"Key":"de-de","Value":""},{"Key":"es-es","Value":""}]}','{"localeKey":"tooltip","Settings":[{"Key":"en-us","Value":""},{"Key":"de-de","Value":""},{"Key":"es-es","Value":""}]}'
+```
+
+This example removes the localized label name and label Tooltips for "Label1" in different languages (English, German, and Spanish).
 
 ## PARAMETERS
 
@@ -200,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleSettings
-The LocaleSettings parameter specifies one or more localized label name or label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
+The LocaleSettings parameter specifies one or more localized label name and label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
 
 - Label display names: `{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}`
 
