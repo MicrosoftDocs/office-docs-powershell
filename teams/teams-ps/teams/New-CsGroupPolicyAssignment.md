@@ -21,7 +21,7 @@ New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <
 ```
 
 ## DESCRIPTION
-This is used to assign a policy to a security group or distribution list.  The policy assignment will then be propagated to the members of the group in accordance with the rules for group policy inheritance.  If a user is directly assigned a policy of a specific type, then they will not inherit a policy of the same type from a group.  If a user is a member of two or more groups that each have a policy of the same type assigned, then the user will inherit the policy based on the group policy assignment with the highest rank.
+This is used to assign a policy to a security group or distribution list.  The policy assignment will then be propagated to the members of the group (even if members are added to the group later) in accordance with the rules for group policy inheritance.  If a user is directly assigned a policy of a specific type, then they will not inherit a policy of the same type from a group.  If a user is a member of two or more groups that each have a policy of the same type assigned, then the user will inherit the policy based on the group policy assignment with the highest rank.
 
 The group policy assignment rank is set at the time a policy is being assigned to a group and is relative to other group policy assignments of the same policy type.  For example, if there are two groups, each assigned a Teams Meeting policy, then one of the group assignments will be rank 1 while the other will be rank 2.
 
