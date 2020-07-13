@@ -2,20 +2,21 @@
 title: PnP PowerShell Overview
 ---
 
+
 # PnP PowerShell overview
 
 SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and can work against both SharePoint Online as SharePoint On-Premises.
 
 ![SharePoint Patterns and Practices](https://devofficecdn.azureedge.net/media/Default/PnP/sppnp.png)
 
-_**Applies to:** SharePoint Online | SharePoint 2016 | SharePoint 2013_
+_**Applies to:** SharePoint Online | SharePoint 2019 | SharePoint 2016 | SharePoint 2013_
 
 ## Installation #
 
 There are 3 ways to install the cmdlets. We recommend, where possible, to install them from the [PowerShell Gallery](https://www.powershellgallery.com). Alternatively you can download the setup files or run a PowerShell script to download the PowerShellGet module and install the cmdlets subsequently.
 
 ### PowerShell Gallery ###
-If your main OS is Windows 10, or if you have [PowerShellGet](https://github.com/powershell/powershellget) installed, you can run the following commands to install the PowerShell cmdlets:
+If you main OS is Windows 10, or if you have [PowerShellGet](https://github.com/powershell/powershellget) installed, you can run the following commands to install the PowerShell cmdlets:
 
 |**SharePoint Version**|**Command to install**|
 |------------------|------------------|
@@ -30,7 +31,7 @@ If your main OS is Windows 10, or if you have [PowerShellGet](https://github.com
 In order to install the cmdlets when you get this error specify the -SkipPublisherCheck switch with the Install-Module cmdlet, e.g. ```Install-Module SharePointPnPPowerShellOnline -SkipPublisherCheck -AllowClobber```
 
 ### Setup files ##
-You can download setup files from the [releases](https://github.com/sharepoint/pnp-powershell/releases) section of the PnP PowerShell repository. These files will up be updated on a monthly basis. Run the install and restart any open instances of PowerShell to use the cmdlets.
+You can download setup files from the [releases](https://github.com/pnp/pnp-powershell/releases) section of the PnP PowerShell repository. These files will up be updated on a monthly basis. Run the install and restart any open instances of PowerShell to use the cmdlets.
 
 ### Installation script ##
 This is an alternative for installation on machines that have at least PowerShell v3 installed. You can find the version of PowerShell  by opening PowerShell and running ```$PSVersionTable.PSVersion```. The value for ```Major``` should be above 3.
@@ -38,7 +39,7 @@ This is an alternative for installation on machines that have at least PowerShel
 To install the cmdlets you can run the below command which will install PowerShell Package Management and then install the PowerShell Modules from the PowerShell Gallery.
 
 ```powershell
-Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/sharepoint/PnP-PowerShell/master/Samples/Modules.Install/Install-SharePointPnPPowerShell.ps1')
+Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/pnp/PnP-PowerShell/master/Samples/Modules.Install/Install-SharePointPnPPowerShell.ps1')
 ```
 
 ## Updating ##
@@ -85,7 +86,7 @@ At the following links you will find a few videos on how to get started with the
 * https://channel9.msdn.com/blogs/OfficeDevPnP/PnP-Webcast-PnP-PowerShell-Getting-started-with-latest-updates
 
 ### Setting up credentials ##
-See this [wiki page](https://github.com/SharePoint/PnP-PowerShell/wiki/How-to-use-the-Windows-Credential-Manager-to-ease-authentication-with-PnP-PowerShell) for more information on how to use the Windows Credential Manager to setup credentials that you can use in unattended scripts
+See this [wiki page](https://github.com/pnp/PnP-PowerShell/wiki/How-to-use-the-Windows-Credential-Manager-to-ease-authentication-with-PnP-PowerShell) for more information on how to use the Windows Credential Manager to setup credentials that you can use in unattended scripts
 
 ## Cmdlet overview
 
@@ -142,6 +143,8 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPCustomAction](../../sharepoint-ps/sharepoint-pnp/Add-PnPCustomAction.md)** |Adds a custom action|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPCustomAction](../../sharepoint-ps/sharepoint-pnp/Get-PnPCustomAction.md)** |Return user custom actions|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPCustomAction](../../sharepoint-ps/sharepoint-pnp/Remove-PnPCustomAction.md)** |Removes a custom action|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Get&#8209;PnPFooter](../../sharepoint-ps/sharepoint-pnp/Get-PnPFooter.md)** |Gets the configuration regarding the footer of the current web|SharePoint Online
+**[Set&#8209;PnPFooter](../../sharepoint-ps/sharepoint-pnp/Set-PnPFooter.md)** |Configures the footer of the current web|SharePoint Online
 **[Get&#8209;PnPHomePage](../../sharepoint-ps/sharepoint-pnp/Get-PnPHomePage.md)** |Return the homepage|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPHomePage](../../sharepoint-ps/sharepoint-pnp/Set-PnPHomePage.md)** |Sets the home page of the current web.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Add&#8209;PnPJavaScriptBlock](../../sharepoint-ps/sharepoint-pnp/Add-PnPJavaScriptBlock.md)** |Adds a link to a JavaScript snippet/block to a web or site collection|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -195,7 +198,7 @@ Cmdlet|Description|Platform
 ### Diagnostic utilities 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Measure&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Measure-PnPList.md)** |Returns statistics on the list object|SharePoint Online, SharePoint 2016, SharePoint 2019
+**[Measure&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Measure-PnPList.md)** |Returns statistics on the list object. This may fail on lists larger than the list view threshold|SharePoint Online, SharePoint 2016, SharePoint 2019
 **[Measure&#8209;PnPResponseTime](../../sharepoint-ps/sharepoint-pnp/Measure-PnPResponseTime.md)** |Gets statistics on response time for the specified endpoint by sending probe requests|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Measure&#8209;PnPWeb](../../sharepoint-ps/sharepoint-pnp/Measure-PnPWeb.md)** |Returns statistics on the web object|SharePoint Online, SharePoint 2016, SharePoint 2019
 
@@ -243,18 +246,21 @@ Cmdlet|Description|Platform
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Add-PnPFile.md)** |Uploads a file to Web|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Copy&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Copy-PnPFile.md)** |Copies a file or folder to a different location, currently there is a 200MB file size limit for the file to be copied.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Copy&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Copy-PnPFile.md)** |Copies a file or folder to a different location. This location can be within the same document library, same site, same site collection or even to another site collection on the same tenant. Currently there is a 200MB file size limit for the file or folder to be copied.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Find&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Find-PnPFile.md)** |Finds a file in the virtual file system of the web.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Get-PnPFile.md)** |Downloads a file.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Move&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Move-PnPFile.md)** |Moves a file to a different location|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Move&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Move-PnPFile.md)** |Moves a file or folder to a different location|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Remove-PnPFile.md)** |Removes a file.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Rename&#8209;PnPFile](../../sharepoint-ps/sharepoint-pnp/Rename-PnPFile.md)** |Renames a file in its current location|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPFileCheckedIn](../../sharepoint-ps/sharepoint-pnp/Set-PnPFileCheckedIn.md)** |Checks in a file|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPFileCheckedOut](../../sharepoint-ps/sharepoint-pnp/Set-PnPFileCheckedOut.md)** |Checks out a file|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Get&#8209;PnPFileVersion](../../sharepoint-ps/sharepoint-pnp/Get-PnPFileVersion.md)** |Retrieves all versions of a file.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Remove&#8209;PnPFileVersion](../../sharepoint-ps/sharepoint-pnp/Remove-PnPFileVersion.md)** |Removes all or a specific file version.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Reset&#8209;PnPFileVersion](../../sharepoint-ps/sharepoint-pnp/Reset-PnPFileVersion.md)** |Resets a file to its previous version|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Restore&#8209;PnPFileVersion](../../sharepoint-ps/sharepoint-pnp/Restore-PnPFileVersion.md)** |Restores a specific file version.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Add&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Add-PnPFolder.md)** |Creates a folder within a parent folder|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Get-PnPFolder.md)** |Return a folder object|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Move&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Move-PnPFolder.md)** |Move a folder to another location in the current web|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Move&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Move-PnPFolder.md)** |Move a folder to another location in the current web. If you want to move a folder to a different site collection, use the Move-PnPFile cmdlet instead, which also supports moving folders and also accross site collections.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Remove-PnPFolder.md)** |Deletes a folder within a parent folder|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Rename&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Rename-PnPFolder.md)** |Renames a folder|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Resolve&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Resolve-PnPFolder.md)** |Returns a folder from a given site relative path, and will create it if it does not exist.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -267,8 +273,8 @@ Cmdlet|Description|Platform
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Get-PnPLabel.md)** |Gets the Office 365 retention label/tag of the specified list or library (if applicable)|SharePoint Online
-**[Reset&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Reset-PnPLabel.md)** |Resets a label/tag on the specified list or library to None|SharePoint Online
-**[Set&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Set-PnPLabel.md)** |Sets a label/tag on the specified list or library. Use Reset-PnPLabel to remove the label again.|SharePoint Online
+**[Reset&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Reset-PnPLabel.md)** |Resets a retention label on the specified list or library to None|SharePoint Online
+**[Set&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Set-PnPLabel.md)** |Sets a retention label on the specified list or library. Use Reset-PnPLabel to remove the label again.|SharePoint Online
 **[Get&#8209;PnPListInformationRightsManagement](../../sharepoint-ps/sharepoint-pnp/Get-PnPListInformationRightsManagement.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPListInformationRightsManagement](../../sharepoint-ps/sharepoint-pnp/Set-PnPListInformationRightsManagement.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPSiteClosure](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteClosure.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -284,7 +290,7 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPDefaultColumnValues](../../sharepoint-ps/sharepoint-pnp/Get-PnPDefaultColumnValues.md)** |Gets the default column values for all folders in document library|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPDefaultColumnValues](../../sharepoint-ps/sharepoint-pnp/Set-PnPDefaultColumnValues.md)** |Sets default column values for a document library|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPFolderPermission](../../sharepoint-ps/sharepoint-pnp/Set-PnPFolderPermission.md)** |Sets folder permissions. Use Get-PnPRoleDefinition to retrieve all available roles you can add or remove using this cmdlet.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Get&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Get-PnPList.md)** |Returns a List object|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Get&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Get-PnPList.md)** |Returns lists from SharePoint|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[New&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/New-PnPList.md)** |Creates a new list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Remove-PnPList.md)** |Deletes a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Set-PnPList.md)** |Updates list settings|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -305,27 +311,72 @@ Cmdlet|Description|Platform
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#8209;PnPManagementApiAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPManagementApiAccessToken.md)** |Gets an access token for the Office 365 Management API|SharePoint Online
+**[Get&#8209;PnPOffice365CurrentServiceStatus](../../sharepoint-ps/sharepoint-pnp/Get-PnPOffice365CurrentServiceStatus.md)** |Gets current service status of the Office 365 Services from the Office 365 Management API|SharePoint Online
+**[Get&#8209;PnPOffice365HistoricalServiceStatus](../../sharepoint-ps/sharepoint-pnp/Get-PnPOffice365HistoricalServiceStatus.md)** |Gets the historical service status of the Office 365 Services of the last 7 days from the Office 365 Management API|SharePoint Online
+**[Get&#8209;PnPOffice365ServiceMessage](../../sharepoint-ps/sharepoint-pnp/Get-PnPOffice365ServiceMessage.md)** |Gets the service messages regarding services in Office 365 from the Office 365 Management API|SharePoint Online
+**[Get&#8209;PnPOffice365Services](../../sharepoint-ps/sharepoint-pnp/Get-PnPOffice365Services.md)** |Gets the services available in Office 365 from the Office 365 Management API|SharePoint Online
+**[Get&#8209;PnPOfficeManagementApiAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPOfficeManagementApiAccessToken.md)** |Gets an access token for the Microsoft Office 365 Management API from the current connection|SharePoint Online
 **[Get&#8209;PnPUnifiedAuditLog](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedAuditLog.md)** |Gets unified audit logs from the Office 365 Management API. Requires the Azure Active Directory application permission 'ActivityFeed.Read'.|SharePoint Online
 
 
 ### Microsoft Graph 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Get&#8209;PnPDeletedUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Get-PnPDeletedUnifiedGroup.md)** |Gets one deleted Office 365 Group (aka Unified Group) or a list of deleted Office 365 Groups|SharePoint Online
-**[Remove&#8209;PnPDeletedUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPDeletedUnifiedGroup.md)** |Permanently removes one deleted Office 365 Group (aka Unified Group)|SharePoint Online
-**[Restore&#8209;PnPDeletedUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Restore-PnPDeletedUnifiedGroup.md)** |Restores one deleted Office 365 Group (aka Unified Group)|SharePoint Online
-**[Add&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteClassification.md)** |Adds one ore more site classification values to the list of possible values. Requires a connection to the Microsoft Graph.|SharePoint Online
-**[Disable&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Disable-PnPSiteClassification.md)** |Disables Site Classifications for the tenant. Requires a connection to the Microsoft Graph.|SharePoint Online
-**[Enable&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Enable-PnPSiteClassification.md)** |Enables Site Classifications for the tenant. Requires a connection to the Microsoft Graph.|SharePoint Online
-**[Get&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteClassification.md)** |Returns the defined Site Classifications for the tenant. Requires a connection to the Microsoft Graph.|SharePoint Online
-**[Remove&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteClassification.md)** |Removes one or more existing site classification values from the list of available values. Requires a connection to the Microsoft Graph|SharePoint Online
-**[Update&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Update-PnPSiteClassification.md)** |Updates Site Classifications for the tenant. Requires a connection to the Microsoft Graph.|SharePoint Online
-**[Get&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroup.md)** |Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups. Requires the Azure Active Directory application permission 'Group.Read.All'.|SharePoint Online
-**[New&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/New-PnPUnifiedGroup.md)** |Creates a new Office 365 Group (aka Unified Group). Requires the Azure Active Directory application permission 'Group.ReadWrite.All'.|SharePoint Online
-**[Remove&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPUnifiedGroup.md)** |Removes one Office 365 Group (aka Unified Group). Requires the Azure Active Directory application permission 'Group.ReadWrite.All'.|SharePoint Online
-**[Set&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Set-PnPUnifiedGroup.md)** |Sets Office 365 Group (aka Unified Group) properties. Requires the Azure Active Directory application permission 'Group.ReadWrite.All'.|SharePoint Online
-**[Get&#8209;PnPUnifiedGroupMembers](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupMembers.md)** |Gets members of a particular Office 365 Group (aka Unified Group). Requires the Azure Active Directory application permissions 'Group.Read.All' and 'User.Read.All'.|SharePoint Online
-**[Get&#8209;PnPUnifiedGroupOwners](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupOwners.md)** |Gets owners of a particular Office 365 Group (aka Unified Group). Requires the Azure Active Directory application permissions 'Group.Read.All' and 'User.Read.All'.|SharePoint Online
+**[Get&#8209;PnPAADUser](../../sharepoint-ps/sharepoint-pnp/Get-PnPAADUser.md)** |Retrieves users from Azure Active Directory|SharePoint Online
+**[Get&#8209;PnPAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAccessToken.md)** |Returns the current OAuth Access token|SharePoint Online
+**[Get&#8209;PnPDeletedMicrosoft365Group](../../sharepoint-ps/sharepoint-pnp/Get-PnPDeletedMicrosoft365Group.md)** |Gets one deleted Microsoft 365 Group or a list of deleted Microsoft 365 Groups|SharePoint Online
+**[Remove&#8209;PnPDeletedMicrosoft365Group](../../sharepoint-ps/sharepoint-pnp/Remove-PnPDeletedMicrosoft365Group.md)** |Permanently removes one deleted Microsoft 365 Group|SharePoint Online
+**[Restore&#8209;PnPDeletedMicrosoft365Group](../../sharepoint-ps/sharepoint-pnp/Restore-PnPDeletedMicrosoft365Group.md)** |Restores one deleted Microsoft 365 Group|SharePoint Online
+**[Get&#8209;PnPGraphSubscription](../../sharepoint-ps/sharepoint-pnp/Get-PnPGraphSubscription.md)** |Gets subscriptions from Microsoft Graph. Requires the Azure Active Directory application permission 'Subscription.Read.All'.|SharePoint Online
+**[New&#8209;PnPGraphSubscription](../../sharepoint-ps/sharepoint-pnp/New-PnPGraphSubscription.md)** |Creates a new Microsof Graph Subscription which allows your webhook API to be called when a change occurs in Microsoft Graph|SharePoint Online
+**[Remove&#8209;PnPGraphSubscription](../../sharepoint-ps/sharepoint-pnp/Remove-PnPGraphSubscription.md)** |Removes an existing Microsoft Graph subscription. Required Azure Active Directory application permission depends on the resource the subscription exists on, see https://docs.microsoft.com/graph/api/subscription-delete#permissions.|SharePoint Online
+**[Set&#8209;PnPGraphSubscription](../../sharepoint-ps/sharepoint-pnp/Set-PnPGraphSubscription.md)** |Updates an existing Microsoft Graph subscription. Required Azure Active Directory application permission depends on the resource the subscription exists on, see https://docs.microsoft.com/graph/api/subscription-delete#permissions.|SharePoint Online
+**[Get&#8209;PnPMicrosoft365Group](../../sharepoint-ps/sharepoint-pnp/Get-PnPMicrosoft365Group.md)** |Gets one Microsoft 365 Group or a list of Microsoft 365 Groups|SharePoint Online
+**[New&#8209;PnPMicrosoft365Group](../../sharepoint-ps/sharepoint-pnp/New-PnPMicrosoft365Group.md)** |Creates a new Microsoft 365 Group|SharePoint Online
+**[Remove&#8209;PnPMicrosoft365Group](../../sharepoint-ps/sharepoint-pnp/Remove-PnPMicrosoft365Group.md)** |Removes one Microsoft 365 Group|SharePoint Online
+**[Set&#8209;PnPMicrosoft365Group](../../sharepoint-ps/sharepoint-pnp/Set-PnPMicrosoft365Group.md)** |Sets Microsoft 365 Group properties|SharePoint Online
+**[Reset&#8209;PnPMicrosoft365GroupExpiration](../../sharepoint-ps/sharepoint-pnp/Reset-PnPMicrosoft365GroupExpiration.md)** |Renews the Microsoft 365 Group by extending its expiration with the number of days defined in the group expiration policy set on the Azure Active Directory|SharePoint Online
+**[Add&#8209;PnPMicrosoft365GroupMember](../../sharepoint-ps/sharepoint-pnp/Add-PnPMicrosoft365GroupMember.md)** |Adds members to a particular Microsoft 365 Group|SharePoint Online
+**[Clear&#8209;PnPMicrosoft365GroupMember](../../sharepoint-ps/sharepoint-pnp/Clear-PnPMicrosoft365GroupMember.md)** |Removes all current members from a particular Microsoft 365 Group|SharePoint Online
+**[Remove&#8209;PnPMicrosoft365GroupMember](../../sharepoint-ps/sharepoint-pnp/Remove-PnPMicrosoft365GroupMember.md)** |Removes members from a particular Microsoft 365 Group|SharePoint Online
+**[Get&#8209;PnPMicrosoft365GroupMembers](../../sharepoint-ps/sharepoint-pnp/Get-PnPMicrosoft365GroupMembers.md)** |Gets members of a particular Microsoft 365 Group (aka Unified Group). Requires the Azure Active Directory application permissions 'Group.Read.All' and 'User.Read.All'.|SharePoint Online
+**[Clear&#8209;PnPMicrosoft365GroupOwner](../../sharepoint-ps/sharepoint-pnp/Clear-PnPMicrosoft365GroupOwner.md)** |Removes all current owners from a particular Microsoft 365 Group (aka Unified Group)|SharePoint Online
+**[Remove&#8209;PnPMicrosoft365GroupOwner](../../sharepoint-ps/sharepoint-pnp/Remove-PnPMicrosoft365GroupOwner.md)** |Removes owners from a particular Microsoft 365 Group|SharePoint Online
+**[Get&#8209;PnPMicrosoft365GroupOwners](../../sharepoint-ps/sharepoint-pnp/Get-PnPMicrosoft365GroupOwners.md)** |Gets owners of a particular Microsoft 365 Group|SharePoint Online
+**[Add&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteClassification.md)** |Adds one ore more site classification values to the list of possible values|SharePoint Online
+**[Disable&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Disable-PnPSiteClassification.md)** |Disables Site Classifications for the tenant|SharePoint Online
+**[Enable&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Enable-PnPSiteClassification.md)** |Enables Site Classifications for the tenant|SharePoint Online
+**[Get&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteClassification.md)** |Returns the defined Site Classifications for the tenant|SharePoint Online
+**[Remove&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteClassification.md)** |Removes one or more existing site classification values from the list of available values|SharePoint Online
+**[Update&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Update-PnPSiteClassification.md)** |Updates Site Classifications for the tenant|SharePoint Online
+
+
+### Microsoft Teams 
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Get&#8209;PnPTeamsApp](../../sharepoint-ps/sharepoint-pnp/Get-PnPTeamsApp.md)** |Gets one Microsoft Teams App or a list of all apps.|SharePoint Online
+**[New&#8209;PnPTeamsApp](../../sharepoint-ps/sharepoint-pnp/New-PnPTeamsApp.md)** |Adds an app to the Teams App Catalog.|SharePoint Online
+**[Remove&#8209;PnPTeamsApp](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTeamsApp.md)** |Removes an app from the Teams AppCatalog.|SharePoint Online
+**[Update&#8209;PnPTeamsApp](../../sharepoint-ps/sharepoint-pnp/Update-PnPTeamsApp.md)** |Updates an existing app in the Teams App Catalog.|SharePoint Online
+**[Add&#8209;PnPTeamsChannel](../../sharepoint-ps/sharepoint-pnp/Add-PnPTeamsChannel.md)** |Adds a channel to an existing Microsoft Teams instance.|SharePoint Online
+**[Get&#8209;PnPTeamsChannel](../../sharepoint-ps/sharepoint-pnp/Get-PnPTeamsChannel.md)** |Gets the channels for a specified Team.|SharePoint Online
+**[Remove&#8209;PnPTeamsChannel](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTeamsChannel.md)** |Removes a channel from a Microsoft Teams instance.|SharePoint Online
+**[Set&#8209;PnPTeamsChannel](../../sharepoint-ps/sharepoint-pnp/Set-PnPTeamsChannel.md)** |Updates an existing Teams Channel|SharePoint Online
+**[Get&#8209;PnPTeamsChannelMessage](../../sharepoint-ps/sharepoint-pnp/Get-PnPTeamsChannelMessage.md)** |Sends a message to a Microsoft Teams Channel.|SharePoint Online
+**[Submit&#8209;PnPTeamsChannelMessage](../../sharepoint-ps/sharepoint-pnp/Submit-PnPTeamsChannelMessage.md)** |Sends a message to a Microsoft Teams Channel.|SharePoint Online
+**[Add&#8209;PnPTeamsTab](../../sharepoint-ps/sharepoint-pnp/Add-PnPTeamsTab.md)** |Adds a tab to an existing Channel|SharePoint Online
+**[Get&#8209;PnPTeamsTab](../../sharepoint-ps/sharepoint-pnp/Get-PnPTeamsTab.md)** |Gets one or all tabs in a channel.|SharePoint Online
+**[Remove&#8209;PnPTeamsTab](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTeamsTab.md)** |Removes a Microsoft Teams tab in a channel.|SharePoint Online
+**[Set&#8209;PnPTeamsTab](../../sharepoint-ps/sharepoint-pnp/Set-PnPTeamsTab.md)** |Updates Teams Tab settings|SharePoint Online
+**[Get&#8209;PnPTeamsTeam](../../sharepoint-ps/sharepoint-pnp/Get-PnPTeamsTeam.md)** |Gets one Microsoft Teams Team or a list of Teams.|SharePoint Online
+**[New&#8209;PnPTeamsTeam](../../sharepoint-ps/sharepoint-pnp/New-PnPTeamsTeam.md)** |Creates a new Team in Microsoft Teams. The cmdlet will create a Microsoft 365 group and then add a team to the group.|SharePoint Online
+**[Remove&#8209;PnPTeamsTeam](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTeamsTeam.md)** |Removes a Microsoft Teams Team instance|SharePoint Online
+**[Set&#8209;PnPTeamsTeam](../../sharepoint-ps/sharepoint-pnp/Set-PnPTeamsTeam.md)** |Updates an existing Team.|SharePoint Online
+**[Set&#8209;PnPTeamsTeamArchivedState](../../sharepoint-ps/sharepoint-pnp/Set-PnPTeamsTeamArchivedState.md)** |Sets the archived state of a team.|SharePoint Online
+**[Set&#8209;PnPTeamsTeamPicture](../../sharepoint-ps/sharepoint-pnp/Set-PnPTeamsTeamPicture.md)** |Sets the picture of an existing team.|SharePoint Online
+**[Add&#8209;PnPTeamsUser](../../sharepoint-ps/sharepoint-pnp/Add-PnPTeamsUser.md)** |Adds a channel to an existing Microsoft Teams instance.|SharePoint Online
+**[Get&#8209;PnPTeamsUser](../../sharepoint-ps/sharepoint-pnp/Get-PnPTeamsUser.md)** |Returns owners, members or guests from a team.|SharePoint Online
+**[Remove&#8209;PnPTeamsUser](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTeamsUser.md)** |Removes users from a team.|SharePoint Online
 
 
 ### Provisioning 
@@ -354,10 +405,10 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPTenantSequenceSite](../../sharepoint-ps/sharepoint-pnp/Add-PnPTenantSequenceSite.md)** |Adds a existing tenant sequence site object to a tenant template|SharePoint Online
 **[Get&#8209;PnPTenantSequenceSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantSequenceSite.md)** |Returns one ore more sites from a tenant template|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Add&#8209;PnPTenantSequenceSubSite](../../sharepoint-ps/sharepoint-pnp/Add-PnPTenantSequenceSubSite.md)** |Adds a tenant sequence sub site object to a tenant sequence site object|SharePoint Online
-**[New&#8209;PnPTenantSequenceTeamNoGroupSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSequenceTeamNoGroupSite.md)** |Creates a new team site without an Office 365 group in-memory object|SharePoint Online
-**[New&#8209;PnPTenantSequenceTeamNoGroupSubSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSequenceTeamNoGroupSubSite.md)** |Creates a team site subsite with no Office 365 group object|SharePoint Online
+**[New&#8209;PnPTenantSequenceTeamNoGroupSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSequenceTeamNoGroupSite.md)** |Creates a new team site without a Microsoft 365 group in-memory object|SharePoint Online
+**[New&#8209;PnPTenantSequenceTeamNoGroupSubSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSequenceTeamNoGroupSubSite.md)** |Creates a team site subsite with no Microsoft 365 group object|SharePoint Online
 **[New&#8209;PnPTenantSequenceTeamSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSequenceTeamSite.md)** |Creates a team site object|SharePoint Online
-**[Apply&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Apply-PnPTenantTemplate.md)** |Applies a tenant template to the current tenant. You must be a SharePoint Online global administrator to run the cmdlet.|SharePoint Online
+**[Apply&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Apply-PnPTenantTemplate.md)** |Applies a tenant template to the current tenant. You must have the Office 365 Global Admin role to run this cmdlet successfully.|SharePoint Online
 **[Get&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantTemplate.md)** |Generates a provisioning tenant template from a site. If the site is a hubsite any connected site will be included.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[New&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantTemplate.md)** |Creates a new tenant template object|SharePoint Online
 **[Read&#8209;PnPTenantTemplate](../../sharepoint-ps/sharepoint-pnp/Read-PnPTenantTemplate.md)** |Loads/Reads a PnP tenant template from the file system and returns an in-memory instance of this template.|SharePoint Online
@@ -440,6 +491,8 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPRoleDefinition](../../sharepoint-ps/sharepoint-pnp/Add-PnPRoleDefinition.md)** |Adds a Role Defintion (Permission Level) to the site collection in the current context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPRoleDefinition](../../sharepoint-ps/sharepoint-pnp/Get-PnPRoleDefinition.md)** |Retrieves a Role Definitions of a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPRoleDefinition](../../sharepoint-ps/sharepoint-pnp/Remove-PnPRoleDefinition.md)** |Remove a Role Definition from a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Disable&#8209;PnPSharingForNonOwnersOfSite](../../sharepoint-ps/sharepoint-pnp/Disable-PnPSharingForNonOwnersOfSite.md)** |Configures the site to only allow sharing of the site and items in the site by owners|SharePoint Online
+**[Get&#8209;PnPSharingForNonOwnersOfSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPSharingForNonOwnersOfSite.md)** |Returns $false if sharing of the site and items in the site is restricted only to owners or $true if members and owners are allowed to share|SharePoint Online
 **[Get&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPSite.md)** |Returns the current site collection from the context.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Set&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPSite.md)** |Sets Site Collection properties.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Add&#8209;PnPSiteCollectionAdmin](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteCollectionAdmin.md)** |Adds one or more users as site collection administrators to the site collection in the current context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -476,8 +529,8 @@ Cmdlet|Description|Platform
 ### Tenant Administration 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Get&#8209;PnPAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAccessToken.md)** |Returns the current OAuth Access token|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Register&#8209;PnPAppCatalogSite](../../sharepoint-ps/sharepoint-pnp/Register-PnPAppCatalogSite.md)** |Creates a new App Catalog Site and sets this site as the Tenant App Catalog|SharePoint Online
+**[Get&#8209;PnPGraphAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPGraphAccessToken.md)** |Returns the current OAuth Access token for the Microsoft Graph API|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPHideDefaultThemes](../../sharepoint-ps/sharepoint-pnp/Get-PnPHideDefaultThemes.md)** |Returns if the default / OOTB themes should be visible to users or not.|SharePoint Online
 **[Set&#8209;PnPHideDefaultThemes](../../sharepoint-ps/sharepoint-pnp/Set-PnPHideDefaultThemes.md)** |Defines if the default / OOTB themes should be visible to users or not.|SharePoint Online
 **[Get&#8209;PnPHomeSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPHomeSite.md)** |Returns the home site url for your tenant|SharePoint Online
@@ -492,10 +545,11 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPHubSiteChild](../../sharepoint-ps/sharepoint-pnp/Get-PnPHubSiteChild.md)** |Retrieves all sites linked to a specific hub site|SharePoint Online
 **[Grant&#8209;PnPHubSiteRights](../../sharepoint-ps/sharepoint-pnp/Grant-PnPHubSiteRights.md)** |Grant additional permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users|SharePoint Online
 **[Revoke&#8209;PnPHubSiteRights](../../sharepoint-ps/sharepoint-pnp/Revoke-PnPHubSiteRights.md)** |Revoke permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users|SharePoint Online
+**[Get&#8209;PnPIsSiteAliasAvailable](../../sharepoint-ps/sharepoint-pnp/Get-PnPIsSiteAliasAvailable.md)** |Validates if a certain alias is still available to be used to create a new site collection for. If it is not, it will propose an alternative alias and URL which is still available.|SharePoint Online
 **[Get&#8209;PnPKnowledgeHubSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPKnowledgeHubSite.md)** |Gets the Knowledge Hub Site URL for your tenant|SharePoint Online
 **[Remove&#8209;PnPKnowledgeHubSite](../../sharepoint-ps/sharepoint-pnp/Remove-PnPKnowledgeHubSite.md)** |Removes the Knowledge Hub Site setting for your tenant|SharePoint Online
 **[Set&#8209;PnPKnowledgeHubSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPKnowledgeHubSite.md)** |Sets the Knowledge Hub Site for your tenant|SharePoint Online
-**[Add&#8209;PnPOffice365GroupToSite](../../sharepoint-ps/sharepoint-pnp/Add-PnPOffice365GroupToSite.md)** |Groupifies a classic team site by creating an Office 365 group for it and connecting the site with the newly created group|SharePoint Online
+**[Add&#8209;PnPMicrosoft365GroupToSite](../../sharepoint-ps/sharepoint-pnp/Add-PnPMicrosoft365GroupToSite.md)** |Groupifies a classic team site by creating a Microsoft 365 group for it and connecting the site with the newly created group|SharePoint Online
 **[Add&#8209;PnPOrgAssetsLibrary](../../sharepoint-ps/sharepoint-pnp/Add-PnPOrgAssetsLibrary.md)** |Adds a given document library as a organizational asset source|SharePoint Online
 **[Get&#8209;PnPOrgAssetsLibrary](../../sharepoint-ps/sharepoint-pnp/Get-PnPOrgAssetsLibrary.md)** |Returns the list of all the configured organizational asset libraries|SharePoint Online
 **[Remove&#8209;PnPOrgAssetsLibrary](../../sharepoint-ps/sharepoint-pnp/Remove-PnPOrgAssetsLibrary.md)** |Removes a given document library as a organizational asset source|SharePoint Online
@@ -506,7 +560,7 @@ Cmdlet|Description|Platform
 **[Disable&#8209;PnPPowerShellTelemetry](../../sharepoint-ps/sharepoint-pnp/Disable-PnPPowerShellTelemetry.md)** |Disables PnP PowerShell telemetry tracking|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Enable&#8209;PnPPowerShellTelemetry](../../sharepoint-ps/sharepoint-pnp/Enable-PnPPowerShellTelemetry.md)** |Enables PnP PowerShell telemetry tracking.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPPowerShellTelemetryEnabled](../../sharepoint-ps/sharepoint-pnp/Get-PnPPowerShellTelemetryEnabled.md)** |Returns true if the PnP PowerShell Telemetry has been enabled.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[New&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/New-PnPSite.md)** |Creates either a communication site or an Office 365 group-connected team site|SharePoint Online
+**[New&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/New-PnPSite.md)** |Creates either a communication site or a Microsoft 365 group-connected team site|SharePoint Online
 **[Add&#8209;PnPSiteCollectionAppCatalog](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteCollectionAppCatalog.md)** |Adds a Site Collection scoped App Catalog to a site|SharePoint Online
 **[Remove&#8209;PnPSiteCollectionAppCatalog](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteCollectionAppCatalog.md)** |Removes a Site Collection scoped App Catalog from a site|SharePoint Online
 **[Add&#8209;PnPSiteDesign](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteDesign.md)** |Creates a new Site Design on the current tenant.|SharePoint Online
@@ -557,12 +611,14 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantSite.md)** |Retrieve site information.|SharePoint Online, SharePoint 2016, SharePoint 2019
 **[New&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSite.md)** |Creates a new (classic) site collection for the current tenant|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTenantSite.md)** |Removes a site collection|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Set&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenantSite.md)** |Set site information.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Set&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenantSite.md)** |Updates settings of a site collection|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Get&#8209;PnPTenantSyncClientRestriction](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantSyncClientRestriction.md)** |Returns organization-level OneDrive synchronization restriction settings|SharePoint Online
+**[Set&#8209;PnPTenantSyncClientRestriction](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenantSyncClientRestriction.md)** |Sets organization-level sync client restriction properties|SharePoint Online
 **[Add&#8209;PnPTenantTheme](../../sharepoint-ps/sharepoint-pnp/Add-PnPTenantTheme.md)** |Adds or updates a theme to the tenant.|SharePoint Online
 **[Get&#8209;PnPTenantTheme](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantTheme.md)** |Returns all or a specific theme|SharePoint Online
 **[Remove&#8209;PnPTenantTheme](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTenantTheme.md)** |Removes a theme|SharePoint Online
 **[Get&#8209;PnPTimeZoneId](../../sharepoint-ps/sharepoint-pnp/Get-PnPTimeZoneId.md)** |Returns a time zone ID|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Get&#8209;PnPWebTemplates](../../sharepoint-ps/sharepoint-pnp/Get-PnPWebTemplates.md)** |Returns the available web templates|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Get&#8209;PnPWebTemplates](../../sharepoint-ps/sharepoint-pnp/Get-PnPWebTemplates.md)** |Returns the available classic web templates|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
 
 ### User and group management 
@@ -582,7 +638,7 @@ Cmdlet|Description|Platform
 **[New&#8209;PnPUser](../../sharepoint-ps/sharepoint-pnp/New-PnPUser.md)** |Adds a user to the built-in Site User Info List and returns a user object|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPUser](../../sharepoint-ps/sharepoint-pnp/Remove-PnPUser.md)** |Removes a specific user from the site collection User Information List|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPUserFromGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPUserFromGroup.md)** |Removes a user from a group|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Add&#8209;PnPUserToGroup](../../sharepoint-ps/sharepoint-pnp/Add-PnPUserToGroup.md)** |Adds a user to a group|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Add&#8209;PnPUserToGroup](../../sharepoint-ps/sharepoint-pnp/Add-PnPUserToGroup.md)** |Adds a user to a SharePoint group|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
 
 ### User Profiles 
@@ -591,8 +647,11 @@ Cmdlet|Description|Platform
 **[New&#8209;PnPPersonalSite](../../sharepoint-ps/sharepoint-pnp/New-PnPPersonalSite.md)** |Office365 only: Creates a personal / OneDrive For Business site|SharePoint Online
 **[New&#8209;PnPUPABulkImportJob](../../sharepoint-ps/sharepoint-pnp/New-PnPUPABulkImportJob.md)** |Submit up a new user profile bulk import job.|SharePoint Online
 **[Get&#8209;PnPUPABulkImportStatus](../../sharepoint-ps/sharepoint-pnp/Get-PnPUPABulkImportStatus.md)** |Get user profile bulk import status.|SharePoint Online
-**[Get&#8209;PnPUserProfileProperty](../../sharepoint-ps/sharepoint-pnp/Get-PnPUserProfileProperty.md)** |You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet.  |SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Set&#8209;PnPUserProfileProperty](../../sharepoint-ps/sharepoint-pnp/Set-PnPUserProfileProperty.md)** |Office365 only: Uses the tenant API to retrieve site information.  You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.  |SharePoint Online
+**[Get&#8209;PnPUserOneDriveQuota](../../sharepoint-ps/sharepoint-pnp/Get-PnPUserOneDriveQuota.md)** |Retrieves the current quota set on the OneDrive for Business site for a specific user|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Set&#8209;PnPUserOneDriveQuota](../../sharepoint-ps/sharepoint-pnp/Set-PnPUserOneDriveQuota.md)** |Sets the quota on the OneDrive for Business site for a specific user|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Reset&#8209;PnPUserOneDriveQuotaToDefault](../../sharepoint-ps/sharepoint-pnp/Reset-PnPUserOneDriveQuotaToDefault.md)** |Resets the current quota set on the OneDrive for Business site for a specific user to the tenant default|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Get&#8209;PnPUserProfileProperty](../../sharepoint-ps/sharepoint-pnp/Get-PnPUserProfileProperty.md)** |You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet. |SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Set&#8209;PnPUserProfileProperty](../../sharepoint-ps/sharepoint-pnp/Set-PnPUserProfileProperty.md)** |Office365 only: Uses the tenant API to retrieve site information. You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.|SharePoint Online
 
 
 ### Utilities 
@@ -620,6 +679,7 @@ Cmdlet|Description|Platform
 ### Webs 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
+**[Get&#8209;PnPAvailableLanguage](../../sharepoint-ps/sharepoint-pnp/Get-PnPAvailableLanguage.md)** |Returns the available languages on the current web|SharePoint Online, SharePoint 2019
 **[Set&#8209;PnPIndexedProperties](../../sharepoint-ps/sharepoint-pnp/Set-PnPIndexedProperties.md)** |Marks values of the propertybag to be indexed by search. Notice that this will overwrite the existing flags, i.e. only the properties you define with the cmdlet will be indexed.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Add&#8209;PnPIndexedProperty](../../sharepoint-ps/sharepoint-pnp/Add-PnPIndexedProperty.md)** |Marks the value of the propertybag key specified to be indexed by search.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPIndexedProperty](../../sharepoint-ps/sharepoint-pnp/Remove-PnPIndexedProperty.md)** |Removes a key from propertybag to be indexed by search. The key and it's value remain in the propertybag, however it will not be indexed anymore.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
@@ -645,16 +705,16 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPWorkflowDefinition](../../sharepoint-ps/sharepoint-pnp/Add-PnPWorkflowDefinition.md)** |Adds a workflow definition|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPWorkflowDefinition](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowDefinition.md)** |Returns a workflow definition|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Remove&#8209;PnPWorkflowDefinition](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWorkflowDefinition.md)** |Removes a workflow definition|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Get&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowInstance.md)** |Get workflow instances|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Get&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowInstance.md)** |Gets SharePoint 2010/2013 workflow instances|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Resume&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Resume-PnPWorkflowInstance.md)** |Resume a workflow|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Start&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Start-PnPWorkflowInstance.md)** |Starts a workflow instance on a list item|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Start&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Start-PnPWorkflowInstance.md)** |Starts a SharePoint 2010/2013 workflow instance on a list item|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Stop&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Stop-PnPWorkflowInstance.md)** |Stops a workflow instance|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Add&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Add-PnPWorkflowSubscription.md)** |Adds a workflow subscription to a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 **[Get&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowSubscription.md)** |Return a workflow subscription|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
-**[Remove&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWorkflowSubscription.md)** |Remove workflow subscription|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
+**[Remove&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWorkflowSubscription.md)** |Removes a SharePoint 2010/2013 workflow subscription|SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 
 
 ## Additional resources
 <a name="bk_addresources"> </a>
 
--  [SharePoint PnP PowerShell on GitHub](https://github.com/SharePoint/PnP-PowerShell)
+-  [SharePoint PnP PowerShell on GitHub](https://github.com/pnp/PnP-PowerShell)
