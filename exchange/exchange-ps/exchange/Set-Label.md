@@ -213,6 +213,8 @@ The LocaleSettings parameter specifies one or more localized label name and labe
 
 - Label Tooltips: `{"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de","Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}`
 
+To remove a language, you will have to give an empty value for that corresponding language.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
