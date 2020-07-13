@@ -17,8 +17,12 @@ Adds a given document library as a organizational asset source
 Add-PnPOrgAssetsLibrary -LibraryUrl <String>
                         [-ThumbnailUrl <String>]
                         [-CdnType <SPOTenantCdnType>]
-                        [-Connection <SPOnlineConnection>]
+                        [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Adds a given document library as an organizational asset source in your Sharepoint Online Tenant. All organizational asset sources you add must reside in the same site collection. Document libraries specified as organizational asset must be enabled as an Office 365 CDN source, either as private or public. It may take some time before this change will be reflected in the webinterface.
@@ -88,7 +92,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -14,8 +14,12 @@ Retrieve all or a specific hubsite.
 ## SYNTAX 
 
 ```powershell
-Get-PnPHubSite [-Connection <SPOnlineConnection>]
+Get-PnPHubSite [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 
@@ -39,7 +43,7 @@ Returns the properties of the specified hubsite
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

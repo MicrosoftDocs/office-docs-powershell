@@ -9,20 +9,24 @@ title: Remove-PnPSiteClassification
 # Remove-PnPSiteClassification
 
 ## SYNOPSIS
-Removes one or more existing site classification values from the list of available values. Requires a connection to the Microsoft Graph
+Removes one or more existing site classification values from the list of available values
 
 ## SYNTAX 
 
 ```powershell
 Remove-PnPSiteClassification -Classifications <String>
                              [-Confirm [<SwitchParameter>]]
+                             [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
+
+## REQUIRED PERMISSIONS
+
+  * Microsoft Graph API: Directory.ReadWrite.All
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
 Remove-PnPSiteClassification -Classifications "HBI"
 ```
 
@@ -30,13 +34,24 @@ Removes the "HBI" site classification from the list of available values.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
 Remove-PnPSiteClassification -Classifications "HBI", "Top Secret"
 ```
 
 Removes the "HBI" site classification from the list of available values.
 
 ## PARAMETERS
+
+### -ByPassPermissionCheck
+Allows the check for required permissions in the access token to be bypassed when set to $true
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Classifications
 

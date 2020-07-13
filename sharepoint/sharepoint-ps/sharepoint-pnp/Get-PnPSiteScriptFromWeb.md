@@ -18,7 +18,7 @@ Generates a Site Script from an existing site
 Get-PnPSiteScriptFromWeb -Url <String>
                          [-IncludeAll [<SwitchParameter>]]
                          [-Lists <String[]>]
-                         [-Connection <SPOnlineConnection>]
+                         [-Connection <PnPConnection>]
 ```
 
 ### Specific components
@@ -30,8 +30,12 @@ Get-PnPSiteScriptFromWeb -Url <String>
                          [-IncludeSiteExternalSharingCapability [<SwitchParameter>]]
                          [-IncludeTheme [<SwitchParameter>]]
                          [-Lists <String[]>]
-                         [-Connection <SPOnlineConnection>]
+                         [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 This command allows a Site Script to be generated off of an existing site on your tenant. Connect to your SharePoint Online Admin site before executing this command.
@@ -161,7 +165,7 @@ Accept pipeline input: True
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

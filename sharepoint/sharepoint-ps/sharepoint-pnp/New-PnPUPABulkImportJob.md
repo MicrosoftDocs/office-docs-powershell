@@ -19,11 +19,15 @@ New-PnPUPABulkImportJob -Folder <String>
                         -UserProfilePropertyMapping <Hashtable>
                         -IdProperty <String>
                         [-IdType <ImportProfilePropertiesUserIdType>]
-                        [-Connection <SPOnlineConnection>]
+                        [-Connection <PnPConnection>]
 ```
 
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 ## DESCRIPTION
-See https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online for information on the API and how the bulk import process works.
+See https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online for information on the API and how the bulk import process works.
 
 ## EXAMPLES
 
@@ -115,7 +119,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

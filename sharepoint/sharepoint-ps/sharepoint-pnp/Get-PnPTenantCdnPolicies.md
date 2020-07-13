@@ -15,8 +15,12 @@ Returns the CDN Policies for the specified CDN (Public | Private).
 
 ```powershell
 Get-PnPTenantCdnPolicies -CdnType <SPOTenantCdnType>
-                         [-Connection <SPOnlineConnection>]
+                         [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Enables or disabled the public or private Office 365 Content Delivery Network (CDN).
@@ -48,7 +52,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

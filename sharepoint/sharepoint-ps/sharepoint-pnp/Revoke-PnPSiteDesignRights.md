@@ -16,8 +16,12 @@ Revokes the specified principals rights to use the site design.
 ```powershell
 Revoke-PnPSiteDesignRights -Identity <TenantSiteDesignPipeBind>
                            -Principals <String[]>
-                           [-Connection <SPOnlineConnection>]
+                           [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 
@@ -65,7 +69,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

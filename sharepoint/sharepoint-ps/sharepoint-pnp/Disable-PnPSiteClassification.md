@@ -9,17 +9,40 @@ title: Disable-PnPSiteClassification
 # Disable-PnPSiteClassification
 
 ## SYNOPSIS
-Disables Site Classifications for the tenant. Requires a connection to the Microsoft Graph.
+Disables Site Classifications for the tenant
+
+## SYNTAX 
+
+```powershell
+Disable-PnPSiteClassification [-ByPassPermissionCheck [<SwitchParameter>]]
+```
+
+## REQUIRED PERMISSIONS
+
+  * Microsoft Graph API: Directory.ReadWrite.All
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
 Disable-PnPSiteClassification
 ```
 
 Disables Site Classifications for your tenant.
+
+## PARAMETERS
+
+### -ByPassPermissionCheck
+Allows the check for required permissions in the access token to be bypassed when set to $true
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ## RELATED LINKS
 

@@ -9,18 +9,22 @@ title: Get-PnPWebTemplates
 # Get-PnPWebTemplates
 
 ## SYNOPSIS
-Returns the available web templates
+Returns the available classic web templates
 
 ## SYNTAX 
 
 ```powershell
 Get-PnPWebTemplates [-Lcid <UInt32>]
                     [-CompatibilityLevel <Int>]
-                    [-Connection <SPOnlineConnection>]
+                    [-Connection <PnPConnection>]
 ```
 
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 ## DESCRIPTION
-Will list all available templates one can use to create a site
+Will list all available classic templates one can use to create a site. Modern templates will not be returned.
 
 ## EXAMPLES
 
@@ -48,7 +52,7 @@ Returns all webtemplates for the compatibility level 15
 ## PARAMETERS
 
 ### -CompatibilityLevel
-The version of SharePoint
+The compatibily level of SharePoint where 14 is SharePoint 2010, 15 is SharePoint 2013 and 16 is SharePoint 2016 and later including SharePoint Online
 
 ```yaml
 Type: Int
@@ -60,7 +64,7 @@ Accept pipeline input: False
 ```
 
 ### -Lcid
-The language ID. For instance: 1033 for English.
+The language ID. For instance: 1033 for English. For more information, see Locale IDs supported by SharePoint at https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint. To get the list of supported languages on a SharePoint environment use: Get-PnPAvailableLanguage.
 
 ```yaml
 Type: UInt32
@@ -75,7 +79,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
@@ -89,4 +93,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](http://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint)

@@ -15,8 +15,12 @@ Removes a Site Collection scoped App Catalog from a site
 
 ```powershell
 Remove-PnPSiteCollectionAppCatalog -Site <SitePipeBind>
-                                   [-Connection <SPOnlineConnection>]
+                                   [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Notice that this will not remove the App Catalog list and its contents from the site.
@@ -48,7 +52,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

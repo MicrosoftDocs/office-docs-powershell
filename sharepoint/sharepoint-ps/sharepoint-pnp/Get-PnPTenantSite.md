@@ -19,8 +19,12 @@ Get-PnPTenantSite [-Url <String>]
                   [-Detailed [<SwitchParameter>]]
                   [-IncludeOneDriveSites [<SwitchParameter>]]
                   [-Filter <String>]
-                  [-Connection <SPOnlineConnection>]
+                  [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Use this cmdlet to retrieve site information from your tenant administration.
@@ -155,7 +159,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

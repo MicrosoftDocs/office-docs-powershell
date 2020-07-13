@@ -14,8 +14,12 @@ Returns the list of all the configured organizational asset libraries
 ## SYNTAX 
 
 ```powershell
-Get-PnPOrgAssetsLibrary [-Connection <SPOnlineConnection>]
+Get-PnPOrgAssetsLibrary [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 
@@ -39,7 +43,7 @@ Returns the server relative url of the first document library which has been fla
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

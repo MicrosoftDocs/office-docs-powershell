@@ -19,7 +19,7 @@ Get-PnPTenantTemplate -Out <String>
                       [-SiteUrl <String>]
                       [-Force [<SwitchParameter>]]
                       [-Configuration <ExtractConfigurationPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ### Extract a template as an object
@@ -27,8 +27,12 @@ Get-PnPTenantTemplate -Out <String>
 Get-PnPTenantTemplate -AsInstance [<SwitchParameter>]
                       [-SiteUrl <String>]
                       [-Configuration <ExtractConfigurationPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## EXAMPLES
 
@@ -117,7 +121,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -18,7 +18,12 @@ Gets unified audit logs from the Office 365 Management API. Requires the Azure A
 Get-PnPUnifiedAuditLog [-ContentType <AuditContentType>]
                        [-StartTime <DateTime>]
                        [-EndTime <DateTime>]
+                       [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
+
+## REQUIRED PERMISSIONS
+
+  * Microsoft Office 365 Management API: ActivityFeed.Read
 
 ## EXAMPLES
 
@@ -30,6 +35,18 @@ Get-PnPUnifiedAuditLog -ContentType SharePoint -StartTime (Get-Date).AddDays(-1)
 Retrieves the audit logs of SharePoint happening between the current time yesterday and the current time the day before yesterday
 
 ## PARAMETERS
+
+### -ByPassPermissionCheck
+Allows the check for required permissions in the access token to be bypassed when set to $true
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -ContentType
 Content type of logs to be retrieved, should be one of the following: AzureActiveDirectory, Exchange, SharePoint, General, DLP.

@@ -17,8 +17,12 @@ Restores a site collection from the tenant scoped recycle bin
 Restore-PnPTenantRecycleBinItem -Url <String>
                                 [-Wait [<SwitchParameter>]]
                                 [-Force [<SwitchParameter>]]
-                                [-Connection <SPOnlineConnection>]
+                                [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 The Restore-PnPTenantRecycleBinItem cmdlet allows a site collection that has been deleted and still exists in the tenant recycle bin to be restored to its original location.
@@ -81,7 +85,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

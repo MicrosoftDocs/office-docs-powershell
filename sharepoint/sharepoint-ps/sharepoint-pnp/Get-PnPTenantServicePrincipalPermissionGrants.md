@@ -14,8 +14,12 @@ Gets the collection of permission grants for the "SharePoint Online Client" serv
 ## SYNTAX 
 
 ```powershell
-Get-PnPTenantServicePrincipalPermissionGrants [-Connection <SPOnlineConnection>]
+Get-PnPTenantServicePrincipalPermissionGrants [-Connection <PnPConnection>]
 ```
+
+## REQUIRED PERMISSIONS
+
+* SharePoint: Access to the SharePoint Tenant Administration site
 
 ## DESCRIPTION
 Gets the collection of permission grants for the "SharePoint Online Client" service principal.
@@ -36,7 +40,7 @@ A permission grant contains the following properties:
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
