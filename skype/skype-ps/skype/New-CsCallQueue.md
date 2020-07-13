@@ -296,7 +296,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConferenceMode
-The ConferenceMode parameter indicates whether or not Conference mode will be applied on calls for this Call queue. Conference mode significantly reduces the amount of time it takes for a caller to be connected to an agent, after the agent accepts the call.
+The ConferenceMode parameter indicates whether or not Conference mode will be applied on calls for this Call queue. Conference mode significantly reduces the amount of time it takes for a caller to be connected to an agent, after the agent accepts the call. The following bullets detail the difference between both modes:
+
+- Conference Mode Disabled: CQ call is presented to agent. Agent answers. Media streams are setup. Depending on geographic location of the CQ call and agent there can be a delay in setting up the media streams which may result in some dead air and/or the first part of the conversation being cut off.
+
+- Conference Mode Enabled: CQ call is put into conference. Agent answers and is brought into conference. Media streams are already setup when agent is brought into conference. No dead air or first bit of conversation being cut off.
 
 ```yaml
 Type: Boolean
