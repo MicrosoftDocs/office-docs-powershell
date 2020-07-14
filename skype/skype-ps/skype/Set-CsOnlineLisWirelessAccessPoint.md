@@ -25,7 +25,7 @@ Set-CsOnlineLisWirelessAccessPoint [[-TenantId] <Guid>] [-BSSID] <String> -Locat
 ## DESCRIPTION
 Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet allows the administrator to map physical locations to the WAP through which calls will be routed.
 
-The BSSID (Basic Service Set Identifiers) is used to describe sections of a wireless local area network. It is the MAC of the 802.11 side of the access point. The BSSID in this command is also supporting the wildcard format which is covering all BSSIDs in the range which are sharing the same description and Location ID. The wildcard can be one '*' on either the last one or two character(s).
+The BSSID (Basic Service Set Identifiers) is used to describe sections of a wireless local area network. It is the MAC of the 802.11 side of the access point. The BSSID parameter in this command is also supporting the wildcard format which is covering all BSSIDs in the range which are sharing the same description and Location ID. The wildcard can be one '*' on either the last one or two character(s).
 
 If a BSSID with wildcard format is already existing, the request for adding one more new BSSID which is within this wildcard range and with the same location ID will not be accepted.
 
