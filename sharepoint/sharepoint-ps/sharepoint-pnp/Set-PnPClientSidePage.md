@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Set-PnPClientSidePage
 ---
 
 # Set-PnPClientSidePage
@@ -28,7 +29,7 @@ Set-PnPClientSidePage -Identity <ClientSidePagePipeBind>
                       [-ContentType <ContentTypePipeBind>]
                       [-ThumbnailUrl <String>]
                       [-Web <WebPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -162,7 +163,7 @@ Accept pipeline input: False
 ```
 
 ### -PromoteAs
-Allows to promote the page for a specific purpose (HomePage | NewsPage)
+Allows to promote the page for a specific purpose (None | HomePage | NewsArticle | Template)
 
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
@@ -265,7 +266,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/unpublish-pnpapp
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Unpublish-PnPApp
 ---
 
 # Unpublish-PnPApp
@@ -15,7 +16,7 @@ Unpublishes/retracts an available add-in from the app catalog
 ```powershell
 Unpublish-PnPApp -Identity <AppMetadataPipeBind>
                  [-Scope <AppCatalogScope>]
-                 [-Connection <SPOnlineConnection>]
+                 [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -70,7 +71,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpindexedpropertykeys
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPIndexedPropertyKeys
 ---
 
 # Get-PnPIndexedPropertyKeys
@@ -15,7 +16,7 @@ Returns the keys of the property bag values that have been marked for indexing b
 ```powershell
 Get-PnPIndexedPropertyKeys [-List <ListPipeBind>]
                            [-Web <WebPipeBind>]
-                           [-Connection <SPOnlineConnection>]
+                           [-Connection <PnPConnection>]
 ```
 
 ## PARAMETERS
@@ -36,7 +37,7 @@ Accept pipeline input: True
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

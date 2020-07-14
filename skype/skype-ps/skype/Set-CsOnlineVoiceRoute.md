@@ -78,7 +78,7 @@ In the first line, the `Get-CsOnlineVoiceRoute` cmdlet is called to retrieve the
 ```
 PS C:\> $y = Get-CsOnlineVoiceRoute -Identity Route1
 
-PS C:\> $y.OnlinePstnGatewayList.Add("OnlinePstnGateway:192.168.0.100")
+PS C:\> $y.OnlinePstnGatewayList.Add("192.168.0.100")
 
 PS C:\> Set-CsOnlineVoiceRoute -Instance $y
 ```
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnlinePstnGatewayList
-This parameter contains a list of online gateways associated with this online voice route. Each member of this list must be the service Identity of the online PSTN gateway. The service Identity is a string in the format OnlinePstnGateway:<FQDN>, where FQDN is the fully qualified domain name (FQDN) of the pool or the IP address of the server. For example, OnlinePstnGateway:redmondpool.litwareinc.com.
+This parameter contains a list of online gateways associated with this online voice route. Each member of this list must be the service Identity of the online PSTN gateway. The service Identity is the fully qualified domain name (FQDN) of the pool or the IP address of the server. For example, redmondpool.litwareinc.com.
 
 By default this list is empty. However, if you leave this parameter blank when creating a new voice route, you'll receive a warning message.
 

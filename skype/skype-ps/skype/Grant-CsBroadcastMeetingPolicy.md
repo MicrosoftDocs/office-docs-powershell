@@ -22,11 +22,18 @@ Grant-CsBroadcastMeetingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainC
 ```
 
 ## DESCRIPTION
-Broadcast meeting functionality is managed by broadcast meeting configurations at the tenant level, and broadcast meeting policies at the user level.
-Broadcast meeting policies are predefined in Skype for Business.
-The defined settings for each policy can be displayed by using the Get-CsBroadcastMeetingPolicy cmdlet with no parameters.
-New policies can't be created, and existing policies can't be modified.
-They can only be granted, or assigned to users.
+Administrators can manage Broadcast meeting functionality in Skype for Business Online using the following:
+- Broadcast meeting configuration at the tenant level
+- Broadcast meeting policy at the user level
+- Conferencing  policy at the user level.
+
+Broadcast meeting configuration and broadcast meeting policy govern broadcast-specific functionality. In addition, the settings of the conferencing policy assigned to the user producing the broadcast also general conferencing settings that are also relevant for broadcast meetings.  
+
+This document describes how to specify which broadcast meeting policy is assigned to a user. Be sure to also review the following docs to manage conferencing policy:[Grant-CsConferencingPolicy](Grant-CsConferencingPolicy.md), [New-CsConferencingPolicy](New-CsConferencingPolicy.md), and [Set-CsConferencingPolicy](Set-CsConferencingPolicy.md).
+
+**NOTES**
+- Broadcast meeting policies are predefined in Skype for Business. The defined settings for each policy can be displayed by using the Get-CsBroadcastMeetingPolicy cmdlet with no parameters.
+- New broadcast meeting policy instance can't be created, and existing policies can't be modified. They can only be granted, or assigned to users.
 
 ## EXAMPLES
 
@@ -173,27 +180,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs]( https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs]( https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).`
 
@@ -212,3 +198,8 @@ None
 ## RELATED LINKS
 
 [Get-CsBroadcastMeetingPolicy](Get-CsBroadcastMeetingPolicy.md)
+[Grant-CsConferencingPolicy](Grant-CsConferencingPolicy.md)
+[New-CsConferencingPolicy](New-CsConferencingPolicy.md)
+[Set-CsConferencingPolicy](Set-CsConferencingPolicy.md)
+[Set-CsBroadcastMeetingConfiguration](Set-CsBroadcastMeetingConfiguration.md)
+

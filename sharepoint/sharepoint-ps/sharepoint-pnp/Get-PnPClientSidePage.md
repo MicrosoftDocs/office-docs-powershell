@@ -3,20 +3,24 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Get-PnPClientSidePage
 ---
 
 # Get-PnPClientSidePage
 
 ## SYNOPSIS
-Gets a Client-Side Page
+Gets a modern site page
 
 ## SYNTAX 
 
 ```powershell
 Get-PnPClientSidePage -Identity <ClientSidePagePipeBind>
                       [-Web <WebPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
+
+## DESCRIPTION
+This command allows the retrieval of a modern sitepage along with its properties and contents on it. Note that for a newly created modern site, the Columns and Sections of the Home.aspx page will not be filled according to the actual site page contents. This is because the underlying CanvasContent1 will not be populated until the homepage has been edited and published. The reason for this behavior is to allow for the default homepage to be able to be updated by Microsoft as long as it hasn't been modified. For any other site page or after editing and publishing the homepage, this command will return the correct columns and sections as they are positioned on the site page.
 
 ## EXAMPLES
 
@@ -70,7 +74,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -3,24 +3,30 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsiteclassification
 applicable: SharePoint Online
 schema: 2.0.0
+title: Add-PnPSiteClassification
 ---
 
 # Add-PnPSiteClassification
 
 ## SYNOPSIS
-Adds one ore more site classification values to the list of possible values. Requires a connection to the Microsoft Graph.
+
+**Required Permissions**
+
+  * Microsoft Graph API: Directory.ReadWrite.All
+
+Adds one ore more site classification values to the list of possible values
 
 ## SYNTAX 
 
 ```powershell
 Add-PnPSiteClassification -Classifications <String>
+                          [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
 Add-PnPSiteClassification -Classifications "Top Secret"
 ```
 
@@ -28,13 +34,24 @@ Adds the "Top Secret" classification to the already existing classification valu
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
 Add-PnPSiteClassification -Classifications "Top Secret","HBI"
 ```
 
 Adds the "Top Secret" and the "For Your Eyes Only" classification to the already existing classification values.
 
 ## PARAMETERS
+
+### -ByPassPermissionCheck
+Allows the check for required permissions in the access token to be bypassed when set to $true
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Classifications
 

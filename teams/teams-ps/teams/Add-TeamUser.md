@@ -3,8 +3,8 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/add-teamuser
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -22,9 +22,7 @@ Add-TeamUser -GroupId <String> -User <String> [-Role <String>] [<CommonParameter
 This cmdlet adds an owner or member to the team, and to the unified group which backs the team.
 
 > [!Note]
-> The command will return immediately, but the Teams application will not reflect the update immediately. The Teams application may need to be open for up to an hour before changes are reflected.
-
-It doesn't work in the same way that the Teams application. If you add an owner in the application the user is also added as member to the unified group. Using this cmdlet, it will add the user only as an owner to the unified group, not as a member. Then you can run the cmdlet again to add the user as member.
+> The command will return immediately, but the Teams application will not reflect the update immediately. The change can take between 24 and 48 hours to appear within the Teams client. 
 
 ## EXAMPLES
 
@@ -68,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Member or Owner.
+Member or Owner. If Owner is specified then the user is also added as a member to the Team backed by unified group. 
 
 ```yaml
 Type: String

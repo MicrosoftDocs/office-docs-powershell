@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpclientsidepage
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Add-PnPClientSidePage
 ---
 
 # Add-PnPClientSidePage
@@ -19,8 +20,9 @@ Add-PnPClientSidePage -Name <String>
                       [-ContentType <ContentTypePipeBind>]
                       [-CommentsEnabled [<SwitchParameter>]]
                       [-Publish [<SwitchParameter>]]
+                      [-HeaderLayoutType <ClientSidePageHeaderLayoutType>]
                       [-Web <WebPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -53,6 +55,13 @@ Add-PnPClientSidePage -Name "Folder/NewPage"
 
 Creates a new Client-Side page named 'NewPage' under 'Folder' folder and saves as a template to the site.
 
+### ------------------EXAMPLE 5------------------
+```powershell
+Add-PnPClientSidePage -Name "NewPage" -HeaderLayoutType ColorBlock
+```
+
+Creates a new Client-Side page named 'NewPage' using the ColorBlock header layout
+
 ## PARAMETERS
 
 ### -CommentsEnabled
@@ -76,6 +85,20 @@ Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
 Type: ContentTypePipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -HeaderLayoutType
+Type of layout used for the header
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: ClientSidePageHeaderLayoutType
 Parameter Sets: (All)
 
 Required: False
@@ -145,7 +168,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

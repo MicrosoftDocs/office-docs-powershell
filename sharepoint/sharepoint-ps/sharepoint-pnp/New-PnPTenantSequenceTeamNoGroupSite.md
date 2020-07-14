@@ -3,12 +3,13 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnptenantsequenceteamnogroupsite
 applicable: SharePoint Online
 schema: 2.0.0
+title: New-PnPTenantSequenceTeamNoGroupSite
 ---
 
 # New-PnPTenantSequenceTeamNoGroupSite
 
 ## SYNOPSIS
-Creates a new team site without an Office 365 group in-memory object
+Creates a new team site without a Microsoft 365 group in-memory object
 
 ## SYNTAX 
 

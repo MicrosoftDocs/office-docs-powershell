@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/test-pnpoffice365groupaliasisused
 applicable: SharePoint Online
 schema: 2.0.0
+title: Test-PnPOffice365GroupAliasIsUsed
 ---
 
 # Test-PnPOffice365GroupAliasIsUsed
@@ -14,7 +15,7 @@ Tests if a given alias is already used used
 
 ```powershell
 Test-PnPOffice365GroupAliasIsUsed -Alias <String>
-                                  [-Connection <SPOnlineConnection>]
+                                  [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +48,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

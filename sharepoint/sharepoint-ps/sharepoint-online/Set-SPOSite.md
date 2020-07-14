@@ -25,8 +25,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
  [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+ [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
- [-Title <String>] [-WhatIf] [-BlockDownloadOfNonViewableFiles <Boolean>]
+ [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
@@ -34,7 +35,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [<CommonParameters>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>][<CommonParameters>]
 ```
 
 ### ParamSet2
@@ -65,9 +66,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
 
 For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates the setting for the site collection identified by parameter Identity.
 
-You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
+You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832.>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
@@ -131,6 +132,21 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingDomainR
 
 Example 7 sets the Sharing Capability to allow external users who accept sharing invitations and sign in as authenticated users, and then specifies an email domain that is allowed for sharing with the external collaborators.
 
+### -----------------------EXAMPLE 8-----------------------------
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -AddInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
+```
+
+This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the site. 
+
+### -----------------------EXAMPLE 9-----------------------------
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -RemoveInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
+```
+
+In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
 
 ## PARAMETERS
 
@@ -237,7 +253,7 @@ Accept wildcard characters: False
 ### -LocaleId
 
 Specifies the language of this site collection.
-For more information, see Locale IDs Assigned by Microsoft (<https://go.microsoft.com/fwlink/p/?LinkId=242911).>
+For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911).
 
 ```yaml
 Type: UInt32
@@ -309,7 +325,7 @@ Accept wildcard characters: False
 
 Specifies the resource quota in megabytes of the site collection.
 The default value is 0.
-For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (<https://msdn.microsoft.com/en-us/library/gg615462.aspx).>
+For more information, see [Resource Usage Limits on Sandboxed Solutions in SharePoint](https://msdn.microsoft.com/library/gg615462.aspx).
 
 ```yaml
 Type: Double
@@ -339,6 +355,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SensitivityLabel
+
+Used to specify the unique identifier (GUID) of the SensitivityLabel.
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SandboxedCodeActivationCapability
 
 PARAMVALUE: Unknown | Check | Disabled | Enabled
@@ -355,12 +387,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockDownloadLinksFileType
+
+The valid values are:  
+
+- WebPreviewableFiles
+- ServerRenderedFilesOnly
+
+The site's value is compared with the tenant level setting and the stricter one wins. For example, if the tenant is set to ServerRenderedFilesOnly then that will be used even if the site is set to WebPreviewableFiles.
+
+```yaml
+Type: BlockDownloadLinksFileTypes
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SharingCapability
 
 Determines what level of sharing is available for the site.
 The possible values are: Disabled - don't allow sharing outside your organization, ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory, ExternalUserSharingOnly - allow external users who accept sharing invitations and sign in as authenticated users, or ExternalUserAndGuestSharing - allow sharing with all external users, and by using anonymous access links.
 
-For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off).>
+For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off>).
 
 ```yaml
 Type: SharingCapabilities
@@ -424,7 +477,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-PARAMVALUE: SwitchParameter
+The WhatIf switch doesn't work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -438,25 +491,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowLimitedAccess
+### -AllowDownloadingNonWebViewableFiles
 
-{{Fill AllowLimitedAccess Description}}
-
-```yaml
-Type: Boolean
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BlockDownloadOfNonViewableFiles
-
-{{Fill BlockDownloadOfNonViewableFiles Description}}
+Specifies if non web viewable files can be downloaded.
 
 ```yaml
 Type: Boolean
@@ -473,7 +510,8 @@ Accept wildcard characters: False
 
 ### -CommentsOnSitePagesDisabled
 
-PARAMVALUE: $true | $false
+Use this parameter to disable Comments section on Site Pages.
+The parameter can't be used for Groups Site Collections.
 
 ```yaml
 Type: Boolean
@@ -576,7 +614,7 @@ Accept wildcard characters: False
 
 Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
-For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
 
 ```yaml
 Type: String
@@ -594,7 +632,7 @@ Accept wildcard characters: False
 
 Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
-For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
 
 ```yaml
 Type: String
@@ -810,11 +848,12 @@ Accept wildcard characters: False
 ### -LimitedAccessFileType
 
 The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting.
--OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
--LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
--LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
 
-PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
+- OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+
+- LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+
+- LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
 
 ```yaml
 Type: SPOLimitedAccessFileType
@@ -826,6 +865,30 @@ Position: Named
 Default value: WebPreviewableFiles
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+### -AddInformationSegment
+
+This parameter allows you to add a segment to a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers in SharePoint Online.
+
+**Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+
+```yaml
+Type: GUID
+Required: False
+Position: Named
+Default value: None
+```
+
+### -RemoveInformationSegment
+This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers with SharePoint Online.
+
+**Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+
+```yaml
+Type: GUID
+Required: False
+Position: Named
+Default value: None
 ```
 
 ### CommonParameters

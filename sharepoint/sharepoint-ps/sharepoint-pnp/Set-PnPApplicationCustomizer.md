@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpapplicationcustomizer
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Set-PnPApplicationCustomizer
 ---
 
 # Set-PnPApplicationCustomizer
@@ -21,7 +22,7 @@ Set-PnPApplicationCustomizer [-Identity <UserCustomActionPipeBind>]
                              [-Sequence <Int>]
                              [-ClientSideComponentProperties <String>]
                              [-Web <WebPipeBind>]
-                             [-Connection <SPOnlineConnection>]
+                             [-Connection <PnPConnection>]
 ```
 
 ### Client Side Component Id
@@ -33,7 +34,7 @@ Set-PnPApplicationCustomizer [-ClientSideComponentId <GuidPipeBind>]
                              [-Sequence <Int>]
                              [-ClientSideComponentProperties <String>]
                              [-Web <WebPipeBind>]
-                             [-Connection <SPOnlineConnection>]
+                             [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -43,14 +44,14 @@ Updates a SharePoint Framework client side extension application customizer by u
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
+Set-PnPApplicationCustomizer -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
 ```
 
 Updates the custom action representing the client side extension registration with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2'.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Set-PnPCustomAction -ClientSideComponentId aa66f67e-46c0-4474-8a82-42bf467d07f2 -Scope web -ClientSideComponentProperties "{`"sourceTermSet`":`"PnP-CollabFooter-SharedLinks`",`"personalItemsStorageProperty`":`"PnP-CollabFooter-MyLinks`"}
+Set-PnPApplicationCustomizer -ClientSideComponentId aa66f67e-46c0-4474-8a82-42bf467d07f2 -Scope web -ClientSideComponentProperties "{`"sourceTermSet`":`"PnP-CollabFooter-SharedLinks`",`"personalItemsStorageProperty`":`"PnP-CollabFooter-MyLinks`"}
 ```
 
 Updates the custom action(s) properties being registered for a SharePoint Framework solution having the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2' in its manifest from the current web.
@@ -161,7 +162,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

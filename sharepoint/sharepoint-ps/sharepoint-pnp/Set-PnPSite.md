@@ -1,8 +1,9 @@
 ---
 external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpsite
-applicable: SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPSite
 ---
 
 # Set-PnPSite
@@ -33,7 +34,7 @@ Set-PnPSite [-Classification <String>]
             [-RestrictedToGeo <RestrictedToRegion>]
             [-SocialBarOnSitePagesDisabled [<SwitchParameter>]]
             [-Identity <String>]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ### Set Lock State
@@ -41,7 +42,7 @@ Set-PnPSite [-Classification <String>]
 Set-PnPSite [-LockState <SiteLockState>]
             [-Wait [<SwitchParameter>]]
             [-Identity <String>]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -98,6 +99,8 @@ Accept pipeline input: False
 ### -Classification
 The classification to set
 
+Only applicable to: SharePoint Online, SharePoint Server 2019
+
 ```yaml
 Type: String
 Parameter Sets: Set Properties
@@ -109,6 +112,8 @@ Accept pipeline input: False
 
 ### -CommentsOnSitePagesDisabled
 Specifies if comments on site pages are enabled or disabled
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -122,6 +127,8 @@ Accept pipeline input: False
 ### -DefaultLinkPermission
 Specifies the default link permission for the site collection. None - Respect the organization default link permission. View - Sets the default link permission for the site to "view" permissions. Edit - Sets the default link permission for the site to "edit" permissions
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SharingPermissionType
 Parameter Sets: Set Properties
@@ -133,6 +140,8 @@ Accept pipeline input: False
 
 ### -DefaultSharingLinkType
 Specifies the default link type for the site collection. None - Respect the organization default sharing link type. AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link. Internal - Sets the default sharing link for this site to the "organization" link or company shareable link. Direct - Sets the default sharing link for this site to the "Specific people" link
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SharingLinkType
@@ -146,6 +155,8 @@ Accept pipeline input: False
 ### -DisableAppViews
 
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: AppViewsPolicy
 Parameter Sets: Set Properties
@@ -157,6 +168,8 @@ Accept pipeline input: False
 
 ### -DisableCompanyWideSharingLinks
 
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: CompanyWideSharingLinksPolicy
@@ -170,6 +183,8 @@ Accept pipeline input: False
 ### -DisableFlows
 Disables Microsoft Flow for this site
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set Properties
@@ -181,6 +196,8 @@ Accept pipeline input: False
 
 ### -DisableSharingForNonOwners
 Specifies to prevent non-owners from inviting new users to the site
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -219,6 +236,8 @@ Accept pipeline input: False
 ### -LockState
 Sets the lockstate of a site
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SiteLockState
 Parameter Sets: Set Lock State
@@ -229,7 +248,9 @@ Accept pipeline input: False
 ```
 
 ### -LogoFilePath
-Sets the logo if the site is modern team site. If you want to set the logo for a classic site, use Set-PnPWeb -SiteLogoUrl
+Sets the logo of the site if it concerns a modern team site. Provide a full path to a local image file on your disk which you want to use as the site logo. The logo will be uploaded automatically to SharePoint. If you want to set the logo for a classic site, use Set-PnPWeb -SiteLogoUrl.
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -268,6 +289,8 @@ Accept pipeline input: False
 ### -RestrictedToGeo
 Specifies the Geo/Region restrictions of this site.
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: RestrictedToRegion
 Parameter Sets: Set Properties
@@ -279,6 +302,8 @@ Accept pipeline input: False
 
 ### -Sharing
 Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SharingCapabilities
@@ -292,6 +317,8 @@ Accept pipeline input: False
 ### -SocialBarOnSitePagesDisabled
 Disables or enables the Social Bar for Site Collection.
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set Properties
@@ -303,6 +330,8 @@ Accept pipeline input: False
 
 ### -StorageMaximumLevel
 Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: Int
@@ -316,6 +345,8 @@ Accept pipeline input: False
 ### -StorageWarningLevel
 Specifies the warning level for the storage quota in megabytes. This value must not exceed the values set for the StorageMaximumLevel parameter
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: Int
 Parameter Sets: Set Properties
@@ -327,6 +358,8 @@ Accept pipeline input: False
 
 ### -Wait
 Wait for the operation to complete
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -341,7 +374,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

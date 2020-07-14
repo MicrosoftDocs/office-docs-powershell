@@ -2,7 +2,6 @@
 Module Name: SharePoint Online PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-online
-Locale: en-US
 author: trent-green
 ms.author: trgreen
 ms.reviewer:
@@ -191,6 +190,14 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOSiteScriptFromList](Get-SPOSiteScriptFromList.md)
 
 {{Manually Enter Get-SPOSiteScript Description Here}}
+
+### [Get-SPOStructuralNavigationCacheSiteState](Get-SPOStructuralNavigationCacheSiteState.md)
+
+{{Manually Enter Get-SPOStructuralNavigationCacheSiteState Description Here}}
+
+### [Get-SPOStructuralNavigationCacheWebState](Get-SPOStructuralNavigationCacheWebState.md)
+
+{{Manually Enter Get-SPOStructuralNavigationCacheWebState Description Here}}
 
 ### [Get-SPOTenant](Get-SPOTenant.md)
 
@@ -400,10 +407,6 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Restore-SPODeletedSite Description Here}}
 
-### [Revoke-SPObjectSecurity](Revoke-SPObjectSecurity.md)
-
-{{Manually Enter Revoke-SPObjectSecurity Description Here}}
-
 ### [Revoke-SPOHubSiteRights](Revoke-SPOHubSiteRights.md)
 
 {{Manually Enter Revoke-SPOHubSiteRights Description Here}}
@@ -463,6 +466,14 @@ The following cmdlet references are for SharePoint Online.
 ### [Set-SPOSiteScript](Set-SPOSiteScript.md)
 
 {{Manually Enter Set-SPOSiteScript Description Here}}
+
+### [Set-SPOStructuralNavigationCacheSiteState](Set-SPOStructuralNavigationCacheSiteState.md)
+
+{{Manually Enter Set-SPOStructuralNavigationCacheSiteState Description Here}}
+
+### [Set-SPOStructuralNavigationCacheWebState](Set-SPOStructuralNavigationCacheWebState.md)
+
+{{Manually Enter Set-SPOStructuralNavigationCacheWebState Description Here}}
 
 ### [Set-SPOTenant](Set-SPOTenant.md)
 

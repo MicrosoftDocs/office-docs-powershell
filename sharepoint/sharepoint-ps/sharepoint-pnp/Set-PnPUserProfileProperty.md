@@ -3,15 +3,18 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpuserprofileproperty
 applicable: SharePoint Online
 schema: 2.0.0
+title: Set-PnPUserProfileProperty
 ---
 
 # Set-PnPUserProfileProperty
 
 ## SYNOPSIS
-Office365 only: Uses the tenant API to retrieve site information.
 
-You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command. 
+**Required Permissions**
 
+* SharePoint: Access to the SharePoint Tenant Administration site
+
+Office365 only: Uses the tenant API to retrieve site information. You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.
 
 ## SYNTAX 
 
@@ -20,7 +23,7 @@ You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint
 Set-PnPUserProfileProperty -Value <String>
                            -Account <String>
                            -PropertyName <String>
-                           [-Connection <SPOnlineConnection>]
+                           [-Connection <PnPConnection>]
 ```
 
 ### Multi
@@ -28,7 +31,7 @@ Set-PnPUserProfileProperty -Value <String>
 Set-PnPUserProfileProperty -Values <String[]>
                            -Account <String>
                            -PropertyName <String>
-                           [-Connection <SPOnlineConnection>]
+                           [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -104,7 +107,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpnavigationnode
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPNavigationNode
 ---
 
 # Add-PnPNavigationNode
@@ -20,11 +21,11 @@ Add-PnPNavigationNode -Location <NavigationType>
                       [-First [<SwitchParameter>]]
                       [-External [<SwitchParameter>]]
                       [-Web <WebPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
-Adds a menu item to either the quicklaunch or top navigation
+Adds a menu item to either the quicklaunch, top navigation, search navigation or the footer
 
 ## EXAMPLES
 
@@ -66,7 +67,7 @@ Adds a navigation node to the quicklaunch. The navigation node will have the tit
 ## PARAMETERS
 
 ### -External
-Indicates the destination URL is outside of the site collection.
+Indicates the destination URL is outside of the site collection
 
 ```yaml
 Type: SwitchParameter
@@ -78,7 +79,7 @@ Accept pipeline input: False
 ```
 
 ### -First
-Add the new menu item to beginning of the collection.
+Add the new menu item to beginning of the collection
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +91,7 @@ Accept pipeline input: False
 ```
 
 ### -Location
-The location of the node to add. Either TopNavigationBar, QuickLaunch, SearchNav
+The location where to add the navigation node to. Either TopNavigationBar, QuickLaunch, SearchNav or Footer.
 
 ```yaml
 Type: NavigationType
@@ -141,7 +142,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

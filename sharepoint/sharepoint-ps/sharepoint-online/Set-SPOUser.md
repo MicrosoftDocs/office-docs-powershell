@@ -29,7 +29,7 @@ That is, to add or remove a user as a SharePoint Online site collection administ
 
 You must have the SharePoint Online Administrator or Global Administrator role to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
@@ -85,6 +85,22 @@ Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateUserTypeFromAzureAD
+If the UserType property of an User is changed in AzureAD from Member to Guest and vice-versa, this parameter can be used to update it in SharePoint Online.
+For more information, see [Convert UserType](https://docs.microsoft.com/azure/active-directory/b2b/user-properties#convert-usertype).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpfolder
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPFolder
 ---
 
 # Get-PnPFolder
@@ -16,25 +17,25 @@ Return a folder object
 ```powershell
 Get-PnPFolder [-Includes <String[]>]
               [-Web <WebPipeBind>]
-              [-Connection <SPOnlineConnection>]
+              [-Connection <PnPConnection>]
 ```
 
 ### Folder By Url
 ```powershell
 Get-PnPFolder -Url <String>
               [-Web <WebPipeBind>]
-              [-Connection <SPOnlineConnection>]
+              [-Connection <PnPConnection>]
 ```
 
 ### Folders In List
 ```powershell
 Get-PnPFolder -List <ListPipeBind>
               [-Web <WebPipeBind>]
-              [-Connection <SPOnlineConnection>]
+              [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
-Retrieves a folder if it exists or all folders inside a provided list or library. Use Ensure-PnPFolder to create the folder if it does not exist.
+Retrieves a folder if it exists or all folders inside a provided list or library. Use Resolve-PnPFolder to create the folder if it does not exist.
 
 ## EXAMPLES
 
@@ -114,7 +115,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
@@ -128,4 +129,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Ensure-PnPFolder](https://github.com/OfficeDev/PnP-PowerShell/blob/master/Documentation/EnsureSPOFolder.md)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Resolve-PnPFolder](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-pnp/Resolve-PnPFolder.md)

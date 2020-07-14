@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpview
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPView
 ---
 
 # Add-PnPView
@@ -24,7 +25,7 @@ Add-PnPView -List <ListPipeBind>
             [-Paged [<SwitchParameter>]]
             [-Aggregations <String>]
             [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -54,8 +55,6 @@ Adds a view named "Demo view" to the "Demo List" list and sets the totals (aggre
 
 ### -Aggregations
 A valid XML fragment containing one or more Aggregations
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -178,7 +177,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

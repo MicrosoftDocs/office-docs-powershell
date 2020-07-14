@@ -3,11 +3,17 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/revoke-pnpsitedesignrights
 applicable: SharePoint Online
 schema: 2.0.0
+title: Revoke-PnPSiteDesignRights
 ---
 
 # Revoke-PnPSiteDesignRights
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Revokes the specified principals rights to use the site design.
 
 ## SYNTAX 
@@ -15,7 +21,7 @@ Revokes the specified principals rights to use the site design.
 ```powershell
 Revoke-PnPSiteDesignRights -Identity <TenantSiteDesignPipeBind>
                            -Principals <String[]>
-                           [-Connection <SPOnlineConnection>]
+                           [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -64,7 +70,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

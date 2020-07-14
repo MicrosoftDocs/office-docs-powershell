@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpteamsteam
 applicable: SharePoint Online
 schema: 2.0.0
+title: Add-PnPTeamsTeam
 ---
 
 # Add-PnPTeamsTeam
@@ -13,11 +14,11 @@ Adds a Teams team to an existing, group connected, site collection
 ## SYNTAX 
 
 ```powershell
-Add-PnPTeamsTeam [-Connection <SPOnlineConnection>]
+Add-PnPTeamsTeam [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
-This command allows you to add a Teams team to an existing, Office 365 group connected, site collection.
+This command allows you to add a Teams team to an existing, Microsoft 365 group connected, site collection.
 
 ## EXAMPLES
 
@@ -34,7 +35,7 @@ This create a teams team for the connected site collection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

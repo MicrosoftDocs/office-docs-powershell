@@ -3,11 +3,17 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/deny-pnptenantserviceprincipalpermissionrequest
 applicable: SharePoint Online
 schema: 2.0.0
+title: Deny-PnPTenantServicePrincipalPermissionRequest
 ---
 
 # Deny-PnPTenantServicePrincipalPermissionRequest
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
 
 ## SYNTAX 
@@ -15,7 +21,7 @@ Denies a permission request for the current tenant's "SharePoint Online Client" 
 ```powershell
 Deny-PnPTenantServicePrincipalPermissionRequest -RequestId <GuidPipeBind>
                                                 [-Force [<SwitchParameter>]]
-                                                [-Connection <SPOnlineConnection>]
+                                                [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +59,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

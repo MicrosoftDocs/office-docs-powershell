@@ -2,8 +2,8 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: New-CsBatchPolicyPackageAssignmentOperation
-author: ruguan
-ms.author: ruguan
+author: icchan
+ms.author: icchan
 manager: amitar
 online version: https://docs.microsoft.com/powershell/module/teams/new-csbatchpolicypackageassignmentoperation
 schema: 2.0.0
@@ -12,8 +12,7 @@ schema: 2.0.0
 # New-CsBatchPolicyPackageAssignmentOperation
 
 ## SYNOPSIS
-
-This cmdlet submits an operation that applies a policy package to a batch of users in a tenant.
+This cmdlet submits an operation that applies a policy package to a batch of users in a tenant. A batch may contain up to 5000 users.
 
 ## SYNTAX
 
@@ -23,7 +22,7 @@ New-CsBatchPolicyPackageAssignmentOperation -Identity <String[]> -PackageName <S
 
 ## DESCRIPTION
 
-This cmdlet submits an operation that applies a policy package to a batch of users in a tenant. Provide one or more user identities to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. The recommended policy package for each user can be found by running Get-CsUserPolicyPackageRecommendation. For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages
+This cmdlet submits an operation that applies a policy package to a batch of users in a tenant. Provide one or more user identities to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. The recommended policy package for each user can be found by running Get-CsUserPolicyPackageRecommendation. For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
@@ -54,7 +53,7 @@ Accept wildcard characters: False
 
 ### -PackageName
 
-The name of a specific policy package to apply. All policy package names can be found by running Get-CsPolicyPackage.
+The name of a specific policy package to apply. All policy package names can be found by running Get-CsPolicyPackage. To remove the currently assigned package, use $null or an empty string "". This will not remove any policy assignments, just the package assigned value.
 
 ```yaml
 Type: String
@@ -82,3 +81,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 
 [Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
+
+[Get-CsUserPolicyPackage](Get-CsUserPolicyPackage.md)

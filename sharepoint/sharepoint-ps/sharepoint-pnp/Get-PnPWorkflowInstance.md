@@ -3,24 +3,33 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpworkflowinstance
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPWorkflowInstance
 ---
 
 # Get-PnPWorkflowInstance
 
 ## SYNOPSIS
-Get workflow instances
+Gets SharePoint 2010/2013 workflow instances
 
 ## SYNTAX 
 
+### By WorkflowSubscription
+```powershell
+Get-PnPWorkflowInstance -WorkflowSubscription <WorkflowSubscriptionPipeBind>
+                        [-Web <WebPipeBind>]
+                        [-Connection <PnPConnection>]
+```
+
+### By List and ListItem
 ```powershell
 Get-PnPWorkflowInstance -List <ListPipeBind>
                         -ListItem <ListItemPipeBind>
                         [-Web <WebPipeBind>]
-                        [-Connection <SPOnlineConnection>]
+                        [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
-Gets all workflow instances
+Gets all SharePoint 2010/2013 workflow instances
 
 ## EXAMPLES
 
@@ -38,6 +47,13 @@ Get-PnPWorkflowInstance -List "My Library" -ListItem 2
 
 Retrieves workflow instances running against the provided item with 2 in the list "My Library"
 
+### ------------------EXAMPLE 3------------------
+```powershell
+Get-PnPWorkflowSubscription | Get-PnPWorkflowInstance
+```
+
+Retrieves workflow instances from all subscriptions
+
 ## PARAMETERS
 
 ### -List
@@ -45,7 +61,7 @@ The List for which workflow instances should be retrieved
 
 ```yaml
 Type: ListPipeBind
-Parameter Sets: (All)
+Parameter Sets: By List and ListItem
 
 Required: True
 Position: 0
@@ -57,18 +73,30 @@ The List Item for which workflow instances should be retrieved
 
 ```yaml
 Type: ListItemPipeBind
-Parameter Sets: (All)
+Parameter Sets: By List and ListItem
 
 Required: True
 Position: 1
 Accept pipeline input: False
 ```
 
+### -WorkflowSubscription
+The workflow subscription for which workflow instances should be retrieved
+
+```yaml
+Type: WorkflowSubscriptionPipeBind
+Parameter Sets: By WorkflowSubscription
+
+Required: True
+Position: 0
+Accept pipeline input: True
+```
+
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

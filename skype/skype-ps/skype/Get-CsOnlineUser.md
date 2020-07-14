@@ -91,6 +91,17 @@ The command shown in Example 5 returns information for all the online users assi
 To accomplish the task, the command includes the Filter parameter along with the filter value {TenantId -eq "bf19b7db-6960-41e5-a139-2aa373474354"}.
 This filter limits the returned data to online users assigned to the tenant "bf19b7db-6960-41e5-a139-2aa373474354".
 
+### -------------------------- Example 6 --------------------------
+```
+PS C:\> $MeetingPolicy="Kiosk"
+PS C:\> $filterString = 'TeamsMeetingPolicy -eq "{0}"' -f $MeetingPolicy
+PS C:\> Get-CsOnlineUser -Filter $filterString
+```
+
+The commands shown in Example 6 filters all the online users with a certain TeamsMeetingPolicy assigned using a variable as filter input.
+To accomplish the task, the filter string is first constructed and resolved locally and then used by the Get-CsOnlineUser cmdlet.
+
+
 
 ## PARAMETERS
 
@@ -278,22 +289,6 @@ Accept wildcard characters: False
 ### -UnassignedUser
 Enables you to return a collection of all the users who have been enabled for Skype for Business but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to unless they are assigned to a Registrar pool.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter

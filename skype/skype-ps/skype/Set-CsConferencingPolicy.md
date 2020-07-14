@@ -83,7 +83,7 @@ This provides administrators with enormous flexibility when it comes to deciding
 Policy property values can be configured at the time a policy is created.
 In addition to that, you can, at any time, use the `Set-CsConferencingPolicy` cmdlet to modify the property values of an existing policy.
 
-The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AsJob, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, Instance, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb
+The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, Instance, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb
 
 ## EXAMPLES
 
@@ -966,7 +966,7 @@ Determines the protocol used for screen sharing - VbSS vs RDP.  This parameter i
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

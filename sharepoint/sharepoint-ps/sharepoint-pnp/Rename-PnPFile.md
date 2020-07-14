@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/rename-pnpfile
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Rename-PnPFile
 ---
 
 # Rename-PnPFile
@@ -19,7 +20,7 @@ Rename-PnPFile -ServerRelativeUrl <String>
                [-OverwriteIfAlreadyExists [<SwitchParameter>]]
                [-Force [<SwitchParameter>]]
                [-Web <WebPipeBind>]
-               [-Connection <SPOnlineConnection>]
+               [-Connection <PnPConnection>]
 ```
 
 ### SITE
@@ -29,7 +30,7 @@ Rename-PnPFile -SiteRelativeUrl <String>
                [-OverwriteIfAlreadyExists [<SwitchParameter>]]
                [-Force [<SwitchParameter>]]
                [-Web <WebPipeBind>]
-               [-Connection <SPOnlineConnection>]
+               [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -121,7 +122,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

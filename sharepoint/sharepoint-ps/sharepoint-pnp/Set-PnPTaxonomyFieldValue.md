@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptaxonomyfieldvalue
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPTaxonomyFieldValue
 ---
 
 # Set-PnPTaxonomyFieldValue
@@ -17,7 +18,7 @@ Sets a taxonomy term value in a listitem field
 Set-PnPTaxonomyFieldValue -ListItem <ListItem>
                           -InternalFieldName <String>
                           [-Terms <Hashtable>]
-                          [-Connection <SPOnlineConnection>]
+                          [-Connection <PnPConnection>]
 ```
 
 ### ITEM
@@ -26,7 +27,7 @@ Set-PnPTaxonomyFieldValue -TermId <GuidPipeBind>
                           -ListItem <ListItem>
                           -InternalFieldName <String>
                           [-Label <String>]
-                          [-Connection <SPOnlineConnection>]
+                          [-Connection <PnPConnection>]
 ```
 
 ### PATH
@@ -34,7 +35,7 @@ Set-PnPTaxonomyFieldValue -TermId <GuidPipeBind>
 Set-PnPTaxonomyFieldValue -TermPath <String>
                           -ListItem <ListItem>
                           -InternalFieldName <String>
-                          [-Connection <SPOnlineConnection>]
+                          [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -138,7 +139,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

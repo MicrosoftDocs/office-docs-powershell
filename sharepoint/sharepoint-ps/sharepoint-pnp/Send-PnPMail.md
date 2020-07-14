@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/send-pnpmail
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Send-PnPMail
 ---
 
 # Send-PnPMail
@@ -21,7 +22,7 @@ Send-PnPMail -To <String[]>
              [-Password <String>]
              [-Cc <String[]>]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -50,7 +51,7 @@ Sends an e-mail via a custom SMTP server and requires a from address and passwor
 ## PARAMETERS
 
 ### -Body
-Body of the email
+Body of the email. Accepts simple HTML as `&lt;h1&gt;&lt;/h1&gt;`, `&lt;br/&gt;` etc.
 
 ```yaml
 Type: String
@@ -137,7 +138,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

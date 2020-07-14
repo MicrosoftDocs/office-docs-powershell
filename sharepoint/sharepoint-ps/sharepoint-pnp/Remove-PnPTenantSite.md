@@ -1,13 +1,19 @@
 ---
 external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptenantsite
-applicable: SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Remove-PnPTenantSite
 ---
 
 # Remove-PnPTenantSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a site collection
 
 ## SYNTAX 
@@ -16,7 +22,7 @@ Removes a site collection
 Remove-PnPTenantSite -Url <String>
                      [-SkipRecycleBin [<SwitchParameter>]]
                      [-Force [<SwitchParameter>]]
-                     [-Connection <SPOnlineConnection>]
+                     [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -62,6 +68,8 @@ Accept pipeline input: False
 ### -SkipRecycleBin
 Do not add to the tenant scoped recycle bin when selected.
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -88,7 +96,7 @@ Accept pipeline input: True
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

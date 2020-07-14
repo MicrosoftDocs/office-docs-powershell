@@ -3,12 +3,13 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpusertogroup
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Add-PnPUserToGroup
 ---
 
 # Add-PnPUserToGroup
 
 ## SYNOPSIS
-Adds a user to a group
+Adds a user to a SharePoint group
 
 ## SYNTAX 
 
@@ -17,7 +18,7 @@ Adds a user to a group
 Add-PnPUserToGroup -LoginName <String>
                    -Identity <GroupPipeBind>
                    [-Web <WebPipeBind>]
-                   [-Connection <SPOnlineConnection>]
+                   [-Connection <PnPConnection>]
 ```
 
 ### External
@@ -27,7 +28,7 @@ Add-PnPUserToGroup -Identity <GroupPipeBind>
                    [-SendEmail [<SwitchParameter>]]
                    [-EmailBody <String>]
                    [-Web <WebPipeBind>]
-                   [-Connection <SPOnlineConnection>]
+                   [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -37,14 +38,14 @@ Add-PnPUserToGroup -Identity <GroupPipeBind>
 Add-PnPUserToGroup -LoginName user@company.com -Identity 'Marketing Site Members'
 ```
 
-Add the specified user to the group "Marketing Site Members"
+Add the specified user to the SharePoint group "Marketing Site Members"
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Add-PnPUserToGroup -LoginName user@company.com -Identity 5
 ```
 
-Add the specified user to the group with Id 5
+Add the specified user to the SharePoint group with Id 5
 
 ## PARAMETERS
 
@@ -77,7 +78,7 @@ Accept pipeline input: False
 ```
 
 ### -Identity
-The group id, group name or group object to add the user to.
+The SharePoint group id, SharePoint group name or SharePoint group object to add the user to
 
 ```yaml
 Type: GroupPipeBind
@@ -118,7 +119,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

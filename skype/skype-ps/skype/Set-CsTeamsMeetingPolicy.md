@@ -28,8 +28,9 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
- [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
+ [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
+ [-DesignatedPresenterRoleMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -43,8 +44,9 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
- [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
+ [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
+ [-DesignatedPresenterRoleMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -225,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSharedNotes
-Determines whether users are allowed to take shared notes.  Set this to TRUE to allow. Set this to FALSE to prohibit.
+Determines whether users are allowed to take shared Meeting notes.  Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -301,7 +303,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
 Enables administrators to provide explanatory text about the meeting policy.
 For example, the Description might indicate the users the policy should be assigned to.
 
@@ -318,6 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -446,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingChatEnabledType
-Specify if users will be able to chat in meetings. Possible values are: Disabled,Enabled.
+Specify if users will be able to chat in meetings. Possible values are: Disabled, Enabled.
 
 ```yaml
 Type: String
@@ -478,6 +480,8 @@ Accept wildcard characters: False
 ### -AllowAnonymousUsersToDialOut
 Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
 
+[!NOTE] This parameter is temporarily disabled.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -486,6 +490,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreferredMeetingProviderForIslandsMode
+Determines the Outlook meeting add-in available to users on Islands mode. By default, this is set to TeamsAndSfb, and the users sees both the Skype for Business and Teams add-ins. Set this to Teams to remove the Skype for Business add-in and only show the Teams add-in.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TeamsAndSfb
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -505,6 +524,88 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -VideoFiltersMode
+Determines the background effects that a user can configure in the Teams client. Possible values are:
+
+- NoFilters: No filters are available.
+- BlurOnly: Background blur is the only option available (requires a processor with AVX2 support, see [Hardware requirements for Microsoft Teams](https://docs.microsoft.com/microsoftteams/hardware-requirements-for-the-teams-app) for more information).
+- BlurAndDefaultBackgrounds: Background blur and a list of pre-selected images are available.
+- AllFilters: All filters are available, including custom images.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEngagementReport
+Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNDIStreaming
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DesignatedPresenterRoleMode
+Determines if users can change the default value of the _Who can present?_ setting in Meeting options in the Teams client. This policy setting affects all meetings, including Meet Now meetings.
+
+Possible values are:
+- EveryoneUserOverride: All meeting participants can be presenters. This is the default value. This parameter corresponds to the _Everyone_ setting in Teams.
+- EveryoneInCompanyUserOverride: Authenticated users in the organization, including guest users, can be presenters. This parameter corresponds to the _People in my organization_ setting in Teams.
+- EveryoneInSameAndFederatedCompanyUserOverride: Authenticated users in the organization, including guest users and users from federated organizations, can be presenters. This parameter corresponds to the _People in my organization and trusted organizations_ setting in Teams.
+- OrganizerOnlyUserOverride: Only the meeting organizer can be a presenter and all meeting participants are designated as attendees. This parameter corresponds to the _Only me_ setting in Teams.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VideoFiltersMode
+Determines what background effects a user can use in scheduled calls and meetings. 
+Possible values: NoFilters, BlurOnly, BlurAndDefaultBackgrounds, AllFilters.
+
+```yaml
+Type: Enum
+Position: Named
+Default value: AllFilters
+Accept pipeline input: False
+Accept wildcard characters: False
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
@@ -517,4 +618,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpview
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPView
 ---
 
 # Set-PnPView
@@ -19,7 +20,7 @@ Set-PnPView -Identity <ViewPipeBind>
             [-Fields <String[]>]
             [-Aggregations <String>]
             [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -59,8 +60,6 @@ Updates the Corporate Documents view on the Documents library and sets the total
 
 ### -Aggregations
 A valid XML fragment containing one or more Aggregations
-
-Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -123,7 +122,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

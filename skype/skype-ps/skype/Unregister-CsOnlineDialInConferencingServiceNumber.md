@@ -13,7 +13,7 @@ ms.reviewer:
 # Unregister-CsOnlineDialInConferencingServiceNumber
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Unassigns the previously assigned service number as default Conference Bridge number.
 
 ## SYNTAX
 
@@ -24,16 +24,16 @@ Unregister-CsOnlineDialInConferencingServiceNumber [-Identity] <String> [-Bridge
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Unassigns the previously assigned service number as default Conference Bridge number.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Unregister-CsOnlineDialInConferencingServiceNumber -BridgeName "Conference Bridge" -RemoveDefaultServiceNumber 1234 
 ```
 
-Insert descriptive text for example 1.
+Unassigns the 1234 Service Number to the given Conference Bridge.
 
 
 ## PARAMETERS
@@ -171,22 +171,6 @@ PARAMVALUE: String
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

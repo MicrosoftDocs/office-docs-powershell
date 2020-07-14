@@ -3,18 +3,24 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnptenantcdnpolicies
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPTenantCdnPolicies
 ---
 
 # Get-PnPTenantCdnPolicies
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns the CDN Policies for the specified CDN (Public | Private).
 
 ## SYNTAX 
 
 ```powershell
 Get-PnPTenantCdnPolicies -CdnType <SPOTenantCdnType>
-                         [-Connection <SPOnlineConnection>]
+                         [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +53,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

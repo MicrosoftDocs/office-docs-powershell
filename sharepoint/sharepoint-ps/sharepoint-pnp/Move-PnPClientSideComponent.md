@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/move-pnpclientsidecomponent
 applicable: SharePoint Online, SharePoint 2019
 schema: 2.0.0
+title: Move-PnPClientSideComponent
 ---
 
 # Move-PnPClientSideComponent
@@ -19,7 +20,7 @@ Move-PnPClientSideComponent -Section <Int>
                             -InstanceId <GuidPipeBind>
                             [-Position <Int>]
                             [-Web <WebPipeBind>]
-                            [-Connection <SPOnlineConnection>]
+                            [-Connection <PnPConnection>]
 ```
 
 ### Move to other column
@@ -29,7 +30,7 @@ Move-PnPClientSideComponent -Column <Int>
                             -InstanceId <GuidPipeBind>
                             [-Position <Int>]
                             [-Web <WebPipeBind>]
-                            [-Connection <SPOnlineConnection>]
+                            [-Connection <PnPConnection>]
 ```
 
 ### Move within a column
@@ -38,7 +39,7 @@ Move-PnPClientSideComponent -Position <Int>
                             -Page <ClientSidePagePipeBind>
                             -InstanceId <GuidPipeBind>
                             [-Web <WebPipeBind>]
-                            [-Connection <SPOnlineConnection>]
+                            [-Connection <PnPConnection>]
 ```
 
 ### Move to other section and column
@@ -49,7 +50,7 @@ Move-PnPClientSideComponent -Section <Int>
                             -InstanceId <GuidPipeBind>
                             [-Position <Int>]
                             [-Web <WebPipeBind>]
-                            [-Connection <SPOnlineConnection>]
+                            [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -163,7 +164,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

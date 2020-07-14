@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/restore-pnprecyclebinitem
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Restore-PnPRecycleBinItem
 ---
 
 # Restore-PnPRecycleBinItem
@@ -12,18 +13,18 @@ Restores the provided recycle bin item to its original location
 
 ## SYNTAX 
 
+### All
+```powershell
+Restore-PnPRecycleBinItem [-Force [<SwitchParameter>]]
+                          [-RowLimit <Int>]
+                          [-Connection <PnPConnection>]
+```
+
 ### Identity
 ```powershell
 Restore-PnPRecycleBinItem -Identity <RecycleBinItemPipeBind>
                           [-Force [<SwitchParameter>]]
-                          [-Connection <SPOnlineConnection>]
-```
-
-### All
-```powershell
-Restore-PnPRecycleBinItem -All [<SwitchParameter>]
-                          [-Force [<SwitchParameter>]]
-                          [-Connection <SPOnlineConnection>]
+                          [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -42,26 +43,21 @@ Get-PnPRecycleBinItem | ? -Property LeafName -like "*.docx" | Restore-PnpRecycle
 
 Restores all the items in the first and second stage recycle bins to their original location of which the filename ends with the .docx extension
 
-## PARAMETERS
-
-### -All
-If provided all items will be stored 
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: All
-
-Required: True
-Position: Named
-Accept pipeline input: True
+### ------------------EXAMPLE 3------------------
+```powershell
+Restore-PnPRecycleBinItem -All -RowLimit 10000
 ```
+
+Permanently restores up to 10,000 items in the recycle bin
+
+## PARAMETERS
 
 ### -Force
 If provided, no confirmation will be asked to restore the recycle bin item
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity, All
 
 Required: False
 Position: Named
@@ -80,11 +76,25 @@ Position: Named
 Accept pipeline input: True
 ```
 
+### -RowLimit
+Limits restoration to specified number of items
+
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
+
+```yaml
+Type: Int
+Parameter Sets: All
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

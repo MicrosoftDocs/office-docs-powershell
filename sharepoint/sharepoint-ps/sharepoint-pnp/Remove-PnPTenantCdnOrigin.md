@@ -3,11 +3,17 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnptenantcdnorigin
 applicable: SharePoint Online
 schema: 2.0.0
+title: Remove-PnPTenantCdnOrigin
 ---
 
 # Remove-PnPTenantCdnOrigin
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes an origin from the Public or Private content delivery network (CDN).
 
 ## SYNTAX 
@@ -15,7 +21,7 @@ Removes an origin from the Public or Private content delivery network (CDN).
 ```powershell
 Remove-PnPTenantCdnOrigin -OriginUrl <String>
                           -CdnType <SPOTenantCdnType>
-                          [-Connection <SPOnlineConnection>]
+                          [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -62,7 +68,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

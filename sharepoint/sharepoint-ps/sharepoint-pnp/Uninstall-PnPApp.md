@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/uninstall-pnpapp
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Uninstall-PnPApp
 ---
 
 # Uninstall-PnPApp
@@ -15,7 +16,7 @@ Uninstalls an available add-in from the site
 ```powershell
 Uninstall-PnPApp -Identity <AppMetadataPipeBind>
                  [-Scope <AppCatalogScope>]
-                 [-Connection <SPOnlineConnection>]
+                 [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -70,7 +71,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

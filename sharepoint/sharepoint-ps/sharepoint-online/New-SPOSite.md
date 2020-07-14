@@ -29,9 +29,9 @@ New-SPOSite [-CompatibilityLevel <Int32>] [-LocaleId <UInt32>] [-NoWait] -Owner 
 The `New-SPOSite` cmdlet creates a new site collection for the current company.
 However, creating a new SharePoint Online site collection fails if a deleted site with the same URL exists in the Recycle Bin.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832> (<https://go.microsoft.com/fwlink/p/?LinkId=251832).>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832>.
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 
-Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (<https://go.microsoft.com/fwlink/p/?LinkId=242911).> The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
+Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (<https://go.microsoft.com/fwlink/p/?LinkId=242911>). The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
 
 ```yaml
 Type: UInt32
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -TimeZoneId
 
-Specifies the time zone of the site collection. For more information, see SPRegionalSettings.TimeZones Property (<https://go.microsoft.com/fwlink/p/?LinkId=242912).>
+Specifies the time zone of the site collection. For more information, see [SPRegionalSettings.TimeZones Property](https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.spregionalsettings.timezones).
 
 ```yaml
 Type: Int32

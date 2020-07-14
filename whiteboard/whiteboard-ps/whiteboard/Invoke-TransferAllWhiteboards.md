@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/whiteboard/invoke-t
 applicable: Microsoft Whiteboard
 title: Set-WhiteboardOwner
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -19,7 +19,7 @@ Transfer ownership of all Whiteboards owned by a user to another user.
 ## SYNTAX
 
 ```powershell
-Invoke-TransferAllWhiteboards [-OwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-TransferAllWhiteboards [-OldOwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -123,6 +123,6 @@ Applicable: Microsoft Whiteboard
 
 ## NOTES
 
-For details on user IDs, see the [overview page](whiteboard.md).
+For details on user IDs, see the [overview page](../../docs-conceptual/overview.md).
 
 ## RELATED LINKS

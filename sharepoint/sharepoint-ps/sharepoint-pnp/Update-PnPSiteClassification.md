@@ -3,12 +3,18 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/update-pnpsiteclassification
 applicable: SharePoint Online
 schema: 2.0.0
+title: Update-PnPSiteClassification
 ---
 
 # Update-PnPSiteClassification
 
 ## SYNOPSIS
-Updates Site Classifications for the tenant. Requires a connection to the Microsoft Graph.
+
+**Required Permissions**
+
+  * Microsoft Graph API: Directory.ReadWrite.All
+
+Updates Site Classifications for the tenant
 
 ## SYNTAX 
 
@@ -17,18 +23,19 @@ Updates Site Classifications for the tenant. Requires a connection to the Micros
 Update-PnPSiteClassification [-Classifications <String>]
                              [-DefaultClassification <String>]
                              [-UsageGuidelinesUrl <String>]
+                             [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
 
 ### Settings
 ```powershell
 Update-PnPSiteClassification -Settings <SiteClassificationsSettings>
+                             [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
 Update-PnPSiteClassification -Classifications "HBI","Top Secret"
 ```
 
@@ -36,7 +43,6 @@ Replaces the existing values of the site classification settings
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
 Update-PnPSiteClassification -DefaultClassification "LBI"
 ```
 
@@ -44,13 +50,24 @@ Sets the default classification value to "LBI". This value needs to be present i
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
 Update-PnPSiteClassification -UsageGuidelinesUrl https://aka.ms/sppnp
 ```
 
-sets the usage guideliness URL to the specified URL.
+sets the usage guideliness URL to the specified URL
 
 ## PARAMETERS
+
+### -ByPassPermissionCheck
+Allows the check for required permissions in the access token to be bypassed when set to $true
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Classifications
 A list of classifications, separated by commas. E.g. "HBI","LBI","Top Secret"

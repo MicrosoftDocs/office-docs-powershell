@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpgroup
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPGroup
 ---
 
 # Get-PnPGroup
@@ -16,35 +17,35 @@ Returns a specific SharePoint group or all SharePoint groups in site.
 ```powershell
 Get-PnPGroup [-Identity <GroupPipeBind>]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
 
 ### Members
 ```powershell
 Get-PnPGroup [-AssociatedMemberGroup [<SwitchParameter>]]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
 
 ### Visitors
 ```powershell
 Get-PnPGroup [-AssociatedVisitorGroup [<SwitchParameter>]]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
 
 ### Owners
 ```powershell
 Get-PnPGroup [-AssociatedOwnerGroup [<SwitchParameter>]]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
 
 ### 
 ```powershell
 Get-PnPGroup [-Includes <String[]>]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -149,7 +150,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

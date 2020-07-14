@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/enable-pnpinplacerecordsmanagementforsite
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Enable-PnPInPlaceRecordsManagementForSite
 ---
 
 # Enable-PnPInPlaceRecordsManagementForSite
@@ -13,7 +14,7 @@ Enables in place records management for a site.
 ## SYNTAX 
 
 ```powershell
-Enable-PnPInPlaceRecordsManagementForSite [-Connection <SPOnlineConnection>]
+Enable-PnPInPlaceRecordsManagementForSite [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -31,7 +32,7 @@ The in place records management feature will be enabled and the in place record 
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

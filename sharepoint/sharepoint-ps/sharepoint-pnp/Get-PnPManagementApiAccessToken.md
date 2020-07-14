@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpmanagementapiaccesstoken
 applicable: SharePoint Online
 schema: 2.0.0
+title: Get-PnPManagementApiAccessToken
 ---
 
 # Get-PnPManagementApiAccessToken
@@ -26,13 +27,6 @@ Get-PnPManagementApiAccessToken -TenantId $tenantId -ClientId $clientId -ClientS
 ```
 
 Retrieves access token for the Office 365 Management API
-
-### ------------------EXAMPLE 2------------------
-```powershell
-Connect-PnPOnline -AccessToken (Get-PnPManagementApiAccessToken -TenantId $tenantId -ClientId $clientId -ClientSecret $clientSecret)
-```
-
-Connects to the Office 365 Management API using an access token for the Office 365 Management API
 
 ## PARAMETERS
 

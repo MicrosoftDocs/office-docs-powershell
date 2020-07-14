@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Retrieves SharePoint Online company logs.
+Retrieves SharePoint Online company logs. This cmdlet is reserved for internal Microsoft use.
 
 ## SYNTAX
 
@@ -50,9 +50,9 @@ For Beta 2, the only company logs available are for Business Connectivity Servic
 > [!NOTE]
 > If you do not use any parameter, the first 1000 rows in descending time range are returned.  
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832.>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 

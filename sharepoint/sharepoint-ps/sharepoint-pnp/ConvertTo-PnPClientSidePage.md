@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/convertto-pnpclientsidepage
 applicable: SharePoint Online
 schema: 2.0.0
+title: ConvertTo-PnPClientSidePage
 ---
 
 # ConvertTo-PnPClientSidePage
@@ -49,12 +50,15 @@ ConvertTo-PnPClientSidePage -Identity <PagePipeBind>
                             [-TargetPageName <String>]
                             [-TargetPageFolder <String>]
                             [-TargetPageFolderOverridesDefaultFolder [<SwitchParameter>]]
-                            [-TargetConnection <SPOnlineConnection>]
+                            [-RemoveEmptySectionsAndColumns [<SwitchParameter>]]
+                            [-TargetConnection <PnPConnection>]
                             [-SkipUserMapping [<SwitchParameter>]]
                             [-UserMappingFile <String>]
+                            [-TermMappingFile <String>]
+                            [-SkipTermStoreMapping [<SwitchParameter>]]
                             [-LDAPConnectionString <String>]
                             [-Web <WebPipeBind>]
-                            [-Connection <SPOnlineConnection>]
+                            [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -435,6 +439,18 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -RemoveEmptySectionsAndColumns
+Remove empty sections and columns after transformation of the page
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -ReplaceHomePageWithDefault
 Replaces a home page with a default stock modern home page
 
@@ -473,6 +489,18 @@ Accept pipeline input: False
 
 ### -SkipItemLevelPermissionCopyToClientSidePage
 By default the item level permissions on a page are copied to the created client side page. Use this switch to prevent the copy
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -SkipTermStoreMapping
+Disables term mapping during transformation
 
 ```yaml
 Type: SwitchParameter
@@ -535,7 +563,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
@@ -581,6 +609,18 @@ Accept pipeline input: False
 
 ### -TargetWebUrl
 Url of the target web that will receive the modern page. Defaults to null which means in-place transformation
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -TermMappingFile
+Specifies a taxonomy term mapping file
 
 ```yaml
 Type: String
@@ -643,7 +683,7 @@ Accept pipeline input: True
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

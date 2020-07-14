@@ -22,8 +22,13 @@ Sets properties on the SharePoint Online organization.
 Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BccExternalSharingInvitations <Boolean>]
  [-BccExternalSharingInvitationsList <String>]
+ [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-DisplayStartASiteOption <Boolean>]
+ [-EnableAIPIntegration <Boolean>]
+ [-EnableMinimumVersionRequirement <Boolean>]
+ [-EnablePromotedFileHandlers <Boolean>]
  [-ExternalServicesEnabled <Boolean>]
+ [-MarkNewFilesSensitiveByDefault <SensitiveByDefaultState>]
  [-MaxCompatibilityLevel <Int32>]
  [-MinCompatibilityLevel <Int32>]
  [-NoAccessRedirectUrl <String>]
@@ -41,11 +46,13 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>]
  [-CommentsOnFilesDisabled <Boolean>]
  [-SocialBarOnSitePagesDisabled <Boolean>]
+ [-DefaultLinkPermission <SharingPermissionType>]
  [-DefaultSharingLinkType <SharingLinkType>]
  [-DisabledWebPartIds <Guid>]
  [-DisallowInfectedFileDownload <Boolean>]
  [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>]
+ [-FilePickerExternalImageSearchEnabled <Boolean>]
  [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>]
  [-IPAddressEnforcement <Boolean>]
@@ -71,16 +78,22 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>]
+ [-SyncPrivacyProfileProperties <Boolean>]
  [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>]
  [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]]
  [-CustomizedExternalSharingServiceUrl <String>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [-ConditionalAccessPolicyErrorHelpLink <String>]
  [-LimitedAccessFileType <SPOLimitedAccessFileType>]
+ [-AllowDownloadingNonWebViewableFiles <Boolean>]
+ [-AllowCommentsTextOnEmailEnabled <Boolean>]
  [-AllowEditing <Boolean>]
  [-EnableAzureADB2BIntegration <Boolean>]
  [-ExternalUserExpirationRequired <Boolean>]
  [-ExternalUserExpireInDays <Int32>]
+ [-EmailAttestationRequired <Boolean>]
+ [-EmailAttestationReAuthDays <Int32>]
  [<CommonParameters>]
 ```
 
@@ -89,7 +102,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
 You can use the `Set-SPOTenant` cmdlet to enable external services and to specify the versions in which site collections can be created.
 You can also use the `Set-SPOSite` cmdlet together with the `Set-SPOTenant` cmdlet to block access to a site in your organization and redirect traffic to another site.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
 ## EXAMPLES
 
@@ -240,6 +253,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockDownloadLinksFileType
+
+The valid values are:  
+
+- WebPreviewableFiles
+- ServerRenderedFilesOnly
+
+```yaml
+Type: BlockDownloadLinksFileTypes
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayStartASiteOption
 
 Determines whether tenant users see the Start a Site menu option.
@@ -257,6 +289,75 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAIPIntegration
+
+This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. (Currently in public preview). For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive (public preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMinimumVersionRequirement
+
+This parameter was used to opt-out of the versioning setting update. It has no effect as of today as versioning setting has already been rolled out.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePromotedFileHandlers
+
+This parameter is reserved for Microsoft internal use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MarkNewFilesSensitiveByDefault
+
+If external sharing is turned on, sensitive content could be shared and accessed by guests before the Office DLP rule finishes processing, you can address this issue by configuring this parameter.
+Possible values are
+- BlockExternalSharing: Prevents guests from accessing newly added files until at least one Office DLP policy scans the content of the file.
+- AllowExternalSharing: Disables this feature.
+
+For more information see [Mark new files as sensitive by default](https://docs.microsoft.com/sharepoint/sensitive-by-default).
+
+```yaml
+Type: SensitiveByDefaultState
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: AllowExternalSharing
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -663,6 +764,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultLinkPermission
+
+Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, internal and direct links.
+
+The valid values are None (non settable), View and Edit.
+
+```yaml
+Type: SharingPermissionType
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultSharingLinkType
 
 Lets administrators choose what type of link appears is selected in the "Get a link" sharing dialog box in OneDrive for Business and SharePoint Online.
@@ -693,13 +812,11 @@ Accept wildcard characters: False
 
 ### -DisabledWebPartIds
 
-PARAMVALUE: <Guid>[,<Guid>,...]
-
 Allows administrators prevent certain, specific web parts from being added to pages or rendering on pages on which they were previously added. Currently, only Amazon Kindle, YouTube and Twitter web parts can be disabled in such a manner.
 
 To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4). If you are looking for a GUID for any other web part, easiest way to achieve is to place the web part on a SharePoint page and move to maintenance mode. See more details around the [web part maintenance mode from Microsoft Support](https://support.office.com/en-us/article/Open-and-use-the-Web-Part-Maintenance-Page-EFF9CE22-D04A-44DD-AE83-AC29A5E396C2).
 
-You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
+You can enter in multiple GUIDs by using a comma to separate them, for example Set-SPOTenant -DisabledWebPartIds 46698648-fcd5-41fc-9526-c7f7b2ace919,544dd15b-cf3c-441b-96da-004d5a8cea1d. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
 
 To re-enable some disabled web parts, use the Set-SPOTenant with the -DisabledWebPartIds parameter and corresponding GUIDs that you still want to keep disabling. To re-enable all disabled web parts, use Set-SPOTenant -DisabledWebPartIds @().
 
@@ -766,6 +883,22 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePickerExternalImageSearchEnabled
+
+For Webparts that support inserting images, like for example Image or Hero webpart, the Web search (Powered by Bing) option will be available if enabled (the default).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1264,6 +1397,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SyncPrivacyProfileProperties
+
+This parameter enables the synchronization of privacy profile properties.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseFindPeopleInPeoplePicker
 
 This feature enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
@@ -1349,6 +1498,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ConditionalAccessPolicyErrorHelpLink
+
+A Link for help when Conditional Access Policy blocks a user. This should be in a valid URL format. A valid URL format that begins with http:// or https://.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowDownloadingNonWebViewableFiles  
+
+This paramater has been deprecated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCommentsTextOnEmailEnabled  
+
+When this parameter is true, the email notification that a user receives when is mentioned, includes the surrounding document context. Set it to false to disable this feature.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowEditing  
 
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
@@ -1392,7 +1589,7 @@ Allows users to preview only Office files in the browser. This option increases 
 The following parameters can be used with `-ConditionalAccessPolicy AllowLimitedAccess` for both the organization-wide setting and the site-level setting.
 
 - OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
-- LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+- LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files. **Warning:** This option is known to cause problems with PDF and image file types because they can be required to be downloaded to the end user's machine to render in the browser. Plan the use of this control carefully. Otherwise, your users could be faced with unexpected "Access Denied" errors.
 - LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
 
 PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
@@ -1411,15 +1608,12 @@ Accept wildcard characters: False
 
 ### -ExternalUserExpirationRequired
 
-> [!NOTE]
-> This feature is currently in development and will not work on Production tenants.
-
 Specifies whether to enable the external user expiration policy, where external users will be expired and removed from the site collection in a given number of days.
 
 > [!NOTE]
 > Once the policy is enabled, expiration values will be set on external users as they join a site collection (via sharing links or via direct access). When the policy is disabled, it will no longer set expiration values on users, but it will not automatically clear expiration values set on existing users. The users can then have their expiration value cleared by a site collection administrator if required.
 
-he valid values are:
+The valid values are:
 True - Enables the Policy.
 False (default) - Disables the policy.
 
@@ -1438,10 +1632,40 @@ Accept wildcard characters: False
 
 ### -ExternalUserExpireInDays
 
-> [!NOTE]
-> This feature is currently in development and will not work on Production tenants.
-
 Specifies the number of days before an external user will expire and be removed from the site collection if the policy is enabled. Value can be from 30 to 730 days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmailAttestationRequired
+
+Sets email attestation to required.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmailAttestationReAuthDays
+
+Sets the number of days for email attestation re-authentication. Value can be from 1 to 365 days.
 
 ```yaml
 Type: Int32

@@ -11,7 +11,6 @@ ms.reviewer:
 # Get-CsGroupPolicyAssignment
 
 ## SYNOPSIS
-NOTE: This cmdlet is currently only available in limited preview in the pre-release Teams PowerShell module.
 
 This cmdlet is used to return group policy assignments.
 
@@ -103,7 +102,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -113,8 +112,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[New-CsGroupPolicyAssignment]()
+[New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md)
 
-[Set-CsGroupPolicyAssignment]()
+[Set-CsGroupPolicyAssignment](Set-CsGroupPolicyAssignment.md)
 
-[Remove-CsGroupPolicyAssignment]()
+[Remove-CsGroupPolicyAssignment](Remove-CsGroupPolicyAssignment.md)

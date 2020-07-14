@@ -3,12 +3,13 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnplist
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPList
 ---
 
 # Get-PnPList
 
 ## SYNOPSIS
-Returns a List object
+Returns lists from SharePoint
 
 ## SYNTAX 
 
@@ -18,7 +19,7 @@ Get-PnPList [-Includes <String[]>]
             [-Identity <ListPipeBind>]
             [-ThrowExceptionIfListNotFound [<SwitchParameter>]]
             [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -35,19 +36,26 @@ Returns all lists in the current web
 Get-PnPList -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
 ```
 
-Returns a list with the given id.
+Returns a list with the given id
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Get-PnPList -Identity Lists/Announcements
 ```
 
-Returns a list with the given url.
+Returns a list with the given url
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Get-PnPList | Where-Object {$_.RootFolder.ServerRelativeUrl -like "/lists/*"}
+```
+
+This examples shows how to do wildcard searches on the list URL. It returns all lists whose URL starts with "/lists/" This could also be used to search for strings inside of the URL.
 
 ## PARAMETERS
 
 ### -Identity
-The ID, name or Url (Lists/MyList) of the list.
+The ID, name or Url (Lists/MyList) of the list
 
 ```yaml
 Type: ListPipeBind
@@ -98,7 +106,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

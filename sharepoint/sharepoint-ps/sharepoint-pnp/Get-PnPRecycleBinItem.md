@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnprecyclebinitem
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Get-PnPRecycleBinItem
 ---
 
 # Get-PnPRecycleBinItem
@@ -15,33 +16,33 @@ Returns the items in the recycle bin from the context
 ### Identity
 ```powershell
 Get-PnPRecycleBinItem [-Identity <GuidPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ### FirstStage
 ```powershell
 Get-PnPRecycleBinItem [-FirstStage [<SwitchParameter>]]
                       [-RowLimit <Int>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ### SecondStage
 ```powershell
 Get-PnPRecycleBinItem [-SecondStage [<SwitchParameter>]]
                       [-RowLimit <Int>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ### All
 ```powershell
 Get-PnPRecycleBinItem [-RowLimit <Int>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ### 
 ```powershell
 Get-PnPRecycleBinItem [-Includes <String[]>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -149,7 +150,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

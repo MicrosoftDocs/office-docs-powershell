@@ -13,9 +13,7 @@ ms.reviewer:
 # Get-CsTeamsMessagingPolicy
 
 ## SYNOPSIS
-Get-CsTeamsMessagingPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]
-
-Get-CsTeamsMessagingPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages.
 
 ## SYNTAX
 
@@ -97,20 +95,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

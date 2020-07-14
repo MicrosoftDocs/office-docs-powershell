@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpfolderpermission
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPFolderPermission
 ---
 
 # Set-PnPFolderPermission
@@ -19,7 +20,7 @@ Set-PnPFolderPermission -List <ListPipeBind>
                         [-InheritPermissions [<SwitchParameter>]]
                         [-SystemUpdate [<SwitchParameter>]]
                         [-Web <WebPipeBind>]
-                        [-Connection <SPOnlineConnection>]
+                        [-Connection <PnPConnection>]
 ```
 
 ### Group
@@ -32,7 +33,7 @@ Set-PnPFolderPermission -Group <GroupPipeBind>
                         [-ClearExisting [<SwitchParameter>]]
                         [-SystemUpdate [<SwitchParameter>]]
                         [-Web <WebPipeBind>]
-                        [-Connection <SPOnlineConnection>]
+                        [-Connection <PnPConnection>]
 ```
 
 ### User
@@ -45,7 +46,7 @@ Set-PnPFolderPermission -User <String>
                         [-ClearExisting [<SwitchParameter>]]
                         [-SystemUpdate [<SwitchParameter>]]
                         [-Web <WebPipeBind>]
-                        [-Connection <SPOnlineConnection>]
+                        [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -194,7 +195,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

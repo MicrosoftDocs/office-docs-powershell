@@ -3,12 +3,13 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpsite
 applicable: SharePoint Online
 schema: 2.0.0
+title: New-PnPSite
 ---
 
 # New-PnPSite
 
 ## SYNOPSIS
-Creates either a communication site or an Office 365 group-connected team site
+Creates either a communication site or a Microsoft 365 group-connected team site
 
 ## SYNTAX 
 
@@ -19,13 +20,15 @@ New-PnPSite -Title <String>
             -Type <SiteType>
             [-Description <String>]
             [-Classification <String>]
+            [-SensitivityLabel <String>]
             [-Owner <String>]
+            [-PreferredDataLocation <Office365Geography>]
             [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
             [-SiteDesign <CommunicationSiteDesign>]
             [-Lcid <UInt32>]
             [-HubSiteId <GuidPipeBind>]
             [-Wait [<SwitchParameter>]]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ### Team Site
@@ -36,11 +39,13 @@ New-PnPSite -Title <String>
             [-Lcid <UInt32>]
             [-Description <String>]
             [-Classification <String>]
-            [-IsPublic <String>]
+            [-SensitivityLabel <String>]
+            [-IsPublic [<SwitchParameter>]]
             [-Owners <String[]>]
+            [-PreferredDataLocation <Office365Geography>]
             [-HubSiteId <GuidPipeBind>]
             [-Wait [<SwitchParameter>]]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ### Communication Site with Custom Design
@@ -51,16 +56,18 @@ New-PnPSite -Title <String>
             -Type <SiteType>
             [-Description <String>]
             [-Classification <String>]
+            [-SensitivityLabel <String>]
             [-Owner <String>]
+            [-PreferredDataLocation <Office365Geography>]
             [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
             [-Lcid <UInt32>]
             [-HubSiteId <GuidPipeBind>]
             [-Wait [<SwitchParameter>]]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
-The New-PnPSite cmdlet creates a new site collection for the current tenant. Currently only 'modern' sites like Communication Site and the Modern Office 365 group-connected team sites are supported. If you want to create a classic site, use New-PnPTenantSite.
+The New-PnPSite cmdlet creates a new site collection for the current tenant. Currently only 'modern' sites like Communication Site and the Modern Microsoft 365 group-connected team sites are supported. If you want to create a classic site, use New-PnPTenantSite.
 
 ## EXAMPLES
 
@@ -190,10 +197,10 @@ Accept pipeline input: False
 ```
 
 ### -IsPublic
-Specifies if new site collection is public. Defaults to false.
+Specifies if the Office 365 Group should be public. Defaults to private.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: Team Site
 
 Required: False
@@ -202,7 +209,7 @@ Accept pipeline input: False
 ```
 
 ### -Lcid
-Specifies the language of the new site collection. Defaults to the current language of the web connected to.
+Specifies the language of the new site collection. Defaults to the current language of the web connected to. For more information, see Locale IDs supported by SharePoint at https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint. To get the list of supported languages on a SharePoint environment use: Get-PnPAvailableLanguage.
 
 ```yaml
 Type: UInt32
@@ -231,6 +238,30 @@ Specifies the owners of the site. Specify the value as a string array: "user@dom
 ```yaml
 Type: String[]
 Parameter Sets: Team Site
+
+Required: False
+Position: 0
+Accept pipeline input: False
+```
+
+### -PreferredDataLocation
+Allows specifying in which geography the SharePoint site collection should be created. I.e. NAM, EUR, APC. For a full list of available regions, see https://docs.microsoft.com/office365/enterprise/multi-geo-add-group-with-pdl#geo-location-codes. Only supported on multi-geo enabled tenants.
+
+```yaml
+Type: Office365Geography
+Parameter Sets: Communication Site with Built-In Site Design
+
+Required: False
+Position: 0
+Accept pipeline input: False
+```
+
+### -SensitivityLabel
+Specifies the sensitivity label of the new site collection
+
+```yaml
+Type: String
+Parameter Sets: Communication Site with Built-In Site Design
 
 Required: False
 Position: 0
@@ -313,7 +344,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

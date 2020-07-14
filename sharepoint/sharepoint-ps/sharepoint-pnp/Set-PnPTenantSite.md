@@ -1,14 +1,20 @@
 ---
 external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnptenantsite
-applicable: SharePoint Online
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, SharePoint Online
 schema: 2.0.0
+title: Set-PnPTenantSite
 ---
 
 # Set-PnPTenantSite
 
 ## SYNOPSIS
-Set site information.
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
+Updates settings of a site collection
 
 ## SYNTAX 
 
@@ -16,13 +22,13 @@ Set site information.
 ```powershell
 Set-PnPTenantSite -Url <String>
                   [-Title <String>]
-                  [-SharingCapability <SharingCapabilities>]
-                  [-DenyAddAndCustomizePages [<SwitchParameter>]]
                   [-LocaleId <UInt32>]
-                  [-StorageMaximumLevel <Int>]
-                  [-StorageWarningLevel <Int>]
                   [-AllowSelfServiceUpgrade [<SwitchParameter>]]
                   [-Owners <String>]
+                  [-DenyAddAndCustomizePages [<SwitchParameter>]]
+                  [-SharingCapability <SharingCapabilities>]
+                  [-StorageMaximumLevel <Int>]
+                  [-StorageWarningLevel <Int>]
                   [-DefaultLinkPermission <SharingPermissionType>]
                   [-DefaultSharingLinkType <SharingLinkType>]
                   [-SharingAllowedDomainList <String>]
@@ -34,7 +40,7 @@ Set-PnPTenantSite -Url <String>
                   [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
                   [-DisableFlows <FlowsPolicy>]
                   [-Wait [<SwitchParameter>]]
-                  [-Connection <SPOnlineConnection>]
+                  [-Connection <PnPConnection>]
 ```
 
 ### Set Lock State
@@ -42,11 +48,11 @@ Set-PnPTenantSite -Url <String>
 Set-PnPTenantSite -Url <String>
                   [-LockState <SiteLockState>]
                   [-Wait [<SwitchParameter>]]
-                  [-Connection <SPOnlineConnection>]
+                  [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
-Sets site properties for existing sites.
+Allows settings of a site collection to be updated
 
 ## EXAMPLES
 
@@ -102,6 +108,8 @@ Accept pipeline input: False
 ### -BlockDownloadOfNonViewableFiles
 Specifies if non web viewable files can be downloaded.
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set Properties
@@ -113,6 +121,8 @@ Accept pipeline input: False
 
 ### -CommentsOnSitePagesDisabled
 Specifies if comments on site pages are enabled
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
@@ -126,6 +136,8 @@ Accept pipeline input: False
 ### -DefaultLinkPermission
 Specifies the default link permission for the site collection. None - Respect the organization default link permission. View - Sets the default link permission for the site to "view" permissions. Edit - Sets the default link permission for the site to "edit" permissions
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SharingPermissionType
 Parameter Sets: Set Properties
@@ -137,6 +149,8 @@ Accept pipeline input: False
 
 ### -DefaultSharingLinkType
 Specifies the default link type for the site collection. None - Respect the organization default sharing link type. AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link. Internal - Sets the default sharing link for this site to the "organization" link or company shareable link. Direct - Sets the default sharing link for this site to the "Specific people" link
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SharingLinkType
@@ -163,6 +177,8 @@ Accept pipeline input: False
 ### -DisableAppViews
 -
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: AppViewsPolicy
 Parameter Sets: Set Properties
@@ -174,6 +190,8 @@ Accept pipeline input: False
 
 ### -DisableCompanyWideSharingLinks
 -
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: CompanyWideSharingLinksPolicy
@@ -187,6 +205,8 @@ Accept pipeline input: False
 ### -DisableFlows
 -
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: FlowsPolicy
 Parameter Sets: Set Properties
@@ -197,7 +217,7 @@ Accept pipeline input: False
 ```
 
 ### -LocaleId
-Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911).
+Specifies the language of this site collection. For more information, see Locale IDs supported by SharePoint at https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint. To get the list of supported languages on a SharePoint environment use: (Get-PnPWeb -Includes RegionalSettings.InstalledLanguages).RegionalSettings.InstalledLanguages.
 
 ```yaml
 Type: UInt32
@@ -210,6 +230,8 @@ Accept pipeline input: False
 
 ### -LockState
 Sets the lockstate of a site
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SiteLockState
@@ -235,6 +257,8 @@ Accept pipeline input: False
 ### -SharingAllowedDomainList
 Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: String
 Parameter Sets: Set Properties
@@ -247,6 +271,8 @@ Accept pipeline input: False
 ### -SharingBlockedDomainList
 Specifies a list of email domains that is blocked for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: String
 Parameter Sets: Set Properties
@@ -258,6 +284,8 @@ Accept pipeline input: False
 
 ### -SharingCapability
 Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SharingCapabilities
@@ -272,6 +300,8 @@ Accept pipeline input: False
 ### -SharingDomainRestrictionMode
 Specifies the external sharing mode for domains.
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SharingDomainRestrictionModes
 Parameter Sets: Set Properties
@@ -284,6 +314,8 @@ Accept pipeline input: False
 ### -StorageMaximumLevel
 Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: Int
 Parameter Sets: Set Properties
@@ -295,6 +327,8 @@ Accept pipeline input: False
 
 ### -StorageWarningLevel
 Specifies the warning level for the storage quota in megabytes. This value must not exceed the values set for the StorageMaximumLevel parameter
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: Int
@@ -332,6 +366,8 @@ Accept pipeline input: True
 ### -Wait
 Wait for the operation to complete
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -345,7 +381,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

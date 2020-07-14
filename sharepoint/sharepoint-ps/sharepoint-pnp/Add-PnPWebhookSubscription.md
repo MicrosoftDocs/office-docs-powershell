@@ -3,6 +3,7 @@ external help file:
 online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpwebhooksubscription
 applicable: SharePoint Online
 schema: 2.0.0
+title: Add-PnPWebhookSubscription
 ---
 
 # Add-PnPWebhookSubscription
@@ -18,7 +19,7 @@ Add-PnPWebhookSubscription -NotificationUrl <String>
                            [-ExpirationDate <DateTime>]
                            [-ClientState <String>]
                            [-Web <WebPipeBind>]
-                           [-Connection <SPOnlineConnection>]
+                           [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -98,7 +99,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

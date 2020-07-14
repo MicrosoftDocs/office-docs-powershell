@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Connects a top-level SPO site collection to a new Office 365 Group.
+Connects a top-level SPO site collection to a new Microsoft 365 Group.
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ Set-SPOSiteOffice365Group
 
 ## DESCRIPTION
 
-Connects a top-level SPO site collection to a new Office 365 Group.  You must be a SharePoint Online global administrator to run the cmdlet.
+Connects a top-level SPO site collection to a new Microsoft 365 Group.  You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
 > [!IMPORTANT]
 > This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
@@ -43,7 +43,7 @@ If the site doesn't exist, this cmdlet returns a "File not found" error.
 
 ### Example 1
 
-This example creates a new Office 365 Group named "site1group" and connects site collection <https://contoso.sharepoint.com/sites/site1> to it.  The group will privacy set to "Private" and Classification set to "Highly Confidential".
+This example creates a new Microsoft 365 Group named "site1group" and connects site collection <https://contoso.sharepoint.com/sites/site1> to it.  The group will privacy set to "Private" and Classification set to "Highly Confidential".
 
 ```powershell
 Set-SPOSiteOffice365Group -Site https://contoso.sharepoint.com/sites/site1 -DisplayName "site1group" -Alias "site1group" -Classification "Highly Confidential"
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-Specifies the name of the new Office 365 Group that will be created.
+Specifies the name of the new Microsoft 365 Group that will be created.
 
 ```yaml
 Type: String
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Alias
 
-Specifies the email alias for the new Office 365 Group that will be created.
+Specifies the email alias for the new Microsoft 365 Group that will be created.
 
 ```yaml
 Type: String
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -IsPublic
 
-Determines the Office 365 Group's privacy setting.  If switch is included, the group will be public, otherwise it will be private.
+Determines the Microsoft 365 Group's privacy setting.  If switch is included, the group will be public, otherwise it will be private.
 
 ```yaml
 Type: SwitchParameter
