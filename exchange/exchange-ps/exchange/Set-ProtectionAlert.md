@@ -395,7 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyUser
-The NotifyUser parameter specifies the SMTP address of the user who receives notification messages for the alert policy. You can specify multiple values separated by commas.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
