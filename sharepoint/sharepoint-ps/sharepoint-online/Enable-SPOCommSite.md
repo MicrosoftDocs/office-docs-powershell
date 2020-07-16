@@ -67,7 +67,7 @@ If the site URL input points to a site that does not exist, you will see the fol
 
 **Error case 4: Classic publishing feature is currently enabled**
 
-We do not support sites that currently have or have had in the past enabled the classic publishing features. If you see this error, your site is not eligible for this feature enablement. Please check [requirements for this feature](https://docs.microsoft.com/sharepoint/modernize-classic-team-site)
+We do not support sites that currently have or have had in the past enabled the classic publishing features. If you see this error, your site is not eligible for this feature enablement. Please check [requirements for this feature](https://docs.microsoft.com/sharepoint/modernize-classic-team-site).
 
 >*Enable-SPOCommSite : The operation cannot be performed because the Publishing feature is enabled on the site.*
 
