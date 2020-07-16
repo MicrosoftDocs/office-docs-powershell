@@ -9,6 +9,11 @@ title: New-PnPTenantSite
 # New-PnPTenantSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Creates a new (classic) site collection for the current tenant
 
 ## SYNTAX 
@@ -27,7 +32,7 @@ New-PnPTenantSite -Title <String>
                   [-RemoveDeletedSite [<SwitchParameter>]]
                   [-Wait [<SwitchParameter>]]
                   [-Force [<SwitchParameter>]]
-                  [-Connection <SPOnlineConnection>]
+                  [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +70,7 @@ Accept pipeline input: False
 ```
 
 ### -Lcid
-Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft: https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splanguage.lcid.aspx. To get the list of supported languages use: (Get-PnPWeb -Includes RegionalSettings.InstalledLanguages).RegionalSettings.InstalledLanguages 
+Specifies the language of this site collection. For more information, see Locale IDs supported by SharePoint at https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint. To get the list of supported languages on a SharePoint environment use: Get-PnPAvailableLanguage.
 
 ```yaml
 Type: UInt32
@@ -214,7 +219,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
@@ -224,4 +229,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](http://go.microsoft.com/fwlink/p/?LinkId=242911Id=242911)[Resource Usage Limits on Sandboxed Solutions in SharePoint 2010](http://msdn.microsoft.com/en-us/library/gg615462.aspx.)[Creating on-premises site collections using CSOM](http://blogs.msdn.com/b/vesku/archive/2014/06/09/provisioning-site-collections-using-sp-app-model-in-on-premises-with-just-csom.aspx)
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)[Locale IDs](https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint)[Resource Usage Limits on Sandboxed Solutions in SharePoint 2010](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/gg615462(v=office.14))[Creating on-premises site collections using CSOM](http://blogs.msdn.com/b/vesku/archive/2014/06/09/provisioning-site-collections-using-sp-app-model-in-on-premises-with-just-csom.aspx)
