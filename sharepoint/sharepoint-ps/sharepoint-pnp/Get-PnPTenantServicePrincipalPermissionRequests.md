@@ -9,12 +9,17 @@ title: Get-PnPTenantServicePrincipalPermissionRequests
 # Get-PnPTenantServicePrincipalPermissionRequests
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Gets the collection of permission requests for the "SharePoint Online Client" service principal
 
 ## SYNTAX 
 
 ```powershell
-Get-PnPTenantServicePrincipalPermissionRequests [-Connection <SPOnlineConnection>]
+Get-PnPTenantServicePrincipalPermissionRequests [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +40,7 @@ A permission request contains the following properties:
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
