@@ -9,6 +9,11 @@ title: Get-PnPUPABulkImportStatus
 # Get-PnPUPABulkImportStatus
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Get user profile bulk import status.
 
 ## SYNTAX 
@@ -16,7 +21,7 @@ Get user profile bulk import status.
 ```powershell
 Get-PnPUPABulkImportStatus [-JobId <GuidPipeBind>]
                            [-IncludeErrorDetails [<SwitchParameter>]]
-                           [-Connection <SPOnlineConnection>]
+                           [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +87,7 @@ Accept pipeline input: True
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

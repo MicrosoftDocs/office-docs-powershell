@@ -9,7 +9,7 @@ title: Set-PnPLabel
 # Set-PnPLabel
 
 ## SYNOPSIS
-Sets a label/tag on the specified list or library. Use Reset-PnPLabel to remove the label again.
+Sets a retention label on the specified list or library. Use Reset-PnPLabel to remove the label again.
 
 ## SYNTAX 
 
@@ -20,28 +20,31 @@ Set-PnPLabel -List <ListPipeBind>
              [-BlockDeletion <Boolean>]
              [-BlockEdit <Boolean>]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
+
+## DESCRIPTION
+Allows setting a retention label on a list or library and its items. Does not work for sensitivity labels.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPLabel  -List "Demo List" -Label "Project Documentation"
+Set-PnPLabel -List "Demo List" -Label "Project Documentation"
 ```
 
 This sets an O365 label on the specified list or library. 
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Set-PnPLabel  -List "Demo List" -Label "Project Documentation" -SyncToItems $true
+Set-PnPLabel -List "Demo List" -Label "Project Documentation" -SyncToItems $true
 ```
 
 This sets an O365 label on the specified list or library and sets the label to all the items in the list and library as well.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Set-PnPLabel  -List "Demo List" -Label "Project Documentation" -BlockDelete $true -BlockEdit $true
+Set-PnPLabel -List "Demo List" -Label "Project Documentation" -BlockDelete $true -BlockEdit $true
 ```
 
 This sets an O365 label on the specified list or library. Next, it also blocks the ability to either edit or delete the item. 
@@ -49,7 +52,7 @@ This sets an O365 label on the specified list or library. Next, it also blocks t
 ## PARAMETERS
 
 ### -BlockDeletion
-Block deletion of items in the library.
+Block deletion of items in the library
 
 ```yaml
 Type: Boolean
@@ -61,7 +64,7 @@ Accept pipeline input: False
 ```
 
 ### -BlockEdit
-Block editing of items in the library.
+Block editing of items in the library
 
 ```yaml
 Type: Boolean
@@ -73,7 +76,7 @@ Accept pipeline input: False
 ```
 
 ### -Label
-The name of the label.
+The name of the retention label
 
 ```yaml
 Type: String
@@ -97,7 +100,7 @@ Accept pipeline input: True
 ```
 
 ### -SyncToItems
-Apply label to existing items in the library.
+Apply label to existing items in the library
 
 ```yaml
 Type: Boolean
@@ -112,7 +115,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -9,6 +9,11 @@ title: Clear-PnPTenantRecycleBinItem
 # Clear-PnPTenantRecycleBinItem
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Permanently deletes a site collection from the tenant scoped recycle bin
 
 ## SYNTAX 
@@ -17,7 +22,7 @@ Permanently deletes a site collection from the tenant scoped recycle bin
 Clear-PnPTenantRecycleBinItem -Url <String>
                               [-Wait [<SwitchParameter>]]
                               [-Force [<SwitchParameter>]]
-                              [-Connection <SPOnlineConnection>]
+                              [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -89,7 +94,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -14,7 +14,7 @@ Returns true if the PnP PowerShell Telemetry has been enabled.
 ## SYNTAX 
 
 ```powershell
-Get-PnPPowerShellTelemetryEnabled [-Connection <SPOnlineConnection>]
+Get-PnPPowerShellTelemetryEnabled [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +35,7 @@ Will return true of false.
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
