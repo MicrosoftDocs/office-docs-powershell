@@ -24,10 +24,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailTrafficATPReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Direction <MultiValuedProperty>] [-Domain <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-Page <Int32>] [-PageSize <Int32>]
- [-ProbeTag <String>] [-StartDate <DateTime>] [-SummarizeBy <MultiValuedProperty>] [<CommonParameters>]
+Get-MailTrafficATPReport
+ [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Direction <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [-SummarizeBy <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +47,7 @@ Safe Links is a feature in Advanced Threat Protection that checks links in email
 
 For the reporting period you specify, the cmdlet returns the following information:
 
-- Domain (note that this value is always blank)
+- Domain
 - Date
 - Event Type
 - Direction

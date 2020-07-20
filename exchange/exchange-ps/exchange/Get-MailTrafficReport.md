@@ -43,7 +43,7 @@ Get-MailTrafficReport
 ## DESCRIPTION
 For the reporting period you specify, the cmdlet returns the following information:
 
-- Domain (note that this value is always blank)
+- Domain (note that this value is populated only when you use the Domain parameter)
 - Date
 - Event Type
 - Direction
