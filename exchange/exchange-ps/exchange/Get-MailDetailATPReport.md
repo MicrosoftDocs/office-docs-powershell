@@ -51,7 +51,7 @@ This example returns the Advanced Threat Protection actions for the last 10 days
 ## PARAMETERS
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
 
 ```yaml
 Type: MultiValuedProperty
