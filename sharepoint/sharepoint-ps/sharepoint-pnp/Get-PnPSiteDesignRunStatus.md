@@ -9,13 +9,18 @@ title: Get-PnPSiteDesignRunStatus
 # Get-PnPSiteDesignRunStatus
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
 
 ## SYNTAX 
 
 ```powershell
 Get-PnPSiteDesignRunStatus -Run <TenantSiteDesignRun>
-                           [-Connection <SPOnlineConnection>]
+                           [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -46,7 +51,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

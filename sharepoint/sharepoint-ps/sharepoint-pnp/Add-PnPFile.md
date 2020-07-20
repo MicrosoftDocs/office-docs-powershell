@@ -28,7 +28,7 @@ Add-PnPFile -Path <String>
             [-Values <Hashtable>]
             [-ContentType <ContentTypePipeBind>]
             [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ### Upload file from stream
@@ -46,7 +46,7 @@ Add-PnPFile -FileName <String>
             [-Values <Hashtable>]
             [-ContentType <ContentTypePipeBind>]
             [-Web <WebPipeBind>]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -103,7 +103,7 @@ This will upload a local file sample.docx to the Documents folder giving it the 
 ## PARAMETERS
 
 ### -Approve
-Will auto approve the uploaded file.
+Will auto approve the uploaded file
 
 ```yaml
 Type: SwitchParameter
@@ -115,7 +115,7 @@ Accept pipeline input: False
 ```
 
 ### -ApproveComment
-The comment added to the approval.
+The comment added to the approval
 
 ```yaml
 Type: String
@@ -127,7 +127,7 @@ Accept pipeline input: False
 ```
 
 ### -CheckInComment
-The comment added to the checkin.
+The comment added to the checkin
 
 ```yaml
 Type: String
@@ -139,7 +139,7 @@ Accept pipeline input: False
 ```
 
 ### -Checkout
-If versioning is enabled, this will check out the file first if it exists, upload the file, then check it in again.
+If versioning is enabled, this will check out the file first if it exists, upload the file, then check it in again
 
 ```yaml
 Type: SwitchParameter
@@ -151,7 +151,7 @@ Accept pipeline input: False
 ```
 
 ### -ContentType
-Use to assign a ContentType to the file.
+Use to assign a ContentType to the file
 
 ```yaml
 Type: ContentTypePipeBind
@@ -199,7 +199,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-The local file path.
+The local file path
 
 ```yaml
 Type: String
@@ -211,7 +211,7 @@ Accept pipeline input: False
 ```
 
 ### -Publish
-Will auto publish the file.
+Will auto publish the file
 
 ```yaml
 Type: SwitchParameter
@@ -223,7 +223,7 @@ Accept pipeline input: False
 ```
 
 ### -PublishComment
-The comment added to the publish action.
+The comment added to the publish action
 
 ```yaml
 Type: String
@@ -312,7 +312,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
