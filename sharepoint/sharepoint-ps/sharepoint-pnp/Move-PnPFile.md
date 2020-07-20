@@ -9,9 +9,23 @@ title: Move-PnPFile
 # Move-PnPFile
 
 ## SYNOPSIS
-Moves a file to a different location
+Moves a file or folder to a different location
 
 ## SYNTAX 
+
+### Other Site Collection
+```powershell
+Move-PnPFile -TargetServerRelativeLibrary <String>
+             [-ServerRelativeUrl <String>]
+             [-SiteRelativeUrl <String>]
+             [-OverwriteIfAlreadyExists [<SwitchParameter>]]
+             [-AllowSchemaMismatch [<SwitchParameter>]]
+             [-AllowSmallerVersionLimitOnDestination [<SwitchParameter>]]
+             [-IgnoreVersionHistory [<SwitchParameter>]]
+             [-Force [<SwitchParameter>]]
+             [-Web <WebPipeBind>]
+             [-Connection <PnPConnection>]
+```
 
 ### Server Relative
 ```powershell
@@ -20,7 +34,7 @@ Move-PnPFile -ServerRelativeUrl <String>
              [-OverwriteIfAlreadyExists [<SwitchParameter>]]
              [-Force [<SwitchParameter>]]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
 
 ### Site Relative
@@ -30,33 +44,71 @@ Move-PnPFile -SiteRelativeUrl <String>
              [-OverwriteIfAlreadyExists [<SwitchParameter>]]
              [-Force [<SwitchParameter>]]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
+
+## DESCRIPTION
+Allows moving a file or folder to a different location inside the same document library, such as in a subfolder, to a different document library on the same site collection or to a document library on another site collection
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:>Move-PnPFile -ServerRelativeUrl /sites/project/Documents/company.docx -TargetUrl /sites/otherproject/Documents/company.docx
+PS:>Move-PnPFile -SiteRelativeUrl "Shared Documents/Document.docx" -TargetUrl "/sites/project/Archive/Document2.docx"
 ```
 
-Moves a file named company.docx located in the document library called Documents located in the projects sitecollection under the managed path sites to the site collection otherproject located in the managed path sites. If a file named company.aspx already exists, it won't perform the move.
+Moves a file named Document.docx located in the document library named "Shared Documents" in the current site to the document library named "Archive" in the same site, renaming the file to Document2.docx. If a file named Document2.docx already exists at the destination, it won't perform the move.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:>Move-PnPFile -SiteRelativeUrl Documents/company.aspx -TargetUrl /sites/otherproject/Documents/company.docx
+PS:>Move-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Document.docx -TargetUrl "/sites/project/Archive/Document.docx" -OverwriteIfAlreadyExists
 ```
 
-Moves a file named company.docx located in the document library called Documents located in the current site to the Documents library in the site collection otherproject located in the managed path sites. If a file named company.aspx already exists, it won't perform the move.
+Moves a file named Document.docx located in the document library named "Shared Documents" in the current site to the document library named "Archive" in the same site. If a file named Document.docx already exists at the destination, it will overwrite it.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:>Move-PnPFile -ServerRelativeUrl /sites/project/Documents/company.docx -TargetUrl /sites/otherproject/Documents/company.docx -OverwriteIfAlreadyExists
+PS:>Move-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Document.docx" -TargetServerRelativeLibrary "/sites/otherproject/Shared Documents" -OverwriteIfAlreadyExists -AllowSchemaMismatch -AllowSmallerVersionLimitOnDestination
 ```
 
-Moves a file named company.docx located in the document library called Documents located in the projects sitecollection under the managed path sites to the site collection otherproject located in the managed path sites. If a file named company.aspx already exists, it will still perform the move and replace the original company.aspx file.
+Moves a file named Document.docx located in the document library named "Shared Documents" in the current site to the document library named "Shared Documents" in another site collection "otherproject" allowing it to overwrite an existing file Document.docx in the destination, allowing the fields to be different on the destination document library from the source document library and allowing a lower document version limit on the destination compared to the source.
+
+### ------------------EXAMPLE 4------------------
+```powershell
+PS:>Move-PnPFile -ServerRelativeUrl "/sites/project/Shared Documents/Archive" -TargetServerRelativeLibrary "/sites/archive/Project" -AllowSchemaMismatch -AllowSmallerVersionLimitOnDestination
+```
+
+Moves a folder named Archive located in the document library named "Shared Documents" in the current site to the document library named "Project" in another site collection "archive" not allowing it to overwrite an existing folder named "Archive" in the destination, allowing the fields to be different on the destination document library from the source document library and allowing a lower document version limit on the destination compared to the source.
 
 ## PARAMETERS
+
+### -AllowSchemaMismatch
+If provided and the target document library specified using TargetServerRelativeLibrary has different fields than the document library where the document is being moved from, the move will succeed. If not provided, it will fail to protect against data loss of metadata stored in fields that cannot be moved along.
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Other Site Collection
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -AllowSmallerVersionLimitOnDestination
+If provided and the target document library specified using TargetServerRelativeLibrary is configured to keep less historical versions of documents than the document library where the document is being moved from, the move will succeed. If not provided, it will fail to protect against data loss of historical versions that cannot be moved along.
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Other Site Collection
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Force
 If provided, no confirmation will be requested and the action will be performed
@@ -70,12 +122,26 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -OverwriteIfAlreadyExists
-If provided, if a file already exists at the TargetUrl, it will be overwritten. If omitted, the move operation will be canceled if the file already exists at the TargetUrl location.
+### -IgnoreVersionHistory
+If provided, only the latest version of the document will be moved and its history will be discared. If not provided, all historical versions will be moved along.
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Other Site Collection
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -OverwriteIfAlreadyExists
+If provided, if a file or folder already exists at the TargetUrl, it will be overwritten. If omitted, the move operation will be canceled if the file or folder already exists at the TargetUrl location.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Server Relative, Site Relative, Other Site Collection
 
 Required: False
 Position: Named
@@ -87,7 +153,7 @@ Server relative Url specifying the file to move. Must include the file name.
 
 ```yaml
 Type: String
-Parameter Sets: Server Relative
+Parameter Sets: Server Relative, Other Site Collection
 
 Required: True
 Position: 0
@@ -95,23 +161,37 @@ Accept pipeline input: True
 ```
 
 ### -SiteRelativeUrl
-Site relative Url specifying the file to move. Must include the file name.
+Site relative Url specifying the file or folder to move. Must include the file or folder name.
 
 ```yaml
 Type: String
-Parameter Sets: Site Relative
+Parameter Sets: Site Relative, Other Site Collection
 
 Required: True
 Position: 0
 Accept pipeline input: True
 ```
 
-### -TargetUrl
-Server relative Url where to move the file to. Must include the file name.
+### -TargetServerRelativeLibrary
+Server relative url of a document library where to move the fileor folder to. Must not include the file or folder name.
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Other Site Collection
+
+Required: True
+Position: 1
+Accept pipeline input: False
+```
+
+### -TargetUrl
+Server relative Url where to move the file or folder to. Must include the file or folder name.
+
+```yaml
+Type: String
+Parameter Sets: Site Relative, Server Relative
 
 Required: True
 Position: 1
@@ -122,7 +202,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False
