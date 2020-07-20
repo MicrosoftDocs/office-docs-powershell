@@ -38,6 +38,8 @@ You can call the Get-CsUser cmdlet and check the HostedVoiceMail property to det
 Policies created at the site scope will be automatically assigned to the users homed on those sites.
 Policies created at the per-user scope must be assigned to users or contact objects with the Grant-CsHostedVoicemailPolicy cmdlet.
 
+[!NOTE]
+Cloud Voicemail takes the place of Exchange Unified Messaging (UM) in providing voice messaging functionality for Skype for Business 2019 voice users who have mailboxes on Exchange Server 2019 or Exchange Online, and for Skype for Business Online voice users. For more information please check [Plan Cloud Voicemail service](https://docs.microsoft.com/skypeforbusiness/hybrid/plan-cloud-voicemail) and [Retiring Unified Messaging in Exchange Online](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Retiring-Unified-Messaging-in-Exchange-Online/ba-p/608991).
 
 
 ## EXAMPLES
@@ -234,7 +236,7 @@ You can return the tenant ID for each of your tenants by running this command:
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
