@@ -22,7 +22,7 @@ Add-PnPApplicationCustomizer -ClientSideComponentId <GuidPipeBind>
                              [-ClientSideComponentProperties <String>]
                              [-ClientSideHostProperties <String>]
                              [-Web <WebPipeBind>]
-                             [-Connection <SPOnlineConnection>]
+                             [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -143,7 +143,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

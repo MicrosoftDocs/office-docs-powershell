@@ -9,7 +9,7 @@ title: Move-PnPFolder
 # Move-PnPFolder
 
 ## SYNOPSIS
-Move a folder to another location in the current web
+Move a folder to another location in the current web. If you want to move a folder to a different site collection, use the Move-PnPFile cmdlet instead, which also supports moving folders and also accross site collections.
 
 ## SYNTAX 
 
@@ -17,7 +17,7 @@ Move a folder to another location in the current web
 Move-PnPFolder -Folder <String>
                -TargetFolder <String>
                [-Web <WebPipeBind>]
-               [-Connection <SPOnlineConnection>]
+               [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -72,7 +72,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

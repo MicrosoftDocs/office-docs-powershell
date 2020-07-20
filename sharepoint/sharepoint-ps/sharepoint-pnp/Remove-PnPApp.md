@@ -16,7 +16,7 @@ Removes an app from the app catalog
 ```powershell
 Remove-PnPApp -Identity <AppMetadataPipeBind>
               [-Scope <AppCatalogScope>]
-              [-Connection <SPOnlineConnection>]
+              [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -71,7 +71,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # Set-Label
 
 ## SYNOPSIS
-This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-Label cmdlet to modify sensitivity labels in your organization.
 
@@ -53,7 +53,14 @@ You need to be assigned permissions in the Security & Compliance Center before y
 Set-Label -Identity "Label1" -LocaleSettings '{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}','{"localeKey":"tooltip","Settings":[{"Key":"en-us","Value":"This is an example label"},{"Key":"de-de","Value":"Dies ist ein Beispieletikett"},{"Key":"es-es","Value":"Esta es una etiqueta de ejemplo"}]}'
 ```
 
-This example sets the localized label name for "Label1" in different languages (English, German, and Spanish).
+This example sets the localized label name and label Tooltips for "Label1" in different languages (English, German, and Spanish).
+
+### Example 2
+```powershell
+Set-Label -Identity "Label1" -LocaleSettings '{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":""},{"Key":"de-de","Value":""},{"Key":"es-es","Value":""}]}','{"localeKey":"tooltip","Settings":[{"Key":"en-us","Value":""},{"Key":"de-de","Value":""},{"Key":"es-es","Value":""}]}'
+```
+
+This example removes the localized label name and label Tooltips for "Label1" in different languages (English, German, and Spanish).
 
 ## PARAMETERS
 
@@ -200,11 +207,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleSettings
-The LocaleSettings parameter specifies one or more localized label name or label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
+The LocaleSettings parameter specifies one or more localized label name and label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
 
 - Label display names: `{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}`
 
 - Label Tooltips: `{"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de","Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}`
+
+To remove a language, you will have to give an empty value for that corresponding language.
 
 ```yaml
 Type: MultiValuedProperty
@@ -290,17 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the sensitivity label that determines the order of label processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and sensitivity labels can't have the same priority value.
-
-Valid values and the default value for this parameter depend on the number of existing sensitivity labels. For example, if there are 8 existing labels:
-
-- Valid priority values for the existing 8 sensitivity labels are from 0 through 7.
-
-- Valid priority values for a new sensitivity label (the 9th label) are from 0 through 8.
-
-- The default value for a new sensitivity label (the 9th label) is 8.
-
-If you modify the priority value of a sensitivity label, the position of the label in the list changes to match the priority value you specify. In other words, if you set the priority value of a sensitivity label to the same value as an existing label, the priority value of the existing sensitivity label and all other lower priority labels after it is increased by 1.
+The Priority parameter specifies a priority value for the sensitivity label that determines the order of label processing. A higher integer value indicates a higher priority.
 
 ```yaml
 Type: Int32
