@@ -51,6 +51,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-ImapSuppressReadReceipt <Boolean>]
  [-ImapUseProtocolDefaults <Boolean>]
  [-IsOptimizedForAccessibility <Boolean>]
+ [-MacOutlookEnabled <Boolean>]
  [-MAPIBlockOutlookExternalConnectivity <Boolean>]
  [-MAPIBlockOutlookNonCachedMode <Boolean>]
  [-MAPIBlockOutlookRpcHttp <Boolean>]
@@ -755,6 +756,26 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MacOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+The MacOutlookEnabled parameter enables or disables access to the mailbox by using Outlook for Mac.
+
+Valid input for this parameter is $true or $false. The default value is $true.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
