@@ -53,8 +53,8 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "kenwith",
-      "ms.author" : "kenwith",
+      "author" : "serdarsoysal",
+      "ms.author" : "serdars",
       "manager" : "serdars",
       "ms.topic" : "reference",
       "ms.service" : "spmt-powershell",
