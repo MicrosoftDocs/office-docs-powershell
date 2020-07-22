@@ -25,6 +25,10 @@ Set-CsOnlineLisWirelessAccessPoint [[-TenantId] <Guid>] [-BSSID] <String> -Locat
 ## DESCRIPTION
 Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet allows the administrator to map physical locations to the WAP through which calls will be routed.
 
+The BSSID (Basic Service Set Identifiers) is used to describe sections of a wireless local area network. It is the MAC of the 802.11 side of the access point. The BSSID parameter in this command also supports the wildcard format to cover all BSSIDs in a range which share the same description and Location ID. The wildcard '*' can be on either the last one or two character(s).
+
+If a BSSID with wildcard format is already existing, the request for adding one more new BSSID which is within this wildcard range and with the same location ID will not be accepted.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -34,11 +38,25 @@ Set-CsOnlineLisWirelessAccessPoint -BSSID 0B-23-CD-16-AA-CC -Description "LIS WA
 
 Example 1 creates the Location Information Server (LIS) wireless access point with Chassis ID "0B-23-CD-16-AA-CC", associated with location ID d26a4935-5997-4bcf-b0db-6ae5a88805fd.
 
+### -------------------------- Example 2 --------------------------
+```
+Set-CsOnlineLisWirelessAccessPoint -BSSID 00-22-C4-17-BB-A* -Description "LIS WAP with BSS ID 00-22-C4-17-BB-A*" -LocationId ca5c581e-5006-499a-a5b3-cd8c2384cc9a
+```
+
+Example 2 creates the Location Information Server (LIS) wireless access point with Chassis ID "00-22-C4-17-BB-A*", associated with location ID ca5c581e-5006-499a-a5b3-cd8c2384cc9a. BSSID "00-22-C4-17-BB-A*" is in wildcard format which equivalents to adding all BSSIDs with the same LocationID in the range "00-22-C4-17-BB-A[0-9A-F]]"
+
+### -------------------------- Example 3 --------------------------
+```
+Set-CsOnlineLisWirelessAccessPoint -BSSID 0F-27-5B-C7-FF-* -Description "LIS WAP with BSS ID 0F-27-5B-C7-FF-*" -LocationId 4d7357dd-7078-4907-8dfa-658c1811f109
+```
+
+Example 3 creates the Location Information Server (LIS) wireless access point with Chassis ID "0F-27-5B-C7-FF-*", associated with location ID 4d7357dd-7078-4907-8dfa-658c1811f109. BSSID "0F-27-5B-C7-FF-*" is in wildcard format which equivalents to adding all BSSIDs with the same LocationID in the range "00-22-C4-17-BB-[0-9A-F][0-9A-F]]"
+
 
 ## PARAMETERS
 
 ### -BSSID
-The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID does exist, that entry will be replaced.
+The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID already exists, that entry will be replaced. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
 
 ```yaml
 Type: String
