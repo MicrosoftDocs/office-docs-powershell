@@ -215,21 +215,21 @@ Accept wildcard characters: False
 ### -ClickAction
 The ClickAction parameter filters the action of a specific click . Valid values are:
 
-None  - un-initialized result
+None  - we were unable to capture the verdict for the URL-the user may have clicked through the URL
 
-Allowed  -  allow the url click and redirect to clicked url
+Allowed  -  User was allowed to navigate to the URL
 
-Blocked - block the page
+Blocked - User was blocked from navigating to the URL
 
-Pending verdict   - url pending to detonate page render
+Pending verdict   - User was presented with the detonation pending page 
 
-Block overridden  -  error render
+Blocked overridden  -  User blocked from navigating to the URL; however, user overrode block to navigate to the URL
 
-Pending verdict bypassed    - clickthrough to original url from Pending page
+Pending verdict bypassed    - User presented with the detonation page; however, user overrode to navigate to the URL.
 
-Error  - clickthrough to original url from Block page
+Error  - The user was presented with the error page. it can also mean there was an error in capturing the verdict. 
 
-Failure    -  unknown exception happened
+Failure    - There was unknown exception while capturing the verdict-the user may have clicked through the URL
 
 ```yaml
 Type: MultiValuedProperty
