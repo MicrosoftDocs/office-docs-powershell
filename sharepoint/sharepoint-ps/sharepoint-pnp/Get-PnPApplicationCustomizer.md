@@ -19,7 +19,7 @@ Get-PnPApplicationCustomizer [-Identity <GuidPipeBind>]
                              [-Scope <CustomActionScope>]
                              [-ThrowExceptionIfCustomActionNotFound [<SwitchParameter>]]
                              [-Web <WebPipeBind>]
-                             [-Connection <SPOnlineConnection>]
+                             [-Connection <PnPConnection>]
 ```
 
 ### 
@@ -28,7 +28,7 @@ Get-PnPApplicationCustomizer [-Includes <String[]>]
                              [-Scope <CustomActionScope>]
                              [-ThrowExceptionIfCustomActionNotFound [<SwitchParameter>]]
                              [-Web <WebPipeBind>]
-                             [-Connection <SPOnlineConnection>]
+                             [-Connection <PnPConnection>]
 ```
 
 ### Client Side Component Id
@@ -37,7 +37,7 @@ Get-PnPApplicationCustomizer -ClientSideComponentId <GuidPipeBind>
                              [-Scope <CustomActionScope>]
                              [-ThrowExceptionIfCustomActionNotFound [<SwitchParameter>]]
                              [-Web <WebPipeBind>]
-                             [-Connection <SPOnlineConnection>]
+                             [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -158,7 +158,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

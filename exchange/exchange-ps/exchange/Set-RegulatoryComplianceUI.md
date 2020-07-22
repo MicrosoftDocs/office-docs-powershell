@@ -10,10 +10,10 @@ monikerRange: "o365scc-ps"
 # Set-RegulatoryComplianceUI
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
+This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
 .
 
-Use the Set-RegulatoryComplianceUI cmdlet to enable or disable regulatory compliance UI in the Office 365 Security & Compliance Center (enable or disable the preservation lock checkbox for retention policies and the immutable label checkbox for retention labels).
+Use the Set-RegulatoryComplianceUI cmdlet to display the UI option in retention label settings to mark content as a regulatory record.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -24,7 +24,7 @@ Set-RegulatoryComplianceUI -Enabled <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -33,16 +33,16 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Set-RegulatoryComplianceUI -Enabled $true
 ```
 
-This example enables the regulatory compliance UI.
+This example displays the UI option in retention label settings to mark content as a regulatory record.
 
 ## PARAMETERS
 
 ### -Enabled
-The Enabled parameter specifies whether to enable or disable regulatory compliance UI. Valid values are:
+The Enabled parameter specifies whether to show or hide the UI option in retention label settings to mark content as a regulatory record. Valid values are:
 
-$true: The preservation lock checkbox is displayed for retention policies and the immutable label checkbox is displayed for retention labels.
+$true: The option to mark content as a regulatory record is visible in the UI for retention label settings.
 
-$false: The preservation lock checkbox is not displayed for retention policies and the immutable label checkbox is not displayed for retention labels. This is the default value.
+$false: The option to mark content as a regulatory record is not visible in the UI for retention label settings. This is the default value.
 
 ```yaml
 Type: Boolean

@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailTrafficReport cmdlet to view details about message traffic in your organization for the last 92 days.
+Use the Get-MailTrafficReport cmdlet to view details about message traffic in your organization for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -41,7 +41,17 @@ Get-MailTrafficReport
 ```
 
 ## DESCRIPTION
-You can use the EventTypes values from the Get-MailTrafficReport cmdlet to analyze what happened to messages when they were filtered by the service. The following list describes the event types for messages.
+For the reporting period you specify, the cmdlet returns the following information:
+
+- Domain (note that this value is populated only when you use the Domain parameter)
+- Date
+- Event Type
+- Direction
+- Action
+- Message Count
+- Recipient Count
+
+You can use the EventType values from the Get-MailTrafficReport cmdlet to analyze what happened to messages when they were filtered by the service. The following list describes the event types for messages.
 
 Mail traffic summary
 
@@ -57,13 +67,13 @@ Mail traffic summary
 
 - Malware: Messages that were marked as malware.
 
--	Receive: Messages successfully received by the service.
+- Receive: Messages successfully received by the service.
 
--	SpoofMail: Messages that were marked as spoofed by the Office 365 anti-spoofing protection.
+- SpoofMail: Messages that were marked as spoofed by anti-spoofing protection.
 
 - TransportRuleHits: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
 
--	TransportRuleMessages: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
+- TransportRuleMessages: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
 
 Spam detections
 
@@ -139,7 +149,7 @@ This example retrieves the statistics for outgoing messages on December 12, 2015
 
 ### Example 3
 ```powershell
-Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
+Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound -SummarizeBy EventType | Format-Table Domain,Date,Action,MessageCount
 ```
 
 This example is similar to the previous example, but now the results are summarized. Because the EventType is one of the summarized values, the rows in the table now contain the unique values of Action. The total number of rows in the report is reduced, and values of MessageCount are correspondingly larger on each row.
@@ -147,7 +157,7 @@ This example is similar to the previous example, but now the results are summari
 ## PARAMETERS
 
 ### -Action
-The Action parameter filters the report by the action taken by DLP policies, transport rules, malware filtering, or spam filtering. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget Actions. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
+The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
 
 You can specify multiple values separated by commas.
 
@@ -181,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
 
 ```yaml
 Type: MultiValuedProperty
@@ -239,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget EventTypes. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
 
 You can specify multiple values separated by commas.
 
@@ -341,7 +351,13 @@ Accept wildcard characters: False
 ### -SummarizeBy
 The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report, and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
-For the Get-MailTrafficReport cmdlet, the SummarizeBy parameter accepts the values Action, Domain, and EventType. You can specify multiple values separated by commas.
+Valid values are:
+
+- Action
+- Domain
+- EventType
+
+You can specify multiple values separated by commas. The values that you specify for this parameter are not displayed in the results (the values in the corresponding columns are blank).
 
 ```yaml
 Type: MultiValuedProperty

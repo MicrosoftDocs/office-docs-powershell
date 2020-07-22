@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [New-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
+In Exchange Online, this cmdlet has been replaced by the [New-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtype) cmdlet in Security & Compliance Center PowerShell.
 
 Use the New-DataClassification cmdlet to create data classification rules that use document fingerprints.
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ### -Locale
 The Locale parameter specifies the language that's associated with the data classification rule.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 You can add additional language translations to the data classification rule by using the Set-DataClassification cmdlet.
 

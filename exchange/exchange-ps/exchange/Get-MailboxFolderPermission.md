@@ -17,8 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxFolderPermission cmdlet to view folder-level permissions in mailboxes.
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderPermission cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderPermission cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -144,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch is required to return Office 365 groups in the results. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to return Microsoft 365 Groups in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

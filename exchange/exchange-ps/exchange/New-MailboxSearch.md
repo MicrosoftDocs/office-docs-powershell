@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-On July 1, 2018, you'll no longer be able to use the New-MailboxSearch cmdlet to create In-Place eDiscovery searches and In-Place Holds in Exchange Online. To create eDiscovery searches and eDiscovery case holds, please start using New-ComplianceSearch and New-CaseHoldPolicy in the Office 365 Security & Compliance Center. You'll still be able to use Set-MailboxSearch to modify existing In-Place eDiscovery searches and In-Place Holds. Creating new searches and holds in Exchange Server 2013 will still be supported, and searches run from your on-premises organization in an Exchange hybrid deployment aren't affected by this change.
+On July 1, 2018, you'll no longer be able to use the New-MailboxSearch cmdlet to create In-Place eDiscovery searches and In-Place Holds in Exchange Online. To create eDiscovery searches and eDiscovery case holds, please start using New-ComplianceSearch and New-CaseHoldPolicy in the Security & Compliance Center. You'll still be able to use Set-MailboxSearch to modify existing In-Place eDiscovery searches and In-Place Holds. Creating new searches and holds in Exchange Server 2013 will still be supported, and searches run from your on-premises organization in an Exchange hybrid deployment aren't affected by this change.
 
 Use the New-MailboxSearch cmdlet to create a mailbox search and either get an estimate of search results, place search results on In-Place Hold or copy them to a Discovery mailbox. You can also place all contents in a mailbox on hold by not specifying a search query, which accomplishes similar results as Litigation Hold.
 
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 ### -Language
 The Language parameter specifies a locale for the search.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
@@ -522,7 +522,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-The SearchQuery parameter specifies keywords for the search query by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://go.microsoft.com/fwlink/p/?linkid=269603).
+The SearchQuery parameter specifies keywords for the search query by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
 
 If you use this parameter with other search query parameters, the query combines these parameters by using the AND operator.
 

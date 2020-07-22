@@ -18,14 +18,15 @@ Permanently deletes all or a specific recycle bin item
 Clear-PnPRecycleBinItem [-All [<SwitchParameter>]]
                         [-SecondStageOnly [<SwitchParameter>]]
                         [-Force [<SwitchParameter>]]
-                        [-Connection <SPOnlineConnection>]
+                        [-RowLimit <Int>]
+                        [-Connection <PnPConnection>]
 ```
 
 ### Identity
 ```powershell
 Clear-PnPRecycleBinItem -Identity <RecycleBinItemPipeBind>
                         [-Force [<SwitchParameter>]]
-                        [-Connection <SPOnlineConnection>]
+                        [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -51,6 +52,13 @@ Clear-PnpRecycleBinItem -Identity $item -Force
 
 Permanently deletes the recycle bin item stored under variable $item from the recycle bin without asking for confirmation from the end user first
 
+### ------------------EXAMPLE 4------------------
+```powershell
+Clear-PnPRecycleBinItem -All -RowLimit 10000
+```
+
+Permanently deletes up to 10,000 items in the recycle bin
+
 ## PARAMETERS
 
 ### -All
@@ -66,11 +74,11 @@ Accept pipeline input: False
 ```
 
 ### -Force
-If provided, no confirmation will be asked to permanently delete the recycle bin item
+If provided, no confirmation will be asked to restore the recycle bin item
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity, All
 
 Required: False
 Position: Named
@@ -87,6 +95,20 @@ Parameter Sets: Identity
 Required: True
 Position: Named
 Accept pipeline input: True
+```
+
+### -RowLimit
+Limits deletion to specified number of items
+
+Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
+
+```yaml
+Type: Int
+Parameter Sets: All
+
+Required: False
+Position: Named
+Accept pipeline input: False
 ```
 
 ### -SecondStageOnly
@@ -107,7 +129,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

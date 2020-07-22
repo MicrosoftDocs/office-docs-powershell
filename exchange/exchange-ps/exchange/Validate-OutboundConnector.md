@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Validate-OutboundConnector cmdlet to test the settings of Outbound connectors in Office 365.
+Use the Validate-OutboundConnector cmdlet to test the settings of Outbound connectors in Microsoft 365.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 

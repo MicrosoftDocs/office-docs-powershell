@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SCInsights cmdlet to view Office 365 insights information.
+Use the Get-SCInsights cmdlet to view Microsoft 365 insights information.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -30,7 +30,7 @@ Get-SCInsights [-EndDate <DateTime>] [<CommonParameters>]
 ## DESCRIPTION
 This cmdlet returns the following output:
 
-- Organization: The Office 365 domain.
+- Organization: The Microsoft 365 domain.
 
 - Date: The date of the even in Coordinated Universal Time (UTC).
 
@@ -67,7 +67,7 @@ To specify a date/time value for this parameter, use either of the following opt
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: DateTime

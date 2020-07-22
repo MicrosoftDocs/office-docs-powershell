@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-HybridConfiguration cmdlet to modify the hybrid deployment between your on-premises Exchange organization and Exchange Online in a Microsoft Office 365 for enterprises organization.
+Use the Set-HybridConfiguration cmdlet to modify the hybrid deployment between your on-premises Exchange organization and Exchange Online in a Microsoft 365 for enterprises organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReceivingTransportServers
-The ReceivingTransportServers parameter specifies the Mailbox servers that are defined in the outbound connector configuration of the Microsoft Exchange Online Protection (EOP) service included as part of the Office 365 for enterprises tenant. The servers defined in the ReceivingTransportServers parameter are designated as the receiving servers for secure mail messages sent from the Exchange Online organization to the on-premises Exchange organization in a hybrid deployment. At least one Mailbox server must be defined and be externally accessible from the Internet for secure mail to be enabled between the on-premises Exchange and Exchange Online organizations. The accepted values for the ReceivingTransportServers parameter are either the full or short computer name of a Mailbox server, for example, either mbx.corp.contoso.com or MBX. Separate server names with a comma if defining more than one Mailbox server.
+The ReceivingTransportServers parameter specifies the Mailbox servers that are defined in the outbound connector configuration of the Microsoft Exchange Online Protection (EOP) service included as part of the Microsoft 365 tenant. The servers defined in the ReceivingTransportServers parameter are designated as the receiving servers for secure mail messages sent from the Exchange Online organization to the on-premises Exchange organization in a hybrid deployment. At least one Mailbox server must be defined and be externally accessible from the Internet for secure mail to be enabled between the on-premises Exchange and Exchange Online organizations. The accepted values for the ReceivingTransportServers parameter are either the full or short computer name of a Mailbox server, for example, either mbx.corp.contoso.com or MBX. Separate server names with a comma if defining more than one Mailbox server.
 
 If configuring the EdgeTransportServers parameter in the hybrid deployment, the ReceivingTransportServers parameter value must be $null.
 
@@ -308,7 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendingTransportServers
-The SendingTransportServers parameter specifies the Mailbox servers that are defined in the inbound connector configuration of the EOP service included as part of the Office 365 for enterprises tenant. The servers defined in the SendingTransportServers parameter are designated as the receiving servers for secure mail messages sent from the on-premise organization to the Exchange Online organization in a hybrid deployment. At least one Mailbox server must be defined and be externally accessible from the Internet for secure mail to be enabled between the on-premises Exchange and Exchange Online organizations. The accepted values for the SendingTransportServers parameter are either the full or short computer name of a Mailbox server, for example, either mbx.corp.contoso.com or MBX. Separate server names with a comma if defining more than one Mailbox server.
+The SendingTransportServers parameter specifies the Mailbox servers that are defined in the inbound connector configuration of the EOP service included as part of the Microsoft 365 tenant. The servers defined in the SendingTransportServers parameter are designated as the receiving servers for secure mail messages sent from the on-premise organization to the Exchange Online organization in a hybrid deployment. At least one Mailbox server must be defined and be externally accessible from the Internet for secure mail to be enabled between the on-premises Exchange and Exchange Online organizations. The accepted values for the SendingTransportServers parameter are either the full or short computer name of a Mailbox server, for example, either mbx.corp.contoso.com or MBX. Separate server names with a comma if defining more than one Mailbox server.
 
 If configuring the EdgeTransportServers parameter in the hybrid deployment, the SendingTransportServers parameter value must be $null.
 
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceInstance
-The ServiceInstance parameter should only be used by organizations manually configuring hybrid deployments with Office 365 operated by 21Vianet in China. All other organizations should use the Hybrid Configuration wizard to configure a hybrid deployment with Office 365. The valid values for this parameter are 0 (null) or 1. The default value is 0 (null). For organizations connecting with Office 365 operated by 21Vianet in China, set this value to 1 when manually configuring your hybrid deployment.
+The ServiceInstance parameter should only be used by organizations manually configuring hybrid deployments with Office 365 operated by 21Vianet in China. All other organizations should use the Hybrid Configuration wizard to configure a hybrid deployment with Microsoft 365. The valid values for this parameter are 0 (null) or 1. The default value is 0 (null). For organizations connecting with Office 365 operated by 21Vianet in China, set this value to 1 when manually configuring your hybrid deployment.
 
 ```yaml
 Type: Int32

@@ -146,7 +146,7 @@ This parameter is available only in the cloud-based service.
 
 The ApproveSkippedItems switch marks all of the skipped items discovered prior to the current time as approved. If the data loss that was detected during this migration is significant, the migration will not be able to complete without approving skipped items. Items may have been skipped because they are corrupted in the source mailbox and can't be copied to the target mailbox, they are larger than the max allowable message size configured for the tenant, or they were detected as missing from the target mailbox when the migration is ready to complete.
 
-For more information about maximum message size values, see the following topic [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926).
+For more information about maximum message size values, see the following topic [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 You don't need to specify a value with this switch.
 
@@ -208,13 +208,13 @@ The CompleteAfter parameter specifies a delay before the batch is completed. Dat
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: DateTime
@@ -252,7 +252,9 @@ Accept wildcard characters: False
 ### -CSVData
 This parameter is available only in on-premises Exchange.
 
-The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the CSV migration file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\MigrationBatch\_1.csv"))
+The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. Use the following format for the value of this parameter: `([System.IO.File]::ReadAllBytes(<path of the CSV migration file>))`. For example: `-CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\MigrationBatch\_1.csv"))`.
+
+**Note**: This parameter doesn't validate the availability of the mailboxes based on RBAC scope. All mailboxes that are specified in the CSV file will be migrated, even if they are outside of the RBAC scope (for example, an OU) that gives the admin permissions to migrate mailboxes.
 
 ```yaml
 Type: Byte[]
@@ -292,7 +294,7 @@ For more information about maximum message size values, see the following topics
 
 - Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
 
-- Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
+- Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
 
@@ -470,13 +472,13 @@ The StartAfter parameter specifies a delay before the data migration for the use
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: DateTime

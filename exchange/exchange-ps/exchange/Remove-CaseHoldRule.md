@@ -28,7 +28,7 @@ Remove-CaseHoldRule [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] 
 ## DESCRIPTION
 Removing a case hold rule causes the release of all Exchange mailbox and SharePoint site case holds that are associated with the rule. Removing a case hold rule also causes the corresponding case hold policy to become invalid, so you should remove it by using the Remove-CaseHoldPolicy cmdlet.
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

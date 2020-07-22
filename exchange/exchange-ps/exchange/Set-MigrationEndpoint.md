@@ -50,15 +50,15 @@ Use the Set-MigrationEndpoint cmdlet to configure settings for different types o
 
 - Cross-forest move: Move mailboxes between two different on-premises Exchange forests. Cross-forest moves require the use of a RemoteMove endpoint.
 
-- Remote move: In a hybrid deployment, a remote move involves onboarding or offboarding migrations. Remote moves require the use of a RemoteMove endpoint. Onboarding moves mailboxes from an on-premises Exchange organization to Exchange Online in Office 365, and uses a RemoteMove endpoint as the source endpoint of the migration batch. Offboarding moves mailboxes from Exchange Online in Office 365 to an on-premises Exchange organization and uses a RemoteMove endpoint as the target endpoint of the migration batch.
+- Remote move: In a hybrid deployment, a remote move involves onboarding or offboarding migrations. Remote moves require the use of a RemoteMove endpoint. Onboarding moves mailboxes from an on-premises Exchange organization to Exchange Online, and uses a RemoteMove endpoint as the source endpoint of the migration batch. Offboarding moves mailboxes from Exchange Online to an on-premises Exchange organization and uses a RemoteMove endpoint as the target endpoint of the migration batch.
 
-- Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online in Office 365. Cutover Exchange migration requires the use of an Exchange endpoint.
+- Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online. Cutover Exchange migration requires the use of an Exchange endpoint.
 
-- Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online in Office 365. Staged Exchange migration requires the use of an Exchange endpoint.
+- Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. Staged Exchange migration requires the use of an Exchange endpoint.
 
-- IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online in Office 365. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
+- IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
 
-- Gmail migration: Migration mailbox data from a G Suite tenant to Exchange Online in Office 365.  For a G Suite migration, you must first create the cloud-based mail users or mailboxes before you migrate mailbox data. G Suite migrations require the use of a Gmail endpoint.
+- Gmail migration: Migration mailbox data from a G Suite tenant to Exchange Online.  For a G Suite migration, you must first create the cloud-based mail users or mailboxes before you migrate mailbox data. G Suite migrations require the use of a Gmail endpoint.
 
 - Local: Move mailboxes between different servers or databases within a single on-premises Exchange forest. Local moves don't require the use of an endpoint.
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ### -Credentials
 The Credentials parameter specifies the username and password for connecting to the remote endpoint. Credentials should be used when creating either a staged or cutover Exchange endpoint or a RemoteMove endpoint.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential

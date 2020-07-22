@@ -94,7 +94,7 @@ This example lists the probes running in the backend services on a Mailbox serve
 
 This example lists the probes running in the client access services on a Mailbox server: `Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook | ?{$_.Name -like '*probe'}`.
 
-For more information on probes and the monitoring framework, see [Managed Availability](https://go.microsoft.com/fwlink/p/?LinkId=510838), [Managed Availability and Server Health](https://go.microsoft.com/fwlink/p/?LinkId=510839), and [Customizing Managed Availability](https://go.microsoft.com/fwlink/p/?LinkId=510840).
+For more information on probes and the monitoring framework, see [Managed Availability](https://docs.microsoft.com/exchange/managed-availability-exchange-2013-help), [Managed Availability and Server Health](https://techcommunity.microsoft.com/t5/exchange-team-blog/managed-availability-and-server-health/ba-p/593180), and [Customizing Managed Availability](https://techcommunity.microsoft.com/t5/exchange-team-blog/customizing-managed-availability/ba-p/592164).
 
 By default, the cmdlet uses the test monitoring account attached to the specified probe. You may enter a different mailbox instead via the MailboxId parameter. The options and results follow.
 
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 ### -Credential
 The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -350,7 +350,7 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The MailboxCredential parameter specifies certain credentials to allow logon access to a user's mailbox. Use the parameter along with the Identity parameter to access a user's mailbox when you don't have access permissions.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential

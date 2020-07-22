@@ -258,7 +258,7 @@ Onboarding and offboarding in Exchange Online
 
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
 
-- G Suite migration: This onboarding migration type migrates mailbox data from a G Suite tenant to Exchange Online.  For a G Suite migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data.
+- G Suite migration: This onboarding migration type migrates mailbox data from a G Suite organization to Exchange Online.  For a G Suite migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -359,7 +359,9 @@ Accept wildcard characters: False
 ### -CSVData
 The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see [CSV files for mailbox migration](https://docs.microsoft.com/exchange/csv-files-for-mailbox-migration-exchange-2013-help).
 
-Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the CSV migration file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\MigrationBatch\_1.csv"))
+Use the following format for the value of this parameter: `([System.IO.File]::ReadAllBytes(<path of the CSV migration file>))`. For example: `-CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\MigrationBatch\_1.csv"))`.
+
+**Note**: This parameter doesn't validate the availability of the mailboxes based on RBAC scope. All mailboxes that are specified in the CSV file will be migrated, even if they are outside of the RBAC scope (for example, an OU) that gives the admin permissions to migrate mailboxes.
 
 ```yaml
 Type: Byte[]
@@ -618,13 +620,13 @@ The CompleteAfter parameter specifies a delay before the batch is completed. Dat
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: DateTime
@@ -758,7 +760,7 @@ For more information about maximum message size values, see the following topics
 
 - Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
 
-- Exchange Online: [Exchange Online Limits](https://go.microsoft.com/fwlink/p/?LinkId=524926)
+- Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
 
@@ -782,7 +784,7 @@ This parameter is available only in on-premises Exchange.
 
 The Locale parameter specifies the language for the migration batch.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
@@ -874,7 +876,7 @@ Accept wildcard characters: False
 ### -PublicFolderToUnifiedGroup
 This parameter is available only in the cloud-based service.
 
-The PublicFolderToUnifiedGroup switch specifies a migration from public folders to Office 365 groups. You don't need to specify a value with this switch.
+The PublicFolderToUnifiedGroup switch specifies a migration from public folders to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1012,13 +1014,13 @@ The StartAfter parameter specifies a delay before the data migration for the use
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see [Get-Date](https://go.microsoft.com/fwlink/p/?LinkID=113313).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: DateTime

@@ -519,7 +519,7 @@ This parameter is available only in on-premises Exchange.
 
 The LinkedCredential parameter specifies the username and password that's used to access the domain controller specified by the LinkedDomainController parameter.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 You can only use the LinkedCredential parameter with a linked user.
 
@@ -741,7 +741,7 @@ Accept wildcard characters: False
 ### -PermanentlyClearPreviousMailboxInfo
 The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Exchange mailbox attributes on a user. You don't need to specify a value with this switch.
 
-Clearing these attributes might be required in mailbox move and re-licensing scenarios between on-premises Exchange and Office 365. For more information, see [Permanently Clear Previous Mailbox Info](https://techcommunity.microsoft.com/t5/exchange-team-blog/permanently-clear-previous-mailbox-info/ba-p/607619).
+Clearing these attributes might be required in mailbox move and re-licensing scenarios between on-premises Exchange and Microsoft 365. For more information, see [Permanently Clear Previous Mailbox Info](https://techcommunity.microsoft.com/t5/exchange-team-blog/permanently-clear-previous-mailbox-info/ba-p/607619).
 
 > [!CAUTION]
 > This switch permanently deletes the existing cloud mailbox and its associated archive, prevents you from reconnecting to the mailbox, and prevents you from recovering content from the mailbox.

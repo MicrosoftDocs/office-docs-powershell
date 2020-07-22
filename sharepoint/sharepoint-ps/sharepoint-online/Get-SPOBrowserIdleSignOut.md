@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Used to retrieve the current configuration values for Idle session sign-out policy.
 
 ## SYNTAX
 

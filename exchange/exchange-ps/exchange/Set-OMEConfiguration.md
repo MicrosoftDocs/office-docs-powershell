@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-OMEConfiguration cmdlet to configure Microsoft Office 365 Message Encryption (OME).
+Use the Set-OMEConfiguration cmdlet to configure Microsoft 365 Message Encryption (OME).
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -73,11 +73,11 @@ Accept wildcard characters: False
 ### -BackgroundColor
 The BackgroundColor parameter specifies the background color. Valid values are:
 
-- An available HTML hexadecimal \(hex triplet\) color code value \(for example, 0xFFFFFF is white\).
+- An HTML hexadecimal color code value (#RRGGBB) enclosed in quotation marks. For example, `"#FFFFFF"` is white.
 
-- An available text value \(for example, yellow is 0x00FFFF00\).
+- A valid color name value. For example, `yellow` is #ffff00. For a list of the valid color names, see [Background color reference](https://docs.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages#background-color-reference).
 
-- $null \(blank\). This is the default value.
+- $null (blank). This is the default value.
 
 ```yaml
 Type: String
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Image
-The Image parameter identifies and uploads an image that will be displayed in the email message and in the Office 365 portal.
+The Image parameter identifies and uploads an image that will be displayed in the email message and in the Microsoft 365 admin center.
 
 You need to read the file to a byte-encoded object using the Get-Content cmdlet, for example, -Image (Get-Content "C:\\Temp\\OME Logo.gif" -Encoding byte)
 
@@ -199,7 +199,7 @@ The OTPEnabled parameter specifies whether to allow recipients to use a one-time
 
 - $true: Recipients can use a one-time passcode to view encrypted messages. This is the default value.
 
-- $false: Recipients can't use a one-time passcode to view encrypted messages. The recipient is required to sign in using an Office 365 work or school account.
+- $false: Recipients can't use a one-time passcode to view encrypted messages. The recipient is required to sign in using a Microsoft 365 work or school account.
 
 ```yaml
 Type: Boolean
@@ -269,11 +269,11 @@ Accept wildcard characters: False
 ```
 
 ### -SocialIdSignIn
-The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Office 365 portal using their own social network id (Google, Yahoo, etc). Valid values are:
+The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Microsoft 365 admin center using their own social network id (Google, Yahoo, etc). Valid values are:
 
 - $true: Social network ID sign in is allowed. This is the default value.
 
-- $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Office 365 work or school account is controlled by the OTPEnabled parameter.
+- $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Microsoft 365 work or school account is controlled by the OTPEnabled parameter.
 
 ```yaml
 Type: Boolean

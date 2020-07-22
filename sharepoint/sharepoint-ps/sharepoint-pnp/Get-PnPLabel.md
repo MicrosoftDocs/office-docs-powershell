@@ -15,38 +15,51 @@ Gets the Office 365 retention label/tag of the specified list or library (if app
 
 ```powershell
 Get-PnPLabel -List <ListPipeBind>
+             [-ValuesOnly [<SwitchParameter>]]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPLabel -List "Demo List"
+Get-PnPLabel -List "Demo List" -ValuesOnly
 ```
 
-This gets the Office 365 retention label which is set to a list or a library.
+This gets the Office 365 retention label which is set to a list or a library
 
 ## PARAMETERS
 
 ### -List
-The ID or Url of the list.
+The ID or Url of the list
 
 ```yaml
 Type: ListPipeBind
 Parameter Sets: (All)
 
 Required: True
-Position: 0
+Position: Named
 Accept pipeline input: True
+```
+
+### -ValuesOnly
+If provided, the results will be returned as values instead of in written text and will include more detailed information
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
 ```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

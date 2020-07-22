@@ -26,7 +26,7 @@ Get-UserBriefingConfig -Identity <string> [-ResultSize <Unlimited>]
 ```
 
 ## DESCRIPTION
-Gets the current state of the Briefing email flag (true or false) for the specified user.
+This cmdlet requires the .NET Framework 4.7.2 or later. Also, you need to be a member of the Organization Management role group (Global admins).
 
 ## EXAMPLES
 
@@ -58,17 +58,17 @@ Accept wildcard characters: False
 ### -ResultSize	
 This parameter is reserved for internal Microsoft use.
 
-```yaml	
-Type: Unlimited	
-Parameter Sets: (All)	
-Aliases:	
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
 Applicable: Exchange Online
-	
-Required: False	
-Position: Named	
-Default value: None	
-Accept pipeline input: False	Accept pipeline input: False
-Accept wildcard characters: False	Accept wildcard characters: False
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## INPUTS

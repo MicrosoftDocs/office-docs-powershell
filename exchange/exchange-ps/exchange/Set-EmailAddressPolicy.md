@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-EmailAddressPolicy cmdlet to modify email address policies. In Exchange Online, email address policies are only available for Office 365 groups.
+Use the Set-EmailAddressPolicy cmdlet to modify email address policies. In Exchange Online, email address policies are only available for Microsoft 365 Groups.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -625,7 +625,7 @@ You can specify multiple email address templates separated by commas: "SMTP:\<Pr
 
 You can't use this parameter with the EnabledPrimarySMTPAddressTemplate parameter.
 
-In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
+In Exchange Online PowerShell, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
 
 ```yaml
 Type: ProxyAddressTemplateCollection
@@ -647,7 +647,7 @@ Valid syntax for this parameter is a domain or subdomain that's configured as an
 
 You can't use this parameter with the EnabledEmailAddressTemplates parameter.
 
-In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
+In Exchange Online PowerShell, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
 
 ```yaml
 Type: String
@@ -783,7 +783,7 @@ The RecipientFilter parameter specifies a custom OPath filter that's based on th
 
 - Property is a filterable property. For filterable properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to filter on. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 

@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Use this cmdlet to get the multi geo experience mode.
 
 ## SYNTAX
 

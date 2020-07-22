@@ -30,7 +30,7 @@ New-CaseHoldPolicy [-Name] <String> -Case <String> [-Comment <String>] [-Confirm
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -146,15 +146,13 @@ The ExchangeLocation parameter specifies the mailboxes to include in the policy.
 
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+To specify a mailbox or distribution group, you can use the following values:
 
 - Name
 
-- Distinguished name (DN)
+- SMTP address
 
-- Email address
-
-- GUID
+- Azure AD ObjectId (You can use the [Get-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser?view=azureadps-2.0) cmdlet to obtain this value.)
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -226,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

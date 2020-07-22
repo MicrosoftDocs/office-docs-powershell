@@ -18,7 +18,10 @@ description: "Learn how to connect to Security & Compliance Center PowerShell by
 If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md) to use remote PowerShell to connect to the Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
 
 > [!NOTE]
-> Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication. <br/><br/> The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+> 
+> - Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
+> 
+> - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
 
 ## What do you need to know before you begin?
 
@@ -40,7 +43,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595), [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 

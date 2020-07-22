@@ -1,5 +1,5 @@
 ---
-title: "Connect to Exchange Online PowerShell"
+title: "Connect to Exchange Online PowerShell with Basic authentication"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -12,18 +12,20 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid: c8bea338-6c1a-4bdf-8de0-7895d427ee5b
 search.appverid: MET150
-description: "Learn how to use remote PowerShell to connect to Exchange Online."
+description: "Learn how to use remote PowerShell to connect to Exchange Online with Basic authentication."
 ---
 
-# Connect to Exchange Online PowerShell
-
-> [!NOTE]
-> We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
+# Connect to Exchange Online PowerShell with Basic authentication
 
 Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
 
-> [!IMPORTANT]
-> If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md). <br/><br/> If you're a standalone Exchange Online Protection (EOP) customer (for example, you're using EOP to protect your on-premises email environment), use the connection instructions in [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md). If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, EOP is one of the included services, and the connection instructions in this topic will work for you.
+> [!NOTE]
+> 
+> - We're eventually going to [disable Basic authentication in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), and the connection method described in this topic uses Basic authentication. We recommend that you use the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md) to connect to Exchange Online PowerShell, because it uses modern authentication in all scenarios.
+> 
+> - The Exchange Online PowerShell V2 module works with multi-factor authentication (MFA). For MFA connection instructions using the older Exchange Online Remote PowerShell Module, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md).
+> 
+> - If you're a standalone Exchange Online Protection (EOP) customer (for example, you're using EOP to protect your on-premises email environment), use the connection instructions in [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md). If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, EOP is one of the included services, and the connection instructions in this topic will work for you.
 
 ## What do you need to know before you begin?
 
@@ -45,7 +47,7 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868), [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757), [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595), [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -105,6 +107,8 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
    - For Microsoft 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://outlook.office365.us/powershell-liveid/`
 
+   - For Microsoft 365 DoD, use the _ConnectionUri_ value: `https://webmail.apps.mil/powershell-liveid`
+
    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where the _ProxyAccessType_ value is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
 
      Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
@@ -144,14 +148,14 @@ If you receive errors, check the following requirements:
 
 The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more information about these cmdlets, see the following topics.
 
-- [Get-Credential](https://go.microsoft.com/fwlink/p/?LinkId=389618)
+- [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential)
 
-- [New-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389621)
+- [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)
 
-- [Import-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389619)
+- [Import-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession)
 
-- [Remove-PSSession](https://go.microsoft.com/fwlink/p/?LinkId=389620)
+- [Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)
 
-- [Set-ExecutionPolicy](https://go.microsoft.com/fwlink/p/?LinkId=389623)
+- [Set-ExecutionPolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
 
 For more information about managing Microsoft 365, see [Manage Microsoft 365 and Office 365](https://docs.microsoft.com/Office365/).

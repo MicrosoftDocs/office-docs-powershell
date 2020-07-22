@@ -15,7 +15,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-EmailAddressPolicy cmdlet to create email address policies. In Exchange Online, email address policies are only available for Office 365 groups.
+Use the New-EmailAddressPolicy cmdlet to create email address policies. In Exchange Online, email address policies are only available for Microsoft 365 Groups.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -205,7 +205,7 @@ You can specify multiple email address templates separated by commas: "SMTP:\<Pr
 
 You can't use this parameter with the EnabledPrimarySMTPAddressTemplate parameter.
 
-In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
+In Exchange Online PowerShell, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
 
 ```yaml
 Type: ProxyAddressTemplateCollection
@@ -227,7 +227,7 @@ Valid syntax for this parameter is a domain or subdomain that's configured as an
 
 You can't use this parameter with the EnabledEmailAddressTemplates parameter.
 
-In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
+In Exchange Online PowerShell, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
 
 ```yaml
 Type: String
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ### -IncludeUnifiedGroupRecipients
 This parameter is available only in the cloud-based service.
 
-The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies to Office 365 groups. You don't need to specify a value with this switch.
+The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -303,7 +303,7 @@ The RecipientFilter parameter specifies a custom OPath filter that's based on th
 
 - Property is a filterable property. For filterable properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to filter on. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
@@ -791,7 +791,7 @@ Accept wildcard characters: False
 ### -ManagedByFilter
 This parameter is available only in the cloud-based service.
 
-The ManagedByFilter parameter specifies the email address policies to apply to Office 365 groups based on the properties of the users who create the Office 365 groups.
+The ManagedByFilter parameter specifies the email address policies to apply to Microsoft 365 Groups based on the properties of the users who create the Microsoft 365 Groups.
 
 This parameter is an OPath filter that's based on the value of any available recipient property (for example, `"Department -eq 'Sales'"`). You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
@@ -799,13 +799,13 @@ This parameter is an OPath filter that's based on the value of any available rec
 
 - Property is a filterable property. For filterable recipient properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 - You can't use a wildcard as the first character. For example, `'Sales*'` is allowed, but `'*Sales'` isn't allowed.
 
-For more information, see [Choose the domain to use when creating Office 365 Groups](https://go.microsoft.com/fwlink/p/?linkid=838413).
+For more information, see [Choose the domain to use when creating Microsoft 365 Groups](https://docs.microsoft.com/microsoft-365/admin/create-groups/choose-domain-to-create-groups).
 
 For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 

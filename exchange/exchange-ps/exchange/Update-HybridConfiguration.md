@@ -36,20 +36,20 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 $OnPremisesCreds = Get-Credential; $TenantCreds = Get-Credential; Update-HybridConfiguration -OnPremisesCredentials $OnPremisesCreds -TenantCredentials $TenantCreds
 ```
 
-This example defines the credentials that are used to update the hybrid configuration object and connect to the Microsoft Office 365 for enterprises organization.
+This example defines the credentials that are used to update the hybrid configuration object and connect to the Microsoft 365 for enterprises organization.
 
 Use the first command to specify your on-premises organization credentials. For example, run this command and enter \<domain\>\\admin@contoso.com and the associated password in the resulting Windows PowerShell Credential Request dialog box.
 
-Use the second command to specify your Office 365 for enterprises organization credentials. For example, run this command and then enter admin@contoso.onmicrosoft.com and the associated account password in the resulting Windows PowerShell Credential Request dialog box.
+Use the second command to specify your Microsoft 365 organization credentials. For example, run this command and then enter admin@contoso.onmicrosoft.com and the associated account password in the resulting Windows PowerShell Credential Request dialog box.
 
-Use the last command to define the credentials that are used to update the hybrid configuration object and connect to the Office 365 for enterprises organization.
+Use the last command to define the credentials that are used to update the hybrid configuration object and connect to the Microsoft 365 organization.
 
 ## PARAMETERS
 
 ### -OnPremisesCredentials
 The OnPremisesCredentials parameter specifies the on-premises Active Directory account and password that's used to configure the hybrid configuration object. This account must be a member of the Organization Management role group.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -65,9 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -TenantCredentials
-The TenantCredentials parameter specifies the Office 365 for enterprises organization account and password that's used to configure the hybrid configuration object. This is often the administrator account that's assigned when the Office 365 organization was created. This account must be a member of the Office 365 Global admin role.
+The TenantCredentials parameter specifies the Microsoft 365 organization account and password that's used to configure the hybrid configuration object. This is often the administrator account that's assigned when the Microsoft 365 organization was created. This account must be a member of the Global admin role.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
