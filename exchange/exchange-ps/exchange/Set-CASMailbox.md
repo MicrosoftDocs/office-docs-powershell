@@ -1280,20 +1280,15 @@ This parameter is available only in the cloud-based service.
 The SmtpClientAuthenticationDisabled parameter specifies whether to disable authenticated SMTP (SMTP AUTH) for the mailbox. Examples of clients and services that require authenticated SMTP to send email messages include:
 
 - POP3 and IMAP4 clients.
-
 - Devices with scan to email capability.
-
 - Workflow applications that send email notifications.
-
 - Online services that send messages using internal email addresses in the organization.
 
 Valid values for this parameter are:
 
 - $true: Authenticated SMTP is disabled for the mailbox.
-
 - $false: Authenticated SMTP is enabled for the mailbox.
-
-- blank ($null): This is the default value. The authenticated SMTP setting for the mailbox is controlled by the corresponding SmtpClientAuthenticationDisabled parameter on the Set-TransportConfig cmdlet for the whole organization. By default, authenticated SMTP is enabled for the organization ($false), which means authenticated SMTP is also enabled for the mailbox.
+- blank ($null): This is the default value. The authenticated SMTP setting for the mailbox is controlled by the corresponding SmtpClientAuthenticationDisabled parameter on the Set-TransportConfig cmdlet for the whole organization.
 
 To selectively enable authenticated SMTP for specific mailboxes only: disable authenticated SMTP at the organizational level ($true), enable it for the specific mailboxes ($false), and leave the rest of the mailboxes with their default value ($null).
 
