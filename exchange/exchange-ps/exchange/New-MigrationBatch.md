@@ -624,9 +624,9 @@ In Exchange Online PowerShell, if you specify a date/time value without a time z
 
 To specify a date/time value for this parameter, use either of the following options:
 
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
+- Specify the date/time value in UTC: For example, "7/30/2020 9:00PM Z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in your local time zone: For example, "7/30/2020 9:00PM -700" (Pacific Daylight Time). It will be converted to UTC if you don't use the -TimeZone parameter.
 
 ```yaml
 Type: DateTime
@@ -1018,9 +1018,9 @@ In Exchange Online PowerShell, if you specify a date/time value without a time z
 
 To specify a date/time value for this parameter, use either of the following options:
 
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
+- Specify the date/time value in UTC: For example, "7/30/2020 9:00PM Z".
 
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in your local time zone: For example, "7/30/2020 9:00PM -700" (Pacific Daylight Time). It will be converted to UTC if you don't use the -TimeZone parameter.
 
 ```yaml
 Type: DateTime
@@ -1128,7 +1128,7 @@ A valid value for this parameter is a supported time zone key name (for example,
 
 To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
-If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
+If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server, and UTC for Exchange Online.
 
 ```yaml
 Type: ExTimeZoneValue
