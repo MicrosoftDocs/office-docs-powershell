@@ -351,7 +351,7 @@ This example is the same as Example 8, but the TimeZone parameter is also used. 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies an unique name for the migration batch on each system (Exchange On-premises or Exchange Online). The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks. This method allows you to start a migration and then leave it to complete after business hours.
+The Name parameter specifies an unique name for the migration batch on each system (Exchange On-premises or Exchange Online). The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: String
@@ -626,7 +626,7 @@ Accept wildcard characters: False
 ### -CompleteAfter
 This parameter is available only in the cloud-based service.
 
-The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but won't complete until the date/time you specify with this parameter.
+The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won´t start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
