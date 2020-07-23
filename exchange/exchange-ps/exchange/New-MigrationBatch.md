@@ -630,13 +630,11 @@ The CompleteAfter parameter specifies a delay before the batch is completed. Dat
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
-To specify a date/time value for this parameter, use either of the following options:
+- Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
 
-- Specify the date/time value in UTC: For example, "7/30/2020 9:00PM Z".
-
-- Specify the date/time value in your local time zone: For example, "7/30/2020 9:00PM -700" (Pacific Daylight Time). It will be converted to UTC if you don't use the -TimeZone parameter.
+- Specify the date/time value in your local time zone: For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
@@ -1024,13 +1022,11 @@ The StartAfter parameter specifies a delay before the data migration for the use
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
-To specify a date/time value for this parameter, use either of the following options:
+- Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
 
-- Specify the date/time value in UTC: For example, "7/30/2020 9:00PM Z".
-
-- Specify the date/time value in your local time zone: For example, "7/30/2020 9:00PM -700" (Pacific Daylight Time). It will be converted to UTC if you don't use the -TimeZone parameter.
+- Specify the date/time value in your local time zone. For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
@@ -1134,11 +1130,15 @@ Accept wildcard characters: False
 ### -TimeZone
 The TimeZone parameter specifies the time zone of the administrator who submits the migration batch.
 
-A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
+A valid value for this parameter is a supported time zone key name (for example, `"Pacific Standard Time"`).
 
 To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
-If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server, and UTC for Exchange Online.
+If the value contains spaces, enclose the value in quotation marks (").
+
+In on-premises Exchange, the default value is the time zone setting of the Exchange server.
+
+In Exchange Online, the default value is `UTC`.
 
 ```yaml
 Type: ExTimeZoneValue
