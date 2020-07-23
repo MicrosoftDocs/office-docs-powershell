@@ -62,7 +62,7 @@ The Get-MigrationBatch cmdlet displays status information about the current migr
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-**Note**: If you didn't run New-MigrationBatch together with the -TimeZone parameter, the default time zone for the migration batch is UTC, and consequently CompleteAfter and CompleteAfterUTC will display the same value (the same applies to StartAfter and StartAfterUTC). If you created the migration batch in the Admin Center, the time zone is defined based on your regional configuration.
+**Note**: In the cloud-based service, if you don't use the TimeZone parameter in the New-MigrationBatch command, the default time zone for the migration batch is UTC. The CompleteAfter and CompleteAfterUTC properties will contain the same value (as will the StartAfter and StartAfterUTC properties). When you create the migration batch in the Exchange admin center (EAC), the time zone that's used is based on your regional configuration.
 
 ## EXAMPLES
 
