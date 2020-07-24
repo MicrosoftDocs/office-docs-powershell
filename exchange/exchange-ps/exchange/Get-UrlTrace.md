@@ -24,23 +24,60 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UrlTrace [-ClickId <Guid>] [-EndDate <DateTime>] [-Expression <Expression>] [-Page <Int32>]
- [-PageSize <Int32>] [-RecipientAddress <MultiValuedProperty>] [-StartDate <DateTime>]
- [-UrlOrDomain <MultiValuedProperty>] [-Workloads <MultiValuedProperty>] [<CommonParameters>]
+Get-UrlTrace
+ [-ClickId <Guid>]
+ [-EndDate <DateTime>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-RecipientAddress <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [-UrlOrDomain <MultiValuedProperty>]
+ [-Workloads <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site. For more information about Advanced Threat Protection Safe Links, see [Office 365 ATP Safe Links](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links).
 
-The following list described the values that are returned in the output of this cmdlet:
+For the reporting period you specify, the cmdlet returns the following information:
+
+- Time Clicked: The date/time when the URL in the message body was clicked. Every analyzed URL click is recorded, even when a user clicks a URL in an existing message that's already been scanned.
+
+- Workload
+
+- Application Name
+
+- Message ID
+
+- Message Trace ID
+
+- Source ID
+
+- Source Details
 
 - ClickId: A GUID for each URL that was analyzed in a message.
 
-- Clicked: The date/time when the URL in the message body was clicked. Every analyzed URL click is recorded, even when a user clicks a URL in an existing message that's already been scanned.
+- Recipient Address
+
+- URL
+
+- User IP Address
 
 - UrlBlocked: The URL was detected as malicious by Safe Links (only the initial block, not subsequent clicks), or the user clicked the URL while the scan in progress (users are taken to a notification page that asks them to try again after the scan is complete).
 
 - UrlClicked: The URL is blocked, but the applicable Safe Links policy has the DoNotAllowClickThrough parameter value $false (click through is allowed). Updated policies aren't applied to existing messages that have already been scanned. New or updated policies are applied to new messages that were received after the policy is applied to the mailbox.
+
+- Click Action: The action of a specific click. Possible values are:
+
+• None: We were unable to capture the verdict for the URL. The user might have clicked through the URL.
+• Allowed: The user was allowed to navigate to the URL.
+• Blocked: The User was blocked from navigating to the URL.
+• Pending verdict: The user was presented with the detonation pending page.
+• Blocked overridden: The user was blocked from navigating to the URL; however, the user overrode the block to navigate to the URL.
+• Pending verdict bypassed: The user presented with the detonation page; however, the user overrode the page to navigate to the URL.
+• Error: The user was presented with the error page. This can also mean there was an error in capturing the verdict.
+• Failure: There was unknown exception while capturing the verdict. The user might have clicked through the URL.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
