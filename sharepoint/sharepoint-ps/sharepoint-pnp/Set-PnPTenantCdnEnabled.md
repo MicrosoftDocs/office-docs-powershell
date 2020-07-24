@@ -77,3 +77,5 @@ Accept pipeline input: False
 ## RELATED LINKS
 
 [SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
+
+[Content Delivery Networks (CDNs)](https://docs.microsoft.com/en-us/office365/enterprise/content-delivery-networks)
