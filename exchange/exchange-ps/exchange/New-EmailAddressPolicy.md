@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ### -IncludeUnifiedGroupRecipients
 This parameter is available only in the cloud-based service.
 
-The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies to Microsoft 365 Groups. You don't need to specify a value with this switch.
+The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies only to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -809,7 +809,7 @@ For more information, see [Choose the domain to use when creating Microsoft 365 
 
 For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 
-You need to use this parameter with the IncludeUnifiedGroupRecipients switch.
+You can only use this parameter with the IncludeUnifiedGroupRecipients switch.
 
 ```yaml
 Type: String
