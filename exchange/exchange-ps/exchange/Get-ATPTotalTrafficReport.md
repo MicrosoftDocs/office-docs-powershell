@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-ATPTotalTrafficReport to view details about message traffic in your organization for the last 90 days. 
+Use the Get-ATPTotalTrafficReport to view details about message traffic in your organization for the last 90 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -56,10 +56,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-ATPTotalTrafficReport -StartDate (get-date).AddDays(-5) -EndDate (get-date).AddDays(-1)
 ```
 
-{{ Add example description here }}
+This example returns data for the last 5 days.
 
 ## PARAMETERS
 
