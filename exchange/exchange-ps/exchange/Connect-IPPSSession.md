@@ -64,9 +64,9 @@ This example connects to standalone Exchange Online Protection PowerShell in an 
 ### -AzureADAuthorizationEndpointUri
 The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens.
 
-In Office 365 Germany for Security & Compliance Center PowerShell, use the value <https://login.microsoftonline.de/common> for this parameter.
+- For Security & Compliance Center PowerShell in Office 365 Germany, use the value <https://login.microsoftonline.de/common> for this parameter.
 
-In Microsoft 365 GCC High and Microsoft 365 DoD for Security & Compliance Center PowerShell, use the value <https://login.microsoftonline.us/common> for this parameter.
+- For Security & Compliance Center PowerShell in Microsoft 365 GCC High and Microsoft 365 DoD, use the value <https://login.microsoftonline.us/common> for this parameter.
 
 ```yaml
 Type: String
@@ -99,13 +99,13 @@ Accept wildcard characters: False
 ### -ConnectionUri
 The ConnectionUri parameter specifies the connection endpoint for the remote PowerShell session.
 
-In standalone Exchange Online Protection organizations without Exchange Online mailboxes, use the value <https://ps.protection.outlook.com/powershell-liveid/> for this parameter.
+- For Exchange Online Protection PowerShell in standalone EOP organizations without Exchange Online mailboxes, use the value <https://ps.protection.outlook.com/powershell-liveid/> for this parameter.
 
-In Office 365 Germany for Security & Compliance Center PowerShell, use the value <https://ps.compliance.protection.outlook.de/PowerShell-LiveID> for this parameter.
+- For Security & Compliance Center PowerShell in Office 365 Germany, use the value <https://ps.compliance.protection.outlook.de/PowerShell-LiveID> for this parameter.
 
-In Microsoft 365 GCC High for Security & Compliance Center PowerShell, use the value <https://outlook.office365.us/powershell-liveid> for this parameter.
+- For Security & Compliance Center PowerShell in Microsoft 365 GCC High, use the value <https://outlook.office365.us/powershell-liveid> for this parameter.
 
-In Microsoft 365 DoD for Security & Compliance Center PowerShell, use the value <https://webmail.apps.mil/powershell-liveid> for this parameter.
+- For Security & Compliance Center PowerShell in Microsoft 365 DoD, use the value <https://l5.ps.compliance.protection.office365.us/powershell-liveid/> for this parameter.
 
 ```yaml
 Type: String
