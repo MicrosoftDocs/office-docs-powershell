@@ -105,7 +105,7 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`.
 
-   - For Microsoft 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
+   - For Microsoft 365 GCC High or Microsoft 365 DoD, use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
 
 3. Run the following command:
 
