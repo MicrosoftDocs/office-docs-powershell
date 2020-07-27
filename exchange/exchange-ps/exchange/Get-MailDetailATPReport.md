@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Advanced Threat protection (ATP) detections in your cloud-based organization for the last 30 days.
+Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Advanced Threat protection (ATP) detections in your cloud-based organization for the last 10 days.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
@@ -51,7 +51,7 @@ This example returns the Advanced Threat Protection actions for the last 10 days
 ## PARAMETERS
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
 
 ```yaml
 Type: MultiValuedProperty

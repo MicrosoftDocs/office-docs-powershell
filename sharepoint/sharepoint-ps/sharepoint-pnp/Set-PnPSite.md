@@ -34,7 +34,7 @@ Set-PnPSite [-Classification <String>]
             [-RestrictedToGeo <RestrictedToRegion>]
             [-SocialBarOnSitePagesDisabled [<SwitchParameter>]]
             [-Identity <String>]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ### Set Lock State
@@ -42,7 +42,7 @@ Set-PnPSite [-Classification <String>]
 Set-PnPSite [-LockState <SiteLockState>]
             [-Wait [<SwitchParameter>]]
             [-Identity <String>]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -374,7 +374,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

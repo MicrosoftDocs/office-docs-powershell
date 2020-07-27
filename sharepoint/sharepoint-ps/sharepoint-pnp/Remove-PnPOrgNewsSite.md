@@ -9,13 +9,18 @@ title: Remove-PnPOrgNewsSite
 # Remove-PnPOrgNewsSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a given site from the list of organizational news sites.
 
 ## SYNTAX 
 
 ```powershell
 Remove-PnPOrgNewsSite -OrgNewsSiteUrl <SitePipeBind>
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +53,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

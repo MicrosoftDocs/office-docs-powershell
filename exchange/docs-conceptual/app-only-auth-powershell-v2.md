@@ -14,7 +14,7 @@ ms.custom:
 ms.assetid:
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
-description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks with Modern Authentication and app-only authentication."
+description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks with modern authentication and app-only authentication."
 ---
 
 # App-only authentication for unattended scripts in the EXO V2 module
@@ -34,7 +34,7 @@ To update from an earlier version of the of the EXO V2 module, run the following
 Update-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
 ```
 
-Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses Modern authentication, the credentials are stored in a local file or a secret vault that's access at run-time.
+Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
 
 Because storing user credentials locally is not a safe practice, we're releasing this feature to support authentication for unattended scripts (automation) scenarios using AzureAD applications and self-signed certificates.
 
@@ -72,13 +72,13 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 
 ## How does it work?
 
-The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id & certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
+The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
 
 ## Setup app-only authentication
 
 An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. You can learn more about this at [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
 
-For a detailed visual flow bout creating applications in Azure AD, see <https://aka.ms/azuread-app>.
+For a detailed visual flow about creating applications in Azure AD, see <https://aka.ms/azuread-app>.
 
 1. Register the application in Azure AD at <https://portal.azure.com>.
 

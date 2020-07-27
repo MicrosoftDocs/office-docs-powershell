@@ -26,6 +26,7 @@
   "Get-AntiPhishPolicy": "advanced-threat-protection",
   "Get-AntiPhishRule": "advanced-threat-protection",
   "Get-AtpPolicyForO365": "advanced-threat-protection",
+  "Get-ATPTotalTrafficReport": "advanced-threat-protection",
   "Get-MailDetailATPReport": "advanced-threat-protection",
   "Get-MailTrafficATPReport": "advanced-threat-protection",
   "Get-PhishFilterPolicy": "advanced-threat-protection",
