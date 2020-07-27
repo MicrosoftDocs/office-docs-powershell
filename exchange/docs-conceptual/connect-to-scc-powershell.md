@@ -69,7 +69,7 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
   
   > [!NOTE]
-  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
+  > You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
   ```dos
   winrm get winrm/config/client/auth
@@ -105,7 +105,9 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`.
 
-   - For Microsoft 365 GCC High or Microsoft 365 DoD, use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
+   - For Microsoft 365 GCC High, use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
+
+   - For Microsoft 365 DoD, use the _ConnectionUri_ value: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`.
 
 3. Run the following command:
 
