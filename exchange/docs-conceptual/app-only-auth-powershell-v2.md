@@ -43,7 +43,7 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 - Connect using a local certificate:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<My Password>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
   ```
 
 - Connect using a certificate thumbprint:
@@ -200,7 +200,7 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 - Security reader
 - Security administrator
 - Helpdesk administrator
-- Exchange Service administrator
+- Exchange administrator
 - Global Reader
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
