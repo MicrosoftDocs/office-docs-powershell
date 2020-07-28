@@ -22,7 +22,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 > [!NOTE]
 > This feature is currently in Public Preview, and is available in the Preview release of Exchange Online PowerShell V2 Module.
 
-To install the Preview release of the EXO V2 module, run the following command:
+To install the Preview release of the EXO V2 module, run the same [steps to install the stable version](exchange-online-powershell-v2.md) but instead step 4 run the following command:
 
 ```powershell
 Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
