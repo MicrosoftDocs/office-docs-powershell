@@ -8,7 +8,7 @@ title: Microsoft Whiteboard
 
 ## Description
 
-The following cmdlet references are for Microsoft Whiteboard. See [Overview](https://docs.microsoft.com/powershell/whiteboard/overview?view=whiteboard-ps) for details on installing the module. The module can only be run by a global tenant admin.
+The following cmdlet references are for Microsoft Whiteboard. See [Overview](https://docs.microsoft.com/powershell/whiteboard/overview) for details on installing the module. The module can only be run by a global tenant admin.
 
 ## Microsoft Whiteboard Admin cmdlets
 ### [Get-Whiteboard](Get-Whiteboard.md)
