@@ -519,6 +519,7 @@ Accept wildcard characters: False
 The ApplyWaterMarkingText parameter specifies the watermark text. If the value contains spaces, enclose the value in quotation marks (").
 
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
