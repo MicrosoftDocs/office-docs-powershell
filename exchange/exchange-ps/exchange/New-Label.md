@@ -159,9 +159,9 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingFooterAlignment
 The ApplyContentMarkingFooterAlignment parameter specifies the footer alignment. Valid values are:
 
--Left
--Center
--Right
+- Left
+- Center
+- Right
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
@@ -291,9 +291,9 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingHeaderAlignment
 The ApplyContentMarkingHeaderAlignment parameter specifies the header alignment. Valid values are:
 
--Left
--Center
--Right
+- Left
+- Center
+- Right
 
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
@@ -497,8 +497,8 @@ Accept wildcard characters: False
 ### -ApplyWaterMarkingLayout
 The ApplyWaterMarkingAlignment parameter specifies the watermark alignment. Valid values are:
 
--Horizontal
--Diagonal
+- Horizontal
+- Diagonal
 
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
@@ -902,9 +902,7 @@ Accept wildcard characters: False
 The ParentId parameter specifies the parent label that you want this label to be under (a sublabel). You can use any value that uniquely identifies the parent sensitivity label. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
