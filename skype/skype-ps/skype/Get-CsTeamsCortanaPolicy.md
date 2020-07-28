@@ -29,7 +29,8 @@ Get-CsTeamsCortanaPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore
 
 ## DESCRIPTION
 
-The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for Cortana voice assistant in Microsoft Teams. Specifically, these specify if a user can use Cortana voice assistant in Microsoft Teams and Cortana invocation behavior via CortanaVoiceInvocationMode parameter -
+The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for Cortana voice assistant in Microsoft Teams. Specifically, if a user can use Cortana voice assistant in Microsoft Teams and determines Cortana invocation behavior via CortanaVoiceInvocationMode parameter -
+
 * Disabled - Cortana voice assistant is disabled
 * PushToTalkUserOverride - Cortana voice assistant is enabled but without wake-word ("Hey Cortana") invocation
 * WakeWordPushToTalkUserOverride - Cortana voice assistant is enabled with wake-word ("Hey Cortana") invocation on devices where wake-word is supported
