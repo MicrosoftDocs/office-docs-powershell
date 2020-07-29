@@ -99,7 +99,7 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 
 ### Install the EXO V2 module
 
-To install the EXO V2 module for the first time, run the following commands:
+To install the EXO V2 module for the first time, complete the following steps:
 
 1. Install or update the PowerShellGet module as described in [Installing PowerShellGet](https://docs.microsoft.com/powershell/scripting/gallery/installing-psget).
 
