@@ -340,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
-The IgnoreLegalHold switch is reserved only for Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
