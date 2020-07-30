@@ -93,7 +93,7 @@ This example creates an In-Place Hold Hold-ProjectX and places all members of th
 
 ### Example 3
 ```powershell
-New-MailboxSearch -Name "Hold-tailspintoys" -SourceMailboxes DG-Research -SearchQuery "'Patent' AND 'Project tailspintoys'" -InPlaceHoldEnabled $true
+New-MailboxSearch -Name "Hold-tailspintoys" -SourceMailboxes DG-Research -SearchQuery '"Patent" AND "Project tailspintoys"' -InPlaceHoldEnabled $true
 ```
 
 This example creates an In-Place Hold Hold-tailspintoys and places all members of the distribution group DG-Research on hold. Because the search specifies the SearchQuery parameter, only messages that match the search query are placed on indefinite In-Place Hold.
