@@ -384,7 +384,7 @@ Accept wildcard characters: False
 
   - Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](learn-about-spoof-intelligence.md).
 
-  - [Configure email authentication](email-validation-and-authentication.md#configure-email-authentication-for-domains-you-own) for the sender domain.
+  - [Configure email authentication](https://docs.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own) for the sender domain.
   
     - For the question mark in the sender's photo, SPF or DKIM are the most important.
     - For the via tag, confirm the domain in the DKIM signature or the **MAIL FROM** address matches (or is a subdomain of) the domain in the From address.
