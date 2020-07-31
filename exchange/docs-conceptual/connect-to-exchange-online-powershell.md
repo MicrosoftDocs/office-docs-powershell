@@ -1,5 +1,5 @@
 ---
-title: "Connect to Exchange Online PowerShell"
+title: "Connect to Exchange Online PowerShell with Basic authentication"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -12,19 +12,16 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid: c8bea338-6c1a-4bdf-8de0-7895d427ee5b
 search.appverid: MET150
-description: "Learn how to use remote PowerShell to connect to Exchange Online."
+description: "Learn how to use remote PowerShell to connect to Exchange Online with Basic authentication."
 ---
 
-# Connect to Exchange Online PowerShell
-
-> [!NOTE]
-> Since Basic Auth Deprecation has been announced and this method uses Basic Authentication on Server Side, 
+# Connect to Exchange Online PowerShell with Basic authentication
 
 Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!NOTE]
 > 
-> - We're eventually going to [disable Basic authentication in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), and the connection method described in this topic uses Basic authentication. We recommend that you use the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md) to connect to Exchange Online PowerShell, because it uses Modern authentication in all scenarios.
+> - We're eventually going to [disable Basic authentication in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), and the connection method described in this topic uses Basic authentication. We recommend that you use the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md) to connect to Exchange Online PowerShell, because it uses modern authentication in all scenarios.
 > 
 > - The Exchange Online PowerShell V2 module works with multi-factor authentication (MFA). For MFA connection instructions using the older Exchange Online Remote PowerShell Module, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md).
 > 
@@ -67,7 +64,7 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
   
   > [!NOTE]
-  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
+  > You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
   ```dos
   winrm get winrm/config/client/auth
@@ -108,11 +105,11 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://outlook.office.de/powershell-liveid/`
 
-   - For Microsoft 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://outlook.office365.us/powershell-liveid/`
+   - For Microsoft 365 GCC High, use the _ConnectionUri_ value: `https://outlook.office365.us/powershell-liveid/`
 
    - For Microsoft 365 DoD, use the _ConnectionUri_ value: `https://webmail.apps.mil/powershell-liveid`
 
-   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where the _ProxyAccessType_ value is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
+   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
 
      Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
 

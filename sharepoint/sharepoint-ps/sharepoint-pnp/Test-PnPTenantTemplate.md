@@ -15,7 +15,7 @@ Tests a tenant template for invalid references
 
 ```powershell
 Test-PnPTenantTemplate -Template <ProvisioningHierarchy>
-                       [-Connection <SPOnlineConnection>]
+                       [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -49,7 +49,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

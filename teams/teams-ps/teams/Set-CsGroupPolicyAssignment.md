@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently only available in private preview in the pre-release Teams PowerShell module.
+**Note:** The cmdlet Set-CsGroupPolicyAssignment will be available soon. In the meantime, to change a group policy assignment you can first remove the current policy assignment from the group and then add a new policy assignment.
 
 This cmdlet is used to update a group policy assignment.
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

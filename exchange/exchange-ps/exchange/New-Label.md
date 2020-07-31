@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # New-Label
 
 ## SYNOPSIS
-This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-Label cmdlet to create sensitivity labels in your organization.
 
@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-Label [-Name] <String> -DisplayName <String>
+New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-AdvancedSettings <PswsHashtable>]
  [-ApplyContentMarkingFooterAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
  [-ApplyContentMarkingFooterEnabled <System.Boolean>]
@@ -74,7 +74,6 @@ New-Label [-Name] <String> -DisplayName <String>
  [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
  [-SiteAndGroupProtectionEnabled <System.Boolean>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType>]
- [-Tooltip <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -125,6 +124,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Tooltip
+The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AdvancedSettings
 The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
@@ -144,9 +159,9 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingFooterAlignment
 The ApplyContentMarkingFooterAlignment parameter specifies the footer alignment. Valid values are:
 
--Left
--Center
--Right
+- Left
+- Center
+- Right
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
@@ -276,9 +291,9 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingHeaderAlignment
 The ApplyContentMarkingHeaderAlignment parameter specifies the header alignment. Valid values are:
 
--Left
--Center
--Right
+- Left
+- Center
+- Right
 
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
@@ -482,8 +497,8 @@ Accept wildcard characters: False
 ### -ApplyWaterMarkingLayout
 The ApplyWaterMarkingAlignment parameter specifies the watermark alignment. Valid values are:
 
--Horizontal
--Diagonal
+- Horizontal
+- Diagonal
 
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
@@ -504,6 +519,7 @@ Accept wildcard characters: False
 The ApplyWaterMarkingText parameter specifies the watermark text. If the value contains spaces, enclose the value in quotation marks (").
 
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -886,9 +902,7 @@ Accept wildcard characters: False
 The ParentId parameter specifies the parent label that you want this label to be under (a sublabel). You can use any value that uniquely identifies the parent sensitivity label. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -1076,22 +1090,6 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tooltip
-The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

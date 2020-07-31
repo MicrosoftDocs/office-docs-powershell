@@ -51,6 +51,8 @@ The following operators are fully supported for all string formats in the EXO V2
 - -not
 - -lt
 - -gt
+- -like
+- -notlike
 
 The -like and -notlike operators are limited in using wildcards (*). Specifically, you can only use wildcards at the beginning of a string value, at the end of a string value, or both.
 

@@ -12,8 +12,6 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently only available in private preview in the pre-release Teams PowerShell module.
-
 This cmdlet is used to assign a policy to a security group or distribution list.
 
 ## SYNTAX
@@ -23,16 +21,16 @@ New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <
 ```
 
 ## DESCRIPTION
-This is used to assign a policy to a security group or distribution list.  The policy assignment will then be propagated to the members of the group in accordance with the rules for group policy inheritance.  If a user is directly assigned a policy of a specific type, then they will not inherit a policy of the same type from a group.  If a user is a member of two or more groups that each have a policy of the same type assigned, then the user will inherit the policy based on the group policy assignment with the highest rank.
+This is used to assign a policy to a security group or distribution list. The policy assignment will then be propagated to the members of the group (even if members are added to the group later) in accordance with the rules for group policy inheritance. If a user is directly assigned a policy of a specific type, then they will not inherit a policy of the same type from a group. If a user is a member of two or more groups that each have a policy of the same type assigned, then the user will inherit the policy based on the group policy assignment with the highest rank.
 
-The group policy assignment rank is set at the time a policy is being assigned to a group and is relative to other group policy assignments of the same policy type.  For example, if there are two groups, each assigned a Teams Meeting policy, then one of the group assignments will be rank 1 while the other will be rank 2.
+The group policy assignment rank is set at the time a policy is being assigned to a group and is relative to other group policy assignments of the same policy type. For example, if there are two groups, each assigned a Teams Meeting policy, then one of the group assignments will be rank 1 while the other will be rank 2.
 
-It’s helpful to think of rank as determining the position of each policy assignment in an ordered list, from highest rank to lowest rank.  In fact, rank can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest rank.  When assigning a policy to a group, set the rank to be the position in the list where you want the new group policy assignment to be.  If a rank is not specified, the policy assignment will be given the lowest rank, corresponding to the end of the list.
+It's helpful to think of rank as determining the position of each policy assignment in an ordered list, from highest rank to lowest rank. In fact, rank can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest rank. When assigning a policy to a group, set the rank to be the position in the list where you want the new group policy assignment to be. If a rank is not specified, the policy assignment will be given the lowest rank, corresponding to the end of the list.
 
 Group policy assignment allows you to easily manage policies across different subsets of users within your organization. Group policy assignment is recommended for groups of up to 50000 users, but it will also work with larger groups. Group policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
 
 Group policy assignment is currently limited to the following policy types:
-TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsAppSetupPolicy, and TeamsComplianceRecordingPolicy.
+TeamsAppSetupPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy.
 
 ## EXAMPLES
 
@@ -64,7 +62,7 @@ d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/20
 ```
 
 ### Example 3
-In this example, the policy assignment rank is set to 2.  The current rank 2 policy assignment of the same type will be updated to rank 3.
+In this example, the policy assignment rank is set to 2. The current rank 2 policy assignment of the same type will be updated to rank 3.
 
 ```
 Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
@@ -149,7 +147,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

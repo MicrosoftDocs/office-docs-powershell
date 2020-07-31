@@ -12,8 +12,6 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently only available in private preview in the pre-release Teams PowerShell module.
-
 This cmdlet is used to return group policy assignments.
 
 ## SYNTAX
@@ -104,7 +102,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
