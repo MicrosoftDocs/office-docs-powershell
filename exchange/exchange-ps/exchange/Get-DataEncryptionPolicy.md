@@ -29,7 +29,7 @@ Get-DataEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter>] [-Confi
 ```
 
 ## DESCRIPTION
-Data encryption policy cmdlets are the Exchange Online part of service encryption with Customer Key in Office 365. For more information, see [Controlling your data in Office 365 using Customer Key](https://aka.ms/customerkey).
+Data encryption policy cmdlets are the Exchange Online part of service encryption with Customer Key in Microsoft 365. For more information, see [Controlling your data in Microsoft 365 using Customer Key](https://aka.ms/customerkey).
 
 You can assign a data encryption policy to a mailbox by using the DataEncryptionPolicy parameter on the Set-Mailbox cmdlet in Exchange Online PowerShell.
 

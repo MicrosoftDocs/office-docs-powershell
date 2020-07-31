@@ -18,7 +18,10 @@ description: "Learn how to connect to Security & Compliance Center PowerShell by
 If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md) to use remote PowerShell to connect to the Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
 
 > [!NOTE]
-> Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication. <br/><br/> The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+> 
+> - Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
+> 
+> - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
 
 ## What do you need to know before you begin?
 
@@ -47,7 +50,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
   
   > [!NOTE]
-  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
+  > You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
   ```dos
   winrm get winrm/config/client/auth
@@ -66,7 +69,10 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 ## Install the Exchange Online Remote PowerShell Module
 
 > [!NOTE]
-> The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect. <br/><br/> If your installed version of the Exchange Online Remote PowerShell Module doesn't have the **Connect-IPPSSession** cmdlet, you need to install the latest version of the module.
+> 
+> - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+> 
+> - If your installed version of the Exchange Online Remote PowerShell Module doesn't have the **Connect-IPPSSession** cmdlet, you need to install the latest version of the module.
 
 You need to do the following steps in a browser that supports ClickOnce (for example, Internet Explorer or Edge):
 
@@ -97,9 +103,11 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
    - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the location of your Microsoft 365 organization as described in the following table:
 
    |**Microsoft 365 offering**|**_ConnectionUri_ parameter value**|**_AzureADAuthorizationEndPointUri_ parameter value**|
-   |:-----|:-----|:-----|
+   |---|---|---|
    |Microsoft 365|Not used |Not used|
    |Office 365 Germany|`https://ps.compliance.protection.outlook.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
+   |Microsoft 365 GCC High|`https://ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
+   |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
 
    This example connects to Security & Compliance Center PowerShell in Microsoft 365 using the account chris@contoso.com.
 

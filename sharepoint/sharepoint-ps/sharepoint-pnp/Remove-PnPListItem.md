@@ -19,7 +19,7 @@ Remove-PnPListItem -List <ListPipeBind>
                    [-Recycle [<SwitchParameter>]]
                    [-Force [<SwitchParameter>]]
                    [-Web <WebPipeBind>]
-                   [-Connection <SPOnlineConnection>]
+                   [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -29,19 +29,19 @@ Remove-PnPListItem -List <ListPipeBind>
 Remove-PnPListItem -List "Demo List" -Identity "1" -Force
 ```
 
-Removes the listitem with id "1" from the "Demo List" list.
+Removes the listitem with id "1" from the "Demo List" list
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Remove-PnPListItem -List "Demo List" -Identity "1" -Force -Recycle
 ```
 
-Removes the listitem with id "1" from the "Demo List" list and saves it in the Recycle Bin.
+Removes the listitem with id "1" from the "Demo List" list and saves it in the Recycle Bin
 
 ## PARAMETERS
 
 ### -Force
-Specifying the Force parameter will skip the confirmation question.
+Specifying the Force parameter will skip the confirmation question
 
 ```yaml
 Type: SwitchParameter
@@ -65,7 +65,7 @@ Accept pipeline input: False
 ```
 
 ### -List
-The ID, Title or Url of the list.
+The ID, Title or Url of the list
 
 ```yaml
 Type: ListPipeBind
@@ -77,7 +77,7 @@ Accept pipeline input: True
 ```
 
 ### -Recycle
-
+When provided, items will be sent to the recycle bin. When omitted, items will permanently be deleted.
 
 ```yaml
 Type: SwitchParameter
@@ -92,7 +92,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

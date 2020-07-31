@@ -15,7 +15,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-ActivityAlert cmdlet to create activity alerts in the Security & Compliance Center. Activity alerts send you email notifications when users perform specific activities in Office 365.
+Use the New-ActivityAlert cmdlet to create activity alerts in the Security & Compliance Center. Activity alerts send you email notifications when users perform specific activities in Microsoft 365.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -38,21 +38,6 @@ New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedPr
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Default
-```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <AlertType>]
- [-Category <AlertRuleCategory>]
- [-Confirm]
- [-Description <String>]
- [-Disabled <Boolean>]
- [-DomainController <Fqdn>]
- [-EmailCulture <CultureInfo>]
- [-RecordType <AuditRecordType>]
- [-Severity <RuleSeverity>]
- [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
-```
-
 ### SimpleAggregationAuditAlert
 ```
 New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
@@ -70,9 +55,9 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <
  [-WhatIf] [<CommonParameters>]
 ```
 
-### ElevationOfPrivilegeAuditAlert
+### Default
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Type <AlertType>
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <AlertType>]
  [-Category <AlertRuleCategory>]
  [-Confirm]
  [-Description <String>]
@@ -162,7 +147,7 @@ Accept wildcard characters: False
 ### -Operation
 The Operation parameter specifies the activity that triggers an activity alert.
 
-A valid value for this parameter is an activity that's available in the Office 365 audit log. For a description of these activities, see [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
+A valid value for this parameter is an activity that's available in the Microsoft 365 audit log. For a description of these activities, see [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
 Although this parameter is technically capable of accepting multiple values separated by commas, multiple values don't work.
 
@@ -235,7 +220,7 @@ The Type parameter specifies the type alert. Valid values are:
 
 - Custom: An alert is created for the activities you specify with the Operation parameter. Typically, you don't need to use this value (if you don't use the Type parameter, and you specify the activities with the Operations parameter, the value Custom is automatically added to the Type property).
 
-- ElevationOfPrivilege: An alert is created for a predefined list of elevation of privilege activities (Operation parameter values). The activities are Add-RoleGroupMember, New-ManagementRoleAssignment, Add member to role., Update-RoleGroupMember, New-RoleGroup, Set-RoleGroup, Set-Mailbox, and Set-ManagementRoleEntry. You can't use the Operation parameter when you use the ElevationOfPrivilege value (on the New-ActivityAlert or Set-ActivityAlert cmdlets).
+- ElevationOfPrivilege: This value is being retired.
 
 - SimpleAggregation: An alert is created based on the activities defined by the Operation and Condition parameters, the number of activities specified by the Threshold parameter, and the time period specified by the TimeWindow parameter.
 
@@ -245,7 +230,7 @@ Note: You can't change the Type value in an existing activity alert.
 
 ```yaml
 Type: AlertType
-Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert, ElevationOfPrivilegeAuditAlert
+Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 
@@ -552,7 +537,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

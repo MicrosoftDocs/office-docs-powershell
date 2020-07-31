@@ -19,7 +19,7 @@ Get-PnPListItem -List <ListPipeBind>
                 [-Id <Int>]
                 [-Fields <String[]>]
                 [-Web <WebPipeBind>]
-                [-Connection <SPOnlineConnection>]
+                [-Connection <PnPConnection>]
 ```
 
 ### By Unique Id
@@ -28,7 +28,7 @@ Get-PnPListItem -List <ListPipeBind>
                 [-UniqueId <GuidPipeBind>]
                 [-Fields <String[]>]
                 [-Web <WebPipeBind>]
-                [-Connection <SPOnlineConnection>]
+                [-Connection <PnPConnection>]
 ```
 
 ### By Query
@@ -39,7 +39,7 @@ Get-PnPListItem -List <ListPipeBind>
                 [-PageSize <Int>]
                 [-ScriptBlock <ScriptBlock>]
                 [-Web <WebPipeBind>]
-                [-Connection <SPOnlineConnection>]
+                [-Connection <PnPConnection>]
 ```
 
 ### All Items
@@ -50,7 +50,7 @@ Get-PnPListItem -List <ListPipeBind>
                 [-PageSize <Int>]
                 [-ScriptBlock <ScriptBlock>]
                 [-Web <WebPipeBind>]
-                [-Connection <SPOnlineConnection>]
+                [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -88,23 +88,30 @@ Retrieves all list items, but only includes the values of the Title and GUID fie
 Get-PnPListItem -List Tasks -Query "<View><Query><Where><Eq><FieldRef Name='GUID'/><Value Type='Guid'>bd6c5b3b-d960-4ee7-a02c-85dc6cd78cc3</Value></Eq></Where></Query></View>"
 ```
 
-Retrieves all list items based on the CAML query specified
+Retrieves all available fields of list items based on the CAML query specified
 
 ### ------------------EXAMPLE 6------------------
+```powershell
+Get-PnPListItem -List Tasks -Query "<View><ViewFields><FieldRef Name='Title'/><FieldRef Name='Modified'/></ViewFields><Query><Where><Geq><FieldRef Name='Modified'/><Value Type='DateTime'><Today/></Value></Eq></Where></Query></View>"
+```
+
+Retrieves all list items modified today, retrieving the columns 'Title' and 'Modified'. When you use -Query, you can add a <ViewFields> clause to retrieve specific columns (since you cannot use -Fields)
+
+### ------------------EXAMPLE 7------------------
 ```powershell
 Get-PnPListItem -List Tasks -PageSize 1000
 ```
 
 Retrieves all list items from the Tasks list in pages of 1000 items
 
-### ------------------EXAMPLE 7------------------
+### ------------------EXAMPLE 8------------------
 ```powershell
 Get-PnPListItem -List Tasks -PageSize 1000 -ScriptBlock { Param($items) $items.Context.ExecuteQuery() } | % { $_.BreakRoleInheritance($true, $true) }
 ```
 
 Retrieves all list items from the Tasks list in pages of 1000 items and breaks permission inheritance on each item
 
-### ------------------EXAMPLE 8------------------
+### ------------------EXAMPLE 9------------------
 ```powershell
 Get-PnPListItem -List Samples -FolderServerRelativeUrl "/sites/contosomarketing/Lists/Samples/Demo"
 ```
@@ -213,7 +220,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

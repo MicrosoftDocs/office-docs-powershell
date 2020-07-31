@@ -17,11 +17,9 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Set-ProtectionAlert cmdlet to modify alert policies in the Security & Compliance Center.
 
+**Note**: You can't use this cmdlet to edit default alert policies. You can only modify alerts that you created using the New-ProtectionAlert cmdlet.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
-
-
-> [!NOTE]
-> You cannot use this cmdlet to edit default alert policies. You can only modify alerts you have created using New-ProtectionAlert cmdlet.
 
 ## SYNTAX
 
@@ -101,7 +99,7 @@ The AggregationType parameter specifies the how the alert policy triggers alerts
 
 - SimpleAggregation: Alerts are triggered based on the volume of activity in a given time window (the values of the Threshold and TimeWindow parameters). This is the default value.
 
-- AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Office 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
+- AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Microsoft 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
 
 ```yaml
 Type: AlertAggregationType
@@ -395,7 +393,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyUser
-The NotifyUser parameter specifies the SMTP address of the user who receives notification messages for the alert policy. You can specify multiple values separated by commas.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -569,7 +567,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

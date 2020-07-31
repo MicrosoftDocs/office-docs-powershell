@@ -1,0 +1,170 @@
+---
+external help file:
+online version: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpmicrosoft365grouptosite
+applicable: SharePoint Online
+schema: 2.0.0
+title: Add-PnPMicrosoft365GroupToSite
+---
+
+# Add-PnPMicrosoft365GroupToSite
+
+## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
+Groupifies a classic team site by creating a Microsoft 365 group for it and connecting the site with the newly created group
+
+## SYNTAX 
+
+```powershell
+Add-PnPMicrosoft365GroupToSite -Url <String>
+                               -Alias <String>
+                               -DisplayName <String>
+                               [-Description <String>]
+                               [-Classification <String>]
+                               [-IsPublic [<SwitchParameter>]]
+                               [-KeepOldHomePage [<SwitchParameter>]]
+                               [-HubSiteId <GuidPipeBind>]
+                               [-Owners <String[]>]
+                               [-Connection <PnPConnection>]
+```
+
+## DESCRIPTION
+This command allows you to add a Microsoft 365 Unified group to an existing classic site collection, also known as groupifying.
+
+## EXAMPLES
+
+### ------------------EXAMPLE 1------------------
+```powershell
+Add-PnPOffice365GroupToSite -Url "https://contoso.sharepoint.com/sites/FinanceTeamsite" -Alias "FinanceTeamsite" -DisplayName = "My finance team site group"
+```
+
+This will groupify the FinanceTeamsite
+
+## PARAMETERS
+
+### -Alias
+Specifies the alias of the group. Cannot contain spaces.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -Classification
+Specifies the classification of the group
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Description
+The optional description of the group
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -DisplayName
+The display name of the group
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -HubSiteId
+If specified the site will be associated to the hubsite as identified by this id
+
+```yaml
+Type: GuidPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -IsPublic
+Specifies if the group is public. Defaults to false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -KeepOldHomePage
+Specifies if the current site home page is kept. Defaults to false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Owners
+The array UPN values of the group's owners
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Url
+Url of the site to be connected to an Microsoft 365 Group
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -Connection
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+```yaml
+Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+## RELATED LINKS
+
+[SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)

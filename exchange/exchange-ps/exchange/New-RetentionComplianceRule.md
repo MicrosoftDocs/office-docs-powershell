@@ -234,6 +234,8 @@ The ExcludedItemClasses parameter specifies the types of messages to exclude fro
 
 - IPM.Note.Microsoft.Voicemail.UM.CA
 
+Additionally, you can specify [message classes for Exchange items](https://docs.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or third-party message classes. Note that the values you specify aren't validated, so the parameter accepts any text value.
+
 You can specify multiple item class values by using the syntax "Value1","Value2",..."ValueN".
 
 ```yaml
@@ -336,7 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter

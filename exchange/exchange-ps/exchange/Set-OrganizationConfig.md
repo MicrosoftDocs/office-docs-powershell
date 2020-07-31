@@ -80,6 +80,7 @@ Set-OrganizationConfig
  [-MailTipsGroupMetricsEnabled <Boolean>]
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
+ [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OnlineMeetingsByDefaultEnabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
@@ -129,6 +130,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-DomainController <Fqdn>]
+ [-EnableAuthAdminReadSession]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -206,6 +208,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-DomainController <Fqdn>]
+ [-EnableAuthAdminReadSession]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -796,7 +799,7 @@ The ConnectorsEnabledForOutlook parameter specifies whether to enable or disable
 
 - $false: Connectors are disabled.
 
-To enable and disable the ability to use connectors on specific Office 365 groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
+To enable and disable the ability to use connectors on specific Microsoft 365 Groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
 
 For more information about connectors for Outlook on the web, see [Connect apps to your inbox in Outlook on the web](https://support.microsoft.com/office/3d41b99c-bf8d-47d4-bc7a-97758b74689d).
 
@@ -944,7 +947,7 @@ Accept wildcard characters: False
 ### -DefaultGroupAccessType
 This parameter is available only in the cloud-based service.
 
-The DefaultGroupAccessType parameter specifies the default access type for Office 365 groups. Valid values are:
+The DefaultGroupAccessType parameter specifies the default access type for Microsoft 365 Groups. Valid values are:
 
 - Public
 
@@ -1114,11 +1117,11 @@ Accept wildcard characters: False
 ### -DirectReportsGroupAutoCreationEnabled
 This parameter is available only in the cloud-based service.
 
-The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Office 365 groups. Valid values are:
+The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Microsoft 365 Groups. Valid values are:
 
-- $true: The automatic creation of direct report Office 365 groups is enabled.
+- $true: The automatic creation of direct report Microsoft 365 Groups is enabled.
 
-- $false: The automatic creation of direct report Office 365 groups is disabled. This is the default value.
+- $false: The automatic creation of direct report Microsoft 365 Groups is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1249,14 +1252,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableAuthAdminReadSession 
+This parameter is available only in on-premises Exchange.
+
+The EnableAuthAdminReadSession switch enables a recipient read session in Exchange 2016 CU17 or later, or in Exchange 2019 CU6 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EndUserDLUpgradeFlowsDisabled
 This parameter is available only in the cloud-based service.
 
-The EndUserDLUpgradeFlowsDisabled parameter specifies whether to prevent users from upgrading their own distribution groups to Office 365 groups in an Exchange Online organization. Valid values are:
+The EndUserDLUpgradeFlowsDisabled parameter specifies whether to prevent users from upgrading their own distribution groups to Microsoft 365 Groups in an Exchange Online organization. Valid values are:
 
-- $true: Users can upgrade distribution groups that they own to Office 365 groups.
+- $true: Users can upgrade distribution groups that they own to Microsoft 365 Groups.
 
-- $false: Users can't upgrade distribution groups that they own to Office 365 groups. This is the default value.
+- $false: Users can't upgrade distribution groups that they own to Microsoft 365 Groups. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1937,14 +1958,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MobileAppEducationEnabled
+This parameter is available only in the cloud-based service.
+
+The MobileAppEducationEnabled specifies whether to show or hide the Outlook for iOS and Android education reminder in Outlook on the web (formerly known as Outlook Web App). Valid values are:
+
+- $true: Outlook on the web and Outlook desktop will show the education reminder to users who aren't using Outlook for iOS and Android to check their company email and calendar events. This is the default value.
+
+- $false: The Outlook for iOS and Android education reminder is disabled.
+
+This setting will affect Outlook desktop at some point in the future.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OAuth2ClientProfileEnabled
 The OAuth2ClientProfileEnabled parameter enables or disables modern authentication in the Exchange organization. Valid values are:
 
-- $true: Modern authentication is enabled.
+- $true: modern authentication is enabled.
 
-- $false: Modern authentication is disabled.
+- $false: modern authentication is disabled.
 
-Modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
+modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
 
 When you enable modern authentication in Exchange Online, we recommend that you also enable it in Skype for Business Online. For more information, see [Skype for Business Online: Enable your tenant for modern authentication](https://aka.ms/SkypeModernAuth).
 
@@ -2006,13 +2051,13 @@ Accept wildcard characters: False
 ### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Office 365 US Government Community Cloud (GCC) customers. Valid values are:
+The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Microsoft 365 US Government Community Cloud (GCC) customers. Valid values are:
 
 - $true: Disable features that aren't FedRAMP compliant for GCC customers. This is the default value for all GCC customers.
 
 - $false: Enable features that aren't FedRAMP compliant for GCC customers.
 
-The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Office 365 US Government customers include:
+The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Microsoft 365 US Government customers include:
 
 - Multi-account support
 
@@ -2020,7 +2065,7 @@ The Outlook for iOS and Android feature and services that are not FedRAMP compli
 
 - HelpShift and in-app support
 
-- Any Microsoft services that are outside the Office 365 US Government Community Cloud (for example, Bing and Cortana).
+- Any Microsoft services that are outside the Microsoft 365 US Government Community Cloud (for example, Bing and Cortana).
 
  For a full list of Features and services that are not FedRAMP compliant for GCC customers, see [Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
 
@@ -2076,7 +2121,7 @@ Accept wildcard characters: False
 ### -OutlookPayEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookPayEnabled parameter enables or disables [Pay bills and invoices in Outlook using Microsoft Pay](https://support.microsoft.com/office/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Office 365 organization. Valid values are:
+The OutlookPayEnabled parameter enables or disables [Pay bills and invoices in Outlook using Microsoft Pay](https://support.microsoft.com/office/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Microsoft 365 organization. Valid values are:
 
 - $true: Payments in Outlook are enabled.
 

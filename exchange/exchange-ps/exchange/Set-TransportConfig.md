@@ -103,7 +103,7 @@ Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
 
 This example configures the Exchange organization to redirect all journaling reports that can't be delivered to the journaling mailbox to the email account journalingndr@contoso.com.
 
-To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Office 365 portal or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see [KB2829319](https://support.microsoft.com/help/2829319).
+To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Microsoft 365 admin center or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see [KB2829319](https://support.microsoft.com/help/2829319).
 
 ## PARAMETERS
 
@@ -1199,18 +1199,14 @@ This parameter is available only in the cloud-based service.
 The SmtpClientAuthenticationDisabled parameter specifies whether to disable authenticated SMTP (SMTP AUTH) for the whole organization. Examples of clients and services that require authenticated SMTP to send email messages include:
 
 - POP3 and IMAP4 clients.
-
 - Devices with scan to email capability.
-
 - Workflow applications that send email notifications.
-
 - Online services that send messages using internal email addresses in the organization.
 
 Valid values for this parameter are:
 
-- $true: Authenticated SMTP is disabled.
-
-- $false: Authenticated SMTP is enabled. This is the default value.
+- $true: Authenticated SMTP is disabled. This is the default value for organizations created after January 2020.
+- $false: Authenticated SMTP is enabled.
 
 The corresponding parameter that controls authenticated SMTP on individual mailboxes is the SmtpClientAuthenticationDisabled parameter on the Set-CASMailbox cmdlet. The default mailbox value is blank ($null), which means the mailbox setting is controlled by this organizational setting.
 

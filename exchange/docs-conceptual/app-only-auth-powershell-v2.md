@@ -14,30 +14,42 @@ ms.custom:
 ms.assetid:
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
-description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks."
+description: "Learn about using the Exchange Online V2 module in scripts and other long-running tasks with modern authentication and app-only authentication."
 ---
 
-# Automate tasks in Exchange Online using PowerShell with Modern Authentication
+# App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> The features described in this topic are currently in Preview, are subject to change, and aren't available to everyone.
+> This feature is currently in Public Preview, and is available in the Preview release of Exchange Online PowerShell V2 Module.
 
-Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses Modern authentication, the credentials are stored in a local file or a secret vault that's access at run-time.
+To install the Preview release of the EXO V2 module, run the same [steps to install the stable version](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-v2-module) but instead step 4 run the following command:
 
-Because storing user credentials locally is not a good security practice, we're releasing this feature to support authentication for app-only scenarios using AzureAD applications and self-signed certificates.
+```powershell
+Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
+```
 
-The following examples show how to use the Exchange Online PowerShell V2 module with app-only authentication
+To update from an earlier version of the of the EXO V2 module, run the following command:
+
+```powershell
+Update-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
+```
+
+Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
+
+Because storing user credentials locally is not a safe practice, we're releasing this feature to support authentication for unattended scripts (automation) scenarios using AzureAD applications and self-signed certificates.
+
+The following examples show how to use the Exchange Online PowerShell V2 module with app-only authentication:
 
 - Connect using a local certificate:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -AppID "alpha-beta-gamma-123456" -Organization "contosoelectronics.onmicrosoft.com"
+  Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<My Password>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
   ```
 
 - Connect using a certificate thumbprint:
 
   ```powershell
-  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "alpha-beta-gamma-123456" -Organization "contosoelectronics.onmicrosoft.com" 
+  Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
   ```
 
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
@@ -60,13 +72,13 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
 
 ## How does it work?
 
-The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id & certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
+The EXO V2 module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. Exchange Online configures the session RBAC using the directory role information that's available in the token.
 
 ## Setup app-only authentication
 
 An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. You can learn more about this at [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
 
-For a detailed visual flow bout creating applications in Azure AD, see <https://aka.ms/azuread-app>.
+For a detailed visual flow about creating applications in Azure AD, see <https://aka.ms/azuread-app>.
 
 1. Register the application in Azure AD at <https://portal.azure.com>.
 
@@ -80,7 +92,10 @@ For a detailed visual flow bout creating applications in Azure AD, see <https://
 
    - Create and configure a self-signed X.509 certificate, which will be used to authenticate your Application against Azure AD, while requesting the app-only access token.
 
-   - This is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#appendix) section later in this topic for instructions for generating certificates in PowerShell.
+   - This is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#step-3-generate-a-self-signed-certificate) section later in this topic for instructions for generating certificates in PowerShell.
+   
+     > [!NOTE]
+     > Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You must use a certificate from a CSP key provider. The [Appendix](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 
 4. Assign RBAC roles
 
@@ -91,7 +106,7 @@ For a detailed visual flow bout creating applications in Azure AD, see <https://
    - Security reader
    - Security administrator
    - Helpdesk administrator
-   - Exchange Service administrator
+   - Exchange administrator
    - Global Reader
 
 ## Appendix
@@ -185,6 +200,8 @@ Azure AD has more than 50 admin roles available. For app-only authentication in 
 - Security reader
 - Security administrator
 - Helpdesk administrator
+- Exchange administrator
+- Global Reader
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
 

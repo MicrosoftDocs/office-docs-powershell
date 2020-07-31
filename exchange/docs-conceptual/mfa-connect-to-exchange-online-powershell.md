@@ -47,7 +47,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
   To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
   
   > [!NOTE]
-  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
+  > You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
   ```dos
   winrm get winrm/config/client/auth
@@ -116,7 +116,7 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
    Connect-EXOPSSession -UserPrincipalName chris@contoso.com
    ```
 
-   This example connects to Exchange Online in Office 365 Germany using the account lukas@fabrikam.com.
+   This example connects to Exchange Online Germany using the account lukas@fabrikam.com.
 
    ```PowerShell
    Connect-EXOPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
