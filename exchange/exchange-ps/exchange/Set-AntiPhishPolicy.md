@@ -368,6 +368,17 @@ The EnableUnauthenticatedSender parameter enables or disables unauthenticate
 
 - $false: Unauthenticated sender identification is disabled.
 
+To prevent these identifiers from being added to messages from specific senders, you have the following options:
+
+  - Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
+
+  - [Configure email authentication](https://docs.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own) for the sender domain.
+  
+    - For the question mark in the sender's photo, SPF or DKIM are the most important.
+    - For the via tag, confirm the domain in the DKIM signature or the **MAIL FROM** address matches (or is a subdomain of) the domain in the From address.
+
+  For more information, see [Identify suspicious messages in Outlook.com and Outlook on the web](https://support.microsoft.com/office/3d44102b-6ce3-4f7c-a359-b623bec82206)
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
