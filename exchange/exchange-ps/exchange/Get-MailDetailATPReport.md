@@ -111,9 +111,9 @@ Email phish EventTypes:
 
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
-- Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
+- ATP-generated URL reputation \* (Indicates a message with a known malicious URL caught by ATP.)
 
-- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
+- Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
 - Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
 
@@ -123,19 +123,27 @@ Email phish EventTypes:
 
 - Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
 
+- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
+
 Email malware EventTypes:
 
 - Anti-malware engine (Indicates a message caught by the anti-malware engine.)
+
+- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
+
+- ATP-generated file reputation \* (Indicates a message with a known malicious file blocked by ATP.)
 
 - ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
 
 - ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
 
-- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
+- EOP URL Reputation (Indicates a message with a known malicious URL caught by EOP.)
+
+- File Detonation \* (Indicates a message with a malicious attachment blocked by the detonation service.)
 
 - Office 365 file reputation (Indicates a message with a known malicious file blocked.)
 
-- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
+- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
 
 Content malware EventTypes:
 
