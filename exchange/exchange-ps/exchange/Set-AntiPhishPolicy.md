@@ -380,6 +380,16 @@ Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+ To prevent these identifiers from being added to messages from specific senders, you have the following options:
+
+  - Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](learn-about-spoof-intelligence.md).
+
+  - [Configure email authentication](email-validation-and-authentication.md#configure-email-authentication-for-domains-you-own) for the sender domain.
+  
+    - For the question mark in the sender's photo, SPF or DKIM are the most important.
+    - For the via tag, confirm the domain in the DKIM signature or the **MAIL FROM** address matches (or is a subdomain of) the domain in the From address.
+
+  For more information, see [Identify suspicious messages in Outlook.com and Outlook on the web](https://support.microsoft.com/office/3d44102b-6ce3-4f7c-a359-b623bec82206)
 
 ### -EnableUnusualCharactersSafetyTips
 This setting is part of impersonation protection and is only available in Advanced Threat Protection.
