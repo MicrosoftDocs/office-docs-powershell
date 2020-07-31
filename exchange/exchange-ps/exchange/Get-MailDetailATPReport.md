@@ -111,11 +111,13 @@ Email phish EventTypes:
 
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
-- ATP-generated URL reputation \* (Indicates a message with a known malicious URL caught by ATP.)
+- ATP-generated URL reputation\* (Indicates a message with a known malicious URL caught by ATP.)
 
 - Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
 - Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
+
+- EOP URL Reputation (Indicates a message with a known malicious URL caught by EOP.)
 
 - General phish filter (Indicates a message caught by basic phish protection.)
 
@@ -127,23 +129,21 @@ Email phish EventTypes:
 
 Email malware EventTypes:
 
-- Anti-malware engine (Indicates a message caught by the anti-malware engine.)
+- Anti-malware engine\* (Indicates a message caught by the anti-malware engine.)
 
 - Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
 
-- ATP-generated file reputation \* (Indicates a message with a known malicious file blocked by ATP.)
+- ATP-generated file reputation\* (Indicates a message with a known malicious file blocked by ATP.)
 
 - ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
 
 - ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
 
-- EOP URL Reputation (Indicates a message with a known malicious URL caught by EOP.)
+- File Detonation\* (Indicates a message with a malicious attachment blocked by the detonation service.)
 
-- File Detonation \* (Indicates a message with a malicious attachment blocked by the detonation service.)
+- Malware ZAP (Indicates a message with malware detected and auto-purged after delivery.)
 
 - Office 365 file reputation (Indicates a message with a known malicious file blocked.)
-
-- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
 
 Content malware EventTypes:
 
