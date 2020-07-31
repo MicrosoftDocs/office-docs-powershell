@@ -1681,8 +1681,8 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUserInfoVisibility
-> [!NOTE]
-> This feature has not yet been rolled out to Production. Attempting to set this parameter before rollout is complete will result in an error message. More details on this feature will be available on release.
+
+This feature has not yet been rolled out to Production. Attempting to set this parameter before rollout is complete will result in an error message. More details on this feature will be available on release.
 
 ```yaml
 Type: String
