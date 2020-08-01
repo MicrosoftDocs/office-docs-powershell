@@ -135,9 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
-The IgnoreLegalHold switch ignores the legal hold status of the mailbox user and allows you to remove the cloud-based mailbox on legal hold.
-
-After you remove a mailbox, you can't include it in a discovery search. Depending on the command parameters you use, removed mailboxes are either purged immediately or when the deleted mailbox retention period expires. Check with your organization's legal or Human Resources department before disabling a mailbox that's on legal hold.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
