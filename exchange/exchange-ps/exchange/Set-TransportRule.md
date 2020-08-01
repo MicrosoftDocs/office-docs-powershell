@@ -2312,7 +2312,7 @@ The ExceptIfHasClassification parameter specifies an exception that looks for me
 
 You use the Get-MessageClassification cmdlet to identify the message classification. For example, to find messages with the Company Internal classification, use the following syntax:
 
--ExceptIfHasClassification @(Get-MessageClassification "Company Internal").Identity
+`-ExceptIfHasClassification @(Get-MessageClassification "Company Internal").Identity`
 
 The message classification referred to in this parameter is the custom message classification that you can create in your organization by using the New-MessageClassification cmdlet. It isn't related to the DLP data classification.
 
@@ -3606,7 +3606,7 @@ The HasClassification parameter specifies a condition that looks for messages wi
 
 You use the Get-MessageClassification cmdlet to identify the message classification. For example, to find messages with the Company Internal classification, use the following syntax:
 
--HasClassification @(Get-MessageClassification "Company Internal").Identity
+`-HasClassification @(Get-MessageClassification "Company Internal").Identity`
 
 The message classification referred to in this parameter is the custom message classification that you can create in your organization by using the New-MessageClassification cmdlet. It isn't related to the DLP classification.
 
