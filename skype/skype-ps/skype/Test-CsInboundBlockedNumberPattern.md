@@ -32,7 +32,7 @@ This cmdlet tests the given number against the created (by using New-CsInboundBl
 PS C:> Test-CsInboundBlockedNumberPattern -PhoneNumber "321321321"
 ```
 
-Tests the "321321321" to check if it will be blocked for inbound calls.
+Tests the "321321321" number to check if it will be blocked for inbound calls.
 
 ## PARAMETERS
 
