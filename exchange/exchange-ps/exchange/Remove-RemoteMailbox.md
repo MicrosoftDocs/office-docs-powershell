@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
-This parameter is reserved for internal Microsoft use.
+The IgnoreLegalHold switch specifies whether to ignore the legal hold status of the remote user. This switch removes the instance of the remote object in the on-premises organization, and the request to remove the mailbox is synchronized to the cloud. The Azure AD object is removed, but if the mailbox is on hold, the mailbox is converted into an inactive mailbox and remains on hold.
 
 ```yaml
 Type: SwitchParameter
