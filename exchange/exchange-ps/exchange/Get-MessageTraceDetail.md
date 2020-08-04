@@ -30,11 +30,11 @@ Get-MessageTraceDetail
  [-Event <MultiValuedProperty>]
  [-Expression <Expression>]
  [-MessageId <String>]
- [-MessageTraceId <Guid>]
+ -MessageTraceId <Guid>
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-ProbeTag <String>]
- [-RecipientAddress <String>]
+ -RecipientAddress <String>
  [-SenderAddress <String>]
  [-StartDate <DateTime>] [<CommonParameters>]
 ```
@@ -48,10 +48,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
+Get-MessageTraceDetail -MessageTraceId ae5c1219-4c90-41bf-fef5-08d837917e7c -RecipientAddress robert@contoso.com
+```
+
+This example uses the Get-MessageTraceDetail cmdlet to retrieve detailed message trace information for messages with the Exchange Network Message ID value ae5c1219-4c90-41bf-fef5-08d837917e7c received by robert@contoso.com.
+
+### Example 2
+```powershell
 Get-MessageTrace -MessageTraceId 2bbad36aa4674c7ba82f4b307fff549f -SenderAddress john@contoso.com -StartDate 06/13/2018 -EndDate 06/15/2018 | Get-MessageTraceDetail
 ```
 
-This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f send by john@contoso.com between June 13, 2018 and June 15, 2018, and pipelines the results to the Get-MessageTraceDetail cmdlet.
+This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f sent by john@contoso.com between June 13, 2018 and June 15, 2018, and pipelines the results to the Get-MessageTraceDetail cmdlet.
 
 ## PARAMETERS
 
