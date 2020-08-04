@@ -24,17 +24,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MessageTraceDetail
+Get-MessageTraceDetail -MessageTraceId <Guid> -RecipientAddress <String>
  [-Action <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-Event <MultiValuedProperty>]
  [-Expression <Expression>]
  [-MessageId <String>]
- -MessageTraceId <Guid>
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-ProbeTag <String>]
- -RecipientAddress <String>
  [-SenderAddress <String>]
  [-StartDate <DateTime>] [<CommonParameters>]
 ```
@@ -61,6 +59,38 @@ Get-MessageTrace -MessageTraceId 2bbad36aa4674c7ba82f4b307fff549f -SenderAddress
 This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f sent by john@contoso.com between June 13, 2018 and June 15, 2018, and pipelines the results to the Get-MessageTraceDetail cmdlet.
 
 ## PARAMETERS
+
+### -MessageTraceId
+The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RecipientAddress
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Action
 The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
@@ -162,22 +192,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -MessageTraceId
-The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Page
 The Page parameter specifies the page number of the results you want to view. Valid input for this parameter is an integer between 1 and 1000. The default value is 1.
 
@@ -223,22 +237,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientAddress
-The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
