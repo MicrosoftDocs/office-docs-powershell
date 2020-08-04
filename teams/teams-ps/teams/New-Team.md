@@ -16,7 +16,6 @@ Groups created through teams cmdlets, APIs, or clients will not show up in Outlo
 
 If you want these groups to appear in Outlook clients, you can use the [Set-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/set-unifiedgroup) cmdlet in the Exchange Powershell Module to disable the switch parameter `HiddenFromExchangeClientsEnabled` (-HiddenFromExchangeClientsEnabled:$false).
 
-If you want to hide groups from the Global Address List (GAL), you can use the same `Set-UnifiedGroup` cmdlet to set the parameter `HiddenFromAddressListsEnabled` to $true.
 
 Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected.
 
