@@ -14,7 +14,7 @@ ms.reviewer:
 This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team. 
 Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default. 
 
-If you want to hide groups from Outlook clients, you can use the [Set-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/set-unifiedgroup) cmdlet in the Exchange Powershell Module to set the parameter `HiddenFromExchangeClientsEnabled` to $true.
+If you want these groups to appear in Outlook clients, you can use the [Set-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/set-unifiedgroup) cmdlet in the Exchange Powershell Module to disable the switch parameter `HiddenFromExchangeClientsEnabled` (-HiddenFromExchangeClientsEnabled:$false).
 
 If you want to hide groups from the Global Address List (GAL), you can use the same `Set-UnifiedGroup` cmdlet to set the parameter `HiddenFromAddressListsEnabled` to $true.
 
