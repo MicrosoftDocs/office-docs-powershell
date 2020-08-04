@@ -59,7 +59,7 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
   
-  If you'd rather run this command in Windows PowerShell, enclose this part of the value in quotation marks: `'@{Basic="true"}'`.
+  If you'd rather run the command in Windows PowerShell, enclose this part of the value in quotation marks: `'@{Basic="true"}'`.
 
   If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
 
