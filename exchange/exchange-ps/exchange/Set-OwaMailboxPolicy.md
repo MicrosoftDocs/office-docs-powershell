@@ -712,6 +712,8 @@ Accept wildcard characters: False
 ### -DisableFacebook
 This parameter is available only in the cloud-based service.
 
+Facebook integration is no longer available. For more information, see [Facebook Connect is no longer available](https://support.microsoft.com/office/facebook-connect-is-no-longer-available-f31c8107-7b5a-4e3d-8a22-e506dacb6db6).
+
 The DisableFacebook switch specifies whether users can synchronize their Facebook contacts to their Contacts folder in Outlook on the web. By default, Facebook integration is enabled.
 
 - To disable Facebook integration, use this switch without a value.
