@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
-This parameter is reserved for internal Microsoft use.
+The IgnoreLegalHold switch specifies whether to ignore the legal hold status of the remote user. This switch disables the instance of the remote object in the on-premises organization, and the request to disable the mailbox is synchronized to the cloud. However, if the cloud mailbox is on hold, the request to disable the mailbox is blocked, and an error is returned.
 
 ```yaml
 Type: SwitchParameter

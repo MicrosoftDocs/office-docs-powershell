@@ -58,14 +58,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | Remove-ManagementRoleEntry -WhatIf
+New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | %{Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
 ```
 
 This example creates the management role Redmond Journaling View-Only based on the Journaling parent role.
 
-After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling. The WhatIf switch is used to verify that the correct role entries are removed.
-
-After confirmation that the command removes the correct role entries, the second command is run again without the WhatIf switch.
+After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling.
 
 For more information about pipelining and the Where cmdlet, see the following topics:
 
