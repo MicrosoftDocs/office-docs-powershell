@@ -24,10 +24,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailTrafficATPReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Direction <MultiValuedProperty>] [-Domain <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-Page <Int32>] [-PageSize <Int32>]
- [-ProbeTag <String>] [-StartDate <DateTime>] [-SummarizeBy <MultiValuedProperty>] [<CommonParameters>]
+Get-MailTrafficATPReport
+ [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Direction <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [-SummarizeBy <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,16 +48,17 @@ Safe Links is a feature in Advanced Threat Protection that checks links in email
 For the reporting period you specify, the cmdlet returns the following information:
 
 - Domain
-
 - Date
-
 - Event Type
-
 - Direction
-
 - Action
-
+- SubType
+- Policy Source
+- Verdict Source
+- Delivery Status
 - Message Count
+
+To see all of these columns (width issues), write the output to a file. For example, `Get-MailTrafficATPReport | Out-String -Width 4096 | Out-File "C:\Users\admin\Desktop\Mail Traffic ATP Report.txt"`.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -77,7 +88,7 @@ This example is similar to the previous example, but now the results are summari
 ## PARAMETERS
 
 ### -Action
-The Action parameter filters the report by the action taken by DLP policies, transport rules, malware filtering, or spam filtering. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget Actions. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
+The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
 
 You can specify multiple values separated by commas.
 
@@ -111,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
 
 ```yaml
 Type: MultiValuedProperty
@@ -173,6 +184,8 @@ Email phish EventTypes:
 
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
+- Dmarc (Indicates a message for which the sender was marked as not authenticated by DMARC.)
+
 - Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
 - User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
@@ -205,7 +218,7 @@ Content malware EventTypes:
 
 - AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP/E5.)
 
-\* These features require a standalone Office 365 ATP or E5 subscription.
+\* These features require an E5 subscription or an Office 365 ATP add-on.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -307,7 +320,14 @@ Accept wildcard characters: False
 ### -SummarizeBy
 The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
-For the Get-MailTrafficATPReport cmdlet, valid values are Action, Direction, Domain, and EventType. You can specify multiple values separated by commas.
+Valid values are:
+
+- Action
+- Direction
+- Domain
+- EventType
+
+You can specify multiple values separated by commas. When you specify the values Action or Domain, the value is not displayed in the results (the values in the corresponding columns are blank).
 
 ```yaml
 Type: MultiValuedProperty

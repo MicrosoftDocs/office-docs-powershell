@@ -70,8 +70,8 @@ This example returns information for the specified file hash value.
 ### -ListType
 The ListType parameter specifies the list to view. Valid values are:
 
--FileHash
--Url
+- FileHash
+- Url
 
 ```yaml
 Type: ListType

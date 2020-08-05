@@ -73,6 +73,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AtpPolicyForO365](Get-AtpPolicyForO365.md)
 
+### [Get-ATPTotalTrafficReport](Get-ATPTotalTrafficReport.md)
+
 ### [Get-MailDetailATPReport](Get-MailDetailATPReport.md)
 
 ### [Get-MailTrafficATPReport](Get-MailTrafficATPReport.md)
