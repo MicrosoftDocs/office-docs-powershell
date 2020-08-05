@@ -94,6 +94,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ExternalUserExpireInDays <Int32>]
  [-EmailAttestationRequired <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
+ [-BlockUserInfoVisibility]
  [<CommonParameters>]
 ```
 
@@ -1678,6 +1679,21 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -BlockUserInfoVisibility
+
+This feature has not yet been rolled out to Production. Attempting to set this parameter before rollout is complete will result in an error message. More details on this feature will be available on release.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 
 ### CommonParameters
 
