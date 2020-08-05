@@ -47,20 +47,21 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
-  
-  > [!NOTE]
-  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
+  **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
+
+  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
 
   ```dos
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
+  If you don't see the value `Basic = true`, you need to run this command **in a Command Prompt** (not in Windows PowerShell) to enable Basic authentication for WinRM:
 
   ```dos
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
+
+  **Note**: If you'd rather run the command in Windows PowerShell, enclose this part of the command in quotation marks: `'@{Basic="true"}'`.
 
   If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
 
@@ -69,7 +70,10 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 ## Install the Exchange Online Remote PowerShell Module
 
 > [!NOTE]
-> The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect. <br/><br/> If your installed version of the Exchange Online Remote PowerShell Module doesn't have the **Connect-IPPSSession** cmdlet, you need to install the latest version of the module.
+> 
+> - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+> 
+> - If your installed version of the Exchange Online Remote PowerShell Module doesn't have the **Connect-IPPSSession** cmdlet, you need to install the latest version of the module.
 
 You need to do the following steps in a browser that supports ClickOnce (for example, Internet Explorer or Edge):
 
@@ -100,9 +104,11 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
    - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the location of your Microsoft 365 organization as described in the following table:
 
    |**Microsoft 365 offering**|**_ConnectionUri_ parameter value**|**_AzureADAuthorizationEndPointUri_ parameter value**|
-   |:-----|:-----|:-----|
+   |---|---|---|
    |Microsoft 365|Not used |Not used|
    |Office 365 Germany|`https://ps.compliance.protection.outlook.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
+   |Microsoft 365 GCC High|`https://ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
+   |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
 
    This example connects to Security & Compliance Center PowerShell in Microsoft 365 using the account chris@contoso.com.
 

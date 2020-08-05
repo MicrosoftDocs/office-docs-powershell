@@ -184,6 +184,8 @@ Email phish EventTypes:
 
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
+- Dmarc (Indicates a message for which the sender was marked as not authenticated by DMARC.)
+
 - Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
 - User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
@@ -216,7 +218,7 @@ Content malware EventTypes:
 
 - AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP/E5.)
 
-\* These features require a standalone Office 365 ATP or E5 subscription.
+\* These features require an E5 subscription or an Office 365 ATP add-on.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 

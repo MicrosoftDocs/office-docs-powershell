@@ -75,6 +75,12 @@ After the Connect-ExchangeOnline command is successful, you can run ExO V2 modul
 ### -AzureADAuthorizationEndpointUri
 The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens.
 
+- For Exchange Online PowerShell in Office 365 Germany, use the value <https://login.microsoftonline.de/common> for this parameter.
+
+- For Exchange Online PowerShell in Microsoft 365 GCC High and Microsoft 365 DoD, use the value <https://login.microsoftonline.us/common> for this parameter.
+
+To connect to other Exchange PowerShell environments (for example, Security & Compliance Center PowerShell or standalone Exchange Online Protection PowerShell), use this parameter with the [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -106,6 +112,14 @@ Accept wildcard characters: False
 
 ### -ConnectionUri
 The ConnectionUri parameter specifies the connection endpoint for the remote PowerShell session.
+
+- For Exchange Online PowerShell in Office 365 Germany, use the value <https://outlook.office.de/PowerShell-LiveID> for this parameter.
+
+- For Exchange Online PowerShell in Microsoft 365 GCC High, use the value <https://outlook.office365.us/powershell-liveid> for this parameter.
+
+- For Exchange Online PowerShell in Microsoft 365 DoD, use the value <https://webmail.apps.mil/powershell-liveid> for this parameter.
+
+To connect to other Exchange PowerShell environments (for example, Security & Compliance Center PowerShell or standalone Exchange Online Protection PowerShell), use this parameter with the [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
 
 ```yaml
 Type: String
