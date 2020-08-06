@@ -1131,6 +1131,8 @@ When you enter a value, qualify the value with one of the following units:
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
+The embedded images are treated as attachments (for example, messages with a picture in the signature); for this reason, we do not recommend using a very small value since unexpected messages will be blocked.
+
 ```yaml
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
