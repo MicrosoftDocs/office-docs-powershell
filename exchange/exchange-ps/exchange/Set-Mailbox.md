@@ -4887,6 +4887,9 @@ The RetentionComment parameter specifies a comment that's displayed in Outlook r
 
 This comment can only be set if the RetentionHoldEnabled parameter is set to $true. This comment should be localized to the user's preferred language. If the comment contains spaces, enclose the comment in quotation marks (").
 
+> [!NOTE]
+> On Exchange Online the RetentionComment parameter is associated with Litigation Hold (LitigationHoldEnabled). RetentionHoldEnabled does not need to be $true when setting the RetentionComment on Exchange Online.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
