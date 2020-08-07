@@ -4885,10 +4885,11 @@ Accept wildcard characters: False
 ### -RetentionComment
 The RetentionComment parameter specifies a comment that's displayed in Outlook regarding the user's retention hold status.
 
-This comment can only be set if the RetentionHoldEnabled parameter is set to $true. This comment should be localized to the user's preferred language. If the comment contains spaces, enclose the comment in quotation marks (").
+In on-premises Exchange, you can only use this parameter if the RetentionHoldEnabled parameter is set to $true.
 
-> [!NOTE]
-> On Exchange Online the RetentionComment parameter is associated with Litigation Hold (LitigationHoldEnabled). RetentionHoldEnabled does not need to be $true when setting the RetentionComment on Exchange Online.
+In Exchange Online, this parameter is associated with Litigation Hold (the LitigationHoldEnabled parameter), so you don't need to set the RetentionHoldEnabled parameter to $true when you use this parameter.
+
+This comment should be localized to the user's preferred language. If the comment contains spaces, enclose the comment in quotation marks (").
 
 ```yaml
 Type: String
