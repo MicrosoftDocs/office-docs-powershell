@@ -1199,18 +1199,14 @@ This parameter is available only in the cloud-based service.
 The SmtpClientAuthenticationDisabled parameter specifies whether to disable authenticated SMTP (SMTP AUTH) for the whole organization. Examples of clients and services that require authenticated SMTP to send email messages include:
 
 - POP3 and IMAP4 clients.
-
 - Devices with scan to email capability.
-
 - Workflow applications that send email notifications.
-
 - Online services that send messages using internal email addresses in the organization.
 
 Valid values for this parameter are:
 
-- $true: Authenticated SMTP is disabled.
-
-- $false: Authenticated SMTP is enabled. This is the default value.
+- $true: Authenticated SMTP is disabled. This is the default value for organizations created after January 2020.
+- $false: Authenticated SMTP is enabled.
 
 The corresponding parameter that controls authenticated SMTP on individual mailboxes is the SmtpClientAuthenticationDisabled parameter on the Set-CASMailbox cmdlet. The default mailbox value is blank ($null), which means the mailbox setting is controlled by this organizational setting.
 

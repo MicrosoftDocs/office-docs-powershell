@@ -1,5 +1,5 @@
 - name: Home
-  href: index.md
+  href: index.yml
   items:
   - name: Exchange Server PowerShell
     href: exchange-management-shell.md
