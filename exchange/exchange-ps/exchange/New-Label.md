@@ -647,7 +647,13 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionDoubleKeyEncryptionUrl
-This parameter is reserved for internal Microsoft use.
+The feature for this parameter is currently in Public Preview, and is not available to everyone.
+
+The EncryptionDoubleKeyEncryptionUrl parameter specifies the Double Key Encryption endpoint URL.
+
+You can't remove the URL after the label has been created; you can only modify it.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
