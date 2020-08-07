@@ -13,14 +13,14 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn about the available property sets in the Exchange Online PowerShell V2 module."
+description: "Admins can lear about the property sets that are available in the Get-EXO* cmdlets in the Exchange Online PowerShell V2 module."
 ---
 
 # Property sets in Exchange Online PowerShell V2 cmdlets
 
-This topic describes the property sets that are available in the new cmdlets in the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md). For more information about property sets, see [Properties and property sets in the EXO V2 module](exchange-online-powershell-v2.md#properties-and-property-sets-in-the-exo-v2-module).
+This topic describes the property sets that are available in the **Get-EXO\*** cmdlets in the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md). For more information about property sets, see [Properties and property sets in the EXO V2 module](exchange-online-powershell-v2.md#properties-and-property-sets-in-the-exo-v2-module).
 
-For more information about filtering in the EXO V2 module, see [Filters in the Exchange Online V2 module](filters-v2.md).
+For more information about filtering in the EXO V2 module, see [Filters in the EXO V2 module](filters-v2.md).
 
 ## Get-EXOCasMailbox property sets
 
@@ -96,6 +96,22 @@ For more information, see:
 
 - [Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/get-mailbox)
 
+## Get-EXOMailboxStatistics property sets
+
+The available property sets for the **Get-EXOMailboxStatistics** cmdlet and the properties they contain are described in the following table:
+
+|||
+|:-----|:-----|
+|**PropertySet**|**Properties**|
+|Minimum|DeletedItemCount <br/> DisplayName <br/> ItemCount <br/> MailboxGuid <br/> TotalDeletedItemSize <br/> TotalItemSize|
+|All|AssociatedItemCount <br/> AttachmentTableAvailableSize <br/> AttachmentTableTotalSize <br/> DatabaseIssueWarningQuota <br/> DatabaseName <br/> DatabaseProhibitSendQuota <br/> DatabaseProhibitSendReceiveQuota <br/> DeletedItemCount <br/> DisconnectDate <br/> DisconnectReason <br/> DisplayName <br/> DumpsterMessagesPerFolderCountReceiveQuota <br/> DumpsterMessagesPerFolderCountWarningQuota <br/> ExternalDirectoryOrganizationId <br/> FastIsEnabled <br/> FolderHierarchyChildrenCountReceiveQuota <br/> FolderHierarchyChildrenCountWarningQuota <br/> FolderHierarchyDepthReceiveQuota <br/> FolderHierarchyDepthWarningQuota <br/> FoldersCountReceiveQuota <br/> FoldersCountWarningQuota <br/> IsAbandonedMoveDestination <br/> IsArchiveMailbox <br/> IsDatabaseCopyActive <br/> IsHighDensityShard <br/> IsMoveDestination <br/> IsQuarantined <br/> ItemCount <br/> LastLoggedOnUserAccount <br/> LastLogoffTime <br/> LastLogonTime <br/> LegacyDN <br/> MailboxGuid <br/> MailboxMessagesPerFolderCountReceiveQuota <br/> MailboxMessagesPerFolderCountWarningQuota <br/> MailboxType <br/> MailboxTypeDetail <br/> MessageTableAvailableSize <br/> MessageTableTotalSize <br/> NamedPropertiesCountQuota <br/> NeedsToMove <br/> OtherTablesAvailableSize <br/> OtherTablesTotalSize <br/> OwnerADGuid <br/> QuarantineClients <br/> QuarantineDescription <br/> QuarantineEnd <br/> QuarantineFileVersion <br/> QuarantineLastCrash <br/> ResourceUsageRollingAvgDatabaseReads <br/> ResourceUsageRollingAvgRop <br/> ResourceUsageRollingClientTypes <br/> ServerName <br/> StorageLimitStatus <br/> SystemMessageCount <br/> SystemMessageSize <br/> SystemMessageSizeShutoffQuota <br/> SystemMessageSizeWarningQuota <br/> TotalDeletedItemSize <br/> TotalItemSize|
+
+For more information, see:
+
+- [Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxstatistics)
+
+- [Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-mailboxstatistics)
+
 ## Get-EXORecipient property sets
 
 The available property sets for the **Get-EXORecipient** cmdlet and the properties they contain are described in the following table:
@@ -118,19 +134,3 @@ For more information, see:
 - [Get-EXORecipient](https://docs.microsoft.com/powershell/module/exchange/get-exorecipient)
 
 - [Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/get-recipient)
-
-### Get-EXOMailboxStatistics property sets
-
-The available property sets for the **Get-EXOMailboxStatistics** cmdlet and the properties they contain are described in the following table:
-
-|||
-|:-----|:-----|
-|**PropertySet**|**Properties**|
-|Minimum|DeletedItemCount <br/> DisplayName <br/> ItemCount <br/> MailboxGuid <br/> TotalDeletedItemSize <br/> TotalItemSize|
-|All|AssociatedItemCount <br/> AttachmentTableAvailableSize <br/> AttachmentTableTotalSize <br/> DatabaseIssueWarningQuota <br/> DatabaseName <br/> DatabaseProhibitSendQuota <br/> DatabaseProhibitSendReceiveQuota <br/> DeletedItemCount <br/> DisconnectDate <br/> DisconnectReason <br/> DisplayName <br/> DumpsterMessagesPerFolderCountReceiveQuota <br/> DumpsterMessagesPerFolderCountWarningQuota <br/> ExternalDirectoryOrganizationId <br/> FastIsEnabled <br/> FolderHierarchyChildrenCountReceiveQuota <br/> FolderHierarchyChildrenCountWarningQuota <br/> FolderHierarchyDepthReceiveQuota <br/> FolderHierarchyDepthWarningQuota <br/> FoldersCountReceiveQuota <br/> FoldersCountWarningQuota <br/> IsAbandonedMoveDestination <br/> IsArchiveMailbox <br/> IsDatabaseCopyActive <br/> IsHighDensityShard <br/> IsMoveDestination <br/> IsQuarantined <br/> ItemCount <br/> LastLoggedOnUserAccount <br/> LastLogoffTime <br/> LastLogonTime <br/> LegacyDN <br/> MailboxGuid <br/> MailboxMessagesPerFolderCountReceiveQuota <br/> MailboxMessagesPerFolderCountWarningQuota <br/> MailboxType <br/> MailboxTypeDetail <br/> MessageTableAvailableSize <br/> MessageTableTotalSize <br/> NamedPropertiesCountQuota <br/> NeedsToMove <br/> OtherTablesAvailableSize <br/> OtherTablesTotalSize <br/> OwnerADGuid <br/> QuarantineClients <br/> QuarantineDescription <br/> QuarantineEnd <br/> QuarantineFileVersion <br/> QuarantineLastCrash <br/> ResourceUsageRollingAvgDatabaseReads <br/> ResourceUsageRollingAvgRop <br/> ResourceUsageRollingClientTypes <br/> ServerName <br/> StorageLimitStatus <br/> SystemMessageCount <br/> SystemMessageSize <br/> SystemMessageSizeShutoffQuota <br/> SystemMessageSizeWarningQuota <br/> TotalDeletedItemSize <br/> TotalItemSize|
-
-For more information, see:
-
-- [Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxstatistics)
-
-- [Get-MailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-mailboxstatistics)

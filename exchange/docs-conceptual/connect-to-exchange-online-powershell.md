@@ -1,137 +1,120 @@
 ---
-title: "Connect to Exchange Online PowerShell with Basic authentication"
-ms.author: chrisda
+title: Connect to Exchange Online PowerShell
 author: chrisda
 manager: dansimp
-ms.date: 7/10/2017
+ms.date:
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online
+ms.reviewer: navgupta
 localization_priority: Priority
 ms.collection: Strat_EX_Admin
 ms.custom:
-ms.assetid: c8bea338-6c1a-4bdf-8de0-7895d427ee5b
+ms.assetid:
 search.appverid: MET150
-description: "Learn how to use remote PowerShell to connect to Exchange Online with Basic authentication."
+description: "Learn how to use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell with modern authentication and/or multi-factor authentication (MFA)."
 ---
 
-# Connect to Exchange Online PowerShell with Basic authentication
+# Connect to Exchange Online PowerShell using the EXO V2 module
 
-Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
+The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the EXO V2 module, see [About the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
 
-> [!NOTE]
-> 
-> - We're eventually going to [disable Basic authentication in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), and the connection method described in this topic uses Basic authentication. We recommend that you use the [Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md) to connect to Exchange Online PowerShell, because it uses modern authentication in all scenarios.
-> 
-> - The Exchange Online PowerShell V2 module works with multi-factor authentication (MFA). For MFA connection instructions using the older Exchange Online Remote PowerShell Module, see [Connect to Exchange Online PowerShell using multi-factor authentication](mfa-connect-to-exchange-online-powershell.md).
-> 
-> - If you're a standalone Exchange Online Protection (EOP) customer (for example, you're using EOP to protect your on-premises email environment), use the connection instructions in [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md). If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, EOP is one of the included services, and the connection instructions in this topic will work for you.
+This topic contains instructions for how to connect to Exchange Online PowerShell using the EXO V2 module.
+
+To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), see [Connect to Exchange Online PowerShell using Basic authentication](basic-auth-connect-to-exo-powershell.md).
 
 ## What do you need to know before you begin?
 
-- Estimated time to complete: 5 minutes
+- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
-- You can use the following versions of Windows:
+- The required _ConnectionUri_ and _AzureADAuthorizationEndPointUri_ parameter values depend on the nature of your Microsoft 365 organization as described in the following table:
 
-  - Windows 10
+  |**Microsoft 365 offering**|**_ConnectionUri_ value**|**_AzureADAuthorizationEndPointUri_ value**|
+  |:-----|:-----|:-----|
+  |Microsoft 365 or Microsoft 365 GCC|Not used|Not used|
+  |Microsoft 365 GCC High|`https://outlook.office365.us/powershell-liveid`|`https://login.microsoftonline.us/common`|
+  |Microsoft 365 DoD|`https://webmail.apps.mil/powershell-liveid`|`https://login.microsoftonline.us/common`|
+  |Office 365 Germany|`https://outlook.office.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
 
-  - Windows 8.1
+## Connect to Exchange Online PowerShell using MFA
 
-  - Windows Server 2019
+If you account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online PowerShell without using MFA](#connect-to-exchange-online-powershell-without-using-mfa) section.
 
-  - Windows Server 2016
+1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
-  - Windows Server 2012 or Windows Server 2012 R2
-
-  - Windows 7 Service Pack 1 (SP1)<sup>*</sup>
-
-  - Windows Server 2008 R2 SP1<sup>*</sup>
-
-  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595), [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
-
-- Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
-
-  > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
-
-  To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
-
-  ```PowerShell
-  Set-ExecutionPolicy RemoteSigned
-  ```
-
-- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
-
-  **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
-
-  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
-  
-  ```dos
-  winrm get winrm/config/client/auth
-  ```
-
-  If you don't see the value `Basic = true`, you need to run this command **in a Command Prompt** (not in Windows PowerShell) to enable Basic authentication for WinRM:
-
-  ```dos
-  winrm set winrm/config/client/auth @{Basic="true"}
-  ```
-
-  **Note**: If you'd rather run the command in Windows PowerShell, enclose this part of the command in quotation marks: `'@{Basic="true"}'`.
-
-  If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
-
-  > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
-
-> [!TIP]
-> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
-
-## Connect to Exchange Online
-
-1. On your local computer, open Windows PowerShell and run the following command.
-
-   ```PowerShell
-   $UserCredential = Get-Credential
+   ```powershell
+   Import-Module ExchangeOnlineManagement
    ```
 
-   In the **Windows PowerShell Credential Request** dialog box, type your work or school account and password, and then click **OK**.
+2. The command that you need to run uses the following syntax:
 
-2. Run the following command:
-
-   ```PowerShell
-   $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+   ```powershell
+   Connect-ExchangeOnline -UserPrincipalName <UPN> -ShowProgress $true [-ConnectionUri <Value>] [-AzureADAuthorizationEndPointUri <Value>]
    ```
 
-   **Notes**:
+   - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
+   - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUri_ parameters values are described in the table in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
 
-   - For Office 365 operated by 21Vianet, use the _ConnectionUri_ value: `https://partner.outlook.cn/PowerShell`
+   **This example connects to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**.
 
-   - For Office 365 Germany, use the _ConnectionUri_ value: `https://outlook.office.de/powershell-liveid/`
-
-   - For Microsoft 365 GCC High, use the _ConnectionUri_ value: `https://outlook.office365.us/powershell-liveid/`
-
-   - For Microsoft 365 DoD, use the _ConnectionUri_ value: `https://webmail.apps.mil/powershell-liveid`
-
-   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
-
-     Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
-
-     For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
-
-3. Run the following command:
-
-   ```PowerShell
-   Import-PSSession $Session -DisableNameChecking
+   ```powershell
+   Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -ShowProgress $true
    ```
+
+   **This example connects to Exchange Online PowerShell in a Microsoft GCC High organization**.
+
+   ```powershell
+   Connect-ExchangeOnline -UserPrincipalName laura@blueyonderairlines.us -ShowProgress $true -ConnectionUri https://outlook.office365.us/powershell-liveid -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common
+   ```
+
+   **This example connects to Exchange Online PowerShell in a Microsoft 365 DoD organization**.
+
+   ```powershell
+   Connect-ExchangeOnline -UserPrincipalName julia@adatum.mil -ShowProgress $true -ConnectionUri https://webmail.apps.mil/powershell-liveid -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common
+   ```
+
+   **This example connects to Exchange Online PowerShell in an Office 365 Germany organization**.
+
+   ```powershell
+   Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.de -ShowProgress $true -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   ```
+
+For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
 
 ```PowerShell
-Remove-PSSession $Session
+Disconnect-ExchangeOnline
 ```
+
+## Connect to Exchange Online PowerShell without using MFA
+
+If your account doesn't use multi-factor authentication, use the steps in this section.
+
+1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
+
+   ```powershell
+   Import-Module ExchangeOnlineManagement
+   ```
+
+2. Run the following command:
+
+   ```powershell
+   $UserCredential = Get-Credential
+   ```
+
+   In the **Windows PowerShell Credential Request** dialog box that appears, type your work or school account and password, and then click **OK**.
+
+3. Run the following command:
+
+     ```powershell
+     Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true
+     ```
 
 ## How do you know this worked?
 
-After Step 3, the Exchange Online cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online cmdlet, for example, **Get-Mailbox**, and see the results.
+The Exchange Online cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online PowerShell cmdlet, for example, **Get-EXOMailbox**, and see the results.
 
 If you receive errors, check the following requirements:
 
@@ -139,24 +122,8 @@ If you receive errors, check the following requirements:
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to your Exchange Online organization.
 
-- The account you use to connect to Exchange Online must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
+- The account you use to connect to must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 
 - If your organization uses federated authentication, and your identity provider (IDP) and/or security token service (STS) isn't publicly available, you can't use a federated account to connect to Exchange Online PowerShell. Instead, create and use a non-federated account in Microsoft 365 to connect to Exchange Online PowerShell.
-
-## See also
-
-The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more information about these cmdlets, see the following topics.
-
-- [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential)
-
-- [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)
-
-- [Import-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession)
-
-- [Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)
-
-- [Set-ExecutionPolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
-
-For more information about managing Microsoft 365, see [Manage Microsoft 365 and Office 365](https://docs.microsoft.com/Office365/).
