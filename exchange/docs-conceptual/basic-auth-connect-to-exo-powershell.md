@@ -1,5 +1,5 @@
 ---
-title: "Connect to Exchange Online PowerShell using Basic auth"
+title: "Basic auth - Connect to Exchange Online PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -11,11 +11,12 @@ localization_priority: Priority
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
+ROBOTS: NOINDEX
 search.appverid: MET150
 description: "Learn how to use remote PowerShell to connect to Exchange Online with Basic authentication."
 ---
 
-# Connect to Exchange Online PowerShell using Basic authentication
+# Basic auth - Connect to Exchange Online PowerShell
 
 > [!NOTE]
 > The connection instructions in this topic [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
@@ -46,13 +47,13 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
   To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-  ```PowerShell
+  ```powershell
   Set-ExecutionPolicy RemoteSigned
   ```
 
   You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
@@ -77,11 +78,11 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
-## Connect to Exchange Online
+## Connect to Exchange Online PowerShell
 
 1. On your local computer, open Windows PowerShell and run the following command.
 
-   ```PowerShell
+   ```powershell
    $UserCredential = Get-Credential
    ```
 
@@ -89,18 +90,15 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
 2. Run the following command:
 
-   ```PowerShell
+   ```powershell
    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
    ```
 
    **Notes**:
 
    - For Office 365 operated by 21Vianet, use the _ConnectionUri_ value: `https://partner.outlook.cn/PowerShell`
-
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://outlook.office.de/powershell-liveid/`
-
    - For Microsoft 365 GCC High, use the _ConnectionUri_ value: `https://outlook.office365.us/powershell-liveid/`
-
    - For Microsoft 365 DoD, use the _ConnectionUri_ value: `https://webmail.apps.mil/powershell-liveid`
 
    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
@@ -111,14 +109,14 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
 3. Run the following command:
 
-   ```PowerShell
+   ```powershell
    Import-PSSession $Session -DisableNameChecking
    ```
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
 
-```PowerShell
+```powershell
 Remove-PSSession $Session
 ```
 
@@ -143,13 +141,9 @@ If you receive errors, check the following requirements:
 The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more information about these cmdlets, see the following topics.
 
 - [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential)
-
 - [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)
-
 - [Import-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession)
-
 - [Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)
-
 - [Set-ExecutionPolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)
 
 For more information about managing Microsoft 365, see [Manage Microsoft 365 and Office 365](https://docs.microsoft.com/Office365/).

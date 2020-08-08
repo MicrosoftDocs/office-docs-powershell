@@ -1,5 +1,5 @@
 ---
-title: Connect to Security & Compliance Center PowerShell
+title: Connect to Security & Compliance Center PowerShell using the EXO V2 module
 author: chrisda
 manager: dansimp
 ms.date:
@@ -15,7 +15,7 @@ search.appverid: MET150
 description: "Learn how to use the Exchange Online PowerShell V2 module to connect to Security & Compliance Center PowerShell with modern authentication and/or multi-factor authentication (MFA)."
 ---
 
-# Connect to Security & Compliance Center PowerShell using the EXO V2 module
+# Connect to Security & Compliance Center PowerShell
 
 The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the EXO V2 module, see [About the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
 
@@ -29,12 +29,15 @@ To use the older, less secure remote PowerShell connection instructions that [wi
 
 - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUri_ parameter values depend on the nature of your Microsoft 365 organization as described in the following table:
 
-  |**Microsoft 365 offering**|**_ConnectionUri_ value**|**_AzureADAuthorizationEndPointUri_ value**|
-  |:-----|:-----|:-----|
+  ****
+
+  |Microsoft 365 offering|_ConnectionUri_ value|_AzureADAuthorizationEndPointUri_ value|
+  |---|---|---|
   |Microsoft 365 or Microsoft 365 GCC|Not used|Not used|
   |Microsoft 365 GCC High|`https://ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
   |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
   |Office 365 Germany|`https://ps.compliance.protection.outlook.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
+  |
 
 ## Connect to Security & Compliance PowerShell using MFA
 
@@ -84,7 +87,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](https:/
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
 
-```PowerShell
+```powershell
 Disconnect-ExchangeOnline
 ```
 

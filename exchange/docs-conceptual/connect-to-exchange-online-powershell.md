@@ -84,7 +84,7 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](http
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
 
-```PowerShell
+```powershell
 Disconnect-ExchangeOnline
 ```
 

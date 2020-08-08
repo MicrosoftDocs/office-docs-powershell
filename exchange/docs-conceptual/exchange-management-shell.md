@@ -37,19 +37,14 @@ You only get access to the Exchange cmdlets and parameters that are associated w
 A benefit of remote PowerShell is that you can use Windows PowerShell on a local computer to connect to a remote Exchange server, and import the Exchange cmdlets in the Windows PowerShell session so you can administer Exchange. The only requirements for the computer are:
 
 - A supported operating system for Exchange Server.
-
 - A supported version of the .NET Framework.
-
 - A supported version of the Windows Management Framework (WMF), which includes WinRM and Windows PowerShell.
 
 For details, see the following topics:
 
 - [Exchange 2019 system requirements](https://docs.microsoft.com/Exchange/plan-and-deploy/system-requirements?view=exchserver-2019)
-
 - [Exchange 2016 system requirements](https://docs.microsoft.com/Exchange/plan-and-deploy/system-requirements?view=exchserver-2016)
-
 - [Exchange 2013 system requirements](https://docs.microsoft.com/exchange/exchange-2013-system-requirements-exchange-2013-help)
-
 - [Exchange 2010 system requirements](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/aa996719(v=exchg.141))
 
 However, we recommend that you install the Exchange management tools (which includes the Exchange Management Shell) on any computer that you use to extensively manage Exchange Server. Without the Exchange management tools installed, you need to connect to the remote Exchange server manually, and you don't have access to the additional capabilities that the Exchange management tools provide.
@@ -70,8 +65,10 @@ For more information about Edge Transport servers, see [Edge Transport Servers](
 
 The following table provides links to topics that can help you learn about and use the Exchange Management Shell.
 
-|**Topic**|**Description**|
-|:-----|:-----|
+****
+
+|Topic|Description|
+|---|---|
 |[Open the Exchange Management Shell](open-the-exchange-management-shell.md)|Find and open the Exchange Management Shell on an Exchange server or a computer that has the Exchange management tools installed.|
 |[Connect to Exchange servers using remote PowerShell](connect-to-exchange-servers-using-remote-powershell.md)|Use Windows PowerShell on a local computer to connect to an Exchange server.|
 |[Control remote PowerShell access to Exchange servers](control-remote-powershell-access-to-exchange-servers.md)|Learn how to block or allow users' remote PowerShell access to Exchange servers.|
@@ -79,3 +76,4 @@ The following table provides links to topics that can help you learn about and u
 |[Exchange cmdlet syntax](exchange-cmdlet-syntax.md)|Learn about the structure and syntax of cmdlets in Exchange PowerShell.|
 |[Recipient filters in Exchange Management Shell commands](recipient-filters.md)|Learn about recipient filters in the Exchange Management Shell.|
 |[Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers](use-update-exchangehelp.md)|Learn how to use Update-ExchangeHelp to update help for Exchange cmdlet reference topics on Exchange servers.|
+|

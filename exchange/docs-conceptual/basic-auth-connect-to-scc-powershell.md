@@ -1,5 +1,5 @@
 ---
-title: "Connect to Security & Compliance Center PowerShell using Basic auth"
+title: "Basic auth - Connect to Security & Compliance Center PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -9,11 +9,15 @@ ms.topic: article
 ms.service: o365-security-and-compliance
 localization_priority: Normal
 ms.assetid:
+ROBOTS: NOINDEX
 search.appverid: MET150
 description: "Learn how to connect to Security & Compliance Center PowerShell."
 ---
 
-# Connect to Security & Compliance Center PowerShell using Basic authentication
+# Basic auth - Connect to Security & Compliance Center PowerShell
+
+> [!NOTE]
+> The connection instructions in this topic [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md).
 
 Security & Compliance Center PowerShell allows you to manage your Security & Compliance Center settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to the Security & Compliance Center. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Security & Compliance Center cmdlets into your local Windows PowerShell session so that you can use them.
 
@@ -26,9 +30,9 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 > 
 > - A location condition in an Azure Active Directory conditional access policy restricts your access to trusted IPs.
 > 
-> In these scenarios, you need to download and use the Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md).
+> In these scenarios, you need to download and use the Exchange Online PowerShell V2 module (EXO V2 module) to connect to Security & Compliance Center PowerShell. For instructions, see [Connect to Security & Compliance Center PowerShell using the EXO V2 module](connect-to-scc-powershell.md).
 > 
-> Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+> Some features in the Security & Compliance Center (for example, mailbox archiving) link to existing functionality in Exchange Online. To use PowerShell with these features, you need to connect to Exchange Online PowerShell instead of Security & Compliance Center PowerShell. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 ## What do you need to know before you begin?
 
@@ -54,13 +58,13 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
   To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-  ```PowerShell
+  ```powershell
   Set-ExecutionPolicy RemoteSigned
   ```
 
   You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   **Note** You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
@@ -86,7 +90,7 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
 1. On your local computer, open Windows PowerShell and run the following command:
 
-   ```PowerShell
+   ```powershell
    $UserCredential = Get-Credential
    ```
 
@@ -94,21 +98,19 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
 2. Run the following command:
 
-   ```PowerShell
+   ```powershell
    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
    ```
 
    **Notes**:
 
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`.
-
    - For Microsoft 365 GCC High, use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
-
    - For Microsoft 365 DoD, use the _ConnectionUri_ value: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`.
 
 3. Run the following command:
 
-   ```PowerShell
+   ```powershell
    Import-PSSession $Session -DisableNameChecking
    ```
 
@@ -117,7 +119,7 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
 
-```PowerShell
+```powershell
 Remove-PSSession $Session
 ```
 

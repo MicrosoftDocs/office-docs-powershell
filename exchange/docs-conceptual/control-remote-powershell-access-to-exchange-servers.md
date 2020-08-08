@@ -37,13 +37,13 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
 
 This example disables remote PowerShell access for the user named Therese Lindqvist.
 
-```PowerShell
+```powershell
 Set-User "Therese Lindqvist" -RemotePowerShellEnabled $false
 ```
 
 This example enables remote PowerShell access for the user named Sirirat Kitjakarn.
 
-```PowerShell
+```powershell
 Set-User "Sirirat Kitjakarn" -RemotePowerShellEnabled $true
 ```
 
@@ -59,21 +59,21 @@ To prevent remote PowerShell access for a specific group of existing users, you 
 
 To disable access to remote PowerShell for any number of users based on an existing attribute, use the following syntax:
 
-```PowerShell
+```powershell
 $<VariableName> = <Get-Mailbox | Get-User> -ResultSize unlimited -Filter <Filter>
 ```
 
-```PowerShell
+```powershell
 $<VariableName> | foreach {Set-User -RemotePowerShellEnabled $false}
 ```
 
 This example removes access to remote PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
 
-```PowerShell
+```powershell
 $DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
 ```
 
-```PowerShell
+```powershell
 $DSA | foreach {Set-User -RemotePowerShellEnabled $false}
 ```
 
@@ -81,11 +81,11 @@ $DSA | foreach {Set-User -RemotePowerShellEnabled $false}
 
 To disable access to remote PowerShell for a list of specific users, use the following syntax:
 
-```PowerShell
+```powershell
 $<VariableName> = Get-Content <text file>
 ```
 
-```PowerShell
+```powershell
 $<VariableName> | foreach {Set-User -RemotePowerShellEnabled $false
 ```
 
@@ -95,11 +95,11 @@ This example uses the text file C:\My Documents\NoPowerShell.txt to identify the
 
 After you populate the text file with the user accounts you want to update, run the following commands:
 
-```PowerShell
+```powershell
 $NPS = Get-Content "C:\My Documents\NoPowerShell.txt"
 ```
 
-```PowerShell
+```powershell
 $NPS | foreach {Set-User -RemotePowerShellEnabled $false}
 ```
 
@@ -107,30 +107,30 @@ $NPS | foreach {Set-User -RemotePowerShellEnabled $false}
 
 To view the remote PowerShell access status for a specific user, use the following syntax:
 
-```PowerShell
+```powershell
 Get-User -Identity <UserIdentity> | Format-List RemotePowerShellEnabled
 ```
 
 This example displays the remote PowerShell access status of the user named Sarah Jones.
 
-```PowerShell
+```powershell
 Get-User -Identity "Sarah Jones" | Format-List RemotePowerShellEnabled
 ```
 
 To display the remote PowerShell access status for all users, run the following command:
 
-```PowerShell
+```powershell
 Get-User -ResultSize unlimited | Format-Table -Auto Name,DisplayName,RemotePowerShellEnabled
 ```
 
 To display only those users who don't have access to remote PowerShell, run the following command:
 
-```PowerShell
+```powershell
 Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
 To display only those users who have access to remote PowerShell, run the following command:
 
-```PowerShell
+```powershell
 Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'
 ```

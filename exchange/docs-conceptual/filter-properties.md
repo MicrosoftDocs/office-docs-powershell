@@ -12,43 +12,28 @@ ms.assetid: b02b0005-2fb6-4bc2-8815-305259fa5432
 description: "Learn about the filterable properties for the Filter parameter in Exchange Server and Exchange Online."
 ---
 
-# Filterable properties for the Filter parameter
+# Filterable properties for the Filter parameter on Exchange cmdlets
 
-You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in Exchange Server and Exchange Online. The _Filter_ parameter is available on these recipient cmdlets:
+You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in the Exchange Management Shell (Exchange Server PowerShell) and in Exchange Online PowerShell. The _Filter_ parameter is available on these recipient cmdlets:
 
 - [Get-CASMailbox](../exchange-ps/exchange/Get-CASMailbox.md)
-
 - [Get-Contact](../exchange-ps/exchange/Get-Contact.md)
-
 - [Get-DistributionGroup](../exchange-ps/exchange/Get-DistributionGroup.md)
-
 - [Get-DynamicDistributionGroup](../exchange-ps/exchange/Get-DynamicDistributionGroup.md)
-
 - [Get-Group](../exchange-ps/exchange/Get-Group.md)
-
 - [Get-LinkedUser](../exchange-ps/exchange/Get-LinkedUser.md)
-
 - [Get-Mailbox](../exchange-ps/exchange/Get-Mailbox.md)
-
 - [Get-MailContact](../exchange-ps/exchange/Get-MailContact.md)
-
 - [Get-MailPublicFolder](../exchange-ps/exchange/Get-MailPublicFolder.md)
-
 - [Get-MailUser](../exchange-ps/exchange/Get-MailUser.md)
-
 - [Get-Recipient](../exchange-ps/exchange/Get-Recipient.md)
-
 - [Get-RemoteMailbox](../exchange-ps/exchange/Get-RemoteMailbox.md)
-
 - [Get-SecurityPrincipal](../exchange-ps/exchange/Get-SecurityPrincipal.md)
-
 - [Get-UMMailbox](../exchange-ps/exchange/Get-UMMailbox.md)
-
 - [Get-User](../exchange-ps/exchange/Get-User.md)
-
 - [Get-UnifiedGroup](../exchange-ps/exchange/Get-UnifiedGroup.md)
 
-For more information, see [Recipient filters in Exchange PowerShell commands](recipient-filters.md).
+For more information about recipients filters in Exchange PowerShell, see [Recipient filters in Exchange PowerShell commands](recipient-filters.md).
 
 > [!NOTE]
 > The _Filter_ parameter is also available on other cmdlets (for example, **Get-MailboxStatistics**, **Get-Queue**, and **Get-Message**). However, the property values that are accepted by the _Filter_ parameter on these cmdlets aren't similar to the user and group properties that are described in this topic.
@@ -73,8 +58,12 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
 
-|**Property name**|**LDAP display name**|**Available on cmdlets**|**Value**|**Comments**|
-|:-----|:-----|:-----|:-----|:-----|
+- For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
+
+****
+
+|Property name|LDAP display name|Available on cmdlets|Value|Comments|
+|---|---|---|---|---|
 |_AcceptMessagesOnlyFrom_|_authOrig_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|This filter requires the distinguished name of the individual recipient (a mailbox, mail user, or mail contact). For example, `Get-DistributionGroup -Filter "AcceptMessagesOnlyFrom -eq 'CN=Yuudai Uchida,CN=Users,DC=contoso,DC=com'"` or `Get-DistributionGroup -Filter "AcceptMessagesOnlyFrom -eq 'contoso.com/Users/Angela Gruber'"`. <br/> To find the distinguished name of the individual recipient, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
 |_AcceptMessagesOnlyFromDLMembers_|_dLMemSubmitPerms_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|This filter requires the distinguished name or canonical distinguished name of the group (a distribution group, mail-enabled security group, or dynamic distribution group). For example, `Get-Mailbox -Filter "AcceptMessagesOnlyFromDLMembers -eq 'CN=Marketing Department,CN=Users,DC=contoso,DC=com'"`. or `Get-Mailbox -Filter "AcceptMessagesOnlyFromDLMembers -eq 'contoso.com/Users/Marketing Department'"`. <br/> To find the distinguished name of the group, replace _\<GroupIdentity\>_ with the name, alias, or email address of the group, and run one of these commands: `Get-DistributionGroup -Identity "<GroupIdentity>" | Format-List Name,DistinguishedName` or `Get-DynamicDistributionGroup -Identity "<GroupIdentity>" | Format-List Name,DistinguishedName`. <br/> Although this is a multivalued property, the filter will return a match if the property _contains_ the specified value.|
 |_ActiveSyncAllowedDeviceIDs_|_msExchMobileAllowedDeviceIds_|**Get-CASMailbox**|String (wildcards accepted) or `$null`|A device ID is a text string that uniquely identifies the device. Use the **Get-MobileDevice** cmdlet to see the devices that have ActiveSync partnerships with a mailbox. To see the device IDs on a mailbox, replace _\<MailboxIdentity\>_ with the name, alias, or email address of the mailbox, and run this command: `Get-MobileDevice -Mailbox <MailboxIdentity> | Format-List`. <br/> After you have the device ID value, you can use it in the filter. For example, `Get-CasMailbox -Filter "(ActiveSyncAllowedDeviceIDs -like '*text1') -or (ActiveSyncAllowedDeviceIDs -eq 'text2'"`.|
@@ -310,9 +299,8 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 |_WhenSoftDeleted_|_msExchWhenSoftDeletedTime_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|This filter requires the _SoftDeleted_ switch in the command for mailboxes. <br/> For example, `Get-Mailbox -SoftDeleted -Filter "WhenSoftDeleted -gt '8/1/2017 2:00:00 PM'"`.|
 |_WindowsEmailAddress_|_mail_|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|String (wildcards accepted) or `$null`|For example, `Get-Mailbox -Filter "WindowsEmailAddress -like '*@fabrikam.com'"`.|
 |_WindowsLiveID_|_msExchWindowsLiveID_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|For example, `Get-Mailbox -Filter "WindowsEmailAddress -like '*@fabrikam.onmicrosoft.com'"`.|
+|
 
 ## For more information
 
-Exchange 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://techcommunity.microsoft.com/t5/exchange-team-blog/need-help-converting-your-ldap-filters-to-opath/ba-p/595108).
-
-For more information about the syntax that can be used within OPATH filters, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
+Exchange Server 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://techcommunity.microsoft.com/t5/exchange-team-blog/need-help-converting-your-ldap-filters-to-opath/ba-p/595108).

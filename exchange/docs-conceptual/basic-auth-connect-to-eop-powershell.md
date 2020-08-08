@@ -1,5 +1,5 @@
 ---
-title: "Connect to Exchange Online Protection PowerShell using Basic auth"
+title: "Basic auth - Connect to Exchange Online Protection PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -9,13 +9,14 @@ ms.topic: article
 ms.service: eop
 localization_priority: Normal
 ms.assetid:
+ROBOTS: NOINDEX
 description: "Use remote PowerShell to connect to a standalone Exchange Online Protection (EOP) organization without mailboxes in Exchange Online."
 ---
 
-# Connect to Exchange Online Protection PowerShell using Basic authentication
+# Bssic auth - Connect to Exchange Online Protection PowerShell
 
 > [!NOTE]
-> The connection instructions in this topic [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online Protection PowerShell using the EXO V2 module](connect-to-exchange-online-protection-powershell.md).
+> The connection instructions in this topic [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Exchange Online Protection PowerShell. For instructions, see [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
 
 In standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, standalone EOP PowerShell allows you to manage your EOP organization from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to EOP. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the EOP cmdlets into your local Windows PowerShell session so that you can use them.
 
@@ -23,7 +24,7 @@ In standalone Exchange Online Protection (EOP) organizations without Exchange On
 
 - Estimated time to complete: 5 minutes
 
-- The instructions in this topic are for organizations without Exchange Online mailboxes (for example, you have a standalone EOP subscription to protect your on-premises email environment). If you have a Microsoft 365 subscription that includes Exchange Online mailboxes, the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
+- **The procedures in this topic are only for EOP that don't have Exchange Online mailboxes** (for example, you have a standalone EOP subscription to protect your on-premises email environment). If you have a Microsoft 365 subscription that includes Exchange Online mailboxes, the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
 
 - You can use the following versions of Windows:
 
@@ -43,13 +44,13 @@ In standalone Exchange Online Protection (EOP) organizations without Exchange On
 
   To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-  ```PowerShell
+  ```powershell
   Set-ExecutionPolicy RemoteSigned
   ```
 
   You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
@@ -78,7 +79,7 @@ In standalone Exchange Online Protection (EOP) organizations without Exchange On
 
 1. On your local computer, open Windows PowerShell and run the following command:
 
-    ```PowerShell
+    ```powershell
     $UserCredential = Get-Credential
     ```
 
@@ -86,7 +87,7 @@ In standalone Exchange Online Protection (EOP) organizations without Exchange On
 
 2. Run the following command:
 
-    ```PowerShell
+    ```powershell
     $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
     ```
 
@@ -98,14 +99,14 @@ In standalone Exchange Online Protection (EOP) organizations without Exchange On
 
 3. Run the following command:
 
-   ```PowerShell
+   ```powershell
    Import-PSSession $Session -DisableNameChecking
    ```
 
    > [!NOTE]
    > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
 
-   ```PowerShell
+   ```powershell
    Remove-PSSession $Session
    ```
 
@@ -136,11 +137,7 @@ If you receive errors, check the following requirements:
 The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more information about these cmdlets, see the following topics.
 
 - [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential)
-
 - [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)
-
 - [Import-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession)
-
 - [Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)
-
 - [Set-ExecutionPolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)

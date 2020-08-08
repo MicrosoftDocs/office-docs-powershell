@@ -27,6 +27,8 @@ Exchange Online PowerShell enables you to manage your Exchange Online organizati
 
 - For detailed information about OPath filter syntax in Exchange Online, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
+- You can also use Client Access Rules to block PowerShell access to Exchange Online. For details, see [Client Access Rules in Exchange Online](https://docs.microsoft.com/Exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules).
+
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
@@ -34,13 +36,13 @@ Exchange Online PowerShell enables you to manage your Exchange Online organizati
 
 This example disables access to Exchange Online PowerShell for the user david@contoso.com.
 
-```PowerShell
+```powershell
 Set-User -Identity david@contoso.com -RemotePowerShellEnabled $false
 ```
 
 This example enables access to Exchange Online PowerShell for the user david@contoso.com.
 
-```PowerShell
+```powershell
 Set-User -Identity david@contoso.com -RemotePowerShellEnabled $true
 ```
 
@@ -56,21 +58,21 @@ To prevent access to Exchange Online PowerShell for a specific group of existing
 
 To disable access to Exchange Online PowerShell for any number of users based on an existing attribute, use the following syntax:
 
-```PowerShell
+```powershell
 $<VariableName> = <Get-Mailbox | Get-User> -ResultSize unlimited -Filter <Filter>
 ```
 
-```PowerShell
+```powershell
 $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 This example removes access to Exchange Online PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
 
-```PowerShell
+```powershell
 $DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
 ```
 
-```PowerShell
+```powershell
 $DSA | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
@@ -78,11 +80,11 @@ $DSA | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 
 To disable access to Exchange Online PowerShell for a list of specific users, use the following syntax:
 
-```PowerShell
+```powershell
 $<VariableName> = Get-Content <text file>
 ```
 
-```PowerShell
+```powershell
 $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
@@ -92,11 +94,11 @@ This example uses the text file C:\My Documents\NoPowerShell.txt to identify the
 
 After you populate the text file with the user accounts you want to update, run the following commands:
 
-```PowerShell
+```powershell
 $NPS = Get-Content "C:\My Documents\NoPowerShell.txt"
 ```
 
-```PowerShell
+```powershell
 $NPS | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
 ```
 
@@ -104,30 +106,30 @@ $NPS | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShel
 
 To view the Exchange Online PowerShell access status for a specific user, use the following syntax:
 
-```PowerShell
+```powershell
 Get-User -Identity <UserIdentity> | Format-List RemotePowerShellEnabled
 ```
 
 This example displays the Exchange Online PowerShell access status of the user named Sarah Jones.
 
-```PowerShell
+```powershell
 Get-User -Identity "Sarah Jones" | Format-List RemotePowerShellEnabled
 ```
 
 To display the Exchange Online PowerShell access status for all users, run the following command:
 
-```PowerShell
+```powershell
 Get-User -ResultSize unlimited | Format-Table -Auto Name,DisplayName,RemotePowerShellEnabled
 ```
 
 To display only those users who don't have access to Exchange Online PowerShell, run the following command:
 
-```PowerShell
+```powershell
 Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
 To display only those users who have access to Exchange Online PowerShell, run the following command:
 
-```PowerShell
+```powershell
 Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'
 ```

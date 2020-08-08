@@ -1,5 +1,5 @@
 ---
-title: "MFA - Connect to Security & Compliance Center PowerShell using the old module"
+title: "V1 module - Connect to Security & Compliance Center PowerShell using MFA"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -8,12 +8,13 @@ ms.audience: Admin
 ms.topic: article
 ms.service: o365-security-and-compliance
 localization_priority: Normal
-ms.assetid: 8e11c808-e734-4874-ac94-e5251ea85c19
+ms.assetid:
 search.appverid: MET150
-description: "Admins can learn how to use the old Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell for multi-factor authentication (MFA) or federated authentication."
+ROBOTS: NOINDEX
+description: "Admins can learn how to use the older Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell for multi-factor authentication (MFA) or federated authentication."
 ---
 
-# MFA - Connect to Security & Compliance Center PowerShell using the old module
+# V1 module - Connect to Security & Compliance Center PowerShell using MFA
 
 > [!NOTE]
 > The older Exchange Online Remote PowerShell Module that's described in this topic will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md).
@@ -42,7 +43,7 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
   <sup>\*</sup> This version of Windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595), [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
@@ -92,7 +93,7 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 2. The command that you need to run uses the following syntax:
 
-   ```PowerShell
+   ```powershell
    Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
    ```
 
@@ -109,13 +110,13 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
    This example connects to Security & Compliance Center PowerShell in Microsoft 365 using the account chris@contoso.com.
 
-   ```PowerShell
+   ```powershell
    Connect-IPPSSession -UserPrincipalName chris@contoso.com
    ```
 
    This example connects to Security & Compliance Center PowerShell in Office 365 Germany using the account lukas@fabrikam.com.
 
-   ```PowerShell
+   ```powershell
    Connect-IPPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://ps.compliance.protection.outlook.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
    ```
 
@@ -131,13 +132,13 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 5. **(Optional)**: If you want to connect to an Exchange Online PowerShell module session in the same window, you need to run
 
-   ```PowerShell
+   ```powershell
    $EXOSession=New-ExoPSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
    ```
 
    and then import the Exchange Online session into the current one using an specific prefix
 
-   ```PowerShell
+   ```powershell
    Import-PSSession $EXOSession -Prefix EXO
    ```
 

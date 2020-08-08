@@ -49,7 +49,7 @@ If you don't have the Exchange management tools installed on your local computer
 
   To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-  ```PowerShell
+  ```powershell
   Set-ExecutionPolicy RemoteSigned
   ```
 
@@ -62,7 +62,7 @@ If you don't have the Exchange management tools installed on your local computer
 
 1. On your local computer, open Windows PowerShell, and run the following command:
 
-   ```PowerShell
+   ```powershell
    $UserCredential = Get-Credential
    ```
 
@@ -70,7 +70,7 @@ If you don't have the Exchange management tools installed on your local computer
 
 2. Replace `<ServerFQDN>` with the fully qualified domain name of your Exchange server (for example, `mailbox01.contoso.com`) and run the following command:
 
-   ```PowerShell
+   ```powershell
    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://<ServerFQDN>/PowerShell/ -Authentication Kerberos -Credential $UserCredential
    ```
 
@@ -78,14 +78,14 @@ If you don't have the Exchange management tools installed on your local computer
 
 3. Run the following command:
 
-   ```PowerShell
+   ```powershell
    Import-PSSession $Session -DisableNameChecking
    ```
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
 
-```PowerShell
+```powershell
 Remove-PSSession $Session
 ```
 

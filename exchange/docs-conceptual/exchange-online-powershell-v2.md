@@ -13,7 +13,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Admins can learn about the installation, maintenance, and inner workings of the Exchange Online PowerShell V2 module that they use to connect to all Exchange-related PowerShell environments in Microsoft 365."
+description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V2 module that they use to connect to all Exchange-related PowerShell environments in Microsoft 365."
 ---
 
 # About the Exchange Online PowerShell V2 module
@@ -22,11 +22,11 @@ The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses
 
 For connection instructions using the EXO V2 module, see the following topics:
 
-- [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
+- [Connect to Exchange Online PowerShell using the EXO V2 module](connect-to-exchange-online-powershell.md)
 
-- [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md)
+- [Connect to Security & Compliance Center PowerShell using the EXO V2 module](connect-to-scc-powershell.md)
 
-- [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md)
+- [Connect to Exchange Online Protection PowerShell using the EXO V2 module](connect-to-exchange-online-protection-powershell.md)
 
 The rest of this topic explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
 
@@ -40,15 +40,17 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 
 ## How the EXO V2 module works
 
-The module contains a small set of Exchange Online PowerShell cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). When you first open the module, you'll only see these new cmdlets. After you connect to your Exchange Online organization, you'll see all of the older remote PowerShell cmdlets that are available in Exchange Online PowerShell.
+The module contains a small set of exclusive Exchange Online PowerShell cmdlets that are optimized for bulk data retrieval scenarios (think: thousands and thousands of objects). When you first open the module, you'll only see these exclusive cmdlets. After you [connect to your Exchange Online organization](connect-to-exchange-online-powershell.md), you'll see all of the familiar cmdlets that are available in Exchange Online PowerShell.
 
 The module use modern authentication for all cmdlets. You can't use Basic authentication in the EXO V2 module; however, you still need to enable the Basic authentication setting in WinRM as explained [later in this topic](#prerequisites-for-the-exo-v2-module).
 
-The Exchange Online cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents. However, the original Exchange Online cmdlets are still accessible in the EXO V2 module for backwards compatibility **after** you create a session to connect to your Exchange Online organization.
+The Exchange Online cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents, but the equivalent cmdlets are still available (after you connect).
 
-The Exchange Online PowerShell cmdlets that are only available in the EXO V2 module are described in the following table:
+The Exchange Online PowerShell cmdlets that are only available in the EXO V2 module are listed in the following table:
 
-|Cmdlet in the EXO V2 module|Older related cmdlet|
+****
+
+|EXO V2 module cmdlet|Older related cmdlet|
 |---|---|
 |[Get-EXOMailbox](../exchange-ps/exchange/Get-EXOMailbox.md)|[Get-Mailbox](../exchange-ps/exchange/Get-Mailbox.md)|
 |[Get-EXORecipient](../exchange-ps/exchange/Get-EXORecipient.md)|[Get-Recipient](../exchange-ps/exchange/Get-Recipient.md)|
@@ -63,12 +65,14 @@ The Exchange Online PowerShell cmdlets that are only available in the EXO V2 mod
 |[Set-UserBriefingConfig](../exchange-ps/exchange/Set-UserBriefingConfig.md)|n/a|
 |
 
-The connection-related cmdlets that are available in the EXO V2 module are described in the following table:
+The connection-related cmdlets that are available in the EXO V2 module are listed in the following table:
 
-|Cmdlet in the EXO V2 module|Older related cmdlet|
+****
+
+|EXO V2 module cmdlet|Older related cmdlet|
 |---|---|
-|[Connect-ExchangeOnline](../exchange-ps/exchange/Connect-ExchangeOnline.md)|[Connect-EXOPSSession](mfa-connect-to-exchange-online-powershell.md) <br/> or <br/> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
-|[Connect-IPPSSession](../exchange-ps/exchange/Connect-IPPSSession.md)|[Connect-IPPSSession](mfa-connect-to-scc-powershell.md)|
+|[Connect-ExchangeOnline](../exchange-ps/exchange/Connect-ExchangeOnline.md)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <br/> or <br/> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
+|[Connect-IPPSSession](../exchange-ps/exchange/Connect-IPPSSession.md)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)|
 |[Disconnect-ExchangeOnline](../exchange-ps/exchange/Disconnect-ExchangeOnline.md)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
 |
 
@@ -106,7 +110,7 @@ The procedures in this section explain how to install, update, and uninstall the
   Set-ExecutionPolicy RemoteSigned
   ```
 
-- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
   **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
@@ -139,9 +143,9 @@ To install the EXO V2 module for the first time, complete the following steps **
 
 2. Close and re-open the window.
 
-3. Now you can use the **Install-Module** cmdlet to install the EXO V2 module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also install Preview versions if they're available:
+3. Now you can use the **Install-Module** cmdlet to install the EXO V2 module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also install a Preview version if one is available.
 
-   - To install **the latest public version** of the module that's available, run the following command:
+   - To install **the latest public version** of the module, run the following command:
 
      ```powershell
      Install-Module -Name ExchangeOnlineManagement
@@ -161,7 +165,7 @@ To install the EXO V2 module for the first time, complete the following steps **
      Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
      ```
 
-     When you're finished, enter **Y** to accept the license agreement.
+   When you're finished, enter **Y** to accept the license agreement.
 
 For detailed syntax and parameter information, see [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/install-module).
 
@@ -175,9 +179,9 @@ If the module is already installed on your computer, you can run the following c
    Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
    ```
 
-2. You can use the **Update-Module** cmdlet **in an elevated Windows PowerShell window** to update the EXO V2 module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also install Preview versions if they're available:
+2. You can use the **Update-Module** cmdlet **in an elevated Windows PowerShell window** to update the EXO V2 module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also upgrade to a Preview version if one is available.
 
-   - To upgrade to **the latest public version** of the module that's available, run the following command:
+   - To upgrade to **the latest public version** of the module, run the following command:
 
      ```powershell
      Update-Module -Name ExchangeOnlineManagement
@@ -199,7 +203,7 @@ If the module is already installed on your computer, you can run the following c
 
      When you're finished, enter **Y** to accept the license agreement.
 
-3. To confirm that the update was successful, run the following commands to check the module version:
+3. To confirm that the update was successful, run the following commands to check the version information of the module that's installed:
 
    ```powershell
    Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
@@ -225,7 +229,7 @@ For detailed syntax and parameter information, see [Uninstall-Module](https://do
 
 ## Properties and property sets in the EXO V2 module
 
-Traditional Exchange Online cmdlets returns all possible object properties in their output, including many properties that are often blank or aren't interesting in many scenarios. Returning a large number of blank and unnecessary properties causes degraded performance (more server computation and added network load). You rarely (if ever) need the full complement of properties in the cmdlet output.
+Traditional Exchange Online cmdlets return all possible object properties in their output, including many properties that are often blank or aren't interesting in many scenarios. This behavior causes degraded performance (more server computation and added network load). You rarely (if ever) need the full complement of properties in the cmdlet output.
 
 The **Get-EXO\*** cmdlets in the module have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we've categorized specific related properties into property sets. Simply put, these property sets are buckets of two or more related properties on the cmdlet.
 
@@ -243,14 +247,14 @@ Property sets are controlled by the following parameters:
 
 You can use the *PropertySets* and *Properties* parameters together in the same command.
 
-We've also included a Minimum property set that includes a bare minimum set of properties for the cmdlet output.
+We've also included a Minimum property set that includes a bare minimum set of required properties for the cmdlet output (for example, identity properties). The properties in the Minimum property sets are also described in [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md).
 
 - If you don't use the *PropertySets* or *Properties* parameters, you automatically get the properties in the Minimum property set.
 - If you use the *PropertySets* or *Properties* parameters, you get the specified properties **and** the properties in the Minimum property set.
 
 Either way, the cmdlet output will contain far fewer properties, and the time it takes to return those results will be much faster.
 
-After you [connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md), this example returns the properties in the Minimum property set for the first ten mailboxes.
+For example, after you [connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md), the following example returns only the properties in the Minimum property set for the first ten mailboxes.
 
 ```powershell
 Get-EXOMailbox -ResultSize 10
@@ -259,7 +263,7 @@ Get-EXOMailbox -ResultSize 10
 In contrast, the output of the same **Get-Mailbox** command would return at least 230 properties for each of the first ten mailboxes.
 
 > [!NOTE]
-> Although the _PropertySets_ parameter accepts the value All, we highly discourage using this value to retrieve all properties, because it slows down the command and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve the minimum number of specific properties.
+> Although the _PropertySets_ parameter accepts the value All, we highly discourage using this value to retrieve all properties, because it slows down the command and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve the minimum number of properties that are required for your scenario.
 
 For more information about filtering in the EXO V2 module, see [Filters in the Exchange Online V2 module](filters-v2.md).
 
