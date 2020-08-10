@@ -46,8 +46,6 @@ The Workload parameter specifies where auditing is allowed. Valid values are:
 
 - Exchange
 
-- InTune
-
 - OneDriveForBusiness
 
 - SharePoint
