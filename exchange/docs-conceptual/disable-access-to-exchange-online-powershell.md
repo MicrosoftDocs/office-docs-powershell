@@ -23,7 +23,7 @@ Exchange Online PowerShell enables you to manage your Exchange Online organizati
 
 - Microsoft 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this topic to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions).
 
-- You can only use Exchange Online PowerShell to perform this procedure. To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+- You can only use Exchange Online PowerShell to perform this procedure. To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 - For detailed information about OPath filter syntax in Exchange Online, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 

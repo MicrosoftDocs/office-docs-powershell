@@ -19,7 +19,10 @@ description: "Use Windows PowerShell on a local computer to connect to an Exchan
 If you don't have the Exchange management tools installed on your local computer, you can use Windows PowerShell to create a remote PowerShell session to an Exchange server. It's a simple three-step process, where you enter your credentials, provide the required connection settings, and then import the Exchange cmdlets into your local Windows PowerShell session so that you can use them.
 
 > [!NOTE]
-> We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You'll get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md). <br/><br/> The **Get-ExchangeCertificate** cmdlet does not fully support remote PowerShell. We recommend that you use the Exchange Management Shell instead to get all the properties of this cmdlet.
+> 
+> - We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md).
+> 
+> - The **Get-ExchangeCertificate** cmdlet does not fully support remote PowerShell. We recommend that you use the Exchange Management Shell instead to get all the properties of this cmdlet.
 
 ## What do you need to know before you begin?
 
@@ -28,17 +31,11 @@ If you don't have the Exchange management tools installed on your local computer
 - You can use the following versions of Windows:
 
   - Windows 10
-
   - Windows 8.1
-
   - Windows Server 2019
-
   - Windows Server 2016
-
   - Windows Server 2012 or Windows Server 2012 R2
-
   - Windows 7 Service Pack 1 (SP1)<sup>*</sup>
-
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
   <sup>\*</sup> This version of Windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595), [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
@@ -53,7 +50,7 @@ If you don't have the Exchange management tools installed on your local computer
   Set-ExecutionPolicy RemoteSigned
   ```
 
-    You need to configure this setting only once on your computer, not every time you connect.
+  For more information about execution policies, see [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) forum.
@@ -106,11 +103,7 @@ If you receive errors, check the following requirements:
 The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more information about these cmdlets, see the following topics.
 
 - [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential)
-
 - [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)
-
 - [Import-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession)
-
 - [Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)
-
 - [Set-ExecutionPolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)

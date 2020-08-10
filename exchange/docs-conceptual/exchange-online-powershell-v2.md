@@ -22,11 +22,11 @@ The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses
 
 For connection instructions using the EXO V2 module, see the following topics:
 
-- [Connect to Exchange Online PowerShell using the EXO V2 module](connect-to-exchange-online-powershell.md)
+- [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
 
-- [Connect to Security & Compliance Center PowerShell using the EXO V2 module](connect-to-scc-powershell.md)
+- [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md)
 
-- [Connect to Exchange Online Protection PowerShell using the EXO V2 module](connect-to-exchange-online-protection-powershell.md)
+- [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md)
 
 The rest of this topic explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
 
@@ -104,11 +104,11 @@ The procedures in this section explain how to install, update, and uninstall the
 
   To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-  You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
-
   ```powershell
   Set-ExecutionPolicy RemoteSigned
   ```
+
+  For more information about execution policies, see [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 

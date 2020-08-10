@@ -19,7 +19,7 @@ description: "Admins can learn how to use the older Exchange Online Remote Power
 > [!NOTE]
 > The older Exchange Online Remote PowerShell Module that's described in this topic will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
-If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
+If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
 ## What do you need to know before you begin?
 
@@ -80,7 +80,7 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 - Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
 
-- When you use the Exchange Online Remote PowerShell Module, your session will end after one hour, which can be problematic for long-running scripts or processes. To avoid this issue, use [Trusted IPs](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips) to bypass MFA for connections from your intranet. Trusted IPs allow you to connect to Exchange Online PowerShell from your intranet using the old instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md). Also, if you have servers in a datacenter, be sure to add their public IP addresses to Trusted IPs as described [here](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-mfasettings#enable-the-trusted-ips-feature-by-using-service-settings).
+- When you use the Exchange Online Remote PowerShell Module, your session will end after one hour, which can be problematic for long-running scripts or processes. To avoid this issue, use [Trusted IPs](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips) to bypass MFA for connections from your intranet. Trusted IPs allow you to connect to Exchange Online PowerShell from your intranet using the old instructions at [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md). Also, if you have servers in a datacenter, be sure to add their public IP addresses to Trusted IPs as described [here](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-mfasettings#enable-the-trusted-ips-feature-by-using-service-settings).
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542) or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
@@ -99,12 +99,15 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
    - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the nature of your Microsoft 365 organization as described in the following table:
 
-     |**Microsoft 365 offering**|**_ConnectionUri_ parameter value**|**_AzureADAuthorizationEndPointUri_ parameter value**|
-     |:-----|:-----|:-----|
+     ****
+
+     |Microsoft 365 offering|_ConnectionUri_ parameter value|_AzureADAuthorizationEndPointUri_ parameter value|
+     |---|---|---|
      |Microsoft 365|Not used|Not used|
      |Office 365 Germany|`https://outlook.office.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
      |Microsoft 365 GCC High|`https://outlook.office365.us/powershell-liveid`|`https://login.microsoftonline.us/common`|
      |Microsoft 365 DoD|`https://webmail.apps.mil/powershell-liveid`|`https://login.microsoftonline.us/common`|
+     |
 
    This example connects to Exchange Online in Microsoft 365 using the account chris@contoso.com.
 

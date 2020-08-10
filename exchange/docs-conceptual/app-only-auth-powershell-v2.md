@@ -20,7 +20,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> This feature is currently in Public Preview, and is available in the `2.0.3-Preview` release of Exchange Online PowerShell V2 Module. For instruction on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+> This feature is currently in Public Preview, and is available in the `2.0.3-Preview` release of Exchange Online PowerShell V2 Module. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
 

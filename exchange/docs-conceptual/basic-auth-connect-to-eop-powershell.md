@@ -20,11 +20,17 @@ description: "Use remote PowerShell to connect to a standalone Exchange Online P
 
 In standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, standalone EOP PowerShell allows you to manage your EOP organization from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to EOP. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the EOP cmdlets into your local Windows PowerShell session so that you can use them.
 
+The following introductory video shows you how to connect to and use Exchange Online Protection PowerShell:
+
+[Use Exchange Online Protection PowerShell](https://videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=9cb28006-c2cb-45b6-b72e-eeed8767dee7&AutoPlayVideo=false)
+
+**Note:** This video applies to Exchange Online PowerShell and EOP PowerShell. When you connect to your organization, be sure to specify the correct URL (*ConnectionUri* value). The required URL is different for Exchange Online and standalone EOP organizations.
+
 ## What do you need to know before you begin?
 
 - Estimated time to complete: 5 minutes
 
-- **The procedures in this topic are only for EOP that don't have Exchange Online mailboxes** (for example, you have a standalone EOP subscription to protect your on-premises email environment). If you have a Microsoft 365 subscription that includes Exchange Online mailboxes, the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
+- **The procedures in this topic are only for EOP organizations that don't have Exchange Online mailboxes** (for example, you have a standalone EOP subscription that protects your on-premises email environment). If you have a Microsoft 365 subscription includes Exchange Online mailboxes, you can't connect to Exchange Online Protection PowerShell. The same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
 
 - You can use the following versions of Windows:
 
@@ -48,7 +54,7 @@ In standalone Exchange Online Protection (EOP) organizations without Exchange On
   Set-ExecutionPolicy RemoteSigned
   ```
 
-  You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+  For more information about execution policies, see [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 

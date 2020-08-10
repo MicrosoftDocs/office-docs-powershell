@@ -23,11 +23,17 @@ description: "Learn how to use remote PowerShell to connect to Exchange Online w
 
 Exchange Online PowerShell allows you to manage your Exchange Online settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the Exchange Online cmdlets into your local Windows PowerShell session so that you can use them.
 
-**Note**: If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, you can use the instructions in this topic to connect to your Exchange Online Protection (EOP) organization.
+The following introductory video shows you how to connect to and use Exchange Online PowerShell:
+
+[Use Exchange Online PowerShell](https://videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=9cb28006-c2cb-45b6-b72e-eeed8767dee7&AutoPlayVideo=false)
+
+**Note:** This video applies to Exchange Online PowerShell and EOP PowerShell. When you connect to your organization, be sure to specify the correct URL (*ConnectionUri* value). The required URL is different for Exchange Online and standalone EOP organizations.
 
 ## What do you need to know before you begin?
 
 - Estimated time to complete: 5 minutes
+
+- If your on-premises Exchange organization has Exchange Enterprise CAL with Services licenses, you can use the instructions in this topic to connect to your EOP organization.
 
 - You can use the following versions of Windows:
 
@@ -51,7 +57,7 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
   Set-ExecutionPolicy RemoteSigned
   ```
 
-  You need to configure this setting only once on your computer. Read more about execution policies [here](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+  For more information about execution policies, see [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 

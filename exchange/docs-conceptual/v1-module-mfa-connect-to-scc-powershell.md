@@ -19,7 +19,7 @@ description: "Admins can learn how to use the older Exchange Online Remote Power
 > [!NOTE]
 > The older Exchange Online Remote PowerShell Module that's described in this topic will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md).
 
-If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md) to use remote PowerShell to connect to the Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
+If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Basic auth - Connect to Security & Compliance Center PowerShell](basic-auth-connect-to-scc-powershell.md) to use remote PowerShell to connect to the Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
 
 **Notes**:
 
@@ -101,12 +101,15 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
    - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the location of your Microsoft 365 organization as described in the following table:
 
-   |**Microsoft 365 offering**|**_ConnectionUri_ parameter value**|**_AzureADAuthorizationEndPointUri_ parameter value**|
-   |---|---|---|
-   |Microsoft 365|Not used |Not used|
-   |Office 365 Germany|`https://ps.compliance.protection.outlook.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
-   |Microsoft 365 GCC High|`https://ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
-   |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
+     ****
+
+     |Microsoft 365 offering|_ConnectionUri_ parameter value|_AzureADAuthorizationEndPointUri_ parameter value|
+     |---|---|---|
+     |Microsoft 365|Not used |Not used|
+     |Office 365 Germany|`https://ps.compliance.protection.outlook.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
+     |Microsoft 365 GCC High|`https://ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
+     |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
+     |
 
    This example connects to Security & Compliance Center PowerShell in Microsoft 365 using the account chris@contoso.com.
 
