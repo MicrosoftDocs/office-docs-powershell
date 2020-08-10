@@ -110,7 +110,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 3. The command that you need to run uses the following syntax:
 
    ```powershell
-   <Connect-IPPSSession | Connect-ExchangeOnline> -Credential $UserCredential -ShowProgress $true [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>]
+   <Connect-IPPSSession | Connect-ExchangeOnline> -Credential $UserCredential -ShowProgress $true -ConnectionUri <URL>
    ```
 
   The required cmdlet and _ConnectionUri_ parameter values are described in the table in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
@@ -124,7 +124,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    **This example connects to Exchange Online Protection PowerShell in an Office 365 Germany organization**:
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ShowProgress $true -ConnectionUri https://ps.protection.outlook.de/powershell-liveid/ -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   Connect-IPPSSession -Credential $UserCredential -ShowProgress $true -ConnectionUri https://ps.protection.outlook.de/powershell-liveid/
    ```
 
    **This example connects to Exchange Online Protection PowerShell in an Exchange Enterprise CAL with Services organization**:
