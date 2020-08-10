@@ -35,7 +35,7 @@ To use the older Exchange Online Remote PowerShell Module to connect to Security
 
   |Microsoft 365 offering|_ConnectionUri_ value|_AzureADAuthorizationEndPointUri_ value|
   |---|---|---|
-  |Microsoft 365 or Microsoft 365 GCC|Not used|Not used|
+  |Microsoft 365 or Microsoft 365 GCC|`https://ps.compliance.protection.outlook.com/powershell-liveid/`|Not used|
   |Microsoft 365 GCC High|`https://ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
   |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
   |Office 365 Germany|`https://ps.compliance.protection.outlook.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
@@ -54,7 +54,7 @@ If you account uses multi-factor authentication, use the steps in this section. 
 2. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName <UPN> -ShowProgress $true [-ConnectionUri <Value>] [-AzureADAuthorizationEndPointUri <Value>]
+   Connect-IPPSSession -UserPrincipalName <UPN> -ShowProgress $true [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>]
    ```
 
    - \<UPN\> is your account in user principal name format (for example, `navin@contoso.com`).
@@ -63,7 +63,7 @@ If you account uses multi-factor authentication, use the steps in this section. 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**.
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName chris@contoso.com -ShowProgress $true
+   Connect-IPPSSession -UserPrincipalName chris@contoso.com -ShowProgress $true -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/
    ```
 
    **This example connects to Security & Compliance Center PowerShell in an Office 365 Germany organization**.
@@ -114,7 +114,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 3. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ShowProgress $true [-ConnectionUri <Value>]
+   Connect-IPPSSession -Credential $UserCredential -ShowProgress $true -ConnectionUri <URL>
    ```
 
    The _ConnectionUri_ values are described in the table in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
@@ -122,7 +122,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**.
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ShowProgress $true
+   Connect-IPPSSession -Credential $UserCredential -ShowProgress $true -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/
    ```
 
    **This example connects to Security & Compliance Center PowerShell in an Office 365 Germany organization**.
