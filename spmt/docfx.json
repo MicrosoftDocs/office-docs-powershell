@@ -2,7 +2,9 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md"],
+        "files": [
+          "**/*.md"
+        ],
         "src": "docs-conceptual",
         "version": "spmt-ps",
         "dest": "spmt",
@@ -12,26 +14,36 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
-         "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
         "version": "spmt-ps",
         "dest": "spmt/spmt-ps"
       },
       {
-      "files": ["**/*.md"],
-      "src": "spmt-ps",
-      "version": "spmt-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "spmt-ps",
-      "version": "spmt-ps",
-      "dest": "module/spmt-ps"
-    }
+        "files": [
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "src": "spmt-ps",
+        "version": "spmt-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "spmt-ps",
+        "version": "spmt-ps",
+        "dest": "module/spmt-ps"
+      }
     ],
     "resource": [
       {
@@ -53,12 +65,12 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "serdarsoysal",
-      "ms.author" : "serdars",
-      "manager" : "serdars",
-      "ms.topic" : "reference",
-      "ms.service" : "spmt-powershell",
-      "ms.devlang" : "powershell",
+      "author": "serdarsoysal",
+      "ms.author": "serdars",
+      "manager": "serdars",
+      "ms.topic": "reference",
+      "ms.service": "spmt-powershell",
+      "ms.devlang": "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"

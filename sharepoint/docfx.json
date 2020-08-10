@@ -2,7 +2,10 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md","**/**.yml"],
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
         "src": "docs-conceptual",
         "version": "sharepoint-ps",
         "dest": "sharepoint",
@@ -12,26 +15,36 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
-         "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
         "version": "sharepoint-ps",
         "dest": "sharepoint/sharepoint-ps"
       },
       {
-      "files": ["**/*.md"],
-      "src": "sharepoint-ps",
-      "version": "sharepoint-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "sharepoint-ps",
-      "version": "sharepoint-ps",
-      "dest": "module/sharepoint-ps"
-    }
+        "files": [
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "src": "sharepoint-ps",
+        "version": "sharepoint-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "sharepoint-ps",
+        "version": "sharepoint-ps",
+        "dest": "module/sharepoint-ps"
+      }
     ],
     "resource": [
       {
@@ -53,22 +66,22 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "techwriter40",
-      "ms.author" : "kirks",
-      "manager" : "pamgreen",
-      "ms.date" : "11/28/2017",
-      "ms.topic" : "reference",
-      "ms.devlang" : "powershell",
+      "author": "techwriter40",
+      "ms.author": "kirks",
+      "manager": "pamgreen",
+      "ms.date": "11/28/2017",
+      "ms.topic": "reference",
+      "ms.devlang": "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {
-      "ms.service":{
-        "sharepoint-ps/sharepoint-online/*.md":"sharepoint-powershell"
+      "ms.service": {
+        "sharepoint-ps/sharepoint-online/*.md": "sharepoint-powershell"
       },
-      "ms.prod":{
-        "sharepoint-ps/sharepoint-server/*.md":"sharepoint-powershell"
+      "ms.prod": {
+        "sharepoint-ps/sharepoint-server/*.md": "sharepoint-powershell"
       }
     },
     "template": [],

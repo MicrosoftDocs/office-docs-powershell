@@ -2,7 +2,9 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md"],
+        "files": [
+          "**/*.md"
+        ],
         "src": "docs-conceptual",
         "version": "officewebapps-ps",
         "dest": "officewebapps",
@@ -12,26 +14,36 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
-         "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
         "version": "officewebapps-ps",
         "dest": "officewebapps/officewebapps-ps"
       },
       {
-      "files": ["**/*.md"],
-      "src": "officewebapps-ps",
-      "version": "officewebapps-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "officewebapps-ps",
-      "version": "officewebapps-ps",
-      "dest": "module/officewebapps-ps"
-    }
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "src": "officewebapps-ps",
+        "version": "officewebapps-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "officewebapps-ps",
+        "version": "officewebapps-ps",
+        "dest": "module/officewebapps-ps"
+      }
     ],
     "resource": [
       {
@@ -53,13 +65,13 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "serdarsoysal",
-      "ms.author" : "mikeplum",
-      "manager" : "laurawi",
-      "ms.date" : "11/28/2017",
-      "ms.topic" : "reference",
-      "ms.prod" : "office-online-server-powershell",
-      "ms.devlang" : "powershell",
+      "author": "serdarsoysal",
+      "ms.author": "mikeplum",
+      "manager": "laurawi",
+      "ms.date": "11/28/2017",
+      "ms.topic": "reference",
+      "ms.prod": "office-online-server-powershell",
+      "ms.devlang": "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"

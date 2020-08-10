@@ -2,7 +2,9 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md"],
+        "files": [
+          "**/*.md"
+        ],
         "src": "docs-conceptual",
         "version": "teams-ps",
         "dest": "teams",
@@ -12,26 +14,36 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
-         "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
         "version": "teams-ps",
         "dest": "teams/teams-ps"
       },
       {
-      "files": ["**/*.md"],
-      "src": "teams-ps",
-      "version": "teams-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "teams-ps",
-      "version": "teams-ps",
-      "dest": "module/teams-ps"
-    }
+        "files": [
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "src": "teams-ps",
+        "version": "teams-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "teams-ps",
+        "version": "teams-ps",
+        "dest": "module/teams-ps"
+      }
     ],
     "resource": [
       {
@@ -53,12 +65,12 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "serdarsoysal",
-      "ms.author" : "serdars",
-      "manager" : "serdars",
-      "ms.topic" : "reference",
-      "ms.service" : "teams-powershell",
-      "ms.devlang" : "powershell",
+      "author": "serdarsoysal",
+      "ms.author": "serdars",
+      "manager": "serdars",
+      "ms.topic": "reference",
+      "ms.service": "teams-powershell",
+      "ms.devlang": "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"

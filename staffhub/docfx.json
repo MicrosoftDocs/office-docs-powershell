@@ -2,7 +2,9 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md"],
+        "files": [
+          "**/*.md"
+        ],
         "src": "docs-conceptual",
         "version": "staffhub-ps",
         "dest": "staffhub",
@@ -12,26 +14,36 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
-         "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
         "version": "staffhub-ps",
         "dest": "staffhub/staffhub-ps"
       },
       {
-      "files": ["**/*.md"],
-      "src": "staffhub-ps",
-      "version": "staffhub-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "staffhub-ps",
-      "version": "staffhub-ps",
-      "dest": "module/staffhub-ps"
-    }
+        "files": [
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "src": "staffhub-ps",
+        "version": "staffhub-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "staffhub-ps",
+        "version": "staffhub-ps",
+        "dest": "module/staffhub-ps"
+      }
     ],
     "resource": [
       {
@@ -53,13 +65,13 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "serdarsoysal",
-      "ms.author" : "serdars",
-      "manager" : "serdars",
-      "ms.date" : "09/25/2017",
-      "ms.topic" : "reference",
-      "ms.service" : "staffhub-powershell",
-      "ms.devlang" : "powershell",
+      "author": "serdarsoysal",
+      "ms.author": "serdars",
+      "manager": "serdars",
+      "ms.date": "09/25/2017",
+      "ms.topic": "reference",
+      "ms.service": "staffhub-powershell",
+      "ms.devlang": "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
