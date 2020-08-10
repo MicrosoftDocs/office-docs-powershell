@@ -24,7 +24,7 @@ Start-SPOUnifiedGroupMove [-GroupAlias] <String> [-DestinationDataLocation] <Str
 
 ## DESCRIPTION
 
-Initiates the move of an Office 365 Group to a new geo location. The administrator may set a preferred start and end time for the move, however the preferred end time is not guaranteed. The customer tenant must be multi-geo enabled.
+Initiates the move of an Office 365 Group site to a new geo location. The administrator may set a preferred start and end time for the move, however the preferred end time is not guaranteed. The customer tenant must be Multi-Geo enabled to use these commandlets. 
 
 ## EXAMPLES
 
@@ -34,13 +34,13 @@ Initiates the move of an Office 365 Group to a new geo location. The administrat
 Start-SPOUnifiedGroupMove -GroupAlias EUTeam -DestinationDataLocation EUR
 ```
 
-Starts the move of Office 365 Group EUTeam to the Preferred Data Location EUR (Europe).
+Starts the move of an Office 365 Group site with an alias EUTeam to the Preferred Data Location EUR (Europe).
 
 ## PARAMETERS
 
 ### -DestinationDataLocation
 
-The destination location for the Office 365 Group move.
+The destination location for the Office 365 Group site move.
 
 ```yaml
 Type: String
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-Force the cmdlet to run.
+Force the cmdlet to run. This ignores all warings blocks and validations. It is only recommended if the administrator only wishes to preserve data and is not intersted in checks for applications, Business Connectivity Services, or other functionalities. 
 
 ```yaml
 Type: SwitchParameter
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -GroupAlias
 
-The alias of the Office 365 Group.
+The alias of the Office 365 Group attached to the site you want to move.
 
 ```yaml
 Type: String
@@ -118,22 +118,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Reserved
-
-{{ Fill Reserved Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SuppressAllWarnings
 
 Suppress all warning messages.
@@ -152,7 +136,7 @@ Accept wildcard characters: False
 
 ### -SuppressBcsCheck
 
-Suppress checking of Business Connectivity Services used with the associated Office 365 Group Team site.
+Suppress checking for Business Connectivity Services used with the associated Office 365 Group site.
 
 ```yaml
 Type: SwitchParameter
@@ -168,7 +152,7 @@ Accept wildcard characters: False
 
 ### -SuppressMarketplaceAppCheck
 
-Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated Office 365 Group Team site.
+Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated Office 365 Group site.
 
 ```yaml
 Type: SwitchParameter
@@ -184,7 +168,7 @@ Accept wildcard characters: False
 
 ### -SuppressWorkflow2013Check
 
-Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated Office 365 Group Team site.
+Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated Office 365 Group site.
 
 ```yaml
 Type: SwitchParameter
