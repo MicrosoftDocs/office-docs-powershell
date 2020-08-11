@@ -1169,13 +1169,13 @@ This parameter uses the following syntax:
 
 "\<domain1\>:\<capability1\>,\<capability 2\>\>"...,"\<domain2\>:\<capability1\>,\<capability2\>..."...
 
-At the moment, this parameter can only be used in Exchange hybrid deployments and the available \<capability\> values are:
+At the moment, this parameter can only be used in Exchange hybrid deployments and the available \<capability\> values for this scenario are:
 
 - AcceptCloudServicesMail (Exchange 2013 or later)
 
 - AcceptOorgProtocol (Exchange 2010)
 
-For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
+There are more available values but there is no scenario to use them. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
 
 The available \<domainy\> values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
 
