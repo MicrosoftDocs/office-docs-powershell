@@ -1817,7 +1817,7 @@ The \<capability\> values you can use are:
 
 - AcceptOorgProtocol (Exchange 2010)
 
-At the moment, this parameter can only be used in hybrid Exchange deployments and therefore the other available values for \<capability\> cannot be used. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
+At the moment, this parameter can only be used in Exchange hybrid deployments and therefore the other available values for \<capability\> cannot be used. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
 
 The available \<domainy\> values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
 
