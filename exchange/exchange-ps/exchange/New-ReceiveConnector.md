@@ -1821,7 +1821,7 @@ At the moment, this parameter can only be used in Exchange hybrid deployments an
 
 The available \<domainy\> values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
 
-For example, "contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptCloudServicesMail"
+For example, "contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptCloudServicesMail".
 
 ```yaml
 Type: MultiValuedProperty
