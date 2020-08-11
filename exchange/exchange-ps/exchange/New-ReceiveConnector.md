@@ -1811,7 +1811,7 @@ This parameter uses the following syntax:
 
 "\<domain1\>:\<capability1\>,\<capability 2\>\>"...,"\<domain2\>:\<capability1\>,\<capability2\>..."...
 
-At the moment, this parameter can only be used in Exchange hybrid deployments and the \<capability\> values used in this scenario are:
+At the moment, this parameter can only be used in Exchange hybrid deployments and the available \<capability\> values for this scenario are:
 
 - AcceptCloudServicesMail (Exchange 2013 or later)
 
