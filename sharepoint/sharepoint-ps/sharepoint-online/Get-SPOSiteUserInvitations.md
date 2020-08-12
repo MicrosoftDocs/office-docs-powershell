@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Searchs against all stored sharing links and retrieves the email invites. 
+Searches against all stored sharing links and retrieves the email invites. 
 
 ## SYNTAX
 
