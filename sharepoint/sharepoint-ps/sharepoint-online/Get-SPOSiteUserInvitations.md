@@ -24,7 +24,7 @@ Get-SPOSiteUserInvitations [-Site] <SpoSitePipeBind> [-EmailAddress] <string> [<
 
 ## DESCRIPTION
 
-Searchs against all stored sharing links on a Site and retrieves the email invites. 
+Searches against all stored sharing links on a Site and retrieves the email invites. 
 
 ## EXAMPLES
 
