@@ -28,7 +28,7 @@ To install the Preview release of the EXO V2 module, run the same [steps to inst
 Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
 ```
 
-To update from an earlier version of the of the EXO V2 module, run the following command:
+To update from an earlier version of the EXO V2 module to the preview release of EXO V2 module, run the following command:
 
 ```powershell
 Update-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
