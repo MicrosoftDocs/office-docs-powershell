@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsipphonepolicy
 applicable: Skype for Business Online
-title: Grant-CSTeamsIPPhonePolicy
+title: Grant-CsTeamsIPPhonePolicy
 author: tonywoodruff
 ms.author: anwoodru
 ms.reviewer: kponnus
