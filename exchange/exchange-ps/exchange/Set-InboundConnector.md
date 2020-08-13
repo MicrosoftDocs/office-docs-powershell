@@ -416,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPAddresses
-The SenderIPAddresses parameter specifies the remote IP addresses from which this connector accepts messages. You enter the IP addresses using the following syntax:
+The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. IPv6 addresses are not supported. You enter the IP addresses using the following syntax:
 
 - Single IP: For example, 192.168.1.1.
 

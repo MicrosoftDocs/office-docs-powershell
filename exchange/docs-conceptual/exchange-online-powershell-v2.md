@@ -67,37 +67,32 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 - You can use the following versions of Windows:
 
   - Windows 10
-
   - Windows 8.1
-
   - Windows Server 2019
-
   - Windows Server 2016
-
   - Windows Server 2012 or Windows Server 2012 R2
-
   - Windows 7 Service Pack 1 (SP1)<sup>*</sup>
-
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
   <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
-  
-  > [!NOTE]
-  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
+  **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
 
+  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
+  
   ```dos
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
+  If you don't see the value `Basic = true`, you need to run this command **in a Command Prompt** (not in Windows PowerShell) to enable Basic authentication for WinRM:
 
   ```dos
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
+
+  **Note**: If you'd rather run the command in Windows PowerShell, enclose this part of the command in quotation marks: `'@{Basic="true"}'`.
 
   If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
 
@@ -105,7 +100,7 @@ You can download the EXO V2 module from the PowerShell gallery [here](https://ww
 
 ### Install the EXO V2 module
 
-To install the EXO V2 module for the first time, run the following commands:
+To install the EXO V2 module for the first time, complete the following steps:
 
 1. Install or update the PowerShellGet module as described in [Installing PowerShellGet](https://docs.microsoft.com/powershell/scripting/gallery/installing-psget).
 
@@ -241,9 +236,9 @@ Get-EXOCASMailbox -Properties EwsEnabled, MAPIBlockOutlookNonCachedMode -Propert
 
 We've also included a Minimum property set (or *minset*) in the available property sets that includes a bare minimum set of properties for the cmdlet output.
 
-- If you don't use the *PropertySets* or *Properties* parameters, you automatically get the properties that are included in the Minimum property set.
+- If you don't use the *PropertySets* or *Properties* parameters, you automatically get the properties in the Minimum property set.
 
-- If you use the *PropertySets* or *Properties* parameters, you you only get the specified properties.
+- If you use the *PropertySets* or *Properties* parameters, you get the specified properties **and** the properties in the Minimum property set.
 
 Either way, the cmdlet output will contain far fewer properties, and the time it takes to return those results will be much faster.
 
@@ -257,16 +252,8 @@ In contrast, the same **Get-Mailbox** cmdlet would return at least 230 propertie
 
 For details about the property sets that are available in EXO V2 module cmdlets, see [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md) or the individual EXO V2 module cmdlet reference topics.
 
-EXO cmdlets also provide a way to retrieve all properties for an object by using the _ProperySets_ parameter with the value `All`.
-
-The following example returns all properties for the 10 mailboxes:
-
-```PowerShell
-Get-EXOMailbox -ResultSize 10 -PropertySets All
-```
-
 > [!NOTE]
-> We highly discourage using the _PropertySets_ parameter with the value `All` because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve only the required properties.
+> Although you can retrieve all properties for an object by using the _PropertySets_ parameter with the value All, we highly discourage this because it slows down the cmdlet and reduces reliability. Always use the _PropertySets_ and _Properties_ parameters to retrieve the minimum number of properties.
 
 For more information about filtering in the EXO V2 module, see [Filters in the Exchange Online V2 module](filters-v2.md).
 
@@ -325,7 +312,7 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 
 - Use EXO V2 cmdlets even if WinRM Basic Auth is disabled on client machine. Note that remote PowerShell cmdlets require WinRM Basic Auth, and they won't be available if it's disabled.
 
--  Identity parameter for V2 cmdlets now supports Name and Alias as well. Note that using Alias or Name slows down the performance of V2 cmdlets, so we don't recommend using them.
+- Identity parameter for V2 cmdlets now supports Name and Alias as well. Note that using Alias or Name slows down the performance of V2 cmdlets, so we don't recommend using them.
 
 - Fixed issue where the data type of attributes returned by V2 cmdlet was different from remote PowerShell cmdlets. We still have few attributes which have differing data types, and we plan to handle them in coming months.
 

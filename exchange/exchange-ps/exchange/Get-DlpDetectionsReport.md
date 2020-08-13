@@ -35,22 +35,13 @@ Get-DlpDetectionsReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
 The Get-DlpDetectionsReport cmdlet returns general DLP detection data that's aggregated per day. The properties returned include:
 
 - Date
-
-- DlpPolicy
-
-- TransportRule
-
-- Action
-
-- EventType
-
-- MessageCount
-
+- DLP Policy
+- DLP Compliance Rule
+- Event Type
 - Source
+- Message Count
 
-- StartDate
-
-- EndDate
+To see all of these columns (width issues), write the output to a file. For example, `Get-DlpDetectionsReport | Out-String -Width 4096 | Out-File "C:\Users\admin\Desktop\DLP Detections Report.txt"`.
 
 To see detailed information about each DLP rule match, use the Get-DlpDetailReport cmdlet.
 
@@ -282,17 +273,13 @@ Accept wildcard characters: False
 ### -SummarizeBy
 The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
-For the Get-DLPDetectionsReport cmdlet, the SummarizeBy parameter accepts the following values:
-
-- Action
+Valid values are:
 
 - DLPPolicy
-
 - Domain
-
 - EventType
 
-You can specify multiple values separated by commas.
+You can specify multiple values separated by commas. The values that you specify for this parameter are not displayed in the results (the values in the corresponding columns are blank).
 
 ```yaml
 Type: MultiValuedProperty

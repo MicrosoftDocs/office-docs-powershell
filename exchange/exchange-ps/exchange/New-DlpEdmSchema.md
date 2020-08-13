@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DlpEdmSchema [-FileData] <Byte[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+New-DlpEdmSchema [-FileData] <Byte[]> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
