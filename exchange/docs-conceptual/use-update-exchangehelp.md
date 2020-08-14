@@ -39,7 +39,7 @@ This method requires that the Exchange server has direct access to the internet.
 
 Run the following command in the Exchange Management Shell:
 
-```PowerShell
+```powershell
 Update-ExchangeHelp -Verbose
 ```
 
@@ -139,13 +139,13 @@ If you want to identify only the update packages that apply to you, follow these
 
    To find the version details on a single Exchange server, run the following command:
 
-   ```PowerShell
+   ```powershell
    Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
    ```
 
    To find the version details for all Exchange servers in your organization, run the following command:
 
-   ```PowerShell
+   ```powershell
    Get-ExchangeServer | Sort-Object Name | ForEach {Invoke-Command -ComputerName $_.Name -ScriptBlock {Get-Command ExSetup.exe | ForEach{$_.FileVersionInfo}}} | Format-Table -Auto
    ```
 

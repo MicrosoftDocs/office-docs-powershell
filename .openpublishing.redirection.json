@@ -6512,8 +6512,8 @@
     },
     {
       "source_path": "exchange/docs-conceptual/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell.md",
-      "redirect_url": "https://docs.microsoft.com/powershell/exchange/mfa-connect-to-scc-powershell",
-      "redirect_document_id": true
+      "redirect_url": "https://docs.microsoft.com/powershell/exchange/connect-to-scc-powershell",
+      "redirect_document_id": false
     },
     {
       "source_path": "exchange/docs-conceptual/exchange-server/connect-to-exchange-servers-using-remote-powershell.md",
@@ -6582,8 +6582,8 @@
     },
     {
       "source_path": "exchange/docs-conceptual/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell.md",
-      "redirect_url": "https://docs.microsoft.com/powershell/exchange/mfa-connect-to-exchange-online-powershell",
-      "redirect_document_id": true
+      "redirect_url": "https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell",
+      "redirect_document_id": false
     },
     {
       "source_path": "exchange/docs-conceptual/exchange-online/exchange-online-powershell-v2/app-only-auth-powershell-v2.md",
@@ -6614,6 +6614,16 @@
       "source_path": "exchange/docs-conceptual/exchange-eop/exchange-online-protection-powershell.md",
       "redirect_url": "https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "exchange/docs-conceptual/mfa-connect-to-exchange-online-powershell.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/docs-conceptual/mfa-connect-to-scc-powershell.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/exchange/connect-to-scc-powershell",
+      "redirect_document_id": false
     }
   ] 
   }
