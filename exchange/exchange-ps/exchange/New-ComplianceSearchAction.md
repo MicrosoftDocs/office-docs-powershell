@@ -236,13 +236,13 @@ This parameter requires the Export role in the Security & Compliance Center. By 
 
 The ExchangeArchiveFormat parameter specifies how to export Exchange search results. Valid values are:
 
-- IndividualMessage: Export each message as an .msg message file. This is the default value.
-
 - PerUserPst: One PST file for each mailbox.
 
 - SinglePst: One PST file that contains all exported messages.
 
 - SingleFolderPst: One PST file with a single root folder for the entire export.
+
+- IndividualMessage: Export each message as an .msg message file. This is the default value.
 
 - PerUserZip: One ZIP file for each mailbox. Each ZIP file contains the exported .msg message files from the mailbox. This value corresponds to the "export files in a compressed folder" checkbox in the Security & Compliance Center.
 
