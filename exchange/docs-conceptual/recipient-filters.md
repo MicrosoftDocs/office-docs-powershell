@@ -41,17 +41,17 @@ The following parameters are considered precanned filters:
 
 Precanned filters are available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](../exchange-ps/exchange/new-dynamicdistributiongroup.md)
-- [Set-DynamicDistributionGroup](../exchange-ps/exchange/set-dynamicdistributiongroup.md)
+- [New-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/new-dynamicdistributiongroup)
+- [Set-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/set-dynamicdistributiongroup)
 
-- [New-EmailAddressPolicy](../exchange-ps/exchange/new-emailaddresspolicy.md)
-- [Set-EmailAddressPolicy](../exchange-ps/exchange/set-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/new-emailaddresspolicy)
+- [Set-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/set-emailaddresspolicy)
 
-- [New-AddressList](../exchange-ps/exchange/new-addresslist.md)
-- [Set-AddressList](../exchange-ps/exchange/set-addresslist.md)
+- [New-AddressList](https://docs.microsoft.com/powershell/module/exchange/new-addresslist)
+- [Set-AddressList](https://docs.microsoft.com/powershell/module/exchange/set-addresslist)
 
-- [New-GlobalAddressList](../exchange-ps/exchange/new-globaladdresslist.md)
-- [Set-GlobalAddressList](../exchange-ps/exchange/set-globaladdresslist.md)
+- [New-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/new-globaladdresslist)
+- [Set-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/set-globaladdresslist)
 
 ### Precanned filter example
 
@@ -84,17 +84,17 @@ If precanned filters don't meet your needs for creating or modifying dynamic dis
 
 The recipient filter parameter is available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](../exchange-ps/exchange/new-dynamicdistributiongroup.md)
-- [Set-DynamicDistributionGroup](../exchange-ps/exchange/set-dynamicdistributiongroup.md)
+- [New-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/new-dynamicdistributiongroup)
+- [Set-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/set-dynamicdistributiongroup)
 
-- [New-EmailAddressPolicy](../exchange-ps/exchange/new-emailaddresspolicy.md)
-- [Set-EmailAddressPolicy](../exchange-ps/exchange/set-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/new-emailaddresspolicy)
+- [Set-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/set-emailaddresspolicy)
 
-- [New-AddressList](../exchange-ps/exchange/new-addresslist.md)
-- [Set-AddressList](../exchange-ps/exchange/set-addresslist.md)
+- [New-AddressList](https://docs.microsoft.com/powershell/module/exchange/new-addresslist)
+- [Set-AddressList](https://docs.microsoft.com/powershell/module/exchange/set-addresslist)
 
-- [New-GlobalAddressList](../exchange-ps/exchange/new-globaladdresslist.md)
-- [Set-GlobalAddressList](../exchange-ps/exchange/set-globaladdresslist.md)
+- [New-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/new-globaladdresslist)
+- [Set-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/set-globaladdresslist)
 
 For more information about the filterable properties you can use with the _RecipientFilter_ parameter, see [Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md).
 
@@ -122,21 +122,21 @@ Get-Mailbox -Identity Ayla | Format-List
 
 The _Filter_ parameter is available for the following recipient cmdlets:
 
-- [Get-CASMailbox](../exchange-ps/exchange/get-casmailbox.md)
-- [Get-Contact](../exchange-ps/exchange/get-contact.md)
-- [Get-DistributionGroup](../exchange-ps/exchange/get-distributiongroup.md)
-- [Get-DynamicDistributionGroup](../exchange-ps/exchange/get-dynamicdistributiongroup.md)
-- [Get-Group](../exchange-ps/exchange/get-group.md)
-- [Get-Mailbox](../exchange-ps/exchange/get-mailbox.md)
-- [Get-MailContact](../exchange-ps/exchange/get-mailcontact.md)
-- [Get-MailPublicFolder](../exchange-ps/exchange/get-mailpublicfolder.md)
-- [Get-MailUser](../exchange-ps/exchange/get-mailuser.md)
-- [Get-Recipient](../exchange-ps/exchange/get-recipient.md)
-- [Get-RemoteMailbox](../exchange-ps/exchange/get-remotemailbox.md)
-- [Get-SecurityPrincipal](../exchange-ps/exchange/get-securityprincipal.md)
-- [Get-UMMailbox](../exchange-ps/exchange/get-ummailbox.md)
-- [Get-User](../exchange-ps/exchange/get-user.md)
-- [Get-UnifiedGroup](../exchange-ps/exchange/Get-UnifiedGroup.md)
+- [Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-casmailbox)
+- [Get-Contact](https://docs.microsoft.com/powershell/module/exchange/get-contact)
+- [Get-DistributionGroup](https://docs.microsoft.com/powershell/module/exchange/get-distributiongroup)
+- [Get-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/get-dynamicdistributiongroup)
+- [Get-Group](https://docs.microsoft.com/powershell/module/exchange/get-group)
+- [Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/get-mailbox)
+- [Get-MailContact](https://docs.microsoft.com/powershell/module/exchange/get-mailcontact)
+- [Get-MailPublicFolder](https://docs.microsoft.com/powershell/module/exchange/get-mailpublicfolder)
+- [Get-MailUser](https://docs.microsoft.com/powershell/module/exchange/get-mailuser)
+- [Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/get-recipient)
+- [Get-RemoteMailbox](https://docs.microsoft.com/powershell/module/exchange/get-remotemailbox)
+- [Get-SecurityPrincipal](https://docs.microsoft.com/powershell/module/exchange/get-securityprincipal)
+- [Get-UMMailbox](https://docs.microsoft.com/powershell/module/exchange/get-ummailbox)
+- [Get-User](https://docs.microsoft.com/powershell/module/exchange/get-user)
+- [Get-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/get-unifiedgroup)
 
 For more information about the filterable properties you can use with the _Filter_ parameter, see [Filterable properties for the Filter parameter](filter-properties.md).
 
@@ -150,7 +150,7 @@ Get-User -Filter "Title -like 'Manager*'"
 
 ## Custom filters using the ContentFilter parameter
 
-You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](../exchange-ps/exchange/new-mailboxexportrequest.md) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
+You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](https://docs.microsoft.com/powershell/module/exchange/new-mailboxexportrequest) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
 
 ### ContentFilter parameter example
 
