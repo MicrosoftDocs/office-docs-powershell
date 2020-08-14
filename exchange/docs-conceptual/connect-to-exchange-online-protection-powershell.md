@@ -21,7 +21,7 @@ The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses
 
 **This topic contains instructions for how to connect to Exchange Online Protection PowerShell using the EXO V2 module with or without using MFA.**
 
-To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), see [Bssic auth - Connect to Exchange Online Protection PowerShell](basic-auth-connect-to-eop-powershell.md).
+To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Bssic auth - Connect to Exchange Online Protection PowerShell](basic-auth-connect-to-eop-powershell.md).
 
 ## What do you need to know before you begin?
 

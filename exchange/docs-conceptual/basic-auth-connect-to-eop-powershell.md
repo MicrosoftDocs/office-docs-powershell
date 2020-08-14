@@ -16,7 +16,7 @@ description: "Use remote PowerShell to connect to a standalone Exchange Online P
 # Bssic auth - Connect to Exchange Online Protection PowerShell
 
 > [!NOTE]
-> The connection instructions in this topic [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Exchange Online Protection PowerShell. For instructions, see [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
+> The connection instructions in this topic [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163) due to the security concerns around Basic authentication. Instead, you should use the Exchange Online PowerShell V2 module (the EXO V2 module) to connect to Exchange Online Protection PowerShell. For instructions, see [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
 
 In standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, standalone EOP PowerShell allows you to manage your EOP organization from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to EOP. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the EOP cmdlets into your local Windows PowerShell session so that you can use them.
 

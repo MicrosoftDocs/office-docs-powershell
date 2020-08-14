@@ -21,7 +21,7 @@ The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses
 
 **This topic contains instructions for how to connect to Security & Compliance Center PowerShell using the EXO V2 module with or without MFA.**
 
-To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), see [Basic auth - Connect to Security & Compliance Center PowerShell](basic-auth-connect-to-scc-powershell.md).
+To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Basic auth - Connect to Security & Compliance Center PowerShell](basic-auth-connect-to-scc-powershell.md).
 
 To use the older Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell using MFA, see [V1 module - Connect to Security & Compliance Center PowerShell using MFA](v1-module-mfa-connect-to-scc-powershell.md). Note that this older version of the module will eventually be retired.
 
