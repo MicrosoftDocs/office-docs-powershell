@@ -12,16 +12,13 @@ ms.assetid: cf78aca5-6699-485c-9b15-e0adba252176
 description: "Learn about the recipient properties that you can use with the RecipientFilter parameter in Exchange Server and Exchange Online cmdlets."
 ---
 
-# Filterable properties for the RecipientFilter parameter
+# Filterable properties for the RecipientFilter parameter on Exchange cmdlets
 
 You use the _RecipientFilter_ parameter to create OPATH filters based on the properties of recipient objects in Exchange Server 2016 or later, and Exchange Online. The _RecipientFilter_ parameter is available in the following cmdlets:
 
 - [New-AddressList](https://docs.microsoft.com/powershell/module/exchange/new-addresslist) and [Set-AddressList](https://docs.microsoft.com/powershell/module/exchange/set-addresslist)
-
 - [New-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/new-dynamicdistributiongroup) and [Set-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/set-dynamicdistributiongroup)
-
 - [New-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/new-emailaddresspolicy) and [Set-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/set-emailaddresspolicy)
-
 - [New-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/new-globaladdresslist) and [Set-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/set-globaladdresslist)
 
 ## Filterable recipient properties
@@ -33,7 +30,6 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 - The list might include:
 
   - Properties that are only used in one type of environment: Microsoft 365, on-premises Exchange, or hybrid. The property might exist on recipient objects in all environments, but the value is only meaningful (a value other than blank or `None`) in one type of environment.
-
   - Properties that are present, but correspond to features that are no longer used in Exchange.
 
 - You can't use properties from other Active Directory schema extensions with the _RecipientFilter_ parameter.
@@ -50,10 +46,12 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
 
+- For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
+
 ****
 
-|**Property name**|**LDAP display name**|**Value**|**Comments**|
-|:-----|:-----|:-----|:-----|
+|Property name|LDAP display name|Value|Comments|
+|---|---|---|---|
 |_AcceptMessagesOnlyFrom_|_authOrig_|Dynamic distribution groups: String (wildcards accepted). <br/> Others: Blank or non-blank.||
 |_AcceptMessagesOnlyFromDLMembers_|_dLMemSubmitPerms_|Dynamic distribution groups: String (wildcards accepted). <br/> Others: Blank or non-blank.||
 |_ActiveSyncAllowedDeviceIDs_|_msExchMobileAllowedDeviceIds_|String (wildcards accepted).||
@@ -309,9 +307,8 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_WhenSoftDeleted_|_msExchWhenSoftDeletedTime_|Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server. <br/> Others: Blank or non-blank.||
 |_WindowsEmailAddress_|_mail_|String (wildcards accepted).||
 |_WindowsLiveID_|_msExchWindowsLiveID_|String (wildcards accepted).||
+|
 
 ## For more information
 
-Exchange 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Need-help-converting-your-LDAP-filters-to-OPATH/ba-p/595108).
-
-For more information about the syntax that can be used within OPATH filters, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
+Exchange Server 2007 was the first version of Exchange that required OPATH filters instead of LDAP filters. For more information about converting LDAP filters to OPATH filters, see the Microsoft Exchange Team Blog article, [Need help converting your LDAP filters to OPATH?](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Need-help-converting-your-LDAP-filters-to-OPATH/ba-p/595108).
