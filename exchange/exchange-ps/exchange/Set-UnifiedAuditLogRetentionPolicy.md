@@ -310,8 +310,6 @@ The RecordTypes parameter specifies the audit logs of a specific record type tha
 
 - SkypeForBusinessUsersBlocked
 
-- Sway
-
 - SyntheticProbe
 
 - TeamsHealthcare
