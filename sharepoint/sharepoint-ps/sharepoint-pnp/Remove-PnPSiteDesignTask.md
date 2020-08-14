@@ -9,6 +9,11 @@ title: Remove-PnPSiteDesignTask
 # Remove-PnPSiteDesignTask
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Removes a Site Design Task. If the execution of the associated site script has already started the execution will not be terminated.
 
 ## SYNTAX 
@@ -16,7 +21,7 @@ Removes a Site Design Task. If the execution of the associated site script has a
 ```powershell
 Remove-PnPSiteDesignTask -Identity <TenantSiteDesignTaskPipeBind>
                          [-Force [<SwitchParameter>]]
-                         [-Connection <SPOnlineConnection>]
+                         [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -58,7 +63,7 @@ Accept pipeline input: True
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

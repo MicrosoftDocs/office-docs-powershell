@@ -9,6 +9,11 @@ title: Revoke-PnPTenantServicePrincipalPermission
 # Revoke-PnPTenantServicePrincipalPermission
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Revokes a permission that was previously granted to the "SharePoint Online Client" service principal.
 
 ## SYNTAX 
@@ -16,7 +21,7 @@ Revokes a permission that was previously granted to the "SharePoint Online Clien
 ```powershell
 Revoke-PnPTenantServicePrincipalPermission -ObjectId <String>
                                            [-Force [<SwitchParameter>]]
-                                           [-Connection <SPOnlineConnection>]
+                                           [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +57,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

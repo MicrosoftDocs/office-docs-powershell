@@ -66,20 +66,21 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
 - WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
-  
-  > [!NOTE]
-  > You must temporarily enable WinRM to run the following commands. You can enable it by running "winrm quickconfig".
+  **Note** You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
+
+  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
 
   ```dos
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
+  If you don't see the value `Basic = true`, you need to run this command **in a Command Prompt** (not in Windows PowerShell) to enable Basic authentication for WinRM:
 
   ```dos
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
+
+  **Note**: If you'd rather run the command in Windows PowerShell, enclose this part of the command in quotation marks: `'@{Basic="true"}'`.
 
   If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
 
@@ -105,7 +106,9 @@ Security & Compliance Center PowerShell allows you to manage your Security & Com
 
    - For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`.
 
-   - For Microsoft 365 Government Community Cloud High (GCC High), use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
+   - For Microsoft 365 GCC High, use the _ConnectionUri_ value: `https://ps.compliance.protection.office365.us/powershell-liveid/`.
+
+   - For Microsoft 365 DoD, use the _ConnectionUri_ value: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`.
 
 3. Run the following command:
 

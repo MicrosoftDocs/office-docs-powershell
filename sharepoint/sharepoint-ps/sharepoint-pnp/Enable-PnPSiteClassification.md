@@ -9,7 +9,12 @@ title: Enable-PnPSiteClassification
 # Enable-PnPSiteClassification
 
 ## SYNOPSIS
-Enables Site Classifications for the tenant. Requires a connection to the Microsoft Graph.
+
+**Required Permissions**
+
+  * Microsoft Graph API: Directory.ReadWrite.All
+
+Enables Site Classifications for the tenant
 
 ## SYNTAX 
 
@@ -17,6 +22,7 @@ Enables Site Classifications for the tenant. Requires a connection to the Micros
 Enable-PnPSiteClassification -Classifications <String>
                              -DefaultClassification <String>
                              [-UsageGuidelinesUrl <String>]
+                             [-ByPassPermissionCheck [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
@@ -38,6 +44,18 @@ Enable-PnPSiteClassification -Classifications "HBI","LBI","Top Secret" -UsageGui
 Enables Site Classifications for your tenant and provides three classification values. The usage guideliness will be set to the specified URL.
 
 ## PARAMETERS
+
+### -ByPassPermissionCheck
+Allows the check for required permissions in the access token to be bypassed when set to $true
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ### -Classifications
 

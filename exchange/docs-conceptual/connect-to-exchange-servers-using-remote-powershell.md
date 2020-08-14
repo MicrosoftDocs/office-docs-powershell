@@ -45,9 +45,9 @@ If you don't have the Exchange management tools installed on your local computer
 
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
-  `Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.`
+  > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
-  To require all scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
+  To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
   ```PowerShell
   Set-ExecutionPolicy RemoteSigned
