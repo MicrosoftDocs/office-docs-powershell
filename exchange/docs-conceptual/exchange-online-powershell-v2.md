@@ -40,7 +40,7 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 
 |New cmdlet in the EXO V2 module|Older related cmdlet|
 |---|---|
-|[Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](mfa-connect-to-exchange-online-powershell) <br/> or <br/> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
+|[Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](mfa-connect-to-exchange-online-powershell.md) <br/> or <br/> [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)|
 |[Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exomailbox)|[Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/get-mailbox)|
 |[GetRecipient](https://docs.microsoft.com/powershell/module/exchange/get-exorecipient)|[Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/get-recipient)|
 |[Get-EXOCasMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exocasmailbox)|[Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-casmailbox)|
@@ -51,7 +51,7 @@ The new cmdlets in the EXO V2 module are listed in the following table:
 |[Get-EXOMailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission)|
 |[Get-EXOMobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/get-mobiledevicestatistics)|
 |[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
-|[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](mfa-connect-to-scc-powershell)|
+|[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](mfa-connect-to-scc-powershell.md)|
 
 ## Install and maintain the Exchange Online PowerShell V2 module
 
