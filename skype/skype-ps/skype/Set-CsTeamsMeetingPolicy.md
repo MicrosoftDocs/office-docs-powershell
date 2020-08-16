@@ -278,7 +278,8 @@ Possible values are:
 - EveryoneInCompany, if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. 
 - Everyone, if you'd like to admit anonymous users by default. 
 - EveryoneInSameAndFederatedCompany, if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby. 
-- OrganizerOnly, if you would like that only meeting organizers can bypass the lobby. 
+- OrganizerOnly, if you would like that only meeting organizers can bypass the lobby.
+
 This setting also applies to participants joining via a PSTN device (i.e. a traditional phone).
 
 ```yaml
