@@ -27,9 +27,7 @@ When a policy assignment is removed from a group, any other group policy assignm
 
 ## EXAMPLES
 
-### Example 1
-In this example, the policy assignment with rank 2 is removed.  As a result, the policy assignment with rank 3 is updated to rank 2.
-
+### EXAMPLE 1
 ```
 Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
 
@@ -49,6 +47,8 @@ d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/20
 566b8d39-5c5c-4aaa-bc07-4f36278a1b38 TeamsMeetingPolicy Kiosk      2    11/2/2019 12:14:41 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
 ```
 
+In this example, the policy assignment with rank 2 is removed.  As a result, the policy assignment with rank 3 is updated to rank 2.
+
 ## PARAMETERS
 
 ### -GroupId
@@ -56,7 +56,7 @@ The ID of the group from which the assignment will be removed.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -71,7 +71,7 @@ The policy type of the assignment to be removed from the group.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
