@@ -56,7 +56,7 @@ The ID of the group from which the assignment will be removed.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -71,7 +71,7 @@ The policy type of the assignment to be removed from the group.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
