@@ -9,7 +9,7 @@ ms.topic: article
 ms.service: exchange-online
 localization_priority: Normal
 ms.assetid: 5bcc46d3-8a07-4e9f-b1b0-e4cb0b0afc12
-description: "Admins can learn how to use PowerShell to find the permissions required to run any Exchange or Exchange Online cmdlet."
+description: "Admins can learn how to use PowerShell to find the permissions required to run any cmdlet in Exchange Server PowerShell or Exchange Online PowerShell."
 ---
 
 # Find the permissions required to run any Exchange cmdlet
@@ -22,7 +22,7 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 - You can only use PowerShell to perform this procedure.
 
-- Basically, you need to be an administrator to complete this procedure. Specifically, you need access to the **Get-ManagementRole** and **Get-ManagementRoleAssignment** cmdlets. By default, access to these cmdlets is granted by the View-Only Configuration or Role Management roles, which are assigned to the View-Only Organization Management and Organization Management role groups.
+- Basically, you need to be an administrator to complete this procedure. Specifically, you need access to the **Get-ManagementRole** and **Get-ManagementRoleAssignment** cmdlets. By default, access to these cmdlets is granted by the **View-Only Configuration** or **Role Management** roles, which are typically assigned to the **View-Only Organization Management** and **Organization Management** role groups.
 
 - The procedures in this topic don't work in Security & Compliance Center PowerShell. For more information about permissions in the Security & Compliance Center, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
@@ -35,19 +35,19 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 1. Open the PowerShell environment where you want to run the cmdlet.
 
-   - To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+   - **Exchange Online**: [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
-   - To learn how to open the Exchange Management Shell in your on-premises Exchange organization, see [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
+   - **Exchange Server**: [Open the Exchange Management Shell](open-the-exchange-management-shell.md) or [Connect to Exchange servers using remote PowerShell](connect-to-exchange-servers-using-remote-powershell.md).
 
 2. Run the following command to identify the cmdlet and, optionally, one or more parameters on the cmdlet. Be sure to replace `<Cmdlet>` and optionally, `<Parameter1>,<Parameter2>,...` with the actual cmdlet and parameter names you are interested in. If you specify multiple parameters separated by commas, only the roles that include **all** of the parameters are returned.
 
-   ```PowerShell
+   ```powershell
    $Perms = Get-ManagementRole -Cmdlet <Cmdlet> [-CmdletParameters <Parameter1>,<Parameter2>,...]
    ```
 
 3. Run the following command:
 
-   ```PowerShell
+   ```powershell
    $Perms | foreach {Get-ManagementRoleAssignment -Role $_.Name -Delegating $false | Format-Table -Auto Role,RoleAssigneeType,RoleAssigneeName}
    ```
 
@@ -75,7 +75,7 @@ What if there are no results?
 
   Run the following command to find the role that contains the cmdlet or parameters. Be sure to replace `<Cmdlet>` and optionally, `<Parameter1>,<Parameter2>,...` with the actual cmdlet and parameter names you are interested in. Note that you can use wildcard characters (*) in the cmdlet and parameter names (for example, `*-Mailbox*`).
 
-  ```PowerShell
+  ```powershell
   Get-ManagementRoleEntry -Identity *\<Cmdlet>  [-Parameters <Parameter1>,<Parameter2>,... ]
   ```
 
@@ -83,7 +83,7 @@ What if there are no results?
 
   - If the command returns one or more entries for **Name**, **Role**, and **Parameters**, the cmdlet (or parameters on the cmdlet) is available in your environment, but the required role isn't assigned to anyone. To see all roles that aren't assigned to anyone, run the following command:
 
-    ```PowerShell
+    ```powershell
     $na = Get-ManagementRole ; $na | foreach {If ((Get-ManagementRoleAssignment -Role $_.Name -Delegating $false) -eq $null) {$_.Name}}
     ```
 
@@ -93,42 +93,42 @@ What if there are no results?
 
   To include scope information in Step 2, substitute the following command:
 
-  ```PowerShell
+  ```powershell
   $Perms | foreach {Get-ManagementRoleAssignment -Role $_.Name -Delegating $false | Format-List Role,RoleAssigneeType,RoleAssigneeName,*Scope*}
   ```
 
 - To see all roles assigned to a specific user, run the following command:
 
-  ```PowerShell
+  ```powershell
   Get-ManagementRoleAssignment -RoleAssignee <UserIdentity> -Delegating $false | Format-Table -Auto Role,RoleAssigneeName,RoleAssigneeType
   ```
 
   For example:
 
-  ```PowerShell
+  ```powershell
   Get-ManagementRoleAssignment -RoleAssignee julia@contoso.com -Delegating $false | Format-Table -Auto Role,RoleAssigneeName,RoleAssigneeType
   ```
 
 - To see all users who are assigned a specific role, run the following command:
 
-  ```PowerShell
+  ```powershell
   Get-ManagementRoleAssignment -Role "<Role name>" -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
   ```
 
   For example:
 
-  ```PowerShell
+  ```powershell
   Get-ManagementRoleAssignment -Role "Mailbox Import Export"  -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
   ```
 
 - To see the members of a specific role group, run the following command:
 
-  ```PowerShell
+  ```powershell
   Get-RoleGroupMember "<Role group name>"
   ```
 
   For example:
 
-  ```PowerShell
+  ```powershell
   Get-RoleGroupMember "Organization Management"
   ```

@@ -17,16 +17,12 @@ description: "Learn about using PowerShell in Exchange Online Protection"
 Exchange Online Protection PowerShell is the administrative interface that enables you to manage your standalone Exchange Online Protection (EOP) organization from the command line. For example, you can use Exchange Online Protection PowerShell to configure mail flow rules (also known as transport rules) and connectors.
 
 > [!NOTE]
-> Exchange Online Protection PowerShell is only used in *standalone* EOP organizations (for example, your Microsoft 365 subscription includes only standalone EOP without Exchange Online mailboxes to protect your on-premises email environment). If you have a Microsoft subscription that includes Exchnge Online mailboxes (E3, E5, etc.), you don't use Exchange Online Protection PowerShell; the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
+> Exchange Online Protection PowerShell is only used in *standalone* EOP organizations. For example, your Microsoft 365 subscription only includes EOP (no Exchange mailboxes), and you use it to protect your on-premises email environment. If you have a Microsoft 365 subscription that includes Exchange Online mailboxes (E3, E5, etc.), you can't use Exchange Online Protection PowerShell; the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
 
 The following topics provide information about using Exchange Online Protection PowerShell:
 
-- To create a remote PowerShell session to your standalone Exchange Online Protection organization, see [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
+- To create a remote PowerShell session to your standalone Exchange Online Protection organization that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
 
-- For a sample script that lets admins who manage multiple tenants (companies) apply configuration settings to their tenants, see [Sample script for applying EOP settings to multiple tenants](https://docs.microsoft.com/microsoft-365/security/office-365-security/sample-script-for-applying-eop-settings-to-multiple-tenants).
+- To learn about the structure and layout of the cmdlet reference topics in Exchange Online Protection PowerShell, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
 
-- The following introductory video shows you how to connect to and use Exchange Online Protection PowerShell.
-
-  **Note:** This video applies to Exchange Online and standalone EOP organizations. When you connect to your organization, be sure to specify the correct URL (the _ConnectionUri_ value). The required URL is different for Exchange Online and standalone EOP organizations.
-
-  [Use Remote PowerShell in EOP](https://videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=9cb28006-c2cb-45b6-b72e-eeed8767dee7&AutoPlayVideo=false)
+- For a sample script that lets admins who manage multiple organizations apply configuration settings to all of their organizations, see [Sample script for applying EOP settings to multiple tenants](https://docs.microsoft.com/microsoft-365/security/office-365-security/sample-script-for-applying-eop-settings-to-multiple-tenants).
