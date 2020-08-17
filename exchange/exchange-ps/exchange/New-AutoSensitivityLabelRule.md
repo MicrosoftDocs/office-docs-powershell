@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-{{ Fill Comment Description }}
+The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
 Type: String
@@ -197,7 +197,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentContainsSensitiveInformation
-{{ Fill ContentContainsSensitiveInformation Description }}
+The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type.
+
+This parameter uses the basic syntax @(@{Name="\<SensitiveInformationType1\>";[minCount="\<Value\>"],@{Name="\<SensitiveInformationType2\>";[minCount="\<Value\>"],...). For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
 
 ```yaml
 Type: PswsHashtable[]
@@ -213,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentExtensionMatchesWords
-{{ Fill ContentExtensionMatchesWords Description }}
+The ContentExtensionMatchesWords parameter specifies a condition for the auto-labeling policy rule that looks for words in file name extensions. You can specify multiple words separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -229,7 +231,10 @@ Accept wildcard characters: False
 ```
 
 ### -Disabled
-{{ Fill Disabled Description }}
+The Disabled parameter specifies whether the auto-labeling policy rule is enabled or disabled. Valid values are:
+
+- $true: The rule is disabled.
+- $false: The rule is enabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -245,7 +250,10 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentIsPasswordProtected
-{{ Fill DocumentIsPasswordProtected Description }}
+The DocumentIsPasswordProtected parameter specifies a condition for the auto-labeling policy rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+
+- $true: Look for password protected files.
+- $false: Don't look for password protected files.
 
 ```yaml
 Type: Boolean
@@ -261,7 +269,10 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentIsUnsupported
-{{ Fill DocumentIsUnsupported Description }}
+The DocumentIsUnsupported parameter specifies a condition for the auto-labeling policy rule that looks for files that can't be scanned. Valid values are:
+
+- $true: Look for unsupported files that can't be scanned.
+- $false: Don't look for unsupported files that can't be scanned.
 
 ```yaml
 Type: Boolean
@@ -277,7 +288,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAccessScope
-{{ Fill ExceptIfAccessScope Description }}
+The ExceptIfAccessScopeAccessScope parameter specifies an exception for the auto-labeling policy rule that's based on the access scope of the content. The rule isn't applied to content that matches the specified access scope. Valid values are:
+
+- InOrganization: The rule isn't applied to content that's accessible inside the organization.
+- NotInOrganization: The rule isn't applied to content that's accessible outside the organization.
+- None: The exception isn't used.
 
 ```yaml
 Type: AccessScope
@@ -294,7 +309,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentContainsSensitiveInformation
-{{ Fill ExceptIfContentContainsSensitiveInformation Description }}
+The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the auto-labeling policy rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type.
+
+This parameter uses the basic syntax @(@{Name="\<SensitiveInformationType1\>";[minCount="\<Value\>"],@{Name="\<SensitiveInformationType2\>";[minCount="\<Value\>"],...). For example, @(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"}).
 
 ```yaml
 Type: PswsHashtable[]
@@ -310,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentExtensionMatchesWords
-{{ Fill ExceptIfContentExtensionMatchesWords Description }}
+The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the auto-labeling policy rule that looks for words in file name extensions. You can specify multiple words separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -326,7 +343,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentIsPasswordProtected
-{{ Fill ExceptIfDocumentIsPasswordProtected Description }}
+The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the auto-labeling policy rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+
+- $true: Look for password protected files.
+- $false: Don't look for password protected files.
 
 ```yaml
 Type: Boolean
@@ -342,7 +362,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentIsUnsupported
-{{ Fill ExceptIfDocumentIsUnsupported Description }}
+The ExceptIfDocumentIsUnsupported parameter specifies an exception for the auto-labeling policy rule that looks for files that can't be scanned. Valid values are:
+
+- $true: Look for unsupported files that can't be scanned.
+- $false: Don't look for unsupported files that can't be scanned.
 
 ```yaml
 Type: Boolean
@@ -358,7 +381,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFrom
-{{ Fill ExceptIfFrom Description }}
+The ExceptIfFrom parameter specifies an exception for the auto-labeling policy rule that looks for messages from specific senders. You can use any value that uniquely identifies the sender. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -374,7 +404,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromMemberOf
-{{ Fill ExceptIfFromMemberOf Description }}
+The ExceptIfFromMemberOf parameter specifies an exception for the auto-labeling policy rule that looks for messages sent by group members. You identify the group members by their email addresses.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: SmtpAddress[]
@@ -390,7 +422,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfProcessingLimitExceeded
-{{ Fill ExceptIfProcessingLimitExceeded Description }}
+The ExceptIfProcessingLimitExceeded parameter specifies an exception for the auto-labeling policy rule rule that looks for files where scanning couldn't complete. Valid values are:
+
+- $true: Look for files where scanning couldn't complete.
+- $false: Don't look for files where scanning couldn't complete.
 
 ```yaml
 Type: Boolean
@@ -406,7 +441,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-{{ Fill ExceptIfRecipientDomainIs Description }}
+The ExceptIfRecipientDomainIs parameter specifies an exception for the auto-labeling policy rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -422,7 +457,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderIPRanges
-{{ Fill ExceptIfSenderIPRanges Description }}
+The ExceptIfSenderIpRanges parameter specifies an exception for the auto-labeling policy rule rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+
+- Single IP address: For example, 192.168.1.1.
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+You can specify multiple IP addresses or ranges separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -438,7 +479,18 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentTo
-{{ Fill ExceptIfSentTo Description }}
+The ExceptIfSentTo parameter specifies an exception for the auto-labeling policy rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+You can use this exception in auto-labeling policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
@@ -518,7 +570,11 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-{{ Fill Policy Description }}
+The Policy parameter specifies the auto-labeling policy that contains the auto-labeling policy rule. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: PolicyIdParameter
@@ -550,7 +606,10 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessingLimitExceeded
-{{ Fill ProcessingLimitExceeded Description }}
+The ProcessingLimitExceeded parameter specifies a condition for the auto-labeling policy rule that looks for files where scanning couldn't complete. You can use this condition to create rules that work together to identify and process messages where the content couldn't be fully scanned. Valid values are:
+
+- $true: Look for files where scanning couldn't complete.
+- $false: Don't look for files where scanning couldn't complete.
 
 ```yaml
 Type: Boolean
@@ -566,7 +625,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientDomainIs
-{{ Fill RecipientDomainIs Description }}
+The RecipientDomainIs parameter specifies a condition for the auto-labeling policy rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -582,7 +641,12 @@ Accept wildcard characters: False
 ```
 
 ### -ReportSeverityLevel
-{{ Fill ReportSeverityLevel Description }}
+The ReportSeverityLevel parameter specifies the severity level of the incident report for content detections based on the rule. Valid values are:
+
+- None: You can't select this value if the rule has no actions configured.
+- Low: This is the default value.
+- Medium
+- High
 
 ```yaml
 Type: RuleSeverity
@@ -599,7 +663,11 @@ Accept wildcard characters: False
 ```
 
 ### -RuleErrorAction
-{{ Fill RuleErrorAction Description }}
+The RuleErrorAction parameter specifies what to do if an error is encountered during the evaluation of the rule. Valid values are:
+
+- Ignore
+- RetryThenBlock
+- Blank (the value $null): This is the default value.
 
 ```yaml
 Type: PolicyRuleErrorAction
@@ -616,7 +684,13 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPRanges
-{{ Fill SenderIPRanges Description }}
+The SenderIpRanges parameter specifies a condition for the auto-sensitivity policy rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+
+- Single IP address: For example, 192.168.1.1.
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+You can specify multiple IP addresses or ranges separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -632,7 +706,18 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-{{ Fill SentTo Description }}
+The SentTo parameter specifies a condition for the auto-sensitivity policy rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+You can use this condition in auto-sensitivity policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty

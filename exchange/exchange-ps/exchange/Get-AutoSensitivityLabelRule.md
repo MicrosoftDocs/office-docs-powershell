@@ -119,12 +119,8 @@ Accept wildcard characters: False
 The Policy parameter filters the auto-labeling policy rule results by the associated auto-labeling policy. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
-You can use this parameter with the Identity parameter in the same command.
 
 ```yaml
 Type: PolicyIdParameter

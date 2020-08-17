@@ -210,7 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-{{ Fill ExchangeSenderMemberOf Description }}
+The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the auto-labeling policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
 
 ```yaml
 Type: SmtpAddress[]
@@ -226,7 +228,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-{{ Fill ExchangeSenderMemberOfException Description }}
+The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the auto-labeling policy. You identify the group by its email address.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
+
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
@@ -258,7 +264,12 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
-{{ Fill Mode Description }}
+The Mode parameter specifies the action and notification level of the auto-labeling policy. Valid values are:
+
+- Enable: The policy is enabled for actions and notifications. This is the default value.
+- Disable: The policy is disabled.
+- TestWithNotifications: No actions are taken, but notifications are sent.
+- TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
 
 ```yaml
 Type: PolicyMode
