@@ -237,10 +237,10 @@ The **Get-EXO\*** cmdlets in the module have categorized output properties. Inst
 
 In the biggest and most used **Get-EXO\*** cmdlets:
 
-- [Get-EXOCasMailbox](../exchange-ps/exchange/Get-EXOCasMailbox.md)
-- [Get-EXOMailbox](../exchange-ps/exchange/Get-EXOMailbox.md)
-- [Get-EXOMailboxStatistics](../exchange-ps/exchange/Get-EXOMailboxStatistics.md)
-- [Get-EXORecipient](../exchange-ps/exchange/Get-EXORecipient.md)
+- [Get-EXOCasMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exocasmailbox)
+- [Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exomailbox.md)
+- [Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxstatistics.md)
+- [Get-EXORecipient](https://docs.microsoft.com/powershell/module/exchange/get-exorecipient.md)
 
 Property sets are controlled by the following parameters:
 
