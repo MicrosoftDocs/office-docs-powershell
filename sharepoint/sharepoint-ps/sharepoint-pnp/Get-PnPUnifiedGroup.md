@@ -59,7 +59,7 @@ Retrieves a specific Office 365 Group based on its object instance
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-Get-PnPUnifiedGroup -IncludeIfHasTeam
+Get-PnPUnifiedGroup -IncludeHasTeam
 ```
 
 Retrieves all the Office 365 Groups and checks for each of them if it has a Microsoft Team provisioned for it
