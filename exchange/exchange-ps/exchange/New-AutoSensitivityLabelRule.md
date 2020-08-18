@@ -125,9 +125,7 @@ Accept wildcard characters: False
 The AccessScope parameter specifies a condition for the auto-labeling policy rule that's based on the access scope of the content. The rule is applied to content that matches the specified access scope. Valid values are:
 
 - InOrganization: The rule is applied to content that's accessible inside the organization.
-
 - NotInOrganization: The rule is applied to content that's accessible outside the organization.
-
 - None: The condition isn't used.
 
 ```yaml
