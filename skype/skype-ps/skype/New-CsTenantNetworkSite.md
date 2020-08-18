@@ -109,7 +109,7 @@ Accept wildcard characters: False
 This parameter is used to assign a custom emergency call routing policy to a network site. For more information see [Assign a custom emergency call routing policy to a network site](https://docs.microsoft.com/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
