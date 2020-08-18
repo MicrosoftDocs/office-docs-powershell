@@ -29,7 +29,7 @@ New-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-Networ
 ```
 New-CsTenantNetworkSite [-Tenant <System.Guid>] -NetworkSiteID <String> [-Description <String>]
  [-NetworkRegionID <String>] [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>]
- [-EmergencyCallRoutingPolicy <Object>] [-EmergencyCallingPolicy <Object>] [-OnlineVoiceRoutingPolicy <String>] [-SiteAddress <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>] [-OnlineVoiceRoutingPolicy <String>] [-SiteAddress <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
