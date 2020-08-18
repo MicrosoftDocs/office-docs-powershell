@@ -20,7 +20,7 @@ As an Admin, you can use the Windows PowerShell command, New-CsTenantNetworkSite
 ### Identity (Default)
 ```
 New-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
- [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-EmergencyCallRoutingPolicy <Object>] [-EmergencyCallingPolicy <Object>] [-OnlineVoiceRoutingPolicy <String>]
+ [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>] [-OnlineVoiceRoutingPolicy <String>]
  [-SiteAddress <String>] [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
