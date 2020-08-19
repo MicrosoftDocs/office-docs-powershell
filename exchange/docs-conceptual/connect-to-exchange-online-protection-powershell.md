@@ -1,118 +1,129 @@
 ---
-title: "Connect to Exchange Online Protection PowerShell"
-ms.author: chrisda
+title: Connect to Exchange Online Protection PowerShell
 author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: eop
-localization_priority: Normal
-ms.assetid: 054e0fd7-d465-4572-93f8-a00a9136e4d1
-description: "Use remote PowerShell to connect to a standalone Exchange Online Protection (EOP) organization without mailboxes in Exchange Online."
+ms.service: exchange-online
+ms.reviewer: navgupta
+localization_priority: Priority
+ms.collection: Strat_EX_Admin
+ms.custom:
+ms.assetid:
+search.appverid: MET150
+description: "Learn how to use the Exchange Online PowerShell V2 module to connect to standalone Exchange Online Protection PowerShell with modern authentication and/or multi-factor authentication (MFA)."
 ---
 
 # Connect to Exchange Online Protection PowerShell
 
-In standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, standalone EOP PowerShell allows you to manage your EOP organization from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to EOP. It's a simple three-step process where you enter your Microsoft 365 credentials, provide the required connection settings, and then import the EOP cmdlets into your local Windows PowerShell session so that you can use them.
+The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the EXO V2 module, see [About the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
+
+**This topic contains instructions for how to connect to Exchange Online Protection PowerShell using the EXO V2 module with or without using MFA.**
+
+To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Bssic auth - Connect to Exchange Online Protection PowerShell](basic-auth-connect-to-eop-powershell.md).
 
 ## What do you need to know before you begin?
 
-- Estimated time to complete: 5 minutes
+- **The procedures in this topic are only for Microsoft 365 organizations that don't have Exchange Online mailboxes**. For example, you have a standalone EOP subscription that protects your on-premises email environment. If your Microsoft 365 subscription includes Exchange Online mailboxes, you can't connect to EOP PowerShell; instead, you [connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
-- The instructions in this topic are for organizations without Exchange Online mailboxes (for example, you have a standalone EOP subscription to protect your on-premises email environment). If you have a Microsoft 365 subscription that includes Exchange Online mailboxes, the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
+  If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, your EOP PowerShell connection instructions are the same as Exchange Online PowerShell. Use the Exchange Online PowerShell connection instructions in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) instead of the instructions in this topic.
 
-- You can use the following versions of Windows:
-
-  - Windows 10
-
-  - Windows 8.1
-
-  - Windows Server 2019
-
-  - Windows Server 2016
-
-  - Windows Server 2012 or Windows Server 2012 R2
-
-  - Windows 7 Service Pack 1 (SP1)<sup>*</sup>
-
-  - Windows Server 2008 R2 SP1<sup>*</sup>
-
-  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595), [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
-
-- Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
-
-  > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
-
-  To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
-
-  ```PowerShell
-  Set-ExecutionPolicy RemoteSigned
-  ```
-
-- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
-
-  **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
-
-  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
-  
-  ```dos
-  winrm get winrm/config/client/auth
-  ```
-
-  If you don't see the value `Basic = true`, you need to run this command **in a Command Prompt** (not in Windows PowerShell) to enable Basic authentication for WinRM:
-
-  ```dos
-  winrm set winrm/config/client/auth @{Basic="true"}
-  ```
-
-  **Note**: If you'd rather run the command in Windows PowerShell, enclose this part of the command in quotation marks: `'@{Basic="true"}'`.
-
-  If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
-
-  > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
+- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351) forum.
 
-## Connect to Exchange Online Protection
+## Connect to Exchange Online Protection PowerShell using MFA
 
-1. On your local computer, open Windows PowerShell and run the following command:
+If you account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online Protection PowerShell without using MFA](#connect-to-exchange-online-protection-powershell-without-using-mfa) section.
 
-    ```PowerShell
-    $UserCredential = Get-Credential
-    ```
+1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
-    In the **Windows PowerShell Credential Request** dialog box, type your work or school account and password, and then click **OK**.
+   ```powershell
+   Import-Module ExchangeOnlineManagement
+   ```
+
+2. The command that you need to run uses the following syntax:
+
+   ```powershell
+   Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>]
+   ```
+
+   - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
+   - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the parameter descriptions in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
+
+   **This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization**:
+
+   ```powershell
+   Connect-IPPSSession -UserPrincipalName navin@contoso.com -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/
+   ```
+
+   **This example connects to Exchange Online Protection PowerShell in an Office 365 Germany organization**:
+
+   ```powershell
+   Connect-IPPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://ps.protection.outlook.de/powershell-liveid/ -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   ```
+
+For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+
+> [!NOTE]
+> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
+
+```powershell
+Get-PSSession | Remove-PSSession
+```
+
+## Connect to Exchange Online Protection PowerShell without using MFA
+
+If your account doesn't use multi-factor authentication, use the steps in this section.
+
+1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
+
+   ```powershell
+   Import-Module ExchangeOnlineManagement
+   ```
 
 2. Run the following command:
 
-    ```PowerShell
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-    ```
-
-    **Notes**:
-
-   - For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.protection.outlook.de/powershell-liveid/`
-
-   - For on-premises Exchange organization with Exchange Enterprise CAL with Services licenses, use the _ConnectionUri_ value: `https://outlook.office365.com/powershell-liveid/`
-
-3. Run the following command:
-
-   ```PowerShell
-   Import-PSSession $Session -DisableNameChecking
+   ```powershell
+   $UserCredential = Get-Credential
    ```
 
-   > [!NOTE]
-   > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command:
+   In the **Windows PowerShell Credential Request** dialog box that appears, type your work or school account and password, and then click **OK**.
 
-   ```PowerShell
-   Remove-PSSession $Session
+3. The command that you need to run uses the following syntax:
+
+   ```powershell
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri <URL>
    ```
+
+   The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
+
+   **This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization**:
+
+   ```powershell
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/
+   ```
+
+   **This example connects to Exchange Online Protection PowerShell in an Office 365 Germany organization**:
+
+   ```powershell
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.protection.outlook.de/powershell-liveid/
+   ```
+
+For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+
+> [!NOTE]
+> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
+
+```powershell
+Get-PSSession | Remove-PSSession
+```
 
 ## How do you know this worked?
 
-After Step 3, the Exchange Online Protection cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online Protection cmdlet, for example, **Get-TransportRule**, and see the results.
+The Exchange Online Protection Protection cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online Protection cmdlet, for example, **Get-TransportRule**, and see the results.
 
 If you receive errors, check the following requirements:
 
@@ -126,22 +137,8 @@ If you receive errors, check the following requirements:
 
   > Import-PSSession : Running the Get-Command command in a remote session reported the following error: Processing data for a remote command failed with the following error message: The request for the Windows Remote Shell with ShellId <GUID> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation.
 
-- The **New-PSSession** command (Step 2) might fail to connect if your client IP address changes during the connection request. This can happen if your organization uses a source network address translation (SNAT) pool that contains multiple IP addresses. The connection error looks like this:
+- You might fail to connect if your client IP address changes during the connection request. This can happen if your organization uses a source network address translation (SNAT) pool that contains multiple IP addresses. The connection error looks like this:
 
   > The request for the Windows Remote Shell with ShellId <ID> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation.
 
   To fix the issue, use an SNAT pool that contains a single IP address, or force the use of a specific IP address for connections to the Exchange Online Protection PowerShell endpoint.
-
-## See also
-
-The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more information about these cmdlets, see the following topics.
-
-- [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential)
-
-- [New-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession)
-
-- [Import-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession)
-
-- [Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)
-
-- [Set-ExecutionPolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy)

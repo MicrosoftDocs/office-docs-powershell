@@ -90,7 +90,7 @@ The ID of a batch policy assignment operation.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -105,7 +105,7 @@ The type of the policy to be assigned.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -120,7 +120,7 @@ The name of the policy to be assigned.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -135,7 +135,7 @@ The rank of the policy assignment, relative to other group policy assignments fo
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False
