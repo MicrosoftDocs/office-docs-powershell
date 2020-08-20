@@ -121,6 +121,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowRecordingStorageOutsideRegion
+Allow storing recording outside of region. All meeting recordings will be permanently stored in another region, and can't be migrated. For more info, see https://aka.ms/in-region.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowExternalParticipantGiveRequestControl
 Determines whether external participants can request or give control of screen sharing during meetings scheduled by this user. Set this to TRUE to allow the user to be able to give or request control. Set this to FALSE to prohibit an external user from giving or requesting control in a meeting.
 
