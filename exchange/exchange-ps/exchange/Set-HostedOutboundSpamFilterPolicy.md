@@ -27,6 +27,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-HostedOutboundSpamFilterPolicy [-Identity] <HostedOutboundSpamFilterPolicyIdParameter>
  [-ActionWhenThresholdReached <OutboundRecipientLimitsExceededAction>]
  [-AdminDisplayName <String>]
+ [-AutoForwardingMode <AutoForwardingMode>]
  [-BccSuspiciousOutboundAdditionalRecipients <MultiValuedProperty>]
  [-BccSuspiciousOutboundMail <Boolean>]
  [-Confirm]
@@ -108,6 +109,31 @@ The AdminDisplayName parameter specifies a description for the policy. If the va
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoForwardingMode
+**Note**: Before September 2020, this setting is available but not enforced.
+
+The AutoForwardingMode specifies how the policy controls automatic email forwarding to outbound recipients. Valid values are:
+
+- Automatic: Allows outbound spam filtering to control automatic external email forwarding. This is the default value.
+- On: Automatic external email forwarding is not disabled by the policy.
+- Off: All automatic external email forwarding is disabled by the policy.
+
+This setting applies only to cloud-based mailboxes, and automatic forwarding to internal recipients is not affected by this setting.
+
+```yaml
+Type: AutoForwardingMode
+Parameter Sets: (All)
+Aliases:
+Accepted values: Automatic, Off, On
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
