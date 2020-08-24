@@ -2,7 +2,7 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://docs.microsoft.com/powershell/module/skype/set-csinboundblockednumberpattern
 applicable: Skype for Business Online 
-title: Set-CsInboundBlockedNumberPattern 
+title: Set-CsInboundBlockedNumberPattern
 author: tomkau
 ms.author: tomkau
 ms.reviewer:
