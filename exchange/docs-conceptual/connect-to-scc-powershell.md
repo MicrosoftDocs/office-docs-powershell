@@ -63,7 +63,7 @@ If you account uses multi-factor authentication, use the steps in this section. 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**.
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName laura@blueyonderairlines.us -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common
+   Connect-IPPSSession -UserPrincipalName laura@blueyonderairlines.us -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common
    ```
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 DoD organization**.
@@ -122,7 +122,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**.
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/
    ```
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 DoD organization**.
