@@ -25,20 +25,11 @@ To use the older, less secure remote PowerShell connection instructions that [wi
 
 ## What do you need to know before you begin?
 
-- **The procedures in this topic are only for EOP organizations that don't have Exchange Online mailboxes** (for example, you have a standalone EOP subscription that protects your on-premises email environment). If you have a Microsoft 365 subscription includes Exchange Online mailboxes, you can't connect to Exchange Online Protection PowerShell. The same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
+- **The procedures in this topic are only for Microsoft 365 organizations that don't have Exchange Online mailboxes**. For example, you have a standalone EOP subscription that protects your on-premises email environment. If your Microsoft 365 subscription includes Exchange Online mailboxes, you can't connect to EOP PowerShell; instead, you [connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+
+  If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, your EOP PowerShell connection instructions are the same as Exchange Online PowerShell. Use the Exchange Online PowerShell connection instructions in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) instead of the instructions in this topic.
 
 - The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
-
-- The required cmdlet and _ConnectionUri_ and _AzureADAuthorizationEndPointUri_ parameter values depend on the nature of your Microsoft 365 organization as described in the following table:
-
-  ****
-
-  |Microsoft 365 offering|Cmdlet|_ConnectionUri_ value|_AzureADAuthorizationEndPointUri_ value|
-  |---|---|---|---|
-  |Microsoft 365|**Connect-IPPSSession**|https://ps.protection.outlook.com/powershell-liveid/|Not used|
-  |Office 365 Germany|**Connect-IPPSSession**|`https://outlook.office.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
-  |Exchange Enterprise CAL with Services licenses (on-premises Exchange)|**Connect-ExchangeOnline**|Not used|Not used|
-  |
 
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351) forum.
@@ -56,11 +47,11 @@ If you account uses multi-factor authentication, use the steps in this section. 
 2. The command that you need to run uses the following syntax:
 
    ```powershell
-   <Connect-IPPSSession | Connect-ExchangeOnline> -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>]
+   Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>]
    ```
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
-   - The required cmdlet and _ConnectionUri_ and _AzureADAuthorizationEndPointUri_ parameter values are described in the table in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
+   - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the parameter descriptions in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
 
    **This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization**:
 
@@ -74,19 +65,13 @@ If you account uses multi-factor authentication, use the steps in this section. 
    Connect-IPPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://ps.protection.outlook.de/powershell-liveid/ -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
    ```
 
-   **This example connects to Exchange Online Protection PowerShell in an Exchange Enterprise CAL with Services organization**:
-
-   ```powershell
-   Connect-ExchangeOnline -UserPrincipalName chris@tailspintoys.com
-   ```
-
-For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline) and [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
 
 ```powershell
-Disconnect-ExchangeOnline
+Get-PSSession | Remove-PSSession
 ```
 
 ## Connect to Exchange Online Protection PowerShell without using MFA
@@ -110,10 +95,10 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 3. The command that you need to run uses the following syntax:
 
    ```powershell
-   <Connect-IPPSSession | Connect-ExchangeOnline> -Credential $UserCredential -ConnectionUri <URL>
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri <URL>
    ```
 
-  The required cmdlet and _ConnectionUri_ parameter values are described in the table in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
+   The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
 
    **This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization**:
 
@@ -127,19 +112,13 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.protection.outlook.de/powershell-liveid/
    ```
 
-   **This example connects to Exchange Online Protection PowerShell in an Exchange Enterprise CAL with Services organization**:
-
-   ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential
-   ```
-
-For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline) and [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
 > [!NOTE]
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
 
 ```powershell
-Disconnect-ExchangeOnline
+Get-PSSession | Remove-PSSession
 ```
 
 ## How do you know this worked?
