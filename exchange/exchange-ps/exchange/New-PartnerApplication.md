@@ -13,9 +13,9 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 ||
 # New-PartnerApplication
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available or functional only in on-premises Exchange.
 
-Use the New-PartnerApplication cmdlet to create a partner application configuration.
+Use the New-PartnerApplication cmdlet to create partner application configurations in on-premises Exchange organizations.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
