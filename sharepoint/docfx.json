@@ -69,7 +69,7 @@
         "sharepoint-ps/sharepoint-online/*.yml":"sharepoint-powershell"
       },
       "ms.prod":{
-        "sharepoint-ps/sharepoint-server/*.md":"sharepoint-powershell"
+        "sharepoint-ps/sharepoint-server/*.yml":"sharepoint-powershell"
       }
     },
     "template": [],
