@@ -36,7 +36,7 @@ If you account uses multi-factor authentication, use the steps in this section. 
 1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
    ```powershell
-   Import-Module ExchangeOnlineManagement
+   Import-Module -name ExchangeOnlineManagement
    ```
 
 2. The command that you need to run uses the following syntax:
@@ -88,7 +88,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
    ```powershell
-   Import-Module ExchangeOnlineManagement
+   Import-Module -name ExchangeOnlineManagement
    ```
 
 2. Run the following command:
