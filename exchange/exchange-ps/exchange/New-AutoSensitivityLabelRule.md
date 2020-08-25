@@ -65,10 +65,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+{{ New-AutoSensitivityLabelRule -Name "SocialSecurityRule" -Policy "SSNPolicy" -ContentContainsSensitiveInformation @{"name"="U.S. Social Security Number (SSN)";"mincount"="1"} -Workload SharePoint}}
 ```
 
-{{ Add example description here }}
+{{ This example creates an autolabeling rule named "SocialSecurityRule" that is assigned to the policy "SSNPolicy." This rule looks for Social Security Numbers on documents with a minimum count of 1 on SharePoint sites.}}
 
 ## PARAMETERS
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActivationDate
-{{ Fill ActivationDate Description }}
+{{ This parameter is reserved for internal Microsoft use. }}
 
 ```yaml
 Type: System.DateTime
@@ -504,7 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryDate
-{{ Fill ExpiryDate Description }}
+{{ This parameter is reserved for internal Microsoft use. }}
 
 ```yaml
 Type: System.DateTime
@@ -520,7 +520,7 @@ Accept wildcard characters: False
 ```
 
 ### -From
-{{ Fill From Description }}
+{{ This parameter is reserved for internal Microsoft use. }}
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -536,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromMemberOf
-{{ Fill FromMemberOf Description }}
+{{ This parameter is reserved for internal Microsoft use. }}
 
 ```yaml
 Type: SmtpAddress[]
@@ -552,7 +552,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutableId
-{{ Fill ImmutableId Description }}
+{{ This parameter is reserved for internal Microsoft use. }}
 
 ```yaml
 Type: System.Guid
@@ -588,7 +588,17 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ Fill Priority Description }}
+{{ The Priority parameter specifies a priority value for the rule that determines the order of rule processing within the policy. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
+
+Valid values and the default value for this parameter depend on the number of existing rules in the policy. For example, if there are 8 existing rules:
+
+Valid priority values for the existing 8 rules are from 0 through 7.
+
+Valid priority values for a new 9th rule that you add to the policy are from 0 through 8.
+
+The default value for a new 9th rule that you add to the policy is 8.
+
+If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1. }}
 
 ```yaml
 Type: System.Int32
