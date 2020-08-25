@@ -2,9 +2,7 @@
   "build": {
     "content": [
       {
-        "files": [
-          "**/*.md"
-        ],
+        "files": ["**/*.md"],
         "src": "docs-conceptual",
         "version": "skype-ps",
         "dest": "skype",
@@ -14,36 +12,27 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"
-        ]
+          "ThirdPartyNotices"]
       },
       {
-        "files": [
-          "toc.yml"
-        ],
+         "files": ["toc.yml"],
         "src": "docs-conceptual",
         "version": "skype-ps",
         "dest": "skype/skype-ps"
       },
       {
-        "files": [
-          "**/*.yml"
-        ],
-        "exclude": [
-          "toc.yml"
-        ],
-        "src": "skype-ps",
-        "version": "skype-ps",
-        "dest": "module"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "skype-ps",
-        "version": "skype-ps",
-        "dest": "module/skype-ps"
-      }
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
+      "src": "skype-ps",
+      "version": "skype-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "skype-ps",
+      "version": "skype-ps",
+      "dest": "module/skype-ps"
+    }
     ],
     "resource": [
       {
@@ -65,13 +54,13 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author": "serdarsoysal",
-      "ms.author": "serdars",
-      "manager": "serdars",
-      "ms.date": "09/25/2017",
-      "ms.topic": "reference",
-      "ms.service": "skypeforbusiness-powershell",
-      "ms.devlang": "powershell",
+      "author" : "serdarsoysal",
+      "ms.author" : "serdars",
+      "manager" : "serdars",
+      "ms.date" : "09/25/2017",
+      "ms.topic" : "reference",
+      "ms.service" : "skypeforbusiness-powershell",
+      "ms.devlang" : "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
