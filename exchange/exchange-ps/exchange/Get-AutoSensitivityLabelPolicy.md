@@ -35,10 +35,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+{{Get-AutoSensitivityLabelPolicy -Identity "Employee Numbers" -IncludeTestModeResults $true}}
 ```
 
-{{ Add example description here }}
+{{ This example returns detailed information about the autosensitivity label policy named Employee Numbers. The boolean parameter allows one to see the status of test mode.}}
 
 ## PARAMETERS
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTestModeResults
-{{ Fill IncludeTestModeResults Description }}
+{{The IncludeTestModeResults is a boolean flag that indicates whether or not to include the status of test mode in the policy details.}}
 
 ```yaml
 Type: Boolean
