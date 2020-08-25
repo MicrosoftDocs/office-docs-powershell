@@ -48,10 +48,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-AutoSensitivityLabelPolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePointLocation "https://my.url","https://my.url2" -OneDriveLocation "https://my.url3","https://my.url4" -Mode TestWithoutNotifications
 ```
 
-{{ Add example description here }}
+This example creates an autolabel policy named GlobalPolicy for the specified SharePoint Online and OneDrive for Business locations. The new policy has a descriptive comment and will be in simulation mode on creation.
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplySensitivityLabel
-{{ Fill ApplySensitivityLabel Description }}
+The AppleSensitivityLabel parameter specifies which label to use for the autolabel policy.
 
 ```yaml
 Type: String
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSender
-{{ Fill ExchangeSender Description }}
+The ExchangeSender parameter specifies which senders to include in the policy.
 
 ```yaml
 Type: SmtpAddress[]
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderException
-{{ Fill ExchangeSenderException Description }}
+The ExchangeSenderException parameter specifies which senders to exclude in the policy.
 
 ```yaml
 Type: SmtpAddress[]
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ Fill Priority Description }}
+The Priority parameter specifies the priority of the policy. The highest priority policy will take action over lower priority policies if two policies are applicable for a file.
 
 ```yaml
 Type: System.Int32
