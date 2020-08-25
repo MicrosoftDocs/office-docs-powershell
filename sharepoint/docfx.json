@@ -21,7 +21,8 @@
         "dest": "sharepoint/sharepoint-ps"
       },
       {
-      "files": ["**/*.md"],
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
       "src": "sharepoint-ps",
       "version": "sharepoint-ps",
       "dest": "module"
