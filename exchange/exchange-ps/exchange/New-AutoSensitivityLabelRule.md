@@ -588,17 +588,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ The Priority parameter specifies a priority value for the rule that determines the order of rule processing within the policy. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
-
-Valid values and the default value for this parameter depend on the number of existing rules in the policy. For example, if there are 8 existing rules:
-
-Valid priority values for the existing 8 rules are from 0 through 7.
-
-Valid priority values for a new 9th rule that you add to the policy are from 0 through 8.
-
-The default value for a new 9th rule that you add to the policy is 8.
-
-If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1. }}
+{{ This parameter is reserved for internal Microsoft use. }}
 
 ```yaml
 Type: System.Int32
