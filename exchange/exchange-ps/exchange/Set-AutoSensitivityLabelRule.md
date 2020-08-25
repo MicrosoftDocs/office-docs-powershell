@@ -527,7 +527,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ This parameter is not supported for this cmdlet.}}
+{{ This parameter is reserved for internal Microsoft use. }}
 
 ```yaml
 Type: System.Int32
