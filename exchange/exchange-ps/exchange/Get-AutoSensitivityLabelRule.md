@@ -38,10 +38,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+{{ Get-AutoSensitivityLabelRule }}
 ```
 
-{{ Add example description here }}
+{{ This example displays summary information for all autolabeling rules in the Security & Compliance Center. }}
 
 ## PARAMETERS
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeExecutionRuleGuids
-{{ Fill IncludeExecutionRuleGuids Description }}
+{{ The parameter IncludeExecutionRuleGuids takes a boolean value which will toggle including the execution rule guid in the rule details. }}
 
 ```yaml
 Type: Boolean
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeExecutionRuleInformation
-{{ Fill IncludeExecutionRuleInformation Description }}
+{{ The parameter IncludeExecutionRuleInformation takes a boolean value which will toggle including the execution rule info in the rule details.  }}
 
 ```yaml
 Type: Boolean
