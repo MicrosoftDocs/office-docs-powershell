@@ -13,6 +13,7 @@ schema: 2.0.0
 # Test-CsInboundBlockedNumberPattern
 
 ## SYNOPSIS
+This cmdlet tests the given number against the created (by using New-CsInboundBlockedNumberPattern cmdlet) blocked numbers pattern.
 
 ## SYNTAX
 
@@ -22,16 +23,16 @@ Test-CsInboundBlockedNumberPattern -PhoneNumber <String> [-TenantId <Guid>] [-FQ
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet tests the given number against the created (by using New-CsInboundBlockedNumberPattern cmdlet) blocked numbers pattern.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:> {{ Add example code here }}
+PS C:\> Test-CsInboundBlockedNumberPattern -PhoneNumber "321321321"
 ```
 
-{{ Add example description here }}
+Tests the "321321321" number to check if it will be blocked for inbound calls.
 
 ## PARAMETERS
 
@@ -51,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -FQDN
-{{ Fill FQDN Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -66,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-{{ Fill PhoneNumber Description }}
+The phone number to be tested.
 
 ```yaml
 Type: String
@@ -81,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
-{{ Fill TenantId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid

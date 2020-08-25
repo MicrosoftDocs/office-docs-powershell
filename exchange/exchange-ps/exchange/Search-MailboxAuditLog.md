@@ -237,11 +237,7 @@ Accept wildcard characters: False
 The LogonTypes parameter specifies the type of logons. Valid values are:
 
 - Admin: Audit log entries for mailbox access by administrator logons are returned.
-
 - Delegate: Audit log entries for mailbox access by delegates are returned, including access by users with Full Mailbox Access permission.
-
-- External: For Exchange Online mailboxes, audit log entries for mailbox access by Microsoft datacenter administrators are returned.
-
 - Owner: Audit log entries for mailbox access by the primary mailbox owner are returned. This value requires the ShowDetails switch.
 
 ```yaml
