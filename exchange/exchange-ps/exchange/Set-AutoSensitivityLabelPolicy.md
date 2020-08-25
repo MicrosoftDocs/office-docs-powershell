@@ -78,10 +78,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Set-AutoSensitivityLabelPolicy -Identity "Main PII" -AddSharePointLocation "https://my.url1","https://my.url2" -AddOneDriveLocation "https://my.url3","https://my.url4" }}
+Set-AutoSensitivityLabelPolicy -Identity "Main PII" -AddSharePointLocation "https://my.url1","https://my.url2" -AddOneDriveLocation "https://my.url3","https://my.url4"
 ```
 
-{{ This example adds the specified URLs to the SharePoint Online and OneDrive for Business locations for the autolabeling policy named Main PII without affecting the existing URL values. }}
+This example adds the specified URLs to the SharePoint Online and OneDrive for Business locations for the autolabeling policy named Main PII without affecting the existing URL values.
 
 ## PARAMETERS
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-{{ This AddExchangeLocation parameter specifies new exchange locations to be added to the policy without affecting the existing ones. }}
+This AddExchangeLocation parameter specifies new Exchange locations to be added to the policy without affecting the existing ones.
 
 ```yaml
 Type: MultiValuedProperty
@@ -124,9 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
-{{ The AddOneDriveLocation parameter specifies the OneDrive for Business sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+The AddOneDriveLocation parameter specifies the OneDrive for Business sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>". }}
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -142,9 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
-{{ This parameter specifies the OneDrive for Business sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+The AddOneDriveLocationException parameter specifies the OneDrive for Business sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>". }}
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -160,11 +160,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocation
-{{ The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 SharePoint Online sites can't be added to the policy until they have been indexed.
 
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>". }}
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationException
-{{ This parameter specifies the SharePoint Online sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The AddSharePointLocationException parameter specifies the SharePoint Online sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>". }}
 
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplySensitivityLabel
-{{ The ApplySensitivityLabel parameter selects which label to be used for the policy. This will override the previous label on the policy. }}
+The ApplySensitivityLabel parameter selects which label to be used for the policy. This will override the previous label on the policy.
 
 ```yaml
 Type: String
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-{{ The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note". }}
+The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
 Type: String
@@ -250,7 +250,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{ The parameter Enabled is a boolean value to enable/disable the policy. }}
+The Enabled parameter enables or disables the policy. Valid values are:
+
+- $true: The policy is enabled. This is the default value.
+
+- $false: The policy is disabled.
 
 ```yaml
 Type: Boolean
@@ -266,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSender
-{{ The parameter ExchangeSender specifies the sender list in exchange for which the policy should include.}}
+The ExchangeSender parameter specifies the sender list in Exchange for which the policy should include.
 
 ```yaml
 Type: SmtpAddress[]
@@ -282,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderException
-{{ The parameter ExchangeSenderException specifies the sender list in exchange for which the policy should exclude. }}
+The ExchangeSenderException parameter specifies the sender list in Exchange for which the policy should exclude.
 
 ```yaml
 Type: SmtpAddress[]
@@ -298,11 +302,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-{{ The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the autolabeling policy. You identify the group by its email address.
+The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to include in the autolabeling policy. You identify the group by its email address.
 
 To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>.
 
-You can't use this parameter to specify Microsoft 365 Groups. }}
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
@@ -318,11 +322,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-{{ The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the autolabeling policy. You identify the group by its email address.
+The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-enabled security groups, or dynamic distribution groups to exclude from the autolabeling policy. You identify the group by its email address.
 
 To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>.
 
-You can't use this parameter to specify Microsoft 365 Groups. }}
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
@@ -338,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch. }}
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -353,31 +357,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-{{The Identity parameter specifies the autolabel policy that you want to modify. You can use any value that uniquely identifies the policy. }}
-```yaml
-Type: PolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -Mode
-{{ The Mode parameter specifies the action and notification level of the autolabel policy. Valid values are:
+The Mode parameter specifies the action and notification level of the autolabel policy. Valid values are:
 
-Enable: The policy is enabled for actions and notifications.
+- Enable: The policy is enabled for actions and notifications.
 
-Disable: The policy is disabled.
+- Disable: The policy is disabled.
 
-TestWithNotifications: Not supported.
+- TestWithNotifications: Not supported.
 
-TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent (Test mode). }}
+- TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent (Test mode).
 
 ```yaml
 Type: PolicyMode
@@ -394,17 +383,17 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and policies can't have the same priority value.
+The Priority parameter specifies a priority value for the policy that determines the order of policy processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and policies can't have the same priority value.
 
 Valid values and the default value for this parameter depend on the number of existing policies. For example, if there are 5 existing policies:
 
-Valid priority values for the existing 5 policies are from 0 through 4.
+- Valid priority values for the existing 5 policies are from 0 through 4.
 
-Valid priority values for a new 6th policy are from 0 through 5.
+- Valid priority values for a new 6th policy are from 0 through 5.
 
-The default value for a new 6th policy is 5.
+- The default value for a new 6th policy is 5.
 
-If you modify the priority value of a policy, the position of the policy in the list changes to match the priority value you specify. In other words, if you set the priority value of a policy to the same value as an existing policy, the priority value of the existing policy and all other lower priority policies after it is increased by 1. }}
+If you modify the priority value of a policy, the position of the policy in the list changes to match the priority value you specify. In other words, if you set the priority value of a policy to the same value as an existing policy, the priority value of the existing policy and all other lower priority policies after it is increased by 1.
 
 ```yaml
 Type: System.Int32
@@ -420,7 +409,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
-{{ The parameter RemoveExchangeLocation removes locations on exchange from the policy.}}
+The RemoveExchangeLocation parameter removes locations on Exchange from the policy.
 
 ```yaml
 Type: MultiValuedProperty
@@ -436,9 +425,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
-{{ The RemoveOneDriveLocation parameter specifies the OneDrive for Business sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+The RemoveOneDriveLocation parameter specifies the OneDrive for Business sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>". }}
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -454,9 +443,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
-{{ This parameter specifies the OneDrive for Business sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+This RemoveOneDriveLocationException parameter specifies the OneDrive for Business sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>". }}
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -472,9 +461,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
-{{ The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>". }}
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -490,9 +479,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
-{{ This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The RemoveSharePointLocationException parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>". }}
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -508,7 +497,9 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDistribution
-{{ The RetryDistribution switch redistributes the policy to all OneDrive for Business and SharePoint Online locations. Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch. }}
+The RetryDistribution switch redistributes the policy to all OneDrive for Business and SharePoint Online locations. You don't need to specify a value with this switch.
+
+Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
 
 ```yaml
 Type: SwitchParameter
