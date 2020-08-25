@@ -13,9 +13,9 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 ||
 # Set-PartnerApplication
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available or functional only in on-premises Exchange.
 
-Use the Set-PartnerApplication cmdlet to configure partner application configurations.
+Use the Set-PartnerApplication cmdlet to configure partner application configurations in on-premises Exchange organizations.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
