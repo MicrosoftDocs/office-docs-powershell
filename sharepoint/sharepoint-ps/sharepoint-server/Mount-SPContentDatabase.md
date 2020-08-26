@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 Attaches an existing content database to the farm.
-
+NOTE: Please be aware that if a content database that does not exists is specified, it will be created by this cmdlet.
 
 
 ## SYNTAX
@@ -32,6 +32,7 @@ Mount-SPContentDatabase [-Name] <String> [-WebApplication] <SPWebApplicationPipe
 ## DESCRIPTION
 The Mount-SPContentDatabase cmdlet attaches an existing content database to the farm.
 If the database being mounted requires an upgrade, this cmdlet will cause the database to be upgraded.
+NOTE: Please be aware that if a content database that does not exists is specified, it will be created by this cmdlet.
 
 The default behavior of this cmdlet causes an upgrade of the schema of the database and initiates upgraded builds for all site collections within the specified content database if required.
 To prevent initiation of upgraded builds of site collections, use the NoB2BSiteUpgrade parameter.
