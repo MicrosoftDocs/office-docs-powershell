@@ -15,6 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 Attaches an existing content database to the farm.
+
 NOTE: Please be aware that if a content database that does not exists is specified, it will be created by this cmdlet.
 
 
@@ -402,4 +403,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
