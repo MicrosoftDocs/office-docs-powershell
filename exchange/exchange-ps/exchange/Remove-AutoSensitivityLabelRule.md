@@ -32,10 +32,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-AutoSensitivityLabelRule -Identity "Social Security Rule"
 ```
 
-{{ Add example description here }}
+This example removes the rule named Social Security Rule.
 
 ## PARAMETERS
 
