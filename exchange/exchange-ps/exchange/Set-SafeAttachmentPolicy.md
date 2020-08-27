@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-SafeAttachmentPolicy cmdlet to modify Safe Attachments policies in your cloud-based organization.
+Use the Set-SafeAttachmentPolicy cmdlet to modify safe attachment policies in your cloud-based organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -37,7 +37,7 @@ Set-SafeAttachmentPolicy [-Identity] <SafeAttachmentPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity.
+Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Office 365 ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -48,12 +48,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-SafeAttachmentsPolicy -Identity "Engineering Block Attachments" -Redirect $true -RedirectAddress admin@contoso.com
 ```
 
-This example modifies the existing Safe Attachments policy named Engineering Block Attachments to redirect detected malware attachments to admin@contoso.com.
+This example modifies the existing safe attachment policy named Engineering Block Attachments to redirect detected malware attachments to admin@contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Safe Attachments policy that you want to modify.
+The Identity parameter specifies the safe attachment policy that you want to modify.
 
 You can use any value that uniquely identifies the policy. For example:
 
@@ -77,9 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -Action
-The Action parameter specifies the action for the Safe Attachments policy. Valid values are:
+The Action parameter specifies the action for the safe attachment policy. Valid values are:
 
-- Allow: Deliver the email message, including the malware attachment.
+- Allow: Attachments aren't scanned by safe attachment policies.
 
 - Block: Block the email message that contains the malware attachment. This is the default value.
 
@@ -103,11 +103,11 @@ Accept wildcard characters: False
 ```
 
 ### -ActionOnError
-The ActionOnError parameter specifies the error handling option for Safe Attachments scanning (what to do if attachment scanning times out or an error occurs). Valid values are:
+The ActionOnError parameter specifies the error handling option for safe attachment scanning (what to do if attachment scanning times out or an error occurs). Valid values are:
 
-- $true: The action specified by the Action parameter is applied to messages even when the attachments aren't successfully scanned.
+- $true: The action specified by the Action parameter is applied to messages even when the attachments aren't successfully scanned. This is the default value.
 
-- $false: The action specified by the Action parameter isn't applied to messages when the attachments aren't successfully scanned. This is the default value.
+- $false: The action specified by the Action parameter isn't applied to messages when the attachments aren't successfully scanned.
 
 ```yaml
 Type: Boolean
@@ -159,11 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-The Enable parameter specifies whether the policy is enabled. Valid values are:
-
-- $true: The policy is enabled.
-
-- $false: The policy is disabled. This is the default value.
+This parameter isn't used. To enable or disable a safe attachment policy, use the Enabled parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets.
 
 ```yaml
 Type: Boolean
