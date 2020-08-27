@@ -201,8 +201,6 @@ The RecordType parameter filters the results by the record types that are define
 
 - SkypeForBusinessUsersBlocked
 
-- Sway
-
 - SyntheticProbe
 
 - TeamsHealthcare

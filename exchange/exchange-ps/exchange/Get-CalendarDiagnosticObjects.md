@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-CalendarDiagnosticObjects cmdlet to collect a range of calendar logs. The calendar diagnostic logs track important calendar-related event data for each mailbox, and can be used to troubleshoot calendar issues that occur in mailboxes. The logs track all calendar items and meeting messages.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -25,17 +25,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
+ [-ConfigurationName <String>]
  [-CustomPropertyNames <String[]>]
- [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
  [-EntryId <String>]
+ [-EwsId <String>]
  [-ExactMatch <Boolean>]
  [-ItemClass <String[]>]
  [-ItemIds <String[]>]
  [-MeetingId <String>]
- [-ReadFromDomainController]
+ [-ODataId <String>]
  [-ResultSize <Unlimited>]
  [-ShouldBindToItem <Boolean>]
+ [-ShouldDecodeEnums <Boolean>]
+ [-ShouldFetchAttendeeCollection <Boolean>]
  [-ShouldFetchRecurrenceExceptions <Boolean>]
  [-StartDate <ExDateTime>]
  [-Subject <String>]
@@ -129,11 +132,11 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -CustomPropertyNames
-The CustomPropertyNames parameter returns the specified calendar item custom property in the results. You can specify multiple values separated by commas.
+### -ConfigurationName
+{{ Fill ConfigurationName Description }}
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -145,11 +148,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-This parameter is reserved for internal Microsoft use.
+### -CustomPropertyNames
+The CustomPropertyNames parameter returns the specified calendar item custom property in the results. You can specify multiple values separated by commas.
 
 ```yaml
-Type: Fqdn
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -181,6 +184,22 @@ Accept wildcard characters: False
 
 ### -EntryId
 The EntryID parameter filters the results by the specified EntryID property value, which corresponds to the MAPI property PR\_ENTRYID.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EwsId
+{{ Fill EwsId Description }}
 
 ```yaml
 Type: String
@@ -269,11 +288,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReadFromDomainController
-This parameter is reserved for internal Microsoft use.
+### -ODataId
+{{ Fill ODataId Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -307,6 +326,38 @@ The ShouldBindToItem parameter specifies whether to truncate large streamable pr
 - $true: The values of large streamable properties aren't truncated, so the full value is returned.
 
 - $false: The values of large streamable properties are truncated. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShouldDecodeEnums
+{{ Fill ShouldDecodeEnums Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShouldFetchAttendeeCollection
+{{ Fill ShouldFetchAttendeeCollection Description }}
 
 ```yaml
 Type: Boolean

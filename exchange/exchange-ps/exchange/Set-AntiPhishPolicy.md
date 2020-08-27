@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-AntiPhishPolicy cmdlet to modify antiphish policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -367,6 +367,17 @@ The EnableUnauthenticatedSender parameter enables or disables unauthenticate
 - $true: This is the default value. A question mark (?) is applied to the sender's photo if the message does not pass SPF or DKIM checks AND the message does not pass DMARC or composite authentication. The via tag (chris@contoso.com <u>via</u> michelle@fabrikam.com) is added if the domain in the From address (the message sender that's displayed in email clients) is different from the domain in the DKIM signature or the MAIL FROM address.
 
 - $false: Unauthenticated sender identification is disabled.
+
+To prevent these identifiers from being added to messages from specific senders, you have the following options:
+
+  - Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
+
+  - [Configure email authentication](https://docs.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own) for the sender domain.
+  
+    - For the question mark in the sender's photo, SPF or DKIM are the most important.
+    - For the via tag, confirm the domain in the DKIM signature or the **MAIL FROM** address matches (or is a subdomain of) the domain in the From address.
+
+  For more information, see [Identify suspicious messages in Outlook.com and Outlook on the web](https://support.microsoft.com/office/3d44102b-6ce3-4f7c-a359-b623bec82206)
 
 ```yaml
 Type: Boolean

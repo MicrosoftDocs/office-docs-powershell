@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsguestmeetingconfiguration
 applicable: Skype for Business Online
-title: Get-CsTeamsGuestCallingConfiguration
+title: Get-CsTeamsGuestMeetingConfiguration
 schema: 2.0.0
 manager: bulenteg
 author: tomkau

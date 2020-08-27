@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-SafeLinksAggregateReport cmdlet to return to return general data about Safe Links for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,7 +36,7 @@ Get-SafeLinksAggregateReport
 ## DESCRIPTION
 Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites.
 
-This cmdlet returns the following information:
+For the reporting period you specify, the cmdlet returns the following information:
 
 - Action
 - App

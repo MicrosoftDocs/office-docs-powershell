@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Searches against all stored sharing links and retrieves the email invites. 
 
 ## SYNTAX
 
@@ -24,23 +24,25 @@ Get-SPOSiteUserInvitations [-Site] <SpoSitePipeBind> [-EmailAddress] <string> [<
 
 ## DESCRIPTION
 
-.
+Searches against all stored sharing links on a Site and retrieves the email invites. 
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Get-SPOSiteUserInvitations -Site https://contoso.sharepoint.com/sites/ContosoWeb1/ -EmailAddress someone@example.com
 ```
 
-.
+This example retrieves email invites stored in the ContosoWeb1 site to the user with email address someone@example.com.
 
 ## PARAMETERS
 
 ### -Site
 
-.
+Specifies the URL or GUID of the site collection to get.
+
+The type must be a valid URL, in the form, https://server_name or https://server_name/sites/sitename, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: SpoSitePipeBind
@@ -56,7 +58,7 @@ Accept wildcard characters: False
 
 ### -EmailAddress
 
-.
+Email Address of the user.
 
 ```yaml
 Type: String

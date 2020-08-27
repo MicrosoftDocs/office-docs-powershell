@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficTopReport cmdlet to view a report of the highest volume senders, recipients, malware recipients and spam recipients in your organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -31,6 +31,17 @@ Get-MailTrafficTopReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
 ```
 
 ## DESCRIPTION
+For the reporting period you specify, the cmdlet returns the following information:
+
+- Domain
+- Date
+- Name
+- Event Type
+- Direction
+- Count
+
+To see all of these columns (width issues), write the output to a file. For example, `Get-MailTrafficTopReport | Out-String -Width 4096 | Out-File "C:\Users\admin\Desktop\Mail Traffic Top Report.txt"`.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -79,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
 
 ```yaml
 Type: MultiValuedProperty
@@ -129,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget EventTypes. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
 
 You can specify multiple values separated by commas.
 
@@ -231,7 +242,12 @@ Accept wildcard characters: False
 ### -SummarizeBy
 The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
-For the Get-MailTopTrafficReport cmdlet, the SummarizeBy parameter accepts the values Domain and EventType. You can specify multiple values separated by commas.
+Valid values are:
+
+- Domain
+- EventType
+
+You can specify multiple values separated by commas. The values that you specify for this parameter are not displayed in the results (the values in the corresponding columns are blank).
 
 ```yaml
 Type: MultiValuedProperty

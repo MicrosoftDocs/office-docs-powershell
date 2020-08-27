@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailDetailSpamReport cmdlet to view the details of spam messages for the last 10 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -46,7 +46,7 @@ This example retrieves the details of spam messages sent by john@contoso.com bet
 ## PARAMETERS
 
 ### -Action
-The Action parameter filters the report by the action taken by DLP policies, transport rules, malware filtering, or spam filtering. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget Actions. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
+The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
 
 You can specify multiple values separated by commas.
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
 
 ```yaml
 Type: MultiValuedProperty
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget EventTypes. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
 
 You can specify multiple values separated by commas.
 

@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-InboundConnector cmdlet to create a new Inbound connector in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPAddresses
-The SenderIPAddresses parameter specifies the remote IP addresses from which this connector accepts messages. You enter the IP addresses using the following syntax:
+The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. IPv6 addresses are not supported. You enter the IP addresses using the following syntax:
 
 - Single IP: For example, 192.168.1.1.
 

@@ -13,7 +13,7 @@ monikerRange: "exchonline-ps"
 # Set-UserBriefingConfig
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 Use the Set-UserBriefingConfig cmdlet to enable or disable the Briefing for a user. For more details about configuring the Briefing, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin).
 
