@@ -139,14 +139,11 @@ Create a self-signed x.509 certificate using one of the following methods:
 
 - (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets to request a self-signed certificate and export it to PFX.
 
-- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1):
+- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1). Note that this script generates SHA1 certificates.
 
   ```powershell
   .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2020-04-01 -EndDate 2022-04-01
   ```
-  
-  > [!NOTE]
-  > Note that this script generates SHA1 certificates.
 
 ## Step 4: Attach the certificate to the Azure AD application
 
