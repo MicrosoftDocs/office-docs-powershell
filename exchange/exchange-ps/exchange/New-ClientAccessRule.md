@@ -44,13 +44,12 @@ Client access rules are like mail flow rules (also known as transport rules) for
 
 Note: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
-- OutlookWebApp: BasicAuthentication and AdfsAuthentication.
-
-- ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
-
-- RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
-
 - ExchangeActiveSync: BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
+- ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
+- IMAP4: BasicAuthentication and OAuthAuthentication.
+- OutlookWebApp: BasicAuthentication and AdfsAuthentication.
+- POP3: BasicAuthentication and OAuthAuthentication.
+- RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
