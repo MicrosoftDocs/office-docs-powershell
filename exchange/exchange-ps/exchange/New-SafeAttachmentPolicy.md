@@ -37,9 +37,9 @@ New-SafeAttachmentPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-New safe attachment policies aren't valid and aren't applied until you add a safe attachment rule to the policy by using the New-SafeAttachmentRule cmdlet.
+Safe Attachments is a feature in Office 365 Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Office 365 ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
 
-Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Office 365 ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
+New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the SafeAttachmentPolicy parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets to associate the policy with a rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
