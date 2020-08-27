@@ -688,27 +688,15 @@ Accept wildcard characters: False
 ### -Workload
 The Workload parameter specifies the workload. Valid values are:
 
-- AuditAlerting
-- DynamicScope
-- EndpointDevices
 - Exchange
-- ExchangeOnPremises
-- Intune
-- ModernGroup
 - OneDriveForBusiness
-- PublicFolder
 - SharePoint
-- SharePointOnPremises
-- Skype
-- Teams
-- ThirdPartyApps
-- UnifiedAuditAzure
 
 ```yaml
 Type: Workload
 Parameter Sets: (All)
 Aliases:
-Accepted values: None, Exchange, SharePoint, Intune, OneDriveForBusiness, PublicFolder, SharePointOnPremises, ExchangeOnPremises, AuditAlerting, Skype, ModernGroup, DynamicScope, Teams, UnifiedAuditAzure, EndpointDevices, ThirdPartyApps
+Accepted values: Exchange, SharePoint, OneDriveForBusiness
 Applicable: Office 365 Security & Compliance Center
 
 Required: False
