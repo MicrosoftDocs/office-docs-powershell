@@ -65,10 +65,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ New-AutoSensitivityLabelRule -Name "SocialSecurityRule" -Policy "SSNPolicy" -ContentContainsSensitiveInformation @{"name"="U.S. Social Security Number (SSN)";"mincount"="1"} -Workload SharePoint}}
+New-AutoSensitivityLabelRule -Name "SocialSecurityRule" -Policy "SSNPolicy" -ContentContainsSensitiveInformation @{"name"="U.S. Social Security Number (SSN)";"mincount"="1"} -Workload SharePoint
 ```
 
-{{ This example creates an autolabeling rule named "SocialSecurityRule" that is assigned to the policy "SSNPolicy." This rule looks for Social Security Numbers on documents with a minimum count of 1 on SharePoint sites.}}
+This example creates an autolabeling rule named "SocialSecurityRule" that is assigned to the policy "SSNPolicy." This rule looks for Social Security Numbers on documents with a minimum count of 1 on SharePoint sites.
 
 ## PARAMETERS
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActivationDate
-{{ This parameter is reserved for internal Microsoft use. }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.DateTime
@@ -504,7 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryDate
-{{ This parameter is reserved for internal Microsoft use. }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.DateTime
@@ -520,7 +520,7 @@ Accept wildcard characters: False
 ```
 
 ### -From
-{{ This parameter is reserved for internal Microsoft use. }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -536,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromMemberOf
-{{ This parameter is reserved for internal Microsoft use. }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress[]
@@ -552,7 +552,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutableId
-{{ This parameter is reserved for internal Microsoft use. }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.Guid
@@ -588,7 +588,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ This parameter is reserved for internal Microsoft use. }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.Int32
