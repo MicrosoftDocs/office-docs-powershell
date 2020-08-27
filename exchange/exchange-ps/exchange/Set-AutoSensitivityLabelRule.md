@@ -65,10 +65,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-AutoSensitivityLabelRule -Identity "SocialSecurityRule1" -Comment "Example"
 ```
 
-{{ Add example description here }}
+This example changes the rule property "Comment" with the rule name "SocialSecurityRule1" to the text "Example".
 
 ## PARAMETERS
 
@@ -479,7 +479,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryDate
-{{ Fill ExpiryDate Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.DateTime
@@ -495,7 +495,7 @@ Accept wildcard characters: False
 ```
 
 ### -From
-{{ Fill From Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -511,7 +511,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromMemberOf
-{{ Fill FromMemberOf Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress[]
@@ -527,7 +527,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ Fill Priority Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.Int32
