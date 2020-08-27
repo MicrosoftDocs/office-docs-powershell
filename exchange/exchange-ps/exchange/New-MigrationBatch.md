@@ -21,6 +21,77 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Onboarding
+```
+New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpsters]
+ [-ExcludeFolders <MultiValuedProperty>]
+ [-IncludeFolders <MultiValuedProperty>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Offboarding
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TargetEndpoint <MigrationEndpointIdParameter>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
+```
+
 ### Local
 ```
 New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
@@ -116,74 +187,6 @@ New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
  [-SkipReports]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Onboarding
-```
-New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-AllowIncrementalSyncs <Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>]
- [-ArchiveOnly]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-ExcludeDumpsters]
- [-ExcludeFolders <MultiValuedProperty>]
- [-LargeItemLimit <Unlimited>]
- [-Locale <CultureInfo>]
- [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>]
- [-Partition <MailboxIdParameter>]
- [-PrimaryOnly]
- [-ReportInterval <Timespan>]
- [-SkipMerging <MultiValuedProperty>]
- [-SkipMoving <MultiValuedProperty>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-StartAfter <DateTime>]
- [-TargetArchiveDatabases <MultiValuedProperty>]
- [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Offboarding
-```
-New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
- [-AllowIncrementalSyncs <Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>]
- [-ArchiveOnly]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-LargeItemLimit <Unlimited>]
- [-Locale <CultureInfo>]
- [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>]
- [-Partition <MailboxIdParameter>]
- [-PrimaryOnly]
- [-ReportInterval <Timespan>]
- [-SkipMerging <MultiValuedProperty>]
- [-SkipMoving <MultiValuedProperty>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-StartAfter <DateTime>]
- [-TargetArchiveDatabases <MultiValuedProperty>]
- [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>]
- [-TargetEndpoint <MigrationEndpointIdParameter>]
  [-TimeZone <ExTimeZoneValue>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -669,6 +672,58 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentFilter
+This parameter is available only in the cloud-based service.
+
+The ContentFilter parameter uses OPath filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+- Property is a filterable property. For filterable properties, see [Filterable properties for the ContentFilter parameter](https://docs.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
+
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
+
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
+
+You can specify the language of the filter by using the ContentFilterLanguage parameter.
+
+```yaml
+Type: String
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentFilterLanguage
+This parameter is available only in the cloud-based service.
+
+The ContentFilterLanguage parameter specifies the language for the ContentFilter parameter.
+
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+
+```yaml
+Type: CultureInfo
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableOnCopy
 The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters.. You don't need to specify a value with this switch.
 
@@ -746,7 +801,25 @@ Accept wildcard characters: False
 ### -ExcludeFolders
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the on-premises messaging system to the cloud-based mailboxes. Use folder names relative to the IMAP root on the on-premises mail server. Specify the value as a string array and separate multiple folder names with commas.
+For an IMAP migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the on-premises email system to the cloud-based mailboxes. Use folder names relative to the IMAP root on the on-premises mail server. Specify the value as a string array and separate multiple folder names with commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeFolders
+This parameter is available only in the cloud-based service.
+
+For an IMAP migration, the IncludeFolders parameter specifies mailbox folders that you want to migrate from the on-premises email system to the cloud-based mailboxes. Use folder names relative to the IMAP root on the on-premises mail server. Specify the value as a string array and separate multiple folder names with commas.
 
 ```yaml
 Type: MultiValuedProperty
