@@ -65,10 +65,10 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-AutoSensitivityLabelRule -Name "SocialSecurityRule" -Policy "SSNPolicy" -ContentContainsSensitiveInformation @{"name"="U.S. Social Security Number (SSN)";"mincount"="1"} -Workload SharePoint
 ```
 
-{{ Add example description here }}
+This example creates an autolabeling rule named "SocialSecurityRule" that is assigned to the policy "SSNPolicy." This rule looks for Social Security Numbers on documents with a minimum count of 1 on SharePoint sites.
 
 ## PARAMETERS
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActivationDate
-{{ Fill ActivationDate Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.DateTime
@@ -504,7 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryDate
-{{ Fill ExpiryDate Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.DateTime
@@ -520,7 +520,7 @@ Accept wildcard characters: False
 ```
 
 ### -From
-{{ Fill From Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -536,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromMemberOf
-{{ Fill FromMemberOf Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress[]
@@ -552,7 +552,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutableId
-{{ Fill ImmutableId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.Guid
@@ -588,7 +588,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{ Fill Priority Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.Int32
