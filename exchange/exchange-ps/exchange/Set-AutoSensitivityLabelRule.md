@@ -692,12 +692,11 @@ The Workload parameter specifies the workload. Valid values are:
 - OneDriveForBusiness
 - SharePoint
 
-
 ```yaml
 Type: Workload
 Parameter Sets: (All)
 Aliases:
-Accepted values: None, Exchange, SharePoint, OneDriveForBusiness
+Accepted values: Exchange, SharePoint, OneDriveForBusiness
 Applicable: Office 365 Security & Compliance Center
 
 Required: False
