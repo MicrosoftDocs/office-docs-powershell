@@ -90,11 +90,10 @@ Accept wildcard characters: False
 
 ### -Workload
 The Workload parameter specifies the workload. Valid values are:
+
 - Exchange
 - OneDriveForBusiness
 - SharePoint
-
-
 
 ```yaml
 Type: Workload
