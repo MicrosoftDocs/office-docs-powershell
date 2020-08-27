@@ -75,7 +75,7 @@ The ID of a group whose policy assignments will be returned.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -90,7 +90,7 @@ The policy type for which group policy assignments will be returned.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False

@@ -29,20 +29,7 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 
 - The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
-- The required _ConnectionUri_ and _AzureADAuthorizationEndPointUri_ parameter values depend on the nature of your Microsoft 365 organization as described in the following table:
-
-  ****
-
-  |Microsoft 365 offering|_ConnectionUri_ value|_AzureADAuthorizationEndPointUri_ value|
-  |---|---|---|
-  |Microsoft 365 or Microsoft 365 GCC|Not used|Not used|
-  |Office 365 Germany|`https://outlook.office.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
-  |Office 365 operated by 21Vianet|`https://partner.outlook.cn/PowerShell`|n/a|
-  |Microsoft 365 GCC High|`https://outlook.office365.us/powershell-liveid`|`https://login.microsoftonline.us/common`|
-  |Microsoft 365 DoD|`https://webmail.apps.mil/powershell-liveid`|`https://login.microsoftonline.us/common`|
-  |
-
-- The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
+- If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, your EOP PowerShell connection instructions are the same as Exchange Online PowerShell as described in this topic.
 
 > [!TIP]
 > Having problems? Ask in the [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542) forum.
@@ -64,7 +51,8 @@ If you account uses multi-factor authentication, use the steps in this section. 
    ```
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
-   - The _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values are described in the table in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
+   - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+   - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
 
    **This example connects to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
 
@@ -93,7 +81,7 @@ If you account uses multi-factor authentication, use the steps in this section. 
    **This example connects to Exchange Online PowerShell to manage another tenant**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -DelegatedOrganization adatum.onmicrosoft.com
+   Connect-ExchangeOnline -UserPrincipalName navin@contoso.com -DelegatedOrganization adatum.onmicrosoft.com
    ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
@@ -129,7 +117,8 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Connect-ExchangeOnline -Credential $UserCredential = Get-Credential -ShowProgress $true [-ConnectionUri <URL>] [-DelegatedOrganization <String>]
    ```
 
-   The _ConnectionUri_ values are described in the table in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
+   - The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+   - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
 
    **Connect to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
 

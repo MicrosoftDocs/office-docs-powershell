@@ -121,6 +121,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowRecordingStorageOutsideRegion
+Allow storing recording outside of region. All meeting recordings will be permanently stored in another region, and can't be migrated. For more info, see https://aka.ms/in-region.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowExternalParticipantGiveRequestControl
 Determines whether external participants can request or give control of screen sharing during meetings scheduled by this user. Set this to TRUE to allow the user to be able to give or request control. Set this to FALSE to prohibit an external user from giving or requesting control in a meeting.
 
@@ -273,7 +288,14 @@ Accept wildcard characters: False
 
 
 ### -AutoAdmittedUsers
-Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to EveryoneInSameAndFederatedCompany if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby.  This setting also applies to participants joining via a PSTN device (i.e. a traditional phone).
+Determines what types of participants will automatically be added to meetings organized by this user.
+Possible values are:
+- EveryoneInCompany, if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. 
+- Everyone, if you'd like to admit anonymous users by default. 
+- EveryoneInSameAndFederatedCompany, if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby. 
+- OrganizerOnly, if you would like that only meeting organizers can bypass the lobby.
+
+This setting also applies to participants joining via a PSTN device (i.e. a traditional phone).
 
 ```yaml
 Type: String
