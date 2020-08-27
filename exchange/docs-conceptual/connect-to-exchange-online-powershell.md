@@ -114,7 +114,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 3. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential = Get-Credential -ShowProgress $true [-ConnectionUri <URL>] [-DelegatedOrganization <String>]
+   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true [-ConnectionUri <URL>] [-DelegatedOrganization <String>]
    ```
 
    - The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
