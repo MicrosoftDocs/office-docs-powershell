@@ -271,8 +271,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeHiddenFiles
-If set to On, hidden system files will be migrated.
-By default, it is set to On.
+If set to true, hidden system files will be migrated.
+By default, it is set to true.
 
 ```yaml
 Type: Boolean
