@@ -83,6 +83,7 @@ Set-OrganizationConfig
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OnlineMeetingsByDefaultEnabled <Boolean>]
+ [-OutlookGifPickerDisabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
  [-OutlookMobileHelpShiftEnabled <Boolean>]
  [-OutlookMobileSingleAccountEnabled <Boolean>]
@@ -2047,6 +2048,15 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -OutlookGifPickerDisabled
+This parameter is available only in the cloud-based service.
+
+The OutlookGifPickerDisabled parameter disables the GIF Search (powered by Bing) feature built into the Outlook on the web Compose page.
+
+- $true: GIF Search in Outlook on the web is enabled.
+
+- $False: GIF Search in Outlook on the web is disabled. This is the default value.
 
 ### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
