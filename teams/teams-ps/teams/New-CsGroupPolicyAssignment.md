@@ -32,7 +32,7 @@ Group policy assignment allows you to easily manage policies across different su
 Group policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
 
 Group policy assignment is currently limited to the following policy types:
-TeamsAppSetupPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy.
+CallingLineIdentity, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy.
 
 ## EXAMPLES
 

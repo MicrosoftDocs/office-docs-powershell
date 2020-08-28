@@ -21,9 +21,9 @@ Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (AT
 
 - Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
 
-- ATP to protect files in SharePoint Online, OneDrive for Business and Microsoft Teams.
+- ATP protection files in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Conect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -103,7 +103,6 @@ The AllowSafeDocsOpen parameter specifies whether users can click through and by
 
 - $false: Users aren't allowed to exit Protected View in case of a malicious detection.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -154,11 +153,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableATPForSPOTeamsODB
-The EnableATPForSPOTeamsODB parameter specifies whether Safe Attachments is enabled for SharePoint Online, OneDrive for Business and Microsoft Teams. Valid values are:
+The EnableATPForSPOTeamsODB parameter specifies whether ATP protection is enabled for files in SharePoint Online, OneDrive for Business and Microsoft Teams. Valid values are:
 
-- $true: Safe Attachments is enabled for SharePoint Online, OneDrive for Business and Microsoft Teams.
+- $true: ATP protection is enabled for files in SharePoint Online, OneDrive for Business and Microsoft Teams. SharePoint Online admins can use the DisallowInfectedFileDownload parameter on the [Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant) cmdlet to control whether users are allowed to download files that are found to be malicious.
 
-- $false: Safe Attachments is disabled for SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.
+- $false: ATP protection is disabled for file in SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.
 
 ```yaml
 Type: Boolean
