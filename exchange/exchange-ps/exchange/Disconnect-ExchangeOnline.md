@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps"
 # Disconnect-ExchangeOnline
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Conect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 Use the Disconnect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to disconnect from an Exchange Online organization.
 

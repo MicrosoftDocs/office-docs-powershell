@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet is used to assign retrieve the status of batch policy assignment operations.
+This cmdlet is used to retrieve the status of batch policy assignment operations.
 
 ## SYNTAX
 

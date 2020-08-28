@@ -15,9 +15,9 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SafeAttachmentRule cmdlet to view Safe Attachments rules in your cloud-based organization.
+Use the Get-SafeAttachmentRule cmdlet to view safe attachment rules in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Conect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,7 +28,7 @@ Get-SafeAttachmentRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<Co
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity.
+Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Office 365 ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -39,19 +39,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-SafeAttachmentRule
 ```
 
-This example returns a summary list of all Safe Attachments rules in your organization.
+This example returns a summary list of all safe attachment rules in your organization.
 
 ### Example 2
 ```powershell
 Get-SafeAttachmentRule -Identity "Research Department Attachment Rule" | Format-List
 ```
 
-This example returns detailed information about the Safe Attachments rule named Research Department Attachment Rule.
+This example returns detailed information about the safe attachment rule named Research Department Attachment Rule.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Safe Attachments rule that you want to view.
+The Identity parameter specifies the safe attachment rule that you want to view.
 
 You can use any value that uniquely identifies the rule. For example:
 

@@ -14,7 +14,7 @@ monikerRange: "exchonline-ps"
 # Connect-IPPSSession
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Conect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell V2 module to connect to Security & Compliance Center PowerShell or standalone Exchange Online Protection PowerShell.
 
@@ -103,7 +103,7 @@ The ConnectionUri parameter specifies the connection endpoint for the remote Pow
 
 - For Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC, don't use this parameter.
 - For Security & Compliance Center PowerShell in Office 365 Germany, use the value <https://ps.compliance.protection.outlook.de/PowerShell-LiveID> for this parameter.
-- For Security & Compliance Center PowerShell in Microsoft 365 GCC High, use the value <https://outlook.office365.us/powershell-liveid> for this parameter.
+- For Security & Compliance Center PowerShell in Microsoft 365 GCC High, use the value <https://ps.compliance.protection.office365.us/powershell-liveid/> for this parameter.
 - For Security & Compliance Center PowerShell in Microsoft 365 DoD, use the value <https://l5.ps.compliance.protection.office365.us/powershell-liveid/> for this parameter.
 - For Exchange Online Protection PowerShell in standalone EOP organizations without Exchange Online mailboxes, use the value <https://ps.protection.outlook.com/powershell-liveid/> for this parameter.
 
