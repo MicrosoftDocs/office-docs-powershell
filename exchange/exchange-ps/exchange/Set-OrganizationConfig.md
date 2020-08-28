@@ -2052,11 +2052,26 @@ Accept wildcard characters: False
 ### -OutlookGifPickerDisabled
 This parameter is available only in the cloud-based service.
 
-The OutlookGifPickerDisabled parameter disables the GIF Search (powered by Bing) feature built into the Outlook on the web Compose page.
+This feature is currently in Preview, is not availalble everywhere, and is subject to change.
 
-- $true: GIF Search in Outlook on the web is enabled.
+The OutlookGifPickerDisabled parameter disables the GIF Search (powered by Bing) feature that's built into the Compose page in Outlook on the web. Valid values are:
 
-- $False: GIF Search in Outlook on the web is disabled. This is the default value.
+- $true: GIF Search in Outlook on the web is disabled.
+
+- $false: GIF Search in Outlook on the web is enabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
