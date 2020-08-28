@@ -83,6 +83,7 @@ Set-OrganizationConfig
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OnlineMeetingsByDefaultEnabled <Boolean>]
+ [-OutlookGifPickerDisabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
  [-OutlookMobileHelpShiftEnabled <Boolean>]
  [-OutlookMobileSingleAccountEnabled <Boolean>]
@@ -2040,6 +2041,30 @@ Type: MultiValuedProperty
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookGifPickerDisabled
+This parameter is available only in the cloud-based service.
+
+This feature is currently in Preview, is not availalble everywhere, and is subject to change.
+
+The OutlookGifPickerDisabled parameter disables the GIF Search (powered by Bing) feature that's built into the Compose page in Outlook on the web. Valid values are:
+
+- $true: GIF Search in Outlook on the web is disabled.
+
+- $false: GIF Search in Outlook on the web is enabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
