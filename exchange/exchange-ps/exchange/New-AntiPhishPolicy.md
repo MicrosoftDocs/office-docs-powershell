@@ -60,7 +60,7 @@ New-AntiPhishPolicy [-Name] <String>
 ## DESCRIPTION
 Phishing messages contain fraudulent links or spoofed domains in an effort to get personal information from the recipients.
 
-New antiphish policies aren't valid and aren't applied until you add an antiphish rule to the policy by using the New-AntiPhishRule cmdlet.
+New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the AntiPhishPolicy parameter on the New-AntiPhishRule or Set-AntiPhishRule cmdlets to associate the policy with a rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
