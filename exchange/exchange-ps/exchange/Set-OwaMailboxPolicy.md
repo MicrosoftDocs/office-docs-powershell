@@ -87,6 +87,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-PlacesEnabled <Boolean>]
  [-PremiumClientEnabled <Boolean>]
  [-PrintWithoutDownloadEnabled <Boolean>]
+ [-ProjectMocaEnabled <Boolean>]
  [-PublicFoldersEnabled <Boolean>]
  [-RecoverDeletedItemsEnabled <Boolean>]
  [-ReferenceAttachmentsEnabled <Boolean>]
@@ -1580,9 +1581,33 @@ This parameter is available only in the cloud-based service.
 
 The PrintWithoutDownloadEnabled specifies whether to allow printing of supported files without downloading the attachment in Outlook on the web. Valid values are:
 
-- $true: Supported files can be printed without being downloaded in Outlook web app. This is the default value.
+- $true: Supported files can be printed without being downloaded in Outlook on the web. This is the default value.
 
-- $false: Supported files must be downloaded before they can be printed in Outlook web app.
+- $false: Supported files must be downloaded before they can be printed in Outlook on the web.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProjectMocaEnabled
+**Note**: The feature that's associated with this parameter is currently in Preview, is not available to all organizations, and is subject to change.
+
+This parameter is available only in the cloud-based service.
+
+The ProjectMocaEnabled parameter enables or disables access to Project Moca in Outlook on the web. Valid values are:
+
+- $true: Access to Project Moca is enabled in Outlook on the web.
+
+- $false: Access to Project Moca is disabled in Outlook on the web. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1866,7 +1891,7 @@ Accept wildcard characters: False
 ### -SkipCreateUnifiedGroupCustomSharepointClassification
 This parameter is available only in the cloud-based service.
 
-The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Microsoft 365 Groups in Outlook web app. Valid values are:
+The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Microsoft 365 Groups in Outlook on the web. Valid values are:
 
 - $true: The custom SharePoint page is skipped when a user creates a Microsoft 365 Group in Outlook on the web. This is the default value.
 
