@@ -1571,6 +1571,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AdministrativeUnit](Get-AdministrativeUnit.md)
 
+### [Get-AutoSensitivityLabelPolicy](Get-AutoSensitivityLabelPolicy.md)
+
+### [Get-AutoSensitivityLabelRule](Get-AutoSensitivityLabelRule.md)
+
 ### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
 
 ### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
@@ -1609,6 +1613,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-ActivityAlert](New-ActivityAlert.md)
 
+### [New-AutoSensitivityLabelPolicy](New-AutoSensitivityLabelPolicy.md)
+
+### [New-AutoSensitivityLabelRule](New-AutoSensitivityLabelRule.md)
+
 ### [New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
 
 ### [New-JournalRule](New-JournalRule.md)
@@ -1633,6 +1641,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ActivityAlert](Remove-ActivityAlert.md)
 
+### [Remove-AutoSensitivityLabelPolicy](Remove-AutoSensitivityLabelPolicy.md)
+
+### [Remove-AutoSensitivityLabelRule](Remove-AutoSensitivityLabelRule.md)
+
 ### [Remove-InformationBarrierPolicy](Remove-InformationBarrierPolicy.md)
 
 ### [Remove-JournalRule](Remove-JournalRule.md)
@@ -1656,6 +1668,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-TransportRule](Remove-TransportRule.md)
 
 ### [Set-ActivityAlert](Set-ActivityAlert.md)
+
+### [Set-AutoSensitivityLabelPolicy](Set-AutoSensitivityLabelPolicy.md)
+
+### [Set-AutoSensitivityLabelRule](Set-AutoSensitivityLabelRule.md)
 
 ### [Set-InformationBarrierPolicy](Set-InformationBarrierPolicy.md)
 

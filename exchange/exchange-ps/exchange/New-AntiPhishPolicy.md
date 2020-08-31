@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-AntiPhishPolicy cmdlet to create antiphish policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Conect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -60,7 +60,7 @@ New-AntiPhishPolicy [-Name] <String>
 ## DESCRIPTION
 Phishing messages contain fraudulent links or spoofed domains in an effort to get personal information from the recipients.
 
-New antiphish policies aren't valid and aren't applied until you add an antiphish rule to the policy by using the New-AntiPhishRule cmdlet.
+New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the AntiPhishPolicy parameter on the New-AntiPhishRule or Set-AntiPhishRule cmdlets to associate the policy with a rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
