@@ -22,7 +22,7 @@ New-CsBatchPolicyPackageAssignmentOperation -PackageName <String> -PolicyList <S
 
 ## DESCRIPTION
 
-This cmdlet submits an operation that creates a custom policy package. It allows the user to create a custom package inluding policies that he wants. The available policy types and names and their settings can be found by running Get-CsPolicyPackage. For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+This cmdlet submits an operation that creates a custom policy package. It allows the user to create their own policy package. For more information on policy packages and the policy types available, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ Creates a custom package with name "myCustomPackage" with two policies included:
 
 ### -PackageName
 
-The name of the custom package. It cannot be empty or with only spaces.
+The name of the custom package. It cannot be empty or only contain spaces.
 
 ```yaml
 Type: String
