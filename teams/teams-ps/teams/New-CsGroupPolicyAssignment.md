@@ -27,7 +27,9 @@ The group policy assignment rank is set at the time a policy is being assigned t
 
 It's helpful to think of rank as determining the position of each policy assignment in an ordered list, from highest rank to lowest rank. In fact, rank can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest rank. When assigning a policy to a group, set the rank to be the position in the list where you want the new group policy assignment to be. If a rank is not specified, the policy assignment will be given the lowest rank, corresponding to the end of the list.
 
-Group policy assignment allows you to easily manage policies across different subsets of users within your organization. Group policy assignment is recommended for groups of up to 50000 users, but it will also work with larger groups. Group policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
+Group policy assignment allows you to easily manage policies across different subsets of users within your organization. Group policy assignment is recommended for groups of up to 50000 users, but it will also work with larger groups. 
+
+Group policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
 
 Group policy assignment is currently limited to the following policy types:
 CallingLineIdentity, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy.

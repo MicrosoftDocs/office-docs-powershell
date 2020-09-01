@@ -15,7 +15,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Enable-SafeAttachmentRule cmdlet to enable disabled Safe Attachments rules in your cloud-based organization.
+Use the Enable-SafeAttachmentRule cmdlet to enable safe attachment rules in your cloud-based organization.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -28,7 +28,7 @@ Enable-SafeAttachmentRule [-Identity] <RuleIdParameter> [-Confirm] [-WhatIf] [<C
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity.
+Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Office 365 ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -39,12 +39,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Enable-SafeAttachmentRule -Identity "Marketing Department Attachment Rule"
 ```
 
-This example enables the disabled Safe Attachments rule named Marketing Department Attachment Rule.
+This example enables the disabled safe attachment rule named Marketing Department Attachment Rule.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the disabled Safe Attachments rule that you want to enable.
+The Identity parameter specifies the disabled safe attachment rule that you want to enable.
 
 You can use any value that uniquely identifies the rule. For example:
 
