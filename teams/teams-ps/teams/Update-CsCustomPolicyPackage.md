@@ -75,7 +75,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-The user is not allowed to update the pre-defined packages created by Microsoft.
+As a result, the whole policy list of the custom package will be REPLACED by the new one instead of a union. The user is not allowed to update the pre-defined packages created by Microsoft. 
 
 ## RELATED LINKS
 
