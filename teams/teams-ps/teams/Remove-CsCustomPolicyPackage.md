@@ -22,7 +22,7 @@ Remove-CsBatchPolicyPackageAssignmentOperation -PackageName <String>
 
 ## DESCRIPTION
 
-This cmdlet submits an operation that deletes a custom policy package. It allows the user to delete a custom package that he is authorized to. The available package names can be found by running Get-CsPolicyPackage and with pre-defined packages excluded.
+This cmdlet submits an operation that deletes a custom policy package. It allows the admin user to delete a custom package. The available package names can be found by running Get-CsPolicyPackage.
 
 ## EXAMPLES
 
@@ -31,13 +31,13 @@ This cmdlet submits an operation that deletes a custom policy package. It allows
 PS C:\> Remove-CsCustomPolicyPackage -PackageName myCustomPackage
 ```
 
-Deletes a custom package with name "myCustomPackage". If the custom package with the name "myCustomPackage" exists and the user is authorized to delete it. The command will return success result.
+Deletes a custom package with name "myCustomPackage". If the custom package with the name "myCustomPackage" exists and the admin user is authorized to delete it. The command will return success result.
 
 ## PARAMETERS
 
 ### -PackageName
 
-The name of the custom package. It cannot be empty or with only spaces.
+The name of the custom package. It cannot be empty or only contain spaces. 
 
 ```yaml
 Type: String
@@ -59,7 +59,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-The user is not allowed to delete a pre-defined package controlled by Microsoft.
+The user is not allowed to delete a pre-defined package created by Microsoft.
 
 ## RELATED LINKS
 
