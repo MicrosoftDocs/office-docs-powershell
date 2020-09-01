@@ -22,7 +22,7 @@ Update-CsBatchPolicyPackageAssignmentOperation -PackageName <String> -PolicyList
 
 ## DESCRIPTION
 
-This cmdlet submits an operation that updates the policies into a custom policy package. It allows the user to change the policies included into the package. The available policy types and names and their settings can be found by running Get-CsPolicyPackage. The available custom packages can be found by running Get-CsPolicyPackage and with pre-defined packages excluded. For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+This cmdlet submits an operation that updates the policies into a custom policy package. It allows the user to change the policies included in the package. The available policy types can be found here https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ Updates the custom package named "myCustomPackage" by changing the policies to a
 
 ### -PackageName
 
-The name of the custom package that the user wants to update. It cannot be empty or with only spaces.
+The name of the custom package that the user wants to update. It cannot be empty or only contain spaces.
 
 ```yaml
 Type: String
@@ -75,7 +75,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-The user is not allowed to update the pre-defined packages controlled by Microsoft
+The user is not allowed to update the pre-defined packages created by Microsoft.
 
 ## RELATED LINKS
 
