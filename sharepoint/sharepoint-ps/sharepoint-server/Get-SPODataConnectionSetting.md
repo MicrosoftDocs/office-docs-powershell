@@ -123,8 +123,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
+[New-SPODataConnectionSetting](xref:SharePoint-Online.New-SPODataConnectionSetting.md)
 
-[Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
+[Remove-SPODataConnectionSetting](xref:SharePoint-Online.Remove-SPODataConnectionSetting)
 
-[Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
+[Set-SPODataConnectionSetting](xref:SharePoint-Online.Set-SPODataConnectionSetting)

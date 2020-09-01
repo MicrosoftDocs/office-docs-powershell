@@ -105,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Mount-SPProjectWebInstance](Mount-SPProjectWebInstance.md)
