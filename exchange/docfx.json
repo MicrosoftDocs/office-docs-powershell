@@ -88,7 +88,7 @@
     },
     "fileMetadata": {
       "apiPlatform": {
-        "exchange-ps/exchange/**/*.md": [
+        "exchange-ps/exchange/**/*.yml": [
           "powershell"
         ]
       }
