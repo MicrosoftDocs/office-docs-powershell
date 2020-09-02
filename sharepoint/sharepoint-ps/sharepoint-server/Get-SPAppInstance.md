@@ -181,8 +181,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Restart-SPAppInstanceJobs](Restart-SPAppInstanceJobs.md)
-
 [Uninstall-SPAppInstance](Uninstall-SPAppInstance.md)
 
 [Update-SPAppInstance](Update-SPAppInstance.md)

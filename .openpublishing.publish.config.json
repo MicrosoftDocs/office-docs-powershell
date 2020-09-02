@@ -41,17 +41,15 @@
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
-        "AzurePsModulePage": "Content"
+        "PowershellModule": "Content",
+        "PowershellCmdlet": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
         ]
       },
       "monikerPath": [
@@ -70,17 +68,15 @@
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
-        "AzurePsModulePage": "Content"
+        "PowershellModule": "Content",
+        "PowershellCmdlet": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
         ]
       },
       "monikerPath": [
@@ -186,17 +182,15 @@
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
-        "AzurePsModulePage": "Content"
+        "PowershellModule": "Content",
+        "PowershellCmdlet": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
         ]
       },
       "monikerPath": [
@@ -274,6 +268,13 @@
       "version": "latest",
       "id": "Microsoft.OpenPublishing.CommonPlugins",
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    },
+    {
+      "id": "Microsoft.DocAsCode.MAML2Yaml",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "path_to_root": "_dependentPackages/MAML2Yaml",
+      "target_framework": "net45",
+      "version": "latest"
     }
   ]
 }
