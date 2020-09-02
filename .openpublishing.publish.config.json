@@ -12,17 +12,15 @@
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
-        "AzurePsModulePage": "Content"
+        "PowershellModule": "Content",
+        "PowershellCmdlet": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
         ]
       },
       "monikerPath": [
