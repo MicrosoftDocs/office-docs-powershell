@@ -34,7 +34,7 @@ Adds the "Top Secret" classification to the already existing classification valu
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Add-PnPSiteClassification -Classifications "Top Secret","HBI"
+Add-PnPSiteClassification -Classifications "Top Secret","For Your Eyes Only"
 ```
 
 Adds the "Top Secret" and the "For Your Eyes Only" classification to the already existing classification values.
