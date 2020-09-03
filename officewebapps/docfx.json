@@ -21,7 +21,8 @@
         "dest": "officewebapps/officewebapps-ps"
       },
       {
-      "files": ["**/*.md"],
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
       "src": "officewebapps-ps",
       "version": "officewebapps-ps",
       "dest": "module"
