@@ -95,6 +95,3 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Set-ApplicationCredentialKey](Set-ApplicationCredentialKey.md)
-
-

@@ -1696,6 +1696,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableAutoNewsDigest
+
+Enable or disable auto news digest. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
