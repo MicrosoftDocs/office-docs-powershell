@@ -1194,7 +1194,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowTemplate
-The WorkflowControlFlags parameter specifies advanced controls for the steps that are performed in the migration. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
+The WorkflowTemplate parameter specifies advanced controls for the steps that are performed in the migration. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
 ```yaml
 Type: String

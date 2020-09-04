@@ -21,7 +21,8 @@
         "dest": "teams/teams-ps"
       },
       {
-      "files": ["**/*.md"],
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
       "src": "teams-ps",
       "version": "teams-ps",
       "dest": "module"
