@@ -31,7 +31,7 @@ This cmdlet submits an operation that deletes a custom policy package. It allows
 PS C:\> Remove-CsCustomPolicyPackage -PackageName myCustomPackage
 ```
 
-Deletes a custom package with name "myCustomPackage". If the custom package with the name "myCustomPackage" exists and the admin user is authorized to delete it. The command will return success result.
+Deletes a custom package with name "myCustomPackage". If the custom package with the name "myCustomPackage" exists and the admin user is authorized to delete it, the command will return success result.
 
 ## PARAMETERS
 
