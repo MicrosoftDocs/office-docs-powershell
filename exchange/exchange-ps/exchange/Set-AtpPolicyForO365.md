@@ -15,13 +15,13 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (ATP) policy in Office 365. The ATP policy enables the following protections:
+Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (ATP) policy in Office 365. The ATP policy enables the following protections in Office 365 ATP:
 
 - Safe Links for Office 365 ProPlus desktop clients, web, and mobile apps.
 
 - Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
 
-- ATP protection files in SharePoint Online, OneDrive for Business and Microsoft Teams.
+- ATP protection for files in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
