@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsipphonepolicy
 applicable: Skype for Business Online
-title: Grant-CSTeamsIPPhonePolicy
+title: Grant-CsTeamsIPPhonePolicy
 author: tonywoodruff
 ms.author: anwoodru
 ms.reviewer: kponnus
@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use the Grant-CSTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policies to a user account or group of user accounts. Teams phone policies determine the features that are available to users of Teams phones. For example, you might enable the hot desking feature for some users while disabling it for others.
+Use the Grant-CsTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policies to a user account or group of user accounts. Teams phone policies determine the features that are available to users of Teams phones. For example, you might enable the hot desking feature for some users while disabling it for others.
 
 
 ## SYNTAX
@@ -26,7 +26,7 @@ Grant-CsTeamsIPPhonePolicy [-PassThru] [-Confirm] [[-PolicyName] <XdsIdentity>] 
 ```
 
 ## DESCRIPTION
-Use the Grant-CSTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policies to a phone signed in with an account that may be used by end users, common area phones, or meeting room accounts. 
+Use the Grant-CsTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policies to a phone signed in with an account that may be used by end users, common area phones, or meeting room accounts. 
 
 Note: Assigning a per user policy will override any global policy taking effect against the respective user account. 
 
