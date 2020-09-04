@@ -247,19 +247,6 @@
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
-      "path_to_root": "_dependentPackages/azurecli.plugins",
-      "id": "opbuild.templates.azurecli",
-      "version": "latest",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2"
-    },
-    {
-      "path_to_root": "_dependentPackages/CommonPlugins",
-      "target_framework": "net45",
-      "version": "latest",
-      "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2"
-    },
-    {
       "id": "Microsoft.DocAsCode.MAML2Yaml",
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
       "path_to_root": "_dependentPackages/MAML2Yaml",
