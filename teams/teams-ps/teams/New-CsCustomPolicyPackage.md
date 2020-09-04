@@ -53,7 +53,7 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies included in the package. For each policy in the list, the form is "<PolicyType>, <PolicyName>". delimiters of ' ', '.', ':', '\t' are also acceptable.
+A list of one or more policies included in the package. For each policy in the list, the form is "<PolicyType>, <PolicyName>". Delimiters of ' ', '.', ':', '\t' are also acceptable.
 
 ```yaml
 Type: String[]
