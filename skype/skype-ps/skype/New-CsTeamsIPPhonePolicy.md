@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsipphonepolicy
 applicable: Skype for Business Online
-title: New-CSTeamsIPPhonePolicy
+title: New-CsTeamsIPPhonePolicy
 author: tonywoodruff
 ms.author: anwoodru
 ms.reviewer: kponnus
@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-New-CSTeamsIPPhonePolicy allows you to create a policy to manage features related to Teams phone experiences. Teams phone policies determine the features that are available to users.
+New-CsTeamsIPPhonePolicy allows you to create a policy to manage features related to Teams phone experiences. Teams phone policies determine the features that are available to users.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ New-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinute
 
 ## DESCRIPTION
 
-The New-CSTeamsIPPhonePolicy cmdlet allows you to create a policy to manage features related to Teams phone experiences assigned to a user account used to sign into a Teams phone. 
+The New-CsTeamsIPPhonePolicy cmdlet allows you to create a policy to manage features related to Teams phone experiences assigned to a user account used to sign into a Teams phone. 
 
 ## EXAMPLES
 

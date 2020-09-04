@@ -26,6 +26,6 @@ The Microsoft Whiteboard cmdlets are often used to facilate the export of Whiteb
 
 ## Common Cmdlets
 
-* [Get-Whiteboard](../whiteboard-ps/whiteboard/Get-Whiteboard.md)
-* [Set-WhiteboardOwner](../whiteboard-ps/whiteboard/Set-WhiteboardOwner.md)
-* [Invoke-TransferAllWhiteboard](../whiteboard-ps/whiteboard/Invoke-TransferAllWhiteboards.md)
+* @MicrosoftWhiteboardAdmin.Get-Whiteboard
+* @MicrosoftWhiteboardAdmin.Set-WhiteboardOwner
+* @MicrosoftWhiteboardAdmin.Invoke-TransferAllWhiteboards
