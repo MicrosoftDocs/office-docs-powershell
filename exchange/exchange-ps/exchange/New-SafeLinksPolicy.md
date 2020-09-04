@@ -290,9 +290,9 @@ Accept wildcard characters: False
 ### -ScanUrls
 The ScanUrls parameter specifies whether to enable or disable real-time scanning of links in email messages. Valid values are:
 
-- $true: Real-time scanning links in email messages is enabled.
+- $true: Real-time scanning of links in email messages is enabled.
 
-- $false: Real-time scanning links in email messages is disabled. This is the default value.
+- $false: Real-time scanning of links in email messages is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
