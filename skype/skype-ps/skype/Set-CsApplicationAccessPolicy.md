@@ -26,7 +26,7 @@ Set-CsApplicationAccessPolicy [-Identity <XdsIdentity>] [-AppIds <PSListModifier
 
 ## DESCRIPTION
 
-<TODO: description>
+This cmdlet modifies an existing application access policy.
 
 ## EXAMPLES
 
@@ -36,7 +36,7 @@ Set-CsApplicationAccessPolicy [-Identity <XdsIdentity>] [-AppIds <PSListModifier
 PS C:\> Set-CsApplicationAccessPolicy -Identity "ASimplePolicy" -AppIds @{Add="5817674c-81d9-4adb-bfb2-8f6a442e4622"}
 ```
 
-The command shown above adds an new app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622" to the per-user application access policy ASimplePolicy.
+The command shown above adds a new app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622" to the per-user application access policy ASimplePolicy.
 
 ### Remove app IDs from the policy
 
@@ -54,7 +54,7 @@ Unique identifier assigned to the policy when it was created.
 
 ```yaml
 Type: XdsIdentity
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 
 ### -AppIds
 
-<TODO: description for parameter?> A list of application (client) IDs. For details of application (client) ID, refer to: [Get tenant and app ID values for signing in](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in).
+A list of application (client) IDs. For details of application (client) ID, refer to: [Get tenant and app ID values for signing in](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in).
 
 ```yaml
 Type: PSListModifier
@@ -92,4 +92,3 @@ Accept wildcard characters: False
 [Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
 [Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
 [Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
-

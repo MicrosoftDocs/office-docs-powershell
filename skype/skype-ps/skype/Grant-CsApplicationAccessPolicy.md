@@ -14,37 +14,37 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Assigns a per-user application access policy to one or moer users. After assigning an application access policy to a user, the applications configured in th policy will be authorized to access online meetings on behalf of that user.
+Assigns a per-user application access policy to one or more users. After assigning an application access policy to a user, the applications configured in the policy will be authorized to access online meetings on behalf of that user.
 
 ## SYNTAX
 
 ### FileName
 
 ```
-Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <String>]
+Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <String>] [-Global]
 ```
 
 ## DESCRIPTION
 
-<TODO: description>
+This cmdlet assigns a per-user application access policy to one or more users. After assigning an application access policy to a user, the applications configured in the policy will be authorized to access online meetings on behalf of that user.
 
 ## EXAMPLES
 
-### Assign an application access poicy to a user
+### Assign an application access policy to a user
 
 ```
 PS C:\> Grant-CsApplicationAccessPolicy -Identity "dc17674c-81d9-4adb-bfb2-8f6a442e4624" -PolicyName "ASimplePolicy"
 ```
 
-The command shown above assigns the per-user application access policy "ASimplePolicy" to the user with obect ID "dc17674c-81d9-4adb-bfb2-8f6a442e4624".
+The command shown above assigns the per-user application access policy "ASimplePolicy" to the user with object ID "dc17674c-81d9-4adb-bfb2-8f6a442e4624".
 
-### UnAssign an application access poicy from a user
+### Unassign an application access policy from a user
 
 ```
 PS C:\> Grant-CsApplicationAccessPolicy -Identity "dc17674c-81d9-4adb-bfb2-8f6a442e4624" -PolicyName $Null
 ```
 
-In the command shown above , any per-user application access policy previously assigned to the user with user (object) ID "dc17674c-81d9-4adb-bfb2-8f6a442e4624" is unassigned from that user; as a result, applications configured in the policy can no longer access online meetings on behalf of that user. To unassign a per-user policy, set the PolicyName to a null value ($Null).
+In the command shown above, any per-user application access policy previously assigned to the user with user (object) ID "dc17674c-81d9-4adb-bfb2-8f6a442e4624" is unassigned from that user; as a result, applications configured in the policy can no longer access online meetings on behalf of that user. To unassign a per-user policy, set the PolicyName to a null value ($Null).
 
 ### Assign an application access policy to all users in the tenant
 
@@ -66,11 +66,11 @@ The command shown above assigns the per-user application access policy "ASimpleP
 
 ### -Identity
 
-Indicates the user (object) ID of the user account to be assigned the per-user online voice routing policy. 
+Indicates the user (object) ID of the user account to be assigned the per-user application access policy. 
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -PolicyName
 
-<TODO: description for parameter?> "Name" of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:ASimplePolicy has a PolicyName equal to ASimplePolicy.
+Name of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:ASimplePolicy has a PolicyName equal to ASimplePolicy.
 
 ```yaml
 Type: PSListModifier
@@ -124,4 +124,3 @@ Accept wildcard characters: False
 [Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
 [Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
 [Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
-

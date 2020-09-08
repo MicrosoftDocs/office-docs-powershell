@@ -26,11 +26,11 @@ Get-CsApplicationAccessPolicy [-Identity <XdsIdentity>]
 
 ## DESCRIPTION
 
-<TODO: description>
+This cmdlet retrieves information about the application access policy configured for use in the tenant.
 
 ## EXAMPLES
 
-### Retrieve all applicationn access policies
+### Retrieve all application access policies
 
 ```
 PS C:\> Get-CsApplicationAccessPolicy
@@ -55,7 +55,7 @@ Unique identifier assigned to the policy when it was created.
 
 ```yaml
 Type: XdsIdentity
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
@@ -77,4 +77,3 @@ Accept wildcard characters: False
 [Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
 [Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
 [Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
-

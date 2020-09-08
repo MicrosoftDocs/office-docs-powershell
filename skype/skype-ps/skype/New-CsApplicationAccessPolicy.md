@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Creates a new application access policy. Application access policy contains a list of application(client) IDs. When granted to a user, those applications will be authorized to access online meetings on behalf of that user.
+Creates a new application access policy. Application access policy contains a list of application (client) IDs. When granted to a user, those applications will be authorized to access online meetings on behalf of that user.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ New-CsApplicationAccessPolicy [-Identity <XdsIdentity>] [-AppIds <PSListModifier
 
 ## DESCRIPTION
 
-<TODO: description>
+This cmdlet creates a new application access policy. Application access policy contains a list of application (client) IDs. When granted to a user, those applications will be authorized to access online meetings on behalf of that user.
 
 ## EXAMPLES
 
@@ -55,7 +55,7 @@ Unique identifier assigned to the policy when it was created.
 
 ```yaml
 Type: XdsIdentity
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 
 ### -AppIds
 
-<TODO: description for parameter?> A list of application (client) IDs. For details of application (client) ID, refer to: [Get tenant and app ID values for signing in](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in).
+A list of application (client) IDs. For details of application (client) ID, refer to: [Get tenant and app ID values for signing in](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in).
 
 ```yaml
 Type: PSListModifier
@@ -83,10 +83,10 @@ Accept wildcard characters: False
 
 ### -Description
 
-<TODO: description for parameter> Specifies the description of the policy.
+Specifies the description of the policy.
 
 ```yaml
-Type: string
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,4 +109,3 @@ Accept wildcard characters: False
 [Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
 [Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
 [Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
-

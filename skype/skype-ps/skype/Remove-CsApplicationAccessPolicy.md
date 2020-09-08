@@ -26,7 +26,7 @@ Remove-CsApplicationAccessPolicy [-Identity <XdsIdentity>]
 
 ## DESCRIPTION
 
-<TODO: description>
+This cmdlet deletes an existing application access policy.
 
 ## EXAMPLES
 
@@ -46,7 +46,7 @@ Unique identifier assigned to the policy when it was created.
 
 ```yaml
 Type: XdsIdentity
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
@@ -68,4 +68,3 @@ Accept wildcard characters: False
 [Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
 [Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
 [Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
-
