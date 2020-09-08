@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/remove-csteamsipphonepolicy
 applicable: Skype for Business Online
-title: Remove-CSTeamsIPPhonePolicy
+title: Remove-CsTeamsIPPhonePolicy
 author: tonywoodruff
 ms.author: anwoodru
 ms.reviewer: kponnus
@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use the Remove-CSTeamsIPPhonePolicy cmdlet to remove a custom policy that's been created for controlling Teams phone experiences.
+Use the Remove-CsTeamsIPPhonePolicy cmdlet to remove a custom policy that's been created for controlling Teams phone experiences.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Remove-CsTeamsIPPhonePolicy [-WhatIf] [-Confirm] [[-Identity] <XdsIdentity>] [-T
 ```
 
 ## DESCRIPTION
-Use the Remove-CSTeamsIPPhonePolicy cmdlet to remove a custom policy that's been created for controlling Teams IP Phones experiences.
+Use the Remove-CsTeamsIPPhonePolicy cmdlet to remove a custom policy that's been created for controlling Teams IP Phones experiences.
 
 Note: Ensure the policy is not assigned to any users or the policy deletion will fail.
 

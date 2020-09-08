@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsipphonepolicy
 applicable: Skype for Business Online
-title: Get-CSTeamsIPPhonePolicy
+title: Get-CsTeamsIPPhonePolicy
 author: tonywoodruff
 ms.author: anwoodru
 ms.reviewer: kponnus
@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Get-CSTeamsIPPhonePolicy allows IT Admins to view policies for IP Phone experiences in Microsoft Teams 
+Get-CsTeamsIPPhonePolicy allows IT Admins to view policies for IP Phone experiences in Microsoft Teams 
 
 ## SYNTAX
 

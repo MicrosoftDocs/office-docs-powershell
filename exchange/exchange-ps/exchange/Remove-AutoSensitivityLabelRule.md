@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/remove-autosensitivitylabelrule
 applicable: Office 365 Security & Compliance Center
-title: Get-Label
+title: Remove-AutoSensitivityLabelRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda

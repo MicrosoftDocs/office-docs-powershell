@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-autosensitivitylabelpolicy
 applicable: Office 365 Security & Compliance Center
-title: Get-Label
+title: Get-AutoSensitivityLabelPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda

@@ -21,7 +21,8 @@
         "dest": "sharepoint/sharepoint-ps"
       },
       {
-      "files": ["**/*.md"],
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
       "src": "sharepoint-ps",
       "version": "sharepoint-ps",
       "dest": "module"
@@ -65,10 +66,10 @@
     },
     "fileMetadata": {
       "ms.service":{
-        "sharepoint-ps/sharepoint-online/*.md":"sharepoint-powershell"
+        "sharepoint-ps/sharepoint-online/*.yml":"sharepoint-powershell"
       },
       "ms.prod":{
-        "sharepoint-ps/sharepoint-server/*.md":"sharepoint-powershell"
+        "sharepoint-ps/sharepoint-server/*.yml":"sharepoint-powershell"
       }
     },
     "template": [],

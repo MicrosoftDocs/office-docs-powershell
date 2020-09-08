@@ -21,7 +21,8 @@
         "dest": "skype/skype-ps"
       },
       {
-      "files": ["**/*.md"],
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
       "src": "skype-ps",
       "version": "skype-ps",
       "dest": "module"

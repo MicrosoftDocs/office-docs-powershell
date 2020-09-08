@@ -21,7 +21,8 @@
         "dest": "whiteboard/whiteboard-ps"
       },
       {
-      "files": ["**/*.md"],
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
       "src": "whiteboard-ps",
       "version": "whiteboard-ps",
       "dest": "module"
