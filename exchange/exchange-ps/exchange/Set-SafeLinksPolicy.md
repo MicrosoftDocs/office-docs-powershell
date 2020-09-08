@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowClickThrough
-This parameter is reserved for internal Microsoft use.
+This parameter has been deprecated. Use the DoNotAllowClickThrough parameter instead.
 
 ```yaml
 Type: Boolean
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotRewriteUrls
-The DoNotRewriteUrls parameter specifies a URL that's skipped by Safe Links scanning. You can specify multiple values separated by commas.
+The DoNotRewriteUrls parameter specifies the URLs that skip Safe Links scanning and are always allowed. You can specify multiple values separated by commas. Wildcards are supported (up to three).
 
 ```yaml
 Type: MultiValuedProperty
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotTrackUserClicks
-The DoNotTrackUserClicks parameter specifies whether to track user clicks related to links in email messages. Valid values are:
+The DoNotTrackUserClicks parameter specifies whether to track user clicks related to links in email messages and Microsoft Teams. Valid values are:
 
 - $true: User clicks aren't tracked.
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableForInternalSenders
-The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to internal senders. Valid values are:
+The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to messages sent between internal senders and internal recipients within the same Exchange Online organization. Valid values are:
 
 - $true: The policy is applied to internal and external senders.
 
@@ -234,9 +234,9 @@ Accept wildcard characters: False
 ### -EnableSafeLinksForTeams
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
-- $true: Safe Links is enabled for Teams.
+- $true: Safe Links is enabled for Teams. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 
-- $false: Safe Links isn't enabled for Teams.
+- $false: Safe Links isn't enabled for Teams. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedUrls
-The ExcludedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the ExcludedUrls parameter, update them to use the DoNotRewriteUrls parameter.
+This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
 
 ```yaml
 Type: String[]
@@ -272,7 +272,7 @@ The IsEnabled parameter specifies whether to rewrite URLs and check against a li
 
 - $true: Rewrite URLs and check against a list of known malicious links whenever a user clicks on a link.
 
-- $false: Don't rewrite URLs. This is the default value.
+- $false: Don't rewrite URLs and do not check links. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -340,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhiteListedUrls
-The WhiteListedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the WhiteListedUrls parameter, update them to use the DoNotRewriteUrls parameter.
+This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
 
 ```yaml
 Type: String
