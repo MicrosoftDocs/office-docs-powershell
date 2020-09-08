@@ -390,7 +390,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDsnReportingAuthority
-The ExternalDsnReportingAuthority parameter specifies what the server name should be in the machine-readable part of the external DSN message. The default value is the authoritative domain specified during installation.
+The ExternalDsnReportingAuthority parameter specifies the domain in the machine-readable part of external DSN messages. The default value is blank ($null), which means the value is the authoritative domain that you specified during the creation of the organization.
 
 ```yaml
 Type: SmtpDomain
@@ -406,7 +406,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDsnSendHtml
-The ExternalDsnSendHtml parameter specifies whether external DSN messages should be sent by using HTML or whether messages should be sent in plain text. Valid input for this parameter is $true or $false.The default value is $true.
+The ExternalDsnSendHtml parameter specifies whether external DSN messages should be HTML or plain text. Valid values are:
+
+- $true: DSNs are HTML. This is the default value.
+- $false: DSNs are plain text.
 
 ```yaml
 Type: Boolean
@@ -422,7 +425,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalPostmasterAddress
-The ExternalPostmasterAddress parameter specifies the email address in the From header field of an external DSN message. The default value is $null. In the Transport service on a Mailbox server, the value of the external postmaster email address is postmaster@\<defaultaccepteddomain\>. If an Edge Transport server hasn't yet been through the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster email address on the Edge Transport server is postmaster@\<edgetransportserverfqdn\>. If an Edge Transport server has completed the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster email address on the Edge Transport server is postmaster@\<defaultaccepteddomain\>. To override the default behavior, you can specify an email address for the ExternalPostMasterAddress parameter.
+The ExternalPostmasterAddress parameter specifies the email address in the From header field of an external DSN message. The default value is blank ($null).
+
+The default value means the external postmaster address is postmaster@\<DefaultAcceptedDomain\> in the following locations:
+
+- On Hub Transport servers or the Transport service on Mailbox servers.
+- On Edge Transport servers that are subscribed to the Exchange organization.
+- In Exchange Online.
+
+On Edge Transport servers that aren't subscribed to the Exchange organization, the default external postmaster email address is postmaster@\<EdgeTransportServerFQDN\>.
+
+To override the default behavior, you can specify an email address for the ExternalPostMasterAddress parameter.
 
 ```yaml
 Type: SmtpAddress
@@ -463,15 +476,10 @@ On a Mailbox server, NDRs are copied to the mailbox assigned to the Exchange rec
 DSN codes are entered as x.y.z and are separated by commas. By default, the following DSN codes are monitored:
 
 - 5.4.8
-
 - 5.4.6
-
 - 5.4.4
-
 - 5.2.4
-
 - 5.2.0
-
 - 5.1.4
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
@@ -496,13 +504,13 @@ Accept wildcard characters: False
 ```
 
 ### -HeaderPromotionModeSetting
-The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received from outside the Exchange organization. You can use one of the following values:
+The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received from outside the Exchange organization. Valid values are:
 
 - MustCreate: Exchange creates a named property for each new custom X-header.
 
 - MayCreate: Exchange creates a named property for each new custom X-header on messages received from authenticated senders. No named properties are created for custom X-headers on messages received from unauthenticated senders.
 
-- NoCreate: Exchange won't create any named properties based on custom X-headers on incoming messages.
+- NoCreate: Exchange won't create any named properties based on custom X-headers on incoming messages. This is the default value.
 
 ```yaml
 Type: HeaderPromotionMode
@@ -598,7 +606,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalDsnReportingAuthority
-The InternalDsnReportingAuthority parameter specifies what the server name should be in the internal DSN message. The default value is the authoritative domain specified during installation.
+The InternalDsnReportingAuthority parameter specifies the domain in the machine-readable part of internal DSN messages. The default value is blank ($null), which means the value is the authoritative domain that you specified during the creation of the organization.
 
 ```yaml
 Type: SmtpDomain
@@ -614,7 +622,10 @@ Accept wildcard characters: False
 ```
 
 ### -InternalDsnSendHtml
-The InternalDsnSendHtml parameter specifies whether internal DSN messages should be sent by using HTML or whether messages should be sent in plain text. Valid input for this parameter is $true or $false. The default is $true.
+The InternalDsnSendHtml parameter specifies whether internal DSN messages should be HTML or plain text. Valid values are:
+
+- $true: DSNs are HTML. This is the default value.
+- $false: DSNs are plain text.
 
 ```yaml
 Type: Boolean
@@ -828,15 +839,17 @@ Accept wildcard characters: False
 ```
 
 ### -MaxRecipientEnvelopeLimit
-This parameter is available only in on-premises Exchange.
+The MaxRecipientEnvelopeLimit parameter specifies the maximum number of recipients in a message. Exchange treats an unexpanded distribution group as one recipient.
 
-The MaxRecipientEnvelopeLimit parameter specifies the maximum number of recipients in a message. The default value is 500. The valid input range for this parameter is from 0 through 2147483647. If you enter a value of Unlimited, no limit is imposed on the number of recipients in a message. Exchange treats an unexpanded distribution group as one recipient.
+In on-premises Exchange, the default value is 500. The valid input range for this parameter is from 0 through 2147483647. If you enter a value of Unlimited, no limit is imposed on the number of recipients in a message.
+
+In Exchange Online, the default value is Unlimited, which means the organizational limit of 1000 is used. You can enter a custom value up to 1000. For more information, see [Sending limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1) in the Microsoft 365 service description.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1360,7 +1373,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoicemailJournalingEnabled
-This parameter is available only in on-premises Exchange.
+This parameter is available or functional only in on-premises Exchange.
 
 The VoicemailJournalingEnabled parameter specifies whether Unified Messaging voice mail messages are journaled by the Journaling agent. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -1368,7 +1381,7 @@ The VoicemailJournalingEnabled parameter specifies whether Unified Messaging voi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
