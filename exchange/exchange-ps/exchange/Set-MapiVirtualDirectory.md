@@ -244,7 +244,7 @@ You can specify multiple values separated by commas.
 
 The default values are NTLM, OAuth, and Negotiate. We recommend that you always have the virtual directory configured for OAuth.
 
-For more information about the different authentication protocols, see [Understanding HTTP Authentication](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/understanding-http-authentication) and [What is OAuth authentication?](https://docs.microsoft.com/exchange/using-oauth-authentication-to-support-ediscovery-in-an-exchange-hybrid-deployment-exchange-2013-help#what-is-oauth-authentication).
+For more information about the different authentication methods, see [Understanding HTTP Authentication](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/understanding-http-authentication) and [What is OAuth authentication?](https://docs.microsoft.com/exchange/using-oauth-authentication-to-support-ediscovery-in-an-exchange-hybrid-deployment-exchange-2013-help#what-is-oauth-authentication).
 
 ```yaml
 Type: MultiValuedProperty
