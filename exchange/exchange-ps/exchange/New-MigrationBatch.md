@@ -687,7 +687,11 @@ Accept wildcard characters: False
 ### -ContentFilter
 This parameter is available only in the cloud-based service.
 
-The ContentFilter parameter uses OPath filter syntax to filter the messages by Received date. Only contents that match the ContentFilter parameter will be moved to Exchange online. For example, `"Received -gt '8/23/2020'"`, `"Received -le '2019/01/01'"`, `"Received -gt '8/23/2015' -and Received -lt '8/23/2020'"`.
+The ContentFilter parameter uses OPath filter syntax to filter the messages by Received date. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
+
+- `"Received -gt '8/23/2020'"`
+- `"Received -le '2019/01/01'"`
+- `"Received -gt '8/23/2015' -and Received -lt '8/23/2020'"`
 
 You can specify the language by using the ContentFilterLanguage parameter.
 
@@ -807,45 +811,29 @@ For IMAP migration, use folder names relative to the IMAP root on the source mai
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
-\<FolderName\>/\*: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, `MyProjects` or `MyProjects/FY2010`.
 
-\#\<FolderName\>\#/\*: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, `#Inbox#` denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
 - Inbox
-
 - SentItems
-
 - DeletedItems
-
 - Calendar
-
 - Contacts
-
 - Drafts
-
 - Journal
-
 - Tasks
-
 - Notes
-
 - JunkEmail
-
 - CommunicatorHistory
-
 - Voicemail
-
 - Fax
-
 - Conflicts
-
 - SyncIssues
-
 - LocalFailures
-
 - ServerFailures
 
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
+If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a back slash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder, but not the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
 
@@ -871,48 +859,31 @@ For IMAP migration, use folder names relative to the IMAP root on the source mai
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
-\<FolderName\>/\*: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, `MyProjects` or `MyProjects/FY2010`.
 
-\#\<FolderName\>\#/\*: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, `#Inbox#` denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
 - Inbox
-
 - SentItems
-
 - DeletedItems
-
 - Calendar
-
 - Contacts
-
 - Drafts
-
 - Journal
-
 - Tasks
-
 - Notes
-
 - JunkEmail
-
 - CommunicatorHistory
-
 - Voicemail
-
 - Fax
-
 - Conflicts
-
 - SyncIssues
-
 - LocalFailures
-
 - ServerFailures
 
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
+If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a back slash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder, but not the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Onboarding
