@@ -360,7 +360,7 @@ ludeFolders "Payment"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
-A G Suite migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Paymeng label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
+A G Suite migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
 
 
 ## PARAMETERS
