@@ -20,6 +20,13 @@ If your operating system is using PowerShell 5 or newer, you can install the Sha
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
 ```
 
+
+To ensure you have all the available cmdlets you should always make sure the module is up to date. You can update the SharePoint Online Management Shell by running the following command in administrative mode.
+
+```ps
+Update-Module -Name Microsoft.Online.SharePoint.PowerShell
+```
+
 To open the SharePoint Online Management Shell command prompt, from the **Start** screen, type **sharepoint**, and then click **SharePoint Online Management Shell**.
 
 <br />
