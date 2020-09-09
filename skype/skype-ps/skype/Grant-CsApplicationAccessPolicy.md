@@ -102,7 +102,7 @@ When you use this cmdlet without specifying a user identity, the policy applies 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: GrantToTenant
+Parameter Sets:(All)
 Aliases:
 
 Required: False
