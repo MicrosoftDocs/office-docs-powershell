@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-PhishFilterPolicy cmdlet to view the spoof intelligence policy and detected spoofed sending activities in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -26,7 +26,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-PhishFilterPolicy [[-Identity] <HostedConnectionFilterPolicyIdParameter>]
  [-AllowedToSpoof <String>]
- [-ConfidenceLevel <ConfidenceLevel>]
  [-DecisionSetBy <DecisionSetBy>]
  [-Detailed]
  [-SpoofAllowBlockList]
@@ -114,32 +113,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConfidenceLevel
-The ConfidenceLevel parameter filters the results by the specified confidence level. Valid values are:
-
--Low
--High
-
-You can only see the ConfidenceLevel value in the results when you include the Detailed switch in the command.
-
-```yaml
-Type: ConfidenceLevel
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DecisionSetBy
 The DecisionSetBy parameter filters the results by who allowed or blocked the spoofed sender. Valid values are:
 
--Admin
--SpoofProtection
+- Admin
+- SpoofProtection
 
 ```yaml
 Type: DecisionSetBy
@@ -159,8 +137,8 @@ The Detailed switch specifies whether to return detailed information in the resu
 
 Specifically, this switch returns the following additional properties:
 
-- ConfidenceLevel
-- DomainPairsCountInCategory
+- ConfidenceLevel: Level of signals indicated by spoof intelligence that these domains may be suspicious, based on historical sending patterns and the reputation score of the domains.
+- DomainPairsCountInCategory: The spoofed domains displayed are separated into two categories: suspicious domain pairs and non-suspicious domain pairs. For more information, see [this topic](https://docs.microsoft.com/microsoft-365/security/office-365-security/walkthrough-spoof-intelligence-insight).
 
 ```yaml
 Type: SwitchParameter

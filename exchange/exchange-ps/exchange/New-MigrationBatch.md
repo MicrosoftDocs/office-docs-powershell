@@ -21,6 +21,77 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Onboarding
+```
+New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpsters]
+ [-ExcludeFolders <MultiValuedProperty>]
+ [-IncludeFolders <MultiValuedProperty>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Offboarding
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TargetEndpoint <MigrationEndpointIdParameter>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
+```
+
 ### Local
 ```
 New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
@@ -120,74 +191,6 @@ New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Onboarding
-```
-New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-AllowIncrementalSyncs <Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>]
- [-ArchiveOnly]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-ExcludeDumpsters]
- [-ExcludeFolders <MultiValuedProperty>]
- [-LargeItemLimit <Unlimited>]
- [-Locale <CultureInfo>]
- [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>]
- [-Partition <MailboxIdParameter>]
- [-PrimaryOnly]
- [-ReportInterval <Timespan>]
- [-SkipMerging <MultiValuedProperty>]
- [-SkipMoving <MultiValuedProperty>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-StartAfter <DateTime>]
- [-TargetArchiveDatabases <MultiValuedProperty>]
- [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Offboarding
-```
-New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
- [-AllowIncrementalSyncs <Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>]
- [-ArchiveOnly]
- [-AutoComplete]
- [-AutoRetryCount <Int32>]
- [-AutoStart]
- [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
- [-Confirm]
- [-DomainController <Fqdn>]
- [-LargeItemLimit <Unlimited>]
- [-Locale <CultureInfo>]
- [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>]
- [-Partition <MailboxIdParameter>]
- [-PrimaryOnly]
- [-ReportInterval <Timespan>]
- [-SkipMerging <MultiValuedProperty>]
- [-SkipMoving <MultiValuedProperty>]
- [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
- [-StartAfter <DateTime>]
- [-TargetArchiveDatabases <MultiValuedProperty>]
- [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>]
- [-TargetEndpoint <MigrationEndpointIdParameter>]
- [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
-```
-
 ### PublicFolderToUnifiedGroup
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup]
@@ -258,7 +261,7 @@ Onboarding and offboarding in Exchange Online
 
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
 
-- G Suite migration: This onboarding migration type migrates mailbox data from a G Suite organization to Exchange Online.  For a G Suite migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data.
+- G Suite migration: This onboarding migration type migrates mailbox data from a G Suite organization to Exchange Online. For a G Suite migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data. For more information, see Example 10.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -336,7 +339,29 @@ $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $M
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
-This example is the same as Example 3, but the CompleteAfter parameter is also used. Data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM. This method allows you to start a migration and then leave it to complete after business hours.
+This example is the same as Example 3, but the CompleteAfter parameter is also used. Data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM (UTC). This method allows you to start a migration and then leave it to complete after business hours if your time zone is Coordinated Universal Time.
+
+### Example 9
+```powershell
+$Credentials = Get-Credential; 
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"; 
+Start-MigrationBatch -Identity $OnboardingBatch.Identity
+```
+
+This example is the same as Example 8, but the TimeZone parameter is also used. Data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM (PST). This method allows you to start a migration and then leave it to complete after business hours if your time zone is Pacific Standard Time.
+
+### Example 10
+```powershell
+$MigrationEndpointGmail = New-MigrationEndpoint -Gmail -ServiceAccountKeyFileData $([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\gmailonboarding.json")) -EmailAddress admin@contoso.com -Name GmailEndpoint; 
+$OnboardingBatch = New-MigrationBatch -SourceEndpoint $MigrationEndpointGmail.Identity -Name GmailBatch1 -CSVData $([System.IO.File]::ReadAll
+Bytes("C:\Users\Administrator\Desktop\gmail.csv")) -TargetDeliveryDomain "o365.contoso.com" -ContentFilter "Received -ge '2019/4/30'" -Inc
+ludeFolders "Payment"
+Start-MigrationBatch -Identity $OnboardingBatch.Identity
+```
+
+A G Suite migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
+
 
 ## PARAMETERS
 
@@ -616,17 +641,15 @@ Accept wildcard characters: False
 ### -CompleteAfter
 This parameter is available only in the cloud-based service.
 
-The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but won't complete until the date/time you specify with this parameter.
+The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
-To specify a date/time value for this parameter, use either of the following options:
+- Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
 
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in your local time zone: For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
@@ -653,6 +676,50 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentFilter
+This parameter is available only in the cloud-based service.
+
+The ContentFilter parameter uses OPath filter syntax to filter the messages by Received date. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
+
+- `"Received -gt '8/23/2020'"`
+- `"Received -le '2019/01/01'"`
+- `"Received -gt '8/23/2015' -and Received -lt '8/23/2020'"`
+
+You can specify the language by using the ContentFilterLanguage parameter.
+
+```yaml
+Type: String
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentFilterLanguage
+This parameter is available only in the cloud-based service.
+
+The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
+
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+
+```yaml
+Type: CultureInfo
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -738,8 +805,85 @@ Accept wildcard characters: False
 ### -ExcludeFolders
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the on-premises messaging system to the cloud-based mailboxes. Use folder names relative to the IMAP root on the on-premises mail server. Specify the value as a string array and separate multiple folder names with commas.
+For an IMAP migration or G Suite migration, the ExcludeFolders parameter specifies mailbox folders that you don't want to migrate from the source email system to the cloud-based mailboxes. Specify the value as a string array and separate multiple folder names with commas.
 
+For IMAP migration, use folder names relative to the IMAP root on the source mail server. For G Suite migration, use label names on the source mail server.
+
+Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
+
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, `MyProjects` or `MyProjects/FY2010`.
+
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, `#Inbox#` denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+
+- Inbox
+- SentItems
+- DeletedItems
+- Calendar
+- Contacts
+- Drafts
+- Journal
+- Tasks
+- Notes
+- JunkEmail
+- CommunicatorHistory
+- Voicemail
+- Fax
+- Conflicts
+- SyncIssues
+- LocalFailures
+- ServerFailures
+
+If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a back slash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder, but not the well-known Notes folder, use the following syntax: `\#Notes\#`.
+
+Wildcard characters can't be used in folder names.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeFolders
+This parameter is available only in the cloud-based service.
+
+For an IMAP migration or G Suite migration, the IncludeFolders parameter specifies mailbox folders that you want to migrate from the on-premises email system to the cloud-based mailboxes. Use folder names relative to the IMAP root on the source mail server or use label names for G Suite migration. Specify the value as a string array and separate multiple folder names with commas.
+
+For IMAP migration, use folder names relative to the IMAP root on the source mail server. For G Suite migration, use label names on the source mail server.
+
+Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
+
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, `MyProjects` or `MyProjects/FY2010`.
+
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, `#Inbox#` denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+
+- Inbox
+- SentItems
+- DeletedItems
+- Calendar
+- Contacts
+- Drafts
+- Journal
+- Tasks
+- Notes
+- JunkEmail
+- CommunicatorHistory
+- Voicemail
+- Fax
+- Conflicts
+- SyncIssues
+- LocalFailures
+- ServerFailures
+
+If the user creates a personal folder with the same name as a well-known folder and the `#` symbol surrounding it, you can use a back slash (`\`) as an escape character to specify that folder. For example, if a user creates a folder named `#Notes#` and you want to specify that folder, but not the well-known Notes folder, use the following syntax: `\#Notes\#`.
+
+Wildcard characters can't be used in folder names.
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Onboarding
@@ -1014,13 +1158,11 @@ The StartAfter parameter specifies a delay before the data migration for the use
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
-To specify a date/time value for this parameter, use either of the following options:
+- Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
 
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value in your local time zone. For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
@@ -1124,11 +1266,15 @@ Accept wildcard characters: False
 ### -TimeZone
 The TimeZone parameter specifies the time zone of the administrator who submits the migration batch.
 
-A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
+A valid value for this parameter is a supported time zone key name (for example, `"Pacific Standard Time"`).
 
 To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
-If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
+If the value contains spaces, enclose the value in quotation marks (").
+
+In on-premises Exchange, the default value is the time zone setting of the Exchange server.
+
+In Exchange Online, the default value is `UTC`.
 
 ```yaml
 Type: ExTimeZoneValue
@@ -1184,7 +1330,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowTemplate
-The WorkflowControlFlags parameter specifies advanced controls for the steps that are performed in the migration. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
+The WorkflowTemplate parameter specifies advanced controls for the steps that are performed in the migration. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
 ```yaml
 Type: String

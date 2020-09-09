@@ -48,31 +48,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-ThrottlingPolicyAssociation -OrganizationalUnit Users
-```
-
-In Exchange Server 2010 and 2013, this example returns a list of all the mailboxes in your organization in the Users OU.
-
-### Example 2
-```powershell
 Get-ThrottlingPolicyAssociation -ResultSize unlimited
 ```
 
 This example retrieves a summary list of all throttling policy associations in your organization.
 
-### Example 3
+### Example 2
 ```powershell
 Get-ThrottlingPolicyAssociation -Anr Chr -DomainController DC01
 ```
 
 In Exchange Server 2010 and 2013, this example returns all the mailboxes that resolve from the ambiguous name resolution search on the string "Chr" that are in the domain DC01. This example returns mailboxes for users such as Chris Ashton, Christian Hess, and Christa Geller.
 
-### Example 4
+### Example 3
 ```powershell
-Get-Group -Identity "Courtney Sweet" | Format-List
+Get-ThrottlingPolicyAssociation -Identity "Courtney Sweet" | Format-List
 ```
 
-This example returns detailed information for the throttling policy association named Courtney Sweet that's associated with the user's mailbox.
+This example returns detailed information for the throttling policy association named Courtney Sweet.
 
 ## PARAMETERS
 

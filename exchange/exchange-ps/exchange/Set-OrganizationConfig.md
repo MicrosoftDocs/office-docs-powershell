@@ -80,8 +80,10 @@ Set-OrganizationConfig
  [-MailTipsGroupMetricsEnabled <Boolean>]
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
+ [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OnlineMeetingsByDefaultEnabled <Boolean>]
+ [-OutlookGifPickerDisabled <Boolean>]
  [-OutlookMobileGCCRestrictionsEnabled <Boolean>]
  [-OutlookMobileHelpShiftEnabled <Boolean>]
  [-OutlookMobileSingleAccountEnabled <Boolean>]
@@ -1957,14 +1959,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MobileAppEducationEnabled
+This parameter is available only in the cloud-based service.
+
+The MobileAppEducationEnabled specifies whether to show or hide the Outlook for iOS and Android education reminder in Outlook on the web (formerly known as Outlook Web App). Valid values are:
+
+- $true: Outlook on the web and Outlook desktop will show the education reminder to users who aren't using Outlook for iOS and Android to check their company email and calendar events. This is the default value.
+
+- $false: The Outlook for iOS and Android education reminder is disabled.
+
+This setting will affect Outlook desktop at some point in the future.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OAuth2ClientProfileEnabled
 The OAuth2ClientProfileEnabled parameter enables or disables modern authentication in the Exchange organization. Valid values are:
 
-- $true: Modern authentication is enabled.
+- $true: modern authentication is enabled.
 
-- $false: Modern authentication is disabled.
+- $false: modern authentication is disabled.
 
-Modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
+modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
 
 When you enable modern authentication in Exchange Online, we recommend that you also enable it in Skype for Business Online. For more information, see [Skype for Business Online: Enable your tenant for modern authentication](https://aka.ms/SkypeModernAuth).
 
@@ -2015,6 +2041,30 @@ Type: MultiValuedProperty
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookGifPickerDisabled
+This parameter is available only in the cloud-based service.
+
+This feature is currently in Preview, is not available everywhere, and is subject to change.
+
+The OutlookGifPickerDisabled parameter disables the GIF Search (powered by Bing) feature that's built into the Compose page in Outlook on the web. Valid values are:
+
+- $true: GIF Search in Outlook on the web is disabled.
+
+- $false: GIF Search in Outlook on the web is enabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

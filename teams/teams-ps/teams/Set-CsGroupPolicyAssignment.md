@@ -12,6 +12,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 
+**Note:** The cmdlet Set-CsGroupPolicyAssignment will be available soon. In the meantime, to change a group policy assignment you can first remove the current policy assignment from the group and then add a new policy assignment.
+
 This cmdlet is used to update a group policy assignment.
 
 ## SYNTAX
@@ -67,7 +69,7 @@ The ID of a batch policy assignment operation.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -82,7 +84,7 @@ The type of the policy assigned.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -97,7 +99,7 @@ The of the new policy to be assigned.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -112,7 +114,7 @@ The new rank of the policy assignment, relative to other group policy assignment
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False

@@ -17,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-AuthenticationPolicy cmdlet to modify authentication policies in your organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthActiveSync
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthActiveSync switch specifies whether to allow only Modern authentication with Exchange ActiveSync in Exchange 2019 CU2 or later hybrid environments.
+The BlockLegacyAuthActiveSync switch specifies whether to allow only modern authentication with Exchange ActiveSync in Exchange 2019 CU2 or later hybrid environments.
 
 - To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for ActiveSync, use this switch without a value.
 
@@ -381,7 +381,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthAutodiscover
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthAutodiscover switch specifies whether to allow only Modern authentication with Autodiscover in Exchange 2019 CU2 or later hybrid environments.
+The BlockLegacyAuthAutodiscover switch specifies whether to allow only modern authentication with Autodiscover in Exchange 2019 CU2 or later hybrid environments.
 
 - To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for Autodiscover, use this switch without a value.
 
@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthImap
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthImap switch specifies whether to allow only Modern authentication with IMAP in Exchange 2019 CU2 or later hybrid environments.
+The BlockLegacyAuthImap switch specifies whether to allow only modern authentication with IMAP in Exchange 2019 CU2 or later hybrid environments.
 
 - To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for IMAP, use this switch without a value.
 
@@ -425,7 +425,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthMapi
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthMapi switch specifies whether to allow only Modern authentication with MAPI in Exchange 2019 CU2 or later hybrid environments.
+The BlockLegacyAuthMapi switch specifies whether to allow only modern authentication with MAPI in Exchange 2019 CU2 or later hybrid environments.
 
 - To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for MAPI, use this switch without a value.
 
@@ -447,7 +447,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthOfflineAddressBook
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthOfflineAddressBook switch specifies whether to allow only Modern authentication with Offline Address Books in Exchange 2019 CU2 or later hybrid environments.
+The BlockLegacyAuthOfflineAddressBook switch specifies whether to allow only modern authentication with Offline Address Books in Exchange 2019 CU2 or later hybrid environments.
 
 - To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for Offline Address Books, use this switch without a value.
 
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthPop
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthPop switch specifies whether to allow only Modern authentication with POP in Exchange 2019 CU2 or later hybrid environments.
+The BlockLegacyAuthPop switch specifies whether to allow only modern authentication with POP in Exchange 2019 CU2 or later hybrid environments.
 
 - To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for POP, use this switch without a value.
 
@@ -491,7 +491,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthRpc
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthRpc switch specifies whether to allow only Modern authentication with RPC in Exchange 2019 CU2 or later hybrid environments.
+The BlockLegacyAuthRpc switch specifies whether to allow only modern authentication with RPC in Exchange 2019 CU2 or later hybrid environments.
 
 - To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for RPC, use this switch without a value.
 
@@ -513,7 +513,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthWebServices
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthWebServices switch specifies whether to allow only Modern authentication with Exchange Web Services (EWS) in Exchange 2019 CU2 or later hybrid environments.
+The BlockLegacyAuthWebServices switch specifies whether to allow only modern authentication with Exchange Web Services (EWS) in Exchange 2019 CU2 or later hybrid environments.
 
 - To block Basic authentication, Digest authentication, and Windows authentication (NTLM and Kerberos) for EWS, use this switch without a value.
 

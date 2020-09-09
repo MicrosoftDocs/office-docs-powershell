@@ -14,9 +14,9 @@ monikerRange: "exchonline-ps"
 # Connect-ExchangeOnline
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
-Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to connect to an Exchange Online organization.
+Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. To connect to other PowerShell environments (for example, Security & Compliance Center PowerShell or standalone Exchange Online Protection PowerShell), use the [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -78,14 +78,15 @@ After the Connect-ExchangeOnline command is successful, you can run ExO V2 modul
 ## PARAMETERS
 
 ### -ConnectionUri
-The ConnectionUri parameter specifies the connection endpoint for the remote PowerShell session. You don't need to use this parameter for Exchange Online PowerShell in Microsoft 365 worldwide.
+The ConnectionUri parameter specifies the connection endpoint for the remote Exchange Online PowerShell session.
 
-Valid values for other PowerShell environments that require this parameter are:
+- For Exchange Online PowerShell in Microsoft 365 or Microsoft 365 GCC, you don't use this parameter.
+- For Exchange Online PowerShell in Office 365 Germany, use the value <https://outlook.office.de/PowerShell-LiveID> for this parameter.
+- For Exchange Online PowerShell in Office 365 operated by 21Vianet, use the value <https://partner.outlook.cn/PowerShell> for this parameter.
+- For Exchange Online PowerShell in Microsoft 365 GCC High, use the value <https://outlook.office365.us/powershell-liveid> for this parameter.
+- For Exchange Online PowerShell in Microsoft 365 DoD, use the value <https://webmail.apps.mil/powershell-liveid> for this parameter.
 
-- Exchange Online PowerShell in Office 365 Germany: `https://outlook.office.de/PowerShell-LiveID`
-- Exchange Online PowerShell in Microsoft 365 GCC High: `https://outlook.office365.us/powershell-liveid`
-- Exchange Online PowerShell in Microsoft 365 DoD: `https://webmail.apps.mil/powershell-liveid`
-
+**Note**: If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, use the this cmdlet without the _ConnectionUri_ parameter to connect to EOP PowerShell (the same connection instructions as Exchange Online PowerShell).
 
 ```yaml
 Type: String
@@ -101,12 +102,13 @@ Accept wildcard characters: False
 ```
 
 ### -AzureADAuthorizationEndpointUri
-The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You don't need to use this parameter for Exchange Online PowerShell in Microsoft 365 worldwide.
+The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You use this parameter with multi-factor authentication (MFA) and federated authentication.
 
-Valid values for other PowerShell environments that require this parameter are:
+- For Exchange Online PowerShell in Microsoft 365 or Microsoft 365 GCC, don't use this parameter.
+- For Exchange Online PowerShell in Office 365 Germany, use the value <https://login.microsoftonline.de/common> for this parameter.
+- For Exchange Online PowerShell in Microsoft 365 GCC High and Microsoft 365 DoD, use the value <https://login.microsoftonline.us/common> for this parameter.
 
-- Exchange Online PowerShell in Office 365 Germany: `https://login.microsoftonline.de/common`
-- Exchange Online PowerShell in Microsoft 365 GCC High and Microsoft 365 DoD: `https://login.microsoftonline.us/common`
+**Note**: MFA authentication or federated authentication isn't available in Office 365 operated by 21Vianet.
 
 ```yaml
 Type: String

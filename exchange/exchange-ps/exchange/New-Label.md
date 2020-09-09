@@ -13,7 +13,7 @@ monikerRange: "o365scc-ps"
 # New-Label
 
 ## SYNOPSIS
-This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in Office 365 Security & Compliance Center PowerShell. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-Label cmdlet to create sensitivity labels in your organization.
 
@@ -159,9 +159,9 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingFooterAlignment
 The ApplyContentMarkingFooterAlignment parameter specifies the footer alignment. Valid values are:
 
--Left
--Center
--Right
+- Left
+- Center
+- Right
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
@@ -291,9 +291,9 @@ Accept wildcard characters: False
 ### -ApplyContentMarkingHeaderAlignment
 The ApplyContentMarkingHeaderAlignment parameter specifies the header alignment. Valid values are:
 
--Left
--Center
--Right
+- Left
+- Center
+- Right
 
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
@@ -497,8 +497,8 @@ Accept wildcard characters: False
 ### -ApplyWaterMarkingLayout
 The ApplyWaterMarkingAlignment parameter specifies the watermark alignment. Valid values are:
 
--Horizontal
--Diagonal
+- Horizontal
+- Diagonal
 
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
@@ -519,6 +519,7 @@ Accept wildcard characters: False
 The ApplyWaterMarkingText parameter specifies the watermark text. If the value contains spaces, enclose the value in quotation marks (").
 
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -646,7 +647,13 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionDoubleKeyEncryptionUrl
-This parameter is reserved for internal Microsoft use.
+The feature for this parameter is currently in Public Preview, and is not available to everyone.
+
+The EncryptionDoubleKeyEncryptionUrl parameter specifies the Double Key Encryption endpoint URL.
+
+You can't remove the URL after the label has been created; you can only modify it.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -901,9 +908,7 @@ Accept wildcard characters: False
 The ParentId parameter specifies the parent label that you want this label to be under (a sublabel). You can use any value that uniquely identifies the parent sensitivity label. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

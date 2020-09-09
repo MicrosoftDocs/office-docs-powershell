@@ -15,22 +15,29 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-CalendarNotification cmdlet to set text message notifications for calendar events for a user.
+The Set-CalendarNotification cmdlet allows users to set text message notification options for calendar events in their own calendar. By default, the MyTextMessaging end-user role gives access to this cmdlet, so admins can't configure text messaging notification for calendar events in user calendars.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-CalendarNotification [-Identity] <MailboxIdParameter> [-CalendarUpdateNotification <Boolean>]
- [-CalendarUpdateSendDuringWorkHour <Boolean>] [-Confirm] [-DailyAgendaNotification <Boolean>]
- [-DailyAgendaNotificationSendTime <TimeSpan>] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-MeetingReminderNotification <Boolean>] [-MeetingReminderSendDuringWorkHour <Boolean>]
- [-NextDays <Int32>] [-WhatIf] [<CommonParameters>]
+Set-CalendarNotification [-Identity] <MailboxIdParameter>
+ [-CalendarUpdateNotification <Boolean>]
+ [-CalendarUpdateSendDuringWorkHour <Boolean>]
+ [-Confirm]
+ [-DailyAgendaNotification <Boolean>]
+ [-DailyAgendaNotificationSendTime <TimeSpan>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-MeetingReminderNotification <Boolean>]
+ [-MeetingReminderSendDuringWorkHour <Boolean>]
+ [-NextDays <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Users can receive text message notifications of changes to calendar events and daily agendas. Use the Set-CalendarNotification cmdlet to configure these notifications for a user.
+Users can receive text message notifications of changes to calendar events and daily agendas.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -96,7 +103,11 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarUpdateNotification
-The CalendarUpdateNotification parameter specifies whether calendar notifications are enabled for the user.
+The CalendarUpdateNotification parameter specifies whether calendar update notifications are sent to the user's mobile device. Valid values are:
+
+- $true: Calendar update notifications are enabled.
+
+- $false: Calendar update notifications aren't enabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -112,7 +123,11 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarUpdateSendDuringWorkHour
-The CalendarUpdateSendDuringWorkHour parameter specifies whether calendar notifications are sent during working hours.
+The CalendarUpdateSendDuringWorkHour parameter specifies whether calendar update notifications are only sent to the user's mobile device during working hours. Valid values are:
+
+- $true: Calendar update notifications are only sent during working hours.
+
+- $false: Calendar update notifications are sent anytime. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -148,7 +163,11 @@ Accept wildcard characters: False
 ```
 
 ### -DailyAgendaNotification
-The DailyAgendaNotification parameter specifies whether a daily agenda should be sent to the user's mobile phone.
+The DailyAgendaNotification parameter specifies whether daily agenda notifications are sent to the user's mobile device. Valid values are:
+
+- $true: Daily agenda notifications are sent.
+
+- $false: Daily agenda notifications are not sent. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -164,11 +183,11 @@ Accept wildcard characters: False
 ```
 
 ### -DailyAgendaNotificationSendTime
-The DailyAgendaNotificationSendTime parameter specifies the time to send the daily agenda.
+The DailyAgendaNotificationSendTime parameter specifies the time to send daily agenda notifications to the user's mobile device.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
+To specify a value, enter it as a time span: hh:mm:ss where hh = hours, mm = minutes and ss = seconds.
 
-For example, a time span of 2 days and 8 hours is shown: 02.08:00:00.
+The default value is 08:00:00.
 
 ```yaml
 Type: TimeSpan
@@ -202,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope parameter isn't implemented yet.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +237,11 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingReminderNotification
-The MeetingReminderNotification parameter specifies whether meeting reminders are sent to the user's mobile phone.
+The MeetingReminderNotification parameter specifies whether meeting reminder notifications are sent to the user's mobile device. Valid values are:
+
+- $true: Meeting reminder notifications are sent.
+
+- $false: Meeting reminder notifications are not sent. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -234,7 +257,11 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingReminderSendDuringWorkHour
-The MeetingReminderSendDuringWorkHour parameter specifies whether meeting reminders are only sent during working hours.
+The MeetingReminderSendDuringWorkHour parameter specifies whether meeting reminder notifications are only sent to the user's mobile device during working hours. Valid values are:
+
+- $true: Meeting update notifications are only sent during working hours.
+
+- $false: Meeting update notifications are sent anytime. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -250,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -NextDays
-The NextDays parameter specifies how many days should be sent in the daily agenda.
+The NextDays parameter specifies how many days should be sent in the daily agenda notification to the user's mobile device. A valid value is an integer between 1 and 7. The default value is 1.
 
 ```yaml
 Type: Int32

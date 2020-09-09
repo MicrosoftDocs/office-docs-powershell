@@ -15,9 +15,9 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-SafeAttachmentPolicy cmdlet to create Safe Attachments policies in your cloud-based organization.
+Use the New-SafeAttachmentPolicy cmdlet to create safe attachment policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -37,9 +37,9 @@ New-SafeAttachmentPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-New Safe Attachments policies aren't valid and aren't applied until you add a Safe Attachments rule to the policy by using the New-SafeAttachmentRule cmdlet.
+Safe Attachments is a feature in Office 365 Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Office 365 ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
 
-Safe Attachments is a feature in Advanced Threat Protection that opens email attachments in a special hypervisor environment to detect malicious activity.
+New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the SafeAttachmentPolicy parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets to associate the policy with a rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -47,18 +47,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-SafeAttachmentPolicy -Name "Marketing Block Attachments" -Enable $true -Redirect $true -RedirectAddress admin@contoso.com
+New-SafeAttachmentPolicy -Name "Marketing Block Attachments" -Redirect $true -RedirectAddress admin@contoso.com
 ```
 
 This example creates a new Safe Attachments policy named Marketing Block Attachments with the following options:
 
-- The policy is enabled.
-
 - The action is Block. This is the default value of the Action parameter, so you don't need to specify it.
 
-- If Safe Attachments scanning isn't available or encounters errors, deliver the message as normal. The default value of the ActionOnError parameter is $false, so you don't need to specify it.
+- Enable redirection for detected malware attachments and send the messages to admin@contoso.com.
 
-- Redirect detected malware messages to admin@contoso.com.
+- If Safe Attachments scanning isn't available or encounters errors, don't deliver the message as normal. The default value of the ActionOnError parameter is $true, so you don't need to specify it.
 
 ## PARAMETERS
 
@@ -81,7 +79,7 @@ Accept wildcard characters: False
 ### -Action
 The Action parameter specifies the action for the Safe Attachments policy. Valid values are:
 
-- Allow: Deliver the email message, including the malware attachment.
+- Allow: Attachments aren't scanned by Safe Attachments policies.
 
 - Block: Block the email message that contains the malware attachment. This is the default value.
 
@@ -107,9 +105,9 @@ Accept wildcard characters: False
 ### -ActionOnError
 The ActionOnError parameter specifies the error handling option for Safe Attachments scanning (what to do if scanning times out or an error occurs). Valid values are:
 
-- $true: The action specified by the Action parameter is applied to messages even when the attachments aren't successfully scanned.
+- $true: The action specified by the Action parameter is applied to messages even when the attachments aren't successfully scanned. This is the default value.
 
-- $false: The action specified by the Action parameter isn't applied to messages when the attachments aren't successfully scanned. This is the default value.
+- $false: The action specified by the Action parameter isn't applied to messages when the attachments aren't successfully scanned.
 
 ```yaml
 Type: Boolean
@@ -161,11 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-The Enable parameter specifies whether policy is enabled. Valid values are:
-
-- $true: The rule or policy is enabled.
-
-- $false: The rule or policy is disabled. This is the default value.
+This parameter isn't used. To enable or disable a safe attachment policy, use the Enabled parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets.
 
 ```yaml
 Type: Boolean

@@ -17,11 +17,9 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Set-ProtectionAlert cmdlet to modify alert policies in the Security & Compliance Center.
 
+**Note**: You can't use this cmdlet to edit default alert policies. You can only modify alerts that you created using the New-ProtectionAlert cmdlet.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
-
-
-> [!NOTE]
-> You cannot use this cmdlet to edit default alert policies. You can only modify alerts you have created using New-ProtectionAlert cmdlet.
 
 ## SYNTAX
 
@@ -395,7 +393,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyUser
-The NotifyUser parameter specifies the SMTP address of the user who receives notification messages for the alert policy. You can specify multiple values separated by commas.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty

@@ -215,5 +215,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPEnterpriseSearchLinksDatabase](Get-SPEnterpriseSearchLinksDatabase.md)
 
 [Remove-SPEnterpriseSearchLinksDatabase](Remove-SPEnterpriseSearchLinksDatabase.md)
-
-[Repartition-SPEnterpriseSearchLinksDatabases](Repartition-SPEnterpriseSearchLinksDatabases.md)

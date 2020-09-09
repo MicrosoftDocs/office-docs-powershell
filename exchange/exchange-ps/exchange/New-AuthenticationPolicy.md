@@ -17,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-AuthenticationPolicy cmdlet to create authentication policies in your organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthActiveSync
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthActiveSync switch specifies whether to allow only Modern authentication with Exchange ActiveSync in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthActiveSync switch specifies whether to allow only modern authentication with Exchange ActiveSync in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with Exchange ActiveSync:
 
@@ -339,7 +339,7 @@ This switch disables the following legacy authentication methods with Exchange A
 
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -357,7 +357,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthAutodiscover
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthAutodiscover switch specifies whether to allow only Modern authentication with Autodiscover in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthAutodiscover switch specifies whether to allow only modern authentication with Autodiscover in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with Autodiscover:
 
@@ -367,7 +367,7 @@ This switch disables the following legacy authentication methods with Autodiscov
 
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthImap
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthImap switch specifies whether to allow only Modern authentication with IMAP in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthImap switch specifies whether to allow only modern authentication with IMAP in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with IMAP:
 
@@ -395,7 +395,7 @@ This switch disables the following legacy authentication methods with IMAP:
 
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -413,7 +413,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthMapi
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthMapi switch specifies whether to allow only Modern authentication with MAPI in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthMapi switch specifies whether to allow only modern authentication with MAPI in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with MAPI:
 
@@ -423,7 +423,7 @@ This switch disables the following legacy authentication methods with MAPI:
 
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -441,7 +441,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthOfflineAddressBook
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthOfflineAddressBook switch specifies whether to allow only Modern authentication with Offline Address Books in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthOfflineAddressBook switch specifies whether to allow only modern authentication with Offline Address Books in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with Offline Address Books:
 
@@ -451,7 +451,7 @@ This switch disables the following legacy authentication methods with Offline Ad
 
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthPop
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthPop switch specifies whether to allow only Modern authentication with POP in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthPop switch specifies whether to allow only modern authentication with POP in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with POP:
 
@@ -479,7 +479,7 @@ This switch disables the following legacy authentication methods with POP:
 
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -497,7 +497,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthRpc
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthRpc switch specifies whether to allow only Modern authentication with RPC in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthRpc switch specifies whether to allow only modern authentication with RPC in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with RPC:
 
@@ -507,7 +507,7 @@ This switch disables the following legacy authentication methods with RPC:
 
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -525,7 +525,7 @@ Accept wildcard characters: False
 ### -BlockLegacyAuthWebServices
 This parameter is available only in on-premises Exchange.
 
-The BlockLegacyAuthWebServices switch specifies whether to allow only Modern authentication with Exchange Web Services (EWS) in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
+The BlockLegacyAuthWebServices switch specifies whether to allow only modern authentication with Exchange Web Services (EWS) in Exchange 2019 CU2 or later hybrid environments. You don't need to specify a value with this switch.
 
 This switch disables the following legacy authentication methods with EWS:
 
@@ -535,7 +535,7 @@ This switch disables the following legacy authentication methods with EWS:
 
 - Windows authentication (NTLM and Kerberos)
 
-Before you disable the legacy authentication methods for this protocol, verify that hybrid Modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support Modern authentication.
+Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
 
 ```yaml
 Type: SwitchParameter
