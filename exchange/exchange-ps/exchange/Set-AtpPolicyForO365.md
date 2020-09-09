@@ -15,13 +15,13 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (ATP) policy in Office 365. The ATP policy enables the following protections:
+Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (ATP) policy in Office 365. The ATP policy enables the following protections in Office 365 ATP:
 
 - Safe Links for Office 365 ProPlus desktop clients, web, and mobile apps.
 
 - Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
 
-- ATP protection files in SharePoint Online, OneDrive for Business and Microsoft Teams.
+- ATP protection for files in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -77,11 +77,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowClickThrough
-The AllowClickThrough parameter specifies whether to allow users to click through to the original blocked URL in Office 365 ProPlus. Valid values are:
+The AllowClickThrough parameter specifies whether to allow users to click through to the original blocked URL in Office 365 apps on desktop, mobile, and web clients. Valid values are:
 
-- $true: Users are allowed to click through to the original URL. This is the default value.
+- $true: Users are allowed to click through to the original URL.
 
-- $false: Users aren't allowed to click through to the original URL.
+- $false: Users aren't allowed to click through to the original URL. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
-The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning. You can specify multiple values separated by commas.
+The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning in email messages, Microsoft Teams, and Office documents. You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -193,11 +193,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForO365Clients
-The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Microsoft 365 apps on desktop and mobile clients. Valid values are:
+The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Microsoft 365 apps on desktop, mobile, and web clients. Valid values are:
 
-- $true: Safe Links are enabled for Microsoft 365 desktop and mobile apps. This is the default value.
+- $true: Safe Links are enabled for Microsoft 365 desktop, mobile, and web apps. This is the default value.
 
-- $false: Safe Links are disabled for Microsoft 365 desktop and mobile apps.
+- $false: Safe Links are disabled for Microsoft 365 desktop, mobile, and web apps.
 
 ```yaml
 Type: Boolean
@@ -213,11 +213,11 @@ Accept wildcard characters: False
 ```
 
 ### -TrackClicks
-The TrackClicks parameter specifies whether to track user clicks related to blocked URLs. Valid values are:
+The TrackClicks parameter specifies whether to track user clicks related to blocked URLs in Office documents. Valid values are:
 
-- $true: User clicks are tracked. This is the default value.
+- $true: User clicks are tracked.
 
-- $false: User clicks aren't tracked.
+- $false: User clicks aren't tracked. This is the default value.
 
 ```yaml
 Type: Boolean
