@@ -12,12 +12,12 @@ schema: 2.0.0
 # New-CsCustomPolicyPackage
 
 ## SYNOPSIS
-This cmdlet submits an operation that creates a custom policy package with custom package name and a list of policies.
+This cmdlet submits an operation that creates a custom policy package with custom package name, description and a list of policies.
 
 ## SYNTAX
 
 ```
-New-CsBatchPolicyPackageAssignmentOperation -PackageName <String> -PolicyList <String[]> [<CommonParameters>]
+New-CsBatchPolicyPackageAssignmentOperation -PackageName <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,10 +28,17 @@ This cmdlet submits an operation that creates a custom policy package. It allows
 
 ### Example 1
 ```powershell
+PS C:\> New-CsCustomPolicyPackage -PackageName myCustomPackage -PolicyList "TeamsMeeting, Education_Teacher" , "TeamsMessaging, Firstline_Manager" -Description "My first custom package"
+```
+
+Creates a custom package named "myCustomPackage" with two policies included: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager". Describe it as "My first custom package".
+
+### Example 2
+```powershell
 PS C:\> New-CsCustomPolicyPackage -PackageName myCustomPackage -PolicyList "TeamsMeeting, Education_Teacher" , "TeamsMessaging, Firstline_Manager"
 ```
 
-Creates a custom package with name "myCustomPackage" with two policies included: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager".
+Creates a custom package named "myCustomPackage" with two policies included: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager". No description included.
 
 ## PARAMETERS
 
@@ -62,6 +69,22 @@ Aliases:
 Applicable: Microsoft Teams
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+
+The description of the custom package. It can be empty.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
