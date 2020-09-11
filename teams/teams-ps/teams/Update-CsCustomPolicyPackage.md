@@ -72,7 +72,7 @@ Accept wildcard characters: False
 The description of the custom package. It can be empty.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
