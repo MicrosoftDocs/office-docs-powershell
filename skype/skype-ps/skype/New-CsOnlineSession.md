@@ -20,14 +20,14 @@ Creates a persistent connection to Microsoft Skype for Business Online DataCente
 ```
 New-CsOnlineSession [[-Credential] <PSCredential>] [-OverrideAdminDomain <String>]
  [-OverrideDiscoveryUri <Uri>] [-OverridePowerShellUri <Uri>] [-OverrideAccessTokenResourceUri <Uri>]
- [-SessionOption <PSSessionOption>] [<CommonParameters>]
+ [-SessionOption <PSSessionOption>] [<CommonParameters>] [-TeamsEnvironmentName <String>]
 ```
 
 ### OAuthAccessToken
 ```
 New-CsOnlineSession [-OAuthAccessToken <SecureString>] [-OverrideAdminDomain <String>]
  [-OverrideDiscoveryUri <Uri>] [-OverridePowerShellUri <Uri>] [-OverrideAccessTokenResourceUri <Uri>]
- [-SessionOption <PSSessionOption>] [<CommonParameters>]
+ [-SessionOption <PSSessionOption>] [<CommonParameters>] [-TeamsEnvironmentName <String>]
 ```
 
 ## DESCRIPTION
@@ -152,6 +152,20 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsEnvironmentName
+Use this setting if your organization is in one of the Teams Government Cloud environments.
+
+Specify "TeamsGCCH" if your organization is in the GCC High Environment. Specify "TeamsDOD" if your organization is in the DoD Environment.
+
+```yaml
+Type: String
 Required: False
 Position: Named
 Default value: None
