@@ -17,7 +17,7 @@ This cmdlet submits an operation that updates a custom policy package with new p
 ## SYNTAX
 
 ```
-Update-CsBatchPolicyPackageAssignmentOperation -PackageName <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
+Update-CsBatchPolicyPackageAssignmentOperation -Identity <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,14 +28,14 @@ This cmdlet submits an operation that updates the policies into a custom policy 
 
 ### Example 1
 ```powershell
-PS C:\> Update-CsCustomPolicyPackage -PackageName myCustomPackage -PolicyList "TeamsMeeting, Education_Teacher" , "TeamsMessaging, Firstline_Manager"
+PS C:\> Update-CsCustomPolicyPackage -Identity myCustomPackage -PolicyList "TeamsMeetingPolicy, Education_Teacher" , "TeamsMessagingPolicy, Firstline_Manager"
 ```
 
 Updates the custom package named "myCustomPackage" by changing the policies to a new list: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager" and setting description to none.
 
 ## PARAMETERS
 
-### -PackageName
+### -Identity
 
 The name of the custom package that the user wants to update. It cannot be empty or only contain spaces.
 
