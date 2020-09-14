@@ -36,7 +36,7 @@ This cmdlet modifies an existing application meeting configuration for the tenan
 PS C:\> Set-CsApplicationMeetingConfiguration -AllowRemoveParticipantAppIds @{Add="5817674c-81d9-4adb-bfb2-8f6a442e4622"}
 ```
 
-The command shown above adds a new app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622" to the application meeting configuration settings for the tenant.
+The command shown above adds a new app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622" to the application meeting configuration settings for the tenant to allow it to remove participant.
 
 ### Remove app IDs from the configuration to allow remove participant for the tenant
 
@@ -44,7 +44,7 @@ The command shown above adds a new app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622"
 PS C:\> Set-CsApplicationMeetingConfiguration -AllowRemoveParticipantAppIds @{Remove="5817674c-81d9-4adb-bfb2-8f6a442e4622"}
 ```
 
-The command shown above removes the app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622" from the application meeting configuration settings for the tenant.
+The command shown above removes the app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622" from the application meeting configuration settings for the tenant to disallow it to remove participant.
 
 ## PARAMETERS
 
