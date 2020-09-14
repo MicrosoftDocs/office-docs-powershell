@@ -17,7 +17,7 @@ This cmdlet submits an operation that creates a custom policy package with custo
 ## SYNTAX
 
 ```
-New-CsBatchPolicyPackageAssignmentOperation -PackageName <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
+New-CsBatchPolicyPackageAssignmentOperation -Identity <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,21 +28,21 @@ This cmdlet submits an operation that creates a custom policy package. It allows
 
 ### Example 1
 ```powershell
-PS C:\> New-CsCustomPolicyPackage -PackageName myCustomPackage -PolicyList "TeamsMeeting, Education_Teacher" , "TeamsMessaging, Firstline_Manager" -Description "My first custom package"
+PS C:\> New-CsCustomPolicyPackage -Identity myCustomPackage -PolicyList "TeamsMeeting, Education_Teacher" , "TeamsMessaging, Firstline_Manager" -Description "My first custom package"
 ```
 
 Creates a custom package named "myCustomPackage" with two policies included: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager". Describe it as "My first custom package".
 
 ### Example 2
 ```powershell
-PS C:\> New-CsCustomPolicyPackage -PackageName myCustomPackage -PolicyList "TeamsMeeting, Education_Teacher" , "TeamsMessaging, Firstline_Manager"
+PS C:\> New-CsCustomPolicyPackage -Identity myCustomPackage -PolicyList "TeamsMeeting, Education_Teacher" , "TeamsMessaging, Firstline_Manager"
 ```
 
 Creates a custom package named "myCustomPackage" with two policies included: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager". No description included.
 
 ## PARAMETERS
 
-### -PackageName
+### -Identity
 
 The name of the custom package. It cannot be empty or only contain spaces.
 
