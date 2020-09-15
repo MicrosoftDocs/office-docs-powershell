@@ -36,7 +36,15 @@ You need to be assigned permissions in the Security & Compliance Center before y
 Remove-DlpKeywordDictionary -Identity "Financial Data"
 ```
 
-This example remove the DLP keyword dictionary named Financial Data.
+This example removes the DLP keyword dictionary named Financial Data.
+
+### Example 2
+```powershell
+Get-DlpKeywordDictionary | Foreach-Object { Remove-DlpKeywordDictionary -Identity $_.Name -confirm:$True }
+```
+
+This example removes all the DLP keyword dictionaries with a Confirm on each removal.
+
 
 ## PARAMETERS
 
