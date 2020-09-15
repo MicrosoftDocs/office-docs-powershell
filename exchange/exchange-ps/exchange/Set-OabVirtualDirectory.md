@@ -49,7 +49,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-OABVirtualDirectory -Identity "Server1\OAB (Default Web Site)" -ExternalUrl "https://www.contoso.com/OAB"
 ```
 
-This example changes the external URL of the OAB virtual directory OAB (Default Web Site) to https://www.contoso.com/OAB.
+This example changes the external URL of the OAB virtual directory OAB (Default Web Site) to `https://www.contoso.com/OAB`.
 
 ## PARAMETERS
 

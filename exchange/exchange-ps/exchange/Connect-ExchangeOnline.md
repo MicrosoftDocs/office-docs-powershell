@@ -76,8 +76,8 @@ After the Connect-ExchangeOnline command is successful, you can run ExO V2 modul
 The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You use this parameter with multi-factor authentication (MFA) and federated authentication.
 
 - For Exchange Online PowerShell in Microsoft 365 or Microsoft 365 GCC, don't use this parameter.
-- For Exchange Online PowerShell in Office 365 Germany, use the value <https://login.microsoftonline.de/common> for this parameter.
-- For Exchange Online PowerShell in Microsoft 365 GCC High and Microsoft 365 DoD, use the value <https://login.microsoftonline.us/common> for this parameter.
+- For Exchange Online PowerShell in Office 365 Germany, use the value `https://login.microsoftonline.de/common` for this parameter.
+- For Exchange Online PowerShell in Microsoft 365 GCC High and Microsoft 365 DoD, use the value `https://login.microsoftonline.us/common` for this parameter.
 
 **Note**: MFA authentication or federated authentication isn't available in Office 365 operated by 21Vianet.
 
