@@ -40,6 +40,7 @@ Get-CASMailbox [-Anr <String>]
  [-SortBy <String>]
  [-ReadIsOptimizedForAccessibility]
  [-RecalculateHasActiveSyncDevicePartnership] [<CommonParameters>]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
 ```
 
 ### Identity
@@ -59,6 +60,7 @@ Get-CASMailbox [[-Identity] <MailboxIdParameter>]
  [-SortBy <String>]
  [-ReadIsOptimizedForAccessibility]
  [-RecalculateHasActiveSyncDevicePartnership] [<CommonParameters>]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
 ```
 
 ## DESCRIPTION
@@ -98,6 +100,14 @@ Get-CASMailbox chris@contoso.com | Format-List Ews*
 ```
 
 This example returns all Exchange Web Services settings for the user chris@contoso.com.
+
+
+### Example 4
+```powershell
+Get-CASMailbox -RecipientTypeDetails SharedMailbox | Select *
+```
+
+This example filters the cmdlet output to only include Shared mailboxes.
 
 ## PARAMETERS
 
@@ -401,6 +411,46 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientTypeDetails
+The RecipientTypeDetails parameter filters the results by the specified mailbox subtype. Valid values are:
+
+- DiscoveryMailbox
+
+- EquipmentMailbox
+
+- GroupMailbox
+
+- LegacyMailbox
+
+- LinkedMailbox
+
+- LinkedRoomMailbox
+
+- RoomMailbox
+
+- SchedulingMailbox
+
+- SharedMailbox
+
+- TeamMailbox
+
+- UserMailbox
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: RecipientTypeDetails[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
