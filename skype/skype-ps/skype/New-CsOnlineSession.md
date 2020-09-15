@@ -16,25 +16,18 @@ Creates a persistent connection to Microsoft Skype for Business Online DataCente
 
 ## SYNTAX
 
-### UserName (Default)
-```
-New-CsOnlineSession [[-UserName] <String>] [-OverrideAdminDomain <String>] [-OverrideDiscoveryUri <Uri>]
- [-OverridePowerShellUri <Uri>] [-OverrideAccessTokenResourceUri <Uri>] [-SessionOption <PSSessionOption>]
- [<CommonParameters>]
-```
-
-### Credential
+### Credential (Default)
 ```
 New-CsOnlineSession [[-Credential] <PSCredential>] [-OverrideAdminDomain <String>]
  [-OverrideDiscoveryUri <Uri>] [-OverridePowerShellUri <Uri>] [-OverrideAccessTokenResourceUri <Uri>]
- [-SessionOption <PSSessionOption>] [<CommonParameters>]
+ [-SessionOption <PSSessionOption>] [<CommonParameters>] [-TeamsEnvironmentName <String>]
 ```
 
 ### OAuthAccessToken
 ```
 New-CsOnlineSession [-OAuthAccessToken <SecureString>] [-OverrideAdminDomain <String>]
  [-OverrideDiscoveryUri <Uri>] [-OverridePowerShellUri <Uri>] [-OverrideAccessTokenResourceUri <Uri>]
- [-SessionOption <PSSessionOption>] [<CommonParameters>]
+ [-SessionOption <PSSessionOption>] [<CommonParameters>] [-TeamsEnvironmentName <String>]
 ```
 
 ## DESCRIPTION
@@ -45,14 +38,16 @@ In this session, Skype for Business Online administrator can run Skype for Busin
 
 ### EXAMPLE 1
 ```
-New-CsOnlineSession -UserName admin@contoso.com
+$credential = get-credential
+New-CsOnlineSession -Credential $credential
 ```
 
 Establishes a Skype for Business Online Remote PowerShell session, supplying the credentials of a Skype for Business Online administrator account.
 
 ### EXAMPLE 2
 ```
-New-CsOnlineSession -UserName admin@contoso.com -OverrideAdminDomain fabrikam.onmicrosoft.com
+$credential = get-credential
+New-CsOnlineSession -Credential $credential -OverrideAdminDomain fabrikam.onmicrosoft.com
 ```
 
 Establishes a Skype for Business Online Remote PowerShell session, with a Skype for Business Online administrator account that has permission to manage the tenant fabrikam.onmicrosoft.com that was specified using the optional OverrideAdminDomain parameter.
@@ -69,6 +64,8 @@ Establishes a Skype for Business Online Remote PowerShell session using multi-fa
 
 ### -UserName
 Specifies the Skype for Business Online administrator account name to be used when prompting for credentials.
+> [!WARNING]
+> UserName has been deprecated and is not avaiable in Teams Powershell module. Please use Credential parameter to provide username and password. 
 
 ```yaml
 Type: String
@@ -172,6 +169,20 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsEnvironmentName
+Use this setting if your organization is in one of the Teams Government Cloud environments.
+
+Specify "TeamsGCCH" if your organization is in the GCC High Environment. Specify "TeamsDOD" if your organization is in the DoD Environment.
+
+```yaml
+Type: String
 Required: False
 Position: Named
 Default value: None
