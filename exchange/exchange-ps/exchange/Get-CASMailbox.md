@@ -111,6 +111,42 @@ This example filters the cmdlet output to only include Shared mailboxes.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -ActiveSyncDebugLogging
 The ActiveSyncDebugLogging switch shows the actual value of the ActiveSyncDebugLogging property for the mailbox. If you don't use this switch, the value always appears as $false.
 
@@ -232,42 +268,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -420,28 +420,19 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientTypeDetails
-The RecipientTypeDetails parameter filters the results by the specified mailbox subtype. Valid values are:
+This parameter is available only in the cloud-based service.
+
+The RecipientTypeDetails parameter filters the results by the specified recipient subtype. Valid values are:
 
 - DiscoveryMailbox
-
 - EquipmentMailbox
-
-- GroupMailbox
-
 - LegacyMailbox
-
 - LinkedMailbox
-
 - LinkedRoomMailbox
-
+- MailUser
 - RoomMailbox
-
-- SchedulingMailbox
-
 - SharedMailbox
-
 - TeamMailbox
-
 - UserMailbox
 
 You can specify multiple values separated by commas.
@@ -450,7 +441,7 @@ You can specify multiple values separated by commas.
 Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
