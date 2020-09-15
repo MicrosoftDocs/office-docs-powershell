@@ -94,8 +94,6 @@ The Workload parameter specifies where the audit configuration policy applies. V
 
 - Exchange
 
-- InTune
-
 - OneDriveForBusiness
 
 - SharePoint

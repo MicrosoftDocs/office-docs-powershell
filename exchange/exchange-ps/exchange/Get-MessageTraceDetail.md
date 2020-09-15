@@ -17,24 +17,22 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message. Note that these detailed results are returned less quickly than the Get-MessageTrace results.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MessageTraceDetail
+Get-MessageTraceDetail -MessageTraceId <Guid> -RecipientAddress <String>
  [-Action <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-Event <MultiValuedProperty>]
  [-Expression <Expression>]
  [-MessageId <String>]
- [-MessageTraceId <Guid>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-ProbeTag <String>]
- [-RecipientAddress <String>]
  [-SenderAddress <String>]
  [-StartDate <DateTime>] [<CommonParameters>]
 ```
@@ -48,12 +46,51 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
+Get-MessageTraceDetail -MessageTraceId ae5c1219-4c90-41bf-fef5-08d837917e7c -RecipientAddress robert@contoso.com
+```
+
+This example uses the Get-MessageTraceDetail cmdlet to retrieve detailed message trace information for messages with the Exchange Network Message ID value ae5c1219-4c90-41bf-fef5-08d837917e7c received by robert@contoso.com.
+
+### Example 2
+```powershell
 Get-MessageTrace -MessageTraceId 2bbad36aa4674c7ba82f4b307fff549f -SenderAddress john@contoso.com -StartDate 06/13/2018 -EndDate 06/15/2018 | Get-MessageTraceDetail
 ```
 
-This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f send by john@contoso.com between June 13, 2018 and June 15, 2018, and pipelines the results to the Get-MessageTraceDetail cmdlet.
+This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f sent by john@contoso.com between June 13, 2018 and June 15, 2018, and pipelines the results to the Get-MessageTraceDetail cmdlet.
 
 ## PARAMETERS
+
+### -MessageTraceId
+The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RecipientAddress
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Action
 The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
@@ -155,22 +192,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -MessageTraceId
-The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Page
 The Page parameter specifies the page number of the results you want to view. Valid input for this parameter is an integer between 1 and 1000. The default value is 1.
 
@@ -216,22 +237,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientAddress
-The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

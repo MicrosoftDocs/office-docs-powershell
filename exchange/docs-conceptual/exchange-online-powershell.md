@@ -15,18 +15,18 @@ description: "Learn about using PowerShell in Exchange Online"
 
 # Exchange Online PowerShell
 
-Exchange Online PowerShell is the administrative interface that enables you to manage your Microsoft Exchange Online organization from the command line.  For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following topics provide information about using Exchange Online PowerShell:
+Exchange Online PowerShell is the administrative interface that enables you to manage your Microsoft Exchange Online organization from the command line. For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following topics provide information about using Exchange Online PowerShell:
 
-- To create a remote PowerShell session to your Exchange Online organization, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+- To create a remote PowerShell session to your Exchange Online organization that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
-- To prevent or allow connections to connect to your Exchange Online organization using remote PowerShell, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
+- To prevent or allow PowerShell access to your Exchange Online organization, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
-- The following introductory video shows you how to connect to and use Exchange Online PowerShell.
+- To learn about the structure and layout of the cmdlet reference topics in Exchange Online PowerShell, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
 
-   **Note:** This video applies to Exchange Online and standalone Exchange Online Protection (EOP) organizations. When you connect to your organization, be sure to specify the correct URL (*ConnectionUri* value). The required URL is different for Exchange Online and EOP organizations.
-
-  [Use Remote PowerShell in EOP](https://videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=9cb28006-c2cb-45b6-b72e-eeed8767dee7&AutoPlayVideo=false)
-
-- To find the permissions you need to run a specific cmdlet, or one or more parameters on the cmdlet, see [Find the permissions required to run any Exchange cmdlet](find-exchange-cmdlet-permissions.md).
+- To find the permissions that you need to run a specific cmdlet, or one or more parameters on a cmdlet, see [Find the permissions required to run any Exchange cmdlet](find-exchange-cmdlet-permissions.md).
 
 - To learn about recipient filters in Exchange Online PowerShell, see [Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands](recipient-filters.md).
+
+- To learn about authentication in Exchange Online PowerShell for unattended scripts using AzureAD applications and self-signed certificates, see [App-only authentication for unattended scripts in the EXO V2 module](app-only-auth-powershell-v2.md).
+
+- To learn about property sets in EXO V2 module cmdlets, see [Property sets in Exchange Online PowerShell V2 cmdlets](cmdlet-property-sets.md).

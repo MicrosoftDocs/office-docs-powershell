@@ -20,19 +20,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> This feature is currently in Public Preview, and is available in the Preview release of Exchange Online PowerShell V2 Module.
-
-To install the Preview release of the EXO V2 module, run the same [steps to install the stable version](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-v2-module) but instead step 4 run the following command:
-
-```powershell
-Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
-```
-
-To update from an earlier version of the of the EXO V2 module, run the following command:
-
-```powershell
-Update-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
-```
+> This feature is currently in Public Preview, and is available in the `2.0.3-Preview` release of Exchange Online PowerShell V2 Module. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
 
@@ -53,22 +41,6 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```
 
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
-
-- Connect using an existing service principal and client-secret:
-
-  1. Get an OAuth access token using Active Directory Authentication Library (ADAL) PowerShell.
-
-  2. Use the access token and username to create a PSCredential object:
-
-     ```powershell
-     $AppCredential = New-Object System.Management.Automation.PSCredential(<UPN>,<Token>)
-     ```
-
-  3. Silently pass the PSCredential object to the EXO V2 module:
-
-     ```powershell
-     Connect-ExchangeOnline -Credential $AppCredential
-     ```
 
 ## How does it work?
 
@@ -165,13 +137,13 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1):
+- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets to request a self-signed certificate and export it to PFX.
+
+- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1). Note that this script generates SHA1 certificates.
 
   ```powershell
   .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2020-04-01 -EndDate 2022-04-01
   ```
-
-- Use the **makecert.exe** tool from the Windows SDK.
 
 ## Step 4: Attach the certificate to the Azure AD application
 

@@ -1,5 +1,5 @@
 ---
-title: "Connect to Security & Compliance Center PowerShell using multi-factor authentication"
+title: "V1 module - Connect to Security & Compliance Center PowerShell using MFA"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -8,20 +8,24 @@ ms.audience: Admin
 ms.topic: article
 ms.service: o365-security-and-compliance
 localization_priority: Normal
-ms.assetid: 8e11c808-e734-4874-ac94-e5251ea85c19
+ms.assetid:
 search.appverid: MET150
-description: "Learn how to connect to Security & Compliance Center PowerShell by using multi-factor authentication (MFA) or federated authentication."
+ROBOTS: NOINDEX
+description: "Admins can learn how to use the older Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell for multi-factor authentication (MFA) or federated authentication."
 ---
 
-# Connect to Security & Compliance Center PowerShell using multi-factor authentication
-
-If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md) to use remote PowerShell to connect to the Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
+# V1 module - Connect to Security & Compliance Center PowerShell using MFA
 
 > [!NOTE]
-> 
-> - Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
-> 
-> - The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
+> The older Exchange Online Remote PowerShell Module that's described in this topic will eventually be retired. The Exchange Online PowerShell V2 module (EXO V2 module) supports MFA, so we suggest using it instead. For instructions, see [Connect to Security & Compliance Center PowerShell](connect-to-scc-powershell.md).
+
+If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Basic auth - Connect to Security & Compliance Center PowerShell](basic-auth-connect-to-scc-powershell.md) to use remote PowerShell to connect to the Security & Compliance Center. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance Center PowerShell.
+
+**Notes**:
+
+- Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Security & Compliance Center PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
+
+- The Exchange Online Remote PowerShell Module is not supported in PowerShell Core (macOS, Linux, or Windows Nano Server). As a workaround, you can install the module on a computer that's running a supported version of Windows (physical or virtual), and use remote desktop software to connect.
 
 ## What do you need to know before you begin?
 
@@ -30,37 +34,32 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 - You can use the following versions of Windows:
 
   - Windows 10
-
   - Windows 8.1
-
   - Windows Server 2019
-
   - Windows Server 2016
-
   - Windows Server 2012 or Windows Server 2012 R2
-
   - Windows 7 Service Pack 1 (SP1)<sup>*</sup>
-
   - Windows Server 2008 R2 SP1<sup>*</sup>
 
-  <sup>\*</sup> This version of windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595), [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  <sup>\*</sup> This version of Windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](https://docs.microsoft.com/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595), [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to transport the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
+- WinRM needs to allow Basic authentication (it's enabled by default). We don't send the username and password combination, but the Basic authentication header is required to send the session's OAuth token, since the client-side WinRM implementation has no support for OAuth.
 
-  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt**:
-  
-  > [!NOTE]
-  > You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
+  **Note**: You must temporarily enable WinRM to run the following commands. You can enable it by running the command: `winrm quickconfig`.
+
+  To verify that Basic authentication is enabled for WinRM, run this command **in a Command Prompt** (not in Windows PowerShell):
 
   ```dos
   winrm get winrm/config/client/auth
   ```
 
-  If you don't see the value `Basic = true`, you need to run this command to enable Basic authentication for WinRM:
+  If you don't see the value `Basic = true`, you need to run this command **in a Command Prompt** (not in Windows PowerShell) to enable Basic authentication for WinRM:
 
   ```dos
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
+
+  **Note**: If you'd rather run the command in Windows PowerShell, enclose this part of the command in quotation marks: `'@{Basic="true"}'`.
 
   If Basic authentication for WinRM is disabled, you'll get this error when you try to connect:
 
@@ -94,7 +93,7 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 2. The command that you need to run uses the following syntax:
 
-   ```PowerShell
+   ```powershell
    Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
    ```
 
@@ -102,22 +101,25 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
    - The _\<ConnectionUri\>_ and _\<AzureADUri\>_ values depend on the location of your Microsoft 365 organization as described in the following table:
 
-   |**Microsoft 365 offering**|**_ConnectionUri_ parameter value**|**_AzureADAuthorizationEndPointUri_ parameter value**|
-   |---|---|---|
-   |Microsoft 365|Not used |Not used|
-   |Office 365 Germany|`https://ps.compliance.protection.outlook.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
-   |Microsoft 365 GCC High|`https://ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
-   |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
+     ****
+
+     |Microsoft 365 offering|_ConnectionUri_ parameter value|_AzureADAuthorizationEndPointUri_ parameter value|
+     |---|---|---|
+     |Microsoft 365|Not used |Not used|
+     |Office 365 Germany|`https://ps.compliance.protection.outlook.de/PowerShell-LiveID`|`https://login.microsoftonline.de/common`|
+     |Microsoft 365 GCC High|`https://ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
+     |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
+     |
 
    This example connects to Security & Compliance Center PowerShell in Microsoft 365 using the account chris@contoso.com.
 
-   ```PowerShell
+   ```powershell
    Connect-IPPSSession -UserPrincipalName chris@contoso.com
    ```
 
    This example connects to Security & Compliance Center PowerShell in Office 365 Germany using the account lukas@fabrikam.com.
 
-   ```PowerShell
+   ```powershell
    Connect-IPPSSession -UserPrincipalName lukas@fabrikam.com -ConnectionUri https://ps.compliance.protection.outlook.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
    ```
 
@@ -133,13 +135,13 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
 5. **(Optional)**: If you want to connect to an Exchange Online PowerShell module session in the same window, you need to run
 
-   ```PowerShell
+   ```powershell
    $EXOSession=New-ExoPSSession -UserPrincipalName <UPN> [-ConnectionUri <ConnectionUri> -AzureADAuthorizationEndPointUri <AzureADUri>]
    ```
 
    and then import the Exchange Online session into the current one using an specific prefix
 
-   ```PowerShell
+   ```powershell
    Import-PSSession $EXOSession -Prefix EXO
    ```
 

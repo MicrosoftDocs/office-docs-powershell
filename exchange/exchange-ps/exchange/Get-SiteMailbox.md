@@ -1,19 +1,21 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-sitemailbox
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-SiteMailbox
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-SiteMailbox
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange. Site mailboxes were removed from Exchange Online and SharePoint Online in 2017.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+
+Site mailboxes were deprecated in Exchange Online and SharePoint Online in 2017. For more information, see [Deprecation of Site Mailboxes](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028).
 
 Use the Get-SiteMailbox cmdlet to view information about site mailboxes. This cmdlet is primarily used by Microsoft SharePoint and Exchange to display information to users in the user interface. However, you may find it helpful for discovering information such as the site mailbox's owners, members, and lifecycle status.
 
@@ -61,84 +63,6 @@ This example queries for site mailboxes that are marked for deletion and removes
 
 ## PARAMETERS
 
-### -Anr
-The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
-
-- CommonName (CN)
-
-- DisplayName
-
-- FirstName
-
-- LastName
-
-- Alias
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassOwnerCheck
-The BypassOwnerCheck parameter is used when the account that's running the command isn't a member or owner of the site mailbox. You don't need to specify a value with this switch.
-
-If you run the command without this parameter, and you aren't a member or owner of the site mailbox, then the command will fail.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeletedSiteMailbox
-The DeletedSiteMailbox switch returns site mailboxes that have been marked for pending deletion. You don't need to specify a value with this switch.
-
-When the lifecycle application in SharePoint closes a site mailbox, the site mailbox is retained for the period specified in the lifecycle policy in the closed state. The mailbox can then be reactivated by an end user or by a SharePoint administrator. After the retention period, the Exchange site mailbox that's housed in the mailbox database will have its name prepended with MDEL: to indicate that it has been marked for deletion. To free storage space and the alias, use the Remove-Mailbox cmdlet to manually remove these site mailboxes from the mailbox database.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the identity of the site mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -158,7 +82,7 @@ The Identity parameter specifies the identity of the site mailbox. You can use a
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: 1
@@ -167,7 +91,91 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Anr
+The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
+
+- CommonName (CN)
+
+- DisplayName
+
+- FirstName
+
+- LastName
+
+- Alias
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassOwnerCheck
+The BypassOwnerCheck parameter is used when the account that's running the command isn't a member or owner of the site mailbox. You don't need to specify a value with this switch.
+
+If you run the command without this parameter, and you aren't a member or owner of the site mailbox, then the command will fail.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeletedSiteMailbox
+This parameter is available only in on-premises Exchange.
+
+The DeletedSiteMailbox switch returns site mailboxes that have been marked for pending deletion. You don't need to specify a value with this switch.
+
+When the lifecycle application in SharePoint closes a site mailbox, the site mailbox is retained for the period specified in the lifecycle policy in the closed state. The mailbox can then be reactivated by an end user or by a SharePoint administrator. After the retention period, the Exchange site mailbox that's housed in the mailbox database will have its name prepended with MDEL: to indicate that it has been marked for deletion. To free storage space and the alias, use the Remove-Mailbox cmdlet to manually remove these site mailboxes from the mailbox database.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReadFromDomainController
+This parameter is available only in on-premises Exchange.
+
 The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. If you run the command Set-AdServerSettings -ViewEntireForest $true to include all objects in the forest and you don't use the ReadFromDomainController switch, it's possible that information will be read from a global catalog that has outdated information. When you use the ReadFromDomainController switch, multiple reads might be necessary to get the information. You don't have to specify a value with this switch.
 
 By default, the recipient scope is set to the domain that hosts your Exchange servers.
@@ -192,7 +200,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

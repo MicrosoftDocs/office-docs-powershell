@@ -20,6 +20,13 @@ The existence of this cmdlet is being documented for completeness, but do not us
 
 ## SYNTAX
 
+```
+New-CsTeamsAppPermissionPolicy [-Force] [-Description <Object>] [-GlobalCatalogAppsType <Object>] [-WhatIf]
+ [-PrivateCatalogAppsType <Object>] [-Confirm] [[-Identity] <Object>] [-DefaultCatalogAppsType <Object>]
+ [-Tenant <Object>] [-InMemory] [-GlobalCatalogApps <Object>] [-DefaultCatalogApps <Object>]
+ [-PrivateCatalogApps <Object>] [-AsJob]
+```
+
 ## DESCRIPTION
 As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies.
 

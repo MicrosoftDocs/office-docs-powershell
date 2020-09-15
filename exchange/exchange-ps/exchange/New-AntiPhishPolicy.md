@@ -17,7 +17,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-AntiPhishPolicy cmdlet to create antiphish policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -60,7 +60,7 @@ New-AntiPhishPolicy [-Name] <String>
 ## DESCRIPTION
 Phishing messages contain fraudulent links or spoofed domains in an effort to get personal information from the recipients.
 
-New antiphish policies aren't valid and aren't applied until you add an antiphish rule to the policy by using the New-AntiPhishRule cmdlet.
+New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the AntiPhishPolicy parameter on the New-AntiPhishRule or Set-AntiPhishRule cmdlets to associate the policy with a rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -359,7 +359,13 @@ The EnableUnauthenticatedSender parameter enables or disables unauthenticate
 
 - $true: This is the default value. A question mark (?) is applied to the sender's photo if the message does not pass SPF or DKIM checks AND the message does not pass DMARC or composite authentication. The via tag (chris@contoso.com <u>via</u> michelle@fabrikam.com) is added if the domain in the From address (the message sender that's displayed in email clients) is different from the domain in the DKIM signature or the MAIL FROM address.
 
-- $false: Unauthenticated sender identification is disabled.
+- $false: A question mark is never applied to the sender's photo. The via tag is still added if the domain in the From address is different from the domain in the DKIM signature or the MAIL FROM address.
+
+To prevent these identifiers from being added to messages from specific senders, you have the following options:
+
+- Allow the sender to spoof in the spoof intelligence policy. This action will prevent the via tag from appearing in messages from the sender when unauthenticated sender identification is disabled. For instructions, see [Configure spoof intelligence in Microsoft 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
+
+- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://docs.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own).
 
 ```yaml
 Type: Boolean

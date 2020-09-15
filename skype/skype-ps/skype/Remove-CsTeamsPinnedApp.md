@@ -2,7 +2,7 @@
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/remove-csteamspinnedapp
 applicable: Skype for Business Online
-title: Remove-CsTeamsAppSetupPolicy
+title: Remove-CsTeamsPinnedApp
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
@@ -21,6 +21,10 @@ The existence of this cmdlet is being documented for completeness, but do not us
 
 
 ## SYNTAX
+
+```
+Remove-CsTeamsPinnedApp [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force] [-AsJob]
+```
 
 ## DESCRIPTION
 

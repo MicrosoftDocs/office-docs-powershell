@@ -443,8 +443,6 @@ The RecordType parameter specifies a record type label for the activity alert. V
 
 - SkypeForBusinessUsersBlocked
 
-- Sway
-
 - ThreatIntelligence
 
 - ThreatIntelligenceAtpContent
