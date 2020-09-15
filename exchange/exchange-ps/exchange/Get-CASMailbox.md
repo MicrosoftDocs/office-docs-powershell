@@ -107,7 +107,7 @@ This example returns all Exchange Web Services settings for the user chris@conto
 Get-CASMailbox -RecipientTypeDetails SharedMailbox | Select *
 ```
 
-This example filters the cmdlet output to only include Shared mailboxes.
+In Exchange Online, this example filters the cmdlet output to only include shared mailboxes.
 
 ## PARAMETERS
 
