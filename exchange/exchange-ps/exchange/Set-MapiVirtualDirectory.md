@@ -47,7 +47,7 @@ Set-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" -Intern
 
 This example makes the following configuration changes to the MAPI virtual directory on the default web site of the server named ContosoMail:
 
-- Internal URL: https://contoso/mapi.
+- Internal URL: `https://contoso/mapi`.
 
 - IIS authentication methods: NTLM, Negotiate, and OAuth.
 

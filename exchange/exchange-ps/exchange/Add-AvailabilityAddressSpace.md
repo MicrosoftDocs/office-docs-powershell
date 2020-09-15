@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetAutodiscoverEpr
-The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, https://contoso.com/autodiscover/autodiscover.xml. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
+The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, `https://contoso.com/autodiscover/autodiscover.xml`. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
 
 ```yaml
 Type: Uri
