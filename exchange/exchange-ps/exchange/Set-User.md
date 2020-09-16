@@ -68,7 +68,6 @@ Set-User [-Identity] <UserIdParameter>
  [-SamAccountName <String>]
  [-SeniorityIndex <Int32>]
  [-SimpleDisplayName <String>]
- [-SkipDualWrite]
  [-StateOrProvince <String>]
  [-StreetAddress <String>]
  [-StsRefreshTokensValidFrom <DateTime>]
@@ -951,22 +950,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipDualWrite
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
