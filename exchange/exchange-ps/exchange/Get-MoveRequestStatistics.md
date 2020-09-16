@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ### -DiagnosticInfo
 This parameter is available only in the cloud-based service.
 
-Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems. There are three possible arguments: showtimeline, showtimeslots and verbose.
 
 ```yaml
 Type: String
