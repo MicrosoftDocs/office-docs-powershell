@@ -67,7 +67,7 @@ This example connects to standalone Exchange Online Protection PowerShell in an 
 The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You use this parameter with multi-factor authentication (MFA) and federated authentication.
 
 - For Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC, don't use this parameter.
-- For Security & Compliance Center PowerShell in Office 365 Germany, use the value <https://login.microsoftonline.de/common> for this parameter.
+- For Security & Compliance Center PowerShell in Office 365 Germany, use the value `https://login.microsoftonline.de/common` for this parameter.
 
 ```yaml
 Type: String

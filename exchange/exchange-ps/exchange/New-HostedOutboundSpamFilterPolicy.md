@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyOutboundSpam
-**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://docs.microsoft.com/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam.md#verify-the-alert-settings-for-restricted-users).
+**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://docs.microsoft.com/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam#verify-the-alert-settings-for-restricted-users).
 
 The NotifyOutboundSpam parameter specify whether to notify admins when outgoing spam is detected. Valid values are:
 

@@ -46,7 +46,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-WebServicesVirtualDirectory -WebSiteName "www.contoso.com" -ExternalUrl "https://www.contoso.com/webservices.aspx"
 ```
 
-This example creates a virtual directory under the non-default website www.contoso.com. It also sets the external URL to https://www.contoso.com/webservices.aspx.
+This example creates a virtual directory under the non-default website www.contoso.com. It also sets the external URL to `https://www.contoso.com/webservices.aspx`.
 
 ## PARAMETERS
 
