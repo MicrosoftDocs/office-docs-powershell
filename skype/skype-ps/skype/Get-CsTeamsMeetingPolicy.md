@@ -49,7 +49,7 @@ In Example 1, Get-CsTeamsMeetingPolicy is called without any additional paramete
 Get-CsTeamsMeetingPolicy -Identity SalesPolicy
 ```
 
-In Example 2, Get-CsTeamsMeetingPolicy is used to return the per-user meeting policy that has an Identity SalesPolicy.
+In Example 2, Get-CsTeamsMeetingPolicy is used to return the meeting policy that has the Identity SalesPolicy.
 Because identities are unique, this command will never return more than one item.
 
 ### -------------------------- Example 3 --------------------------
