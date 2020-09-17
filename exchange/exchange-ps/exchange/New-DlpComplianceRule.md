@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-AccessScope <AccessScope>]
  [-ActivationDate <DateTime>]
+ [-AddRecipients <PswsHashtable>]
  [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-BlockAccess <Boolean>]
@@ -39,6 +40,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-DocumentIsUnsupported <Boolean>]
  [-DocumentNameMatchesPatterns <MultiValuedProperty>]
  [-DocumentNameMatchesWords <MultiValuedProperty>]
+ [-DocumentSizeOver <ByteQuantifiedSize>]
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
  [-ExceptIfAccessScope <AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
@@ -50,23 +52,32 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ExceptIfDocumentIsUnsupported <Boolean>]
  [-ExceptIfDocumentNameMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfDocumentNameMatchesWords <MultiValuedProperty>]
+ [-ExceptIfDocumentSizeOver <ByteQuantifiedSize>]
+ [-ExceptIfFrom <RecipientIdParameter[]>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfFromAddressMatchesPatterns <MultiValuedProperty>]
+ [-ExceptIfHeaderContainsWords <PswsHashtable>]
+ [-ExceptIfHeaderMatchesPatterns <PswsHashtable>]
  [-ExceptIfProcessingLimitExceeded <Boolean>]
  [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
+ [-ExceptIfSenderDomainIs <MultiValuedProperty>]
  [-ExceptIfSenderIPRanges <MultiValuedProperty>]
  [-ExceptIfSentTo <MultiValuedProperty>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
  [-ExceptIfSubjectContainsWords <MultiValuedProperty>]
  [-ExceptIfSubjectMatchesPatterns <MultiValuedProperty>]
  [-ExpiryDate <DateTime>]
- [-From <SmtpAddress[]>]
+ [-From <RecipientIdParameter[]>]
  [-FromAddressContainsWords <MultiValuedProperty>]
  [-FromAddressMatchesPatterns <MultiValuedProperty>]
  [-FromMemberOf <SmtpAddress[]>]
  [-GenerateAlert <MultiValuedProperty>]
  [-GenerateIncidentReport <MultiValuedProperty>]
+ [-HeaderContainsWords <PswsHashtable>]
+ [-HeaderMatchesPatterns <PswsHashtable>]
  [-ImmutableId <Guid>]
  [-IncidentReportContent <ReportContentOption[]>]
+ [-Moderate <PswsHashtable>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomText <String>]
  [-NotifyPolicyTipCustomText <String>]
@@ -75,11 +86,14 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Priority <Int32>]
  [-ProcessingLimitExceeded <Boolean>]
  [-RecipientDomainIs <MultiValuedProperty>]
+ [-RedirectMessageTo <RecipientIdParameter[]>]
  [-RemoveHeader <MultiValuedProperty>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
+ [-SenderDomainIs <MultiValuedProperty>]
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
  [-SetHeader <PswsHashtable>]
  [-StopPolicyProcessing <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
@@ -170,6 +184,28 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddRecipients
+The AddRecipients parameter specifies an action for the DLP rule that adds the specified recipients to email messages. This parameter uses the following syntax:
+
+- `@{<AddToRecipients | CopyTo | BlindCopyTo> = "emailaddress"}`. For example, `@{AddToRecipients = "laura@contoso.com"}` or `@{BlindCopyTo = "julia@contoso.com"}`.
+
+- `@{AddManagerAsRecipientType = "<To | Cc | Bcc>"}`. For example, `@{AddManagerAsRecipientType = "Bcc"}`.
+
+You can use this action in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -461,6 +497,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DocumentSizeOver
+The DocumentSizeOver parameter specifies a condition for the DLP rule that looks for messages where any attachment is greater than the specified size.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EncryptRMSTemplate
 The EncryptRMSTemplate parameter specifies an action for the DLP rule that applies rights management service (RMS) templates to files. You identify the RMS template by name. If the name contains spaces, enclose the name in quotation marks (").
 
@@ -683,6 +747,52 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfDocumentSizeOver
+The ExceptIfDocumentSizeOver parameter specifies an exception for the DLP rule that looks for messages where any attachment is greater than the specified size.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfFrom
+The ExceptIfFrom parameter specifies an exception for the DLP rule that looks for messages from specific senders. You identify the senders by email address. You can specify multiple values separated by commas.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfFromAddressContainsWords
 The ExceptIfFromAddressContainsWords parameter specifies an exception for the DLP rule that looks for words or phrases in the sender's email address. You can specify multiple words or phrases separated by commas.
 
@@ -718,6 +828,44 @@ You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfHeaderContainsWords
+The HeaderContainsWords parameter specifies an exception for the DLP rule that looks for words in a header field.
+
+To specify multiple words or phrases, this parameter uses the syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfHeaderMatchesPatterns
+The HeaderMatchesPatterns parameter specifies an exception for the DLP rule that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1","regular expression2",..."regular expressionN"`.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -765,6 +913,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfSenderDomainIs
+The ExceptIfSenderDomainIs parameter specifies an exception for the DLP rule that looks for messages from senders with email address in the specified domains. You can specify multiple values separated by commas.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfSenderIPRanges
 The ExceptIfSenderIpRanges parameter specifies an exception for the DLP rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
 
@@ -790,26 +956,30 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentTo
-The ExceptIfSentTo parameter specifies an exception for the DLP rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+The ExceptIfSentTo parameter specifies an exception for the DLP rule that looks for recipients in messages. You identify the recipients by email address. You can specify mulitiple values separatedYou can use any value that uniquely identifies the recipient. For example:
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSentToMemberOf
+The ExceptIfSentToMemberOf parameter specifies an exception for the DLP rule that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You identify the groups by email address. You can specify multiple values separated by commas.
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -884,10 +1054,12 @@ Accept wildcard characters: False
 ```
 
 ### -From
-This parameter is reserved for internal Microsoft use.
+The From parameter specifies a condition for the DLP rule that looks for messages from specific senders. You identify the senders by email address. You can specify multiple values separated by commas.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: SmtpAddress[]
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -1007,6 +1179,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HeaderContainsWords
+The HeaderContainsWords parameter specifies a condition for the DLP rule that looks for words in a header field.
+
+To specify multiple words or phrases, this parameter uses the syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HeaderMatchesPatterns
+The HeaderMatchesPatterns parameter specifies a condition for the DLP rule that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1","regular expression2",..."regular expressionN"`.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ImmutableId
 This parameter is reserved for internal Microsoft use.
 
@@ -1066,6 +1276,24 @@ Therefore, if you use any of these redundant values with the value Default, they
 
 ```yaml
 Type: ReportContentOption[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Moderate
+The Moderate parameter specifies an action for the DLP rule that sends the email message to a moderator. This parameter uses the syntax: `@{ModerateMessageByManager = <$true | $false>; ModerateMessageByUser = @("emailaddress1","emailaddress2",..."emailaddressN")}`.
+
+You can use this action in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -1245,6 +1473,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RedirectMessageTo
+The RedirectMessageTo parameter specifies an action for the DLP rule that redirects the message to the specified email address. You can specify multiple values separated by commas.
+
+You can use this action in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveHeader
 The RemoveHeader parameter specifies an action for the DLP rule that removes a header field from the message header. This parameter uses the syntax HeaderName or "HeaderName:HeaderValue".You can specify multiple header names or header name and value pairs separated by commas: HeaderName1,"HeaderName2:HeaderValue2",HeaderName3,..."HeaderNameN:HeaderValueN".
 
@@ -1311,6 +1556,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SenderDomainIs
+The SenderDomainIs parameter specifies a condition for the DLP rule that looks for messages from senders with email address in the specified domains. You can specify multiple values separated by commas.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SenderIPRanges
 The SenderIpRanges parameter specifies a condition for the DLP rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
 
@@ -1336,26 +1599,30 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies a condition for the DLP rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+The SentTo parameter specifies a condition for the DLP rule that looks for recipients in messages. You identify the recipients by email address. You can specify multiple values separated by commas.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SentToMemberOf
+The SentToMemberOf parameter specifies a condition for the DLP rule that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You identify the groups by email address. You can specify multiple values separated by commas.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
