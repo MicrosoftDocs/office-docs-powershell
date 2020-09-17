@@ -36,12 +36,6 @@ Set-SPOTenantSyncClientRestriction -DisableReportProblemDialog <Boolean> [<Commo
 Set-SPOTenantSyncClientRestriction [-ExcludedFileExtensions <String>] [<CommonParameters>]
 ```
 
-### GrooveBlockOptions
-
-```powershell
-Set-SPOTenantSyncClientRestriction [-GrooveBlockOption <String>] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 
 This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [Cmdlet Parameter Sets](https://msdn.microsoft.com/library/dd878348(VS.85).aspx).
@@ -55,8 +49,6 @@ The **Set-SPOTenantSyncClientRestriction** cmdlet is used to control a variety o
 * Set restrictions on whether users can sync items to non-domain joined machines, control the list of allowed domains, and manage whether Mac clients (which do not support domain join) can sync.
 
 * Prevents files with specific extensions from being synced.
-
-* Controls whether users can continue to sync OneDrive for Business libraries with the old OneDrive for Business sync client.
 
 **Restrict non-domain joined machines from syncing**
 
@@ -80,8 +72,7 @@ When the feature is enabled the following will occur:
   * Regardless if the computer is joined to a domain which is set in the Safe Recipient List.
   * Regardless if the computer is joined to  a domain which is not set in the Safe Recipient List.
   * And for all non-domain joined computers.
-
-* Microsoft  OneDrive for Business sync client prior to version 15.0.4693.1000 will stop syncing existing libraries.
+* Microsoft OneDrive for Business sync client prior to version 15.0.4693.1000 will stop syncing existing libraries.
 
 > [!IMPORTANT]
 > In order to explicitly block Microsoft OneDrive client for Mac or OneDrive for Business Next Generation Sync Client on Mac OS X, please run the **Set-SPOTenantSyncClientRestriction** cmdlet with the **BlockMacSync** parameter set to true.  For more information about the Next Generation Sync Client for Mac OS X, see [Get started with the new OneDrive sync client on Mac OS X](https://go.microsoft.com/fwlink/?LinkID=717727).
@@ -105,20 +96,6 @@ Any file extension may be blocked using this feature, but note that it may take 
 
 > [!IMPORTANT]
 > This feature is only supported by the new OneDrive for Business sync client. To determine the version of your Sync client, see [What version of the sync client am I using?](https://support.office.com/en-us/article/Which-version-of-OneDrive-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba).
-
-**Control whether users can use the old OneDrive for Business sync client**
-
-The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to configure your tenant to allow or disallow users from using the old OneDrive for Business sync client to sync OneDrive for Business libraries.
-
-This feature is controlled on an opt-out model which lets users to continue syncing with the old sync client, you may choose to opt out of the Groove block.
-
-When this feature is enabled, the old OneDrive for Business sync client will stop syncing the user's OneDrive contents. OneDrive for Business users who are still using the old OneDrive for Business sync client will see an error message and will be prompted to launch and configure the new OneDrive for Business sync client. If they do not yet have the new client installed, they will have the opportunity to download and install it.
-
-If you opt out, users will be able to resume syncing with the old OneDrive for Business Sync client.
-Note that it may take up to an hour for this change to be reflected.
-
-> [!NOTE]
-> This feature only applies to syncing a user's own OneDrive for Business sites. Team Sites and shared content from other people's OneDrive for Business sites will continue to sync with the old OneDrive for Business sync client.
 
 ## EXAMPLES
 
@@ -154,21 +131,6 @@ Set-SPOTenantSyncClientRestriction  -ExcludedFileExtensions ""
 
 This example clears the ExcludedFileExtension list and lets all file types synced with the new client (OneDrive.exe).
 
-### --------------------EXAMPLE 5------------------
-
-```powershell
-Set-SPOTenantSyncClientRestriction -GrooveBlockOption "OptOut"
-```
-
-This example allows users in a tenant to continue syncing OneDrive for Business libraries with the old OneDrive for Business sync client.
-
-### --------------------EXAMPLE 6------------------
-
-```powershell
-Set-SPOTenantSyncClientRestriction -GrooveBlockOption "HardOptIn"
-```
-
-This example blocks users in a tenant from syncing OneDrive for Business libraries using the old OneDrive for Business sync client. Users will be prompted to upgrade to the new client.
 
 ## PARAMETERS
 
@@ -250,25 +212,6 @@ Blocks certain file types from syncing with the new sync client (OneDrive.exe).
 Type: String
 Parameter Sets: FileExclusion
 Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GrooveBlockOption
-
-Controls whether or not a tenant's users can sync OneDrive for Business libraries with the old OneDrive for Business sync client.
-The valid values are **OptOut, HardOptin, and SoftOptin**.
-
-```yaml
-Type: String
-Parameter Sets: GrooveBlockOptions
-Aliases:
-Accepted values: OptOut, HardOptIn, SoftOptIn
 Applicable: SharePoint Online
 
 Required: False
