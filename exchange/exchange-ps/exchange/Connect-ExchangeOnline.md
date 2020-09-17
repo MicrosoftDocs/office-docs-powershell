@@ -73,11 +73,13 @@ After the Connect-ExchangeOnline command is successful, you can run ExO V2 modul
 ## PARAMETERS
 
 ### -AzureADAuthorizationEndpointUri
-The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You use this parameter with multi-factor authentication (MFA) and federated authentication.
+**Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
 
-- For Exchange Online PowerShell in Microsoft 365 or Microsoft 365 GCC, don't use this parameter.
-- For Exchange Online PowerShell in Office 365 Germany, use the value <https://login.microsoftonline.de/common> for this parameter.
-- For Exchange Online PowerShell in Microsoft 365 GCC High and Microsoft 365 DoD, use the value <https://login.microsoftonline.us/common> for this parameter.
+The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You use this parameter with multi-factor authentication (MFA) and federated authentication. The following Exchange Online PowerShell environments and related values are supported:
+
+- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter.
+- Office 365 Germany: `https://login.microsoftonline.de/common`
+- Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/common`.
 
 **Note**: MFA authentication or federated authentication isn't available in Office 365 operated by 21Vianet.
 
@@ -111,15 +113,17 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-The ConnectionUri parameter specifies the connection endpoint for the remote Exchange Online PowerShell session.
+**Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
 
-- For Exchange Online PowerShell in Microsoft 365 or Microsoft 365 GCC, you don't use this parameter.
-- For Exchange Online PowerShell in Office 365 Germany, use the value <https://outlook.office.de/PowerShell-LiveID> for this parameter.
-- For Exchange Online PowerShell in Office 365 operated by 21Vianet, use the value <https://partner.outlook.cn/PowerShell> for this parameter.
-- For Exchange Online PowerShell in Microsoft 365 GCC High, use the value <https://outlook.office365.us/powershell-liveid> for this parameter.
-- For Exchange Online PowerShell in Microsoft 365 DoD, use the value <https://webmail.apps.mil/powershell-liveid> for this parameter.
+The ConnectionUri parameter specifies the connection endpoint for the remote Exchange Online PowerShell session. The following Exchange Online PowerShell environments and related values are supported:
 
-**Note**: If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, use the this cmdlet without the _ConnectionUri_ parameter to connect to EOP PowerShell (the same connection instructions as Exchange Online PowerShell).
+- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://outlook.office365.com/powershell-liveid/`, but that's also the default value, so you don't need to use this parameter for these environments.
+- Office 365 Germany: `https://outlook.office.de/PowerShell-LiveID`
+- Office 365 operated by 21Vianet: `https://partner.outlook.cn/PowerShell`
+- Microsoft 365 GCC High: `https://outlook.office365.us/powershell-liveid`
+- Microsoft 365 DoD: `https://webmail.apps.mil/powershell-liveid`
+
+**Note**: If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for Exchange Online Protection, use the this cmdlet without the _ConnectionUri_ parameter to connect to EOP PowerShell (the same connection instructions as Exchange Online PowerShell in Microsoft 365 or Microsoft GCC).
 
 ```yaml
 Type: String
@@ -189,17 +193,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeEnvironmentName
-The ExchangeEnvironmentName specifies the Exchange Online environment. Valid values are:
+The ExchangeEnvironmentName specifies the Exchange Online environment and replaces the need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters. The following Exchange Online PowerShell environments are supported:
 
-- O365China
-
-- O365Default (this is the default value)
-
-- O365GermanyCloud
-
-- O365USGovDoD
-
-- O365USGovGCCHigh
+- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `O365Default`, but that's also the default value, so you don't need to use this parameter for these environments.
+- Office 365 Germany: `O365GermanyCloud`
+- Office 365 operated by 21Vianet: `O365China`
+- Microsoft 365 GCC High: `O365USGovGCCHigh`
+- Microsoft 365 DoD: `O365USGovDoD`
 
 ```yaml
 Type: ExchangeEnvironment
@@ -284,7 +284,7 @@ The PSSessionOption parameter specifies the PowerShell session options to use in
 
 `$Options = New-PSSessionOption <Settings>`
 
-And you use the variable name as the value for this parameter (for example, $Options).
+And you use the variable name as the value for this parameter (for example, `$Options`).
 
 ```yaml
 Type: PSSessionOption
@@ -302,9 +302,9 @@ Accept wildcard characters: False
 ### -ShowBanner
 The ShowBanner switch shows or hides the banner message that's displayed when you run Connect-ExchangeOnline. You don't need to specify a value with this switch.
 
-To show the banner, you don't need to use this switch (the banner is displayed by default).
+- To show the banner, you don't need to use this switch (the banner is displayed by default).
 
-To hide the banner, use this exact syntax: `-ShowBanner:$false`.
+- To hide the banner, use this exact syntax: `-ShowBanner:$false`.
 
 ```yaml
 Type: SwitchParameter
