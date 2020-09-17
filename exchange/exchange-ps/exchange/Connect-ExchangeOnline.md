@@ -66,7 +66,7 @@ The second command connects the current PowerShell session using the credentials
 
 After the Connect-ExchangeOnline command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
 
-### Example 2
+### Example 2 
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -ShowProgress $true
 ```
@@ -74,6 +74,25 @@ Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -ShowProgress $true
 This command connects the current PowerShell session using chris@contoso.com account, which is MFA enabled.
 
 After the Connect-ExchangeOnline command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
+
+### Example 3 : Connect to EXO using Certificate Based Authentication
+```powershell
+Connect-ExchangeOnline -AppId <%App_id%> -CertificateFilePath "C:\users\johndoe\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
+```
+This command connects to Exchange Online using public key of certificate in case of Unattended scripting.
+
+
+### Example 4 : Connect to EXO using Certificate Based Authentication and Thumprint
+```powershell
+Connect-ExchangeOnline -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
+```
+Use this syntax to connect to Exchange Online in unattended scripting scenarios using Certificate Thumbprint.
+
+### Example 5 : Connect to EXO using Certificate Based Authentication and Certificate File
+```powershell
+Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate object%> -Organization "contoso.onmicrosoft.com"
+```
+Use this syntax to connect to Exchange Online in unattended scripting scenarios using Certificate File. This is more suited for scenarios where certificate is stored in remote machines and fetched at run-time. For eg Certificates stored in Azure Key Vault and used for EXO scripting.
 
 ## PARAMETERS
 
@@ -397,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -FormatTypeName
-
+Use this parameter to format the output of cmdlet
 
 ```yaml
 Type: String[]
