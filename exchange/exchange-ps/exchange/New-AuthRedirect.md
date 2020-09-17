@@ -42,7 +42,7 @@ This example creates an OAuth redirection object with the following settings:
 
 - AuthScheme: Bearer
 
-- TargetURL: https://mbx01.contoso.com
+- TargetURL: `https://mbx01.contoso.com`
 
 ## PARAMETERS
 
