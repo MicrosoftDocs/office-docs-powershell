@@ -23,29 +23,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Connect-ExchangeOnline 
-[[-ConnectionUri] <String>] [[-AzureADAuthorizationEndpointUri] <String>]
- [[-ExchangeEnvironmentName] <ExchangeEnvironment>] 
- [[-PSSessionOption] <PSSessionOption>]
- [-BypassMailboxAnchoring] [[-DelegatedOrganization] <String>] 
- [-Prefix <String>] [-ShowBanner]
- [-CommandName <String[]>] 
- [-FormatTypeName <String[]>] 
- [-UserPrincipalName <String>]
- [-Credential <PSCredential>] 
+Connect-ExchangeOnline [[-ConnectionUri] <String>] [[-AzureADAuthorizationEndpointUri] <String>] [[-ExchangeEnvironmentName] <ExchangeEnvironment>] 
+ [[-PSSessionOption] <PSSessionOption>] [[-DelegatedOrganization] <String>]
+ [-AppId <String>]
+ [-BypassMailboxAnchoring] 
  [-Certificate <X509Certificate2>] 
  [-CertificateFilePath <String>]
  [-CertificatePassword <SecureString>] 
  [-CertificateThumbprint <String>]
- [-AppId <String>]
- [-Organization <String>]
+ [-CommandName <String[]>] 
+ [-Credential <PSCredential>] 
  [-EnableErrorReporting] 
+ [-FormatTypeName <String[]>] 
  [-LogDirectoryPath <String>] 
  [-LogLevel <LogLevel>]
- [-TrackPerformance <Boolean>] 
- [-ShowProgress <Boolean>] 
- [-UseMultithreading <Boolean>] 
+ [-Organization <String>]
  [-PageSize <UInt32>]
+ [-Prefix <String>] [-ShowBanner]
+ [-ShowProgress <Boolean>] 
+ [-TrackPerformance <Boolean>] 
+ [-UseMultithreading <Boolean>] 
+ [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
 
@@ -73,67 +71,31 @@ Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -ShowProgress $true
 
 This command connects the current PowerShell session using chris@contoso.com account, which is MFA enabled.
 
-After the Connect-ExchangeOnline command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
+After the command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
 
-### Example 3 : Connect to EXO using Certificate Based Authentication
+### Example 3
 ```powershell
-Connect-ExchangeOnline -AppId <%App_id%> -CertificateFilePath "C:\users\johndoe\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
+Connect-ExchangeOnline -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
 ```
-This command connects to Exchange Online using public key of certificate in case of Unattended scripting.
+
+Use this syntax to connect to Exchange Online in unattended scripting scenarios using the public key of a certificate.
 
 
-### Example 4 : Connect to EXO using Certificate Based Authentication and Thumprint
+### Example 4
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
-Use this syntax to connect to Exchange Online in unattended scripting scenarios using Certificate Thumbprint.
 
-### Example 5 : Connect to EXO using Certificate Based Authentication and Certificate File
+Use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate thumbprint.
+
+### Example 5
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate object%> -Organization "contoso.onmicrosoft.com"
 ```
-Use this syntax to connect to Exchange Online in unattended scripting scenarios using Certificate File. This is more suited for scenarios where certificate is stored in remote machines and fetched at run-time. For eg Certificates stored in Azure Key Vault and used for EXO scripting.
+
+Use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
 ## PARAMETERS
-
-**Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
-
-The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You use this parameter with multi-factor authentication (MFA) and federated authentication. The following Exchange Online PowerShell environments and related values are supported:
-
-- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter.
-- Office 365 Germany: `https://login.microsoftonline.de/common`
-- Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/common`.
-
-**Note**: MFA authentication or federated authentication isn't available in Office 365 operated by 21Vianet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassMailboxAnchoring
-The BypassMailboxAnchoring switch bypasses the use of the mailbox anchoring hint. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ConnectionUri
 **Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
@@ -161,28 +123,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
-The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+### -AzureADAuthorizationEndpointUri
+**Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You use this parameter with multi-factor authentication (MFA) and federated authentication. The following Exchange Online PowerShell environments and related values are supported:
 
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
+- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter.
+- Office 365 Germany: `https://login.microsoftonline.de/common`
+- Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/common`.
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DelegatedOrganization
-The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter only works if the customer organization has agreed to your delegated management via the CSP program.
-
-After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
+**Note**: MFA authentication or federated authentication isn't available in Office 365 operated by 21Vianet.
 
 ```yaml
 Type: String
@@ -191,26 +141,7 @@ Aliases:
 Applicable: Exchange Online
 
 Required: False
-Position: 5
-### -AzureADAuthorizationEndpointUri
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableErrorReporting
-The EnableErrorReporting switch enables logging errors to a local file. You don't need to specify a value with this switch.
-
-By default, it creates 2 files in the %TMP% folder. You can use the LogDirectoryPath parameter to specify the location of the log files.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -238,6 +169,236 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PSSessionOption
+The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
+
+`$Options = New-PSSessionOption <Settings>`
+
+And you use the variable name as the value for this parameter (for example, `$Options`).
+
+```yaml
+Type: PSSessionOption
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DelegatedOrganization
+The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter only works if the customer organization has agreed to your delegated management via the CSP program.
+
+After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppId
+**Note**: This parameter is available in version 2.0.3 or later.
+
+The AppId parameter specifies the application ID of the service principal that's used in certificate based authentication (CBA). A valid value is the GUID of the application ID (service principal). For example, `36ee4c6c-0812-40a2-b820-b22ebd02bce3`.
+
+For more information, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassMailboxAnchoring
+The BypassMailboxAnchoring switch bypasses the use of the mailbox anchoring hint. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Certificate
+**Note**: This parameter is available in version 2.0.3 or later.
+
+The Certificate parameter specifies the certificate that's used for CBA. A valid value is the X509Certificate2 object value of the certificate.
+
+Don't use this parameter with the CertificateFilePath or CertificateThumbprint parameters.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: X509Certificate2
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateFilePath
+**Note**: This parameter is available in version 2.0.3 or later.
+
+The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file.
+
+Don't use this parameter with the Certificate or CertificateThumbprint parameters.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificatePassword
+**Note**: This parameter is available in version 2.0.3 or later.
+
+The CertificatePassword parameter specifies the password that's required to open the certificate file when you use the CertificateFilePath parameter to identify the certificate that's used for CBA.
+
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateThumbprint
+**Note**: This parameter is available in version 2.0.3 or later.
+
+The CertificateThumbprint parameter specifies the certificate that's used for CBA. A valid value is the thumbprint value of the certificate. For example, `83213AEAC56D61C97AEE5C1528F4AC5EBA7321C1`.
+
+Don't use this parameter with the Certificate or CertificateFilePath parameters.
+
+For more information about CBA, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommandName
+The CommandName parameter specifies the comma separated list of commands to import into the session. Use this parameter for applications or scripts that use a specific set of cmdlets. Reducing the number of cmdlets in the session helps improve performance and reduces the memory footprint of the application or script.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Credential
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableErrorReporting
+The EnableErrorReporting switch enables logging errors to a local file. You don't need to specify a value with this switch.
+
+By default, it creates 2 files in the %TMP% folder. You can use the LogDirectoryPath parameter to specify the location of the log files.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FormatTypeName
+The FormatTypeName parameter specifies the output format of the cmdlet.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LogDirectoryPath
 The LogDirectoryPath parameter specifies the location of the log files. The default location is %TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv.
 
@@ -257,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-The LogLevel parameter specifies the logging level. Possible values are Default and All.
+The LogLevel parameter specifies the logging level. Valid values are Default and All.
 
 ```yaml
 Type: String
@@ -295,142 +456,14 @@ The Prefix parameter specifies an alias to add to nouns in the names of older re
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PSSessionOption
-The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
-
-`$Options = New-PSSessionOption <Settings>`
-
-And you use the variable name as the value for this parameter (for example, `$Options`).
-
-```yaml
-Type: PSSessionOption
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Online
 
 Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AppId
-This parameter is applicable in case of Certificate Based Authentication Flow. AppId is the GUID of application created as part of setup for CBA as documented here - https://aka.ms/exov2-cba
-It is the application ID of the Service Principal.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -Certificate
-This parameter is applicable in case of Certificate Based Authentication which is available in version 2.0.3 or higher. It currently accepts certificate in format of X509Certificate2 object.
-
-```yaml
-Type: X509Certificate2
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CertificateFilePath
-This parameter is applicable in case of Certificate Based Authentication which is available in version 2.0.3 or higher. Use this parameter to pass  the complete path of public file of Certificate file. 
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CertificatePassword
-This parameter is applicable in case of Certificate Based Authentication which is available in version 2.0.3 or higher.
-Use this parameter to pass the password used to encrypt the certificate.If a password was used during Certificate creation, the same is required when connecting to Exchange Online using certificate.  
-
-```yaml
-Type: SecureString
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CertificateThumbprint
-Specifies the certificate thumbprint of a digital public key X.509 certificate of a user account that has permission to perform this action.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CommandName
-Use this parameter to pass the comma separated list of commands which has to be imported into the session. This is applicable for applications or scripts which use a select set of cmdlets and it helps in improving performance as well as reducing memory footprint of the application/script.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FormatTypeName
-Use this parameter to format the output of cmdlet
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
 
 ### -ShowBanner
 The ShowBanner switch shows or hides the banner message that's displayed when you run Connect-ExchangeOnline. You don't need to specify a value with this switch.
@@ -473,7 +506,13 @@ Accept wildcard characters: False
 ```
 
 ### -TrackPerformance
-Use this parameter to measure additional events like CPU Load, memory consumed etc. This parameter works when logging is enabled.
+The TrackPerformance parameter measures addtional events (for example, CPU load and memory consumed). Valid values are:
+
+- $true: Performance tracking is enabled.
+
+- $false: Performance tracking is disabled. This is the default value.
+
+This parameter only when works when logging is enabled.
 
 ```yaml
 Type: Boolean
@@ -489,7 +528,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMultithreading
-The UseMultithreading parameter specifies whether to disable or enable multi-threading in the EXO V2 module Valid values are:
+The UseMultithreading parameter specifies whether to disable or enable multi-threading in the EXO V2 module. Valid values are:
 
 - $true: Enable multi-threading. This is the default value.
 
