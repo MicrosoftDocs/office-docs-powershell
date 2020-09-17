@@ -44,11 +44,13 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-DeleteSubject <Boolean>]
  [-DomainController <Fqdn>]
  [-EnableResponseDetails <Boolean>]
+ [-EnforceCapacity <Boolean>]
  [-EnforceSchedulingHorizon <Boolean>]
  [-ForwardRequestsToDelegates <Boolean>]
  [-IgnoreDefaultScope]
  [-MaximumConflictInstances <Int32>]
  [-MaximumDurationInMinutes <Int32>]
+ [-MinimumDurationInMinutes <Int32>]
  [-OrganizerInfo <Boolean>]
  [-ProcessExternalMeetingMessages <Boolean>]
  [-RemoveForwardedMeetingNotifications <Boolean>]
@@ -601,6 +603,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnforceCapacity
+This parameter is available only in the cloud-based service.
+
+The EnforceCapacity parameter specifies whether to restrict the number of attendees to the capacity of the workspace.  For example, if capacity is set to 10, then only 10 people can book the workspace. Valid values are:
+
+- $true: Capacity is enforced.
+
+- $false: Capacity is not enforced. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnforceSchedulingHorizon
 The EnforceSchedulingHorizon parameter controls the behavior of recurring meetings that extend beyond the date specified by the BookingWindowInDays parameter. Valid values are:
 
@@ -691,6 +715,26 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MinimumDurationInMinutes
+This parameter is available only in the cloud-based service.
+
+The MinimumDurationInMinutes parameter specifies the minimum duration in minutes for meeting requests. A valid value is an integer from 0 through INT32 (2147483647). The default value is 0, which means there is no minimum duration.
+
+For recurring meetings, the value of this parameter applies to the length of an individual meeting instance.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
