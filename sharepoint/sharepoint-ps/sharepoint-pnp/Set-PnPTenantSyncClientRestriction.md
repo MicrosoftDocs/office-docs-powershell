@@ -24,7 +24,6 @@ Set-PnPTenantSyncClientRestriction [-BlockMacSync [<SwitchParameter>]]
                                    [-DomainGuids <Guid>]
                                    [-Enable [<SwitchParameter>]]
                                    [-ExcludedFileExtensions <String>]
-                                   [-GrooveBlockOption <GrooveBlockOption>]
                                    [-Connection <PnPConnection>]
 ```
 
@@ -104,18 +103,6 @@ Blocks certain file types from syncing with the new sync client (OneDrive.exe). 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -GrooveBlockOption
-Controls whether or not a tenant's users can sync OneDrive for Business libraries with the old OneDrive for Business sync client. The valid values are OptOut, HardOptin, and SoftOptin.
-
-```yaml
-Type: GrooveBlockOption
 Parameter Sets: (All)
 
 Required: False
