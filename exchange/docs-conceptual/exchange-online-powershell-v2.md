@@ -64,7 +64,7 @@ The Exchange Online PowerShell cmdlets that are only available in the EXO V2 mod
 |[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
 |[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](mfa-connect-to-scc-powershell.md)|
 |[Get-UserBriefingConfig](https://docs.microsoft.com/powershell/module/exchange/get-userbriefingconfig)|n/a|
-|[Set-UserBriefingConfig](https://docs.microsoft.com/powershell/module/exchange/set-userbriefingconfig.md)|n/a|
+|[Set-UserBriefingConfig](https://docs.microsoft.com/powershell/module/exchange/set-userbriefingconfig)|n/a|
 |
 
 The connection-related cmdlets that are available in the EXO V2 module are listed in the following table:
@@ -238,9 +238,9 @@ The **Get-EXO\*** cmdlets in the module have categorized output properties. Inst
 In the biggest and most used **Get-EXO\*** cmdlets:
 
 - [Get-EXOCasMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exocasmailbox)
-- [Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exomailbox.md)
-- [Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxstatistics.md)
-- [Get-EXORecipient](https://docs.microsoft.com/powershell/module/exchange/get-exorecipient.md)
+- [Get-EXOMailbox](https://docs.microsoft.com/powershell/module/exchange/get-exomailbox)
+- [Get-EXOMailboxStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxstatistics)
+- [Get-EXORecipient](https://docs.microsoft.com/powershell/module/exchange/get-exorecipient)
 
 Property sets are controlled by the following parameters:
 
