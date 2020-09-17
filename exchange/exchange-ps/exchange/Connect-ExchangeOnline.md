@@ -23,24 +23,29 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Connect-ExchangeOnline
- [[-AzureADAuthorizationEndpointUri] <String>]
- [-BypassMailboxAnchoring]
- [[-ConnectionUri] <String>]
- [-Credential <PSCredential>]
- [[-DelegatedOrganization] <String>]
- [-EnableErrorReporting]
- [[-ExchangeEnvironmentName] <ExchangeEnvironment>]
- [-LogDirectoryPath <String>]
- [-LogLevel <String>]
- [-PageSize <UInt32>]
- [-Prefix <String>]
+Connect-ExchangeOnline 
+[[-ConnectionUri] <String>] [[-AzureADAuthorizationEndpointUri] <String>]
+ [[-ExchangeEnvironmentName] <ExchangeEnvironment>] 
  [[-PSSessionOption] <PSSessionOption>]
- [-ShowBanner]
- [-ShowProgress <Boolean>]
- [-TrackPerformance <Boolean>]
- [-UseMultithreading <Boolean>]
+ [-BypassMailboxAnchoring] [[-DelegatedOrganization] <String>] 
+ [-Prefix <String>] [-ShowBanner]
+ [-CommandName <String[]>] 
+ [-FormatTypeName <String[]>] 
  [-UserPrincipalName <String>]
+ [-Credential <PSCredential>] 
+ [-Certificate <X509Certificate2>] 
+ [-CertificateFilePath <String>]
+ [-CertificatePassword <SecureString>] 
+ [-CertificateThumbprint <String>]
+ [-AppId <String>]
+ [-Organization <String>]
+ [-EnableErrorReporting] 
+ [-LogDirectoryPath <String>] 
+ [-LogLevel <LogLevel>]
+ [-TrackPerformance <Boolean>] 
+ [-ShowProgress <Boolean>] 
+ [-UseMultithreading <Boolean>] 
+ [-PageSize <UInt32>]
  [<CommonParameters>]
 ```
 
@@ -72,7 +77,6 @@ After the Connect-ExchangeOnline command is successful, you can run ExO V2 modul
 
 ## PARAMETERS
 
-### -AzureADAuthorizationEndpointUri
 **Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
 
 The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You use this parameter with multi-factor authentication (MFA) and federated authentication. The following Exchange Online PowerShell environments and related values are supported:
@@ -169,6 +173,7 @@ Applicable: Exchange Online
 
 Required: False
 Position: 5
+### -AzureADAuthorizationEndpointUri
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -299,6 +304,115 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AppId
+This parameter is applicable in case of Certificate Based Authentication Flow. AppId is the GUID of application created as part of setup for CBA as documented here - https://aka.ms/exov2-cba
+It is the application ID of the Service Principal.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Certificate
+This parameter is applicable in case of Certificate Based Authentication which is available in version 2.0.3 or higher. It currently accepts certificate in format of X509Certificate2 object.
+
+```yaml
+Type: X509Certificate2
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateFilePath
+This parameter is applicable in case of Certificate Based Authentication which is available in version 2.0.3 or higher. Use this parameter to pass  the complete path of public file of Certificate file. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificatePassword
+This parameter is applicable in case of Certificate Based Authentication which is available in version 2.0.3 or higher.
+Use this parameter to pass the password used to encrypt the certificate.If a password was used during Certificate creation, the same is required when connecting to Exchange Online using certificate.  
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateThumbprint
+Specifies the certificate thumbprint of a digital public key X.509 certificate of a user account that has permission to perform this action.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommandName
+Use this parameter to pass the comma separated list of commands which has to be imported into the session. This is applicable for applications or scripts which use a select set of cmdlets and it helps in improving performance as well as reducing memory footprint of the application/script.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FormatTypeName
+
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+
 ### -ShowBanner
 The ShowBanner switch shows or hides the banner message that's displayed when you run Connect-ExchangeOnline. You don't need to specify a value with this switch.
 
@@ -340,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrackPerformance
-{{ Fill TrackPerformance Description }}
+Use this parameter to measure additional events like CPU Load, memory consumed etc. This parameter works when logging is enabled.
 
 ```yaml
 Type: Boolean
