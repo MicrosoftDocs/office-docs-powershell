@@ -21,7 +21,7 @@ The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses
 
 **This topic contains instructions for how to connect to Exchange Online Protection PowerShell using the EXO V2 module with or without using MFA.**
 
-To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Bssic auth - Connect to Exchange Online Protection PowerShell](basic-auth-connect-to-eop-powershell.md).
+To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Basic auth - Connect to Exchange Online Protection PowerShell](basic-auth-connect-to-eop-powershell.md).
 
 ## What do you need to know before you begin?
 
@@ -71,7 +71,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](https:/
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
 
 ```powershell
-Get-PSSession | Remove-PSSession
+Disconnect-ExchangeOnline
 ```
 
 ## Connect to Exchange Online Protection PowerShell without using MFA
@@ -118,7 +118,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](https:/
 > Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
 
 ```powershell
-Get-PSSession | Remove-PSSession
+Disconnect-ExchangeOnline
 ```
 
 ## How do you know this worked?
