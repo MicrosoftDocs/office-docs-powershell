@@ -59,6 +59,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Filter
+Enables you to use wildcards when specifying the application meeting configuration settings to be returned.
+Because you can only have a single, global instance of these settings there is little reason to use the Filter parameter.
+However, if you prefer, you can use syntax similar to this to retrieve the global settings: -Identity "g*".
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocalStore
+Retrieves the application meeting configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
