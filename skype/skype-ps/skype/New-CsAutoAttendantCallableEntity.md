@@ -46,10 +46,10 @@ This example creates a user callable entity.
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
-$callableEntity = New-CsAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type ApplicationEndpoint
+$callableEntity = New-CsAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type ExternalPSTN
 ```
 
-This example creates an application endpoint callable entity.
+This example creates an ExternalPSTN callable entity.
 
 ### -------------------------- Example 3 --------------------------
 ```powershell
@@ -135,6 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscription
+Email transcription is only supported with shared voicemail callable entities.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
