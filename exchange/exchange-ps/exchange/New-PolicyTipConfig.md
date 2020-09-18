@@ -48,7 +48,7 @@ This example creates a custom Policy Tip with the following settings:
 New-PolicyTipConfig Url -Value "https://www.contoso.com/PolicyTipInformation"
 ```
 
-This example sets the informational URL in Policy Tips to the value https://www.contoso.com/PolicyTipInformation.
+This example sets the informational URL in Policy Tips to the value `https://www.contoso.com/PolicyTipInformation`.
 
 ## PARAMETERS
 

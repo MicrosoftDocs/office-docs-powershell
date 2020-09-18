@@ -92,7 +92,7 @@ This example makes the following changes to the existing retention policy named 
 
 - Adds the mailbox for the user named Kitty Petersen.
 
-- Adds the SharePoint Online site https://contoso.sharepoint.com/sites/teams/finance.
+- Adds the SharePoint Online site `https://contoso.sharepoint.com/sites/teams/finance`.
 
 - Removes public folders.
 

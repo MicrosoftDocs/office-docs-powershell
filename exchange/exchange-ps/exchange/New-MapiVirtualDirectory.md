@@ -48,7 +48,7 @@ New-MapiVirtualDirectory -InternalUrl https://contoso.com/mapi -IISAuthenticatio
 
 This example creates a new MAPI virtual directory that has the following configuration:
 
-- Internal URL: https://contoso.com/mapi
+- Internal URL: `https://contoso.com/mapi`
 
 - IIS authentication methods: NTLM, Negotiate and OAuth.
 

@@ -1565,7 +1565,7 @@ Accept wildcard characters: False
 ### -WorkFoldersSyncUrl
 The WorkFoldersSyncUrl parameter specifies the URL that's used to synchronize company data on devices.
 
-Valid input for this parameter a URL. For example, https://workfolders.contoso.com.
+Valid input for this parameter a URL. For example, `https://workfolders.contoso.com`.
 
 This setting is available only on Windows 8.1 RT devices.
 

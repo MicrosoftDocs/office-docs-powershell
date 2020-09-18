@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE -TargetUrl https://mbx01.contoso.com
 ```
 
-This example sets the TargetURL value to https://mbx01.contoso.com for the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
+This example sets the TargetURL value to `https://mbx01.contoso.com` for the existing OAuth redirection object named `AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE`.
 
 ### Example 2
 ```powershell

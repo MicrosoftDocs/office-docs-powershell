@@ -598,7 +598,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNDIStreaming
-This parameter is reserved for internal Microsoft use.
+This parameter enables the use of NDI technology to capture and deliver broadcast-quality audio and video over your network.
 
 ```yaml
 Type: Boolean
