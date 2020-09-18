@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Remove-CsCustomPolicyPackage
-author: gucsun
+author: sunguchuan
 ms.author: gucsun
 manager: amitar
 online version: https://docs.microsoft.com/powershell/module/teams/remove-CsCustomPolicyPackage
@@ -37,7 +37,7 @@ Deletes a custom package with name "myCustomPackage". If the custom package with
 
 ### -PackageName
 
-The name of the custom package. It cannot be empty or only contain spaces. 
+The name of the custom package.
 
 ```yaml
 Type: String
