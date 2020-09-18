@@ -31,20 +31,20 @@ This cmdlet submits an operation that creates a custom policy package. It allows
 PS C:\> New-CsCustomPolicyPackage -Identity myCustomPackage -PolicyList "TeamsMeetingPolicy, Education_Teacher" , "TeamsMessagingPolicy, Firstline_Manager" -Description "My first custom package"
 ```
 
-Creates a custom package named "myCustomPackage" with two policies included: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager". Describe it as "My first custom package".
+Creates a custom package named "myCustomPackage" with description "My first custom package" and two policies included: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager". 
 
 ### Example 2
 ```powershell
 PS C:\> New-CsCustomPolicyPackage -Identity myCustomPackage -PolicyList "TeamsMeetingPolicy, Education_Teacher" , "TeamsMessagingPolicy, Firstline_Manager"
 ```
 
-Creates a custom package named "myCustomPackage" with two policies included: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager". No description included.
+Creates a custom package named "myCustomPackage" with two policies included: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager". 
 
 ## PARAMETERS
 
 ### -Identity
 
-The name of the custom package. It cannot be empty or only contain spaces.
+The name of the custom package.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-The description of the custom package. It can be empty.
+The description of the custom package.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: False
-Position: 0
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
