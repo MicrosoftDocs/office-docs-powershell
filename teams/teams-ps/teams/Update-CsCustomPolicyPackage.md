@@ -96,4 +96,5 @@ As a result, the whole policy list of the custom package will be REPLACED by the
 ## RELATED LINKS
 
 [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
+
 [Get-CsTeamsMeetingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMeetingPolicy.md)
