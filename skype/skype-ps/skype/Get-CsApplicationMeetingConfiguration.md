@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/get-CsApplicationMeetingConfiguration
-applicable: Skype for Business Online
+applicable: Teams
 title: Get-CsApplicationMeetingConfiguration
 schema: 2.0.0
 manager: zhengni
@@ -68,7 +68,7 @@ However, if you prefer, you can use syntax similar to this to retrieve the globa
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Teams
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Retrieves the application meeting configuration data from the local replica of t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Teams
 
 Required: False
 Position: Named
