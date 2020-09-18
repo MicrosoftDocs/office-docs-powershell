@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Update-CsCustomPolicyPackage
-author: gucsun
+author: sunguchuan
 ms.author: gucsun
 manager: amitar
 online version: https://docs.microsoft.com/powershell/module/teams/update-CsCustomPolicyPackage
