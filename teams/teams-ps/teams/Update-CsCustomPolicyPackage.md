@@ -22,7 +22,7 @@ Update-CsBatchPolicyPackageAssignmentOperation -Identity <String> -PolicyList <S
 
 ## DESCRIPTION
 
-This cmdlet submits an operation that updates the policies into a custom policy package. It allows the user to change the description and policies included in the package. The available policy types can be found here https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+This cmdlet submits an operation that updates a custom policy package with new package settings. For more information on available policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
@@ -31,13 +31,13 @@ This cmdlet submits an operation that updates the policies into a custom policy 
 PS C:\> Update-CsCustomPolicyPackage -Identity myCustomPackage -PolicyList "TeamsMeetingPolicy, Education_Teacher" , "TeamsMessagingPolicy, Firstline_Manager"
 ```
 
-Updates the custom package named "myCustomPackage" by changing the policies to a new list: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager" and setting description to none.
+Updates the custom package named "myCustomPackage" with a new list of policies: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager".
 
 ## PARAMETERS
 
 ### -Identity
 
-The name of the custom package that the user wants to update. It cannot be empty or only contain spaces.
+The name of the custom package that the user wants to update.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies included in the new policy list. For each policy in the list, the form is "<PolicyType>, <PolicyName>". Delimiters of ' ', '.', ':', '\t' are also acceptable.
+A list of one or more policies included in the new policy list. For each policy in the list, the form is "<PolicyType>, <PolicyName>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed in this [link](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages#supported-policy-types). To get the full list of available policy names, please refer to [Get-CsTeamsMeetingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMeetingPolicy.md)
 
 ```yaml
 Type: String[]
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-The description of the custom package. It can be empty.
+The description of the custom package.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: False
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
