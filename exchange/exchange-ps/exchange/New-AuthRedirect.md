@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-AuthRedirect
@@ -42,7 +41,7 @@ This example creates an OAuth redirection object with the following settings:
 
 - AuthScheme: Bearer
 
-- TargetURL: https://mbx01.contoso.com
+- TargetURL: `https://mbx01.contoso.com`
 
 ## PARAMETERS
 

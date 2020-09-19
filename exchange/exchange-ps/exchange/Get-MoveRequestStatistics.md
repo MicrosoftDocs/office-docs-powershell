@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MoveRequestStatistics
@@ -227,7 +226,11 @@ Accept wildcard characters: False
 ### -DiagnosticInfo
 This parameter is available only in the cloud-based service.
 
-Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems. Valid values are:
+
+- ShowTimeline
+- ShowTimeslot
+- Verbose
 
 ```yaml
 Type: String

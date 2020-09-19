@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-HoldCompliancePolicy
@@ -59,7 +58,7 @@ This example makes the following changes to the existing preservation policy nam
 
 - Adds the mailbox for the user named Kitty Petersen.
 
-- Adds the SharePoint Online site https://contoso.sharepoint.com/sites/teams/finance.
+- Adds the SharePoint Online site `https://contoso.sharepoint.com/sites/teams/finance`.
 
 - Removes public folders.
 

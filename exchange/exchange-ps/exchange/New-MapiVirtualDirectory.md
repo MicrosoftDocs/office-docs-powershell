@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-MapiVirtualDirectory
@@ -49,7 +48,7 @@ New-MapiVirtualDirectory -InternalUrl https://contoso.com/mapi -IISAuthenticatio
 
 This example creates a new MAPI virtual directory that has the following configuration:
 
-- Internal URL: https://contoso.com/mapi
+- Internal URL: `https://contoso.com/mapi`
 
 - IIS authentication methods: NTLM, Negotiate and OAuth.
 

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-CaseHoldPolicy
@@ -59,7 +58,7 @@ This example makes the following changes to the existing case hold policy named 
 
 - Adds the mailbox for the user named Kitty Petersen.
 
-- Adds the SharePoint Online site https://contoso.sharepoint.com/sites/teams/finance.
+- Adds the SharePoint Online site `https://contoso.sharepoint.com/sites/teams/finance`.
 
 - Removes public folders.
 
@@ -118,7 +117,7 @@ To specify a mailbox or distribution group, you can use the following values:
 
 - SMTP address
 
-- Azure AD ObjectId (You can use the [Get-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser?view=azureadps-2.0) cmdlet to obtain this value.)
+- Azure AD ObjectId (You can use the [Get-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 

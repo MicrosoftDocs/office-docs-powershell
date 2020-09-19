@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-OabVirtualDirectory
@@ -49,7 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-OABVirtualDirectory -Identity "Server1\OAB (Default Web Site)" -ExternalUrl "https://www.contoso.com/OAB"
 ```
 
-This example changes the external URL of the OAB virtual directory OAB (Default Web Site) to https://www.contoso.com/OAB.
+This example changes the external URL of the OAB virtual directory OAB (Default Web Site) to `https://www.contoso.com/OAB`.
 
 ## PARAMETERS
 
