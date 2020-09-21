@@ -8,7 +8,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer: navgupta
-monikerRange: "exchonline-ps"
 ---
 
 # Connect-IPPSSession
@@ -18,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell V2 module. For m
 
 Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell V2 module to connect to Security & Compliance Center PowerShell or standalone Exchange Online Protection PowerShell.
 
-**Note**: If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, use the [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline) cmdlet and the same connection instructions as Exchange Online PowerShell to connect to EOP PowerShell.
+**Note**: If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for Exchange Online Protection (EOP), use the [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline) cmdlet the Exchange Online PowerShell instructions to connect to your EOP PowerShell environment.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -68,6 +67,7 @@ The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorizati
 
 - Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter.
 - Security & Compliance Center PowerShell in Office 365 Germany: `https://login.microsoftonline.de/common`
+- Security & Compliance Center PowerShell in Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/common`
 
 ```yaml
 Type: String
@@ -102,6 +102,8 @@ The ConnectionUri parameter specifies the connection endpoint for the remote Pow
 
 - Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://ps.compliance.protection.outlook.com/powershell-liveid/`, but that's also the default value, so you don't need to use this parameter for these environments.
 - Security & Compliance Center PowerShell in Office 365 Germany: `https://ps.compliance.protection.outlook.de/PowerShell-LiveID`
+- Security & Compliance Center PowerShell in Microsoft 365 GCC High: `https://ps.compliance.protection.office365.us/powershell-liveid/`
+- Security & Compliance Center PowerShell in Microsoft 365 DoD: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`
 - Exchange Online Protection PowerShell in standalone EOP organizations without Exchange Online mailboxes: `https://ps.protection.outlook.com/powershell-liveid/`
 
 ```yaml

@@ -64,8 +64,7 @@ Establishes a Skype for Business Online Remote PowerShell session using multi-fa
 
 ### -UserName
 Specifies the Skype for Business Online administrator account name to be used when prompting for credentials.
-> [!WARNING]
-> UserName has been deprecated and is not avaiable in Teams Powershell module. Please use Credential parameter to provide username and password. 
+Please Note: UserName has been deprecated and is not available in the Teams Powershell module. Please use the Credential parameter to provide username and password. 
 
 ```yaml
 Type: String
@@ -183,6 +182,7 @@ Specify "TeamsGCCH" if your organization is in the GCC High Environment. Specify
 
 ```yaml
 Type: String
+Parameter Sets: (All)
 Required: False
 Position: Named
 Default value: None
