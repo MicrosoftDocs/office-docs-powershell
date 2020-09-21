@@ -161,14 +161,6 @@ To install the EXO V2 module for the first time, complete the following steps **
      Install-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
      ```
 
-     For example, to install the `2.0.3-Preview` version that's required for [app-only authentication for unattended scripts](app-only-auth-powershell-v2.md), run the following command:
-
-     ```powershell
-     Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
-     ```
-
-   When you're finished, enter **Y** to accept the license agreement.
-
 For detailed syntax and parameter information, see [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/install-module).
 
 ### Update the EXO V2 module
@@ -196,14 +188,6 @@ If the module is already installed on your computer, you can run the following c
      ```powershell
      Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
      ```
-
-     For example, to upgrade to the `2.0.3-Preview` version that's required for [app-only authentication for unattended scripts](app-only-auth-powershell-v2.md), run the following command:
-
-     ```powershell
-     Update-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
-     ```
-
-     When you're finished, enter **Y** to accept the license agreement.
 
 3. To confirm that the update was successful, run the following commands to check the version information of the module that's installed:
 
@@ -281,7 +265,7 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 
   For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline) and [App-only authentication for unattended scripts in the EXO V2 module](app-only-auth-powershell-v2.md).
 
-- Connect with Exchange Online PowerShell and Security Compliance Center PowerShell simultaneously in a single PowerShell window.
+- Connect to Exchange Online PowerShell and Security Compliance Center PowerShell simultaneously in a single PowerShell window.
 
 - The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high usage PowerShell applications.
 
