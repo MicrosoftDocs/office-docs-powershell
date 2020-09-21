@@ -194,17 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocation
-The AddModernGroupLocation parameter specifies the Microsoft 365 Groups to add to the list of included Microsoft 365 Groups when you aren't using the value All for the ModernGroupLocation parameter.
-
-You can use any value that uniquely identifies the Microsoft 365 Group. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
+The AddModernGroupLocation parameter specifies the Microsoft 365 Groups to add to the list of included Microsoft 365 Groups. To identify the Microsoft 365 Group, you must use the primary SMTP address.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -222,19 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocationException
-The AddModernGroupLocationException parameter specifies the Microsoft 365 Groups to add to the list of excluded Microsoft 365 Groups when you're using the value All for the ModernGroupLocation parameter.
-
-You can use any value that uniquely identifies the Microsoft 365 Group. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -454,17 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocation
-The RemoveModernGroupLocation parameter specifies the Microsoft 365 Groups to remove from the list of included groups when you aren't using the value All for the ModernGroupLocation parameter.
-
-You can use any value that uniquely identifies the Microsoft 365 Group. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
+The RemoveModernGroupLocation parameter specifies the Microsoft 365 Groups to remove from the list of included groups. To identify the Microsoft 365 Group, you must use the primary SMTP address.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -482,19 +450,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocationException
-The RemoveModernGroupLocationException parameter specifies the Microsoft 365 Groups to remove from the list of excluded groups when you're using the value All for the ModernGroupLocation parameter.
-
-You can use any value that uniquely identifies the Microsoft 365 Group. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
