@@ -17,7 +17,7 @@ This cmdlet submits an operation that deletes a custom policy package with the g
 ## SYNTAX
 
 ```
-Remove-CsBatchPolicyPackageAssignmentOperation -PackageName <String>
+Remove-CsBatchPolicyPackageAssignmentOperation -Identity <String>
 ```
 
 ## DESCRIPTION
@@ -28,10 +28,10 @@ This cmdlet submits an operation that deletes a custom policy package. It allows
 
 ### Example 1
 ```powershell
-PS C:\> Remove-CsCustomPolicyPackage -PackageName myCustomPackage
+PS C:\> Remove-CsCustomPolicyPackage -Identity myCustomPackage
 ```
 
-Deletes a custom package with name "myCustomPackage". If the custom package with the name "myCustomPackage" exists and the admin user is authorized to delete it, the command will return success result.
+Deletes a custom package named "myCustomPackage".
 
 ## PARAMETERS
 
