@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscription
-Email transcription is only supported with shared voicemail callable entities.
+Enables the email transcription of voicemail, this is only supported with shared voicemail callable entities.
 
 ```yaml
 Type: SwitchParameter
