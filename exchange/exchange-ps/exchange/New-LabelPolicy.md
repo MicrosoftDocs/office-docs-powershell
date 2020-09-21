@@ -205,21 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocation
-The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. Valid values are:
-
-- A Microsoft 365 Group
-
-- The value All for all Microsoft 365 Groups. You can only use this value by itself.
-
-To identify the Microsoft 365 Group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
+The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. To identify the Microsoft 365 Group, you must use the primary SMTP address.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -237,19 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocationException
-The ModernGroupLocationException parameter specifies the Microsoft 365 Groups to exclude when you're using the value All for the ModernGroupLocation parameter.
-
-You can use any value that uniquely identifies the Microsoft 365 Group. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
