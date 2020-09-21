@@ -94,6 +94,19 @@ Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate object%>
 
 Use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
+### Example 6
+```powershell
+Connect-ExchangeOnline -Device
+```
+Use this syntax to connect to Exchange Online in interactive scripting scenarios on Linux machines which don't have Internet Browsers for Single Sign-On Authentication.This parameter works only during connecting to Exchange Online in Windows PowerShell 7.0 or higher. It prints a URL along with a unique code which is unqiue tied to the session. For device-flow to work correctly, the printed URL needs to be opened in a browser in any machine and Unique code needs to be entered after which regular Azure AD authentication flow will be initiated to complete the PowerShell session authentication. Once the login is complete in browser, the session in Powershell Window gets authenticated and cmdlets are imported after few seconds.
+
+### Example 7
+```powershell
+Connect-ExchangeOnline -InlineCredential
+```
+Use this syntax to connect to Exchange Online in interactive scripting scenarios by passing credentials directly on terminal in Windows PowerShell 7.0 or higher. This parameter works similar to Credential parameter with added security as it doesn't require credentials to be stored in the script locally and can be entered directly in an interactive PowerShell session.
+
+
 ## PARAMETERS
 
 ### -ConnectionUri
@@ -364,10 +377,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Device
+This parameter is available in Preview version 2.0.4-Preview1. 
+Use this parameter to authenticate interactively in machines which doesn't have Internet Browsers to support Single Sign-on. This parameter works only during connecting to Exchange Online in Windows PowerShell 7.0 or higher. It prints a URL along with a unique code which is unqiue tied to the session. For device-flow to work correctly, the printed URL needs to be opened in a browser in any machine and Unique code needs to be entered after which regular Azure AD authentication flow will be initiated to complete the PowerShell session authentication. Once the login is complete in browser, the session in Powershell Window gets authenticated and cmdlets are imported after few seconds.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableErrorReporting
 The EnableErrorReporting switch enables logging errors to a local file. You don't need to specify a value with this switch.
 
 By default, it creates 2 files in the %TMP% folder. You can use the LogDirectoryPath parameter to specify the location of the log files.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InlineCredential
+This parameter is available in Preview version 2.0.4-Preview1. 
+Use this parameter to pass credentials directly on terminal during connecting to Exchange Online in Windows PowerShell 7.0 or higher. This parameter works similar to Credential parameter with added security as it doesn't require credentials to be stored in the script locally and can be entered directly in an interactive PowerShell session.
 
 ```yaml
 Type: SwitchParameter
