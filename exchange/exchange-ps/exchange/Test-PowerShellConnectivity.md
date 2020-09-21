@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Test-PowerShellConnectivity
@@ -90,14 +89,14 @@ This example tests the PowerShell (Default Web Site) virtual directory on the MB
 $UserCredentials = Get-Credential; Test-PowerShellConnectivity -ConnectionUri https://contoso.com/powershell -TestCredential $UserCredentials -Authentication Basic
 ```
 
-This example tests the remote PowerShell virtual directory that's available at https://contoso.com/powershell. A mismatch between the SSL certificate and the URL isn't expected, so the TrustAnySSLCertificate switch isn't used. The virtual directory is configured to use Basic authentication.
+This example tests the remote PowerShell virtual directory that's available at `https://contoso.com/powershell`. A mismatch between the SSL certificate and the URL isn't expected, so the TrustAnySSLCertificate switch isn't used. The virtual directory is configured to use Basic authentication.
 
 The credentials that are used to connect to the virtual directory are stored in the $UserCredentials variable. The test is then run as previously described.
 
 ## PARAMETERS
 
 ### -ConnectionUri
-The ConnectionUri parameter specifies the URL of the remote PowerShell virtual directory to test, for example, https://contoso.com/powershell.
+The ConnectionUri parameter specifies the URL of the remote PowerShell virtual directory to test, for example, `https://contoso.com/powershell`.
 
 You can't use this parameter with the ClientAccessServer parameter.
 

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Import-RMSTrustedPublishingDomain
@@ -230,7 +229,7 @@ Accept wildcard characters: False
 ### -ExtranetCertificationUrl
 The ExtranetCertificationUrl parameter specifies the external certification URL of the on-premises AD RMS server that's stamped into the Rights Account Certificate (RAC). The RAC establishes a user's identity in the AD RMS system, and is used to decrypt content.
 
-By default, the value of the ExtranetCertificationUrl parameter is https://\<FQDN\>/\_wmcs/certification/servercertification.asmx.
+By default, the value of the ExtranetCertificationUrl parameter is `https://<FQDN>/_wmcs/certification/servercertification.asmx`.
 
 ```yaml
 Type: Uri
@@ -248,7 +247,7 @@ Accept wildcard characters: False
 ### -IntranetCertificationUrl
 The IntranetCertificationUrl parameter specifies the internal certification URL of the on-premises AD RMS server that's stamped into the RAC. The RAC establishes a user's identity in the AD RMS system, and is used to decrypt content.
 
-By default, the value of the IntranetCertificationUrl parameter is https://\<server name\>/\_wmcs/certification/servercertification.asmx.
+By default, the value of the IntranetCertificationUrl parameter is `https://<server name>/_wmcs/certification/servercertification.asmx`.
 
 ```yaml
 Type: Uri

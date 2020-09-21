@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Set-HostedContentFilterPolicy
@@ -267,7 +266,7 @@ The BulkSpamAction parameter specifies the action to take on messages that are m
 
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 
 - NoAction
 
@@ -543,7 +542,7 @@ The HighConfidenceSpamAction parameter specifies the action to take on messages 
 
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 
 - Quarantine: Move the message to the quarantine. The quarantined message is only available to admins.
 
@@ -1169,7 +1168,7 @@ The SpamAction parameter specifies the action to take on messages that are marke
 
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 
 - Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
 

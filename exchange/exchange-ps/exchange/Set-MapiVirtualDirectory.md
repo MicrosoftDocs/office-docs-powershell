@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-MapiVirtualDirectory
@@ -47,7 +46,7 @@ Set-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" -Intern
 
 This example makes the following configuration changes to the MAPI virtual directory on the default web site of the server named ContosoMail:
 
-- Internal URL: https://contoso/mapi.
+- Internal URL: `https://contoso/mapi`.
 
 - IIS authentication methods: NTLM, Negotiate, and OAuth.
 
@@ -243,6 +242,8 @@ The IISAuthenticationMethods parameter specifies the authentication methods that
 You can specify multiple values separated by commas.
 
 The default values are NTLM, OAuth, and Negotiate. We recommend that you always have the virtual directory configured for OAuth.
+
+For more information about the different authentication methods, see [Understanding HTTP Authentication](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/understanding-http-authentication) and [What is OAuth authentication?](https://docs.microsoft.com/exchange/using-oauth-authentication-to-support-ediscovery-in-an-exchange-hybrid-deployment-exchange-2013-help#what-is-oauth-authentication).
 
 ```yaml
 Type: MultiValuedProperty

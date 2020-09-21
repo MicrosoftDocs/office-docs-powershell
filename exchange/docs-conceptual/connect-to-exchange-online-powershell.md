@@ -29,7 +29,7 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 
 - The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
-- If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, your EOP PowerShell connection instructions are the same as Exchange Online PowerShell as described in this topic.
+- If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for Exchange Online Protection (EOP), your EOP PowerShell connection instructions are the same as Exchange Online PowerShell as described in this topic.
 
 > [!TIP]
 > Having problems? Ask in the [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542) forum.
@@ -47,11 +47,11 @@ If you account uses multi-factor authentication, use the steps in this section. 
 2. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName <UPN> -ShowProgress $true [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>] [-DelegatedOrganization <String>]
+   Connect-ExchangeOnline -UserPrincipalName <UPN> -ShowProgress $true [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>]
    ```
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
-   - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+   - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
    - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
 
    **This example connects to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
@@ -63,19 +63,19 @@ If you account uses multi-factor authentication, use the steps in this section. 
    **This example connects to Exchange Online PowerShell in an Office 365 Germany organization**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.de -ShowProgress $true -ConnectionUri https://outlook.office.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.de -ShowProgress $true -ExchangeEnvironmentName O365GermanyCloud
    ```
 
    **This example connects to Exchange Online PowerShell in a Microsoft GCC High organization**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName laura@blueyonderairlines.us -ShowProgress $true -ConnectionUri https://outlook.office365.us/powershell-liveid -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common
+   Connect-ExchangeOnline -UserPrincipalName laura@blueyonderairlines.us -ShowProgress $true -ExchangeEnvironmentName O365USGovGCCHigh
    ```
 
    **This example connects to Exchange Online PowerShell in a Microsoft 365 DoD organization**:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName julia@adatum.mil -ShowProgress $true -ConnectionUri https://webmail.apps.mil/powershell-liveid -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common
+   Connect-ExchangeOnline -UserPrincipalName julia@adatum.mil -ShowProgress $true -ExchangeEnvironmentName O365USGovDoD
    ```
 
    **This example connects to Exchange Online PowerShell to manage another tenant**:
@@ -114,10 +114,10 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 3. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true [-ConnectionUri <URL>] [-DelegatedOrganization <String>]
+   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>]
    ```
 
-   - The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
+   - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
    - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/partners).
 
    **Connect to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
@@ -129,25 +129,25 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    **Connect to Exchange Online PowerShell in an Office 365 Germany organization**:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ConnectionUri https://outlook.office.de/powershell-liveid/
+   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ExchangeEnvironmentName O365GermanyCloud
    ```
 
    **Connect to Exchange Online PowerShell in an Office 365 operated by 21Vianet organization**:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ConnectionUri https://partner.outlook.cn/PowerShell
+   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ExchangeEnvironmentName O365China
    ```
 
    **Connect to Exchange Online PowerShell in a Microsoft 365 GCC High organization**:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ConnectionUri https://outlook.office365.us/powershell-liveid/
+   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ExchangeEnvironmentName O365USGovGCCHigh
    ```
 
    **Connect to Exchange Online PowerShell in a Microsoft 365 DoD organization**:
 
    ```powershell
-   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ConnectionUri https://webmail.apps.mil/powershell-liveid
+   Connect-ExchangeOnline -Credential $UserCredential -ShowProgress $true -ExchangeEnvironmentName O365USGovDoD
    ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
