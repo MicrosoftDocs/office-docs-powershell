@@ -61,7 +61,7 @@ $afterHoursCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation 
 $inclusionScopeGroupIds = @("4c3053a6-20bf-43df-bf7a-156124168856")
 $inclusionScope = New-CsAutoAttendantDialScope -GroupScope -GroupIds $inclusionScopeGroupIds
 
-$aa = New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
+$aa = New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -LanguageId "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
 ```
 
 This example creates a new AA named _Main auto attendant_ that has the following properties:
@@ -105,7 +105,7 @@ $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -Date
 
 $christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
 
-$aa = New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity
+$aa = New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -LanguageId "en-US" -TimeZoneId "UTC" -Operator $operatorEntity
 ```
 
 This example creates a new AA named _Main auto attendant_ that has the following properties:
@@ -136,7 +136,7 @@ $christmasCallFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @(
 
 $christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
 
-New-CsAutoAttendant -Name "Customer Support Auto Attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC"
+New-CsAutoAttendant -Name "Customer Support Auto Attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -LanguageId "en-US" -TimeZoneId "UTC"
 
 # Id                       : a65b3434-05a1-48ed-883d-e3ca35a60af8
 # TenantId                 : f6b89083-a2f8-55cc-9f62-33b73af44164
@@ -168,7 +168,7 @@ $christmasCallFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @(
 
 $christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
 
-New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC"
+New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -LanguageId "en-US" -TimeZoneId "UTC"
 
 # Id                       : 236450c4-9f1e-4c19-80eb-d68819d36a15
 # TenantId                 : f6b89083-a2f8-55cc-9f62-33b73af44164
@@ -241,7 +241,7 @@ $menu = New-CsAutoAttendantMenu -Name "AA menu2" -Prompts @($menuPrompt) -Enable
 $callFlow = New-CsAutoAttendantCallFlow -Name "Default" -Menu $menu -Greetings $greetingPrompt
 
 # Auto attendant
-New-CsAutoAttendant -Name $aaName -Language $language -CallFlows @($afterHoursCallFlow) -TimeZoneId $tz -Operator $operator -DefaultCallFlow $callFlow -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -EnableVoiceResponse
+New-CsAutoAttendant -Name $aaName -LanguageId $language -CallFlows @($afterHoursCallFlow) -TimeZoneId $tz -Operator $operator -DefaultCallFlow $callFlow -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -EnableVoiceResponse
 ```
 
 This example creates a new AA named _Main auto attendant_ that has the following properties:
