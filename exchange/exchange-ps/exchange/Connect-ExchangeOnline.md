@@ -331,6 +331,8 @@ Accept wildcard characters: False
 ```
 
 ### -CommandName
+**Note**: This parameter is available in version 2.0.3 or later.
+
 The CommandName parameter specifies the comma separated list of commands to import into the session. Use this parameter for applications or scripts that use a specific set of cmdlets. Reducing the number of cmdlets in the session helps improve performance and reduces the memory footprint of the application or script.
 
 ```yaml
@@ -347,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions. You don't use this parameter for accounts with multi-factor authentication (MFA).
 
 A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
@@ -399,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogDirectoryPath
-The LogDirectoryPath parameter specifies the location of the log files. The default location is %TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv.
+The LogDirectoryPath parameter specifies the location of the log files. The default location is `%TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv`.
 
 If you specify a custom location and filename that contains spaces, enclose the value in quotation marks (").
 
@@ -505,7 +507,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrackPerformance
-The TrackPerformance parameter measures addtional events (for example, CPU load and memory consumed). Valid values are:
+The TrackPerformance parameter measures additional events (for example, CPU load and memory consumed). Valid values are:
 
 - $true: Performance tracking is enabled.
 
@@ -547,7 +549,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip the first screen in authentication prompt.
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). This parameter allows you to skip the first screen in authentication prompt, and is used for accounts with MFA.
 
 ```yaml
 Type: String

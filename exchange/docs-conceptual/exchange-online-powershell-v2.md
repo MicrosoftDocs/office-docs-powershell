@@ -95,8 +95,8 @@ The procedures in this section explain how to install, update, and uninstall the
   - Windows Server 2019
   - Windows Server 2016
   - Windows Server 2012 or Windows Server 2012 R2
-  - Windows 7 Service Pack 1 (SP1)<sup>*</sup>
-  - Windows Server 2008 R2 SP1<sup>*</sup>
+  - Windows 7 Service Pack 1 (SP1)<sup>\*</sup>
+  - Windows Server 2008 R2 SP1<sup>\*</sup>
 
   <sup>\*</sup> This version of Windows has reached end of support, and is now only supported when running in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
@@ -271,19 +271,37 @@ For more information about filtering in the EXO V2 module, see [Filters in the E
 
 ## Release notes
 
-### Current release: Version 1.0.1
+### Current release: Version 2.0.3
 
-- This is the General Availability (GA) version of the EXO PowerShell V2 Module. It is stable and ready for use in production environments.
+- General availability of certificate based authentication (CBA), which enables using modern authentication in unattended scripting or background automation scenarios. The available certificate storage locations are:
 
-- Get-ExoMobileDeviceStatistics cmdlet now supports Identity parameter.
+  - Remote in the Azure Key Value (the _Certificate_) parameter. This option enhances security by fetching the certificate only at runtime.
+  - Local in the CurrentUser or LocalMachine certificate store (the _CertificateThumbprint_ parameter).
+  - Local in an exported certificate file (the _CertificateFilePath_ and _CertificatePassword_ parameters).
+
+  For more information, see the parameter descriptions in [Connect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline) and [App-only authentication for unattended scripts in the EXO V2 module](app-only-auth-powershell-v2.md).
+
+- Connect with Exchange Online PowerShell and Security Compliance Center PowerShell simultaneously in a single PowerShell window.
+
+- The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high usage PowerShell applications.
+
+- **Get-EXOMailboxFolderPermission** now supports ExternalDirectoryObjectID in the _Identity_ parameter.
+
+- Optimized latency of the first V2 cmdlet call. Lab results show the first call latency has been reduced from 8 seconds to approximately 1 second. Actual results will depend on the cmdlet result size and the tenant environment.
+
+### Previous releases
+
+#### Version 1.0.1
+
+- General Availability (GA) version of the EXO V2 module. It is stable and ready for use in production environments.
+
+- **Get-EXOMobileDeviceStatistics** cmdlet now supports the _Identity_ parameter.
 
 - Improved reliability of session auto-reconnect in certain cases where a script was running for ~50 minutes and threw a "Cmdlet not found" error due to a bug in auto-reconnect logic.
 
 - Fixed data-type issues of two commonly used "User" and "MailboxFolderUser" attributes for easy migration of scripts.
 
-- Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not and NotLike support. Check online documentation for attributes that aren't supported in filters.
-
-### Previous releases
+- Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not and NotLike support. Check [Filters in the EXO V2 module](filters-v2.md) for attributes that aren't supported in filters.
 
 #### Version 0.4578.0
 
