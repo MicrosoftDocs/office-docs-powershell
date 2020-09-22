@@ -27,7 +27,7 @@ To use the older Exchange Online Remote PowerShell Module to connect to Security
 
 ## What do you need to know before you begin?
 
-- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module). The rest of the instructions in the topic assume that you've already installed the module.
 
 ## Connect to Security & Compliance PowerShell using MFA
 
@@ -38,6 +38,9 @@ If you account uses multi-factor authentication, use the steps in this section. 
    ```powershell
    Import-Module ExchangeOnlineManagement
    ```
+
+   > [!NOTE]
+   > If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written. If you haven't already installed the module, you can install and load the latest public version of the module in one step by running the command: `Import-Module -Name ExchangeOnlineManagement`.
 
 2. The command that you need to run uses the following syntax:
 
@@ -89,6 +92,9 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    ```powershell
    Import-Module ExchangeOnlineManagement
    ```
+
+   > [!NOTE]
+   > If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written. If you haven't already installed the module, you can install and load the latest public version of the module in one step by running the command: `Import-Module -Name ExchangeOnlineManagement`.
 
 2. Run the following command:
 
