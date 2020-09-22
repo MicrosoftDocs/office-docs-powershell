@@ -161,6 +161,14 @@ To install the EXO V2 module for the first time, complete the following steps **
      Install-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
      ```
 
+     For example, to install the `2.0.4-Preview2` version that's required for PowerShell Core support, run the following command:
+
+     ```powershell
+     Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.4-Preview2 -AllowPrerelease
+     ```
+
+     When you're finished, enter **Y** to accept the license agreement.
+
 For detailed syntax and parameter information, see [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/install-module).
 
 ### Update the EXO V2 module
@@ -188,6 +196,14 @@ If the module is already installed on your computer, you can run the following c
      ```powershell
      Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
      ```
+
+     For example, to upgrade to the `2.0.4-Preview2` version that's required for PowerShell Core support, run the following command:
+
+     ```powershell
+     Update-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.4-Preview2 -AllowPrerelease
+     ```
+
+     When you're finished, enter **Y** to accept the license agreement.
 
 3. To confirm that the update was successful, run the following commands to check the version information of the module that's installed:
 
