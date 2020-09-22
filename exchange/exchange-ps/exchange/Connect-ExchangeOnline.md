@@ -100,7 +100,7 @@ In version 2.0.3 or later, use this syntax to connect to Exchange Online in unat
 Connect-ExchangeOnline -Device
 ```
 
-In Windows PowerShell 7.0 or later using version 2.0.4-Preview1 or later in Linux, this command connects to Exchange Online using single sign-on (SSO) in interactive scripting scenarios on computers that don't have web browsers.
+In Windows PowerShell 7.0 or later using version 2.0.4-Preview2 or later in Linux, this command connects to Exchange Online using single sign-on (SSO) in interactive scripting scenarios on computers that don't have web browsers.
 
 The command prints a URL along with a unique code that's tied to the session. You need to open the printed URL in a browser on any computer, and you need to enter the unique code. After you complete the login in the web browser, the session in the Windows Powershell window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
@@ -109,7 +109,7 @@ The command prints a URL along with a unique code that's tied to the session. Yo
 Connect-ExchangeOnline -InlineCredential
 ```
 
-In Windows PowerShell 7.0 or later using version 2.0.4-Preview1 or later in Linux, this command connects to Exchange Online in interactive scripting scenarios by passing credentials directly in the Windows PowerShell window.
+In Windows PowerShell 7.0 or later using version 2.0.4-Preview2 or later in Linux, this command connects to Exchange Online in interactive scripting scenarios by passing credentials directly in the Windows PowerShell window.
 
 ## PARAMETERS
 
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -Device
-**Note**: This parameter is available only in version 2.0.4-Preview1 or later.
+**Note**: This parameter is available only in version 2.0.4-Preview2 or later.
 
 The Device switch specifies whether to authenticate interactively computers that don't have web browsers to support single sign-on (SSO). You don't need to specify a value with this switch.
 
@@ -438,7 +438,7 @@ Accept wildcard characters: False
 ```
 
 ### -InlineCredential
-**Note**: This parameter is available only in version 2.0.4-Preview1 or later.
+**Note**: This parameter is available only in version 2.0.4-Preview2 or later.
 
 The InlineCredential switch specifies whether to pass credentials directly in the Windows PowerShell window. You don't need to specify a value with this switch.
 
