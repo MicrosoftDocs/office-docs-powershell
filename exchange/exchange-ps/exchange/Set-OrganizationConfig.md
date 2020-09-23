@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-OrganizationConfig
@@ -2146,7 +2145,7 @@ Accept wildcard characters: False
 ### -OutlookPayEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookPayEnabled parameter enables or disables [Pay bills and invoices in Outlook using Microsoft Pay](https://support.microsoft.com/office/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Microsoft 365 organization. Valid values are:
+The OutlookPayEnabled parameter enables or disables Microsoft Pay in the Microsoft 365 organization. Valid values are:
 
 - $true: Payments in Outlook are enabled.
 
@@ -2594,7 +2593,7 @@ Accept wildcard characters: False
 ### -WACDiscoveryEndpoint
 This parameter is available only in on-premises Exchange.
 
-The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes in the organization. For example, https://oos.internal.contoso.com/hosting/discovery.
+The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes in the organization. For example, `https://oos.internal.contoso.com/hosting/discovery`.
 
 Office Online Server enables users to view supported file attachments in Outlook on the web (formerly known as Outlook Web App).
 

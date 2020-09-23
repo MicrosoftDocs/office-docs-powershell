@@ -27,15 +27,11 @@ Set-TeamPicture -GroupId <String> -ImagePath <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-> [!IMPORTANT]
-> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
-
-
 ## EXAMPLES
 
 ### Example 1
 ```
-Set-TeamPicture -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -ImagePath c:\Image\TeamPictire.png
+Set-TeamPicture -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -ImagePath c:\Image\TeamPicture.png
 ```
 
 ## PARAMETERS

@@ -25,6 +25,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-DisplayStartASiteOption <Boolean>]
  [-EnableAIPIntegration <Boolean>]
+ [-EnableAutoNewsDigest <Boolean>]
  [-EnableMinimumVersionRequirement <Boolean>]
  [-EnablePromotedFileHandlers <Boolean>]
  [-ExternalServicesEnabled <Boolean>]
@@ -1692,6 +1693,23 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAutoNewsDigest
+
+Enable or disable auto news digest. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
