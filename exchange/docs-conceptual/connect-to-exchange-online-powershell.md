@@ -36,7 +36,7 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 
 ## Connect to Exchange Online PowerShell using MFA
 
-If you account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online PowerShell without using MFA](#connect-to-exchange-online-powershell-without-using-mfa) section.
+If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online PowerShell without using MFA](#connect-to-exchange-online-powershell-without-using-mfa) section.
 
 1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
