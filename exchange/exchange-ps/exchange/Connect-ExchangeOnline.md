@@ -8,7 +8,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer: navgupta
-monikerRange: "exchonline-ps"
 ---
 
 # Connect-ExchangeOnline
@@ -23,26 +22,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Connect-ExchangeOnline [[-ConnectionUri] <String>] [[-AzureADAuthorizationEndpointUri] <String>] [[-ExchangeEnvironmentName] <ExchangeEnvironment>] 
- [[-PSSessionOption] <PSSessionOption>] [[-DelegatedOrganization] <String>]
+Connect-ExchangeOnline [[-ConnectionUri] <String>] [[-AzureADAuthorizationEndpointUri] <String>] [[-ExchangeEnvironmentName] <ExchangeEnvironment>] [[-PSSessionOption] <PSSessionOption>] [[-DelegatedOrganization] <String>]
  [-AppId <String>]
- [-BypassMailboxAnchoring] 
- [-Certificate <X509Certificate2>] 
+ [-BypassMailboxAnchoring]
+ [-Certificate <X509Certificate2>]
  [-CertificateFilePath <String>]
- [-CertificatePassword <SecureString>] 
+ [-CertificatePassword <SecureString>]
  [-CertificateThumbprint <String>]
- [-CommandName <String[]>] 
- [-Credential <PSCredential>] 
- [-EnableErrorReporting] 
- [-FormatTypeName <String[]>] 
- [-LogDirectoryPath <String>] 
+ [-CommandName <String[]>]
+ [-Credential <PSCredential>]
+ [-Device]
+ [-EnableErrorReporting]
+ [-FormatTypeName <String[]>]
+ [-InlineCredential]
+ [-LogDirectoryPath <String>]
  [-LogLevel <LogLevel>]
  [-Organization <String>]
  [-PageSize <UInt32>]
- [-Prefix <String>] [-ShowBanner]
- [-ShowProgress <Boolean>] 
- [-TrackPerformance <Boolean>] 
- [-UseMultithreading <Boolean>] 
+ [-Prefix <String>]
+ [-ShowBanner]
+ [-ShowProgress <Boolean>]
+ [-TrackPerformance <Boolean>]
+ [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
@@ -64,7 +65,7 @@ The second command connects the current PowerShell session using the credentials
 
 After the Connect-ExchangeOnline command is successful, you can run ExO V2 module cmdlets and older remote PowerShell cmdlets.
 
-### Example 2 
+### Example 2
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -ShowProgress $true
 ```
@@ -80,20 +81,35 @@ Connect-ExchangeOnline -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Do
 
 Use this syntax to connect to Exchange Online in unattended scripting scenarios using the public key of a certificate.
 
-
 ### Example 4
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
-Use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate thumbprint.
+In version 2.0.3 or later, use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate thumbprint.
 
 ### Example 5
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate object%> -Organization "contoso.onmicrosoft.com"
 ```
 
-Use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
+In version 2.0.3 or later, use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
+
+### Example 6
+```powershell
+Connect-ExchangeOnline -Device
+```
+
+In Windows PowerShell 7.0 or later using version 2.0.4-Preview2 or later in Linux, this command connects to Exchange Online using single sign-on (SSO) in interactive scripting scenarios on computers that don't have web browsers.
+
+The command prints a URL along with a unique code that's tied to the session. You need to open the printed URL in a browser on any computer, and you need to enter the unique code. After you complete the login in the web browser, the session in the Windows Powershell window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
+
+### Example 7
+```powershell
+Connect-ExchangeOnline -InlineCredential
+```
+
+In Windows PowerShell 7.0 or later using version 2.0.4-Preview2 or later in Linux, this command connects to Exchange Online in interactive scripting scenarios by passing credentials directly in the Windows PowerShell window.
 
 ## PARAMETERS
 
@@ -332,6 +348,8 @@ Accept wildcard characters: False
 ```
 
 ### -CommandName
+**Note**: This parameter is available in version 2.0.3 or later.
+
 The CommandName parameter specifies the comma separated list of commands to import into the session. Use this parameter for applications or scripts that use a specific set of cmdlets. Reducing the number of cmdlets in the session helps improve performance and reduces the memory footprint of the application or script.
 
 ```yaml
@@ -348,12 +366,32 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions. You don't use this parameter for accounts with multi-factor authentication (MFA).
 
 A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Device
+**Note**: This parameter is available only in version 2.0.4-Preview2 or later.
+
+The Device switch specifies whether to authenticate interactively computers that don't have web browsers to support single sign-on (SSO). You don't need to specify a value with this switch.
+
+This switch works only in Windows PowerShell 7.0 or later for connections to Exchange Online in Linux. The command prints a URL along with a unique code that's tied to the session. You need to open the printed URL in a browser on any computer, and you need to enter the unique code. After you complete the login in the web browser, the session in the Windows Powershell window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -399,8 +437,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InlineCredential
+**Note**: This parameter is available only in version 2.0.4-Preview2 or later.
+
+The InlineCredential switch specifies whether to pass credentials directly in the Windows PowerShell window. You don't need to specify a value with this switch.
+
+This switch works only in Windows PowerShell 7.0 or later for connections to Exchange Online in Linux. This switch is similar to the Credential parameter, but with added security. The InlineCredential switch doesn't require you to store the credentials locally in the script, and you can enter credentials directly in an interactive PowerShell session.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LogDirectoryPath
-The LogDirectoryPath parameter specifies the location of the log files. The default location is %TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv.
+The LogDirectoryPath parameter specifies the location of the log files. The default location is `%TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv`.
 
 If you specify a custom location and filename that contains spaces, enclose the value in quotation marks (").
 
@@ -506,7 +564,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrackPerformance
-The TrackPerformance parameter measures addtional events (for example, CPU load and memory consumed). Valid values are:
+The TrackPerformance parameter measures additional events (for example, CPU load and memory consumed). Valid values are:
 
 - $true: Performance tracking is enabled.
 
@@ -548,7 +606,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip the first screen in authentication prompt.
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). This parameter allows you to skip the first screen in authentication prompt, and is used for accounts with MFA.
 
 ```yaml
 Type: String

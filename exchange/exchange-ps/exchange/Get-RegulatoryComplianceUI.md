@@ -4,7 +4,6 @@ online version: https://docs.microsoft.com/powershell/module/exchange/get-regula
 applicable: Office 365 Security & Compliance Center
 title: Get-RegulatoryComplianceUI
 schema: 2.0.0
-monikerRange: "o365scc-ps"
 ---
 
 # Get-RegulatoryComplianceUI

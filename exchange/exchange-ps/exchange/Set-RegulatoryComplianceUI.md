@@ -4,7 +4,6 @@ online version: https://docs.microsoft.com/powershell/module/exchange/set-regula
 applicable: Office 365 Security & Compliance Center
 title: Set-RegulatoryComplianceUI
 schema: 2.0.0
-monikerRange: "o365scc-ps"
 ---
 
 # Set-RegulatoryComplianceUI
