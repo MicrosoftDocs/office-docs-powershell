@@ -31,7 +31,7 @@ To use the older Exchange Online Remote PowerShell Module to connect to Security
 
 ## Connect to Security & Compliance PowerShell using MFA
 
-If you account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Security & Compliance Center PowerShell without using MFA](#connect-to-security--compliance-center-powershell-without-using-mfa) section.
+If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Security & Compliance Center PowerShell without using MFA](#connect-to-security--compliance-center-powershell-without-using-mfa) section.
 
 1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
