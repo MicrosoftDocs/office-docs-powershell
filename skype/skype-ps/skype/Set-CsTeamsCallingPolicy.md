@@ -295,7 +295,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -MusicOnHoldEnabledType
-Settings this parameter allows you to turn on or turn off music on hold when a PSTN caller is placed on hold. It is turned on by default. Valid options are: Enabled, Disabled, UserOverride. For now setting the value to UserOverride is the same as Enabled. This setting does not apply to call park and SLA boss delegate features. 
+Setting this parameter allows you to turn on or turn off music on hold when a PSTN caller is placed on hold. It is turned on by default. Valid options are: Enabled, Disabled, UserOverride. For now setting the value to UserOverride is the same as Enabled. This setting does not apply to call park and SLA boss delegate features. 
 
 ```yaml
 Type: Enum
@@ -310,6 +310,8 @@ Accept wildcard characters: False
 ```
 
 ### -SafeTransferEnabled
+Teams users will be able to transfer a call safely, between Teams and Skype For Business.  If the target user does not answer the call, it will ring back to the transferrer.  The person transferring the call must be a Teams user.  The person the call is being transferred to must be either a Teams or Skype for Business user in the same tenant or in a federated tenant.
+
 Possible values
 - Enabled
 - Disabled
