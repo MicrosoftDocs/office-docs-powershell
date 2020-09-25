@@ -6547,8 +6547,8 @@
     },
     {
       "source_path": "exchange/docs-conceptual/exchange-server/use-update-exchangehelp.md",
-      "redirect_url": "https://docs.microsoft.com/powershell/exchange/use-update-exchangehelp.md",
-      "redirect_document_id": false
+      "redirect_url": "https://docs.microsoft.com/powershell/exchange/use-update-exchangehelp",
+      "redirect_document_id": true
     },
     {
       "source_path": "exchange/docs-conceptual/exchange-server/recipient-filters/filter-properties.md",
