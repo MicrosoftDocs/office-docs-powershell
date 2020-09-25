@@ -25,7 +25,7 @@ Get-SPOGeoAdministrator [<CommonParameters>]
 ## DESCRIPTION
 
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets [https://go.microsoft.com/fwlink/?LinkID=187810](https://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Get-SPOGeoAdministrator` cmdlet has a single parameter set and matches a user or a list of users which has the ability to do changes globally in the geo location that you are connected to.
 
