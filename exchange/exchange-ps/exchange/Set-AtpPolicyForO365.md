@@ -118,7 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
-The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning in email messages, and supported Office 365 desktop and mobile apps. You can specify multiple values separated by commas.
+The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning in email messages, and supported Office 365 desktop and mobile apps.
+
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+For details about the entry syntax, see [Entry syntax for the "Block the following URLs" list](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-block-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -200,6 +206,8 @@ The EnableSafeLinksForO365Clients parameter specifies whether Safe Links scannin
 
 - $false: Safe Links scanning is disabled in supported Office 365 apps.
 
+Note that this protection applies to links in Office documents, not links in email messages. Safe Links protection for links in email messages is controlled by Safe Links policies (the [New-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/new-safelinkspolicy) or [Set-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/set-safelinkspolicy) cmdlets).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -214,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrackClicks
-The TrackClicks parameter specifies whether to track user clicks related to blocked URLs in supported Office 365 desktop, mobile, and web apps. Valid values are:
+The TrackClicks parameter specifies whether to track user clicks related to blocked URLs in supported Office 365 apps. Valid values are:
 
 - $true: User clicks in supported Office 365 apps are tracked.
 
