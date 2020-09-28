@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: ITPro
 ms.topic: article
-ms.prod: exchange-server-itpro
+ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.assetid: 63976059-25f8-4b4f-b597-633e78b803c0
 description: "Find and open the shortcut for Exchange PowerShell (also known as the Exchange Management Shell) on Exchange servers or computers that have the Exchange management tools installed."

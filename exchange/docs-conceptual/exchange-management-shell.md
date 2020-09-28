@@ -2,11 +2,11 @@
 title: "Exchange Server PowerShell (Exchange Management Shell)"
 ms.author: chrisda
 author: chrisda
-manager: sansimp
+manager: dansimp
 ms.date:
 ms.audience: ITPro
 ms.topic: article
-ms.prod: exchange-server-itpro
+ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.assetid: 925ad66f-2f05-4269-9923-c353d9c19312
 description: "Learn about Exchange Server PowerShell, also known as the Exchange Management Shell. This topic describes how PowerShell works on Exchange servers, and provides links to other topics that can help you learn how to use the Exchange Management Shell."
