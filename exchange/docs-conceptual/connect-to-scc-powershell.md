@@ -32,7 +32,7 @@ To use the older Exchange Online Remote PowerShell Module to connect to Security
 ## Connect to Security & Compliance PowerShell using MFA
 
 > [!NOTE]
-> Currently, you can't use the EXO V2 module to connect to Security & Compliance Center PowerShell in GCC High or DoD environments using MFA. Instead, use the older instructions [V1 module - Connect to Security & Compliance Center PowerShell using MFA](v1-module-mfa-connect-to-scc-powershell.md).
+> Currently, you can't use the EXO V2 module to connect to Security & Compliance Center PowerShell in DoD environments using MFA. Instead, use the older instructions [V1 module - Connect to Security & Compliance Center PowerShell using MFA](v1-module-mfa-connect-to-scc-powershell.md).
 
 If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Security & Compliance Center PowerShell without using MFA](#connect-to-security--compliance-center-powershell-without-using-mfa) section.
 
@@ -63,6 +63,12 @@ If your account uses multi-factor authentication, use the steps in this section.
 
    ```powershell
    Connect-IPPSSession -UserPrincipalName lukas@fabrikam.de -ConnectionUri https://ps.compliance.protection.outlook.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   ```
+
+   **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**.
+
+   ```powershell
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/
    ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
