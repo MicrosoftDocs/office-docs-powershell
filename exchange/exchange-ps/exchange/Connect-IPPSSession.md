@@ -69,6 +69,8 @@ The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorizati
 - Security & Compliance Center PowerShell in Office 365 Germany: `https://login.microsoftonline.de/common`
 - Security & Compliance Center PowerShell in Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/common`
 
+This parameter is required in Office 365 Germany, Microsoft 365 GCC High, or Microsoft 365 DoD organizations when you don't use the UserPrincipalName parameter.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
