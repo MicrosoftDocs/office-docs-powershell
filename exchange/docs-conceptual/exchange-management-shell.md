@@ -2,7 +2,7 @@
 title: "Exchange Server PowerShell (Exchange Management Shell)"
 ms.author: chrisda
 author: chrisda
-manager: sansimp
+manager: dansimp
 ms.date:
 ms.audience: ITPro
 ms.topic: article
