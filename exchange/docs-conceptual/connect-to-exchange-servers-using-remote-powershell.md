@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: ITPro
 ms.topic: article
-ms.prod: exchange-server-itpro
+ms.prod: exchange-server-it-pro
 localization_priority: Priority
 ms.collection: Strat_EX_Admin
 ms.custom:
