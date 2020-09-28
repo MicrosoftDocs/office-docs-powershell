@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: eop
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid:
 ROBOTS: NOINDEX
