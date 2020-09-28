@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-security-and-compliance
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid:
 search.appverid: MET150
