@@ -240,7 +240,7 @@ The FolderScope parameter specifies the scope of the search by folder type. Vali
 
 - Tasks
 
-The ManagedCustomFolder value returns output for all managed custom folders. The RecoverableItems value returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
+The ManagedCustomFolder value returns output for all managed custom folders. The RecoverableItems value returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders. Folderscope parameter values LegacyArchiveJournals and NonIpmRoot are only applicable for Exchange 2013 and in addition to this Archives is added in Exchange Server 2016 and later.
 
 ```yaml
 Type: Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType
