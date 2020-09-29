@@ -63,11 +63,13 @@ This example connects to standalone Exchange Online Protection PowerShell in an 
 ## PARAMETERS
 
 ### -AzureADAuthorizationEndpointUri
-The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. You use this parameter with multi-factor authentication (MFA) and federated authentication. The following PowerShell environments and related values are supported:
+The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint Uri that can issue OAuth2 access tokens. The following PowerShell environments and related values are supported:
 
 - Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter.
 - Security & Compliance Center PowerShell in Office 365 Germany: `https://login.microsoftonline.de/common`
 - Security & Compliance Center PowerShell in Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/common`
+
+This parameter is required in Office 365 Germany, Microsoft 365 GCC High, or Microsoft 365 DoD organizations when you don't use the UserPrincipalName parameter.
 
 ```yaml
 Type: String
@@ -100,7 +102,7 @@ Accept wildcard characters: False
 ### -ConnectionUri
 The ConnectionUri parameter specifies the connection endpoint for the remote PowerShell session. The following PowerShell environments and related values are supported:
 
-- Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://ps.compliance.protection.outlook.com/powershell-liveid/`, but that's also the default value, so you don't need to use this parameter for these environments.
+- Security & Compliance Center PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://ps.compliance.protection.outlook.com/powershell-liveid/`, but that's also the default value, so you don't need to use this parameter in those environments.
 - Security & Compliance Center PowerShell in Office 365 Germany: `https://ps.compliance.protection.outlook.de/PowerShell-LiveID`
 - Security & Compliance Center PowerShell in Microsoft 365 GCC High: `https://ps.compliance.protection.office365.us/powershell-liveid/`
 - Security & Compliance Center PowerShell in Microsoft 365 DoD: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`
@@ -120,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions. You don't use this parameter for accounts with multi-factor authentication (MFA).
 
 A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
@@ -176,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip the first screen in authentication prompt.
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip the first screen in authentication prompt, and is used for accounts with MFA.
 
 ```yaml
 Type: String

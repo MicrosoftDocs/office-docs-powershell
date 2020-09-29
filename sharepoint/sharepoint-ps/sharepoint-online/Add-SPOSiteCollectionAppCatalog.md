@@ -24,7 +24,10 @@ Add-SPOSiteCollectionAppCatalog -Site <SpoSitePipeBind> [-WhatIf] [-Confirm] [<C
 
 ## DESCRIPTION
 
-Use this cmdlet to add a site collection scoped app catalog to the specified site.
+Use this cmdlet to add a site collection scoped app catalog to the specified site. To run this cmdlet user must have the following roles:
+* SharePoint Admin role or Global Administrator role
+* Site Collection Administrator of the tenant app catalog
+* Site Collection Administrator of the site collection of the site specified in the `-Site` parameter
 
 ## EXAMPLES
 

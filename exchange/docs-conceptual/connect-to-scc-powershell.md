@@ -5,7 +5,7 @@ manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: exchange-online
+ms.service: exchange-powershell
 ms.reviewer: navgupta
 localization_priority: Priority
 ms.collection: Strat_EX_Admin
@@ -27,11 +27,11 @@ To use the older Exchange Online Remote PowerShell Module to connect to Security
 
 ## What do you need to know before you begin?
 
-- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module). The rest of the instructions in the topic assume that you've already installed the module.
 
 ## Connect to Security & Compliance PowerShell using MFA
 
-If you account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Security & Compliance Center PowerShell without using MFA](#connect-to-security--compliance-center-powershell-without-using-mfa) section.
+If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Security & Compliance Center PowerShell without using MFA](#connect-to-security--compliance-center-powershell-without-using-mfa) section.
 
 1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
@@ -39,14 +39,17 @@ If you account uses multi-factor authentication, use the steps in this section. 
    Import-Module ExchangeOnlineManagement
    ```
 
+   **Note**: If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
+
 2. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>]
+   Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>]
    ```
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
-   - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the parameter descriptions in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
+   - The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
+   - When you use the _UserPrincipalName_ parameter, you don't need to use the 
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**.
 
@@ -57,19 +60,20 @@ If you account uses multi-factor authentication, use the steps in this section. 
    **This example connects to Security & Compliance Center PowerShell in an Office 365 Germany organization**.
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName lukas@fabrikam.de -ConnectionUri https://ps.compliance.protection.outlook.de/PowerShell-LiveID -AzureADAuthorizationEndPointUri https://login.microsoftonline.de/common
+   Connect-IPPSSession -UserPrincipalName lukas@fabrikam.de -ConnectionUri https://ps.compliance.protection.outlook.de/PowerShell-LiveID
    ```
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**.
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName laura@blueyonderairlines.us -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common
+   Connect-IPPSSession -UserPrincipalName -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/
    ```
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 DoD organization**.
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName julia@adatum.mil -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common
+   Connect-IPPSSession -UserPrincipalName -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/
+   ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
 
@@ -90,6 +94,8 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Import-Module ExchangeOnlineManagement
    ```
 
+   **Note**: If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
+
 2. Run the following command:
 
    ```powershell
@@ -101,10 +107,10 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 3. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ConnectionUri <URL>
+   Connect-IPPSSession -Credential $UserCredential [-ConnectionUri <URL>] [-AzureADAuthorizationEndpointUri <URL>]
    ```
 
-   The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
+   The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the parameter descriptions in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**.
 
@@ -115,19 +121,19 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    **This example connects to Security & Compliance Center PowerShell in an Office 365 Germany organization**.
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.compliance.protection.outlook.de/
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.compliance.protection.outlook.de/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.de/common
    ```
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft GCC High organization**.
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common
    ```
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 DoD organization**.
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common
    ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline).
