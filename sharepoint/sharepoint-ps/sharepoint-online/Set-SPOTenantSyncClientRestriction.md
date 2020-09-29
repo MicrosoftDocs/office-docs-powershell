@@ -38,10 +38,6 @@ Set-SPOTenantSyncClientRestriction [-ExcludedFileExtensions <String>] [<CommonPa
 
 ### GrooveBlockOptions
 
-> [!NOTE]
-> GrooveBlockOptions is planned to be deprecated. 
-> Please refrain from using the parameter.
-
 ```powershell
 Set-SPOTenantSyncClientRestriction [-GrooveBlockOption <String>] [<CommonParameters>]
 ```
