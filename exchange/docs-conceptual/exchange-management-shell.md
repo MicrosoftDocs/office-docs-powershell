@@ -42,8 +42,8 @@ A benefit of remote PowerShell is that you can use Windows PowerShell on a local
 
 For details, see the following topics:
 
-- [Exchange 2019 system requirements](https://docs.microsoft.com/Exchange/plan-and-deploy/system-requirements?view=exchserver-2019)
-- [Exchange 2016 system requirements](https://docs.microsoft.com/Exchange/plan-and-deploy/system-requirements?view=exchserver-2016)
+- [Exchange 2019 system requirements](https://docs.microsoft.com/Exchange/plan-and-deploy/system-requirements?view=exchserver-2019&preserve-view=true)
+- [Exchange 2016 system requirements](https://docs.microsoft.com/Exchange/plan-and-deploy/system-requirements?view=exchserver-2016&preserve-view=true)
 - [Exchange 2013 system requirements](https://docs.microsoft.com/exchange/exchange-2013-system-requirements-exchange-2013-help)
 - [Exchange 2010 system requirements](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/aa996719(v=exchg.141))
 
