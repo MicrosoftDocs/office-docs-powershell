@@ -38,6 +38,10 @@ Set-SPOTenantSyncClientRestriction [-ExcludedFileExtensions <String>] [<CommonPa
 
 ### GrooveBlockOptions
 
+> [!NOTE]
+> GrooveBlockOptions is planned to be deprecated. 
+> Please refrain from using the parameter.
+
 ```powershell
 Set-SPOTenantSyncClientRestriction [-GrooveBlockOption <String>] [<CommonParameters>]
 ```
@@ -260,6 +264,10 @@ Accept wildcard characters: False
 ```
 
 ### -GrooveBlockOption
+
+> [!NOTE]
+> GrooveBlockOptions is planned to be deprecated. 
+> Please refrain from using the parameter.
 
 Controls whether or not a tenant's users can sync OneDrive for Business libraries with the old OneDrive for Business sync client.
 The valid values are **OptOut, HardOptin, and SoftOptin**.
