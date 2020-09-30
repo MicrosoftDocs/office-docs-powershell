@@ -68,6 +68,7 @@ All other policy properties will be left as previously assigned.
 
 ### -AllowGiphy
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
+Note: [Optional Connected Experiences](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for Giphys to be allowed.
 
 ```yaml
 Type: Boolean
