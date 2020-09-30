@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: ITPro
 ms.topic: article
-ms.service: exchange-online
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid: 5bcc46d3-8a07-4e9f-b1b0-e4cb0b0afc12
 description: "Admins can learn how to use PowerShell to find the permissions required to run any cmdlet in Exchange Server PowerShell or Exchange Online PowerShell."
