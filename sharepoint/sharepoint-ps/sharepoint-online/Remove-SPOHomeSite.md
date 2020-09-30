@@ -34,7 +34,7 @@ Use this cmdlet to remove the current SharePoint Online Home Site setting.
 Remove-SPOHomeSite
 ```
 
-This example removes the current SharerPoint Online Home Site setting.
+This example removes the current SharePoint Online Home Site setting.
 
 ## PARAMETERS
 
