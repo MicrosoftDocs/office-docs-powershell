@@ -48,7 +48,7 @@ When moving a user to or from Office 365 (either Skype for Business Online or Te
 - Moving a user to Teams is achieved by specifying the MoveToTeams switch. This performs the same operations as a move to Skype for Business Online (without the specifying -MoveToTeams) and also performs the following actions:
 
     - TeamsUpgradePolicy with Mode=TeamsOnly is assigned to the online user account.
-    - Meeting migration is triggered to move meetings to Teams instead of Skype for Business Online. This functionality is currently available to TAP customers only. For customers not in TAP, meetings are always migrated to Skype for Business Online.
+    - Meeting migration is triggered to move meetings to Teams instead of Skype for Business Online.
 
 - Contacts are moved in all cases, unless -force is specified.
 
