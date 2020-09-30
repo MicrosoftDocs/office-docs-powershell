@@ -163,7 +163,7 @@
     {
       "source_path": "sharepoint/docs-conceptual/overview.md",
       "redirect_url": "https://docs.microsoft.com/powershell/sharepoint",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/active-directory/Add-ADPermission.md",
@@ -6547,7 +6547,7 @@
     },
     {
       "source_path": "exchange/docs-conceptual/exchange-server/use-update-exchangehelp.md",
-      "redirect_url": "https://docs.microsoft.com/powershell/exchange/use-update-exchangehelp.md",
+      "redirect_url": "https://docs.microsoft.com/powershell/exchange/use-update-exchangehelp",
       "redirect_document_id": true
     },
     {

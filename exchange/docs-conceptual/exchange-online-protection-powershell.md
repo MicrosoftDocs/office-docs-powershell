@@ -6,7 +6,7 @@ manager: dansimp
 ms.date: 2/20/2018
 ms.audience: Admin
 ms.topic: article
-ms.service: eop
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid: f7918a88-774a-405e-945b-bc2f5ee9f748
 description: "Learn about using PowerShell in Exchange Online Protection"

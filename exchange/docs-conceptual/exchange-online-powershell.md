@@ -6,7 +6,7 @@ manager: dansimp
 ms.date: 2/20/2018
 ms.audience: Admin
 ms.topic: article
-ms.service: exchange-online
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid: 1cb603b0-2961-4afe-b879-b048fe0f64a2
 search.appverid: MET150

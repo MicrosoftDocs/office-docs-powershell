@@ -71,6 +71,7 @@ Accept wildcard characters: False
 ### -WebTemplate
 
 Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template.
+For more information, visit [SharePoint site design and site script overview](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview).
 
 ```yaml
 Type: String
