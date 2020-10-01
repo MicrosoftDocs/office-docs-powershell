@@ -5,7 +5,7 @@ manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: exchange-online
+ms.service: exchange-powershell
 ms.reviewer: navgupta
 localization_priority: Priority
 ms.collection: Strat_EX_Admin
@@ -44,8 +44,7 @@ If your account uses multi-factor authentication, use the steps in this section.
    Import-Module ExchangeOnlineManagement
    ```
 
-   > [!NOTE]
-   > If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written. If you haven't already installed the module, you can install and load the latest public version of the module in one step by running the command: `Import-Module -Name ExchangeOnlineManagement`.
+   **Note**: If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
 
 2. The command that you need to run uses the following syntax:
 
@@ -106,8 +105,7 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    Import-Module ExchangeOnlineManagement
    ```
 
-   > [!NOTE]
-   > If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written. If you haven't already installed the module, you can install and load the latest public version of the module in one step by running the command: `Import-Module -Name ExchangeOnlineManagement`.
+   **Note**: If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
 
 2. Run the following command:
 

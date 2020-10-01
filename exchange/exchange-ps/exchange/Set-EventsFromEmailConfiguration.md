@@ -107,13 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventReservationProcessingLevel
-The EventReservationProcessingLevel parameter specifies whether event reservations are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
-
-- Disabled: Do not discover event reservations from messages.
-
-- Email: Discover event reservations from messages, but don't automatically add them to the user's calendar.
-
-- Calendar: Discover event reservations from messages and automatically add them to the user's calendar. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String
@@ -151,13 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -FoodEstablishmentReservationProcessingLevel
-The FoodEstablishmentProcessingLevel parameter specifies whether dining reservations are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
-
-- Disabled: Do not discover restaurant reservations from messages.
-
-- Email: Discover restaurant reservations from messages however do not automatically add these to the user's calendar.
-
-- Calendar: Discover restaurant reservations from messages and automatically add them to the user's calendar. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String
@@ -173,13 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -InvoiceProcessingLevel
-The InvoiceProcessingLevel parameter specifies whether invoices are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
-
-- Disabled: Do not discover invoices from messages.
-
-- Email: Discover invoices from messages however do not automatically add these to the user's calendar.
-
-- Calendar: Discover invoices from messages and automatically add them to the user's calendar. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String
@@ -277,13 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceReservationProcessingLevel
-The ServiceReservationProcessingLevel parameter specifies whether service reservations are automatically discovered from messages, and whether these reservations are automatically added to the user's calendar. Valid values are:
-
-- Disabled: Do not discover service reservations from messages.
-
-- Email: Discover service reservations from messages, but don't automatically add them to the user's calendar.
-
-- Calendar: Discover service reservations from messages and automatically add them to the user's calendar. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: String

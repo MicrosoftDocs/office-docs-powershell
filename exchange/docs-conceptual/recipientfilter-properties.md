@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: ITPro
 ms.topic: article
-ms.prod: exchange-server-itpro
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid: cf78aca5-6699-485c-9b15-e0adba252176
 description: "Learn about the recipient properties that you can use with the RecipientFilter parameter in Exchange Server and Exchange Online cmdlets."
