@@ -56,7 +56,7 @@ Gets the status of the site content give on the variable $siteurl
 
 ### -GroupName
 
-PARAMVALUE: String
+Name of the group being moved.
 
 ```yaml
 Type: String
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -SourceSiteUrl
 
-PARAMVALUE: String
+Specifies the source URL of the site collection.
 
 ```yaml
 Type: String
