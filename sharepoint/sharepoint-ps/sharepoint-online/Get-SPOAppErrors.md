@@ -48,6 +48,14 @@ Get-SPOAppErrors -ProductId ba51729b-e017-409d-681a-66f1dd18f0f4
 
 This example returns a collection of monitoring error message(s) for application whose GUID is ba51729b-e017-409d-681a-66f1dd18f0f4.
 
+### ------------ Example 2 --------------------
+
+```powershell
+Get-SPOAppErrors -ProductId ba51729b-e017-409d-681a-66f1dd18f0f4 -StartTimeInUtc (Get-Date).AddHours(-1).ToUniversalTime()
+```
+
+This example returns a collection of monitoring error message(s) for application whose GUID is ba51729b-e017-409d-681a-66f1dd18f0f4 in the last hour.
+
 ## PARAMETERS
 
 ### -EndTimeInUtc
@@ -86,7 +94,7 @@ Accept wildcard characters: False
 
 ### -StartTimeInUtc
 
-Specifies the start time in UTC to search for monitoring errors (for example, 01032011:12:00). If no start time is given, the default value 72 hours before the current time is used.
+Specifies the start time in UTC to search for monitoring errors. If no start time is given, the default value 72 hours before the current time is used.
 
 ```yaml
 Type: DateTime
