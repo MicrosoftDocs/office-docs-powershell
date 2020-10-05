@@ -133,7 +133,7 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 5. In the **Select permissions** section that appears on the page, expand **Exchange** and select **Exchange.ManageAsApp**
 
-   ![Select Exchange API permssions](media/app-only-auth-exchange-manageasapp.png)
+   ![Select Exchange.ManageAsApp permssions](media/app-only-auth-exchange-manageasapp.png)
 
    When you're finished, click **Add permissions**.
 
