@@ -137,7 +137,7 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
    When you're finished, click **Add permissions**.
 
-6. Back on the **Configured permissions** page that appears, click **Grant admin consent for <\tenant name\>**, and select **Yes** in the dialog that appears.
+6. Back on the **Configured permissions** page that appears, click **Grant admin consent for \<tenant name\>**, and select **Yes** in the dialog that appears.
 
 7. Close the flyout when you're finished.
 
