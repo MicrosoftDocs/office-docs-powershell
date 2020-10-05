@@ -105,7 +105,7 @@ If you encounter problems, check the [required permssions](https://docs.microsof
 
    - **Name**: Enter something descriptive.
 
-   - **Supported account types**: Select **Accounts in this organizational directory only (Microsoft)**.
+   - **Supported account types**: Select **Accounts in this organizational directory only (/<YourOrganizationName/> only - Single tenant)**.
 
    - **Redirect URI (optional)**: In the first box, select **Web**. In the second box, enter the URI where the access token is sent.
 
