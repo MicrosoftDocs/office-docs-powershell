@@ -108,20 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
+The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. A valid value is a mailbox.
 
-- A mailbox
-
-- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+To specify the mailbox, you can use any value that uniquely identifies it. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -140,21 +133,16 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocationException
-The AddExchangeLocationException parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
+The AddExchangeLocationException parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. A valid value is a mailbox.
 
-- A mailbox
-
-- A distribution group or mail-enabled security group
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+To specify the mailbox, you can use any value that uniquely identifies it. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Email address
-
 - GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
