@@ -49,7 +49,7 @@ If your account uses multi-factor authentication, use the steps in this section.
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
    - The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
-   - When you use the _UserPrincipalName_ parameter, you don't need to use the 
+   - When you use the _UserPrincipalName_ parameter, you don't need to use the _AzureADAuthorizationEndpointUri_ parameter in environments that would otherwise require it.
 
    **This example connects to Security & Compliance Center PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**.
 
