@@ -13,45 +13,33 @@ ms.reviewer:
 # Set-CsTenantMigrationConfiguration
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Used to enable or disable Meeting Migration Service (MMS).
 
 ## SYNTAX
 
-### Identity (Default)
 ```
-Set-CsTenantMigrationConfiguration [-Tenant <Guid>] [-MeetingMigrationEnabled <Boolean>]
- [-ACPMeetingMigrationTriggerEnabled <Boolean>]
- [-MeetingMigrationSourceMeetingTypes <MeetingMigrationSourceMeetingTypes>]
- [-MeetingMigrationTargetMeetingTypes <MeetingMigrationTargetMeetingTypes>] [[-Identity] <XdsIdentity>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsTenantMigrationConfiguration [-Tenant <Guid>] [-MeetingMigrationEnabled <Boolean>]
- [-ACPMeetingMigrationTriggerEnabled <Boolean>]
- [-MeetingMigrationSourceMeetingTypes <MeetingMigrationSourceMeetingTypes>]
- [-MeetingMigrationTargetMeetingTypes <MeetingMigrationTargetMeetingTypes>] [-Instance <PSObject>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTenantMigrationConfiguration [-WhatIf] [-MeetingMigrationEnabled <Object>] [-Confirm]
+ [[-Identity] <Object>] [-Tenant <Object>] [-Force] [-Instance <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Used to enable or disable Meeting Migration Service (MMS).
+For more information, see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Set-CsTenantMigrationConfiguration -MeetingMigrationEnabled $false
 ```
 
-Insert descriptive text for example 1.
+This example disables MMS in the organization.
 
 
 ## PARAMETERS
 
 ### -Confirm
-PARAMVALUE: SwitchParameter
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -67,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-PARAMVALUE: XdsIdentity
+Unique identifier for the Migration Configuration.
 
 ```yaml
 Type: XdsIdentity
@@ -99,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-PARAMVALUE: PSObject
+The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values.
+You can retrieve this object reference by calling the `Get-CsTenantMigrationConfiguration` cmdlet.
 
 ```yaml
 Type: PSObject
@@ -115,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingMigrationEnabled
-PARAMVALUE: $true | $false
+Set this to false to disable the Meeting Migration Service.
 
 ```yaml
 Type: Boolean
@@ -131,7 +120,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+Globally unique identifier (GUID) of the tenant account whose Migration Configurations are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 ```yaml
 Type: Guid
@@ -147,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+Shows what would happen if the cmdlet runs.
 
 ```yaml
 Type: SwitchParameter
@@ -162,14 +157,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ACPMeetingMigrationTriggerEnabled
-{{Fill ACPMeetingMigrationTriggerEnabled Description}}
+### -AsJob
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs]( https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
