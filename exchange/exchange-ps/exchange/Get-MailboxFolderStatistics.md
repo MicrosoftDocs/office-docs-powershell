@@ -208,9 +208,9 @@ The FolderScope parameter specifies the scope of the search by folder type. Vali
 - Inbox
 - JunkEmail
 - Journal
-- LegacyArchiveJournals: Exchange 2013 only.
+- LegacyArchiveJournals: Exchange 2013 or later.
 - ManagedCustomFolder: Returns output for all managed custom folders.
-- NonIpmRoot: Exchange 2013 only.
+- NonIpmRoot: Exchange 2013 or later.
 - Notes
 - Outbox
 - Personal
