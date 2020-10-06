@@ -88,7 +88,7 @@ This example retrieves information about users in the Marketing OU.
 
 ### Example 4
 ```powershell
-Get-User -Filter "Title -like '*Manager'"
+Get-User -Filter "Title -like 'Manager*'"
 ```
 
 This example uses the Filter parameter to retrieve information about all users that have the word Manager at the end of their title.
