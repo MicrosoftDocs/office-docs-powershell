@@ -17,9 +17,16 @@ Used to enable or disable Meeting Migration Service (MMS).
 
 ## SYNTAX
 
+### Identity (Default)
 ```
 Set-CsTenantMigrationConfiguration [-WhatIf] [-MeetingMigrationEnabled <Object>] [-Confirm]
  [[-Identity] <Object>] [-Tenant <Object>] [-Force] [-Instance <Object>] [-AsJob]
+```
+
+### Instance
+```
+Set-CsTenantMigrationConfiguration [-WhatIf] [-MeetingMigrationEnabled <Object>] [-Confirm]
+[-Tenant <Object>] [-Force] [-Instance <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
