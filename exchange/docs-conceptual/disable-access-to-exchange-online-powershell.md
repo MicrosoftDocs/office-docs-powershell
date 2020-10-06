@@ -69,7 +69,7 @@ $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false
 This example removes access to Exchange Online PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
 
 ```powershell
-$DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
+$DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like 'Sales Associate*')"
 ```
 
 ```powershell

@@ -93,7 +93,7 @@ This example creates the address list MyAddressList2 that includes mailboxes tha
 
 ### Example 3
 ```powershell
-New-AddressList -Name "AL_AgencyB" -RecipientFilter "((RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -like '*AgencyB*'))"
+New-AddressList -Name "AL_AgencyB" -RecipientFilter "((RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -like 'AgencyB*'))"
 ```
 
 This example creates the address list AL\_AgencyB that includes mailboxes that have the value of the CustomAttribute15 parameter contains AgencyB.

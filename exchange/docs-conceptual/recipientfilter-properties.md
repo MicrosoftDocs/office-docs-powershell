@@ -40,7 +40,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - You typically use the object's name for properties that require a valid object value (for example, a mailbox, a distribution group, or an email address policy, but the property might also accept the object's distinguished name (DN) or globally unique identifier (GUID). To find the object's DN or GUID, use the **Get-** cmdlet that corresponds to the object's type (for example, `Get-EmailAddressPolicy | Format-List Name,DistinguishedName,GUID`).
 
-- Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like '*abc'"`).
+- Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`).
 
 - The Value column in the table describes the acceptable values for the *filter*, not necessarily for the property itself. For example, a property might obviously contain a date or numeric value, but when you use that property in a filter, it might be treated like a text string (no value check, and wildcards are supported).
 
