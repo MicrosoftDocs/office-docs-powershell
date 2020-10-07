@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewpolicyv2
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-SupervisoryReviewPolicyV2
 schema: 2.0.0
 author: chrisda
@@ -58,7 +58,7 @@ The Identity parameter specifies the supervisory review policy that you want to 
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
