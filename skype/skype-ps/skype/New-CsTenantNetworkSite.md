@@ -20,7 +20,7 @@ As an Admin, you can use the Windows PowerShell command, New-CsTenantNetworkSite
 ### Identity (Default)
 ```
 New-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
- [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-OnlineVoiceRoutingPolicy <String>]
+ [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>] [-OnlineVoiceRoutingPolicy <String>]
  [-SiteAddress <String>] [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -29,7 +29,7 @@ New-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-Networ
 ```
 New-CsTenantNetworkSite [-Tenant <System.Guid>] -NetworkSiteID <String> [-Description <String>]
  [-NetworkRegionID <String>] [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>]
- [-OnlineVoiceRoutingPolicy <String>] [-SiteAddress <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>] [-OnlineVoiceRoutingPolicy <String>] [-SiteAddress <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -95,6 +95,36 @@ This parameter determines whether the current site is enabled for location based
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmergencyCallRoutingPolicy
+This parameter is used to assign a custom emergency call routing policy to a network site. For more information see [Assign a custom emergency call routing policy to a network site](https://docs.microsoft.com/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmergencyCallingPolicy
+This parameter is used to assign a custom emergency calling policy to a network site. For more information see [Assign a custom emergency calling policy to a network site](https://docs.microsoft.com/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

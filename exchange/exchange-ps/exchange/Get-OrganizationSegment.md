@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-organizationsegment
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-OrganizationSegment
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-OrganizationSegment
@@ -67,7 +66,7 @@ The Identity parameter specifies the organization segment that you want to view.
 Type: PolicyIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 0

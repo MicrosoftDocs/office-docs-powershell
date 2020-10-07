@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-activityalert
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-ActivityAlert
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-ActivityAlert
@@ -78,7 +77,7 @@ The Identity parameter specifies the activity alert that you want to modify. You
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -106,7 +105,7 @@ The Category parameter specifies a category for the activity alert. Valid values
 Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -122,7 +121,7 @@ The Condition parameter specifies filter conditions for event aggregation.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -142,7 +141,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -158,7 +157,7 @@ The Description parameter specifies an optional description for the activity ale
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -178,7 +177,7 @@ The Disabled parameter specifies whether the activity alert is enabled or disabl
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -194,7 +193,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -212,7 +211,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -230,7 +229,7 @@ You can only use this parameter on activity alerts that have the Type property v
 Type: Double
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -246,7 +245,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -266,7 +265,7 @@ To modify the existing list of recipients, see the Examples section.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -288,7 +287,7 @@ For the syntax that you use to modify an existing list of Operations values, see
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -352,8 +351,6 @@ The RecordType parameter specifies a record type label for the activity alert. V
 
 - SkypeForBusinessUsersBlocked
 
-- Sway
-
 - ThreatIntelligence
 
 - ThreatIntelligenceAtpContent
@@ -370,7 +367,7 @@ You can't use this parameter when the value of the Type parameter is ElevationOf
 Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -390,7 +387,7 @@ The ScopeLevel parameter specifies the scope for activity alerts that use the Ty
 Type: AlertScopeLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -414,7 +411,7 @@ The Severity parameter specifies a severity level for the activity alert. Valid 
 Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -432,7 +429,7 @@ You can only use this parameter on activity alerts that have the Type property v
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -450,7 +447,7 @@ You can only use this parameter on activity alerts that have the Type property v
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -476,7 +473,7 @@ For the syntax that you use to modify an existing list of UserId values, see the
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -492,7 +489,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

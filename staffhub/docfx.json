@@ -21,7 +21,8 @@
         "dest": "staffhub/staffhub-ps"
       },
       {
-      "files": ["**/*.md"],
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
       "src": "staffhub-ps",
       "version": "staffhub-ps",
       "dest": "module"

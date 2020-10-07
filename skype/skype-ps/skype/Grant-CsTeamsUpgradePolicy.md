@@ -22,7 +22,7 @@ Grant-CsTeamsUpgradePolicy [-Identity] <UserIdParameter>] [-PolicyName] <string>
 ```
 
 ## DESCRIPTION
-TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. As an organization with Skype for Business starts to adopt Teams, administrators can manage the user experience in their organization using the concept of coexistence "mode".  Mode defines in which client incoming chats and calls land as well as in what service (Teams or Skype for Business) new meetings are scheduled in. Mode also governs what functionality is avaiable in the Teams client.  Finally, prior to upgrading to TeamsOnly mode administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade. 
+TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. As an organization with Skype for Business starts to adopt Teams, administrators can manage the user experience in their organization using the concept of coexistence "mode".  Mode defines in which client incoming chats and calls land as well as in what service (Teams or Skype for Business) new meetings are scheduled in. Mode also governs what functionality is available in the Teams client. Finally, prior to upgrading to TeamsOnly mode administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade. 
 
 This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization. 
 
@@ -41,6 +41,12 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
 |UpgradeToTeams|TeamsOnly|False|Use this mode to upgrade users to Teams and to prevent chat, calling, and meeting scheduling in Skype for Business.|
 |Global|Islands|False||
 
+
+>[!IMPORTANT]
+>TeamsUpgradePolicy can be assigned to any Teams user, whether that user hase an on-premises account in Skype for Business Server or not. However, **TeamsOnly mode can only be assigned to a user who is already homed in Skype for Business Online**. This is because interop with Skype for Business users and federation as well as Microsoft 365 Phone System functionality are only possible if the user is homed in Skype for Business Online. In addition, you cannot assign TeamsOnly mode as the tenant-wide default if you have any Skype for Business on-premises deployment (which is detected by presence of a lyncdiscover DNS record that points to a location other than Office 365. To make these users TeamsOnly you must first move these users individually to the cloud using `Move-CsUser`.  Once all users have been moved to the cloud, you can [disable hybrid to complete migration to the cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation-disabling-hybrid) and then apply TeamsOnly mode at the tenant level to ensure future users are TeamsOnly by default.
+
+
+
 **NOTES:** 
 - TeamsUpgradePolicy is available in both Office 365 and in on-premises versions of Skype for Business Server, but there are differences: 
     - In Office 365, admins can specify both coexistence mode and whether to trigger notifications of pending upgrade.  
@@ -51,7 +57,7 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
 - In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet available. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
 - When granting a user a policy with mode=TeamsOnly or mode=SfBWithTeamsCollabAndMeetings, by default, meetings organized by that user will be migrated to Teams. For details, see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
-**IMPORTANT**
+
 When users are in any of the Skype for Business modes (SfBOnly, SfBWithTeamsCollab, SfBWithTeamsCollabAndMeetings), calling and chat functionality in the Teams app are disabled (but chat in the context of a Teams meeting is still allowed). Similarly, when users are in the SfBOnly or SfBWithTeamsCollab modes, meeting scheduling is disabled. For more details, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 The `Grant-CsTeamsUpgradePolicy` cmdlet checks the configuration of the corresponding settings in TeamsMessagingPolicy, TeamsCallingPolicy, and TeamsMeetingPolicy to determine if those settings would be superceded by TeamsUpgradePolicy and if so, an informational message is provided in PowerShell.  It is not necessary to set these other policy settings. This is for informational purposes only. Below is an example of what the PowerShell warning looks like:

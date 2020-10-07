@@ -54,7 +54,7 @@ New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName 
 In this example, the batch of users is read from a text file containing user object IDs (guids).
 
 ```
-$user_ids = Get-Content .\users_ids.txt
+$users_ids = Get-Content .\users_ids.txt
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Batch assign Kiosk"
 ```
 

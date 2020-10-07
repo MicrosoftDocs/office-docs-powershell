@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Sets the current configuration values for Idle session sign-out.
 
 ## SYNTAX
 

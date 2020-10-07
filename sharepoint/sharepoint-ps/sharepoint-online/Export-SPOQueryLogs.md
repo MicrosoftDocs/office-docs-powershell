@@ -50,7 +50,7 @@ Example 1 exports the query log for a user who has the e-mail address user1@cont
 
 ### ------------ Example 2 --------------------
 
-````powershell
+```powershell
 Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com -StartTime "2018-10-21" -OutputFolder "c:\users\contosoadmin\Documents"
 ```
 

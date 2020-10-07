@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-OwaMailboxPolicy
@@ -87,6 +86,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-PlacesEnabled <Boolean>]
  [-PremiumClientEnabled <Boolean>]
  [-PrintWithoutDownloadEnabled <Boolean>]
+ [-ProjectMocaEnabled <Boolean>]
  [-PublicFoldersEnabled <Boolean>]
  [-RecoverDeletedItemsEnabled <Boolean>]
  [-ReferenceAttachmentsEnabled <Boolean>]
@@ -712,6 +712,8 @@ Accept wildcard characters: False
 ### -DisableFacebook
 This parameter is available only in the cloud-based service.
 
+Facebook integration is no longer available. For more information, see [Facebook Connect is no longer available](https://support.microsoft.com/office/facebook-connect-is-no-longer-available-f31c8107-7b5a-4e3d-8a22-e506dacb6db6).
+
 The DisableFacebook switch specifies whether users can synchronize their Facebook contacts to their Contacts folder in Outlook on the web. By default, Facebook integration is enabled.
 
 - To disable Facebook integration, use this switch without a value.
@@ -816,7 +818,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalSPMySiteHostURL
-The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, https://sp01.contoso.com).
+The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, `https://sp01.contoso.com`).
 
 This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
 
@@ -1136,7 +1138,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalSPMySiteHostURL
-The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, https://sp01.contoso.com).
+The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, `https://sp01.contoso.com`).
 
 This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
 
@@ -1578,9 +1580,33 @@ This parameter is available only in the cloud-based service.
 
 The PrintWithoutDownloadEnabled specifies whether to allow printing of supported files without downloading the attachment in Outlook on the web. Valid values are:
 
-- $true: Supported files can be printed without being downloaded in Outlook web app. This is the default value.
+- $true: Supported files can be printed without being downloaded in Outlook on the web. This is the default value.
 
-- $false: Supported files must be downloaded before they can be printed in Outlook web app.
+- $false: Supported files must be downloaded before they can be printed in Outlook on the web.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProjectMocaEnabled
+**Note**: The feature that's associated with this parameter is currently in Preview, is not available to all organizations, and is subject to change.
+
+This parameter is available only in the cloud-based service.
+
+The ProjectMocaEnabled parameter enables or disables access to Project Moca in Outlook on the web. Valid values are:
+
+- $true: Access to Project Moca is enabled in Outlook on the web.
+
+- $false: Access to Project Moca is disabled in Outlook on the web. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1864,7 +1890,7 @@ Accept wildcard characters: False
 ### -SkipCreateUnifiedGroupCustomSharepointClassification
 This parameter is available only in the cloud-based service.
 
-The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Microsoft 365 Groups in Outlook web app. Valid values are:
+The SkipCreateUnifiedGroupCustomSharepointClassification parameter specifies whether to skip a custom SharePoint page during the creation of Microsoft 365 Groups in Outlook on the web. Valid values are:
 
 - $true: The custom SharePoint page is skipped when a user creates a Microsoft 365 Group in Outlook on the web. This is the default value.
 

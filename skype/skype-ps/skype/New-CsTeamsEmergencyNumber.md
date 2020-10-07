@@ -22,7 +22,7 @@ New-CsTeamsEmergencyNumber -EmergencyDialString <String> [-EmergencyDialMask <St
 ```
 
 ## DESCRIPTION
- This cmdlet supports to create multiple Teams emergency numbers. The Maximum limitation is 10
+ This cmdlet supports to create multiple Teams emergency numbers.
 
 ## EXAMPLES
 

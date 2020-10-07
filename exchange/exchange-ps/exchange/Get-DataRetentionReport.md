@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dataretentionreport
-applicable: Exchange Online, Office 365 Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-DataRetentionReport
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Get-DataRetentionReport
@@ -17,7 +16,7 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Get-DataRetentionReport cmdlet to view information about data retention in the Security & Compliance Center.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -67,7 +66,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -83,7 +82,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -99,7 +98,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -117,7 +116,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named

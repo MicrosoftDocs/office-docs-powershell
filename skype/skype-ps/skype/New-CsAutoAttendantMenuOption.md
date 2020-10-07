@@ -37,7 +37,7 @@ This example creates a menu option to call the operator when the 0 key is presse
 ### -------------------------- Example 2 --------------------------
 ```
 $troubleShootObjectId = (Get-CsOnlineUser troubleShoot@contoso.com).ObjectId
-$troubleShootEntity = New-CsAutoAttendantCallableEntity -Identity $troubleShootObjectId -Type AApplicationEndpoint
+$troubleShootEntity = New-CsAutoAttendantCallableEntity -Identity $troubleShootObjectId -Type ApplicationEndpoint
 $menuOption = New-CsAutoAttendantMenuOption -Action TransferCallToTarget -DtmfResponse Tone1 -VoiceResponses "Sales" -CallTarget $troubleShootEntity
 ```
 
