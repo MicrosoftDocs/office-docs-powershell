@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Enable-App
@@ -29,7 +28,7 @@ Enable-App [-Identity] <AppIdParameter> [-Confirm] [-DomainController <Fqdn>] [-
 ## DESCRIPTION
 The Enable-App cmdlet requires that the specified app has already been installed (for example, that it has been installed with the New-App cmdlet, or that it's a default app for Microsoft Outlook).
 
-For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://docs.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of Office 365 add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
+For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://docs.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

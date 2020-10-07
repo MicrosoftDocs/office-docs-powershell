@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Export-ExchangeCertificate
@@ -221,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-The FileName parameter specifies the name and path of the exported certificate or certificate request file. You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>). If the value contains spaces, enclose the value in quotation marks (").
+The FileName parameter specifies the name and path of the exported certificate or certificate request file. You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (`\\<Server>\<Share>`). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

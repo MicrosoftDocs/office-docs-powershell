@@ -13,9 +13,7 @@ ms.reviewer:
 # Get-CsTeamsMessagingPolicy
 
 ## SYNOPSIS
-Get-CsTeamsMessagingPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]
-
-Get-CsTeamsMessagingPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages.
 
 ## SYNTAX
 

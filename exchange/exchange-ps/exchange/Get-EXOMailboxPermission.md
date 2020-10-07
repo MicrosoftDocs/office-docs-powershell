@@ -8,13 +8,12 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer: navgupta
-monikerRange: "exchonline-ps"
 ---
 
 # Get-EXOMailboxPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 Use the Get-EXOMailboxPermission cmdlet to retrieve permissions on a mailbox.
 
@@ -65,7 +64,7 @@ FullAccess is inherited by NT AUTHORITY\SYSTEM and ReadPermission is inherited b
 
 FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are inherited by Exchange Trusted Subsystem and ReadPermission is inherited by Managed Availability Servers.
 
-By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Office 365).
+By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Microsoft 365).
 
 ## EXAMPLES
 

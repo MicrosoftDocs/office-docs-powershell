@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Set-DistributionGroup
@@ -1537,7 +1536,7 @@ Accept wildcard characters: False
 ### -ResetMigrationToUnifiedGroup
 This parameter is available only in the cloud-based service.
 
-The ResetMigrationToUnifiedGroup switch specifies whether you want to reset the flag that indicates the migration of the distribution group to an Office 365 Group is in progress. You don't need to specify a value with this switch.
+The ResetMigrationToUnifiedGroup switch specifies whether you want to reset the flag that indicates the migration of the distribution group to a Microsoft 365 Group is in progress. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

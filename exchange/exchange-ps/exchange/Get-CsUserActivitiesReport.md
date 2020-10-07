@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-CsUserActivitiesReport
@@ -15,11 +14,11 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-This cmdlet was deprecated in January, 2018. For information about the available replacement Microsoft Graph reports in Office 365, see the subtopics of [Working with Office 365 usage reports in Microsoft Graph](https://go.microsoft.com/fwlink/p/?LinkID=865135).
+This cmdlet was deprecated in January, 2018. For information about the available replacement Microsoft Graph reports in Microsoft 365, see the subtopics of [Working with Microsoft 365 usage reports in Microsoft Graph](https://docs.microsoft.com/graph/api/resources/report).
 
 Use the Get-CsUserActivitiesReport cmdlet to view number and type of activities that a use participated in while connected to Skype for Business Online in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

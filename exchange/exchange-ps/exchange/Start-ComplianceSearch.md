@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/start-compliancesearch
-applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 title: Start-ComplianceSearch
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
 # Start-ComplianceSearch
@@ -15,7 +14,7 @@ monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Start-ComplianceSearch cmdlet to start stopped, completed or not started compliance searches in Exchange Server 2016 and in the Office 365 Security & Compliance Center.
+Use the Start-ComplianceSearch cmdlet to start stopped, completed or not started compliance searches in Exchange Server 2016 and in the Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 This cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group, and not to the Organization Management role group.
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -62,7 +61,7 @@ You can find these values by running the command Get-ComplianceSearch | Format-T
 Type: ComplianceSearchIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: True
 Position: 1
@@ -82,7 +81,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -98,7 +97,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -114,7 +113,7 @@ The RetryOnError switch specifies whether to retry the search on any items that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -124,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter doesn't work in the Office 365 Security & Compliance Center.
+The WhatIf parameter doesn't work in the Security & Compliance Center.
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -132,7 +131,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named

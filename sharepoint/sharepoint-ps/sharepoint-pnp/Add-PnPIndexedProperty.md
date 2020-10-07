@@ -17,7 +17,7 @@ Marks the value of the propertybag key specified to be indexed by search.
 Add-PnPIndexedProperty -Key <String>
                        [-List <ListPipeBind>]
                        [-Web <WebPipeBind>]
-                       [-Connection <SPOnlineConnection>]
+                       [-Connection <PnPConnection>]
 ```
 
 ## PARAMETERS
@@ -50,7 +50,7 @@ Accept pipeline input: True
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

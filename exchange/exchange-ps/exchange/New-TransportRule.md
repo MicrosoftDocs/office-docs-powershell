@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # New-TransportRule
@@ -1130,6 +1129,8 @@ When you enter a value, qualify the value with one of the following units:
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The embedded images are treated as attachments (for example, messages with a picture in the signature); for this reason, we do not recommend using a very small value since unexpected messages will be blocked.
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -2333,7 +2334,7 @@ The ExceptIfHasClassification parameter specifies an exception that looks for me
 
 You use the Get-MessageClassification cmdlet to identify the message classification. For example, to find messages with the Company Internal classification, use the following syntax:
 
--ExceptIfHasClassification @(Get-MessageClassification "Company Internal").Identity
+`-ExceptIfHasClassification @(Get-MessageClassification "Company Internal").Identity`
 
 The message classification referred to in this parameter is the custom message classification that you can create in your organization by using the New-MessageClassification cmdlet. It isn't related to the DLP data classification.
 
@@ -3627,7 +3628,7 @@ The HasClassification parameter specifies a condition that looks for messages wi
 
 You use the Get-MessageClassification cmdlet to identify the message classification. For example, to find messages with the Company Internal classification, use the following syntax:
 
--HasClassification @(Get-MessageClassification "Company Internal").Identity
+`-HasClassification @(Get-MessageClassification "Company Internal").Identity`
 
 The message classification referred to in this parameter is the custom message classification that you can create in your organization by using the New-MessageClassification cmdlet. It isn't related to the DLP classification.
 
@@ -4241,7 +4242,7 @@ The Quarantine parameter specifies an action that quarantines messages.
 
 - In on-premises Exchange, messages are delivered to the quarantine mailbox that you've configured as part of Content filtering. If the quarantine mailbox isn't configured, the message is returned to the sender in an NDR.
 
-- In Office 365, messages are delivered to the hosted quarantine.
+- In Microsoft 365, messages are delivered to the hosted quarantine.
 
 ```yaml
 Type: Boolean
@@ -4659,7 +4660,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter specifies an action or part of an action for the rule.
 
-The RouteMessageOutboundConnector parameter specifies an action that routes messages through the specified Outbound connector in Office 365. You can use any value that uniquely identifies the connector. For example:
+The RouteMessageOutboundConnector parameter specifies an action that routes messages through the specified Outbound connector in Microsoft 365. You can use any value that uniquely identifies the connector. For example:
 
 - Name
 

@@ -17,7 +17,7 @@ Renames a folder
 Rename-PnPFolder -Folder <String>
                  -TargetFolderName <String>
                  [-Web <WebPipeBind>]
-                 [-Connection <SPOnlineConnection>]
+                 [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -65,7 +65,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

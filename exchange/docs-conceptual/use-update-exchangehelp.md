@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: ITPro
 ms.topic: article
-ms.prod: exchange-server-itpro
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid: 219f78a3-f0e5-4dc6-9787-9a0b9756ee09
 description: "Administrators can learn how to use Update-ExchangeHelp to update Exchange cmdlet reference topics that are available in Exchange Management Shell in Exchange 2016"
@@ -22,7 +22,7 @@ The **Update-ExchangeHelp** cmdlet automatically connects to a predefined websit
 
 - Estimated time to complete:
 
-  - Use **Update-ExchangeHelp** on a single Internet-connected Exchange server: less than 5 minutes.
+  - Use **Update-ExchangeHelp** on a single internet-connected Exchange server: less than 5 minutes.
 
   - Configure **Update-ExchangeHelp** to get updates from an internal web server: 30 minutes.
 
@@ -31,15 +31,15 @@ The **Update-ExchangeHelp** cmdlet automatically connects to a predefined websit
 - You can only use PowerShell to perform this procedure. To learn how to open the Exchange Management Shell in your on-premises Exchange organization, see [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
 
 > [!TIP]
-> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612).
+> Having problems? Ask for help in the [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) forums.
 
-## Use Update-ExchangeHelp on a single Internet-connected Exchange server
+## Use Update-ExchangeHelp on a single internet-connected Exchange server
 
-This method requires that the Exchange server has direct access to the Internet.
+This method requires that the Exchange server has direct access to the internet.
 
 Run the following command in the Exchange Management Shell:
 
-```PowerShell
+```powershell
 Update-ExchangeHelp -Verbose
 ```
 
@@ -51,7 +51,7 @@ Update-ExchangeHelp -Verbose
 
 ## Configure Update-ExchangeHelp to get updates from an internal web server
 
-In some organizations, internal servers don't have access to the Internet. If your internal Exchange servers don't have Internet access, you can configure **Update-ExchangeHelp** to point to an internal web server to get updates. The steps are as follows:
+In some organizations, internal servers don't have access to the internet. If your internal Exchange servers don't have internet access, you can configure **Update-ExchangeHelp** to point to an internal web server to get updates. The steps are as follows:
 
 1. Download and inspect the ExchangeHelpInfo.xml manifest file.
 
@@ -65,7 +65,7 @@ In some organizations, internal servers don't have access to the Internet. If yo
 
 ### Step 1. Download and inspect the ExchangeHelpInfo.xml manifest file
 
-On a computer that has Internet access, open [https://go.microsoft.com/fwlink/p/?LinkId=287244](https://go.microsoft.com/fwlink/p/?LinkId=287244), save the ExchangeHelpInfo.xml manifest file in a location that's easy to remember, and open the file in Notepad.
+On a computer that has internet access, open <https://go.microsoft.com/fwlink/p/?LinkId=287244>, save the ExchangeHelpInfo.xml manifest file in a location that's easy to remember, and open the file in Notepad.
 
 Each available update package is defined in a **\<HelpVersion\>** section, and each **\<HelpVersion\>** section contains the following keys.
 
@@ -139,13 +139,13 @@ If you want to identify only the update packages that apply to you, follow these
 
    To find the version details on a single Exchange server, run the following command:
 
-   ```PowerShell
+   ```powershell
    Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
    ```
 
    To find the version details for all Exchange servers in your organization, run the following command:
 
-   ```PowerShell
+   ```powershell
    Get-ExchangeServer | Sort-Object Name | ForEach {Invoke-Command -ComputerName $_.Name -ScriptBlock {Get-Command ExSetup.exe | ForEach{$_.FileVersionInfo}}} | Format-Table -Auto
    ```
 
@@ -194,7 +194,7 @@ Now, when you run **Update-ExchangeHelp** in the Exchange Management Shell on yo
 
 More interesting is the long-term maintenance of this customized configuration. Basically, you'll need to repeat Step 1 through Step 3 when you discover an update has been made available for Exchange cmdlet reference help, and you want to deploy that updated help to your Exchange servers.
 
-An easy way to find new update packages is to periodically run **Update-ExchangeHelp** on an Internet-connected Exchange server, or computer that has the Exchange management tools installed.
+An easy way to find new update packages is to periodically run **Update-ExchangeHelp** on an internet-connected Exchange server, or computer that has the Exchange management tools installed.
 
 ## Details about Update-ExchangeHelp
 

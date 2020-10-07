@@ -21,7 +21,8 @@
         "dest": "skype/skype-ps"
       },
       {
-      "files": ["**/*.md"],
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
       "src": "skype-ps",
       "version": "skype-ps",
       "dest": "module"
@@ -53,8 +54,8 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "kenwith",
-      "ms.author" : "kenwith",
+      "author" : "serdarsoysal",
+      "ms.author" : "serdars",
       "manager" : "serdars",
       "ms.date" : "09/25/2017",
       "ms.topic" : "reference",

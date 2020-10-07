@@ -9,6 +9,11 @@ title: Register-PnPAppCatalogSite
 # Register-PnPAppCatalogSite
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Creates a new App Catalog Site and sets this site as the Tenant App Catalog
 
 ## SYNTAX 
@@ -18,7 +23,7 @@ Register-PnPAppCatalogSite -Url <String>
                            -Owner <String>
                            -TimeZoneId <Int>
                            [-Force [<SwitchParameter>]]
-                           [-Connection <SPOnlineConnection>]
+                           [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -84,7 +89,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

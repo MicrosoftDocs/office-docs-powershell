@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancesecurityfilter
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-ComplianceSecurityFilter
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-ComplianceSecurityFilter
@@ -15,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-ComplianceSecurityFilter cmdlet to view compliance security filters in the Security & Compliance Center. These filters allow specified users to search only a subset of mailboxes and SharePoint Online or OneDrive for Business sites in your Office 365 organization.
+Use the Get-ComplianceSecurityFilter cmdlet to view compliance security filters in the Security & Compliance Center. These filters allow specified users to search only a subset of mailboxes and SharePoint Online or OneDrive for Business sites in your Microsoft 365 organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,7 +28,7 @@ Get-ComplianceSecurityFilter [-Action <ComplianceSecurityFilterActionType>] [-Co
 ## DESCRIPTION
 Compliance security filters work with compliance searches in the Security & Compliance Center (\*-ComplianceSearch cmdlets), not In-Place eDiscovery searches in Exchange Online (\*-MailboxSearch cmdlets).
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -66,7 +65,7 @@ The Action parameter filters the results by the type of search action that a fil
 Type: ComplianceSecurityFilterActionType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -86,7 +85,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -102,7 +101,7 @@ The FilterName parameter specifies the name of the compliance security filter th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -124,7 +123,7 @@ The User parameter filters the results by the user who gets a filter applied to 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -134,13 +133,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

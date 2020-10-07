@@ -19,7 +19,7 @@ Remove-PnPApplicationCustomizer [-Identity <UserCustomActionPipeBind>]
                                 [-Scope <CustomActionScope>]
                                 [-Force [<SwitchParameter>]]
                                 [-Web <WebPipeBind>]
-                                [-Connection <SPOnlineConnection>]
+                                [-Connection <PnPConnection>]
 ```
 
 ### Client Side Component Id
@@ -28,7 +28,7 @@ Remove-PnPApplicationCustomizer -ClientSideComponentId <GuidPipeBind>
                                 [-Scope <CustomActionScope>]
                                 [-Force [<SwitchParameter>]]
                                 [-Web <WebPipeBind>]
-                                [-Connection <SPOnlineConnection>]
+                                [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -38,14 +38,14 @@ Removes a SharePoint Framework client side extension application customizer by r
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Remove-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
+Remove-PnPApplicationCustomizer -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
 ```
 
 Removes the custom action representing the client side extension registration with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2'.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Remove-PnPCustomAction -ClientSideComponentId aa66f67e-46c0-4474-8a82-42bf467d07f2 -Scope web
+Remove-PnPApplicationCustomizer -ClientSideComponentId aa66f67e-46c0-4474-8a82-42bf467d07f2 -Scope web
 ```
 
 Removes the custom action(s) being registered for a SharePoint Framework solution having the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2' in its manifest from the current web.
@@ -114,7 +114,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -23,7 +23,7 @@ Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPr
  [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
  [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
  [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-AllowImmersiveReader <Boolean>]
- [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-ReadReceiptsEnabledType <String>]
+ [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-Allow [-ReadReceiptsEnabledType <String>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -34,7 +34,7 @@ Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPr
  [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
  [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
  [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-AllowImmersiveReader <Boolean>]
- [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-ReadReceiptsEnabledType <String>]
+ [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-ReadReceiptsEnabledType <String>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -68,6 +68,7 @@ All other policy properties will be left as previously assigned.
 
 ### -AllowGiphy
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
+Note: [Optional Connected Experiences](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for Giphys to be allowed.
 
 ```yaml
 Type: Boolean
@@ -128,6 +129,21 @@ Accept wildcard characters: False
 
 ### -AllowPriorityMessages
 Determines whether a user is allowed to send priorities messages. Set this to TRUE to allow. Set this FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSmartReply
+Determines whether a user is allowed to use smart replies. Set this to TRUE to allow. Set this to FALSE to prohibit. 
 
 ```yaml
 Type: Boolean
@@ -233,6 +249,7 @@ Accept wildcard characters: False
 
 ### -AllowUrlPreviews
 Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
+Note: [Optional Connected Experiences](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
 
 ```yaml
 Type: Boolean

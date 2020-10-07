@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Add-AvailabilityAddressSpace
@@ -124,7 +123,7 @@ Accept wildcard characters: False
 ### -Credentials
 The Credentials parameter specifies the username and password that's used to access the Availability services in the target forest.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -216,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetAutodiscoverEpr
-The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, https://contoso.com/autodiscover/autodiscover.xml. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
+The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, `https://contoso.com/autodiscover/autodiscover.xml`. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
 
 ```yaml
 Type: Uri

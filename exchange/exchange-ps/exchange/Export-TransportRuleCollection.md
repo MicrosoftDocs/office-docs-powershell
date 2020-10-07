@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Export-TransportRuleCollection
@@ -32,7 +31,7 @@ Export-TransportRuleCollection [[-Identity] <RuleIdParameter>]
 ## DESCRIPTION
 The Export-TransportRuleCollection cmdlet can be used to export the transport rule collection in your organization. The format of the exported transport rule collection changed in Exchange Server 2013. The new format can't be imported into Exchange Server 2010.
 
-Exporting the rules collection is a two-step process. You first export the rules collection to a variable, and then use the Set-Content cmdlet to write the data to an XML file. For more information, see [Set-Content](https://go.microsoft.com/fwlink/p/?linkId=156132).
+Exporting the rules collection is a two-step process. You first export the rules collection to a variable, and then use the Set-Content cmdlet to write the data to an XML file. For more information, see [Set-Content](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-content).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

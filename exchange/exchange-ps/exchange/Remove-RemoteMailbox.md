@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Remove-RemoteMailbox
@@ -135,9 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
-The IgnoreLegalHold switch ignores the legal hold status of the mailbox user and allows you to remove the cloud-based mailbox on legal hold.
-
-After you remove a mailbox, you can't include it in a discovery search. Depending on the command parameters you use, removed mailboxes are either purged immediately or when the deleted mailbox retention period expires. Check with your organization's legal or Human Resources department before disabling a mailbox that's on legal hold.
+The IgnoreLegalHold switch specifies whether to ignore the legal hold status of the remote user. This switch removes the instance of the remote object in the on-premises organization, and the request to remove the mailbox is synchronized to the cloud. The Azure AD object is removed, but if the mailbox is on hold, the mailbox is converted into an inactive mailbox and remains on hold.
 
 ```yaml
 Type: SwitchParameter

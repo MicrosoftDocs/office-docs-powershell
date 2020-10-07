@@ -21,13 +21,13 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 ```
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
- [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>]
+ [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
  [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
- [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
+ [-MediaBitRateKb <UInt32>] [-RecordingStorageMode <String>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [[-Identity] <XdsIdentity>]
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -37,13 +37,13 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 ```
 Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowPrivateMeetNow <Boolean>]
- [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>]
+ [-MeetingChatEnabledType <String>] [-LiveCaptionsEnabledType <String>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
  [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>] [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
- [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
+ [-MediaBitRateKb <UInt32>] [-RecordingStorageMode <String>] [-ScreenSharingMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
  [-PreferredMeetingProviderForIslandsMode <string>] [-Instance <PSObject>] 
  [-VideoFiltersMode <String>] [-AllowEngagementReport <String>] [-AllowNDIStreaming <Boolean>]
  [-DesignatedPresenterRoleMode <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -121,6 +121,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowRecordingStorageOutsideRegion
+Allow storing recording outside of region. All meeting recordings will be permanently stored in another region, and can't be migrated. For more info, see https://aka.ms/in-region.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowExternalParticipantGiveRequestControl
 Determines whether external participants can request or give control of screen sharing during meetings scheduled by this user. Set this to TRUE to allow the user to be able to give or request control. Set this to FALSE to prohibit an external user from giving or requesting control in a meeting.
 
@@ -141,6 +156,36 @@ Determines whether video is enabled in  a user's meetings or calls. Set this to 
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPAudioMode
+Determines whether audio can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming audio in the meeting. Set this to DISABLED to prohibit outgoing and incoming audio in the meeting.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPVideoMode
+Determines whether video can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming video in the meeting. Set this to DISABLED to prohibit outgoing and incoming video in the meeting.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -273,7 +318,14 @@ Accept wildcard characters: False
 
 
 ### -AutoAdmittedUsers
-Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to EveryoneInSameAndFederatedCompany if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby.  This setting also applies to participants joining via a PSTN device (i.e. a traditional phone).
+Determines what types of participants will automatically be added to meetings organized by this user.
+Possible values are:
+- EveryoneInCompany, if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. 
+- Everyone, if you'd like to admit anonymous users by default. 
+- EveryoneInSameAndFederatedCompany, if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby. 
+- OrganizerOnly, if you would like that only meeting organizers can bypass the lobby.
+
+This setting also applies to participants joining via a PSTN device (i.e. a traditional phone).
 
 ```yaml
 Type: String
@@ -495,7 +547,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMeetingProviderForIslandsMode
-This parameter is reserved for internal Microsoft use.
+Determines the Outlook meeting add-in available to users on Islands mode. By default, this is set to TeamsAndSfb, and the users sees both the Skype for Business and Teams add-ins. Set this to Teams to remove the Skype for Business add-in and only show the Teams add-in.
 
 ```yaml
 Type: String
@@ -505,6 +557,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: TeamsAndSfb
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -RecordingStorageMode
+This parameter can take two possible values:
+- Stream
+- OneDriveForBusiness
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -560,7 +628,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNDIStreaming
-This parameter is reserved for internal Microsoft use.
+This parameter enables the use of NDI technology to capture and deliver broadcast-quality audio and video over your network.
 
 ```yaml
 Type: Boolean

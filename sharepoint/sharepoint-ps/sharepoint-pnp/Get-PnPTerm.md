@@ -17,7 +17,7 @@ Returns a taxonomy term
 ```powershell
 Get-PnPTerm [-Includes <String[]>]
             [-IncludeChildTerms [<SwitchParameter>]]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ### By Term Id
@@ -25,7 +25,7 @@ Get-PnPTerm [-Includes <String[]>]
 Get-PnPTerm -Identity <Id, Name or Object>
             [-TermStore <Id, Name or Object>]
             [-IncludeChildTerms [<SwitchParameter>]]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ### By Termset
@@ -36,7 +36,7 @@ Get-PnPTerm -TermSet <Id, Title or TaxonomyItem>
             [-TermStore <Id, Name or Object>]
             [-Recursive [<SwitchParameter>]]
             [-IncludeChildTerms [<SwitchParameter>]]
-            [-Connection <SPOnlineConnection>]
+            [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -167,7 +167,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

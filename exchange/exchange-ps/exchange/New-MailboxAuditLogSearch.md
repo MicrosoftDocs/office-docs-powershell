@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MailboxAuditLogSearch
@@ -174,7 +173,7 @@ Accept wildcard characters: False
 ### -GroupMailbox
 This parameter is available only in the cloud-based service.
 
-The GroupMailbox switch is required to include Office 365 groups in the search. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to include Microsoft 365 Groups in the search. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

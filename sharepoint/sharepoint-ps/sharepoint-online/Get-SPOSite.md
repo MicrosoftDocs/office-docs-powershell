@@ -109,6 +109,14 @@ Get-SPOSite -Identity https://contoso.sharepoint.com/sites/research | Select Inf
 
 This example returns the InformationSegments associated to the site.
 
+### -----------------------EXAMPLE 7-----------------------------
+
+```powershell
+Get-SPOSite -Filter { Url -like "contoso.sharepoint.com/sites/18" }
+```
+
+This example uses server side filtering to return sites matching 18.
+
 ## PARAMETERS
 
 ### -Detailed
@@ -170,7 +178,7 @@ Accept wildcard characters: False
 
 ### -Filter
 
-Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{$_PropertyName <operator> "filterValue"}`. Valid operators are as follows: eq, ne, like, notlike.
+Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{ PropertyName <operator> "filterValue"}`. Valid operators are as follows: -eq, -ne, -like, -notlike.
  Currently, you can filter by these properties: Owner, Template, LockState, Url.
 
 > [!NOTE]
@@ -262,7 +270,7 @@ Accept wildcard characters: False
 ### InformationSegment
 This parameter displays the segments associated with a site. 
 
-It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers in SharePoint Online.
+It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/microsoft-365/compliance/information-barriers documentation to understand Information barriers in SharePoint Online.
 
 **Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 

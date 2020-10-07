@@ -3,10 +3,10 @@ external help file: Microsoft.Whiteboard.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftWhiteboard
 online version: https://docs.microsoft.com/powershell/module/whiteboard/invoke-transferallwhiteboards
 applicable: Microsoft Whiteboard
-title: Set-WhiteboardOwner
+title: Invoke-TransferAllWhiteboards
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 

@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-caseholdrule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-CaseHoldRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # New-CaseHoldRule
@@ -28,7 +27,7 @@ New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>
 ## DESCRIPTION
 You need to add the case hold rule to an existing case hold policy using the Policy parameter. Only one rule can be added to each case hold policy.
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -55,7 +54,7 @@ The Name parameter specifies a unique name for the case hold rule. If the value 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -77,7 +76,7 @@ The Policy parameter specifies the case hold policy that contains the rule. You 
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -93,7 +92,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -113,7 +112,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -125,13 +124,13 @@ Accept wildcard characters: False
 ### -ContentMatchQuery
 The ContentMatchQuery parameter specifies a content search filter. Use this parameter to create a query-based hold so only the content that matches the specified search query is placed on hold.
 
-This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://go.microsoft.com/fwlink/p/?linkid=269603).
+This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -151,7 +150,7 @@ The Disabled parameter specifies whether the case hold rule is enabled or disabl
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -161,13 +160,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

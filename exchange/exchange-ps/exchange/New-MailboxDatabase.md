@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-MailboxDatabase
@@ -56,10 +55,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-MailboxDatabase -Name "DB1" -EdbFilePath D:\ExchangeDatabases\DB1\DB1.edb
+New-MailboxDatabase -Server Server1 -Name "DB1" -EdbFilePath D:\ExchangeDatabases\DB1\DB1.edb
 ```
 
-This example creates the mailbox database DB1. This example also uses a non-default location for the database file.
+This example creates the mailbox database DB1 on the Mailbox server named Server1. This example also uses a non-default location for the database file.
 
 ## PARAMETERS
 

@@ -18,7 +18,7 @@ Return registered eventreceivers
 Get-PnPEventReceiver [-List <ListPipeBind>]
                      [-Identity <EventReceiverPipeBind>]
                      [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+                     [-Connection <PnPConnection>]
 ```
 
 ### 
@@ -26,7 +26,7 @@ Get-PnPEventReceiver [-List <ListPipeBind>]
 Get-PnPEventReceiver [-Includes <String[]>]
                      [-Identity <EventReceiverPipeBind>]
                      [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+                     [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -130,7 +130,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

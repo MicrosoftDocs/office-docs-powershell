@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpcompliancepolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-DlpCompliancePolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpCompliancePolicy
@@ -26,7 +25,7 @@ Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail] 
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -53,7 +52,7 @@ The DistributionDetail switch returns detailed policy distribution information i
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -77,7 +76,7 @@ The Identity parameter specifies the DLP policy that you want to view. You can u
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1

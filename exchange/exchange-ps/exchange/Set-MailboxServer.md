@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-MailboxServer
@@ -1042,7 +1041,7 @@ The Locale parameter specifies the locale of the Mailbox server. A locale is a c
 
 - es-CL (Spanish - Chile)
 
-For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=68806).
+For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
@@ -2374,7 +2373,7 @@ Accept wildcard characters: False
 ```
 
 ### -WacDiscoveryEndpoint
-The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes on the server. For example, https://oos.internal.contoso.com/hosting/discovery.
+The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes on the server. For example, `https://oos.internal.contoso.com/hosting/discovery`.
 
 Office Online Server enables users to view supported file attachments in Outlook on the web (formerly known as Outlook Web App).
 

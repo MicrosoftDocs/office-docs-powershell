@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancetagstorage
-applicable: Exchange Online, Office 365 Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-ComplianceTagStorage
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Get-ComplianceTagStorage
@@ -17,7 +16,7 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Get-ComplianceTagStorage cmdlet to confirm that you've created the label policy by using the Enable-ComplianceTagStorage cmdlet. Labels apply retention settings to content.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,7 +27,7 @@ Get-ComplianceTagStorage [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -56,7 +55,7 @@ However, there can be only one label policy in your organization.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: 1

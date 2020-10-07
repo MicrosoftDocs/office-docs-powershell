@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Import-RMSTrustedPublishingDomain
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Import-RMSTrustedPublishingDomain cmdlet to import a trusted publishing domain (TPD) from an on-premises server running Active Directory Rights Management Services (AD RMS) or from RMS Online into your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -230,7 +229,7 @@ Accept wildcard characters: False
 ### -ExtranetCertificationUrl
 The ExtranetCertificationUrl parameter specifies the external certification URL of the on-premises AD RMS server that's stamped into the Rights Account Certificate (RAC). The RAC establishes a user's identity in the AD RMS system, and is used to decrypt content.
 
-By default, the value of the ExtranetCertificationUrl parameter is https://\<FQDN\>/\_wmcs/certification/servercertification.asmx.
+By default, the value of the ExtranetCertificationUrl parameter is `https://<FQDN>/_wmcs/certification/servercertification.asmx`.
 
 ```yaml
 Type: Uri
@@ -248,7 +247,7 @@ Accept wildcard characters: False
 ### -IntranetCertificationUrl
 The IntranetCertificationUrl parameter specifies the internal certification URL of the on-premises AD RMS server that's stamped into the RAC. The RAC establishes a user's identity in the AD RMS system, and is used to decrypt content.
 
-By default, the value of the IntranetCertificationUrl parameter is https://\<server name\>/\_wmcs/certification/servercertification.asmx.
+By default, the value of the IntranetCertificationUrl parameter is `https://<server name>/_wmcs/certification/servercertification.asmx`.
 
 ```yaml
 Type: Uri

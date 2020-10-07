@@ -19,7 +19,7 @@ Set-PnPWebPermission -Group <GroupPipeBind>
                      [-AddRole <String[]>]
                      [-RemoveRole <String[]>]
                      [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+                     [-Connection <PnPConnection>]
 ```
 
 ### User
@@ -28,7 +28,7 @@ Set-PnPWebPermission -User <String>
                      [-AddRole <String[]>]
                      [-RemoveRole <String[]>]
                      [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+                     [-Connection <PnPConnection>]
 ```
 
 ### GroupByWebIdentity
@@ -38,7 +38,7 @@ Set-PnPWebPermission -Identity <WebPipeBind>
                      [-AddRole <String[]>]
                      [-RemoveRole <String[]>]
                      [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+                     [-Connection <PnPConnection>]
 ```
 
 ### UserByWebIdentity
@@ -48,7 +48,7 @@ Set-PnPWebPermission -Identity <WebPipeBind>
                      [-AddRole <String[]>]
                      [-RemoveRole <String[]>]
                      [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+                     [-Connection <PnPConnection>]
 ```
 
 ### GroupByWebUrl
@@ -58,7 +58,7 @@ Set-PnPWebPermission -Url <String>
                      [-AddRole <String[]>]
                      [-RemoveRole <String[]>]
                      [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+                     [-Connection <PnPConnection>]
 ```
 
 ### UserByWebUrl
@@ -68,7 +68,7 @@ Set-PnPWebPermission -Url <String>
                      [-AddRole <String[]>]
                      [-RemoveRole <String[]>]
                      [-Web <WebPipeBind>]
-                     [-Connection <SPOnlineConnection>]
+                     [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -168,7 +168,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

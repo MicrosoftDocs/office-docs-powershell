@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-AuthServer
@@ -81,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthMetadataUrl
-The AuthMetadataUrl parameter specifies the URL for the Office 365 authorization server for your cloud-based organization. For details, see the Office 365 documentation.
+The AuthMetadataUrl parameter specifies the URL for the Microsoft 365 authorization server for your cloud-based organization.
 
 ```yaml
 Type: String

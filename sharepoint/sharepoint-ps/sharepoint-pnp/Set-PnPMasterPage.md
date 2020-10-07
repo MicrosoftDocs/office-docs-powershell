@@ -18,7 +18,7 @@ Set the masterpage
 Set-PnPMasterPage [-MasterPageServerRelativeUrl <String>]
                   [-CustomMasterPageServerRelativeUrl <String>]
                   [-Web <WebPipeBind>]
-                  [-Connection <SPOnlineConnection>]
+                  [-Connection <PnPConnection>]
 ```
 
 ### Site Relative
@@ -26,7 +26,7 @@ Set-PnPMasterPage [-MasterPageServerRelativeUrl <String>]
 Set-PnPMasterPage [-MasterPageSiteRelativeUrl <String>]
                   [-CustomMasterPageSiteRelativeUrl <String>]
                   [-Web <WebPipeBind>]
-                  [-Connection <SPOnlineConnection>]
+                  [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -118,7 +118,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

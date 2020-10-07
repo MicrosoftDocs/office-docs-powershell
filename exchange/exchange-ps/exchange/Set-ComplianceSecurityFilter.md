@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-compliancesecurityfilter
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-ComplianceSecurityFilter
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-ComplianceSecurityFilter
@@ -28,7 +27,7 @@ Set-ComplianceSecurityFilter -FilterName <String> [-Action <ComplianceSecurityFi
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -55,7 +54,7 @@ The FilterName parameter specifies the name of the compliance security filter th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -67,7 +66,7 @@ Accept wildcard characters: False
 ### -Action
 The Action parameter specifies that type of search action that the filter is applied to. Valid values are:
 
-- Export: The filter is applied when exporting search results, or preparing them for analysis in Office 365 Advanced eDiscovery.
+- Export: The filter is applied when exporting search results, or preparing them for analysis in Microsoft 365 Advanced eDiscovery.
 
 - Preview: The filter is applied when previewing search results.
 
@@ -81,7 +80,7 @@ The Action parameter specifies that type of search action that the filter is app
 Type: ComplianceSecurityFilterActionType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -101,7 +100,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -117,7 +116,7 @@ The Description parameter specifies a description for the compliance security fi
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -133,7 +132,7 @@ The Filters parameter specifies the search criteria for the compliance security 
 
 - Mailbox content filter: Specifies the mailbox content the assigned users can search for. Valid syntax is `MailboxContent_<SearchablePropertyName>:<value>`, where `<SearchablePropertyName>` specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, `MailboxContent_recipients:contoso.com` allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable message properties, see [Keyword queries for Compliance Search](https://docs.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
 
-- Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create: `Site_<SearchableSiteProperty>` (specifies site-related properties. For example,`"Site_Path -eq 'https://contoso.sharepoint.com/sites/doctors'"` allows users to only search for content in the <https://contoso.sharepoint.com/sites/doctors> site collection) and `SiteContent_<SearchableSiteProperty>` (specifies content-related properties. For example, `"SiteContent_FileExtension -eq 'docx'"` allows users to only search for Word documents). For a list of searchable site properties, see [Overview of crawled and managed properties in SharePoint Server](https://go.microsoft.com/fwlink/p/?LinkId=331599). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
+- Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create: `Site_<SearchableSiteProperty>` (specifies site-related properties. For example,`"Site_Path -eq 'https://contoso.sharepoint.com/sites/doctors'"` allows users to only search for content in the `https://contoso.sharepoint.com/sites/doctors` site collection) and `SiteContent_<SearchableSiteProperty>` (specifies content-related properties. For example, `"SiteContent_FileExtension -eq 'docx'"` allows users to only search for Word documents). For a list of searchable site properties, see [Overview of crawled and managed properties in SharePoint Server](https://docs.microsoft.com/SharePoint/technical-reference/crawled-and-managed-properties-overview). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
 
 You can specify multiple filters of the same type. For example, `"Mailbox_CustomAttribute10 -eq 'FTE' -and Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'"`.
 
@@ -141,7 +140,7 @@ You can specify multiple filters of the same type. For example, `"Mailbox_Custom
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -179,7 +178,7 @@ If you don't use this parameter in a multi-geo tenant, eDiscovery searches are p
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -205,7 +204,7 @@ The values you specify will overwrite any existing entries. See the Examples sec
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -215,13 +214,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

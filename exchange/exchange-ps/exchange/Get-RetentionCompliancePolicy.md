@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-retentioncompliancepolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-RetentionCompliancePolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-RetentionCompliancePolicy
@@ -37,7 +36,7 @@ This list describes the properties that are displayed by default.
 
 - Mode: The current operating mode of the policy. The possible values are Test (the content is tested, but no rules are enforced), AuditAndNotify (when content matches the conditions specified by the policy, the rule is not enforced, but notification emails are sent) or Enforce (all aspects of the policy are enabled and enforced).
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -70,7 +69,7 @@ The Identity parameter specifies the retention policy that you want to view. You
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -88,7 +87,7 @@ If you don't use this switch, the values of the DistributionStatus and \*Locatio
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -104,7 +103,7 @@ The ExcludeTeamsPolicy switch specifies whether to exclude Teams policies from t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -122,7 +121,7 @@ To see the RetentionRuleTypes property, you need to pipe the command to a format
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -138,7 +137,7 @@ The TeamsPolicyOnly switch specifies whether to show only Teams policies in the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

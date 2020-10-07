@@ -22,7 +22,7 @@ Send-PnPMail -To <String[]>
              [-Password <String>]
              [-Cc <String[]>]
              [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
+             [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -51,7 +51,7 @@ Sends an e-mail via a custom SMTP server and requires a from address and passwor
 ## PARAMETERS
 
 ### -Body
-Body of the email. Accepts simple HTML as `<h1></h1>`, `<br/>` etc. 
+Body of the email. Accepts simple HTML as `&lt;h1&gt;&lt;/h1&gt;`, `&lt;br/&gt;` etc.
 
 ```yaml
 Type: String
@@ -138,7 +138,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

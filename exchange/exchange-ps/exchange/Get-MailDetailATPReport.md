@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MailDetailATPReport
@@ -15,9 +14,9 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Advanced Threat protection (ATP) detections in your cloud-based organization.
+Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Advanced Threat protection (ATP) detections in your cloud-based organization for the last 10 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -37,6 +36,24 @@ Safe Attachments is a feature in Advanced Threat Protection that opens email att
 
 Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
 
+For the reporting period you specify, the cmdlet returns the following information:
+
+- Date
+- Message ID
+- Message Trace ID
+- Domain
+- Subject
+- Message Size
+- Direction
+- Sender Address
+- Recipient Address
+- Event Type
+- Action
+- File Name
+- Malware Name
+
+This cmdlet is limited to 10,000 results. If you reach this limit, you can use the available parameters to filter the output.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -51,7 +68,7 @@ This example returns the Advanced Threat Protection actions for the last 10 days
 ## PARAMETERS
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
 
 ```yaml
 Type: MultiValuedProperty
@@ -105,43 +122,51 @@ The EventType parameter filters the report by the event type. Valid values are:
 
 Email phish EventTypes:
 
-- Advanced phish filter (Indicates a message caught by the Office 365 machine learning model.)
+- Advanced phish filter (Indicates a message caught by the machine learning model.)
 
 - Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
 
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
+- ATP-generated URL reputation\* (Indicates a message with a known malicious URL caught by ATP.)
+
 - Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
-- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
+- Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
 
-- Brand impersonation (Indicates a message caught by Office 365 phish filters as impersonating a known brand.)
+- EOP URL Reputation (Indicates a message with a known malicious URL caught by EOP.)
 
-- General phish filter (Indicates a message caught by basic Office 365 phish protection.)
+- General phish filter (Indicates a message caught by basic phish protection.)
 
-- Malicious URL reputation (Indicates a message with a known malicious URL caught by Office 365 phish filters.)
+- Malicious URL reputation (Indicates a message with a known malicious URL caught by phish filters.)
 
 - Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
 
+- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
+
 Email malware EventTypes:
 
-- Anti-malware engine (Indicates a message caught by the Office 365 anti-malware engine.)
+- Anti-malware engine\* (Indicates a message caught by the anti-malware engine.)
+
+- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
+
+- ATP-generated file reputation\* (Indicates a message with a known malicious file blocked by ATP.)
 
 - ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
 
 - ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
 
-- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
+- File Detonation\* (Indicates a message with a malicious attachment blocked by the detonation service.)
+
+- Malware ZAP (Indicates a message with malware detected and auto-purged after delivery.)
 
 - Office 365 file reputation (Indicates a message with a known malicious file blocked.)
-
-- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
 
 Content malware EventTypes:
 
 - AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
 
-- AvDocumentMalware (Indicates malware found by the Office 365 anti-malware engine. Reporting requires ATP or E5.)
+- AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP or E5.)
 
 \* These features require a standalone Office 365 ATP or E5 subscription.
 

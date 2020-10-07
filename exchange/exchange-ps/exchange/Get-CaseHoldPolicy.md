@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-caseholdpolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-CaseHoldPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-CaseHoldPolicy
@@ -27,7 +26,7 @@ Get-CaseHoldPolicy [[-Identity] <PolicyIdParameter>] [-Case <String>] [-Distribu
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -60,7 +59,7 @@ You can find these values by running the command: Get-ComplianceCase | Format-Ta
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -87,7 +86,7 @@ The following properties are affected by this switch:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -109,7 +108,7 @@ The Identity parameter specifies the case hold policy that you want to view. You
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -125,7 +124,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

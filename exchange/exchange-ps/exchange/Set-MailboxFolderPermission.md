@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-MailboxFolderPermission
@@ -28,7 +27,7 @@ Set-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights
 ```
 
 ## DESCRIPTION
-In Office 365, if you don't use the SendNotificationToUser or SharingPermissionFlags parameters, there are no changes to the functionality of the cmdlet. For example, if the user is an existing delegate, and you change their permissions to Editor without using the SendNotificationToUser or SharingPermissionFlags parameters, the user remains a delegate. But, if you use the SendNotificationToUser parameter ($true or $false), the SharingPermissionFlags parameter has the default value None, which can affect delegate access for existing users. For example, you change an existing delegate's permission to Editor, and you use SendNotificationToUser with the value $true. The user will no longer be a delegate and will only have Editor permissions to the folder.
+In Exchange Online PowerShell, if you don't use the SendNotificationToUser or SharingPermissionFlags parameters, there are no changes to the functionality of the cmdlet. For example, if the user is an existing delegate, and you change their permissions to Editor without using the SendNotificationToUser or SharingPermissionFlags parameters, the user remains a delegate. But, if you use the SendNotificationToUser parameter ($true or $false), the SharingPermissionFlags parameter has the default value None, which can affect delegate access for existing users. For example, you change an existing delegate's permission to Editor, and you use SendNotificationToUser with the value $true. The user will no longer be a delegate and will only have Editor permissions to the folder.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -46,35 +45,35 @@ This example overwrites Ed's existing permissions for the Marketing folder in Ay
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate -SendNotificationToUser $true
 ```
 
-In Office 365, this example resends the sharing invitation to an existing delegate without changing their effective permissions (Ed is already a delegate with Editor permissions to Ayla's mailbox).
+In Exchange Online, this example resends the sharing invitation to an existing delegate without changing their effective permissions (Ed is already a delegate with Editor permissions to Ayla's mailbox).
 
 ### Example 3
 ```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate
 ```
 
-In Office 365, this example removes access to private items for an existing delegate.
+In Exchange Online, this example removes access to private items for an existing delegate.
 
 ### Example 4
 ```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags None
 ```
 
-In Office 365, this example changes an existing calendar delegate to Editor.
+In Exchange Online, this example changes an existing calendar delegate to Editor.
 
 ### Example 5
 ```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor
 ```
 
-In Office 365, this example changes an existing user's permissions to Editor without changing their current delegate status.
+In Exchange Online, this example changes an existing user's permissions to Editor without changing their current delegate status.
 
 ### Example 6
 ```powershell
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SendNotificationToUser $false
 ```
 
-In Office 365, this example changes an existing user's permissions to Editor and removes their current delegate status.
+In Exchange Online, this example changes an existing user's permissions to Editor and removes their current delegate status.
 
 ## PARAMETERS
 
@@ -340,3 +339,11 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
+
+[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
+
+[Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+
+[Get-EXOMailboxFolderPermission](Get-EXOMailboxFolderPermission.md)

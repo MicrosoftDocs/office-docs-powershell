@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 ### -ValidationOnly
 
-This parameter will force the cmdlet to execute only validation
+Use this parameter to validate if the user is able to be moved.
 
 ```yaml
 Type: SwitchParameter

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-ClassificationRuleCollection
@@ -17,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-ClassificationRuleCollection cmdlet to view the classification rule collections in your organization.
 
-In the Office 365 Security & Compliance Center, use the Get-DlpSensitiveInformationTypeRulePackage cmdlet.
+In the Security & Compliance Center, use the Get-DlpSensitiveInformationTypeRulePackage cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

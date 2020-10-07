@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Add-MailboxFolderPermission
@@ -45,14 +44,14 @@ This example grants the Owner role to Ed on the Marketing folder in Ayla's mailb
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User julia@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate
 ```
 
-In Office 365, this example adds Julia as a calendar delegate to Ayla's mailbox, but without access to private items.
+In Exchange Online, this example adds Julia as a calendar delegate to Ayla's mailbox, but without access to private items.
 
 ### Example 3
 ```powershell
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User laura@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate,CanViewPrivateItems
 ```
 
-In Office 365, this example adds Laura as a calendar delegate to Ayla's mailbox with access to private items.
+In Exchange Online, this example adds Laura as a calendar delegate to Ayla's mailbox with access to private items.
 
 ## PARAMETERS
 
@@ -326,3 +325,11 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
+
+[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+
+[Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+
+[Get-EXOMailboxFolderPermission](Get-EXOMailboxFolderPermission.md)

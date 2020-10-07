@@ -7,13 +7,12 @@ title: Get-UserBriefingConfig
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-monikerRange: "exchonline-ps"
 ---
 
 # Get-UserBriefingConfig
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 Use the Get-UserBriefingConfig cmdlet to get the current state of the Briefing email flag for the specified user. For more details about configuring the Briefing email, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin).
 
@@ -26,7 +25,7 @@ Get-UserBriefingConfig -Identity <string> [-ResultSize <Unlimited>]
 ```
 
 ## DESCRIPTION
-Gets the current state of the Briefing email flag (true or false) for the specified user.
+This cmdlet requires the .NET Framework 4.7.2 or later. Also, you need to be a member of the Organization Management role group (Global admins).
 
 ## EXAMPLES
 
@@ -58,17 +57,17 @@ Accept wildcard characters: False
 ### -ResultSize	
 This parameter is reserved for internal Microsoft use.
 
-```yaml	
-Type: Unlimited	
-Parameter Sets: (All)	
-Aliases:	
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
 Applicable: Exchange Online
-	
-Required: False	
-Position: Named	
-Default value: None	
-Accept pipeline input: False	Accept pipeline input: False
-Accept wildcard characters: False	Accept wildcard characters: False
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## INPUTS

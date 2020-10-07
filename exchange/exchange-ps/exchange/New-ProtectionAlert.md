@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-protectionalert
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-ProtectionAlert
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # New-ProtectionAlert
@@ -35,7 +34,7 @@ New-ProtectionAlert
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -44,7 +43,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 New-ProtectionAlert -Name "Content search deleted" -Category Others -NotifyUser admin@contoso.com -ThreatType Activity -Operation SearchRemoved -Description "Custom alert policy to track when content searches are deleted" -AggregationType None
 ```
 
-This example creates an alert policy that triggers an alert whenever anyone in the organization deletes a Content Search in the Office 365 Security & Compliance Center.
+This example creates an alert policy that triggers an alert whenever anyone in the organization deletes a Content Search in the Security & Compliance Center.
 
 ## PARAMETERS
 
@@ -67,7 +66,7 @@ When an activity occurs that matches the conditions of the alert policy, the ale
 Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -83,7 +82,7 @@ The Name parameter specifies the unique name for the alert policy. If the value 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -99,7 +98,7 @@ The NotifyUser parameter specifies the SMTP address of the user who receives not
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -123,7 +122,7 @@ You can't change this value after you create the alert policy.
 Type: ThreatAlertType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -139,13 +138,13 @@ The AggregationType parameter specifies the how the alert policy triggers alerts
 
 - SimpleAggregation: Alerts are triggered based on the volume of activity in a given time window (the values of the Threshold and TimeWindow parameters). This is the default value.
 
-- AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Office 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
+- AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Microsoft 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
 
 ```yaml
 Type: AlertAggregationType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -167,7 +166,7 @@ You can't use this parameter when the AggregationType parameter value is None (a
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -183,7 +182,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -199,7 +198,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -219,7 +218,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -235,7 +234,7 @@ The Description parameter specifies descriptive text for the alert policy. If th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -255,7 +254,7 @@ The Disabled parameter enables or disables the alert policy. Valid values are:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -271,7 +270,7 @@ The Filter parameter uses OPath syntax to filter the results by the specified pr
 
 - Property is a filterable property.
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
@@ -359,7 +358,7 @@ Malware
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -371,13 +370,13 @@ Accept wildcard characters: False
 ### -NotificationCulture
 The NotificationCulture parameter specifies the language or locale that's used for notifications.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -399,7 +398,7 @@ You can't use this parameter when the AggregationType parameter value is None (a
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -417,7 +416,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -437,7 +436,7 @@ The NotifyUserThrottleThreshold parameter specifies the maximum number of notifi
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -457,7 +456,7 @@ The NotifyUserThrottleWindow parameter specifies the time interval in minutes th
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -467,7 +466,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operation
-The Operation parameter specifies the activities that are monitored by the alert policy. For the list of available activities, see the Audited activities tab at [Audited activities](https://go.microsoft.com/fwlink/p/?LinkId=824986).
+The Operation parameter specifies the activities that are monitored by the alert policy. For the list of available activities, see the Audited activities tab at [Audited activities](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
 You can specify multiple values separated by commas.
 
@@ -477,7 +476,7 @@ You can only use this parameter when the ThreatType parameter has the value Acti
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -499,7 +498,7 @@ The Severity parameter specifies the severity of the detection. Valid values are
 Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -517,7 +516,7 @@ You can only use this parameter when the AggregationType parameter value is Simp
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -535,7 +534,7 @@ You can only use this parameter when the AggregationType parameter value is Simp
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -545,13 +544,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

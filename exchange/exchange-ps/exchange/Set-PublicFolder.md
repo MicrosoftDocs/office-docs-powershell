@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-PublicFolder
@@ -150,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -EformsLocaleId
-The EformsLocaleId parameter specifies the locale-specific version of the e-forms library. The valid input for the EformsLocaleId parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at [CultureInfo Class](https://go.microsoft.com/fwlink/p/?linkId=184859).
+The EformsLocaleId parameter specifies the locale-specific version of the e-forms library. The valid input for the EformsLocaleId parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo

@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-rolegroup
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Set-RoleGroup
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Set-RoleGroup
@@ -89,7 +88,7 @@ The Identity parameter specifies the name of the role group to modify. If the na
 Type: RoleGroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -147,7 +146,7 @@ The BypassSecurityGroupManagerCheck switch enables a user who hasn't been added 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -167,7 +166,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -183,7 +182,7 @@ The Description parameter specifies the description displayed when the role grou
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -199,7 +198,7 @@ The DisplayName parameter specifies the friendly name of the role group. If the 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -233,7 +232,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -247,7 +246,7 @@ This parameter is available only in on-premises Exchange.
 
 The LinkedCredential parameter specifies the username and password that's used to access the domain controller specified by the LinkedDomainController parameter.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 You can only use the LinkedCredential parameter with a linked role group.
 
@@ -273,7 +272,7 @@ If you want to add more than one user or USG, separate them using commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -289,7 +288,7 @@ The Name parameter specifies the name of the role group. The name can contain up
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -299,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter doesn't work in the Office 365 Security & Compliance Center.
+This parameter doesn't work in the Security & Compliance Center.
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -307,7 +306,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

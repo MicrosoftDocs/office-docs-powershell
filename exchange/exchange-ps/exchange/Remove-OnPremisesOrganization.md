@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Remove-OnPremisesOrganization
@@ -15,9 +14,9 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-OnPremisesOrganization cmdlet to remove an OnPremisesOrganization object in a Microsoft Office 365 tenant.
+Use the Remove-OnPremisesOrganization cmdlet to remove an OnPremisesOrganization object in a Microsoft 365 tenant.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -40,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-OnPremisesOrganization -Identity ExchangeMail
 ```
 
-This example removes the ExchangeMail OnPremisesOrganization object in an Office 365 tenant.
+This example removes the ExchangeMail OnPremisesOrganization object in a Microsoft 365 organization.
 
 ## PARAMETERS
 

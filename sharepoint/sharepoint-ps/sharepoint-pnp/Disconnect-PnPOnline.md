@@ -14,7 +14,7 @@ Disconnects the context
 ## SYNTAX 
 
 ```powershell
-Disconnect-PnPOnline [-Connection <SPOnlineConnection>]
+Disconnect-PnPOnline [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +27,7 @@ Disconnects the current context and requires you to build up a new connection in
 Disconnect-PnPOnline
 ```
 
-This will disconnect you from the server.
+This will clear out all active tokens
 
 ## PARAMETERS
 
@@ -35,7 +35,7 @@ This will disconnect you from the server.
 Connection to be used by cmdlet
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

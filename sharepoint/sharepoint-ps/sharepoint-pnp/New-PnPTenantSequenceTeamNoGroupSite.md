@@ -9,7 +9,7 @@ title: New-PnPTenantSequenceTeamNoGroupSite
 # New-PnPTenantSequenceTeamNoGroupSite
 
 ## SYNOPSIS
-Creates a new team site without an Office 365 group in-memory object
+Creates a new team site without a Microsoft 365 group in-memory object
 
 ## SYNTAX 
 

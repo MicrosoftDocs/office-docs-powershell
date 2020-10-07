@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpcompliancerule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-DlpComplianceRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpComplianceRule
@@ -29,7 +28,7 @@ Get-DlpComplianceRule [[-Identity] <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -71,7 +70,7 @@ The Identity parameter specifies the DLP rule that you want to view. You can use
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -87,7 +86,7 @@ Accept wildcard characters: False
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -111,7 +110,7 @@ The Policy parameter specifies the DLP policy that contains the rules. Using thi
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

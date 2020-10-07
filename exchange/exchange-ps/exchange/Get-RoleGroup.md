@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-rolegroup
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Get-RoleGroup
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Get-RoleGroup
@@ -77,7 +76,7 @@ If the Identity parameter isn't specified, all role groups are returned.
 Type: RoleGroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -111,7 +110,7 @@ The Filter parameter uses OPath syntax to filter the results by the specified pr
 
 - Property is a filterable property.
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
@@ -137,7 +136,7 @@ You can filter on the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -173,7 +172,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -191,7 +190,7 @@ This ShowPartnerLinked switch specifies whether to return built-in role groups t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -215,7 +214,7 @@ You can sort by the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

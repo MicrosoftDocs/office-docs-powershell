@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-OwaVirtualDirectory
@@ -385,7 +384,7 @@ The AllowOfflineOn parameter specifies when Outlook on the web in offline mode i
 
 - AllComputers: Offline mode is available for public and private computer sessions. This is the default value.
 
-When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
+When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Use offline settings in Outlook on the web](https://support.microsoft.com/office/a34c9d9d-16ac-4020-b730-ffa7c7540ae7).
 
 ```yaml
 Type: AllowOfflineOnEnum
@@ -1089,7 +1088,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalSPMySiteHostURL
-The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, https://sp01.contoso.com).
+The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, `https://sp01.contoso.com`).
 
 This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
 
@@ -1545,7 +1544,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalSPMySiteHostURL
-The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, https://sp01.contoso.com).
+The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, `https://sp01.contoso.com`).
 
 This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
 

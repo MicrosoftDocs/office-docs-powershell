@@ -9,13 +9,18 @@ title: Get-PnPSiteDesign
 # Get-PnPSiteDesign
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Retrieve Site Designs that have been registered on the current tenant.
 
 ## SYNTAX 
 
 ```powershell
 Get-PnPSiteDesign [-Identity <TenantSiteDesignPipeBind>]
-                  [-Connection <SPOnlineConnection>]
+                  [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -52,7 +57,7 @@ Accept pipeline input: True
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

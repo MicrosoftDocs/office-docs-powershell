@@ -75,7 +75,7 @@ Starts the movement from <https://contosoenergy.sharepoint.com/sites/hr> and set
 
 ### -DestinationDataLocation
 
-PARAMVALUE: String
+Defines the new destination of the content that you want to move.
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -DestinationUrl
 
-PARAMVALUE: String
+Destination URL where the move will take place.
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -GroupName
 
-PARAMVALUE: String
+Name of the group to be moved.
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -PreferredMoveBeginDate
 
-PARAMVALUE: DateTime
+Specifies what is the preferred Date and time to start the job.
 
 ```yaml
 Type: DateTime
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -PreferredMoveEndDate
 
-PARAMVALUE: DateTime
+Specifies what is the preferred Date and time to stop the job.
 
 ```yaml
 Type: DateTime
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -Url
 
-Destination URL where the move will take place
+Specifies the source URL of the site collection.
 
 ```yaml
 Type: String
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -ValidationOnly
 
-PARAMVALUE: SwitchParameter
+This parameter will force the cmdlet to execute only validation.
 
 ```yaml
 Type: SwitchParameter

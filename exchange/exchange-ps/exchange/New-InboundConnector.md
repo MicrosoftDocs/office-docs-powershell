@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # New-InboundConnector
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-InboundConnector cmdlet to create a new Inbound connector in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -124,7 +123,7 @@ Accept wildcard characters: False
 ### -CloudServicesMailEnabled
 Note: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-configuration-wizard).
 
-The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft Office 365. Specifically, this parameter controls how certain internal X-MS-Exchange-Organization-\* message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
+The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft 365. Specifically, this parameter controls how certain internal X-MS-Exchange-Organization-\* message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
 
 Valid values are:
 
@@ -352,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictDomainsToCertificate
-The RestrictDomainsToCertificate parameter specifies that Office 365 should identify incoming messages that are eligible for this connector by verifying that the remote server authenticates using a TLS certificate that has the TlsSenderCertificateName in the Subject. Valid values are $true or $false.
+The RestrictDomainsToCertificate parameter specifies that Microsoft 365 should identify incoming messages that are eligible for this connector by verifying that the remote server authenticates using a TLS certificate that has the TlsSenderCertificateName in the Subject. Valid values are $true or $false.
 
 ```yaml
 Type: Boolean
@@ -402,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPAddresses
-The SenderIPAddresses parameter specifies the remote IP addresses from which this connector accepts messages. You enter the IP addresses using the following syntax:
+The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. IPv6 addresses are not supported. You enter the IP addresses using the following syntax:
 
 - Single IP: For example, 192.168.1.1.
 
@@ -444,11 +443,11 @@ Accept wildcard characters: False
 ### -TreatMessagesAsInternal
 The TreatMessagesAsInternal parameter specifies an alternative method to identify messages sent from an on-premises organization as internal messages. You should only consider using this parameter when your on-premises organization doesn't use Exchange. Valid values are:
 
-- $true: Messages are considered internal if the sender's domain matches a domain that's configured in Office 365. This setting allows internal mail flow between Office 365 and on-premises organizations that don't have Exchange Server 2010 or later installed. However, this setting has potential security risks (for example, internal messages bypass antispam filtering), so use caution when configuring this setting.
+- $true: Messages are considered internal if the sender's domain matches a domain that's configured in Microsoft 365. This setting allows internal mail flow between Microsoft 365 and on-premises organizations that don't have Exchange Server 2010 or later installed. However, this setting has potential security risks (for example, internal messages bypass antispam filtering), so use caution when configuring this setting.
 
 - $false: Messages aren't considered internal. This is the default value.
 
-In hybrid environments, you don't need to use this parameter, because the Hybrid Configuration wizard automatically configures the required settings on the Inbound connector in Office 365 and the Send connector in the on-premises Exchange organization (the CloudServicesMailEnabled parameter).
+In hybrid environments, you don't need to use this parameter, because the Hybrid Configuration wizard automatically configures the required settings on the Inbound connector in Microsoft 365 and the Send connector in the on-premises Exchange organization (the CloudServicesMailEnabled parameter).
 
 ```yaml
 Type: Boolean

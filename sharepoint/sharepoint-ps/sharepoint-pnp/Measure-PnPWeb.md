@@ -17,7 +17,7 @@ Returns statistics on the web object
 Measure-PnPWeb [-Identity <WebPipeBind>]
                [-Recursive [<SwitchParameter>]]
                [-IncludeHiddenList [<SwitchParameter>]]
-               [-Connection <SPOnlineConnection>]
+               [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -86,7 +86,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

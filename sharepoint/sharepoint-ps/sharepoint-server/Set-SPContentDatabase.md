@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/s
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPContentDatabase
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 

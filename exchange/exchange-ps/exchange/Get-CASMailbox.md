@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-CASMailbox
@@ -17,8 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-CASMailbox cmdlet to view the Client Access settings that are configured on mailboxes.
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXOCASMailbox cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOCASMailbox cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -41,6 +39,7 @@ Get-CASMailbox [-Anr <String>]
  [-SortBy <String>]
  [-ReadIsOptimizedForAccessibility]
  [-RecalculateHasActiveSyncDevicePartnership] [<CommonParameters>]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
 ```
 
 ### Identity
@@ -60,6 +59,7 @@ Get-CASMailbox [[-Identity] <MailboxIdParameter>]
  [-SortBy <String>]
  [-ReadIsOptimizedForAccessibility]
  [-RecalculateHasActiveSyncDevicePartnership] [<CommonParameters>]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
 ```
 
 ## DESCRIPTION
@@ -100,7 +100,51 @@ Get-CASMailbox chris@contoso.com | Format-List Ews*
 
 This example returns all Exchange Web Services settings for the user chris@contoso.com.
 
+
+### Example 4
+```powershell
+Get-CASMailbox -RecipientTypeDetails SharedMailbox | Select *
+```
+
+In Exchange Online, this example filters the cmdlet output to only include shared mailboxes.
+
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -ActiveSyncDebugLogging
 The ActiveSyncDebugLogging switch shows the actual value of the ActiveSyncDebugLogging property for the mailbox. If you don't use this switch, the value always appears as $false.
@@ -165,7 +209,7 @@ Accept wildcard characters: False
 ### -Credential
 The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -205,7 +249,7 @@ The Filter parameter uses OPath syntax to filter the results by the specified pr
 
 - Property is a filterable property. For more information about the filterable properties, see [Filterable properties for the Filter parameter](https://docs.microsoft.com/powershell/exchange/filter-properties).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
@@ -223,42 +267,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -402,6 +410,37 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientTypeDetails
+This parameter is available only in the cloud-based service.
+
+The RecipientTypeDetails parameter filters the results by the specified recipient subtype. Valid values are:
+
+- DiscoveryMailbox
+- EquipmentMailbox
+- LegacyMailbox
+- LinkedMailbox
+- LinkedRoomMailbox
+- MailUser
+- RoomMailbox
+- SharedMailbox
+- TeamMailbox
+- UserMailbox
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: RecipientTypeDetails[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

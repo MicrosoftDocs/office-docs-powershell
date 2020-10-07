@@ -18,6 +18,11 @@ Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join T
 
 ## SYNTAX
 
+```
+Remove-CsVideoInteropServiceProvider [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force]
+ [-AsJob]
+```
+
 ## DESCRIPTION
 Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join Teams meetings. The CsVideoInteropServiceProvider cmdlets allow you to designate provider/tenant specific information about the connection to the provider.
 

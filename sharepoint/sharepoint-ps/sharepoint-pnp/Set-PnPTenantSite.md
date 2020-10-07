@@ -9,7 +9,12 @@ title: Set-PnPTenantSite
 # Set-PnPTenantSite
 
 ## SYNOPSIS
-Set site information.
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
+Updates settings of a site collection
 
 ## SYNTAX 
 
@@ -35,7 +40,7 @@ Set-PnPTenantSite -Url <String>
                   [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
                   [-DisableFlows <FlowsPolicy>]
                   [-Wait [<SwitchParameter>]]
-                  [-Connection <SPOnlineConnection>]
+                  [-Connection <PnPConnection>]
 ```
 
 ### Set Lock State
@@ -43,11 +48,11 @@ Set-PnPTenantSite -Url <String>
 Set-PnPTenantSite -Url <String>
                   [-LockState <SiteLockState>]
                   [-Wait [<SwitchParameter>]]
-                  [-Connection <SPOnlineConnection>]
+                  [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
-Sets site properties for existing sites.
+Allows settings of a site collection to be updated
 
 ## EXAMPLES
 
@@ -212,7 +217,7 @@ Accept pipeline input: False
 ```
 
 ### -LocaleId
-Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911).
+Specifies the language of this site collection. For more information, see Locale IDs supported by SharePoint at https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint. To get the list of supported languages on a SharePoint environment use: (Get-PnPWeb -Includes RegionalSettings.InstalledLanguages).RegionalSettings.InstalledLanguages.
 
 ```yaml
 Type: UInt32
@@ -376,7 +381,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

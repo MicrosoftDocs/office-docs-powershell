@@ -5,8 +5,8 @@ applicable: Microsoft Teams
 title: Set-TeamMemberSettings
 online version: https://docs.microsoft.com/powershell/module/teams/set-teammembersettings
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 

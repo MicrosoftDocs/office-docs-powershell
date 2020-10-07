@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-dlpcompliancepolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-DlpCompliancePolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-DlpCompliancePolicy
@@ -60,7 +59,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -95,7 +94,7 @@ The Identity parameter specifies the DLP policy that you want to modify. You can
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -111,7 +110,7 @@ The RetryDistribution switch redistributes the policy to all OneDrive for Busine
 Type: SwitchParameter
 Parameter Sets: RetryDistribution
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -127,7 +126,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -143,7 +142,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -159,7 +158,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -177,7 +176,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -195,7 +194,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -215,7 +214,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -233,7 +232,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -251,7 +250,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -269,7 +268,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -285,7 +284,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -305,7 +304,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -319,13 +318,13 @@ The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-ena
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
 
-You can't use this parameter to specify Office 365 Groups.
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -339,13 +338,13 @@ The ExchangeSenderMemberOf parameter specifies the distribution groups, mail-ena
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>.
 
-You can't use this parameter to specify Office 365 Groups.
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -361,7 +360,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -385,7 +384,7 @@ The Mode parameter specifies the action and notification level of the DLP policy
 Type: PolicyMode
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -411,7 +410,7 @@ If you modify the priority value of a policy, the position of the policy in the 
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -427,7 +426,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -443,7 +442,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -459,7 +458,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -477,7 +476,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -495,7 +494,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -513,7 +512,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -531,7 +530,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -549,7 +548,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -567,7 +566,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -577,13 +576,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-auditconfig
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-AuditConfig
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-AuditConfig
@@ -15,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-AuditConfig cmdlet to configure the auditing configuration in the Security & Compliance Center. The auditing configuration specifies where auditing is allowed in Microsoft Office 365.
+Use the Set-AuditConfig cmdlet to configure the auditing configuration in the Security & Compliance Center. The auditing configuration specifies where auditing is allowed in Microsoft 365.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -27,7 +26,7 @@ Set-AuditConfig [[-Identity] <PolicyIdParameter>] -Workload <MultiValuedProperty
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -57,7 +56,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -73,7 +72,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -89,7 +88,7 @@ This parameter is reserved for internal Microsoft use.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -105,7 +104,7 @@ This parameter is reserved for internal Microsoft use.
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
         "src": "docs-conceptual",
         "version": "exchange-ps",
@@ -27,7 +28,10 @@
       },
       {
         "files": [
-          "**/*.md"
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
         ],
         "src": "exchange-ps",
         "version": "exchange-ps",
@@ -84,7 +88,7 @@
     },
     "fileMetadata": {
       "apiPlatform": {
-        "exchange-ps/exchange/**/*.md": [
+        "exchange-ps/exchange/**/*.yml": [
           "powershell"
         ]
       }

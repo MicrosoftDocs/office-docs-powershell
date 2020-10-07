@@ -9,12 +9,17 @@ title: Grant-PnPHubSiteRights
 # Grant-PnPHubSiteRights
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Grant additional permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users
 
 ## SYNTAX 
 
 ```powershell
-Grant-PnPHubSiteRights [-Connection <SPOnlineConnection>]
+Grant-PnPHubSiteRights [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -32,7 +37,7 @@ This example shows how to grant rights to myuser and myotheruser to associate th
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

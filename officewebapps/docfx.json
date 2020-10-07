@@ -21,7 +21,8 @@
         "dest": "officewebapps/officewebapps-ps"
       },
       {
-      "files": ["**/*.md"],
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
       "src": "officewebapps-ps",
       "version": "officewebapps-ps",
       "dest": "module"
@@ -53,7 +54,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "kenwith",
+      "author" : "serdarsoysal",
       "ms.author" : "mikeplum",
       "manager" : "laurawi",
       "ms.date" : "11/28/2017",

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-ClientAccessRule
@@ -44,13 +43,12 @@ Client access rules are like mail flow rules (also known as transport rules) for
 
 Note: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
-- OutlookWebApp: BasicAuthentication and AdfsAuthentication.
-
-- ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
-
-- RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
-
 - ExchangeActiveSync: BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
+- ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
+- IMAP4: BasicAuthentication and OAuthAuthentication.
+- OutlookWebApp: BasicAuthentication and AdfsAuthentication.
+- POP3: BasicAuthentication and OAuthAuthentication.
+- RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -457,7 +455,7 @@ The UserRecipientFilter parameter specifies a condition for the client access ru
 
 - Property is a filterable property. For filterable recipient properties, see 
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 

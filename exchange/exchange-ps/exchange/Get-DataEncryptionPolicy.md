@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-DataEncryptionPolicy
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-DataEncryptionPolicy cmdlet to view data encryption policies in Exchange Online.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,7 +28,7 @@ Get-DataEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter>] [-Confi
 ```
 
 ## DESCRIPTION
-Data encryption policy cmdlets are the Exchange Online part of service encryption with Customer Key in Office 365. For more information, see [Controlling your data in Office 365 using Customer Key](https://aka.ms/customerkey).
+Data encryption policy cmdlets are the Exchange Online part of service encryption with Customer Key in Microsoft 365. For more information, see [Controlling your data in Microsoft 365 using Customer Key](https://aka.ms/customerkey).
 
 You can assign a data encryption policy to a mailbox by using the DataEncryptionPolicy parameter on the Set-Mailbox cmdlet in Exchange Online PowerShell.
 

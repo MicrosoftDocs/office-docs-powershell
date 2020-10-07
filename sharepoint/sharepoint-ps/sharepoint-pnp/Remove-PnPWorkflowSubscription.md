@@ -9,24 +9,24 @@ title: Remove-PnPWorkflowSubscription
 # Remove-PnPWorkflowSubscription
 
 ## SYNOPSIS
-Remove workflow subscription
+Removes a SharePoint 2010/2013 workflow subscription
 
 ## SYNTAX 
 
 ```powershell
 Remove-PnPWorkflowSubscription -Identity <WorkflowSubscriptionPipeBind>
                                [-Web <WebPipeBind>]
-                               [-Connection <SPOnlineConnection>]
+                               [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
-Removes a previously registered workflow subscription
+Removes a previously registered SharePoint 2010/2013 workflow subscription
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Remove-PnPWorkflowSubscription -identity $wfSub
+Remove-PnPWorkflowSubscription -Identity $wfSub
 ```
 
 Removes the workflowsubscription, retrieved by Get-PnPWorkflowSubscription.
@@ -49,14 +49,14 @@ Parameter Sets: (All)
 
 Required: True
 Position: 0
-Accept pipeline input: False
+Accept pipeline input: True
 ```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

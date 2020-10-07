@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-LabelPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-LabelPolicy
@@ -55,7 +54,7 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter> -RetryDistribution
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -81,7 +80,7 @@ The Identity parameter specifies the policy that you want to view. You can use a
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -99,7 +98,7 @@ Locations whose initial distributions succeeded aren't included in the retry. Po
 Type: SwitchParameter
 Parameter Sets: RetryDistribution
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -109,20 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
+The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. A valid value is a mailbox.
 
-- A mailbox
-
-- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+To specify the mailbox, you can use any value that uniquely identifies it. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -131,7 +123,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -141,27 +133,22 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocationException
-The AddExchangeLocationException parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
+The AddExchangeLocationException parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. A valid value is a mailbox.
 
-- A mailbox
-
-- A distribution group or mail-enabled security group
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+To specify the mailbox, you can use any value that uniquely identifies it. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Email address
-
 - GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -185,7 +172,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -195,17 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocation
-The AddModernGroupLocation parameter specifies the Office 365 groups to add to the list of included Office 365 Groups when you aren't using the value All for the ModernGroupLocation parameter.
-
-You can use any value that uniquely identifies the Office 365 Group. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
+The AddModernGroupLocation parameter specifies the Microsoft 365 Groups to add to the list of included Microsoft 365 Groups. To identify the Microsoft 365 Group, you must use the primary SMTP address.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -213,7 +190,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -223,25 +200,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocationException
-The AddModernGroupLocationException parameter specifies the Office 365 groups to add to the list of excluded Office 365 Groups when you're using the value All for the ModernGroupLocation parameter.
-
-You can use any value that uniquely identifies the Office 365 Group. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -251,13 +216,13 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label policy. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label policy. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -273,7 +238,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -293,7 +258,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -309,7 +274,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -325,7 +290,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -341,7 +306,7 @@ This parameter is reserved for internal Microsoft use.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -357,7 +322,7 @@ This parameter is reserved for internal Microsoft use.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -389,7 +354,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -421,7 +386,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -445,7 +410,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -455,17 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocation
-The RemoveModernGroupLocation parameter specifies the Office 365 groups to remove from the list of included groups when you aren't using the value All for the ModernGroupLocation parameter.
-
-You can use any value that uniquely identifies the Office 365 Group. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
+The RemoveModernGroupLocation parameter specifies the Microsoft 365 Groups to remove from the list of included groups. To identify the Microsoft 365 Group, you must use the primary SMTP address.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -473,7 +428,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -483,25 +438,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocationException
-The RemoveModernGroupLocationException parameter specifies the Office 365 groups to remove from the list of excluded groups when you're using the value All for the ModernGroupLocation parameter.
-
-You can use any value that uniquely identifies the Office 365 Group. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -511,13 +454,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

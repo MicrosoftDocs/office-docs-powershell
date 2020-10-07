@@ -12,7 +12,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently only available in private preview in the pre-release Teams PowerShell module.
+**Note:** The cmdlet Set-CsGroupPolicyAssignment will be available soon. In the meantime, to change a group policy assignment you can first remove the current policy assignment from the group and then add a new policy assignment.
 
 This cmdlet is used to update a group policy assignment.
 
@@ -69,7 +69,7 @@ The ID of a batch policy assignment operation.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -84,7 +84,7 @@ The type of the policy assigned.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -99,7 +99,7 @@ The of the new policy to be assigned.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -114,7 +114,7 @@ The new rank of the policy assignment, relative to other group policy assignment
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -136,9 +136,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Get-CsGroupPolicyAssignment]()
+[New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md)
 
-[Set-CsGroupPolicyAssignment]()
+[Get-CsGroupPolicyAssignment](Get-CsGroupPolicyAssignment.md)
 
-[Remove-CsGroupPolicyAssignment]()
-
+[Remove-CsGroupPolicyAssignment](Remove-CsGroupPolicyAssignment.md)

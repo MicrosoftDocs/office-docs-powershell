@@ -15,7 +15,7 @@ Marks the web for full indexing during the next incremental crawl
 
 ```powershell
 Request-PnPReIndexWeb [-Web <WebPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ## PARAMETERS
@@ -24,7 +24,7 @@ Request-PnPReIndexWeb [-Web <WebPipeBind>]
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

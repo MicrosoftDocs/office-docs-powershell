@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE---------------------- 
 ```
-$subscription = Get-SPSIteSubscription -Identity https://site_url
+$subscription = Get-SPSiteSubscription -Identity https://site_url
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Managed Metadata Service Connection'}
 Import-SPMetadataWebServicePartitionData -Identity $subscription -ServiceProxy $proxy -Path "\\server_name\folder_name\file_name.cab"
 ```
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoCompression
-{{Fill NoCompression Description}}
+Do not use.
 
 ```yaml
 Type: SwitchParameter
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -ToContentDatabase
-{{Fill ToContentDatabase Description}}
+Do not use.
 
 ```yaml
 Type: SPContentDatabasePipeBind
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -ToServiceDatabase
-{{Fill ToServiceDatabase Description}}
+Do not use.
 
 ```yaml
 Type: SwitchParameter

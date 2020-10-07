@@ -9,7 +9,7 @@ title: New-PnPTenantSequenceTeamNoGroupSubSite
 # New-PnPTenantSequenceTeamNoGroupSubSite
 
 ## SYNOPSIS
-Creates a team site subsite with no Office 365 group object
+Creates a team site subsite with no Microsoft 365 group object
 
 ## SYNTAX 
 

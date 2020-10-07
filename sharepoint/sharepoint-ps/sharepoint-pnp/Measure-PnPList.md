@@ -9,7 +9,7 @@ title: Measure-PnPList
 # Measure-PnPList
 
 ## SYNOPSIS
-Returns statistics on the list object
+Returns statistics on the list object. This may fail on lists larger than the list view threshold
 
 ## SYNTAX 
 
@@ -20,7 +20,7 @@ Measure-PnPList -Identity <ListPipeBind>
                 [-ItemLevel [<SwitchParameter>]]
                 [-BrokenPermissions [<SwitchParameter>]]
                 [-Web <WebPipeBind>]
-                [-Connection <SPOnlineConnection>]
+                [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -117,7 +117,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019, SharePoint Server 2016
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

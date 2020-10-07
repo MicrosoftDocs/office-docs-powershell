@@ -7,13 +7,14 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-SiteMailboxProvisioningPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
+
+Site mailboxes were deprecated in Exchange Online and SharePoint Online in 2017. For more information, see [Deprecation of Site Mailboxes](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028).
 
 Use the New-SiteMailboxProvisioningPolicy cmdlet to create provisioning policies for site mailboxes.
 
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 ### -DefaultAliasPrefixEnabled
 The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes have the default prefix text added to the alias. Valid values are:
 
-- $true: Aliases get the default prefix text. This is the default value. In Office 365, the default prefix text is SMO- (for example, the alias value BugBash\_2016 becomes SMO-BugBash\_2016). In on-premises Exchange, the default prefix text is SM- (for example, the alias value BugBash\_2016 becomes SM-BugBash\_2016).
+- $true: Aliases get the default prefix text. This is the default value. In Microsoft 365, the default prefix text is SMO- (for example, the alias value BugBash\_2016 becomes SMO-BugBash\_2016). In on-premises Exchange, the default prefix text is SM- (for example, the alias value BugBash\_2016 becomes SM-BugBash\_2016).
 
 - $false: Aliases don't get the default prefix text.
 

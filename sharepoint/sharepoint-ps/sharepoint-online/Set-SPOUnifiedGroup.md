@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-online/s
 applicable: SharePoint Online
 title: Set-SPOUnifiedGroup
 schema: 2.0.0
-author:
-ms.author:
+author: techwriter40
+ms.author: kirks
 ms.reviewer:
 ---
 

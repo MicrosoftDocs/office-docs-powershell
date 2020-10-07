@@ -18,7 +18,7 @@ Returns all or a specific navigation node
 Get-PnPNavigationNode [-Location <NavigationType>]
                       [-Tree [<SwitchParameter>]]
                       [-Web <WebPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ### A single node by ID
@@ -26,7 +26,7 @@ Get-PnPNavigationNode [-Location <NavigationType>]
 Get-PnPNavigationNode [-Id <Int>]
                       [-Tree [<SwitchParameter>]]
                       [-Web <WebPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -75,7 +75,7 @@ Accept pipeline input: False
 ```
 
 ### -Location
-The location of the nodes to retrieve. Either TopNavigationBar, QuickLaunch
+The location of the nodes to retrieve. Either TopNavigationBar, QuickLaunch, SearchNav or Footer.
 
 ```yaml
 Type: NavigationType
@@ -102,7 +102,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

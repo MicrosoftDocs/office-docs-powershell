@@ -18,7 +18,7 @@ ms.reviewer:
 
 ```
 New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
- [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowIPVideo <Boolean>]
+ [-AllowChannelMeetingScheduling <Boolean>] [-AllowMeetNow <Boolean>] [-AllowIPVideo <Boolean>] [-IPAudioMode <String>] [-IPVideoMode <String>]
  [-AllowAnonymousUsersToDialOut <Boolean>] [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowPrivateMeetingScheduling <Boolean>] [-AutoAdmittedUsers <String>] [-AllowCloudRecording <Boolean>]
  [-AllowOutlookAddIn <Boolean>] [-AllowPowerPointSharing <Boolean>]
@@ -26,8 +26,8 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-PreferredMeetingProviderForIslandsMode <String>]
  [-VideoFiltersMode <String>] [-Identity] <XdsIdentity> [-AllowEngagementReport <String>]
- [-AllowNDIStreaming <Boolean>] [-DesignatedPresenterRoleMode <String>] [-InMemory] [-Force] [-WhatIf] 
- [-Confirm] [<CommonParameters>]
+ [-AllowNDIStreaming <Boolean>] [-DesignatedPresenterRoleMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
+ [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -140,6 +140,36 @@ Determines whether video is enabled in  a user's meetings or calls. Set this to 
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPAudioMode
+Determines whether audio can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming audio in the meeting. Set this to DISABLED to prohibit outgoing and incoming audio in the meeting. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPVideoMode
+Determines whether video can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming video in the meeting. Set this to DISABLED to prohibit outgoing and incoming video in the meeting. Invalid value combination IPVideoMode: EnabledOutgoingIncoming and IPAudioMode: Disabled
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -431,7 +461,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMeetingProviderForIslandsMode
-This parameter is reserved for internal Microsoft use.
+Determines the Outlook meeting add-in available to users on Islands mode. By default, this is set to TeamsAndSfb, and the users sees both the Skype for Business and Teams add-ins. Set this to Teams to remove the Skype for Business add-in and only show the Teams add-in.
 
 ```yaml
 Type: String
@@ -516,6 +546,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowPSTNUsersToBypassLobby
+Determines whether a PSTN user joining the meeting is allowed or not to bypass the lobby. If you set this parameter to True, PSTN users are allowed to bypass the lobby as long as an authenticated user is joined to the meeting.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## INPUTS
 
 ### None
@@ -528,4 +573,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

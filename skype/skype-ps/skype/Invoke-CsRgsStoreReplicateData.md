@@ -2,7 +2,7 @@
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/invoke-csrgsstorereplicatedata
 applicable: Skype for Business Server 2019
-title: Invoke-CsRgsStoreReplicateData
+title: Invoke-CsRGSStoreReplicateData
 schema: 2.0.0
 manager: rogupta
 author: hirenshah1
@@ -18,7 +18,7 @@ Replicate existing RGS data present on the specified pool to the backup tables s
 ## SYNTAX
 
 ```
-Invoke-CsRgsStoreReplicateData -PoolFqdn <Fqdn> [-Force] [<CommonParameters>]
+Invoke-CsRGSStoreReplicateData -PoolFqdn <Fqdn> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

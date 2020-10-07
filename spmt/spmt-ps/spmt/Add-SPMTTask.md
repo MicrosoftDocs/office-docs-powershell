@@ -1,12 +1,12 @@
 ---
-External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
 online version: https://docs.microsoft.com/powershell/module/spmt/add-spmttask
 applicable: SharePoint Migration Tool
 title: Add-SPMTTask
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 

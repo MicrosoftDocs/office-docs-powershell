@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Lists all the configured origins under the tenancy or under a given site. Requires Tenant administrator permissions.
+Lists all the configured origins under the tenancy or under a given site. You must be a SharePoint Online administrator or Global Administrator to run this cmdlet.
 
 ## SYNTAX
 

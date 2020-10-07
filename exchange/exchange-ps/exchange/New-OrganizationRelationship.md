@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-OrganizationRelationship
@@ -75,7 +74,7 @@ The domain to connect to is mail.fourthcoffee.com.
 
 The Exchange Web Services application URL is mail.fourthcoffee.com.
 
-The Autodiscover URL is https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity.
+The Autodiscover URL is `https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity`.
 
 Free/busy access is enabled.
 
@@ -444,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetAutodiscoverEpr
-The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, https://contoso.com/autodiscover/autodiscover.svc/wssecurity. Exchange uses the Autodiscover service to automatically detect the correct Exchange server endpoint to use for external requests.
+The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, `https://contoso.com/autodiscover/autodiscover.svc/wssecurity`. Exchange uses the Autodiscover service to automatically detect the correct Exchange server endpoint to use for external requests.
 
 ```yaml
 Type: Uri

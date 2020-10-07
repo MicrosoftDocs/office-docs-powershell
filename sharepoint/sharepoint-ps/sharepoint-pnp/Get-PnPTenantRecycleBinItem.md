@@ -9,12 +9,17 @@ title: Get-PnPTenantRecycleBinItem
 # Get-PnPTenantRecycleBinItem
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns all modern and classic site collections in the tenant scoped recycle bin
 
 ## SYNTAX 
 
 ```powershell
-Get-PnPTenantRecycleBinItem [-Connection <SPOnlineConnection>]
+Get-PnPTenantRecycleBinItem [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +40,7 @@ Returns all modern and classic site collections in the tenant scoped recycle bin
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

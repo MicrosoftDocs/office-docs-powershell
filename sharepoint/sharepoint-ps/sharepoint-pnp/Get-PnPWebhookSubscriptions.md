@@ -16,7 +16,7 @@ Gets all the Webhook subscriptions of the resource
 ```powershell
 Get-PnPWebhookSubscriptions [-List <ListPipeBind>]
                             [-Web <WebPipeBind>]
-                            [-Connection <SPOnlineConnection>]
+                            [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -27,6 +27,13 @@ Get-PnPWebhookSubscriptions -List MyList
 ```
 
 Gets all Webhook subscriptions of the list MyList
+
+### ------------------EXAMPLE 2------------------
+```powershell
+Get-PnPList | Get-PnPWebhookSubscriptions
+```
+
+Gets all Webhook subscriptions of the all the lists
 
 ## PARAMETERS
 
@@ -39,14 +46,14 @@ Parameter Sets: (All)
 
 Required: False
 Position: Named
-Accept pipeline input: False
+Accept pipeline input: True
 ```
 
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

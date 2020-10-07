@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-deviceconfigurationrule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-DeviceConfigurationRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-DeviceConfigurationRule
@@ -52,15 +51,15 @@ Set-DeviceConfigurationRule [-Identity] <ComplianceRuleIdParameter> -TargetGroup
 ## DESCRIPTION
 These are the cmdlets that are used for mobile device management in the Security & Compliance Center:
 
-- DeviceTenantPolicy and DeviceTenantRule cmdlets: A policy that defines whether to block or allow mobile device access to Office 365 email by unsupported devices that use Exchange ActiveSync only. This setting applies to all users in your organization. Both allow and block scenarios allow reporting for unsupported devices, and you can specify exceptions to the policy based on security groups.
+- DeviceTenantPolicy and DeviceTenantRule cmdlets: A policy that defines whether to block or allow mobile device access to Exchange Online email by unsupported devices that use Exchange ActiveSync only. This setting applies to all users in your organization. Both allow and block scenarios allow reporting for unsupported devices, and you can specify exceptions to the policy based on security groups.
 
-- DeviceConditionalAccessPolicy and DeviceConditionalAccessRule cmdlets: Policies that control mobile device access to Office 365 for supported devices. These policies are applied to security groups. Unsupported devices are not allowed to enroll in mobile device management.
+- DeviceConditionalAccessPolicy and DeviceConditionalAccessRule cmdlets: Policies that control mobile device access to Microsoft 365 for supported devices. These policies are applied to security groups. Unsupported devices are not allowed to enroll in mobile device management.
 
 - DeviceConfigurationPolicy and DeviceConfigurationRule cmdlets: Policies that control mobile device settings for supported devices. These policies are applied to security groups.
 
 - Get-DevicePolicy: Returns all mobile device management policies regardless of type (DeviceTenantPolicy, DeviceConditionalAccessPolicy or DeviceConfigurationPolicy).
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -80,7 +79,7 @@ The Identity parameter specifies the mobile device configuration rule that you w
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -98,7 +97,7 @@ You can specify multiple groups separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -118,7 +117,7 @@ The AccountName parameter specifies the account name. Valid values for this para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -138,7 +137,7 @@ The AccountUserName parameter specifies the account user name. Valid values for 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -166,7 +165,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -190,7 +189,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -214,7 +213,7 @@ This setting is available only on Windows 8.1 RT devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -244,7 +243,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -272,7 +271,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -300,7 +299,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -328,7 +327,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -352,7 +351,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -380,7 +379,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -410,7 +409,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -434,7 +433,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -458,7 +457,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -482,7 +481,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -504,7 +503,7 @@ This setting is available only on Windows 8.1 RT devices.
 Type: Int64
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -526,7 +525,7 @@ This setting is available only on Windows 8.1 RT devices.
 Type: Int64
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -556,7 +555,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: RatingAppsEntry
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -586,7 +585,7 @@ This setting is available only on Windows 8.1 RT devices.
 Type: AutoUpdateStatusEntry
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -610,7 +609,7 @@ This setting is available only on Windows Phone 8.1 devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -640,7 +639,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -660,7 +659,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -676,7 +675,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -696,7 +695,7 @@ The EmailAddress parameter specifies the email address. Valid values are:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -720,7 +719,7 @@ This setting is available only on Windows Phone 8.1 devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -740,7 +739,7 @@ The ExchangeActiveSyncHost parameter specifies the Exchange ActiveSync host. Val
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -762,7 +761,7 @@ This setting is available only on Windows 8.1 RT devices.
 Type: Required
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -786,7 +785,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -814,7 +813,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -844,7 +843,7 @@ This setting is available on the following types of devices:
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -864,7 +863,7 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1006,7 +1005,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: RatingMovieEntry
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1026,7 +1025,7 @@ The PasswordComplexity parameter specifies the password complexity. Valid values
 Type: Int64
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1056,7 +1055,7 @@ This setting is available on the following types of devices:
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1086,7 +1085,7 @@ This setting is available on the following types of devices:
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1106,7 +1105,7 @@ The PasswordMinComplexChars parameter specifies the minimum number of complex ch
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1136,7 +1135,7 @@ This setting is available on the following types of devices:
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1160,7 +1159,7 @@ This setting is available only on Android 4+ devices.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1190,7 +1189,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1218,7 +1217,7 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1246,7 +1245,7 @@ This setting is available on the following types of devices:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1286,7 +1285,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: RatingRegionEntry
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1308,7 +1307,7 @@ The RequireEmailProfile parameter specifies whether an email profile is required
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1332,7 +1331,7 @@ This setting is available only on Windows 8.1 RT devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1356,7 +1355,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1476,7 +1475,7 @@ This setting is available only on Apple iOS 6+ devices.
 Type: RatingTvShowEntry
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1504,7 +1503,7 @@ This setting is available only on Windows 8.1 RT devices.
 Type: UserAccountControlStatusEntry
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1514,13 +1513,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1544,7 +1543,7 @@ This setting is available only on Microsoft Windows Phone 8.1 devices.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -1556,7 +1555,7 @@ Accept wildcard characters: False
 ### -WorkFoldersSyncUrl
 The WorkFoldersSyncUrl parameter specifies the URL that's used to synchronize company data on devices.
 
-Valid input for this parameter a URL. For example, https://workfolders.contoso.com.
+Valid input for this parameter a URL. For example, `https://workfolders.contoso.com`.
 
 This setting is available only on Windows 8.1 RT devices.
 
@@ -1564,7 +1563,7 @@ This setting is available only on Windows 8.1 RT devices.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-online/g
 applicable: SharePoint Online
 title: Get-SPOMultiGeoExperience
 schema: 2.0.0
-author:
-ms.author:
+author: techwriter40
+ms.author: kirks
 ms.reviewer:
 ---
 
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Use this cmdlet to get the multi geo experience mode.
 
 ## SYNTAX
 

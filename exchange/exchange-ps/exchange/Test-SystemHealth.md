@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Test-SystemHealth
@@ -54,7 +53,7 @@ This example saves the output data as a byte stream to the temporary variable $t
 ### -ADCredentials
 The ADCredentials parameter specifies the username and password that's used to access Active Directory. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -204,7 +203,7 @@ Accept wildcard characters: False
 ### -ExchangeCredentials
 The ExchangeCredentials parameter specifies the username and password that's used to access Exchange servers. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential

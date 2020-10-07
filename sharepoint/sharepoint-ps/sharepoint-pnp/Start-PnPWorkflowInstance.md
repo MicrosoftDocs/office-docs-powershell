@@ -9,7 +9,7 @@ title: Start-PnPWorkflowInstance
 # Start-PnPWorkflowInstance
 
 ## SYNOPSIS
-Starts a workflow instance on a list item
+Starts a SharePoint 2010/2013 workflow instance on a list item
 
 ## SYNTAX 
 
@@ -17,21 +17,24 @@ Starts a workflow instance on a list item
 Start-PnPWorkflowInstance -Subscription <WorkflowSubscriptionPipeBind>
                           -ListItem <ListItemPipeBind>
                           [-Web <WebPipeBind>]
-                          [-Connection <SPOnlineConnection>]
+                          [-Connection <PnPConnection>]
 ```
+
+## DESCRIPTION
+Allows starting a SharePoint 2010/2013 workflow on a list item in a list
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Start-PnPWorkflowInstance -Subscription $subscription -ListItem $item 
+Start-PnPWorkflowInstance -Subscription 'WorkflowName' -ListItem $item
 ```
 
 Starts a workflow instance on the specified list item
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Start-PnPWorkflowInstance -Subscription $subscription -ListItem 2 
+Start-PnPWorkflowInstance -Subscription $subscription -ListItem 2
 ```
 
 Starts a workflow instance on the specified list item
@@ -66,7 +69,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

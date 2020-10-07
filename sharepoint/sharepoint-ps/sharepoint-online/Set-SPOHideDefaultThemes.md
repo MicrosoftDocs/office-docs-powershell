@@ -59,7 +59,7 @@ Set-SPOHideDefaultThemes $false
 
 ### -HideDefaultThemes
 
-{{ Fill HideDefaultThemes Description }}
+Determines whether to hide the default themes.
 
 ```yaml
 Type: Boolean

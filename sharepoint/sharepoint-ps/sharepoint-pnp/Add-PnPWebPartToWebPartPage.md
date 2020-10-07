@@ -20,7 +20,7 @@ Add-PnPWebPartToWebPartPage -Xml <String>
                             -ZoneId <String>
                             -ZoneIndex <Int>
                             [-Web <WebPipeBind>]
-                            [-Connection <SPOnlineConnection>]
+                            [-Connection <PnPConnection>]
 ```
 
 ### FILE
@@ -30,7 +30,7 @@ Add-PnPWebPartToWebPartPage -Path <String>
                             -ZoneId <String>
                             -ZoneIndex <Int>
                             [-Web <WebPipeBind>]
-                            [-Connection <SPOnlineConnection>]
+                            [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -116,7 +116,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

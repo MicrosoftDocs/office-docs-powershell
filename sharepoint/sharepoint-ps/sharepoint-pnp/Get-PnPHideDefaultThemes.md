@@ -9,12 +9,17 @@ title: Get-PnPHideDefaultThemes
 # Get-PnPHideDefaultThemes
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Returns if the default / OOTB themes should be visible to users or not.
 
 ## SYNTAX 
 
 ```powershell
-Get-PnPHideDefaultThemes [-Connection <SPOnlineConnection>]
+Get-PnPHideDefaultThemes [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +42,7 @@ This example returns the current setting if the default themes should be visible
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

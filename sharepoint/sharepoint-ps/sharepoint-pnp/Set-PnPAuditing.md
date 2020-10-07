@@ -24,7 +24,7 @@ Set-PnPAuditing [-RetentionTime <Int>]
                 [-EditContentTypesColumns [<SwitchParameter>]]
                 [-SearchContent [<SwitchParameter>]]
                 [-EditUsersPermissions [<SwitchParameter>]]
-                [-Connection <SPOnlineConnection>]
+                [-Connection <PnPConnection>]
 ```
 
 ### Enable all
@@ -32,13 +32,13 @@ Set-PnPAuditing [-RetentionTime <Int>]
 Set-PnPAuditing -EnableAll [<SwitchParameter>]
                 [-RetentionTime <Int>]
                 [-TrimAuditLog [<SwitchParameter>]]
-                [-Connection <SPOnlineConnection>]
+                [-Connection <PnPConnection>]
 ```
 
 ### Disable All
 ```powershell
 Set-PnPAuditing -DisableAll [<SwitchParameter>]
-                [-Connection <SPOnlineConnection>]
+                [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -221,7 +221,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

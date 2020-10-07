@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-OfflineAddressBook
@@ -450,7 +449,7 @@ Here are some examples:
 
 - "Sun.1:15 AM-Monday.23:00"
 
-Note: In Office 365, the read only value of this property is displayed in Coordinated Universal Time (UTC).
+Note: In Exchange Online, the read only value of this property is displayed in Coordinated Universal Time (UTC).
 
 ```yaml
 Type: Schedule

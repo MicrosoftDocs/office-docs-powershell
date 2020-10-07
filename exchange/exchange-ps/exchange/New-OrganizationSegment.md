@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-organizationsegment
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-OrganizationSegment
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # New-OrganizationSegment
@@ -15,7 +14,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-OrganizationSegment cmdlet to create organization segments for use with information barrier policies in the Office 365 Security & Compliance Center. Organization Segments are not in effect until you [apply information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies#part-3-apply-information-barrier-policies).
+Use the New-OrganizationSegment cmdlet to create organization segments for use with information barrier policies in the Security & Compliance Center. Organization Segments are not in effect until you [apply information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies#part-3-apply-information-barrier-policies).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,7 +29,7 @@ New-OrganizationSegment [-Name] <String> -UserGroupFilter <String>
 ## DESCRIPTION
 For more information about the filterable attributes that you can use to define segments, see [Attributes for information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-attributes).
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -64,7 +63,7 @@ The Name parameter specifies the unique name for the organization segment. The m
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 0
@@ -84,7 +83,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -100,7 +99,7 @@ The UserGroupFilter parameter uses OPath filter syntax to specify the members of
 
 - Property is a filterable property. For more information, see [Attributes for information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-attributes).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
@@ -112,7 +111,7 @@ Use the same property for all of your segments, and verify that your segments do
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -122,13 +121,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

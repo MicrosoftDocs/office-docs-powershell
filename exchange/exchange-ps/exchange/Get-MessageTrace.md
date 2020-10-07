@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MessageTrace
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MessageTrace cmdlet to trace messages as they pass through the cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -44,9 +43,7 @@ Get-MessageTrace
 ## DESCRIPTION
 You can use this cmdlet to search message data for the last 10 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
 
-If you enter a start date that is greater than 10 days and less than or equal to 30 days, only 10 days of data will be returned.
-
-If you enter a start date that is older than 30 days, you will receive an error and the command will return no results.
+If you enter a start date that is older than 10 days, you will receive an error and the command will return no results.
 
 To search for message data that is greater than 10 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
 

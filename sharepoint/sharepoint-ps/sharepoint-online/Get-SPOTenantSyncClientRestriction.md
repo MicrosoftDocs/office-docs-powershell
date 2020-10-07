@@ -19,22 +19,18 @@ Returns the current configuration status.
 ## SYNTAX
 
 ```powershell
-Get-SPOTenantSyncClientRestriction [<CommonParameters>]
+Get-SPOTenantSyncClientRestriction
 ```
 
 ## DESCRIPTION
 
+The `Get-SPOTenantSyncClientRestriction` cmdlet returns whether the TenantRestrictionEnabled property is true or false and DomainGUIDs that are currently in the safe recipient list which is represented by the AllowedDomainList property.
+
+This cmdlet, that does not take any input, also returns the current state of the BlockMacSync and GrooveBlockOption properties.
+
 You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
 Requires a valid `Connect-SPOService` context to identify the tenant. For information on how to connect to the tenant, see `Connect-SPOService`.
-
-The `Get-SPOTenantSyncClientRestriction` cmdlet returns whether the TenantRestrictionEnabled property is true or false and DomainGUIDs that are currently in the safe recipient list which is represented by the AllowedDomainList property.
-
-The `Get-SPOTenantSyncClientRestriction` cmdlet also returns the current state of the BlockMacSync parameter.
-
-The `Get-SPOTenantSyncClientRestriction` cmdlet also returns the current state of the GrooveBlockOption parameter.
-
-The `Get-SPOTenantSyncClientRestriction` cmdlet does not have any parameters.
 
 ## EXAMPLES
 

@@ -39,6 +39,9 @@ Initialize-PnPPowerShellAuthentication -CertificatePath <String>
                                        [-CertificatePassword <SecureString>]
 ```
 
+## DESCRIPTION
+Initializes a Azure AD App and optionally creates a new self-signed certificate to use with the application registration. Have a look at https://www.youtube.com/watch?v=QWY7AJ2ZQYI for a demonstration on how this cmdlet works and can be used.
+
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
@@ -47,6 +50,27 @@ Initialize-PnPPowerShellAuthentication -ApplicationName TestApp -Tenant yourtena
 ```
 
 Creates a new Azure AD Application registration, creates a new self signed certificate, and adds it to the local certificate store. It will upload the certificate to the azure app registration and it will request the following permissions: Sites.FullControl.All, Group.ReadWrite.All, User.Read.All
+
+### ------------------EXAMPLE 2------------------
+```powershell
+Initialize-PnPPowerShellAuthentication -ApplicationName TestApp -Tenant yourtenant.onmicrosoft.com -CertificatePath c:\certificate.pfx -CertificatePassword (ConvertTo-SecureString -String "password" -AsPlainText -Force)
+```
+
+Creates a new Azure AD Application registration which will use the existing private key certificate at the provided path to allow access. It will upload the provided private key certificate to the azure app registration and it will request the following permissions: Sites.FullControl.All, Group.ReadWrite.All, User.Read.All
+
+### ------------------EXAMPLE 3------------------
+```powershell
+Initialize-PnPPowerShellAuthentication -ApplicationName TestApp -Tenant yourtenant.onmicrosoft.com -Store CurrentUser -Scopes "MSGraph.User.Read.All","SPO.Sites.Read.All"
+```
+
+Creates a new Azure AD Application registration, creates a new self signed certificate, and adds it to the local certificate store. It will upload the certificate to the azure app registration and it will request the following permissions: Sites.Read.All, User.Read.All
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Initialize-PnPPowerShellAuthentication -ApplicationName TestApp -Tenant yourtenant.onmicrosoft.com -OutPath c:\ -CertificatePassword (ConvertTo-SecureString -String "password" -AsPlainText -Force)
+```
+
+Creates a new Azure AD Application registration, creates a new self signed certificate, and stores the public and private key certificates in c:\. The private key certificate will be locked with the password "password". It will upload the certificate to the azure app registration and it will request the following permissions: Sites.FullControl.All, Group.ReadWrite.All, User.Read.All
 
 ## PARAMETERS
 

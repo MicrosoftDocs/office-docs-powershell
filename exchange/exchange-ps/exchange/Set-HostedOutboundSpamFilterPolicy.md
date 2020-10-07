@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Set-HostedOutboundSpamFilterPolicy
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-HostedOutboundSpamFilterPolicy cmdlet to modify outbound spam filter policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -27,6 +26,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-HostedOutboundSpamFilterPolicy [-Identity] <HostedOutboundSpamFilterPolicyIdParameter>
  [-ActionWhenThresholdReached <OutboundRecipientLimitsExceededAction>]
  [-AdminDisplayName <String>]
+ [-AutoForwardingMode <AutoForwardingMode>]
  [-BccSuspiciousOutboundAdditionalRecipients <MultiValuedProperty>]
  [-BccSuspiciousOutboundMail <Boolean>]
  [-Confirm]
@@ -108,6 +108,31 @@ The AdminDisplayName parameter specifies a description for the policy. If the va
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoForwardingMode
+**Note**: Before September 2020, this setting is available but not enforced.
+
+The AutoForwardingMode specifies how the policy controls automatic email forwarding to outbound recipients. Valid values are:
+
+- Automatic: Automatic external email forwarding is blocked by the system. This is the default value.
+- On: Automatic external email forwarding is not restricted.
+- Off: Automatic external email forwarding is disabled and will result in a non-delivery report (also known as an NDR or bounce message) to the sender.
+
+This setting applies only to cloud-based mailboxes, and automatic forwarding to internal recipients is not affected by this setting.
+
+```yaml
+Type: AutoForwardingMode
+Parameter Sets: (All)
+Aliases:
+Accepted values: Automatic, Off, On
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
@@ -218,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientLimitExternalPerHour
-The RecipientLimitExternalPerHour parameter specifies the maximum number of external recipients that a user can send to within an hour. A valid value is 0 to 10000. The default value is 0, which means the service defaults are used. For more information, see [Sending limits across Office 365 options](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options).
+The RecipientLimitExternalPerHour parameter specifies the maximum number of external recipients that a user can send to within an hour. A valid value is 0 to 10000. The default value is 0, which means the service defaults are used. For more information, see [Sending limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1).
 
 ```yaml
 Type: UInt32
@@ -234,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientLimitInternalPerHour
-The RecipientLimitInternalPerHour parameter specifies the maximum number of internal recipients that a user can send to within an hour. A valid value is 0 to 10000. The default value is 0, which means the service defaults are used. For more information, see [Sending limits across Office 365 options](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options).
+The RecipientLimitInternalPerHour parameter specifies the maximum number of internal recipients that a user can send to within an hour. A valid value is 0 to 10000. The default value is 0, which means the service defaults are used. For more information, see [Sending limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1).
 
 ```yaml
 Type: UInt32
@@ -250,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientLimitPerDay
-The RecipientLimitInternalPerHour parameter specifies the maximum number of recipients that a user can send to within a day. A valid value is 0 to 10000. The default value is 0, which means the service defaults are used. For more information, see [Sending limits across Office 365 options](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options).
+The RecipientLimitInternalPerHour parameter specifies the maximum number of recipients that a user can send to within a day. A valid value is 0 to 10000. The default value is 0, which means the service defaults are used. For more information, see [Sending limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1).
 
 ```yaml
 Type: UInt32

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxFolderStatistics
@@ -17,8 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderStatistics cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderStatistics cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -201,48 +199,26 @@ Accept wildcard characters: False
 The FolderScope parameter specifies the scope of the search by folder type. Valid parameter values include:
 
 - All
-
-- Archive
-
+- Archive: Exchange 2016 or later.
 - Calendar
-
 - Contacts
-
 - ConversationHistory
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - JunkEmail
-
 - Journal
-
-- LegacyArchiveJournals
-
-- ManagedCustomFolder
-
-- NonIpmRoot
-
+- LegacyArchiveJournals: Exchange 2013 or later.
+- ManagedCustomFolder: Returns output for all managed custom folders.
+- NonIpmRoot: Exchange 2013 or later.
 - Notes
-
 - Outbox
-
 - Personal
-
-- RecoverableItems
-
+- RecoverableItems: Returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
 - RssSubscriptions
-
 - SentItems
-
 - SyncIssues
-
 - Tasks
-
-The ManagedCustomFolder value returns output for all managed custom folders. The RecoverableItems value returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
 
 ```yaml
 Type: Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType
@@ -294,7 +270,9 @@ Accept wildcard characters: False
 ### -IncludeSoftDeletedRecipients
 This parameter is available only in the cloud-based service.
 
-{{Fill IncludeSoftDeletedRecipients Description}}
+The IncludeSoftDeletedRecipients switch specifies whether to include soft deleted mailboxes in the results. You don't need to specify a value with this switch.
+
+Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 
 ```yaml
 Type: SwitchParameter

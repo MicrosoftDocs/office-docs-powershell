@@ -15,7 +15,7 @@ Deactivate the PnP Response UI add-on
 
 ```powershell
 Disable-PnPResponsiveUI [-Web <WebPipeBind>]
-                        [-Connection <SPOnlineConnection>]
+                        [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,7 @@ If enabled previously, this will remove the PnP Responsive UI from a site.
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

@@ -1,11 +1,9 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
 title: Get-CsUserPolicyPackage
 author: icchan
 ms.author: icchan
-ms.reviewer: etgottli
 manager: amitar
 online version: https://docs.microsoft.com/powershell/module/teams/get-csuserpolicypackage
 schema: 2.0.0
@@ -26,7 +24,7 @@ Get-CsUserPolicyPackage [-Identity] <String> [<CommonParameters>]
 ## DESCRIPTION
 
 This cmdlet supports retrieving the policy package that's assigned to a user. Provide the identity of a user to retrieve the definition of their assigned policy package.
-For more information on policy packages, please review https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages
+For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 

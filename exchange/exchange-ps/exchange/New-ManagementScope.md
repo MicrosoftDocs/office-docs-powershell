@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # New-ManagementScope
@@ -104,7 +103,7 @@ This example creates the Executive Mailboxes scope. Only mailboxes located withi
 
 ### Example 4
 ```powershell
-New-ManagementScope -Name "Protected Exec Users" -RecipientRestrictionFilter "Title -like '*VP*'" -Exclusive; New-ManagementRoleAssignment -SecurityGroup "Executive Administrators" -Role "Mail Recipients" -CustomRecipientWriteScope "Protected Exec Users"
+New-ManagementScope -Name "Protected Exec Users" -RecipientRestrictionFilter "Title -like 'VP*'" -Exclusive; New-ManagementRoleAssignment -SecurityGroup "Executive Administrators" -Role "Mail Recipients" -CustomRecipientWriteScope "Protected Exec Users"
 ```
 
 This example creates the Protected Exec Users exclusive scope. Users that contain the string "VP" in their title match the recipient filter for the scope. When the exclusive scope is created, all users are immediately blocked from modifying the recipients that match the exclusive scope until the scope is associated with a management role assignment. If other role assignments are associated with other exclusive scopes that match the same recipients, those assignments can still modify the recipients.
@@ -173,7 +172,7 @@ The DatabaseRestrictionFilter parameter uses OPath filter syntax to specify the 
 
 - Property is a filterable property. For a list of filterable database properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
@@ -203,7 +202,7 @@ The RecipientRestrictionFilter parameter uses OPath filter syntax to specify the
 
 - Property is a filterable property. For filterable recipient properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
@@ -265,7 +264,7 @@ The ServerRestrictionFilter parameter uses OPath filter syntax to specify the se
 
 - Property is a filterable property. For a list of filterable server properties, see [Understanding management role scopes](https://docs.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 

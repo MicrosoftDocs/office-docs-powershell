@@ -2,7 +2,6 @@
 Module Name: Exchange PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: exchange
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Exchange PowerShell
@@ -13,7 +12,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 - [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell)
 
-- [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
+- [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
 
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
@@ -73,6 +72,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AtpPolicyForO365](Get-AtpPolicyForO365.md)
 
+### [Get-ATPTotalTrafficReport](Get-ATPTotalTrafficReport.md)
+
 ### [Get-MailDetailATPReport](Get-MailDetailATPReport.md)
 
 ### [Get-MailTrafficATPReport](Get-MailTrafficATPReport.md)
@@ -82,6 +83,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SafeAttachmentPolicy](Get-SafeAttachmentPolicy.md)
 
 ### [Get-SafeAttachmentRule](Get-SafeAttachmentRule.md)
+
+### [Get-SafeLinksAggregateReport](Get-SafeLinksAggregateReport.md)
+
+### [Get-SafeLinksDetailReport](Get-SafeLinksDetailReport.md)
 
 ### [Get-SafeLinksPolicy](Get-SafeLinksPolicy.md)
 
@@ -226,6 +231,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SenderReputationConfig](Get-SenderReputationConfig.md)
 
+### [Get-TenantAllowBlockListItems](Get-TenantAllowBlockListItems.md)
+
 ### [New-DkimSigningConfig](New-DkimSigningConfig.md)
 
 ### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
@@ -241,6 +248,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
 
 ### [New-ReportSubmissionPolicy](New-ReportSubmissionPolicy.md)
+
+### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
 
 ### [Preview-QuarantineMessage](Preview-QuarantineMessage.md)
 
@@ -273,6 +282,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
 
 ### [Remove-ReportSubmissionPolicy](Remove-ReportSubmissionPolicy.md)
+
+### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
 
 ### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
 
@@ -321,6 +332,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-SenderIdConfig](Set-SenderIdConfig.md)
 
 ### [Set-SenderReputationConfig](Set-SenderReputationConfig.md)
+
+### [Set-TenantAllowBlockListItems](Set-TenantAllowBlockListItems.md)
 
 ### [Test-IPAllowListProvider](Test-IPAllowListProvider.md)
 
@@ -1567,6 +1580,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AdministrativeUnit](Get-AdministrativeUnit.md)
 
+### [Get-AutoSensitivityLabelPolicy](Get-AutoSensitivityLabelPolicy.md)
+
+### [Get-AutoSensitivityLabelRule](Get-AutoSensitivityLabelRule.md)
+
 ### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
 
 ### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
@@ -1605,6 +1622,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-ActivityAlert](New-ActivityAlert.md)
 
+### [New-AutoSensitivityLabelPolicy](New-AutoSensitivityLabelPolicy.md)
+
+### [New-AutoSensitivityLabelRule](New-AutoSensitivityLabelRule.md)
+
 ### [New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
 
 ### [New-JournalRule](New-JournalRule.md)
@@ -1629,6 +1650,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ActivityAlert](Remove-ActivityAlert.md)
 
+### [Remove-AutoSensitivityLabelPolicy](Remove-AutoSensitivityLabelPolicy.md)
+
+### [Remove-AutoSensitivityLabelRule](Remove-AutoSensitivityLabelRule.md)
+
 ### [Remove-InformationBarrierPolicy](Remove-InformationBarrierPolicy.md)
 
 ### [Remove-JournalRule](Remove-JournalRule.md)
@@ -1652,6 +1677,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-TransportRule](Remove-TransportRule.md)
 
 ### [Set-ActivityAlert](Set-ActivityAlert.md)
+
+### [Set-AutoSensitivityLabelPolicy](Set-AutoSensitivityLabelPolicy.md)
+
+### [Set-AutoSensitivityLabelRule](Set-AutoSensitivityLabelRule.md)
 
 ### [Set-InformationBarrierPolicy](Set-InformationBarrierPolicy.md)
 
@@ -2060,6 +2089,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
 
 ## reporting Cmdlets
+### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)
+
+### [Get-CompromisedUserDetailReport](Get-CompromisedUserDetailReport.md)
+
 ### [Get-ConnectionByClientTypeDetailReport](Get-ConnectionByClientTypeDetailReport.md)
 
 ### [Get-ConnectionByClientTypeReport](Get-ConnectionByClientTypeReport.md)
@@ -2109,6 +2142,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-MailDetailTransportRuleReport](Get-MailDetailTransportRuleReport.md)
 
 ### [Get-MailFilterListReport](Get-MailFilterListReport.md)
+
+### [Get-MailflowStatusReport](Get-MailflowStatusReport.md)
 
 ### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
 

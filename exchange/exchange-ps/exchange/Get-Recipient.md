@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-recipient
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 title: Get-Recipient
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Get-Recipient
@@ -17,10 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-Recipient cmdlet to view existing recipient objects in your organization. This cmdlet returns all mail-enabled objects (for example, mailboxes, mail users, mail contacts, and distribution groups).
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXORecipient cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXORecipient cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
-In cloud environments, to return Office 365 groups, you need to use the RecipientTypeDetails parameter with the value GroupMailbox.
+In cloud environments, to return Microsoft 365 Groups, you need to use the RecipientTypeDetails parameter with the value GroupMailbox.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -154,7 +152,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 Type: String
 Parameter Sets: AnrSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -176,7 +174,7 @@ The AuthenticationType parameter specifies the recipient by authentication type.
 Type: AuthenticationType
 Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -192,7 +190,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -208,7 +206,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -222,7 +220,7 @@ This parameter is available only in on-premises Exchange.
 
 The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -286,7 +284,7 @@ The Filter parameter uses OPath syntax to filter the results by the specified pr
 
 - Property is a filterable property. For more information about the filterable properties, see [Filterable properties for the Filter parameter](https://docs.microsoft.com/powershell/exchange/filter-properties).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
@@ -298,7 +296,7 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -326,7 +324,7 @@ The Identity parameter specifies the recipient object that you want to view. You
 Type: RecipientIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -366,7 +364,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -384,7 +382,7 @@ Soft-deleted recipients are deleted recipients that are still recoverable.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -408,7 +406,7 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -424,7 +422,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -440,7 +438,7 @@ This parameter is reserved for internal Microsoft use.
 Type: PropertySet
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -476,7 +474,7 @@ The RecipientPreviewFilter parameter tests a recipient filter that you would use
 
 - Property is a filterable property. For filterable recipient properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
 
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
@@ -486,7 +484,7 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 Type: String
 Parameter Sets: RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -520,7 +518,7 @@ You can specify multiple values separated by commas.
 Type: RecipientType[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -594,7 +592,7 @@ The value of the RecipientType parameter affects the values that you can use for
 Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -610,7 +608,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -646,7 +644,7 @@ You can sort by the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center, Exchange Online Protection
 
 Required: False
 Position: Named

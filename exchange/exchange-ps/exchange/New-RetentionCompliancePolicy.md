@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-retentioncompliancepolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-RetentionCompliancePolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # New-RetentionCompliancePolicy
@@ -62,7 +61,7 @@ New-RetentionCompliancePolicy [-Name] <String>
 ## DESCRIPTION
 New policies are not valid and will not be applied until a retention rule is added to the policy. In addition, at least one location parameter must be defined to create a retention policy.
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -82,7 +81,7 @@ The Name parameter specifies the unique name of the retention policy. If the val
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -98,7 +97,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -118,7 +117,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -134,7 +133,7 @@ Accept wildcard characters: False
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -154,7 +153,7 @@ The Enabled parameter specifies whether the policy is enabled or disabled. Valid
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -190,7 +189,7 @@ If no mailboxes are specified, then no mailboxes are placed on hold.
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -222,7 +221,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -238,7 +237,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -248,13 +247,13 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocation
-The ModernGroupLocation parameter specifies the Office 365 groups to include in the policy. Valid values are:
+The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. Valid values are:
 
-- An Office 365 Group
+- A Microsoft 365 Group
 
-- The value All for all Office 365 groups. You can only use this value by itself.
+- The value All for all Microsoft 365 Groups. You can only use this value by itself.
 
-To identify the Office 365 Group, you can use any value that uniquely identifies it. For example:
+To identify the Microsoft 365 Group, you can use any value that uniquely identifies it. For example:
 
 - Name
 
@@ -270,7 +269,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -280,9 +279,9 @@ Accept wildcard characters: False
 ```
 
 ### -ModernGroupLocationException
-The ModernGroupLocationException parameter specifies the Office 365 groups to exclude when you're using the value All for the ModernGroupLocation parameter.
+The ModernGroupLocationException parameter specifies the Microsoft 365 Groups to exclude when you're using the value All for the ModernGroupLocation parameter.
 
-You can use any value that uniquely identifies the Office 365 Group. For example:
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
 
@@ -298,7 +297,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -316,7 +315,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -334,7 +333,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -350,7 +349,7 @@ The PublicFolderLocation parameter specifies that you want to include all public
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -374,7 +373,7 @@ Therefore, before you lock a retention policy, it's critical that you understand
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -394,7 +393,7 @@ SharePoint Online sites can't be added to the policy until they have been indexe
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -412,7 +411,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -440,7 +439,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -456,7 +455,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -482,7 +481,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -506,7 +505,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -534,7 +533,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -560,7 +559,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: TeamLocation
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -570,13 +569,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Office 365 Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

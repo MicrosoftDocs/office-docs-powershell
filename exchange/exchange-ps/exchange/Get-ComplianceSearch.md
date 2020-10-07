@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancesearch
-applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 title: Get-ComplianceSearch
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
 # Get-ComplianceSearch
@@ -15,15 +14,18 @@ monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-ComplianceSearch cmdlet to view estimate compliance searches in Exchange Server 2016 and in the Office 365 Security & Compliance Center. After you use the New-ComplianceSearchAction cmdlet to define a preview action for the compliance search, use the Get-ComplianceSearchAction cmdlet to view the results of the compliance search.
+Use the Get-ComplianceSearch cmdlet to view estimate compliance searches in Exchange Server 2016 and in the Security & Compliance Center. After you use the New-ComplianceSearchAction cmdlet to define a preview action for the compliance search, use the Get-ComplianceSearchAction cmdlet to view the results of the compliance search.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-ComplianceSearch [[-Identity] <ComplianceSearchIdParameter>] [-Case <String>] [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-ComplianceSearch [[-Identity] <ComplianceSearchIdParameter>]
+ [-Case <String>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 This cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group and not to the Organization Management role group.
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -52,13 +54,15 @@ This examples show details of the compliance search named Case 1234.
 ## PARAMETERS
 
 ### -Case
-This parameter is reserved for internal Microsoft use.
+The Case parameter filters the results by the name of a Core eDiscovery case that the compliance search is associated with. If the value contains spaces, enclose the value in quotation marks.
+
+You can't use this parameter to view compliance searches associated with Advanced eDiscovery cases.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -118,7 +122,7 @@ To view these properties, you need to use the Identity parameter in the command.
 Type: ComplianceSearchIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: 1
@@ -134,7 +138,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named

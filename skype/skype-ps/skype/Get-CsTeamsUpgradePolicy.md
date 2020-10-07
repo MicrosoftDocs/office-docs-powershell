@@ -15,6 +15,9 @@ ms.reviewer: rogupta
 ## SYNOPSIS
 TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams.
 
+> [!IMPORTANT]
+> It can take up to 24 hours for a change to TeamsUpgradePolicy to take effect. Before then, user presence status may not be correct (may show as **Unknown**).
+
 
 ## SYNTAX
 

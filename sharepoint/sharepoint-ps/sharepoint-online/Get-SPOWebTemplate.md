@@ -29,7 +29,7 @@ The `Get-SPOWebTemplate` cmdlet displays all site templates that match the given
 
 You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832.>
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 

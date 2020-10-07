@@ -9,6 +9,11 @@ title: Get-PnPTenantTemplate
 # Get-PnPTenantTemplate
 
 ## SYNOPSIS
+
+**Required Permissions**
+
+* SharePoint: Access to the SharePoint Tenant Administration site
+
 Generates a provisioning tenant template from a site. If the site is a hubsite any connected site will be included.
 
 ## SYNTAX 
@@ -19,7 +24,7 @@ Get-PnPTenantTemplate -Out <String>
                       [-SiteUrl <String>]
                       [-Force [<SwitchParameter>]]
                       [-Configuration <ExtractConfigurationPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ### Extract a template as an object
@@ -27,7 +32,7 @@ Get-PnPTenantTemplate -Out <String>
 Get-PnPTenantTemplate -AsInstance [<SwitchParameter>]
                       [-SiteUrl <String>]
                       [-Configuration <ExtractConfigurationPipeBind>]
-                      [-Connection <SPOnlineConnection>]
+                      [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -117,7 +122,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

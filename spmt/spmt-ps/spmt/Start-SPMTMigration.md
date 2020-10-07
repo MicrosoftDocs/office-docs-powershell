@@ -1,12 +1,12 @@
 ---
-External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
 online version: https://docs.microsoft.com/powershell/module/spmt/start-spmtmigration
 applicable: SharePoint Migration Tool
 title: Start-SPMTMigration
 schema: 2.0.0
-author: kenwith
-ms.author: kenwith
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 

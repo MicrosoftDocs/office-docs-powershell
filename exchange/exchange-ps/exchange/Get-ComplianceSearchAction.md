@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancesearchaction
-applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 title: Get-ComplianceSearchAction
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
 # Get-ComplianceSearchAction
@@ -15,7 +14,7 @@ monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-ComplianceSearchAction cmdlet to view information about compliance search actions in Exchange Server 2016 and in the Office 365 Security & Compliance Center.
+Use the Get-ComplianceSearchAction cmdlet to view information about compliance search actions in Exchange Server 2016 and in the Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -68,7 +67,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 This cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group, and not to the Organization Management role group.
 
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
 
 ## EXAMPLES
 
@@ -95,7 +94,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -111,7 +110,7 @@ The Details switch specifies whether to include detailed information in the resu
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -145,7 +144,7 @@ The Export switch filters the results by Export compliance search actions. You d
 Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -165,7 +164,7 @@ The Identity parameter specifies the compliance search action that you want to v
 Type: ComplianceSearchActionIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: 1
@@ -181,7 +180,7 @@ The IncludeCredential switch specifies whether to include the credential in the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -197,7 +196,7 @@ The Preview switch filters the results by Preview compliance search actions.
 Type: SwitchParameter
 Parameter Sets: Preview
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -213,7 +212,7 @@ The Purge switch filters the results by Purge compliance search actions.
 Type: SwitchParameter
 Parameter Sets: Purge
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -229,7 +228,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named

@@ -18,7 +18,7 @@ Remove-PnPClientSideComponent -Page <ClientSidePagePipeBind>
                               -InstanceId <GuidPipeBind>
                               [-Force [<SwitchParameter>]]
                               [-Web <WebPipeBind>]
-                              [-Connection <SPOnlineConnection>]
+                              [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -29,6 +29,14 @@ Remove-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6
 ```
 
 Removes the control specified from the page.
+
+### ------------------EXAMPLE 2------------------
+```powershell
+$webpart = Get-PnPClientSideComponent -Page "Home" | Where-Object { $_.Title -eq "Site activity" }
+Remove-PnPClientSideComponent -Page "Home" -InstanceId $webpart.InstanceId -Force
+```
+
+Finds a web part with the Title "Site activity" on the Home.aspx page, then removes it from the page
 
 ## PARAMETERS
 
@@ -80,7 +88,7 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 Only applicable to: SharePoint Online, SharePoint Server 2019
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

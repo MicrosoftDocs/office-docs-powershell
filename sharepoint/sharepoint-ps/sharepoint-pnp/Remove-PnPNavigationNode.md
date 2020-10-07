@@ -18,7 +18,7 @@ Removes a menu item from either the quicklaunch or top navigation
 Remove-PnPNavigationNode -Identity <NavigationNodePipeBind>
                          [-Force [<SwitchParameter>]]
                          [-Web <WebPipeBind>]
-                         [-Connection <SPOnlineConnection>]
+                         [-Connection <PnPConnection>]
 ```
 
 ### All Nodes
@@ -26,7 +26,7 @@ Remove-PnPNavigationNode -Identity <NavigationNodePipeBind>
 Remove-PnPNavigationNode -All [<SwitchParameter>]
                          [-Force [<SwitchParameter>]]
                          [-Web <WebPipeBind>]
-                         [-Connection <SPOnlineConnection>]
+                         [-Connection <PnPConnection>]
 ```
 
 ## EXAMPLES
@@ -40,32 +40,31 @@ Removes the navigation node with the specified id
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-$nodes = Get-PnPNavigationNode -QuickLaunch
-PS:>$nodes | Select-Object -First 1 | Remove-PnPNavigationNode -Force
+Get-PnPNavigationNode -Location Footer | Select-Object -First 1 | Remove-PnPNavigationNode -Force
 ```
 
-Retrieves all navigation nodes from the Quick Launch navigation, then removes the first node in the list and it will not ask for a confirmation
+Removes the first node of the footer navigation without asking for confirmation
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Remove-PnPNavigationNode -Title Recent -Location QuickLaunch
 ```
 
-Will remove the recent navigation node from the quick launch in the current web.
+Will remove the recent navigation node from the quick launch in the current web after confirmation has been given that it should be deleted
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
 Remove-PnPNavigationNode -Title Home -Location TopNavigationBar -Force
 ```
 
-Will remove the home navigation node from the top navigation bar without prompting for a confirmation in the current web.
+Will remove the home navigation node from the top navigation bar without prompting for a confirmation in the current web
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
 Get-PnPNavigationNode -Location QuickLaunch | Remove-PnPNavigationNode -Force
 ```
 
-Will remove all the navigation nodes from the quick launch bar without prompting for a confirmation in the current web.
+Will remove all the navigation nodes from the quick launch bar without prompting for a confirmation in the current web
 
 ## PARAMETERS
 
@@ -109,7 +108,7 @@ Accept pipeline input: True
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

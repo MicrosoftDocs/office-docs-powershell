@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Get-OrganizationConfig
@@ -42,7 +41,7 @@ This example gets the organization configuration information for the domain cont
 Get-OrganizationConfig | Export-CliXML C:\Data\MyFile.xml
 ```
 
-This example gets the configuration information for the tenant organization.
+This example gets the configuration information for the cloud-based organization.
 
 For more information, see [Troubleshoot a hybrid deployment](https://docs.microsoft.com/exchange/hybrid-deployment/troubleshoot-a-hybrid-deployment).
 

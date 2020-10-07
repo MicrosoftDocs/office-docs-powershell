@@ -18,7 +18,7 @@ Invoke-PnPSPRestMethod -Url <String>
                        [-Method <HttpRequestMethod>]
                        [-Content <Object>]
                        [-ContentType <String>]
-                       [-Connection <SPOnlineConnection>]
+                       [-Connection <PnPConnection>]
 ```
 
 ## DESCRIPTION
@@ -80,7 +80,7 @@ Accept pipeline input: False
 ```
 
 ### -ContentType
-The content type of the object to send. Defaults to 'application/json'
+The content type of the object to send. Defaults to 'application/json'.
 
 ```yaml
 Type: String
@@ -104,7 +104,7 @@ Accept pipeline input: False
 ```
 
 ### -Url
-The url to execute.
+The url to execute
 
 ```yaml
 Type: String
@@ -119,7 +119,7 @@ Accept pipeline input: False
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SPOnlineConnection
+Type: PnPConnection
 Parameter Sets: (All)
 
 Required: False

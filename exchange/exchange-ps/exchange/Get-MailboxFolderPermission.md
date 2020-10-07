@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxFolderPermission
@@ -17,8 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxFolderPermission cmdlet to view folder-level permissions in mailboxes.
 
-> [!NOTE]
-> In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderPermission cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderPermission cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -144,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch is required to return Office 365 groups in the results. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to return Microsoft 365 Groups in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -175,3 +173,11 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
+
+[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+
+[Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+
+[Get-EXOMailboxFolderPermission](Get-EXOMailboxFolderPermission.md)

@@ -20,8 +20,7 @@ Designates a library to be used as a central location for organization assets ac
 ## SYNTAX
 
 ```powershell
-Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAssetType <OrgAssetType>] [-CdnType <SPOTenantCdnType>]
-[<CommonParameters>]
+Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAssetType <OrgAssetType>] [-CdnType <SPOTenantCdnType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,10 +31,17 @@ The Add-SPOOrgAssetsLibrary cmdlet designates a library to be a central location
 
 ### Example 1
 
-This example adds <https://contoso.sharepoint.com/sites/branding/Assets> as a designated library for organization assets. Assets is the name of the SharePoint library added and will be the name publicly displayed for the library. The thumbnail publicly displayed for the library is contosologo.jpg, from that same library.
+This example adds https://contoso.sharepoint.com/sites/branding/Assets as a designated library for organization assets. Assets is the name of the SharePoint library added and will be the name publicly displayed for the library. The thumbnail publicly displayed for the library is contosologo.jpg, from that same library.
 
 ```powershell
 Add-SPOOrgAssetsLibrary -LibraryURL https://contoso.sharepoint.com/sites/branding/Assets -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Assets/contosologo.jpg
+```
+### Example 2
+
+This example adds https://contoso.sharepoint.com/sites/branding/Templates as a designated library for organization assets. Templates is the name of the SharePoint library added and will be the name publicly displayed for the library. The thumbnail publicly displayed for the library is contosologo.jpg, from that same library. OrgAssetType is the type of Sharepoint library.
+
+```powershell
+Add-SPOOrgAssetsLibrary -LibraryURL https://contoso.sharepoint.com/sites/branding/Templates -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Templates/contosologo.jpg -OrgAssetType OfficeTemplateLibrary
 ```
 
 ## PARAMETERS
@@ -77,7 +83,12 @@ Accept wildcard characters: False
 
 ### -OrgAssetType
 
-Indicates the type of content in this library. Currently supported values are ImageDocumentLibrary, which is set by default, and OfficeTemplateLibrary.
+Indicates the type of content in this library. Currently supported values are "ImageDocumentLibrary" and "OfficeTemplateLibrary".
+
+ImageDocumentLibrary is the default OrgAssetType and is best used for images. You can access the contents of this library from any site or page in the SharePoint filepicker.
+OfficeTemplateLibrary is the suggested type for Office files and will show up in the UI of all Office desktop apps and Office online in the templates section.
+
+In order to benefit from both UIs you can choose "ImageDocumentLibrary,OfficeTemplateLibrary" as OrgAssetType.
 
 ```yaml
 Type: OrgAssetType
@@ -88,7 +99,7 @@ Accepted values: ImageDocumentLibrary, OfficeTemplateLibrary
 
 Required: False
 Position: Named
-Default value: None
+Default value: ImageDocumentLibrary
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

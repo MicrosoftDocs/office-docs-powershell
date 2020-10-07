@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Add-MailboxPermission
@@ -90,7 +89,7 @@ This example assigns the user Mark Steele Full Access permission to Jeroen Cool'
 Get-Mailbox -ResultSize unlimited -Filter "(RecipientTypeDetails -eq 'UserMailbox') -and (Alias -ne 'Admin')" | Add-MailboxPermission -User admin@contoso.com -AccessRights FullAccess -InheritanceType All
 ```
 
-In Office 365, this example assigns the administrator account admin@contoso.com Full Access permission to all user mailboxes in the contoso.com Office 365 organization.
+In Exchange Online, this example assigns the administrator account admin@contoso.com Full Access permission to all user mailboxes in the contoso.com organization.
 
 ## PARAMETERS
 

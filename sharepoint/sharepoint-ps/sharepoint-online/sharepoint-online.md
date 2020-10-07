@@ -99,14 +99,6 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOCrossGeoUsers Description Here}}
 
-### [Get-SPODataConnectionSetting](Get-SPODataConnectionSetting.md)
-
-{{Manually Enter Get-SPODataConnectionSetting Description Here}}
-
-### [Get-SPODataConnectionSettingMetadata](Get-SPODataConnectionSettingMetadata.md)
-
-{{Manually Enter Get-SPODataConnectionSettingMetadata Description Here}}
-
 ### [Get-SPODeletedSite](Get-SPODeletedSite.md)
 
 {{Manually Enter Get-SPODeletedSite Description Here}}

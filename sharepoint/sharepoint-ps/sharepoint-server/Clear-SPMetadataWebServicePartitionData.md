@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
-{{Fill ServiceContext Description}}
+Specifies the service context which is in the form of an instance of an SPServiceContext object, an SPSiteAdministration object identifier, or a SPSite object. An example of a service context value is an identifier from the ID field, a string identifier, a URI, or a string representation of a GUID.
 
 ```yaml
 Type: SPServiceContextPipeBind
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromContentDatabase
-{{Fill FromContentDatabase Description}}
+Do not use.
 
 ```yaml
 Type: SPContentDatabasePipeBind
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromServiceDatabase
-{{Fill FromServiceDatabase Description}}
+Do not use.
 
 ```yaml
 Type: SwitchParameter
