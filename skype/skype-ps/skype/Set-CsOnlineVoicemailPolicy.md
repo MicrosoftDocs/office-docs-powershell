@@ -151,6 +151,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShareData
+{{ Fill ShareData Description }}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Suppresses the display of any non-fatal error message that might arise when running the command.
 

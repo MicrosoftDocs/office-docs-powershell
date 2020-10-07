@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Disable-Mailbox
@@ -260,6 +259,8 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
+This parameter is available only in on-premises Exchange.
+
 The IgnoreLegalHold switch specifies whether to ignore the legal hold status of the user. When you disable or remove the user, the user's cloud-based mailbox that's on legal hold is also disabled or removed. You don't need to specify a value with this switch.
 
 After you disable or remove a mailbox, you can't include it in a discovery search. When you disable a mailbox, the mailbox is disconnected from the user account. Disconnected mailboxes and removed mailboxes are permanently deleted from the mailbox database after the deleted mailbox retention period expires. However, you can also remove a mailbox and purge it immediately from the mailbox database. Check with your organization's legal or Human Resources department before you disable or remove a mailbox that's on legal hold.
@@ -268,7 +269,7 @@ After you disable or remove a mailbox, you can't include it in a discovery searc
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -282,7 +283,10 @@ This parameter is available only in the cloud-based service.
 
 The PermanentlyDisable switch specifies whether to permanently disable the mailbox. You don't need to specify a value with this switch.
 
-You can only use this switch on user mailboxes that aren't licensed and aren't on hold.
+Notes:
+
+- You can only use this switch on user mailboxes that aren't licensed and aren't on hold.
+- When the Exchange Online license is removed from a mailbox without following other deprovisioning steps, this may leave the mailbox in a hard-deleted state. In this case, this parameter is not useful. You can use it, for example, in hybrid Exchange environments.
 
 ```yaml
 Type: SwitchParameter

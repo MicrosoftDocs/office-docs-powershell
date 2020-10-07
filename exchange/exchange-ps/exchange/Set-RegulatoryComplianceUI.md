@@ -1,10 +1,9 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-regulatorycomplianceui
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-RegulatoryComplianceUI
 schema: 2.0.0
-monikerRange: "o365scc-ps"
 ---
 
 # Set-RegulatoryComplianceUI
@@ -48,7 +47,7 @@ $false: The option to mark content as a regulatory record is not visible in the 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named

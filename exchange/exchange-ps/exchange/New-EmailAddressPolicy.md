@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-EmailAddressPolicy
@@ -205,7 +204,7 @@ You can specify multiple email address templates separated by commas: "SMTP:\<Pr
 
 You can't use this parameter with the EnabledPrimarySMTPAddressTemplate parameter.
 
-In Exchange Online PowerShell, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
+In Exchange Online PowerShell, you can't use variables in the email address template.
 
 ```yaml
 Type: ProxyAddressTemplateCollection
@@ -227,7 +226,7 @@ Valid syntax for this parameter is a domain or subdomain that's configured as an
 
 You can't use this parameter with the EnabledEmailAddressTemplates parameter.
 
-In Exchange Online PowerShell, if you use this parameter with the IncludeUnifiedGroupRecipients, you can't use variables in the email address template.
+In Exchange Online PowerShell, you can't use variables in the email address template.
 
 ```yaml
 Type: String
@@ -279,7 +278,9 @@ Accept wildcard characters: False
 ### -IncludeUnifiedGroupRecipients
 This parameter is available only in the cloud-based service.
 
-The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies to Microsoft 365 Groups. You don't need to specify a value with this switch.
+The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies only to Microsoft 365 Groups. You don't need to specify a value with this switch.
+
+In Exchange Online PowerShell, you always need to use this switch, because email address policies in Exchange Online are only applied to Microsoft 365 groups.
 
 ```yaml
 Type: SwitchParameter
@@ -809,7 +810,7 @@ For more information, see [Choose the domain to use when creating Microsoft 365 
 
 For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 
-You need to use this parameter with the IncludeUnifiedGroupRecipients switch.
+You can only use this parameter in Exchange Online PowerShell with the IncludeUnifiedGroupRecipients switch.
 
 ```yaml
 Type: String

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-EmailAddressPolicy
@@ -87,6 +86,13 @@ Set-EmailAddressPolicy -Identity "Contoso Corp" -DisabledEmailAddressTemplates $
 ```
 
 In on-premises Exchange, this example clears the disabled email address templates from the email address policy named Contoso Corp.
+
+### Example 3
+```powershell
+Set-EmailAddressPolicy -Identity 'Office 365 Groups' -EnabledEmailAddressTemplates "SMTP:@contoso.com","@contoso.onmicrosoft.com","smtp:@contoso.microsoftonline.com"
+```
+
+In Exchange Online, this example modifies the existing email adress policy named Office 365 Groups by setting the enabled email address templates to "SMTP:@contoso.com", and "@contoso.onmicrosoft.com", and "smtp:@contoso.microsoftonline.com". This will also set the enabled primary SMTP address template to "@contoso.com".
 
 ## PARAMETERS
 

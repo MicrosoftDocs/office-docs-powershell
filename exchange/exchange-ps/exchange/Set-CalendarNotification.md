@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-CalendarNotification
@@ -15,7 +14,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-The Set-CalendarNotification cmdlet allows users to set text message notification options for calendar events in their own calendar. By default, the MyTextMessaging end-user role gives access to this cmdlet, so admins can't configure text messaging notification for calender events in user calendars.
+The Set-CalendarNotification cmdlet allows users to set text message notification options for calendar events in their own calendar. By default, the MyTextMessaging end-user role gives access to this cmdlet, so admins can't configure text messaging notification for calendar events in user calendars.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
