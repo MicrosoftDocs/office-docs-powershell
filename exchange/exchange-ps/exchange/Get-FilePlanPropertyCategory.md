@@ -1,16 +1,15 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 https://docs.microsoft.com/powershell/module/exchange/get-fileplanpropertycategory
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-FilePlanPropertyCategory
 schema: 2.0.0
-monikerRange: "o365scc-ps"
 ---
 
 # Get-FilePlanPropertyCategory
 
 ## SYNOPSIS
-This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
+This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc-powershell).
 
 Use the Fet-FilePlanPropertyCategory cmdlet to
 
@@ -23,7 +22,7 @@ Get-FilePlanPropertyCategory [[-Identity] <ComplianceRuleIdParameter>] [<CommonP
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Office 365 Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in Security & Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
@@ -43,7 +42,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 0
