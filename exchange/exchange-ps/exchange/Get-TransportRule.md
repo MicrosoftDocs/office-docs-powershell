@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Get-TransportRule
@@ -151,7 +150,7 @@ Accept wildcard characters: False
 ### -Filter
 The Filter parameter filters the results by using an OPath. This parameter searches the Description property, which includes the conditions, exceptions, actions and the associated values of a transport rule.
 
-This parameter uses the syntax `"Description -like '*Text*'"`. For example, `"Description -like *192.168.1.1*'"`.
+This parameter uses the syntax `"Description -like 'Text*'"`. For example, `"Description -like '192.168.1.1*'"`.
 
 For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 

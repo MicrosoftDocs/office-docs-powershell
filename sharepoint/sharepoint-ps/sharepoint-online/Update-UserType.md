@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-online/u
 applicable: SharePoint Online
 title: Update-UserType
 schema: 2.0.0
-author:
-ms.author:
+author: techwriter40
+ms.author: kirks
 ms.reviewer:
 ---
 

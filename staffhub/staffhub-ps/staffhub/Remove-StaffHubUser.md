@@ -3,7 +3,7 @@ external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xm
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 online version: https://docs.microsoft.com/powershell/module/staffhub/remove-staffhubuser
 applicable: Microsoft StaffHub
-title: Remote-StaffHubUser
+title: Remove-StaffHubUser
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars

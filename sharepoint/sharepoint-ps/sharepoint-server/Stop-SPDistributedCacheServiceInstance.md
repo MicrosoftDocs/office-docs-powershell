@@ -86,7 +86,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Remove-SPDistributedCacheServiceInstanceOnLocalServer](Remove-SPDistributedCacheServiceInstanceOnLocalServer.md)
-
-[Add-SPDistributedCacheServiceInstanceOnLocalServer](Add-SPDistributedCacheServiceInstanceOnLocalServer.md)

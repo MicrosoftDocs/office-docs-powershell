@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MailTrafficATPReport
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Advanced Threat Protection (ATP) detections in your cloud-based organization for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -184,6 +183,8 @@ Email phish EventTypes:
 
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
+- Dmarc (Indicates a message for which the sender was marked as not authenticated by DMARC.)
+
 - Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
 - User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
@@ -216,7 +217,7 @@ Content malware EventTypes:
 
 - AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP/E5.)
 
-\* These features require a standalone Office 365 ATP or E5 subscription.
+\* These features require an E5 subscription or an Office 365 ATP add-on.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 

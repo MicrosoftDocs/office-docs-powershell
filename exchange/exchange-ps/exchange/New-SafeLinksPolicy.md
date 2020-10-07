@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # New-SafeLinksPolicy
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-SafeLinksPolicy cmdlet to create Safe Links policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -44,7 +43,9 @@ New-SafeLinksPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+Safe Links is a feature in Office 365 Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
+
+New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the SafeLinksPolicy parameter on the New-SafeLinksRule or Set-SafeLinksRule cmdlets to associate the policy with a rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowClickThrough
-This parameter is reserved for internal Microsoft use.
+This parameter has been deprecated. Use the DoNotAllowClickThrough parameter instead.
 
 ```yaml
 Type: Boolean
@@ -154,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotAllowClickThrough
-The DoNotAllowClickThrough parameter specifies whether to allow users to click through to the original URL. Valid values are:
+The DoNotAllowClickThrough parameter specifies whether to allow users to click through to the original URL on warning pages. Valid values are:
 
 - $true: The user isn't allowed to click through to the original URL.
 
@@ -174,7 +175,13 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotRewriteUrls
-The DoNotRewriteUrls parameter specifies a URL that's skipped by Safe Links scanning. You can specify multiple values separated by commas.
+The DoNotRewriteUrls parameter specifies the URLs that are not rewritten by Safe Links scanning. The list of entries allows users who are included in the policy to access the specified URLs that would otherwise be blocked by Safe Links.
+
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -190,11 +197,11 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotTrackUserClicks
-The DoNotTrackUserClicks parameter specifies whether to track user clicks related to links in email messages. Valid values are:
+The DoNotTrackUserClicks parameter specifies whether to track user clicks related to Safe Links protection of links in email messages. Valid values are:
 
-- $true: User clicks aren't tracked.
+- $true: User clicks in email messages aren't tracked.
 
-- $false: User clicks are tracked. This is the default value.
+- $false: User clicks in email messages are tracked. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -210,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableForInternalSenders
-The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to internal senders. Valid values are:
+The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to messages sent between internal senders and internal recipients within the same Exchange Online organization. Valid values are:
 
 - $true: The policy is applied to internal and external senders.
 
@@ -230,9 +237,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForTeams
+**Note**: As of March 2020, this parameter is in Preview and is available only for members of the Microsoft Teams Technology Adoption Program (TAP).
+
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
-- $true: Safe Links is enabled for Teams.
+- $true: Safe Links is enabled for Teams. If a protected user clicks a malicious link in a Teams conversation, group chat, or from channels, a warning page will appear in the default web browser.
 
 - $false: Safe Links isn't enabled for Teams. This is the default value.
 
@@ -250,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedUrls
-The ExcludedUrls parameter specifies a URL that's skipped by Safe Links scanning. You can specify multiple values separated by commas.
+This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
 
 ```yaml
 Type: String[]
@@ -266,11 +275,11 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-The IsEnabled parameter specifies whether to rewrite URLs and check against a list of known malicious links whenever a user clicks on a link in email messages. Valid values are:
+The IsEnabled parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
 
-- $true: Rewrite URLs and check against a list of known malicious links whenever a user clicks on a link.
+- $true: Enable Safe Links protection for email messages. Rewrite URLs and check against a list of known malicious links whenever a user clicks a link in an email message.
 
-- $false: Don't rewrite URLs. This is the default value.
+- $false: Disable Safe Links protection for email messages. Don't rewrite URLs and do not check clicked links in email messages. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -286,11 +295,11 @@ Accept wildcard characters: False
 ```
 
 ### -ScanUrls
-The ScanUrls parameter specifies whether to enable or disable real-time scanning of links in email messages. Valid values are:
+The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links in email messages. Valid values are:
 
-- $true: Real-time scanning links in email messages is enabled.
+- $true: Real-time scanning of clicked links in email messages, including links that point to files, is enabled.
 
-- $false: Real-time scanning links in email messages is disabled. This is the default value.
+- $false: Real-time scanning of clicked links in email messages, including links that point to files, is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -306,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrackClicks
-This parameter is reserved for internal Microsoft use.
+This parameter has been deprecated. Use the DoNotTrackUserClicks parameter instead.
 
 ```yaml
 Type: Boolean
@@ -338,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhiteListedUrls
-This parameter is reserved for internal Microsoft use.
+This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
 
 ```yaml
 Type: String

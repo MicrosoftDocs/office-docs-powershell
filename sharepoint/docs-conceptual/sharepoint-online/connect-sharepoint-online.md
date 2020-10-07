@@ -58,3 +58,6 @@ You are now ready to use SharePoint Online commands.
 
 > [!NOTE]
 > If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](/sharepoint/troubleshoot/security/cannot-force-modern-authentication)
+
+> [!NOTE]
+> There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer, if you encounter this issue, uninstall the SharePoint Client Components SDK.

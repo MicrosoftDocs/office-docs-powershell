@@ -8,13 +8,12 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer: navgupta
-monikerRange: "exchonline-ps"
 ---
 
 # Get-EXOMailboxFolderPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 Use the Get-ExOMailboxFolderPermission cmdlet to view folder-level permissions in mailboxes.
 
@@ -175,3 +174,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
+
+[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+
+[Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+
+[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)

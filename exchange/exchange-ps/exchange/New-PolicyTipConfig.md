@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-PolicyTipConfig
@@ -49,7 +48,7 @@ This example creates a custom Policy Tip with the following settings:
 New-PolicyTipConfig Url -Value "https://www.contoso.com/PolicyTipInformation"
 ```
 
-This example sets the informational URL in Policy Tips to the value https://www.contoso.com/PolicyTipInformation.
+This example sets the informational URL in Policy Tips to the value `https://www.contoso.com/PolicyTipInformation`.
 
 ## PARAMETERS
 

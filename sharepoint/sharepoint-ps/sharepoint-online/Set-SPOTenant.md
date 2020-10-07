@@ -25,6 +25,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-DisplayStartASiteOption <Boolean>]
  [-EnableAIPIntegration <Boolean>]
+ [-EnableAutoNewsDigest <Boolean>]
  [-EnableMinimumVersionRequirement <Boolean>]
  [-EnablePromotedFileHandlers <Boolean>]
  [-ExternalServicesEnabled <Boolean>]
@@ -94,6 +95,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ExternalUserExpireInDays <Int32>]
  [-EmailAttestationRequired <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
+ [-BlockUserInfoVisibility]
  [<CommonParameters>]
 ```
 
@@ -594,8 +596,8 @@ Note, that some SharePoint system resources such as templates and pages are requ
 
 The valid values are:  
 
-- True (default) - The Everyone claim group is displayed in People Picker.  
-- False - The Everyone claim group is hidden from the People Picker.
+- True - The Everyone claim group is displayed in People Picker. This has been the default for tenants older than March 2018  
+- False (default) - The Everyone claim group is hidden from the People Picker. This has become the new default for new tenants.
 
 ```yaml
 Type: Boolean
@@ -604,7 +606,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1675,6 +1677,39 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockUserInfoVisibility
+
+This feature has not yet been rolled out to Production. Attempting to set this parameter before rollout is complete will result in an error message. More details on this feature will be available on release.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAutoNewsDigest
+
+Enable or disable auto news digest. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

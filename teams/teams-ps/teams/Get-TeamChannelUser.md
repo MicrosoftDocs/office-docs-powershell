@@ -18,8 +18,7 @@ Get-TeamChannelUser -GroupId <String> -DisplayName <String> [-Role <String>] [<C
 
 ## DESCRIPTION
 
-> [!IMPORTANT]
-> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
+Note: This cmdlet is part of the Public Preview version of Teams PowerShell Module, for more information see [Install Teams PowerShell public preview](https://docs.microsoft.com/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview) and also see [Microsoft Teams PowerShell Release Notes](https://docs.microsoft.com/microsoftteams/teams-powershell-release-notes).
 
 ## EXAMPLES
 
