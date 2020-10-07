@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-organizationsegment
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-OrganizationSegment
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Set-OrganizationSegment
@@ -54,7 +53,7 @@ The Identity parameter specifies the organization segment that you want to modif
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 0
@@ -80,7 +79,7 @@ Use the same property for all of your segments, and verify that your segments do
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

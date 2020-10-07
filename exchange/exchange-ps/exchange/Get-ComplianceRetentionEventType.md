@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/Get-ComplianceRetentionEventType
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-ComplianceRetentionEventType
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-ComplianceRetentionEventType
@@ -59,7 +58,7 @@ The Identity parameter specifies the retention event type that you want to view.
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -77,7 +76,7 @@ If you don't use this switch, the ComplianceTag property will always appear empt
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

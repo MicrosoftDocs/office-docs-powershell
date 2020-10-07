@@ -5,7 +5,7 @@ manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: exchange-online
+ms.service: exchange-powershell
 ms.reviewer: navgupta
 localization_priority: Priority
 ms.collection: Strat_EX_Admin
@@ -27,7 +27,7 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 
 ## What do you need to know before you begin?
 
-- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module). The rest of the instructions in the topic assume that you've already installed the module.
 
 - If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for Exchange Online Protection (EOP), your EOP PowerShell connection instructions are the same as Exchange Online PowerShell as described in this topic.
 
@@ -36,13 +36,15 @@ To use the older Exchange Online Remote PowerShell Module to connect to Exchange
 
 ## Connect to Exchange Online PowerShell using MFA
 
-If you account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online PowerShell without using MFA](#connect-to-exchange-online-powershell-without-using-mfa) section.
+If your account uses multi-factor authentication, use the steps in this section. Otherwise, skip to the [Connect to Exchange Online PowerShell without using MFA](#connect-to-exchange-online-powershell-without-using-mfa) section.
 
 1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
 
    ```powershell
    Import-Module ExchangeOnlineManagement
    ```
+
+   **Note**: If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
 
 2. The command that you need to run uses the following syntax:
 
@@ -102,6 +104,8 @@ If your account doesn't use multi-factor authentication, use the steps in this s
    ```powershell
    Import-Module ExchangeOnlineManagement
    ```
+
+   **Note**: If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
 
 2. Run the following command:
 

@@ -6,12 +6,12 @@ manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: exchange-online
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid:
 search.appverid: MET150
 ROBOTS: NOINDEX
-description: "Admins can learn how to use the older Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell for multi-factor authentication (MFA) or federated authentication."
+description: "Admins can learn how to use the older Exchange Online Remote PowerShell Module to connect to Exchange Online PowerShell for multi-factor authentication (MFA) or federated authentication."
 ---
 
 # V1 module - Connect to Exchange Online PowerShell using MFA

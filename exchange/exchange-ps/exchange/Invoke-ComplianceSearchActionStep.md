@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/invoke-compliancesearchactionstep
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Invoke-ComplianceSearchActionStep
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Invoke-ComplianceSearchActionStep
@@ -49,7 +48,7 @@ This cmdlet is reserved for internal Microsoft use.
 Type: ComplianceSearchActionIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -65,7 +64,7 @@ This cmdlet is reserved for internal Microsoft use.
 Type: PSObject
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -81,7 +80,7 @@ This cmdlet is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named

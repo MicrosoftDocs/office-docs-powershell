@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Set-AtpPolicyForO365
@@ -15,13 +14,13 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (ATP) policy in Office 365. The ATP policy enables the following protections in Office 365 ATP:
+Use the Set-AtpPolicyForO365 cmdlet to modify the Advanced Threat Protection (ATP) policy in Office 365. The ATP policy configures the following protections:
 
-- Safe Links for Office 365 ProPlus desktop clients, web, and mobile apps.
+- Safe Links in supported Office 365 apps in Office 365 ATP.
 
-- Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
+- Safe Documents in Microsoft Defender Advanced Threat Protection (MDATP).
 
-- ATP protection for files in SharePoint Online, OneDrive for Business and Microsoft Teams.
+- ATP for SharePoint Online, OneDrive for Business and Microsoft Teams in Office 365 ATP.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -43,9 +42,11 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
 ```
 
 ## DESCRIPTION
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. For more information, see [Office 365 ATP Safe Links](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links).
+Safe Links is a feature in Advanced Threat Protection that checks links in email messages and other supported locations to see if they lead to malicious web sites. For more information, see [Safe Links in Office 365 ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links).
 
-ATP can also protect files in SharePoint Online, OneDrive for Business and Microsoft Teams by preventing users from opening and downloading files that are identified as malicious. For more information, see [ATP for SharePoint, OneDrive, and Microsoft Teams](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
+ATP for SharePoint Online, OneDrive for Business and Microsoft Teams prevents users from opening and downloading files that are identified as malicious. For more information, see [ATP for SharePoint, OneDrive, and Microsoft Teams](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
+
+Safe Documents in MDATP scans documents and files that are opened in Protected View. For more information, see [Safe Documents in Microsoft 365 E5](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-docs).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -77,11 +78,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowClickThrough
-The AllowClickThrough parameter specifies whether to allow users to click through to the original blocked URL in Office 365 apps on desktop, mobile, and web clients. Valid values are:
+The AllowClickThrough parameter specifies whether to allow users to click through to the original blocked URL in supported Office 365 desktop, mobile, and web apps. Valid values are:
 
-- $true: Users are allowed to click through to the original URL.
+- $true: Users are allowed to click through to the original URL in supported Office 365 apps.
 
-- $false: Users aren't allowed to click through to the original URL. This is the default value.
+- $false: Users aren't allowed to click through to the original URL in supported Office 365 apps. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -117,7 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
-The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning in email messages, Microsoft Teams, and Office documents. You can specify multiple values separated by commas.
+The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning in email messages, and supported Office 365 desktop and mobile apps.
+
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+For details about the entry syntax, see [Entry syntax for the "Block the following URLs" list](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-block-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -193,11 +200,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForO365Clients
-The EnableSafeLinksForO365Clients parameter specifies whether Safe Links is enabled for Microsoft 365 apps on desktop, mobile, and web clients. Valid values are:
+The EnableSafeLinksForO365Clients parameter specifies whether Safe Links scanning is enabled for supported Office 365 desktop, mobile, and web apps. Valid values are:
 
-- $true: Safe Links are enabled for Microsoft 365 desktop, mobile, and web apps. This is the default value.
+- $true: Safe Links scanning is enabled in supported Office 365 apps. This is the default value.
 
-- $false: Safe Links are disabled for Microsoft 365 desktop, mobile, and web apps.
+- $false: Safe Links scanning is disabled in supported Office 365 apps.
+
+Note that this protection applies to links in Office documents, not links in email messages. Safe Links protection for links in email messages is controlled by Safe Links policies (the [New-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/new-safelinkspolicy) or [Set-SafeLinksPolicy](https://docs.microsoft.com/powershell/module/exchange/set-safelinkspolicy) cmdlets).
 
 ```yaml
 Type: Boolean
@@ -213,11 +222,11 @@ Accept wildcard characters: False
 ```
 
 ### -TrackClicks
-The TrackClicks parameter specifies whether to track user clicks related to blocked URLs in Office documents. Valid values are:
+The TrackClicks parameter specifies whether to track user clicks related to blocked URLs in supported Office 365 apps. Valid values are:
 
-- $true: User clicks are tracked.
+- $true: User clicks in supported Office 365 apps are tracked.
 
-- $false: User clicks aren't tracked. This is the default value.
+- $false: User clicks in supported Office 365 apps aren't tracked. This is the default value.
 
 ```yaml
 Type: Boolean

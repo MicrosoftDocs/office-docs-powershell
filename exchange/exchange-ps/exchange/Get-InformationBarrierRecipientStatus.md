@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-informationbarrierrecipientstatus
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-InformationBarrierRecipientStatus
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-InformationBarrierRecipientStatus
@@ -75,7 +74,7 @@ The Identity parameter specifies the recipient that you want to view the segment
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 0
@@ -107,7 +106,7 @@ You can only use this parameter with the Identity parameter; you can't use it by
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1

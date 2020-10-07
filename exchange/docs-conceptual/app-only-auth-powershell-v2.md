@@ -20,7 +20,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> This feature is currently in Public Preview, and is available in the `2.0.3-Preview` release of Exchange Online PowerShell V2 Module. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+> This feature and the required `2.0.3` version of the EXO V2 module are now Generally Available. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
 
@@ -41,6 +41,14 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```
 
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
+  
+- Connect using a certificate object:
+
+  ```powershell
+  Connect-ExchangeOnline -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+  ```
+
+  When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
 
 ## How does it work?
 
@@ -97,7 +105,7 @@ If you encounter problems, check the [required permssions](https://docs.microsof
 
    - **Name**: Enter something descriptive.
 
-   - **Supported account types**: Select **Accounts in this organizational directory only (Microsoft)**.
+   - **Supported account types**: Select **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)**.
 
    - **Redirect URI (optional)**: In the first box, select **Web**. In the second box, enter the URI where the access token is sent.
 
@@ -125,11 +133,11 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 5. In the **Select permissions** section that appears on the page, expand **Exchange** and select **Exchange.ManageAsApp**
 
-   ![Select Exchange API permssions](media/app-only-auth-exchange-manageasapp.png)
+   ![Select Exchange.ManageAsApp permssions](media/app-only-auth-exchange-manageasapp.png)
 
    When you're finished, click **Add permissions**.
 
-6. Back on the **Configured permissions** page that appears, click **Grant admin consent for <\tenant name\>**, and select **Yes** in the dialog that appears.
+6. Back on the **Configured permissions** page that appears, click **Grant admin consent for \<tenant name\>**, and select **Yes** in the dialog that appears.
 
 7. Close the flyout when you're finished.
 
