@@ -18,16 +18,20 @@ This Cmdlet allows a SharePoint administrators to check the status of a site or 
 
 ## SYNTAX
 
-### GroupName
-
-```powershell
-Get-SPOSiteContentMoveState [-GroupName] <String> [<CommonParameters>]
+### MoveReport (Default)
+```
+Get-SPOSiteContentMoveState [-Limit <UInt32>] [-MoveStartTime <DateTime>] [-MoveEndTime <DateTime>]
+ [-MoveState <MoveState>] [-MoveDirection <MoveDirection>] [<CommonParameters>]
 ```
 
 ### SourceSiteUrl
+```
+Get-SPOSiteContentMoveState -SourceSiteUrl <String> [<CommonParameters>]
+```
 
-```powershell
-Get-SPOSiteContentMoveState [-SourceSiteUrl] <String> [<CommonParameters>]
+### SiteMoveId
+```
+Get-SPOSiteContentMoveState -SiteMoveId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,14 +43,6 @@ This command gets the information and the status of a move request of a user bet
 ### -----------------------EXAMPLE 1-----------------------------
 
 ```powershell
-Get-SPOSiteContentMoveState -GroupName "group@contoso.com"
-```
-
-Gets the status of the site content for the group "group@contoso.com"
-
-### -----------------------EXAMPLE 2-----------------------------
-
-```powershell
 Get-SPOSiteContentMoveState -SourceSiteUrl $siteurl
 ```
 
@@ -54,25 +50,110 @@ Gets the status of the site content give on the variable $siteurl
 
 ## PARAMETERS
 
-### -GroupName
-
-Name of the group being moved.
+### -Limit
+Specifies the maximum number of Content move states to return. 
 
 ```yaml
-Type: String
-Parameter Sets: GroupName
+Type: UInt32
+Parameter Sets: MoveReport
 Aliases:
-Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveDirection
+Possible values for this parameter are:
+- MoveOut
+- MoveIn
+- All
+
+```yaml
+Type: MoveDirection
+Parameter Sets: MoveReport
+Aliases:
+Accepted values: MoveOut, MoveIn, All
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -MoveEndTime
+End date and time for the time window between which Content move states are to be retrieved.
+
+```yaml
+Type: DateTime
+Parameter Sets: MoveReport
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveStartTime
+Start date and time for the time window between which Content move states are to be retrieved.
+
+```yaml
+Type: DateTime
+Parameter Sets: MoveReport
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -MoveState
+This parameter is used to specify the move state of the Content move states to retrieve.
+Possible values:
+- NotStarted
+- InProgress
+- Success
+- Failed
+- Stopped
+- Queued
+- NotSupported
+- Rescheduled
+- All
+
+```yaml
+Type: MoveState
+Parameter Sets: MoveReport
+Aliases:
+Accepted values: NotStarted, InProgress, Success, Failed, Stopped, Queued, NotSupported, Rescheduled, All
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteMoveId
+Id of the Site move to retrieve.
+
+```yaml
+Type: Guid
+Parameter Sets: SiteMoveId
+Aliases:
 
 Required: True
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -SourceSiteUrl
-
 Specifies the source URL of the site collection.
 
 ```yaml
