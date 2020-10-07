@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/remove-dlpkeyworddictionary
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Remove-DlpKeywordDictionary
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Remove-DlpKeywordDictionary
@@ -36,7 +35,15 @@ You need to be assigned permissions in the Security & Compliance Center before y
 Remove-DlpKeywordDictionary -Identity "Financial Data"
 ```
 
-This example remove the DLP keyword dictionary named Financial Data.
+This example removes the DLP keyword dictionary named Financial Data.
+
+### Example 2
+```powershell
+Get-DlpKeywordDictionary | Foreach-Object { Remove-DlpKeywordDictionary -Identity $_.Name -confirm:$True }
+```
+
+This example removes all the DLP keyword dictionaries with a Confirm on each removal.
+
 
 ## PARAMETERS
 
@@ -47,7 +54,7 @@ The Identity parameter specifies the name of the DLP keyword dictionary that you
 Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -67,7 +74,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -83,7 +90,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

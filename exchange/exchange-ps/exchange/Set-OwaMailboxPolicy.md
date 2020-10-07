@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-OwaMailboxPolicy
@@ -819,7 +818,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalSPMySiteHostURL
-The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, https://sp01.contoso.com).
+The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, `https://sp01.contoso.com`).
 
 This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
 
@@ -1139,7 +1138,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalSPMySiteHostURL
-The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, https://sp01.contoso.com).
+The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, `https://sp01.contoso.com`).
 
 This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
 

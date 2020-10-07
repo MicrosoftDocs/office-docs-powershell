@@ -7,7 +7,6 @@ title: Set-UserBriefingConfig
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-monikerRange: "exchonline-ps"
 ---
 
 # Set-UserBriefingConfig
