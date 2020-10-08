@@ -84,6 +84,7 @@ Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are
 |[Set-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/set-myanalyticsfeatureconfig)||
 |[Get-UserBriefingConfig](https://docs.microsoft.com/powershell/module/exchange/get-userbriefingconfig)|n/a|
 |[Set-UserBriefingConfig](https://docs.microsoft.com/powershell/module/exchange/set-userbriefingconfig)|n/a|
+|
 
 ## Install and maintain the EXO V2 module
 

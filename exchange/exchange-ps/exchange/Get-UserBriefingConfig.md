@@ -78,6 +78,8 @@ Accept wildcard characters: False
 
 ###  
 
-## Related links
+## NOTES
+
+## RELATED LINKS
 
 [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin)
