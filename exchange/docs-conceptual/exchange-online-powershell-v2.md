@@ -46,7 +46,7 @@ The module use modern authentication for all cmdlets. You can't use Basic authen
 
 The Exchange Online cmdlets in the EXO V2 module are meant to replace their older, less efficient equivalents, but the equivalent cmdlets are still available (after you connect).
 
-The Exchange Online PowerShell cmdlets that are only available in the EXO V2 module are listed in the following table:
+The improved Exchange Online PowerShell cmdlets that are only available in the EXO V2 module are listed in the following table:
 
 ****
 
@@ -61,10 +61,6 @@ The Exchange Online PowerShell cmdlets that are only available in the EXO V2 mod
 |[Get-EXOMailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](https://docs.microsoft.com/powershell/module/exchange/get-mailboxfolderstatistics)|
 |[Get-EXOMailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission)|
 |[Get-EXOMobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](https://docs.microsoft.com/powershell/module/exchange/get-mobiledevicestatistics)|
-|[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
-|[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](mfa-connect-to-scc-powershell.md)|
-|[Get-UserBriefingConfig](https://docs.microsoft.com/powershell/module/exchange/get-userbriefingconfig)|n/a|
-|[Set-UserBriefingConfig](https://docs.microsoft.com/powershell/module/exchange/set-userbriefingconfig)|n/a|
 |
 
 The connection-related cmdlets that are available in the EXO V2 module are listed in the following table:
@@ -77,6 +73,17 @@ The connection-related cmdlets that are available in the EXO V2 module are liste
 |[Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)|
 |[Disconnect-ExchangeOnline](https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/remove-pssession)|
 |
+
+Miscellaneous Exchange Online cmdlets that happen to be in the EXO V2 module are listed in the following table:
+
+****
+
+|EXO V2 module cmdlet|Older related cmdlet|
+|---|---|
+|[Get-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig)||
+|[Set-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/set-myanalyticsfeatureconfig)||
+|[Get-UserBriefingConfig](https://docs.microsoft.com/powershell/module/exchange/get-userbriefingconfig)|n/a|
+|[Set-UserBriefingConfig](https://docs.microsoft.com/powershell/module/exchange/set-userbriefingconfig)|n/a|
 
 ## Install and maintain the EXO V2 module
 
