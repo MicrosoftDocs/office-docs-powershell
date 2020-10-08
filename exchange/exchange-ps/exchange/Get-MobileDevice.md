@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-MobileDevice cmdlet to get the list of devices in your organization that have active Exchange ActiveSync partnerships.
+Use the Get-MobileDevice cmdlet to get the list of devices in your organization that have active partnerships.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -62,7 +62,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MobileDevice -Mailbox "TonySmith"
 ```
 
-This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
+This example returns all the mobile devices that Tony Smith has used that are associated with his mailbox.
 
 ### Example 2
 ```powershell
@@ -168,39 +168,22 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 You can filter by the following properties:
 
 - ClientType
-
 - DeviceAccessControlRule
-
 - DeviceAccessState
-
 - DeviceAccessStateReason
-
 - DeviceActiveSyncVersion
-
 - DeviceId
-
 - DeviceImei
-
 - DeviceMobileOperator
-
 - DeviceModel
-
 - DeviceOS
-
 - DeviceOSLanguage
-
 - DeviceTelephoneNumber
-
 - DeviceType
-
 - DeviceUserAgent
-
 - FirstSyncTime
-
 - FriendlyName
-
 - ProvisioningFlags
-
 - UserDisplayName
 
 ```yaml
