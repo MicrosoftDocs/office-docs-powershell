@@ -41,7 +41,7 @@ This example restores the DEP used with SharePoint Online and OneDrive for Busin
 
 ### -PrimaryKeyVaultName
 
-The name of the primary key vault
+The name of the primary key vault.
 
 ```yaml
 Type: String
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyName
 
-The name of the primary key
+The name of the primary key.
 
 ```yaml
 Type: String
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVersion
 
-The version of the primary key
+The version of the primary key.
 
 ```yaml
 Type: Guid
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVaultName
 
-The name of the secondary key vault
+The name of the secondary key vault.
 
 ```yaml
 Type: String
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyName
 
-The name of the secondary key
+The name of the secondary key.
 
 ```yaml
 Type: String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVersion
 
-The version of the secondary key
+The version of the secondary key.
 
 ```yaml
 Type: Guid
