@@ -25,10 +25,6 @@ Start-SPOSiteContentMove [-Url] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
  [-ValidationOnly] [<CommonParameters>]
 ```
-## DESCRIPTION
-
-This cmdlet allows a SharePoint administrator to validate a geo move before scheduling it.
-
 
 ### UrlAndDestinationUrl
 
@@ -39,7 +35,9 @@ Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-Preferred
 
 ## DESCRIPTION
 
-This cmdlet allows a SharePoint administrator to move and (optionally) rename a site as part of the geo move operation by specifying a new site name in the destrination URL.
+UrlAndDestinationDataLocation: These parameters allow a SharePoint administrator to validate a geo move before scheduling it.
+
+UrlAndDestinationUrl: These parameters allow a SharePoint administrator to move and (optionally) rename a site as part of the geo move operation by specifying a new site name in the destrination URL.
 
 ## EXAMPLES
 
