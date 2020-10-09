@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-autosensitivitylabelpolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-AutoSensitivityLabelPolicy
 schema: 2.0.0
 author: chrisda
@@ -97,7 +97,7 @@ The Identity parameter specifies the auto-labeling policy that you want to modif
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 0
@@ -113,7 +113,7 @@ This AddExchangeLocation parameter specifies new Exchange locations to be added 
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -203,7 +203,7 @@ The ApplySensitivityLabel parameter selects which label to be used for the polic
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -219,7 +219,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Identity, TeamLocation
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -239,7 +239,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ The Enabled parameter enables or disables the policy. Valid values are:
 Type: Boolean
 Parameter Sets: Identity, TeamLocation
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ The ExchangeSender parameter specifies the sender list in Exchange for which the
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -291,7 +291,7 @@ The ExchangeSenderException parameter specifies the sender list in Exchange for 
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -311,7 +311,7 @@ You can't use this parameter to specify Microsoft 365 Groups.
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -331,7 +331,7 @@ You can't use this parameter to specify Microsoft 365 Groups.
 Type: SmtpAddress[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -347,7 +347,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: Identity, TeamLocation
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -372,7 +372,7 @@ Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enable, TestWithNotifications, TestWithoutNotifications, Disable, PendingDeletion
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -398,7 +398,7 @@ If you modify the priority value of a policy, the position of the policy in the 
 Type: System.Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -414,7 +414,7 @@ The RemoveExchangeLocation parameter removes locations on Exchange from the poli
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -432,7 +432,7 @@ To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -450,7 +450,7 @@ To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -468,7 +468,7 @@ To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -486,7 +486,7 @@ To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -504,7 +504,7 @@ Locations whose initial distributions succeeded aren't included in the retry. Po
 Type: SwitchParameter
 Parameter Sets: RetryDistributionParameterSet
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -520,7 +520,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
