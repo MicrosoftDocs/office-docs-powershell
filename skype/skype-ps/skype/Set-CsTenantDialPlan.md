@@ -189,7 +189,8 @@ Accept wildcard characters: False
 ```
 
 ### -OptimizeDeviceDialing
-PARAMVALUE: $true | $false
+Use this parameter to determine the effect of ExternalAccessPrefix parameter.
+If set to True, the ExternalAccessPrefix parameter takes effect.
 
 ```yaml
 Type: Boolean
@@ -199,7 +200,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
