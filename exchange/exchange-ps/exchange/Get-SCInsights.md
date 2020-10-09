@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-scinsights
-applicable: Exchange Online, Office 365 Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-SCInsights
 schema: 2.0.0
 author: chrisda
@@ -72,7 +72,7 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
