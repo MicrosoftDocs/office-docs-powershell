@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-online/U
 applicable: SharePoint Online
 title: Unlock-SensitivityLabelEncryptedFile
 schema: 2.0.0
-author: Sanjoyan-Mustafi
+author: Sanjoyan
 ms.author: samust
 ms.reviewer:
 ---
