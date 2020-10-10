@@ -519,6 +519,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Unregister-SPOHubSite Description Here}}
 
+### [Unlock-SensitivityLabelEncryptedFile](Unlock-SensitivityLabelEncryptedFile.md)
+
+{{Manually Enter Unlock-SensitivityLabelEncryptedFile Description Here}}
+
 ### [Upgrade-SPOSite](Upgrade-SPOSite.md)
 
 {{Manually Enter Upgrade-SPOSite Description Here}}
