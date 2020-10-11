@@ -42,7 +42,7 @@ This example retrieves email invites stored in the ContosoWeb1 site to the user 
 
 Specifies the URL or GUID of the site collection to get.
 
-The type must be a valid URL, in the form, https://server_name or https://server_name/sites/sitename, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+The type must be a valid URL, in the form, https://server_name or https://server_name/sites/sitename
 
 ```yaml
 Type: SpoSitePipeBind
