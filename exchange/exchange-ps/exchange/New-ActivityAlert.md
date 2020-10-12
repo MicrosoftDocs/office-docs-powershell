@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-activityalert
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-ActivityAlert
 schema: 2.0.0
 author: chrisda
@@ -100,7 +100,7 @@ You can only use this parameter with the Type parameter value AnomalousAggregati
 Type: Double
 Parameter Sets: AnomalousOperationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ The Name parameter specifies the unique name of the activity alert. The maximum 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -134,7 +134,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -156,7 +156,7 @@ You can't use this parameter if the Type parameter value is ElevationOfPrivilege
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 Type: MultiValuedProperty
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ You can only use this parameter with the Type parameter value SimpleAggregation.
 Type: Int32
 Parameter Sets: SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -205,7 +205,7 @@ You can only use this parameter with the Type parameter value SimpleAggregation.
 Type: Int32
 Parameter Sets: SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -231,7 +231,7 @@ Note: You can't change the Type value in an existing activity alert.
 Type: AlertType
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 Type: AlertType
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -272,7 +272,7 @@ The Category parameter specifies a category for the activity alert. Valid values
 Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -288,7 +288,7 @@ The Condition parameter specifies filter conditions for event aggregation.
 Type: String
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -308,7 +308,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -324,7 +324,7 @@ The Description parameter specifies an optional description for the activity ale
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -344,7 +344,7 @@ The Disabled parameter specifies whether the activity alert is enabled or disabl
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -360,7 +360,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -378,7 +378,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -458,7 +458,7 @@ You can't use this parameter when the value of the Type parameter is ElevationOf
 Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -478,7 +478,7 @@ The ScopeLevel parameter specifies the scope for activity alerts that use the Ty
 Type: AlertScopeLevel
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -502,7 +502,7 @@ The Severity parameter specifies a severity level for the activity alert. Valid 
 Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -524,7 +524,7 @@ You can only use this parameter with the Type parameter values Custom or Elevati
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -540,7 +540,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

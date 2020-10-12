@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-MobileDeviceMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Force] [-WhatIf] [<CommonParameters>]
+Remove-MobileDeviceMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

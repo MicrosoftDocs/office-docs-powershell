@@ -89,7 +89,7 @@ Archives the existing Search Center site at <https://contoso.sharepoint.com/sear
 
 URL of the source site. The site at this location must exist before performing the swap.
 
-If the target is the root site at <https://tenant-name.sharepoint.com> then the source site must be either a Team Site (STS#0), a Modern Team Site (STS#3), or a Communication Site (SITEPAGEPUBLISHING#0).
+If the target is the root site at <https://tenant-name.sharepoint.com> then the source site must be either a Modern Team Site (STS#3) or a Communication Site (SITEPAGEPUBLISHING#0).
 
 If the target is the search center site at <https://tenant-name.sharepoint.com/search> then the source site must be either a Search Center Site (SRCHCEN#0) or a Basic Search Center Site (SRCHCENTERLITE#0).
 
