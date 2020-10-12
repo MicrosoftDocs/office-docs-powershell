@@ -12,35 +12,28 @@ ms.reviewer:
 # Update-Recipient
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Update-Recipient cmdlet to add Microsoft Exchange attributes to recipient objects created by the global address list (GAL) synchronization management agent in Microsoft Forefront Identity Manager (FIM) 2010. The recipient objects you modify using this cmdlet must reside on a server running Microsoft Exchange Server 2010 or later.
+Use the Update-Recipient cmdlet to add Exchange attributes to recipient objects.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Update-Recipient [-Identity] <RecipientIdParameter> [-Confirm] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Update-Recipient [-Identity] <RecipientIdParameter>
+ [-Confirm]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Because of mergers, acquisitions, or legal requirements, customers may need to deploy Exchange in a multiple Exchange forest topology. These deployments require the synchronization of recipient objects across disparate Active Directory forests.
-
-Microsoft provides the GAL synchronization management agent for synchronizing recipient objects. The version of the GAL synchronization management agent included in Microsoft Identity Integration Server (MIIS) 2003 was designed to work with Exchange Server 2003 and relied on the Recipient Update Service. Because the Recipient Update Service is a deprecated feature and is no longer required, the new GAL synchronization management agent included in FIM 2010 is designed to function without the Recipient Update Service.
-
-As part of the synchronization process, the FIM 2010 GAL synchronization management agent creates recipient objects in both Active Directory forests. After the recipients are created, the management agent uses the Update-Recipient cmdlet to add the attributes required by Microsoft Exchange to complete the provisioning of these recipients.
-
-In Exchange, before you can run the Update-Recipient cmdlet to convert an Active Directory user object into an Exchange mailbox, you must stamp the user object with the following three mandatory Exchange attributes:
+In on-premises Exchange, before you can run the Update-Recipient cmdlet to convert an Active Directory user object into an Exchange mailbox, you must stamp the user object with the following three mandatory Exchange attributes:
 
 - homeMDB
-
 - mailNickname
-
 - msExchHomeServerName
-
-If you're using MIIS 2003, you must run various cmdlets to complete the provisioning process of the mail contacts created by the GAL synchronization management agent. The Update-Recipient cmdlet provides an alternate and more efficient method to do this. You can run the Update-Recipient cmdlet against the recipient objects created by the MIIS 2003 GAL synchronization management agent to complete the provisioning process.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -58,7 +51,7 @@ This example adds Exchange attributes to the mail contact that represents John S
 Get-MailContact -OrganizationalUnit "contoso.com/fabrikam.com Users" | Update-Recipient
 ```
 
-This example updates all contacts in a specific organizational unit (OU). This example assumes that recipients are synchronized between two forests, contoso.com and fabrikam.com, and all the synchronized recipients from the fabrikam.com domain are stored in a specific OU called fabrikam.com Users in the contoso.com domain.
+In on-premises Exchange, this example updates all contacts in a specific organizational unit (OU). This example assumes that recipients are synchronized between two forests, contoso.com and fabrikam.com, and all the synchronized recipients from the fabrikam.com domain are stored in a specific OU called fabrikam.com Users in the contoso.com domain.
 
 ## PARAMETERS
 
@@ -66,15 +59,10 @@ This example updates all contacts in a specific organizational unit (OU). This e
 The Identity parameter specifies the recipient that you want to update. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -129,6 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+The parameter is available only in on-premises Exchange.
+
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
