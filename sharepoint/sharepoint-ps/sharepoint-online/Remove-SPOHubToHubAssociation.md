@@ -31,10 +31,10 @@ Use this cmdlet to remove the selected hub site from its parent hub.
 ### Example 1
 
 ```powershell
-Remove-SPOHubToHubAssociation -HubSiteId https://contoso.sharepoint.com/sites/Research
+Remove-SPOHubToHubAssociation -HubSiteId 6638bd4c-d88d-447c-9eb2-c84f28ba8b15
 ```
 
-This example removes <https://contoso.sharepoint.com/sites/Research> from its parent Hub.
+This example removes the site with the given id from its parent Hub.
 
 ## PARAMETERS
 
