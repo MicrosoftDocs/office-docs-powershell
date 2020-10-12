@@ -19,7 +19,7 @@ Removes the selected hub site from its parent hub.
 ## SYNTAX
 
 ```powershell
-Remove-SPOHubToHubAssociation [-HubSite] <SpoHubSitePipeBind> [<CommonParameters>]
+Remove-SPOHubToHubAssociation [-HubSiteId] <SpoHubSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,19 +31,19 @@ Use this cmdlet to remove the selected hub site from its parent hub.
 ### Example 1
 
 ```powershell
-Remove-SPOHubToHubAssociation -HubSite https://contoso.sharepoint.com/sites/Research
+Remove-SPOHubToHubAssociation -HubSiteId https://contoso.sharepoint.com/sites/Research
 ```
 
 This example removes <https://contoso.sharepoint.com/sites/Research> from its parent Hub.
 
 ## PARAMETERS
 
-### -Hubsite
+### -HubsiteId
 
-Url of the Hub site to be removed from its parent Hub.
+Id of the Hub site to be removed from its parent Hub.
 
 ```yaml
-Type: SpoHubSitePipeBind
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
