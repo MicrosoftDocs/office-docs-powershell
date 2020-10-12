@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-auditconfigurationrule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-AuditConfigurationRule
 schema: 2.0.0
 author: chrisda
@@ -53,7 +53,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -69,7 +69,7 @@ The Identity parameter specifies the audit configuration rule that you want to v
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1

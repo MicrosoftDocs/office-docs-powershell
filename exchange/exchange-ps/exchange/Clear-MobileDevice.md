@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Clear-MobileDevice [-Identity] <MobileDeviceIdParameter> [-Cancel] [-Confirm] [-DomainController <Fqdn>]
- [-NotificationEmailAddresses <MultiValuedProperty>] [-WhatIf] [-AccountOnly] [<CommonParameters>]
+Clear-MobileDevice [-Identity] <MobileDeviceIdParameter>
+ [-AccountOnly]
+ [-Cancel]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +66,6 @@ This example cancels a previously sent Clear-MobileDevice command request for To
 The Identity parameter specifies the mobile device that you want to reset. You can use any value that uniquely identifies the mobile device. For example:
 
 - GUID
-
 - DeviceID
 
 ```yaml
@@ -74,6 +78,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AccountOnly
+The AccountOnly switch specifies whether to perform an account-only remote device wipe where only Exchange mailbox data is removed from the device. You don't need to specify a value with this switch.
+
+You don't need to use this switch for the DeviceType value Outlook, because an account-only remote devices wipe is the only type of wipe that's used on Outlook devices.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -155,24 +177,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AccountOnly
-The AccountOnly switch specifies whether to perform an account-only remote device wipe where only Exchange mailbox data is removed from the device. You don't need to specify a value with this switch.
-
-You don't need to use this switch for the DeviceType value Outlook, because an account-only remote devices wipe is the only type of wipe that's used on Outlook devices.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

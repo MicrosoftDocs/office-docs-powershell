@@ -252,7 +252,7 @@ Accept wildcard characters: False
 
 ### -Template
 
-Displays sites of a specific template. For example, STS, STS#0 or STS#1.
+Displays sites of a specific template. For example, STS, STS#0, STS#1, STS#3, GROUP#0, SRCHCEN#0 or SITEPAGEPUBLISHING#0.
 
 ```yaml
 Type: String
