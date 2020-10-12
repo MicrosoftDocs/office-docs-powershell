@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-informationbarrierpolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-InformationBarrierPolicy
 schema: 2.0.0
 author: chrisda
@@ -78,7 +78,7 @@ The Identity parameter specifies the information barrier policy that you want to
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 0
@@ -94,7 +94,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ You can't use this parameter with the SegmentsBlocked parameter.
 Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsAllowed
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: OrganizationSegmentAllowedFilter
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ You can't use this parameter with the SegmentsAllowed parameter.
 Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ Type: EopInformationBarrierPolicyState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Inactive, Active
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

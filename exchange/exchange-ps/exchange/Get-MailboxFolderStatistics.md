@@ -199,48 +199,26 @@ Accept wildcard characters: False
 The FolderScope parameter specifies the scope of the search by folder type. Valid parameter values include:
 
 - All
-
-- Archive
-
+- Archive: Exchange 2016 or later.
 - Calendar
-
 - Contacts
-
 - ConversationHistory
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - JunkEmail
-
 - Journal
-
-- LegacyArchiveJournals
-
-- ManagedCustomFolder
-
-- NonIpmRoot
-
+- LegacyArchiveJournals: Exchange 2013 or later.
+- ManagedCustomFolder: Returns output for all managed custom folders.
+- NonIpmRoot: Exchange 2013 or later.
 - Notes
-
 - Outbox
-
 - Personal
-
-- RecoverableItems
-
+- RecoverableItems: Returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
 - RssSubscriptions
-
 - SentItems
-
 - SyncIssues
-
 - Tasks
-
-The ManagedCustomFolder value returns output for all managed custom folders. The RecoverableItems value returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
 
 ```yaml
 Type: Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType
