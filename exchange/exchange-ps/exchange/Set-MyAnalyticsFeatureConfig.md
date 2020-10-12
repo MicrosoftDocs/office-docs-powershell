@@ -58,7 +58,7 @@ This example disables the digest email feature for Akshath.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the use you want to view. You identify the user by their email address.
+The Identity parameter specifies the user you want to view. You identify the user by their email address.
 
 ```yaml
 Type: String
