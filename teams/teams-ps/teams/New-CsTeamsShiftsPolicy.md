@@ -59,7 +59,8 @@ Accept wildcard characters: False
 ### -AccessType
 Indicates the Teams access type granted to the user. Today, only unrestricted access to Teams app is supported.
 Use 'UnrestrictedAccess_TeamsApp' as the value for this setting, or is set by default.
-For Teams Off Shift Access Control, the option to show the user a blocking dialog message is supported. Once user accepts this message, it is audit logged and user has usual access to Teams. Set other off shift warning message-specific settings to configure off shift access controls for the user.
+For Teams Off Shift Access Control, the option to show the user a blocking dialog message is supported. Once the user accepts this message, it is audit logged and the user has usual access to Teams. Set other off shift warning message-specific settings to configure off shift access controls for the user.
+
 
 ```yaml
 Type: String
