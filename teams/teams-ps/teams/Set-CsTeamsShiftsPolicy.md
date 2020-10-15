@@ -135,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -AccessGracePeriodMinutes
-Indicates the grace period time in minutes between when the first shift starts or last shift ends and when access is blocked.
+Indicates the grace period time in minutes between when the first shift starts, or last shift ends and when access is blocked.
+
 
 ```yaml
 Type: Int64
