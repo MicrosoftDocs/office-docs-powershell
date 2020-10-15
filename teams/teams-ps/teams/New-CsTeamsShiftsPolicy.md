@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShiftNoticeMessageType
-The warning message shown in the blocking dialog when a user access Teams off shift hours. Select one of 7 Microsoft provided messages, a default message or a custom message. 
+The warning message is shown in the blocking dialog when a user access Teams off shift hours. Select one of 7 Microsoft provided messages, a default message or a custom message. 
 'Message1' - Your employer does not authorize or approve of the use of its network, applications, systems, or tools by non-exempt or hourly employees during their non-working hours. By accepting, you acknowledge that your use of Teams while off shift is not authorized and you will not be compensated.
 'Message2' - Accessing this app outside working hours is voluntary. You won't be compensated for time spent on Teams. Refer to your employer's guidelines on using this app outside working hours. By accepting, you acknowledge that you understand the statement above.
 'Message3' - You won't be compensated for time using Teams. By accepting, you acknowledge that you understand the statement above.
@@ -115,6 +115,7 @@ The warning message shown in the blocking dialog when a user access Teams off sh
 'Message7' - Your employer has turned off access to Teams during non-working hours. Refer to your employer's guidelines on using this app outside working hours.
 'DefaultMessage' - You aren't authorized to use Microsoft Teams during non-working hours and will only be compensated for using it during approved working hours.
 'CustomMessage'
+
 
 ```yaml
 Type: String
