@@ -20,7 +20,8 @@ New-CsTeamsShiftsPolicy [-Identity] <XdsIdentity> [-EnableShiftPresence <Boolean
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to create a TeamsShiftPolicy instance. Use this to also set the policy name, user's shift based presence(EnableShiftPresence) and Teams off shift warning message-specific settings(ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+This cmdlet allows you to create a TeamsShiftPolicy instance. Use this to also set the policy name, user's shift based presence (EnableShiftPresence) and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+
 
 ## EXAMPLES
 
