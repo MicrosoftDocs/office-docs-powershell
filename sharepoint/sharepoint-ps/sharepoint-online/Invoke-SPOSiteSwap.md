@@ -47,7 +47,9 @@ If the target is the root site at <https://tenant-name.sharepoint.com,> then the
 3. Larger tenants that have more than ~10,000 licenses may also need to run the [Page Diagnostic Tool](https://docs.microsoft.com/office365/enterprise/page-diagnostics-for-spo) against the source site. Any analysis results that have the category Attention required (Red) or Improvement opprtunities (Orange) will need to be remediated before performing the swap.
 
 The source and target sites can't be connected to an Office 365 group. They also can't be hub sites or associated with a hub.
-If a site is a hub site, unregister it as a hub site, swap the root site, and then register the site as a hub site. If a site is associated with a hub, disassociate the site, swap the root site, and then reassociate the site.
+If a site is a hub site, unregister it as a hub site, swap the root site, and then register the site as a hub site. If a site is associated with a hub, disassociate the site, swap the root site, and then reassociate the site. 
+
+[!IMPORTANT] The publishing feature can never have been activated on the source site.
 
 ## EXAMPLES
 
@@ -89,7 +91,7 @@ Archives the existing Search Center site at <https://contoso.sharepoint.com/sear
 
 URL of the source site. The site at this location must exist before performing the swap.
 
-If the target is the root site at <https://tenant-name.sharepoint.com> then the source site must be either a Modern Team Site (STS#3) or a Communication Site (SITEPAGEPUBLISHING#0).
+If the target is the root site at <https://tenant-name.sharepoint.com> then the source site must be either a Modern Team Site (STS#3) or a Communication Site (SITEPAGEPUBLISHING#0) and **the publishing feature can never have been activated on the source site**.
 
 If the target is the search center site at <https://tenant-name.sharepoint.com/search> then the source site must be either a Search Center Site (SRCHCEN#0) or a Basic Search Center Site (SRCHCENTERLITE#0).
 
@@ -166,7 +168,7 @@ Accept wildcard characters: False
 
 Overrides and ignores any warnings that have been identified by the Page Diagnostic Tool that are preventing a swap from being initiated.
 
-For example, if you receive the warning "Invoke-SPOSiteSwap : Errors: 0; Warnings: 1; Details: The site is not a communications site or it has the classic publishing feature enabled." then this warning can be overriden and ignored using this parameter.
+For example, if you receive the warning "Invoke-SPOSiteSwap : Errors: 0; Warnings: 1; Details: 2 items are not in CDN, please enable CDN." Warnings can be overriden using this parameter but the items should be reviewed and resolved for long-term stability and performance.
 
 Any errors identified by the Page Diagnostic Tool will still always prevent a swap from being initiated regardless of this parameter.
 
