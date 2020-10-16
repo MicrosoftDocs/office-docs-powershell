@@ -31,7 +31,7 @@ Invoke-SPOSiteSwap
 
 ## DESCRIPTION
 
-Swaps the location of a source site with a target site while archiving the original target site.
+Swaps the location of a source site with a target site in the same SharePoint online tenant while archiving the original target site.
 
 Please note, the target site must be either:
 
