@@ -14,49 +14,34 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+CmdLet to restore customer encryption status for your geo tenant when in recovery mode.
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## SYNTAX
 
 ```powershell
-Restore-SPODataEncryptionPolicy [-Identity] <SpoSitePipeBind> -PrimaryKeyVaultName <string>  -PrimaryKeyName <string> -PrimaryKeyVersion <guid> -SecondaryKeyVaultName <string> -SecondaryKeyName <string> -SecondaryKeyVersion <guid> [<CommonParameters>]
+Restore-SPODataEncryptionPolicy -PrimaryKeyVaultName <string>  -PrimaryKeyName <string> -PrimaryKeyVersion <guid> -SecondaryKeyVaultName <string> -SecondaryKeyName <string> -SecondaryKeyVersion <guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+Use the cmdLet to restore customer encryption status for your geo tenant when in recovery mode.
+For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-
+Restore-SPODataEncryptionPolicy -PrimaryKeyVaultName 'PKVaultName1' -PrimaryKeyName 'PrimaryKey1' -PrimaryKeyVersion 'f635a23bd4a44b9996ff6aadd88d42ba' -SecondaryKeyVaultName 'SKVaultName1' -SecondaryKeyName 'SecondaryKey2' -SecondaryKeyVersion '2b3e8f1d754f438dacdec1f0945f251a’
 ```
-
-This example.
+This example restores the DEP used with SharePoint Online and OneDrive for Business to the given keys.
 
 ## PARAMETERS
 
-### -Identity
-
-URL of the site collection.
-
-```yaml
-Type: SpoSitePipeBind
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PrimaryKeyVaultName
 
-.
+The name of the primary key vault.
 
 ```yaml
 Type: String
@@ -72,7 +57,7 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyName
 
-.
+The name of the primary key.
 
 ```yaml
 Type: String
@@ -88,7 +73,7 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVersion
 
-.
+The version of the primary key.
 
 ```yaml
 Type: Guid
@@ -104,7 +89,7 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVaultName
 
-.
+The name of the secondary key vault.
 
 ```yaml
 Type: String
@@ -120,7 +105,7 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyName
 
-.
+The name of the secondary key.
 
 ```yaml
 Type: String
@@ -136,7 +121,7 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVersion
 
-.
+The version of the secondary key.
 
 ```yaml
 Type: Guid
