@@ -49,7 +49,8 @@ If the target is the root site at <https://tenant-name.sharepoint.com,> then the
 The source and target sites can't be connected to an Office 365 group. They also can't be hub sites or associated with a hub.
 If a site is a hub site, unregister it as a hub site, swap the root site, and then register the site as a hub site. If a site is associated with a hub, disassociate the site, swap the root site, and then reassociate the site. 
 
-[!IMPORTANT] The publishing feature can never have been activated on the source site.
+> [!IMPORTANT]
+> The publishing feature can never have been activated on the source site.
 
 ## EXAMPLES
 
