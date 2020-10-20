@@ -26,6 +26,7 @@ Set-OrganizationConfig
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
+ [-AllowPlusAddressInRecipients <Boolean>]
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
  [-AuditDisabled <Boolean>]
@@ -483,6 +484,24 @@ Type: MultiValuedProperty
 Parameter Sets: AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPlusAddressInRecipients
+This parameter is available only in the cloud-based service.
+
+The AllowPlusAddressInRecipients parameter specifies whether plus addresses are supported for messages sent to your organization's recipients. By default, the parameter is set to $false for existing customers in Exchange Online before September 2020. Customers who onboarded to Exchange Online after September 2020 will have this parameter set to $true by default. If the flag is set to $true, messages sent using a plus address format e.g. john+exmapletag@contoso.com will be delivered to john@contoso.com.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
