@@ -25,7 +25,7 @@ Grant-CsGroupPolicyPackageAssignment -GroupId <String> -PackageName <String> [-P
 
 ## DESCRIPTION
 
-This cmdlet assigns a policy package to a group in a tenant. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. Policy rankings can be optionally specified to determine which policies in a package will be applied to the user in case they belong to two or more groups. If policy rankings for a policy type is not specified, the group's policy assignment for that policy type will be ranked last. Finally, if a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on policy rankings and group policy assignments, please review [this section](New-CsGroupPolicyAssignment.md#description) under New-CsGroupPolicyAssignment. For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+This cmdlet assigns a policy package to a group in a tenant. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. Policy rankings can be optionally specified to determine which policies in a package will be applied to the user in case they belong to two or more groups. If policy rankings for a policy type is not specified, the group's policy assignment for that policy type will be ranked last. Finally, if a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on policy rankings and group policy assignments, please review [the description section under New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md#description). For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -PolicyRankings
 
-The policy rankings for each of the policy types in the package. To specify the policy rankings, follow this format: "\<PolicyType\>, \<PolicyRank\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types of a policy package are listed [here](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). Policy rank should be a number greater or equal to 1.
+The policy rankings for each of the policy types in the package. To specify the policy rankings, follow this format: "\<PolicyType\>, \<PolicyRank\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types of a policy package are listed [here](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). Policy rank should be a number greater than or equal to 1.
 
 ```yaml
 Type: String[]
