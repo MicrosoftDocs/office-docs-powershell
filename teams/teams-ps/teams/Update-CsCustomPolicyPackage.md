@@ -53,7 +53,7 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies included in the new policy list. For each policy in the list, the form is "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed in this [link](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages#supported-policy-types). To get the full list of available policy names, please refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmeetingpolicy) and [Get-CsTeamsMessagingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmessagingpolicy)
+A list of one or more policies included in the new policy list. For each policy in the list, the form is "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed in this [link](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages#supported-policy-types). To get the full list of available policy names, please refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMeetingPolicy.md) and [Get-CsTeamsMessagingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMessagingPolicy.md)
 
 ```yaml
 Type: String[]
@@ -97,6 +97,6 @@ As a result, the policy list of the custom package will be REPLACED by the new o
 
 [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 
-[Get-CsTeamsMeetingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmeetingpolicy)
+[Get-CsTeamsMeetingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMeetingPolicy.md)
 
-[Get-CsTeamsMessagingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmessagingpolicy)
+[Get-CsTeamsMessagingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMessagingPolicy.md)
