@@ -1717,7 +1717,7 @@ Accept wildcard characters: False
 
 ### -EnableAutoNewsDigest
 
-Enable or disable auto news digest. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
+Enable or disable auto news digest. This also controls whether key points are displayed in sharing e-mails for Word files. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
 
 ```yaml
 Type: Boolean
