@@ -17,7 +17,7 @@ This cmdlet submits an operation that updates a custom policy package with new p
 ## SYNTAX
 
 ```
-Update-CsBatchPolicyPackageAssignmentOperation -Identity <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
+Update-CsCustomPolicyPackage -Identity <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies included in the new policy list. For each policy in the list, the form is "<PolicyType>, <PolicyName>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed in this [link](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages#supported-policy-types). To get the full list of available policy names, please refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMeetingPolicy.md) and [Get-CsTeamsMessagingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMessagingPolicy.md)
+A list of one or more policies included in the new policy list. For each policy in the list, the form is "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed in this [link](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages#supported-policy-types). To get the full list of available policy names, please refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmeetingpolicy) and [Get-CsTeamsMessagingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmessagingpolicy)
 
 ```yaml
 Type: String[]
@@ -91,10 +91,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-As a result, the whole policy list of the custom package will be REPLACED by the new one instead of a union. The user is not allowed to update the pre-defined packages created by Microsoft. 
+As a result, the policy list of the custom package will be REPLACED by the new one instead of a union. The user is not allowed to update the default packages created by Microsoft. 
 
 ## RELATED LINKS
 
 [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 
-[Get-CsTeamsMeetingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMeetingPolicy.md)
+[Get-CsTeamsMeetingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmeetingpolicy)
+
+[Get-CsTeamsMessagingPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmessagingpolicy)
