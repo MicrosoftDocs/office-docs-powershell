@@ -1012,19 +1012,15 @@ Accept wildcard characters: False
 ```
 
 ### -FreCardsEnabled
-This parameter is available only in the cloud-based service.
+This parameter is available only in on-premises Exchange.
 
-The FreCardsEnabled parameter specifies whether the theme, signature, and phone cards are available in Outlook on the web. Valid values are:
-
-- $true: The theme, signature, and phone cards are visible in Outlook on the web. This is the default value.
-
-- $false: The theme, signature, and phone cards aren't visible in Outlook on the web. Only the introduction, time zone, and final cards are visible.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
