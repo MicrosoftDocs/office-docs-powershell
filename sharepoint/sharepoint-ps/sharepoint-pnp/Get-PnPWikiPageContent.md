@@ -71,6 +71,8 @@ Accept pipeline input: False
 
 ### System.String
 
+### Notes
+Get-PnPWikiPageContent Cmdlet works with Modern Wiki Pages. It does not work with Wiki Pages created with classic site template like Enterprise Wiki Site Template.
 ## RELATED LINKS
 
 [SharePoint Developer Patterns and Practices](https://aka.ms/sppnp)
