@@ -17,7 +17,7 @@ This cmdlet submits an operation that deletes a custom policy package with the g
 ## SYNTAX
 
 ```
-Remove-CsBatchPolicyPackageAssignmentOperation -Identity <String>
+Remove-CsCustomPolicyPackage -Identity <String>
 ```
 
 ## DESCRIPTION
@@ -35,7 +35,7 @@ Deletes a custom package named "myCustomPackage".
 
 ## PARAMETERS
 
-### -PackageName
+### -Identity
 
 The name of the custom package.
 
@@ -59,7 +59,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-The user is not allowed to delete a pre-defined package created by Microsoft.
+The user is not allowed to delete a default package created by Microsoft.
 
 ## RELATED LINKS
 
