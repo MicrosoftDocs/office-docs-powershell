@@ -29,6 +29,9 @@ Connect-IPPSSession
  [[-AzureADAuthorizationEndpointUri] <String>]
  [[-DelegatedOrganization] <String>]
  [[-PSSessionOption] <PSSessionOption>]
+ [[-Prefix] <String>]
+ [[-CommandName] <String[]>]
+ [[-FormatTypeName] <String[]>]
  [-BypassMailboxAnchoring]
  [-Credential <PSCredential>]
  [-UserPrincipalName <String>]
@@ -134,6 +137,56 @@ Applicable: Exchange Online
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Prefix
+The Prefix parameter specifies an alias to add to nouns in the names of older remote PowerShell cmdlets (cmdlet with nouns that don't already start with EXO). A valid value is a text string without spaces, and you can't use the value EXO (this prefix is reserved for PowerShell V2 module cmdlets).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommandName
+**Note**: This parameter is available in version 2.0.3 or later.
+
+The CommandName parameter specifies the comma separated list of commands to import into the session. Use this parameter for applications or scripts that use a specific set of cmdlets. Reducing the number of cmdlets in the session helps improve performance and reduces the memory footprint of the application or script.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FormatTypeName
+The FormatTypeName parameter specifies the output format of the cmdlet.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 6
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
