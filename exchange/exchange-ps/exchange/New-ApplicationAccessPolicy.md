@@ -35,6 +35,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
 
+A limit of 100 policies per Microsoft 365 tenant is enforced as of today. An error message stating "A tenant cannot have more than 100 policies." will be displayed if this number is exceeded.
+
 While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn’t have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
 
 Every API request using the Outlook REST APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):

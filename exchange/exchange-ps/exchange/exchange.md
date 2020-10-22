@@ -2074,9 +2074,13 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EXORecipientPermission](Get-EXORecipientPermission.md)
 
+### [Get-MyAnalyticsFeatureConfig](Get-MyAnalyticsFeatureConfig.md)
+
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
+
+### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
 
 ## reporting Cmdlets
 ### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)

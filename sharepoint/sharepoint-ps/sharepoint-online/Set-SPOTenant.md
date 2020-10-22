@@ -46,6 +46,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-UsePersistentCookiesForExplorerView <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>]
  [-CommentsOnFilesDisabled <Boolean>]
+ [-CommentsOnListItemsDisabled <Boolean>]
  [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DefaultLinkPermission <SharingPermissionType>]
  [-DefaultSharingLinkType <SharingLinkType>]
@@ -742,6 +743,23 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommentsOnListItemsDisabled
+
+Disables or enables commenting functionality on list items.
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
