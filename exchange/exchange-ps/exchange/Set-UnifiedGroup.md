@@ -216,9 +216,9 @@ Accept wildcard characters: False
 ### -AlwaysSubscribeMembersToCalendarEvents
 The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group. Changing this setting doesn't affect existing group members.
 
-- If you use this switch without a value, all future members that are added to the group will have their subscriptions set to ReplyAndEvents, but this dosent means that previous events will be automatically added to their calendar.
+- If you use this switch without a value, all future members that are added to the group will have their subscriptions set to ReplyAndEvents. Previous events are not automatically added to their calendars.
 
-- If you use this exact syntax: -AlwaysSubscribeMembersToCalendarEvents:$false, all future members that are added to the group will have their subscriptions set to ReplyOnly.
+- If you use this exact syntax: `-AlwaysSubscribeMembersToCalendarEvents:$false,` all future members that are added to the group will have their subscriptions set to ReplyOnly.
 
 Group members can change their own subscription settings, which can override your intended use of this switch.
 
