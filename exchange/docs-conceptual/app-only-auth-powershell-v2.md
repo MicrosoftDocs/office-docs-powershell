@@ -166,7 +166,7 @@ Get-ChildItem -Path Cert:\localMachine\my\1DC696D8BE9E656D1F9ED576931B44EC650CF0
 
 ## Step 4: Attach the certificate to the Azure AD application
 
-After you register the certificate with your application, you can use the public key (`.cer` file) or the thumbprint for authentication.
+After you register the certificate with your application, you can use the public key (`.pfx` file) or the thumbprint for authentication.
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
 
