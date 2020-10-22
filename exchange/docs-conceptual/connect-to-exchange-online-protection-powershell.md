@@ -49,11 +49,12 @@ If your account uses multi-factor authentication, use the steps in this section.
 2. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>]
+   Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>] [-PSSessionOption $ProxyOptions]
    ```
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
    - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the parameter descriptions in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
+   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
    **This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization**:
 
@@ -99,10 +100,11 @@ If your account doesn't use multi-factor authentication, use the steps in this s
 3. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-IPPSSession -Credential $UserCredential -ConnectionUri <URL>
+   Connect-IPPSSession -Credential $UserCredential -ConnectionUri <URL> [-PSSessionOption $ProxyOptions]
    ```
 
-   The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
+   - The required _ConnectionUri_ value depends on the nature of your Microsoft 365 organization. For more information, see the parameter description in [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession).
+   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
    **This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization**:
 
