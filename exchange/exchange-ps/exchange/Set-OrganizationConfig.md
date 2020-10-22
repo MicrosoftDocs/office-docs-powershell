@@ -495,7 +495,11 @@ Accept wildcard characters: False
 ### -AllowPlusAddressInRecipients
 This parameter is available only in the cloud-based service.
 
-The AllowPlusAddressInRecipients parameter specifies whether plus addresses are supported for messages sent to your organization's recipients. By default, the parameter is set to $false for existing customers in Exchange Online before September 2020. Customers who onboarded to Exchange Online after September 2020 will have this parameter set to $true by default. If the flag is set to $true, messages sent using a plus address format e.g. john+exmapletag@contoso.com will be delivered to john@contoso.com.
+The AllowPlusAddressInRecipients parameter enables or disables dynamic, disposable subaddressing as defined in RFC 5233. Valid values are:
+
+- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to jane+exmapletag@contoso.com is delivered to jane@contoso.com. For customers who enrolled in Exchange Online after September 2020, this is the default value. 
+
+- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to jane+exmapletag@contoso.com is delivered only if jane+exmapletag@contoso.com is configured as the primary address or a proxy address on an existing recipient. For customers who enrolled in Exchange Online before September 2020, this is the default value.
 
 ```yaml
 Type: Boolean
