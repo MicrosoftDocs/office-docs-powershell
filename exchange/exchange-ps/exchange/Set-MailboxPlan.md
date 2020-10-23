@@ -191,7 +191,7 @@ The maximum value is determined by the mailbox plan (subscriptions and licenses)
 
 Use this parameter to change the MaxReceiveSize value for new mailboxes that you create. Use the MaxReceiveSize parameter on the Set-Mailbox cmdlet to configure the value on existing mailboxes.
 
-For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
+Base64 encoding increases the size of messages by approximately 33%, so specify a value that's 33% larger than the actual maximum message size that you want to enforce. For example, the value 64 MB results in a maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
@@ -225,7 +225,7 @@ The maximum value is determined by the mailbox plan (subscriptions and licenses)
 
 Use this parameter to change the MaxSendSize value for new mailboxes that you create. Use the MaxSendSize parameter on the Set-Mailbox cmdlet to configure the value on existing mailboxes.
 
-For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
+Base64 encoding increases the size of messages by approximately 33%, so specify a value that's 33% larger than the actual maximum message size that you want to enforce. For example, the value 64 MB results in a maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
