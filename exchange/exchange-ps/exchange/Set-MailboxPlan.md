@@ -187,9 +187,11 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is a number up to 150 MB. The default value is 36 MB.
 
-The maximum value is determined by the mailbox plan. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
+The maximum value is determined by the mailbox plan (subscriptions and licenses). You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
-For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
+Use this parameter to change the MaxReceiveSize value for new mailboxes that you create. Use the MaxReceiveSize parameter on the Set-Mailbox cmdlet to configure the value on existing mailboxes.
+
+Base64 encoding increases the size of messages by approximately 33%, so specify a value that's 33% larger than the actual maximum message size that you want to enforce. For example, the value 64 MB results in a maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
@@ -219,9 +221,11 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is a number up to 150 MB. The default value is 35 MB.
 
-The maximum value is determined by the mailbox plan. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
+The maximum value is determined by the mailbox plan (subscriptions and licenses). You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
-For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
+Use this parameter to change the MaxSendSize value for new mailboxes that you create. Use the MaxSendSize parameter on the Set-Mailbox cmdlet to configure the value on existing mailboxes.
+
+Base64 encoding increases the size of messages by approximately 33%, so specify a value that's 33% larger than the actual maximum message size that you want to enforce. For example, the value 64 MB results in a maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
