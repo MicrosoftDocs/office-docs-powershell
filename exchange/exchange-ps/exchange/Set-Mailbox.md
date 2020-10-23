@@ -3719,8 +3719,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxReceiveSize
-This parameter is available only in on-premises Exchange.
-
 The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to the mailbox. Messages larger than the maximum size are rejected.
 
 When you enter a value, qualify the value with one of the following units:
@@ -3749,7 +3747,7 @@ For any message size limit, you need to set a value that's larger than the actua
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
