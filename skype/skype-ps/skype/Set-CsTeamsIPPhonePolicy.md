@@ -21,7 +21,7 @@ Set-CsTeamsIPPhonePolicy enables you to modify the properties of an existing Tea
 
 ```
 Set-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>]
- [-SearchOnCommonAreaPhoneMode <String>] [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>]
+ [-SearchOnCommonAreaPhoneMode <String>] [-AllowHotDesking <Boolean>] [-AllowHomeScreen <String>] [-AllowBetterTogether <String>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>]
  [-SignInMode <String>] [-WhatIf] [-Confirm] [-Force] [-Instance <Object>]
 ```
 
@@ -38,6 +38,46 @@ PS C:\>  Set-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAr
 This example shows the SignInMode "CommonAreaPhoneSignIn" being set against the policy named "CommonAreaPhone".
 
 ## PARAMETERS
+
+### -AllowBetterTogether
+Determines whether Better Together mode is enabled, phones can lock and unlock in an integrated fashion when connected to their Windows PC running a 64-bit Teams desktop client.
+Possible values this parameter can take:
+
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowHomeScreen
+Determines whether the Home Screen feature of the Teams IP Phones is enabled.
+Possible values this parameter can take:
+
+- Enabled
+- EnabledUserOverride
+- Disabled
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledUserOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -AllowHotDesking
 Determines if the hot desking feature is enabled or not. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode. 
