@@ -67,7 +67,7 @@ Possible values this parameter can take:
 - Disabled
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
