@@ -139,6 +139,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOOrgAssetsLibrary Description Here}}
 
+### [Get-SPOPortalLaunchWaves](Get-SPOPortalLaunchWaves.md)
+
+{{Manually Enter Get-SPOPortalLaunchWaves Description Here}}
+
 ### [Get-SPOPublicCdnOrigins](Get-SPOPublicCdnOrigins.md)
 
 {{Manually Enter Get-SPOPublicCdnOrigins Description Here}}
@@ -291,6 +295,11 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy Description Here}}
 
+
+### [New-SPOPortalLaunchWaves](New-SPOPortalLaunchWaves.md)
+
+{{Manually Enter New-SPOPortalLaunchWaves Description Here}}
+
 ### [New-SPOPublicCdnOrigin](New-SPOPublicCdnOrigin.md)
 
 {{Manually Enter New-SPOPublicCdnOrigin Description Here}}
@@ -338,6 +347,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Remove-SPOOrgAssetsLibrary](Remove-SPOOrgAssetsLibrary.md)
 
 {{Manually Enter Remove-SPOOrgAssetsLibrary Description Here}}
+
+### [Remove-SPOPortalLaunchWaves](Remove-SPOPortalLaunchWaves.md)
+
+{{Manually Enter Remove-SPOPortalLaunchWaves Description Here}}
 
 ### [Remove-SPOPublicCdnOrigin](Remove-SPOPublicCdnOrigin.md)
 
@@ -442,6 +455,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Set-SPOOrgAssetsLibrary](Set-SPOOrgAssetsLibrary.md)
 
 {{Manually Enter Set-SPOOrgAssetsLibrary Description Here}}
+
+### [Set-SPOPortalLaunchWaves](Set-SPOPortalLaunchWaves.md)
+
+{{Manually Enter Set-SPOPortalLaunchWaves Description Here}}
 
 ### [Set-SPOSite](Set-SPOSite.md)
 
