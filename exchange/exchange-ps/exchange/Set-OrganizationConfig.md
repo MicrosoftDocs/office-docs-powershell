@@ -2364,7 +2364,7 @@ The PublicFolderShowClientControl parameter enables or disables access to public
 Type: Boolean
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Server 2016, Exchange 2019
 
 Required: False
 Position: Named
