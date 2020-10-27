@@ -219,6 +219,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
 
+### [Get-QuarantineTag](Get-QuarantineTag.md)
+
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
 
 ### [Get-SenderFilterConfig](Get-SenderFilterConfig.md)
@@ -242,6 +244,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-MalwareFilterPolicy](New-MalwareFilterPolicy.md)
 
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
+
+### [New-QuarantineTag](New-QuarantineTag.md)
 
 ### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
 
@@ -274,6 +278,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-MalwareFilterPolicy](Remove-MalwareFilterPolicy.md)
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
+
+### [Remove-QuarantineTag](Remove-QuarantineTag.md)
 
 ### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
 
@@ -314,6 +320,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-MalwareFilterPolicy](Set-MalwareFilterPolicy.md)
 
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
+
+### [Set-QuarantineTag](Set-QuarantineTag.md)
 
 ### [Set-RecipientFilterConfig](Set-RecipientFilterConfig.md)
 
