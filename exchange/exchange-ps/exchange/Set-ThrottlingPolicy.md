@@ -1658,7 +1658,11 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMaxConcurrency
-The OwaMaxConcurrency parameter specifies how many concurrent connections an Outlook on the web user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OwaMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
+The OwaMaxConcurrency parameter specifies how many concurrent connections an Outlook on the web user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid.
+
+A valid value for this parameter is an integer from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), use the value $null.
+
+**Note**: We don't recommend setting this parameter to a large number or the value $null, because server performance might be negatively affected.
 
 ```yaml
 Type: UInt32
