@@ -94,9 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminNotificationFrequencyInDays
-The AdminNotificationFrequencyInDays parameter specifies the duration in days that an admin receives notification messages for a quarantine release request by and end-user. A valid value is an integer from 1 to 30. The default value is 3.
-
-This parameter is meaningful only if the AdminNotificationsEnabled parameter is $true, and only if the EndUserQuarantinePermissions contains the value `PermissionToRequestRelease: True`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
@@ -112,13 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminNotificationLanguage
-The AdminNotificationLanguage parameter specifies the language of admin quarantine notifications. Valid values are:
-
-Default, Amharic, Arabic, Basque, BengaliIndia, Bulgarian, Catalan, ChineseSimplified, ChineseTraditional, Croatian, Cyrillic, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Malay, Malayalam, Marathi, Norwegian, NorwegianNynorsk, Odia, Persian, Polish, Portuguese, PortuguesePortugal, Romanian, Russian, Serbian, SerbianCyrillic, Slovak, Slovenian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
-
-The default value is Default, which means admin quarantine notifications use the default language of the cloud-based organization.
-
-This parameter is meaningful only if the AdminNotificationsEnabled parameter is $true, and only if the AdminQuarantinePermissions contains the value `PermissionToRequestRelease: True`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: EsnLanguage
@@ -135,10 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminNotificationsEnabled
-The AdminNotificationsEnabled parameter enables or disables admin quarantine release request notification messages. Valid values are:
-
-- $true: Admin quarantine notifications are enabled.
-- $false: Admin quarantine notifications are disabled. This is the default values.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -154,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminQuarantinePermissionsList
-{{ Fill AdminQuarantinePermissionsList Description }}
+This parameter is re
 
 ```yaml
 Type: MultiValuedProperty
@@ -170,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomDisclaimer
-{{ Fill CustomDisclaimer Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -202,10 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -ESNEnabled
-The ESNEnabled parameter enables or disables end-user quarantine notification messages. Valid values are:
-
-- $true: End-user quarantine notifications are enabled.
-- $false: End-user quarantine notifications are disabled. This is the default value.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -270,9 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationFrequencyInDays
-The AdminNotificationFrequencyInDays parameter specifies the duration in days that an end-user receives notification messages for a quarantine message. A valid value is an integer from 1 to 30. The default value is 3.
-
-This parameter is meaningful only if the AdminNotificationsEnabled parameter is $true, and only if the EndUserQuarantinePermissions contains the value `PermissionToRequestRelease: True`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
@@ -288,13 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationLanguage
-The EndUserNotificationLanguage parameter specifies the language of end-user quarantine notifications. Valid values are:
-
-Default, Amharic, Arabic, Basque, BengaliIndia, Bulgarian, Catalan, ChineseSimplified, ChineseTraditional, Croatian, Cyrillic, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Malay, Malayalam, Marathi, Norwegian, NorwegianNynorsk, Odia, Persian, Polish, Portuguese, PortuguesePortugal, Romanian, Russian, Serbian, SerbianCyrillic, Slovak, Slovenian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
-
-The default value is Default, which means end-uer quarantine notifications use the default language of the cloud-based organization.
-
-This parameter is meaningful only if the EndUserNotificationsEnabled parameter is $true, and only if the EndUserQuarantinePermissions contains the value `PermissionToRequestRelease: True`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: EsnLanguage
@@ -375,7 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuarantineRetentionDays
-The QuarantineRetentionDays parameter specifies the duration in days that messages that are retained in quarantine by an action that uses the quarantine tag. A valid value is an integer from 1 to 30. The default value is 15.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32

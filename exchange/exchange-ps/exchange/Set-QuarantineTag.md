@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminNotificationFrequencyInDays
-{{ Fill AdminNotificationFrequencyInDays Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminNotificationLanguage
-{{ Fill AdminNotificationLanguage Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: EsnLanguage
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminNotificationsEnabled
-{{ Fill AdminNotificationsEnabled Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminQuarantinePermissionsList
-{{ Fill AdminQuarantinePermissionsList Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -146,7 +146,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -193,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -ESNEnabled
-{{ Fill ESNEnabled Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -258,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationFrequencyInDays
-{{ Fill EndUserSpamNotificationFrequencyInDays Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
@@ -296,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDehydratedFlag
-{{ Fill IgnoreDehydratedFlag Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -381,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuarantineRetentionDays
-{{ Fill QuarantineRetentionDays Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
