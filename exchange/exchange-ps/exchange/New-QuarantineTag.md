@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-quarantinetag
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: New-QuarantineTag
 schema: 2.0.0
 author: chrisda
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminQuarantinePermissionsList
-This parameter is re
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -207,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissions
-{{ Fill EndUserQuarantinePermissions Description }}
+The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine tag.
+
+A value for this parameter requires the New-QuarantinePermissions cmdlet. Store the results of the New-QuarantinePermissions command in a variable (for example, `$Perms = New-QuarantinePermissions <permissions>`) and then use the variable name (`$Perms`) for this parameter. For more information, see [New-QuarantinePermissions](https://docs.microsoft.com/powershell/module/exchange/new-quarantinepermissions).
 
 ```yaml
 Type: QuarantinePermissions
@@ -223,15 +225,17 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissionsValue
-The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine tag by using a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list:
+The EndUserQuarantinePermissionsValue parameter specifies the end-user permissions for the quarantine tag.
+
+This parameter uses a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list:
 
 - PermissionToAllowSender
 - PermissionToBlockSender
 - PermissionToDelete
 - PermissionToDownload: Currently, this value is always 0.
 - PermissionToPreview
-- PermissionToRelease: Don't set this value and PermissionToRequestRelease to 1. Set one to 1 and the other to 0, or set both to 0.
-- PermissionToRequestRelease: Don't set this value and PermissionToRelease to 1. Set one to 1 and the other to 0, or set both to 0.
+- PermissionToRelease: Don't set this permission and PermissionToRequestRelease to 1. Set one to 1 and the other to 0, or set both to 0.
+- PermissionToRequestRelease: Don't set this permission and PermissionToRelease to 1. Set one to 1 and the other to 0, or set both to 0.
 - PermissionToViewHeader: Currently, this value is always 0, and doesn't hide the **View message header** button in the details of the quarantined message.
 
 The values for the available preset end-user permissions are described in the following list:

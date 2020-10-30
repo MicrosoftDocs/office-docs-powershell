@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-quarantinetag
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-QuarantineTag
 schema: 2.0.0
 author: chrisda
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissions
-{{ Fill EndUserQuarantinePermissions Description }}
+A value for this parameter requires the New-QuarantinePermissions cmdlet. Store the results of the New-QuarantinePermissions command in a variable (for example, `$Perms = New-QuarantinePermissions <permissions>`) and then use the variable name (`$Perms`) for this parameter. For more information, see [New-QuarantinePermissions](https://docs.microsoft.com/powershell/module/exchange/new-quarantinepermissions).
 
 ```yaml
 Type: QuarantinePermissions
@@ -278,13 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationLanguage
-The EndUserNotificationLanguage parameter specifies the language of end-user quarantine notifications. Valid values are:
-
-Default, Amharic, Arabic, Basque, BengaliIndia, Bulgarian, Catalan, ChineseSimplified, ChineseTraditional, Croatian, Cyrillic, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Malay, Malayalam, Marathi, Norwegian, NorwegianNynorsk, Odia, Persian, Polish, Portuguese, PortuguesePortugal, Romanian, Russian, Serbian, SerbianCyrillic, Slovak, Slovenian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
-
-The default value is Default, which means end-uer quarantine notifications use the default language of the cloud-based organization.
-
-This parameter is meaningful only if the EndUserNotificationsEnabled parameter is $true, and only if the EndUserQuarantinePermissions contains the value `PermissionToRequestRelease: True`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: EsnLanguage
@@ -366,10 +360,11 @@ Accept wildcard characters: False
 ### -OrganizationBrandingEnabled
 The OrganizationBrandingEnabled parameter enables or disables organization branding in the end-user quarantine notification messages. Valid values are:
 
-- $true:
-- $false: Organization branding is disabled.
+- $true: Organization branding is enabled. The default Microsoft logo that's used in end-user spam notifications is replaced by your custom logo. Before you do this, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://docs.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
-This setting is meaningful only on the built-in quarantine tag named GlobalDefaultTag (global settings).
+- $false: Organization branding is disabled. The default Microsoft logo is used in end-user spam notifications. This is the default value.
+
+This setting is meaningful only in the built-in quarantine tag named GlobalDefaultTag. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
 
 ```yaml
 Type: Boolean

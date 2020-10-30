@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-quarantinetag
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-QuarantineTag
 schema: 2.0.0
 author: chrisda
@@ -48,6 +48,13 @@ Get-QuarantineTag -Identity NoAccess
 ```
 
 This example returns detailed information about the quarantine tag named NoAccess.
+
+### Example 3
+```powershell
+Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag
+```
+
+This example returns detailed information about the default quarantine tag named GlobalDefaultTag that controls the global end-user spam notification settings.
 
 ## PARAMETERS
 
