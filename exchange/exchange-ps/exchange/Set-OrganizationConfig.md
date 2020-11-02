@@ -497,9 +497,9 @@ This parameter is available only in the cloud-based service.
 
 The AllowPlusAddressInRecipients parameter enables or disables dynamic, disposable subaddressing as defined in RFC 5233. Valid values are:
 
-- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to jane+exmapletag@contoso.com is delivered to jane@contoso.com. For customers who enrolled in Exchange Online after September 2020, this is the default value. 
+- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to jane+exampletag@contoso.com is delivered to jane@contoso.com. For customers who enrolled in Exchange Online after September 2020, this is the default value. 
 
-- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to jane+exmapletag@contoso.com is delivered only if jane+exmapletag@contoso.com is configured as the primary address or a proxy address on an existing recipient. For customers who enrolled in Exchange Online before September 2020, this is the default value.
+- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to jane+exampletag@contoso.com is delivered only if jane+exampletag@contoso.com is configured as the primary address or a proxy address on an existing recipient. For customers who enrolled in Exchange Online before September 2020, this is the default value.
 
 ```yaml
 Type: Boolean
