@@ -339,7 +339,7 @@ Accept wildcard characters: False
 Turn this setting on to enable suggested replies for chat messages.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
