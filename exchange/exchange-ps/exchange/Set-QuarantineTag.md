@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomDisclaimer
-{{ Fill CustomDisclaimer Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -312,6 +312,8 @@ Accept wildcard characters: False
 ### -MultiLanguageCustomDisclaimer
 {{ Fill MultiLanguageCustomDisclaimer Description }}
 
+This setting is available only in the built-in quarantine tag named GlobalDefaultTag that controls global settings. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -328,6 +330,8 @@ Accept wildcard characters: False
 ### -MultiLanguageSenderName
 {{ Fill MultiLanguageSenderName Description }}
 
+This setting is available only in the built-in quarantine tag named GlobalDefaultTag that controls global settings. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -343,6 +347,8 @@ Accept wildcard characters: False
 
 ### -MultiLanguageSetting
 {{ Fill MultiLanguageSetting Description }}
+
+This setting is available only in the built-in quarantine tag named GlobalDefaultTag that controls global settings. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -364,7 +370,7 @@ The OrganizationBrandingEnabled parameter enables or disables organization brand
 
 - $false: Organization branding is disabled. The default Microsoft logo is used in end-user spam notifications. This is the default value.
 
-This setting is meaningful only in the built-in quarantine tag named GlobalDefaultTag. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
+This setting is available only in the built-in quarantine tag named GlobalDefaultTag that controls global settings. To access this quarantine tag, start your command with the following syntax: `Get-QuarantineTag -QuarantineTagType GlobalQuarantineTag | Set-QuarantineTag ...`.
 
 ```yaml
 Type: Boolean

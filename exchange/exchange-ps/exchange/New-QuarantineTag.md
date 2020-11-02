@@ -54,10 +54,23 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-QuarantineTag -Name ContosoTag -EndUserQuarantinePermissionsValue 0
 ```
 
-{{ Add example description here }}
+This example creates a new quarantine tag named ContosoTag with the same permissions as the No access preset permissions group.
+
+To assign Limited access permissions, use the value 106. To assign Full access permissions, use the value 236.
+
+### Example 2
+```powershell
+$LimitedAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRequestRelease $true
+
+New-QuarantineTag -Name LimitedAccess -EndUserQuarantinePermissions $LimitedAccess
+```
+
+This example creates a new quarantine tag named LimitedAccess with the same permissions as Limited access preset permissions group.
+
+The first command uses the New-QuarantinePermissions cmdlet to store the permissions object in a variable. The second command uses the variable for the value of the EndUserQuarantinePermissions parameter.
 
 ## PARAMETERS
 
