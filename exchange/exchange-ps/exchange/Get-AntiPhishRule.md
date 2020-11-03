@@ -51,9 +51,7 @@ This example returns detailed information about the antiphish rule named Researc
 The Identity parameter specifies the antiphish rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

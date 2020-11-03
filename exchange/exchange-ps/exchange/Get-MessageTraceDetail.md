@@ -133,17 +133,11 @@ Accept wildcard characters: False
 The Event parameter filters the report by the message event. The following are examples of common events:
 
 - RECEIVE: The message was received by the service.
-
 - SEND: The message was sent by the service.
-
 - FAIL: The message failed to be delivered.
-
 - DELIVER: The message was delivered to a mailbox.
-
 - EXPAND: The message was sent to a distribution group that was expanded.
-
 - TRANSFER: Recipients were moved to a bifurcated message because of content conversion, message recipient limits, or agents.
-
 - DEFER: The message delivery was postponed and may be re-attempted later.
 
 You can specify multiple values separated by commas.

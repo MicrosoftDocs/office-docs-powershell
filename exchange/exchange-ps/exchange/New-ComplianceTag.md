@@ -50,9 +50,7 @@ New-ComplianceTag -Name "HR Content" -RetentionAction Keep -RetentionDuration 18
 This example creates a new label named HR Content with the following settings:
 
 - Action: Keep.
-
 - Duration: 5 years (1825 days)
-
 - Type: Modification age in days.
 
 ## PARAMETERS
@@ -92,8 +90,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -113,9 +110,7 @@ Accept wildcard characters: False
 The EventType specifies the retention rule that's associated with the label. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can use the Get-RetentionComplianceRule cmdlet to view the available retention rules.
@@ -137,15 +132,10 @@ Accept wildcard characters: False
 The FilePlanProperty parameter specifies the file plan properties to include in the label. To view the file plan property names that you need to use in this parameter, run the following commands:
 
 - Get-FilePlanPropertyAuthority | Format-List Name
-
 - Get-FilePlanPropertyCategory | Format-List Name
-
 - Get-FilePlanPropertyCitation | Format-List Name
-
 - Get-FilePlanPropertyDepartment | Format-List Name
-
 - Get-FilePlanPropertyReferenceId | Format-List Name
-
 - Get-FilePlanPropertySubCategory | Format-List Name
 
 A valid value for this parameter involves two steps:
@@ -201,7 +191,6 @@ Accept wildcard characters: False
 The IsRecordLabel parameter specifies whether the label is a record label. Valid values are:
 
 - $true: The label is a record label. Once the label is applied to content, the label can't be removed.
-
 - $false: The label isn't a record label. This is the default value.
 
 ```yaml
@@ -253,9 +242,7 @@ Accept wildcard characters: False
 The RetentionAction parameter specifies the action for the label. Valid values are:
 
 - Delete
-
 - Keep
-
 - KeepAndDelete
 
 ```yaml
@@ -275,7 +262,6 @@ Accept wildcard characters: False
 The RetentionDuration parameter specifies the number of days to retain the content. Valid values are:
 
 - A positive integer.
-
 - The value unlimited.
 
 ```yaml
@@ -295,11 +281,8 @@ Accept wildcard characters: False
 The RetentionType parameter specifies whether the retention duration is calculated from the content creation date, tagged date, or last modification date. Valid values are:
 
 - CreationAgeInDays
-
 - EventAgeInDays
-
 - ModificationAgeInDays
-
 - TaggedAgeInDays
 
 ```yaml

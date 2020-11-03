@@ -57,9 +57,7 @@ This example displays detailed information for the information barrier policy na
 The Identity parameter specifies the information barrier policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the ExOPolicyId parameter.

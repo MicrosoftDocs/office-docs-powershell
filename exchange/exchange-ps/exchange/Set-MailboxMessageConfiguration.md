@@ -72,23 +72,14 @@ This example sets the compose email message form to always show the Bcc field in
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -108,9 +99,7 @@ Accept wildcard characters: False
 The AfterMoveOrDeleteBehavior parameter specifies the behavior after moving or deleting an email item in Outlook on the web. You can use the following values:
 
 - OpenPreviousItem
-
 - OpenNextItem
-
 - ReturnToView
 
 The default value is OpenNextItem.
@@ -168,7 +157,6 @@ Accept wildcard characters: False
 The AutoAddSignature parameter specifies whether to automatically add signatures to new email messages created in Outlook on the web. Valid values are:
 
 - $true: Email signatures are automatically added to new messages.
-
 - $false: Email signatures aren't automatically added to new messages.
 
 The email signature specified by the SignatureText parameter is added to plain text messages. The email signature specified by the SignatureHTML parameter is added to HTML-formatted messages.
@@ -189,8 +177,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -210,17 +197,11 @@ Accept wildcard characters: False
 The ConversationSortOrder parameter specifies the sorting of messages in the reading pane in Conversation view for the user in Outlook on the web. You can use the following values:
 
 - Chronological
-
 - Tree
-
 - NewestOnTop
-
 - NewestOnBottom
-
 - ChronologicalNewestOnTop
-
 - ChronologicalNewestOnBottom
-
 - TreeNewestOnBottom
 
 The default value is ChronologicalNewestOnTop.
@@ -260,13 +241,9 @@ Accept wildcard characters: False
 The DefaultFontFlags parameter specifies the default text effect when the user creates messages in Outlook on the web. You can use the following values:
 
 - Normal
-
 - Bold
-
 - Italic
-
 - Underline
-
 - All
 
 The default value is Normal.
@@ -396,7 +373,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -416,15 +392,10 @@ Accept wildcard characters: False
 The NewItemNotification parameter specifies how to provide notification for the arrival of new items for the user in Outlook on the web. You can use the following values:
 
 - Sound
-
 - EMailToast
-
 - VoiceMailToast
-
 - FaxToast
-
 - None
-
 - All
 
 The default value is All.
@@ -446,9 +417,7 @@ Accept wildcard characters: False
 The PreviewMarkAsReadBehavior parameter specifies the options for marking an item as Read in the reading pane for the user in Outlook on the web. You can use the following values:
 
 - Delayed: This value uses the delay interval specified by the PreviewMarkAsReadDelaytime parameter.
-
 - OnSelectionChange
-
 - Never
 
 The default value is OnSelectionChange.
@@ -490,9 +459,7 @@ Accept wildcard characters: False
 The ReadReceiptResponse parameter specifies how to respond to requests for read receipts for the user in Outlook on the web. You can use the following values:
 
 - DoNotAutomaticallySend
-
 - AlwaysSend
-
 - NeverSend
 
 The default value is DoNotAutomaticallySend.
@@ -518,15 +485,12 @@ The SendAddressDefault parameter specifies the default From email address when t
 You can use one of the following values:
 
 - Blank, which is represented by the value $null. This indicates no default From address is specified.
-
 - The user's primary email address. For example, bob@contoso.com.
-
 - The GUID of a POP, IMAP, or Hotmail subscription that's configured on the user's mailbox.
 
 By default, no default From address is specified on the mailbox. When no default From address is specified, the default behavior is:
 
 - The primary email address on the mailbox is used for all new messages.
-
 - The To address of the incoming message is used as the From address for all replies or forwarded messages.
 
 You can find the available values for SendAddressDefault on a mailbox by running the command Get-SendAddress -Mailbox \<mailbox\>.
@@ -656,7 +620,6 @@ Accept wildcard characters: False
 The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
 
 - Inline: New messages and replies are created in the preview pane. This is the default value.
-
 - SeparateForm: New messages and replies are created in a new browser window.
 
 ```yaml
@@ -712,7 +675,6 @@ Accept wildcard characters: False
 The AutoAddSignature parameter specifies whether to automatically add signatures to reply email messages created in Outlook on the web. Valid values are:
 
 - $true: Email signatures are automatically added to reply messages.
-
 - $false: Email signatures aren't automatically added to reply messages.
 
 The email signature specified by the SignatureText parameter is added to plain text messages. The email signature specified by the SignatureHTML parameter is added to HTML-formatted messages.
@@ -734,9 +696,7 @@ Accept wildcard characters: False
 The GlobalReadingPanePosition specifies the default location of the reading pane in Outlook on the web. Valid values are:
 
 - Off
-
 - Bottom
-
 - Right (This is the default value)
 
 ```yaml
@@ -756,7 +716,6 @@ Accept wildcard characters: False
 The IsFavoritesFolderTreeCollapsed parameter specifies whether to collapse the Favorites folder tree by default in Outlook on the web. Valid values are:
 
 - $true: The Favorites folder tree is collapsed by default.
-
 - $false: The Favorites folder tree isn't collapsed by default. This is the default value
 
 ```yaml
@@ -776,7 +735,6 @@ Accept wildcard characters: False
 The IsMailRootFolderTreeCollapsed parameter specifies whether to collapse the Mail root folder tree by default in Outlook on the web. Valid values are:
 
 - $true: The Mail root folder tree is collapsed by default.
-
 - $false: The Mail root folder tree isn't collapsed by default. This is the default value
 
 ```yaml
@@ -796,7 +754,6 @@ Accept wildcard characters: False
 The IsReplyAllTheDefaultResponse parameter specifies whether Reply All is the default response for messages in Outlook on the web. Valid values are:
 
 - $true: Reply All is the default response option for messages in the reading pane. This is the default value.
-
 - $false: Reply All isn't the default response option for messages in the reading pane.
 
 ```yaml
@@ -816,7 +773,6 @@ Accept wildcard characters: False
 The LinkPreviewEnabled parameter specifies whether link preview of URLs in email messages is enabled for the user in Outlook on the web. Valid values are:
 
 - $true: Link preview of URLs in email messages is enabled for the user. This is the default value.
-
 - $false: Link preview of URLs in email messages is disabled for the user.
 
 This parameter depends on the value of the LinkPreviewEnabled parameter on the Set-OrganizationConfig cmdlet, which controls the link preview behavior in Outlook on the web for the entire organization. If link preview is disabled for the organization, users can't enable it for themselves.
@@ -838,7 +794,6 @@ Accept wildcard characters: False
 The MailFolderPaneExpanded parameter specifies whether the Mail folder pane is expanded by default in Outlook on the web. Valid values are:
 
 - $true: The Mail folder pane is expanded by default. This is the default value.
-
 - $false: The Mail folder pane isn't expanded by default.
 
 ```yaml
@@ -858,13 +813,9 @@ Accept wildcard characters: False
 The NavigationPaneViewOption parameter specifies the default navigation pane view in Outlook on the web. Valid values are:
 
 - Default: This is the default value
-
 - MailFolders
-
 - PeopleFolders
-
 - Groups
-
 - PinnedMailFolders
 
 ```yaml
@@ -884,7 +835,6 @@ Accept wildcard characters: False
 The PreferAccessibleContent parameter specifies whether to prefer accessible content in Outlook on the web. Valid values are:
 
 - $true: Prefer accessible content.
-
 - $false: Don't prefer accessible content. This is the default value.
 
 ```yaml
@@ -904,7 +854,6 @@ Accept wildcard characters: False
 The ShowPreviewTextInListView parameter specifies whether to show preview text for messages in list view in Outlook on the web. Valid values are:
 
 - $true: Show preview text for messages in list view. This is the default value.
-
 - $false: Don't show preview text for messages in list view.
 
 ```yaml
@@ -924,7 +873,6 @@ Accept wildcard characters: False
 The ShowReadingPaneOnFirstLoad parameter specifies whether to show the reading pane when the user opens in Outlook on the web for the first time. Valid values are:
 
 - $true: Show the reading pane when the user opens Outlook on the web for the first time.
-
 - $false: Don't show the reading pane when the user opens Outlook on the web for the first time. This is the default value.
 
 ```yaml
@@ -944,7 +892,6 @@ Accept wildcard characters: False
 The ShowSenderOnTopInListView parameter specifies whether to show the message sender on top in list view in Outlook on the web. Valid values are:
 
 - $true: Show the message sender on top in list view. This is the default value.
-
 - $false: Don't show the message sender on top in list view.
 
 ```yaml
@@ -964,7 +911,6 @@ Accept wildcard characters: False
 The ShowUpNext parameter specifies whether the next upcoming event should be shown above the mail list view in Outlook on the web. Valid values are:
 
 - $true: Show the next upcoming event above the mail list view. This is the default value.
-
 - $false: Don't show the next upcoming event above the mail list view.
 
 ```yaml

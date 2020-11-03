@@ -81,23 +81,14 @@ Accept wildcard characters: False
 The AccessRights parameter specifies the rights being removed. Valid values include:
 
 - None The administrator doesn't have any rights to modify public folder attributes.
-
 - ModifyPublicFolderACL The administrator has the right to modify client access permissions for the specified folder.
-
 - ModifyPublicFolderAdminACL The administrator has the right to modify administrator permissions for the specified public folder.
-
 - ModifyPublicFolderDeletedItemRetention The administrator has the right to modify the Public Folder Deleted Item Retention attributes (RetainDeletedItemsFor or UseDatabaseRetentionDefaults).
-
 - ModifyPublicFolderExpiry The administrator has the right to modify the Public Folder Expiration attributes (AgeLimitUseDatabaseAgeDefaults).
-
 - ModifyPublicFolderQuotas The administrator has the right to modify the Public Folder Quota attributes (MaxItemSize, PostQuota, PostWarningQuota, or UseDatabaseQuotaDefaults).
-
 - ModifyPublicFolderReplicaList The administrator has the right to modify the replica list attribute for the specified public folder (Replicas).
-
 - AdministerInformationStore The administrator has the right to modify all other public folder properties not defined previously.
-
 - ViewInformationStore The administrator has the right to view public folder properties.
-
 - AllExtendedRights The administrator has the right to modify all public folder properties.
 
 ```yaml
@@ -187,8 +178,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -240,13 +230,9 @@ Accept wildcard characters: False
 The InheritanceType parameter specifies the type of inheritance. Valid values are:
 
 - None
-
 - All
-
 - Descendents
-
 - SelfAndChildren
-
 - Children
 
 ```yaml
@@ -266,11 +252,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

@@ -61,11 +61,8 @@ New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId "3dbc2ae1-7198-45ed-9
 This example creates a new application access policy with the following settings:
 
 - AccessRight: DenyAccess
-
 - AppIDs: 3dbc2ae1-7198-45ed-9f9f-d86ba3ec35b5 and 6ac794ca-2697-4137-8754-d2a78ae47d93
-
 - PolicyScopeGroupId: Engineering Staff
-
 - Description: Engineering Group Policy
 
 ### Example 2
@@ -76,11 +73,8 @@ New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId "e7e4dbfc-046f-40
 This example creates a new application access policy with the following settings:
 
 - AccessRight: RestrictAccess
-
 - AppIDs: e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
-
 - PolicyScopeGroupId: EvenUsers@AppPolicyTest2.com
-
 - Description: Restrict this app to members of security group EvenUsers.
 
 ### Example 3
@@ -91,11 +85,8 @@ New-ApplicationAccessPolicy -AccessRight DenyAccess -AppId "e7e4dbfc-046f-4074-9
 This example creates a new application access policy with the following settings:
 
 - AccessRight: DenyAccess
-
 - AppIDs: e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
-
 - PolicyScopeGroupId: OddUsers@AppPolicyTest2.com
-
 - Description: Deny this app access to members of security group OddUsers.
 
 ## PARAMETERS
@@ -104,7 +95,6 @@ This example creates a new application access policy with the following settings
 The AccessRight parameter specifies the permission that you want to assign in the application access policy. Valid values are:
 
 - RestrictAccess
-
 - DenyAccess
 
 ```yaml
@@ -143,23 +133,16 @@ The PolicyScopeGroupID parameter specifies the recipient to define in the policy
 For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Display name
-
 - Email address
-
 - GUID
 
 This parameter only accepts recipients that are security principals (users or groups that can have permissions assigned to them). The following types of recipients are not security principals, so you can't use them with this parameter:
 
 - Discovery mailboxes  
-
 - Dynamic distribution groups
-
 - Distribution groups
-
 - Shared mailboxes
 
 To verify that a recipient is a security principal, use the syntax `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal`.
@@ -182,8 +165,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

@@ -68,9 +68,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the Foreign connector that you want to examine. The Identity parameter can take any of the following values for the Foreign connector object:
 
 - GUID
-
 - Connector name
-
 - ServerName\\ConnectorName
 
 ```yaml

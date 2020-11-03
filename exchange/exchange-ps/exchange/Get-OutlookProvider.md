@@ -67,9 +67,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the ADIDParameter value of the MAPI protocol that you want to view. Typical values are:
 
 - EXCH
-
 - EXPR
-
 - WEB
 
 ```yaml

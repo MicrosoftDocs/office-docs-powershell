@@ -249,17 +249,11 @@ Accept wildcard characters: False
 The QuarantineTypes parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-
 - HighConfPhish
-
 - Malware
-
 - Phish
-
 - Spam
-
 - SPOMalware (ATP only)
-
 - TransportRule
 
 You can specify multiple values separated by commas.
@@ -301,7 +295,6 @@ Accept wildcard characters: False
 The Reported parameter filters the results by messages that have already been reported as false positives. Valid values are:
 
 - $true: The command only returns quarantined messages that have already been reported as false positives.
-
 - $false: The command only returns quarantined messages that haven't been reported as false positives.
 
 ```yaml
@@ -391,15 +384,10 @@ Accept wildcard characters: False
 The Type parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-
 - HighConfPhish
-
 - Phish
-
 - Spam
-
 - SPOMalware (ATP only)
-
 - TransportRule
 
 You don't need to use this parameter with the QuarantineTypes parameter.

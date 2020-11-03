@@ -58,7 +58,6 @@ New-OutboundConnector -Name "Contoso Outbound Connector" -RecipientDomains *.con
 This example creates the Outbound connector named Contoso Outbound Connector with the following properties:
 
 - It sends messages to recipients in the contoso.com domain and all subdomains.
-
 - It uses TLS encryption and certificate verification for mail routed to the contoso.com domain and all subdomains
 
 ## PARAMETERS
@@ -83,7 +82,6 @@ Accept wildcard characters: False
 The AllAcceptedDomains parameter specifies whether the Outbound connector is used in hybrid organizations where message recipients are in accepted domains of the cloud-based organization. Valid values are:
 
 - $true: The Outbound connector is used in hybrid organizations when message recipients are in an accepted domain of the cloud-based organization. You can only use this value when the ConnectorType parameter value is OnPremises.
-
 - $false: The Outbound connector isn't used in hybrid organizations. This is the default value.
 
 ```yaml
@@ -107,7 +105,6 @@ The CloudServicesMailEnabled parameter specifies whether the connector is used f
 Valid values are:
 
 - $true: The connector is used for mail flow in hybrid organizations, so cross-premises headers are preserved or promoted in messages that flow through the connector. This is the default value for connectors that are created by the Hybrid Configuration wizard. Certain X-MS-Exchange-Organization-\* headers in outbound messages that are sent from one side of the hybrid organization to the other are converted to X-MS-Exchange-CrossPremises-\* headers and are thereby preserved in messages. X-MS-Exchange-CrossPremises-\* headers in inbound messages that are received on one side of the hybrid organization from the other are promoted to X-MS-Exchange-Organization-\* headers. These promoted headers replace any instances of the same X-MS-Exchange-Organization-\* headers that already exist in messages.
-
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
@@ -142,8 +139,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -163,9 +159,7 @@ Accept wildcard characters: False
 The ConnectorSource parameter specifies how the connector is created. Valid values are:
 
 - Default: The connector is manually created. This is the default value when you use this cmdlet, and we recommend that you don't change this value.
-
 - HybridWizard: The connector is automatically created by the Hybrid Configuration Wizard.
-
 - Migrated: The connector was originally created in Microsoft Forefront Online Protection for Exchange.
 
 ```yaml
@@ -185,7 +179,6 @@ Accept wildcard characters: False
 The ConnectorType parameter specifies a category for the domains that are serviced by the connector. Valid values are:
 
 - Partner: The connector services domains that are external to your organization.
-
 - OnPremises: The connector services domains that are used by your on-premises organization.
 
 ```yaml
@@ -205,7 +198,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether to enable or disable the Outbound connector. Valid values are:
 
 - $true: The connector is enabled. This is the default value.
-
 - $false: The connector is disabled.
 
 ```yaml
@@ -225,7 +217,6 @@ Accept wildcard characters: False
 The IsTransportRuleScoped parameter specifies whether the Outbound connector is associated with a transport rule (also known as a mail flow rule). Valid values are:
 
 - $true: The connector is associated with a transport rule.
-
 - $false: The connector isn't associated with a transport rule. This is the default value.
 
 You scope a transport rule to an Outbound connector by using the RouteMessageOutboundConnector parameter on the New-TransportRule or Set-TransportRule cmdlets. Messages that match the conditions of the transport rule are routed to their destinations by using the specified Outbound connector.
@@ -281,7 +272,6 @@ Accept wildcard characters: False
 The RouteAllMessagesViaOnPremises parameter specifies that all messages serviced by this connector are first routed through the on-premises messaging system in hybrid organizations. Valid values are:
 
 - $true: Messages are routed through the on-premises messaging system. This setting requires you to set the ConnectorType parameter to the value OnPremises in the same command.
-
 - $false: Messages aren't routed through the on-premises messaging system. This is the default value.
 
 ```yaml
@@ -317,7 +307,6 @@ Accept wildcard characters: False
 The TestMode parameter specifies whether you want to enabled or disable test mode for the Outbound connector. Valid values are:
 
 - $true: Test mode is enabled.
-
 - $false: Test mode is disabled. This is the default value.
 
 ```yaml
@@ -353,11 +342,8 @@ Accept wildcard characters: False
 The TlsSettings parameter specifies the TLS authentication level that's used for outbound TLS connections established by this Outbound connector. Valid values are:
 
 - EncryptionOnly: TLS is used only to encrypt the communication channel. No certificate authentication is performed.
-
 - CertificateValidation: TLS is used to encrypt the channel and certificate chain validation and revocation lists checks are performed.
-
 - DomainValidation: In addition to channel encryption and certificate validation, the Outbound connector also verifies that the FQDN of the target certificate matches the domain specified in the TlsDomain parameter.
-
 - $null (blank): This is the default value.
 
 ```yaml
@@ -377,7 +363,6 @@ Accept wildcard characters: False
 The UseMXRecord parameter enables or disables DNS routing for the connector. Valid values are:
 
 - $true: The connector uses DNS routing (MX records in DNS) to deliver email. This is the default value.
-
 - $false: The connector delivers email to one or more smart hosts. When you use this value, you also need to specify the smart hosts by using the SmartHosts parameter in the same command.
 
 ```yaml

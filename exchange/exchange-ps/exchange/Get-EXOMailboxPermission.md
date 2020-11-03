@@ -99,13 +99,9 @@ The Identity parameter specifies the mailbox you want to view. For the best perf
 Otherwise, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - LegacyExchangeDN
-
 - SamAccountName
 
 ```yaml
@@ -177,11 +173,8 @@ The User parameter returns information about the user who has permissions to the
 The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 ```yaml

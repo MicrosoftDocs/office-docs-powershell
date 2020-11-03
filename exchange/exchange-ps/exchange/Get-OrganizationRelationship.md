@@ -67,9 +67,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the identity of the organizational relationship. You can use the following values:
 
 - Canonical name
-
 - GUID
-
 - Name
 
 ```yaml

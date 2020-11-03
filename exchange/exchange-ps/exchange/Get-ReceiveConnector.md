@@ -77,11 +77,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the Receive connector that you want to view. You can use any value that uniquely identifies the Receive connector. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - \<ServerName\>\\\<Name\>
 
 You can't use this parameter with the Server parameter.
@@ -103,11 +100,8 @@ Accept wildcard characters: False
 The Server parameter filters the results by the specified Mailbox server or Edge Transport server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can't use this parameter with the Identity parameter.
