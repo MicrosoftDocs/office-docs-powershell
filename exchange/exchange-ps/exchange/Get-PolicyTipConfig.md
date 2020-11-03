@@ -64,9 +64,7 @@ This example returns details about the custom English Policy Tip for the action 
 The Action parameter filters the Policy Tips by action. Valid values for this parameter are:
 
 - NotifyOnly
-
 - RejectOverride
-
 - Reject
 
 You can't use the value Url with the Action parameter. Instead, use command: Get-PolicyTipConfig Url.
@@ -108,11 +106,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the custom Policy Tip you want to view. You can use any value that uniquely identifies the custom Policy Tip. For example:
 
 - \<Locale\>\\\<Action\>: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs). Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
-
 - The value Url
-
 - GUID
-
 - Distinguished name (DN)
 
 You can't use the Identity parameter with the Action, Locale or Original parameters.

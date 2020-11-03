@@ -60,9 +60,7 @@ This example returns logon statistics for all users connected to the server Serv
 The Database parameter specifies the mailbox database to get logon statistics from (all mailboxes in the specified database). You can use any value that uniquely identifies the mailbox database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 This parameter accepts pipeline input from the Get-MailboxDatabase command.
@@ -86,17 +84,11 @@ Accept wildcard characters: False
 The Identity parameter specifies the mailbox to get logon statistics from. You can use one of the following values to identify the mailbox:
 
 - GUID
-
 - Distinguished name (DN)
-
 - Domain\\Account
-
 - User principal name (UPN)
-
 - Legacy Exchange DN
-
 - SmtpAddress
-
 - Alias
 
 This parameter accepts pipeline input from the Get-Mailbox command.
@@ -120,7 +112,6 @@ Accept wildcard characters: False
 The Server parameter specifies the Mailbox server to get logon statistics from (all mailboxes on all databases, including recovery databases, on the specified server). You can use one of the following values to identify the server:
 
 - Fully qualified domain name (FQDN)
-
 - NetBIOS name
 
 This parameter accepts pipeline input from the Get-ExchangeServer and Get-MailboxServer commands.

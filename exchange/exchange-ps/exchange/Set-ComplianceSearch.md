@@ -95,7 +95,6 @@ The Identity parameter specifies the compliance search that you want to modify.
 You can use any value that uniquely identifies the compliance search. For example:
 
 - Name
-
 - JobRunId (GUID)
 
 You can find these values by running the command Get-ComplianceSearch | Format-Table -Auto Name,JobRunId,Status
@@ -117,7 +116,6 @@ Accept wildcard characters: False
 The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
 - A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Microsoft 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
-
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
 To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
@@ -139,7 +137,6 @@ Accept wildcard characters: False
 This parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Microsoft 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
-
 - A distribution group or mail-enabled security group
 
 To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
@@ -229,17 +226,13 @@ Accept wildcard characters: False
 The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to include mailboxes other than regular user mailboxes in the compliance search. Valid values are:
 
 - $true: The search doesn't try to validate the existence of the mailbox before proceeding. This value is required if you want to search mailboxes that don't resolve as regular mailboxes.
-
 - $false: The search tries to validate the existence of the mailbox before proceeding. If you specify a mailbox that isn't a regular user mailbox, the search will fail. This is the default value.
 
 The mailbox types that are affected by the value of this parameter include:
 
 - Inactive mailboxes
-
 - Users without an Exchange Online license who use Office applications
-
 - Guest users
-
 - On-premises users whose identity is synchronized with your Microsoft 365 organization
 
 ```yaml
@@ -258,8 +251,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -313,9 +305,7 @@ Accept wildcard characters: False
 The ExchangeLocation parameter specifies the mailboxes to include. Valid values are:
 
 - A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Microsoft 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
-
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
-
 - The value All for all mailboxes. You can only use this value by itself.
 
 To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
@@ -339,7 +329,6 @@ Accept wildcard characters: False
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Microsoft 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
-
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
 To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
@@ -399,7 +388,6 @@ This parameter is available only in the cloud-based service.
 The IncludeUserAppContent parameter specifies that you want to search the cloud-based storage location for users who don't have a regular Microsoft 365 user account in your organization. These types of users include users without an Exchange Online license who use Office applications, Microsoft 365 guest users, and on-premises users whose identity is synchronized with your Microsoft 365 organization. Valid values are:
 
 - $true: The cloud-based storage location for the users specified in any of the Exchange location parameters will be included in the search. If you use the value All for the ExchangeLocation parameter, the cloud-based storage location for any guest or on-premises user will be included in the search.
-
 - $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value.
 
 ```yaml
@@ -517,7 +505,6 @@ Accept wildcard characters: False
 The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
-
 - A distribution group or mail-enabled security group
 
 To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.
@@ -539,7 +526,6 @@ Accept wildcard characters: False
 This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
 - A mailbox
-
 - A distribution group or mail-enabled security group
 
 To specify a mailbox or distribution group, use the email address. You can specify multiple values separated by commas.

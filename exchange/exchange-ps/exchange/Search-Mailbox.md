@@ -74,11 +74,8 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> -TargetFolder <String>
 You can use the Search-Mailbox cmdlet to search messages in a specified mailbox and perform any of the following tasks:
 
 - Copy messages to a specified target mailbox.
-
 - Delete messages from the source mailbox. You have to be assigned the Mailbox Import Export management role to delete messages.
-
 - Perform single item recovery to recover items from a user's Recoverable Items folder.
-
 - Clean up the Recoverable Items folder for a mailbox when it has reached the Recoverable Items hard quota.
 
 ## EXAMPLES
@@ -133,23 +130,14 @@ Accept wildcard characters: False
 The Identity parameter specifies the identity of the mailbox to search. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -185,23 +173,14 @@ Accept wildcard characters: False
 The TargetMailbox parameter specifies the destination mailbox where search results are copied. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You must use this parameter with the TargetFolder parameter. You can't use this parameter with the EstimateResultOnly switch.
@@ -222,8 +201,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -333,9 +311,7 @@ Accept wildcard characters: False
 The LogLevel parameter specifies the logging level for the search. It can have one of the following values:
 
 - Suppress: No logs are kept.
-
 - Basic: Basic information about the query and who ran it is kept.
-
 - Full: In addition to the information kept by the Basic log level, the Full log level adds a complete list of search results.
 
 The default log level is Basic.

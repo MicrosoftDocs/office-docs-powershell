@@ -67,11 +67,8 @@ This example sets the company, display name, and title properties for the user K
 The Identity parameter specifies the user object that you want to modify. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 ```yaml

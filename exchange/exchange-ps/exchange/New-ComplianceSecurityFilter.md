@@ -106,13 +106,9 @@ This example prevents the user from performing any compliance search actions on 
 The Action parameter specifies that type of search action that the filter is applied to. Valid values are:
 
 - Export: The filter is applied when exporting search results, or preparing them for analysis in Microsoft 365 Advanced eDiscovery.
-
 - Preview: The filter is applied when previewing search results.
-
 - Purge: The filter is applied when purging search results. How the items are deleted is controlled by the PurgeType parameter value on the New-ComplianceSearchAction cmdlet. The default value is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
-
 - Search: The filter is applied when running a search.
-
 - All: The filter is applied to all search actions.
 
 ```yaml
@@ -148,9 +144,7 @@ Accept wildcard characters: False
 The Users parameter specifies the user who gets this filter applied to their searches. Valid values are:
 
 - One or more users: Identify users by their alias or email address. You can specify multiple values separated by commas.
-
 - The value All: Assigns the filter to all users. You can only use this value by itself.
-
 - One or more role groups: Identify the role group by its name. You can specify multiple values separated by commas.
 
 You can't specify distribution groups with this parameter.
@@ -171,8 +165,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -208,9 +201,7 @@ Accept wildcard characters: False
 The Filters parameter specifies the search criteria for the compliance security filter. The filters are applied to the users specified by the Users parameter. You can create three different types of filters:
 
 - Mailbox filter: Specifies the mailboxes that can be searched by the assigned users. Valid syntax is `Mailbox_<MailboxPropertyName>`, where `<MailboxPropertyName>` is a mailbox property value. For example,`"Mailbox_CustomAttribute10 -eq 'OttawaUsers'"` allows users to only search mailboxes that have the value OttawaUsers in the CustomAttribute10 property. For a list of supported mailbox properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
-
 - Mailbox content filter: Specifies the mailbox content the assigned users can search for. Valid syntax is `MailboxContent_<SearchablePropertyName>:<value>`, where `<SearchablePropertyName>` specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, `MailboxContent_recipients:contoso.com` allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable message properties, see [Keyword queries for Compliance Search](https://docs.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
-
 - Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create: `Site_<SearchableSiteProperty>` (specifies site-related properties. For example,`"Site_Path -eq 'https://contoso.sharepoint.com/sites/doctors'"` allows users to only search for content in the `https://contoso.sharepoint.com/sites/doctors` site collection) and `SiteContent_<SearchableSiteProperty>` (specifies content-related properties. For example, `"SiteContent_FileExtension -eq 'docx'"` allows users to only search for Word documents). For a list of searchable site properties, see [Overview of crawled and managed properties in SharePoint Server](https://docs.microsoft.com/SharePoint/technical-reference/crawled-and-managed-properties-overview). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
 
 You can specify multiple filters of the same type. For example, `"Mailbox_CustomAttribute10 -eq 'FTE' -and Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'"`.
@@ -234,23 +225,14 @@ Accept wildcard characters: False
 The Region parameter specifies the satellite location for multi-geo tenants to conduct eDiscovery searches in. Valid values are:
 
 - APC: Asia-Pacific
-
 - AUS: Australia
-
 - CAN: Canada
-
 - EUR: Europe, Middle East, Africa
-
 - FRA: France
-
 - GBR: United Kingdom
-
 - IND: India
-
 - JPN: Japan
-
 - LAM: Latin America
-
 - NAM: North America
 
 If you don't use this parameter in a multi-geo tenant, eDiscovery searches are performed in the central location.

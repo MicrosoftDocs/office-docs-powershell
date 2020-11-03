@@ -69,11 +69,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the Transport server that you want to view. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - GUID
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 ```yaml

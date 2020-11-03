@@ -78,23 +78,14 @@ This example returns the message tracking reports that the Help desk can analyze
 The Identity parameter scopes the search to the specified mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 When you use this parameter without the Sender parameter, the specified mailbox is the message sender that's used in the search. You can specify the recipients by using the Recipients parameter.
@@ -153,8 +144,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -292,9 +282,7 @@ Accept wildcard characters: False
 The TraceLevel parameter specifies the details to include in the results. Valid values are:
 
 - Low: Minimal additional data is returned, including servers that were accessed, timing, message tracking search result counts, and any error information.
-
 - Medium: In addition to all the data returned for the Low setting, the actual message tracking search results are also returned.
-
 - High: Full diagnostic data is returned.
 
 You only need to use this parameter for troubleshooting message tracking issues.

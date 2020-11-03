@@ -37,7 +37,9 @@ Get-MessageTraceDetail -MessageTraceId <Guid> -RecipientAddress <String>
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to search message data for the last 30 days. If you enter a time period that's older than 30 days, you won't receive an error, but the command will return no results.
+You can use this cmdlet to search message data for the last 10 days. If you enter a time period that's older than 10 days, you will receive an error and the command will return no results.
+
+To search for message data that is greater than 10 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -131,17 +133,11 @@ Accept wildcard characters: False
 The Event parameter filters the report by the message event. The following are examples of common events:
 
 - RECEIVE: The message was received by the service.
-
 - SEND: The message was sent by the service.
-
 - FAIL: The message failed to be delivered.
-
 - DELIVER: The message was delivered to a mailbox.
-
 - EXPAND: The message was sent to a distribution group that was expanded.
-
 - TRANSFER: Recipients were moved to a bifurcated message because of content conversion, message recipient limits, or agents.
-
 - DEFER: The message delivery was postponed and may be re-attempted later.
 
 You can specify multiple values separated by commas.

@@ -76,9 +76,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the remote domain that you want to view. You can use any value that uniquely identifies the remote domain. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

@@ -49,9 +49,7 @@ This example returns detailed information for the supervisory review policy name
 The Identity parameter specifies the supervisory review policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

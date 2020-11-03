@@ -70,9 +70,7 @@ This example returns a summary list of all Exchange Control Panel virtual direct
 The Identity parameter specifies the ECP virtual directory that you want to view. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
@@ -96,11 +94,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 You can't use the Server and Identity parameters in the same command.

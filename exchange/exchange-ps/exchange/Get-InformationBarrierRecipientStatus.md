@@ -28,11 +28,8 @@ Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [[-Iden
 The following information is returned in the output of this cmdlet:
 
 - A warning message that indicates whether or not the recipient is included in an information barrier policy.
-
 - If present, the GUID part in the ExOPolicyId property value identifies the information barrier policy that the recipient is included in. You can run the command `Get-InformationBarrierPolicy -ExOPolicyId <GUID>` to identify and view the details of the policy.
-
 - Basic information about the recipient (display name, alias, and last name).
-
 - Recipient properties that can be used in organization segments (Department, CustomAttributeN, etc.) and the current property values for the recipient.
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
@@ -59,15 +56,10 @@ This example returns the information barrier policy relationship for the users m
 The Identity parameter specifies the recipient that you want to view the segment and policy assignment information for. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -87,15 +79,10 @@ Accept wildcard characters: False
 The Identity2 parameter specifies an optional second recipient when you want to view the information barrier policy relationship to the first recipient specified by the Identity parameter. You can use any value that uniquely identifies the second recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 When you include this parameter in a command, you get output for each recipient.

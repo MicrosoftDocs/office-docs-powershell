@@ -67,11 +67,8 @@ For more information about pipelining and the Format-Table cmdlet, see [About Pi
 The Identity parameter specifies the OU or domain that you want to view. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can use this parameter with the SearchText parameter.
