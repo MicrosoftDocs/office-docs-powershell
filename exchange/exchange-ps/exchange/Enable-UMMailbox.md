@@ -83,23 +83,14 @@ This example enables Unified Messaging on a SIP-enabled mailbox for tonysmith@co
 The Identity parameter specifies the mailbox that you want to enable for Unified Messaging. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -119,9 +110,7 @@ Accept wildcard characters: False
 The UMMailboxPolicy parameter specifies the UM mailbox policy that you want to associate with the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -154,7 +143,6 @@ Accept wildcard characters: False
 The AutomaticSpeechRecognitionEnabled parameter specifies whether to enable Automatic Speech Recognition (ASR) for the UM mailbox. Valid values are:
 
 - $true: ASR is enabled for the mailbox. This is the default value. ASR is available only if the user's specified preferred language is installed.
-
 - $false: ASR is disabled for the mailbox.
 
 ```yaml
@@ -173,8 +161,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -250,7 +237,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -320,7 +306,6 @@ Accept wildcard characters: False
 The PINExpired parameter specifies whether the PIN is treated as expired. If the PIN isn't supplied, the PIN is treated as expired and users are prompted to reset their PIN the next time they log on.
 
 - $true: The user is required to reset their PIN the next time they log on.
-
 - $false: The user isn't required to reset their PIN the next time they log on.
 
 ```yaml
@@ -340,7 +325,6 @@ Accept wildcard characters: False
 The SendWelcomeMail parameter specifies whether you want to send a welcome message after the mailbox has been enabled for UM. Valid values are:
 
 - $true: Send the welcome to UM message.
-
 - $false: Don't send the welcome to UM message.
 
 ```yaml

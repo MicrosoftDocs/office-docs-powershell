@@ -75,27 +75,18 @@ The Identity parameter filters the results by the target recipient. The user or 
 You can specify any type of recipient, for example:
 
 - Mailboxes
-
 - Mail users
-
 - External contacts
-
 - Distribution groups
-
 - Dynamic distribution groups
 
 You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -149,31 +140,20 @@ The Trustee parameter filters the results by the user or group to whom you're gr
 You can specify the following types of users or groups:
 
 - Mailbox users
-
 - Mail users with a Microsoft account (formerly known as a Windows Live ID)
-
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

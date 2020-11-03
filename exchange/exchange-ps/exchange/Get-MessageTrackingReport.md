@@ -95,7 +95,6 @@ Accept wildcard characters: False
 The DetailLevel parameter specifies the amount of detail to return in the results. Valid values are:
 
 - Basic: Simple delivery report information is returned, which is more appropriate for users.
-
 - Verbose: Full report information is returned, including server names and physical topology information.
 
 ```yaml
@@ -183,7 +182,6 @@ Accept wildcard characters: False
 The ReportTemplate parameter specifies a predefined format for the output. Valid values are:
 
 - RecipientPath: Returns a detailed tracking report for one recipient of the message. You specify the recipient by using the RecipientPathFilter parameter.
-
 - Summary: Returns a summary for all recipients of the message. You specify the recipients by using the Recipients parameter.
 
 ```yaml
@@ -219,13 +217,9 @@ Accept wildcard characters: False
 The Status parameter filters the results by the specified delivery status codes. Valid values are:
 
 - Delivered
-
 - Read
-
 - Pending
-
 - Transferred
-
 - Unsuccessful
 
 ```yaml
@@ -245,9 +239,7 @@ Accept wildcard characters: False
 The TraceLevel parameter specifies the details to include in the results. Valid values are:
 
 - Low: Minimal additional data is returned, including servers that were accessed, timing, message tracking search result counts and any error information.
-
 - Medium: In addition to the data returned for the Low setting, the actual message tracking search results are also returned.
-
 - High: Full diagnostic data is returned.
 
 You only need to use this parameter for troubleshooting message tracking issues.

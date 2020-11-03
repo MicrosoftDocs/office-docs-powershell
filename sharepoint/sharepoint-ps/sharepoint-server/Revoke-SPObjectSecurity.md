@@ -6,7 +6,7 @@ applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Revoke-SPObjectSecurity
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 ---
 

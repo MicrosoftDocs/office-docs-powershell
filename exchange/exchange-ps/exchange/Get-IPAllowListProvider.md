@@ -68,9 +68,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the IP Allow list provider that you want to view. You can use any value that uniquely identifies the IP Allow list provider. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

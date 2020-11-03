@@ -54,8 +54,7 @@ This example detects the mailbox assistant's health on the local Mailbox server.
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -127,7 +126,6 @@ Accept wildcard characters: False
 This ResolveProblems parameter specifies that if the command detects an issue, it attempts to fix it. This command attempts to fix the following issues:
 
 - Starts the Mailbox Assistants service if it isn't running.
-
 - Restarts the Mailbox Assistants service if it detects that the service is hung or deadlocked for more than 15 minutes.
 
 You don't have to specify a value with this parameter.
@@ -149,11 +147,8 @@ Accept wildcard characters: False
 The ServerName parameter specifies the Mailbox server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

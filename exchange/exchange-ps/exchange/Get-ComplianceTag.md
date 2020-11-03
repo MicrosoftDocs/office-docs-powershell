@@ -51,9 +51,7 @@ This example returns detailed information about the label named HR Content.
 The Identity parameter specifies the label that you want to view. You can use any value that uniquely identifies the tag. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

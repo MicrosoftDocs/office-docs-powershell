@@ -52,8 +52,7 @@ This example tests the health of the Mailbox Replication service on the Mailbox 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -89,11 +88,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the server on which to perform the health test. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 If you don't specify the server, the command runs on the local server.
@@ -183,9 +179,7 @@ The MRSProxyServer parameter specifies the fully qualified domain name (FQDN) of
 The Microsoft Replication proxy service is part of the Mailbox Replication service, and is used for remote mailbox moves. However, the Mailbox Replication proxy service communicates only with the Mailbox Replication service on another server. You can test the Mailbox Replication proxy service in the following ways:
 
 - If you specify an MRSProxyServer value and you specify the source server by using the Identity parameter, the test is performed between that server and the target server specified by the MRSProxyServer parameter.
-
 - If you specify an MRSProxyServer value and you don't specify a source server by using the Identity parameter, the test is performed between the local server and the target server specified by the MRSProxyServer parameter.
-
 - If you don't specify an MRSProxyServer value or an Identity value, the test is performed between the Mailbox Replication service and the Mailbox Replication proxy service on the local server.
 
 ```yaml

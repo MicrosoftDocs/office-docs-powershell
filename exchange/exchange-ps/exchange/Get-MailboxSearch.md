@@ -116,15 +116,10 @@ The Identity parameter specifies the name of the search query. If a name isn't p
 To improve the performance of this cmdlet in Exchange Online, some mailbox search properties aren't returned if you don't specify the name of a mailbox search. These properties are:
 
 - SourceMailboxes
-
 - Sources
-
 - SearchQuery
-
 - ResultsLink
-
 - PreviewResultsLink
-
 - Errors
 
 To view these properties, you have to provide the name of a mailbox search.

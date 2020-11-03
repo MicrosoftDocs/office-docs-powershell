@@ -51,9 +51,7 @@ This example returns detailed information about the outbound spam filter policy 
 The Identity parameter specifies the outbound spam filter policy you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

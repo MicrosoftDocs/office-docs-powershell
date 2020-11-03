@@ -24,7 +24,7 @@ Stop-SPOSiteContentMove [-SourceSiteUrl] <string> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to .
+Use this cmdlet to stop a job to move a particular user or group of users to be moved across geo locations relative to the one that executes the command.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ This example stops the move job for the specified site.
 
 ### -SourceSiteUrl
 
-{{ Fill SourceSiteUrl Description }}
+Specifies the source URL of the site collection.
 
 ```yaml
 Type: String

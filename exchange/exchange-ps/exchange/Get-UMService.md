@@ -69,11 +69,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the Mailbox server that hosts the Unified Messaging service configuration you want to view. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 ```yaml

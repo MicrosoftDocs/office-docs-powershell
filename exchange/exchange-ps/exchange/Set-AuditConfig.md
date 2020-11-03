@@ -43,11 +43,8 @@ This example sets the auditing configuration for Exchange and SharePoint.
 The Workload parameter specifies where auditing is allowed. Valid values are:
 
 - Exchange
-
 - InTune
-
 - OneDriveForBusiness
-
 - SharePoint
 
 You can specify multiple values separated by commas.

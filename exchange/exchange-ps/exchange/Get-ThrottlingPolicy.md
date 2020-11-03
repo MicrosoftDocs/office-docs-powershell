@@ -124,9 +124,7 @@ Accept wildcard characters: False
 The ThrottlingPolicyScope parameter specifies the scope of the throttling policy. You can use the following values:
 
 - Global
-
 - Organization
-
 - Regular
 
 For information about each of these policy scopes, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).

@@ -52,23 +52,14 @@ This example returns the Outlook on the web settings for Tony's mailbox and spec
 The Identity parameter specifies the mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

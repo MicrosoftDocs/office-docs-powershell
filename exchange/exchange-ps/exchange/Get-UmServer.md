@@ -55,11 +55,8 @@ This example returns detailed information for the Unified Messaging server named
 The Identity parameter specifies the Unified Messaging server that you want to view. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - GUID
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 ```yaml

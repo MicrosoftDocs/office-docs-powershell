@@ -108,9 +108,7 @@ This parameter is available only in the cloud-based service.
 The TrustedPublishingDomain parameter specifies the trusted publishing domain you want to search for RMS templates. You can use any value that uniquely identifies the trusted publishing domain, for example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -132,9 +130,7 @@ This parameter is available only in the cloud-based service.
 The Type parameter specifies the type of RMS template. Use one of the following values:
 
 - All
-
 - Archived
-
 - Distributed
 
 ```yaml

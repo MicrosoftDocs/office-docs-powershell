@@ -125,17 +125,11 @@ To mail-enable an on-premises user, create the associated mailbox in the service
 The Identity parameter specifies the identity of the existing on-premises user. You can use any value that uniquely identifies the user. For example:
 
 - ADObjectID
-
 - GUID
-
 - Distinguished name (DN)
-
-- Domain\\SamAccountName
-
+- Domain\\Username
 - User principal name (UPN)
-
 - LegacyExchangeDN
-
 - User alias
 
 ```yaml
@@ -235,7 +229,6 @@ When you create a recipient without specifying an email address, the Alias value
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -290,8 +283,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

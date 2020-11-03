@@ -44,11 +44,8 @@ This example returns the unique users for the license named Exchange Server 2016
 The LicenseName parameter specifies the license type that you want to view. You can find the available license type values by running the Get-ExchangeServerAccessLicense cmdlet. Valid values are:
 
 - Exchange Server \<Version\> Standard CAL
-
 - Exchange Server \<Version\> Enterprise CAL
-
 - Exchange Server \<Version\> Standard Edition
-
 - Exchange Server \<Version\> Enterprise Edition
 
 The \<Version\> value is 2013, 2016, or 2019.

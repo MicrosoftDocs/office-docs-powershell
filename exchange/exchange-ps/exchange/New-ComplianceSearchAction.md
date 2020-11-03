@@ -189,8 +189,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -212,7 +211,6 @@ This parameter is available only in the cloud-based service.
 The EnableDedupe parameter eliminates duplication of messages when you export content search results. Valid values are:
 
 - $true: Export a single copy of a message if the same message exists in multiple folders or mailboxes.
-
 - $false: Export all copies of a message if the same message exists in multiple folders or mailboxes. This is the default value.
 
 ```yaml
@@ -236,15 +234,10 @@ This parameter requires the Export role in the Security & Compliance Center. By 
 The ExchangeArchiveFormat parameter specifies how to export Exchange search results. Valid values are:
 
 - PerUserPst: One PST file for each mailbox.
-
 - SinglePst: One PST file that contains all exported messages.
-
 - SingleFolderPst: One PST file with a single root folder for the entire export.
-
 - IndividualMessage: Export each message as an .msg message file. This is the default value.
-
 - PerUserZip: One ZIP file for each mailbox. Each ZIP file contains the exported .msg message files from the mailbox. This value corresponds to the "export files in a compressed folder" checkbox in the Security & Compliance Center.
-
 - SingleZip: One ZIP file for all mailboxes. The ZIP file contains all exported .msg message files from all mailboxes. This output setting is only available in PowerShell.
 
 To specify the format for SharePoint and OneDrive search results, use the SharePointArchiveFormat parameter.
@@ -322,9 +315,7 @@ In the Security & Compliance Center, this parameter requires the Export role. By
 The Format parameter specifies the format of the search results when you use the Export switch. Valid values are:
 
 - FxStream: Export to PST files. This is the only option that's available when you export search results from the Security & Compliance Center.
-
 - Mime: Export to .eml message files. This the default value when you use cmdlets to export the search results.
-
 - Msg: Export to .msg message files.
 
 ```yaml
@@ -362,7 +353,6 @@ This parameter is available only in the cloud-based service.
 The IncludeSharePointDocumentVersions parameter specifies whether to export previous versions of the document when you use the Export switch. Valid values are:
 
 - $true: Export all versions of the document.
-
 - $false: Export only the current published version of the topic. This is the default value.
 
 ```yaml
@@ -458,11 +448,8 @@ The Purge switch specifies the action for the content search is to remove items 
 Notes:
 
 - A maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
-
 - You can remove items from a maximum of 50,000 mailboxes using a single content search. To remove items from more than 50,000 mailboxes, you'll have to create separate content searches. For more information, see [Search for and delete email messages in your Microsoft 365 organization](https://docs.microsoft.com/microsoft-365/compliance/search-for-and-delete-messages-in-your-organization).
-
 - Unindexed items aren't removed from mailboxes when you use this switch.
-
 - The value of the PurgeType parameter controls how the items are removed.
 
 ```yaml
@@ -482,7 +469,6 @@ Accept wildcard characters: False
 The PurgeType parameter specifies how to remove items when the action is Purge. Valid values are:
 
 - SoftDelete: Purged items are recoverable by users until the deleted item retention period expires.
-
 - HardDelete (cloud only): Purged items are marked for permanent removal from the mailbox and will be permanently removed the next time the mailbox is processed by the Managed Folder Assistant. If single item recovery is enabled on the mailbox, purged items will be permanently removed after the deleted item retention period expires.
 
 ```yaml
@@ -590,15 +576,10 @@ In the Security & Compliance Center, this parameter requires the Preview role. B
 The Scenario parameter specifies the scenario type when you use the Export switch. Valid values are:
 
 - AnalyzeWithZoom: Prepare the search results for processing in Microsoft 365 Advanced eDiscovery.
-
 - General: Exports the search results to the local computer. Emails are exported to .pst files. SharePoint and OneDrive for Business documents are exported in their native Office formats.
-
 - GenerateReportsOnly:
-
 - Inventory:
-
 - RetentionReports:
-
 - TriagePreview:
 
 ```yaml
@@ -618,9 +599,7 @@ Accept wildcard characters: False
 The Scope parameter specifies the items to include when the action is Export. Valid values are:
 
 - IndexedItemsOnly
-
 - UnindexedItemsOnly
-
 - BothIndexedAndUnindexedItems
 
 This parameter is only meaningful for content searches where the IncludeUnindexedItemsEnabled parameter is set to $true.
@@ -686,9 +665,7 @@ This parameter requires the Export role in the Security & Compliance Center. By 
 The SharePointArchiveFormat parameter specifies how to export SharePoint and OneDrive search results. Valid values are:
 
 - IndividualMessage: Export the files uncompressed. This is the default value.
-
 - PerUserZip: One ZIP file for each user. Each ZIP file contains the exported files for the user. This value corresponds to the "export files in a compressed folder" checkbox in the Security & Compliance Center.
-
 - SingleZip: One ZIP file for all users. The ZIP file contains all exported files from all users. This output setting is only available in PowerShell.
 
 To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter.

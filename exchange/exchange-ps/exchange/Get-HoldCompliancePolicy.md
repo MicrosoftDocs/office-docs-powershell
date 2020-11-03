@@ -30,11 +30,8 @@ Get-HoldCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail]
 This list describes the properties displayed by default.
 
 - Name: The unique name of the policy.
-
 - Workload: Where the policy is applied. For example, SharePoint or Exchange.
-
 - Enabled: The value True means the policy is enabled.
-
 - Mode: The current operating mode of the policy. The possible values are Test (the content is tested, but no rules are enforced), AuditAndNotify (when content matches the conditions specified by the policy, the rule is not enforced, but notification emails are sent) or Enforce (all aspects of the policy are enabled and enforced).
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
@@ -77,9 +74,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the preservation policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
