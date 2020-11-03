@@ -69,11 +69,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the sharing policy that you want to view. You can use one of the following values:
 
 - ADObjectID
-
 - Distinguished name (DN)
-
 - Legacy DN
-
 - GUID
 
 ```yaml

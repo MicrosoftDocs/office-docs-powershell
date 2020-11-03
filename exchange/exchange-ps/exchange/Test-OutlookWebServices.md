@@ -41,11 +41,8 @@ Test-OutlookWebServices -Identity:holly@contoso.com
 This example verifies the service information that's returned to the Outlook client from the Autodiscover service for the user holly@contoso.com. The code example verifies information for the following services:
 
 - Availability service
-
 - Outlook Anywhere
-
 - Offline address book
-
 - Unified Messaging
 
 The example tests for a connection to each service. The example also submits a request to the Availability service for the user holly@contoso.com to determine whether the user's free/busy information is being returned correctly from the Client Access server to the Outlook client.
@@ -73,8 +70,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

@@ -60,7 +60,6 @@ New-InboundConnector -Name "Contoso Inbound Connector" -SenderDomains *.contoso.
 This example creates the Inbound connector named Contoso Inbound Connector with the following properties:
 
 - It listens for incoming connections from the domain contoso.com and all subdomains.
-
 - It only accepts mail from contoso.com, and from the IP range 192.168.0.1/25. It rejects mail from contoso.com if it originates from any other IP address.
 
 ### Example 2
@@ -128,7 +127,6 @@ The CloudServicesMailEnabled parameter specifies whether the connector is used f
 Valid values are:
 
 - $true: The connector is used for mail flow in hybrid organizations, so cross-premises headers are preserved or promoted in messages that flow through the connector. This is the default value for connectors that are created by the Hybrid Configuration wizard. Certain X-MS-Exchange-Organization-\* headers in outbound messages that are sent from one side of the hybrid organization to the other are converted to X-MS-Exchange-CrossPremises-\* headers and are thereby preserved in messages. X-MS-Exchange-CrossPremises-\* headers in inbound messages that are received on one side of the hybrid organization from the other are promoted to X-MS-Exchange-Organization-\* headers. These promoted headers replace any instances of the same X-MS-Exchange-Organization-\* headers that already exist in messages.
-
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
@@ -163,8 +161,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -184,9 +181,7 @@ Accept wildcard characters: False
 The ConnectorSource parameter specifies how the connector is created. Valid input for this parameter includes the following values:
 
 - Default: The connector is manually created.
-
 - HybridWizard: The connector is automatically created by the Hybrid Configuration Wizard.
-
 - Migrated: The connector was originally created in Microsoft Forefront Online Protection for Exchange.
 
 The default value for connectors you create yourself is Default. It isn't recommended that you change this value.
@@ -208,7 +203,6 @@ Accept wildcard characters: False
 The ConnectorType parameter specifies a category for the domains that are serviced by the connector. Valid input for this parameter includes the following values:
 
 - Partner: The connector services domains that are external to your organization.
-
 - OnPremises: The connector services domains that are used by your on-premises organization. Use this value for accepted domains in your cloud-based organization that are also specified by the SenderDomains parameter.
 
 ```yaml
@@ -228,9 +222,7 @@ Accept wildcard characters: False
 the EFSkipIPs parameter specifies the source IP addresses to skip in Enhanced Filtering for Connectors when the EFSkipLastIP parameter value is $false. Valid values are:
 
 - A single IP address: For example, 192.168.1.1.
-
 - An IP address range: For example, 192.168.0.1-192.168.0.254.
-
 - Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24
 
 You can specify multiple IP addresses or address range entries separated by commas.
@@ -252,7 +244,6 @@ Accept wildcard characters: False
 The EFSkipIPs parameter specifies the behavior of Enhanced Filtering for Connectors. Valid values are:
 
 - $true: Only the last message source is skipped.
-
 - $false: Skip the source IP addresses specified by the EFSkipIPs parameter. If no IP addresses are specified, Enhanced Filtering for Connectors is disabled on the connector. This is the default value.
 
 ```yaml
@@ -404,7 +395,6 @@ Accept wildcard characters: False
 The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. IPv6 addresses are not supported. You enter the IP addresses using the following syntax:
 
 - Single IP: For example, 192.168.1.1.
-
 - CIDR IP: You can use Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25.
 
 You can specify multiple IP addresses separated by commas.
@@ -444,7 +434,6 @@ Accept wildcard characters: False
 The TreatMessagesAsInternal parameter specifies an alternative method to identify messages sent from an on-premises organization as internal messages. You should only consider using this parameter when your on-premises organization doesn't use Exchange. Valid values are:
 
 - $true: Messages are considered internal if the sender's domain matches a domain that's configured in Microsoft 365. This setting allows internal mail flow between Microsoft 365 and on-premises organizations that don't have Exchange Server 2010 or later installed. However, this setting has potential security risks (for example, internal messages bypass antispam filtering), so use caution when configuring this setting.
-
 - $false: Messages aren't considered internal. This is the default value.
 
 In hybrid environments, you don't need to use this parameter, because the Hybrid Configuration wizard automatically configures the required settings on the Inbound connector in Microsoft 365 and the Send connector in the on-premises Exchange organization (the CloudServicesMailEnabled parameter).

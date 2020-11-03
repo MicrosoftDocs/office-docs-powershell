@@ -157,7 +157,6 @@ Accept wildcard characters: False
 The Identity parameter specifies the compliance search action that you want to view. You can use any value that uniquely identifies the compliance search action. For example:
 
 - Name: The compliance search action name uses the syntax \<Compliance Search Name\>\_\<Action\> . For example, Case 1234\_Preview.
-
 - JobRunId (GUID)
 
 ```yaml

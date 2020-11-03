@@ -84,7 +84,6 @@ This example retrieves the statistics for the mobile phone configured to synchro
 The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
 
 - GUID
-
 - DeviceID
 
 You can't use this parameter with the Mailbox parameter.
@@ -106,23 +105,14 @@ Accept wildcard characters: False
 The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Identity parameter.

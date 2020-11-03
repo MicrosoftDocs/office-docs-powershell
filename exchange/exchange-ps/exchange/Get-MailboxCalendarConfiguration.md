@@ -29,23 +29,14 @@ Get-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter> [-DomainContro
 The Get-MailboxCalendarConfiguration cmdlet returns settings for the calendar of the specified mailbox, including the following:
 
 - Workdays: Days that appear in the calendar as work days in Outlook on the web
-
 - WorkingHoursStartTime: Time that the calendar work day starts
-
 - WorkingHoursEndTime: Time that the calendar work day ends
-
 - WorkingHoursTimeZone: Time zone set on the mailbox for the working hours start and end times
-
 - WeekStartDay: First day of the calendar work week
-
 - ShowWeekNumbers: Number for each week ranging from 1 through 52 for the calendar while in month view in Outlook on the web
-
 - TimeIncrement: Increments in minutes in which the calendar displays time in Outlook on the web
-
 - RemindersEnabled: Whether Outlook on the web provides a visual cue when a calendar reminder is due
-
 - ReminderSoundEnabled: Whether a sound is played when a calendar reminder is due
-
 - DefaultReminderTime: Length of time before each meeting or appointment that the calendar in Outlook on the web shows the reminder
 
 To see all of the settings returned, pipeline the command to the Format-List command. To view a code sample, see "Example 1."
@@ -81,23 +72,14 @@ This example requests that the domain controller DC1 retrieves calendar settings
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

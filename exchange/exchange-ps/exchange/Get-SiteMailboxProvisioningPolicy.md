@@ -54,9 +54,7 @@ This example returns detailed information about the site mailbox provisioning po
 The Identity parameter specifies the site mailbox provisioning policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

@@ -69,9 +69,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the setting override that you want to view. You can use any value that uniquely identifies the override. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

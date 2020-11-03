@@ -32,15 +32,10 @@ Get-CsClientDeviceDetailReport [-EndDate <DateTime>] [-ResultSize <Unlimited>] [
 The Get-CsClientDeviceDetailReport cmdlet returns the number of peer-to-peer sessions and conferences that a user participated in, and a count of what type of device they used. You can query this information for the last 3 months. For the reporting period you specify, the cmdlet returns the following information:
 
 - UserName
-
 - WindowsActivities: Note that this includes activity using both Skype for Business and Skype for Business Web App clients.
-
 - WindowsPhoneActivities
-
 - AndroidActivities
-
 - iPhoneActivities
-
 - iPadActivities
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).

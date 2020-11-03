@@ -59,7 +59,6 @@ Above example fetches the statstics for active sync devices linked to user with 
 This input parameter acts as Identity filter. The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
 
 - GUID
-
 - User ID or user principal name (UPN)
 
 ```yaml

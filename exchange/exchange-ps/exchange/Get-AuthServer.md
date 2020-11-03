@@ -51,9 +51,7 @@ This example retrieves detailed information for the authorization server named W
 The Identity parameter specifies the authorization server object that you want to view. You can use any value that uniquely identifies the authorization server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

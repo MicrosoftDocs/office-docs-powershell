@@ -63,15 +63,10 @@ Accept wildcard characters: False
 The Identity parameter specifies the distribution group or mail-enabled security group that you want to remove. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml

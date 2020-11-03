@@ -47,11 +47,8 @@ Set-UMCallRouterSettings -DialPlans MySIPDialPlan -IPAddressFamily Any -Server M
 This example creates the following configuration on the Exchange server named MyUMCallRouter:
 
 - Adds the server to the UM SIP dial plan MySIPDialPlan.
-
 - Enables the Microsoft Exchange Unified Messaging Call Router service to accept both IPv4 and IPv6 data packets.
-
 - Sets the maximum number of incoming voice, fax, auto attendant and Outlook Voice Access calls to 150.
-
 - Enables the Microsoft Exchange Unified Messaging Call Router service to start up using TLS mode.
 
 ### Example 2
@@ -67,11 +64,8 @@ This example removes the Exchange server named UMCallRouter001 from all UM SIP d
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
@@ -93,8 +87,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

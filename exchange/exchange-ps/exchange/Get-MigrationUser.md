@@ -173,45 +173,25 @@ Accept wildcard characters: False
 The Status parameter returns information about migration users that have the specified status state. Use one of the following values:
 
 - Completed
-
 - CompletedWithWarnings
-
 - Completing
-
 - CompletionFailed
-
 - CompletionSynced
-
 - Corrupted
-
 - Failed
-
 - IncrementalFailed
-
 - IncrementalStopped
-
 - IncrementalSynced
-
 - IncrementalSyncing
-
 - Provisioning
-
 - ProvisionUpdating
-
 - Queued
-
 - Removing
-
 - Starting
-
 - Stopped
-
 - Stopping
-
 - Synced
-
 - Syncing
-
 - Validating
 
 ```yaml
@@ -231,13 +211,9 @@ Accept wildcard characters: False
 The StatusSummary parameter returns abbreviated information about migration users that have the specified status value. Use one of the following values:
 
 - Active
-
 - Completed
-
 - Failed
-
 - Stopped
-
 - Synced
 
 ```yaml

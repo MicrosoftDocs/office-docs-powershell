@@ -72,7 +72,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
 - $true: The policy is enabled. This is the default value.
-
 - $false: The policy is disabled.
 
 ```yaml
@@ -108,7 +107,6 @@ Accept wildcard characters: False
 The BodyCanonicalization parameter specifies the canonicalization algorithm that's used to create and verify the message body part of the DKIM signature. This value effectively controls the sensitivity of DKIM to changes to the message body in transit. Valid values are:
 
 - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This is the default value.
-
 - Simple: Only changes in empty lines at the end of the message body are tolerated.
 
 ```yaml
@@ -127,8 +125,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -148,7 +145,6 @@ Accept wildcard characters: False
 The HeaderCanonicalization parameter specifies the canonicalization algorithm that's used to create and verify the message header part of the DKIM signature. This value effectively controls the sensitivity of DKIM to changes to the message headers in transit. Valid values are:
 
 - Relaxed: Common modifications to the message header are tolerated (for example, Header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields). This is the default value.
-
 - Simple: No changes to the header fields are tolerated.
 
 ```yaml

@@ -71,13 +71,9 @@ Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData $([byte[]](Get-C
 This example imports a TPD from an AD RMS server into a cloud-based organization. The TPD uses the following values:
 
 - Path to exported XML file: C:\\My Documents\\Contoso.xml
-
 - Password of exported XML file: Pa$$word1
-
 - External licensing URL: https://rms.contoso.com/\_wmcs/licensing
-
 - Internal licensing URL: https://RMS01/\_wmcs/licensing
-
 - TPD name: Contoso TPD
 
 ## PARAMETERS
@@ -189,8 +185,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -268,11 +263,8 @@ The RefreshTemplates switch specifies whether to update the RMS templates in a p
 When you add, modify, or remove RMS templates in a TPD on the AD RMS server, you export the updated TPD to a new XML file, and import the new XML file in your cloud-based organization. The RefreshTemplates switch uses the following rules:
 
 - Only the FileData, Password, and Name parameters are required. The value of the Name parameter must match the name of the previously imported TPD.
-
 - If the new XML file doesn't contain an RMS template that was defined in the previously imported TPD, the RMS template is removed from the cloud-based organization.
-
 - If the new XML file contains an updated RMS template that was defined in the previously imported TPD, the RMS template settings are updated in the cloud-based organization. However, the RMS template isn't changed from Archived to Distributed or vice versa.
-
 - If the new XML file contains an RMS template that wasn't imported in the original TPD, the RMS template is added to the cloud-based organization in the Archived state. To make the new RMS template usable, you must change its state from Archived to Distributed using the Set-RMSTemplate cmdlet.
 
 ```yaml
