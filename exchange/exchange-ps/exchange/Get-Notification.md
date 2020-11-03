@@ -126,13 +126,9 @@ Accept wildcard characters: False
 The ProcessType parameter filters the results by the type of notification event. Valid values are:
 
 - CertExpiry
-
 - ExportPST
-
 - ImportPST
-
 - MailboxRestore
-
 - Migration
 
 ```yaml

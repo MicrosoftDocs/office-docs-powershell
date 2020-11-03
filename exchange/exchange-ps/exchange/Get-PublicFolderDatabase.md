@@ -74,9 +74,7 @@ This example returns information about all public folders on Server01.
 The Identity parameter specifies the public folder database that you want to view. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't the Identity and Server parameters in the same command.
@@ -100,11 +98,8 @@ Accept wildcard characters: False
 The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can't use the Server and Identity parameters in the same command.

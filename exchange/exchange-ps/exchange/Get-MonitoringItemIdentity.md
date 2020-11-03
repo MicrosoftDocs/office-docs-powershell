@@ -58,11 +58,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server that contains the health set. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 ```yaml

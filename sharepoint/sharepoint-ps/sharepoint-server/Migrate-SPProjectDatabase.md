@@ -6,7 +6,7 @@ applicable: Project Server 2016
 title: Migrate-SPProjectDatabase
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 ---
 

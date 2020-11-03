@@ -44,9 +44,7 @@ This example confirms that you've created the label policy in your organization.
 The Identity parameter specifies the label policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name (GUID value)
-
 - Distinguished name (DN)
-
 - GUID (a different value than Name)
 
 However, there can be only one label policy in your organization.

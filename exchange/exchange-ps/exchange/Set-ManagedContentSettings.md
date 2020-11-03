@@ -69,15 +69,10 @@ Accept wildcard characters: False
 The AddressForJournaling parameter specifies the journaling recipient where journaled messages are sent. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -114,8 +109,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -183,7 +177,6 @@ Accept wildcard characters: False
 The MessageFormatForJournaling parameter specifies the format in which an item should be journaled in. You can use the following values:
 
 - UseMsg Microsoft Outlook .MSG format
-
 - UseTnef Outlook MAPI format
 
 ```yaml
@@ -235,13 +228,9 @@ Accept wildcard characters: False
 The RetentionAction parameter specifies one of the following actions to take when an item reaches its retention age limit, specified by the AgeLimitForRetention parameter. The following retention actions can be used:
 
 - Mark as past retention limit
-
 - Move to a managed custom folder
-
 - Move to the Deleted Items folder
-
 - Delete and allow recovery
-
 - Permanently delete
 
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
@@ -281,7 +270,6 @@ The TriggerForRetention parameter specifies the date that's considered as the st
 Valid values include:
 
 - WhenDelivered The item expires based on when it was delivered.
-
 - WhenMoved The item expires based on the date it was moved.
 
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.

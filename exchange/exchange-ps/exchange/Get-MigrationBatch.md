@@ -50,13 +50,9 @@ Get-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
 The Get-MigrationBatch cmdlet displays status information about the current migration batch. This information includes the following information:
 
 - Status of the migration batch
-
 - Total number of mailboxes being migrated
-
 - Number of successfully completed migrations
-
 - Migration errors
-
 - Date and time when the migration was started and completed.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -229,33 +225,19 @@ Accept wildcard characters: False
 The Status parameter returns a list of migration batches that have the specified status state. Use one of the following values:
 
 - Completed
-
 - CompletedWithErrors
-
 - Completing
-
 - Corrupted
-
 - Created
-
 - Failed
-
 - IncrementalSyncing
-
 - Removing
-
 - Starting
-
 - Stopped
-
 - Syncing
-
 - Stopping
-
 - Synced
-
 - SyncedwithErrors
-
 - Waiting
 
 ```yaml

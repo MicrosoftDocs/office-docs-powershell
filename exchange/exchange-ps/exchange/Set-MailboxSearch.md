@@ -107,7 +107,6 @@ This parameter is available only in on-premises Exchange.
 The AllSourceMailboxes parameter specifies whether to include all mailboxes in the search. Valid values are:
 
 - $true: All mailboxes are included in the search. This value is required when the value of the AllPublicFolderSources parameter is $falseand you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
-
 - $false: All mailboxes aren't included in the search. This is the default value. You can use this value when the value of the AllPublicFolderSources parameter is $trueor you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
 
 ```yaml
@@ -126,8 +125,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -219,7 +217,6 @@ Accept wildcard characters: False
 The EstimateOnly parameter specifies whether to provide only an estimate of the number of items that will be returned. Valid values are:
 
 - $true: Messages aren't copied to the target mailbox, and only an estimate of the number of items is returned.
-
 - $false: Messages are copied to the target mailbox.
 
 ```yaml
@@ -239,7 +236,6 @@ Accept wildcard characters: False
 The ExcludeDuplicateMessages parameter eliminates duplication of messages across mailboxes in an In-Place eDiscovery search. Valid values are:
 
 - $true: Copy a single instance of a message if the same message exists in multiple folders or mailboxes. This is the default value.
-
 - $false: Copy all instances of a message if the same message exists in multiple folders or mailboxes.
 
 ```yaml
@@ -293,7 +289,6 @@ Accept wildcard characters: False
 The IncludeUnsearchableItems parameter specifies whether items that couldn't be indexed by Exchange Search should be included in the results. Valid values are:
 
 - $true: Unsearchable items are included in the results.
-
 - $false: Unsearchable items aren't included in the results. This is the default value.
 
 Unsearchable items aren't placed on hold for a query-based In-Place Hold. If you need to place unsearchable items on hold, you need to create an indefinite hold (a hold without specifying any search parameters, which provides functionality similar to Litigation Hold.
@@ -315,7 +310,6 @@ Accept wildcard characters: False
 The InPlaceHoldEnabled parameter specifies whether to set an In-Place Hold on items in the search results. Valid values are:
 
 - $true: In-Place Hold is enabled on the search results.
-
 - $false: In-Place Hold isn't enabled on the search results. This is the default value.
 
 You can't set an In-Place Hold on the search results when the AllSourceMailboxes parameter is $true.
@@ -339,7 +333,6 @@ Accept wildcard characters: False
 The ItemHoldPeriod parameter specifies the number of days for the In-Place Hold onthe mailbox items (all items or the mailbox items that are returned in the search query results). You use this parameter with the InPlaceHoldEnabled parameter to set an In-Place Hold. The duration is calculated from the time the item is received or created in the mailbox. Valid values are:
 
 - An integer.
-
 - The value unlimited. This is the default value. Items are held until you remove the In-Place Hold by removing the search by using the Remove-MailboxSearch cmdlet, removing the source mailbox from the search by using the Set-MailboxSearch cmdlet and the SourceMailboxes parameter, or in on-premises Exchange, you remove all public folders from the search by using the Set-MailboxSearch cmdlet to change the AllPublicFolderSources parameter from $true to $false.
 
 ```yaml
@@ -377,9 +370,7 @@ Accept wildcard characters: False
 The LogLevel parameter specifies a logging level for the mailbox search. Valid values are:
 
 - Basic: Basic details of the search are kept. This is the default value.
-
 - Full: In addition to details in the Basic logging level, a full list of all messages returned is included.
-
 - Suppress: Logging is suppressed. No logs are kept.
 
 ```yaml
@@ -399,19 +390,12 @@ Accept wildcard characters: False
 The MessageTypes parameter specifies the message types to include in the search query. Valid values are:
 
 - Contacts
-
 - Docs
-
 - Email
-
 - IM
-
 - Journals
-
 - Meetings
-
 - Notes
-
 - Tasks
 
 You can specify multiple values separated by commas.
@@ -497,13 +481,9 @@ If you use this parameter with other search query parameters, the query combines
 The other search query parameters are:
 
 - EndDate
-
 - MessageTypes
-
 - Recipients
-
 - Senders
-
 - StartDate
 
 ```yaml
@@ -543,15 +523,10 @@ Accept wildcard characters: False
 The SourceMailboxes parameter specifies the mailboxes to be searched. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -563,7 +538,6 @@ To clear the source mailboxes, use the value $null.
 To enable In-Place Hold on the search results, you need to set the AllSourceMailboxes parameter to $false (the default value) and configure one or both of the following settings:
 
 - Specify one or more source mailboxes by using the SourceMailboxes parameter.
-
 - In on-premises Exchange, set the AllPublicFolderSources parameter to $true.
 
 ```yaml
@@ -619,15 +593,10 @@ Accept wildcard characters: False
 The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -649,23 +618,14 @@ Accept wildcard characters: False
 The TargetMailbox parameter specifies the destination mailbox where the search results are copied. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -703,7 +663,6 @@ This parameter is available only in on-premises Exchange.
 The AllPublicFolderSources parameter specifies whether to include all public folders in the organization in the search. Valid values are:
 
 - $true: All public folders are included in the search. This value is required when the value of the AllSourceMailboxes parameter is $falseand you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
-
 - $false: No public folders are included in the search. This is the default value. You can use this value when the value of the AllSourceMailboxes parameter is $trueor you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
 
 ```yaml

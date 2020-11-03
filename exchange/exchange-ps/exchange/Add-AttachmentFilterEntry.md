@@ -54,7 +54,6 @@ This example adds an attachment filter entry based on the MIME content type imag
 The Name parameter specifies the files that you want to block. Valid values are:
 
 - A exact file name (for example, BadFile.exe) or file name extension (for example, \*.exe). You need to use the value Filename for the Type parameter.
-
 - A valid MIME content type (for example, application/javascript or text/scriplet). You need to use the value ContentType for the Type parameter.
 
 ```yaml
@@ -74,7 +73,6 @@ Accept wildcard characters: False
 The Type parameter specifies what type of attachment the attachment filter entry blocks. Valid values are:
 
 - ContentType: This value matches the attachment filter entry against the MIME content type that's specified in the Name parameter.
-
 - FileName: This value matches the attachment filter entry against the simple file name that's specified in the Name parameter.
 
 ```yaml
@@ -93,8 +91,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

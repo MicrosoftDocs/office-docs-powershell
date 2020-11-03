@@ -1,5 +1,6 @@
 ---
 title: Intro to SharePoint Online Management Shell
+ms.service: sharepoint-powershell
 ---
 
 # Intro to SharePoint Online Management Shell
@@ -20,14 +21,14 @@ The major and obvious difference is the nouns they use. Every SharePoint Online 
 
 SharePoint Online Management Shell commands manage SharePoint settings and site collections, whereas Office 365 commands manage Office 365-level tasks such as users, licenses, organization information, and services. They both manage users and groups. However, Office 365 PowerShell commands manage users and groups for all of the Office 365 services. The SharePoint Online commands manage users and groups only for SharePoint Online.
 
-## Should I use the SharePoint admin center or SharePoint Online PowerShell commands? 
+## Should I use the SharePoint admin center or SharePoint Online PowerShell commands?
 
 If you are new to Office 365 and SharePoint Online and you have not done much managing of SharePoint sites or users, the SharePoint admin center is a good place to start.
 
 After you get familiar with SharePoint sites and users, try using SharePoint Online PowerShell commands, especially when you want to manage lots of site collections or users.
 
-> [!NOTE] 
-> For the complete list of SharePoint Online cmdlets, see [SharePoint Online PowerShell](https://docs.microsoft.com/powershell/module/sharepoint-online/?view=sharepoint-ps)
+> [!NOTE]
+> For the complete list of SharePoint Online cmdlets, see [SharePoint Online PowerShell](https://docs.microsoft.com/powershell/module/sharepoint-online)
 
 ## How do I get permissions and set up the environment?
 

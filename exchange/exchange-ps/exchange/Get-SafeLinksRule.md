@@ -55,9 +55,7 @@ The Identity parameter specifies the Safe Links rule that you want to view.
 You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

@@ -156,11 +156,8 @@ Accept wildcard characters: False
 The Server parameter filters the results by the specified Unified Messaging server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in the same command.

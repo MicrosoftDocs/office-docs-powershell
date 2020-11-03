@@ -28,9 +28,7 @@ Get-TransportPipeline [-DomainController <Fqdn>] [<CommonParameters>]
 The Get-TransportPipeline cmdlet enables you to view all the transport agents that are configured in the following locations:
 
 - In the Transport service on Mailbox servers.
-
 - In the Front End Transport service on Mailbox servers.
-
 - On Edge Transport server in the perimeter network.
 
 The associated transport service must be started and at least one email message must be sent through the server since the last service restart before the transport pipeline can be viewed. Only the transport events and agents that were involved in the processing of email messages since the associated service was last started are returned.
