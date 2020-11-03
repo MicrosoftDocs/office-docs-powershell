@@ -1752,7 +1752,7 @@ The LogonPagePublicPrivateSelectionEnabled parameter specifies whether the Outlo
 
 - $false: The public/private computer session selection isn't available on the Outlook on the web sign-in page. All sessions are considered to be on private computers. This is the default value.
 
-By default in Exchange 2013 or later, all Outlook on the web sessions are considered to be on private computers. Users can only specify public computer sessions if you've set this parameter value to $false.
+By default in Exchange 2013 or later, all Outlook on the web sessions are considered to be on private computers. Users can only specify public computer sessions if you've set this parameter value to $true.
 
 When you change the value of this parameter, restart IIS (Stop-Service WAS -Force and Start-Service W3SVC).
 
