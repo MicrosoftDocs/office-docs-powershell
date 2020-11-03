@@ -22,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Filter
 ```
-Remove-Message -Filter <String> [-Server <ServerIdParameter>]
+Remove-Message -Filter <String>
+ [-Server <ServerIdParameter>]
  [-Confirm]
  [-WhatIf]
- [-WithNDR <Boolean>] [<CommonParameters>]
+ [-WithNDR <Boolean>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -33,7 +35,8 @@ Remove-Message -Filter <String> [-Server <ServerIdParameter>]
 Remove-Message [-Identity] <MessageIdentity>
  [-Confirm]
  [-WhatIf]
- [-WithNDR <Boolean>] [<CommonParameters>]
+ [-WithNDR <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

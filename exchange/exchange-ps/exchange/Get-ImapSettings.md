@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ImapSettings [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<CommonParameters>]
+Get-ImapSettings [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

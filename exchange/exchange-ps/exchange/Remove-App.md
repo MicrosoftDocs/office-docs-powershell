@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-App [-Identity] <AppIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Mailbox <MailboxIdParameter>]
- [-OrganizationApp] [-WhatIf] [-PrivateCatalog] [<CommonParameters>]
+Remove-App [-Identity] <AppIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationApp]
+ [-WhatIf]
+ [-PrivateCatalog]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

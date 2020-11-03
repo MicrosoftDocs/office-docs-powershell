@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-ContentFilterPhrase [-Phrase] <String> -Influence <Influence> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Add-ContentFilterPhrase [-Phrase] <String> -Influence <Influence>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,6 +44,22 @@ This example adds the phrase Free credit report to the Block phrase list. Any me
 
 ## PARAMETERS
 
+### -Phrase
+The Phrase parameter specifies a custom word or phrase for the Content Filter agent. When you pass an argument, you must enclose the Phrase parameter in quotation marks (") if the phrase contains spaces, for example: "This is a bad phrase". Custom phrases must be less than 257 characters in length.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Influence
 The Influence parameter specifies whether the phrase being added will cause the messages that contain the phrase to be allowed or blocked. Valid values are GoodWord and BadWord.
 
@@ -54,22 +73,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Phrase
-The Phrase parameter specifies a custom word or phrase for the Content Filter agent. When you pass an argument, you must enclose the Phrase parameter in quotation marks (") if the phrase contains spaces, for example: "This is a bad phrase". Custom phrases must be less than 257 characters in length.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

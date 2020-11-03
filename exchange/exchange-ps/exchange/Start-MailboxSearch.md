@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Start-MailboxSearch [-Identity] <SearchObjectIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-Resume] [-WhatIf] [-StatisticsStartIndex <Int32>] [<CommonParameters>]
+Start-MailboxSearch [-Identity] <SearchObjectIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Resume]
+ [-WhatIf]
+ [-StatisticsStartIndex <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

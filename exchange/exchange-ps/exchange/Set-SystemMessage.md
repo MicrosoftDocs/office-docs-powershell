@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SystemMessage [-Identity] <SystemMessageIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Name <String>]
- [-Original] [-Text <String>] [-WhatIf] [<CommonParameters>]
+Set-SystemMessage [-Identity] <SystemMessageIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Name <String>]
+ [-Original]
+ [-Text <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

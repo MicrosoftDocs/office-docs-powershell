@@ -27,7 +27,8 @@ Suspend-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestId
  [-Confirm]
  [-DomainController <Fqdn>]
  [-SuspendComment <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -24,14 +24,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Add-ServerMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Duration
 ```
-Add-ServerMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter> [-Duration <EnhancedTimeSpan>]
+Add-ServerMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter>
+ [-Duration <EnhancedTimeSpan>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,6 +51,24 @@ This example adds a server monitoring override that disables the responder Activ
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the identity of the monitoring item that you want to override. This parameter uses the syntax \<HealthSet\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. Note that the values are case sensitive. For example, use "AD\\ActiveDirectoryConnectivityConfigDCServerReboot", not "ad\\activedirectoryconnectivityconfigdcserverreboot".
+
+You can use Get-ServerHealth to find the correct object for the monitoring item you want to override.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplyVersion
 The ApplyVersion parameter specifies the version of Exchange that gets the override. If you update Exchange to a newer version (for example, you apply a Cumulative Update or Service Pack), the override is no longer applied to the server.
 
@@ -63,24 +84,6 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the identity of the monitoring item that you want to override. This parameter uses the syntax \<HealthSet\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. Note that the values are case sensitive. For example, use "AD\\ActiveDirectoryConnectivityConfigDCServerReboot", not "ad\\activedirectoryconnectivityconfigdcserverreboot".
-
-You can use Get-ServerHealth to find the correct object for the monitoring item you want to override.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

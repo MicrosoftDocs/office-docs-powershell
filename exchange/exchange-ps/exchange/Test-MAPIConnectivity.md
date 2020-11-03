@@ -30,7 +30,8 @@ Test-MAPIConnectivity -Database <DatabaseIdParameter>
  [-DomainController <Fqdn>]
  [-MonitoringContext <Boolean>]
  [-PerConnectionTimeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -44,7 +45,8 @@ Test-MAPIConnectivity [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-MonitoringContext <Boolean>]
  [-PerConnectionTimeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
@@ -57,7 +59,8 @@ Test-MAPIConnectivity [-Server <ServerIdParameter>]
  [-IncludePassive]
  [-MonitoringContext <Boolean>]
  [-PerConnectionTimeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

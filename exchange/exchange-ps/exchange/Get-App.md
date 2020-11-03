@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-App [[-Identity] <AppIdParameter>] [-DomainController <Fqdn>] [-Mailbox <MailboxIdParameter>]
- [-OrganizationApp] [-PrivateCatalog] [<CommonParameters>]
+Get-App [[-Identity] <AppIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

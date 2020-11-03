@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ExchangeSettings [-Name] <String> [-Confirm] [-DomainController <Fqdn>] [-Force] [-WhatIf]
+New-ExchangeSettings [-Name] <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

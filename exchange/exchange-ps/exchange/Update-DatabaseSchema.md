@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Update-DatabaseSchema [-Identity] <DatabaseIdParameter> -MajorVersion <UInt16> -MinorVersion <UInt16>
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

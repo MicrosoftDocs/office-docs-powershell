@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-RemoteDomain [-Name] <String> -DomainName <SmtpDomainWithSubdomains>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

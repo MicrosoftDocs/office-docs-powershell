@@ -41,7 +41,8 @@ Set-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
  [-SkipVerification]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

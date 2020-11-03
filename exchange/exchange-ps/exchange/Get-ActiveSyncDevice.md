@@ -29,7 +29,9 @@ Get-ActiveSyncDevice -Mailbox <MailboxIdParameter>
  [-Filter <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [-Monitoring] [<CommonParameters>]
+ [-SortBy <String>]
+ [-Monitoring]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -39,7 +41,9 @@ Get-ActiveSyncDevice [[-Identity] <ActiveSyncDeviceIdParameter>]
  [-Filter <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [-Monitoring] [<CommonParameters>]
+ [-SortBy <String>]
+ [-Monitoring]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

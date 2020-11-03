@@ -21,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ComplianceSecurityFilter -Action <ComplianceSecurityFilterActionType> -FilterName <String>
- -Users <MultiValuedProperty> [-Confirm] [-Description <String>] [-Filters <MultiValuedProperty>]
- [-Region <String>] [-WhatIf] [<CommonParameters>]
+New-ComplianceSecurityFilter -Action <ComplianceSecurityFilterActionType> -FilterName <String> -Users <MultiValuedProperty>
+ [-Confirm]
+ [-Description <String>]
+ [-Filters <MultiValuedProperty>]
+ [-Region <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

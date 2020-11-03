@@ -24,37 +24,42 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### DCAdminPurgeKeyRequest
 ```
-Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-PermanentDataPurgeContact <String>] -PermanentDataPurgeReason <String>
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -PermanentDataPurgeReason <String> [-PermanentDataPurgeContact <String>]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Force]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TenantAdminPurgeKeyRequest
 ```
-Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -PermanentDataPurgeContact <String> -PermanentDataPurgeReason <String> [-PermanentDataPurgeRequested]
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -PermanentDataPurgeContact <String> -PermanentDataPurgeReason <String>
+ [-PermanentDataPurgeRequested]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Force]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RefreshKey
 ```
-Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Refresh]
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter>
+ [-Refresh]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

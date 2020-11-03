@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-eDiscoveryCaseAdmin -Users <String[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+Update-eDiscoveryCaseAdmin -Users <String[]>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

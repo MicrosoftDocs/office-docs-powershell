@@ -168,7 +168,8 @@ New-ThrottlingPolicy [-Name] <String>
  [-SuiteMaxConcurrency <Unlimited>]
  [-SuiteRechargeRate <Unlimited>]
  [-ThrottlingPolicyScope <ThrottlingPolicyScopeType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -661,7 +662,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryMaxConcurrency
-The DiscoveryMaxConcurrency parameter specifies the number of concurrent discovery search executions that a user can have at the same time. To modify the discovery throttling parameters, create a new policy and name it "DiscoveryThrottlingPolicy". 
+The DiscoveryMaxConcurrency parameter specifies the number of concurrent discovery search executions that a user can have at the same time. To modify the discovery throttling parameters, create a new policy and name it "DiscoveryThrottlingPolicy".
 
 ```yaml
 Type: Unlimited

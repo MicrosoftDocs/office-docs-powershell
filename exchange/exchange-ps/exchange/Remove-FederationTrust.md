@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-FederationTrust [-Identity] <FederationTrustIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Remove-FederationTrust [-Identity] <FederationTrustIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

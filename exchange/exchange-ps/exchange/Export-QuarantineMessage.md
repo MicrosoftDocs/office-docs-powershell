@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-QuarantineMessage -Identity <QuarantineMessageIdentity> [<CommonParameters>]
+Export-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

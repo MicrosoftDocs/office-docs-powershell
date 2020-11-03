@@ -22,10 +22,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-DeliveryAgentConnector [-Identity] <DeliveryAgentConnectorIdParameter>
- [-AddressSpaces <MultiValuedProperty>] [-Comment <String>] [-Confirm] [-DeliveryProtocol <String>]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-Force] [-IsScopedConnector <Boolean>]
- [-MaxConcurrentConnections <Int32>] [-MaxMessageSize <Unlimited>] [-MaxMessagesPerConnection <Int32>]
- [-Name <String>] [-SourceTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-AddressSpaces <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-DeliveryProtocol <String>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-IsScopedConnector <Boolean>]
+ [-MaxConcurrentConnections <Int32>]
+ [-MaxMessageSize <Unlimited>]
+ [-MaxMessagesPerConnection <Int32>]
+ [-Name <String>]
+ [-SourceTransportServers <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

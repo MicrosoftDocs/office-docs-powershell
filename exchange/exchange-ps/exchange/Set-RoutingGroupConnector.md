@@ -21,10 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-RoutingGroupConnector [-Identity] <RoutingGroupConnectorIdParameter> [-Confirm] [-Cost <Int32>]
- [-DomainController <Fqdn>] [-MaxMessageSize <Unlimited>] [-Name <String>]
- [-PublicFolderReferralsEnabled <Boolean>] [-SourceTransportServers <MultiValuedProperty>]
- [-TargetTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-RoutingGroupConnector [-Identity] <RoutingGroupConnectorIdParameter>
+ [-Confirm]
+ [-Cost <Int32>]
+ [-DomainController <Fqdn>]
+ [-MaxMessageSize <Unlimited>]
+ [-Name <String>]
+ [-PublicFolderReferralsEnabled <Boolean>]
+ [-SourceTransportServers <MultiValuedProperty>]
+ [-TargetTransportServers <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -27,7 +27,8 @@ Get-RoleGroup [[-Identity] <RoleGroupIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-ShowPartnerLinked]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

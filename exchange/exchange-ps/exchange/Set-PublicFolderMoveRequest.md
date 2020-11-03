@@ -21,11 +21,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-PublicFolderMoveRequest [-Identity] <PublicFolderMoveRequestIdParameter> [-AcceptLargeDataLoss]
- [-BadItemLimit <Unlimited>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm] [-DomainController <Fqdn>]
- [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
+Set-PublicFolderMoveRequest [-Identity] <PublicFolderMoveRequestIdParameter>
+ [-AcceptLargeDataLoss]
+ [-BadItemLimit <Unlimited>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
  [-Priority <RequestPriority>]
- [-SuspendWhenReadyToComplete <Boolean>] [-WhatIf] [-RequestExpiryInterval <Unlimited>]
+ [-SuspendWhenReadyToComplete <Boolean>]
+ [-WhatIf]
+ [-RequestExpiryInterval <Unlimited>]
  [<CommonParameters>]
 ```
 

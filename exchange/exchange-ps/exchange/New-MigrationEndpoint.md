@@ -22,19 +22,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ExchangeRemoteMoveAutoDiscover
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeRemoteMove]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress>
+ [-Autodiscover]
+ [-ExchangeRemoteMove]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhereAutoDiscover
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeOutlookAnywhere]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress>
+ [-Autodiscover]
+ [-ExchangeOutlookAnywhere]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
@@ -43,12 +48,16 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <
  [-SkipVerification]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhere
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> [-EmailAddress <SmtpAddress>] [-ExchangeOutlookAnywhere] [-ExchangeServer <String>]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential>
+ [-EmailAddress <SmtpAddress>]
+ [-ExchangeOutlookAnywhere]
+ [-ExchangeServer <String>]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -61,36 +70,46 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> [-EmailAddress 
  [-SkipVerification]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeRemoteMove
 ```
-New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-Credentials <PSCredential>] [-ExchangeRemoteMove]
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
+ [-Credentials <PSCredential>]
+ [-ExchangeRemoteMove]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PSTImport
 ```
-New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-Credentials <PSCredential>] [-PSTImport]
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
+ [-Credentials <PSCredential>]
+ [-PSTImport]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IMAP
 ```
-New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-IMAP] [-Port <Int32>] [-Security <IMAPSecurityMechanism>]
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
+ [-IMAP]
+ [-Port <Int32>]
+ [-Security <IMAPSecurityMechanism>]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -98,24 +117,29 @@ New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-IMAP] [-Port <Int32>
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Gmail
 ```
-New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]> [-Gmail] [-EmailAddress <SmtpAddress>]
+New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]>
+ [-Gmail]
+ [-EmailAddress <SmtpAddress>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+ [-PublicFolder]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -124,24 +148,28 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDa
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Compliance
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn> [-Compliance]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-Compliance]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MrsProxyPublicFolderToUnifiedGroup
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolderToUnifiedGroup]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-PublicFolderToUnifiedGroup]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
@@ -149,24 +177,28 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MrsProxyPublicFolder
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolder]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-PublicFolder]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LegacyPublicFolderToUnifiedGroup
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolderToUnifiedGroup]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+ [-PublicFolderToUnifiedGroup]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -175,7 +207,8 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDa
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

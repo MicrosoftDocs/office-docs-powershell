@@ -22,28 +22,29 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CustomIdentity
 ```
-Enable-OutlookAnywhere -ClientAuthenticationMethod <AuthenticationMethod>
- -ExternalHostname <Hostname> -SSLOffloading <Boolean> [-IISAuthenticationMethods <MultiValuedProperty>]
+Enable-OutlookAnywhere -ClientAuthenticationMethod <AuthenticationMethod> -ExternalHostname <Hostname> -SSLOffloading <Boolean>
+ [-IISAuthenticationMethods <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
  [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DefaultIdentity
 ```
-Enable-OutlookAnywhere -DefaultAuthenticationMethod <AuthenticationMethod>
- -ExternalHostname <Hostname> -SSLOffloading <Boolean>
+Enable-OutlookAnywhere -DefaultAuthenticationMethod <AuthenticationMethod> -ExternalHostname <Hostname> -SSLOffloading <Boolean>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
  [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

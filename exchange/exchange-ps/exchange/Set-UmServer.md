@@ -38,7 +38,8 @@ Set-UMServer [-Identity] <UMServerIdParameter>
  [-SipTlsListeningPort <Int32>]
  [-Status <ServerStatus>]
  [-UMStartupMode <UMStartupMode>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

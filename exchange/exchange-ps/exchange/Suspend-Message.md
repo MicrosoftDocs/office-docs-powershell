@@ -22,16 +22,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Filter
 ```
-Suspend-Message -Filter <String> [-Server <ServerIdParameter>]
+Suspend-Message -Filter <String>
+ [-Server <ServerIdParameter>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Suspend-Message [-Identity] <MessageIdentity>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

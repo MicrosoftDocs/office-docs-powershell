@@ -35,7 +35,8 @@ Set-AntiPhishRule [-Identity] <RuleIdParameter>
  [-RecipientDomainIs <Word[]>]
  [-SentTo <RecipientIdParameter[]>]
  [-SentToMemberOf <RecipientIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-DkimSigningConfig [-Identity] <DkimSigningConfigIdParameter> [-AdminDisplayName <String>]
- [-BodyCanonicalization <CanonicalizationType>] [-Confirm] [-Enabled <Boolean>]
- [-HeaderCanonicalization <CanonicalizationType>] [-PublishTxtRecords] [-WhatIf] [<CommonParameters>]
+Set-DkimSigningConfig [-Identity] <DkimSigningConfigIdParameter>
+ [-AdminDisplayName <String>]
+ [-BodyCanonicalization <CanonicalizationType>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-HeaderCanonicalization <CanonicalizationType>]
+ [-PublishTxtRecords]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

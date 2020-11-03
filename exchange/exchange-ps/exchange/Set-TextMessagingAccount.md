@@ -28,7 +28,8 @@ Set-TextMessagingAccount [-Identity] <MailboxIdParameter>
  [-IgnoreDefaultScope]
  [-MobileOperatorId <Int32>]
  [-NotificationPhoneNumber <E164Number>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

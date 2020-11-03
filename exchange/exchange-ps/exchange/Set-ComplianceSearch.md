@@ -52,7 +52,8 @@ Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
  [-RemoveSharePointLocationExclusion <String[]>]
  [-SharePointLocation <String[]>]
  [-SharePointLocationExclusion <String[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

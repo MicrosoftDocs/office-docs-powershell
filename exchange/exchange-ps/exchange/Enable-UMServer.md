@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-UMServer [-Identity] <UMServerIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Enable-UMServer [-Identity] <UMServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

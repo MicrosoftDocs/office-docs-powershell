@@ -35,7 +35,8 @@ Set-SafeLinksRule [-Identity] <RuleIdParameter>
  [-SafeLinksPolicy <SafeLinksPolicyIdParameter>]
  [-SentTo <RecipientIdParameter[]>]
  [-SentToMemberOf <RecipientIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

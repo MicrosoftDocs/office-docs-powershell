@@ -22,20 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Database
 ```
-Get-MailboxRepairRequest [-Database] <DatabaseIdParameter> [[-StoreMailbox] <StoreMailboxIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-MailboxRepairRequest [-Database] <DatabaseIdParameter>
+ [[-StoreMailbox] <StoreMailboxIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter> [-Detailed]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter>
+ [-Detailed]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
-Get-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> [-Archive]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-MailboxRepairRequest [-Mailbox] <MailboxIdParameter>
+ [-Archive]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

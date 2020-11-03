@@ -26,7 +26,8 @@ Export-MigrationReport [-Identity] <MigrationReportIdParameter> -CsvStream <Stre
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Partition <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Paged
@@ -35,7 +36,8 @@ Export-MigrationReport [-Identity] <MigrationReportIdParameter> -RowCount <Int32
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Partition <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-UMCallAnsweringRule [-Identity] <UMCallAnsweringRuleIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
+Remove-UMCallAnsweringRule [-Identity] <UMCallAnsweringRuleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -24,12 +24,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Server
 ```
-Get-OfflineAddressBook -Server <ServerIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-OfflineAddressBook -Server <ServerIdParameter>
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-OfflineAddressBook [[-Identity] <OfflineAddressBookIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-OfflineAddressBook [[-Identity] <OfflineAddressBookIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

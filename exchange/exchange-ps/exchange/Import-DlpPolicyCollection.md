@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Import-DlpPolicyCollection [-FileData] <Byte[]> [[-Identity] <DlpPolicyIdParameter>] [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
+Import-DlpPolicyCollection [-FileData] <Byte[]>
+ [[-Identity] <DlpPolicyIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

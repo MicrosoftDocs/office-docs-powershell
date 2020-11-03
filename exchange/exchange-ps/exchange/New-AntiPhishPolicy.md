@@ -53,7 +53,8 @@ New-AntiPhishPolicy [-Name] <String>
  [-TargetedUserProtectionAction <ImpersonationAction>]
  [-TargetedUsersToProtect <MultiValuedProperty>]
  [-UnusualCharactersSafetyTipsCustomText <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Stop-ManagedFolderAssistant [[-Identity] <ServerIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Stop-ManagedFolderAssistant [[-Identity] <ServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

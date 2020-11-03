@@ -27,7 +27,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-ApplicationAccessPolicy [-Identity] <ApplicationAccessPolicyIdParameter>
  [-Description <String>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn’t work on this cmdlet.
+The WhatIf switch doesn't work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter

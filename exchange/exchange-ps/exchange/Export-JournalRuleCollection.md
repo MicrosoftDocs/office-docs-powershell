@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-JournalRuleCollection [[-Identity] <RuleIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-ExportLegacyRules] [-WhatIf] [<CommonParameters>]
+Export-JournalRuleCollection [[-Identity] <RuleIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExportLegacyRules]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,13 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Thumbprint
 ```
-Export-ExchangeCertificate [-Thumbprint] <String> [-Server <ServerIdParameter>]
+Export-ExchangeCertificate [-Thumbprint] <String>
+ [-Server <ServerIdParameter>]
  [-BinaryEncoded]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-FileName <String>]
  [-Password <SecureString>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -39,7 +41,8 @@ Export-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
  [-DomainController <Fqdn>]
  [-FileName <String>]
  [-Password <SecureString>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

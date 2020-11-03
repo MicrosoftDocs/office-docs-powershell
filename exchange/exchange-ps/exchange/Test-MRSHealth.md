@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-MRSHealth [[-Identity] <ServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-MaxQueueScanAgeSeconds <Int32>] [-MonitoringContext <Boolean>] [-WhatIf]
- [-MRSProxyCredentials <PSCredential>] [-MRSProxyServer <Fqdn>] [<CommonParameters>]
+Test-MRSHealth [[-Identity] <ServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxQueueScanAgeSeconds <Int32>]
+ [-MonitoringContext <Boolean>]
+ [-WhatIf]
+ [-MRSProxyCredentials <PSCredential>]
+ [-MRSProxyServer <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

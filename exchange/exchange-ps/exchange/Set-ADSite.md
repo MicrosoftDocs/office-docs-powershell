@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AdSite [-Identity] <AdSiteIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-HubSiteEnabled <Boolean>] [-PartnerId <Int32>]
- [-WhatIf] [-InboundMailEnabled <Boolean>] [<CommonParameters>]
+Set-AdSite [-Identity] <AdSiteIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-HubSiteEnabled <Boolean>]
+ [-PartnerId <Int32>]
+ [-WhatIf]
+ [-InboundMailEnabled <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

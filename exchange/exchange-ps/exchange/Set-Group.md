@@ -21,11 +21,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-Group [-Identity] <GroupIdParameter> [-BypassSecurityGroupManagerCheck] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-IsHierarchicalGroup <Boolean>]
- [-ManagedBy <GeneralRecipientIdParameter[]>] [-Name <String>] [-Notes <String>]
- [-PhoneticDisplayName <String>] [-SeniorityIndex <Int32>] [-SimpleDisplayName <String>] [-Universal] [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+Set-Group [-Identity] <GroupIdParameter>
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-IsHierarchicalGroup <Boolean>]
+ [-ManagedBy <GeneralRecipientIdParameter[]>]
+ [-Name <String>]
+ [-Notes <String>]
+ [-PhoneticDisplayName <String>]
+ [-SeniorityIndex <Int32>]
+ [-SimpleDisplayName <String>]
+ [-Universal]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

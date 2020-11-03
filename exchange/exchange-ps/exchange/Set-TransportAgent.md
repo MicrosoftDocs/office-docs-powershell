@@ -21,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-TransportAgent [-Identity] <TransportAgentObjectId> [-Confirm] [-DomainController <Fqdn>]
- [-Priority <Int32>] [-WhatIf]
- [-TransportService <TransportService>] [<CommonParameters>]
+Set-TransportAgent [-Identity] <TransportAgentObjectId>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Priority <Int32>]
+ [-WhatIf]
+ [-TransportService <TransportService>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

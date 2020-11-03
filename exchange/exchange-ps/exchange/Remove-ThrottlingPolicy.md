@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ThrottlingPolicy [-Identity] <ThrottlingPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [-Force] [<CommonParameters>]
+Remove-ThrottlingPolicy [-Identity] <ThrottlingPolicyIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

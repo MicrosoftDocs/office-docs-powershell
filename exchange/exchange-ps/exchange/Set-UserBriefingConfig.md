@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UserBriefingConfig -Identity <String> [-Enabled [<$true | $false>] [-ResultSize <Unlimited>]
+Set-UserBriefingConfig -Identity <String>
+ [-Enabled [<$true | $false>]
+ [-ResultSize <Unlimited>]
 ```
 
 ## DESCRIPTION

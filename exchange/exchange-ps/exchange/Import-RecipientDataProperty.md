@@ -22,18 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ImportPicture
 ```
-Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-Picture]
+Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]>
+ [-Picture]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ImportSpokenName
 ```
-Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-SpokenName]
+Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]>
+ [-SpokenName]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

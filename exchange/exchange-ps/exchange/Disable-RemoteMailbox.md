@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-RemoteMailbox [-Identity] <RemoteMailboxIdParameter> [-Archive] [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-IgnoreLegalHold] [-WhatIf] [<CommonParameters>]
+Disable-RemoteMailbox [-Identity] <RemoteMailboxIdParameter>
+ [-Archive]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-IgnoreLegalHold]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

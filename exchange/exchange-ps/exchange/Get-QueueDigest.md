@@ -29,7 +29,8 @@ Get-QueueDigest -Dag <MultiValuedProperty>
  [-Filter <String>]
  [-GroupBy <QueueDigestGroupBy>]
  [-ResultSize <Unlimited>]
- [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-Timeout <EnhancedTimeSpan>]
+ [<CommonParameters>]
 ```
 
 ### Forest
@@ -39,7 +40,8 @@ Get-QueueDigest [-Forest]
  [-Filter <String>]
  [-GroupBy <QueueDigestGroupBy>]
  [-ResultSize <Unlimited>]
- [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-Timeout <EnhancedTimeSpan>]
+ [<CommonParameters>]
 ```
 
 ### Server
@@ -50,7 +52,8 @@ Get-QueueDigest -Server <MultiValuedProperty>
  [-GroupBy <QueueDigestGroupBy>]
  [-IncludeE14Servers]
  [-ResultSize <Unlimited>]
- [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-Timeout <EnhancedTimeSpan>]
+ [<CommonParameters>]
 ```
 
 ### Site
@@ -61,7 +64,8 @@ Get-QueueDigest -Site <MultiValuedProperty>
  [-GroupBy <QueueDigestGroupBy>]
  [-IncludeE14Servers]
  [-ResultSize <Unlimited>]
- [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-Timeout <EnhancedTimeSpan>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

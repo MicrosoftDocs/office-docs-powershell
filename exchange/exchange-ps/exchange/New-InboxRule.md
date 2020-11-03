@@ -108,7 +108,8 @@ New-InboxRule -FromMessageId <MailboxStoreObjectIdParameter>
  [-Force]
  [-FromSubscription <AggregationSubscriptionIdentity[]>]
  [-Mailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

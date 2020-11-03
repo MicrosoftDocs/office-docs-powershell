@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CaseHoldPolicy [[-Identity] <PolicyIdParameter>] [-Case <String>] [-DistributionDetail] [-IncludeBindings]
+Get-CaseHoldPolicy [[-Identity] <PolicyIdParameter>]
+ [-Case <String>]
+ [-DistributionDetail]
+ [-IncludeBindings]
  [<CommonParameters>]
 ```
 

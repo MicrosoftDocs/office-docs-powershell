@@ -42,7 +42,8 @@ New-InboundConnector [-Name] <String> -SenderDomains <MultiValuedProperty>
  [-SenderIPAddresses <MultiValuedProperty>]
  [-TlsSenderCertificateName <TlsCertificate>]
  [-TreatMessagesAsInternal <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

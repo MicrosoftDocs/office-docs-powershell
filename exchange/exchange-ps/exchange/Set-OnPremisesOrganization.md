@@ -23,10 +23,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-OnPremisesOrganization [-Identity] <OnPremisesOrganizationIdParameter> [-Comment <String>] [-Confirm]
- [-HybridDomains <MultiValuedProperty>] [-InboundConnector <InboundConnectorIdParameter>]
- [-OrganizationName <String>] [-OrganizationRelationship <OrganizationRelationshipIdParameter>]
- [-OutboundConnector <OutboundConnectorIdParameter>] [-WhatIf] [<CommonParameters>]
+Set-OnPremisesOrganization [-Identity] <OnPremisesOrganizationIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-HybridDomains <MultiValuedProperty>]
+ [-InboundConnector <InboundConnectorIdParameter>]
+ [-OrganizationName <String>]
+ [-OrganizationRelationship <OrganizationRelationshipIdParameter>]
+ [-OutboundConnector <OutboundConnectorIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

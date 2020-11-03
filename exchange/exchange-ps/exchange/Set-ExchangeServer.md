@@ -34,7 +34,8 @@ Set-ExchangeServer [-Identity] <ServerIdParameter>
  [-StaticDomainControllers <MultiValuedProperty>]
  [-StaticExcludedDomainControllers <MultiValuedProperty>]
  [-StaticGlobalCatalogs <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

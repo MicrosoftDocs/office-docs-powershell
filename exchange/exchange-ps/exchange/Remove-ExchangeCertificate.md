@@ -22,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Thumbprint
 ```
-Remove-ExchangeCertificate [-Thumbprint] <String> [-Server <ServerIdParameter>]
+Remove-ExchangeCertificate [-Thumbprint] <String>
+ [-Server <ServerIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -33,7 +35,8 @@ Remove-ExchangeCertificate [-Thumbprint] <String> [-Server <ServerIdParameter>]
 Remove-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

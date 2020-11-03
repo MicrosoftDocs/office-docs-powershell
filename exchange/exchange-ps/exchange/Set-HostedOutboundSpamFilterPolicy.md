@@ -35,7 +35,8 @@ Set-HostedOutboundSpamFilterPolicy [-Identity] <HostedOutboundSpamFilterPolicyId
  [-RecipientLimitExternalPerHour <UInt32>]
  [-RecipientLimitInternalPerHour <UInt32>]
  [-RecipientLimitPerDay <UInt32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

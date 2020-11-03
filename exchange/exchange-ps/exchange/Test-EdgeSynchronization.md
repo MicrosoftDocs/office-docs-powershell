@@ -25,15 +25,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Test-EdgeSynchronization -VerifyRecipient <ProxyAddress>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
 ```
-Test-EdgeSynchronization [-ExcludeRecipientTest] [-FullCompareMode] [-MaxReportSize <Unlimited>] [-MonitoringContext <Boolean>] [-TargetServer <String>]
+Test-EdgeSynchronization [-ExcludeRecipientTest]
+ [-FullCompareMode]
+ [-MaxReportSize <Unlimited>]
+ [-MonitoringContext <Boolean>]
+ [-TargetServer <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

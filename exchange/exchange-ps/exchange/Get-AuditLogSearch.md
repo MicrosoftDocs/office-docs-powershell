@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AuditLogSearch [[-Identity] <AuditLogSearchIdParameter>] [-CreatedAfter <ExDateTime>]
- [-CreatedBefore <ExDateTime>] [-ResultSize <Int32>] [-Type <String>] [<CommonParameters>]
+Get-AuditLogSearch [[-Identity] <AuditLogSearchIdParameter>]
+ [-CreatedAfter <ExDateTime>]
+ [-CreatedBefore <ExDateTime>]
+ [-ResultSize <Int32>]
+ [-Type <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

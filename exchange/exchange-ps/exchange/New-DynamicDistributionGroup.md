@@ -53,7 +53,8 @@ New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <WellKnownReci
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CustomFilter
@@ -71,7 +72,8 @@ New-DynamicDistributionGroup [-Name] <String> -RecipientFilter <String>
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

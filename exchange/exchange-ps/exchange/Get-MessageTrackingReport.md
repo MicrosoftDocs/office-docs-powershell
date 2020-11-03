@@ -23,11 +23,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MessageTrackingReport [-Identity] <MessageTrackingReportId> [-BypassDelegateChecking]
- [-DetailLevel <MessageTrackingDetailLevel>] [-DomainController <Fqdn>] [-DoNotResolve]
- [-RecipientPathFilter <SmtpAddress>] [-Recipients <String[]>] [-ReportTemplate <ReportTemplate>]
- [-ResultSize <Unlimited>] [-Status <_DeliveryStatus>]
- [-TraceLevel <TraceLevel>] [<CommonParameters>]
+Get-MessageTrackingReport [-Identity] <MessageTrackingReportId>
+ [-BypassDelegateChecking]
+ [-DetailLevel <MessageTrackingDetailLevel>]
+ [-DomainController <Fqdn>]
+ [-DoNotResolve]
+ [-RecipientPathFilter <SmtpAddress>]
+ [-Recipients <String[]>]
+ [-ReportTemplate <ReportTemplate>]
+ [-ResultSize <Unlimited>]
+ [-Status <_DeliveryStatus>]
+ [-TraceLevel <TraceLevel>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

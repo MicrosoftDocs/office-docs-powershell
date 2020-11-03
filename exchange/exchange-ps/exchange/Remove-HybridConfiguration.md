@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-HybridConfiguration [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-HybridConfiguration [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

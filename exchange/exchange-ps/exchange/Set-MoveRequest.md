@@ -48,7 +48,8 @@ Set-MoveRequest [-Identity] <MoveRequestIdParameter>
  [-StartAfter <DateTime>]
  [-SuspendWhenReadyToComplete <Boolean>]
  [-TargetDatabase <DatabaseIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

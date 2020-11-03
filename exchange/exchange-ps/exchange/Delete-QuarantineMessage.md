@@ -24,13 +24,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identities
 ```
-Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
+ [-Identity <QuarantineMessageIdentity>]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IdentityOnly
 ```
-Delete-QuarantineMessage -Identity <QuarantineMessageIdentity> [-Confirm] [-WhatIf] [<CommonParameters>]
+Delete-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

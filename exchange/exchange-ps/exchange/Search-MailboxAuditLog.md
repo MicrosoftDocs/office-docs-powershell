@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>] [-ShowDetails]
+Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>]
+ [-ShowDetails]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
  [-ExternalAccess <Boolean>]

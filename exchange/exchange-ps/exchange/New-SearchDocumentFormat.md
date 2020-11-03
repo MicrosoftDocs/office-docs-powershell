@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Extension <String> -MimeType <String>
- -Name <String> [-Confirm] [-Enabled <Boolean>] [-Server <ServerIdParameter>] [-WhatIf]
+New-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Extension <String> -MimeType <String> -Name <String>
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

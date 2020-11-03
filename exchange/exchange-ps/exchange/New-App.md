@@ -22,7 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ExtensionOfficeMarketplace
 ```
-New-App [-Etoken <String>] [-Mailbox <MailboxIdParameter>] [-MarketplaceCorrelationID <String>] [-MarketplaceAssetID <String>] [-MarketplaceQueryMarket <String>] [-MarketplaceServicesUrl <String>] [-MarketplaceUserProfileType <String>]
+New-App [-Etoken <String>]
+ [-Mailbox <MailboxIdParameter>]
+ [-MarketplaceCorrelationID <String>]
+ [-MarketplaceAssetID <String>]
+ [-MarketplaceQueryMarket <String>]
+ [-MarketplaceServicesUrl <String>]
+ [-MarketplaceUserProfileType <String>]
  [-AllowReadWriteMailbox]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
@@ -33,7 +39,8 @@ New-App [-Etoken <String>] [-Mailbox <MailboxIdParameter>] [-MarketplaceCorrelat
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExtensionFileData
@@ -50,7 +57,8 @@ New-App [-FileData <Byte[]>]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExtensionFileStream
@@ -67,7 +75,8 @@ New-App [-FileStream <Stream>]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExtensionPrivateURL
@@ -84,7 +93,8 @@ New-App [-Url <Uri>]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

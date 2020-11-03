@@ -31,7 +31,8 @@ Add-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
  [-PSSnapinName <String>]
  [-Type <ManagementRoleEntryType>]
  [-UnScopedTopLevel]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ParentRoleEntry
@@ -41,7 +42,8 @@ Add-ManagementRoleEntry [-ParentRoleEntry] <RoleEntryIdParameter> -Role <RoleIdP
  [-DomainController <Fqdn>]
  [-Force]
  [-Overwrite]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

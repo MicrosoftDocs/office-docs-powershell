@@ -24,19 +24,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Database
 ```
-Get-MailboxStatistics -Database <DatabaseIdParameter> [[-StoreMailboxIdentity] <StoreMailboxIdParameter>]
+Get-MailboxStatistics -Database <DatabaseIdParameter>
+ [[-StoreMailboxIdentity] <StoreMailboxIdParameter>]
  [-CopyOnServer <ServerIdParameter>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IncludeMoveHistory]
  [-IncludeMoveReport]
  [-IncludeQuarantineDetails]
- [-NoADLookup] [<CommonParameters>]
+ [-NoADLookup]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive]
+Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-Archive]
  [-CopyOnServer <ServerIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludeMoveHistory]
@@ -56,7 +59,8 @@ Get-MailboxStatistics -Server <ServerIdParameter>
  [-IncludeMoveReport]
  [-IncludePassive]
  [-IncludeQuarantineDetails]
- [-NoADLookup] [<CommonParameters>]
+ [-NoADLookup]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

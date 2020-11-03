@@ -21,10 +21,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-IPAllowListProvider [-Identity] <IPAllowListProviderIdParameter> [-AnyMatch <Boolean>]
- [-BitmaskMatch <IPAddress>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
- [-IPAddressesMatch <MultiValuedProperty>] [-LookupDomain <SmtpDomain>] [-Name <String>] [-Priority <Int32>]
- [-WhatIf] [<CommonParameters>]
+Set-IPAllowListProvider [-Identity] <IPAllowListProviderIdParameter>
+ [-AnyMatch <Boolean>]
+ [-BitmaskMatch <IPAddress>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-IPAddressesMatch <MultiValuedProperty>]
+ [-LookupDomain <SmtpDomain>]
+ [-Name <String>]
+ [-Priority <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

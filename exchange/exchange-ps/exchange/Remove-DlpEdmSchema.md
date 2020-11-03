@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-DlpEdmSchema [-Identity] <EdmStorageIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-DlpEdmSchema [-Identity] <EdmStorageIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

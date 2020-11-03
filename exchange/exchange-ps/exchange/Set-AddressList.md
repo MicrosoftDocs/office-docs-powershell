@@ -50,7 +50,8 @@ Set-AddressList [-Identity] <AddressListIdParameter>
  [-Name <String>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
  [-RecipientFilter <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

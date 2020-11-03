@@ -21,11 +21,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-MailContact [-Identity] <ContactIdParameter> -ExternalEmailAddress <ProxyAddress> [-Alias <String>]
- [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
+Enable-MailContact [-Identity] <ContactIdParameter> -ExternalEmailAddress <ProxyAddress>
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
- [-MessageBodyFormat <MessageBodyFormat>] [-MessageFormat <MessageFormat>]
- [-PrimarySmtpAddress <SmtpAddress>] [-UsePreferMessageFormat <Boolean>] [-WhatIf] [<CommonParameters>]
+ [-MessageBodyFormat <MessageBodyFormat>]
+ [-MessageFormat <MessageFormat>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-UsePreferMessageFormat <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

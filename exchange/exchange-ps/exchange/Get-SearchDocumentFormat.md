@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SearchDocumentFormat [[-Identity] <SearchDocumentFormatId>] [-Server <ServerIdParameter>] [<CommonParameters>]
+Get-SearchDocumentFormat [[-Identity] <SearchDocumentFormatId>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

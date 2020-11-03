@@ -27,7 +27,8 @@ New-UMIPGateway [-Name] <String> -Address <UMSmartHost>
  [-GlobalCallRoutingScheme <UMGlobalCallRoutingScheme>]
  [-IPAddressFamily <IPAddressFamily>]
  [-UMDialPlan <UMDialPlanIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -26,7 +26,8 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String>
  [-Comment <String>]
  [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### OrganizationSegmentsAllowed
@@ -34,7 +35,8 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String>
 New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsAllowed <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### OrganizationSegmentsBlocked
@@ -42,7 +44,8 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -Segment
 New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsBlocked <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

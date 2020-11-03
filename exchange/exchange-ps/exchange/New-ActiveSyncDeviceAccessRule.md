@@ -21,9 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ActiveSyncDeviceAccessRule -AccessLevel <DeviceAccessLevel>
- -Characteristic <DeviceAccessCharacteristic> -QueryString <String> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+New-ActiveSyncDeviceAccessRule -AccessLevel <DeviceAccessLevel> -Characteristic <DeviceAccessCharacteristic> -QueryString <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -32,7 +32,8 @@ New-SiteMailboxProvisioningPolicy [-Name] <String>
  [-IssueWarningQuota <ByteQuantifiedSize>]
  [-MaxReceiveSize <ByteQuantifiedSize>]
  [-ProhibitSendReceiveQuota <ByteQuantifiedSize>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

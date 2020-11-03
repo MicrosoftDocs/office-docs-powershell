@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-PublicFolder [-Name] <String> [-Confirm] [-DomainController <Fqdn>] [-EformsLocaleId <CultureInfo>]
- [-Path <PublicFolderIdParameter>] [-Server <ServerIdParameter>]
- [-WhatIf] [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
+New-PublicFolder [-Name] <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EformsLocaleId <CultureInfo>]
+ [-Path <PublicFolderIdParameter>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [-Mailbox <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-GlobalMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum>
- -PropertyName <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-BuildRange <String>]
- [-Roles <String>] [<CommonParameters>]
+Remove-GlobalMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [-BuildRange <String>]
+ [-Roles <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

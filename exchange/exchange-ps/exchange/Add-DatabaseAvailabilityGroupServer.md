@@ -21,11 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdParameter> [-MailboxServer] <ServerIdParameter>
+Add-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdParameter>
+ [-MailboxServer] <ServerIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-SkipDagValidation]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

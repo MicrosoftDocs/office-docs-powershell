@@ -26,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-AccessToCustomerDataRequest -ApprovalDecision <Approve | Deny | Cancel> -RequestId <String>
- [-Comment <String>] [<CommonParameters>]
+ [-Comment <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

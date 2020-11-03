@@ -23,10 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AddressBookPolicy [-Name] <String> -AddressLists <AddressListIdParameter[]>
- -GlobalAddressList <GlobalAddressListIdParameter> -OfflineAddressBook <OfflineAddressBookIdParameter>
- -RoomList <AddressListIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+New-AddressBookPolicy [-Name] <String> -AddressLists <AddressListIdParameter[]> -GlobalAddressList <GlobalAddressListIdParameter> -OfflineAddressBook <OfflineAddressBookIdParameter> -RoomList <AddressListIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SettingOverride [-Identity] <SettingOverrideIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Remove-SettingOverride [-Identity] <SettingOverrideIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

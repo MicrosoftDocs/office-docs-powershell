@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-UMServer [-Identity] <UMServerIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Immediate <Boolean>] [-WhatIf] [<CommonParameters>]
+Disable-UMServer [-Identity] <UMServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Immediate <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

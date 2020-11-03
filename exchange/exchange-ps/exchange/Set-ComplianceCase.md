@@ -30,7 +30,8 @@ Set-ComplianceCase [-Identity] <ComplianceCaseIdParameter>
  [-ExternalId <String>]
  [-Name <String>]
  [-Reopen]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

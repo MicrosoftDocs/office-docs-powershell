@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-CmdletExtensionAgent [-Identity] <CmdletExtensionAgentIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Name <String>] [-Priority <Byte>] [-WhatIf] [<CommonParameters>]
+Set-CmdletExtensionAgent [-Identity] <CmdletExtensionAgentIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Name <String>]
+ [-Priority <Byte>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

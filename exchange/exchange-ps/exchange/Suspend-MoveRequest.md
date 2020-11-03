@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Suspend-MoveRequest [-Identity] <MoveRequestIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-SuspendComment <String>] [-WhatIf] [-ProxyToMailbox <MailboxIdParameter>] [<CommonParameters>]
+Suspend-MoveRequest [-Identity] <MoveRequestIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-SuspendComment <String>]
+ [-WhatIf]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

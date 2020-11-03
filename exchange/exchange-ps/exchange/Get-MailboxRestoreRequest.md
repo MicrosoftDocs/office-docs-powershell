@@ -24,14 +24,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MailboxRestoreRequest [[-Identity] <MailboxRestoreRequestIdParameter>]
  [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Filtering
 ```
-Get-MailboxRestoreRequest [-BatchName <String>] [-HighPriority <Boolean>] [-Name <String>] [-RequestQueue <DatabaseIdParameter>] [-SourceDatabase <DatabaseIdParameter>] [-Status <RequestStatus>] [-Suspend <Boolean>] [-TargetDatabase <DatabaseIdParameter>] [-TargetMailbox <MailboxOrMailUserIdParameter>]
+Get-MailboxRestoreRequest [-BatchName <String>]
+ [-HighPriority <Boolean>]
+ [-Name <String>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [-SourceDatabase <DatabaseIdParameter>]
+ [-Status <RequestStatus>]
+ [-Suspend <Boolean>]
+ [-TargetDatabase <DatabaseIdParameter>]
+ [-TargetMailbox <MailboxOrMailUserIdParameter>]
  [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-FocusedInbox -Identity <MailboxIdParameter> [<CommonParameters>]
+Get-FocusedInbox -Identity <MailboxIdParameter>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <Boolean>]
+Remove-Mailbox [-Identity] <MailboxIdParameter>
+ [-Permanent <Boolean>]
  [-Arbitration]
  [-AuditLog]
  [-AuxAuditLog]
@@ -35,7 +36,8 @@ Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <Boolean>]
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### StoreMailboxIdentity
@@ -53,18 +55,21 @@ Remove-Mailbox -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailb
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
 ```
-Remove-Mailbox [-Identity] <MailboxIdParameter> [-PermanentlyDelete]
+Remove-Mailbox [-Identity] <MailboxIdParameter>
+ [-PermanentlyDelete]
  [-Confirm]
  [-Force]
  [-IgnoreLegalHold]
  [-Migration]
  [-PublicFolder]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

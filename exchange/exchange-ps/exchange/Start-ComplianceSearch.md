@@ -25,7 +25,8 @@ Start-ComplianceSearch [-Identity] <ComplianceSearchIdParameter>
  [-Confirm]
  [-Force]
  [-RetryOnError]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

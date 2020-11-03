@@ -21,8 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-AddParameter] [-Confirm]
- [-DomainController <Fqdn>] [-Parameters <String[]>] [-RemoveParameter] [-UnScopedTopLevel] [-WhatIf] [-Force]
+Set-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
+ [-AddParameter]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Parameters <String[]>]
+ [-RemoveParameter]
+ [-UnScopedTopLevel]
+ [-WhatIf]
+ [-Force]
  [<CommonParameters>]
 ```
 

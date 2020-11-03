@@ -23,9 +23,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-DataClassification [-Identity] <DataClassificationIdParameter> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Fingerprints <MultiValuedProperty>] [-IsDefault] [-Locale <CultureInfo>]
- [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-DataClassification [-Identity] <DataClassificationIdParameter>
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Fingerprints <MultiValuedProperty>]
+ [-IsDefault]
+ [-Locale <CultureInfo>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

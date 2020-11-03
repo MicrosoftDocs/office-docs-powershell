@@ -27,7 +27,8 @@ Remove-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdP
  [-Confirm]
  [-DomainController <Fqdn>]
  [-SkipDagValidation]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

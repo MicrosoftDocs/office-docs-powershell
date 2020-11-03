@@ -203,12 +203,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-UserPrincipalName <String>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### ExcludeFromAllOrgHolds
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-ExcludeFromAllOrgHolds]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -324,12 +326,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### ExcludeFromOrgHolds
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-ExcludeFromOrgHolds <String>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -445,12 +449,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### RecalculateInactiveMailbox
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RecalculateInactiveMailbox]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -566,12 +572,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### RemoveDelayHoldApplied
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoveDelayHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -687,12 +695,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### RemoveDelayReleaseHoldApplied
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayReleaseHoldApplied]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoveDelayReleaseHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -812,7 +822,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayReleaseHoldApplied]
 
 ### RemoveDisabledArchive
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDisabledArchive]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoveDisabledArchive]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -927,12 +938,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDisabledArchive]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### RemoveOrphanedHolds
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveOrphanedHolds <String[]>]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoveOrphanedHolds <String[]>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -1046,7 +1059,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

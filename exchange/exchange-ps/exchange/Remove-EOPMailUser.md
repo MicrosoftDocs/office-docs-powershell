@@ -25,7 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-EOPMailUser [-ExternalDirectoryObjectId <String>] [-Identity <MailUserIdParameter>] [<CommonParameters>]
+Remove-EOPMailUser [-ExternalDirectoryObjectId <String>]
+ [-Identity <MailUserIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

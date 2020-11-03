@@ -29,7 +29,8 @@ Import-ExchangeCertificate -FileData <Byte[]>
  [-Password <SecureString>]
  [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FileName
@@ -41,7 +42,8 @@ Import-ExchangeCertificate -Instance <String[]>
  [-Password <SecureString>]
  [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
@@ -53,7 +55,8 @@ Import-ExchangeCertificate -FileName <String>
  [-Password <SecureString>]
  [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

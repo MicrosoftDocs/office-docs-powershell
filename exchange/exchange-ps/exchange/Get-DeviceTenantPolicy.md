@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DeviceTenantPolicy [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-DeviceTenantPolicy [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
