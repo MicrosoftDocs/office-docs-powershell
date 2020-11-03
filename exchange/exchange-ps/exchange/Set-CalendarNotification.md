@@ -69,23 +69,14 @@ This example enables a daily agenda to be sent in text messages to the user Tony
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -105,7 +96,6 @@ Accept wildcard characters: False
 The CalendarUpdateNotification parameter specifies whether calendar update notifications are sent to the user's mobile device. Valid values are:
 
 - $true: Calendar update notifications are enabled.
-
 - $false: Calendar update notifications aren't enabled. This is the default value.
 
 ```yaml
@@ -125,7 +115,6 @@ Accept wildcard characters: False
 The CalendarUpdateSendDuringWorkHour parameter specifies whether calendar update notifications are only sent to the user's mobile device during working hours. Valid values are:
 
 - $true: Calendar update notifications are only sent during working hours.
-
 - $false: Calendar update notifications are sent anytime. This is the default value.
 
 ```yaml
@@ -144,8 +133,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -165,7 +153,6 @@ Accept wildcard characters: False
 The DailyAgendaNotification parameter specifies whether daily agenda notifications are sent to the user's mobile device. Valid values are:
 
 - $true: Daily agenda notifications are sent.
-
 - $false: Daily agenda notifications are not sent. This is the default value.
 
 ```yaml
@@ -239,7 +226,6 @@ Accept wildcard characters: False
 The MeetingReminderNotification parameter specifies whether meeting reminder notifications are sent to the user's mobile device. Valid values are:
 
 - $true: Meeting reminder notifications are sent.
-
 - $false: Meeting reminder notifications are not sent. This is the default value.
 
 ```yaml
@@ -259,7 +245,6 @@ Accept wildcard characters: False
 The MeetingReminderSendDuringWorkHour parameter specifies whether meeting reminder notifications are only sent to the user's mobile device during working hours. Valid values are:
 
 - $true: Meeting update notifications are only sent during working hours.
-
 - $false: Meeting update notifications are sent anytime. This is the default value.
 
 ```yaml

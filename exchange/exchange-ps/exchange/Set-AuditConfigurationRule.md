@@ -43,33 +43,19 @@ This example modifies an existing SharePoint auditing rule. The check-out operat
 The AuditOperation parameter specifies the operations that are audited by the rule. Valid values are:
 
 - Administrate
-
 - CheckIn
-
 - CheckOut
-
 - Count
-
 - CreateUpdate
-
 - Delete
-
 - Forward
-
 - MoveCopy
-
 - PermissionChange
-
 - ProfileChange
-
 - SchemaChange
-
 - Search
-
 - SendAsOthers
-
 - View
-
 - Workflow
 
 You can specify multiple values separated by commas.
@@ -106,8 +92,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

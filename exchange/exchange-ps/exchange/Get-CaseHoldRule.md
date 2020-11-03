@@ -42,9 +42,7 @@ This example displays detailed information for the case hold rule named "30 Day 
 The Identity parameter specifies the case hold rule you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -64,9 +62,7 @@ Accept wildcard characters: False
 The Policy parameter filters the case hold rule results by the associated case hold policy. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can use this parameter with the Identity parameter in the same command.

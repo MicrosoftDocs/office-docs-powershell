@@ -71,17 +71,11 @@ The MailboxGuid and MoveRequestQueue parameters are for debugging purposes only.
 The Identity parameter specifies the identity of the mailbox or mail user. You can use the following values:
 
 - GUID
-
 - Distinguished name (DN)
-
 - Domain\\Account
-
 - User principal name (UPN)
-
 - Legacy Exchange DN
-
 - SMTP address
-
 - Alias
 
 You can't use this parameter with the MailboxGuid or MoveRequestQueue parameters.
@@ -125,9 +119,7 @@ This parameter is available only in on-premises Exchange.
 The MoveRequestQueue parameter specifies the database on which the move request is queued. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -148,8 +140,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -205,23 +196,14 @@ This parameter is available only in the cloud-based service.
 The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

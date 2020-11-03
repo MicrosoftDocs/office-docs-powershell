@@ -51,7 +51,6 @@ This example lists all the properties of the sensitive information type named "C
 The Identity parameter specifies the sensitive information type that you want to view. Valid values are:
 
 - Name
-
 - Id (GUID value)
 
 ```yaml

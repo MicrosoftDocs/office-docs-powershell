@@ -93,23 +93,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the identity of the mailbox where the apps are installed. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Identity parameter.

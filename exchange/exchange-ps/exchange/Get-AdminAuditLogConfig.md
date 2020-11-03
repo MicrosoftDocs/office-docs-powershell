@@ -39,7 +39,6 @@ Get-AdminAuditLogConfig | Format-List
 This example displays the administrator audit logging settings. The output of the Get-AdminAuditLogConfig cmdlet is piped to the Format-List cmdlet. For more information about piping and the Format-List cmdlet, see the following topics:
 
 - [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
-
 - [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help)
 
 ## PARAMETERS

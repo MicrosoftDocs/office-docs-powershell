@@ -72,15 +72,10 @@ New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Execut
 This example creates the mailbox search Legal-ProjectX. The search uses several parameters to restrict the search query:
 
 - SourceMailboxes: This parameter restricts the search to members of the DG-Marketing and DG-Executives distribution groups.
-
 - Recipients: This parameter specifies that the search includes all mail sent to the domain contoso.com.
-
 - SearchQuery: This parameter specifies a KQL query for messages with either the words project or report and for messages with attachments.
-
 - StartDate and EndDate: These parameters specify the start date of January 1, 2018, and end date of December 31, 2018, for the search.
-
 - TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
-
 - StatusMailRecipients: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
 
 ### Example 2
@@ -130,7 +125,6 @@ This parameter is available only in on-premises Exchange.
 The AllPublicFolderSources parameter specifies whether to include all public folders in the organization in the search. Valid values are:
 
 - $true: All public folders are included in the search. This value is required when the value of the AllSourceMailboxes parameter is $false and you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
-
 - $false: No public folders are included in the search. This is the default value. You can use this value when the value of the AllSourceMailboxes parameter is $true or you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
 
 ```yaml
@@ -152,7 +146,6 @@ This parameter is available only in on-premises Exchange.
 The AllSourceMailboxes parameter specifies whether to include all mailboxes in the search. Valid values are:
 
 - $true: All mailboxes are included in the search. This value is required when the value of the AllPublicFolderSources parameter is $false and you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
-
 - $false: All mailboxes aren't included in the search. This is the default value. You can use this value when the value of the AllPublicFolderSources parameter is $true or you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
 
 ```yaml
@@ -171,8 +164,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -280,7 +272,6 @@ Accept wildcard characters: False
 The ExcludeDuplicateMessages parameter eliminates duplication of messages in search results. Valid values are:
 
 - $true: Copy a single instance of a message if the same message exists in multiple folders or mailboxes. This is the default value.
-
 - $false: Copy all instances of a message if the same message exists in multiple folders or mailboxes.
 
 ```yaml
@@ -350,7 +341,6 @@ Accept wildcard characters: False
 The InPlaceHoldEnabled parameter specifies whether to set an In-Place Hold on items in the search results. Valid values are:
 
 - $true: In-Place Hold is enabled on the search results.
-
 - $false: In-Place Hold isn't enabled on the search results. This is the default value.
 
 You can't set an In-Place Hold on the search results when the AllSourceMailboxes parameter is $true.
@@ -390,7 +380,6 @@ Accept wildcard characters: False
 The ItemHoldPeriod parameter specifies the number of days for the In-Place Hold onthe mailbox items (all mailbox items or the items that are returned in the search query results). The duration is calculated from the time the item is received or created in the mailbox. Valid values are:
 
 - An integer.
-
 - The value unlimited. This is the default value. Items are held until you remove the In-Place Hold by removing the search by using the Remove-MailboxSearch cmdlet, removing the source mailbox from the search by using the Set-MailboxSearch cmdlet and the SourceMailboxes parameter, or in on-premises Exchange, you remove all public folders from the search by using the Set-MailboxSearch cmdlet to change the AllPublicFolderSources parameter from $true to $false.
 
 ```yaml
@@ -428,9 +417,7 @@ Accept wildcard characters: False
 The LogLevel parameter specifies the logging level for the search. Valid values are:
 
 - Suppress: No logs are kept.
-
 - Basic: Basic information about the query and who ran it is kept. This is the default value.
-
 - Full: In addition to the information kept by the Basic log level, the Full log level adds a complete list of search results.
 
 ```yaml
@@ -450,19 +437,12 @@ Accept wildcard characters: False
 The MessageTypes parameter specifies the message types to include in the search query. Valid values are:
 
 - Contacts
-
 - Docs
-
 - Email
-
 - IM
-
 - Journals
-
 - Meetings
-
 - Notes
-
 - Tasks
 
 You can specify multiple values separated by commas.
@@ -528,13 +508,9 @@ If you use this parameter with other search query parameters, the query combines
 The other search query parameters are:
 
 - EndDate
-
 - MessageTypes
-
 - Recipients
-
 - Senders
-
 - StartDate
 
 ```yaml
@@ -572,15 +548,10 @@ Accept wildcard characters: False
 The SourceMailboxes parameter specifies the identity of one or more mailboxes to be searched. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -592,7 +563,6 @@ The default value is blank ($null), which means no source mailboxes are specifie
 To enable In-Place Hold on the search results, you need to set the AllSourceMailboxes parameter to $false (the default value) and configure one or both of the following settings:
 
 - Specify one ore more source mailboxes by using the SourceMailboxes parameter.
-
 - In on-premises Exchange, set the AllPublicFolderSources parameter to $true.
 
 ```yaml
@@ -630,15 +600,10 @@ Accept wildcard characters: False
 The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -660,23 +625,14 @@ Accept wildcard characters: False
 The TargetMailbox parameter specifies the destination mailbox where the search results are copied. You can use any value that uniquely identifies themailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

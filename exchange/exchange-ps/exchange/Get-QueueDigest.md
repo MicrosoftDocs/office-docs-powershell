@@ -195,21 +195,13 @@ Accept wildcard characters: False
 The GroupedBy parameter sorts the messages in the delivery queue results. Valid values are:
 
 - DeliveryType
-
 - LastError
-
 - NextHopCategory
-
 - NextHopDomain (this is the default value)
-
 - NextHopKey
-
 - RiskLevel
-
 - Status
-
 - ServerName
-
 - OutboundIPPool
 
 ```yaml

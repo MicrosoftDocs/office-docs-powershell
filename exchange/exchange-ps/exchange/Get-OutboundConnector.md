@@ -47,9 +47,7 @@ This example displays detailed information about the Outbound connector named Co
 The Identity parameter specifies the Outbound connector that you want to view. You can use any value that uniquely identifies the connector. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -69,7 +67,6 @@ Accept wildcard characters: False
 The IncludeTestModeConnectors parameter filters the results by Outbound connectors that are in test mode. Valid values are:
 
 - $true: Only Outbound connectors that are in test mode are returned in the results.
-
 - $false: All Outbound connectors that aren't in test mode are returned in the results.. This is the default value.
 
 You configure an Outbound connector in test mode by using the TestMode parameter on the New-OutboundConnector or Set-OutboundConnector cmdlets.
@@ -91,7 +88,6 @@ Accept wildcard characters: False
 The IsTransportRuleScoped parameter filters the results by Outbound connectors that are scoped to transport rules (also known as mail flow rules). Valid values are:
 
 - $true: Only Outbound connectors that are scoped to transport rules are returned in the results.
-
 - $false: All Outbound connectors that aren't scoped to transport rules are returned in the results.. This is the default value.
 
 You scope a transport rule to a specific Outbound connector by using the RouteMessageOutboundConnector parameter on the New-TransportRule or Set-TransportRule cmdlets.

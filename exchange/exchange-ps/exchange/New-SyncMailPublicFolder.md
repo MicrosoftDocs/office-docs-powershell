@@ -63,7 +63,6 @@ When you create a recipient without specifying an email address, the Alias value
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -120,8 +119,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -161,11 +159,8 @@ The EmailAddresses parameter specifies all the email addresses (proxy addresses)
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
-
 - smtp: Other SMTP email addresses.
-
 - X400: X.400 addresses in on-premises Exchange.
-
 - X500: X.500 addresses in on-premises Exchange.
 
 If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
@@ -173,9 +168,7 @@ If you don't include a \<Type\> value for an email address, the value smtp is as
 To specify the primary SMTP email address, you can use any of the following methods:
 
 - Use the \<Type\> value SMTP on the address.
-
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
-
 - If it's available, use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
@@ -213,7 +206,6 @@ Accept wildcard characters: False
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
 - $true: The recipient isn't visible in address lists.
-
 - $false: The recipient is visible in address lists. This is the default value.
 
 ```yaml
@@ -265,7 +257,6 @@ Accept wildcard characters: False
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 
 - In environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is set to the value True for the recipient), the WindowsEmailAddress parameter has no effect on the WindowsEmailAddress property or the primary email address value.
-
 - In environments where the recipient isn't subject to email address policies (the EmailAddressPolicyEnabled property is set to the value False for the recipient), the WindowsEmailAddress parameter updates the WindowsEmailAddress property and the primary email address to the same value.
 
 The WindowsEmailAddress property is visible for the recipient in Active Directory Users and Computers in the E-mail attribute. The attribute common name is E-mail-Addresses, and the Ldap-Display-Name is mail. If you modify this attribute in Active Directory, the recipient's primary email address is not updated to the same value.
@@ -289,15 +280,10 @@ The AcceptMessagesOnlyFrom parameter specifies who is allowed to send messages t
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple senders, use the following syntax: \<sender1\>,\<sender2\>,...\<senderX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderX\>".
@@ -325,15 +311,10 @@ The Contacts parameter specifies the contacts for the public folder. Contacts ar
 Valid values for this parameter are recipients in your organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -595,7 +576,6 @@ Accept wildcard characters: False
 The DeliverToMailboxAndForward parameter specifies the message delivery behavior when a forwarding address is specified by the ForwardingAddress parameter. Valid values are:
 
 - $true: Messages are delivered to this mail-enabled public folder and forwarded to the specified recipient or email address.
-
 - $false: If a forwarding recipient is configured, messages are delivered only to the specified recipient, and messages aren't delivered to this mail-enabled public folder. If no forwarding recipient is configured, messages are delivered only to this mailbox. This is the default value.
 
 The default value is $false. This parameter is meaningful only if you configure a forwarding recipient by using the ForwardingAddress parameter.
@@ -635,21 +615,15 @@ Accept wildcard characters: False
 The ForwardingAddress parameter specifies a forwarding address for messages that are sent to this mail-enabled public folder. A valid value for this parameter is a recipient in your organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 How messages are delivered and forwarded is controlled by the DeliverToMailboxAndForward parameter.
 
 - DeliverToMailboxAndForward is $true: Messages are delivered to this mail-enabled public folder and forwarded to the specified recipient.
-
 - DeliverToMailboxAndForward is $false: Messages are only forwarded to the specified recipient. Messages aren't delivered to this mail-enabled public folder.
 
 The default value is blank ($null), which means no forwarding recipient is configured.
@@ -673,15 +647,10 @@ The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mail-
 The sender you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -707,11 +676,8 @@ The MaxReceiveSize parameter specifies the maximum size of a message that can be
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -739,11 +705,8 @@ The MaxSendSize parameter specifies the maximum size of a message that can be se
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -787,15 +750,10 @@ The RejectMessagesFrom parameter specifies who isn't allowed to send messages to
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple senders, use the following syntax: \<sender1\>,\<sender2\>,...\<senderX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderX\>".
@@ -821,7 +779,6 @@ Accept wildcard characters: False
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
 - $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
-
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml

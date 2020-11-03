@@ -30,11 +30,8 @@ Get-OnlineMeetingConfiguration [-Identity] <MailboxIdParameter> [<CommonParamete
 Exchange Online maintains a per-user cache of Skype for Business Online meeting information that's updated every 24 hours. The Get-OnlineMeetingConfiguration cmdlet provides the following information about the Skype Meetings configuration and the Skype for Business Online meeting information for the user:
 
 - IsAutoOnlineMeetingEnabled: Indicates if Skype Meetings is enabled for the mailbox.
-
 - OnlineMeetingInfo: Skype for Business Online meeting coordinates.
-
 - LastSyncTime: The last time Exchange Online successfully synchronized meeting coordinates from Skype for Business Online.
-
 - LastSuccessfulSyncTime: The last time Exchange Online successfully cleaned the cached of used Skype for Business Online meeting coordinates.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -54,23 +51,14 @@ This example gets the Skype Meetings configuration for the specified mailbox.
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

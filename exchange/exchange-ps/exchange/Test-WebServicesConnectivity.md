@@ -78,13 +78,9 @@ The first time you use this cmdlet, you might be required to create a test user.
 The test results are displayed on-screen. The cmdlet returns the following information.
 
 - Source: Source server.
-
 - ServiceEndpoint: Destination server.
-
 - Scenario: The operations that are tested. Values are Autodiscover: SOAP Provider and EWS: GetFolder (full mode) or EWS: ConvertID (light mode).
-
 - Result: The values returned are typically Success or \*FAILURE\*.
-
 - Latency(MS): The time required to complete the test in milliseconds
 
 You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding \> \<filename\> to the command. For example:
@@ -116,11 +112,8 @@ The AutoDiscoverServer parameter specifies the server with the Client Access ser
 You can use any value that uniquely identifies the server. For example:
 
 - Name (for example, Exchange01)
-
 - Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
-
 - Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
-
 - GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
 
 You can't use this parameter with the ClientAccessServer parameter.
@@ -144,11 +137,8 @@ The ClientAccessServer parameter specifies the Exchange server to test. This ser
 You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 You can't use this parameter with the AutoDiscoverServer parameter.
@@ -183,23 +173,14 @@ Accept wildcard characters: False
 The Identity parameter specifies the mailbox to use for the test. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 When you use this parameter, you also need to use the MailboxCredential parameter.
@@ -238,8 +219,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

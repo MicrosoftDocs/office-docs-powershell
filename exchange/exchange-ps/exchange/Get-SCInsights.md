@@ -30,13 +30,9 @@ Get-SCInsights [-EndDate <DateTime>] [<CommonParameters>]
 This cmdlet returns the following output:
 
 - Organization: The Microsoft 365 domain.
-
 - Date: The date of the even in Coordinated Universal Time (UTC).
-
 - InsightType
-
 - InsightSubType: The value All or Archive.
-
 - UsersCount: An integer count, or the size in megabytes for the InsightType value.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -65,7 +61,6 @@ The EndDate parameter specifies the end date of the date range.
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml

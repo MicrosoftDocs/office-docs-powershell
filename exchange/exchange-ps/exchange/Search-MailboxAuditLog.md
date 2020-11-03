@@ -88,23 +88,14 @@ This example retrieves mailbox audit log entries for Ken Kwok's mailbox for acti
 The Identity parameter specifies a single mailbox to retrieve mailbox audit log entries from. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -198,7 +189,6 @@ Accept wildcard characters: False
 The HasAttachments parameter filters the search by messages that have attachments. Valid values are:
 
 - $true: Only messages with attachments are included in the search.
-
 - $false: Messages with and without attachments are included in the search.
 
 ```yaml
@@ -278,49 +268,27 @@ Accept wildcard characters: False
 The Operations parameter filters the search results by the mailbox actions that are logged by mailbox audit logging. Valid values are:
 
 - AddFolderPermissions (Exchange 2019 and Exchange Online only. Although this value is accepted, it's already included in the UpdateFolderPermissions action and isn't audited separately.)
-
 - ApplyRecord (Exchange Online only)
-
 - Copy
-
 - Create
-
 - Default (Exchange Online only)
-
 - FolderBind
-
 - HardDelete
-
 - MailboxLogin
-
 - MailItemsAccessed (Exchange Online only and only for E5 or E5 Compliance add-on subscription users.)
-
 - MessageBind (Although this value is accepted, these actions are no longer logged.)
-
 - ModifyFolderPermissions (Exchange 2019 and Exchange Online only. Although this value is accepted, it's already included in the UpdateFolderPermissions action and isn't audited separately.)
-
 - Move
-
 - MoveToDeletedItems
-
 - RecordDelete (Exchange Online only)
-
 - RemoveFolderPermissions (Exchange 2019 and Exchange Online only. Although this value is accepted, it's already included in the UpdateFolderPermissions action and isn't audited separately.)
-
 - SendAs
-
 - SendOnBehalf
-
 - SoftDelete
-
 - Update
-
 - UpdateCalendarDelegation (Exchange 2019 and Exchange Online only)
-
 - UpdateComplianceTag (Exchange Online only)
-
 - UpdateFolderPermissions (Exchange 2019 and Exchange Online only)
-
 - UpdateInboxRules (Exchange 2019 and Exchange Online only)
 
 You can enter multiple values separated by commas.

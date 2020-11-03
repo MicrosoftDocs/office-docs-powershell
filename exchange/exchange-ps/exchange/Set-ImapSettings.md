@@ -125,11 +125,8 @@ Accept wildcard characters: False
 The CalendarItemRetrievalOption parameter specifies how calendar items are presented to IMAP4 clients. Valid values are:
 
 - 0 or iCalendar. This is the default value.
-
 - 1 or IntranetUrl
-
 - 2 or InternetUrl
-
 - 3 or Custom
 
 If you specify 3 or Custom, you need to specify a value for the OwaServerUrl parameter setting.
@@ -150,8 +147,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -187,7 +183,6 @@ Accept wildcard characters: False
 The EnableExactRFC822Size parameter specifies how message sizes are presented to IMAP4 clients. Valid values are:
 
 - $true: Calculate the exact message size. Because this setting can negatively affect performance, you should configure it only if it's required by your IMAP4 clients.
-
 - $false: Use an estimated message size. This is the default value.
 
 ```yaml
@@ -207,7 +202,6 @@ Accept wildcard characters: False
 The EnableGSSAPIAndNTLMAuth parameter specifies whether connections can use Integrated Windows authentication (NTLM) using the Generic Security Services application programming interface (GSSAPI). This setting applies to connections where Transport Layer Security (TLS) is disabled. Valid values are:
 
 - $true: NTLM for IMAP4 connections is enabled. This is the default value.
-
 - $false: NTLM for IMAP4 connections is disabled.
 
 ```yaml
@@ -229,7 +223,6 @@ The EnforceCertificateErrors parameter specifies whether to enforce valid Secure
 The default setting is $false.
 
 - $true: If the certificate isn't valid or doesn't match the target IMAP4 server's FQDN, the connection attempt fails.
-
 - $false: The server doesn't deny IMAP4 connections based on certificate errors. This is the default value.
 
 ```yaml
@@ -249,9 +242,7 @@ Accept wildcard characters: False
 The ExtendedProtectionPolicy parameter specifies how Extended Protection for Authentication is used. Valid values are:
 
 - None: Extended Protection for Authentication isn't used. This is the default value.
-
 - Allow: Extended Protection for Authentication is used only if it's supported by the incoming IMAP4 connection. If it's not, Extended Protection for Authentication isn't used.
-
 - Require: Extended Protection for Authentication is required for all IMAP4 connections. If the incoming IMAP4 connection doesn't support it, the connection is rejected.
 
 Extended Protection for Authentication enhances the protection and handling of credentials by Integrated Windows authentication (also known as NTLM), so we strongly recommend that you use it if it's supported by your clients (default installations of Windows 7 or later and Windows Server 2008 R2 or later support it).
@@ -343,11 +334,8 @@ Accept wildcard characters: False
 The LogFileRollOverSettings parameter specifies how frequently IMAP4 protocol logging creates a new log file. Valid values are:
 
 - 1 or Hourly.
-
 - 2 or Daily. This is the default value
-
 - 3 or Weekly.
-
 - 4 or Monthly.
 
 This parameter is only meaningful when the LogPerFileSizeQuota parameter value is 0, and the ProtocolLogEnabled parameter value is $true.
@@ -369,9 +357,7 @@ Accept wildcard characters: False
 The LoginType parameter specifies the authentication method for IMAP4 connections. Valid values are:
 
 - 1 or PlainTextLogin.
-
 - 2 or PlainTextAuthentication.
-
 - 3 or SecureLogin. This is the default value.
 
 ```yaml
@@ -393,13 +379,9 @@ The LogPerFileSizeQuota parameter specifies the maximum size of a IMAP4 protocol
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -489,17 +471,11 @@ Accept wildcard characters: False
 The MessageRetrievalMimeFormat parameter specifies the MIME encoding of messages. Valid values are:
 
 - 0 or TextOnly.
-
 - 1 or HtmlOnly.
-
 - 2 or HtmlAndTextAlternative.
-
 - 3 or TextEnrichedOnly.
-
 - 4 or TextEnrichedAndTextAlternative.
-
 - 5 or BestBodyFormat. This is the default value.
-
 - 6 or Tnef.
 
 ```yaml
@@ -555,7 +531,6 @@ Accept wildcard characters: False
 The ProtocolLogEnabled parameter specifies whether to enable protocol logging for IMAP4. Valid values are:
 
 - $true: IMAP4 protocol logging is enabled.
-
 - $false: IMAP4 protocol logging is disabled. This is the default value.
 
 ```yaml
@@ -591,11 +566,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
@@ -617,7 +589,6 @@ Accept wildcard characters: False
 The ShowHiddenFoldersEnabled parameter specifies whether hidden mailbox folders are visible. Valid values are:
 
 - $true: Hidden folders are visible.
-
 - $false: Hidden folders aren't visible. This is the default value.
 
 ```yaml
@@ -659,7 +630,6 @@ Accept wildcard characters: False
 The SuppressReadReceipt parameter specifies whether to stop duplicate read receipts from being sent to IMAP4 clients that have the Send read receipts for messages I send setting configured in their IMAP4 email program. Valid values are:
 
 - $true: The sender receives a read receipt only when the recipient opens the message.
-
 - $false: The sender receives a read receipt when the recipient downloads the message, and when the recipient opens the message. This is the default value.
 
 ```yaml
