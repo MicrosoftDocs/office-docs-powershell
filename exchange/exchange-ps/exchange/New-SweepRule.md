@@ -118,7 +118,7 @@ For the value of `MailboxID`, you can use any value that uniquely identifies the
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
@@ -274,7 +274,7 @@ The Mailbox parameter specifies the mailbox where you want to create the Sweep r
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
@@ -328,7 +328,7 @@ For the value of `MailboxID`, you can use any value that uniquely identifies the
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

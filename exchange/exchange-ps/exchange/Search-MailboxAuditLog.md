@@ -91,7 +91,7 @@ The Identity parameter specifies a single mailbox to retrieve mailbox audit log 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

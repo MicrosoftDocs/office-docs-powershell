@@ -117,7 +117,7 @@ The Mailbox parameter specifies the UM-enabled mailbox that contains the UM call
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

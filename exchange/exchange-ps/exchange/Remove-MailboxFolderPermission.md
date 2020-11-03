@@ -48,7 +48,7 @@ The Identity parameter specifies the target mailbox and folder. The syntax is \<
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

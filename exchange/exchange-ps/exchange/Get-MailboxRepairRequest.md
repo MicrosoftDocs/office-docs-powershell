@@ -120,7 +120,7 @@ The Mailbox parameter specifies the mailbox that you want to get mailbox repair 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

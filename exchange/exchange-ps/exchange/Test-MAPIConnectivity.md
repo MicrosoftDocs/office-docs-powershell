@@ -124,7 +124,7 @@ The Identity parameter specifies a mailbox to test. You can use any value that u
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

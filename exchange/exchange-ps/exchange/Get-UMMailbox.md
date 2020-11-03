@@ -159,7 +159,7 @@ The Identity parameter specifies the UM-enabled mailbox that you want to view. Y
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

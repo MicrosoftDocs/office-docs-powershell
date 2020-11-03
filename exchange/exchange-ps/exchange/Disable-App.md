@@ -110,7 +110,7 @@ The Mailbox parameter specifies the identity of the mailbox. You can use any val
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

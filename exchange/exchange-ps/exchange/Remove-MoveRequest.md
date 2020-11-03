@@ -199,7 +199,7 @@ The ProxyToMailbox parameter specifies the move destination by the location of t
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

@@ -110,7 +110,7 @@ The Mailbox parameter specifies a mailbox for assigning opt-in tags. You can use
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

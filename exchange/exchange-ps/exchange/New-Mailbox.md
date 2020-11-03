@@ -1316,7 +1316,7 @@ The ArbitrationMailbox parameter specifies the arbitration mailbox that's used t
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

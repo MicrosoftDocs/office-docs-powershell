@@ -311,7 +311,7 @@ For the value of `MailboxID`, you can use any value that uniquely identifies the
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
@@ -1185,7 +1185,7 @@ The Mailbox parameter specifies the mailbox that contains the Inbox rule. You ca
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
@@ -1283,7 +1283,7 @@ For the value of `MailboxID`, you can use any value that uniquely identifies the
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

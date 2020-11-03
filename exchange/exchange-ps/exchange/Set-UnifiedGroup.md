@@ -780,7 +780,7 @@ The sender you specify for this parameter must a mailbox, mail user or mail-enab
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

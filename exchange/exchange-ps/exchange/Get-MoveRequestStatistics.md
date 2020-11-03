@@ -300,7 +300,7 @@ The ProxyToMailbox parameter filters the results by the location of the specifie
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

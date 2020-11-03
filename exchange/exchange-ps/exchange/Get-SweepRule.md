@@ -114,7 +114,7 @@ The Mailbox parameter filters the results by the specified mailbox. You can use 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

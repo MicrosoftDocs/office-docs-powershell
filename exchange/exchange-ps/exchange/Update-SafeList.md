@@ -58,7 +58,7 @@ The Identity parameter specifies the mailbox from which you want to collect safe
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

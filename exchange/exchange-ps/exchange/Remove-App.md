@@ -101,7 +101,7 @@ The Mailbox parameter specifies the mailbox that you want to modify. You can use
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

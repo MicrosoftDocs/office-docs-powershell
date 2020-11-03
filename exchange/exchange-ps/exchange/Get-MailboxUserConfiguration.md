@@ -72,7 +72,7 @@ The Mailbox parameter specifies the mailbox that contains the user configuration
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

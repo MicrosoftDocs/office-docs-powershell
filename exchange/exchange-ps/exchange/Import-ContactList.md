@@ -125,7 +125,7 @@ The Identity parameter specifies the target mailbox to which the contacts are im
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

@@ -187,7 +187,7 @@ The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

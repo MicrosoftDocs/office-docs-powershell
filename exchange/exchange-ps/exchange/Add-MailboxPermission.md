@@ -100,7 +100,7 @@ The Identity parameter specifies the mailbox where you want to assign permission
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

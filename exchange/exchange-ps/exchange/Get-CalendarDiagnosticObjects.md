@@ -96,7 +96,7 @@ The Identity parameter specifies the mailbox or Microsoft 365 Group whose calend
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

@@ -283,7 +283,7 @@ The Mailbox parameter specifies the mailbox where you want to install the app. Y
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
@@ -459,7 +459,7 @@ The UserList parameter specifies who can use an organizational app. Valid values
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

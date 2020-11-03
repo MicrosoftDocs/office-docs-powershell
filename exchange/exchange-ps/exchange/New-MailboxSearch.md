@@ -628,7 +628,7 @@ The TargetMailbox parameter specifies the destination mailbox where the search r
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

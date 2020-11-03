@@ -121,7 +121,7 @@ The Identity parameter specifies that mailbox that contains the diagnostics logs
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

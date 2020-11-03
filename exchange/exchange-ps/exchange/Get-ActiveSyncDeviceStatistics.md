@@ -95,7 +95,7 @@ The Mailbox parameter specifies the user mailbox for which you want to retrieve 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

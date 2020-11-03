@@ -133,7 +133,7 @@ The Identity parameter specifies the resource mailbox that you want to modify. Y
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

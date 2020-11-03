@@ -87,7 +87,7 @@ The Mailbox parameter filters the results by mailbox. You can use any value that
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

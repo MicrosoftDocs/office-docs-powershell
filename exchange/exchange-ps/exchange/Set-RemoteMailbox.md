@@ -118,7 +118,7 @@ The Identity parameter specifies the remote mailbox (mail user) that you want to
 - ADObjectID
 - GUID
 - Distinguished name (DN)
-- Domain\\SamAccountName
+- Domain\\Username
 - User principal name (UPN)
 - Legacy DN
 - Email address

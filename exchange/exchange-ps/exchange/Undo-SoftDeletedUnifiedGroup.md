@@ -54,7 +54,7 @@ The SoftDeletedObject parameter specifies the soft-deleted Microsoft 365 Group t
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

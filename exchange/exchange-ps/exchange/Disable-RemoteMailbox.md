@@ -63,7 +63,7 @@ The Identity parameter specifies the cloud-based mailbox. Valid values are:
 - ADObjectID
 - GUID
 - Distinguished name (DN)
-- Domain\\SamAccountName
+- Domain\\Username
 - User principal name (UPN)
 - LegacyExchangeDN
 - Email address

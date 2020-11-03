@@ -149,7 +149,7 @@ You can use any value that uniquely identifies the user or group. For example:
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

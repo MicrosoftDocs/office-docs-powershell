@@ -151,7 +151,7 @@ The Identity parameter specifies a target user mailbox. You can use any value th
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
@@ -358,7 +358,7 @@ In Exchange 2013 or later, the Identity parameter specifies a target user mailbo
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

@@ -76,7 +76,7 @@ The Identity parameter specifies the mailbox that you want to restore. You can u
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

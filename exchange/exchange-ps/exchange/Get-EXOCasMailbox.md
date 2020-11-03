@@ -80,7 +80,7 @@ Otherwise, you can use any other value that uniquely identifies the mailbox. For
 - Name
 - Alias
 - Distinguished name (DN)
-- Domain\Username
+- Domain\\Username
 - Email address
 - LegacyExchangeDN
 - SamAccountName

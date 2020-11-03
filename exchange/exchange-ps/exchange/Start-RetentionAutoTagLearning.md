@@ -89,7 +89,7 @@ The Identity parameter identifies the mailbox. You can use any value that unique
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

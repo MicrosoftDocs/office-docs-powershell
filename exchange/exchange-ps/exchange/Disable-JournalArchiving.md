@@ -54,7 +54,7 @@ The Identity parameter specifies the identity of the user's journal archive mail
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

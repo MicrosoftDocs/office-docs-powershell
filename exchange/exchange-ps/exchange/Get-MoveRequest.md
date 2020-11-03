@@ -93,7 +93,7 @@ The Identity parameter specifies the identity of the move request, which is the 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
@@ -349,7 +349,7 @@ The ProxyToMailbox parameter filters the results by the location of the specifie
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

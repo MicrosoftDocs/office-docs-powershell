@@ -177,7 +177,7 @@ The Mailbox parameter specifies the mailbox that you want to repair or detect co
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

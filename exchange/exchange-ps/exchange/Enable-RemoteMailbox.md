@@ -127,7 +127,7 @@ The Identity parameter specifies the identity of the existing on-premises user. 
 - ADObjectID
 - GUID
 - Distinguished name (DN)
-- Domain\\SamAccountName
+- Domain\\Username
 - User principal name (UPN)
 - LegacyExchangeDN
 - User alias

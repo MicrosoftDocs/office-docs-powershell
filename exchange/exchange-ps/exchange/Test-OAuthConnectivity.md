@@ -120,7 +120,7 @@ The Mailbox parameter specifies the mailbox for which you want to test OAuth con
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

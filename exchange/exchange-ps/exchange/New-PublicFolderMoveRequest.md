@@ -89,7 +89,7 @@ The TargetMailbox parameter specifies the target public folder mailbox that you 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

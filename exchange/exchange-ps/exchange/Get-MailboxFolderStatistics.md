@@ -83,7 +83,7 @@ The Identity parameter specifies the identity of the mailbox or mail user. You c
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

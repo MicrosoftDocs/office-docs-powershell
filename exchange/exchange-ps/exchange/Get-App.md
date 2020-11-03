@@ -96,7 +96,7 @@ The Mailbox parameter specifies the identity of the mailbox where the apps are i
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

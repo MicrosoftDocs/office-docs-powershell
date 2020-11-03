@@ -85,7 +85,7 @@ The Mailbox parameter specifies the target mailbox where the message is created.
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

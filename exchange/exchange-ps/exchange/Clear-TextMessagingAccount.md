@@ -51,7 +51,7 @@ The Identity parameter specifies the target mailbox. You can any value that uniq
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

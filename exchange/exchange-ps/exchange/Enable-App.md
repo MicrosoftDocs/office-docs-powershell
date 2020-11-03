@@ -110,7 +110,7 @@ The Mailbox parameter specifies the the mailbox. You can use any value that uniq
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

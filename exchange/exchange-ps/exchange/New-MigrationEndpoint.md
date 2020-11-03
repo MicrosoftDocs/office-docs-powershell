@@ -820,7 +820,7 @@ The TestMailbox parameter specifies an Exchange Online mailbox used as the targe
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

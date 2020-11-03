@@ -210,7 +210,7 @@ In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdP
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

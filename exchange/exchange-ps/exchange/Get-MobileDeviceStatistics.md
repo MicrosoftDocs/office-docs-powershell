@@ -108,7 +108,7 @@ The Mailbox parameter filters the results by the user mailbox that's associated 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

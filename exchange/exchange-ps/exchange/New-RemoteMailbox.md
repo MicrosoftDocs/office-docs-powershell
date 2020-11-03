@@ -312,7 +312,7 @@ The ArbitrationMailbox parameter specifies the mailbox used to manage the modera
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

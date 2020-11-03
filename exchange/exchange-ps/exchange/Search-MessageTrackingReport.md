@@ -81,7 +81,7 @@ The Identity parameter scopes the search to the specified mailbox. You can use a
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

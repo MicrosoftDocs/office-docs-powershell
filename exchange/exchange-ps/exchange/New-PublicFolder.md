@@ -194,7 +194,7 @@ The Mailbox parameter specifies the hierarchy public folder mailbox where you wa
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

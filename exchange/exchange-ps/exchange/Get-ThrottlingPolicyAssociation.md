@@ -118,7 +118,7 @@ The Identity parameter specifies the throttling policy association that you want
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

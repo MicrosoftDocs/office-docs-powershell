@@ -86,7 +86,7 @@ The Identity parameter specifies the mailbox to be processed. In cross-premises 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

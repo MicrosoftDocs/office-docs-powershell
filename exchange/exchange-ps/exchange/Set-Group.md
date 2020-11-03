@@ -208,7 +208,7 @@ The owner you specify for this parameter must be a mailbox, mail user or mail-en
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

@@ -103,7 +103,7 @@ The Mailbox parameter specifies the identity of the hierarchy public folder mail
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

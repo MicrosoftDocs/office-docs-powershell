@@ -116,7 +116,7 @@ Otherwise, you can use any value that uniquely identifies the mailbox. For examp
 - Name
 - Alias
 - Distinguished name (DN)
-- Domain\Username
+- Domain\\Username
 - Email address
 - LegacyExchangeDN
 - SamAccountName

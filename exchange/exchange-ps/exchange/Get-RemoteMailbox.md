@@ -184,7 +184,7 @@ The Identity parameter specifies the remote mailbox that you want to view. You c
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

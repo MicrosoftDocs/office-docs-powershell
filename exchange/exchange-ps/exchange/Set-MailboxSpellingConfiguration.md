@@ -56,7 +56,7 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

@@ -61,7 +61,7 @@ The Identity parameter specifies the identity of the user. You can use any value
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

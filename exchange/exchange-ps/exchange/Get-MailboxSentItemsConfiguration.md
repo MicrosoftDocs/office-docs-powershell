@@ -64,7 +64,7 @@ The Identity parameter specifies the mailbox whose Sent Items configuration you 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

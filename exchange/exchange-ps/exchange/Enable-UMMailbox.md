@@ -86,7 +86,7 @@ The Identity parameter specifies the mailbox that you want to enable for Unified
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

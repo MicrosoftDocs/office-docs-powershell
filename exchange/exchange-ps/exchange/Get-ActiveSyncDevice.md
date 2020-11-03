@@ -72,7 +72,7 @@ The Mailbox parameter specifies the mailbox that has the associated ActiveSync d
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

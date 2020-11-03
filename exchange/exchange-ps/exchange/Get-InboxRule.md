@@ -175,7 +175,7 @@ The Mailbox parameter specifies the mailbox that contains the Inbox rule. You ca
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

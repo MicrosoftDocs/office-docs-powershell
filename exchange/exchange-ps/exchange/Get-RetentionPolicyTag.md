@@ -136,7 +136,7 @@ The Mailbox parameter returns the retention tags that are assigned to the retent
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

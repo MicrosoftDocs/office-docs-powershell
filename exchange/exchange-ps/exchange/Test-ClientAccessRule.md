@@ -155,7 +155,7 @@ The User parameter specifies the user account to test. You can use any value tha
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

@@ -133,7 +133,7 @@ The Identity parameter specifies the identity of the mailbox to search. You can 
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
@@ -176,7 +176,7 @@ The TargetMailbox parameter specifies the destination mailbox where search resul
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

@@ -72,7 +72,7 @@ The Identity parameter specifies the public folder mailbox that you want to upda
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

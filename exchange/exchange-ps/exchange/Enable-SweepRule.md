@@ -110,7 +110,7 @@ The Mailbox parameter specifies the mailbox that contains the rule you want to e
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

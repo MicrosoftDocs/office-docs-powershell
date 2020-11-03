@@ -181,7 +181,7 @@ The Identity parameter specifies the user account. You can use any value that un
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

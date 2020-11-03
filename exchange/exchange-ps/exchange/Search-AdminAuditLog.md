@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ### -UserIds
 The UserIds parameter filters the results by the user who made the change (who ran the cmdlet).
 
-A typical value for this parameter is the user principal name (UPN; for example, helpdesk@contoso.com). But, updates that were made by system accounts without email addresses might use the Domain\Username syntax (for example, NT AUTHORITY\SYSTEM (MSExchangeHMHost)).
+A typical value for this parameter is the user principal name (UPN; for example, helpdesk@contoso.com). But, updates that were made by system accounts without email addresses might use the Domain\\Username syntax (for example, NT AUTHORITY\SYSTEM (MSExchangeHMHost)).
 
 To enter multiple values, use the following syntax: User1,User2,...UserN. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "User 1","User 2",..."User N".
 

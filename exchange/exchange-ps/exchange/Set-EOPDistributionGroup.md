@@ -128,7 +128,7 @@ The ManagedBy parameter specifies one or more group owners. A group must have at
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN

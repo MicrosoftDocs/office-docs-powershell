@@ -196,7 +196,7 @@ Valid values are mailboxes or mail users in your organization. You can use any v
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- Domain\Username
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
