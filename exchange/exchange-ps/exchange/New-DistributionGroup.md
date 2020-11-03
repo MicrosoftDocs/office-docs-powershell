@@ -45,7 +45,8 @@ New-DistributionGroup [-Name] <String>
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-Type <GroupType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

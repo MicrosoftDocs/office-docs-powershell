@@ -35,12 +35,14 @@ Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParamete
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>]
+Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter>
+ [[-ActivateOnServer] <MailboxServerIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <DatabaseMountDialOverride>]
@@ -53,12 +55,15 @@ Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [[-ActivateOnServer
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
-Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>] [-MoveAllDatabasesOrNone]
+Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter>
+ [[-ActivateOnServer] <MailboxServerIdParameter>]
+ [-MoveAllDatabasesOrNone]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <DatabaseMountDialOverride>]
@@ -71,12 +76,15 @@ Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnSer
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SkipAllChecks
 ```
-Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer] <MailboxServerIdParameter> [-SkipAllChecks]
+Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter>
+ [-ActivateOnServer] <MailboxServerIdParameter>
+ [-SkipAllChecks]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <DatabaseMountDialOverride>]
@@ -89,7 +97,8 @@ Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer]
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

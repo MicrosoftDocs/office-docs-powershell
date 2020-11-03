@@ -29,19 +29,22 @@ Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> -ComponentN
  [-DomainController <Fqdn>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExtendedProperties
 ```
-Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> [-ExtendedProperties]
+Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter>
+ [-ExtendedProperties]
  [-Archive]
  [-Confirm]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

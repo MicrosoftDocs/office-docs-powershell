@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Stop-MailboxSearch [-Identity] <SearchObjectIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Stop-MailboxSearch [-Identity] <SearchObjectIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

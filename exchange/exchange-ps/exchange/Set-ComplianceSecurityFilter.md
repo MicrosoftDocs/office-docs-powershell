@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ComplianceSecurityFilter -FilterName <String> [-Action <ComplianceSecurityFilterActionType>]
- [-Confirm] [-Description <String>] [-Filters <MultiValuedProperty>] [-Region <String>]
- [-Users <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-ComplianceSecurityFilter -FilterName <String>
+ [-Action <ComplianceSecurityFilterActionType>]
+ [-Confirm]
+ [-Description <String>]
+ [-Filters <MultiValuedProperty>]
+ [-Region <String>]
+ [-Users <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

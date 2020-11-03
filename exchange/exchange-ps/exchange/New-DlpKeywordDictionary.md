@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DlpKeywordDictionary -Name <String> [-Confirm] [-Description <String>] [-FileData <Byte[]>] [-WhatIf]
+New-DlpKeywordDictionary -Name <String>
+ [-Confirm]
+ [-Description <String>]
+ [-FileData <Byte[]>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

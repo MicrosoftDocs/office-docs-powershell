@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AuditConfig [[-Identity] <PolicyIdParameter>] -Workload <MultiValuedProperty> [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+Set-AuditConfig [[-Identity] <PolicyIdParameter>] -Workload <MultiValuedProperty>
+ [-DomainController <Fqdn>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

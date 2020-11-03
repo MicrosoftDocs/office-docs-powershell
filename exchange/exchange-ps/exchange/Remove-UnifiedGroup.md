@@ -23,7 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-UnifiedGroup [-Identity] <UnifiedGroupIdParameter> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+Remove-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
+ [-Confirm]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Compare-TextMessagingVerificationCode [[-Identity] <MailboxIdParameter>] -VerificationCode <String> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Compare-TextMessagingVerificationCode [[-Identity] <MailboxIdParameter>] -VerificationCode <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,6 +59,33 @@ Compare-TextMessagingVerificationCode -Identity TonySmith -VerificationCode 1115
 This example compares the verification code 111555 to the code sent to Tony Smith's mobile phone after confirmation is given.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mailbox where you are trying to enable text messaging notifications. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -VerificationCode
 The VerificationCode parameter contains the verification code that the user specified.
@@ -107,33 +137,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox where you are trying to enable text messaging notifications. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

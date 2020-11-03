@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-OMEMessageRevocation -MessageId <String> -Revoke <Boolean> [<CommonParameters>]
+Set-OMEMessageRevocation -MessageId <String> -Revoke <Boolean>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

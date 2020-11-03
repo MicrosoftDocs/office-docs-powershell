@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-DatabaseAvailabilityGroupNetwork [-Identity] <DatabaseAvailabilityGroupNetworkIdParameter> [-Confirm]
- [-Description <String>] [-DomainController <Fqdn>] [-IgnoreNetwork <Boolean>] [-Name <String>]
- [-ReplicationEnabled <Boolean>] [-Subnets <DatabaseAvailabilityGroupSubnetId[]>] [-WhatIf]
+Set-DatabaseAvailabilityGroupNetwork [-Identity] <DatabaseAvailabilityGroupNetworkIdParameter>
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-IgnoreNetwork <Boolean>]
+ [-Name <String>]
+ [-ReplicationEnabled <Boolean>]
+ [-Subnets <DatabaseAvailabilityGroupSubnetId[]>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

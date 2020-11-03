@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-OwaMailboxPolicy [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [-IsDefault] [<CommonParameters>]
+New-OwaMailboxPolicy [-Name] <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [-IsDefault]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

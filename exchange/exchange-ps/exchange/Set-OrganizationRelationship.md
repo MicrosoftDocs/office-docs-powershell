@@ -43,7 +43,8 @@ Set-OrganizationRelationship [-Identity] <OrganizationRelationshipIdParameter>
  [-TargetAutodiscoverEpr <Uri>]
  [-TargetOwaURL <Uri>]
  [-TargetSharingEpr <Uri>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

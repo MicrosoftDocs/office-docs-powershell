@@ -22,14 +22,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Filters
 ```
-Get-CmdletExtensionAgent [-Assembly <String>] [-Enabled <Boolean>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-CmdletExtensionAgent [-Assembly <String>]
+ [-Enabled <Boolean>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-CmdletExtensionAgent [[-Identity] <CmdletExtensionAgentIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

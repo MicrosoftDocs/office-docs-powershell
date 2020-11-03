@@ -138,7 +138,8 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### AsyncParameterSet
@@ -155,7 +156,8 @@ Get-Mailbox -Async -Properties <String[]>
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

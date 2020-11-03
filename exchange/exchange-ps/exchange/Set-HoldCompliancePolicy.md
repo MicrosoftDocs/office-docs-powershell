@@ -24,9 +24,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### RetryDistribution
 ```
-Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-RetryDistribution]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -37,11 +39,13 @@ Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocation <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
- [-Enabled <Boolean>] [-Force]
+ [-Enabled <Boolean>]
+ [-Force]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemovePublicFolderLocation <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

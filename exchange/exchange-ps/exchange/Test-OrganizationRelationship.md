@@ -25,7 +25,8 @@ Test-OrganizationRelationship -UserIdentity <RecipientIdParameter>
  [[-Identity] <OrganizationRelationshipIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

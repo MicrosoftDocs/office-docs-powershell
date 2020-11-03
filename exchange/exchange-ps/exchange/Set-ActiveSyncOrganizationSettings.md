@@ -21,7 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>] [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <Boolean>] [-AllowRMSSupportForUnenlightenedApps <Boolean>] [-Confirm] [-DefaultAccessLevel <DeviceAccessLevel>] [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf] [<CommonParameters>]
+Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>]
+ [-AdminMailRecipients <MultiValuedProperty>]
+ [-AllowAccessForUnSupportedPlatform <Boolean>]
+ [-AllowRMSSupportForUnenlightenedApps <Boolean>]
+ [-Confirm]
+ [-DefaultAccessLevel <DeviceAccessLevel>]
+ [-DomainController <Fqdn>]
+ [-OtaNotificationMailInsert <String>]
+ [-UserMailInsert <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

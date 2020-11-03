@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Set1
 ```
-Test-ApplicationAccessPolicy [-Identity] <RecipientIdParameter> -AppId <String> [<CommonParameters>]
+Test-ApplicationAccessPolicy [-Identity] <RecipientIdParameter> -AppId <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

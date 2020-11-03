@@ -21,12 +21,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DatabaseAvailabilityGroup [-Name] <String> [-Confirm] [-DatabaseAvailabilityGroupIpAddresses <IPAddress[]>]
- [-DomainController <Fqdn>] [-ThirdPartyReplication <ThirdPartyReplicationMode>] [-WhatIf]
- [-WitnessDirectory <NonRootLocalLongFullPath>] [-WitnessServer <FileShareWitnessServerName>]
+New-DatabaseAvailabilityGroup [-Name] <String>
+ [-Confirm]
+ [-DatabaseAvailabilityGroupIpAddresses <IPAddress[]>]
+ [-DomainController <Fqdn>]
+ [-ThirdPartyReplication <ThirdPartyReplicationMode>]
+ [-WhatIf]
+ [-WitnessDirectory <NonRootLocalLongFullPath>]
+ [-WitnessServer <FileShareWitnessServerName>]
  [-DagConfiguration <DatabaseAvailabilityGroupConfigurationIdParameter>]
  [-ActivityState <ActivityStateOption>]
- [-FileSystem <FileSystemMode>] [<CommonParameters>]
+ [-FileSystem <FileSystemMode>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

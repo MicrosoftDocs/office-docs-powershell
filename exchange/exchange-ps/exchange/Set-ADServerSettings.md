@@ -24,21 +24,30 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-AdServerSettings -RunspaceServerSettings <RunspaceServerSettingsPresentationObject>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FullParams
 ```
-Set-AdServerSettings [-ConfigurationDomainController <Fqdn>] [-PreferredGlobalCatalog <Fqdn>] [-RecipientViewRoot <String>] [-SetPreferredDomainControllers <MultiValuedProperty>] [-ViewEntireForest <Boolean>]
+Set-AdServerSettings [-ConfigurationDomainController <Fqdn>]
+ [-PreferredGlobalCatalog <Fqdn>]
+ [-RecipientViewRoot <String>]
+ [-SetPreferredDomainControllers <MultiValuedProperty>]
+ [-ViewEntireForest <Boolean>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SingleDC
 ```
-Set-AdServerSettings [[-PreferredServer] <Fqdn>] [-RecipientViewRoot <String>] [-ViewEntireForest <Boolean>]
+Set-AdServerSettings [[-PreferredServer] <Fqdn>]
+ [-RecipientViewRoot <String>]
+ [-ViewEntireForest <Boolean>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

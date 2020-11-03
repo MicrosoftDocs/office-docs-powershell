@@ -65,7 +65,8 @@ Set-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter>
  [-Timezone <String>]
  [-TimeZoneName <UMTimeZone>]
  [-WeekStartDay <DayOfWeek>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxAuditBypassAssociation [-Identity] <MailboxAuditBypassAssociationIdParameter>
- -AuditBypassEnabled <Boolean> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Set-MailboxAuditBypassAssociation [-Identity] <MailboxAuditBypassAssociationIdParameter> -AuditBypassEnabled <Boolean>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

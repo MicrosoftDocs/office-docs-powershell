@@ -22,12 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Test-ExchangeSearch [[-Identity] <MailboxIdParameter>] [-Archive]
+Test-ExchangeSearch [[-Identity] <MailboxIdParameter>]
+ [-Archive]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IndexingTimeoutInSeconds <Int32>]
  [-MonitoringContext]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Database
@@ -37,7 +39,8 @@ Test-ExchangeSearch [-MailboxDatabase <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-IndexingTimeoutInSeconds <Int32>]
  [-MonitoringContext]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
@@ -47,7 +50,8 @@ Test-ExchangeSearch [-Server <ServerIdParameter>]
  [-DomainController <Fqdn>]
  [-IndexingTimeoutInSeconds <Int32>]
  [-MonitoringContext]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

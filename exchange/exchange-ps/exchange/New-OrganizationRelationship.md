@@ -40,7 +40,8 @@ New-OrganizationRelationship [-Name] <String> -DomainNames <MultiValuedProperty>
  [-TargetAutodiscoverEpr <Uri>]
  [-TargetOwaURL <Uri>]
  [-TargetSharingEpr <Uri>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

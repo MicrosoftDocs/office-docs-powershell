@@ -24,20 +24,33 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-MailboxExportRequestStatistics [-Identity] <MailboxExportRequestIdParameter> [-DomainController <Fqdn>]
- [-IncludeReport] [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-ReportOnly] [<CommonParameters>]
+Get-MailboxExportRequestStatistics [-Identity] <MailboxExportRequestIdParameter>
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ### MRSInstance
 ```
-Get-MailboxExportRequestStatistics -MRSInstance <Fqdn> [-DomainController <Fqdn>] [-RequestGuid <Guid>]
+Get-MailboxExportRequestStatistics -MRSInstance <Fqdn>
+ [-DomainController <Fqdn>]
+ [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
 ```
-Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter> [-DomainController <Fqdn>]
- [-IncludeReport] [-RequestGuid <Guid>] [-Diagnostic] [-DiagnosticArgument <String>] [-ReportOnly]
+Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-RequestGuid <Guid>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-ReportOnly]
  [<CommonParameters>]
 ```
 

@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights <MailboxFolderAccessRight[]>
- -User <MailboxFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-SendNotificationToUser <Boolean>] [-SharingPermissionFlags <MailboxFolderPermissionFlags>] [<CommonParameters>]
+Add-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights <MailboxFolderAccessRight[]> -User <MailboxFolderUserIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-SendNotificationToUser <Boolean>]
+ [-SharingPermissionFlags <MailboxFolderPermissionFlags>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,6 +59,37 @@ Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User laura@con
 In Exchange Online, this example adds Laura as a calendar delegate to Ayla's mailbox with access to private items.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the target mailbox and folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
+
+For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Inbox\Reports`.
+
+```yaml
+Type: MailboxFolderIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -AccessRights
 The AccessRights parameter specifies the permissions that you want to add for the user on the mailbox folder.
@@ -100,37 +136,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the target mailbox and folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
-
-For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Inbox\Reports`.
-
-```yaml
-Type: MailboxFolderIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -200,22 +205,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SendNotificationToUser
 This parameter is available only in the cloud-based service.
 
@@ -260,6 +249,22 @@ Type: MailboxFolderPermissionFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

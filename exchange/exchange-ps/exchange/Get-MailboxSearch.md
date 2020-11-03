@@ -30,7 +30,8 @@ Get-MailboxSearch [[-Identity] <SearchObjectIdParameter>]
 
 ### EwsStoreObjectIdentity
 ```
-Get-MailboxSearch [[-Identity] <EwsStoreObjectIdParameter>] [-ShowDeletionInProgressSearches]
+Get-MailboxSearch [[-Identity] <EwsStoreObjectIdParameter>]
+ [-ShowDeletionInProgressSearches]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
@@ -38,7 +39,8 @@ Get-MailboxSearch [[-Identity] <EwsStoreObjectIdParameter>] [-ShowDeletionInProg
 
 ### InPlaceHoldIdentity
 ```
-Get-MailboxSearch -InPlaceHoldIdentity <String> [-ShowDeletionInProgressSearches]
+Get-MailboxSearch -InPlaceHoldIdentity <String>
+ [-ShowDeletionInProgressSearches]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]

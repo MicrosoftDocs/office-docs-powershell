@@ -19,7 +19,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-RegulatoryComplianceUI -Enabled <Boolean> [<CommonParameters>]
+Set-RegulatoryComplianceUI -Enabled <Boolean>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

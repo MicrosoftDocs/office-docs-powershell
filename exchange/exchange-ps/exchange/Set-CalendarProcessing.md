@@ -58,7 +58,8 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-ResourceDelegates <RecipientIdParameter[]>]
  [-ScheduleOnlyDuringWorkHours <Boolean>]
  [-TentativePendingApproval <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

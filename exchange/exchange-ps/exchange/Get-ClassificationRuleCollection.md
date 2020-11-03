@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ClassificationRuleCollection [[-Identity] <ClassificationRuleCollectionIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

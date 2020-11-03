@@ -21,12 +21,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SenderReputationConfig [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
- [-ExternalMailEnabled <Boolean>] [-InternalMailEnabled <Boolean>]
- [-OpenProxyDetectionEnabled <Boolean>] [-ProxyServerName <String>] [-ProxyServerPort <Int32>]
+Set-SenderReputationConfig [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExternalMailEnabled <Boolean>]
+ [-InternalMailEnabled <Boolean>]
+ [-OpenProxyDetectionEnabled <Boolean>]
+ [-ProxyServerName <String>]
+ [-ProxyServerPort <Int32>]
  [-ProxyServerType <ProxyType>]
- [-SenderBlockingEnabled <Boolean>] [-SenderBlockingPeriod <Int32>] [-SrlBlockThreshold <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-SenderBlockingEnabled <Boolean>]
+ [-SenderBlockingPeriod <Int32>]
+ [-SrlBlockThreshold <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -49,7 +49,8 @@ Set-Mailboxsearch [-Identity] <SearchObjectIdParameter>
  [-StatisticsStartIndex <Int32>]
  [-StatusMailRecipients <RecipientIdParameter[]>]
  [-TargetMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

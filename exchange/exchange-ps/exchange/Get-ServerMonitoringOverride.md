@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ServerMonitoringOverride -Server <ServerIdParameter> [<CommonParameters>]
+Get-ServerMonitoringOverride -Server <ServerIdParameter>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

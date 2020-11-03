@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ClientAccessArray [-Identity] <ClientAccessArrayIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Fqdn <Fqdn>] [-Name <String>] [-Site <AdSiteIdParameter>] [-WhatIf] [<CommonParameters>]
+Set-ClientAccessArray [-Identity] <ClientAccessArrayIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Fqdn <Fqdn>]
+ [-Name <String>]
+ [-Site <AdSiteIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

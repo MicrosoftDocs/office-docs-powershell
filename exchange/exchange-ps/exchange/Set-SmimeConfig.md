@@ -48,7 +48,8 @@ Set-SmimeConfig [[-Identity] <OrganizationIdParameter>]
  [-OWAUseKeyIdentifier <Boolean>]
  [-OWAUseSecondaryProxiesWhenFindingCertificates <Boolean>]
  [-SMIMECertificateIssuingCA <Byte[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

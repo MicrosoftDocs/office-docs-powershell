@@ -22,12 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Rehome
 ```
-Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-RehomeRequest]
+Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
+ [-RehomeRequest]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity

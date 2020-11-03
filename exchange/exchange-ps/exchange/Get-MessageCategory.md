@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MessageCategory [[-Identity] <MessageCategoryIdParameter>] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
+Get-MessageCategory [[-Identity] <MessageCategoryIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

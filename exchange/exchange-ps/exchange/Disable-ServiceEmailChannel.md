@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-ServiceEmailChannel [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Disable-ServiceEmailChannel [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

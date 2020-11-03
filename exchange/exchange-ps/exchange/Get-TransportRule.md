@@ -21,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-TransportRule [[-Identity] <RuleIdParameter>] [-DomainController <Fqdn>]
- [-State <RuleState>] [-DlpPolicy <String>]
- [-Filter <String>] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-TransportRule [[-Identity] <RuleIdParameter>]
+ [-DomainController <Fqdn>]
+ [-State <RuleState>]
+ [-DlpPolicy <String>]
+ [-Filter <String>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

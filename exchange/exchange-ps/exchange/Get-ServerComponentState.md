@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ServerComponentState [-Identity] <ServerIdParameter> [-Component <String>] [-DomainController <Fqdn>]
+Get-ServerComponentState [-Identity] <ServerIdParameter>
+ [-Component <String>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

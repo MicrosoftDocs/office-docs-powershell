@@ -27,7 +27,8 @@ Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Preview
@@ -37,7 +38,8 @@ Get-ComplianceSearchAction [-Preview]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Purge
@@ -47,7 +49,8 @@ Get-ComplianceSearchAction [-Purge]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Export
@@ -57,7 +60,8 @@ Get-ComplianceSearchAction [-Export]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

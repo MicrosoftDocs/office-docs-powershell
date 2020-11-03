@@ -28,7 +28,8 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <Mailbox
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
@@ -37,12 +38,14 @@ Remove-MailboxPermission -Instance <MailboxAcePresentationObject>
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
  [-Deny]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
  [[-Identity] <MailboxIdParameter>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-ResetDefault]
  [-User <SecurityPrincipalIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Owner
@@ -51,12 +54,14 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ClearAutoMapping
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
+Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-ClearAutoMapping]
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
  [-Deny]
@@ -64,16 +69,19 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-User <SecurityPrincipalIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ResetDefault
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ResetDefault]
+Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-ResetDefault]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ClientAccessServer2010
 ```
-Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-AllowUnsecureAccess]
+Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+ [-AllowUnsecureAccess]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LightMode]
@@ -34,7 +35,8 @@ Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-Allow
  [-Timeout <UInt32>]
  [-TrustAnySSLCertificate]
  [-UseAutodiscoverForClientAccessServer]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AutoDiscoverServer
@@ -45,27 +47,32 @@ Test-WebServicesConnectivity -AutoDiscoverServer <ClientAccessServerIdParameter>
  [-LightMode]
  [-MailboxCredential <PSCredential>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MonitoringContext
 ```
-Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] [-MonitoringContext]
+Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>]
+ [-MonitoringContext]
  [-Confirm]
  [-LightMode]
  [-MailboxCredential <PSCredential>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ClientAccessServer
 ```
-Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] [-ClientAccessServer <ClientAccessServerIdParameter>]
+Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>]
+ [-ClientAccessServer <ClientAccessServerIdParameter>]
  [-Confirm]
  [-LightMode]
  [-MailboxCredential <PSCredential>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -60,12 +60,14 @@ New-SendConnector -Name <String> -AddressSpaces <MultiValuedProperty>
  [-TlsDomain <SmtpDomainWithSubdomains>]
  [-Usage <UsageType>]
  [-UseExternalDNSServersEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LinkedReceiveConnector
 ```
-New-SendConnector [-Name] <String> [-LinkedReceiveConnector <ReceiveConnectorIdParameter>]
+New-SendConnector [-Name] <String>
+ [-LinkedReceiveConnector <ReceiveConnectorIdParameter>]
  [-AuthenticationCredential <PSCredential>]
  [-Comment <String>]
  [-Confirm]
@@ -98,7 +100,8 @@ New-SendConnector [-Name] <String> [-LinkedReceiveConnector <ReceiveConnectorIdP
  [-TlsDomain <SmtpDomainWithSubdomains>]
  [-Usage <UsageType>]
  [-UseExternalDNSServersEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

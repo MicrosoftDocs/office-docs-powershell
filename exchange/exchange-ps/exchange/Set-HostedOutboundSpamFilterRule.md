@@ -35,7 +35,8 @@ Set-HostedOutboundSpamFilterRule [-Identity] <RuleIdParameter>
  [-Name <String>]
  [-Priority <Int32>]
  [-SenderDomainIs <Word[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

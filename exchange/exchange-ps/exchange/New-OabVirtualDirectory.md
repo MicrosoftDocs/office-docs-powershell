@@ -21,11 +21,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-OabVirtualDirectory [-Confirm] [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
- [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-Path <String>] [-PollInterval <Int32>] [-Recovery]
- [-RequireSSL <Boolean>] [-Server <ServerIdParameter>] [-WebSiteName <String>] [-WhatIf]
- [-Role <VirtualDirectoryRole>] [<CommonParameters>]
+New-OabVirtualDirectory [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-Path <String>]
+ [-PollInterval <Int32>]
+ [-Recovery]
+ [-RequireSSL <Boolean>]
+ [-Server <ServerIdParameter>]
+ [-WebSiteName <String>]
+ [-WhatIf]
+ [-Role <VirtualDirectoryRole>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

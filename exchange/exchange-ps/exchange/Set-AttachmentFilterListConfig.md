@@ -28,7 +28,8 @@ Set-AttachmentFilterListConfig
  [-DomainController <Fqdn>]
  [-ExceptionConnectors <MultiValuedProperty>]
  [-RejectResponse <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

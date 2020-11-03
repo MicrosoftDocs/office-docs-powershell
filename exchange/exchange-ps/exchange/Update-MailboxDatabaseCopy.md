@@ -22,15 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CancelSeed
 ```
-Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-CancelSeed]
+Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
+ [-CancelSeed]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-BeginSeed] [-Force] [-Network <DatabaseAvailabilityGroupNetworkIdParameter>] [-SecondaryDatabasePartitionOnly] [-SourceServer <ServerIdParameter>]
+Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
+ [-BeginSeed]
+ [-Force]
+ [-Network <DatabaseAvailabilityGroupNetworkIdParameter>]
+ [-SecondaryDatabasePartitionOnly]
+ [-SourceServer <ServerIdParameter>]
  [-CatalogOnly]
  [-Confirm]
  [-DatabaseOnly]
@@ -42,12 +49,14 @@ Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-BeginSeed] [-
  [-NoThrottle]
  [-PrimaryDatabasePartitionOnly]
  [-SafeDeleteExistingFiles]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExplicitServer
 ```
-Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter> [-MaximumSeedsInParallel <Int32>]
+Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter>
+ [-MaximumSeedsInParallel <Int32>]
  [-CatalogOnly]
  [-Confirm]
  [-DatabaseOnly]
@@ -59,7 +68,8 @@ Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter> [-MaximumSeedsInPa
  [-NoThrottle]
  [-PrimaryDatabasePartitionOnly]
  [-SafeDeleteExistingFiles]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

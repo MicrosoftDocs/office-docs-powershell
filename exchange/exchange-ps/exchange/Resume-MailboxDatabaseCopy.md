@@ -22,18 +22,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ReplicationOnly]
+Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
+ [-ReplicationOnly]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DisableReplayLag
 ```
-Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-DisableReplayLag] [-DisableReplayLagReason <String>]
+Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
+ [-DisableReplayLag]
+ [-DisableReplayLagReason <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

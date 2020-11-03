@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AnomalousOperationAuditAlert
 ```
-New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Type <AlertType>
+New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty> -Type <AlertType>
+ [-Operation <MultiValuedProperty>]
  [-Category <AlertRuleCategory>]
  [-Condition <String>]
  [-Confirm]
@@ -34,12 +35,14 @@ New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedPr
  [-ScopeLevel <AlertScopeLevel>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SimpleAggregationAuditAlert
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
+ [-Operation <MultiValuedProperty>]
  [-Category <AlertRuleCategory>]
  [-Condition <String>]
  [-Confirm]
@@ -51,12 +54,14 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <
  [-ScopeLevel <AlertScopeLevel>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <AlertType>]
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty>
+ [-Type <AlertType>]
  [-Category <AlertRuleCategory>]
  [-Confirm]
  [-Description <String>]
@@ -66,7 +71,8 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <M
  [-RecordType <AuditRecordType>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

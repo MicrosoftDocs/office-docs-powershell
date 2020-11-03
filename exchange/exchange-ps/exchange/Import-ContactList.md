@@ -24,18 +24,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Data
 ```
-Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVData <Byte[]>
+Import-ContactList [-Identity] <MailboxIdParameter> -CSVData <Byte[]>
+ [-CSV]
  [-DateCultureName] <String>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Stream
 ```
-Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVStream <Stream>
+Import-ContactList [-Identity] <MailboxIdParameter> -CSVStream <Stream>
+ [-CSV]
  [-DateCultureName] <String>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

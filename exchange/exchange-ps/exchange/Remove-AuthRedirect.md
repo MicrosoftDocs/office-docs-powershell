@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-AuthRedirect [-Identity] <AuthRedirectIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Remove-AuthRedirect [-Identity] <AuthRedirectIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

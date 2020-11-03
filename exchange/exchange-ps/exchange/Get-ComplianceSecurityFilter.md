@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceSecurityFilter [-Action <ComplianceSecurityFilterActionType>] [-Confirm]
- [-FilterName <String>] [-User <String>] [-WhatIf] [<CommonParameters>]
+Get-ComplianceSecurityFilter [-Action <ComplianceSecurityFilterActionType>]
+ [-Confirm]
+ [-FilterName <String>]
+ [-User <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

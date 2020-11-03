@@ -22,7 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-AuditConfigurationRule [-Identity] <ComplianceRuleIdParameter> -AuditOperation <MultiValuedProperty>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

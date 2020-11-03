@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-ArchiveConnectivity [-UserSmtp] <SmtpAddress> [-Confirm] [-WhatIf] [-IncludeArchiveMRMConfiguration]
- [-MessageId <String>] [<CommonParameters>]
+Test-ArchiveConnectivity [-UserSmtp] <SmtpAddress>
+ [-Confirm]
+ [-WhatIf]
+ [-IncludeArchiveMRMConfiguration]
+ [-MessageId <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

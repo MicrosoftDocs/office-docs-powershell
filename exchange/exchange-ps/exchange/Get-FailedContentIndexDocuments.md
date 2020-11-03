@@ -31,7 +31,8 @@ Get-FailedContentIndexDocuments [-Identity] <MailboxIdParameter>
  [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Database
@@ -44,7 +45,8 @@ Get-FailedContentIndexDocuments -MailboxDatabase <DatabaseIdParameter>
  [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
@@ -57,7 +59,8 @@ Get-FailedContentIndexDocuments -Server <ServerIdParameter>
  [-FailureMode <FailureMode>]
  [-ResultSize <Unlimited>]
  [-StartDate <DateTime>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

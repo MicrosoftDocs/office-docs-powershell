@@ -31,7 +31,8 @@ New-UMDialPlan [-Name] <String> -CountryOrRegionCode <String> -NumberOfDigitsInE
  [-GenerateUMMailboxPolicy <Boolean>]
  [-URIType <UMURIType>]
  [-VoIPSecurity <UMVoIPSecurityType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

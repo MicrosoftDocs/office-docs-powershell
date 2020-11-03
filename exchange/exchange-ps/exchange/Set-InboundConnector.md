@@ -45,7 +45,8 @@ Set-InboundConnector [-Identity] <InboundConnectorIdParameter>
  [-SenderIPAddresses <MultiValuedProperty>]
  [-TlsSenderCertificateName <TlsCertificate>]
  [-TreatMessagesAsInternal <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

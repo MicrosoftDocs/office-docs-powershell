@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-SmtpConnectivity [[-Identity] <ServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-MonitoringContext <Boolean>] [-WhatIf] [<CommonParameters>]
+Test-SmtpConnectivity [[-Identity] <ServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MonitoringContext <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

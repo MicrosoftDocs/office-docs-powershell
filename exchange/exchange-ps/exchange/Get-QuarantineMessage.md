@@ -26,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Details
 ```
-Get-QuarantineMessage -Identity <QuarantineMessageIdentity> [-SenderAddress <String[]>]
+Get-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-SenderAddress <String[]>]
  [<CommonParameters>]
 ```
 

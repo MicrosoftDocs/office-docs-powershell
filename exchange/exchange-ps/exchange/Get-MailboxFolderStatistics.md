@@ -24,17 +24,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive] [-DiagnosticInfo <String>]
- [-DomainController <Fqdn>] [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
- [-IncludeAnalysis] [-IncludeOldestAndNewestItems] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-Archive]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ### AuditLog
 ```
-Get-MailboxFolderStatistics [-AuditLog] [-DomainController <Fqdn>]
+Get-MailboxFolderStatistics [-AuditLog]
+ [-DomainController <Fqdn>]
  [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
- [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-IncludeAnalysis]
- [-IncludeOldestAndNewestItems] [-DiagnosticInfo <String>] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [[-Identity] <GeneralMailboxOrMailUserIdParameter>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
+ [-DiagnosticInfo <String>]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

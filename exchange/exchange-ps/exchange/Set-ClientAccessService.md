@@ -22,18 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AlternateServiceAccount
 ```
-Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter> [-AlternateServiceAccountCredential <PSCredential[]>] [-CleanUpInvalidAlternateServiceAccountCredentials] [-RemoveAlternateServiceAccountCredentials]
+Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter>
+ [-AlternateServiceAccountCredential <PSCredential[]>]
+ [-CleanUpInvalidAlternateServiceAccountCredentials]
+ [-RemoveAlternateServiceAccountCredentials]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter> [-Array <ClientAccessArrayIdParameter>] [-AutoDiscoverServiceInternalUri <Uri>] [-AutoDiscoverSiteScope <MultiValuedProperty>]
+Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter>
+ [-Array <ClientAccessArrayIdParameter>]
+ [-AutoDiscoverServiceInternalUri <Uri>]
+ [-AutoDiscoverSiteScope <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

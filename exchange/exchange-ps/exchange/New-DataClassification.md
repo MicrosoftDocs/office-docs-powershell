@@ -24,8 +24,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DataClassification [-Name] <String> -Description <String> -Fingerprints <MultiValuedProperty>
- [-ClassificationRuleCollectionIdentity <ClassificationRuleCollectionIdParameter>] [-Confirm]
- [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-WhatIf] [<CommonParameters>]
+ [-ClassificationRuleCollectionIdentity <ClassificationRuleCollectionIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

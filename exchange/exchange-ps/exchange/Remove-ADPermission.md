@@ -32,7 +32,8 @@ Remove-ADPermission [-Identity] <ADRawEntryIdParameter> -User <SecurityPrincipal
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Owner
@@ -40,7 +41,8 @@ Remove-ADPermission [-Identity] <ADRawEntryIdParameter> -User <SecurityPrincipal
 Remove-ADPermission [-Identity] <ADRawEntryIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
@@ -57,7 +59,8 @@ Remove-ADPermission -Instance <ADAcePresentationObject>
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]
  [-User <SecurityPrincipalIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

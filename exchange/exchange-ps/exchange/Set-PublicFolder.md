@@ -45,7 +45,8 @@ Set-PublicFolder [-Identity] <PublicFolderIdParameter>
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseReplicationSchedule <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,9 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DlpPolicy [[-Name] <String>] [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-Mode <RuleMode>] [-Parameters <Hashtable>] [-State <RuleState>]
- [-Template <String>] [-TemplateData <Byte[]>] [-WhatIf] [<CommonParameters>]
+New-DlpPolicy [[-Name] <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Mode <RuleMode>]
+ [-Parameters <Hashtable>]
+ [-State <RuleState>]
+ [-Template <String>]
+ [-TemplateData <Byte[]>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

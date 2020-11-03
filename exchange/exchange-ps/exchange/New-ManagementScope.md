@@ -27,7 +27,8 @@ New-ManagementScope [-Name] <String> -DatabaseList <DatabaseIdParameter[]>
  [-DomainController <Fqdn>]
  [-Exclusive]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DatabaseFilter
@@ -37,7 +38,8 @@ New-ManagementScope [-Name] <String> -DatabaseRestrictionFilter <String>
  [-DomainController <Fqdn>]
  [-Exclusive]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RecipientFilter
@@ -48,7 +50,8 @@ New-ManagementScope [-Name] <String> -RecipientRestrictionFilter <String>
  [-Exclusive]
  [-Force]
  [-RecipientRoot <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ServerList
@@ -58,7 +61,8 @@ New-ManagementScope [-Name] <String> -ServerList <ServerIdParameter[]>
  [-DomainController <Fqdn>]
  [-Exclusive]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ServerFilter
@@ -68,7 +72,8 @@ New-ManagementScope [-Name] <String> -ServerRestrictionFilter <String>
  [-DomainController <Fqdn>]
  [-Exclusive]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

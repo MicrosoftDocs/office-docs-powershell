@@ -21,13 +21,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-HybridConfiguration [-ClientAccessServers <MultiValuedProperty>] [-Confirm] [-DomainController <Fqdn>]
- [-Domains <MultiValuedProperty>] [-ExternalIPAddresses <MultiValuedProperty>]
- [-Features <MultiValuedProperty>] [-OnPremisesSmartHost <SmtpDomain>]
- [-SecureMailCertificateThumbprint <String>] [-TransportServers <MultiValuedProperty>] [-WhatIf]
- [-EdgeTransportServers <MultiValuedProperty>] [-ReceivingTransportServers <MultiValuedProperty>]
- [-SendingTransportServers <MultiValuedProperty>] [-ServiceInstance <Int32>]
- [-TlsCertificateName <SmtpX509Identifier>] [<CommonParameters>]
+New-HybridConfiguration [-ClientAccessServers <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Domains <MultiValuedProperty>]
+ [-ExternalIPAddresses <MultiValuedProperty>]
+ [-Features <MultiValuedProperty>]
+ [-OnPremisesSmartHost <SmtpDomain>]
+ [-SecureMailCertificateThumbprint <String>]
+ [-TransportServers <MultiValuedProperty>]
+ [-WhatIf]
+ [-EdgeTransportServers <MultiValuedProperty>]
+ [-ReceivingTransportServers <MultiValuedProperty>]
+ [-SendingTransportServers <MultiValuedProperty>]
+ [-ServiceInstance <Int32>]
+ [-TlsCertificateName <SmtpX509Identifier>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

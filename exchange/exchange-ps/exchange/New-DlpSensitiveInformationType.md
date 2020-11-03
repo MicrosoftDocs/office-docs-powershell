@@ -22,8 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpSensitiveInformationType [-Name] <String> -Description <String> -Fingerprints <MultiValuedProperty>
- [-SensitiveInformationTypeRuleCollectionIdentity <SensitiveInformationTypeRuleCollectionIdParameter>] [-Confirm]
- [-Locale <CultureInfo>] [-WhatIf] [<CommonParameters>]
+ [-SensitiveInformationTypeRuleCollectionIdentity <SensitiveInformationTypeRuleCollectionIdParameter>]
+ [-Confirm]
+ [-Locale <CultureInfo>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,12 +21,29 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-SystemHealth [-ADCredentials <PSCredential>] [-Analyze] [-Collect] [-ConfigurationData <Byte[]>]
- [-ConfigurationFileLocation <LongPath>] [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-DownloadConfigurationUpdates] [-ExchangeCredentials <PSCredential>] [-Export] [-GenerateEvents]
- [-GenerateSQMData] [-MaxThreads <Int32>] [-MergeFileLocation <LongPath>] [-OutData]
- [-OutFileLocation <LongPath>] [-Roles <String[]>] [-ScanType <String>] [-ServerList <String[]>]
- [-Timeout <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
+Test-SystemHealth [-ADCredentials <PSCredential>]
+ [-Analyze]
+ [-Collect]
+ [-ConfigurationData <Byte[]>]
+ [-ConfigurationFileLocation <LongPath>]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-DownloadConfigurationUpdates]
+ [-ExchangeCredentials <PSCredential>]
+ [-Export]
+ [-GenerateEvents]
+ [-GenerateSQMData]
+ [-MaxThreads <Int32>]
+ [-MergeFileLocation <LongPath>]
+ [-OutData]
+ [-OutFileLocation <LongPath>]
+ [-Roles <String[]>]
+ [-ScanType <String>]
+ [-ServerList <String[]>]
+ [-Timeout <EnhancedTimeSpan>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Suspend-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-SuspendComment <String>] [-WhatIf] [<CommonParameters>]
+Suspend-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-SuspendComment <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

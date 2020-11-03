@@ -44,7 +44,8 @@ Set-IRMConfiguration [-Identity <OrganizationIdParameter>]
  [-SimplifiedClientAccessEnabled <Boolean>]
  [-SimplifiedClientAccessEncryptOnlyDisabled <Boolean>]
  [-TransportDecryptionSetting <TransportDecryptionSetting>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -268,7 +269,7 @@ The ExternalLicensingEnabled parameter specifies whether Exchange will try to ac
 Valid values are:
 
 - $true: Exchange will try to acquire licenses from clusters other than the one it is configured to use. This value can help prevent denial of service (DoS) attacks.
-- $false: Exchange will try to acquire licenses only from clusters that it is configured to use. This is the default value. The *LicensingLocation* parameter specifies the list of allowed clusters. 
+- $false: Exchange will try to acquire licenses only from clusters that it is configured to use. This is the default value. The *LicensingLocation* parameter specifies the list of allowed clusters.
 
 ```yaml
 Type: Boolean

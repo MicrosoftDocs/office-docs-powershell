@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-PolicyTipConfig [-Identity] <PolicyTipConfigIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Value <String>] [-WhatIf] [<CommonParameters>]
+Set-PolicyTipConfig [-Identity] <PolicyTipConfigIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Value <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

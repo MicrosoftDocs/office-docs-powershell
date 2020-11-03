@@ -46,7 +46,8 @@ New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddr
  [-DomainController <Fqdn>]
  [-Priority <EmailAddressPolicyPriority>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AllTemplatesWithCustomFilter
@@ -57,7 +58,8 @@ New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddr
  [-DomainController <Fqdn>]
  [-Priority <EmailAddressPolicyPriority>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SMTPTemplateWithPrecannedFilter
@@ -85,7 +87,8 @@ New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <Stri
  [-DomainController <Fqdn>]
  [-Priority <EmailAddressPolicyPriority>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SMTPTemplateWithCustomFilter
@@ -95,12 +98,15 @@ New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <Stri
  [-DomainController <Fqdn>]
  [-Priority <EmailAddressPolicyPriority>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AllTemplatesForUnifiedGroupRecipientsFilter
 ```
-New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection> [-IncludeUnifiedGroupRecipients] [-ManagedByFilter <String>]
+New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection>
+ [-IncludeUnifiedGroupRecipients]
+ [-ManagedByFilter <String>]
  [-Confirm]
  [-DisabledEmailAddressTemplates <ProxyAddressTemplateCollection>]
  [-DomainController <Fqdn>]
@@ -112,12 +118,15 @@ New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddr
 
 ### SMTPTemplateForUnifiedGroupRecipientsFilter
 ```
-New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String> [-IncludeUnifiedGroupRecipients] [-ManagedByFilter <String>]
+New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String>
+ [-IncludeUnifiedGroupRecipients]
+ [-ManagedByFilter <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Priority <EmailAddressPolicyPriority>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

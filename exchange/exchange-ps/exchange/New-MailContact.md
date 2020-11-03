@@ -40,7 +40,8 @@ New-MailContact -Name <String> -ExternalEmailAddress <ProxyAddress>
  [-PrimarySmtpAddress <SmtpAddress>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-UsePreferMessageFormat <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

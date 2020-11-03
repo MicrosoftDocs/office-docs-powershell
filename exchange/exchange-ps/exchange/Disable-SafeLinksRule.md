@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-SafeLinksRule [-Identity] <RuleIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Disable-SafeLinksRule [-Identity] <RuleIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

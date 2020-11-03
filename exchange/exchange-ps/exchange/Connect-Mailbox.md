@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Equipment
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Equipment]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter>
+ [-Database] <DatabaseIdParameter>
+ [-Equipment]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -38,7 +40,8 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
 
 ### Linked
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> -LinkedDomainController <Fqdn> -LinkedMasterAccount <UserIdParameter>
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter>
+ [-Database] <DatabaseIdParameter> -LinkedDomainController <Fqdn> -LinkedMasterAccount <UserIdParameter>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -49,12 +52,15 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
  [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-User <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Room
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Room]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter>
+ [-Database] <DatabaseIdParameter>
+ [-Room]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -64,12 +70,15 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
  [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-User <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Shared
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Shared]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter>
+ [-Database] <DatabaseIdParameter>
+ [-Shared]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -79,21 +88,29 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
  [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-User <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ValidateOnly
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-ValidateOnly]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter>
+ [-Database] <DatabaseIdParameter>
+ [-ValidateOnly]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### User
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-AllowLegacyDNMismatch] [-Archive]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter>
+ [-Database] <DatabaseIdParameter>
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-AllowLegacyDNMismatch]
+ [-Archive]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -103,7 +120,8 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
  [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-User <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -44,7 +44,8 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
  [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

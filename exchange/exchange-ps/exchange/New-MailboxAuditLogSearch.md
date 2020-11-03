@@ -32,7 +32,8 @@ New-MailboxAuditLogSearch -EndDate <ExDateTime> -StartDate <ExDateTime> -StatusM
  [-Name <String>]
  [-Operations <MultiValuedProperty>]
  [-ShowDetails]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

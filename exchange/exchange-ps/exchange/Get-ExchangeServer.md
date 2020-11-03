@@ -26,14 +26,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-ExchangeServer -Domain <Fqdn>
  [-DomainController <Fqdn>]
- [-Status] [<CommonParameters>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-ExchangeServer [[-Identity] <ServerIdParameter>]
  [-DomainController <Fqdn>]
- [-Status] [<CommonParameters>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

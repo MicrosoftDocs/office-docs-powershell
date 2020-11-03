@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Restore-DetailsTemplate [-Identity] <DetailsTemplateIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Restore-DetailsTemplate [-Identity] <DetailsTemplateIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Uninstall-TransportAgent [-Identity] <TransportAgentObjectId> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-TransportService <TransportService>] [<CommonParameters>]
+Uninstall-TransportAgent [-Identity] <TransportAgentObjectId>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [-TransportService <TransportService>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,10 +21,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-ReplicationHealth [[-Identity] <ServerIdParameter>] [-ActiveDirectoryTimeout <Int32>] [-Confirm]
- [-DomainController <Fqdn>] [-MonitoringContext <Boolean>] [-OutputObjects]
- [-TransientEventSuppressionWindow <UInt32>] [-WhatIf]
- [-DatabaseAvailabilityGroup <DatabaseAvailabilityGroupIdParameter>] [<CommonParameters>]
+Test-ReplicationHealth [[-Identity] <ServerIdParameter>]
+ [-ActiveDirectoryTimeout <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MonitoringContext <Boolean>]
+ [-OutputObjects]
+ [-TransientEventSuppressionWindow <UInt32>]
+ [-WhatIf]
+ [-DatabaseAvailabilityGroup <DatabaseAvailabilityGroupIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

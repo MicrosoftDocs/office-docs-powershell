@@ -28,7 +28,8 @@ New-RetentionPolicy [-Name] <String>
  [-IsDefaultArbitrationMailbox]
  [-RetentionId <Guid>]
  [-RetentionPolicyTagLinks <RetentionPolicyTagIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

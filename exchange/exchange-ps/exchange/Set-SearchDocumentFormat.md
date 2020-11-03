@@ -23,8 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Enabled <Boolean> [-Confirm]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Set-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Enabled <Boolean>
+ [-Confirm]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

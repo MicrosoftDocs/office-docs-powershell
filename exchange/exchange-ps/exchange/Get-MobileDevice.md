@@ -32,7 +32,8 @@ Get-MobileDevice -Mailbox <MailboxIdParameter>
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -47,7 +48,8 @@ Get-MobileDevice [[-Identity] <MobileDeviceIdParameter>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

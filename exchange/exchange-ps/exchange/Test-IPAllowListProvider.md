@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-IPAllowListProvider [-Identity] <IPAllowListProviderIdParameter> -IPAddress <IPAddress> [-Confirm]
- [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Test-IPAllowListProvider [-Identity] <IPAllowListProviderIdParameter> -IPAddress <IPAddress>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

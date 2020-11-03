@@ -20,8 +20,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ExchangeDiagnosticInfo [-Argument <String>] [-Component <String>] [-Process <String>]
- [-Server <ServerIdParameter>] [-Unlimited] [<CommonParameters>]
+Get-ExchangeDiagnosticInfo [-Argument <String>]
+ [-Component <String>]
+ [-Process <String>]
+ [-Server <ServerIdParameter>]
+ [-Unlimited]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

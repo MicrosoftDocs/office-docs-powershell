@@ -27,7 +27,8 @@ Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -DatabaseRestrictio
  [-DomainController <Fqdn>]
  [-Force]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ServerFilter
@@ -37,17 +38,21 @@ Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -ServerRestrictionF
  [-DomainController <Fqdn>]
  [-Force]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RecipientFilter
 ```
-Set-ManagementScope [-Identity] <ManagementScopeIdParameter> [-RecipientRestrictionFilter <String>] [-RecipientRoot <OrganizationalUnitIdParameter>]
+Set-ManagementScope [-Identity] <ManagementScopeIdParameter>
+ [-RecipientRestrictionFilter <String>]
+ [-RecipientRoot <OrganizationalUnitIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

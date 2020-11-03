@@ -23,11 +23,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-ActiveSyncConnectivity [[-ClientAccessServer] <ServerIdParameter>] [[-URL] <String>]
- [-AllowUnsecureAccess] [-Confirm] [-DomainController <Fqdn>] [-LightMode] [-MailboxCredential <PSCredential>]
- [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-MonitoringInstance <String>]
- [-ResetTestAccountCredentials] [-Timeout <UInt32>] [-TrustAnySSLCertificate]
- [-UseAutodiscoverForClientAccessServer] [-WhatIf] [<CommonParameters>]
+Test-ActiveSyncConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+ [[-URL] <String>]
+ [-AllowUnsecureAccess]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-MailboxCredential <PSCredential>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-MonitoringInstance <String>]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-UseAutodiscoverForClientAccessServer]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

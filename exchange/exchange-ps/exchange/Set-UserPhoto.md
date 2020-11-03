@@ -22,13 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CancelPhoto
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-Cancel]
+Set-UserPhoto [-Identity] <MailboxIdParameter>
+ [-Cancel]
  [-Confirm]
  [-GroupMailbox]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadPhotoData
@@ -39,18 +41,23 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureData <Byte[]>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadPreview
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-PictureData <Byte[]>] [-PictureStream <Stream>] [-Preview]
+Set-UserPhoto [-Identity] <MailboxIdParameter>
+ [-PictureData <Byte[]>]
+ [-PictureStream <Stream>]
+ [-Preview]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadPhotoStream
@@ -61,18 +68,21 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureStream <Stream>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SavePhoto
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-Save]
+Set-UserPhoto [-Identity] <MailboxIdParameter>
+ [-Save]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

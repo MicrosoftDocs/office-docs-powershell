@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ManagementScope [[-Identity] <ManagementScopeIdParameter>] [-DomainController <Fqdn>]
- [-Exclusive <Boolean>] [-Orphan] [<CommonParameters>]
+Get-ManagementScope [[-Identity] <ManagementScopeIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Exclusive <Boolean>]
+ [-Orphan]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

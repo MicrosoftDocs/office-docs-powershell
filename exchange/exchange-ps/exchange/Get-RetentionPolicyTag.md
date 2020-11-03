@@ -25,15 +25,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-RetentionPolicyTag [[-Identity] <RetentionPolicyTagIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludeSystemTags]
- [-Types <ElcFolderType[]>] [<CommonParameters>]
+ [-Types <ElcFolderType[]>]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
-Get-RetentionPolicyTag [-Mailbox <MailboxIdParameter>] [-OptionalInMailbox]
+Get-RetentionPolicyTag [-Mailbox <MailboxIdParameter>]
+ [-OptionalInMailbox]
  [-DomainController <Fqdn>]
  [-IncludeSystemTags]
- [-Types <ElcFolderType[]>] [<CommonParameters>]
+ [-Types <ElcFolderType[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

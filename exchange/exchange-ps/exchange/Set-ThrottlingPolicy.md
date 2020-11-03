@@ -166,7 +166,8 @@ Set-ThrottlingPolicy [-Identity] <ThrottlingPolicyIdParameter>
  [-SchedulesMaxConcurrency <Unlimited>]
  [-SchedulesRechargeRate <Unlimited>]
  [-ThrottlingPolicyScope <ThrottlingPolicyScopeType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

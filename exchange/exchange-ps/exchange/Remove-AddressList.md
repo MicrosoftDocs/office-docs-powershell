@@ -23,8 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-AddressList [-Identity] <AddressListIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Recursive]
- [-WhatIf] [<CommonParameters>]
+Remove-AddressList [-Identity] <AddressListIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Recursive]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -24,12 +24,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-PublicFolderMoveRequest -Folders <PublicFolderIdParameter[]> -TargetMailbox <MailboxIdParameter>
- [-AcceptLargeDataLoss] [-AllowLargeItems] [-BadItemLimit <Unlimited>] [-CompletedRequestAgeLimit <Unlimited>]
- [-Confirm] [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>] [-Name <String>]
- [-Priority <RequestPriority>] [-Suspend]
- [-SuspendComment <String>] [-SuspendWhenReadyToComplete] [-WhatIf]
+ [-AcceptLargeDataLoss]
+ [-AllowLargeItems]
+ [-BadItemLimit <Unlimited>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-Name <String>]
+ [-Priority <RequestPriority>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-SuspendWhenReadyToComplete]
+ [-WhatIf]
  [-WorkloadType <RequestWorkloadType>]
- [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
+ [-RequestExpiryInterval <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

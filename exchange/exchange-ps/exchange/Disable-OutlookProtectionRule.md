@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-OutlookProtectionRule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Disable-OutlookProtectionRule [-Identity] <RuleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

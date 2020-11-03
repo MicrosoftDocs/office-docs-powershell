@@ -23,8 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RecipientPermission [[-Identity] <RecipientIdParameter>] [-AccessRights <MultiValuedProperty>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-Trustee <SecurityPrincipalIdParameter>]
+Get-RecipientPermission [[-Identity] <RecipientIdParameter>]
+ [-AccessRights <MultiValuedProperty>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-Trustee <SecurityPrincipalIdParameter>]
  [<CommonParameters>]
 ```
 

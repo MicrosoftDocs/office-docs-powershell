@@ -64,7 +64,8 @@ Set-FrontendTransportService [-Identity] <FrontendTransportServerIdParameter>
  [-SendProtocolLogPath <LocalLongFullPath>]
  [-TransientFailureRetryCount <Int32>]
  [-TransientFailureRetryInterval <EnhancedTimeSpan>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

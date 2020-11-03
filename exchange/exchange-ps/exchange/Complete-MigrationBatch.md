@@ -27,7 +27,8 @@ Complete-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-SyncAndComplete]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,6 +56,22 @@ Complete-MigrationBatch -Identity LocalMove1 -NotificationEmails admin@contoso.c
 This example completes the migration batch LocalMove1 and sends a notification email message to the specified users.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the name of the migration batch that you want to complete. The value for this parameter is specified by the Name parameter for the New-MigrationBatch cmdlet. Use the Get-MigrationBatch cmdlet to determine the value of this parameter for the migration batch.
+
+```yaml
+Type: MigrationBatchIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -90,22 +107,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the migration batch that you want to complete. The value for this parameter is specified by the Name parameter for the New-MigrationBatch cmdlet. Use the Get-MigrationBatch cmdlet to determine the value of this parameter for the migration batch.
-
-```yaml
-Type: MigrationBatchIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

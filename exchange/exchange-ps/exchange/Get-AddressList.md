@@ -25,19 +25,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Container
 ```
 Get-AddressList -Container <AddressListIdParameter>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-AddressList [[-Identity] <AddressListIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### SearchSet
 ```
 Get-AddressList [-SearchText <String>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

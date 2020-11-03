@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-HybridConfiguration -OnPremisesCredentials <PSCredential> -TenantCredentials <PSCredential> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-ForceUpgrade] [-SuppressOAuthWarning] [<CommonParameters>]
+Update-HybridConfiguration -OnPremisesCredentials <PSCredential> -TenantCredentials <PSCredential>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [-ForceUpgrade]
+ [-SuppressOAuthWarning]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

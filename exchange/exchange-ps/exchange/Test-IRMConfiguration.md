@@ -26,7 +26,8 @@ Test-IRMConfiguration [[-Identity] <OrganizationIdParameter>] -Sender <SmtpAddre
  [-DomainController <Fqdn>]
  [-Recipient <SmtpAddress[]>]
  [-RMSOnline]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

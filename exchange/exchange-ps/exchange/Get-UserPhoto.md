@@ -33,7 +33,8 @@ Get-UserPhoto [-Anr <String>]
  [-Preview]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -49,7 +50,8 @@ Get-UserPhoto [[-Identity] <MailboxIdParameter>]
  [-Preview]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

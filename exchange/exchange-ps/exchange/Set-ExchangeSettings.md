@@ -22,11 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ClearHistory
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-ClearHistory] -Reason <String>
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
+ [-ClearHistory]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UpdateSetting
@@ -36,7 +38,8 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -ConfigName <Stri
  [-DomainController <Fqdn>]
  [-Force]
  [-GroupName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemoveSetting
@@ -46,14 +49,16 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -ConfigName <Stri
  [-DomainController <Fqdn>]
  [-Force]
  [-GroupName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CreateSettingsGroup
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsGroup]
- -ExpirationDate <DateTime> -Reason <String> [-ConfigPairs <String[]>]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -ExpirationDate <DateTime> -Reason <String>
+ [-ConfigPairs <String[]>]
  [-Confirm]
+ [-CreateSettingsGroup]
  [-Disable]
  [-DomainController <Fqdn>]
  [-Force]
@@ -62,60 +67,77 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsG
  [-MinVersion <String>]
  [-NameMatch <String>]
  [-Priority <Int32>]
- [-Scope <ExchangeSettingsScope>] [-ScopeFilter <String>]
- [-WhatIf] [<CommonParameters>]
+ [-Scope <ExchangeSettingsScope>]
+ [-ScopeFilter <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CreateSettingsGroupGuid
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsGroup]
- -ExpirationDate <DateTime> -GuidMatch <Guid> -Reason <String> [-ConfigPairs <String[]>] [-Confirm]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -ExpirationDate <DateTime> -GuidMatch <Guid> -Reason <String>
+ [-ConfigPairs <String[]>]
+ [-Confirm]
+ [-CreateSettingsGroup]
  [-Disable]
  [-DomainController <Fqdn>]
  [-Force]
  [-GroupName <String>]
  [-Priority <Int32>]
- [-Scope <ExchangeSettingsScope>] [-WhatIf]
+ [-Scope <ExchangeSettingsScope>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### CreateSettingsGroupAdvanced
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsGroup] -Reason <String> -SettingsGroup <String>
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> -SettingsGroup <String>
+ [-CreateSettingsGroup]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CreateSettingsGroupGeneric
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsGroup]
- -ExpirationDate <DateTime> -Reason <String> [-ConfigPairs <String[]>] [-GenericScopeName <String>] [-GenericScopeValue <String>] [-GroupName <String>]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -ExpirationDate <DateTime> -Reason <String>
+ [-CreateSettingsGroup]
+ [-ConfigPairs <String[]>]
+ [-GenericScopeName <String>]
+ [-GenericScopeValue <String>]
+ [-GroupName <String>]
  [-Confirm]
  [-Disable]
  [-DomainController <Fqdn>]
  [-Force]
  [-Priority <Int32>]
  [-Scope <ExchangeSettingsScope>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UpdateSettingsGroup
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-ExpirationDate <DateTime>] -Reason <String> [-GroupName <String>] [-UpdateSettingsGroup]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
+ [-ExpirationDate <DateTime>]
+ [-GroupName <String>]
+ [-UpdateSettingsGroup]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
  [-Priority <Int32>]
  [-ScopeFilter <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemoveMultipleSettings
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
- -ConfigPairs <String[]> [-GroupName <String>] [-RemoveSetting]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> -ConfigPairs <String[]>
+ [-GroupName <String>]
+ [-RemoveSetting]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
@@ -125,40 +147,49 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
 
 ### RemoveSettingsGroup
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> [-GroupName <String>] [-RemoveSettingsGroup]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
+ [-GroupName <String>]
+ [-RemoveSettingsGroup]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UpdateSettingsGroupAdvanced
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> -SettingsGroup <String> [-UpdateSettingsGroup]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> -SettingsGroup <String>
+ [-UpdateSettingsGroup]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UpdateMultipleSettings
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
- -ConfigPairs <String[]> [-GroupName <String>] [-UpdateSetting]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> -ConfigPairs <String[]>
+ [-GroupName <String>]
+ [-UpdateSetting]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EnableSettingsGroup
 ```
 Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
- [-EnableGroup <String> [-DisableGroup <String>]
+ [-EnableGroup <String>
+ [-DisableGroup <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

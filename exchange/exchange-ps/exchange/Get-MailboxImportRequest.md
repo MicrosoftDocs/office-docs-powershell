@@ -26,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MailboxImportRequest [[-Identity] <MailboxImportRequestIdParameter>]
  [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### MailboxFiltering
@@ -41,7 +42,8 @@ Get-MailboxImportRequest
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
  [-Suspend <Boolean>]
- [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### MailboxLocationFiltering
@@ -56,7 +58,8 @@ Get-MailboxImportRequest
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
  [-Suspend <Boolean>]
- [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

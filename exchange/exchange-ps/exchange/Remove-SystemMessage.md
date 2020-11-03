@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SystemMessage [-Identity] <SystemMessageIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Remove-SystemMessage [-Identity] <SystemMessageIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

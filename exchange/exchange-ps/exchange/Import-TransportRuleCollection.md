@@ -26,7 +26,8 @@ Import-TransportRuleCollection [-FileData] <Byte[]>
  [-DomainController <Fqdn>]
  [-Force]
  [[-Identity] <RuleIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

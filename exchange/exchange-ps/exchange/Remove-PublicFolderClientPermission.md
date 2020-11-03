@@ -21,9 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter> -AccessRights <MultiValuedProperty>
- -User <PublicFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+Remove-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter> -AccessRights <MultiValuedProperty> -User <PublicFolderUserIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

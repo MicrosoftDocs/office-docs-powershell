@@ -22,22 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity (Default)
 ```
-Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -Comment <String> -ReportDate <ExDateTime> [-DowntimeMinutes <Double>]
+Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -Comment <String> -ReportDate <ExDateTime>
+ [-DowntimeMinutes <Double>]
  [-Confirm]
  [-Force]
  [-ReportingDatabase <String>]
  [-ReportingServer <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ResetToOriginal
 ```
-Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -ReportDate <ExDateTime> [-ResetToOriginal]
+Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -ReportDate <ExDateTime>
+ [-ResetToOriginal]
  [-Confirm]
  [-Force]
  [-ReportingDatabase <String>]
  [-ReportingServer <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
