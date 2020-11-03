@@ -1732,6 +1732,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludeAtAGlanceInShareEmails
+
+Enable or disable the At A Glance feature in sharing e-mails. This provides the key points and time to read for the shared item if available.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
