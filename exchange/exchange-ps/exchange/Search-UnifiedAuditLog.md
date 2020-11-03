@@ -102,7 +102,6 @@ The EndDate parameter specifies the end date of the date range. Entries are stor
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, `"2018-05-06 14:30:00z"`.
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2018 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 If you don't include a timestamp in the value for this parameter, the default timestamp is 12:00 AM (midnight) on the specified date.
@@ -126,7 +125,6 @@ The StartDate parameter specifies the start date of the date range. Entries are 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, `"2018-05-06 14:30:00z"`.
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2018 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 If you don't include a timestamp in the value for this parameter, the default timestamp is 12:00 AM (midnight) on the specified date.
@@ -236,145 +234,75 @@ Accept wildcard characters: False
 The RecordType parameter filters the log entries by record type. Valid values are:
 
 - AeD
-
 - AirInvestigation
-
 - ApplicationAudit
-
 - AzureActiveDirectory
-
 - AzureActiveDirectoryAccountLogon
-
 - AzureActiveDirectoryStsLogon
-
 - Campaign
-
 - ComplianceDLPExchange
-
 - ComplianceDLPSharePoint
-
 - ComplianceDLPSharePointClassification
-
 - ComplianceSupervisionExchange
-
 - CustomerKeyServiceEncryption
-
 - CRM
-
 - DataCenterSecurityCmdlet
-
 - DataGovernance
-
 - DataInsightsRestApiAudit
-
 - Discovery
-
 - DLPEndpoint
-
 - ExchangeAdmin
-
 - ExchangeAggregatedOperation
-
 - ExchangeItem
-
 - ExchangeItemAggregated
-
 - ExchangeItemGroup
-
 - HRSignal
-
 - HygieneEvent
-
 - InformationWorkerProtection
-
 - InformationBarrierPolicyApplication
-
 - Kaizala
-
 - LabelContentExplorer
-
 - MailSubmission
-
 - MicrosoftFlow
-
 - MicrosoftForms
-
 - MicrosoftTeamsAnalytics
-
 - MicrosoftTeams
-
 - MicrosoftTeamsAdmin
-
 - MicrosoftTeamsDevice
-
 - MicrosoftTeamsAddOns
-
 - MicrosoftStream
-
 - MicrosoftTeamsSettingsOperation
-
 - MipAutoLabelSharePointItem
-
 - MipAutoLabelSharePointPolicyLocation
-
 - MIPLabel
-
 - OfficeNative
-
 - OneDrive
-
 - PowerBIAudit
-
 - Project
-
 - PowerAppsApp
-
 - PowerAppsPlan
-
 - Quarantine
-
 - SecurityComplianceAlerts
-
 - SecurityComplianceCenterEOPCmdlet
-
 - SecurityComplianceInsights
-
 - SharePoint
-
 - SharePointCommentOperation
-
 - SharePointContentTypeOperation
-
 - SharePointFileOperation
-
 - SharePointFieldOperation
-
 - SharePointListOperation
-
 - SharePointListItemOperation
-
 - SharePointSharingOperation
-
 - SkypeForBusinessCmdlets
-
 - SkypeForBusinessPSTNUsage
-
 - SkypeForBusinessUsersBlocked
-
 - SyntheticProbe
-
 - ThreatFinder
-
 - ThreatIntelligence
-
 - ThreatIntelligenceAtpContent
-
 - ThreatIntelligenceUrl
-
 - TeamsHealthcare
-
 - WorkplaceAnalytics
-
 - Yammer
 
 ```yaml
@@ -410,7 +338,6 @@ Accept wildcard characters: False
 The SessionCommand parameter specifies how much information is returned and how it's organized. Valid values are:
 
 - ReturnNextPreviewPage: This value causes the cmdlet to return data sorted on date. The maximum number of records returned through use of either paging or the ResultSize parameter is 5,000 records.
-
 - ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results.
 
 **Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID.

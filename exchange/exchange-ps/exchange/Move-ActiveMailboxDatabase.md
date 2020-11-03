@@ -131,9 +131,7 @@ This example performs a server switchover for the Mailbox server MBX1. All activ
 The Identity parameter specifies the mailbox database that you want to activate. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Server parameter
@@ -155,11 +153,8 @@ Accept wildcard characters: False
 The Server parameter specifies the server that you want to move all active mailbox databases from. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 You can't use this parameter with the Identity parameter
@@ -181,11 +176,8 @@ Accept wildcard characters: False
 The ActivatePreferredOnServer parameter specifies the Mailbox server where you want to activate all mailbox databases that have copies with an ActivationPreference value of 1. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 You can use this parameter as part of ending maintenance mode on a Mailbox server.
@@ -242,8 +234,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -279,13 +270,9 @@ Accept wildcard characters: False
 The MountDialOverride parameter is used to override the auto database mount dial (AutoDatabaseMountDial) setting for the target server and specify an alternate setting. The following are possible values:
 
 - None: When using this value, the currently configured auto database mount dial setting on the target server will be used.
-
 - Lossless: This is the default value. When using this value, the database doesn't automatically mount until all log files that were generated on the original active copy have been copied to the passive copy.
-
 - GoodAvailability: If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 6. If the copy queue length is greater than 6, the database doesn't automatically mount. When the copy queue length is less than or equal to 6, Microsoft Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
-
 - BestEffort: If you specify this value, the database automatically mounts regardless of the size of the copy queue length. Because the database will mount with any amount of log loss, using this value could result in a large amount of data loss.
-
 - BestAvailability: If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
 
 ```yaml

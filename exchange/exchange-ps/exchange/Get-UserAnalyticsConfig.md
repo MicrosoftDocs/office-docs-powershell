@@ -44,15 +44,10 @@ This example returns the MyAnalytics privacy setting for the user with email add
 The Identity parameter specifies the user that you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml

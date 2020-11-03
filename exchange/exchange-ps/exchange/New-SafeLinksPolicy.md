@@ -59,9 +59,7 @@ New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true -TrackClicks $t
 This example creates a new Safe Links policy named Marketing Block URL with the following options:
 
 - The policy is enabled.
-
 - Users aren't allowed to click through to the original URL. This is the default value of the DoNotAllowClickThrough parameter, so you don't need to specify it.
-
 - User clicks on URLs are tracked in URL trace.
 
 ## PARAMETERS
@@ -117,8 +115,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -138,7 +135,6 @@ Accept wildcard characters: False
 The DeliverMessageAfterScan parameter specifies whether to deliver email messages only after Safe Links scanning is complete. Valid values are:
 
 - $true: Wait until Safe Links scanning is complete before delivering the message.
-
 - $false: If Safe Links scanning can't complete, deliver the message anyway. This is the default value.
 
 ```yaml
@@ -158,7 +154,6 @@ Accept wildcard characters: False
 The DoNotAllowClickThrough parameter specifies whether to allow users to click through to the original URL on warning pages. Valid values are:
 
 - $true: The user isn't allowed to click through to the original URL.
-
 - $false: The user is allowed to click through to the original URL. This is the default value.
 
 ```yaml
@@ -200,7 +195,6 @@ Accept wildcard characters: False
 The DoNotTrackUserClicks parameter specifies whether to track user clicks related to Safe Links protection of links in email messages. Valid values are:
 
 - $true: User clicks in email messages aren't tracked.
-
 - $false: User clicks in email messages are tracked. This is the default value.
 
 ```yaml
@@ -220,7 +214,6 @@ Accept wildcard characters: False
 The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to messages sent between internal senders and internal recipients within the same Exchange Online organization. Valid values are:
 
 - $true: The policy is applied to internal and external senders.
-
 - $false: The policy is applied only to external senders. This is the default value.
 
 ```yaml
@@ -242,7 +235,6 @@ Accept wildcard characters: False
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
 - $true: Safe Links is enabled for Teams. If a protected user clicks a malicious link in a Teams conversation, group chat, or from channels, a warning page will appear in the default web browser.
-
 - $false: Safe Links isn't enabled for Teams. This is the default value.
 
 ```yaml
@@ -278,7 +270,6 @@ Accept wildcard characters: False
 The IsEnabled parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
 
 - $true: Enable Safe Links protection for email messages. Rewrite URLs and check against a list of known malicious links whenever a user clicks a link in an email message.
-
 - $false: Disable Safe Links protection for email messages. Don't rewrite URLs and do not check clicked links in email messages. This is the default value.
 
 ```yaml
@@ -298,7 +289,6 @@ Accept wildcard characters: False
 The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links in email messages. Valid values are:
 
 - $true: Real-time scanning of clicked links in email messages, including links that point to files, is enabled.
-
 - $false: Real-time scanning of clicked links in email messages, including links that point to files, is disabled. This is the default value.
 
 ```yaml

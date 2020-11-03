@@ -76,7 +76,6 @@ Accept wildcard characters: False
 The Identity parameter specifies which attachment filter entry the command retrieves. The Identity parameter accepts values in the format Type:Name, where Type is one of the following values:
 
 - ContentType: This value matches the attachment filter entry against the MIME content type.
-
 - FileName: This value matches the attachment filter entry against the simple file name.
 
 ```yaml

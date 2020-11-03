@@ -69,35 +69,20 @@ This example retrieves the calendar permissions diagnostic log for the mailbox n
 The ComponentName parameter specifies the component that you want to retrieve the diagnostic logs for. Valid values depend on the type and location of the mailbox (on-premises Exchange or Exchange Online). Valid values include:
 
 - ActionProcessingAgent
-
 - BirthdayAssistant
-
 - CalendarPermissions
-
 - CalendarSharingLocalFolder
-
 - DefaultViewIndexer
-
 - FreeBusyPublishingAssistantQuickLog
-
 - HoldTracking
-
 - InternetCalendar
-
 - InternalCalendarSharingMigration
-
 - MRM
-
 - OnlineMeetings
-
 - OOFRules
-
 - RemindersAssistant
-
 - SharingMigrationAssistant
-
 - SharingSyncAssistant
-
 - SweepRules
 
 ```yaml
@@ -133,23 +118,14 @@ Accept wildcard characters: False
 The Identity parameter specifies that mailbox that contains the diagnostics logs that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -186,8 +162,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

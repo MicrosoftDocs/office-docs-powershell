@@ -284,7 +284,6 @@ When you create a recipient without specifying an email address, the Alias value
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -310,23 +309,14 @@ This parameter is available or functional only in Exchange Server 2010.
 The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -361,8 +351,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -482,15 +471,10 @@ Accept wildcard characters: False
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -514,7 +498,6 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
@@ -538,11 +521,8 @@ The OnPremisesOrganizationalUnit parameter specifies the organizational unit (OU
 Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 This parameter has no effect on the mailbox in the service.
@@ -580,7 +560,6 @@ Accept wildcard characters: False
 The RemotePowerShellEnabled parameter specifies whether the user can connect to Exchange using remote PowerShell. Remote PowerShell is required to open the Exchange Management Shell on Exchange servers, or to use Windows PowerShell open and import a remote PowerShell session to Exchange. Access to remote PowerShell is required even if you're trying to open the Exchange Management Shell on the local Exchange server. Valid values are:
 
 - $true: The user can use remote PowerShell. This is the default value.
-
 - $false: The user can't use remote PowerShell.
 
 ```yaml
@@ -618,7 +597,6 @@ Accept wildcard characters: False
 The ResetPasswordOnNextLogon parameter specifies whether the user must change their password the next time they log on. Valid values are:
 
 - $true: The user is required to change their password the next time they log on.
-
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
 
 ```yaml
@@ -654,9 +632,7 @@ Accept wildcard characters: False
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
-
 - Internal: Notify senders in the organization when their messages aren't approved.
-
 - Never: Don't notify anyone when a message isn't approved.
 
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).

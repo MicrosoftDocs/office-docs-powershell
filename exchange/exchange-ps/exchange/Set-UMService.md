@@ -43,7 +43,6 @@ Set-UMService -Identity MyUMServer -IPAddressFamily Any -UMStartupMode Dual
 This example performs the following actions:
 
 - Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to accept both IPv4 and IPv6 data packets.
-
 - Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up using both TCP and TLS mode.
 
 ### Example 2
@@ -61,11 +60,8 @@ Set-UMService -Identity MyUMServer -DialPlans MySIPDialPlan -MaxCallsAllowed 50 
 This example performs the following actions:
 
 - Adds the Mailbox server MyUMServer to the UM dial plan MySIPDialPlan.
-
 - Sets the maximum number of incoming calls to 50.
-
 - Sets northamerica.lyncpoolna.contoso.com:5061 as the FQDN and port for the SIP access service that is used by Microsoft Lync Server or Skype for Business Server for inbound and outbound calling from remote Lync or Skype for Business clients.
-
 - Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up in TLS mode.
 
 ## PARAMETERS
@@ -74,11 +70,8 @@ This example performs the following actions:
 The Identity parameter specifies the Mailbox server that hosts the Unified Messaging service configuration you want to modify. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 ```yaml
@@ -97,8 +90,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -162,9 +154,7 @@ The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Min
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -176,11 +166,8 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
-
 - "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
 
 ```yaml
@@ -200,9 +187,7 @@ Accept wildcard characters: False
 The IPAddressFamily parameter specifies whether the UM IP gateway will use IPv4, IPv6, or both to communicate. Valid values are:
 
 - IPv4
-
 - IPv6
-
 - Any: IPv6 is used first and if necessary, the UM IP gateway falls back to IPv4. This is the default value.
 
 ```yaml
@@ -238,7 +223,6 @@ Accept wildcard characters: False
 The IrmLogEnabled parameter specifies whether to enable logging of Information Rights Management (IRM) transactions. IRM logging is enabled by default. Valid values are:
 
 - $true: Enable IRM logging
-
 - $false: Disable IRM logging
 
 ```yaml
@@ -280,13 +264,9 @@ The IrmLogMaxDirectorySize parameter specifies the maximum size of all IRM logs 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -312,13 +292,9 @@ The IrmLogMaxFileSize parameter specifies the maximum size of each IRM log file.
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -412,9 +388,7 @@ Accept wildcard characters: False
 The UMStartupMode parameter specifies the startup mode for the Unified Messaging service. Valid values are:
 
 - TCP (This is the default value)
-
 - TLS
-
 - Dual: The service can listen on ports 5060 and 5061 at the same time. If you add the Exchange server to UM dial plans that have different security settings, you should use this value.
 
 If you change the value of this parameter, you need to restart the Unified Messaging service.

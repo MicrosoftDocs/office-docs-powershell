@@ -46,9 +46,7 @@ This example removes the outbound spam filter policy named Contoso Executives.
 The Identity parameter specifies the outbound spam filter policy you want to remove. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

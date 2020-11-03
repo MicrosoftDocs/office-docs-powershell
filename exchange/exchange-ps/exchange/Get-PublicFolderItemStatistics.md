@@ -55,13 +55,9 @@ Get-PublicFolderItemStatistics -Identity "\Marketing\Reports" | Select Subject,L
 This example exports the output of the Get-PublicFolderItemStatistics command to the PFItemStats.csv file that includes the following information for all items within the public folder \\Marketing\\Reports:
 
 - Subject of the message (Subject)
-
 - Date and time when the item was last modified (LastModificationTime)
-
 - If the item has attachments (HasAttachments)
-
 - Type of item (ItemType)
-
 - Size of the item (MessageSize)
 
 ## PARAMETERS
@@ -104,23 +100,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the identity of the hierarchy public folder mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -142,11 +129,8 @@ This parameter is available or functional only in Exchange Server 2010.
 The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 ```yaml

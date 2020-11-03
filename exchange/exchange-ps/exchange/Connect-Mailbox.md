@@ -116,17 +116,13 @@ There is no Disconnect-Mailbox cmdlet. You can use the Disable-Mailbox or Remove
 Use the Disable-Mailbox cmdlet to:
 
 - Disconnect the mailbox from the user account.
-
 - Keep the mailbox in the disabled state before it's permanently deleted, subject to the deleted mailbox retention period.
-
 - Keep the user account, but remove the Exchange attributes from the account.
 
 Use the Remove-Mailbox cmdlet to:
 
 - Disconnect the mailbox from the user account.
-
 - Keep the mailbox in the disabled state before it's permanently deleted, subject to the deleted mailbox retention period (except if you use the Permanent or StoreMailboxIdentity parameters, which immediately deletes the mailbox from the database).
-
 - Remove the user account.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -167,9 +163,7 @@ This example connects a room mailbox.
 The Identity parameter specifies the mailbox that you want to connect to a user account. This parameter doesn't specify an Active Directory object. You can use the following values to identify the mailbox:
 
 - Display name
-
 - GUID
-
 - LegacyExchangeDN
 
 You use this parameter with the Database parameter to specify the mailbox that you want to connect.
@@ -191,9 +185,7 @@ Accept wildcard characters: False
 The Database parameter specifies the Exchange database that contains the mailbox that you want to connect. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You use this parameter with the Identity parameter to specify the mailbox that you want to connect.
@@ -251,11 +243,8 @@ Accept wildcard characters: False
 The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. This parameter is required only if you're creating a linked mailbox. You can use any value that uniquely identifies the master account. For example: For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 This parameter is required only if you're connecting a linked mailbox.
@@ -329,9 +318,7 @@ Accept wildcard characters: False
 The ActiveSyncMailboxPolicy parameter specifies the mobile device mailbox policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:.
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 If you don't use this parameter, the default mobile device mailbox policy is used.
@@ -353,9 +340,7 @@ Accept wildcard characters: False
 The AddressBookPolicy parameter specifies the address book policy that's applied to the mailbox. You can use any value that uniquely identifies the address book policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
@@ -383,7 +368,6 @@ When you create a recipient without specifying an email address, the Alias value
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -438,8 +422,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -541,9 +524,7 @@ Accept wildcard characters: False
 The RetentionPolicy parameter specifies the retention policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Retention policies consist of tags that are applied to mailbox folders and mail items to determine the period of time that the items should be retained.
@@ -565,11 +546,8 @@ Accept wildcard characters: False
 The User parameter specifies the user object in Active Directory that you want to connect the mailbox to. You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 If you don't use this parameter, the command uses the LegacyExchangeDN and DisplayName property values of the mailbox to find a user account that has those same values. If it can't find a unique match, it doesn't connect the mailbox.

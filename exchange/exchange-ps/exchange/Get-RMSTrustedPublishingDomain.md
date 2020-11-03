@@ -60,9 +60,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the trusted publishing domain. You can use any value that uniquely identifies the trusted publishing domain, for example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

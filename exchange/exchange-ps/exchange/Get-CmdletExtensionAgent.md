@@ -91,7 +91,6 @@ Accept wildcard characters: False
 The Enabled parameter filters the results by enabled or disabled cmdlet extension agents. Valid values are:
 
 - $true: Only enabled agents are included in the results.
-
 - $false: Only disabled agents are included in the results.
 
 If you don't use this parameter, enabled and disabled agents are included in the results.
@@ -113,9 +112,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the name of the cmdlet extension agent that you want to view. You can use any value that uniquely identifies the agent. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

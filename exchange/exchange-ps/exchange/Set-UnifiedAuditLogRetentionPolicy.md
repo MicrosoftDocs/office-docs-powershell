@@ -57,9 +57,7 @@ This example modifies an audit log retention policy and changes to retention dur
 The Identity parameter specifies the unified audit log retention policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distingished name (DN)
-
 - GUID
 
 ```yaml
@@ -81,7 +79,6 @@ The Priority parameter specifies a priority value for the policy that determines
 Valid values and the default value for this parameter depend on the number of existing policies. For example, if there are 8 existing policies:
 
 - Valid priority values for the existing 8 policies are from 7 through 0.
-
 - Valid priority values for a new policy (the 9th policy) are from 8 through 0.
 
 You must use a unique priority value when modifying audit log retention policies. This parameter is required when modifying an audit log retention policy.
@@ -103,11 +100,8 @@ Accept wildcard characters: False
 The RetentionDuration parameter specifies how long audit log records are kept. Valid values are:
 
 - ThreeMonths
-
 - SixMonths
-
 - NineMonths
-
 - TwelveMonths
 
 This parameter is required when modifying an audit log retention policy.
@@ -129,8 +123,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -184,145 +177,75 @@ Accept wildcard characters: False
 The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. The values you specify will overwrite any existing entries. Valid values are:
 
 - AeD
-
 - AirInvestigation
-
 - ApplicationAudit
-
 - AzureActiveDirectory
-
 - AzureActiveDirectoryAccountLogon
-
 - AzureActiveDirectoryStsLogon
-
 - CRM
-
 - Campaign
-
 - ComplianceDLPExchange
-
 - ComplianceDLPSharePoint
-
 - ComplianceDLPSharePointClassification
-
 - ComplianceSupervisionExchange
-
 - CustomerKeyServiceEncryption
-
 - DLPEndpoint
-
 - DataCenterSecurityCmdlet
-
 - DataGovernance
-
 - DataInsightsRestApiAudit
-
 - Discovery
-
 - ExchangeAdmin
-
 - ExchangeAggregatedOperation
-
 - ExchangeItem
-
 - ExchangeItemAggregated
-
 - ExchangeItemGroup
-
 - HRSignal
-
 - HygieneEvent
-
 - InformationBarrierPolicyApplication
-
 - InformationWorkerProtection
-
 - Kaizala
-
 - LabelContentExplorer
-
 - MIPLabel
-
 - MailSubmission
-
 - MicrosoftFlow
-
 - MicrosoftForms
-
 - MicrosoftStream
-
 - MicrosoftTeams
-
 - MicrosoftTeamsAdmin
-
 - MicrosoftTeamsAnalytics
-
 - MicrosoftTeamsDevice
-
 - MicrosoftTeamsShifts
-
 - MipAutoLabelExchangeItem
-
 - MipAutoLabelSharePointItem
-
 - MipAutoLabelSharePointPolicyLocation
-
 - OfficeNative
-
 - OneDrive
-
 - PowerAppsApp
-
 - PowerAppsPlan
-
 - PowerBIAudit
-
 - Project
-
 - Quarantine
-
 - SecurityComplianceAlerts
-
 - SecurityComplianceCenterEOPCmdlet
-
 - SecurityComplianceInsights
-
 - SharePoint
-
 - SharePointCommentOperation
-
 - SharePointContentTypeOperation
-
 - SharePointFieldOperation
-
 - SharePointFileOperation
-
 - SharePointListItemOperation
-
 - SharePointListOperation
-
 - SharePointSharingOperation
-
 - SkypeForBusinessCmdlets
-
 - SkypeForBusinessPSTNUsage
-
 - SkypeForBusinessUsersBlocked
-
 - SyntheticProbe
-
 - TeamsHealthcare
-
 - ThreatFinder
-
 - ThreatIntelligence
-
 - ThreatIntelligenceAtpContent
-
 - ThreatIntelligenceUrl
-
 - WorkplaceAnalytics
-
 - Yammer
 
 You can specify multiple values separated by commas.
