@@ -60,7 +60,6 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 The  parameter enables or disables the customized message that's presented to users in the Report Message add-in. Valid values are:
 
 - $true: The customized message is presented to users in the Report Message add-in. You specify the text in the PreSubmitMessage, PreSubmitMessageTitle, PostSubmitMessage, and PostSubmitMessageTitle parameters.
-
 - $false: A customized message is not presented to users. This is the default value.
 
 ```yaml
@@ -80,7 +79,6 @@ Accept wildcard characters: False
 The  parameter enables or disables sending the reported message to Microsoft. Valid values are:
 
 - $true: Reported messages are sent to Microsoft. This is the default value.
-
 - $false: Reported message are not sent to Microsoft.
 
 ```yaml
@@ -100,7 +98,6 @@ Accept wildcard characters: False
 The EnableThirdPartyAddres parameter enables or disables using third-party reporting tools for user submissions. Valid values are:
 
 - $true: Users use third-party tools to report messages to the recipients specified by the ThirdPartyAddresses.
-
 - $false: Users use the Report Message add-in to report messages. This is the default value.
 
 ```yaml
@@ -216,7 +213,6 @@ Accept wildcard characters: False
 The ReportJunkToCustomizedAddress parameter enables or disables sending messages reported as junk to custom recipients. Valid values are:
 
 - $true: Messages reported as junk are sent to the recipients specified by the ReportJunkAddresses parameter.
-
 - $false: Messages reported as junk are not sent to custom recipients. This is the default value.
 
  Whether or not the messages are also sent to Microsoft is controlled by the EnableReportToMicrosoft parameter (the default value is $true).
@@ -254,7 +250,6 @@ Accept wildcard characters: False
 The ReportNotJunkToCustomizedAddress parameter enables or disables sending messages reported as not junk to custom recipients. Valid values are:
 
 - $true: Messages reported as not junk are sent to the recipients specified by the ReportNotJunkAddresses parameter.
-
 - $false: Messages reported as not junk are not sent to custom recipients. This is the default value.
 
  Whether or not the messages are also sent to Microsoft is controlled by the EnableReportToMicrosoft parameter (the default value is $true).
@@ -292,7 +287,6 @@ Accept wildcard characters: False
 The ReportPhishToCustomizedAddress parameter enables or disables sending messages reported as phishing to custom recipients. Valid values are:
 
 - $true: Messages reported as phishing are sent to the recipients specified by the ReportPhishAddresses parameter.
-
 - $false: Messages reported as not junk are not sent to custom recipients. This is the default value.
 
  Whether or not the messages are also sent to Microsoft is controlled by the EnableReportToMicrosoft parameter (the default value is $true).
