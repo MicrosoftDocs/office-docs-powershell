@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-AssistantHealth [[-ServerName] <ServerIdParameter>] [-Confirm] [-IncludeCrashDump]
- [-MaxProcessingTimeInMinutes <UInt32>] [-MonitoringContext] [-ResolveProblems] [-WhatIf]
- [-WatermarkBehindWarningThreholdInMinutes <UInt32>] [<CommonParameters>]
+Test-AssistantHealth [[-ServerName] <ServerIdParameter>]
+ [-Confirm]
+ [-IncludeCrashDump]
+ [-MaxProcessingTimeInMinutes <UInt32>]
+ [-MonitoringContext]
+ [-ResolveProblems]
+ [-WhatIf]
+ [-WatermarkBehindWarningThreholdInMinutes <UInt32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

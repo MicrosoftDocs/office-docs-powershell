@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AdSite [[-Identity] <AdSiteIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-AdSite [[-Identity] <AdSiteIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

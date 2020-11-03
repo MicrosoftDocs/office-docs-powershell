@@ -34,7 +34,8 @@ Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-RetentionComplianceAction <String>]
  [-RetentionDuration <Unlimited>]
  [-RetentionDurationDisplayHint <HoldDurationHint>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

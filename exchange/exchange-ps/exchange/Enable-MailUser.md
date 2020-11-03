@@ -32,18 +32,21 @@ Enable-MailUser [-Identity] <UserIdParameter> -ExternalEmailAddress <ProxyAddres
  [-MessageFormat <MessageFormat>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-UsePreferMessageFormat <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EnableGuestUser
 ```
-Enable-MailUser [-Identity] <UserIdParameter> [-ExternalEmailAddress <ProxyAddress>]
+Enable-MailUser [-Identity] <UserIdParameter>
+ [-ExternalEmailAddress <ProxyAddress>]
  [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

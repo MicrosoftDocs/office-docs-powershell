@@ -22,12 +22,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ContentFilterConfig [-BypassedRecipients <MultiValuedProperty>]
- [-BypassedSenderDomains <MultiValuedProperty>] [-BypassedSenders <MultiValuedProperty>] [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExternalMailEnabled <Boolean>]
- [-InternalMailEnabled <Boolean>] [-OutlookEmailPostmarkValidationEnabled <Boolean>]
- [-QuarantineMailbox <SmtpAddress>] [-RejectionResponse <AsciiString>] [-SCLDeleteEnabled <Boolean>]
- [-SCLDeleteThreshold <Int32>] [-SCLQuarantineEnabled <Boolean>] [-SCLQuarantineThreshold <Int32>]
- [-SCLRejectEnabled <Boolean>] [-SCLRejectThreshold <Int32>] [-WhatIf] [<CommonParameters>]
+ [-BypassedSenderDomains <MultiValuedProperty>]
+ [-BypassedSenders <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExternalMailEnabled <Boolean>]
+ [-InternalMailEnabled <Boolean>]
+ [-OutlookEmailPostmarkValidationEnabled <Boolean>]
+ [-QuarantineMailbox <SmtpAddress>]
+ [-RejectionResponse <AsciiString>]
+ [-SCLDeleteEnabled <Boolean>]
+ [-SCLDeleteThreshold <Int32>]
+ [-SCLQuarantineEnabled <Boolean>]
+ [-SCLQuarantineThreshold <Int32>]
+ [-SCLRejectEnabled <Boolean>]
+ [-SCLRejectThreshold <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

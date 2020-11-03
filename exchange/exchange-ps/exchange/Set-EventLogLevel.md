@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-EventLogLevel [-Identity] <ECIdParameter> -Level <ECIdParameter> [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Set-EventLogLevel [-Identity] <ECIdParameter> -Level <ECIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

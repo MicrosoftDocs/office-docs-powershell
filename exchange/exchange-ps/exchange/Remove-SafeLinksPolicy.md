@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter> [-Confirm] [-Force] [-WhatIf]
+Remove-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
+ [-Confirm]
+ [-Force]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

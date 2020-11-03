@@ -23,11 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> -AccessRights <MultiValuedProperty> -User <SecurityPrincipalIdParameter>
- [-Confirm] [-Deny]
+ [-Confirm]
+ [-Deny]
  [-DomainController <Fqdn>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
@@ -41,7 +43,8 @@ Add-PublicFolderAdministrativePermission -Instance <PublicFolderAdministrativeAc
  [[-Identity] <PublicFolderIdParameter>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Owner
@@ -50,7 +53,8 @@ Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> -
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

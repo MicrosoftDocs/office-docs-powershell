@@ -28,7 +28,8 @@ Get-CASMailboxPlan [[-Identity] <MailboxPlanIdParameter>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

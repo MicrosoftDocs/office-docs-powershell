@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RemoteDomain [[-Identity] <RemoteDomainIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-RemoteDomain [[-Identity] <RemoteDomainIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

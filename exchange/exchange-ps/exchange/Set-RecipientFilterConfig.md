@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-RecipientFilterConfig [-BlockedRecipients <MultiValuedProperty>] [-BlockListEnabled <Boolean>]
- [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExternalMailEnabled <Boolean>]
- [-InternalMailEnabled <Boolean>] [-RecipientValidationEnabled <Boolean>] [-WhatIf]
+Set-RecipientFilterConfig [-BlockedRecipients <MultiValuedProperty>]
+ [-BlockListEnabled <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExternalMailEnabled <Boolean>]
+ [-InternalMailEnabled <Boolean>]
+ [-RecipientValidationEnabled <Boolean>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

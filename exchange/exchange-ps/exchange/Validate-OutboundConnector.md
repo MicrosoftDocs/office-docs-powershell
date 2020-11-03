@@ -24,7 +24,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Validate-OutboundConnector -Identity <OutboundConnectorIdParameter> -Recipients <MultiValuedProperty>
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

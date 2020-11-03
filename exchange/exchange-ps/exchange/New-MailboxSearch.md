@@ -54,7 +54,8 @@ New-MailboxSearch [-Name] <String>
  [-StartDate <ExDateTime>]
  [-StatusMailRecipients <RecipientIdParameter[]>]
  [-TargetMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

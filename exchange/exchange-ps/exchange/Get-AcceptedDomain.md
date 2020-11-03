@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AcceptedDomain [[-Identity] <AcceptedDomainIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-AcceptedDomain [[-Identity] <AcceptedDomainIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

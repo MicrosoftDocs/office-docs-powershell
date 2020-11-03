@@ -23,8 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-PendingFederatedDomain [[-Identity] <OrganizationIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-PendingAccountNamespace <SmtpDomain>] [-PendingDomains <SmtpDomain[]>] [-WhatIf] [<CommonParameters>]
+Set-PendingFederatedDomain [[-Identity] <OrganizationIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-PendingAccountNamespace <SmtpDomain>]
+ [-PendingDomains <SmtpDomain[]>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

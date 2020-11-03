@@ -22,12 +22,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-ManagedContentSettings [-Name] <String> -FolderName <ELCFolderIdParameter> -MessageClass <String>
- [-AddressForJournaling <RecipientIdParameter>] [-AgeLimitForRetention <EnhancedTimeSpan>] [-Confirm]
- [-DomainController <Fqdn>] [-JournalingEnabled <Boolean>] [-LabelForJournaling <String>]
- [-MessageFormatForJournaling <JournalingFormat>] [-MoveToDestinationFolder <ELCFolderIdParameter>]
+ [-AddressForJournaling <RecipientIdParameter>]
+ [-AgeLimitForRetention <EnhancedTimeSpan>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-JournalingEnabled <Boolean>]
+ [-LabelForJournaling <String>]
+ [-MessageFormatForJournaling <JournalingFormat>]
+ [-MoveToDestinationFolder <ELCFolderIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-RetentionAction <RetentionAction>]
- [-RetentionEnabled <Boolean>] [-TriggerForRetention <RetentionDateType>] [-WhatIf]
+ [-RetentionEnabled <Boolean>]
+ [-TriggerForRetention <RetentionDateType>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

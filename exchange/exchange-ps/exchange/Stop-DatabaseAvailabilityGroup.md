@@ -26,7 +26,8 @@ Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter
  [-ConfigurationOnly]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MailboxSet
@@ -35,7 +36,8 @@ Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter
  [-ConfigurationOnly]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

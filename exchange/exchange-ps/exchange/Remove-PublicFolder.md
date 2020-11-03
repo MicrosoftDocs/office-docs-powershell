@@ -28,7 +28,8 @@ Remove-PublicFolder [-Identity] <PublicFolderIdParameter>
  [-DomainController <Fqdn>]
  [-Recurse]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

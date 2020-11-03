@@ -31,7 +31,8 @@ Get-DynamicDistributionGroup [-Anr <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -45,7 +46,8 @@ Get-DynamicDistributionGroup [[-Identity] <DynamicGroupIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### ManagedBySet
@@ -57,7 +59,8 @@ Get-DynamicDistributionGroup [-ManagedBy <GeneralRecipientIdParameter>]
  [-IgnoreDefaultScope]
  [-IncludeSystemObjects]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
  [-SortBy <String>]
  [<CommonParameters>]
 ```

@@ -22,8 +22,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
- [-ClientAccessServer <ClientAccessServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-MonitoringContext <Boolean>] [-TargetAddress <RecipientIdParameter[]>] [-WhatIf] [<CommonParameters>]
+ [-ClientAccessServer <ClientAccessServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MonitoringContext <Boolean>]
+ [-TargetAddress <RecipientIdParameter[]>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

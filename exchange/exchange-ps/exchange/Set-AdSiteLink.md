@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AdSiteLink [-Identity] <AdSiteLinkIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-ExchangeCost <Int32>] [-MaxMessageSize <Unlimited>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-AdSiteLink [-Identity] <AdSiteLinkIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExchangeCost <Int32>]
+ [-MaxMessageSize <Unlimited>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

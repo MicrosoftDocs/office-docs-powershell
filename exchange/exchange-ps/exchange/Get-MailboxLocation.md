@@ -28,7 +28,8 @@ Get-MailboxLocation -Database <DatabaseIdParameter>
  [-Confirm]
  [-MailboxLocationType <MailboxLocationType>]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -37,16 +38,19 @@ Get-MailboxLocation -Identity <MailboxLocationIdParameter>
  [-Confirm]
  [-MailboxLocationType <MailboxLocationType>]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### User
 ```
-Get-MailboxLocation -User <UserIdParameter> [-IncludePreviousPrimary]
+Get-MailboxLocation -User <UserIdParameter>
+ [-IncludePreviousPrimary]
  [-Confirm]
  [-MailboxLocationType <MailboxLocationType>]
  [-ResultSize <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

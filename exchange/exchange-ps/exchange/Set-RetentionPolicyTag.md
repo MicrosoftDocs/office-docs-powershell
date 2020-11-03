@@ -42,8 +42,10 @@ Set-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter>
  [-Name <String>]
  [-RetentionAction <RetentionAction>]
  [-RetentionEnabled <Boolean>]
- [-RetentionId <Guid>] [-SystemTag <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-RetentionId <Guid>]
+ [-SystemTag <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MailboxTask
@@ -61,7 +63,8 @@ Set-RetentionPolicyTag -Mailbox <MailboxIdParameter>
  [-OptionalInMailbox <RetentionPolicyTagIdParameter[]>]
  [-RetentionId <Guid>]
  [-SystemTag <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

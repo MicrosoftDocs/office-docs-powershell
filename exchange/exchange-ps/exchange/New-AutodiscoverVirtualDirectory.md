@@ -21,13 +21,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AutodiscoverVirtualDirectory [-ApplicationRoot <String>] [-AppPoolId <String>]
- [-BasicAuthentication <Boolean>] [-Confirm] [-DigestAuthentication <Boolean>]
- [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
- [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-Path <String>] [-WebSiteName <String>] [-WhatIf]
- [-WindowsAuthentication <Boolean>] [-WSSecurityAuthentication <Boolean>]
- [-OAuthAuthentication <Boolean>] [-Role <VirtualDirectoryRole>] [-Server <ServerIdParameter>]
+New-AutodiscoverVirtualDirectory [-ApplicationRoot <String>]
+ [-AppPoolId <String>]
+ [-BasicAuthentication <Boolean>]
+ [-Confirm]
+ [-DigestAuthentication <Boolean>]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-Path <String>]
+ [-WebSiteName <String>]
+ [-WhatIf]
+ [-WindowsAuthentication <Boolean>]
+ [-WSSecurityAuthentication <Boolean>]
+ [-OAuthAuthentication <Boolean>]
+ [-Role <VirtualDirectoryRole>]
+ [-Server <ServerIdParameter>]
  [<CommonParameters>]
 ```
 

@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Import-DlpPolicyTemplate [-FileData] <Byte[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+Import-DlpPolicyTemplate [-FileData] <Byte[]>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -23,11 +23,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-EcpVirtualDirectory [-AppPoolId <String>] [-Confirm] [-DomainController <Fqdn>]
- [-ExtendedProtectionFlags <MultiValuedProperty>] [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>] [-ExternalUrl <Uri>] [-InternalUrl <Uri>]
- [-Path <String>] [-Server <ServerIdParameter>] [-WebSiteName <String>] [-WhatIf]
- [-Role <VirtualDirectoryRole>] [<CommonParameters>]
+New-EcpVirtualDirectory [-AppPoolId <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-Path <String>]
+ [-Server <ServerIdParameter>]
+ [-WebSiteName <String>]
+ [-WhatIf]
+ [-Role <VirtualDirectoryRole>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

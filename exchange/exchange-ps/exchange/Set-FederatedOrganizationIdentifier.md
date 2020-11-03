@@ -23,9 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-FederatedOrganizationIdentifier [[-Identity] <OrganizationIdParameter>] [-AccountNamespace <SmtpDomain>]
- [-Confirm] [-DelegationFederationTrust <FederationTrustIdParameter>] [-DomainController <Fqdn>]
- [-Enabled <Boolean>] [-OrganizationContact <SmtpAddress>] [-WhatIf] [-DefaultDomain <SmtpDomain>]
+Set-FederatedOrganizationIdentifier [[-Identity] <OrganizationIdParameter>]
+ [-AccountNamespace <SmtpDomain>]
+ [-Confirm]
+ [-DelegationFederationTrust <FederationTrustIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-OrganizationContact <SmtpAddress>]
+ [-WhatIf]
+ [-DefaultDomain <SmtpDomain>]
  [<CommonParameters>]
 ```
 

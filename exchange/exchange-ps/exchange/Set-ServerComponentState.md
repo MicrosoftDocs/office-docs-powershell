@@ -21,14 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ServerComponentState [-Identity] <ServerIdParameter> -Component <String> -Requester <String>
- -State <ServiceState>
+Set-ServerComponentState [-Identity] <ServerIdParameter> -Component <String> -Requester <String> -State <ServiceState>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LocalOnly]
  [-RemoteOnly]
  [-TimeoutInSeconds <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

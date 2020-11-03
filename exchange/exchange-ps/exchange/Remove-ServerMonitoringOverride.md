@@ -21,10 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ServerMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum>
- -PropertyName <String> -Server <ServerIdParameter>
+Remove-ServerMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -Server <ServerIdParameter>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,9 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter> -AccessRights <MultiValuedProperty>
- -User <PublicFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+Add-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter> -AccessRights <MultiValuedProperty> -User <PublicFolderUserIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,6 +49,24 @@ Add-PublicFolderClientPermission -Identity "\My Public Folder" -User Chris -Acce
 This example adds permission for the user Chris to create items in the public folder My Public Folder.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format TopLevelPublicFolder\\PublicFolder.
+
+You can omit the parameter label so that only the public folder name or GUID is supplied.
+
+```yaml
+Type: PublicFolderIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -AccessRights
 The AccessRights parameter specifies the rights being added. This parameter accepts the following values:
@@ -83,24 +104,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format TopLevelPublicFolder\\PublicFolder.
-
-You can omit the parameter label so that only the public folder name or GUID is supplied.
-
-```yaml
-Type: PublicFolderIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

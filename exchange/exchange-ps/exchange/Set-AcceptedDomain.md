@@ -21,13 +21,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AcceptedDomain [-Identity] <AcceptedDomainIdParameter> [-AddressBookEnabled <Boolean>]
- [-Confirm] [-DomainController <Fqdn>]
+Set-AcceptedDomain [-Identity] <AcceptedDomainIdParameter>
+ [-AddressBookEnabled <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-DomainType <AcceptedDomainType>]
- [-MakeDefault <Boolean>] [-Name <String>]
- [-OutboundOnly <Boolean>] [-PendingRemoval <Boolean>] [-WhatIf]
- [-EnableNego2Authentication <Boolean>] [-MatchSubDomains <Boolean>]
- [-PendingCompletion <Boolean>] [<CommonParameters>]
+ [-MakeDefault <Boolean>]
+ [-Name <String>]
+ [-OutboundOnly <Boolean>]
+ [-PendingRemoval <Boolean>]
+ [-WhatIf]
+ [-EnableNego2Authentication <Boolean>]
+ [-MatchSubDomains <Boolean>]
+ [-PendingCompletion <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

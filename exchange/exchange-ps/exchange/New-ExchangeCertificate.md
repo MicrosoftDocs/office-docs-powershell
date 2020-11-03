@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Request
 ```
-New-ExchangeCertificate [-BinaryEncoded] [-GenerateRequest] [-RequestFile <String>]
+New-ExchangeCertificate [-BinaryEncoded]
+ [-GenerateRequest]
+ [-RequestFile <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DomainName <MultiValuedProperty>]
@@ -38,7 +40,8 @@ New-ExchangeCertificate [-BinaryEncoded] [-GenerateRequest] [-RequestFile <Strin
  [-Server <ServerIdParameter>]
  [-SubjectKeyIdentifier <String>]
  [-SubjectName <X500DistinguishedName>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Certificate
@@ -59,7 +62,8 @@ New-ExchangeCertificate [-Services <AllowedServices>]
  [-Server <ServerIdParameter>]
  [-SubjectKeyIdentifier <String>]
  [-SubjectName <X500DistinguishedName>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

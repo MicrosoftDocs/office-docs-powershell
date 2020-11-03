@@ -23,10 +23,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-HoldComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm]
- [-ContentDateFrom <DateTime>] [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>]
- [-Disabled <Boolean>] [-HoldContent <Unlimited>] [-HoldDurationDisplayHint <HoldDurationHint>]
- [-WhatIf] [<CommonParameters>]
+New-HoldComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-ContentDateFrom <DateTime>]
+ [-ContentDateTo <DateTime>]
+ [-ContentMatchQuery <String>]
+ [-Disabled <Boolean>]
+ [-HoldContent <Unlimited>]
+ [-HoldDurationDisplayHint <HoldDurationHint>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

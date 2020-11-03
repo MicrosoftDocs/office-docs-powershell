@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Resume-MoveRequest [-Identity] <MoveRequestIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-ProxyToMailbox <MailboxIdParameter>] [-SuspendWhenReadyToComplete] [<CommonParameters>]
+Resume-MoveRequest [-Identity] <MoveRequestIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-SuspendWhenReadyToComplete]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

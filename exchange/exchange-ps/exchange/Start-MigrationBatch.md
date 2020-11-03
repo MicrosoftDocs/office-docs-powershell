@@ -26,7 +26,8 @@ Start-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
  [-DomainController <Fqdn>]
  [-Partition <MailboxIdParameter>]
  [-Validate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

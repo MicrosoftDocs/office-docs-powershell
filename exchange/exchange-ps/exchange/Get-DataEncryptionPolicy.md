@@ -23,8 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DataEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Get-DataEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

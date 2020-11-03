@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-OnPremisesOrganization [-Identity] <OnPremisesOrganizationIdParameter> [-Confirm] [-WhatIf]
+Remove-OnPremisesOrganization [-Identity] <OnPremisesOrganizationIdParameter>
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

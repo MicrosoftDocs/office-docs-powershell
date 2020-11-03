@@ -27,7 +27,8 @@ Set-UnifiedAuditLogRetentionPolicy [-Identity] <PolicyIdParameter> -Priority <In
  [-Operations <MultiValuedProperty>]
  [-RecordTypes <MultiValuedProperty>]
  [-UserIds <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

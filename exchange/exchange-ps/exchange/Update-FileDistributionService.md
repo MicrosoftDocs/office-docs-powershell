@@ -25,7 +25,8 @@ Update-FileDistributionService [-Identity] <ServerIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Type <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

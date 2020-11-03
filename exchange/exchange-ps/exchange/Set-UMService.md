@@ -21,13 +21,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMService [-Identity] <UMServerIdParameter> [-Confirm] [-DialPlans <MultiValuedProperty>]
- [-DomainController <Fqdn>] [-GrammarGenerationSchedule <ScheduleInterval[]>]
- [-IPAddressFamily <IPAddressFamily>] [-IPAddressFamilyConfigurable <Boolean>]
- [-IrmLogEnabled <Boolean>] [-IrmLogMaxAge <EnhancedTimeSpan>] [-IrmLogMaxDirectorySize <Unlimited>]
- [-IrmLogMaxFileSize <ByteQuantifiedSize>] [-IrmLogPath <LocalLongFullPath>] [-MaxCallsAllowed <Int32>]
- [-SIPAccessService <ProtocolConnectionSettings>] [-Status <ServerStatus>]
- [-UMStartupMode <UMStartupMode>] [-WhatIf] [<CommonParameters>]
+Set-UMService [-Identity] <UMServerIdParameter>
+ [-Confirm]
+ [-DialPlans <MultiValuedProperty>]
+ [-DomainController <Fqdn>]
+ [-GrammarGenerationSchedule <ScheduleInterval[]>]
+ [-IPAddressFamily <IPAddressFamily>]
+ [-IPAddressFamilyConfigurable <Boolean>]
+ [-IrmLogEnabled <Boolean>]
+ [-IrmLogMaxAge <EnhancedTimeSpan>]
+ [-IrmLogMaxDirectorySize <Unlimited>]
+ [-IrmLogMaxFileSize <ByteQuantifiedSize>]
+ [-IrmLogPath <LocalLongFullPath>]
+ [-MaxCallsAllowed <Int32>]
+ [-SIPAccessService <ProtocolConnectionSettings>]
+ [-Status <ServerStatus>]
+ [-UMStartupMode <UMStartupMode>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

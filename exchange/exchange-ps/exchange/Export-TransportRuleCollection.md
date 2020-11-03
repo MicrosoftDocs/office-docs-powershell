@@ -25,7 +25,8 @@ Export-TransportRuleCollection [[-Identity] <RuleIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExportLegacyRules]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-DlpPolicyCollection [[-Identity] <DlpPolicyIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Export-DlpPolicyCollection [[-Identity] <DlpPolicyIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

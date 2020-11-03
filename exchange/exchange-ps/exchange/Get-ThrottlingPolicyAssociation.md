@@ -26,7 +26,8 @@ Get-ThrottlingPolicyAssociation [-Anr <String>]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [<CommonParameters>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -35,7 +36,8 @@ Get-ThrottlingPolicyAssociation [[-Identity] <ThrottlingPolicyAssociationIdParam
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [<CommonParameters>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

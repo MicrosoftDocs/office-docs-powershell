@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail] [<CommonParameters>]
+Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
+ [-DistributionDetail]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

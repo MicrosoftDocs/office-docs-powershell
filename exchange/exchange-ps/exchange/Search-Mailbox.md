@@ -36,12 +36,14 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EstimateResult
 ```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly]
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
+ [-EstimateResultOnly]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DoNotIncludeArchive]
@@ -50,7 +52,8 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly]
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
@@ -67,7 +70,8 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> -TargetFolder <String>
  [-SearchDumpster]
  [-SearchDumpsterOnly]
  [-SearchQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

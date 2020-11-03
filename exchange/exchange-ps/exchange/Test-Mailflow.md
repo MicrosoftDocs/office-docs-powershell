@@ -22,25 +22,31 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AutoDiscoverTargetMailboxServer
 ```
-Test-Mailflow [[-Identity] <ServerIdParameter>] [-AutoDiscoverTargetMailboxServer]
+Test-Mailflow [[-Identity] <ServerIdParameter>]
+ [-AutoDiscoverTargetMailboxServer]
  [-ActiveDirectoryTimeout <Int32>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CrossPremises
 ```
-Test-Mailflow -CrossPremises <Boolean> [-ActiveDirectoryTimeout <Int32>] [-CrossPremisesExpirationTimeout <EnhancedTimeSpan>] [-CrossPremisesPendingErrorCount <Int32>]
+Test-Mailflow -CrossPremises <Boolean>
+ [-ActiveDirectoryTimeout <Int32>]
+ [-CrossPremisesExpirationTimeout <EnhancedTimeSpan>]
+ [-CrossPremisesPendingErrorCount <Int32>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TargetDatabase
@@ -52,19 +58,22 @@ Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetDatabase <DatabaseIdParam
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TargetEmailAddress
 ```
-Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetEmailAddress <String> [-TargetEmailAddressDisplayName <String>]
+Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetEmailAddress <String>
+ [-TargetEmailAddressDisplayName <String>]
  [-ActiveDirectoryTimeout <Int32>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TargetMailboxServer
@@ -89,7 +98,8 @@ Test-Mailflow [[-Identity] <ServerIdParameter>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-FederationTrust [-Confirm] [-DomainController <Fqdn>] [-MonitoringContext <Boolean>]
- [-UserIdentity <RecipientIdParameter>] [-WhatIf] [<CommonParameters>]
+Test-FederationTrust [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MonitoringContext <Boolean>]
+ [-UserIdentity <RecipientIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

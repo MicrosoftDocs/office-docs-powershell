@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Send-TextMessagingVerificationCode [[-Identity] <MailboxIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Send-TextMessagingVerificationCode [[-Identity] <MailboxIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

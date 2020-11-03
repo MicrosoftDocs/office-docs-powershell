@@ -22,7 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Onboarding
 ```
-New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+New-MigrationBatch -Name <String>
+ [-CSVData <Byte[]>]
+ [-DisallowExistingUsers]
+ [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
@@ -55,12 +58,14 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-TargetDatabases <MultiValuedProperty>]
  [-TargetDeliveryDomain <String>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Offboarding
 ```
-New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-DisallowExistingUsers]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
@@ -88,12 +93,16 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
  [-TargetDeliveryDomain <String>]
  [-TargetEndpoint <MigrationEndpointIdParameter>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Local
 ```
-New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]>
+ [-DisallowExistingUsers]
+ [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>]
+ [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
@@ -117,7 +126,8 @@ New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingU
  [-TargetArchiveDatabases <MultiValuedProperty>]
  [-TargetDatabases <MultiValuedProperty>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LocalPublicFolder
@@ -142,12 +152,14 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PreexistingUserIds
 ```
-New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
+New-MigrationBatch <MultiValuedProperty> -Name <String>
+ [-UserIds]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
@@ -165,12 +177,14 @@ New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Preexisting
 ```
-New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
+New-MigrationBatch -Name <String>
+ [-Users] <MultiValuedProperty>
  [-AllowIncrementalSyncs <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -187,12 +201,14 @@ New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolderToUnifiedGroup
 ```
-New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup]
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-PublicFolderToUnifiedGroup]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
@@ -212,12 +228,14 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup
  [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### WorkflowTemplate
 ```
-New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
+New-MigrationBatch -Name <String>
+ [-WorkflowTemplate <String>]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
@@ -234,7 +252,8 @@ New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -263,7 +282,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2; 
+New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2
 Start-MigrationBatch -Identity LocalMove1
 ```
 
@@ -271,18 +290,19 @@ This example creates a migration batch for a local move, where the mailboxes in 
 
 ### Example 2
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpointSource = New-MigrationEndpoint -ExchangeRemoteMove -Name Forest1Endpoint -Autodiscover -EmailAddress administrator@forest1.contoso.com -Credentials $Credentials; 
-$CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $MigrationEndpointSource.Identity -TargetDeliveryDomain forest2.contoso.com -TargetDatabases MBXDB1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv")); Start-MigrationBatch -Identity $CrossForestBatch.Identity
+$Credentials = Get-Credential
+$MigrationEndpointSource = New-MigrationEndpoint -ExchangeRemoteMove -Name Forest1Endpoint -Autodiscover -EmailAddress administrator@forest1.contoso.com -Credentials $Credentials
+$CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $MigrationEndpointSource.Identity -TargetDeliveryDomain forest2.contoso.com -TargetDatabases MBXDB1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv"))
+Start-MigrationBatch -Identity $CrossForestBatch.Identity
 ```
 
 This example creates a migration batch for a cross-forest enterprise move, where the mailboxes for the mail users specified in the CSV file are moved to a different forest. A new migration endpoint is created, which identifies the domain where the mailboxes are currently located. The endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet. Note that cross-forest moves are initiated from the target forest, which is the forest that you want to move the mailboxes to.
 
 ### Example 3
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")); 
+$Credentials = Get-Credential
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv"))
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -290,9 +310,9 @@ This example creates a migration batch for an onboarding remote move migration f
 
 ### Example 4
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
-$OffboardingBatch = New-MigrationBatch -Name RemoteOffBoarding1 -TargetEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain onprem.contoso.com -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOffBoarding1.csv")); 
+$Credentials = Get-Credential
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+$OffboardingBatch = New-MigrationBatch -Name RemoteOffBoarding1 -TargetEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain onprem.contoso.com -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOffBoarding1.csv"))
 Start-MigrationBatch -Identity $OffboardingBatch.Identity
 ```
 
@@ -300,8 +320,8 @@ This example creates a migration batch for an offboarding remote move migration 
 
 ### Example 5
 ```powershell
-$credentials = Get-Credential; 
-$SourceEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Autodiscover -Name SourceEndpoint -EmailAddress administrator@contoso.com -Credentials $credentials; 
+$credentials = Get-Credential
+$SourceEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Autodiscover -Name SourceEndpoint -EmailAddress administrator@contoso.com -Credentials $credentials
 New-MigrationBatch -Name CutoverBatch -SourceEndpoint $SourceEndpoint.Identity -TimeZone "Pacific Standard Time" -AutoStart
 ```
 
@@ -309,9 +329,9 @@ This example creates a migration batch for the cutover Exchange migration Cutove
 
 ### Example 6
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Name ContosoEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials; 
-$StagedBatch1 = New-MigrationBatch -Name StagedBatch1 -SourceEndpoint $MigrationEndpoint.Identity -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\StagedBatch1.csv")); 
+$Credentials = Get-Credential
+$MigrationEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Name ContosoEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
+$StagedBatch1 = New-MigrationBatch -Name StagedBatch1 -SourceEndpoint $MigrationEndpoint.Identity -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\StagedBatch1.csv"))
 Start-MigrationBatch -Identity $StagedBatch1.Identity
 ```
 
@@ -319,7 +339,7 @@ This example creates and starts a migration batch for a staged Exchange migratio
 
 ### Example 7
 ```powershell
-New-MigrationEndpoint -IMAP -Name IMAPEndpoint1 -RemoteServer imap.contoso.com -Port 993; 
+New-MigrationEndpoint -IMAP -Name IMAPEndpoint1 -RemoteServer imap.contoso.com -Port 993
 New-MigrationBatch -Name IMAPbatch1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\IMAPmigration_1.csv")) -SourceEndpoint IMAPEndpoint1 -ExcludeFolders "Deleted Items","Junk Email"
 ```
 
@@ -327,9 +347,9 @@ This example creates a migration endpoint for the connection settings to the IMA
 
 ### Example 8
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"; 
+$Credentials = Get-Credential
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -337,9 +357,9 @@ This example is the same as Example 3, but the CompleteAfter parameter is also u
 
 ### Example 9
 ```powershell
-$Credentials = Get-Credential; 
-$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; 
-$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"; 
+$Credentials = Get-Credential
+$MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+$OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -347,7 +367,7 @@ This example is the same as Example 8, but the TimeZone parameter is also used. 
 
 ### Example 10
 ```powershell
-$MigrationEndpointGmail = New-MigrationEndpoint -Gmail -ServiceAccountKeyFileData $([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\gmailonboarding.json")) -EmailAddress admin@contoso.com -Name GmailEndpoint; 
+$MigrationEndpointGmail = New-MigrationEndpoint -Gmail -ServiceAccountKeyFileData $([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\gmailonboarding.json")) -EmailAddress admin@contoso.com -Name GmailEndpoint
 $OnboardingBatch = New-MigrationBatch -SourceEndpoint $MigrationEndpointGmail.Identity -Name GmailBatch1 -CSVData $([System.IO.File]::ReadAll
 Bytes("C:\Users\Administrator\Desktop\gmail.csv")) -TargetDeliveryDomain "o365.contoso.com" -ContentFilter "Received -ge '2019/4/30'" -Inc
 ludeFolders "Payment"
@@ -355,7 +375,6 @@ Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
 A G Suite migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
-
 
 ## PARAMETERS
 

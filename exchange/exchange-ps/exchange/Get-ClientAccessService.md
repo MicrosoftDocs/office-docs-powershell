@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ClientAccessService [[-Identity] <ClientAccessServerIdParameter>] [-DomainController <Fqdn>]
- [-IncludeAlternateServiceAccountCredentialPassword] [-IncludeAlternateServiceAccountCredentialStatus]
+Get-ClientAccessService [[-Identity] <ClientAccessServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IncludeAlternateServiceAccountCredentialPassword]
+ [-IncludeAlternateServiceAccountCredentialStatus]
  [<CommonParameters>]
 ```
 

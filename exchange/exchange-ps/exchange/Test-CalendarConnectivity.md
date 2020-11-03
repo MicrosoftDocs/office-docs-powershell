@@ -23,10 +23,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-CalendarConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-LightMode] [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-ResetTestAccountCredentials]
- [-TestType <OwaConnectivityTestType>] [-Timeout <UInt32>] [-TrustAnySSLCertificate]
- [-VirtualDirectoryName <String>] [-WhatIf] [<CommonParameters>]
+Test-CalendarConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-ResetTestAccountCredentials]
+ [-TestType <OwaConnectivityTestType>]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-VirtualDirectoryName <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

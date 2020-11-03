@@ -32,7 +32,8 @@ New-SiteMailbox [[-DisplayName] <String>] -SharePointUrl <Uri>
  [-Name <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-OverrideRecipientQuotas]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

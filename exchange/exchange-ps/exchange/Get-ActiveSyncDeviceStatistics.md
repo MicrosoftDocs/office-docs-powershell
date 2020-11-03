@@ -28,7 +28,8 @@ Get-ActiveSyncDeviceStatistics [-Identity] <ActiveSyncDeviceIdParameter>
  [-DomainController <Fqdn>]
  [-GetMailboxLog]
  [-NotificationEmailAddresses <MultiValuedProperty>]
- [-ShowRecoveryPassword] [<CommonParameters>]
+ [-ShowRecoveryPassword]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
@@ -37,7 +38,8 @@ Get-ActiveSyncDeviceStatistics -Mailbox <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-GetMailboxLog]
  [-NotificationEmailAddresses <MultiValuedProperty>]
- [-ShowRecoveryPassword] [<CommonParameters>]
+ [-ShowRecoveryPassword]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

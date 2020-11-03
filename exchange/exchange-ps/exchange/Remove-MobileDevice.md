@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-MobileDevice [-Identity] <MobileDeviceIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

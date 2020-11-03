@@ -21,9 +21,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-DlpSensitiveInformationType [-Identity] <SensitiveInformationTypeIdParameter> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Fingerprints <MultiValuedProperty>] [-IsDefault] [-Locale <CultureInfo>]
- [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-DlpSensitiveInformationType [-Identity] <SensitiveInformationTypeIdParameter>
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Fingerprints <MultiValuedProperty>]
+ [-IsDefault]
+ [-Locale <CultureInfo>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

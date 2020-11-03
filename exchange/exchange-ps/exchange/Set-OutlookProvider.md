@@ -21,9 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-OutlookProvider [-Identity] <OutlookProviderIdParameter> [-CertPrincipalName <String>] [-Confirm]
- [-DomainController <Fqdn>] [-Name <String>] [-OutlookProviderFlags <OutlookProviderFlags>]
- [-Server <String>] [-TTL <Int32>] [-WhatIf] [-RequiredClientVersions <String[]>] [<CommonParameters>]
+Set-OutlookProvider [-Identity] <OutlookProviderIdParameter>
+ [-CertPrincipalName <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Name <String>]
+ [-OutlookProviderFlags <OutlookProviderFlags>]
+ [-Server <String>]
+ [-TTL <Int32>]
+ [-WhatIf]
+ [-RequiredClientVersions <String[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

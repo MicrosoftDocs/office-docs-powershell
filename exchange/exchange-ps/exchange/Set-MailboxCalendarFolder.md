@@ -21,12 +21,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter> [-Confirm]
- [-DetailLevel <DetailLevelEnumType>] [-DomainController <Fqdn>]
+Set-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter>
+ [-Confirm]
+ [-DetailLevel <DetailLevelEnumType>]
+ [-DomainController <Fqdn>]
  [-PublishDateRangeFrom <DateRangeEnumType>]
  [-PublishDateRangeTo <DateRangeEnumType>]
- [-PublishEnabled <Boolean>] [-ResetUrl] [-SearchableUrlEnabled <Boolean>] [-WhatIf]
- [-SetAsSharingSource] [-UseHttps] [<CommonParameters>]
+ [-PublishEnabled <Boolean>]
+ [-ResetUrl]
+ [-SearchableUrlEnabled <Boolean>]
+ [-WhatIf]
+ [-SetAsSharingSource]
+ [-UseHttps]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

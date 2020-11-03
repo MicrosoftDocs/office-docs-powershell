@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-UMCallDataRecord -ClientStream <Stream> -Date <ExDateTime> [-Confirm] [-DomainController <Fqdn>]
- [-UMDialPlan <UMDialPlanIdParameter>] [-UMIPGateway <UMIPGatewayIdParameter>] [-WhatIf] [<CommonParameters>]
+Export-UMCallDataRecord -ClientStream <Stream> -Date <ExDateTime>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-UMDialPlan <UMDialPlanIdParameter>]
+ [-UMIPGateway <UMIPGatewayIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

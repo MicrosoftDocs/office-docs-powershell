@@ -22,9 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Restore-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
- [-ActiveDirectorySite <AdSiteIdParameter>] [-AlternateWitnessDirectory <NonRootLocalLongFullPath>]
- [-AlternateWitnessServer <FileShareWitnessServerName>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-UsePrimaryWitnessServer] [<CommonParameters>]
+ [-ActiveDirectorySite <AdSiteIdParameter>]
+ [-AlternateWitnessDirectory <NonRootLocalLongFullPath>]
+ [-AlternateWitnessServer <FileShareWitnessServerName>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [-UsePrimaryWitnessServer]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AuditConfigurationPolicy [[-Identity] <PolicyIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-AuditConfigurationPolicy [[-Identity] <PolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

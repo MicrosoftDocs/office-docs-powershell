@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-SenderId -IPAddress <IPAddress> -PurportedResponsibleDomain <SmtpDomain> [-Confirm]
- [-DomainController <Fqdn>] [-HelloDomain <String>] [-Server <ServerIdParameter>] [-WhatIf]
+Test-SenderId -IPAddress <IPAddress> -PurportedResponsibleDomain <SmtpDomain>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-HelloDomain <String>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

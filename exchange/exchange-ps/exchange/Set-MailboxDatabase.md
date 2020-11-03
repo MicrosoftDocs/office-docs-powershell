@@ -57,7 +57,8 @@ Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
  [-RecoverableItemsWarningQuota <Unlimited>]
  [-RetainDeletedItemsUntilBackup <Boolean>]
  [-RpcClientAccessServer <ClientAccessServerOrArrayIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -58,7 +58,7 @@ Get-EXORecipient cmdlet can be used to view existing recipient objects in your o
 
 ### Example 1
 ```powershell
-Get-EXORecipient -ResultSize 100 
+Get-EXORecipient -ResultSize 100
 ```
 
 This example returns the first 100 recipient objects in name sorted order.

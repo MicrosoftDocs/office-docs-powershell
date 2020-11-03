@@ -26,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

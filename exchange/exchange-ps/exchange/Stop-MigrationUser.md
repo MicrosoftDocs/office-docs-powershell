@@ -23,7 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Stop-MigrationUser [[-Identity] <MigrationUserIdParameter>] [-Confirm] [-Partition <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
+Stop-MigrationUser [[-Identity] <MigrationUserIdParameter>]
+ [-Confirm]
+ [-Partition <MailboxIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

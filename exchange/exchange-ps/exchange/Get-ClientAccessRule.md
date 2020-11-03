@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ClientAccessRule [[-Identity] <ClientAccessRuleIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Get-ClientAccessRule [[-Identity] <ClientAccessRuleIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Update-PublicFolder [-Identity] <PublicFolderIdParameter> -Server <ServerIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

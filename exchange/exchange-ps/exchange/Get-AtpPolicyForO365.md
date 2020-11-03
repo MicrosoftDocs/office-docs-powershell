@@ -27,7 +27,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>] [<CommonParameters>]
+Get-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

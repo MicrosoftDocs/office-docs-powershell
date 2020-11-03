@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-EOPDistributionGroup [-ExternalDirectoryObjectId <String>] [-Identity <DistributionGroupIdParameter>]
+Remove-EOPDistributionGroup [-ExternalDirectoryObjectId <String>]
+ [-Identity <DistributionGroupIdParameter>]
  [<CommonParameters>]
 ```
 

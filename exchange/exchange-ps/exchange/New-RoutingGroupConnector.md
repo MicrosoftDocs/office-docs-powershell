@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-RoutingGroupConnector [-Name] <String> -SourceTransportServers <MultiValuedProperty>
- -TargetTransportServers <MultiValuedProperty> [-BiDirectional <Boolean>] [-Confirm] [-Cost <Int32>]
- [-DomainController <Fqdn>] [-PublicFolderReferralsEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
+New-RoutingGroupConnector [-Name] <String> -SourceTransportServers <MultiValuedProperty> -TargetTransportServers <MultiValuedProperty>
+ [-BiDirectional <Boolean>]
+ [-Confirm]
+ [-Cost <Int32>]
+ [-DomainController <Fqdn>]
+ [-PublicFolderReferralsEnabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

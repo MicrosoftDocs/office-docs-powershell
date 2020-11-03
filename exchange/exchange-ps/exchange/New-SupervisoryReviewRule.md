@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter> [-Condition <String>] [-Confirm]
- [-SamplingRate <Int32>] [-WhatIf] [<CommonParameters>]
+New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter>
+ [-Condition <String>]
+ [-Confirm]
+ [-SamplingRate <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

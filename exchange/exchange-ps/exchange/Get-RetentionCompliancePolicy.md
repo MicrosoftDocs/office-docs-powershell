@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail] [-ExcludeTeamsPolicy] [-RetentionRuleTypes] [-TeamsPolicyOnly]
+Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
+ [-DistributionDetail]
+ [-ExcludeTeamsPolicy]
+ [-RetentionRuleTypes]
+ [-TeamsPolicyOnly]
  [<CommonParameters>]
 ```
 

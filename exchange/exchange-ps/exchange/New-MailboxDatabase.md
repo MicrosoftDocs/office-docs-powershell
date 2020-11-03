@@ -34,18 +34,21 @@ New-MailboxDatabase [-Name] <String> -Server <ServerIdParameter>
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
  [-SkipDatabaseLogFolderCreation]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Recovery
 ```
-New-MailboxDatabase [[-Name] <String>] -Server <ServerIdParameter> [-Recovery]
+New-MailboxDatabase [[-Name] <String>] -Server <ServerIdParameter>
+ [-Recovery]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
  [-SkipDatabaseLogFolderCreation]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

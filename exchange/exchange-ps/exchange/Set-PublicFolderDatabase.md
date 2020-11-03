@@ -43,7 +43,8 @@ Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter>
  [-ReplicationSchedule <Schedule>]
  [-RetainDeletedItemsUntilBackup <Boolean>]
  [-UseCustomReferralServerList <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

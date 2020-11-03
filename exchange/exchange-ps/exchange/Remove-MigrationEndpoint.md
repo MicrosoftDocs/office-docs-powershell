@@ -25,7 +25,8 @@ Remove-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Partition <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

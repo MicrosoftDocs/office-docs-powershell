@@ -24,18 +24,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CrossValidate
 ```
-Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-CrossValidate] [-NumberOfSegments <Int32>]
+Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter>
+ [-CrossValidate]
+ [-NumberOfSegments <Int32>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Train
 ```
-Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-Clear] [-Train]
+Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter>
+ [-Clear]
+ [-Train]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

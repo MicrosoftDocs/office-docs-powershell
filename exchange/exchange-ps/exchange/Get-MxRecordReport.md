@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MxRecordReport [-Domain <Fqdn>] [-Expression <Expression>] [-ProbeTag <String>] [<CommonParameters>]
+Get-MxRecordReport [-Domain <Fqdn>]
+ [-Expression <Expression>]
+ [-ProbeTag <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

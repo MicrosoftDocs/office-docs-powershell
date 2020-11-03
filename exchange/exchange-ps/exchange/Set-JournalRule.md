@@ -28,7 +28,8 @@ Set-JournalRule [-Identity] <RuleIdParameter>
  [-Name <String>]
  [-Recipient <SmtpAddress>]
  [-Scope <JournalRuleScope>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

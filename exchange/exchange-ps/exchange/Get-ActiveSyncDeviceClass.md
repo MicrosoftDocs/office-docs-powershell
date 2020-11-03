@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ActiveSyncDeviceClass [[-Identity] <ActiveSyncDeviceClassIdParameter>] [-DomainController <Fqdn>]
- [-Filter <String>] [-SortBy <String>] [<CommonParameters>]
+Get-ActiveSyncDeviceClass [[-Identity] <ActiveSyncDeviceClassIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

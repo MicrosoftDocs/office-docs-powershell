@@ -24,18 +24,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### PublicFolder
 ```
-Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-DisplayName <String>] [-PublicFolder]
+Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter>
+ [-DisplayName <String>]
+ [-PublicFolder]
  [-Confirm]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SoftDeletedMailbox
 ```
-Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-Password <SecureString>] [-WindowsLiveID <WindowsLiveId>]
- [-Confirm] [-DisplayName <String>]
+Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter>
+ [-Password <SecureString>]
+ [-WindowsLiveID <WindowsLiveId>]
+ [-Confirm]
+ [-DisplayName <String>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

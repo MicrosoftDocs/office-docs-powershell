@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-EmailAddressPolicy [-Identity] <EmailAddressPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-FixMissingAlias] [-WhatIf] [-UpdateSecondaryAddressesOnly] [<CommonParameters>]
+Update-EmailAddressPolicy [-Identity] <EmailAddressPolicyIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FixMissingAlias]
+ [-WhatIf]
+ [-UpdateSecondaryAddressesOnly]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

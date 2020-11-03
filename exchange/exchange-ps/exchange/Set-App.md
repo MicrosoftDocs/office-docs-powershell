@@ -21,9 +21,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-App [-Identity] <AppIdParameter> [-Confirm] [-DefaultStateForUser <DefaultStateForUser>]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-OrganizationApp]
- [-ProvidedTo <ClientExtensionProvidedTo>] [-UserList <MultiValuedProperty>] [-WhatIf] [-PrivateCatalog]
+Set-App [-Identity] <AppIdParameter>
+ [-Confirm]
+ [-DefaultStateForUser <DefaultStateForUser>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-OrganizationApp]
+ [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UserList <MultiValuedProperty>]
+ [-WhatIf]
+ [-PrivateCatalog]
  [<CommonParameters>]
 ```
 

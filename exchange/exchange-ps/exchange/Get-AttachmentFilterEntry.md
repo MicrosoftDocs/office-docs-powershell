@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AttachmentFilterEntry [[-Identity] <String>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-AttachmentFilterEntry [[-Identity] <String>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

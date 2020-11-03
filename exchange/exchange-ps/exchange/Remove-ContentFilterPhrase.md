@@ -23,8 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Remove-ContentFilterPhrase [-Identity] <ContentFilterPhraseIdParameter>
- [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Phrase
@@ -32,7 +34,8 @@ Remove-ContentFilterPhrase [-Identity] <ContentFilterPhraseIdParameter>
 Remove-ContentFilterPhrase [-Phrase <ContentFilterPhraseIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

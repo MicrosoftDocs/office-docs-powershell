@@ -22,16 +22,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Filter
 ```
-Resume-Message -Filter <String> [-Server <ServerIdParameter>]
+Resume-Message -Filter <String>
+ [-Server <ServerIdParameter>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Resume-Message [-Identity] <MessageIdentity>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AuthRedirect [[-Identity] <AuthRedirectIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-AuthRedirect [[-Identity] <AuthRedirectIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

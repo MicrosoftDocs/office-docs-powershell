@@ -31,7 +31,8 @@ Get-Group [-Anr <String>]
  [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -45,7 +46,8 @@ Get-Group [[-Identity] <GroupIdParameter>]
  [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -26,7 +26,8 @@ New-MessageClassification [-Name] <String> -DisplayName <String> -Locale <Cultur
  [-Confirm]
  [-DomainController <Fqdn>]
  [-RecipientDescription <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -39,7 +40,8 @@ New-MessageClassification [-Name] <String> -DisplayName <String> -SenderDescript
  [-PermissionMenuVisible <Boolean>]
  [-RecipientDescription <String>]
  [-RetainClassificationEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

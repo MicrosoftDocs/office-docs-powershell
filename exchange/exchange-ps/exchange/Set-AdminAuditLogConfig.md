@@ -33,7 +33,8 @@ Set-AdminAuditLogConfig [[-Identity] <OrganizationIdParameter>]
  [-Name <String>]
  [-TestCmdletLoggingEnabled <Boolean>]
  [-UnifiedAuditLogIngestionEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

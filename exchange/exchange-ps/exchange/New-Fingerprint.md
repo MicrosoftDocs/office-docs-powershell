@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-Fingerprint [[-FileData] <Byte[]>] -Description <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+New-Fingerprint [[-FileData] <Byte[]>] -Description <String>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,6 +44,24 @@ $Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -E
 This example creates a new document fingerprint based on the file C:\\My Documents\\Contoso Patent Template.docx. You store the new fingerprint as a variable so you can use it with the New-DataClassification cmdlet in the same PowerShell session.
 
 ## PARAMETERS
+
+### -FileData
+The FileData parameter specifies the file to use as a document fingerprint.
+
+You need to read the file to a byte-encoded object using the Get-Content cmdlet. For details, see the section.
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 The Description parameter specifies a description for the document fingerprint.
@@ -72,24 +93,6 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FileData
-The FileData parameter specifies the file to use as a document fingerprint.
-
-You need to read the file to a byte-encoded object using the Get-Content cmdlet. For details, see the section.
-
-```yaml
-Type: Byte[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

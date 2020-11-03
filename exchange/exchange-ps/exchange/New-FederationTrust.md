@@ -22,20 +22,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### SkipNamespaceProviderProvisioning
 ```
-New-FederationTrust [-Name] <String> -Thumbprint <String> -ApplicationUri <String> [-SkipNamespaceProviderProvisioning] [-AdministratorProvisioningId <String>] [-ApplicationIdentifier <String>]
+New-FederationTrust [-Name] <String> -Thumbprint <String> -ApplicationUri <String>
+ [-SkipNamespaceProviderProvisioning]
+ [-AdministratorProvisioningId <String>]
+ [-ApplicationIdentifier <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MetadataUrl <Uri>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FederationTrust
 ```
-New-FederationTrust [-Name] <String> -Thumbprint <String> [-SuppressDnsWarning] [-UseLegacyProvisioningService]
+New-FederationTrust [-Name] <String> -Thumbprint <String>
+ [-SuppressDnsWarning]
+ [-UseLegacyProvisioningService]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MetadataUrl <Uri>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Filter
 ```
-Retry-Queue -Filter <String> [-Server <ServerIdParameter>]
+Retry-Queue -Filter <String>
+ [-Server <ServerIdParameter>]
  [-Confirm]
  [-Resubmit <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -33,7 +35,8 @@ Retry-Queue -Filter <String> [-Server <ServerIdParameter>]
 Retry-Queue [-Identity] <QueueIdentity>
  [-Confirm]
  [-Resubmit <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

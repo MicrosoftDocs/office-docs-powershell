@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CrossForest
 ```
-New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-LinkedCredential <PSCredential>]
+New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGroup <UniversalSecurityGroupIdParameter>
+ [-LinkedCredential <PSCredential>]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
@@ -35,7 +36,8 @@ New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGr
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-Roles <RoleIdParameter[]>]
  [-SamAccountName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
@@ -53,7 +55,8 @@ New-RoleGroup [-Name] <String>
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-Roles <RoleIdParameter[]>]
  [-SamAccountName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

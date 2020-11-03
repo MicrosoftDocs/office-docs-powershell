@@ -22,20 +22,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AuthMetadataUrl
 ```
-New-AuthServer [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
+New-AuthServer [-Name] <String> -AuthMetadataUrl <String>
+ [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### NativeClientAuthServer
 ```
-New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <AuthServerType> [-TrustAnySSLCertificate]
+New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <AuthServerType>
+ [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AppSecret
@@ -44,7 +48,8 @@ New-AuthServer [-Name] <String> -Type <AuthServerType>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -48,7 +48,8 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
  [-TrustedMailInboundEnabled <Boolean>]
  [-TrustedMailOutboundEnabled <Boolean>]
  [-UseSimpleDisplayName <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

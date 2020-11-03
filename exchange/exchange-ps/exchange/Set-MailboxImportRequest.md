@@ -24,12 +24,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Rehome
 ```
-Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-RehomeRequest]
+Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
+ [-RehomeRequest]
  [-AzureSharedAccessSignatureToken <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -49,7 +51,8 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-RemoteHostName <Fqdn>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

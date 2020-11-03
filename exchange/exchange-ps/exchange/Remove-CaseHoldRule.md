@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-CaseHoldRule [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf] [<CommonParameters>]
+Remove-CaseHoldRule [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-ForceDeletion]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

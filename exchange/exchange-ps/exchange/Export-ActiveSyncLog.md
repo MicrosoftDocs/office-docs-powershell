@@ -21,8 +21,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-ActiveSyncLog -Filename <String> [-Confirm] [-EndDate <DateTime>] [-Force] [-OutputPath <String>]
- [-OutputPrefix <String>] [-StartDate <DateTime>] [-UseGMT] [-WhatIf] [<CommonParameters>]
+Export-ActiveSyncLog -Filename <String>
+ [-Confirm]
+ [-EndDate <DateTime>]
+ [-Force]
+ [-OutputPath <String>]
+ [-OutputPrefix <String>]
+ [-StartDate <DateTime>]
+ [-UseGMT]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

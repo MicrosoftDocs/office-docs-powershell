@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-AvailabilityReportOutage [-SiteName] <String> -ReportDate <ExDateTime> [-Confirm] [-Force]
- [-ReportingDatabase <String>] [-ReportingServer <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-AvailabilityReportOutage [-SiteName] <String> -ReportDate <ExDateTime>
+ [-Confirm]
+ [-Force]
+ [-ReportingDatabase <String>]
+ [-ReportingServer <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

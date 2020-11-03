@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Default (Default)
 ```
-Get-EXOMailboxPermission [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-EXOMailboxPermission [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -42,27 +43,19 @@ Get-EXOMailboxPermission
 ## DESCRIPTION
 The output of this cmdlet shows the following information:
 
-Identity: The mailbox in question.
-
-User: The security principal (user, security group, Exchange management role group, etc.) that has permission to the mailbox.
-
-AccessRights: The permission that the security principal has on the mailbox. The available values are ChangeOwner (change the owner of the mailbox), ChangePermission (change the permissions on the mailbox), DeleteItem (delete the mailbox), ExternalAccount (indicates the account isn't in the same domain), FullAccess (open the mailbox, access its contents, but can't send mail) and ReadPermission (read the permissions on the mailbox). Whether the permissions are allowed or denied is indicated in the Deny column.
-
-IsInherited: Whether the permission is inherited (True) or directly assigned to the mailbox (False). Permissions are inherited from the mailbox database and/or Active Directory. Typically, directly assigned permissions override inherited permissions.
-
-Deny: Whether the permission is allowed (False) or denied (True). Typically, deny permissions override allow permissions.
+- Identity: The mailbox in question.
+- User: The security principal (user, security group, Exchange management role group, etc.) that has permission to the mailbox.
+- AccessRights: The permission that the security principal has on the mailbox. The available values are ChangeOwner (change the owner of the mailbox), ChangePermission (change the permissions on the mailbox), DeleteItem (delete the mailbox), ExternalAccount (indicates the account isn't in the same domain), FullAccess (open the mailbox, access its contents, but can't send mail) and ReadPermission (read the permissions on the mailbox). Whether the permissions are allowed or denied is indicated in the Deny column.
+- IsInherited: Whether the permission is inherited (True) or directly assigned to the mailbox (False). Permissions are inherited from the mailbox database and/or Active Directory. Typically, directly assigned permissions override inherited permissions.
+- Deny: Whether the permission is allowed (False) or denied (True). Typically, deny permissions override allow permissions.
 
 By default, the following permissions are assigned to user mailboxes:
 
-FullAccess and ReadPermission are directly assigned to NT AUTHORITY\SELF. This entry gives a user permission to their own mailbox.
-
-FullAccess is denied to Administrator, Domain Admins, Enterprise Admins and Organization Management. These inherited permissions prevent these users and group members from opening other users' mailboxes.
-
-ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are allowed for Administrator, Domain Admins, Enterprise Admins and Organization Management. Note that these inherited permission entries also appear to allow FullAccess. However, these users and groups do not have FullAccess to the mailbox because the inherited Deny permission entries override the inherited Allow permission entries.
-
-FullAccess is inherited by NT AUTHORITY\SYSTEM and ReadPermission is inherited by NT AUTHORITY\NETWORK.
-
-FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are inherited by Exchange Trusted Subsystem and ReadPermission is inherited by Managed Availability Servers.
+-FullAccess and ReadPermission are directly assigned to NT AUTHORITY\SELF. This entry gives a user permission to their own mailbox.
+-FullAccess is denied to Administrator, Domain Admins, Enterprise Admins and Organization Management. These inherited permissions prevent these users and group members from opening other users' mailboxes.
+-ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are allowed for Administrator, Domain Admins, Enterprise Admins and Organization Management. Note that these inherited permission entries also appear to allow FullAccess. However, these users and groups do not have FullAccess to the mailbox because the inherited Deny permission entries override the inherited Allow permission entries.
+-FullAccess is inherited by NT AUTHORITY\SYSTEM and ReadPermission is inherited by NT AUTHORITY\NETWORK.
+-FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are inherited by Exchange Trusted Subsystem and ReadPermission is inherited by Managed Availability Servers.
 
 By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Microsoft 365).
 

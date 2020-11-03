@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String> [-Comment <String>]
+New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
+ [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
  [-ExchangeLocation <MultiValuedProperty>]
@@ -47,7 +48,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 
 ### Example 1
 ```powershell
-New-AutoSensitivityLabelPolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePointLocation "https://my.url","https://my.url2" -OneDriveLocation "https://my.url3","https://my.url4" -Mode TestWithoutNotifications -ApplySensitivityLabel "Test" 
+New-AutoSensitivityLabelPolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePointLocation "https://my.url","https://my.url2" -OneDriveLocation "https://my.url3","https://my.url4" -Mode TestWithoutNotifications -ApplySensitivityLabel "Test"
 ```
 
 This example creates an autolabel policy named GlobalPolicy for the specified SharePoint Online and OneDrive for Business locations with the label "Test". The new policy has a descriptive comment and will be in simulation mode on creation.
@@ -278,8 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocation
-The OneDriveLocation parameter specifies the OneDrive for Business sites to include. You identify the site by its URL value. The value All is currently not supported. 
-
+The OneDriveLocation parameter specifies the OneDrive for Business sites to include. You identify the site by its URL value. The value All is currently not supported.
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
@@ -330,8 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value. The value All is currently not supported. 
-
+The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value. The value All is currently not supported.
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>". SharePoint Online sites can't be added to a policy until they have been indexed.
 
 ```yaml

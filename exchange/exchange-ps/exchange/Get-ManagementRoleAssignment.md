@@ -45,7 +45,8 @@ Get-ManagementRoleAssignment [[-Identity] <RoleAssignmentIdParameter>]
 
 ### RoleAssignee
 ```
-Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>] [-Role <RoleIdParameter>]
+Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
+ [-Role <RoleIdParameter>]
  [-ConfigWriteScope <ConfigWriteScopeType>]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
