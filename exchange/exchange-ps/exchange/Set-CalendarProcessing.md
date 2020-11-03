@@ -577,7 +577,6 @@ This parameter is available only in the cloud-based service.
 The EnforceCapacity parameter specifies whether to restrict the number of attendees to the capacity of the workspace.  For example, if capacity is set to 10, then only 10 people can book the workspace. Valid values are:
 
 - $true: Capacity is enforced.
-
 - $false: Capacity is not enforced. This is the default value.
 
 ```yaml
