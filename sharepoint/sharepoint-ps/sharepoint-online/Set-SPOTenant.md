@@ -97,6 +97,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EmailAttestationRequired <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
  [-BlockUserInfoVisibility]
+ [-IncludeAtAGlanceInShareEmails]
  [<CommonParameters>]
 ```
 
