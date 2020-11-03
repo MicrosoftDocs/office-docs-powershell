@@ -70,9 +70,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the availability address space that you want to view. You can use any value that uniquely identifies the object. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

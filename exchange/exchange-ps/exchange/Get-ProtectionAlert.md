@@ -49,9 +49,7 @@ This example returns detailed information about the alert policy named Malicious
 The Identity parameter specifies the alert policy that you want to view. You can use any value that uniquely identifies the alert policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

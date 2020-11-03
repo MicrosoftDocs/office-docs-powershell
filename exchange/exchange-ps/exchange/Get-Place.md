@@ -51,15 +51,10 @@ This example returns detailed metadata for Conference Room 1.
 The Identity parameter specifies the room mailbox that you want to view. You can use any value that uniquely identifies the room. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml

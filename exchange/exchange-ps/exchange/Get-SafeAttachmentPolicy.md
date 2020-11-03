@@ -55,9 +55,7 @@ The Identity parameter specifies the safe attachment policy that you want to vie
 You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

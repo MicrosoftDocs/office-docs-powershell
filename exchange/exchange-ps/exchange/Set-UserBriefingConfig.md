@@ -14,6 +14,8 @@ ms.author: chrisda
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
+**Note**: This cmdlet is being replaced by the [Set-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/set-myanalyticsfeatureconfig) cmdlet.
+
 Use the Set-UserBriefingConfig cmdlet to enable or disable the Briefing for a user. For more details about configuring the Briefing, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
@@ -59,7 +61,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether to enable or disable the Briefing email for a specified user's mailbox. Valid values are:
 
 - $true: The daily briefing message is enabled.
-
 - $false: The daily briefing message is disabled. This is the default value.
 
 ```yaml
@@ -98,6 +99,8 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ###  
+
+## NOTES
 
 ## RELATED LINKS
 

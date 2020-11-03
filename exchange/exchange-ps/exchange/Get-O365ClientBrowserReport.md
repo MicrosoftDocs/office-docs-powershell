@@ -32,15 +32,10 @@ Get-O365ClientBrowserReport [-Browser <String>] [-EndDate <DateTime>] [-ResultSi
 The report displays the client use statistics for the five most recent versions of the browsers named in the Browser parameter description. All previous browser versions are combined into a sixth category named Others. The following list describes the properties that are returned in the results.
 
 - TenantGuid: Unique identifier of the tenant.
-
 - TenantName: Tenant name.
-
 - Date: Last time the line item data was aggregated.
-
 - Browser: Browser name.
-
 - Version: Browser version.
-
 - TotalBrowserCount: Number of times a given browser and version combination connected to the service during the reporting period.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -67,13 +62,9 @@ This example retrieves the client browser information for all browsers between J
 The Browser parameter filters the report by browser. If you don't use this parameter, all browsers will be included. The accepted values for this parameter are:
 
 - IE
-
 - Firefox
-
 - Chrome
-
 - Safari
-
 - Opera
 
 ```yaml

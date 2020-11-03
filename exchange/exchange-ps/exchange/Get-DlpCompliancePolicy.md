@@ -65,11 +65,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the DLP policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - Id
 
 ```yaml

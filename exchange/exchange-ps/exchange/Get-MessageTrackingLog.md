@@ -34,11 +34,8 @@ A unique message tracking log exists for the Transport service on a Mailbox serv
 The field names displayed in the results from the Get-MessageTrackingLog cmdlet are similar to the actual field names used in the message tracking logs. The differences are:
 
 - The dashes are removed from the field names. For example internal-message-id is displayed as InternalMessageId.
-
 - The date-time field is displayed as Timestamp.
-
 - The recipient-address field is displayed as Recipients.
-
 - The sender-address field is displayed as Sender.
 
 For more information about the message tracking log files, see [Message tracking](https://docs.microsoft.com/Exchange/mail-flow/transport-logs/message-tracking).
@@ -228,11 +225,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

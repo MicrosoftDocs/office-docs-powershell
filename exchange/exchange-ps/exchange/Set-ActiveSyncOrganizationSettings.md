@@ -78,7 +78,6 @@ Accept wildcard characters: False
 The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
 
 - $true
-
 - $false (This is the default value)
 
 ```yaml
@@ -97,8 +96,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -118,9 +116,7 @@ Accept wildcard characters: False
 The DefaultAccessLevel parameter specifies the access level for new and existing device partnerships. Valid values are:
 
 - Allow (This is the default value)
-
 - Block
-
 - Quarantine
 
 If you change this value from Allow to Block or Quarantine, all existing connected devices are immediately affected, unless the devices are subject to device access rules or individual allow or block list entries.

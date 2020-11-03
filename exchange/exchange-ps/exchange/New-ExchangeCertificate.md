@@ -171,8 +171,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -216,7 +215,6 @@ Typically, values include server names (for example, Mailbox01) and FQDNs (for e
 The default value includes the name and FQDN of the Exchange server when both of the following conditions are true:
 
 - You don't use this parameter.
-
 - You don't use any of these parameters: IncludeAcceptedDomains, IncludeAutoDiscover, IncludeServerFQDN, or IncludeServerNetBIOSName.
 
 ```yaml
@@ -296,7 +294,6 @@ The IncludeAcceptedDomains switch specifies that all accepted domains in the Exc
 When you use this switch:
 
 - If you've already included an accepted domain in the DomainName parameter, the value isn't duplicated in the Subject Alternative Name field.
-
 - For new self-signed certificates, if you don't use the Services parameter, the certificate is only assigned to SMTP.
 
 ```yaml
@@ -318,13 +315,11 @@ The IncludeAutoDiscover switch specifies whether to add a Subject Alternative Na
 For example, if the organization has the accepted domains woodgrovebank.com and woodgrovebank.co.uk, using this switch results in the addition of the following values in the Subject Alternative Name field:
 
 - autodiscover.woodgrovebank.com
-
 - autodiscover.woodgrovebank.co.uk
 
 When you use this switch:
 
 - If you've already included the value autodiscover.\<AcceptedDomain\> in the DomainName parameter, the value isn't duplicated in the Subject Alternative Name field.
-
 - For new self-signed certificates, if you don't use the Services parameter, the certificate is only assigned to SMTP.
 
 ```yaml
@@ -396,9 +391,7 @@ Accept wildcard characters: False
 The KeySize parameter specifies the size (in bits) of the RSA public key that's associated with the new certificate request or self-signed certificate. Valid values are:
 
 - 1024
-
 - 2048 (This is the default value)
-
 - 4096
 
 ```yaml
@@ -418,7 +411,6 @@ Accept wildcard characters: False
 The PrivateKeyExportable parameter specifies whether the new self-signed certificate has an exportable private key, and controls whether you can export the certificate from the server (and import the certificate on other servers). Valid values are:
 
 - $true: The private key is exportable, so you can export the certificate from the server.
-
 - $false: The private key isn't exportable, so you can't export the certificate. This is the default value.
 
 This parameter is only meaningful for new self-signed certificates.
@@ -460,11 +452,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
@@ -486,19 +475,12 @@ Accept wildcard characters: False
 The Services parameter specifies the Exchange services that the new self-signed certificate is enabled for. Valid values are:
 
 - None: You can enable the certificate for Exchange services later by using the Enable-ExchangeCertificate cmdlet.
-
 - Federation
-
 - IIS
-
 - IMAP: Don't enable a wildcard certificate for the IMAP4 service. Instead, use the Set-ImapSettings cmdlet to configure the FQDN that clients use to connect to the IMAP4 service.
-
 - POP: Don't enable a wildcard certificate for the POP3 service. Instead, use the Set-PopSettings cmdlet to configure the FQDN that clients use to connect to the POP3 service.
-
 - SMTP: When you enable a certificate for SMTP, you're prompted to replace the default Exchange self-signed certificate that's used to encrypt SMTP traffic between internal Exchange. If you want to replace the default certificate without the confirmation prompt, use the Force switch.
-
 - UM: This value requires that the UMStartupMode parameter on the Set-UMService cmdlet is set to TLS or Dual. If the UMStartupMode parameter is set to the default value of TCP, you can't enable the certificate for the UM service.
-
 - UMCallRouter: This value requires that the UMStartupMode parameter on the Set-UMCallRouterService cmdlet is set to TLS or Dual. If the UMStartupMode parameter is set to the default value TCP, you can't enable the certificate for the UM Call Router service.
 
 You can specify multiple values separated by commas. The default values are IMAP,POP, and SMTP.
@@ -546,9 +528,7 @@ This parameter uses the syntax: [C=\<CountryOrRegion\>,S=\<StateOrProvince\>,L=L
 For example, if you want the certificate's subject to be mail.contoso.com in the United States, you can use any of the following values:
 
 - C=US,S=WA,L=Redmond,O=Contoso,OU=IT,CN=mail.contoso.com
-
 - C=US,O=Contoso,CN=mail.contoso.com
-
 - C=US,CN=mail.contoso.com
 
 If you don't use this parameter, the default value is the name of the Exchange server where you run the command (for example, CN=Mailbox01).

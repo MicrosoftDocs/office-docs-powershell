@@ -49,9 +49,7 @@ This example returns detailed information for the policy named Engineering Group
 The Identity parameter specifies the sensitivity label policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
