@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/r
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 title: Remove-FASTSearchSpelltuning
 ---

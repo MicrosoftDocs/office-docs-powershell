@@ -145,7 +145,18 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets to request a self-signed certificate and export it to PFX.
+- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets to request a self-signed certificate and export it to `.cer` and `.pfx`.
+
+```powershell
+# Create certificate
+New-SelfSignedCertificate -DnsName "example.com" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1)
+
+# Export certificate to .pfx file
+Get-ChildItem -Path Cert:\localMachine\my\1DC696D8BE9E656D1F9ED576931B44EC650CF0F8 | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "1234" -Force -AsPlainText)
+
+# Export certificate to .cer file
+Get-ChildItem -Path Cert:\localMachine\my\1DC696D8BE9E656D1F9ED576931B44EC650CF0F8 | Export-Certificate -FilePath mycert.cer
+```
 
 - Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1). Note that this script generates SHA1 certificates.
 
@@ -155,7 +166,7 @@ Create a self-signed x.509 certificate using one of the following methods:
 
 ## Step 4: Attach the certificate to the Azure AD application
 
-After you register the certificate with your application, you can use the public key (.pfx file) or the thumbprint for authentication.
+After you register the certificate with your application, you can use the public key (`.pfx` file) or the thumbprint for authentication.
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
 
@@ -169,7 +180,7 @@ After you register the certificate with your application, you can use the public
 
    ![Click Upload certificate](media/app-only-auth-upload-cert.png)
 
-6. In the dialog that appears, browse to the self-signed certificate you created in the previous Step, and then click **Add**.
+6. In the dialog that appears, browse to the self-signed certificate (`.cer` file) you created in the previous step, and then click **Add**.
 
 ## Step 5: Assign a role to the application
 

@@ -4236,7 +4236,7 @@ Accept wildcard characters: False
 ### -Quarantine
 This parameter specifies an action or part of an action for the rule.
 
-This action is available only on Edge Transport servers in on-premises Exchange.
+In on-premises Exchange, this action is available only on Edge Transport servers.
 
 The Quarantine parameter specifies an action that quarantines messages.
 
@@ -4248,7 +4248,7 @@ The Quarantine parameter specifies an action that quarantines messages.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
