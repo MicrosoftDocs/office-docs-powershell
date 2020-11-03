@@ -42,37 +42,21 @@ Get-CalendarDiagnosticAnalysis -LogLocation <String[]>
 The following properties of the calendar item are returned in the default output of the cmdlet (when the DetailLevel parameter is set to Basic):
 
 - Local Log Time
-
 - ItemId
-
 - NormalizedSubject
-
 - StartTime
-
 - EndTime
-
 - CalendarLogTriggerAction
-
 - ClientInfoString
-
 - OriginalLastModifiedTime
-
 - ClientIntent
-
 - CleanGlobalObjectId
-
 - ItemClass
-
 - ParentDisplay
-
 - Duration
-
 - AppointmentRecurring
-
 - SentRepresentingEmailAddress
-
 - SenderEmailAddress
-
 - SentRepresentingDisplayName
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -145,7 +129,6 @@ Accept wildcard characters: False
 The DetailLevel parameter specifies the level of detail you want to see in the analysis output. Valid values are:
 
 - Basic: This is the default value. The calendar item properties that are returned are listed in the Detailed Description.
-
 - Advanced: 37 additional calendar item properties are returned. You should use this value only for detailed debugging information.
 
 ```yaml
@@ -183,9 +166,7 @@ Accept wildcard characters: False
 The OutputAs parameter specifies the output format of the command. Valid values are:
 
 - CSV (This is the default value)
-
 - HTML
-
 - XML
 
 ```yaml

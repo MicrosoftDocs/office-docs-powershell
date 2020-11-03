@@ -456,8 +456,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -597,11 +596,8 @@ Accept wildcard characters: False
 The GroupName parameter specifies the name of the Exchange settings group in group operations. For example:
 
 - Create Exchange settings groups and simultaneously configure the group scope and priority.
-
 - Modify the ExpirationDate, Priority, and ScopeFilter values of existing Exchange settings groups.
-
 - Remove existing Exchange settings groups.
-
 - Add, remove, or update Exchange setting objects in existing Exchange settings groups.
 
 If the value contains spaces, enclose the value in quotation marks (").
@@ -699,19 +695,12 @@ Accept wildcard characters: False
 The Scope parameter specifies the scope of the Exchange settings object. Valid values are:
 
 - Dag
-
 - Database
-
 - Forest
-
 - Generic
-
 - Organization
-
 - Process
-
 - Server
-
 - User
 
 ```yaml
@@ -731,11 +720,8 @@ Accept wildcard characters: False
 The ScopeFilter parameter uses OPath filter syntax to specify the scope of an Exchange settings group based. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"ServerRole -like 'Mailbox*'"`).
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property.
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.

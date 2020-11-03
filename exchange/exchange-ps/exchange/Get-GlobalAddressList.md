@@ -95,9 +95,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the global address list that you want to view. You can use any value that uniquely identifies the GAL. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

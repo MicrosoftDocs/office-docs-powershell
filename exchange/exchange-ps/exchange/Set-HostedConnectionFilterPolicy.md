@@ -46,7 +46,6 @@ Set-HostedConnectionFilterPolicy "Default" -IPAllowList 192.168.1.10,192.168.1.2
 This example modifies the connection filter policy named Default with the following settings:
 
 - Messages from 192.168.1.10 and 192.168.1.23 are never identified as spam.
-
 - Messages from 10.10.10.0/25 and 172.17.17.0/24 are always identified as spam.
 
 ### Example 2
@@ -57,7 +56,6 @@ Set-HostedConnectionFilterPolicy "Default" -IPAllowList @{Add="192.168.2.10","19
 This example modifies the connection filter policy named Default with the following settings:
 
 - The following IP addresses are added to the existing values in the IP allow list: 192.168.2.10, 192.169.3.0/24 and 192.168.4.1-192.168.4.5.
-
 - The IP address 192.168.1.10 is removed from the existing values in the IP allow list.
 
 ## PARAMETERS
@@ -66,9 +64,7 @@ This example modifies the connection filter policy named Default with the follow
 The Identity parameter specifies the connection filter policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Typically, you only have one connection filter policy: the default policy named Default.
@@ -121,8 +117,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -164,9 +159,7 @@ The IPAllowList parameter specifies IP addresses from which messages are always 
 You enter the IP addresses using the following syntax:
 
 - Single IP: For example, 192.168.1.1.
-
 - IP range: You can use an IP address range, for example, 192.168.0.1-192.168.0.254.
-
 - CIDR IP: You can use Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25. Valid network mask values are /24 through /32.
 
 You can specify multiple IP addresses of the same type separated by commas. For example, \<single IP1\>, \<single IP2\> or \<CIDR IP1\>, \<CIDR IP2\>. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: @{Add="\<single IP1\>","\<IP range1\>",\<CIDR IP1\>...}.
@@ -190,9 +183,7 @@ The IPBlockList parameter specifies IP addresses from which messages are never a
 You enter the IP addresses using the following syntax:
 
 - Single IP: For example, 192.168.1.1.
-
 - IP range: You can use an IP address range, for example, 192.168.0.1-192.168.0.254.
-
 - CIDR IP: You can use Classless InterDomain Routing (CIDR), for example, 192.168.0.1/25. Valid network mask values are /24 through /32.
 
 You can specify multiple IP addresses of the same type separated by commas. For example, \<single IP1\>, \<single IP2\> or \<CIDR IP1\>, \<CIDR IP2\>. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: @{Add="\<single IP1\>","\<IP range1\>",\<CIDR IP1\>...}.

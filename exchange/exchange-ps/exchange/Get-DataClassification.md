@@ -100,9 +100,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the data classification rule that you want to view. You can use any value that uniquely identifies the data classification rule. For example:
 
 - Name
-
 - LocalizedName
-
 - Identity GUID value
 
 ```yaml

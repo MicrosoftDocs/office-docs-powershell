@@ -102,8 +102,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -161,13 +160,9 @@ The ConnectivityLogMaxDirectorySize parameter specifies the maximum size of all 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -193,13 +188,9 @@ The ConnectivityLogMaxFileSize parameter specifies the maximum size of each conn
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -239,9 +230,7 @@ Accept wildcard characters: False
 The ContentConversionTracingEnabled parameter specifies whether content conversion tracing is enabled. Content conversion tracing captures content conversion failures that occur in the Transport service or in the Mailbox Transport service on the Mailbox server. The default value is $false. Content conversion tracing captures a maximum of 128 MB of content conversion failures. When the 128 MB limit is reached, no more content conversion failures are captured. Content conversion tracing captures the complete contents of email messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
 - Administrators: Full Control
-
 - Network Service: Full Control
-
 - System: Full Control
 
 ```yaml
@@ -315,13 +304,9 @@ The MailboxDeliveryAgentLogMaxDirectorySize parameter specifies the maximum size
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -347,13 +332,9 @@ The MailboxDeliveryAgentLogMaxFileSize parameter specifies the maximum size of e
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -409,7 +390,6 @@ Accept wildcard characters: False
 The MailboxDeliveryConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Valid values are:
 
 - None: Protocol logging is disabled for the mailbox delivery Receive connector. This is the default value.
-
 - Verbose: Protocol logging is enabled for the mailbox delivery Receive connector. The location of the log files is controlled by the ReceiveProtocolLogPath parameter.
 
 ```yaml
@@ -429,7 +409,6 @@ Accept wildcard characters: False
 The MailboxDeliveryConnectorSmtpUtf8Enabled parameters or disables email address internationalization (EAI) support for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Valid values are:
 
 - $true: Mail can be delivered to local mailboxes that have international characters in email addresses. This is the default value
-
 - $false: Mail can't be delivered to local mailboxes that have international characters in email addresses.
 
 ```yaml
@@ -487,13 +466,9 @@ The MailboxDeliveryThrottlingLogMaxDirectorySize parameter specifies the maximum
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -519,13 +494,9 @@ The MailboxDeliveryThrottlingLogMaxFileSize parameter specifies the maximum size
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -603,13 +574,9 @@ The MailboxSubmissionAgentLogMaxDirectorySize parameter specifies the maximum si
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -635,13 +602,9 @@ The MailboxSubmissionAgentLogMaxFileSize parameter specifies the maximum size of
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -729,9 +692,7 @@ Accept wildcard characters: False
 The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\\Mailbox\\Hub\\PipelineTracing. The path must be local to the Exchange computer. Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter. Pipeline tracing captures the complete contents of email messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
 - Administrators: Full Control
-
 - Network Service: Full Control
-
 - System: Full Control
 
 ```yaml
@@ -795,13 +756,9 @@ A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the v
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -831,13 +788,9 @@ A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the v
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -903,13 +856,9 @@ The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -975,13 +924,9 @@ A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the v
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1011,13 +956,9 @@ A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the v
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1043,7 +984,6 @@ Accept wildcard characters: False
 The SendProtocolLogPath parameter specifies the location of the protocol log directory for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\ProtocolLog\\SmtpSend. Log files are automatically stored in the following subdirectories:
 
 - Submission: Protocol log files for the intra-organization Send connector in the Mailbox Transport Submission service.
-
 - Delivery: Protocol log files for side effect messages that are submitted after messages are delivered to mailboxes. For example, a message delivered to a mailbox triggers an Inbox rule that redirects the message to another recipient.
 
 Don't use the value $null for this parameter, because event log errors are generated if protocol logging is enabled for the intra-organization Send connector in the Mailbox Transport Submission service. To disable protocol logging for this connector, use the value None for the IntraOrgConnectorProtocolLoggingLevel parameter on the Set-TransportService cmdlet.

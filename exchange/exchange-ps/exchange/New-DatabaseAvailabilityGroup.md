@@ -35,15 +35,12 @@ When creating a DAG, you need to specify a valid computer name for the DAG no lo
 The requirements for the witness server are as follows:
 
 - The witness server can't be a member of the DAG.
-
 - The witness server must be running the Windows Server 2008 operating system or later.
-
 - A single server can serve as a witness for multiple DAGs; however, each DAG requires its own witness directory.
 
 The following combinations of options and behaviors are available:
 
 - You can specify a name for the DAG, the witness server that you want to use, and the directory you want created and shared on the witness server.
-
 - You can specify a name for the DAG and the witness server that you want to use. In this scenario, the task creates the default directory on the specified witness server.
 
 If the witness server that you specify isn't an Exchange server, you need to add the Exchange Trusted Subsystem universal security group (USG) to the local Administrators group on the witness server. If the witness server is a directory server, you need to add the Exchange Trusted Subsystem USG to the Builtin\\Administrators group. These security permissions are necessary to ensure that Exchange can create a directory and share on the witness server as needed.
@@ -96,8 +93,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -245,7 +241,6 @@ Accept wildcard characters: False
 The FileSystem parameter specifies the file system that's used for the DAG. Valid values are:
 
 - NTFS
-
 - ReFS
 
 ```yaml

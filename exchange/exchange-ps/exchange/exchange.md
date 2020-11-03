@@ -9,11 +9,8 @@ title: exchange
 Exchange PowerShell is built on Windows PowerShell technology and provides a powerful command-line interface that enables automation of administrative tasks. The following PowerShell environments are available in Exchange:
 
 - [Exchange Server PowerShell (Exchange Management Shell)](https://docs.microsoft.com/powershell/exchange/exchange-management-shell)
-
 - [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell)
-
 - [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
-
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
 ## active-directory Cmdlets
@@ -2084,9 +2081,13 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EXORecipientPermission](Get-EXORecipientPermission.md)
 
+### [Get-MyAnalyticsFeatureConfig](Get-MyAnalyticsFeatureConfig.md)
+
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
+
+### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
 
 ## reporting Cmdlets
 ### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)

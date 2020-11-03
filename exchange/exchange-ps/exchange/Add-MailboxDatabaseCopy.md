@@ -31,11 +31,8 @@ Add-MailboxDatabaseCopy [-Identity] <DatabaseIdParameter> [-MailboxServer] <Mail
 To use the Add-MailboxDatabaseCopy cmdlet to add a mailbox database copy, the following criteria must be met:
 
 - The specified Mailbox server must be in the same database availability group (DAG), and the DAG must have quorum and be healthy.
-
 - The specified Mailbox server must not already host a copy of the specified mailbox database.
-
 - The database path used by the specified database must also be available on the specified Mailbox server, because all copies of a database must use the same path.
-
 - If you're adding the second copy of a database (for example, adding the first passive copy of the database), circular logging must not be enabled for the specified mailbox database. If circular logging is enabled, you must first disable it. After the mailbox database copy has been added, circular logging can be enabled. After enabling circular logging for a replicated mailbox database, continuous replication circular logging (CRCL) is used instead of JET circular logging. If you're adding the third or subsequent copy of a database, CRCL can remain enabled.
 
 After running the Add-MailboxDatabaseCopy cmdlet, the new copy remains in a Suspended state if the SeedingPostponed parameter is specified. When the database copy status is set to Suspended, the SuspendMessage is set to "Replication is suspended for database copy '{0}' because database needs to be seeded."
@@ -71,9 +68,7 @@ This example adds a copy of mailbox database DB3 to the Mailbox server MBX4. Rep
 The Identity parameter specifies the mailbox database that's being copied. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -124,8 +119,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

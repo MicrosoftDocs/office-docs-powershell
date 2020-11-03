@@ -67,11 +67,8 @@ This example returns detailed information for the address list named building4th
 The Container parameter filters the results based on the location of the address list. Only address lists under the specified path are returned. Valid input for this parameter is the root "\\" (also known as All Address Lists) or an existing address list. You can use any value that uniquely identifies the address list. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
 
 You can't use this parameter with the Identity or SearchText parameters.
@@ -111,11 +108,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the address list that you want to view. You can use any value that uniquely identifies the address list. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
 
 You can't use this parameter with the Container or SearchText parameters.

@@ -49,9 +49,7 @@ This example returns detailed information for the authentication policy named En
 The Identity parameter specifies the authentication policy you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

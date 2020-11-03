@@ -47,9 +47,7 @@ This example approves the customer lockbox request EXSR123456 with a comment.
 The ApprovalDecision parameter specifies the approval decision for the customer lockbox request. Valid values are:
 
 - Approve
-
 - Deny
-
 - Cancel
 
 ```yaml

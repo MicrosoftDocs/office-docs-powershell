@@ -135,9 +135,7 @@ Accept wildcard characters: False
 The Exclude parameter specifies the types of queues you want to exclude from the results. Valid values for this parameter are:
 
 - Internal
-
 - External
-
 - A valid queue DeliveryType value. For details, see the NextHopSolutionKey section in Queues and messages in queues.
 
 ```yaml
@@ -175,9 +173,7 @@ Accept wildcard characters: False
 The Include parameter specifies the types of queues you want to include the results. Valid values for this parameter are:
 
 - Internal
-
 - External
-
 - A valid queue DeliveryType value. For details, see the NextHopSolutionKey section in Queues and messages in queues.
 
 ```yaml
@@ -261,11 +257,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
