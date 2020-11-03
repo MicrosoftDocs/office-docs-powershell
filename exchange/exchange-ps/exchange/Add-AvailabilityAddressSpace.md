@@ -62,13 +62,9 @@ This example is useful with a trusted cross-forest Availability service. The con
 The AccessMethod parameter specifies how the free/busy data is accessed. Valid values are:
 
 - PerUserFB: Per-user free/busy information can be requested. The free/busy data is accessed in the defined per-user free/busy proxy account or group, or in the All Exchange Servers group. This value requires a trust between the two forests, and requires you to use either the UseServiceAccount parameter or Credentials parameter.
-
 - OrgWideFB: Only default free/busy for each user can be requested. The free/busy data is accessed in the per-user free/busy proxy account or group in the target forest. This value requires you to use either the UseServiceAccount parameter or Credentials parameter.
-
 - OrgWideFBBasic: This value is reserved for internal Microsoft use.
-
 - InternalProxy: The request is proxied to an Exchange in the site that has a later version of Exchange.
-
 - PublicFolder: This value was used to access free/busy data on Exchange Server 2003 servers.
 
 ```yaml
@@ -103,8 +99,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -182,7 +177,6 @@ This parameter is available only in on-premises Exchange.
 The UseServiceAccount parameter specifies whether to use the local Availability service account for authorization. Valid values
 
 - $true: The local Availability service account is used for authorization.
-
 - $false: The local Availability service account isn't used for authorization. You need to use the Credentials parameter.
 
 ```yaml

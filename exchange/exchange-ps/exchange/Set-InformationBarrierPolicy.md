@@ -69,9 +69,7 @@ This example activates the specified inactive information barrier policy.
 The Identity parameter specifies the information barrier policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -163,7 +161,6 @@ Accept wildcard characters: False
 The State parameter specifies whether the information barrier policy is active or inactive. Valid values are:
 
 - Active
-
 - Inactive
 
 ```yaml

@@ -107,17 +107,11 @@ In Exchange Server 2010, this example returns default statistics for a mailbox t
 The Identity parameter specifies the identity of the mailbox or mail user. You can use one of the following values:
 
 - GUID
-
 - Distinguished name (DN)
-
 - Domain\\Account
-
 - User principal name (UPN)
-
 - Legacy Exchange DN
-
 - SMTP address
-
 - Alias
 
 You can use this parameter with the MoveRequestQueue or MailboxGuid parameters.
@@ -143,9 +137,7 @@ This parameter is for debugging purposes only.
 The MoveRequestQueue parameter specifies the mailbox database on which the move request resides. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity or MRSInstance parameters.
@@ -305,23 +297,14 @@ This parameter is available only in the cloud-based service.
 The ProxyToMailbox parameter filters the results by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

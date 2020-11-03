@@ -66,9 +66,7 @@ This parameter is available only in on-premises Exchange.
 The AddressBookEnabled parameter specifies whether to enable recipient filtering for this accepted domain. The default values are:
 
 - $true for authoritative domains.
-
 - $false for internal relay domains.
-
 - $false for external relay domains.
 
 ```yaml
@@ -87,8 +85,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -128,9 +125,7 @@ Accept wildcard characters: False
 The DomainType parameter specifies the accepted domain type. Valid values are:
 
 - Authoritative: This is the default value. Your organization is completely responsible for delivering email to recipients in the domain, and for generating non-delivery reports (also known as an NDRs, delivery system notifications, DSNs, or bounce messages) for unresolved recipients.
-
 - InternalRelay: This is a type of non-authoritative domain. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external messaging system that's under your control. The external messaging system is responsible for generating NDRs for unresolved recipients. Use this value to treat messages that are sent to the domain as internal messages.
-
 - ExternalRelay: This is a type of non-authoritative domain that's available only in on-premises Exchange organizations. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external messaging system that's completely outside of your control. The external messaging system is responsible for generating NDRs for unresolved recipients.
 
 Note:
@@ -156,7 +151,6 @@ This parameter is available only in on-premises Exchange.
 The MakeDefault parameter specifies whether the accepted domain is the default domain. Valid values are: $true or $false.
 
 - $true: The accepted domain is the default domain. This is the default value for first accepted domain that's created in the organization.
-
 - $false: The accepted domain isn't the default domain. This the default value for subsequent accepted domains.
 
 The default accepted domain is used in sender email addresses when the senders have only non-SMTP email addresses (for example, X.400 addresses). Non-SMTP email addresses are encapsulated in SMTP email addresses by using the Internet Mail Connector Encapsulated Address (IMCEA) encapsulation method. IMCEA encapsulation uses the default domain value in the SMTP email address.

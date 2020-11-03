@@ -70,9 +70,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the Intra-Organization connector that you want to view. You can use any value that uniquely identifies the connector. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

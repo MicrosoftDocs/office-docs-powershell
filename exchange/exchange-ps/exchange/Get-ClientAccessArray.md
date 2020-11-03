@@ -31,7 +31,6 @@ Client Access arrays were introduced in Exchange Server 2010 so Outlook clients 
 Changes in the Exchange server architecture that were introduced in Exchange Server 2013 removed the need for RPC Client Access arrays:
 
 - Outlook clients can't use RPC over TCP to access mailboxes on Exchange Server 2013 or later versions and RPC Client Access arrays only work with RPC over TCP.
-
 - Because the Client Access server role is now a stateless proxy, you use different and less complex methods to configure load balancing and high availability for internal and external client connections. For more information, see [Load balancing in Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/load-balancing).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -74,13 +73,9 @@ Accept wildcard characters: False
 The Identity parameter specifies the Client Access array that you want to view. You can use these values:
 
 - Name (if the value doesn't contain spaces)
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - Fully qualified domain name (FQDN)
-
 - GUID
 
 ```yaml
@@ -100,11 +95,8 @@ Accept wildcard characters: False
 The Site parameter filters the results by Active Directory site. You can use any value that uniquely identifies the site. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - To see a list of available sites, use the Get-ADSite cmdlet.
 
 ```yaml

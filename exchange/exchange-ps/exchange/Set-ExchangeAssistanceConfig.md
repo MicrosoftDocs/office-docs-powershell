@@ -81,8 +81,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -168,7 +167,6 @@ Accept wildcard characters: False
 The ExchangeHelpAppOnline specifies whether your organization uses the public help that's hosted by Microsoft. Valid values are:
 
 - $true: Your organization uses the help that's hosted by Microsoft. This is the default value.
-
 - $false: Your organization doesn't use the help that's hosted by Microsoft. You need to use the ControlPanelHelpURL, ManagementConsoleHelpURL, OWAHelpURL, and OWALightHelpURL parameters to configure the URLs where the help files are hosted.
 
 ```yaml

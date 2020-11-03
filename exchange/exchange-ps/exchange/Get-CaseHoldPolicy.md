@@ -50,7 +50,6 @@ This example displays detailed information for the policy named "Regulation 123 
 The Case parameter specifies the case hold policy that you want to view by using the eDiscovery case that's associated with the policy. You can use the following values to identify the eDiscovery case:
 
 - Name
-
 - Identity (GUID value).
 
 You can find these values by running the command: Get-ComplianceCase | Format-Table -Auto Name,Status,Identity.
@@ -99,9 +98,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the case hold policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

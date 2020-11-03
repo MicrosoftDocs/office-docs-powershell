@@ -95,7 +95,6 @@ The Identity parameter specifies the compliance search that you want to view.
 You can use any value that uniquely identifies the compliance search. For example:
 
 - Name
-
 - JobRunId (GUID)
 
 You can find these values by running the command Get-ComplianceSearch | Format-Table -Auto Name,JobRunId,Status
@@ -103,17 +102,11 @@ You can find these values by running the command Get-ComplianceSearch | Format-T
 To improve the performance of this cmdlet, some compliance search properties aren't returned if you don't specify the identity of the compliance search. These properties are:
 
 - Items
-
 - Size
-
 - SuccessResults
-
 - NumBindings
-
 - ExchangeLocation
-
 - SharePointLocation
-
 - OneDriveLocation
 
 To view these properties, you need to use the Identity parameter in the command.

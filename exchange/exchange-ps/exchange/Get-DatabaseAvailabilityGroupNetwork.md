@@ -31,27 +31,18 @@ State information is returned for subnets and for network interfaces, as describ
 Valid states for Internet Protocol version 4 (IPv4) subnets
 
 - Up: All defined network interfaces in the DAG are functional and available for communication. This is the expected and normal operational state.
-
 - Down: All defined network interfaces in the DAG are nonfunctional and have lost communication with each other and all external hosts. All connected network interfaces are in a Failed or Unreachable state.
-
 - Partitioned: One or more network interfaces in the DAG are in an Unreachable state, but at least two interfaces can communicate with each other or an external host.
-
 - Misconfigured: All subnets for a specified DAG network must have the same values for ReplicationEnabled and IgnoreNetwork. If any one of the subnets isn't configured with the same values for these parameters as all other subnets on the network, all subnets are in a Misconfigured state.
-
 - Unavailable: The network isn't enabled for replication or use by the DAG, or all DAG members attached to the network are inactive or unavailable.
-
 - Unknown: The system was unable to determine the state of the subnet.
 
 Valid states for network interfaces
 
 - Up: The network interface is functional and can communicate with all other network interfaces. This is the expected and normal operational state.
-
 - Failed: The network interface is unable to communicate with other network interfaces or external hosts, although other network interfaces on the local area network (LAN) are able to communicate with each other and external hosts.
-
 - Unreachable: The system was unable to communicate with at least one network interface whose state is Up.
-
 - Unavailable: The network interface isn't enabled for replication or use by the DAG, or the DAG member associated with this network interface is inactive or unavailable.The network interface isn't enabled for replication or use by the DAG, or the DAG member associated with this network interface is inactive or unavailable.
-
 - Unknown: The system was unable to determine the state of the network interface.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -117,11 +108,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Mailbox server in the DAG to retrieve health information for the DAG network from. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 ```yaml

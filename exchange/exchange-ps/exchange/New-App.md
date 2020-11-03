@@ -131,8 +131,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -152,9 +151,7 @@ Accept wildcard characters: False
 The DefaultStateForUser parameter specifies the default initial state of an organization app. Valid values are:
 
 - Enabled: The organization app is enabled by default.
-
 - Disabled: The organization app is disabled by default. This is the default value.
-
 - AlwaysEnabled: The organization app is enabled and users can't disable it.
 
 You need to use the OrganizationApp switch when you use this parameter.
@@ -212,7 +209,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the app is available to users in the organization. Valid values are:
 
 - $true: The app is available to the specified users. This is the default value.
-
 - $false: The app is hidden from all users in the organization.
 
 This setting overrides the ProvidedTo, UserList and DefaultStateForUser settings. This setting doesn't prevent users from installing their own instance of the app if they have install permissions.
@@ -284,23 +280,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example: For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -432,7 +419,6 @@ Accept wildcard characters: False
 The ProvidedTo parameter specifies the availability of the app in your organization. Valid values are:
 
 - Everyone: This is the default value. This app is provided to every user in the organization. Every user sees this app listed in the installed apps list in Outlook on the web Options. When an app in the installed apps list is enabled, users can use the features of this app in their email. All users are blocked from installing their own instances of this app, including but not limited to users with install apps permissions.
-
 - SpecificUsers: This app is provided to only the users specified by the UserList parameter. All other users don't see this organizational app in their management view, nor will it activate in their mail or calendar items. The specified users are also blocked from installing their own instance of this app. Unlisted users aren't blocked from installing their own instance of this app.
 
 You use this parameter with the OrganizationApp switch.
@@ -470,23 +456,14 @@ Accept wildcard characters: False
 The UserList parameter specifies who can use an organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".

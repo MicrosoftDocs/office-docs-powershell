@@ -33,35 +33,20 @@ Get-DlpDetailReport [-Action <MultiValuedProperty>] [-Actor <MultiValuedProperty
 The Get-DlpDetailReport cmdlet returns detailed information about specific DLP rule matches for the last 7 days. Although the cmdlet accepts date ranges older than 7 days, only information about the last 7 days are returned. The properties returned include:
 
 - Date
-
 - Title
-
 - Location
-
 - Severity
-
 - Size
-
 - Source
-
 - Actor
-
 - DLPPolicy
-
 - UserAction
-
 - Justification
-
 - SensitiveInformationType
-
 - SensitiveInformationCount
-
 - SensitiveInformationConfidence
-
 - EventType
-
 - Action
-
 - ObjectId
 
 To see DLP detection data that's aggregated per day, use the [Get-DlpDetectionsReport](https://docs.microsoft.com/powershell/module/exchange/get-dlpdetectionsreport) cmdlet.
@@ -83,9 +68,7 @@ The following example lists the details of all the DLP policy activities defined
 The Action parameter filters the report by the action taken by DLP policies. Valid values are:
 
 - BlockAccess
-
 - GenerateIncidentReport
-
 - NotifyUser
 
 You can specify multiple values separated by commas.
@@ -179,13 +162,9 @@ Accept wildcard characters: False
 The EventType parameter filters the report by the event type. Valid values are:
 
 - DLPActionHits
-
 - DLPPolicyFalsePositive
-
 - DLPPolicyHits
-
 - DLPPolicyOverride
-
 - DLPRuleHits
 
 You can specify multiple values separated by commas.
@@ -255,9 +234,7 @@ Accept wildcard characters: False
 The Source parameter filters the report by workload. Valid values are:
 
 - EXCH: Exchange Online
-
 - ODB: OneDrive for Business
-
 - SPO: SharePoint Online
 
 You can specify multiple values separated by commas.
