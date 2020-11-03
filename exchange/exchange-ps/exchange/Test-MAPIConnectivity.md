@@ -94,32 +94,6 @@ This example tests connectivity to a mailbox, specified as a domain name and use
 
 ## PARAMETERS
 
-### -Database
-This parameter is available only in on-premises Exchange.
-
-The Database parameter specifies the database on which to test the connectivity to the system mailbox. You can use any value that uniquely identifies the database. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-If you don't use this parameter or the Identity parameter, the command tests the SystemMailbox on each active database on the Exchange server (the local Exchange server or the server you specify with the Server parameter).
-
-You can't use the Identity, Database, or Server parameters in the same command.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies a mailbox to test. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -148,6 +122,32 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Database
+This parameter is available only in on-premises Exchange.
+
+The Database parameter specifies the database on which to test the connectivity to the system mailbox. You can use any value that uniquely identifies the database. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+If you don't use this parameter or the Identity parameter, the command tests the SystemMailbox on each active database on the Exchange server (the local Exchange server or the server you specify with the Server parameter).
+
+You can't use the Identity, Database, or Server parameters in the same command.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

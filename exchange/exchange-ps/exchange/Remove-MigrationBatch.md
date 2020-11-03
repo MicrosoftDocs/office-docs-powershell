@@ -26,7 +26,7 @@ Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
  [-DomainController <Fqdn>]
  [-Force]
  [-Partition <MailboxIdParameter>
- [-WhatIf]]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

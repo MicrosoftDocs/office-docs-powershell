@@ -34,6 +34,7 @@ Set-Contact [-Identity] <ContactIdParameter>
  [-DomainController <Fqdn>]
  [-Fax <String>]
  [-FirstName <String>]
+ [-GeoCoordinates <GeoCoordinates>]
  [-HomePhone <String>]
  [-IgnoreDefaultScope]
  [-Initials <String>]
@@ -62,7 +63,6 @@ Set-Contact [-Identity] <ContactIdParameter>
  [-WebPage <String>]
  [-WhatIf]
  [-WindowsEmailAddress <SmtpAddress>]
- [-GeoCoordinates <GeoCoordinates>]
  [<CommonParameters>]
 ```
 
@@ -303,6 +303,25 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GeoCoordinates
+The GeoCoordinates parameter specifies the contact's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
+
+- Latitude and longitude: For example, "47.644125;-122.122411"
+- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
+
+```yaml
+Type: GeoCoordinates
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -782,25 +801,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GeoCoordinates
-The GeoCoordinates parameter specifies the contact's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
-
-- Latitude and longitude: For example, "47.644125;-122.122411"
-- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
-
-```yaml
-Type: GeoCoordinates
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

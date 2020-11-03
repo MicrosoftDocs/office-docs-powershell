@@ -58,6 +58,26 @@ This example displays detailed information for the Exchange cmdlet extension age
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name of the cmdlet extension agent that you want to view. You can use any value that uniquely identifies the agent. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: CmdletExtensionAgentIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Assembly
 The Assembly parameter filters the results by the specified Assembly property value. The value for the built-in Exchange cmdlet extension agents is Microsoft.Exchange.ProvisioningAgent.dll.
 
@@ -108,26 +128,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the cmdlet extension agent that you want to view. You can use any value that uniquely identifies the agent. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-```yaml
-Type: CmdletExtensionAgentIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

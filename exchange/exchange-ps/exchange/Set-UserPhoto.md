@@ -117,24 +117,6 @@ This example deletes the preview photo that was uploaded in the previous example
 
 ## PARAMETERS
 
-### -Cancel
-The Cancel switch parameter deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
-
-To delete the photo that's currently associated with a user's account, use the Remove-UserPhoto cmdlet. The Cancel switch only deletes the preview photo.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: CancelPhoto
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user. For example:
 
@@ -159,6 +141,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Cancel
+The Cancel switch parameter deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
+
+To delete the photo that's currently associated with a user's account, use the Remove-UserPhoto cmdlet. The Cancel switch only deletes the preview photo.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CancelPhoto
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
