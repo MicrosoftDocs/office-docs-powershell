@@ -54,13 +54,9 @@ This example tests access to the user RandomUser9911@AppPolicyTest2.com for the 
 The Identity parameter specifies the recipient to test. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Display name
-
 - Email address
-
 - GUID
 
 ```yaml

@@ -49,9 +49,7 @@ This example returns detailed information for the sensitivity label named Engine
 The Identity parameter specifies the sensitivity label that you want to view. You can use any value that uniquely identifies the label. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

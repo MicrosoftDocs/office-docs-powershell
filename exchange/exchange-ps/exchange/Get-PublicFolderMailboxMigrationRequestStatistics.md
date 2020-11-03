@@ -56,11 +56,8 @@ Get-MailboxRestoreRequestStatistics -RequestQueue <DatabaseIdParameter>
 The Get-PublicFolderMailboxMigrationRequestStatistics cmdlet displays the following properties by default.
 
 - Name: The name assigned by the system to a specific mailbox migration job.
-
 - StatusDetail: The current status of the job.
-
 - TargetMailbox: The mailbox being migrated.
-
 - PercentComplete: The percentage of job completion.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -102,9 +99,7 @@ This parameter is for debugging purposes only.
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.

@@ -91,23 +91,14 @@ This example retrieves a list of items that couldn't be indexed by Exchange Sear
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -127,9 +118,7 @@ Accept wildcard characters: False
 The MailboxDatabase parameter specifies the database from which to get the mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -149,9 +138,7 @@ Accept wildcard characters: False
 The Server parameter specifies a Mailbox server. You can use the following values:
 
 - Name
-
 - GUID
-
 - DN
 
 ```yaml
@@ -170,8 +157,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -257,9 +243,7 @@ Accept wildcard characters: False
 The FailureMode parameter specifies the type of error. Use the following values.
 
 - Transient: Returns items that couldn't be indexed due to transient errors. Exchange Search attempts to index these items again.
-
 - Permanent: Returns items that couldn't be indexed due to a permanent error. Exchange Search does not attempt to index these items again.
-
 - All: Returns items that couldn't be indexed regardless of nature of failure.
 
 ```yaml

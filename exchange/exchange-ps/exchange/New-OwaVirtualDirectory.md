@@ -90,8 +90,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -127,13 +126,9 @@ Accept wildcard characters: False
 The ExtendedProtectionFlags parameter specifies custom settings for Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - None: This is the default setting.
-
 - AllowDotlessSPN: Required if you want to use Service Principal Name (SPN) values that don't contain FQDNs (for example, HTTP/ContosoMail instead of HTTP/mail.contoso.com). You specify SPNs with the ExtendedProtectionSPNList parameter. This setting makes Extended Protection for Authentication less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
-
 - NoServiceNameCheck: The SPN list isn't checked to validate a channel binding token. This setting makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
-
 - Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
-
 - ProxyCoHosting: HTTP and HTTPS traffic may be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
 
 ```yaml
@@ -153,7 +148,6 @@ Accept wildcard characters: False
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - $null: This is the default value.
-
 - Single SPN or comma delimited list of valid SPNs: The SPN value format is \<protocol\>/\<FQDN\>. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
 
 ```yaml
@@ -173,9 +167,7 @@ Accept wildcard characters: False
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
 
 - None: Extended Protection for Authentication isn't be used on the virtual directory. This is the default value.
-
 - Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication will work, but may not be as secure as connections that use Extended Protection for Authentication.
-
 - Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
 
 Note:
@@ -199,33 +191,19 @@ Accept wildcard characters: False
 The ExternalAuthenticationMethods parameter restricts the authentication methods that can be used to connect to the virtual directory from outside the firewall. Valid values are:
 
 - Adfs
-
 - Basic
-
 - Certificate
-
 - Digest
-
 - Fba
-
 - Kerberos
-
 - LiveIdBasic
-
 - LiveIdFba
-
 - LiveIdNegotiate
-
 - NegoEx
-
 - Negotiate
-
 - Ntlm
-
 - OAuth
-
 - WindowsIntegrated
-
 - WSSecurity
 
 You can specify multiple values separated by commas.
@@ -233,7 +211,6 @@ You can specify multiple values separated by commas.
 Although you can specify any of these values, whether or not the authentication method actually works for external connections depends on other factors. For example:
 
 - Is the authentication method available on the virtual directory?
-
 - Is the authentication method available, but disabled on the virtual directory?
 
 ```yaml
@@ -319,7 +296,6 @@ Accept wildcard characters: False
 The Role parameter species the configuration for the virtual directory. Valid values are:
 
 - ClientAccess: Configure the virtual directory for the Client Access (frontend) services on the Mailbox server.
-
 - Mailbox: Configure the virtual directory for the backend services on the Mailbox server.
 
 Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
@@ -341,11 +317,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 ```yaml

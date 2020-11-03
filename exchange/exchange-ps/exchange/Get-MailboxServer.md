@@ -68,9 +68,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the Mailbox server that you want to view. You can use any value that uniquely identifies the Mailbox server. For example:
 
 - Name
-
 - GUID
-
 - Distinguished name (DN)
 
 ```yaml

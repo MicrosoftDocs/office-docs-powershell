@@ -58,7 +58,6 @@ This example returns the detailed report of ATP detections during the specified 
 The Action parameter filters the results by the action taken on the attachment or link. Valid values are:
 
 - Allow
-
 - BlockAccess
 
 ```yaml

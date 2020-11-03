@@ -48,11 +48,8 @@ This example displays the event categories and log levels for the server Exchang
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can't use this parameter with the Identity parameter.

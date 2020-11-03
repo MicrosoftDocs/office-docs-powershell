@@ -47,7 +47,6 @@ The third command exports the message to the specified file using the message en
 Notes:
 
 - The `| select -ExpandProperty Eml`" part of the command specifies the whole message, including attachments.
-
 - You need to use the Out-File cmdlet to write the .eml message file with the required encoding. If you use the default PowerShell redirection operator ">" to write the output file, the default encoding is Unicode, which might not match the actual message encoding.
 
 ### Example 2

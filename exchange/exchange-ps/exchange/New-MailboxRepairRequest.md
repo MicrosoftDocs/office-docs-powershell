@@ -92,81 +92,43 @@ This example creates a variable that identifies Ann Beebe's mailbox and then use
 The CorruptionType parameter specifies the type of corruption that you want to detect and repair. You can use the following values:
 
 - AbandonedMoveDestination: Exchange 2016 or later, but only with the Database parameter, not the Mailbox parameter.
-
 - AggregateCounts: Aggregate counts on folders that aren't reflecting correct values.
-
 - BigFunnelMissingPOIs: Exchange 2016.
-
 - BigFunnelPOI: Exchange 2019.
-
 - CleanupFilesFolder: Exchange 2016 or later.
-
 - CleanupGraphNodesWithPropertyError: Exchange 2016 or later.
-
 - CleanupOfficeGraphFolders: Exchange 2016 or later.
-
 - CleanupOfficeGraphSsc: Exchange 2016 or later.
-
 - CleanupOrphanedIndexes: Exchange 2016 or later.
-
 - CleanupTrendingAroundMe: Exchange 2016 or later.
-
 - CorruptJunkRule: Exchange 2013 or later.
-
 - CorruptSearchFolderCriteria: Exchange 2016 or later.
-
 - CorruptedPerUserData: Exchange 2016 or later.
-
 - DropAllLazyIndexes: Exchange 2013 or later.
-
 - EmptyFilesFolder: Exchange 2016 or later.
-
 - Extension1: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - Extension2: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - Extension3: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - Extension4: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - Extension5: Exchange 2013 or later, but reserved for internal Microsoft use.
-
 - FocusedInboxCleanup: Exchange 2016 or later.
-
 - FolderACL: Exchange 2013 or later.
-
 - FolderView: Views on folders that aren't returning correct contents.
-
 - ImapId: Exchange 2013 or later.
-
 - LockedMoveTarget: Exchange 2013 or later, but only if the mailbox is locked.
-
 - MessageId
-
 - MessagePtagCn
-
 - MissingSpecialFolders: Exchange 2013 or later.
-
 - OlcFolderCleanup: Exchange 2016 or later.
-
 - ProvisionedFolder: Provisioned folders that are incorrectly pointing into parent folders that aren't provisioned.
-
 - ReduceRedundantAI: Exchange 2016 or later, and only by itself.
-
 - RemovePICWFolder: Exchange 2016 or later, but reserved for internal Microsoft use.
-
 - ReplState: Exchange 2013 or later.
-
 - RestrictionFolder: Exchange 2013 or later.
-
 - RuleMessageClass: Exchange 2013 or later.
-
 - ScheduledCheck: Exchange 2013 or later.
-
 - SearchFolder: Search folder corruption.
-
 - SyncDefaultFolderLocalizationWithMailbox: Exchange 2016 or later.
-
 - UniqueMidIndex: Exchange 2013 or later.
 
 You can specify multiple values separated by commas.
@@ -188,9 +150,7 @@ Accept wildcard characters: False
 The Database parameter repairs or detects corruption in all mailboxes in the specified database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Mailbox parameter.
@@ -214,23 +174,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox that you want to repair or detect corruption in. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Database parameter.
@@ -271,8 +222,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

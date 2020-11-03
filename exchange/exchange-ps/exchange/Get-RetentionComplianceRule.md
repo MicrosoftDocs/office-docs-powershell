@@ -29,11 +29,8 @@ Get-RetentionComplianceRule [[-Identity] <ComplianceRuleIdParameter>] [-Policy <
 This list describes the properties that are displayed by default in the summary information.
 
 - Name: The unique name of the rule.
-
 - Disabled: The enabled or disabled status of the rule.
-
 - Mode: The current operating mode of the rule (for example, Enforce).
-
 - Comment: An administrative comment.
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
@@ -60,9 +57,7 @@ This example displays detailed information for the retention rule named "30 Day 
 The Identity parameter specifies the retention rule you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -82,9 +77,7 @@ Accept wildcard characters: False
 The Policy parameter filters the retention rule results by the associated retention policy. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can use this parameter with the Identity parameter in the same command.
