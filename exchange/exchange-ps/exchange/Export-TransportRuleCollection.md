@@ -56,6 +56,24 @@ In Exchange Server 2010, this example exports legacy transport rules created in 
 
 ## PARAMETERS
 
+### -Identity
+This cmdlet is available only in on-premises Exchange, and is functional only in Exchange Server 2010.
+
+The Identity parameter specifies the name or GUID of a transport rule to be exported.
+
+```yaml
+Type: RuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -110,24 +128,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This cmdlet is available only in on-premises Exchange, and is functional only in Exchange Server 2010.
-
-The Identity parameter specifies the name or GUID of a transport rule to be exported.
-
-```yaml
-Type: RuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

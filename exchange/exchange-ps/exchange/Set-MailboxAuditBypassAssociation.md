@@ -53,6 +53,22 @@ This example removes the bypass association for the Svc-MyApplication account.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies a user or computer account to be bypassed from mailbox audit logging.
+
+```yaml
+Type: MailboxAuditBypassAssociationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AuditBypassEnabled
 The AuditBypassEnabled parameter specifies whether audit bypass is enabled for the user or computer. Valid values include the following:
 
@@ -69,22 +85,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies a user or computer account to be bypassed from mailbox audit logging.
-
-```yaml
-Type: MailboxAuditBypassAssociationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

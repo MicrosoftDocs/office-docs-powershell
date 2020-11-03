@@ -54,6 +54,22 @@ The example tests for a connection to each service. The example also submits a r
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies any valid address in the forest. If you specify this parameter, incorrectly formed  addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and username in the domain\\username format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
+
+```yaml
+Type: RecipientIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -ClientAccessServer
 This parameter is available or functional only in Exchange Server 2010.
 
@@ -104,22 +120,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies any valid address in the forest. If you specify this parameter, incorrectly formed  addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and username in the domain\\username format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
-
-```yaml
-Type: RecipientIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

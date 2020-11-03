@@ -134,6 +134,29 @@ This example tests message flow from the local Mailbox server where you're runni
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the source Mailbox server name from which a test message is sent. You can use any value that uniquely identifies the server. For example:
+
+- Name
+- FQDN
+- Distinguished name (DN)
+- Exchange Legacy DN
+
+If you don't use this parameter, the local Mailbox server is used.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: AutoDiscoverTargetMailboxServer, TargetDatabase, TargetEmailAddress, TargetMailboxServer, SourceServer
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AutoDiscoverTargetMailboxServer
 The AutoDiscoverTargetMailboxServer switch specifies whether to automatically populate a list of target Mailbox servers to which to send a test message. The task queries Active Directory to discover all Mailbox servers and then sends each server a test message.
 
@@ -347,29 +370,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the source Mailbox server name from which a test message is sent. You can use any value that uniquely identifies the server. For example:
-
-- Name
-- FQDN
-- Distinguished name (DN)
-- Exchange Legacy DN
-
-If you don't use this parameter, the local Mailbox server is used.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: AutoDiscoverTargetMailboxServer, TargetDatabase, TargetEmailAddress, TargetMailboxServer, SourceServer
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

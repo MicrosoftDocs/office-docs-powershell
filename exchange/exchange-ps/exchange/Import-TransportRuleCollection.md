@@ -21,11 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Import-TransportRuleCollection [-FileData] <Byte[]>
+Import-TransportRuleCollection [[-Identity] <RuleIdParameter>] [-FileData] <Byte[]>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [[-Identity] <RuleIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -51,6 +50,24 @@ This example imports a transport rule collection from the XML file named Exporte
 **Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
 
 ## PARAMETERS
+
+### -Identity
+This cmdlet is available only in on-premises Exchange, and is only functional in Exchange Server 2010.
+
+The Identity parameter specifies the transport rule to be imported. Use either the GUID or the name of the rule. You can omit the parameter label.
+
+```yaml
+Type: RuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -FileData
 The FileData parameter specifies the variable name that contains the content of the XML file. The content is retrieved using the Get-Content cmdlet.
@@ -120,24 +137,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This cmdlet is available only in on-premises Exchange, and is only functional in Exchange Server 2010.
-
-The Identity parameter specifies the transport rule to be imported. Use either the GUID or the name of the rule. You can omit the parameter label.
-
-```yaml
-Type: RuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

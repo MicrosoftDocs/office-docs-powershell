@@ -69,6 +69,26 @@ This example returns all the Exchange ActiveSync mobile devices that Tony Smith 
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the ActiveSync device that you want to view. You can use any value that uniquely identifies the device. For example:
+
+- GUID
+- DeviceIdentity
+- Multi-TenantID
+
+```yaml
+Type: ActiveSyncDeviceIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Mailbox
 The Mailbox parameter specifies the mailbox that has the associated ActiveSync device that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -157,26 +177,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the ActiveSync device that you want to view. You can use any value that uniquely identifies the device. For example:
-
-- GUID
-- DeviceIdentity
-- Multi-TenantID
-
-```yaml
-Type: ActiveSyncDeviceIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

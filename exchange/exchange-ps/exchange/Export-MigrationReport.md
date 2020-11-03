@@ -54,22 +54,6 @@ There are no examples for using this cmdlet because the values used for the requ
 
 ## PARAMETERS
 
-### -CsvStream
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Stream
-Parameter Sets: StreamBased
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 This parameter is reserved for internal Microsoft use.
 
@@ -83,6 +67,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -CsvStream
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Stream
+Parameter Sets: StreamBased
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

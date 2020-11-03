@@ -22,16 +22,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DatabaseAvailabilityGroup [-Name] <String>
+ [-ActivityState <ActivityStateOption>]
  [-Confirm]
+ [-DagConfiguration <DatabaseAvailabilityGroupConfigurationIdParameter>]
  [-DatabaseAvailabilityGroupIpAddresses <IPAddress[]>]
  [-DomainController <Fqdn>]
+ [-FileSystem <FileSystemMode>]
  [-ThirdPartyReplication <ThirdPartyReplicationMode>]
  [-WhatIf]
  [-WitnessDirectory <NonRootLocalLongFullPath>]
  [-WitnessServer <FileShareWitnessServerName>]
- [-DagConfiguration <DatabaseAvailabilityGroupConfigurationIdParameter>]
- [-ActivityState <ActivityStateOption>]
- [-FileSystem <FileSystemMode>]
  [<CommonParameters>]
 ```
 
@@ -96,6 +96,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ActivityState
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: ActivityStateOption
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -107,6 +123,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DagConfiguration
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: DatabaseAvailabilityGroupConfigurationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -139,6 +171,25 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileSystem
+The FileSystem parameter specifies the file system that's used for the DAG. Valid values are:
+
+- NTFS
+- ReFS
+
+```yaml
+Type: FileSystemMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -203,57 +254,6 @@ Type: FileShareWitnessServerName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DagConfiguration
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: DatabaseAvailabilityGroupConfigurationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActivityState
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ActivityStateOption
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FileSystem
-The FileSystem parameter specifies the file system that's used for the DAG. Valid values are:
-
-- NTFS
-- ReFS
-
-```yaml
-Type: FileSystemMode
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

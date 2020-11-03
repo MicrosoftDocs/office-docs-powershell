@@ -27,8 +27,8 @@ Restore-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParame
  [-AlternateWitnessServer <FileShareWitnessServerName>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf]
  [-UsePrimaryWitnessServer]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -163,14 +163,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+### -UsePrimaryWitnessServer
+The UsePrimaryWitnessServer switch specifies that the DAG's currently configured witness server should be used if a witness is needed by the DAG members being activated. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -179,14 +179,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UsePrimaryWitnessServer
-The UsePrimaryWitnessServer parameter specifies that the DAG's currently configured witness server should be used if a witness is needed by the DAG members being activated.
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

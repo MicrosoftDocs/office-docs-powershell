@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-OrganizationRelationship -UserIdentity <RecipientIdParameter>
- [[-Identity] <OrganizationRelationshipIdParameter>]
+Test-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>] -UserIdentity <RecipientIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf]
@@ -46,6 +45,26 @@ Test-OrganizationRelationship -UserIdentity katherine@fabrikam.com -Identity con
 This example validates the organization relationship deployed in the fabrikam.com on-premises Exchange organization and checks whether a delegation token can be retrieved for a mailbox in the external organization domain contoso.com.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the organization relationship to be tested. You can use the following values:
+
+- Canonical name
+- GUID
+- Name
+
+```yaml
+Type: OrganizationRelationshipIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -UserIdentity
 The UserIdentity parameter specifies the mailbox for which a delegation token is requested to access the external organization's configuration information. You can use any value that uniquely identifies the mailbox. For example:
@@ -104,26 +123,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the organization relationship to be tested. You can use the following values:
-
-- Canonical name
-- GUID
-- Name
-
-```yaml
-Type: OrganizationRelationshipIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

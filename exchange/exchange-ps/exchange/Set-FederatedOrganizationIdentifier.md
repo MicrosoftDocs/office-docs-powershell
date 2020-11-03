@@ -26,12 +26,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-FederatedOrganizationIdentifier [[-Identity] <OrganizationIdParameter>]
  [-AccountNamespace <SmtpDomain>]
  [-Confirm]
+ [-DefaultDomain <SmtpDomain>]
  [-DelegationFederationTrust <FederationTrustIdParameter>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-OrganizationContact <SmtpAddress>]
  [-WhatIf]
- [-DefaultDomain <SmtpDomain>]
  [<CommonParameters>]
 ```
 
@@ -67,6 +67,22 @@ This example enables the organization identifier. This enables federation for th
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the federated organization identifier.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AccountNamespace
 The AccountNamespace parameter specifies the federated domain to be used to establish the organization identifier with the Microsoft Federation Gateway.
 
@@ -94,6 +110,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultDomain
+The DefaultDomain parameter specifies the federated domain used for delegation tokens issued by the Microsoft Federation Gateway for user accounts in the Exchange organization. If the DefaultDomain parameter isn't set, the primary SMTP domain for each user account is used in delegation tokens issued by the Microsoft Federation Gateway. Only a single domain or subdomain for the Exchange organization should be configured, and it applies to all delegation tokens issued for the Exchange organization, for example, contoso.com.
+
+```yaml
+Type: SmtpDomain
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -154,22 +186,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the federated organization identifier.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -OrganizationContact
 The OrganizationContact parameter specifies the SMTP address of the federation contact.
 
@@ -194,22 +210,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultDomain
-The DefaultDomain parameter specifies the federated domain used for delegation tokens issued by the Microsoft Federation Gateway for user accounts in the Exchange organization. If the DefaultDomain parameter isn't set, the primary SMTP domain for each user account is used in delegation tokens issued by the Microsoft Federation Gateway. Only a single domain or subdomain for the Exchange organization should be configured, and it applies to all delegation tokens issued for the Exchange organization, for example, contoso.com.
-
-```yaml
-Type: SmtpDomain
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

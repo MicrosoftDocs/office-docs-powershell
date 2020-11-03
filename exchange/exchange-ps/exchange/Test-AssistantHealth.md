@@ -27,8 +27,8 @@ Test-AssistantHealth [[-ServerName] <ServerIdParameter>]
  [-MaxProcessingTimeInMinutes <UInt32>]
  [-MonitoringContext]
  [-ResolveProblems]
- [-WhatIf]
  [-WatermarkBehindWarningThreholdInMinutes <UInt32>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -172,22 +172,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WatermarkBehindWarningThreholdInMinutes
 The WatermarkBehindWarningThreholdInMinutes parameter specifies the threshold for watermark age. Event watermarks indicate the last time that events were successfully processed by an assistant. An event watermark that hasn't been updated in a while may indicate a problem. For each Mailbox Assistant, the Test-AssistantHealth cmdlet compares the current time with the time stamp of the last event watermark to determine the watermark age. If that age exceeds the value set by the WatermarkBehindWarningThreholdInMinutes parameter, a warning is generated.
 
@@ -198,6 +182,22 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

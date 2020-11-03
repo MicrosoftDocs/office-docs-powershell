@@ -45,22 +45,6 @@ This example creates a new search document format with an extension of .sct and 
 
 ## PARAMETERS
 
-### -Extension
-The Extension parameter specifies the file type to be processed by the filter and is designated by the common file extension associated with the file type. Examples include .MP3, .JPG and .PNG. Note the leading period.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter uniquely identifies the new search document format. For example, an identity of "PropSCT" might specify a proprietary document format which is supported by a custom IFilter. The Identity parameter must be unique within the search document formats.
 
@@ -74,6 +58,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Extension
+The Extension parameter specifies the file type to be processed by the filter and is designated by the common file extension associated with the file type. Examples include .MP3, .JPG and .PNG. Note the leading period.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

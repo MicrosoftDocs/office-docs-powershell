@@ -46,22 +46,6 @@ This command disables the Zip file format for indexing by Exchange Search.
 
 ## PARAMETERS
 
-### -Enabled
-The Enabled parameter specifies whether the file format is enabled. Set the parameter to $false to disable the format for content indexing.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the identity of the file format.
 
@@ -75,6 +59,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Enabled
+The Enabled parameter specifies whether the file format is enabled. Set the parameter to $false to disable the format for content indexing.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -65,6 +65,25 @@ This example returns a summary list of all DSR cases that the custom role group 
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the compliance case that you want to view. You can use any value that uniquely identifies the case. For example:
+
+- Name
+- Identity (GUID value)
+
+```yaml
+Type: ComplianceCaseIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -CaseType
 The CaseType parameter specifies the type of compliance case that you want to view. Valid values are:
 
@@ -103,25 +122,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the compliance case that you want to view. You can use any value that uniquely identifies the case. For example:
-
-- Name
-- Identity (GUID value)
-
-```yaml
-Type: ComplianceCaseIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

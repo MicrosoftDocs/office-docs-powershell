@@ -58,22 +58,6 @@ This example overrides the specified outage with a new downtime value of 40 minu
 
 ## PARAMETERS
 
-### -Comment
-The Comment parameter describes the outage that was inserted.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the outage to add to the outage reporting.
 
@@ -87,6 +71,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Comment
+The Comment parameter describes the outage that was inserted.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
