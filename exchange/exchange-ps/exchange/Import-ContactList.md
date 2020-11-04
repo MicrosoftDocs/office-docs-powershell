@@ -26,8 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Import-ContactList [-Identity] <MailboxIdParameter> -CSVData <Byte[]>
  [-CSV]
- [-DateCultureName] <String>
  [-Confirm]
+ [-DateCultureName <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -36,8 +36,8 @@ Import-ContactList [-Identity] <MailboxIdParameter> -CSVData <Byte[]>
 ```
 Import-ContactList [-Identity] <MailboxIdParameter> -CSVStream <Stream>
  [-CSV]
- [-DateCultureName] <String>
  [-Confirm]
+ [-DateCultureName <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```

@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DatabaseAvailabilityGroupNetwork [-Name] <String>
- [-DatabaseAvailabilityGroup] <DatabaseAvailabilityGroupIdParameter>
+New-DatabaseAvailabilityGroupNetwork [-Name] <String> [-DatabaseAvailabilityGroup] <DatabaseAvailabilityGroupIdParameter>
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
@@ -47,22 +46,6 @@ This example creates the DAG network DAG1Repl in the DAG DAG1. A subnet of 10.0.
 
 ## PARAMETERS
 
-### -DatabaseAvailabilityGroup
-The DatabaseAvailabilityGroup parameter specifies the name of the DAG that'll use the network being created.
-
-```yaml
-Type: DatabaseAvailabilityGroupIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 The Name parameter specifies the name of the DAG network being created.
 
@@ -74,6 +57,22 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DatabaseAvailabilityGroup
+The DatabaseAvailabilityGroup parameter specifies the name of the DAG that'll use the network being created.
+
+```yaml
+Type: DatabaseAvailabilityGroupIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
