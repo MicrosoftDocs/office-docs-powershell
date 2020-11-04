@@ -47,14 +47,13 @@ Remove-ADPermission [-Identity] <ADRawEntryIdParameter>
 
 ### Instance
 ```
-Remove-ADPermission -Instance <ADAcePresentationObject>
+Remove-ADPermission [[-Identity] <ADRawEntryIdParameter>] -Instance <ADAcePresentationObject>
  [-AccessRights <ActiveDirectoryRights[]>]
  [-ChildObjectTypes <ADSchemaObjectIdParameter[]>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
- [[-Identity] <ADRawEntryIdParameter>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]

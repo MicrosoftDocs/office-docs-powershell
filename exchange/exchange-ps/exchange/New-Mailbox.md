@@ -22,9 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### User
 ```
-New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String>
- [-InactiveMailbox <MailboxIdParameter>]
- [-RemovedMailbox <RemovedMailboxIdParameter>]
+New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String> [-InactiveMailbox <MailboxIdParameter>] [-RemovedMailbox <RemovedMailboxIdParameter>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -63,9 +61,7 @@ New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String
 
 ### MicrosoftOnlineServicesID
 ```
-New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID <WindowsLiveId>
- [-InactiveMailbox <MailboxIdParameter>]
- [-RemovedMailbox <RemovedMailboxIdParameter>]
+New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID <WindowsLiveId> [-InactiveMailbox <MailboxIdParameter>] [-RemovedMailbox <RemovedMailboxIdParameter>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -105,10 +101,7 @@ New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID
 
 ### Arbitration
 ```
-New-Mailbox [-Name]
- [-Arbitration] <String>
- [-Password <SecureString>]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] [-Arbitration] <String> [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -140,8 +133,7 @@ New-Mailbox [-Name]
 
 ### AuditLog
 ```
-New-Mailbox [-Name] <String> -UserPrincipalName <String>
- [-AuditLog]
+New-Mailbox [-Name] <String> -UserPrincipalName <String> [-AuditLog]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -171,9 +163,7 @@ New-Mailbox [-Name] <String> -UserPrincipalName <String>
 
 ### AuxAuditLog
 ```
-New-Mailbox [-Name] <String>
- [-AuxAuditLog]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> [-AuxAuditLog] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -203,10 +193,7 @@ New-Mailbox [-Name] <String>
 
 ### DisabledUser
 ```
-New-Mailbox [-Name] <String>
- [-AccountDisabled]
- [-Password <SecureString>]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -246,10 +233,7 @@ New-Mailbox [-Name] <String>
 
 ### Discovery
 ```
-New-Mailbox [-Name] <String>
- [-Discovery]
- [-Password <SecureString>]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -283,11 +267,7 @@ New-Mailbox [-Name] <String>
 
 ### EnableRoomMailboxAccount
 ```
-New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <Boolean>
- [-MicrosoftOnlineServicesID <WindowsLiveId>
- [-Room]
- [-RoomMailboxPassword <SecureString>]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <Boolean> [-MicrosoftOnlineServicesID <WindowsLiveId> [-Room] [-RoomMailboxPassword <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -319,10 +299,7 @@ New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <Boolean>
 
 ### Equipment
 ```
-New-Mailbox [-Name] <String>
- [-Equipment]
- [-Password <SecureString>]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -358,8 +335,7 @@ New-Mailbox [-Name] <String>
 
 ### FederatedUser
 ```
-New-Mailbox [-Name] <String> -FederatedIdentity <String>
- [-RemovedMailbox <RemovedMailboxIdParameter>]
+New-Mailbox [-Name] <String> -FederatedIdentity <String> [-RemovedMailbox <RemovedMailboxIdParameter>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Archive]
@@ -387,8 +363,7 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String>
 
 ### InactiveMailbox
 ```
-New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter>
- [-Password <SecureString>]
+New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter> [-Password <SecureString>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -427,10 +402,7 @@ New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter>
 
 ### Linked
 ```
-New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
- [-LinkedCredential <PSCredential>]
- [-Password <SecureString>]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -514,8 +486,7 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
 
 ### MicrosoftOnlineServicesFederatedUser
 ```
-New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServicesID <WindowsLiveId>
- [-RemovedMailbox <RemovedMailboxIdParameter>]
+New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServicesID <WindowsLiveId> [-RemovedMailbox <RemovedMailboxIdParameter>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Archive]
@@ -542,11 +513,7 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineService
 
 ### Migration
 ```
-New-Mailbox [-Name] <String>
- [-Arbitration]
- [-Migration]
- [-Password <SecureString>]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> [-Arbitration] [-Migration] [-Password <SecureString>] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -578,10 +545,7 @@ New-Mailbox [-Name] <String>
 
 ### PublicFolder
 ```
-New-Mailbox [-Name] <String>
- [-PublicFolder]
- [-HoldForMigration]
- [-IsExcludedFromServingHierarchy <Boolean>]
+New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFromServingHierarchy <Boolean>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -613,8 +577,7 @@ New-Mailbox [-Name] <String>
 
 ### RemoteArchive
 ```
-New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString> -UserPrincipalName <String>
- [-RemoteArchive]
+New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString> -UserPrincipalName <String> [-RemoteArchive]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -654,8 +617,7 @@ New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString
 
 ### RemovedMailbox
 ```
-New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter>
- [-Password <SecureString>]
+New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter> [-Password <SecureString>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -694,11 +656,7 @@ New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter>
 
 ### Room
 ```
-New-Mailbox [-Name] <String>
- [-Password <SecureString>]
- [-ResourceCapacity <Int32>]
- [-Room]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> [-Password <SecureString>] [-ResourceCapacity <Int32>] [-Room] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -738,10 +696,7 @@ New-Mailbox [-Name] <String>
 
 ### Scheduling
 ```
-New-Mailbox [-Name] <String>
- [-Password <SecureString>]
- [-UserPrincipalName <String>]
- [-Scheduling]
+New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <String>] [-Scheduling]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -773,10 +728,7 @@ New-Mailbox [-Name] <String>
 
 ### Shared
 ```
-New-Mailbox [-Name] <String>
- [-Password <SecureString>]
- [-Shared]
- [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]

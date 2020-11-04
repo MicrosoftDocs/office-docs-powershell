@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdParameter>
- [-MailboxServer] <ServerIdParameter>
+Remove-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdParameter> [-MailboxServer] <ServerIdParameter>
  [-ConfigurationOnly]
  [-Confirm]
  [-DomainController <Fqdn>]

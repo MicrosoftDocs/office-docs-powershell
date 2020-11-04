@@ -34,13 +34,12 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <Mailbox
 
 ### Instance
 ```
-Remove-MailboxPermission -Instance <MailboxAcePresentationObject>
+Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePresentationObject>
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [[-Identity] <MailboxIdParameter>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-ResetDefault]
  [-User <SecurityPrincipalIdParameter>]

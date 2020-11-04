@@ -34,13 +34,12 @@ Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> -
 
 ### Instance
 ```
-Add-PublicFolderAdministrativePermission -Instance <PublicFolderAdministrativeAceObject>
+Add-PublicFolderAdministrativePermission [[-Identity] <PublicFolderIdParameter>] -Instance <PublicFolderAdministrativeAceObject>
  [-AccessRights <MultiValuedProperty>]
  [-User <SecurityPrincipalIdParameter>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
- [[-Identity] <PublicFolderIdParameter>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
  [-WhatIf]

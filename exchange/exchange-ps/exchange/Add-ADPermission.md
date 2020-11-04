@@ -47,14 +47,13 @@ Add-ADPermission [-Identity] <ADRawEntryIdParameter> -Owner <SecurityPrincipalId
 
 ### Instance
 ```
-Add-ADPermission -Instance <ADAcePresentationObject>
+Add-ADPermission [[-Identity] <ADRawEntryIdParameter>] -Instance <ADAcePresentationObject>
  [-AccessRights <ActiveDirectoryRights[]>]
  [-ChildObjectTypes <ADSchemaObjectIdParameter[]>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
- [[-Identity] <ADRawEntryIdParameter>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]

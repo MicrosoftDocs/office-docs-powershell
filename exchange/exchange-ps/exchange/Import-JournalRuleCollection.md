@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Import-JournalRuleCollection [-FileData] <Byte[]>
- [[-Identity] <RuleIdParameter>]
+Import-JournalRuleCollection [[-Identity] <RuleIdParameter>] [-FileData] <Byte[]>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf]

@@ -23,8 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DkimSigningConfig [-DomainName] <SmtpDomainWithSubdomains>
- [-Enabled] <Boolean>
+New-DkimSigningConfig [-DomainName] <SmtpDomainWithSubdomains> [-Enabled] <Boolean>
  [-AdminDisplayName <String>]
  [-BodyCanonicalization <CanonicalizationType>]
  [-Confirm]
