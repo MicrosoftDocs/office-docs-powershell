@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Import-DlpPolicyCollection [-FileData] <Byte[]>
- [[-Identity] <DlpPolicyIdParameter>]
+Import-DlpPolicyCollection [[-Identity] <DlpPolicyIdParameter>] [-FileData] <Byte[]>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
@@ -47,6 +46,22 @@ Import-DlpPolicyCollection -FileData ([Byte[]]$(Get-Content -Path " C:\My Docume
 This example imports the DLP policy collection in the file C:\\My Documents\\DLP Backup.xml.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the name of the DLP policy you want to import. The DLP policy must exist in the XML file you specify with the FileData parameter.
+
+```yaml
+Type: DlpPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -FileData
 The FileData parameter specifies the DLP policy collection file you want to import.
@@ -116,22 +131,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the DLP policy you want to import. The DLP policy must exist in the XML file you specify with the FileData parameter.
-
-```yaml
-Type: DlpPolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-AllowApplePushNotifications <Boolean>]
  [-AllowBluetooth <BluetoothType>]
  [-AllowBrowser <Boolean>]
  [-AllowCamera <Boolean>]
@@ -56,6 +57,7 @@ Set-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-DevicePolicyRefreshInterval <Unlimited>]
  [-DomainController <Fqdn>]
  [-IrmEnabled <Boolean>]
+ [-IsDefault <Boolean>]
  [-IsDefaultPolicy <Boolean>]
  [-MaxAttachmentSize <Unlimited>]
  [-MaxCalendarAgeFilter <CalendarAgeFilterType>]
@@ -79,8 +81,6 @@ Set-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-UNCAccessEnabled <Boolean>]
  [-WhatIf]
  [-WSSAccessEnabled <Boolean>]
- [-AllowApplePushNotifications <Boolean>]
- [-IsDefault <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -129,6 +129,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AllowApplePushNotifications
+This parameter is available only in the cloud-based service.
+
+The AllowApplePushNotifications parameter specifies whether push notifications are allowed to Apple mobile devices.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -649,6 +667,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsDefault
+The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IsDefaultPolicy
 The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
 
@@ -1023,40 +1057,6 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowApplePushNotifications
-This parameter is available only in the cloud-based service.
-
-The AllowApplePushNotifications parameter specifies whether push notifications are allowed to Apple mobile devices.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefault
-The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

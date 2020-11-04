@@ -22,10 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Onboarding
 ```
-New-MigrationBatch -Name <String>
- [-CSVData <Byte[]>]
- [-DisallowExistingUsers]
- [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
@@ -64,8 +61,7 @@ New-MigrationBatch -Name <String>
 
 ### Offboarding
 ```
-New-MigrationBatch -Name <String> -CSVData <Byte[]>
- [-DisallowExistingUsers]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
@@ -99,10 +95,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]>
 
 ### Local
 ```
-New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]>
- [-DisallowExistingUsers]
- [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>]
- [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveOnly]
@@ -158,8 +151,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
 
 ### PreexistingUserIds
 ```
-New-MigrationBatch <MultiValuedProperty> -Name <String>
- [-UserIds]
+New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
@@ -183,8 +175,7 @@ New-MigrationBatch <MultiValuedProperty> -Name <String>
 
 ### Preexisting
 ```
-New-MigrationBatch -Name <String>
- [-Users] <MultiValuedProperty>
+New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
  [-AllowIncrementalSyncs <Boolean>]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
@@ -207,8 +198,7 @@ New-MigrationBatch -Name <String>
 
 ### PublicFolderToUnifiedGroup
 ```
-New-MigrationBatch -Name <String> -CSVData <Byte[]>
- [-PublicFolderToUnifiedGroup]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
@@ -234,8 +224,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]>
 
 ### WorkflowTemplate
 ```
-New-MigrationBatch -Name <String>
- [-WorkflowTemplate <String>]
+New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-AutoComplete]
@@ -1350,7 +1339,7 @@ This parameter is available only in on-premises Exchange.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType
+Type: RequestWorkloadType
 Parameter Sets: Local
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019

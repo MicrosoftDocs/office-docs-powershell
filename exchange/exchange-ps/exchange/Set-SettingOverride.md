@@ -26,13 +26,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-SettingOverride [-Identity] <SettingOverrideIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-Force]
  [-MaxVersion <Version>]
  [-MinVersion <Version>]
  [-Parameters <MultiValuedProperty>]
  [-Reason <String>]
  [-Server <String[]>]
  [-WhatIf]
- [-Force]
  [<CommonParameters>]
 ```
 

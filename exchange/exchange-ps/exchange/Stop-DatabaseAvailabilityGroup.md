@@ -70,22 +70,6 @@ This example stops the Mailbox server MBX3, which is currently offline, in the D
 
 ## PARAMETERS
 
-### -ActiveDirectorySite
-The ActiveDirectorySite parameter specifies the Active Directory site containing the DAG members to stop (for example, stop all DAG members in a particular Active Directory site).
-
-```yaml
-Type: AdSiteIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the name of the DAG being stopped.
 
@@ -97,6 +81,22 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ActiveDirectorySite
+The ActiveDirectorySite parameter specifies the Active Directory site containing the DAG members to stop (for example, stop all DAG members in a particular Active Directory site).
+
+```yaml
+Type: AdSiteIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

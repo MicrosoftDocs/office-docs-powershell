@@ -37,10 +37,9 @@ Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
 
 ### AuditLog
 ```
-Get-MailboxFolderStatistics [-AuditLog]
+Get-MailboxFolderStatistics [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-AuditLog]
  [-DomainController <Fqdn>]
  [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
- [[-Identity] <GeneralMailboxOrMailUserIdParameter>]
  [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-DiagnosticInfo <String>]

@@ -50,6 +50,24 @@ This example removes permission for the user Chris to the public folder My Publi
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path by using the format \\TopLevelPublicFolder\\PublicFolder.
+
+You can omit the parameter label so that only the public folder name or GUID is supplied.
+
+```yaml
+Type: PublicFolderIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AccessRights
 This parameter is available or functional only in Exchange Server 2010.
 
@@ -86,24 +104,6 @@ Applicable: Exchange Server 2010
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path by using the format \\TopLevelPublicFolder\\PublicFolder.
-
-You can omit the parameter label so that only the public folder name or GUID is supplied.
-
-```yaml
-Type: PublicFolderIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

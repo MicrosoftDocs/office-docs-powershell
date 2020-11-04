@@ -41,8 +41,7 @@ Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParamete
 
 ### Identity
 ```
-Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter>
- [[-ActivateOnServer] <MailboxServerIdParameter>]
+Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <DatabaseMountDialOverride>]
@@ -61,8 +60,7 @@ Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter>
 
 ### Server
 ```
-Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter>
- [[-ActivateOnServer] <MailboxServerIdParameter>]
+Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>]
  [-MoveAllDatabasesOrNone]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -82,8 +80,7 @@ Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter>
 
 ### SkipAllChecks
 ```
-Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter>
- [-ActivateOnServer] <MailboxServerIdParameter>
+Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer] <MailboxServerIdParameter>
  [-SkipAllChecks]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -204,6 +201,22 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -ActivateOnServer
+The ActivateOnServer parameter specifies the name of the Mailbox server on which the mailbox database copy should be activated.
+
+```yaml
+Type: MailboxServerIdParameter
+Parameter Sets: Identity, Server
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -SkipAllChecks
 The SkipAllChecks switch specifies whether to skip all checks. You don't need to specify a value with this switch.
 
@@ -221,22 +234,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActivateOnServer
-The ActivateOnServer parameter specifies the name of the Mailbox server on which the mailbox database copy should be activated.
-
-```yaml
-Type: MailboxServerIdParameter
-Parameter Sets: Identity, Server
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

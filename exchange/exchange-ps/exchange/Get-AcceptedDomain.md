@@ -47,6 +47,22 @@ This example lists all the authoritative accepted domains in your organization.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies a string value for the accepted domain. Enter either the GUID or the name of the accepted domain.
+
+```yaml
+Type: AcceptedDomainIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -64,22 +80,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies a string value for the accepted domain. Enter either the GUID or the name of the accepted domain.
-
-```yaml
-Type: AcceptedDomainIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

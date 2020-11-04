@@ -22,24 +22,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Database
 ```
-Get-MailboxRepairRequest [-Database] <DatabaseIdParameter>
- [[-StoreMailbox] <StoreMailboxIdParameter>]
+Get-MailboxRepairRequest [-Database] <DatabaseIdParameter> [[-StoreMailbox] <StoreMailboxIdParameter>]
  [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter>
- [-Detailed]
+Get-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter> [-Detailed]
  [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
-Get-MailboxRepairRequest [-Mailbox] <MailboxIdParameter>
- [-Archive]
+Get-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> [-Archive]
  [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
@@ -81,6 +78,22 @@ This example uses the Database and StoreMailbox parameters to display the Identi
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\>.
+
+```yaml
+Type: StoreIntegrityCheckJobIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Database
 The Database parameter returns mailbox repair requests for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
@@ -93,22 +106,6 @@ You can't use this parameter with the Mailbox parameter.
 ```yaml
 Type: DatabaseIdParameter
 Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\>.
-
-```yaml
-Type: StoreIntegrityCheckJobIdParameter
-Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 

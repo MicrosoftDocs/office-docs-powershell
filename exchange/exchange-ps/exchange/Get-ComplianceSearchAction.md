@@ -91,6 +91,26 @@ This example shows details about the compliance search action named "Case 1234\_
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the compliance search action that you want to view. You can use any value that uniquely identifies the compliance search action. For example:
+
+- Name: The compliance search action name uses the syntax \<Compliance Search Name\>\_\<Action\> . For example, Case 1234\_Preview.
+- JobRunId (GUID)
+
+```yaml
+Type: ComplianceSearchActionIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+
 ### -Case
 This parameter is reserved for internal Microsoft use.
 
@@ -154,25 +174,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the compliance search action that you want to view. You can use any value that uniquely identifies the compliance search action. For example:
-
-- Name: The compliance search action name uses the syntax \<Compliance Search Name\>\_\<Action\> . For example, Case 1234\_Preview.
-- JobRunId (GUID)
-
-```yaml
-Type: ComplianceSearchActionIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

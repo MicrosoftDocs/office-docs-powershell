@@ -27,10 +27,10 @@ Set-App [-Identity] <AppIdParameter>
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
  [-OrganizationApp]
+ [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
  [-UserList <MultiValuedProperty>]
  [-WhatIf]
- [-PrivateCatalog]
  [<CommonParameters>]
 ```
 
@@ -173,6 +173,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrivateCatalog
+The PrivateCatalog switch specifies that the app you want to modify is located in a private catalog. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProvidedTo
 The ProvidedTo parameter specifies the availability of the app in your organization. Valid value are:
 
@@ -235,22 +251,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrivateCatalog
-The PrivateCatalog switch specifies that the app you want to modify is located in a private catalog. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

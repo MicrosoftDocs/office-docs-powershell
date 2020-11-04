@@ -25,11 +25,11 @@ Set-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
  [-AddParameter]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-Force]
  [-Parameters <String[]>]
  [-RemoveParameter]
  [-UnScopedTopLevel]
  [-WhatIf]
- [-Force]
  [<CommonParameters>]
 ```
 
@@ -145,6 +145,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+This parameter is available only in the cloud-based service.
+
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Parameters
 The Parameters parameter specifies the parameters to be added to or removed from the role entry.
 
@@ -217,24 +235,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-This parameter is available only in the cloud-based service.
-
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

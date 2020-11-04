@@ -34,13 +34,12 @@ Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> -
 
 ### Instance
 ```
-Add-PublicFolderAdministrativePermission -Instance <PublicFolderAdministrativeAceObject>
+Add-PublicFolderAdministrativePermission [[-Identity] <PublicFolderIdParameter>] -Instance <PublicFolderAdministrativeAceObject>
  [-AccessRights <MultiValuedProperty>]
  [-User <SecurityPrincipalIdParameter>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
- [[-Identity] <PublicFolderIdParameter>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-Server <ServerIdParameter>]
  [-WhatIf]
@@ -77,6 +76,37 @@ Add-PublicFolderAdministrativePermission -User Chris -Identity \MyPublicFolder -
 This example denies the user Chris the ViewInformationStore permission.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format TopLevelPublicFolder\\PublicFolder.
+
+You can omit the parameter label so that only the public folder name or GUID is supplied.
+
+```yaml
+Type: PublicFolderIdParameter
+Parameter Sets: Identity, Owner
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+```yaml
+Type: PublicFolderIdParameter
+Parameter Sets: Instance
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -AccessRights
 The AccessRights parameter specifies the rights that are being added. Valid values include:
@@ -115,37 +145,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format TopLevelPublicFolder\\PublicFolder.
-
-You can omit the parameter label so that only the public folder name or GUID is supplied.
-
-```yaml
-Type: PublicFolderIdParameter
-Parameter Sets: Identity, Owner
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PublicFolderIdParameter
-Parameter Sets: Instance
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

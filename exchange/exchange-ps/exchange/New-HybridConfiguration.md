@@ -21,21 +21,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-HybridConfiguration [-ClientAccessServers <MultiValuedProperty>]
+New-HybridConfiguration
+ [-ClientAccessServers <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Domains <MultiValuedProperty>]
+ [-EdgeTransportServers <MultiValuedProperty>]
  [-ExternalIPAddresses <MultiValuedProperty>]
  [-Features <MultiValuedProperty>]
  [-OnPremisesSmartHost <SmtpDomain>]
- [-SecureMailCertificateThumbprint <String>]
- [-TransportServers <MultiValuedProperty>]
- [-WhatIf]
- [-EdgeTransportServers <MultiValuedProperty>]
  [-ReceivingTransportServers <MultiValuedProperty>]
+ [-SecureMailCertificateThumbprint <String>]
  [-SendingTransportServers <MultiValuedProperty>]
  [-ServiceInstance <Int32>]
  [-TlsCertificateName <SmtpX509Identifier>]
+ [-TransportServers <MultiValuedProperty>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -130,6 +131,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -EdgeTransportServers
+The EdgeTransportServers parameter specifies the Edge Transport servers that are configured to support the hybrid deployment features. The Edge Transport server must be externally accessible from the Internet on port 25. The accepted values for the EdgeTransportServers parameter are either the full or short computer name of an Edge Transport server, for example, either edge.corp.contoso.com or EDGE. Separate server names with a comma if defining more than one Edge Transport server.
+
+When configuring the EdgeTransportServers parameter, you must configure the ReceivingTransportServers and SendingTransportServers parameter values to $null.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -ExternalIPAddresses
 The ExternalIPAddresses parameter is a legacy parameter that specifies the publicly accessible inbound IP address of Microsoft Exchange Server 2010 Hub Transport servers. The only configuration change that should be made with this parameter is to change or clear the legacy Exchange 2010 Hub Transport server IP address value. The IP address must be Internet Protocol version 4 (IPv4) based only.
 
@@ -187,76 +206,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -SecureMailCertificateThumbprint
-This parameter is available or functional only in Exchange Server 2010.
-
-The SecureMailCertificateThumbprint parameter specifies the thumbprint of the X.509 certificate to be used as the certificate for hybrid deployment secure message transport. This certificate cannot be self-signed, must be obtained from a trusted certificate authority (CA) and must be installed on all Hub Transport servers defined in the TransportServers parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -TransportServers
-This parameter is available or functional only in Exchange Server 2010.
-
-The TransportServers parameter specifies the Exchange Server 2010 SP2 servers with the Hub Transport server role installed that are configured to support the hybrid deployment features. At least one Hub Transport server must be defined and be externally accessible from the Internet for secure mail to be enabled between the on-premises and cloud-based organizations.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EdgeTransportServers
-The EdgeTransportServers parameter specifies the Edge Transport servers that are configured to support the hybrid deployment features. The Edge Transport server must be externally accessible from the Internet on port 25. The accepted values for the EdgeTransportServers parameter are either the full or short computer name of an Edge Transport server, for example, either edge.corp.contoso.com or EDGE. Separate server names with a comma if defining more than one Edge Transport server.
-
-When configuring the EdgeTransportServers parameter, you must configure the ReceivingTransportServers and SendingTransportServers parameter values to $null.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -ReceivingTransportServers
 The ReceivingTransportServers parameter specifies the Mailbox servers that are defined in the outbound connector configuration of the Microsoft Exchange Online Protection (EOP) service included as part of the Microsoft 365 organization. The servers defined in the ReceivingTransportServers parameter are designated as the receiving servers for secure mail messages sent from the Exchange Online organization to the on-premises Exchange organization in a hybrid deployment. At least one Mailbox server must be defined and be externally accessible from the Internet for secure mail to be enabled between the on-premises Exchange and Exchange Online organizations. The accepted values for the ReceivingTransportServers parameter are either the full or short computer name of a Mailbox server, for example, either mbx.corp.contoso.com or MBX. Separate server names with a comma if defining more than one Mailbox server.
 
@@ -267,6 +216,24 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -SecureMailCertificateThumbprint
+This parameter is available or functional only in Exchange Server 2010.
+
+The SecureMailCertificateThumbprint parameter specifies the thumbprint of the X.509 certificate to be used as the certificate for hybrid deployment secure message transport. This certificate cannot be self-signed, must be obtained from a trusted certificate authority (CA) and must be installed on all Hub Transport servers defined in the TransportServers parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -322,6 +289,40 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -TransportServers
+This parameter is available or functional only in Exchange Server 2010.
+
+The TransportServers parameter specifies the Exchange Server 2010 SP2 servers with the Hub Transport server role installed that are configured to support the hybrid deployment features. At least one Hub Transport server must be defined and be externally accessible from the Internet for secure mail to be enabled between the on-premises and cloud-based organizations.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

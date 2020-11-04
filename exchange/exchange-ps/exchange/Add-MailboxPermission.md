@@ -45,14 +45,13 @@ Add-MailboxPermission [-Identity] <MailboxIdParameter> -Owner <SecurityPrincipal
 
 ### Instance
 ```
-Add-MailboxPermission -Instance <MailboxAcePresentationObject>
+Add-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePresentationObject>
  [-AccessRights <MailboxRights[]>]
  [-User <SecurityPrincipalIdParameter>]
  [-AutoMapping <Boolean>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
- [[-Identity] <MailboxIdParameter>]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-WhatIf]

@@ -43,6 +43,22 @@ This example removes the existing availability configuration.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the availability configuration that you want to remove. The default name of the availability configuration you create by using the New-AvailabilityConfig is Availability Configuration.
+
+```yaml
+Type: AvailabilityConfigIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -59,22 +75,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the availability configuration that you want to remove. The default name of the availability configuration you create by using the New-AvailabilityConfig is Availability Configuration.
-
-```yaml
-Type: AvailabilityConfigIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

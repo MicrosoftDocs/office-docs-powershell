@@ -26,9 +26,9 @@ Test-MRSHealth [[-Identity] <ServerIdParameter>]
  [-DomainController <Fqdn>]
  [-MaxQueueScanAgeSeconds <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf]
  [-MRSProxyCredentials <PSCredential>]
  [-MRSProxyServer <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -54,6 +54,29 @@ Test-MRSHealth MBX01
 This example tests the health of the Mailbox Replication service on the Mailbox server named MBX01.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the server on which to perform the health test. You can use any value that uniquely identifies the server. For example:
+
+- Name
+- Distinguished name (DN)
+- ExchangeLegacyDN
+- GUID
+
+If you don't specify the server, the command runs on the local server.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -90,29 +113,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the server on which to perform the health test. You can use any value that uniquely identifies the server. For example:
-
-- Name
-- Distinguished name (DN)
-- ExchangeLegacyDN
-- GUID
-
-If you don't specify the server, the command runs on the local server.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -MaxQueueScanAgeSeconds
 The MaxQueueScanAgeSeconds parameter specifies the threshold for the last queue scan property. If the time stamp on the last queue scan property is older than the value specified by this parameter, an error event is created that shows the Mailbox Replication service isn't scanning mailbox database queues. The default value is 1800 seconds (30 minutes).
 
@@ -136,22 +136,6 @@ The MonitoringContext parameter specifies whether to include the associated moni
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
@@ -193,6 +177,22 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

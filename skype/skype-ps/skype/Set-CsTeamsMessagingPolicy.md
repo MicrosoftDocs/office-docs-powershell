@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSmartReply
-Determines whether a user is allowed to use smart replies. Set this to TRUE to allow. Set this to FALSE to prohibit. 
+Turn this setting on to enable suggested replies for chat messages. Set this to TRUE to allow. Set this to FALSE to prohibit. 
 
 ```yaml
 Type: Boolean
