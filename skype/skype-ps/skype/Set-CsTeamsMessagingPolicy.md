@@ -279,6 +279,8 @@ Accept wildcard characters: False
 ```
 
 ### -ChannelsInChatListEnabledType
+On mobile devices, enable to display favorite channels above recent chats.
+
 Possible values are: DisabledUserOverride, EnabledUserOverride.
 
 ```yaml

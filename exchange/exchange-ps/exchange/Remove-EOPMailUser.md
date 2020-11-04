@@ -25,7 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-EOPMailUser [-ExternalDirectoryObjectId <String>] [-Identity <MailUserIdParameter>] [<CommonParameters>]
+Remove-EOPMailUser [-ExternalDirectoryObjectId <String>]
+ [-Identity <MailUserIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,23 +64,14 @@ Accept wildcard characters: False
 The Identity parameter specifies the mail user that you want to delete. You can use any value that uniquely identifies the mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

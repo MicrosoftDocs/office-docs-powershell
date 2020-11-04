@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-QuarantineMessageHeader -Identity <QuarantineMessageIdentity> [<CommonParameters>]
+Get-QuarantineMessageHeader -Identity <QuarantineMessageIdentity>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SendConnector [[-Identity] <SendConnectorIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-SendConnector [[-Identity] <SendConnectorIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

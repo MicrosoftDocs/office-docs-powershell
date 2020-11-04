@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ResubmitRequest [[-Identity] <ResubmitRequestIdentityParameter>] [-Server <ServerIdParameter>]
+Get-ResubmitRequest [[-Identity] <ResubmitRequestIdentityParameter>]
+ [-Server <ServerIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -66,11 +67,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

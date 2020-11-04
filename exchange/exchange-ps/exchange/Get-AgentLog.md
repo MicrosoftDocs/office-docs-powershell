@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AgentLog [-EndDate <DateTime>] [-Location <LocalLongFullPath>] [-StartDate <DateTime>]
- [-TransportService <TransportService>] [<CommonParameters>]
+Get-AgentLog [-EndDate <DateTime>]
+ [-Location <LocalLongFullPath>]
+ [-StartDate <DateTime>]
+ [-TransportService <TransportService>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,13 +98,9 @@ Accept wildcard characters: False
 The TransportService parameter specifies the transport service that you want to view or modify. Valid values for this parameter are:
 
 - Hub for the Transport service on Mailbox servers.
-
 - MailboxSubmission for the Mailbox Transport Submission service on Mailbox servers.
-
 - MailboxDelivery for the Mailbox Transport Delivery service on Mailbox servers.
-
 - FrontEnd for the Front End Transport service on Mailbox servers.
-
 - Edge on Edge Transport servers.
 
 ```yaml

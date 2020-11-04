@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AdSite [[-Identity] <AdSiteIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-AdSite [[-Identity] <AdSiteIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,6 +42,22 @@ This example displays the configuration details for the Active Directory site na
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the identity of the Active Directory site for which you want to view configuration details. The identity can be expressed as a GUID or the Active Directory site name. If the Active Directory site name includes spaces, enclose the name in quotation marks (").
+
+```yaml
+Type: AdSiteIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -55,22 +73,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the identity of the Active Directory site for which you want to view configuration details. The identity can be expressed as a GUID or the Active Directory site name. If the Active Directory site name includes spaces, enclose the name in quotation marks (").
-
-```yaml
-Type: AdSiteIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

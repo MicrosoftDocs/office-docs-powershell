@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OutboundConnectorReport [-Domain <Fqdn>] [-Expression <Expression>] [-ProbeTag <String>]
+Get-OutboundConnectorReport [-Domain <Fqdn>]
+ [-Expression <Expression>]
+ [-ProbeTag <String>]
  [<CommonParameters>]
 ```
 

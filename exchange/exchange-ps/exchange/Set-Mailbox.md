@@ -203,12 +203,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-UserPrincipalName <String>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### ExcludeFromAllOrgHolds
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-ExcludeFromAllOrgHolds]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -324,12 +326,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### ExcludeFromOrgHolds
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-ExcludeFromOrgHolds <String>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -445,12 +449,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### RecalculateInactiveMailbox
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RecalculateInactiveMailbox]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -566,12 +572,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### RemoveDelayHoldApplied
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoveDelayHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -687,12 +695,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### RemoveDelayReleaseHoldApplied
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayReleaseHoldApplied]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoveDelayReleaseHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -812,7 +822,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayReleaseHoldApplied]
 
 ### RemoveDisabledArchive
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDisabledArchive]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoveDisabledArchive]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -927,12 +938,14 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDisabledArchive]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ### RemoveOrphanedHolds
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveOrphanedHolds <String[]>]
+Set-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoveOrphanedHolds <String[]>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -1046,7 +1059,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-UserCertificate <MultiValuedProperty>]
  [-UserSMimeCertificate <MultiValuedProperty>]
  [-WhatIf]
- [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -1118,23 +1132,14 @@ In Exchange Online, this example removes the delay hold that's applied to Asraf'
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -1156,15 +1161,10 @@ The AcceptMessagesOnlyFrom parameter specifies who is allowed to send messages t
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -1194,15 +1194,10 @@ The AcceptMessagesOnlyFromDLMembers parameter specifies who is allowed to send m
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group are allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: \<group1\>,\<group2\>,...\<groupN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<group1\>","\<group2\>",..."\<groupN\>".
@@ -1234,15 +1229,10 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -1272,7 +1262,6 @@ This parameter is available only in the cloud-based service.
 The AccountDisabled parameter specifies whether to disable the account that's associated with the mailbox. Valid values are:
 
 - $true: The associated account is disabled. The user can't log in to the mailbox.
-
 - $false: The associated account is enabled. The user can log in to the mailbox.
 
 ```yaml
@@ -1292,9 +1281,7 @@ Accept wildcard characters: False
 The AddressBookPolicy parameter specifies the address book policy that's applied to the mailbox. You can use any value that uniquely identifies the address book policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
@@ -1322,7 +1309,6 @@ When you create a recipient without specifying an email address, the Alias value
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -1348,7 +1334,6 @@ This parameter is available only in on-premises Exchange.
 The AntispamBypassEnabled parameter specifies whether to skip anti-spam processing on the mailbox. Valid values are:
 
 - $true: Anti-spam processing is skipped on the mailbox.
-
 - $false: Anti-spam processing occurs on the mailbox. This is the default value
 
 ```yaml
@@ -1408,23 +1393,14 @@ This parameter is available only in on-premises Exchange.
 The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -1446,9 +1422,7 @@ This parameter is available only in on-premises Exchange.
 The ArchiveDatabase parameter specifies the Exchange database that contains the archive that's associated with this mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -1510,13 +1484,9 @@ The ArchiveQuota parameter specifies the maximum size for the user's archive mai
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1560,13 +1530,9 @@ The ArchiveWarningQuota parameter specifies the warning threshold for the size o
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1606,43 +1572,24 @@ Accept wildcard characters: False
 The AuditAdmin parameter specifies the mailbox operations to log for administrators as part of mailbox audit logging. Valid values are:
 
 - None
-
 - AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
-
 - ApplyRecord (Available only in the cloud-based service.)
-
 - Copy
-
 - Create (Enabled by default.)
-
 - FolderBind (Enabled by default in on-premises Exchange 2010 or later.)
-
 - HardDelete (Enabled by default.)
-
 - MessageBind (This has been deprecated in the cloud-based service.)
-
 - ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
-
 - Move (Enabled by default in on-premises Exchange 2010 or later.)
-
 - MoveToDeletedItems (Enabled by default.)
-
 - RecordDelete (Available only in the cloud-based service.)
-
 - RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
-
 - SendAs (Enabled by default.)
-
 - SendOnBehalf (Enabled by default.)
-
 - SoftDelete (Enabled by default.)
-
 - Update (Enabled by default.)
-
 - UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
-
 - UpdateCalendarDelegation (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
-
 - UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
@@ -1668,37 +1615,21 @@ Accept wildcard characters: False
 The AuditDelegate parameter specifies the mailbox operations to log for delegate users as part of mailbox audit logging. Valid values are:
 
 - None
-
 - AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
-
 - ApplyRecord (Available only in the cloud-based service.)
-
 - Create (Enabled by default.)
-
 - FolderBind
-
 - HardDelete (Enabled by default.)
-
 - ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
-
 - Move
-
 - MoveToDeletedItems (Enabled by default only in the cloud-based service.)
-
 - RecordDelete (Available only in the cloud-based service.)
-
 - RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
-
 - SendAs (Enabled by default.)
-
 - SendOnBehalf (Enabled by default only in the cloud-based service.)
-
 - SoftDelete (Enabled by default only in the cloud-based service.)
-
 - Update (Enabled by default only in the cloud-based service.)
-
 - UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
-
 - UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
@@ -1724,7 +1655,6 @@ Accept wildcard characters: False
 The AuditEnabled parameter specifies whether to enable or disable mailbox audit logging for the mailbox. If auditing is enabled, actions specified in the AuditAdmin, AuditDelegate, and AuditOwner parameters are logged. Valid values are:
 
 - $true: Mailbox audit logging is enabled.
-
 - $false: Mailbox audit logging is disabled. This is the default value.
 
 **Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://docs.microsoft.com/microsoft-365/compliance/enable-mailbox-auditing).
@@ -1788,39 +1718,22 @@ Accept wildcard characters: False
 The AuditOwner parameter specifies the mailbox operations to log for mailbox owners as part of mailbox audit logging. Valid values include:
 
 - None (This is the default value in Exchange 2010, Exchange 2013, and Exchange 2016.)
-
 - AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
-
 - ApplyRecord (Available only in the cloud-based service.)
-
 - Create
-
 - FolderBind (Available only in Exchange 2013.)
-
 - HardDelete (Enabled by default in the cloud-based service.)
-
 - MailboxLogin (Available only in Exchange 2016, Exchange 2019, and the cloud-based service.)
-
 - MessageBind (Available only in Exchange 2013.)
-
 - ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
-
 - Move
-
 - MoveToDeletedItems (Enabled by default in the cloud-based service.)
-
 - RecordDelete (Available only in the cloud-based service.)
-
 - RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
-
 - SoftDelete (Enabled by default in the cloud-based service.)
-
 - Update (Enabled by default in the cloud-based service.)
-
 - UpdateFolderPermissions (Available only in the cloud-based service; enabled by default.)
-
 - UpdateCalendarDelegation (Available only in the cloud-based service; enabled by default.)
-
 - UpdateInboxRules (Available only in the cloud-based service; enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
@@ -1870,15 +1783,10 @@ The BypassModerationFromSendersOrMembers parameter specifies who is allowed to s
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple senders and overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -1910,13 +1818,9 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1942,7 +1846,6 @@ Accept wildcard characters: False
 The CalendarRepairDisabled parameter specifies whether to prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
 
 - $true: The Calendar Repair Assistant doesn't repair calendar items in the mailbox.
-
 - $false: The Calendar Repair Assistant repairs calendars items in the mailbox. This is the default value.
 
 ```yaml
@@ -1962,7 +1865,6 @@ Accept wildcard characters: False
 The CalendarVersionStoreDisabled parameter specifies whether to prevent calendar changes in the mailbox from being logged. Valid values are:
 
 - $true: Changes to a calendar item aren't recorded.
-
 - $false: Changes to a calendar item are recorded. This keeps older versions of meetings and appointments. This is the default value.
 
 ```yaml
@@ -2001,8 +1903,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -2022,7 +1923,6 @@ Accept wildcard characters: False
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
 - $true: A DTMF map is created for the recipient. This is the default value.
-
 - $false: A DTMF map isn't created for the recipient.
 
 ```yaml
@@ -2284,9 +2184,7 @@ This parameter is available only in on-premises Exchange.
 The Database parameter specifies the mailbox database that contains the mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Use the Get-MailboxDatabase cmdlet to see the available mailbox databases.
@@ -2310,9 +2208,7 @@ This parameter is available only in the cloud-based service.
 The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
@@ -2336,9 +2232,7 @@ This parameter is available only in the cloud-based service.
 The DefaultAuditSet parameter specifies whether to revert the mailbox operations that are logged in the mailbox audit log back to the set of default operations for the specified logon type. Valid values are:
 
 - Admin: Reverts the mailbox operations to log for administrators back to the default list of operations.
-
 - Delegate: Reverts the mailbox operations to log for delegate users back to the default list of operations.
-
 - Owner: Reverts the mailbox operations to log for mailbox owners back to the default list of operations.
 
 With on-by-default mailbox auditing in the cloud-based service, a set of mailbox operations are logged by default for each logon type. This list of operations is managed by Microsoft, who will automatically add new operations to be audited when they are released. If you change the list of mailbox operations for any logon type (by using the AuditAdmin, AuditDelegate, or AuditOwner parameters), any new mailbox operation released by Microsoft will not be audited; you'll need to explicitly add new mailbox operations to the list of operations for a logon type. Use this parameter to revert the mailbox back to the Microsoft-managed list of mailbox operations that are audited for a logon type. For more information about on-by-default mailbox auditing, see [Manage mailbox auditing](https://docs.microsoft.com/microsoft-365/compliance/enable-mailbox-auditing).
@@ -2360,15 +2254,10 @@ Accept wildcard characters: False
 The DefaultPublicFolderMailbox parameter assigns a specific public folder mailbox to the user. You can use any value that uniquely identifies the public folder mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 By default, the public folder mailbox used by a user is automatically selected by an algorithm that load-balances users across all public folder mailboxes.
@@ -2390,7 +2279,6 @@ Accept wildcard characters: False
 The DeliverToMailboxAndForward parameter specifies the message delivery behavior when a forwarding address is specified by the ForwardingAddress or ForwardingSmtpAddress parameters. Valid values are:
 
 - $true: Messages are delivered to this mailbox and forwarded to the specified recipient or email address.
-
 - $false: If a forwarding recipient or email address is configured, messages are delivered only to the specified recipient or email address, and messages aren't delivered to this mailbox. If no forwarding recipient or email address is configured, messages are delivered only to this mailbox.
 
 The default value is $false. The value of this parameter is meaningful only if you configure a forwarding recipient or email address.
@@ -2414,7 +2302,6 @@ This parameter is available only in on-premises Exchange.
 The DisableThrottling parameter enables or disables sender rate throttling for the mailbox. Valid values are:
 
 - $true: Messages sent by this mailbox will not be throttled by Sender Rate Control. We only recommend this value for moderation mailboxes.
-
 - $false: Messages will be throttled after the threshold is exceeded. This is the default value.
 
 ```yaml
@@ -2470,7 +2357,6 @@ This parameter is available only in on-premises Exchange.
 The DowngradeHighPriorityMessagesEnabled parameter specifies whether to prevent the mailbox from sending high priority messages to an X.400 mail system. Valid values are:
 
 - $true: High priority messages sent to X.400 recipients are changed to normal priority.
-
 - $false: High priority messages set to X.400 recipients remain high priority. This is the default value.
 
 ```yaml
@@ -2532,7 +2418,6 @@ This parameter is available only in the cloud-based service.
 The ElcProcessingDisabled parameter specifies whether to prevent the Managed Folder Assistant from processing the mailbox. Valid values are:
 
 - $true: The Managed Folder Assistant isn't allowed to process the mailbox. Note that this setting will be ignored if a retention policy that has Preservation Lock enabled is applied to the mailbox.
-
 - $false: The Managed Folder Assistant is allowed to process the mailbox. This is the default value.
 
 ```yaml
@@ -2554,11 +2439,8 @@ The EmailAddresses parameter specifies all the email addresses (proxy addresses)
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
-
 - smtp: Other SMTP email addresses.
-
 - X400: X.400 addresses in on-premises Exchange.
-
 - X500: X.500 addresses in on-premises Exchange.
 
 If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
@@ -2566,9 +2448,7 @@ If you don't include a \<Type\> value for an email address, the value smtp is as
 To specify the primary SMTP email address, you can use any of the following methods:
 
 - Use the \<Type\> value SMTP on the address.
-
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
-
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
@@ -2596,7 +2476,6 @@ This parameter is available only in on-premises Exchange.
 The EmailAddressPolicyEnabled parameter specifies whether to apply email address policies to this recipient. Valid values are:
 
 - $true: Email address policies are applied to this recipient. This is the default value.
-
 - $false: Email address policies aren't applied to this recipient.
 
 ```yaml
@@ -2616,7 +2495,6 @@ Accept wildcard characters: False
 The EnableRoomMailboxAccount parameter specifies whether to enable the disabled user account that's associated with this room mailbox. Valid values are:
 
 - $true: The disabled account that's associated with the room mailbox is enabled. You also need to use the RoomMailboxPassword with this value. This allows the account to log on to the room mailbox.
-
 - $false: The account that's associated with the room mailbox is disabled. You can't use the account to logon to the room mailbox. This is the default value.
 
 Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
@@ -2830,7 +2708,6 @@ Accept wildcard characters: False
 The ExternalOofOptions parameter specifies the automatic replies or Out of Office (also known OOF) message options that are available for the mailbox. Valid values are:
 
 - External: Automatic replies can be configured for external senders. This is the default value.
-
 - InternalOnly: Automatic replies can be configured only for internal senders.
 
 ```yaml
@@ -2986,21 +2863,15 @@ Accept wildcard characters: False
 The ForwardingAddress parameter specifies a forwarding address in your organization for messages that are sent to this mailbox. You can use any value that uniquely identifies the internal recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 How messages are delivered and forwarded is controlled by the DeliverToMailboxAndForward parameter.
 
 - DeliverToMailboxAndForward is $true: Messages are delivered to this mailbox and forwarded to the specified recipient.
-
 - DeliverToMailboxAndForward is $false: Messages are only forwarded to the specified recipient. Messages aren't delivered to this mailbox.
 
 The default value is blank ($null), which means no forwarding recipient is configured.
@@ -3026,7 +2897,6 @@ The ForwardingSmtpAddress parameter specifies a forwarding SMTP address for mess
 How messages are delivered and forwarded is controlled by the DeliverToMailboxAndForward parameter.
 
 - DeliverToMailboxAndForward is $true: Messages are delivered to this mailbox and forwarded to the specified email address.
-
 - DeliverToMailboxAndForward is $false: Messages are only forwarded to the specified email address. Messages aren't delivered to this mailbox.
 
 The default value is blank ($null), which means no forwarding email address is configured.
@@ -3072,23 +2942,14 @@ The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mailb
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
@@ -3118,23 +2979,14 @@ The GroupMailbox switch is required to modify Group Mailboxes in Exchange Online
 You can use any value that uniquely identifies the Group Mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -3154,7 +3006,6 @@ Accept wildcard characters: False
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
 - $true: The recipient isn't visible in address lists.
-
 - $false: The recipient is visible in address lists. This is the default value.
 
 ```yaml
@@ -3178,7 +3029,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -3200,7 +3050,6 @@ The ImListMigrationCompleted parameter specifies whether a user's Lync or Skype 
 Valid values are:
 
 - $true: The user's Lync or Skype for Business contact list is stored in their Exchange 2016 mailbox. This prevents you from migrating the mailbox back to an Exchange 2010 server.
-
 - $false: The user's Lync or Skype for Business contact list is stored on a Lync or Skype for Business server. This doesn't prevent you from migrating the mailbox back to an Exchange 2010 server. This is the default value.
 
 Lync Server 2013 and Skype for Business Server 2015 support storing the user's contact list in their Exchange 2016 mailbox. This feature is known as the unified contact store (UCS), and it allows applications to show a consistent, up-to-date contact list. However, Exchange 2010 doesn't support the unified contact store. Therefore, before you migrate a user's Exchange 2016 mailbox back to Exchange 2010, you need to move the user's Lync or Skype for Business contact list from the unified contact store back to a Lync 2013 or Skype for Business server. For more information, see [Configuring Microsoft Lync Server 2013 to use the unified contact store](https://docs.microsoft.com/lyncserver/lync-server-2013-configuring-lync-server-to-use-the-unified-contact-store).
@@ -3324,13 +3173,9 @@ The IssueWarningQuota parameter specifies the warning threshold for the size of 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -3438,11 +3283,8 @@ This parameter is available only in on-premises Exchange.
 The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 ```yaml
@@ -3498,7 +3340,6 @@ Accept wildcard characters: False
 The LitigationHoldEnabled parameter specifies whether to place the mailbox on litigation hold. Valid values are:
 
 - $true: The mailbox is on litigation hold.
-
 - $false: The mailbox isn't on litigation hold. This is the default value.
 
 After a mailbox is placed on litigation hold, messages can't be deleted from the mailbox. Deleted items and all versions of changed items are retained in the Recoverable Items folder. Items that are purged from the dumpster are also retained and the items are held indefinitely. If you enable litigation hold, single-item recovery quotas aren't applied.
@@ -3602,7 +3443,6 @@ The MailTip parameter specifies the custom MailTip text for this recipient. The 
 When you add a MailTip to a recipient, two things happen:
 
 - HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: \<html\>\<body\>This mailbox is not monitored\</body\>\</html\>. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
-
 - The text is automatically added to the MailTipTranslations property of the recipient as the default value: default:\<MailTip text\>. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
 
 ```yaml
@@ -3724,11 +3564,8 @@ The MaxReceiveSize parameter specifies the maximum size of a message that can be
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -3780,11 +3617,8 @@ The MaxSendSize parameter specifies the maximum size of a message that can be se
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -3818,7 +3652,6 @@ Accept wildcard characters: False
 The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send on behalf of" permission. Valid values are:
 
 - $true: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
-
 - $false: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
 You give users permission to send on behalf of a mailbox by using the GrantSendOnBehalfTo parameter on the mailbox.
@@ -3842,7 +3675,6 @@ Accept wildcard characters: False
 The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send as" permission. Valid values are:
 
 - $true: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
-
 - $false: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
 In Exchange Online, you give a user permission to send as a mailbox by running this command: `Add-RecipientPermission <Mailbox> -AccessRights SendAs -Trustee <User>`.
@@ -3886,7 +3718,6 @@ Accept wildcard characters: False
 The MessageTrackingReadStatusEnabled parameter specifies whether to include detailed information in delivery reports for messages sent to the mailbox. Valid values are:
 
 - $true: The read status of the message and the date-time that the message was delivered is shown in the delivery report for messages sent to this mailbox. This is the default value.
-
 - $false: The read status of the message isn't displayed in the delivery report for messages sent to this mailbox. Only the date-time that the message was delivered is shown in the delivery report.
 
 ```yaml
@@ -3942,15 +3773,10 @@ Accept wildcard characters: False
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
@@ -3976,7 +3802,6 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
@@ -4072,9 +3897,7 @@ This parameter is available only in on-premises Exchange.
 The OfflineAddressBook parameter specifies the offline address book (OAB) that's associated with the mailbox. You can use any value that uniquely identifies the OAB. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Use the Get-OfflineAddressBook cmdlet to see the available offline address books.
@@ -4152,7 +3975,6 @@ Accept wildcard characters: False
 The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, you need to be a member of one of the following role groups:
 
 - Exchange Online: You can't use this parameter to change another user's password. To change another user's password, use the Set-MsolUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell). To change a another user's password in the Microsoft 365 admin center, see [Reset Microsoft 365 for business passwords](https://docs.microsoft.com/microsoft-365/admin/add-users/reset-passwords).
-
 - On-premises Exchange: The Organization Management or Help Desk role groups via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
 This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
@@ -4198,13 +4020,9 @@ The ProhibitSendQuota parameter specifies a size limit for the mailbox. If the m
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -4234,13 +4052,9 @@ The ProhibitSendReceiveQuota parameter specifies a size limit for the mailbox. I
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -4388,13 +4202,9 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -4426,13 +4236,9 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -4460,15 +4266,10 @@ The RejectMessagesFrom parameter specifies who isn't allowed to send messages to
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -4498,15 +4299,10 @@ The RejectMessagesFromDLMembers parameter specifies who isn't allowed to send me
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group aren't allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: \<group1\>,\<group2\>,...\<groupN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<group1\>","\<group2\>",..."\<groupN\>".
@@ -4538,15 +4334,10 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -4739,7 +4530,6 @@ Accept wildcard characters: False
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
 - $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
-
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
@@ -4761,7 +4551,6 @@ This parameter is available only in on-premises Exchange.
 The ResetPasswordOnNextLogon parameter specifies whether the user is required to change their password the next time they log on to their mailbox. Valid values are:
 
 - $true: The user is required to change their password the next time they log on to their mailbox.
-
 - $false: The user isn't required to change their password the next time they log on to their mailbox. This is the default value.
 
 In Exchange Online, administrators can require users to reset their password the next time they log on by using the ResetPasswordOnNextLogon parameter on the Set-User cmdlet.
@@ -4823,9 +4612,7 @@ Accept wildcard characters: False
 The RetainDeletedItemsFor parameter specifies the length of time to keep soft-deleted items for the mailbox. Soft-deleted items are items that have been deleted by using any of these methods:
 
 - Deleting items from the Deleted Items folder.
-
 - Selecting the Empty Deleted Items Folder action.
-
 - Deleting items using Shift + Delete.
 
 These actions move the items to the Recoverable Items folder, into a subfolder named Deletions.
@@ -4859,7 +4646,6 @@ This parameter is available only in on-premises Exchange.
 The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in the Recoverable Items\\Deletions folder of the mailbox until the next database backup occurs. Valid values are:
 
 - $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the deleted item retention and recoverable items quota values.
-
 - $false: Retention of deleted items doesn't depend on a backup of the mailbox database. This is the default value.
 
 For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
@@ -4905,7 +4691,6 @@ Accept wildcard characters: False
 The RetentionHoldEnabled parameter specifies whether the mailbox is placed on retention hold. Placing the mailbox on retention hold temporarily suspends the processing of retention policies or managed folder mailbox policies for the mailbox (for example, when the user is on vacation). Valid values are:
 
 - $true: The mailbox is placed on retention hold. Retention policies and managed folder policies are suspended for the mailbox.
-
 - $false: The retention hold is removed from the mailbox. The mailbox is subject to retention policies and managed folder policies. This is the default value.
 
 To set the start date for retention hold, use the StartDateForRetentionHold parameter.
@@ -4927,9 +4712,7 @@ Accept wildcard characters: False
 The RetentionPolicy parameter specifies the retention policy that you want applied to this mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished Name (DN)
-
 - GUID
 
 Retention policies consist of tags that are applied to mailbox folders and mail items to determine the period of time that the items should be retained.
@@ -4971,9 +4754,7 @@ Accept wildcard characters: False
 The RoleAssignmentPolicy parameter specifies the role assignment policy that's assigned to the mailbox. You can use any value that uniquely identifies the role assignment policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 In Exchange Online, a role assignment policy must be assigned to the mailbox. In on-premises Exchange, to configure the mailbox so there's no role assignment policy assigned, use the value $null.
@@ -5017,7 +4798,6 @@ The RulesQuota parameter specifies the limit for the size of Inbox rules for the
 A valid value is a number from 32 to 256 kilobytes (32768 to 262144 bytes). When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -5065,9 +4845,7 @@ This parameter is available only in on-premises Exchange.
 The SCLDeleteEnabled parameter specifies whether to silently delete messages that meet or exceed the spam confidence level (SCL) specified by the SCLDeleteThreshold parameter. Valid values are:
 
 - $true: Messages that meet or exceed the SCLDeleteThreshold value are silently deleted without sending an non-delivery report (NDR).
-
 - $false: Messages that meet or exceed the SCLDeleteThreshold value aren't deleted.
-
 - $null (blank): The value isn't configured. This is the default value.
 
 ```yaml
@@ -5109,9 +4887,7 @@ This parameter is available only in on-premises Exchange.
 The SCLJunkEnabled parameter specifies whether messages that exceed(not meet) the SCL specified by the SCLJunkThreshold parameter are moved to the Junk Email folder. Valid values are:
 
 - $true: Messages that exceed the SCLJunkThreshold value are moved to the Junk Email folder. Messages that meet the SCLJunkThreshold value aren't moved to the Junk Email folder.
-
 - $false: Messages that meet or exceed the SCLJunkThreshold value aren't moved to the Junk Email folder.
-
 - $null (blank): The value isn't configured. This is the default value.
 
 ```yaml
@@ -5153,9 +4929,7 @@ This parameter is available only in on-premises Exchange.
 The SCLQuarantineEnabled parameter specifies whether messages that meet or exceed the SCL specified by the SCLQuarantineThreshold parameter are quarantined. If a message is quarantined, it's sent to the quarantine mailbox where administrators can review it. Valid values are:
 
 - $true: Messages that meet or exceed the SCLQuarantineThreshold value are sent to the quarantine mailbox.
-
 - $false: Messages that meet or exceed the SCLQuarantineThreshold value aren't sent to the quarantine mailbox.
-
 - $null (blank): The value isn't configured. This is the default value.
 
 To configure the quarantine mailbox, see [Configure a spam quarantine mailbox](https://docs.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-quarantine-mailboxes).
@@ -5199,9 +4973,7 @@ This parameter is available only in on-premises Exchange.
 The SCLRejectEnabled parameter specifies whether messages that meet or exceed the SCL specified by the SCLRejectThreshold parameter are rejected. Valid values are:
 
 - $true: Messages that meet or exceed the SCLRejectThreshold value are rejected, and an NDR is sent to the sender.
-
 - $false: Messages that meet or exceed the SCLRejectThreshold value aren't rejected.
-
 - $null (blank): The value isn't configured. This is the default value.
 
 ```yaml
@@ -5273,9 +5045,7 @@ Accept wildcard characters: False
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
-
 - Internal: Notify senders in the organization when their messages aren't approved.
-
 - Never: Don't notify anyone when a message isn't approved.
 
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
@@ -5297,9 +5067,7 @@ Accept wildcard characters: False
 The SharingPolicy parameter specifies the sharing policy that's assigned to the mailbox. You can use any value that uniquely identifies the sharing policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Use the Get-SharingPolicy cmdlet to see the available sharing policies.
@@ -5321,11 +5089,8 @@ Accept wildcard characters: False
 The SimpleDisplayName parameter is used to display an alternative description of the object when only a limited set of characters is permitted. Valid characters are:
 
 - a - z
-
 - A - Z
-
 - 0 - 9
-
 - "\<space\>", """, "'", "(", ")", "+", ",", "-", ".", "/", ":", and "?".
 
 ```yaml
@@ -5345,7 +5110,6 @@ Accept wildcard characters: False
 The SingleItemRecoveryEnabled parameter specifies whether to prevent the Recovery Items folder from being purged. Valid values are:
 
 - $true: Single item recovery is enabled. The Recovery Items folder can't be purged. and items that have been deleted or edited can't be removed.
-
 - $false: Single item recovery isn't enabled. The Recovery Items folder can be purged, and, items that have been deleted or edited can be removed. This is the default value.
 
 ```yaml
@@ -5457,9 +5221,7 @@ This parameter is available only in on-premises Exchange.
 The ThrottlingPolicy parameter specifies the throttling policy that's assigned to the mailbox. You can use any value that uniquely identifies the throttling policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Use the Get-ThrottlingPolicy cmdlet to see the available throttling policies.
@@ -5481,11 +5243,8 @@ Accept wildcard characters: False
 The Type parameter specifies the mailbox type for the mailbox. Valid values are:
 
 - Regular
-
 - Room
-
 - Equipment
-
 - Shared
 
 ```yaml
@@ -5525,9 +5284,7 @@ Accept wildcard characters: False
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
 - emailAddress:\<integers\>
-
 - lastNameFirstName:\<integers\>
-
 - firstNameLastName:\<integers\>
 
 To enter values that overwrite all existing entries, use the following syntax: emailAddress:\<integers\>,lastNameFirstName:\<integers\>,firstNameLastName:\<integers\>.
@@ -5575,7 +5332,6 @@ Accept wildcard characters: False
 The UseDatabaseQuotaDefaults parameter specifies whether the mailbox uses the applicable quota values that are configured on the mailbox or on the mailbox database. Valid values are:
 
 - $true: The mailbox uses the applicable quota values that are configured on the mailbox database. Any of those quota values configured directly on the mailbox are ignored.
-
 - $false: The mailbox uses its own values for the applicable quota values. Any of those quota values on the mailbox database are ignored.
 
 In Exchange Online, the default value is $false. In on-premises Exchange, the default value is $true.
@@ -5583,15 +5339,10 @@ In Exchange Online, the default value is $false. In on-premises Exchange, the de
 The applicable quota values are:
 
 - CalendarLoggingQuota
-
 - IssueWarningQuota
-
 - ProhibitSendQuota
-
 - ProhibitSendReceiveQuota
-
 - RecoverableItemsQuota
-
 - RecoverableItemsWarningQuota
 
 ```yaml
@@ -5613,7 +5364,6 @@ This parameter is available only in on-premises Exchange.
 The UseDatabaseRetentionDefaults parameter specifies whether the mailbox uses the MailboxRetention attribute value that's configured on the mailbox database. This value controls how long deleted mailboxes are kept in the database before they are permanently removed (purged). The default value is 30 days. Valid values are:
 
 - $true: The mailbox uses the MailboxRetention value that's configured on the mailbox database. This is the default value.
-
 - $false: When the mailbox is deleted, it's retained indefinitely.
 
 ```yaml
@@ -5699,7 +5449,6 @@ Accept wildcard characters: False
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 
 - In environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is set to the value True for the recipient), the WindowsEmailAddress parameter has no effect on the WindowsEmailAddress property or the primary email address value.
-
 - In environments where the recipient isn't subject to email address policies (the EmailAddressPolicyEnabled property is set to the value False for the recipient), the WindowsEmailAddress parameter updates the WindowsEmailAddress property and the primary email address to the same value.
 
 The WindowsEmailAddress property is visible for the recipient in Active Directory Users and Computers in the E-mail attribute. The attribute common name is E-mail-Addresses, and the Ldap-Display-Name is mail. If you modify this attribute in Active Directory, the recipient's primary email address is not updated to the same value.

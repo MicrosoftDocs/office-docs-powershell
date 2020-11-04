@@ -22,14 +22,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Owner
 ```
-Get-ADPermission [-Identity] <ADRawEntryIdParameter> [-Owner]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-ADPermission [-Identity] <ADRawEntryIdParameter>
+ [-Owner]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### AccessRights
 ```
-Get-ADPermission [-Identity] <ADRawEntryIdParameter> [-User <SecurityPrincipalIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-ADPermission [-Identity] <ADRawEntryIdParameter>
+ [-User <SecurityPrincipalIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

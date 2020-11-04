@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-FederationTrust [[-Identity] <FederationTrustIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-FederationTrust [[-Identity] <FederationTrustIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

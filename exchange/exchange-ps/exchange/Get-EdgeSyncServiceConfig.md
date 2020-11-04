@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-EdgeSyncServiceConfig [[-Identity] <EdgeSyncServiceConfigIdParameter>] [-DomainController <Fqdn>]
- [-Site <AdSiteIdParameter>] [<CommonParameters>]
+Get-EdgeSyncServiceConfig [[-Identity] <EdgeSyncServiceConfigIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Site <AdSiteIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

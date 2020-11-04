@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DistributionGroupMember [-Identity] <DistributionGroupMemberIdParameter> [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-ReadFromDomainController] [-ResultSize <Unlimited>]
+Get-DistributionGroupMember [-Identity] <DistributionGroupMemberIdParameter>
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -53,15 +57,10 @@ This example sets the scope of the search to the entire forest by running the Se
 The Identity parameter specifies the distribution group or mail-enabled security group. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -121,7 +120,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml

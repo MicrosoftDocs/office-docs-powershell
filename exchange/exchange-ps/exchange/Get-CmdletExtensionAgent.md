@@ -22,14 +22,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Filters
 ```
-Get-CmdletExtensionAgent [-Assembly <String>] [-Enabled <Boolean>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-CmdletExtensionAgent [-Assembly <String>]
+ [-Enabled <Boolean>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-CmdletExtensionAgent [[-Identity] <CmdletExtensionAgentIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,6 +57,26 @@ Get-CmdletExtensionAgent "Mailbox Creation Time Agent"
 This example displays detailed information for the Exchange cmdlet extension agent named Mailbox Creation Time Agent.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the name of the cmdlet extension agent that you want to view. You can use any value that uniquely identifies the agent. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: CmdletExtensionAgentIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Assembly
 The Assembly parameter filters the results by the specified Assembly property value. The value for the built-in Exchange cmdlet extension agents is Microsoft.Exchange.ProvisioningAgent.dll.
@@ -91,7 +114,6 @@ Accept wildcard characters: False
 The Enabled parameter filters the results by enabled or disabled cmdlet extension agents. Valid values are:
 
 - $true: Only enabled agents are included in the results.
-
 - $false: Only disabled agents are included in the results.
 
 If you don't use this parameter, enabled and disabled agents are included in the results.
@@ -106,28 +128,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the cmdlet extension agent that you want to view. You can use any value that uniquely identifies the agent. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-```yaml
-Type: CmdletExtensionAgentIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

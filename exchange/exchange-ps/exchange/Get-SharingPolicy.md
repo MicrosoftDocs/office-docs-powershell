@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SharingPolicy [[-Identity] <SharingPolicyIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-SharingPolicy [[-Identity] <SharingPolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,11 +71,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the sharing policy that you want to view. You can use one of the following values:
 
 - ADObjectID
-
 - Distinguished name (DN)
-
 - Legacy DN
-
 - GUID
 
 ```yaml

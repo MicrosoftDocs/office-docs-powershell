@@ -40,9 +40,7 @@ This example retrieves email invites stored in the ContosoWeb1 site to the user 
 
 ### -Site
 
-Specifies the URL of the site collection to get.
-
-The type must be a valid URL, in the form, https://server_name or https://server_name/sites/sitename
+Specifies the URL of the site collection.
 
 ```yaml
 Type: SpoSitePipeBind

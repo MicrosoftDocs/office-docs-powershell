@@ -48,9 +48,7 @@ This example displays summary information for all autolabeling rules in the Secu
 The Identity parameter specifies the auto-labeling policy rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -86,7 +84,6 @@ Accept wildcard characters: False
 The IncludeExecutionRuleGuids parameter specifies whether to include the execution rule GUID in the rule details. Valid values are:
 
 - $true: Include the execution rule GUID in the rule details.
-
 - $false: Don't include the execution rule GUID in the rule details. This is the default value.
 
 ```yaml
@@ -106,7 +103,6 @@ Accept wildcard characters: False
 The IncludeExecutionRuleInformation parameter specifies whether to include the execution rule information in the rule details. Valid values are:
 
 - $true: Include the execution rule information in the rule details.
-
 - $false: Don't include the execution rule information in the rule details. This is the default value.
 
 ```yaml
