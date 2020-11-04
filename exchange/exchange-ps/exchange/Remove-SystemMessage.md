@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SystemMessage [-Identity] <SystemMessageIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Remove-SystemMessage [-Identity] <SystemMessageIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -52,15 +55,12 @@ This example removes the specified custom quota message (combination of language
 TheIdentity parameter specifies the custom system message that you want to remove. You can use any value that uniquely identifies the system message. For example:
 
 - Identity
-
 - Distinguished name (DN)
-
 - GUID
 
 The identity value of a system message uses one of these formats:
 
 - System messages for enhanced status codes: \<Language\>\\\<Internal \| External\>\\\<DSNcode\>. For example, En\\Internal\\5.1.2 or Ja\\External\\5.1.2.
-
 - System messages for quotas: \<Language\>\\\<QuotaMessageType\>. For example, En\\ProhibitSendReceiveMailBox.
 
 \<Language\>: For the list of supported language codes, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
@@ -133,8 +133,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

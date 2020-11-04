@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,9 +69,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the identity of the organizational relationship. You can use the following values:
 
 - Canonical name
-
 - GUID
-
 - Name
 
 ```yaml

@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-FocusedInbox -Identity <MailboxIdParameter> [-FocusedInboxOn <Boolean>] [<CommonParameters>]
+Set-FocusedInbox -Identity <MailboxIdParameter>
+ [-FocusedInboxOn <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,23 +48,14 @@ This example disables Focused Inbox for the mailbox of laura@contoso.com.
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name>\\\<account name>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -82,7 +75,6 @@ Accept wildcard characters: False
 The FocusedInboxOn parameter enables or disables Focused Inbox for the mailbox. Valid values are:
 
 - $true: Focused Inbox is enabled. This is the default value.
-
 - $false: Focused Inbox is disabled.
 
 ```yaml

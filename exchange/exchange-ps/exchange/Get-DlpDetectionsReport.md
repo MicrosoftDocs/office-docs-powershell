@@ -23,10 +23,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpDetectionsReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-DlpCompliancePolicy <MultiValuedProperty>] [-DlpComplianceRule <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-Page <Int32>] [-PageSize <Int32>]
- [-Source <MultiValuedProperty>] [-StartDate <DateTime>] [-SummarizeBy <MultiValuedProperty>]
+Get-DlpDetectionsReport [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-DlpCompliancePolicy <MultiValuedProperty>]
+ [-DlpComplianceRule <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-Source <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [-SummarizeBy <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
@@ -61,9 +69,7 @@ This example lists the DLP activities for November, 2018.
 The Action parameter filters the report by the action taken by DLP policies. Valid values are:
 
 - BlockAccess
-
 - GenerateIncidentReport
-
 - NotifyUser
 
 You can specify multiple values separated by commas.
@@ -155,13 +161,9 @@ Accept wildcard characters: False
 The EventType parameter filters the report by the event type. Valid values are:
 
 - DLPActionHits
-
 - DLPPolicyFalsePositive
-
 - DLPPolicyHits
-
 - DLPPolicyOverride
-
 - DLPRuleHits
 
 You can specify multiple values separated by commas.
@@ -231,9 +233,7 @@ Accept wildcard characters: False
 The Source parameter filters the report by workload. Valid values are:
 
 - EXCH: Exchange Online
-
 - ODB: OneDrive for Business
-
 - SPO: SharePoint Online
 
 You can specify multiple values separated by commas.

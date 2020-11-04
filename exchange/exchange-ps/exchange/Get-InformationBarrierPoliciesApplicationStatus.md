@@ -22,12 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Default (Default)
 ```
-Get-InformationBarrierPoliciesApplicationStatus [-All] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [-All]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>] [-All] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>]
+ [-All]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

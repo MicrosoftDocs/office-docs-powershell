@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights <MailboxFolderAccessRight[]>
- -User <MailboxFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-SendNotificationToUser <Boolean>] [-SharingPermissionFlags <MailboxFolderPermissionFlags>]
+Set-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights <MailboxFolderAccessRight[]> -User <MailboxFolderUserIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-SendNotificationToUser <Boolean>]
+ [-SharingPermissionFlags <MailboxFolderPermissionFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -77,95 +81,20 @@ In Exchange Online, this example changes an existing user's permissions to Edito
 
 ## PARAMETERS
 
-### -AccessRights
-The AccessRights parameter specifies the permissions that you want to modify for the user on the mailbox folder. The values that you specify replace the existing permissions for the user on the folder.
-
-You can specify individual folder permissions or roles, which are combinations of permissions. You can specify multiple permissions and roles separated by commas.
-
-The following individual permissions are available:
-
-- CreateItems: The user can create items in the specified folder.
-
-- CreateSubfolders: The user can create subfolders in the specified folder.
-
-- DeleteAllItems: The user can delete all items in the specified folder.
-
-- DeleteOwnedItems: The user can only delete items that they created from the specified folder.
-
-- EditAllItems: The user can edit all items in the specified folder.
-
-- EditOwnedItems: The user can only edit items that they created in the specified folder.
-
-- FolderContact: The user is the contact for the specified public folder.
-
-- FolderOwner: The user is the owner of the specified folder. The user can view the folder, move the folder, and create subfolders. The user can't read items, edit items, delete items, or create items.
-
-- FolderVisible: The user can view the specified folder, but can't read or edit items within the specified public folder.
-
-- ReadItems: The user can read items within the specified folder.
-
-The roles that are available, along with the permissions that they assign, are described in the following list:
-
-- Author:CreateItems, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
-
-- Contributor:CreateItems, FolderVisible
-
-- Editor:CreateItems, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
-
-- None:FolderVisible
-
-- NonEditingAuthor:CreateItems, FolderVisible, ReadItems
-
-- Owner:CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderContact, FolderOwner, FolderVisible, ReadItems
-
-- PublishingEditor:CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
-
-- PublishingAuthor:CreateItems, CreateSubfolders, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
-
-- Reviewer:FolderVisible, ReadItems
-
-The following roles apply specifically to calendar folders:
-
-- AvailabilityOnly: View only availability data
-
-- LimitedDetails: View availability data with subject and location
-
-```yaml
-Type: MailboxFolderAccessRight[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the target mailbox and folder. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Inbox\Reports`.
@@ -183,19 +112,62 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AccessRights
+The AccessRights parameter specifies the permissions that you want to modify for the user on the mailbox folder. The values that you specify replace the existing permissions for the user on the folder.
+
+You can specify individual folder permissions or roles, which are combinations of permissions. You can specify multiple permissions and roles separated by commas.
+
+The following individual permissions are available:
+
+- CreateItems: The user can create items in the specified folder.
+- CreateSubfolders: The user can create subfolders in the specified folder.
+- DeleteAllItems: The user can delete all items in the specified folder.
+- DeleteOwnedItems: The user can only delete items that they created from the specified folder.
+- EditAllItems: The user can edit all items in the specified folder.
+- EditOwnedItems: The user can only edit items that they created in the specified folder.
+- FolderContact: The user is the contact for the specified public folder.
+- FolderOwner: The user is the owner of the specified folder. The user can view the folder, move the folder, and create subfolders. The user can't read items, edit items, delete items, or create items.
+- FolderVisible: The user can view the specified folder, but can't read or edit items within the specified public folder.
+- ReadItems: The user can read items within the specified folder.
+
+The roles that are available, along with the permissions that they assign, are described in the following list:
+
+- Author:CreateItems, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
+- Contributor:CreateItems, FolderVisible
+- Editor:CreateItems, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
+- None:FolderVisible
+- NonEditingAuthor:CreateItems, FolderVisible, ReadItems
+- Owner:CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderContact, FolderOwner, FolderVisible, ReadItems
+- PublishingEditor:CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
+- PublishingAuthor:CreateItems, CreateSubfolders, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
+- Reviewer:FolderVisible, ReadItems
+
+The following roles apply specifically to calendar folders:
+
+- AvailabilityOnly: View only availability data
+- LimitedDetails: View availability data with subject and location
+
+```yaml
+Type: MailboxFolderAccessRight[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -User
 The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -214,8 +186,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -249,39 +220,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SendNotificationToUser
 This parameter is available only in the cloud-based service.
 
 The SendNotificationToUser parameter specifies whether to send a sharing invitation to the user when you modify their calendar permissions. The message will be a normal calendar sharing invitation that can be accepted by the recipient. Valid values are:
 
 - $true: A sharing invitation is sent.
-
 - $false: No sharing invitation is sent. This is the default value.
 
 This parameter only applies to calendar folders and can only be used with the following AccessRights parameter values:
 
 - AvailabilityOnly
-
 - LimitedDetails
-
 - Reviewer
-
 - Editor
 
 ```yaml
@@ -303,9 +254,7 @@ This parameter is available only in the cloud-based service.
 The SharingPermissionFlags parameter assigns calendar delegate permissions. This parameter only applies to calendar folders and can only be used when the AccessRights parameter value is Editor. Valid values are:
 
 - None: Removes delegate permissions and updates the meeting message rule so the user stops receiving meeting invites and responses for the mailbox. This is the default value when you use the SendNotificationToUser parameter without specifying a value for the SharingPermissionFlags parameter.
-
 - Delegate: The user is made a calendar delegate, which includes receiving meeting invites and responses. If there are no other delegates, this value will create the meeting message rule. If there are existing delegates, the user is added to the meeting message rule without changing how delegate messages are sent.
-
 - CanViewPrivateItems: The user can access private items on the calendar. You must use this value with the Delegate value.
 
 You can specify multiple values separated by commas.
@@ -315,6 +264,22 @@ Type: MailboxFolderPermissionFlags
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

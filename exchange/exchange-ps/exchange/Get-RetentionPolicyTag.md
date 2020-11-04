@@ -25,24 +25,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-RetentionPolicyTag [[-Identity] <RetentionPolicyTagIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludeSystemTags]
- [-Types <ElcFolderType[]>] [<CommonParameters>]
+ [-Types <ElcFolderType[]>]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
-Get-RetentionPolicyTag [-Mailbox <MailboxIdParameter>] [-OptionalInMailbox]
+Get-RetentionPolicyTag [-Mailbox <MailboxIdParameter>]
+ [-OptionalInMailbox]
  [-DomainController <Fqdn>]
  [-IncludeSystemTags]
- [-Types <ElcFolderType[]>] [<CommonParameters>]
+ [-Types <ElcFolderType[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Retention tags are used to apply message retention settings to messages or folders. There are three types of retention tags:
 
 - Retention policy tags
-
 - Default policy tags
-
 - Personal tags
 
 Retention policy tags are applied to default folders such as Inbox and Deleted Items. Personal tags are available to users to tag items and folders. The default policy tag is applied to all items that don't have a tag applied by the user or aren't inherited from the folder they're located in. The Get-RetentionPolicyTag cmdlet displays all the settings for the specified tag.
@@ -135,23 +136,14 @@ Accept wildcard characters: False
 The Mailbox parameter returns the retention tags that are assigned to the retention policy that's applied to the specified mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 This parameter only returns default policy tags (DPTs) and personal tags; it doesn't return retention policy tags.
@@ -191,33 +183,19 @@ Accept wildcard characters: False
 The Types parameter specifies the type of retention tag to return. Valid values include:
 
 - Calendar
-
 - Contacts
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - JunkEmail
-
 - Journal
-
 - Notes
-
 - Outbox
-
 - SentItems
-
 - Tasks
-
 - All
-
 - RssSubscriptions
-
 - ConversationHistory
-
 - Personal
 
 The parameter accepts multiple values separated by a comma.

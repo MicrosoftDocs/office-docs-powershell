@@ -21,10 +21,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ExchangeSettings [[-Identity] <ExchangeSettingsIdParameter>] [-ConfigName <String>]
- [-Database <DatabaseIdParameter>] [-Diagnostic] [-DiagnosticArgument <String>] [-DomainController <Fqdn>]
- [-Force] [-GenericScopeName <String>] [-GenericScopes <String[]>] [-GenericScopeValue <String>]
- [-Organization <OrganizationIdParameter>] [-Process <String>] [-Server <ServerIdParameter>] [-User <Guid>]
+Get-ExchangeSettings [[-Identity] <ExchangeSettingsIdParameter>]
+ [-ConfigName <String>]
+ [-Database <DatabaseIdParameter>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-GenericScopeName <String>]
+ [-GenericScopes <String[]>]
+ [-GenericScopeValue <String>]
+ [-Organization <OrganizationIdParameter>]
+ [-Process <String>]
+ [-Server <ServerIdParameter>]
+ [-User <Guid>]
  [<CommonParameters>]
 ```
 
@@ -71,11 +81,8 @@ Accept wildcard characters: False
 The Database parameter filters the results by mailbox database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 ```yaml
@@ -209,9 +216,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the name of the Exchange setting object. You can use any value that uniquely identifies the object. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -263,11 +268,8 @@ Accept wildcard characters: False
 The Server parameter filters the results by Exchange server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 ```yaml

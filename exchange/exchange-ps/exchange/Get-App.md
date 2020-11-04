@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-App [[-Identity] <AppIdParameter>] [-DomainController <Fqdn>] [-Mailbox <MailboxIdParameter>]
- [-OrganizationApp] [-PrivateCatalog] [<CommonParameters>]
+Get-App [[-Identity] <AppIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-OrganizationApp]
+ [-PrivateCatalog]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,6 +59,22 @@ This example displays the summary list of apps installed by administrators for t
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the GUID of the app that you want to view. To find the GUID value of an app, run the command Get-App | Format-Table -Auto DisplayName,AppId.
+
+```yaml
+Type: AppIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -73,43 +93,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the GUID of the app that you want to view. To find the GUID value of an app, run the command Get-App | Format-Table -Auto DisplayName,AppId.
-
-```yaml
-Type: AppIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Mailbox
 The Mailbox parameter specifies the identity of the mailbox where the apps are installed. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Identity parameter.

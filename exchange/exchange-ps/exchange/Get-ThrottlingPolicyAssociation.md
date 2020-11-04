@@ -26,7 +26,8 @@ Get-ThrottlingPolicyAssociation [-Anr <String>]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [<CommonParameters>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -35,7 +36,8 @@ Get-ThrottlingPolicyAssociation [[-Identity] <ThrottlingPolicyAssociationIdParam
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [<CommonParameters>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,13 +74,9 @@ This example returns detailed information for the throttling policy association 
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
 - CommonName (CN)
-
 - DisplayName
-
 - FirstName
-
 - LastName
-
 - Alias
 
 ```yaml
@@ -116,29 +114,17 @@ Accept wildcard characters: False
 The Identity parameter specifies the throttling policy association that you want to view. You can use any value that uniquely identifies the throttling policy association. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID For example:
-
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -190,9 +176,7 @@ Accept wildcard characters: False
 The ThrottlingPolicy parameter filters the results by throttling policy. You can use any value that uniquely identifies the throttling policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

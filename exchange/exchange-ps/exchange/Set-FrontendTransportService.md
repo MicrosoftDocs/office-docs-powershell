@@ -64,7 +64,8 @@ Set-FrontendTransportService [-Identity] <FrontendTransportServerIdParameter>
  [-SendProtocolLogPath <LocalLongFullPath>]
  [-TransientFailureRetryCount <Int32>]
  [-TransientFailureRetryInterval <EnhancedTimeSpan>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -148,13 +149,9 @@ The AgentLogMaxDirectorySize parameter specifies the maximum size of all agent l
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -180,13 +177,9 @@ The AgentLogMaxFileSize parameter specifies the maximum size of each agent log f
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -243,8 +236,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -302,13 +294,9 @@ The ConnectivityLogMaxDirectorySize parameter specifies the maximum size of all 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -334,13 +322,9 @@ The ConnectivityLogMaxFileSize parameter specifies the maximum size of each conn
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -418,13 +402,9 @@ The DnsLogMaxDirectorySize parameter specifies the maximum size of all DNS logs 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -450,13 +430,9 @@ The DnsLogMaxFileSize parameter specifies the maximum size of each DNS log file.
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -666,7 +642,6 @@ Accept wildcard characters: False
 The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging on the implicit and invisible intra-organization Send connector In the Front End Transport service. Valid values are:
 
 - None: Protocol logging is disabled for the intra-organization Send connector in the Front End Transport service.
-
 - Verbose: Protocol logging is enabled for the intra-organization Send connector in the Front End Transport service. This is the default value. The location of the log files is controlled by the SendProtocolLogPath parameter.
 
 ```yaml
@@ -728,13 +703,9 @@ A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the v
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -764,13 +735,9 @@ A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the v
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -836,13 +803,9 @@ The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -908,13 +871,9 @@ A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the v
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -944,13 +903,9 @@ A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the v
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -978,7 +933,6 @@ The SendProtocolLogPath parameter specifies the location of the protocol log dir
 Don't use the value $null for this parameter, because event log errors are generated if protocol logging is enabled for any Send connector in the Front End Transport service that has this server configured as a source server. To disable protocol logging for these Send connectors, use the value None for the following parameters:
 
 - The IntraOrgConnectorProtocolLoggingLevel parameter.
-
 - The ProtocolLoggingLevel parameter on the Set-SendConnector cmdlet for each Send connector in the Front End Transport service.
 
 ```yaml

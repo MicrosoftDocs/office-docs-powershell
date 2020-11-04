@@ -25,13 +25,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### RuleCollectionIdentity
 ```
 Get-DataClassification [[-ClassificationRuleCollectionIdentity] <ClassificationRuleCollectionIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-DataClassification [[-Identity] <DataClassificationIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,9 +102,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the data classification rule that you want to view. You can use any value that uniquely identifies the data classification rule. For example:
 
 - Name
-
 - LocalizedName
-
 - Identity GUID value
 
 ```yaml
