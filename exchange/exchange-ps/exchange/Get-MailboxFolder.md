@@ -22,18 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GetChildren
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-GetChildren]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>]
+ [-GetChildren]
  [-DomainController <Fqdn>]
  [-MailFolderOnly]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Recurse
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-Recurse]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>]
+ [-Recurse]
  [-DomainController <Fqdn>]
  [-MailFolderOnly]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -140,23 +144,14 @@ The Identity parameter specifies the mailbox folder that you want to view. The s
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 If you don't specify the folder, the command returns information about folders in the root hierarchy of the specified mailbox.

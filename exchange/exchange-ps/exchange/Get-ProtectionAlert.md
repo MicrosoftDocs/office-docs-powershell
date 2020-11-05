@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-protectionalert
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-ProtectionAlert
 schema: 2.0.0
 author: chrisda
@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ProtectionAlert [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
+Get-ProtectionAlert [[-Identity] <ComplianceRuleIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,16 +50,14 @@ This example returns detailed information about the alert policy named Malicious
 The Identity parameter specifies the alert policy that you want to view. You can use any value that uniquely identifies the alert policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1

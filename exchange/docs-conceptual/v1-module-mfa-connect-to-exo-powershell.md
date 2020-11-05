@@ -6,12 +6,12 @@ manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: exchange-online
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid:
 search.appverid: MET150
 ROBOTS: NOINDEX
-description: "Admins can learn how to use the older Exchange Online Remote PowerShell Module to connect to Security & Compliance Center PowerShell for multi-factor authentication (MFA) or federated authentication."
+description: "Admins can learn how to use the older Exchange Online Remote PowerShell Module to connect to Exchange Online PowerShell for multi-factor authentication (MFA) or federated authentication."
 ---
 
 # V1 module - Connect to Exchange Online PowerShell using MFA
@@ -158,7 +158,7 @@ After Step 4, the Exchange Online cmdlets are imported into your Exchange Online
 
 If you receive errors, check the following requirements:
 
-- To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to your Exchange Online organization.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Exchange Online.
 
 - The account you use to connect to Exchange Online must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 

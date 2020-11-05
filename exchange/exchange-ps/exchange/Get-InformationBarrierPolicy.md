@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-informationbarrierpolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-InformationBarrierPolicy
 schema: 2.0.0
 author: chrisda
@@ -22,12 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### InformationBarrierDefault (Default)
 ```
-Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
+Get-InformationBarrierPolicy [-ExoPolicyId <Guid>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-InformationBarrierPolicy [[-Identity] <PolicyIdParameter>] [-ExoPolicyId <Guid>] [<CommonParameters>]
+Get-InformationBarrierPolicy [[-Identity] <PolicyIdParameter>]
+ [-ExoPolicyId <Guid>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,9 +60,7 @@ This example displays detailed information for the information barrier policy na
 The Identity parameter specifies the information barrier policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the ExOPolicyId parameter.
@@ -68,7 +69,7 @@ You can't use this parameter with the ExOPolicyId parameter.
 Type: PolicyIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 0
@@ -86,7 +87,7 @@ You can't use this parameter with the Identity parameter.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

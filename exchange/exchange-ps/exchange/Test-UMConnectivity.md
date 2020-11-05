@@ -34,12 +34,19 @@ Test-UMConnectivity -Phone <String> -PIN <String> -TUILogon <Boolean> -UMDialPla
  [-RemotePort <Int32>]
  [-Secured <Boolean>]
  [-Timeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EndToEnd
 ```
-Test-UMConnectivity -Phone <String> -UMIPGateway <UMIPGatewayIdParameter> [-DiagDtmfDurationInMilisecs <Int32>] [-DiagDtmfSequence <String>] [-DiagInitialSilenceInMilisecs <Int32>] [-DiagInterDtmfDiffGapInMilisecs <String>] [-DiagInterDtmfGapInMilisecs <Int32>] [-From <String>]
+Test-UMConnectivity -Phone <String> -UMIPGateway <UMIPGatewayIdParameter>
+ [-DiagDtmfDurationInMilisecs <Int32>]
+ [-DiagDtmfSequence <String>]
+ [-DiagInitialSilenceInMilisecs <Int32>]
+ [-DiagInterDtmfDiffGapInMilisecs <String>]
+ [-DiagInterDtmfGapInMilisecs <Int32>]
+ [-From <String>]
  [-CertificateThumbprint <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -48,15 +55,18 @@ Test-UMConnectivity -Phone <String> -UMIPGateway <UMIPGatewayIdParameter> [-Diag
  [-MonitoringContext <Boolean>]
  [-Secured <Boolean>]
  [-Timeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PinReset
 ```
-Test-UMConnectivity -ResetPIN <Boolean> [-Confirm]
+Test-UMConnectivity -ResetPIN <Boolean>
+ [-Confirm]
  [-DomainController <Fqdn>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TuiLogonGeneral
@@ -71,7 +81,8 @@ Test-UMConnectivity -TUILogonAll <Boolean>
  [-RemotePort <Int32>]
  [-Secured <Boolean>]
  [-Timeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LocalLoop
@@ -86,7 +97,8 @@ Test-UMConnectivity [-CallRouter]
  [-RemotePort <Int32>]
  [-Secured <Boolean>]
  [-Timeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -272,8 +284,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

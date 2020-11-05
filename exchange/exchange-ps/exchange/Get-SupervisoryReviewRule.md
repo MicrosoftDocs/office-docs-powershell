@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewrule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-SupervisoryReviewRule
 schema: 2.0.0
 author: chrisda
@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewRule [[-Identity] <ComplianceRuleIdParameter>] [-Policy <PolicyIdParameter>]
+Get-SupervisoryReviewRule [[-Identity] <ComplianceRuleIdParameter>]
+ [-Policy <PolicyIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -57,16 +58,14 @@ This example returns the rule that assigned to the supervisory review policy nam
 The Identity parameter specifies the supervisory review rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -79,16 +78,14 @@ Accept wildcard characters: False
 The Policy parameter filters the results by supervisory review policy that's assigned to the rule. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

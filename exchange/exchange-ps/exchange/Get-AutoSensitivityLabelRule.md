@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-autosensitivitylabelrule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-AutoSensitivityLabelRule
 schema: 2.0.0
 author: chrisda
@@ -48,16 +48,14 @@ This example displays summary information for all autolabeling rules in the Secu
 The Identity parameter specifies the auto-labeling policy rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 0
@@ -73,7 +71,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -86,14 +84,13 @@ Accept wildcard characters: False
 The IncludeExecutionRuleGuids parameter specifies whether to include the execution rule GUID in the rule details. Valid values are:
 
 - $true: Include the execution rule GUID in the rule details.
-
 - $false: Don't include the execution rule GUID in the rule details. This is the default value.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -106,14 +103,13 @@ Accept wildcard characters: False
 The IncludeExecutionRuleInformation parameter specifies whether to include the execution rule information in the rule details. Valid values are:
 
 - $true: Include the execution rule information in the rule details.
-
 - $false: Don't include the execution rule information in the rule details. This is the default value.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -133,7 +129,7 @@ The Policy parameter filters the auto-labeling policy rule results by the associ
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -149,7 +145,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

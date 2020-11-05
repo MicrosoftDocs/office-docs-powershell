@@ -26,6 +26,8 @@ The Remove-CsHuntGroup cmdlet deletes an existing Call Queue specified by the Pr
 
 The Remove-CsHuntGroup cmdlet may suggest additional steps required to complete the Call Queue setup.
 
+Please Note: This cmdlet is part of the first generation provisioning and is no longer supported. Please use the cmdlets which follow this format "*-CsCallQueue*" instead.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------

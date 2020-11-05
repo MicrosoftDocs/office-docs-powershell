@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Arbitration
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Arbitration]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -37,7 +38,8 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemoteArchive
@@ -55,12 +57,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
  [-RemoteArchive]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Discovery
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Discovery]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Discovery]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -73,12 +77,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Discovery]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Equipment
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Equipment]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Equipment]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -91,12 +97,15 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Equipment]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LinkedRoomMailbox
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [-LinkedRoom]
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
+ [-LinkedCredential <PSCredential>]
+ [-LinkedRoom]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Archive]
@@ -113,12 +122,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -L
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Linked
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>]
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -LinkedMasterAccount <UserIdParameter>
+ [-LinkedCredential <PSCredential>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -131,12 +142,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-PublicFolder]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-PublicFolder]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -150,12 +163,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-PublicFolder]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Room
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Room]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Room]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -168,12 +183,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Room]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Shared
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Shared]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Shared]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -186,7 +203,8 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Shared]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### User
@@ -205,12 +223,16 @@ Enable-Mailbox [-Identity] <UserIdParameter>
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Archive
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>  [-ArchiveGuid <Guid>] [-ArchiveName <MultiValuedProperty>]
+Enable-Mailbox [-Identity] <UserIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>  [-ArchiveGuid <Guid>]
+ [-ArchiveName <MultiValuedProperty>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>
  [-Confirm]
@@ -220,12 +242,14 @@ Enable-Mailbox [-Identity] <UserIdParameter>] [-Archive] [-ArchiveDatabase <Data
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuditLog
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [AuditLog]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [AuditLog]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -236,12 +260,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> [AuditLog]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AutoExpandingArchive
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-AutoExpandingArchive]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-AutoExpandingArchive]
  [-Confirm]
  [-Force]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
@@ -285,11 +311,8 @@ This example creates a remote archive for the existing on-premises user named Ay
 The Identity parameter specifies the user or InetOrgPerson object that you want to mailbox-enable. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 ```yaml
@@ -411,11 +434,8 @@ This parameter is available only in on-premises Exchange.
 The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example: For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 This parameter is required only if you're enabling a linked mailbox.
@@ -519,9 +539,7 @@ This parameter is available only in on-premises Exchange.
 The ActiveSyncMailboxPolicy parameter specifies the mobile device mailbox policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:.
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 If you don't use this parameter, the default mobile device mailbox policy is applied to the mailbox.
@@ -545,9 +563,7 @@ This parameter is available only in on-premises Exchange.
 The AddressBookPolicy parameter specifies the address book policy that's applied to the mailbox. You can use any value that uniquely identifies the address book policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
@@ -577,7 +593,6 @@ When you create a recipient without specifying an email address, the Alias value
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -619,9 +634,7 @@ This parameter is available only in on-premises Exchange.
 The ArchiveDatabase parameter specifies the Exchange database that contains the archive that's associated with this mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -701,7 +714,6 @@ After you enable auto-expanding archiving, additional storage space is automatic
 Notes:
 
 - The user's archive mailbox has to be enabled before auto-expanding archiving can be enabled.
-
 - After you enable auto-expanding archiving for the user's mailbox, it can't be disabled.
 
 ```yaml
@@ -720,8 +732,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -743,9 +754,7 @@ This parameter is available only in on-premises Exchange.
 The Database parameter specifies the Exchange database that contains the new mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -941,9 +950,7 @@ This parameter is available only in on-premises Exchange.
 The RetentionPolicy parameter specifies the retention policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Retention policies consist of tags that are applied to mailbox folders and mail items to determine the period of time that the items should be retained.
@@ -965,9 +972,7 @@ Accept wildcard characters: False
 The RoleAssignmentPolicy parameter specifies the management role assignment policy that's assigned to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 If you don't use this parameter, the default role assignment policy is used. If the assignment policy name contains spaces, enclose the name in quotation marks ("). If you don't want to assign an assignment policy when a mailbox is created or enabled, specify a value of $null. For more information about assignment policies, see [Understanding management role assignment policies](https://docs.microsoft.com/exchange/understanding-management-role-assignment-policies-exchange-2013-help).

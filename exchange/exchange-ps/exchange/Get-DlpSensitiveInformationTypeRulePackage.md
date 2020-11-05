@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage
-applicable: Exchange Online, Office 365 Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-DlpSensitiveInformationTypeRulePackage
 schema: 2.0.0
 author: chrisda
@@ -54,16 +54,14 @@ This example returns detailed information for the sensitive information type rul
 The Identity parameter specifies the sensitive information type rule package that you want to view. You can use any value that uniquely identifies the rule package. For example:
 
 - RuleCollectionName
-
 - LocalizedName
-
 - GUID (from the Identity value)
 
 ```yaml
 Type: SensitiveInformationTypeRuleCollectionIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: 1

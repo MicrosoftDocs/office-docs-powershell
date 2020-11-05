@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-informationbarrierpoliciesapplicationstatus
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-InformationBarrierPoliciesApplicationStatus
 schema: 2.0.0
 author: chrisda
@@ -22,12 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Default (Default)
 ```
-Get-InformationBarrierPoliciesApplicationStatus [-All] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [-All]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>] [-All] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [[-Identity] <PolicyIdParameter>]
+ [-All]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +63,7 @@ The Identity parameter specifies the information barrier policy application that
 Type: PolicyIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 0
@@ -78,7 +81,7 @@ If you don't use this switch, the command only returns the most recent policy ap
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

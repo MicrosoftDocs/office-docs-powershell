@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancesearch
-applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 title: Get-ComplianceSearch
 schema: 2.0.0
 author: chrisda
@@ -53,6 +53,41 @@ This examples show details of the compliance search named Case 1234.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the compliance search that you want to view.
+
+You can use any value that uniquely identifies the compliance search. For example:
+
+- Name
+- JobRunId (GUID)
+
+You can find these values by running the command Get-ComplianceSearch | Format-Table -Auto Name,JobRunId,Status
+
+To improve the performance of this cmdlet, some compliance search properties aren't returned if you don't specify the identity of the compliance search. These properties are:
+
+- Items
+- Size
+- SuccessResults
+- NumBindings
+- ExchangeLocation
+- SharePointLocation
+- OneDriveLocation
+
+To view these properties, you need to use the Identity parameter in the command.
+
+```yaml
+Type: ComplianceSearchIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Case
 The Case parameter filters the results by the name of a Core eDiscovery case that the compliance search is associated with. If the value contains spaces, enclose the value in quotation marks.
 
@@ -62,7 +97,7 @@ You can't use this parameter to view compliance searches associated with Advance
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -89,48 +124,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the compliance search that you want to view.
-
-You can use any value that uniquely identifies the compliance search. For example:
-
-- Name
-
-- JobRunId (GUID)
-
-You can find these values by running the command Get-ComplianceSearch | Format-Table -Auto Name,JobRunId,Status
-
-To improve the performance of this cmdlet, some compliance search properties aren't returned if you don't specify the identity of the compliance search. These properties are:
-
-- Items
-
-- Size
-
-- SuccessResults
-
-- NumBindings
-
-- ExchangeLocation
-
-- SharePointLocation
-
-- OneDriveLocation
-
-To view these properties, you need to use the Identity parameter in the command.
-
-```yaml
-Type: ComplianceSearchIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -138,7 +131,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
 
 Required: False
 Position: Named

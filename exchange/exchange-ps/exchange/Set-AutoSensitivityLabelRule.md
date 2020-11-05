@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/set-autosensitivitylabelrule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Set-AutoSensitivityLabelRule
 schema: 2.0.0
 author: chrisda
@@ -75,16 +75,14 @@ This example changes the rule property "Comment" with the rule name "SocialSecur
 The Identity parameter specifies the auto-labeling policy rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 0
@@ -105,7 +103,7 @@ Type: AccessScope
 Parameter Sets: (All)
 Aliases:
 Accepted values: InOrganization, NotInOrganization, None
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -121,7 +119,7 @@ Accept wildcard characters: False
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -137,7 +135,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -149,15 +147,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -175,7 +172,7 @@ This parameter uses the basic syntax @(@{Name="\<SensitiveInformationType1\>";[m
 Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -191,7 +188,7 @@ The ContentExtensionMatchesWords parameter specifies a condition for the auto-la
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -204,14 +201,13 @@ Accept wildcard characters: False
 The Disabled parameter specifies whether the case hold rule is enabled or disabled. Valid values are:
 
 - $true: The rule is disabled.
-
 - $false: The rule is enabled. This is the default value.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -224,14 +220,13 @@ Accept wildcard characters: False
 The DocumentIsPasswordProtected parameter specifies a condition for the auto-labeling policy rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
 
 - $true: Look for password protected files.
-
 - $false: Don't look for password protected files.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -250,7 +245,7 @@ The DocumentIsUnsupported parameter specifies a condition for the auto-labeling 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -271,7 +266,7 @@ Type: AccessScope
 Parameter Sets: (All)
 Aliases:
 Accepted values: InOrganization, NotInOrganization, None
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -289,7 +284,7 @@ This parameter uses the basic syntax @(@{Name="\<SensitiveInformationType1\>";[m
 Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -305,7 +300,7 @@ The ExceptIfContentExtensionMatchesWords parameter specifies an exception for th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -324,7 +319,7 @@ The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -343,7 +338,7 @@ The ExceptIfDocumentIsUnsupported parameter specifies an exception for the auto-
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -366,7 +361,7 @@ The ExceptIfFrom parameter specifies an exception for the auto-labeling policy r
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -384,7 +379,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -403,7 +398,7 @@ The ExceptIfProcessingLimitExceeded parameter specifies an exception for the aut
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -419,7 +414,7 @@ The ExceptIfRecipientDomainIs parameter specifies an exception for the auto-labe
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -441,7 +436,7 @@ You can specify multiple IP addresses or ranges separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -468,7 +463,7 @@ You can use this exception in auto-labeling policies that are scoped only to Exc
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -484,7 +479,7 @@ This parameter is reserved for internal Microsoft use.
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -500,7 +495,7 @@ This parameter is reserved for internal Microsoft use.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -516,7 +511,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -532,7 +527,7 @@ This parameter is reserved for internal Microsoft use.
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -551,7 +546,7 @@ The ProcessingLimitExceeded parameter specifies a condition for the auto-labelin
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -567,7 +562,7 @@ The RecipientDomainIs parameter specifies a condition for the auto-labeling poli
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -589,7 +584,7 @@ Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Accepted values: Low, Medium, High, None, Informational, Information
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -610,7 +605,7 @@ Type: PolicyRuleErrorAction
 Parameter Sets: (All)
 Aliases:
 Accepted values: Ignore, RetryThenBlock
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -632,7 +627,7 @@ You can specify multiple IP addresses or ranges separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -659,7 +654,7 @@ You can use this condition in auto-sensitivity policies that are scoped only to 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -675,7 +670,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -696,7 +691,7 @@ Type: Workload
 Parameter Sets: (All)
 Aliases:
 Accepted values: Exchange, SharePoint, OneDriveForBusiness
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

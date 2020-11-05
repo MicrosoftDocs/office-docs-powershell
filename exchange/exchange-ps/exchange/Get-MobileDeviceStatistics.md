@@ -32,7 +32,8 @@ Get-MobileDeviceStatistics [-Identity] <MobileDeviceIdParameter>
  [-OWAforDevices]
  [-ShowRecoveryPassword]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
@@ -45,7 +46,8 @@ Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter>
  [-OWAforDevices]
  [-ShowRecoveryPassword]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,7 +78,7 @@ This example uses the Get-CASMailbox cmdlet to determine who in the organization
 Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
 ```
 
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the Exchange ActiveSync log file and sends it to the System Administrator at admin@contoso.com.
+This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the log file and sends it to the System Administrator at admin@contoso.com.
 
 ## PARAMETERS
 
@@ -84,7 +86,6 @@ This example retrieves the statistics for the mobile phone configured to synchro
 The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
 
 - GUID
-
 - DeviceID
 
 You can't use this parameter with the Mailbox parameter.
@@ -106,23 +107,14 @@ Accept wildcard characters: False
 The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Identity parameter.

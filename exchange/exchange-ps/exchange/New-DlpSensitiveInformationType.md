@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtype
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-DlpSensitiveInformationType
 schema: 2.0.0
 author: chrisda
@@ -22,8 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpSensitiveInformationType [-Name] <String> -Description <String> -Fingerprints <MultiValuedProperty>
- [-SensitiveInformationTypeRuleCollectionIdentity <SensitiveInformationTypeRuleCollectionIdParameter>] [-Confirm]
- [-Locale <CultureInfo>] [-WhatIf] [<CommonParameters>]
+ [-SensitiveInformationTypeRuleCollectionIdentity <SensitiveInformationTypeRuleCollectionIdParameter>]
+ [-Confirm]
+ [-Locale <CultureInfo>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +52,7 @@ The Description parameter specifies a description for the sensitive information 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -65,7 +68,7 @@ The Fingerprints parameter specifies the byte-encoded files to use as document f
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -83,7 +86,7 @@ The value of this parameter is used in the Policy Tip that's presented to users 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -99,7 +102,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ClassificationRuleCollectionIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -111,15 +114,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -139,7 +141,7 @@ You can add additional language translations to the sensitive information type r
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -155,7 +157,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: eop
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid:
 ROBOTS: NOINDEX
@@ -124,7 +124,7 @@ If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
 
-- To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to your Exchange Online Protection organization.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Exchange Online Protection.
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 

@@ -48,7 +48,8 @@ New-AddressList [-Name] <String> -IncludedRecipients <WellKnownRecipientType>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CustomFilter
@@ -59,16 +60,15 @@ New-AddressList [-Name] <String> -RecipientFilter <String>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Conditional parameters that are used with the IncludedRecipients parameter are subject to the following limitations:
 
 - The EQV operator is used for every property value, as in "Department equals Sales". Wildcards and partial matches aren't supported.
-
 - The OR operator is always used for multiple values of the same property, as in "Department equals Sales OR Marketing".
-
 - The AND operator is always used for multiple properties, as in "Department equals Sales AND Company equals Contoso".
 
 To create flexible filters that use any available recipient property and that aren't subject to these limitations, you can use the RecipientFilter parameter to create an OPath filter.
@@ -93,7 +93,7 @@ This example creates the address list MyAddressList2 that includes mailboxes tha
 
 ### Example 3
 ```powershell
-New-AddressList -Name "AL_AgencyB" -RecipientFilter "((RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -like '*AgencyB*'))"
+New-AddressList -Name "AL_AgencyB" -RecipientFilter "((RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -like 'AgencyB*'))"
 ```
 
 This example creates the address list AL\_AgencyB that includes mailboxes that have the value of the CustomAttribute15 parameter contains AgencyB.
@@ -120,15 +120,10 @@ Accept wildcard characters: False
 The IncludedRecipients parameter specifies a precanned filter that's based on the recipient type. Valid values are:
 
 - AllRecipients: This value can be used only by itself.
-
 - MailboxUsers
-
 - MailContacts
-
 - MailGroups
-
 - MailUsers
-
 - Resources: This value indicates room or equipment mailboxes.
 
 You can specify multiple values separated by commas. When you use multiple values, the OR Boolean operator is applied.
@@ -152,15 +147,10 @@ Accept wildcard characters: False
 The RecipientFilter parameter specifies a custom OPath filter that's based on the value of any available recipient property. You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property. For filterable properties, see [Filterable properties for the RecipientFilter parameter](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to filter on. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
-
 - In cloud-based environments, you can't use a wildcard as the first character. For example, `'Sales*'` is allowed, but `'*Sales'` isn't allowed.
-
 - In on-premises Exchange, wildcards are valid only as the first or last character. For example, `'Sales*'` or `'*Sales'` are allowed, but `'Sa*les'` isn't allowed.
 
 For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
@@ -543,8 +533,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -564,11 +553,8 @@ Accept wildcard characters: False
 The Container parameter specifies where to create the address list. Valid input for this parameter is under the root "\\" (also known as All Address Lists) or under an existing address list. You can use any value that uniquely identifies the address list. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
 
 If you don't use this parameter,the address list is created under the root (\\).
@@ -628,11 +614,8 @@ This parameter is available only in on-premises Exchange.
 The RecipientContainer parameter specifies a filter that's based on the recipient's location in Active Directory. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 If you don't use this parameter, the default value is the OU where the object was created.

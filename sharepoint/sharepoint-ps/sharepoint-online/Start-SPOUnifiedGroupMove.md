@@ -120,7 +120,7 @@ Accept wildcard characters: False
 
 ### -Reserved
 
-{{ Fill Reserved Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String

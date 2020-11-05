@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-retentioncompliancerule
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-RetentionComplianceRule
 schema: 2.0.0
 author: chrisda
@@ -22,30 +22,39 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ComplianceTag
 ```
-New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParameter> [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParameter>
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
  [-RetentionComplianceAction <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
 ```
-New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-RetentionDuration <Unlimited>] [-RetentionDurationDisplayHint <HoldDurationHint>]
+New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
+ [-Comment <String>]
+ [-ExcludedItemClasses <MultiValuedProperty>]
+ [-RetentionDuration <Unlimited>]
+ [-RetentionDurationDisplayHint <HoldDurationHint>]
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
  [-RetentionComplianceAction <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublishComplianceTag
 ```
-New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <String> [-Confirm]
+New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <String>
+ [-Confirm]
  [-ExpirationDateOption <String>]
  [-RetentionComplianceAction <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,7 +84,7 @@ You can't use this parameter with the Name or PublishComplianceTag parameters.
 Type: String
 Parameter Sets: ComplianceTag
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -93,7 +102,7 @@ You can't use this parameter with the ApplyComplianceTag or PublishComplianceTag
 Type: String
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 1
@@ -109,7 +118,7 @@ The Policy parameter specifies the policy to contain the rule.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -129,7 +138,7 @@ You can't use this parameter with the Name or ApplyComplianceTag parameters.
 Type: String
 Parameter Sets: PublishComplianceTag
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -145,7 +154,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -157,15 +166,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -187,7 +195,7 @@ You can use this parameter with the ApplyComplianceTag parameter.
 Type: PswsHashtable[]
 Parameter Sets: ComplianceTag
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -205,7 +213,7 @@ This parameter uses a text search string or a query that's formatted by using th
 Type: String
 Parameter Sets: ComplianceTag, Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -218,19 +226,12 @@ Accept wildcard characters: False
 The ExcludedItemClasses parameter specifies the types of messages to exclude from the rule. You can use this parameter only to exclude items from a hold policy, which excludes the specified item class from being held. Using this parameter won't exclude items from deletion policies. Typically, you use this parameter to exclude voicemail messages, IM conversations, and other Skype for Business Online content from being held by a hold policy. Common Skype for Business values include:
 
 - IPM.Note.Microsoft.Conversation
-
 - IPM.Note.Microsoft.Conversation.Voice
-
 - IPM.Note.Microsoft.Missed
-
 - IPM.Note.Microsoft.Missed.Voice
-
 - IPM.Note.Microsoft.Voicemail
-
 - IPM.Note.Microsoft.VoiceMessage.UA
-
 - IPM.Note.Microsoft.Voicemail.UM
-
 - IPM.Note.Microsoft.Voicemail.UM.CA
 
 Additionally, you can specify [message classes for Exchange items](https://docs.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or third-party message classes. Note that the values you specify aren't validated, so the parameter accepts any text value.
@@ -241,7 +242,7 @@ You can specify multiple item class values by using the syntax "Value1","Value2"
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -254,14 +255,13 @@ Accept wildcard characters: False
 The ExpirationDateOption parameter specifies whether the expiration date is calculated from the content creation date or last modification date. Valid values are:
 
 - CreationAgeInDays
-
 - ModificationAgeInDays
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -274,16 +274,14 @@ Accept wildcard characters: False
 The RetentionComplianceAction parameter specifies the retention action for the rule. Valid values are:
 
 - Delete
-
 - Keep
-
 - KeepAndDelete
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -296,14 +294,13 @@ Accept wildcard characters: False
 The RetentionDuration parameter specifies the hold duration for the retention rule. Valid values are:
 
 - An integer: The hold duration in days.
-
 - Unlimited: The content is held indefinitely.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -316,9 +313,7 @@ Accept wildcard characters: False
 The RetentionDurationDisplayHint parameter specifies the units that are used to display the retention duration in the Security & Compliance Center. Valid values are:
 
 - Days
-
 - Months
-
 - Years
 
 For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.
@@ -327,7 +322,7 @@ For example, if this parameter is set to the value Years, and the RetentionDurat
 Type: HoldDurationHint
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -343,7 +338,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

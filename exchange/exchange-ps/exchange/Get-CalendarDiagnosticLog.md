@@ -65,13 +65,9 @@ Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -LogLocation <String>
 The output of this cmdlet contains the following information:
 
 - IsFileLink: Indicates whether the calendar item has been exported to a .msg file by using the LogLocation parameter. Values are True or False.
-
 - Identity: Identifies the mailbox that holds the calendar item. An example value is: excallog://laura@contoso.com/?id=RgAAAACF/h/dHTTkQbdPrk7z+G4SBwCoatc7EmnEQq1iF35p17stAAAAAAFEAACoatc7EmnEQq1iF35p17stAAAAABEIAAAP.
-
 - LogDate: The date-time that the calendar item was logged.
-
 - NormalizedSubject: The Subject field of the calendar item.
-
 - CleanGlobalObjectId: The identifier that's constant throughout the lifetime of the calendar item. For example, 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55.
 
 After you run the Get-CalendarDiagnosticLog cmdlet, you can analyze the calendar data using the Get-CalendarDiagnosticAnalysis cmdlet. For more information, see [Get-CalendarDiagnosticAnalysis](https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticanalysis).
@@ -111,7 +107,6 @@ This example exports all calendar items in the Calendar Diagnostic log for Jasen
 Notes:
 
 - In this example, the message files are written to C:\\My Documents\\Calendar Diagnostic Export\\jkozma@contoso.com.
-
 - In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
 
 ## PARAMETERS
@@ -120,23 +115,14 @@ Notes:
 The Identity parameter specifies the mailbox that contains the calendar items. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -327,7 +313,6 @@ Accept wildcard characters: False
 The ExactMatch parameter specifies whether to use an exact match or a partial match for text values that you specify for the Subject parameter. Valid values are:
 
 - $true: The subject search uses an exact match and searches all calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" anywhere in the subject, but not "budgeting".
-
 - $false: The subject search uses a partial match and searches a maximum of 1000 calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" and "budgeting" anywhere in the subject. This is the default value.
 
 A partial subject match search may not return all of the relevant calendar items. Try using an exact subject match search for more accurate results.

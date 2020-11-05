@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-UMServer [-Identity] <UMServerIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Immediate <Boolean>] [-WhatIf] [<CommonParameters>]
+Disable-UMServer [-Identity] <UMServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Immediate <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,11 +35,8 @@ The Disable-UMServer cmdlet sets the status of a Unified Messaging server. A UM 
 After this task is completed, the UM server can no longer:
 
 - Answer any incoming calls
-
 - Respond to Play on Phone requests from a Client Access server
-
 - Be used to manage UM-enabled mailboxes
-
 - Be queried when a diagnostic task is used
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -77,8 +78,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

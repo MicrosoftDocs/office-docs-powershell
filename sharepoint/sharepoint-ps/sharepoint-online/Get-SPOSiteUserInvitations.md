@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Get-SPOSiteUserInvitations
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 
@@ -40,9 +40,7 @@ This example retrieves email invites stored in the ContosoWeb1 site to the user 
 
 ### -Site
 
-Specifies the URL or GUID of the site collection to get.
-
-The type must be a valid URL, in the form, https://server_name or https://server_name/sites/sitename, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+Specifies the URL of the site collection.
 
 ```yaml
 Type: SpoSitePipeBind

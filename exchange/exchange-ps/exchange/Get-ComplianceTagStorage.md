@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancetagstorage
-applicable: Exchange Online, Office 365 Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-ComplianceTagStorage
 schema: 2.0.0
 author: chrisda
@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceTagStorage [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-ComplianceTagStorage [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,9 +45,7 @@ This example confirms that you've created the label policy in your organization.
 The Identity parameter specifies the label policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name (GUID value)
-
 - Distinguished name (DN)
-
 - GUID (a different value than Name)
 
 However, there can be only one label policy in your organization.
@@ -55,7 +54,7 @@ However, there can be only one label policy in your organization.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: 1

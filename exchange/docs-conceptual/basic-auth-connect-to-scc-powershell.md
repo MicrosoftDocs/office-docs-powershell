@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-security-and-compliance
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid:
 ROBOTS: NOINDEX
@@ -133,7 +133,7 @@ If you receive errors, check the following requirements:
 
 - Verify that your account has permission to access the Security & Compliance Center. For details, see [Give users access to the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center).
 
-- To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to the Security & Compliance Center.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to the Security & Compliance Center.
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 

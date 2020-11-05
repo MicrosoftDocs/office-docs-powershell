@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-organizationsegment
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-OrganizationSegment
 schema: 2.0.0
 author: chrisda
@@ -27,7 +27,8 @@ Get-OrganizationSegment [<CommonParameters>]
 
 ### Identity
 ```
-Get-OrganizationSegment [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-OrganizationSegment [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,16 +58,14 @@ This example returns detailed information about the organization segment named E
 The Identity parameter specifies the organization segment that you want to view. You can use any value that uniquely identifies the segment. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 0

@@ -25,8 +25,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SPOActiveUserReport [-EndDate <DateTime>] [-ReportType <ReportType>]
- [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-SPOActiveUserReport [-EndDate <DateTime>]
+ [-ReportType <ReportType>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

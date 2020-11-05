@@ -105,7 +105,7 @@ If you encounter problems, check the [required permssions](https://docs.microsof
 
    - **Name**: Enter something descriptive.
 
-   - **Supported account types**: Select **Accounts in this organizational directory only (Microsoft)**.
+   - **Supported account types**: Select **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)**.
 
    - **Redirect URI (optional)**: In the first box, select **Web**. In the second box, enter the URI where the access token is sent.
 
@@ -133,11 +133,11 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 5. In the **Select permissions** section that appears on the page, expand **Exchange** and select **Exchange.ManageAsApp**
 
-   ![Select Exchange API permssions](media/app-only-auth-exchange-manageasapp.png)
+   ![Select Exchange.ManageAsApp permssions](media/app-only-auth-exchange-manageasapp.png)
 
    When you're finished, click **Add permissions**.
 
-6. Back on the **Configured permissions** page that appears, click **Grant admin consent for <\tenant name\>**, and select **Yes** in the dialog that appears.
+6. Back on the **Configured permissions** page that appears, click **Grant admin consent for \<tenant name\>**, and select **Yes** in the dialog that appears.
 
 7. Close the flyout when you're finished.
 
@@ -145,7 +145,18 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets to request a self-signed certificate and export it to PFX.
+- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets to request a self-signed certificate and export it to `.cer` and `.pfx`.
+
+```powershell
+# Create certificate
+$mycert = New-SelfSignedCertificate -DnsName "example.com" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1)
+
+# Export certificate to .pfx file
+$mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "1234" -Force -AsPlainText)
+
+# Export certificate to .cer file
+$mycert | Export-Certificate -FilePath mycert.cer
+```
 
 - Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1). Note that this script generates SHA1 certificates.
 
@@ -155,7 +166,7 @@ Create a self-signed x.509 certificate using one of the following methods:
 
 ## Step 4: Attach the certificate to the Azure AD application
 
-After you register the certificate with your application, you can use the public key (.pfx file) or the thumbprint for authentication.
+After you register the certificate with your application, you can use the public key (`.pfx` file) or the thumbprint for authentication.
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
 
@@ -169,7 +180,7 @@ After you register the certificate with your application, you can use the public
 
    ![Click Upload certificate](media/app-only-auth-upload-cert.png)
 
-6. In the dialog that appears, browse to the self-signed certificate you created in the previous Step, and then click **Add**.
+6. In the dialog that appears, browse to the self-signed certificate (`.cer` file) you created in the previous step, and then click **Add**.
 
 ## Step 5: Assign a role to the application
 

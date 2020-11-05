@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ServerComponentState [-Identity] <ServerIdParameter> [-Component <String>] [-DomainController <Fqdn>]
+Get-ServerComponentState [-Identity] <ServerIdParameter>
+ [-Component <String>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
@@ -50,9 +52,7 @@ This example returns detailed information for the component state of the Unified
 The Identity parameter specifies the Exchange server where you want to view the configuration settings. You can use the following values:
 
 - Name
-
 - Distinguished name (DN)
-
 - FQDN
 
 ```yaml

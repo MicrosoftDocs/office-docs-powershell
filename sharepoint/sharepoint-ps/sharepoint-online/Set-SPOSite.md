@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ### -LocaleId
 
 Specifies the language of this site collection.
-For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911).
+For more information, see [MS-OE376, LCID](https://docs.microsoft.com/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a).
 
 ```yaml
 Type: UInt32
@@ -389,10 +389,12 @@ Accept wildcard characters: False
 
 ### -BlockDownloadLinksFileType
 
-The valid values are:  
+The valid values are:
 
 - WebPreviewableFiles
 - ServerRenderedFilesOnly
+
+**Note**: ServerRendered (Office Only) and WebPreviewable (All supported files).
 
 The site's value is compared with the tenant level setting and the stricter one wins. For example, if the tenant is set to ServerRenderedFilesOnly then that will be used even if the site is set to WebPreviewableFiles.
 

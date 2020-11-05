@@ -26,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-AccessToCustomerDataRequest -ApprovalDecision <Approve | Deny | Cancel> -RequestId <String>
- [-Comment <String>] [<CommonParameters>]
+ [-Comment <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,9 +48,7 @@ This example approves the customer lockbox request EXSR123456 with a comment.
 The ApprovalDecision parameter specifies the approval decision for the customer lockbox request. Valid values are:
 
 - Approve
-
 - Deny
-
 - Cancel
 
 ```yaml
