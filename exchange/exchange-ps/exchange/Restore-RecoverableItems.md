@@ -107,7 +107,7 @@ In Exchange Online, after using the Get-RecoverableItems cmdlet to verify the ex
 
 ### Example 4
 ```powershell
-Get-RecoverableItems administrator | Restore-RecoverableItems 
+Get-RecoverableItems administrator | Restore-RecoverableItems
 ```
 
 This example bulk restores all the recoverable items for administrator.
@@ -118,23 +118,14 @@ This example bulk restores all the recoverable items for administrator.
 The Identity parameter specifies the mailbox that contains the deleted items that you want to restore. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name>\<account name>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>",..."\<ValueX>".
@@ -205,13 +196,9 @@ Accept wildcard characters: False
 The FilterItemType parameter filters the results by the specified MessageClass (ItemClass) property value of the deleted item. For example:
 
 - IPM.Appointment (Meetings and appointments)
-
 - IPM.Contact
-
 - IPM.File
-
 - IPM.Note
-
 - IPM.Task
 
 ```yaml
@@ -319,9 +306,7 @@ Accept wildcard characters: False
 The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
 - DeletedItems: The Deleted Items folder.
-
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
-
 - PurgedItems: (Cloud only) The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
 If you don't use this parameter, the command will search all of these folders.

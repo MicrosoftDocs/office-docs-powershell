@@ -149,13 +149,13 @@ Create a self-signed x.509 certificate using one of the following methods:
 
 ```powershell
 # Create certificate
-New-SelfSignedCertificate -DnsName "example.com" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1)
+$mycert = New-SelfSignedCertificate -DnsName "example.com" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1)
 
 # Export certificate to .pfx file
-Get-ChildItem -Path Cert:\localMachine\my\1DC696D8BE9E656D1F9ED576931B44EC650CF0F8 | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "1234" -Force -AsPlainText)
+$mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "1234" -Force -AsPlainText)
 
 # Export certificate to .cer file
-Get-ChildItem -Path Cert:\localMachine\my\1DC696D8BE9E656D1F9ED576931B44EC650CF0F8 | Export-Certificate -FilePath mycert.cer
+$mycert | Export-Certificate -FilePath mycert.cer
 ```
 
 - Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1). Note that this script generates SHA1 certificates.

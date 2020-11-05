@@ -38,7 +38,8 @@ New-OfflineAddressBook [-Name] <String> -AddressLists <AddressBookBaseIdParamete
  [-SkipPublicFolderInitialization]
  [-Versions <MultiValuedProperty>]
  [-VirtualDirectories <VirtualDirectoryIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +62,6 @@ New-OfflineAddressBook -Name "Contoso Executives OAB" -AddressLists "Default Glo
 This example creates a new OAB named Contoso Executives OAB with the following properties:
 
 - Address lists included in the OAB: Default Global Address List and Contoso Executives Address List
-
 - All OAB virtual directories in the organization can accept requests to download the OAB.
 
 The organization mailbox that's responsible for generating the OAB is SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c} (we didn't use the GeneratingMailbox parameter to specify a different organization mailbox).
@@ -106,9 +106,7 @@ Accept wildcard characters: False
 The AddressLists parameter specifies the address lists or global address lists that are included in the OAB. You can use any value that uniquely identifies the address list. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -131,8 +129,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -188,23 +185,14 @@ This parameter is available only in on-premises Exchange.
 The GeneratingMailbox parameter specifies the arbitration mailbox where the OAB is generated. Specifically, the arbitration mailbox must contain the OrganizationCapabilityOABGen value for the PersistedCapability property. An arbitration mailbox with this capability is also known as an organization mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 The default value for this parameter is the organization mailbox named SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}.
@@ -230,7 +218,6 @@ This parameter is available only in on-premises Exchange.
 The GlobalWebDistributionEnabled parameter specifies whether all OAB virtual directories in the organization can accept requests to download the OAB. These locations are advertised by the Autodiscover service. Valid values are:
 
 - $true: Any OAB virtual directory in the organization can accept requests to download the OAB. You can't use this setting with the VirtualDirectories parameter.
-
 - $false: Only the OAB virtual directories that are specified by the VirtualDirectories parameter accept requests to download the OAB. This is the default value.
 
 In Exchange 2013 CU7 or later, we recommend that you use the value $true for this parameter. The Client Access services on any Mailbox server can proxy incoming OAB download requests to the correct location.
@@ -252,7 +239,6 @@ Accept wildcard characters: False
 The IsDefault parameter specifies whether the OAB is used by all mailboxes and mailbox databases that don't have an OAB specified. Valid values are:
 
 - $true: The OAB is the default OAB.
-
 - $false: The OAB is isn't the default OAB. This is the default value.
 
 ```yaml
@@ -274,9 +260,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The PublicFolderDatabase parameter specifies the public folder database that's used to distribute the OAB. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
@@ -322,9 +306,7 @@ The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Min
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -336,9 +318,7 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
 
 ```yaml
@@ -360,11 +340,8 @@ This parameter is available or functional only in Exchange Server 2010.
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 If you don't use this parameter, the command is run on the local server.
@@ -388,7 +365,6 @@ This parameter is available only in on-premises Exchange.
 The ShadowMailboxDistributionEnabled parameter specifies whether a read only copy of the OAB (also known as a shadow copy) is distributed to all other OAB generation mailboxes (also known as organization mailboxes). This allows additional Mailbox servers to be endpoints for requests to download the OAB, which can help prevent users from downloading the OAB across slow WAN links. Valid values are:
 
 - $true: The OAB is distributed to all other organization mailboxes.
-
 - $false: The OAB is isn't distributed to other organization mailboxes. This is the default value.
 
 The value of this parameter is only meaningful if you have multiple organization mailboxes, and is only beneficial in Exchange organizations that have multiple Active Directory sites.
@@ -430,11 +406,8 @@ This parameter is available or functional only in Exchange Server 2010.
 The Versions parameter specifies what version of OAB to generate. The allowed values are:
 
 - Version1
-
 - Version2
-
 - Version3
-
 - Version4
 
 ```yaml
@@ -458,9 +431,7 @@ The VirtualDirectories parameter specifies the OAB virtual directories that acce
 You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.

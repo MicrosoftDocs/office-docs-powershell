@@ -23,9 +23,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-CaseHoldPolicy [-Name] <String> -Case <String> [-Comment <String>] [-Confirm] [-Enabled <Boolean>]
- [-ExchangeLocation <MultiValuedProperty>] [-Force] [-PublicFolderLocation <MultiValuedProperty>]
- [-SharePointLocation <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+New-CaseHoldPolicy [-Name] <String> -Case <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-ExchangeLocation <MultiValuedProperty>]
+ [-Force]
+ [-PublicFolderLocation <MultiValuedProperty>]
+ [-SharePointLocation <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +55,6 @@ Remember, after you create the policy, you need to create a rule for the policy 
 The Case parameter specifies the eDiscovery case that you want to associate with the case hold policy. You can use the following values to identify the eDiscovery case:
 
 - Name
-
 - Identity (GUID value).
 
 You can find these values by running the command: Get-ComplianceCase | Format-Table -Auto Name,Status,Identity.
@@ -101,8 +107,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -122,7 +127,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the policy is enabled or disabled. Valid values are:
 
 - $true: The policy is enabled. This is the default value.
-
 - $false: The policy is disabled.
 
 ```yaml
@@ -142,15 +146,12 @@ Accept wildcard characters: False
 The ExchangeLocation parameter specifies the mailboxes to include in the policy. Valid values are:
 
 - A mailbox
-
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
 To specify a mailbox or distribution group, you can use the following values:
 
 - Name
-
 - SMTP address
-
 - Azure AD ObjectId (You can use the [Get-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".

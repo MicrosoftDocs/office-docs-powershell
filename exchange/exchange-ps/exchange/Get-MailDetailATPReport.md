@@ -24,10 +24,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-MailDetailATPReport [-Direction <MultiValuedProperty>]
- [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-EventType <MultiValuedProperty>]
- [-Expression <Expression>] [-MalwareName <MultiValuedProperty>] [-MessageId <MultiValuedProperty>]
- [-MessageTraceId <MultiValuedProperty>] [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>]
- [-RecipientAddress <MultiValuedProperty>] [-SenderAddress <MultiValuedProperty>] [-StartDate <DateTime>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-MalwareName <MultiValuedProperty>]
+ [-MessageId <MultiValuedProperty>]
+ [-MessageTraceId <MultiValuedProperty>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-RecipientAddress <MultiValuedProperty>]
+ [-SenderAddress <MultiValuedProperty>]
+ [-StartDate <DateTime>]
  [<CommonParameters>]
 ```
 
@@ -123,49 +132,31 @@ The EventType parameter filters the report by the event type. Valid values are:
 Email phish EventTypes:
 
 - Advanced phish filter (Indicates a message caught by the machine learning model.)
-
 - Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
-
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
-
 - ATP-generated URL reputation\* (Indicates a message with a known malicious URL caught by ATP.)
-
 - Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
-
 - Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
-
 - EOP URL Reputation (Indicates a message with a known malicious URL caught by EOP.)
-
 - General phish filter (Indicates a message caught by basic phish protection.)
-
 - Malicious URL reputation (Indicates a message with a known malicious URL caught by phish filters.)
-
 - Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
-
 - User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
 
 Email malware EventTypes:
 
 - Anti-malware engine\* (Indicates a message caught by the anti-malware engine.)
-
 - Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
-
 - ATP-generated file reputation\* (Indicates a message with a known malicious file blocked by ATP.)
-
 - ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
-
 - ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
-
 - File Detonation\* (Indicates a message with a malicious attachment blocked by the detonation service.)
-
 - Malware ZAP (Indicates a message with malware detected and auto-purged after delivery.)
-
 - Office 365 file reputation (Indicates a message with a known malicious file blocked.)
 
 Content malware EventTypes:
 
 - AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
-
 - AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP or E5.)
 
 \* These features require a standalone Office 365 ATP or E5 subscription.
@@ -205,17 +196,11 @@ Accept wildcard characters: False
 The MalwareName parameter filters the results by malware payload. Valid values are:
 
 - Excel
-
 - EXE
-
 - Flash
-
 - Others
-
 - PDF
-
 - PowerPoint
-
 - URL
 
 You can specify multiple values separated by commas.

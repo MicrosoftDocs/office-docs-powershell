@@ -155,7 +155,7 @@ If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the three steps again and pay close attention to the user name and password you enter in Step 1.
 
-- To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to your Exchange Online organization.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to the Security & Compliance Center.
 
 - The account you use to connect must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 

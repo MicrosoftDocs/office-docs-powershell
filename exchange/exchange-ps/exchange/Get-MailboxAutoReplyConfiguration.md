@@ -21,21 +21,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxAutoReplyConfiguration [-Identity] <MailboxIdParameter> [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-ReadFromDomainController] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-MailboxAutoReplyConfiguration [-Identity] <MailboxIdParameter>
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use the Get-MailboxAutoReplyConfiguration cmdlet to retrieve all the mailboxes enabled for Automatic Replies. When run, the cmdlet returns Automatic Replies settings for the specified mailbox that include the following:
 
 - Mailbox identity value
-
 - Whether Automatic Replies is enabled, scheduled, or disabled for the mailbox
-
 - Start and end date, time during which Automatic Replies will be sent
-
 - Whether external senders receive Automatic Replies (none, known senders, or all)
-
 - Automatic Replies message to be sent to internal and external senders
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -62,23 +62,14 @@ This example retrieves Automatic Replies settings for Tony's mailbox at contoso.
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

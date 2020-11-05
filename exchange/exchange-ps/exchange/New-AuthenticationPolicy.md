@@ -45,7 +45,8 @@ New-AuthenticationPolicy [[-Name] <String>]
  [-BlockLegacyAuthRpc]
  [-BlockLegacyAuthWebServices]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -333,9 +334,7 @@ The BlockLegacyAuthActiveSync switch specifies whether to allow only modern auth
 This switch disables the following legacy authentication methods with Exchange ActiveSync:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
 Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
@@ -361,9 +360,7 @@ The BlockLegacyAuthAutodiscover switch specifies whether to allow only modern au
 This switch disables the following legacy authentication methods with Autodiscover:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
 Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
@@ -389,9 +386,7 @@ The BlockLegacyAuthImap switch specifies whether to allow only modern authentica
 This switch disables the following legacy authentication methods with IMAP:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
 Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
@@ -417,9 +412,7 @@ The BlockLegacyAuthMapi switch specifies whether to allow only modern authentica
 This switch disables the following legacy authentication methods with MAPI:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
 Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
@@ -445,9 +438,7 @@ The BlockLegacyAuthOfflineAddressBook switch specifies whether to allow only mod
 This switch disables the following legacy authentication methods with Offline Address Books:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
 Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
@@ -473,9 +464,7 @@ The BlockLegacyAuthPop switch specifies whether to allow only modern authenticat
 This switch disables the following legacy authentication methods with POP:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
 Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
@@ -501,9 +490,7 @@ The BlockLegacyAuthRpc switch specifies whether to allow only modern authenticat
 This switch disables the following legacy authentication methods with RPC:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
 Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
@@ -529,9 +516,7 @@ The BlockLegacyAuthWebServices switch specifies whether to allow only modern aut
 This switch disables the following legacy authentication methods with EWS:
 
 - Basic authentication
-
 - Digest authentication
-
 - Windows authentication (NTLM and Kerberos)
 
 Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
@@ -552,8 +537,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

@@ -117,11 +117,8 @@ This example modifies the action of the existing Inbox rule ProjectContoso. The 
 The Identity parameter specifies the Inbox rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - RuleIdentity property (for example, 16752869479666417665).
-
 - Exchange Online: `<mailbox alias>\<RuleIdentity>` (for example, `rzaher\16752869479666417665`.
-
 - On-premises Exchange: `<mailbox canonical name>\<RuleIdentity>` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
 
 ```yaml
@@ -175,51 +172,28 @@ Accept wildcard characters: False
 The ApplySystemCategory parameter specifies an action for the Inbox rule that applies the specified system category to messages. System categories are available to all mailboxes in the organization. Valid values are:
 
 - NotDefined
-
 - Bills
-
 - Document
-
 - DocumentPlus
-
 - Event
-
 - Family
-
 - File
-
 - Flight
-
 - FromContact
-
 - Important
-
 - LiveView
-
 - Lodging
-
 - MailingList
-
 - Newsletter
-
 - Photo
-
 - Purchase
-
 - RentalCar
-
 - RestaurantReservation
-
 - RetiredPromotion
-
 - ShippingNotification
-
 - Shopping
-
 - SocialUpdate
-
 - Travel
-
 - Video
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>.
@@ -264,8 +238,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -287,23 +260,14 @@ The CopyToFolder parameter specifies an action for the Inbox rule that copies me
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 Example values for this parameter are `john@contoso.com:\Marketing` or `John:\Inbox\Reports`.
@@ -325,51 +289,28 @@ Accept wildcard characters: False
 The DeleteSystemCategory parameter specifies an action for the Inbox rule that deletes the specified system category from messages. System categories are available to all mailboxes in the organization. Valid values are:
 
 - NotDefined
-
 - Bills
-
 - Document
-
 - DocumentPlus
-
 - Event
-
 - Family
-
 - File
-
 - Flight
-
 - FromContact
-
 - Important
-
 - LiveView
-
 - Lodging
-
 - MailingList
-
 - Newsletter
-
 - Photo
-
 - Purchase
-
 - RentalCar
-
 - RestaurantReservation
-
 - RetiredPromotion
-
 - ShippingNotification
-
 - Shopping
-
 - SocialUpdate
-
 - Travel
-
 - Video
 
 You can specify multiple values separated by commas.
@@ -391,7 +332,6 @@ Accept wildcard characters: False
 The DeleteMessage parameter specifies an action for the Inbox rule that sends messages to the Deleted Items folder. Valid values are:
 
 - $true: Messages that match the conditions of the rule are moved to the Deleted Items folder.
-
 - $false: The action isn't used.
 
 ```yaml
@@ -451,25 +391,15 @@ Accept wildcard characters: False
 The ExceptIfFlaggedForAction parameter specifies an exception for the Inbox rule that looks messages with the specified message flag. Valid values are:
 
 - Any
-
 - Call
-
 - DoNotForward
-
 - FollowUp
-
 - ForYourInformation
-
 - Forward
-
 - NoResponseNecessary
-
 - Read
-
 - Reply
-
 - ReplyToAll
-
 - Review
 
 The corresponding condition parameter to this exception is FlaggedForAction.
@@ -491,15 +421,10 @@ Accept wildcard characters: False
 The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example: For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -565,7 +490,6 @@ Accept wildcard characters: False
 The ExceptIfHasAttachment parameter specifies an exception for the Inbox rule that looks for messages with attachments. Valid values are:
 
 - $true: The rule action isn't applied to messages that have attachments.
-
 - $false: The exception isn't used.
 
 The corresponding condition parameter to this exception is HasAttachment.
@@ -627,25 +551,15 @@ Accept wildcard characters: False
 The ExceptIfMessageTypeMatches parameter specifies an exception for the Inbox rule that looks for messages of the specified type. Valid values are:
 
 - AutomaticReply
-
 - AutomaticForward
-
 - Encrypted
-
 - Calendaring
-
 - CalendaringResponse
-
 - PermissionControlled
-
 - Voicemail
-
 - Signed
-
 - ApprovalRequest
-
 - ReadReceipt
-
 - NonDeliveryReport
 
 The corresponding condition parameter to this exception is MessageTypeMatches.
@@ -667,7 +581,6 @@ Accept wildcard characters: False
 The ExceptIfMyNameInCcBox parameter specifies an exception for the Inbox rule that looks for messages where the mailbox owner is in the Cc field. Valid values are:
 
 - $true: The rule action isn't applied to messages where the mailbox owner is in the Cc field.
-
 - $false: The exception isn't used.
 
 The corresponding condition parameter to this exception is MyNameInCcBox.
@@ -689,7 +602,6 @@ Accept wildcard characters: False
 The ExceptIfMyNameInToBox parameter specifies an exception for the Inbox rule that looks for messages where the mailbox owner is in the To field. Valid values are:
 
 - $true: The rule action isn't applied to messages where the mailbox owner is in the To field.
-
 - $false: The exception isn't used.
 
 The corresponding condition parameter to this exception is MyNameInToBox.
@@ -711,7 +623,6 @@ Accept wildcard characters: False
 The ExceptIfMyNameInToOrCcBox parameter specifies an exception for the Inbox rule that looks for messages where the mailbox owner is in the To or Cc fields Valid values are.
 
 - $true: The rule action isn't applied to messages where the mailbox owner is in the To or Cc fields.
-
 - $false: The exception isn't used.
 
 The corresponding condition parameter to this exception is MyNameInToOrCcBox.
@@ -733,7 +644,6 @@ Accept wildcard characters: False
 The ExceptIfMyNameNotInToBox parameter specifies an exception for the Inbox rule that looks for messages where the mailbox owner isn't in the To field. Valid values are:
 
 - $true: The rule action isn't applied to messages where the mailbox owner isn't in the To field.
-
 - $false: The exception isn't used.
 
 The corresponding condition parameter to this exception is MyNameNotInToBox.
@@ -817,7 +727,6 @@ Accept wildcard characters: False
 The ExceptIfSentOnlyToMe parameter specifies an exception for the Inbox rule that looks for messages where the only recipient is the mailbox owner. Valid values are:
 
 - $true: The rule action isn't applied to messages where the mailbox owner is the only recipient.
-
 - $false: The exception isn't used.
 
 The corresponding condition parameter to this exception is SentOnlyToMe.
@@ -839,15 +748,10 @@ Accept wildcard characters: False
 The ExceptIfSentTo parameter specifies an exception that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -915,9 +819,7 @@ Accept wildcard characters: False
 The ExceptIfWithImportance parameter specifies an exception for the Inbox rule that looks for messages with the specified importance level. Valid values are:
 
 - High
-
 - Normal
-
 - Low
 
 The corresponding condition parameter to this exception is WithImportance.
@@ -941,13 +843,9 @@ The ExceptIfWithinSizeRangeMaximum parameter specifies part of an exception for 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -975,13 +873,9 @@ The ExceptIfWithinSizeRangeMinimum parameter specifies part of an exception for 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1007,11 +901,8 @@ Accept wildcard characters: False
 The ExceptIfWithSensitivity parameter specifies an exception for the Inbox rule that looks for messages with the specified sensitivity level. Valid values are:
 
 - Normal
-
 - Personal
-
 - Private
-
 - CompanyConfidential
 
 The corresponding condition parameter to this exception is WithSensitivity.
@@ -1033,25 +924,15 @@ Accept wildcard characters: False
 The FlaggedForAction parameter specifies a condition for the Inbox rule that looks for messages with the specified message flag. Valid values are:
 
 - Any
-
 - Call
-
 - DoNotForward
-
 - FollowUp
-
 - ForYourInformation
-
 - Forward
-
 - NoResponseNecessary
-
 - Read
-
 - Reply
-
 - ReplyToAll
-
 - Review
 
 ```yaml
@@ -1089,15 +970,10 @@ Accept wildcard characters: False
 The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient as an attachment. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -1119,15 +995,10 @@ Accept wildcard characters: False
 The ForwardTo parameter specifies an action for the Inbox rule that forwards the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -1149,15 +1020,10 @@ Accept wildcard characters: False
 The From parameter specifies a condition for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -1223,7 +1089,6 @@ Accept wildcard characters: False
 The HasAttachment parameter specifies a condition for the Inbox rule that looks for messages with attachments. Valid values are:
 
 - $true: The rule action is applied to messages that have attachments.
-
 - $false: The condition isn't used.
 
 The corresponding exception parameter to this condition is ExceptIfHasAttachment.
@@ -1285,23 +1150,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -1321,7 +1177,6 @@ Accept wildcard characters: False
 The MarkAsRead parameter specifies an action for the Inbox rule that marks messages as read. Valid values are:
 
 - $true: Messages that match the conditions of the rule are marked as read.
-
 - $false: The action isn't used.
 
 ```yaml
@@ -1341,9 +1196,7 @@ Accept wildcard characters: False
 The MarkImportance parameter specifies an action for the Inbox rule that marks messages with the specified importance flag. Valid values are:
 
 - Low
-
 - Normal
-
 - High
 
 ```yaml
@@ -1363,25 +1216,15 @@ Accept wildcard characters: False
 The MessageTypeMatches parameter specifies a condition for the Inbox rule that looks for messages of the specified type. Valid values are:
 
 - AutomaticReply
-
 - AutomaticForward
-
 - Encrypted
-
 - Calendaring
-
 - CalendaringResponse
-
 - PermissionControlled
-
 - Voicemail
-
 - Signed
-
 - ApprovalRequest
-
 - ReadReceipt
-
 - NonDeliveryReport
 
 The corresponding exception parameter to this condition is ExceptIfMessageTypeMatches.
@@ -1405,23 +1248,14 @@ The MoveToFolder parameter specifies an action for the Inbox rule that moves mes
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 Example values for this parameter are `john@contoso.com:\Marketing` or `John:\Inbox\Reports`.
@@ -1443,7 +1277,6 @@ Accept wildcard characters: False
 The MyNameInCcBox parameter specifies a condition for the Inbox rule that looks for messages where the mailbox owner is in the Cc field. Valid values are:
 
 - $true: The rule action is applied to messages where the mailbox owner is in the Cc field.
-
 - $false: The condition isn't used.
 
 The corresponding exception parameter to this condition is ExceptIfMyNameInCcBox.
@@ -1465,7 +1298,6 @@ Accept wildcard characters: False
 The MyNameInToBox parameter specifies a condition for the Inbox rule that looks for messages where the mailbox owner is in the To field. Valid values are:
 
 - $true: The rule action is applied to messages where the mailbox owner is in the To field.
-
 - $false: The condition isn't used.
 
 The corresponding exception parameter to this condition is ExceptIfMyNameInToBox.
@@ -1487,7 +1319,6 @@ Accept wildcard characters: False
 The MyNameInToOrCcBox parameter specifies a condition for the Inbox rule that looks for messages where the mailbox owner is in the To or Cc fields Valid values are.
 
 - $true: The rule action is applied to messages where the mailbox owner is in the To or Cc fields.
-
 - $false: The condition isn't used.
 
 The corresponding exception parameter to this condition is ExceptIfMyNameInToOrCcBox.
@@ -1509,7 +1340,6 @@ Accept wildcard characters: False
 The MyNameNotInToBox parameter specifies a condition for the Inbox rule that looks for messages where the mailbox owner isn't in the To field. Valid values are:
 
 - $true: The rule action is applied to messages where the mailbox owner isn't in the To field.
-
 - $false: The condition isn't used.
 
 The corresponding exception parameter to this condition is ExceptIfMyNameNotInToBox.
@@ -1547,7 +1377,6 @@ Accept wildcard characters: False
 The PinMessage parameter specifies an action for the Inbox rule that pins messages to the top of the Inbox. Valid values are:
 
 - $true: Message that match the conditions of the rule are pinned to the top of the Inbox.
-
 - $false: The action isn't used.
 
 ```yaml
@@ -1645,15 +1474,10 @@ Accept wildcard characters: False
 The RedirectTo parameter specifies an action for the Inbox rule that redirects the message to the specified recipient. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -1695,7 +1519,6 @@ Accept wildcard characters: False
 The SentOnlyToMe parameter specifies a condition for the Inbox rule that looks for messages where the only recipient is the mailbox owner. Valid values are:
 
 - $true: The rule action is applied to messages where the mailbox owner is the only recipient.
-
 - $false: The condition isn't used.
 
 The corresponding exception parameter to this condition is ExceptIfSentOnlyToMe.
@@ -1717,15 +1540,10 @@ Accept wildcard characters: False
 The SentTo parameter specifies a condition for the Inbox rule that looks for messages with the specified recipients. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -1749,7 +1567,6 @@ Accept wildcard characters: False
 The StopProcessingRules parameter specifies an action for the Inbox rule that stops processing additional rules if the conditions of this Inbox rule are met. Valid values are:If set to $true, the StopProcessingRules parameter instructs Exchange to stop processing additional rules if the conditions of this Inbox rule are met.
 
 - $true: Stop processing more rules.
-
 - $false: The action isn't used (continue processing more rules after this one).
 
 ```yaml
@@ -1829,9 +1646,7 @@ Accept wildcard characters: False
 The WithImportance parameter specifies a condition for the Inbox rule that looks for messages with the specified importance level. Valid values are:
 
 - High
-
 - Normal
-
 - Low
 
 The corresponding exception parameter to this condition is ExceptIfWithImportance.
@@ -1855,13 +1670,9 @@ The WithinSizeRangeMaximum parameter specifies part of a condition for the Inbox
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1889,13 +1700,9 @@ The WithinSizeRangeMinimum parameter specifies part of a condition for the Inbox
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1921,11 +1728,8 @@ Accept wildcard characters: False
 The WithSensitivity parameter specifies a condition for the Inbox rule that looks for messages with the specified sensitivity level. Valid values are:
 
 - Normal
-
 - Personal
-
 - Private
-
 - CompanyConfidential
 
 The corresponding exception parameter to this condition is ExceptIfWithSensitivity.
