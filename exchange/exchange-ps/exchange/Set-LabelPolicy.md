@@ -65,6 +65,13 @@ Set-LabelPolicy -Identity "Global Policy" -AdvancedSettings @{EnableCustomPermis
 
 This example configures the specified advanced setting for the sensitivity label policy name Global Policy.
 
+### Example 2
+```powershell
+Set-LabelPolicy -Identity "Client Policy" -AdvancedSettings @{PFileSupportedExtensions=""}
+```
+
+This example removes the PFileSupportedExtensions property from the sensitivity label policy named Client Policy. AIP will use the default value.
+
 ## PARAMETERS
 
 ### -Identity
