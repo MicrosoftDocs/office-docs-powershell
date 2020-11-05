@@ -26,7 +26,7 @@ Start-SPOUserAndContentMove [-UserPrincipalName] <String> [-DestinationDataLocat
 
 ## DESCRIPTION
 
-This commandlet applies to Multi-Geo tenants and it is designed to move user profiles and their corresponding OneDrive personal sites across geo locations. These commandlets may only be ran by a SharePoint or Global administrator, who is connected to the SharePoint administration center of the geo location where the user is currently hosted. 
+This cmdlet applies to Multi-Geo tenants and it is designed to move user profiles and their corresponding OneDrive personal sites across geo locations. These cmdlets may only be ran by a SharePoint or Global administrator, who is connected to the SharePoint administration center of the geo location where the user is currently hosted. 
 
 ## EXAMPLES
 
