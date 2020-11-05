@@ -27,7 +27,8 @@ Remove-InboxRule [-Identity] <InboxRuleIdParameter>
  [-DomainController <Fqdn>]
  [-Force]
  [-Mailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,11 +58,8 @@ This example removes all Inbox rules from the mailbox Joe@Contoso.com.
 The Identity parameter specifies the Inbox rule that you want to remove. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - RuleIdentity property (for example, 16752869479666417665).
-
 - Exchange Online: `<mailbox alias>\<RuleIdentity>` (for example, `rzaher\16752869479666417665`.
-
 - On-premises Exchange: `<mailbox canonical name>\<RuleIdentity>` (for example, `contoso.com/Users/Rick Zaher\16752869479666417665`).
 
 ```yaml
@@ -96,8 +94,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -153,23 +150,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

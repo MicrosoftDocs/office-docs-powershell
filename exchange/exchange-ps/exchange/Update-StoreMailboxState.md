@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-StoreMailboxState -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter> [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Update-StoreMailboxState -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,9 +61,7 @@ This example updates the mailbox state for all disconnected mailboxes on the mai
 The Database parameter specifies the mailbox database that contains the mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -98,8 +98,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -145,7 +144,8 @@ To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Ty
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
-In a scenario where a mailbox is moved to another database, then the mailbox is immediately disabled, there is a 24-hour delay to allow for replication. 
+
+In a scenario where a mailbox is moved to another database, then the mailbox is immediately disabled, there is a 24-hour delay to allow for replication.
 
 In this scenario Update-StoreMailboxState may not immediately update DisconnectState and DisconnectReason when running Get-MailboxStatistics. The mailbox statistics will update approximately 24 hours after the move.
 

@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Preview-QuarantineMessage -Identity <QuarantineMessageIdentity> [<CommonParameters>]
+Preview-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

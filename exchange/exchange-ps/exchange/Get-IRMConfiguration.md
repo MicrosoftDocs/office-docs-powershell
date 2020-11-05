@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-IRMConfiguration [-DomainController <Fqdn>] [<CommonParameters>]
+Get-IRMConfiguration [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

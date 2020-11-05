@@ -39,7 +39,8 @@ Set-MailboxAutoReplyConfiguration [-Identity] <MailboxIdParameter>
  [-InternalMessage <String>]
  [-OOFEventSubject <String>]
  [-StartTime <DateTime>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,23 +70,14 @@ This example configures Automatic Replies for Tony's mailbox to be sent and incl
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -107,7 +99,6 @@ This parameter is available only in the cloud-based service.
 The AutoDeclineFutureRequestsWhenOOF parameter specifies whether to automatically decline new meeting requests that are sent to the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
 - $true: New meeting requests that are received during the scheduled time period are automatically declined.
-
 - $false: Meeting requests received during the scheduled time period aren't automatically declined. This is the default value.
 
 You can use this parameter only when the AutoReplyState parameter is set to Scheduled.
@@ -129,15 +120,12 @@ Accept wildcard characters: False
 The AutoReplyState parameter specifies whether the mailbox is enabled for Automatic Replies. Valid values are:
 
 - Enabled: Automatic Replies are sent for the mailbox.
-
 - Disabled: Automatic Replies aren't sent for the mailbox. This is the default value.
-
 - Scheduled: Automatic Replies are sent for the mailbox during the time period that's specified by the StartTime and EndTime parameters.
 
 The Enabled and Scheduled values require these additional settings:
 
 - A value for the InternalMessageValue parameter.
-
 - A value for the ExternalMessageValue parameter if the ExternalAudience parameter is set to Known or All.
 
 ```yaml
@@ -156,8 +144,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -179,7 +166,6 @@ This parameter is available only in the cloud-based service.
 The CreateOOFEvent parameter specifies whether to create a calendar event that corresponds to the scheduled time period when Automatic Replies are being sent for the mailbox. Valid values are:
 
 - $true: When you configure a scheduled time period for Automatic Replies by using the value Scheduled for the AutoReplyState parameter, a calendar event is created in the mailbox for those dates. You can specify the subject for the event by using the OOFEventSubject parameter.
-
 - $false: When you configure a scheduled time period for Automatic Replies by using the value Scheduled for the AutoReplyState parameter, no calendar event is created for those dates. This is the default value.
 
 ```yaml
@@ -201,7 +187,6 @@ This parameter is available only in the cloud-based service.
 The DeclineAllEventsForScheduledOOF parameter specifies whether to decline all existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
 - $true: Existing calendar events in the mailbox that occur during the scheduled time period are declined and removed from the calendar.
-
 - $false: Existing calendar events in the mailbox that occur during the scheduled time period remain in the calendar. This is the default value.
 
 You can use this parameter only when the DeclineEventsForScheduledOOF parameter is set to $true.
@@ -227,7 +212,6 @@ This parameter is available only in the cloud-based service.
 The DeclineEventsForScheduledOOF parameter specifies whether it's possible to decline existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
 - $true: Existing calendar events in the mailbox that occur during the scheduled time period can be declined and removed from the calendar. To decline specific events during the scheduled time period, use the EventsToDeleteIDs parameter. To decline all events during the scheduled time period, use the DeclineAllEventsForScheduledOOF parameter.
-
 - $false: Existing calendar events in the mailbox that occur during the scheduled time period remain in the calendar. This is the default value.
 
 You can use this parameter only when the AutoReplyState parameter is set to Scheduled.
@@ -251,7 +235,6 @@ This parameter is available only in the cloud-based service.
 The DeclineMeetingMessage parameter specifies the text in the message when meetings requests that are sent to the mailbox are automatically declined. For example:
 
 - The AutoDeclineFutureRequestsWhenOOF parameter is set to $true.
-
 - The DeclineEventsForScheduledOOF parameter is set to $true, and the DeclineAllEventsForScheduledOOF parameter is set to $true, or individual events are specified by using the EventsToDeleteIDs parameter.
 
 If the value contains spaces, enclose the value in quotation marks ("). HTML tags aren't automatically added to the text, but you can use values that contain HTML tags. For example, "\<html\>\<body\>I'm on vacation.\<br\>I can't attend the meeting.\</body\>\</html\>".
@@ -333,9 +316,7 @@ Accept wildcard characters: False
 The ExternalAudience parameter specifies whether Automatic Replies are sent to external senders. Valid values are:
 
 - None: Automatic Replies aren't sent to any external senders.
-
 - Known: Automatic Replies are sent only to external senders that are specified in the Contact list of the mailbox.
-
 - All: Automatic Replies are sent to all external senders. This is the default value.
 
 The value of this parameter is meaningful only when the AutoReplyState parameter is set to Enabled or Scheduled.
@@ -361,7 +342,6 @@ HTML tags are automatically added to the text. For example, if you enter the tex
 The value of this parameter is meaningful only when both of the following conditions are true:
 
 - The AutoReplyState parameter is set to Enabled or Scheduled.
-
 - The ExternalAudience parameter is set to Known or All.
 
 To clear the value of this parameter when it's no longer required (for example, if you change the ExternalAudience parameter to None), use the value $null.
@@ -385,7 +365,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml

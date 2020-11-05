@@ -95,7 +95,7 @@ In version 2.0.3 or later, use this syntax to connect to Exchange Online in unat
 
 ### Example 5
 ```powershell
-Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate object%> -Organization "contoso.onmicrosoft.com"
+Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
 
 In version 2.0.3 or later, use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.

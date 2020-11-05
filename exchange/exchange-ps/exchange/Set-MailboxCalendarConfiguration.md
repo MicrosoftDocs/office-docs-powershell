@@ -99,23 +99,14 @@ This example sets the working day's starting hour to 7 A.M. for the calendar of 
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -226,8 +217,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -247,7 +237,6 @@ Accept wildcard characters: False
 The ConversationalSchedulingEnabled parameter specifies whether to enable or disable conversational scheduling. Valid values are:
 
 - $true: Conversational scheduling is enabled. This is the default value.
-
 - $false: Conversational scheduling is disabled.
 
 ```yaml
@@ -269,7 +258,6 @@ This parameter is available only in the cloud-based service.
 The CreateEventsFromEmailAsPrivate parameter specifies whether to create events from email messages as Normal or Private. Valid values are:
 
 - $true: Events from email are created as Private. This is the default value.
-
 - $false: Events from email are created as Normal (public).
 
 ```yaml
@@ -325,35 +313,20 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Note that the value can't contain seconds. Valid values are:
 
 - 00:00:00
-
 - 00:05:00 (5 minutes)
-
 - 00:10:00 (10 minutes)
-
 - 00:15:00 (15 minutes) This is the default value.
-
 - 00:30:00 (30 minutes)
-
 - 01:00:00 (1 hour)
-
 - 02:00:00 (2 hours)
-
 - 03:00:00 (3 hours)
-
 - 04:00:00 (4 hours)
-
 - 08:00:00 (8 hours)
-
 - 12:00:00 (12 hours)
-
 - 1.00:00:00 (1 day)
-
 - 2.00:00:00 (2 days)
-
 - 3.00:00:00 (3 days)
-
 - 7.00:00:00 (7 days)
-
 - 14.00:00:00 (14 days)
 
 This parameter is ignored when the RemindersEnabled parameter is set to $false.
@@ -377,7 +350,6 @@ This parameter is available only in the cloud-based service.
 The DiningEventsFromEmailEnabled parameter specifies whether to create dining reservation events from email messages. Valid values are:
 
 - $true: Create dining reservation events from email messages. This is the default value.
-
 - $false: Don't create dining reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -419,7 +391,6 @@ This parameter is available only in the cloud-based service.
 The EntertainmentEventsFromEmailEnabled parameter specifies whether to create entertainment reservation events from email messages. Valid values are:
 
 - $true: Create entertainment reservation events from email messages. This is the default value.
-
 - $false: Don't create entertainment reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -443,21 +414,15 @@ This parameter is available only in the cloud-based service.
 The EventsFromEmailEnabled parameter specifies whether to enable events to be created from email messages. Valid values are:
 
 - $true: Creating events from email messages is enabled. This is the default value.
-
 - $false: Creating events from email messages is disabled.
 
 When this setting is enabled, you can enable or disable creating specific types of events from email messages by using the following parameters:
 
 - DiningEventsFromEmailEnabled
-
 - EntertainmentEventsFromEmailEnabled
-
 - FlightEventsFromEmailEnabled
-
 - HotelEventsFromEmailEnabled
-
 - PackageDeliveryEventsFromEmailEnabled
-
 - RentalCarEventsFromEmailEnabled
 
 ```yaml
@@ -479,7 +444,6 @@ This parameter is available only in the cloud-based service.
 The FlightEventsFromEmailEnabled parameter specifies whether to create flight reservation events from email messages. Valid values are:
 
 - $true: Create flight reservation events from email messages. This is the default value.
-
 - $false: Don't create flight reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -501,11 +465,8 @@ Accept wildcard characters: False
 The FirstWeekOfYear parameter specifies the first week of the year. Valid values are:
 
 - FirstDay: Week numbers start on the first day of the year. This is the default value.
-
 - FirstFourDayWeek: Week numbers start on the first week that has at least four days.
-
 - FirstFullWeek: Week numbers start on the first week that has seven days.
-
 - LegacyNotSet: You can't set this value. This is a null value that appears only when the mailbox has been moved from an earlier version of Exchange.
 
 You configure the first day of the week by using the WeekStartDay parameter.
@@ -529,7 +490,6 @@ This parameter is available only in the cloud-based service.
 The HotelEventsFromEmailEnabled parameter specifies whether to create hotel reservation events from email messages. Valid values are:
 
 - $true: Create hotel reservation events from email messages. This is the default value.
-
 - $false: Don't create hotel reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -553,7 +513,6 @@ This parameter is available only in the cloud-based service.
 The InvoiceEventsFromEmailEnabled parameter specifies whether to allow creating invoices from email messages. Valid values are:
 
 - $true: Creating invoices from messages is enabled. This is the default value.
-
 - $false: Creating invoices from messages is disabled.
 
 ```yaml
@@ -607,9 +566,7 @@ This parameter is available only in the cloud-based service.
 The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
 
 - $true: All meetings are online by default.
-
 - $false: All meetings are not online by default.
-
 - $null: The value of the OnlineMeetingsByDefaultEnabled parameter on the Set-OrganizationConfig cmdlet (the organizational setting) is used.
 
 ```yaml
@@ -631,7 +588,6 @@ This parameter is available only in the cloud-based service.
 The PackageDeliveryEventsFromEmailEnabled parameter specifies whether to create package delivery events from email messages. Valid values are:
 
 - $true: Create package delivery events from email messages.
-
 - $false: Don't create package delivery events from email messages. This is the default value.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -653,7 +609,6 @@ Accept wildcard characters: False
 The RemindersEnabled parameter enables or disables reminders for calendar items. Valid values are:
 
 - $true: Reminders are enabled. This is the default value.
-
 - $false: Reminders are disabled.
 
 When the reminder is first displayed is controlled by the DefaultReminderTime parameter.
@@ -675,7 +630,6 @@ Accept wildcard characters: False
 The ReminderSoundEnabled parameter specifies whether a sound is played along with the reminder. Valid values are:
 
 - $true: A sound is played with the reminder. This is the default value.
-
 - $false: No sound is played with the reminder.
 
 This parameter is ignored when the RemindersEnabled parameter is set to $false.
@@ -699,7 +653,6 @@ This parameter is available only in the cloud-based service.
 The RentalCarEventsFromEmailEnabled parameter specifies whether to create rental car reservation events from email messages. Valid values are:
 
 - $true: Create rental car reservation events from email messages. This is the default value.
-
 - $false: Don't create rental car reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -721,7 +674,6 @@ Accept wildcard characters: False
 The ShowWeekNumbers parameter specifies whether the week number is displayed in the Outlook on the web calendar. Valid values are:
 
 - $true: The week number is displayed.
-
 - $false: The week number isn't displayed. This is the default value.
 
 ```yaml
@@ -757,7 +709,6 @@ Accept wildcard characters: False
 The TimeIncrement parameter specifies the scale that the Outlook on the web calendar uses to show time. Valid values are:
 
 - FifteenMinutes
-
 - ThirtyMinutes (This is the default value)
 
 ```yaml
@@ -777,7 +728,6 @@ Accept wildcard characters: False
 The UseBrightCalendarColorThemeInOwa parameter specifies whether to use light colors or bright colors for the calendar in Outlook on the web. Valid values are:
 
 - $true: Use bright colors in the calendar.
-
 - $false: Use light colors in the calendar. This is the default value.
 
 ```yaml
@@ -797,17 +747,11 @@ Accept wildcard characters: False
 The WeekStartDay parameter specifies the first day of the week. Valid values are:
 
 - Sunday (This is the default value)
-
 - Monday
-
 - Tuesday
-
 - Wednesday
-
 - Thursday
-
 - Friday
-
 - Saturday
 
 ```yaml
@@ -829,9 +773,7 @@ This parameter is available only in the cloud-based service.
 The WeatherEnabled specifies whether weather is displayed in the calendar in Outlook on the web. Valid values are:
 
 - FirstRun (This is the default value)
-
 - Disabled: Hide weather on the calendar.
-
 - Enabled: Show weather on the calendar.
 
 ```yaml
@@ -901,9 +843,7 @@ This parameter is available only in the cloud-based service.
 The WeatherUnit parameter specifies the temperature scale that's used to display the weather in the calendar in Outlook on the web. Valid values are:
 
 - Default (This is the default value)
-
 - Celsius
-
 - Fahrenheit
 
 ```yaml
@@ -939,25 +879,15 @@ Accept wildcard characters: False
 The WorkDays parameter specifies the work days in the calendar. Valid values are:
 
 - None
-
 - AllDays
-
 - Weekdays (This is the default value)
-
 - WeekEndDays
-
 - Sunday
-
 - Monday
-
 - Tuesday
-
 - Wednesday
-
 - Thursday
-
 - Friday
-
 - Saturday
 
 You can specify multiple values separated by commas, but redundant values are ignored. For example, entering Weekdays,Monday results in the value Weekdays.

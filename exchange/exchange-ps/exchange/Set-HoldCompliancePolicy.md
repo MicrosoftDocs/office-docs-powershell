@@ -24,9 +24,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### RetryDistribution
 ```
-Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-RetryDistribution]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -37,11 +39,13 @@ Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocation <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
- [-Enabled <Boolean>] [-Force]
+ [-Enabled <Boolean>]
+ [-Force]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemovePublicFolderLocation <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,11 +61,8 @@ Set-HoldCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocat
 This example makes the following changes to the existing preservation policy named "Regulation 123 Compliance":
 
 - Adds the mailbox for the user named Kitty Petersen.
-
 - Adds the SharePoint Online site `https://contoso.sharepoint.com/sites/teams/finance`.
-
 - Removes public folders.
-
 - Updates the comment.
 
 ## PARAMETERS
@@ -70,9 +71,7 @@ This example makes the following changes to the existing preservation policy nam
 The Identity parameter specifies the preservation policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -108,17 +107,13 @@ Accept wildcard characters: False
 The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes. Valid values are:
 
 - A mailbox
-
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
 To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -191,8 +186,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -212,7 +206,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
 - $true: The policy is enabled. This is the default value.
-
 - $false: The policy is disabled.
 
 ```yaml
@@ -248,17 +241,13 @@ Accept wildcard characters: False
 The RemoveExchangeLocation parameter specifies the existing mailboxes to remove from the policy. Valid values are:
 
 - A mailbox
-
 - A distribution group or mail-enabled security group
 
 To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".

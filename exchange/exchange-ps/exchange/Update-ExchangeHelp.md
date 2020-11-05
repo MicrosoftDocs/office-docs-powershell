@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-ExchangeHelp [-Force] [<CommonParameters>]
+Update-ExchangeHelp [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

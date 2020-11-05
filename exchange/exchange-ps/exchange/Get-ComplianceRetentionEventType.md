@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceRetentionEventType [-Identity <ComplianceRuleIdParameter>] [-LoadTag] [<CommonParameters>]
+Get-ComplianceRetentionEventType [-Identity <ComplianceRuleIdParameter>]
+ [-LoadTag]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,9 +51,7 @@ This example returns detailed information for the retention event type named Fab
 The Identity parameter specifies the retention event type that you want to view. You can use any value that uniquely identifies the retention event type. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

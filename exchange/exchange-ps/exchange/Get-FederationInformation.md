@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-FederationInformation -DomainName <SmtpDomain> [-BypassAdditionalDomainValidation] [-Force]
- [-TrustedHostnames <MultiValuedProperty>] [<CommonParameters>]
+Get-FederationInformation -DomainName <SmtpDomain>
+ [-BypassAdditionalDomainValidation]
+ [-Force]
+ [-TrustedHostnames <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

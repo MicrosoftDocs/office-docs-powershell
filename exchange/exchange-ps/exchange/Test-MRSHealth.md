@@ -21,9 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-MRSHealth [[-Identity] <ServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-MaxQueueScanAgeSeconds <Int32>] [-MonitoringContext <Boolean>] [-WhatIf]
- [-MRSProxyCredentials <PSCredential>] [-MRSProxyServer <Fqdn>] [<CommonParameters>]
+Test-MRSHealth [[-Identity] <ServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxQueueScanAgeSeconds <Int32>]
+ [-MonitoringContext <Boolean>]
+ [-MRSProxyCredentials <PSCredential>]
+ [-MRSProxyServer <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,11 +55,33 @@ This example tests the health of the Mailbox Replication service on the Mailbox 
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the server on which to perform the health test. You can use any value that uniquely identifies the server. For example:
+
+- Name
+- Distinguished name (DN)
+- ExchangeLegacyDN
+- GUID
+
+If you don't specify the server, the command runs on the local server.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -82,32 +110,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the server on which to perform the health test. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- ExchangeLegacyDN
-
-- GUID
-
-If you don't specify the server, the command runs on the local server.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -143,22 +145,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MRSProxyCredentials
 The MRSProxyCredentials parameter specifies the credentials that are required for the MRSProxyPingCheck test on the server that's specified by the MRSProxyServer parameter.
 
@@ -183,9 +169,7 @@ The MRSProxyServer parameter specifies the fully qualified domain name (FQDN) of
 The Microsoft Replication proxy service is part of the Mailbox Replication service, and is used for remote mailbox moves. However, the Mailbox Replication proxy service communicates only with the Mailbox Replication service on another server. You can test the Mailbox Replication proxy service in the following ways:
 
 - If you specify an MRSProxyServer value and you specify the source server by using the Identity parameter, the test is performed between that server and the target server specified by the MRSProxyServer parameter.
-
 - If you specify an MRSProxyServer value and you don't specify a source server by using the Identity parameter, the test is performed between the local server and the target server specified by the MRSProxyServer parameter.
-
 - If you don't specify an MRSProxyServer value or an Identity value, the test is performed between the Mailbox Replication service and the Mailbox Replication proxy service on the local server.
 
 ```yaml
@@ -193,6 +177,22 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
