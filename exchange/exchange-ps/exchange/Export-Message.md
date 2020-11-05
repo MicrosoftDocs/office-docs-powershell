@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Export-Message
@@ -22,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-Message [-Identity] <MessageIdentity> [-Confirm] [-WhatIf] [<CommonParameters>]
+Export-Message [-Identity] <MessageIdentity>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,9 +49,7 @@ Get-Message -Queue "Server1\contoso.com" -ResultSize Unlimited | ForEach-Object 
 This example retrieves all messages from the specified queue. The query results are then piped to the Export-Message command, and all the messages are copied to individual .eml files. The Internet Message IDs of each message are used as the file names. To accomplish this, the command does the following:
 
 - Retrieves all messages in a specific queue using the Get-Message cmdlet.
-
 - The result is pipelined into the ForEach-Object cmdlet, which prepares a file name including full path using the temporary variable $Temp that consists of the Internet Message ID with .eml extension. The Internet Message ID field contains angled brackets ("\>" and "\<") which need to be removed as they are invalid file names. This is done using the Replace method of the temporary variable.
-
 - The ForEach-Object cmdlet also exports the message using the file name prepared.
 
 ## PARAMETERS
@@ -73,8 +73,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

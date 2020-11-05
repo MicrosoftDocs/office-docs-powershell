@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ClientAccessServer
@@ -24,8 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ClientAccessServer [[-Identity] <ClientAccessServerIdParameter>] [-DomainController <Fqdn>]
- [-IncludeAlternateServiceAccountCredentialPassword] [-IncludeAlternateServiceAccountCredentialStatus]
+Get-ClientAccessServer [[-Identity] <ClientAccessServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IncludeAlternateServiceAccountCredentialPassword]
+ [-IncludeAlternateServiceAccountCredentialStatus]
  [<CommonParameters>]
 ```
 
@@ -50,6 +51,30 @@ This example returns detailed information for the server mail.contoso.com.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the server with the Client Access server role installed that you want to view.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name (for example, Exchange01)
+- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
+- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
+- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+
+```yaml
+Type: ClientAccessServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -63,32 +88,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the server with the Client Access server role installed that you want to view.
-
-You can use any value that uniquely identifies the server. For example:
-
-- Name (for example, Exchange01)
-
-- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
-
-- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
-
-- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
-
-```yaml
-Type: ClientAccessServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

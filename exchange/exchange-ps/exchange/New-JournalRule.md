@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-JournalRule
@@ -22,10 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-JournalRule -Name <String> -JournalEmailAddress <RecipientIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <Boolean>]
+New-JournalRule -Name <String> -JournalEmailAddress <RecipientIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
  [-Recipient <SmtpAddress>]
- [-Scope <JournalRuleScope>] [-WhatIf] [<CommonParameters>]
+ [-Scope <JournalRuleScope>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,15 +69,10 @@ Accept wildcard characters: False
 The JournalEmailAddress parameter specifies a recipient object to which journal reports are sent. You ean use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -93,8 +91,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -164,9 +161,7 @@ Accept wildcard characters: False
 The Scope parameter specifies the scope of email messages to which the journal rule is applied. Valid values for this parameter are as follows:
 
 - Global: Global rules process all email messages that pass through a Transport service. This includes email messages that were already processed by the external and internal rules. The default value is Global.
-
 - Internal: Internal rules process email messages sent and received by recipients in your organization.
-
 - External: External rules process email messages sent to recipients or from senders outside your organization.
 
 ```yaml

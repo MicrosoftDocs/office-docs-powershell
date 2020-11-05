@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MxRecordReport
@@ -24,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MxRecordReport [-Domain <Fqdn>] [-Expression <Expression>] [-ProbeTag <String>] [<CommonParameters>]
+Get-MxRecordReport [-Domain <Fqdn>]
+ [-Expression <Expression>]
+ [-ProbeTag <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

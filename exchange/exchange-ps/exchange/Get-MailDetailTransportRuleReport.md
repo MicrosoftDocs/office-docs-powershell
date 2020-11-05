@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MailDetailTransportRuleReport
@@ -24,11 +23,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailDetailTransportRuleReport [-Action <MultiValuedProperty>] [-Direction <MultiValuedProperty>]
- [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-EventType <MultiValuedProperty>]
- [-Expression <Expression>] [-MessageId <MultiValuedProperty>] [-MessageTraceId <MultiValuedProperty>]
- [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>] [-RecipientAddress <MultiValuedProperty>]
- [-SenderAddress <MultiValuedProperty>] [-StartDate <DateTime>] [-TransportRule <MultiValuedProperty>]
+Get-MailDetailTransportRuleReport [-Action <MultiValuedProperty>]
+ [-Direction <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-MessageId <MultiValuedProperty>]
+ [-MessageTraceId <MultiValuedProperty>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-RecipientAddress <MultiValuedProperty>]
+ [-SenderAddress <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [-TransportRule <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 

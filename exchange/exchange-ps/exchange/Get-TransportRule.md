@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Get-TransportRule
@@ -22,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-TransportRule [[-Identity] <RuleIdParameter>] [-DomainController <Fqdn>]
- [-State <RuleState>] [-DlpPolicy <String>]
- [-Filter <String>] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-TransportRule [[-Identity] <RuleIdParameter>]
+ [-DomainController <Fqdn>]
+ [-State <RuleState>]
+ [-DlpPolicy <String>]
+ [-Filter <String>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,9 +93,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -112,7 +113,6 @@ Accept wildcard characters: False
 The State parameter specifies filters the results by enabled or disabled rules. Valid values are:
 
 - Enabled: Only enabled rules are returned in the results.
-
 - Disabled: Only disabled rules are returned in the results.
 
 If you don't use this parameter, the command returns all rules, both enabled and disabled.
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ### -Filter
 The Filter parameter filters the results by using an OPath. This parameter searches the Description property, which includes the conditions, exceptions, actions and the associated values of a transport rule.
 
-This parameter uses the syntax `"Description -like '*Text*'"`. For example, `"Description -like *192.168.1.1*'"`.
+This parameter uses the syntax `"Description -like 'Text*'"`. For example, `"Description -like '192.168.1.1*'"`.
 
 For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 

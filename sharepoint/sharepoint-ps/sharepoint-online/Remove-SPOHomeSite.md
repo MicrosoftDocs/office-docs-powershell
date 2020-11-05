@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Remove-SPOHomeSite
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 
@@ -34,7 +34,7 @@ Use this cmdlet to remove the current SharePoint Online Home Site setting.
 Remove-SPOHomeSite
 ```
 
-This example removes the current SharerPoint Online Home Site setting.
+This example removes the current SharePoint Online Home Site setting.
 
 ## PARAMETERS
 

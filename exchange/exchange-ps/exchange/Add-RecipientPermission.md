@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Add-RecipientPermission
@@ -24,8 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty>
- -Trustee <SecurityPrincipalIdParameter> [-SkipDomainValidationForMailContact] [-SkipDomainValidationForMailUser] [-SkipDomainValidationForSharedMailbox] [-Confirm] [-WhatIf] [<CommonParameters>]
+Add-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty> -Trustee <SecurityPrincipalIdParameter>
+ [-SkipDomainValidationForMailContact]
+ [-SkipDomainValidationForMailUser]
+ [-SkipDomainValidationForSharedMailbox]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +48,39 @@ This example gives the user Ayla Kol SendAs permission for the mailbox Help Desk
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the target recipient. The user or group specified by the Trustee parameter receives SendAs permission on this recipient.
+
+You can specify any type of recipient, for example:
+
+- Mailboxes
+- Mail users
+- External contacts
+- Distribution groups
+- Dynamic distribution groups
+
+You can use any value that uniquely identifies the recipient. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+```yaml
+Type: RecipientIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AccessRights
 The AccessRights parameter specifies the permission. The only value for this parameter is SendAs.
 
@@ -60,79 +97,26 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the target recipient. The user or group specified by the Trustee parameter receives SendAs permission on this recipient.
-
-You can specify any type of recipient, for example:
-
-- Mailboxes
-
-- Mail users
-
-- External contacts
-
-- Distribution groups
-
-- Dynamic distribution groups
-
-You can use any value that uniquely identifies the recipient. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- Email address
-
-- GUID
-
-```yaml
-Type: RecipientIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Trustee
 The Trustee parameter specifies the user or group that receives SendAs permission on the recipient specified by the Identity parameter.
 
 You can specify the following types of users or groups (security principals) for this parameter:
 
 - Mailbox users
-
 - Mail users with a Microsoft account (formerly known as a Windows Live ID)
-
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -199,8 +183,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

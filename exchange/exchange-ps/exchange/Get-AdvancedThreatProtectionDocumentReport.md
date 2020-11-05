@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-AdvancedThreatProtectionDocumentReport
@@ -67,7 +66,6 @@ This example returns the aggregated report of ATP detections for the specified o
 The Action parameter filters the results by the action taken on the attachment or link. Valid values are:
 
 - Allow
-
 - BlockAccess
 
 ```yaml

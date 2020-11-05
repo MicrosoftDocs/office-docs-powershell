@@ -8,7 +8,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer: navgupta
-monikerRange: "exchonline-ps"
 ---
 
 # Get-EXOMobileDeviceStatistics
@@ -38,8 +37,6 @@ Get-EXOMobileDeviceStatistics
 ## DESCRIPTION
 This cmdlet returns a list of statistics about each mobile device. Additionally, it allows you to retrieve logs and send those logs to a recipient for troubleshooting purposes.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. 
-
 ## EXAMPLES
 
 ### Example 1
@@ -60,7 +57,6 @@ Above example fetches the statstics for active sync devices linked to user with 
 This input parameter acts as Identity filter. The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
 
 - GUID
-
 - User ID or user principal name (UPN)
 
 ```yaml

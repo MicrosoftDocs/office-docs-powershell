@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-DkimSigningConfig
@@ -24,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DkimSigningConfig [[-Identity] <DkimSigningConfigIdParameter>] [<CommonParameters>]
+Get-DkimSigningConfig [[-Identity] <DkimSigningConfigIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,9 +54,7 @@ This example shows detailed information for the DKIM signing policy for contoso.
 The Identity parameter specifies the DKIM signing policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name: The domain name (for example, contoso.com).
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

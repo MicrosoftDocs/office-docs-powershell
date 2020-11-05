@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-AvailabilityReportOutage
@@ -22,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AvailabilityReportOutage [[-Identity] <AvailabilityReportOutageIdParameter>] [-ReportDate <ExDateTime>]
- [-ReportingDatabase <String>] [-ReportingServer <Fqdn>] [<CommonParameters>]
+Get-AvailabilityReportOutage [[-Identity] <AvailabilityReportOutageIdParameter>]
+ [-ReportDate <ExDateTime>]
+ [-ReportingDatabase <String>]
+ [-ReportingServer <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ClientAccessArray
@@ -22,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ClientAccessArray [[-Identity] <ClientAccessArrayIdParameter>] [-DomainController <Fqdn>]
- [-Site <AdSiteIdParameter>] [<CommonParameters>]
+Get-ClientAccessArray [[-Identity] <ClientAccessArrayIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Site <AdSiteIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +33,6 @@ Client Access arrays were introduced in Exchange Server 2010 so Outlook clients 
 Changes in the Exchange server architecture that were introduced in Exchange Server 2013 removed the need for RPC Client Access arrays:
 
 - Outlook clients can't use RPC over TCP to access mailboxes on Exchange Server 2013 or later versions and RPC Client Access arrays only work with RPC over TCP.
-
 - Because the Client Access server role is now a stateless proxy, you use different and less complex methods to configure load balancing and high availability for internal and external client connections. For more information, see [Load balancing in Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/load-balancing).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -55,6 +55,28 @@ This example returns detailed information for the Client Access array named CASA
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the Client Access array that you want to view. You can use these values:
+
+- Name (if the value doesn't contain spaces)
+- Distinguished name (DN)
+- ExchangeLegacyDN
+- Fully qualified domain name (FQDN)
+- GUID
+
+```yaml
+Type: ClientAccessArrayIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -71,41 +93,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the Client Access array that you want to view. You can use these values:
-
-- Name (if the value doesn't contain spaces)
-
-- Distinguished name (DN)
-
-- ExchangeLegacyDN
-
-- Fully qualified domain name (FQDN)
-
-- GUID
-
-```yaml
-Type: ClientAccessArrayIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Site
 The Site parameter filters the results by Active Directory site. You can use any value that uniquely identifies the site. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - To see a list of available sites, use the Get-ADSite cmdlet.
 
 ```yaml

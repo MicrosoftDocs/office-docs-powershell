@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MigrationEndpoint
@@ -23,41 +22,48 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ConnectionSettingsFilter
 ```
-Get-MigrationEndpoint -ConnectionSettings <ExchangeConnectionSettings> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-MigrationEndpoint -ConnectionSettings <ExchangeConnectionSettings>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### TypeFilter
 ```
-Get-MigrationEndpoint -Type <MigrationType> [-Diagnostic] [-DiagnosticArgument <String>]
- [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>] [-DiagnosticInfo <String>] [<CommonParameters>]
+Get-MigrationEndpoint -Type <MigrationType>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [-DiagnosticInfo <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MigrationEndpoint [[-Identity] <MigrationEndpointIdParameter>] [-Diagnostic] [-DiagnosticArgument <String>]
- [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>] [-DiagnosticInfo <String>] [<CommonParameters>]
+Get-MigrationEndpoint [[-Identity] <MigrationEndpointIdParameter>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [-DiagnosticInfo <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Get-MigrationEndpoint cmdlet retrieves settings for different types of migration:
 
 - Cross-forest move: Move mailboxes between two different on-premises Exchange forests. Cross-forest moves require the use of a RemoteMove endpoint.
-
 - Remote move: In a hybrid deployment, a remote move involves onboarding or offboarding migrations. Remote moves require the use of a RemoteMove endpoint. Onboarding moves mailboxes from an on-premises Exchange organization to Exchange Online, and uses a RemoteMove endpoint as the source endpoint of the migration batch. Offboarding moves mailboxes from Exchange Online to an on-premises Exchange organization and uses a RemoteMove endpoint as the target endpoint of the migration batch.
-
 - Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online. Cutover Exchange migration requires the use of an Exchange endpoint.
-
 - Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. Staged Exchange migration requires the use of an Exchange endpoint.
-
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
-
 - Local: Move mailboxes between different servers or databases within a single on-premises Exchange forest. Local moves don't require the use of an endpoint.
 
 For more information about the different move and migration scenarios, see:
 
 - [Mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/recipients/mailbox-moves)
-
 - [Manage on-premises mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/architecture/mailbox-servers/manage-mailbox-moves)
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -201,11 +207,8 @@ Accept wildcard characters: False
 The Type parameter filters the results by the type of migration. Valid values for this parameter are:
 
 - ExchangeOutlookAnywhere: Cutover or staged Exchange migrations
-
 - ExchangeRemoteMove: Remote moves and migrations
-
 - IMAP: IMAP migrations
-
 - PublicFolder: Public folder migrations
 
 ```yaml

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Search-AdminAuditLog
@@ -63,11 +62,8 @@ Search-AdminAuditLog -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults,P
 This example finds all the administrator audit log entries that match the following criteria:
 
 - Cmdlets: Set-Mailbox
-
 - Parameters: UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota
-
 - StartDate: 01/24/2018
-
 - EndDate: 02/12/2018
 
 The command completed successfully
@@ -134,7 +130,6 @@ Use the short date format that's defined in the Regional Options settings on the
 In the cloud-based service, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 In the results of this cmdlet, the date/time when the change was made (the cmdlet was run) is returned in the property named **RunDate**.
@@ -156,7 +151,6 @@ Accept wildcard characters: False
 The ExternalAccess parameter filters the results by changes that were made (cmdlets that were run) by users outside of your organization. Valid values are:
 
 - $true: Only return audit log entries where the change was made by an external user. In Exchange Online, use value to return audit log entries for changes that were made by Microsoft datacenter administrators.
-
 - $false: Only return audit log entries where the change was made by an internal user.
 
 ```yaml
@@ -176,7 +170,6 @@ Accept wildcard characters: False
 The IsSuccess parameter filters the results by whether the changes were successful. Valid values are:
 
 - $true: Only return audit log entries where the change was successful (in other words, the cmdlet ran successfully).
-
 - $false: Only return audit log entries where the change was not successful (in other words, the cmdlet did not run successfully and resulted in an error).
 
 In the results of this cmdlet, this property is named **Succeeded**.
@@ -198,9 +191,7 @@ Accept wildcard characters: False
 The ObjectIds parameter filters the results by the object that was modified (the mailbox, public folder, Send connector, transport rule, accepted domain, etc. that the cmdlet operated on). A valid value depends on how the object is represented in the audit log. For example:
 
 - Name
-
 - Canonical distinguished name (for example, contoso.com/Users/Akia Al-Zuhairi)
-
 - Public folder identity (for example, \\Engineering\\Customer Discussion)
 
 You'll likely need to use other filtering parameters on this cmdlet to narrow down the results and identify the types of objects that you're interested in. In the results of this cmdlet, this property is named **ObjectModified**.
@@ -264,7 +255,6 @@ Use the short date format that's defined in the Regional Options settings on the
 In the cloud-based service, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 In the results of this cmdlet, the date/time when the change was made (the cmdlet was run) is returned in the property named **RunDate**.
@@ -301,7 +291,7 @@ Accept wildcard characters: False
 ### -UserIds
 The UserIds parameter filters the results by the user who made the change (who ran the cmdlet).
 
-A typical value for this parameter is the user principal name (UPN; for example, helpdesk@contoso.com). But, updates that were made by system accounts without email addresses might use the Domain\Username syntax (for example, NT AUTHORITY\SYSTEM (MSExchangeHMHost)).
+A typical value for this parameter is the user principal name (UPN; for example, helpdesk@contoso.com). But, updates that were made by system accounts without email addresses might use the Domain\\Username syntax (for example, NT AUTHORITY\SYSTEM (MSExchangeHMHost)).
 
 To enter multiple values, use the following syntax: User1,User2,...UserN. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "User 1","User 2",..."User N".
 

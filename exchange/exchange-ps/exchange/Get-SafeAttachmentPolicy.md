@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-SafeAttachmentPolicy
@@ -24,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SafeAttachmentPolicy [[-Identity] <SafeAttachmentPolicyIdParameter>] [<CommonParameters>]
+Get-SafeAttachmentPolicy [[-Identity] <SafeAttachmentPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,9 +56,7 @@ The Identity parameter specifies the safe attachment policy that you want to vie
 You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

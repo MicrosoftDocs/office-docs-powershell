@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-CalendarDiagnosticObjects
@@ -49,17 +48,11 @@ Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
 Some of the more interesting properties that are returned in the results are:
 
 - AppointmentState: 1 = The appointment is a meeting, 2 = The appointment has been received, 4 = The appointment has been cancelled, and 8 = the appointment is a forwarded appointment.
-
 - CalendarLogTriggerAction: The action that's taken on the item (for example, Create or Update).
-
 - ClientInfoString: The entity that made the change (for example, Client=OWA;\<AdditionalDetails\>, Client=WebServices;\<AdditionalDetails\>;, or Client=TBA;Service=MSExchangeMailboxAssistants;Action=ELCAssistant;).
-
 - MeetingRequestType: 1 = The meeting message is a meeting request, 65536 = The meeting message is a full update to an existing meeting, 131072 = The meeting message is an informational update to an existing meeting, 262144 = The meeting message is a silent update, 524288 = The update is outdated, or 1048576 = The meeting message is forwarded to a delegate, and the copy is marked as informational.
-
 - OriginalLastModifiedTime: Used as the primary sort field to order the events.
-
 - ResponseType: 0 = The organizer hasn't received a response, 1 = The organizer's copy of the meeting, 2 = Tentative, 3 = Accept, 4 = Decline, or 5 = The attendee hasn't responded.
-
 - ResponsibleUserName: The LegacyExchangeDN value of the user who made the change (for example, /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=BN6PR11MB1587/cn=Microsoft System Attendant or /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=696eea97d3c449eab648920d03385efb-admin).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -100,23 +93,14 @@ This example returns diagnostic information for meetings with the subject Team L
 The Identity parameter specifies the mailbox or Microsoft 365 Group whose calendar you want to view. You can use any value that uniquely identifies the mailbox or Microsoft 365 Group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -218,7 +202,6 @@ Accept wildcard characters: False
 The ExactMatch parameter specifies whether to use an exact match or a partial match for text values that you specify for the Subject parameter. Valid values are:
 
 - $true: The subject search uses an exact match and searches all calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" anywhere in the subject, but not "budgeting".
-
 - $false: The subject search uses a partial match and searches a maximum of 1000 calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" and "budgeting" anywhere in the subject. This is the default value.
 
 A partial subject match search may not return all of the relevant calendar items. Try using an exact subject match search for more accurate results.
@@ -324,7 +307,6 @@ Accept wildcard characters: False
 The ShouldBindToItem parameter specifies whether to truncate large streamable property values (for example, AppointmentRecurrenceBlob). Valid values are:
 
 - $true: The values of large streamable properties aren't truncated, so the full value is returned.
-
 - $false: The values of large streamable properties are truncated. This is the default value.
 
 ```yaml
@@ -376,7 +358,6 @@ Accept wildcard characters: False
 The ShouldFetchRecurrenceExceptions parameter specifies whether to include exceptions to recurring meetings. Valid values are:
 
 - $true: Include exceptions to recurring meetings. When you use this value, you also need to use the ItemIds parameter.
-
 - $false: Don't Include exceptions to recurring meetings. This is the default value.
 
 ```yaml

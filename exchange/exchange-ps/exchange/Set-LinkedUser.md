@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-LinkedUser
@@ -24,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-LinkedUser [-Identity] <UserIdParameter> [-CertificateSubject <MultiValuedProperty>] [-Confirm] [-WhatIf]
+Set-LinkedUser [-Identity] <UserIdParameter>
+ [-CertificateSubject <MultiValuedProperty>]
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -48,7 +50,6 @@ This example modifies the certificate subject for the linked user "GALSync-Servi
 The Identity parameter specifies the linked user. You can use any value that uniquely identifies the linked user, for example:
 
 - Name
-
 - Distinguished name (DN)
 
 ```yaml
@@ -83,8 +84,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

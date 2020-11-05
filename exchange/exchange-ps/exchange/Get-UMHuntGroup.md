@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-UMHuntGroup
@@ -22,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMHuntGroup [[-Identity] <UMHuntGroupIdParameter>] [-DomainController <Fqdn>]
- [-UMDialPlan <UMDialPlanIdParameter>] [<CommonParameters>]
+Get-UMHuntGroup [[-Identity] <UMHuntGroupIdParameter>]
+ [-DomainController <Fqdn>]
+ [-UMDialPlan <UMDialPlanIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

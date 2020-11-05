@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Test-ActiveSyncConnectivity
@@ -25,10 +24,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Test-ActiveSyncConnectivity [[-ClientAccessServer] <ServerIdParameter>] [[-URL] <String>]
- [-AllowUnsecureAccess] [-Confirm] [-DomainController <Fqdn>] [-LightMode] [-MailboxCredential <PSCredential>]
- [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-MonitoringInstance <String>]
- [-ResetTestAccountCredentials] [-Timeout <UInt32>] [-TrustAnySSLCertificate]
- [-UseAutodiscoverForClientAccessServer] [-WhatIf] [<CommonParameters>]
+ [-AllowUnsecureAccess]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-MailboxCredential <PSCredential>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-MonitoringInstance <String>]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-UseAutodiscoverForClientAccessServer]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,15 +50,10 @@ The first time you use this cmdlet, you might be required to create a test user.
 The test results are displayed on-screen. The cmdlet returns the following information.
 
 - CasServer: The Exchange server that the client connected to.
-
 - LocalSite: The name of the local Active Directory site.
-
 - Scenario: The operations that are tested. Values are: Options, FolderSync, First Sync, GetItemEstimate, Sync Data, Ping, and Sync Test Item.
-
 - Result: The values returned are typically Success, Skipped, or Failure.
-
 - Latency(MS): The time required to complete the test in milliseconds.
-
 - Error: Any error messages that were encountered.
 
 You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding \> \<filename\> to the command. For example:
@@ -76,33 +80,14 @@ This example tests the Exchange ActiveSync connectivity for the mailbox PaulS us
 
 ## PARAMETERS
 
-### -AllowUnsecureAccess
-The AllowUnsecureAccess switch allows the test to continue over an unsecured channel that doesn't require Secure Sockets Layer (SSL). You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ClientAccessServer
 The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed and is responsible for accepting client connections.
 
 You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 You can't use this parameter with the Url parameter.
@@ -120,11 +105,44 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -URL
+The URL parameter specifies the URL that's used to connect to the Exchange ActiveSync virtual directory.
+
+You can't use this parameter with the ClientAccessServer parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUnsecureAccess
+The AllowUnsecureAccess switch allows the test to continue over an unsecured channel that doesn't require Secure Sockets Layer (SSL). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -200,11 +218,8 @@ The MailboxServer parameter specifies the Exchange 2016 or Exchange 2013 Mailbox
 You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 If you don't use this parameter, connections to all Mailbox servers in the local Active Directory site are tested.
@@ -299,24 +314,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -URL
-The URL parameter specifies the URL that's used to connect to the Exchange ActiveSync virtual directory.
-
-You can't use this parameter with the ClientAccessServer parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

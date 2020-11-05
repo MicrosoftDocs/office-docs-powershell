@@ -53,6 +53,12 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-TeamUser](Get-TeamUser.md)
 {{Manually Enter Get-TeamUser Description Here}}
 
+### [Get-TeamsShiftsPolicy](Get-TeamsShiftsPolicy.md)
+{{Manually Enter Get-TeamsShiftsPolicy Description Here}}
+
+### [Grant-TeamsShiftsPolicy](Grant-TeamsShiftsPolicy.md)
+{{Manually Enter Grant-TeamsShiftsPolicy Description Here}}
+
 ### [New-Team](New-Team.md)
 {{Manually Enter New-Team Description Here}}
 
@@ -61,6 +67,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [New-TeamsApp](New-TeamsApp.md)
 {{Manually Enter New-TeamsApp Description Here}}
+
+### [New-TeamsShiftsPolicy](New-TeamsShiftsPolicy.md)
+{{Manually Enter New-TeamsShiftsPolicy Description Here}}
 
 ### [Remove-Team](Remove-Team.md)
 {{Manually Enter Remove-Team Description Here}}
@@ -76,6 +85,9 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Remove-TeamUser](Remove-TeamUser.md)
 {{Manually Enter Remove-TeamUser Description Here}}
+
+### [Remove-TeamsShiftsPolicy](Remove-TeamsShiftsPolicy.md)
+{{Manually Enter Remove-TeamsShiftsPolicy Description Here}}
 
 ### [Set-Team](Set-Team.md)
 {{Manually Enter Set-Team Description Here}}
@@ -103,3 +115,6 @@ The following cmdlet references are for Microsoft Teams.
 
 ### [Set-TeamsApp](Set-TeamsApp.md)
 {{Manually Enter Set-TeamsApp Description Here}}
+
+### [Set-TeamsShiftsPolicy](Set-TeamsShiftsPolicy.md)
+{{Manually Enter Set-TeamsShiftsPolicy Description Here}}

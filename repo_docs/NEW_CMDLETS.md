@@ -14,18 +14,14 @@ Install-Module -Name platyPS -Scope CurrentUser
 
 **Notes**:
 
-- You need platyPS v0.11.1 or later, released on or about September 13, 2018. If you have an earlier version of platyPS installed, close all open Windows PowerShell windows where the platyPS module is currently loaded (or run the command `Remove-Module platyPS`) and then run `Update-Module platyPS` from an elevated Windows PowerShell window.
+- You need platyPS v0.14.0 or later, released on or about April 3 2019. If you have an earlier version of platyPS installed, close all open Windows PowerShell windows where the platyPS module is currently loaded (or run the command `Remove-Module platyPS`) and then run `Update-Module platyPS` from an elevated Windows PowerShell window.
 
 - Windows PowerShell 5.x is part of the Windows Management Framework (WMF) and can be [downloaded](https://aka.ms/wmf5download) and installed on these versions of Windows:
   
   - Windows Server 2012 R2
-
   - Windows Server 2012
-
   - Windows Server 2008 R2 SP1
-
   - Windows 8.1
-
   - Windows 7
 
   If you need to install platyPS on an older version of Windows (for example, a server running a product that lacks support for WMF 5.x or its requirements), see the [Install platyPS on older versions of Windows](#install-platyps-on-older-versions-of-windows) section at the end of this topic.
@@ -34,9 +30,9 @@ Install-Module -Name platyPS -Scope CurrentUser
 
 You probably know how to do this already, but the available workloads and connection methods are:
 
-- Skype for Business Online: [https://technet.microsoft.com/library/dn362795.aspx](https://technet.microsoft.com/library/dn362795.aspx)
+- Skype for Business Online: <https://docs.microsoft.com/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell>
 
-- Microsoft Teams: [https://blogs.technet.microsoft.com/skypehybridguy/2017/11/07/microsoft-teams-powershell-support/](https://blogs.technet.microsoft.com/skypehybridguy/2017/11/07/microsoft-teams-powershell-support/)
+- Microsoft Teams: [Install Microsoft Teams PowerShell](https://docs.microsoft.com/MicrosoftTeams/teams-powershell-install)
 
   **HINT:** Use `Upgrade-Module` and also `Uninstall-Module` depending on the module version you have installed.
 
@@ -85,7 +81,7 @@ Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Computer, Add-Con
 Manifest   3.0.0.0    Microsoft.PowerShell.Security       {ConvertFrom-SecureString, ConvertTo-SecureString, Get-Acl...
 Manifest   3.1.0.0    Microsoft.PowerShell.Utility        {Add-Member, Add-Type, Clear-Variable, Compare-Object...}
 Binary     1.0.0.1    PackageManagement                   {Find-Package, Find-PackageProvider, Get-Package, Get-Pack...
-Script     0.10.0     platyps                             {Get-HelpPreview, Get-MarkdownMetadata, Merge-MarkdownHelp...
+Script     0.14.0     platyps                             {Get-HelpPreview, Get-MarkdownMetadata, Merge-MarkdownHelp...
 Script     1.0.0.1    PowerShellGet                       {Find-Command, Find-DscResource, Find-Module, Find-RoleCap...
 Script     1.2        PSReadline                          {Get-PSReadlineKeyHandler, Get-PSReadlineOption, Remove-PS...
 Script     1.0        tmp_byivwzpq.e1k                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
@@ -119,25 +115,25 @@ Check the details of your connection instructions, but your session information 
 
 1. Run the following command to find your session:
 
-    ```powershell
-    Get-PSSession | Format-Table -Auto
-    ```
+   ```powershell
+   Get-PSSession | Format-Table -Auto
+   ```
 
-    The output will resemble this:
+   The output will resemble this:
 
-    ```powershell
-    Id Name   ComputerName          ComputerType  State  ConfigurationName  Availability
-    -- ----   ------------          ------------  -----  -----------------  ------------
-     1 WinRM1 outlook.office365.com RemoteMachine Opened Microsoft.Exchange    Available
-    ```
+   ```powershell
+   Id Name                           ComputerName          ComputerType  State  ConfigurationName  Availability
+   -- ----                           ------------          ------------  -----  -----------------  ------------
+   1 ExchangeOnlineInternalSession_1 outlook.office365.com RemoteMachine Opened Microsoft.Exchange    Available
+   ```
 
-    or this:
+   or this:
 
-    ```powershell
-    Id Name   ComputerName            ComputerType  State  ConfigurationName    Availability
-    -- ----   ------------            ------------  -----  -----------------    ------------
-     1 WinRM1 admin2a.online.lync.com RemoteMachine Opened Microsoft.PowerShell    Available
-    ```
+   ```powershell
+   Id Name   ComputerName            ComputerType  State  ConfigurationName    Availability
+   -- ----   ------------            ------------  -----  -----------------    ------------
+   1  WinRM1 admin2a.online.lync.com RemoteMachine Opened Microsoft.PowerShell Available
+   ```
 
     **Note**: If you see multiple sessions, either start over in a new PowerShell window or confirm the session you want to use. The first connection is 1, the second is 2, and so on.
 
@@ -184,7 +180,7 @@ You have two choices:
 
 - \<PSSessionVariableName\> is the remote PowerShell session variable from [Step 5](#step-5-verify-your-your-pssession-variable-name) (for example, `$Session`) _and is required only if the connection instructions used remote PowerShell (one or more **xxx-xxxSession** commands)_.
 
-   Failure to use the _Session_ parameter in remote PowerShell environments leads to weird results: multiple syntax blocks/parameter sets aren't recognized and are collapsed into one big block, the Type value is Object for all parameters, the Required value is False for all parameters, etc.
+  Failure to use the _Session_ parameter in remote PowerShell environments leads to weird results: multiple syntax blocks/parameter sets aren't recognized and are collapsed into one big block, the Type value is Object for all parameters, the Required value is False for all parameters, etc.
 
 - If the \<Path\> location doesn't exist, it's created for you.
 
@@ -192,19 +188,19 @@ You have two choices:
 
 This example creates topic files for all available cmdlets in the Skype for Business Online PowerShell session where the module is `tmp_byivwzpq.e1k` and the session variable is `$Session` in the folder C:\My Docs\SfBO.
 
-```
+```powershell
 New-MarkdownHelp -Module tmp_byivwzpq.e1k -OutputFolder "C:\My Docs\SfBO" -Session $Session
 ```
 
 #### Dump specific cmdlets to files
 
-This example creates a topic file for the cmdlet named Get-CoolFeature in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
+This example creates a topic file for the cmdlet named **Get-CoolFeature** in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
 
 ```powershell
 New-MarkdownHelp -Command "Get-CoolFeature" -OutputFolder "C:\My Docs\ExO" -Session $Session
 ```
 
-This example creates topic files for the Get-CoolFeature, New-CoolFeature, Remove-CoolFeature, and Set-CoolFeature cmdlets from the Exchange Online session where the session variable is `$Session` in the folder C:\My Docs\ExO. 
+This example creates topic files for the **Get-CoolFeature**, **New-CoolFeature**, **Remove-CoolFeature**, and **Set-CoolFeature** cmdlets from the Exchange Online session where the session variable is `$Session` in the folder C:\My Docs\ExO.
 
 The first command stores the cmdlet names in a variable. The second command uses that variable to identify the cmdlets and write the output files.
 
@@ -218,7 +214,7 @@ New-MarkdownHelp -Command $NewCmdlets -OutputFolder "C:\My Docs\ExO" -Session $S
 
 ### Step 7: Document the new cmdlet
 
-Now that you have topic files for the new cmdets, you can actually document them. The topics are plain text UTF-8 files that are formatted using [markdown](https://guides.github.com/features/mastering-markdown/). Office writers use [Visual Studio Code](https://code.visualstudio.com/) to edit topic files, but you can use Notepad or your favorite text editor.
+Now that you have topic files for the new cmdlets, you can actually document them. The topics are plain text UTF-8 files that are formatted using [markdown](https://guides.github.com/features/mastering-markdown/). Office writers use [Visual Studio Code](https://code.visualstudio.com/) to edit topic files, but you can use Notepad or your favorite text editor.
 
 These are the basic topic elements that require your attention, regardless of the product or service:
 
@@ -243,6 +239,7 @@ Every cmdlet reference topic needs at least the following in the metadata field 
 ```text
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+online version: https://docs.microsoft.com/powershell/module/skype/add-cssladelegates
 applicable: Skype for Business Server 2015
 title: Add-CsSlaDelegates
 author:
@@ -256,7 +253,7 @@ schema: 2.0.0
 
 - **Module Name**: Not used in Exchange topics (remove it). For other products, this is the module name of the product.
 
-- **online version**: Empty, but needs to be present.
+- **online version**: This is the URL of the topic. This URL value is what makes the `Get-Help <Cmdlet> -Online` command work, so it's very important.
 
 - **applicable**: You need to add this attribute and value yourself. Notice that it starts with a lowercase 'a'. See other topics for available values. Don't invent new values here. The value **must** come from the list of predefined values.
 
@@ -277,11 +274,11 @@ schema: 2.0.0
 Here's an example of the parameter metadata that's present in every parameter section:
 
 ```text
-```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft StaffHub
+
 Required: False
 Position: 1
 Default value: None
@@ -293,7 +290,7 @@ Most of the attributes and values are generated automatically by platyPS. The on
 
 - **Applicable**: You need to add this attribute and value yourself. Notice the capital 'A'. See other topics for available values (same available values as the **applicable** attribute at the top of the topic). Don't invent new values here. The value **must** come from the list of predefined values.
 
-- **Default value** and **Accept wildcard characters**: These attributes are present, but the values are never truthfully populated by platyPS (they're always None and False, respectively). You can correct the values if you think it's important. Otherwise, leave them as is.
+- **Default value** and **Accept wildcard characters**: These attributes are present, but the values are never truthfully populated by platyPS **or any other PowerShell utility** (they're always None and False, respectively). You can correct the values if you think it's important. Otherwise, leave them as is.
 
 ### Step 8: Add the new cmdlet topic files to the repository
 
@@ -301,61 +298,95 @@ When you're done editing the topics, upload them to GitHub. Note that you need t
 
 1. Go to the correct location in the appropriate GitHub repository:
 
-   - Exchange: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange)
+   - Exchange: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange>
 
-     For Exchange, you also need to go one level deeper into an appropriate subfolder. Choose wisely based on the surrounding cmdlet topics. Don't create new folders.
+   - Office Web Apps: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps>
 
-   - Office Web Apps: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps)
+   - SharePoint Online: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-online>
 
-   - SharePoint Online: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-online](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-online)
+   - SharePoint PNP: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-pnp>
 
-   - SharePoint PNP: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-pnp](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-pnp)
+   - SharePoint Server: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-server>
 
-   - SharePoint Server: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-server](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-server)
+   - Skype: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/skype/skype-ps/skype>
 
-   - Skype: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/skype/skype-ps/skype](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/skype/skype-ps/skype)
+   - StaffHub: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/staffhub/staffhub-ps/staffhub>
 
-   - StaffHub: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/staffhub/staffhub-ps/staffhub](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/staffhub/staffhub-ps/staffhub)
+   - Teams: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams>
 
-   - Teams: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams)
-
-   - Whiteboard: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard)
+   - Whiteboard: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard>
 
 2. Click **Upload files**
 
    ![Upload file](../images/upload_files.png)
 
-3. After you're done adding files, go to the **Propose file change** area at the bottom of the page. Enter a title and optional description information and then click **Propose file change**.
+3. After you're done adding files, go to the **Propose file change** section at the bottom of the page:
 
-4. On the next screen, click **Create pull request**.
+   - A brief title is required. By default, the title is the name of the file, but you can change it.
+   - Optionally, you can enter more details in the **Add an optional extended description** box.
+
+   When you're ready, click the green **Propose file change** button.
+
+   ![Propose file change section](../images/propose-file-change.png)
+
+4. On the **Comparing changes** page that appears, click the green **Create pull request** button.
+
+   ![Comparing changes page](../images/comparing-changes-page.png)
+
+5. On the **Open a pull request** page that appears, click the green **Create pull request** button.
+
+   ![Open a pull request page](../images/open-a-pull-request-page.png)
+
+> [!NOTE]
+> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.<br/><br/>The point is: click any green buttons that are presented to you until there are no more.
 
 ### Step 9: Add the new cmdlets to the TOC file
 
-**Note**: This step isn't required for Exchange or SharePoint PNP, because there is no TOC file.
-
 Add the cmdlet to Table of Contents (TOC) file in the GitHub repo. TOC file is the name of the module. For example:
 
-- Office Web Apps: [https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/officewebapps/officewebapps-ps/officewebapps/officewebapps.md](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/officewebapps/officewebapps-ps/officewebapps/officewebapps.md)
+- Exchange <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/exchange/exchange-ps/exchange/exchange.md>
 
-- SharePoint Online: [https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-online/sharepoint-online.md](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-online/sharepoint-online.md)
+  **Note**: Exchange also uses pseudo folders to organize cmdlets. You need to add any new cmdlets in the proper location in the file: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/exchange/mapping/serviceMapping.json>.
 
-- SharePoint Server: [https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-server/sharepoint-server.md](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-server/sharepoint-server.md)
+- Office Web Apps: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/officewebapps/officewebapps-ps/officewebapps/officewebapps.md>
 
-- Skype: [https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/skype.md](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/skype.md)
+- SharePoint Online: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-online/sharepoint-online.md>
 
-- StaffHub: [https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/staffhub/staffhub-ps/staffhub/staffhub.md](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/staffhub/staffhub-ps/staffhub/staffhub.md)
+- SharePoint PNP: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-pnp/sharepoint-pnp.md>
 
-- Teams: [https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/teams/teams-ps/teams/teams.md](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/teams/teams-ps/teams/teams.md)
+- SharePoint Server: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-server/sharepoint-server.md>
 
-- Whiteboard: [https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/whiteboard/whiteboard-ps/whiteboard/whiteboard.md](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/whiteboard/whiteboard-ps/whiteboard/whiteboard.md)
+- Skype: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/skype.md>
+
+- StaffHub: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/staffhub/staffhub-ps/staffhub/staffhub.md>
+
+- Teams: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/teams/teams-ps/teams/teams.md>
+
+- Whiteboard: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/whiteboard/whiteboard-ps/whiteboard/whiteboard.md>
 
 In the TOC file, you can fill in a description or remove the template text line. However, if you leave the template text line make sure it's in _exactly_ the right format so it won't render as a template text.
 
-After you're done editing the TOC file:
+After you're done editing the TOC files:
 
-1. Go to the **Propose file change** area at the bottom of the page. Enter a title and optional description information and then click **Propose file change**. 
+1. Go to the **Propose file change** section at the bottom of the page:
 
-2. On the next screen, click **Create pull request**.
+   - A brief title is required. By default, the title is the name of the file, but you can change it.
+   - Optionally, you can enter more details in the **Add an optional extended description** box.
+
+   When you're ready, click the green **Propose file change** button.
+
+   ![Propose file change section](../images/propose-file-change.png)
+
+2. On the **Comparing changes** page that appears, click the green **Create pull request** button.
+
+   ![Comparing changes page](../images/comparing-changes-page.png)
+
+3. On the **Open a pull request** page that appears, click the green **Create pull request** button.
+
+   ![Open a pull request page](../images/open-a-pull-request-page.png)
+
+> [!NOTE]
+> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.<br/><br/>The point is: click any green buttons that are presented to you until there are no more.
 
 ## Appendix
 
@@ -369,51 +400,61 @@ After you're done editing the TOC file:
 
 - <https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module>
 
-### Install platyPS on older versions of Windows
+### Install platyPS on older versions of Windows (WMF 3.0 or 4.0)
 
-**Note**: These procedures aren't required on Windows 10, Windows Server 2016, or other versions of Windows where the WMF 5.x is already installed.
+> [!NOTE]
+> These procedures aren't required on Windows 10, Windows Server 2016 or later, or other versions of Windows where the WMF 5.x is already installed.
 
-1. Download and install [PowerShellGet](https://www.microsoft.com/download/details.aspx?id=51451).
+To install platyPS on Windows clients or servers that are using PowerShell 3.0 or 4.0 and don't have access to the **Install-Module** cmdlet, do the steps in this section.
 
-2. From an elevated Windows PowerShell window, run the following command:
+1. Download and install PowerShellGet. The steps are described in [Installing PowerShellGet](https://docs.microsoft.com/powershell/scripting/gallery/installing-psget) and are summarized here as follows:
 
-   ```powershell
-   Save-Module PowerShellGet -Path "<TargetPath>"
-   ```
+   a. **PowerShell 3.0 only**: Run the following command in an elevated Windows PowerShell window:
 
-   Where \<TargetPath\> is a location that's easy to find (for example, C:\Temp\PSG).
+      ```powershell
+      [Environment]::SetEnvironmentVariable(
+        'PSModulePath',
+        ((([Environment]::GetEnvironmentVariable('PSModulePath', 'Machine') -split ';') + "$env:ProgramFiles\WindowsPowerShell\Modules") -join ';'), 'Machine'
+      )
+      ```
 
-   **Notes**:
+   b. On another computer running PowerShell 5.1 or later where PowerShellGet is installed and working, open an elevated Windows PowerShell window and run the following command:
 
-   - The target folder/path must already exist.
+      ```powershell
+      Save-Module PowerShellGet -Path "<ExistingPath>"
+      ```
 
-   - The command will create two new folders in the target path:
+      Where \<ExistingPath\> is **an existing** folder/path that's easy to find (for example, `C:\Temp\PSG`).
 
-     - PackageManagement
+   c. The command will create two new folders in the target path:
 
-     - PowerShellGet
+      - `PackageManagement\<VersionFolder>\<FilesAndFolders>`
+      - `PowerShellGet\<VersionFolder>\<FilesAndFolders>`
 
-3. Delete the following folders from your computer or move them to a remote location for safekeeping:
+      You need to move the \<FilesAndFolders\> out from under the \<VersionFolder\> and delete the now empty \<VersionFolder\> so the contents of the folders look like this:
 
-   - C:\Program Files\WindowsPowerShell\Modules\PackageManagement
+      - `PackageManagement\<FilesAndFolders>`
+      - `PowerShellGet\<FilesAndFolders>`
 
-   - C:\Program Files\WindowsPowerShell\Modules\PowerShellGet
+2. Delete the following folders from your computer or move them to a remote location for safekeeping:
 
-4. In Windows Explorer, copy the PackageManagement and PowerShellGet folders FROM \<TargetPath\> TO C:\Program Files\WindowsPowerShell\Modules\ (replacing the folders you deleted in Step 3 with the new ones you downloaded in Step 2).
+   - `C:\Program Files\WindowsPowerShell\Modules\PackageManagement`
+   - `C:\Program Files\WindowsPowerShell\Modules\PowerShellGet`
+
+3. Copy the `PackageManagement` and `PowerShellGet` folders that you downloaded and fixed in Step 1 to `C:\Program Files\WindowsPowerShell\Modules`.
 
    You should now have the following folders again:
 
-   - C:\Program Files\WindowsPowerShell\Modules\PackageManagement
+   - `C:\Program Files\WindowsPowerShell\Modules\PackageManagement`
+   - `C:\Program Files\WindowsPowerShell\Modules\PowerShellGet`
 
-   - C:\Program Files\WindowsPowerShell\Modules\PowerShellGet
-
-5. From an elevated Windows PowerShell window, run the following command:
+4. From an elevated Windows PowerShell window, run the following command:
 
    ```powershell
    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
    ```
 
-6. Now you can finally install platyPS by running the following command:
+5. Now you can finally install platyPS by running the usual command:
 
    ```powershell
    Install-Module -Name platyPS -Scope CurrentUser

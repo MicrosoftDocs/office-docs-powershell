@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Set-SafeLinksPolicy
@@ -65,9 +64,7 @@ The Identity parameter specifies the Safe Links policy that you want to modify.
 You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -100,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowClickThrough
-This parameter is reserved for internal Microsoft use.
+This parameter has been deprecated. Use the DoNotAllowClickThrough parameter instead.
 
 ```yaml
 Type: Boolean
@@ -118,8 +115,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -139,7 +135,6 @@ Accept wildcard characters: False
 The DeliverMessageAfterScan parameter specifies whether to deliver email messages only after Safe Links scanning is complete. Valid values are:
 
 - $true: Wait until Safe Links scanning is complete before delivering the message.
-
 - $false: If Safe Links scanning can't complete, deliver the message anyway. This is the default value.
 
 ```yaml
@@ -156,10 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotAllowClickThrough
-The DoNotAllowClickThrough parameter specifies whether to allow users to click through to the original URL. Valid values are:
+The DoNotAllowClickThrough parameter specifies whether to allow users to click through to the original URL on warning pages. Valid values are:
 
 - $true: The user isn't allowed to click through to the original URL.
-
 - $false: The user is allowed to click through to the original URL. This is the default value.
 
 ```yaml
@@ -176,7 +170,11 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotRewriteUrls
-The DoNotRewriteUrls parameter specifies a URL that's skipped by Safe Links scanning. You can specify multiple values separated by commas.
+The DoNotRewriteUrls parameter specifies the URLs that are not rewritten by Safe Links scanning. The list of entries allows users who are included in the policy to access the specified URLs that would otherwise be blocked by Safe Links.
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+
+For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -192,11 +190,10 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotTrackUserClicks
-The DoNotTrackUserClicks parameter specifies whether to track user clicks related to links in email messages. Valid values are:
+The DoNotTrackUserClicks parameter specifies whether to track user clicks related to Safe Links protection of links in email messages. Valid values are:
 
-- $true: User clicks aren't tracked.
-
-- $false: User clicks are tracked. This is the default value.
+- $true: User clicks in email messages aren't tracked.
+- $false: User clicks in email messages are tracked. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -212,10 +209,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableForInternalSenders
-The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to internal senders. Valid values are:
+The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to messages sent between internal senders and internal recipients within the same Exchange Online organization. Valid values are:
 
 - $true: The policy is applied to internal and external senders.
-
 - $false: The policy is applied only to external senders. This is the default value.
 
 ```yaml
@@ -232,11 +228,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeLinksForTeams
+**Note**: As of March 2020, this parameter is in Preview is available only for members of the Microsoft Teams Technology Adoption Program (TAP).
+
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
-- $true: Safe Links is enabled for Teams.
-
-- $false: Safe Links isn't enabled for Teams.
+- $true: Safe Links is enabled for Teams. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
+- $false: Safe Links isn't enabled for Teams. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -252,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedUrls
-The ExcludedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the ExcludedUrls parameter, update them to use the DoNotRewriteUrls parameter.
+This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
 
 ```yaml
 Type: String[]
@@ -268,11 +265,10 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-The IsEnabled parameter specifies whether to rewrite URLs and check against a list of known malicious links whenever a user clicks on a link in email messages. Valid values are:
+The IsEnabled parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
 
-- $true: Rewrite URLs and check against a list of known malicious links whenever a user clicks on a link.
-
-- $false: Don't rewrite URLs. This is the default value.
+- $true: Enable Safe Links protection for email messages. Rewrite URLs and check against a list of known malicious links whenever a user clicks a link in an email message.
+- $false: Disable Safe Links protection for email messages. Don't rewrite URLs and do not check clicked links in email messages. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -288,11 +284,10 @@ Accept wildcard characters: False
 ```
 
 ### -ScanUrls
-The ScanUrls parameter specifies whether to enable or disable real-time scanning of links in email messages. Valid values are:
+The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links in email messages. Valid values are:
 
-- $true: Real-time scanning links in email messages is enabled.
-
-- $false: Real-time scanning links in email messages is disabled. This is the default value.
+- $true: Real-time scanning of clicked links in email messages, including links that point to files, is enabled.
+- $false: Real-time scanning of clicked links in email messages, including links that point to files, is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -340,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhiteListedUrls
-The WhiteListedUrls parameter has been deprecated. Use the DoNotRewriteUrls parameter instead. If you have any scripts that use the WhiteListedUrls parameter, update them to use the DoNotRewriteUrls parameter.
+This parameter has been deprecated. Use the DoNotRewriteUrls parameter instead.
 
 ```yaml
 Type: String

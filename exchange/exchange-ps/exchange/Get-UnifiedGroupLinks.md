@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-UnifiedGroupLinks
@@ -49,15 +48,10 @@ This example show the members of the Microsoft 365 Group named Human Resources D
 The Identity parameter specifies the Microsoft 365 Group that you want to view. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -77,13 +71,9 @@ Accept wildcard characters: False
 The LinkType parameter specifies the Microsoft 365 Group property that you want to view. Valid values are:
 
 - Members
-
 - Owners
-
 - Subscribers
-
 - Aggregators
-
 - EventSubscribers
 
 ```yaml

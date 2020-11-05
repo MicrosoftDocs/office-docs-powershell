@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-UMCallSummaryReport
@@ -22,50 +21,34 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMCallSummaryReport -GroupBy <GroupBy> [-DomainController <Fqdn>]
+Get-UMCallSummaryReport -GroupBy <GroupBy>
+ [-DomainController <Fqdn>]
  [-UMDialPlan <UMDialPlanIdParameter>]
- [-UMIPGateway <UMIPGatewayIdParameter>] [<CommonParameters>]
+ [-UMIPGateway <UMIPGatewayIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Get-UMCallSummaryReport cmdlet displays the aggregated statistics about all calls received or placed by Mailbox servers running the Microsoft Exchange Unified Messaging service in an organization including voice messages, missed calls, subscriber access, auto attendant, or fax calls. The data returned by running this cmdlet includes audio quality metrics for the sample calls such as the following:
 
 - Date: Date in which all calls associated with the selected UM IP gateway and UM dial plan have been grouped based on the value of the GroupBy parameter: Total has the value ---, Month has the value MMM/YY and Day has the value MM/DD/YY, where MMM is the first three letters of the month and YY is the last two digits of the year.
-
 - Voice Message: Percentage of incoming calls answered by Unified Messaging on behalf of users in which callers left a voice message.
-
 - Missed Calls: Percentage of incoming calls answered by Unified Messaging on behalf of users in which the callers didn't leave a voice message resulting in a missed call notification.
-
 - Outlook Voice Access: Percentage of incoming calls in which users authenticate to Unified Messaging to access their email, calendars, and voice messages.
-
 - Outbound: Percentage of calls placed or transferred by Unified Messaging on behalf of authenticated or unauthenticated users. This property can have the value Find Me, Play On Phone, or Play On Phone Greetings.
-
 - Automated Attendant: Percentage of incoming calls that were answered by auto attendants.
-
 - Fax: Percentage of incoming calls that were redirected to a fax partner.
-
 - Other: Percentage of any other incoming or placed calls that don't fall in any of the previous categories. This is provided to allow different types of calls that might be provided in the future to be accounted for as well. This category includes unauthenticated calls made to pilot numbers.
-
 - Failed Or Rejected: Percentage of calls that either failed or were rejected by the Mailbox server for that organization.
-
 - Audio Quality: Overall audio quality for the selected period of time for the organization/user. 4.50 or higher = Excellent, 3.5 to 4.49 = Good, 2.5 to 3.49 = Average, 1.50 to 2.49 =Poor, and 1.49 or lower = Bad.
-
 - Total Calls: If the UM IP gateway is selected, this is the total number of calls grouped for the selected UM IP gateway for the corresponding date, If the UM dial plan control is selected, this is the total number of calls grouped for the selected UM dial plan for the corresponding date, and If the user is selected, this column has the total number of calls for the user.
-
 - Network MOS (NMOS): Average NMOS for the specific UM dial plan or UM IP gateway.
-
 - NMOS Degradation:
-
 - NMOS degradation for the specific UM dial plan or UM IP gateway.:
-
 - Jitter: Average jitter for the specific UM dial plan or UM IP gateway.
-
 - Packet loss: Average packet loss for the specific UM dial plan or UM IP gateway.
-
 - Round Trip: Round trip time (in milliseconds) for the selected UM dial plan or UM IP gateway.
-
 - Burst loss Duration: Average duration of packet loss during bursts of losses for the selected UM dial plan or UM IP gateway.
-
 - Number of samples: Number of calls sampled, when calculating the averages. A sample refers to any call data record that contains at least one of the audio quality metrics.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -106,9 +89,7 @@ This example displays the statistics for calls received or placed by Mailbox ser
 The GroupBy parameter specifies how to return the results. Valid values are:
 
 - Day: Daily statistics for the last 90 days.
-
 - Month: Monthly statistics for the last 12 months.
-
 - Total: A summary of all call statistics for your Mailbox servers running the Microsoft Exchange Unified Messaging service in your organization.
 
 ```yaml

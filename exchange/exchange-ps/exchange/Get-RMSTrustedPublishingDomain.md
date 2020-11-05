@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-RMSTrustedPublishingDomain
@@ -24,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RMSTrustedPublishingDomain [[-Identity] <RmsTrustedPublishingDomainIdParameter>] [-Default] [<CommonParameters>]
+Get-RMSTrustedPublishingDomain [[-Identity] <RmsTrustedPublishingDomainIdParameter>]
+ [-Default]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,9 +62,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the trusted publishing domain. You can use any value that uniquely identifies the trusted publishing domain, for example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

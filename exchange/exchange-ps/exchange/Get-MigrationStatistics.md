@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MigrationStatistics
@@ -22,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MigrationStatistics [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-DomainController <Fqdn>]
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Get-MigrationStatistics [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

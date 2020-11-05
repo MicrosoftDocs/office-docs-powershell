@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-OMEConfiguration
@@ -24,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OMEConfiguration [[-Identity] <OMEConfigurationIdParameter>] [<CommonParameters>]
+Get-OMEConfiguration [[-Identity] <OMEConfigurationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

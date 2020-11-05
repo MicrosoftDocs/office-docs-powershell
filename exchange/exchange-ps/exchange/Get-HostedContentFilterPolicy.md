@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-HostedContentFilterPolicy
@@ -24,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-HostedContentFilterPolicy [[-Identity] <HostedContentFilterPolicyIdParameter>] [<CommonParameters>]
+Get-HostedContentFilterPolicy [[-Identity] <HostedContentFilterPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,9 +52,7 @@ This example retrieves details about the spam filter policy named Default.
 The Identity parameter specifies the spam filter policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

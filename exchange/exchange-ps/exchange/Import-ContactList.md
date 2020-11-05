@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Import-ContactList
@@ -25,18 +24,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Data
 ```
-Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVData <Byte[]>
- [-DateCultureName] <String>
+Import-ContactList [-Identity] <MailboxIdParameter> -CSVData <Byte[]>
+ [-CSV]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-DateCultureName <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Stream
 ```
-Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVStream <Stream>
- [-DateCultureName] <String>
+Import-ContactList [-Identity] <MailboxIdParameter> -CSVStream <Stream>
+ [-CSV]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-DateCultureName <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,6 +57,33 @@ Import-ContactList -CSV -CSVData ([System.IO.File]::ReadAllBytes("D:\Users\Admin
 This example imports a list of contacts in a .csv file named TerryAdams.csv to a mailbox for a user whose email address is terrya@contoso.edu. The date fields are parsed using the date format of "en-GB" locale (dd/MM/YYYY).
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the target mailbox to which the contacts are imported. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -CSV
 The CSV parameter simply specifies that the contacts will be imported from a .csv file.
@@ -119,47 +149,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the target mailbox to which the contacts are imported. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-HostedOutboundSpamFilterRule
@@ -24,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-HostedOutboundSpamFilterRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
+Get-HostedOutboundSpamFilterRule [[-Identity] <RuleIdParameter>]
+ [-State <RuleState>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,9 +53,7 @@ This example returns detailed information for the outbound spam filter rule name
 The Identity parameter specifies the outbound spam filter rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -74,7 +73,6 @@ Accept wildcard characters: False
 The State parameter filters the results by enabled or disabled rules. Valid values are:
 
 - Enabled: Only enabled rules are returned.
-
 - Disabled: Only disabled rules are returned.
 
 ```yaml

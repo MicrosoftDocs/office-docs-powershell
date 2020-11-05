@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-RoutingGroupConnector
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RoutingGroupConnector [[-Identity] <RoutingGroupConnectorIdParameter>] [-DomainController <Fqdn>]
+Get-RoutingGroupConnector [[-Identity] <RoutingGroupConnectorIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

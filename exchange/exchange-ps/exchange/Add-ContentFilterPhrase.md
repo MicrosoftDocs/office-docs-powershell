@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Add-ContentFilterPhrase
@@ -22,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-ContentFilterPhrase [-Phrase] <String> -Influence <Influence> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Add-ContentFilterPhrase [-Phrase] <String> -Influence <Influence>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,6 +43,22 @@ Add-ContentFilterPhrase -Phrase "Free credit report" -Influence BadWord
 This example adds the phrase Free credit report to the Block phrase list. Any messages that contain this phrase will be marked as spam by the Content Filtering agent.
 
 ## PARAMETERS
+
+### -Phrase
+The Phrase parameter specifies a custom word or phrase for the Content Filter agent. When you pass an argument, you must enclose the Phrase parameter in quotation marks (") if the phrase contains spaces, for example: "This is a bad phrase". Custom phrases must be less than 257 characters in length.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Influence
 The Influence parameter specifies whether the phrase being added will cause the messages that contain the phrase to be allowed or blocked. Valid values are GoodWord and BadWord.
@@ -60,27 +78,10 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Phrase
-The Phrase parameter specifies a custom word or phrase for the Content Filter agent. When you pass an argument, you must enclose the Phrase parameter in quotation marks (") if the phrase contains spaces, for example: "This is a bad phrase". Custom phrases must be less than 257 characters in length.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

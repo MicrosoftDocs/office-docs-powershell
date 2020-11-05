@@ -8,7 +8,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer: navgupta
-monikerRange: "exchonline-ps"
 ---
 
 # Get-EXOMailboxStatistics
@@ -110,23 +109,16 @@ Accept wildcard characters: False
 The Identity parameter specifies the mailbox you want to return statistics for. For the best performance, we recommend using the following values to identify the mailbox:
 
 - User ID or user principal name (UPN)
-
 - GUID
 
 Otherwise, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - LegacyExchangeDN
-
 - SamAccountName
 
 ```yaml
@@ -182,7 +174,6 @@ Accept wildcard characters: False
 The PropertySets parameter specifies a logical grouping of properties that are returned in the output of this cmdlet. Valid values are:
 
 - Minimum (this is the default value)
-
 - All
 
 You can specify multiple values separated by commas.

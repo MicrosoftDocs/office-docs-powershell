@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # New-HostedContentFilterPolicy
@@ -94,7 +93,6 @@ New-HostedContentFilterPolicy -Name "Contoso Executives" -HighConfidenceSpamActi
 This example creates a spam filter policy named Contoso Executives with the following settings:
 
 - Quarantine messages when the spam filtering verdict is spam or high confidence spam.
-
 - BCL 6 triggers the action for a bulk email spam filtering verdict.
 
 ## PARAMETERS
@@ -121,11 +119,8 @@ Accept wildcard characters: False
 The AddXHeaderValue parameter specifies the X-header name (not value) to add to spam messages when a spam filtering verdict parameter is set to the value AddXHeader. The following spam filtering verdict parameters can use the AddXHeader action:
 
 - BulkSpamAction
-
 - HighConfidenceSpamAction
-
 - PhishSpamAction
-
 - SpamAction
 
 The maximum length is 255 characters, and the value can't contain spaces or colons (:).
@@ -257,17 +252,11 @@ Accept wildcard characters: False
 The BulkSpamAction parameter specifies the action to take on messages that are marked as bulk email (also known as gray mail) based on the bulk complaint level (BCL) of the message, and the BCL threshold you configure in the BulkThreshold parameter. Valid values are:
 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header and deliver the message.
-
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
-
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - NoAction
-
 - Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
-
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
@@ -302,8 +291,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -323,7 +311,6 @@ Accept wildcard characters: False
 The DownloadLink parameter shows or hides a link in end-user spam quarantine notifications to download the Junk Email Reporting Tool for Outlook. Valid values are:
 
 - $true: end-user spam quarantine notifications contain a link to download the Junk Email Reporting Tool for Outlook.
-
 - $false: end-user spam quarantine notifications don't contain the link. This is the default value.
 
 This parameter is only meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
@@ -345,7 +332,6 @@ Accept wildcard characters: False
 The EnableEndUserSpamNotification parameter enables for disables sending end-user spam quarantine notifications. Valid values are:
 
 - $true: End-users periodically receive notifications when a messages that was supposed to be delivered to them was quarantined as spam. When you use this value, you can also use the EndUserSpamNotificationCustomSubject, EndUserSpamNotificationFrequency, and EndUserSpamNotificationLanguage parameters.
-
 - $false: end-user spam quarantine notifications are disabled. This is the default value.
 
 ```yaml
@@ -365,7 +351,6 @@ Accept wildcard characters: False
 The EnableLanguageBlockList parameter enables or disables marking messages that were written in specific languages as spam. Valid values are:
 
 - $true: Mark messages hat were written in the languages specified by the LanguageBlockList parameter as spam.
-
 - $false: Don't mark messages as spam solely based on their languages. This is the default value.
 
 ```yaml
@@ -385,7 +370,6 @@ Accept wildcard characters: False
 The EnableRegionBlockList parameter enables or disables marking messages that are sent from specific countries or regions as spam. Valid values are:
 
 - $true: Mark messages from senders in the RegionBlockList parameter as spam.
-
 - $false: Don't mark messages as spam solely based on the source country or region. This is the default value.
 
 ```yaml
@@ -511,9 +495,7 @@ Accept wildcard characters: False
 The HighConfidencePhishAction parameter specifies the action to take on messages that are marked as high confidence phishing (not phishing). Phishing messages use fraudulent links or spoofed domains to get personal information. Valid values are:
 
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
-
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
-
 - Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is only available to admins.
 
 ```yaml
@@ -533,15 +515,10 @@ Accept wildcard characters: False
 The HighConfidenceSpamAction parameter specifies the action to take on messages that are marked as high confidence spam (not spam, bulk email, phishing, or high confidence phishing). Valid values are:
 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
-
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is available to the intended recipients and admins.
-
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
@@ -563,9 +540,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithBizOrInfoUrls parameter increases the spam score of messages that contain links to .biz or .info domains. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain links to .biz or .info domains are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: URL to .biz or .info websites` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -587,9 +562,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithImageLinks parameter increases the spam score of messages that contain image links to remote websites. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain image links to remote websites are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: Image links to remote sites` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -611,9 +584,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithNumericIps parameter increases the spam score of messages that contain links to IP addresses. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain links to IP addresses are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: Numeric IP in URL` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -635,9 +606,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithRedirectToOtherPort parameter increases the spam score of messages that contain links that redirect to TCP ports other than 80 (HTTP), 8080 (alternate HTTP), or 443 (HTTPS). Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain links that redirect to other TCP ports are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: URL redirect to other port` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -657,7 +626,6 @@ Accept wildcard characters: False
 The InlineSafetyTipsEnabled parameter specifies whether to enable or disable safety tips that are shown to recipients in messages. Valid values are:
 
 - $true: Safety tips are enabled. This is the default value.
-
 - $false: Safety tips are disabled.
 
 ```yaml
@@ -703,9 +671,7 @@ Accept wildcard characters: False
 The MarkAsSpamBulkMail parameter allows spam filtering to act on bulk email messages. Valid values are:
 
 - Off: The message is stamped with the BCL, but no action is taken for a bulk email filtering verdict. In effect, the values of the BulkThreshold and BulkSpamAction parameters are irrelevant.
-
 - On: This is the default value. A BCL that's greater than the BulkThreshold value is converted to an SCL 6 that corresponds to a filtering verdict of spam, and the BulkSpamAction value is taken on the message.
-
 - Test: This value is available, but isn't used for this parameter.
 
 ```yaml
@@ -727,9 +693,7 @@ Accept wildcard characters: False
 The MarkAsSpamEmbedTagsInHtml parameter marks a message as spam when the message contains HTML \<embed\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain HTML \<embed\> tags are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Embed tag in html` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -751,9 +715,7 @@ Accept wildcard characters: False
 The MarkAsSpamEmptyMessages parameter marks a message as spam when the message contains no subject, no content in the message body, and no attachments. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Empty messages are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Empty Message` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -775,9 +737,7 @@ Accept wildcard characters: False
 The MarkAsSpamFormTagsInHtml parameter marks a message as spam when the message contains HTML \<form\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain HTML \<form\> tags are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Form tag in html` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -799,9 +759,7 @@ Accept wildcard characters: False
 The MarkAsSpamFramesInHtml parameter marks a message as spam when the message contains HTML \<frame\> or \<iframe\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain HTML \<frame\> or \<iframe\> tags are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: IFRAME or FRAME in HTML` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -823,7 +781,6 @@ Accept wildcard characters: False
 The MarkAsSpamFromAddressAuthFail parameter marks a message as spam when Sender ID filtering encounters a hard fail. This setting combines an Sender Policy Framework (SPF) check with a Sender ID check to help protect against message headers that contain forged senders. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages where Sender ID filtering encounters a hard fail are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: SPF From Record Fail` is added to the message.
 
 ```yaml
@@ -845,9 +802,7 @@ Accept wildcard characters: False
 The MarkAsSpamJavaScriptInHtml parameter marks a message as spam when the message contains JavaScript or VBScript. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain JavaScript or VBScript are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Javascript or VBscript tags in HTML` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -869,7 +824,6 @@ Accept wildcard characters: False
 The MarkAsSpamNdrBackscatter parameter marks a message as spam when the message is a non-delivery report (also known as an NDR or bounce messages) sent to a forged sender (known as *backscatter*). Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Backscatter is given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Backscatter NDR` is added to the message.
 
 ```yaml
@@ -891,9 +845,7 @@ Accept wildcard characters: False
 The MarkAsSpamObjectTagsInHtml parameter marks a message as spam when the message contains HTML \<object\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain HTML \<object\> tags are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Object tag in html` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -915,9 +867,7 @@ Accept wildcard characters: False
 The MarkAsSpamSensitiveWordList parameter marks a message as spam when the message contains words from the sensitive words list. Microsoft maintains a dynamic but non-editable list of words that are associated with potentially offensive messages. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain words from the sensitive word list in the subject or message body are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Sensitive word in subject/body` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -939,7 +889,6 @@ Accept wildcard characters: False
 The MarkAsSpamSpfRecordHardFail parameter marks a message as spam when SPF record checking encounters a hard fail. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages sent from an IP address that isn't specified in the SPF Sender Policy Framework (SPF) record in DNS are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: SPF Record Fail` is added to the message.
 
 ```yaml
@@ -961,9 +910,7 @@ Accept wildcard characters: False
 The MarkAsSpamWebBugsInHtml parameter marks a message as spam when the message contains web bugs (also known as web beacons). Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-
 - On: The setting is enabled. Messages that contain web bugs are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Web bug` is added to the message.
-
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -983,11 +930,8 @@ Accept wildcard characters: False
 The ModifySubjectValue parameter specifies the text to prepend to the existing subject of messages when a spam filtering verdict parameter is set to the value ModifySubject. The following spam filtering verdict parameters can use the ModifySubject action:
 
 - BulkSpamAction
-
 - HighConfidenceSpamAction
-
 - PhishSpamAction
-
 - SpamAction
 
 If the value contains spaces, enclose the value in quotation marks (").
@@ -1009,15 +953,10 @@ Accept wildcard characters: False
 The PhishSpamAction parameter specifies the action to take on messages that are marked as phishing (not high confidence phishing). Phishing messages use fraudulent links or spoofed domains to get personal information. Valid values are:
 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header and deliver the message.
-
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
-
 - Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is available to the intended recipients (as of April, 2020) and admins.
-
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
@@ -1037,7 +976,6 @@ Accept wildcard characters: False
 The PhishZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect phishing messages in delivered messages in Exchange Online mailboxes. Valid values are:
 
 - $true: Phish ZAP is enabled. This is the default value. The result depends on the spam filtering verdict action: MoveToJmf = Read and unread phish messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine: Read and unread phish messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
-
 - $false: Phish ZAP is disabled.
 
 **Note**: Use this parameter instead of the ZapEnabled parameter. The ZapEnabled parameter will be deprecated in a future release. During the transition, the value of this parameter is inherited from the ZapEnabled parameter. After you use the PhishZapEnabled parameter or the corresponding phish ZAP setting in the admin center on an existing spam filter policy, the ZapEnabled parameter value is ignored for phish ZAP.
@@ -1059,13 +997,9 @@ Accept wildcard characters: False
 The QuarantineRetentionPeriod parameter specifies the number of days that spam messages remain in quarantine when a spam filtering verdict parameter is set to the value Quarantine. All spam filtering verdict parameters can use the Quarantine action:
 
 - BulkSpamAction
-
 - HighConfidencePhishAction
-
 - HighConfidenceSpamAction
-
 - PhishSpamAction
-
 - SpamAction
 
 A valid value is an integer between 1 and 30. The default value is 30.
@@ -1089,11 +1023,8 @@ Accept wildcard characters: False
 The RedirectToRecipients parameter specifies the email addresses of replacement recipients when a spam filtering verdict parameter is set to the value Redirect. The following spam filtering verdict parameters can use the Redirect action:
 
 - BulkSpamAction
-
 - HighConfidenceSpamAction
-
 - PhishSpamAction
-
 - SpamAction
 
 You can specify multiple email addresses separated by commas.
@@ -1141,15 +1072,10 @@ Accept wildcard characters: False
 The SpamAction parameter specifies the action to take on messages that are marked as spam (not high confidence spam, bulk email, phishing, or high confidence phishing). Valid values are:
 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-
 - Delete : Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/censure-that-spam-is-routed-to-each-user-s-junk-email-folder).
-
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
-
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
@@ -1169,7 +1095,6 @@ Accept wildcard characters: False
 The SpamZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect spam in delivered messages in Exchange Online mailboxes. Valid values are:
 
 - $true: Spam ZAP is enabled. This is the default value. The result depends on the spam filtering verdict action: MoveToJmf = Unread spam messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine: Unread spam messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
-
 - $false: Spam ZAP is disabled.
 
 **Note**: Use this parameter instead of the ZapEnabled parameter. The ZapEnabled parameter will be deprecated in a future release. During the transition, the value of this parameter is inherited from the ZapEnabled parameter. After you use the SpamZapEnabled parameter or the corresponding spam ZAP setting in the admin center on an existing spam filter policy, the ZapEnabled parameter value is ignored for spam ZAP.
@@ -1193,9 +1118,7 @@ Accept wildcard characters: False
 The TestModeAction parameter specifies the additional action to take on messages when one or more IncreaseScoreWith\* or MarkAsSpam\* ASF parameters are set to the value Test. Valid values are:
 
 - None: This is the default value, and we recommend that you don't change it.
-
 - AddXHeader: The X-header value `X-CustomSpam: This message was filtered by the custom spam filter option` is added to the message.
-
 - BccMessage: Redirect the message to the recipients specified by the TestModeBccToRecipients parameter.
 
 ```yaml
@@ -1255,7 +1178,6 @@ Accept wildcard characters: False
 The ZapEnabled parameter specifies whether to enable ZAP for phish and spam in Exchange Online mailboxes. Valid values are:
 
 - $true: ZAP for phish and spam is enabled. This is the default value.
-
 - $false: ZAP for phish and spam is disabled.
 
 ```yaml

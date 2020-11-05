@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-CsActiveUserReport
@@ -26,24 +25,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CsActiveUserReport [-EndDate <DateTime>] [-ReportType <ReportType>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-CsActiveUserReport [-EndDate <DateTime>]
+ [-ReportType <ReportType>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use the Get-CsActiveUserReport to query information about the activities of Skype for Business Online users in the last 3 months. For the reporting period you specify, the cmdlet returns the following information:
 
 - ActiveUsers
-
 - ActiveIMUsers
-
 - ActiveAudioUsers
-
 - ActiveVideoUsers
-
 - ActiveApplicationSharingUsers
-
 - ActiveFileTransferUsers
-
 - ActivePSTNConferencingUsers
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).

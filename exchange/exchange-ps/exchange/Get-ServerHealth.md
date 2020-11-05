@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ServerHealth
@@ -36,15 +35,10 @@ The cmdlet returns health values that you can use to determine the state of the 
 The cmdlet also returns an alert value that provides the specific state of your server. The following values may be returned:
 
 - Degraded
-
 - Unhealthy
-
 - Repairing
-
 - Disabled
-
 - Unavailable
-
 - UnInitialized
 
 ## EXAMPLES
@@ -62,11 +56,8 @@ This example returns the server health for server Server01.
 The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 ```yaml

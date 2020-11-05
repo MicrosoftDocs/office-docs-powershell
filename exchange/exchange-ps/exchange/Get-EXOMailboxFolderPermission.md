@@ -8,7 +8,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer: navgupta
-monikerRange: "exchonline-ps"
 ---
 
 # Get-EXOMailboxFolderPermission
@@ -32,8 +31,7 @@ Get-EXOMailboxFolderPermission [[-Identity] <String>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to retrieve folder level permission in the mailbox. 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you.
+Use this cmdlet to retrieve folder level permission in the mailbox.
 
 ## EXAMPLES
 
@@ -59,15 +57,10 @@ The Identity parameter specifies the mailbox folder that you want to view. This 
 Otherwise, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Email address
-
 - LegacyExchangeDN
-
 - SamAccountName
 
 ```yaml
@@ -119,15 +112,10 @@ Accept wildcard characters: False
 The User parameter filters the results by the specified mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 **Note**: If you specify a user that doesn't have permission to access the mailbox folder, the command will throw an exception.
@@ -175,3 +163,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
+
+[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+
+[Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+
+[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
