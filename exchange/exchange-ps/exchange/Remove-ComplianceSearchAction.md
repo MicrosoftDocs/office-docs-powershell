@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ComplianceSearchAction [-Identity] <ComplianceSearchActionIdParameter> [-Confirm] [-WhatIf]
+Remove-ComplianceSearchAction [-Identity] <ComplianceSearchActionIdParameter>
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

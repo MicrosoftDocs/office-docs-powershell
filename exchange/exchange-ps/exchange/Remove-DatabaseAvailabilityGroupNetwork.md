@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-DatabaseAvailabilityGroupNetwork [-Identity] <DatabaseAvailabilityGroupNetworkIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-DatabaseAvailabilityGroupNetwork [-Identity] <DatabaseAvailabilityGroupNetworkIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

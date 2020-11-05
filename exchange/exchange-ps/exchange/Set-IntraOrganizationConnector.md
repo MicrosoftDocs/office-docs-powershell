@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-IntraOrganizationConnector [-Identity] <IntraOrganizationConnectorIdParameter> [-Confirm]
- [-DiscoveryEndpoint <Uri>] [-DomainController <Fqdn>] [-Enabled <Boolean>]
- [-TargetAddressDomains <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-IntraOrganizationConnector [-Identity] <IntraOrganizationConnectorIdParameter>
+ [-Confirm]
+ [-DiscoveryEndpoint <Uri>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-TargetAddressDomains <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

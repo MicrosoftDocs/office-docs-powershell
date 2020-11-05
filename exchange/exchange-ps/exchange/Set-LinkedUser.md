@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-LinkedUser [-Identity] <UserIdParameter> [-CertificateSubject <MultiValuedProperty>] [-Confirm] [-WhatIf]
+Set-LinkedUser [-Identity] <UserIdParameter>
+ [-CertificateSubject <MultiValuedProperty>]
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

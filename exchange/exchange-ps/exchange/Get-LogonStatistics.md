@@ -23,19 +23,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Database
 ```
 Get-LogonStatistics -Database <DatabaseIdParameter>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-LogonStatistics [-Identity] <LogonableObjectIdParameter>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
 Get-LogonStatistics -Server <ServerIdParameter>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

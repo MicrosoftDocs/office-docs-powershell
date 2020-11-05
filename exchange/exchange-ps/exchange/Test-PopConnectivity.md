@@ -23,11 +23,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-PopConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-Confirm]
- [-ConnectionType <ProtocolConnectionType>] [-DomainController <Fqdn>] [-LightMode]
- [-MailboxCredential <PSCredential>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
- [-PerConnectionTimeout <Int32>] [-PortClientAccessServer <Int32>] [-ResetTestAccountCredentials]
- [-Timeout <UInt32>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+Test-PopConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+ [-Confirm]
+ [-ConnectionType <ProtocolConnectionType>]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-MailboxCredential <PSCredential>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-PerConnectionTimeout <Int32>]
+ [-PortClientAccessServer <Int32>]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

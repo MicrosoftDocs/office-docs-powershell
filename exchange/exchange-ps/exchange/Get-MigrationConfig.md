@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MigrationConfig [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Get-MigrationConfig [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

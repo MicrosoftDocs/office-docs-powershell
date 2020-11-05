@@ -34,7 +34,8 @@ New-HostedOutboundSpamFilterRule [-Name] <String> -HostedOutboundSpamFilterPolic
  [-FromMemberOf <RecipientIdParameter[]>]
  [-Priority <Int32>]
  [-SenderDomainIs <Word[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,16 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### RetryDistribution
 ```
-Set-DeviceConditionalAccessPolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+Set-DeviceConditionalAccessPolicy [-Identity] <PolicyIdParameter>
+ [-RetryDistribution]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Set-DeviceConditionalAccessPolicy [-Identity] <PolicyIdParameter> [-Comment <String>] [-Enabled <Boolean>] [-Force]
+Set-DeviceConditionalAccessPolicy [-Identity] <PolicyIdParameter>
+ [-Comment <String>]
+ [-Enabled <Boolean>]
+ [-Force]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

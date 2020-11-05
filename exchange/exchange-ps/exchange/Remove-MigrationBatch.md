@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-Force] [-Partition <MailboxIdParameter>
- [-WhatIf]] [<CommonParameters>]
+Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Partition <MailboxIdParameter>
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

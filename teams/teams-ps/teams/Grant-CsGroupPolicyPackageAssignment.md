@@ -32,7 +32,7 @@ Policy rankings can be optionally specified for each policy type in the package 
 - If the policy type was previously assigned to the group, the ranking for the policy type will not change.
 - If the policy type was not previously assigned to the group, the ranking for the policy type will be ranked last.
 
-Finally, if a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on policy rankings and group policy assignments, please review [the description section under New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md#description).
+Finally, if a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on policy rankings and group policy assignments, please review [the description section under New-CsGroupPolicyAssignment](https://docs.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment#description).
 
 ## EXAMPLES
 
@@ -111,6 +111,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](Get-CsPolicyPackage.md)
+[Get-CsPolicyPackage](https://docs.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md)
+[New-CsGroupPolicyAssignment](https://docs.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)

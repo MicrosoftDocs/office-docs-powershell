@@ -23,8 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType>
- -StartDate <DateTime> [-DeliveryStatus <String>]
+Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType> -StartDate <DateTime>
+ [-DeliveryStatus <String>]
  [-Direction <MessageDirection>]
  [-DLPPolicy <MultiValuedProperty>]
  [-Locale <CultureInfo>]

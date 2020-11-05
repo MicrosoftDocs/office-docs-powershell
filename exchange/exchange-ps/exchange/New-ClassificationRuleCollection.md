@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ClassificationRuleCollection [-FileData] <Byte[]> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+New-ClassificationRuleCollection [-FileData] <Byte[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

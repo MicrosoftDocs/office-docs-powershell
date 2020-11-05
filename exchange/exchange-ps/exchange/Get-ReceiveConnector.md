@@ -23,13 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Get-ReceiveConnector [[-Identity] <ReceiveConnectorIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
 Get-ReceiveConnector [-Server <ServerIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

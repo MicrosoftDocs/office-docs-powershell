@@ -21,11 +21,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ForeignConnector [-Identity] <ForeignConnectorIdParameter> [-AddressSpaces <MultiValuedProperty>]
- [-Comment <String>] [-Confirm] [-DomainController <Fqdn>] [-DropDirectory <String>]
- [-DropDirectoryQuota <Unlimited>] [-Enabled <Boolean>] [-Force] [-IsScopedConnector <Boolean>]
- [-MaxMessageSize <Unlimited>] [-Name <String>] [-RelayDsnRequired <Boolean>]
- [-SourceTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-ForeignConnector [-Identity] <ForeignConnectorIdParameter>
+ [-AddressSpaces <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DropDirectory <String>]
+ [-DropDirectoryQuota <Unlimited>]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-IsScopedConnector <Boolean>]
+ [-MaxMessageSize <Unlimited>]
+ [-Name <String>]
+ [-RelayDsnRequired <Boolean>]
+ [-SourceTransportServers <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

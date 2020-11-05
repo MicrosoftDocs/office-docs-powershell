@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-WhatIf] [<CommonParameters>]
+Remove-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

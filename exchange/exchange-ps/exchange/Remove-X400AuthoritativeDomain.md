@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-X400AuthoritativeDomain [-Identity] <X400AuthoritativeDomainIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-X400AuthoritativeDomain [-Identity] <X400AuthoritativeDomainIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

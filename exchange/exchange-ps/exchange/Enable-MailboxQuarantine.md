@@ -26,25 +26,30 @@ Enable-MailboxQuarantine [-Identity] <GeneralMailboxIdParameter>
  [-AllowMigration]
  [-Confirm]
  [-Duration <EnhancedTimeSpan>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MailboxOrMailUserIdentity
 ```
-Enable-MailboxQuarantine [-Identity] <GeneralMailboxOrMailUserIdParameter> [-QuarantineReason <String>]
+Enable-MailboxQuarantine [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-QuarantineReason <String>]
  [-AllowMigration]
  [-Confirm]
  [-Duration <EnhancedTimeSpan>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### StoreMailboxIdentity
 ```
-Enable-MailboxQuarantine -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter> [-QuarantineReason <String>]
+Enable-MailboxQuarantine -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter>
+ [-QuarantineReason <String>]
  [-AllowMigration]
  [-Confirm]
  [-Duration <EnhancedTimeSpan>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

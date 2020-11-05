@@ -36,7 +36,8 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-EnableSafeDocs <Boolean>]
  [-EnableSafeLinksForO365Clients <Boolean>]
  [-TrackClicks <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

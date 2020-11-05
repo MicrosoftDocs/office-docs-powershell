@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-TransportServer [[-Identity] <TransportServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-TransportServer [[-Identity] <TransportServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

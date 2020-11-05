@@ -22,18 +22,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GlobalCache
 ```
-Reset-ProvisioningCache [-Server] <Fqdn> -Application <String> [-GlobalCache]
+Reset-ProvisioningCache [-Server] <Fqdn> -Application <String>
+ [-GlobalCache]
  [-CacheKeys <MultiValuedProperty>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### OrganizationCache
 ```
-Reset-ProvisioningCache [-Server] <Fqdn> -Application <String>] [-CurrentOrganization] [-Organizations <MultiValuedProperty>]
+Reset-ProvisioningCache [-Server] <Fqdn> -Application <String>]
+ [-CurrentOrganization]
+ [-Organizations <MultiValuedProperty>]
  [-CacheKeys <MultiValuedProperty>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

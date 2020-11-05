@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-IPBlockListProvidersConfig [-BypassedRecipients <MultiValuedProperty>] [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExternalMailEnabled <Boolean>]
- [-InternalMailEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
+Set-IPBlockListProvidersConfig [-BypassedRecipients <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExternalMailEnabled <Boolean>]
+ [-InternalMailEnabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

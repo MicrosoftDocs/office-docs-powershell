@@ -724,7 +724,8 @@ The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Ex
 
 Clearing these attributes might be required in mailbox move and re-licensing scenarios between on-premises Exchange and Microsoft 365. For more information, see [Permanently Clear Previous Mailbox Info](https://techcommunity.microsoft.com/t5/exchange-team-blog/permanently-clear-previous-mailbox-info/ba-p/607619).
 
-> [!CAUTION]
+>
+ [!CAUTION]
 > This switch permanently deletes the existing cloud mailbox and its associated archive, prevents you from reconnecting to the mailbox, and prevents you from recovering content from the mailbox.
 
 ```yaml
@@ -1102,7 +1103,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn’t work on this cmdlet.
+The WhatIf switch doesn't work on this cmdlet.
 
 ```yaml
 Type: SwitchParameter

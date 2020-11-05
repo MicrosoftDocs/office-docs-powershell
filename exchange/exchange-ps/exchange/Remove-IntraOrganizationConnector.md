@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-IntraOrganizationConnector [-Identity] <IntraOrganizationConnectorIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Remove-IntraOrganizationConnector [-Identity] <IntraOrganizationConnectorIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

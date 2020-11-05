@@ -27,7 +27,8 @@ New-UnifiedAuditLogRetentionPolicy [-Name] <String> -Priority <Int32> -Retention
  [-Operations <MultiValuedProperty>]
  [-RecordTypes <MultiValuedProperty>]
  [-UserIds <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -24,10 +24,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-MailDetailATPReport [-Direction <MultiValuedProperty>]
- [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-EventType <MultiValuedProperty>]
- [-Expression <Expression>] [-MalwareName <MultiValuedProperty>] [-MessageId <MultiValuedProperty>]
- [-MessageTraceId <MultiValuedProperty>] [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>]
- [-RecipientAddress <MultiValuedProperty>] [-SenderAddress <MultiValuedProperty>] [-StartDate <DateTime>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-MalwareName <MultiValuedProperty>]
+ [-MessageId <MultiValuedProperty>]
+ [-MessageTraceId <MultiValuedProperty>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-RecipientAddress <MultiValuedProperty>]
+ [-SenderAddress <MultiValuedProperty>]
+ [-StartDate <DateTime>]
  [<CommonParameters>]
 ```
 

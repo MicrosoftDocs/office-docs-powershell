@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-RoleGroup [-Identity] <RoleGroupIdParameter> [-BypassSecurityGroupManagerCheck] [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
+Remove-RoleGroup [-Identity] <RoleGroupIdParameter>
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

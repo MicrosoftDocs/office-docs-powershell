@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ManagedFolderMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-ManagedFolderLinks <ELCFolderIdParameter[]>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-ManagedFolderMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ManagedFolderLinks <ELCFolderIdParameter[]>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

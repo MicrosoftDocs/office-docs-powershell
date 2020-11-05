@@ -32,12 +32,15 @@ Test-PowerShellConnectivity -ConnectionUri <Uri> -TestCredential <PSCredential>
  [-MonitoringContext]
  [-ResetTestAccountCredentials]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-TestType <OwaConnectivityTestType>] [-VirtualDirectoryName <String>]
+Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+ [-TestType <OwaConnectivityTestType>]
+ [-VirtualDirectoryName <String>]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -45,7 +48,8 @@ Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-TestTy
  [-MonitoringContext]
  [-ResetTestAccountCredentials]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

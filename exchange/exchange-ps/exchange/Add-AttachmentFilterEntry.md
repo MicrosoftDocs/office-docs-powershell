@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Add-AttachmentFilterEntry -Name <String> -Type <AttachmentType>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

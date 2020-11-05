@@ -23,10 +23,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpDetectionsReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-DlpCompliancePolicy <MultiValuedProperty>] [-DlpComplianceRule <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-Page <Int32>] [-PageSize <Int32>]
- [-Source <MultiValuedProperty>] [-StartDate <DateTime>] [-SummarizeBy <MultiValuedProperty>]
+Get-DlpDetectionsReport [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-DlpCompliancePolicy <MultiValuedProperty>]
+ [-DlpComplianceRule <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-Source <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [-SummarizeBy <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 

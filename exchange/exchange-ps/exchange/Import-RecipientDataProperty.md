@@ -22,18 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ImportPicture
 ```
-Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-Picture]
+Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]>
+ [-Picture]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ImportSpokenName
 ```
-Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-SpokenName]
+Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]>
+ [-SpokenName]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,24 +63,6 @@ This example imports the picture file for Ayla Kol.
 
 ## PARAMETERS
 
-### -FileData
-The FileData parameter specifies the location and file name of the picture or audio file.
-
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
-
-```yaml
-Type: Byte[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the mailbox or contact that you're adding the picture or spoken name file to. You can use any value that uniquely identifies the user. For example:
 
@@ -95,6 +81,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -FileData
+The FileData parameter specifies the location and file name of the picture or audio file.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

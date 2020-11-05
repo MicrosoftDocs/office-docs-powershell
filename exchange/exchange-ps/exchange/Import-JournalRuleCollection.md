@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Import-JournalRuleCollection [-FileData] <Byte[]> [[-Identity] <RuleIdParameter>] [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Import-JournalRuleCollection [[-Identity] <RuleIdParameter>] [-FileData] <Byte[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,6 +51,22 @@ This example imports journal rules from the XML file ExportedJournalRules.xml in
 The first step retrieves journal rules from the previously exported XML file ExportedJournalRules.xml using the Get-Content cmdlet, and then stores the results in the variable $Data. The second step retrieves data from the variable $Data and imports journal rules to your organization, overwriting existing journal rules.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the name of a journal rule to be imported.
+
+```yaml
+Type: RuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -FileData
 The FileData parameter specifies the variable name that contains the content of the XML file.
@@ -99,22 +118,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of a journal rule to be imported.
-
-```yaml
-Type: RuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ActiveSyncDeviceClass [[-Identity] <ActiveSyncDeviceClassIdParameter>] [-DomainController <Fqdn>]
- [-Filter <String>] [-SortBy <String>] [<CommonParameters>]
+Get-ActiveSyncDeviceClass [[-Identity] <ActiveSyncDeviceClassIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,6 +50,26 @@ Get-ActiveSyncDeviceClass | group-object -Property DeviceType
 This example lists all device types within the organization along with a count of the number of devices of each type present.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the ActiveSync device class that you want to view. You can use any value that uniquely identifies the ActiveSync device class. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: ActiveSyncDeviceClassIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -DomainController
 This parameter is available only in on-premises Exchange.
@@ -94,26 +117,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the ActiveSync device class that you want to view. You can use any value that uniquely identifies the ActiveSync device class. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-```yaml
-Type: ActiveSyncDeviceClassIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

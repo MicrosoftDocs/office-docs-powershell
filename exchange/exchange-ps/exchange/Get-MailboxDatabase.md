@@ -28,7 +28,8 @@ Get-MailboxDatabase -Server <ServerIdParameter>
  [-IncludeCorrupted]
  [-IncludePreExchange2010]
  [-IncludePreExchange2013]
- [-Status] [<CommonParameters>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -39,7 +40,8 @@ Get-MailboxDatabase [[-Identity] <DatabaseIdParameter>]
  [-IncludeCorrupted]
  [-IncludePreExchange2010]
  [-IncludePreExchange2013]
- [-Status] [<CommonParameters>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

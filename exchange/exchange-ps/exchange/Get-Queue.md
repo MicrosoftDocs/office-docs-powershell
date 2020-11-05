@@ -31,12 +31,14 @@ Get-Queue [[-Identity] <QueueIdentity>]
  [-ResultSize <Unlimited>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
-Get-Queue [-Server <ServerIdParameter>] [-Filter <String>]
+Get-Queue [-Server <ServerIdParameter>]
+ [-Filter <String>]
  [-BookmarkIndex <Int32>]
  [-BookmarkObject <ExtensibleQueueInfo>]
  [-Exclude <QueueViewerIncludesAndExcludes>]
@@ -45,7 +47,8 @@ Get-Queue [-Server <ServerIdParameter>] [-Filter <String>]
  [-ResultSize <Unlimited>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

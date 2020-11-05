@@ -23,9 +23,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-CaseHoldPolicy [-Name] <String> -Case <String> [-Comment <String>] [-Confirm] [-Enabled <Boolean>]
- [-ExchangeLocation <MultiValuedProperty>] [-Force] [-PublicFolderLocation <MultiValuedProperty>]
- [-SharePointLocation <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+New-CaseHoldPolicy [-Name] <String> -Case <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-ExchangeLocation <MultiValuedProperty>]
+ [-Force]
+ [-PublicFolderLocation <MultiValuedProperty>]
+ [-SharePointLocation <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

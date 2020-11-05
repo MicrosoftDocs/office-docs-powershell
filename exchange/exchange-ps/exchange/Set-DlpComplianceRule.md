@@ -99,7 +99,8 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ProcessingLimitExceeded <Boolean>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

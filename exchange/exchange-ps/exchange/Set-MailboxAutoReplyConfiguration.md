@@ -39,7 +39,8 @@ Set-MailboxAutoReplyConfiguration [-Identity] <MailboxIdParameter>
  [-InternalMessage <String>]
  [-OOFEventSubject <String>]
  [-StartTime <DateTime>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

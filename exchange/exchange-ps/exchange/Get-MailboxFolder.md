@@ -22,18 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GetChildren
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-GetChildren]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>]
+ [-GetChildren]
  [-DomainController <Fqdn>]
  [-MailFolderOnly]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Recurse
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-Recurse]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>]
+ [-Recurse]
  [-DomainController <Fqdn>]
  [-MailFolderOnly]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

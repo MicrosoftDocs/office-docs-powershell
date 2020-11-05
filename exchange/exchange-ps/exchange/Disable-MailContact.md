@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-MailContact [-Identity] <MailContactIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Disable-MailContact [-Identity] <MailContactIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

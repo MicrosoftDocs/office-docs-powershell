@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-ComplianceCaseMember [-Case] <String> -Members <String[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+Update-ComplianceCaseMember [-Case] <String> -Members <String[]>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

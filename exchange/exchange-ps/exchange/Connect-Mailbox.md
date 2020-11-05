@@ -38,18 +38,18 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
 
 ### Linked
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> -LinkedDomainController <Fqdn> -LinkedMasterAccount <UserIdParameter>
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> -LinkedDomainController <Fqdn> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-LinkedCredential <PSCredential>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-User <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Room
@@ -64,7 +64,8 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
  [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-User <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Shared
@@ -79,7 +80,8 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
  [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-User <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ValidateOnly
@@ -88,12 +90,16 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### User
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-AllowLegacyDNMismatch] [-Archive]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-User <UserIdParameter>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-AllowLegacyDNMismatch]
+ [-Archive]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -102,8 +108,8 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-User <UserIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

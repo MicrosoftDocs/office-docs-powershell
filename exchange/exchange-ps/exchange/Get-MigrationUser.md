@@ -45,7 +45,8 @@ Get-MigrationUser [-BatchId <MigrationBatchIdParameter>]
 Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
  [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>]
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
+ [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

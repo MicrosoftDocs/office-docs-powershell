@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpPolicyTemplate [[-Identity] <DlpPolicyIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-DlpPolicyTemplate [[-Identity] <DlpPolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

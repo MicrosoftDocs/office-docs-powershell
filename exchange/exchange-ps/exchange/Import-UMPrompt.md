@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMDialPlan <UMDialPlanIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadAutoAttendantPrompts
@@ -33,7 +34,8 @@ Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMDialPlan <U
 Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadAutoAttendantPromptsStream
@@ -41,7 +43,8 @@ Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMAutoAttenda
 Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMAutoAttendant <UMAutoAttendantIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadDialPlanPromptsStream
@@ -49,7 +52,8 @@ Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMAutoAtten
 Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMDialPlan <UMDialPlanIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

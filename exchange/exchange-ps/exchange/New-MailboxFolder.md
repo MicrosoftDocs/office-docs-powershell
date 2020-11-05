@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-MailboxFolder [-Name] <String> -Parent <MailboxFolderIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+New-MailboxFolder [-Name] <String> -Parent <MailboxFolderIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

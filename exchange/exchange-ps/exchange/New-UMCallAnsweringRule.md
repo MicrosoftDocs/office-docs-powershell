@@ -21,11 +21,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-UMCallAnsweringRule -Name <String> [-CallerIds <MultiValuedProperty>]
- [-CallersCanInterruptGreeting <Boolean>] [-CheckAutomaticReplies <Boolean>] [-Confirm]
- [-DomainController <Fqdn>] [-ExtensionsDialed <MultiValuedProperty>] [-KeyMappings <MultiValuedProperty>]
- [-Mailbox <MailboxIdParameter>] [-Priority <Int32>] [-ScheduleStatus <Int32>] [-TimeOfDay <TimeOfDay>]
- [-WhatIf] [<CommonParameters>]
+New-UMCallAnsweringRule -Name <String>
+ [-CallerIds <MultiValuedProperty>]
+ [-CallersCanInterruptGreeting <Boolean>]
+ [-CheckAutomaticReplies <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtensionsDialed <MultiValuedProperty>]
+ [-KeyMappings <MultiValuedProperty>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Priority <Int32>]
+ [-ScheduleStatus <Int32>]
+ [-TimeOfDay <TimeOfDay>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

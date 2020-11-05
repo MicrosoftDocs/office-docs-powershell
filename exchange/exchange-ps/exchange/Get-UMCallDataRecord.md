@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMCallDataRecord -Mailbox <MailboxIdParameter> [-DomainController <Fqdn>]
+Get-UMCallDataRecord -Mailbox <MailboxIdParameter>
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

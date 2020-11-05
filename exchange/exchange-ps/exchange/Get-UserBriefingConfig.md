@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UserBriefingConfig -Identity <string> [-ResultSize <Unlimited>]
+Get-UserBriefingConfig -Identity <string>
+ [-ResultSize <Unlimited>]
 ```
 
 ## DESCRIPTION

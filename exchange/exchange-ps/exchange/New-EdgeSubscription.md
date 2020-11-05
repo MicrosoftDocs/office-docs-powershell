@@ -21,10 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-EdgeSubscription [-AccountExpiryDuration <TimeSpan>] [-Confirm]
- [-CreateInboundSendConnector <Boolean>] [-CreateInternetSendConnector <Boolean>]
- [-DomainController <Fqdn>] [-FileData <Byte[]>] [-FileName <LongPath>] [-Force] [-Site <AdSiteIdParameter>]
- [-WhatIf] [<CommonParameters>]
+New-EdgeSubscription [-AccountExpiryDuration <TimeSpan>]
+ [-Confirm]
+ [-CreateInboundSendConnector <Boolean>]
+ [-CreateInternetSendConnector <Boolean>]
+ [-DomainController <Fqdn>]
+ [-FileData <Byte[]>]
+ [-FileName <LongPath>]
+ [-Force]
+ [-Site <AdSiteIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

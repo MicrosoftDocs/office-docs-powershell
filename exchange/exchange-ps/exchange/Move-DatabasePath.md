@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Move-DatabasePath [-Identity] <DatabaseIdParameter> [-ConfigurationOnly] [-Confirm] [-DomainController <Fqdn>]
- [-EDBFilePath <EdbFilePath>] [-Force] [-LogFolderPath <NonRootLocalLongFullPath>] [-WhatIf]
+Move-DatabasePath [-Identity] <DatabaseIdParameter>
+ [-ConfigurationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EDBFilePath <EdbFilePath>]
+ [-Force]
+ [-LogFolderPath <NonRootLocalLongFullPath>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

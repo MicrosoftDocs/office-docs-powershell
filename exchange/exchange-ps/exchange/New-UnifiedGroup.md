@@ -46,7 +46,8 @@ New-UnifiedGroup [-DisplayName <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ProvisioningOptions
@@ -72,12 +73,14 @@ New-UnifiedGroup [-DisplayName <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SegmentationOption
 ```
-New-UnifiedGroup [-DisplayName <String>] [-SubscriptionEnabled]
+New-UnifiedGroup [-DisplayName <String>]
+ [-SubscriptionEnabled]
  [-AccessType <ModernGroupTypeInfo>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
@@ -98,18 +101,22 @@ New-UnifiedGroup [-DisplayName <String>] [-SubscriptionEnabled]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DlMigration
 ```
-New-UnifiedGroup -DlIdentity <DistributionGroupIdParameter> [-ConvertClosedDlToPrivateGroup] [-DeleteDlAfterMigration]
+New-UnifiedGroup -DlIdentity <DistributionGroupIdParameter>
+ [-ConvertClosedDlToPrivateGroup]
+ [-DeleteDlAfterMigration]
  [-Confirm]
  [-ExecutingUser <RecipientIdParameter>]
  [-ManagedBy <RecipientIdParameter[]>]
  [-Members <RecipientIdParameter[]>]
  [-Owner <RecipientIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

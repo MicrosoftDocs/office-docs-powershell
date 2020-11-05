@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-HoldCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail] [<CommonParameters>]
+Get-HoldCompliancePolicy [[-Identity] <PolicyIdParameter>]
+ [-DistributionDetail]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

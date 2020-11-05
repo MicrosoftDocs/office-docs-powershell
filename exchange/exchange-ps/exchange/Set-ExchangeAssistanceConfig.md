@@ -22,13 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ExchangeAssistanceConfig [[-Identity] <OrganizationIdParameter>]
- [-CommunityLinkDisplayEnabled <Boolean>] [-CommunityURL <Uri>] [-Confirm]
- [-ControlPanelFeedbackEnabled <Boolean>] [-ControlPanelFeedbackURL <Uri>] [-ControlPanelHelpURL <Uri>]
- [-DomainController <Fqdn>] [-ExchangeHelpAppOnline <Boolean>]
- [-ManagementConsoleFeedbackEnabled <Boolean>] [-ManagementConsoleFeedbackURL <Uri>]
- [-ManagementConsoleHelpURL <Uri>] [-OWAFeedbackEnabled <Boolean>] [-OWAFeedbackURL <Uri>]
- [-OWAHelpURL <Uri>] [-OWALightFeedbackEnabled <Boolean>] [-OWALightFeedbackURL <Uri>]
- [-OWALightHelpURL <Uri>] [-PrivacyLinkDisplayEnabled <Boolean>] [-PrivacyStatementURL <Uri>] [-WhatIf]
+ [-CommunityLinkDisplayEnabled <Boolean>]
+ [-CommunityURL <Uri>]
+ [-Confirm]
+ [-ControlPanelFeedbackEnabled <Boolean>]
+ [-ControlPanelFeedbackURL <Uri>]
+ [-ControlPanelHelpURL <Uri>]
+ [-DomainController <Fqdn>]
+ [-ExchangeHelpAppOnline <Boolean>]
+ [-ManagementConsoleFeedbackEnabled <Boolean>]
+ [-ManagementConsoleFeedbackURL <Uri>]
+ [-ManagementConsoleHelpURL <Uri>]
+ [-OWAFeedbackEnabled <Boolean>]
+ [-OWAFeedbackURL <Uri>]
+ [-OWAHelpURL <Uri>]
+ [-OWALightFeedbackEnabled <Boolean>]
+ [-OWALightFeedbackURL <Uri>]
+ [-OWALightHelpURL <Uri>]
+ [-PrivacyLinkDisplayEnabled <Boolean>]
+ [-PrivacyStatementURL <Uri>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -45,6 +58,22 @@ Set-ExchangeAssistanceConfig -ExchangeHelpAppOnline $false -ManagementConsoleHel
 This example changes the Help location for the Exchange admin center.
 
 ## PARAMETERS
+
+### -Identity
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -CommunityLinkDisplayEnabled
 This parameter is reserved for internal Microsoft use.
@@ -179,22 +208,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter> [-DomainController <Fqdn>]
- [-VerifyDefaultFolderNameLanguage] [<CommonParameters>]
+Get-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter>
+ [-DomainController <Fqdn>]
+ [-VerifyDefaultFolderNameLanguage]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

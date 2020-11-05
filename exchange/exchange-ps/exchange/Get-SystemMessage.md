@@ -22,12 +22,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-SystemMessage [[-Identity] <SystemMessageIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-SystemMessage [[-Identity] <SystemMessageIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Original
 ```
-Get-SystemMessage [-Original] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-SystemMessage [-Original]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -30,13 +30,15 @@ New-OwaVirtualDirectory
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
  [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-ExternalAuthenticationMethods <MultiValuedProperty>]
- [-ExternalUrl <Uri>] [-InternalUrl <Uri>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
  [-Name <String>]
  [-Path <String>]
  [-Role <VirtualDirectoryRole>]
  [-Server <ServerIdParameter>]
  [-WebSiteName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

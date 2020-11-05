@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DlpFingerprint [[-FileData] <Byte[]>] -Description <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+New-DlpFingerprint [[-FileData] <Byte[]>] -Description <String>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

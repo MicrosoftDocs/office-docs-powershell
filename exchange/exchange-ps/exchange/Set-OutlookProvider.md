@@ -21,9 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-OutlookProvider [-Identity] <OutlookProviderIdParameter> [-CertPrincipalName <String>] [-Confirm]
- [-DomainController <Fqdn>] [-Name <String>] [-OutlookProviderFlags <OutlookProviderFlags>]
- [-Server <String>] [-TTL <Int32>] [-WhatIf] [-RequiredClientVersions <String[]>] [<CommonParameters>]
+Set-OutlookProvider [-Identity] <OutlookProviderIdParameter>
+ [-CertPrincipalName <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Name <String>]
+ [-OutlookProviderFlags <OutlookProviderFlags>]
+ [-RequiredClientVersions <String[]>]
+ [-Server <String>]
+ [-TTL <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -143,6 +151,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequiredClientVersions
+The RequiredClientVersions parameter specifies the minimum version of Microsoft Outlook that's allowed to connect to the Exchange server. This information is in the Autodiscover response to the client connection request. Valid input for this parameter is "\<MinimumVersion\>, \<ExpirationDate\>".
+
+\<MinimumVersion\> is the version of Outlook in the format xx.x.xxxx.xxxx. For example, to specify Outlook 2010 Service Pack 2 (SP2), use the value 14.0.7012.1000.
+
+\<ExpirationDate\> is the UTC date-time when connections by older versions of Outlook will be blocked. The UTC date-time is represented in the ISO 8601 date-time format: yyyy-mm-ddThh:mm:ss.fffZ, where yyyy = year, mm = month, dd = day, T indicates the beginning of the time component, hh = hour, mm = minute, ss = second, fff = fractions of a second and Z signifies Zulu, which is another way to denote UTC.
+
+An example of a valid value for this parameter is "14.0.7012.1000, 2014-01-01T12:00:00Z".
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Server
 The Server parameter specifies the Mailbox server to use for Outlook Anywhere clients.
 
@@ -185,28 +215,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequiredClientVersions
-The RequiredClientVersions parameter specifies the minimum version of Microsoft Outlook that's allowed to connect to the Exchange server. This information is in the Autodiscover response to the client connection request. Valid input for this parameter is "\<MinimumVersion\>, \<ExpirationDate\>".
-
-\<MinimumVersion\> is the version of Outlook in the format xx.x.xxxx.xxxx. For example, to specify Outlook 2010 Service Pack 2 (SP2), use the value 14.0.7012.1000.
-
-\<ExpirationDate\> is the UTC date-time when connections by older versions of Outlook will be blocked. The UTC date-time is represented in the ISO 8601 date-time format: yyyy-mm-ddThh:mm:ss.fffZ, where yyyy = year, mm = month, dd = day, T indicates the beginning of the time component, hh = hour, mm = minute, ss = second, fff = fractions of a second and Z signifies Zulu, which is another way to denote UTC.
-
-An example of a valid value for this parameter is "14.0.7012.1000, 2014-01-01T12:00:00Z".
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

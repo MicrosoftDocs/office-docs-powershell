@@ -23,8 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-FederatedDomain [[-Identity] <OrganizationIdParameter>] -DomainName <SmtpDomain> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Add-FederatedDomain [[-Identity] <OrganizationIdParameter>] -DomainName <SmtpDomain>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +47,22 @@ Add-FederatedDomain -DomainName Contoso.co.uk
 This example adds the domain Contoso.co.uk to the existing federation trust.
 
 ## PARAMETERS
+
+### -Identity
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -DomainName
 The DomainName parameter specifies the secondary domain to be configured.
@@ -93,22 +112,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

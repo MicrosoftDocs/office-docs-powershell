@@ -22,7 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Remove-MailboxUserConfiguration [-Identity] <MailboxUserConfigurationIdParameter> -Mailbox <MailboxIdParameter>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -45,7 +45,8 @@ Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
  [-BlockLegacyAuthRpc]
  [-BlockLegacyAuthWebServices]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

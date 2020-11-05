@@ -36,7 +36,8 @@ Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationReq
 
 ### MigrationRequestQueue
 ```
-Get-PublicFolderMigrationRequestStatistics -RequestQueue <DatabaseIdParameter> [-RequestGuid <Guid>]
+Get-PublicFolderMigrationRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-RequestGuid <Guid>]
  [-Diagnostic]
  [-DiagnosticArgument <String>]
  [-DomainController <Fqdn>]

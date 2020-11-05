@@ -43,7 +43,8 @@ New-ComplianceSearch [-Name] <String>
  [-SharePointLocation <String[]>]
  [-SharePointLocationExclusion <String[]>]
  [-StatusMailRecipients <String[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

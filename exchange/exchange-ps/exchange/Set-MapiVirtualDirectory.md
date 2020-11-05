@@ -31,7 +31,8 @@ Set-MapiVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-ExternalUrl <Uri>]
  [-IISAuthenticationMethods <MultiValuedProperty>]
  [-InternalUrl <Uri>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

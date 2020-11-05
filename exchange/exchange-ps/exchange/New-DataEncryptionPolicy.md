@@ -23,8 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DataEncryptionPolicy [-Name] <String> -AzureKeyIDs <MultiValuedProperty> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-WhatIf] [<CommonParameters>]
+New-DataEncryptionPolicy [-Name] <String> -AzureKeyIDs <MultiValuedProperty>
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Disable-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
@@ -33,7 +34,8 @@ Disable-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter>
 Disable-OutlookAnywhere [-Server <ServerIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

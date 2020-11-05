@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ClientAccessServer2010
 ```
-Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-AllowUnsecureAccess]
+Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+ [-AllowUnsecureAccess]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LightMode]
@@ -34,18 +35,19 @@ Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-Allow
  [-Timeout <UInt32>]
  [-TrustAnySSLCertificate]
  [-UseAutodiscoverForClientAccessServer]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AutoDiscoverServer
 ```
-Test-WebServicesConnectivity -AutoDiscoverServer <ClientAccessServerIdParameter>
+Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] -AutoDiscoverServer <ClientAccessServerIdParameter>
  [-Confirm]
- [[-Identity] <MailboxIdParameter>]
  [-LightMode]
  [-MailboxCredential <PSCredential>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MonitoringContext
@@ -55,7 +57,8 @@ Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] [-MonitoringCont
  [-LightMode]
  [-MailboxCredential <PSCredential>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ClientAccessServer
@@ -65,7 +68,8 @@ Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] [-ClientAccessSe
  [-LightMode]
  [-MailboxCredential <PSCredential>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,28 +110,32 @@ This example tests the client connection to Exchange Web Services on the server 
 
 ## PARAMETERS
 
-### -AutoDiscoverServer
-The AutoDiscoverServer parameter specifies the server with the Client Access server role installed that's used for Autodiscover.
+### -Identity
+The Identity parameter specifies the mailbox to use for the test. You can use any value that uniquely identifies the mailbox. For example:
 
-You can use any value that uniquely identifies the server. For example:
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
-- Name (for example, Exchange01)
-- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
-- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
-- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
-
-You can't use this parameter with the ClientAccessServer parameter.
+When you use this parameter, you also need to use the MailboxCredential parameter.
 
 ```yaml
-Type: ClientAccessServerIdParameter
-Parameter Sets: AutoDiscoverServer
+Type: MailboxIdParameter
+Parameter Sets: AutoDiscoverServer, MonitoringContext, ClientAccessServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-Required: True
-Position: Named
+Required: False
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -156,6 +164,31 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AutoDiscoverServer
+The AutoDiscoverServer parameter specifies the server with the Client Access server role installed that's used for Autodiscover.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name (for example, Exchange01)
+- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
+- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
+- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+
+You can't use this parameter with the ClientAccessServer parameter.
+
+```yaml
+Type: ClientAccessServerIdParameter
+Parameter Sets: AutoDiscoverServer
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ```yaml
 Type: ServerIdParameter
 Parameter Sets: ClientAccessServer
@@ -164,35 +197,6 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox to use for the test. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-When you use this parameter, you also need to use the MailboxCredential parameter.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: AutoDiscoverServer, MonitoringContext, ClientAccessServer
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

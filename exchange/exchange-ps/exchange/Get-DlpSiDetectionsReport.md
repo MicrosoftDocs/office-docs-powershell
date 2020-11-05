@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpSiDetectionsReport [-EndDate <DateTime>] [-SensitiveType <MultiValuedProperty>] [<CommonParameters>]
+Get-DlpSiDetectionsReport [-EndDate <DateTime>]
+ [-SensitiveType <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-JournalRuleCollection [[-Identity] <RuleIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-ExportLegacyRules] [-WhatIf] [<CommonParameters>]
+Export-JournalRuleCollection [[-Identity] <RuleIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExportLegacyRules]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,6 +51,22 @@ $file = Export-JournalRuleCollection -ExportLegacyRules; Set-Content -Path "C:\M
 In Exchange Server 2010, this example exports legacy journal rules to an XML file using the two-step process similar to the preceding example. In the first step, the Export-JournalRuleCollection cmdlet is used with the ExportLegacyRules switch to export legacy rules to the array $file. In the second step, the exported data is saved to the XML file Ex2007-JournallRules.xml.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the name of a journal rule.
+
+```yaml
+Type: RuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -98,22 +118,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of a journal rule.
-
-```yaml
-Type: RuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

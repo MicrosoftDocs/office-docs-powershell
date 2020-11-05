@@ -37,7 +37,8 @@ New-EdgeSyncServiceConfig [-ConfigurationSyncInterval <EnhancedTimeSpan>]
  [-OptionDuration <EnhancedTimeSpan>]
  [-RecipientSyncInterval <EnhancedTimeSpan>]
  [-Site <AdSiteIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

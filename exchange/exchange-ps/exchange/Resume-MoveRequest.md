@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Resume-MoveRequest [-Identity] <MoveRequestIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-ProxyToMailbox <MailboxIdParameter>] [-SuspendWhenReadyToComplete] [<CommonParameters>]
+Resume-MoveRequest [-Identity] <MoveRequestIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-SuspendWhenReadyToComplete]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -114,22 +119,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ProxyToMailbox
 This parameter is available only in the cloud-based service.
 
@@ -167,6 +156,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

@@ -33,7 +33,8 @@ Set-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
  [-TrustedListsOnly <Boolean>]
  [-TrustedRecipientsAndDomains <MultiValuedProperty>]
  [-TrustedSendersAndDomains <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

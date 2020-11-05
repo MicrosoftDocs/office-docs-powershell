@@ -22,8 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Probe
 ```
-Test-OutlookConnectivity [-ProbeIdentity] <String> [-Credential <PSCredential>] [-Hostname <String>]
- [-MailboxId <MailboxIdParameter>] [-RunFromServerId <ServerIdParameter>] [-TimeOutSeconds <String>]
+Test-OutlookConnectivity [-ProbeIdentity] <String>
+ [-Credential <PSCredential>]
+ [-Hostname <String>]
+ [-MailboxId <MailboxIdParameter>]
+ [-RunFromServerId <ServerIdParameter>]
+ [-TimeOutSeconds <String>]
  [<CommonParameters>]
 ```
 
@@ -36,7 +40,8 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -Protocol <Protocol>
  [-MonitoringContext]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RpcProxyServer
@@ -45,15 +50,15 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -GetDefaultsFromAuto
  [-Archive <Boolean>]
  [-Confirm]
  [-MailboxCredential <PSCredential>]
+ [-MonitoringContext]
  [-RpcAuthenticationType <RpcAuthenticationType>]
  [-RpcClientAccessServer <ClientAccessServerIdParameter>]
  [-RpcProxyAuthenticationType <RPCProxyAuthenticationType>]
  [-RpcProxyServer <ServerIdParameter>]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
- [-WhatIf] [<CommonParameters>]
-
- [-MonitoringContext]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RpcTestType
@@ -69,7 +74,8 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -RpcTestType <RpcTes
  [-RpcProxyTestType <RpcProxyTestType>]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### WSTestType
@@ -81,7 +87,8 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -WSTestType <Virtual
  [-MonitoringContext]
  [-TotalTimeoutInMinutes <Int32>]
  [-TrustAnySslCert]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

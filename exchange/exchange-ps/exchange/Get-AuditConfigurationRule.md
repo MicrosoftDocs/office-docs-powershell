@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AuditConfigurationRule [[-Identity] <ComplianceRuleIdParameter>] [-DomainController <Fqdn>]
+Get-AuditConfigurationRule [[-Identity] <ComplianceRuleIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
@@ -46,22 +47,6 @@ This example lists details about the audit configuration rule named 989a3a6c-dc4
 
 ## PARAMETERS
 
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the audit configuration rule that you want to view. The name of the rule is a GUID value. For example, 989a3a6c-dc40-4fa4-8307-beb3ece992e9.
 
@@ -75,6 +60,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

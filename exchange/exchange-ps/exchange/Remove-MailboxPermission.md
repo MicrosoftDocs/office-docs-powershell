@@ -28,21 +28,23 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <Mailbox
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Remove-MailboxPermission -Instance <MailboxAcePresentationObject>
+Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePresentationObject>
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
  [-Deny]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [[-Identity] <MailboxIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-ResetDefault]
  [-User <SecurityPrincipalIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Owner
@@ -51,12 +53,14 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ClearAutoMapping
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
+Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-ClearAutoMapping]
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
  [-Deny]
@@ -64,16 +68,19 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-User <SecurityPrincipalIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ResetDefault
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ResetDefault]
+Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-ResetDefault]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,6 +98,33 @@ Remove-MailboxPermission -Identity Test1 -User Test2 -AccessRights FullAccess -I
 This example removes user Test2's full access rights to Test1's mailbox.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mailbox where you are removing permissions. You can use any value that uniquely identifies the mailbox: For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: AccessRights, Owner, ClearAutoMapping, ResetDefault
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -AccessRights
 The AccessRights parameter specifies the rights required to perform the operation. You can use the following values:
@@ -126,33 +160,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox where you are removing permissions. You can use any value that uniquely identifies the mailbox: For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: AccessRights, Owner, ClearAutoMapping, ResetDefault
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

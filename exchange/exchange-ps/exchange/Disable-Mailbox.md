@@ -22,41 +22,53 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Arbitration
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Arbitration] [-DisableLastArbitrationMailboxAllowed] [-DisableArbitrationMailboxWithOABsAllowed]
+Disable-Mailbox [-Identity] <MailboxIdParameter>
+ [-Arbitration]
+ [-DisableLastArbitrationMailboxAllowed]
+ [-DisableArbitrationMailboxWithOABsAllowed]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-IgnoreLegalHold]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Archive
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Archive] [-PermanentlyDisable]
+Disable-Mailbox [-Identity] <MailboxIdParameter>
+ [-Archive]
+ [-PermanentlyDisable]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-IgnoreLegalHold]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Confirm] [-PublicFolder]
+Disable-Mailbox [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-PublicFolder]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-IgnoreLegalHold]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemoteArchive
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-RemoteArchive]
+Disable-Mailbox [-Identity] <MailboxIdParameter>
+ [-RemoteArchive]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-IgnoreLegalHold]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

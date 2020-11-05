@@ -21,18 +21,49 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-Contact [-Identity] <ContactIdParameter> [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
- [-AssistantName <String>] [-City <String>] [-Company <String>] [-Confirm] [-CountryOrRegion <CountryInfo>]
- [-CreateDTMFMap <Boolean>] [-Department <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-Fax <String>] [-FirstName <String>] [-HomePhone <String>] [-IgnoreDefaultScope] [-Initials <String>]
- [-LastName <String>] [-Manager <UserContactIdParameter>] [-MobilePhone <String>] [-Name <String>]
- [-Notes <String>] [-Office <String>] [-OtherFax <MultiValuedProperty>] [-OtherHomePhone <MultiValuedProperty>]
- [-OtherTelephone <MultiValuedProperty>] [-Pager <String>] [-Phone <String>] [-PhoneticDisplayName <String>]
- [-PostalCode <String>] [-PostOfficeBox <MultiValuedProperty>] [-SeniorityIndex <Int32>]
- [-SimpleDisplayName <String>] [-StateOrProvince <String>] [-StreetAddress <String>]
- [-TelephoneAssistant <String>] [-Title <String>] [-UMCallingLineIds <MultiValuedProperty>]
- [-UMDtmfMap <MultiValuedProperty>] [-WebPage <String>] [-WhatIf] [-WindowsEmailAddress <SmtpAddress>]
- [-GeoCoordinates <GeoCoordinates>] [<CommonParameters>]
+Set-Contact [-Identity] <ContactIdParameter>
+ [-AllowUMCallsFromNonUsers <AllowUMCallsFromNonUsersFlags>]
+ [-AssistantName <String>]
+ [-City <String>]
+ [-Company <String>]
+ [-Confirm]
+ [-CountryOrRegion <CountryInfo>]
+ [-CreateDTMFMap <Boolean>]
+ [-Department <String>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Fax <String>]
+ [-FirstName <String>]
+ [-GeoCoordinates <GeoCoordinates>]
+ [-HomePhone <String>]
+ [-IgnoreDefaultScope]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-Manager <UserContactIdParameter>]
+ [-MobilePhone <String>]
+ [-Name <String>]
+ [-Notes <String>]
+ [-Office <String>]
+ [-OtherFax <MultiValuedProperty>]
+ [-OtherHomePhone <MultiValuedProperty>]
+ [-OtherTelephone <MultiValuedProperty>]
+ [-Pager <String>]
+ [-Phone <String>]
+ [-PhoneticDisplayName <String>]
+ [-PostalCode <String>]
+ [-PostOfficeBox <MultiValuedProperty>]
+ [-SeniorityIndex <Int32>]
+ [-SimpleDisplayName <String>]
+ [-StateOrProvince <String>]
+ [-StreetAddress <String>]
+ [-TelephoneAssistant <String>]
+ [-Title <String>]
+ [-UMCallingLineIds <MultiValuedProperty>]
+ [-UMDtmfMap <MultiValuedProperty>]
+ [-WebPage <String>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -272,6 +303,25 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GeoCoordinates
+The GeoCoordinates parameter specifies the contact's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
+
+- Latitude and longitude: For example, "47.644125;-122.122411"
+- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
+
+```yaml
+Type: GeoCoordinates
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -751,25 +801,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GeoCoordinates
-The GeoCoordinates parameter specifies the contact's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
-
-- Latitude and longitude: For example, "47.644125;-122.122411"
-- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
-
-```yaml
-Type: GeoCoordinates
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

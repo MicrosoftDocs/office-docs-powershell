@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DetailsTemplate [[-Identity] <DetailsTemplateIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Get-DetailsTemplate [[-Identity] <DetailsTemplateIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

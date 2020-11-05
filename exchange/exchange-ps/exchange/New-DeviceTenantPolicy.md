@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DeviceTenantPolicy [-Comment <String>] [-Confirm] [-Enabled <Boolean>] [-Force] [-WhatIf]
+New-DeviceTenantPolicy [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

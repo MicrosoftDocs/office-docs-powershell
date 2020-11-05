@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-DlpSensitiveInformationTypeRulePackage [-FileData] <Byte[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-DlpSensitiveInformationTypeRulePackage [-FileData] <Byte[]>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

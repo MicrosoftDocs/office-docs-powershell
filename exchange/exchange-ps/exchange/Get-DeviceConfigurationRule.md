@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DeviceConfigurationRule [[-Identity] <ComplianceRuleIdParameter>] [-CompareToWorkload]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-DeviceConfigurationRule [[-Identity] <ComplianceRuleIdParameter>]
+ [-CompareToWorkload]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

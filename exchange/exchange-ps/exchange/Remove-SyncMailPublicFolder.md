@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SyncMailPublicFolder [-Identity] <MailPublicFolderIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Remove-SyncMailPublicFolder [-Identity] <MailPublicFolderIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

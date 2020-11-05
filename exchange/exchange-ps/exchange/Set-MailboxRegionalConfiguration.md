@@ -22,13 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter>
- [-Confirm] [-DateFormat <String>]
+ [-Confirm]
+ [-DateFormat <String>]
  [-DomainController <Fqdn>]
  [-Language <CultureInfo>]
  [-LocalizeDefaultFolderName]
  [-TimeFormat <String>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
