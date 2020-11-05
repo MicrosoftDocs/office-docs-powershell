@@ -88,7 +88,7 @@ New-ComplianceSearchAction [-SearchName] <String[]>
  [-Scenario <ComplianceSearchActionScenario>]
  [-SearchNames <String[]>]
  [-Version <String>]
- [-WhatIf]]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
