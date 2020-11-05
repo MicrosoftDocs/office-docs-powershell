@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscription
-PARAMVALUE: $true | $false
+Allows you to disable or enable voicemail transcription. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscriptionProfanityMasking
-PARAMVALUE: $true | $false
+Allows you to disable or enable profanity masking for the voicemail transcriptions. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscriptionTranslation
-PARAMVALUE: $true | $false
+Allows you to disable or enable translation for the voicemail transcriptions. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEditingCallAnswerRulesSetting
-PARAMVALUE: $true | $false
+Controls if editing call answer rule settings are enabled or disabled for a user. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
