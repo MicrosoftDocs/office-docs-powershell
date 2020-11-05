@@ -264,6 +264,8 @@ The valid values are:
 - WebPreviewableFiles
 - ServerRenderedFilesOnly
 
+**Note**: ServerRendered (Office Only) and WebPreviewable (All supported files). 
+
 ```yaml
 Type: BlockDownloadLinksFileTypes
 Parameter Sets: (All)
