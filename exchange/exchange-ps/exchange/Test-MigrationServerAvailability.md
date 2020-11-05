@@ -22,105 +22,139 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ExchangeRemoteMoveAutodiscover
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeRemoteMove]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>
+ [-Autodiscover]
+ [-ExchangeRemoteMove]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhereAutodiscover
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeOutlookAnywhere]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>
+ [-Autodiscover]
+ [-ExchangeOutlookAnywhere]
  [-Confirm]
  [-MailboxPermission <MigrationMailboxPermission>]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PSTImport
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-FilePath <String>] [-PSTImport]
+Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-FilePath <String>]
+ [-PSTImport]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhere
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn> [-ExchangeOutlookAnywhere]
+Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn>
+ [-ExchangeOutlookAnywhere]
  [-Authentication <AuthenticationMethod>]
  [-EmailAddress <SmtpAddress>]
- [-MailboxPermission <MigrationMailboxPermission>] [-TestMailbox <MailboxIdParameter>]
+ [-MailboxPermission <MigrationMailboxPermission>]
+ [-TestMailbox <MailboxIdParameter>]
  [-SourceMailboxLegacyDN <String>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
+Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+ [-PublicFolder]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeRemoteMove
 ```
-Test-MigrationServerAvailability -RemoteServer <Fqdn> [-Credentials <PSCredential>] [-ExchangeRemoteMove]
+Test-MigrationServerAvailability -RemoteServer <Fqdn>
+ [-Credentials <PSCredential>]
+ [-ExchangeRemoteMove]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TestEndpoint
 ```
 Test-MigrationServerAvailability -Endpoint <MigrationEndpointIdParameter>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IMAP
 ```
-Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32> [-Imap]
- [-Authentication <AuthenticationMethod>] [-Security <NIMAPSecurityMechanism]
+Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32>
+ [-Imap]
+ [-Authentication <AuthenticationMethod>]
+ [-Security <NIMAPSecurityMechanism]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Gmail
 ```
-Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]> [-Gmail] [-EmailAddress <SmtpAddress>]
+Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]>
+ [-Gmail]
+ [-EmailAddress <SmtpAddress>]
  [-Confirm]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Compliance
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>  [-Compliance] [-RemoteServer <Fqdn>]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>  [-Compliance]
+ [-RemoteServer <Fqdn>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MrsProxyPublicFolderToUnifiedGroup
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolderToUnifiedGroup] [-TestMailbox <MailboxIdParameter>]
+Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-PublicFolderToUnifiedGroup]
+ [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LegacyPublicFolderToUnifiedGroup
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolderToUnifiedGroup]
+Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+ [-PublicFolderToUnifiedGroup]
  [-Authentication <AuthenticationMethod>]
  [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MrsProxyPublicFolder
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolder] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-PublicFolder]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -131,13 +165,11 @@ For an IMAP migration, this cmdlet uses the server's fully qualified domain name
 For an Exchange migration, this cmdlet uses one of the following settings to communicate with the on-premises server:
 
 - For Exchange 2003, it uses the server's FQDN and credentials for an administrator account that can access the server.
-
 - For Exchange Server 2007 and later versions, you can connect using the Autodiscover service and the email address of an administrator account that can access the server.
 
 If the verification is successful, you can use the same settings to create a migration endpoint. For more information, see:
 
 - New-MigrationEndpoint
-
 - New-MigrationBatch
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -465,9 +497,7 @@ Accept wildcard characters: False
 The RemoteServer parameter specifies the FQDN of the on-premises mail server. This parameter is required when you want to perform one of the following migration types:
 
 - Cross-forest move
-
 - Remote move (hybrid deployments)
-
 - IMAP migration
 
 ```yaml
@@ -588,8 +618,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -629,7 +658,6 @@ The MailboxPermission parameter specifies what permissions are assigned to the m
 Specify one of the following values for the account defined by the Credentials parameter:
 
 - FullAccess: The account has been assigned the Full-Access permission to the mailboxes that will be migrated.
-
 - Admin: The account is a member of the Domain Admins group in the organization that hosts the mailboxes that will be migrated.
 
 This parameter isn't used for testing the connection to the remote server for a remote move migration or an IMAP migration.

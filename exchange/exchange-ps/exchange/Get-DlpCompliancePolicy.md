@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail] [<CommonParameters>]
+Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
+ [-DistributionDetail]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,11 +67,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the DLP policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - Id
 
 ```yaml

@@ -21,10 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-ClientAccessRule
- -AuthenticationType <ClientAccessAuthenticationMethod>
- -Protocol <ClientAccessProtocol> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter> [-Confirm]
- [-OAuthClaims <Hashtable>] [-WhatIf] [<CommonParameters>]
+Test-ClientAccessRule -AuthenticationType <ClientAccessAuthenticationMethod> -Protocol <ClientAccessProtocol> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter>
+ [-Confirm]
+ [-OAuthClaims <Hashtable>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,11 +34,8 @@ Client access rules are like mail flow rules (also known as transport rules) for
 Note: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
 - OutlookWebApp:BasicAuthentication and AdfsAuthentication.
-
 - ExchangeAdminCenter:BasicAuthentication and AdfsAuthentication.
-
 - RemotePowerShell:BasicAuthentication and NonBasicAuthentication.
-
 - ExchangeActiveSync:BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -52,13 +50,9 @@ Test-ClientAccessRule -AuthenticationType BasicAuthentication -Protocol OutlookW
 This example tests client access by using the following client properties:
 
 - Authentication type: Basic
-
 - Protocol:OutlookWebApp
-
 - Remote address: 172.17.17.26
-
 - Remote port: 443
-
 - User: julia@contoso.com
 
 ## PARAMETERS
@@ -69,13 +63,9 @@ The AuthenticationType parameter specifies the client authentication type to tes
 Valid values for this parameter are:
 
 - AdfsAuthentication
-
 - BasicAuthentication
-
 - CertificateBasedAuthentication
-
 - NonBasicAuthentication
-
 - OAuthAuthentication
 
 In client access rules, authentication types are defined by the AnyOfAuthenticationTypes and ExceptAnyOfAuthenticationTypes parameters.
@@ -99,25 +89,15 @@ The Protocol parameter specifies the client protocol to test.
 Valid values for this parameter are:
 
 - ExchangeActiveSync
-
 - ExchangeAdminCenter
-
 - ExchangeWebServices
-
 - IMAP4
-
 - OfflineAddressBook
-
 - OutlookAnywhere
-
 - OutlookWebApp
-
 - POP3
-
 - PowerShellWebServices
-
 - RemotePowerShell
-
 - REST
 
 In client access rules, protocol types are defined by the AnyOfProtocols and ExceptAnyOfProtocols parameters.
@@ -173,23 +153,14 @@ Accept wildcard characters: False
 The User parameter specifies the user account to test. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 In client access rules, users are defined by the UsernameMatchesAnyOfPatterns, UserRecipientFilter, and ExceptUsernameMatchesAnyOfPatterns parameters.
@@ -210,8 +181,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

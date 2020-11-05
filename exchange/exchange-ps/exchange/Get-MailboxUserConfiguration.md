@@ -22,7 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-MailboxUserConfiguration [-Identity] <MailboxUserConfigurationIdParameter> -Mailbox <MailboxIdParameter>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +53,6 @@ This example returns detailed information for the specified user configuration i
 The Identity parameter specifies the user configuration item that you want to view. This parameter uses the syntax \<MailboxFolder\>\\\<ItemName\>:
 
 - Valid values for \<MailboxFolder\> are folder names (for example, Inbox or Calendar), the value Configuration, or the value Root. Wildcards (\*) aren't supported.
-
 - Valid values for \<ItemName\> start with IPM.Configuration (for example, IPM.Configuration.Aggregated.OwaUserConfiguration. Wildcards (\*) are supported.
 
 ```yaml
@@ -70,23 +72,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox that contains the user configuration items you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-OMEMessageRevocation -MessageId <String> -Revoke <Boolean> [<CommonParameters>]
+Set-OMEMessageRevocation -MessageId <String> -Revoke <Boolean>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +67,6 @@ Accept wildcard characters: False
 The Revoke parameter specifies whether to revoke encryption for the message. Valid values are:
 
 - $true: Encryption for the specified message is revoked. The recipient will get an error when they try to view the encrypted message in the Office 365 Message Encryption portal
-
 - $false: Encryption for the specified message isn't revoked. This is the default value.
 
 ```yaml

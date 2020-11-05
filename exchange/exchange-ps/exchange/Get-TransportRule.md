@@ -21,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-TransportRule [[-Identity] <RuleIdParameter>] [-DomainController <Fqdn>]
- [-State <RuleState>] [-DlpPolicy <String>]
- [-Filter <String>] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-TransportRule [[-Identity] <RuleIdParameter>]
+ [-DomainController <Fqdn>]
+ [-State <RuleState>]
+ [-DlpPolicy <String>]
+ [-Filter <String>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,9 +93,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -111,7 +113,6 @@ Accept wildcard characters: False
 The State parameter specifies filters the results by enabled or disabled rules. Valid values are:
 
 - Enabled: Only enabled rules are returned in the results.
-
 - Disabled: Only disabled rules are returned in the results.
 
 If you don't use this parameter, the command returns all rules, both enabled and disabled.

@@ -158,7 +158,7 @@ After Step 4, the Exchange Online cmdlets are imported into your Exchange Online
 
 If you receive errors, check the following requirements:
 
-- To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to your Exchange Online organization.
+- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Exchange Online.
 
 - The account you use to connect to Exchange Online must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 

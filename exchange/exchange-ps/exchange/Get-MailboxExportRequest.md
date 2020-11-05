@@ -26,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MailboxExportRequest [[-Identity] <MailboxExportRequestIdParameter>]
  [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### MailboxFiltering
@@ -40,7 +41,8 @@ Get-MailboxExportRequest [-Mailbox <MailboxOrMailUserIdParameter>]
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
  [-Suspend <Boolean>]
- [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### MailboxLocationFiltering
@@ -54,7 +56,8 @@ Get-MailboxExportRequest [-Mailbox <MailboxLocationIdParameter>]
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
  [-Suspend <Boolean>]
- [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,15 +103,10 @@ The Identity parameter specifies the identity of the export request. By default,
 This parameter can't be with the following parameters:
 
 - BatchName
-
 - Mailbox
-
 - Name
-
 - Status
-
 - Suspend
-
 - HighPriority
 
 ```yaml
@@ -148,9 +146,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The Database parameter specifies the database in which the user's mailbox or archive resides. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -188,7 +184,6 @@ Accept wildcard characters: False
 The HighPriority parameter filters the results based on the Priority value that was assigned when the request was created. Valid input for this parameter is $true or $false. Here's how these values filter the results:
 
 - $true Returns requests that were created with the Priority value High, Higher, Highest or Emergency.
-
 - $false Returns requests that were created with the Priority value Normal, Low, Lower or Lowest.
 
 You can't use this parameter with the Identity parameter.
@@ -214,23 +209,14 @@ In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParam
 In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Identity parameter.
@@ -303,23 +289,14 @@ Accept wildcard characters: False
 The Status parameter filters the results based on status. You can use the following values:
 
 - AutoSuspended
-
 - Completed
-
 - CompletedWithWarning
-
 - CompletionInProgress
-
 - Failed
-
 - InProgress
-
 - Queued
-
 - Retrying
-
 - Suspended
-
 - Synced
 
 You can't use this parameter with the Identity parameter.
@@ -361,9 +338,7 @@ Accept wildcard characters: False
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.

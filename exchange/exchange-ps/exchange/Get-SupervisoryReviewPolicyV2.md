@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewPolicyV2 [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-SupervisoryReviewPolicyV2 [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,9 +50,7 @@ This example returns detailed information for the supervisory review policy name
 The Identity parameter specifies the supervisory review policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

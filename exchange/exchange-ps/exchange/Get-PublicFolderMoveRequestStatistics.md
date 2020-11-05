@@ -27,17 +27,20 @@ Get-PublicFolderMoveRequestStatistics [-Identity] <PublicFolderMoveRequestIdPara
  [-DiagnosticArgument <String>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
- [-ReportOnly] [<CommonParameters>]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
 ```
-Get-PublicFolderMoveRequestStatistics -RequestQueue <DatabaseIdParameter> [-RequestGuid <Guid>]
+Get-PublicFolderMoveRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-RequestGuid <Guid>]
  [-Diagnostic]
  [-DiagnosticArgument <String>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
- [-ReportOnly] [<CommonParameters>]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,9 +88,7 @@ This parameter is for debugging purposes only.
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.

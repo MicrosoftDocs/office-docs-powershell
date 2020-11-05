@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpEdmSchema [[-Identity] <EdmStorageIdParameter>] [<CommonParameters>]
+Get-DlpEdmSchema [[-Identity] <EdmStorageIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +50,6 @@ This example returns detailed information for the DLP EDM schema named Schema fo
 The Identity parameter specifies the DLP EDM schema that you want to view. You can use any value that uniquely identifies the schema. For example:
 
 - Name
-
 - Distinguished name (DN)
 
 ```yaml

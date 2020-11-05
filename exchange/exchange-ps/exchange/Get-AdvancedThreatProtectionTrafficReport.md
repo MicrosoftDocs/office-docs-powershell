@@ -23,10 +23,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AdvancedThreatProtectionTrafficReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Direction <MultiValuedProperty>] [-DisplayBy <String>] [-Domain <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-MalwareName <MultiValuedProperty>]
- [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-AdvancedThreatProtectionTrafficReport [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Direction <MultiValuedProperty>]
+ [-DisplayBy <String>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-MalwareName <MultiValuedProperty>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,21 +70,13 @@ This example returns the results of Safe Attachments and Safe Links actions duri
 The Action parameter filters the results by the action taken on the attachment or link. Valid values are:
 
 - Allow
-
 - AllowRedirect
-
 - BlockAccess
-
 - BlockRedirect
-
 - BypassMessage
-
 - BypassMessageSystem
-
 - ContentReplaced
-
 - InfectedAllowed
-
 - ReplaceRedirect
 
 ```yaml
@@ -126,7 +128,6 @@ Accept wildcard characters: False
 The DisplayBy parameter specifies how the information in the report is organized. Valid values are:
 
 - Action (This is the default value)
-
 - MalwareName
 
 ```yaml
@@ -214,17 +215,11 @@ Accept wildcard characters: False
 The MalwareName parameter filters the results by malware payload. Valid values are:
 
 - Excel
-
 - EXE
-
 - Flash
-
 - Others
-
 - PDF
-
 - PowerPoint
-
 - URL
 
 You can specify multiple values separated by commas.
