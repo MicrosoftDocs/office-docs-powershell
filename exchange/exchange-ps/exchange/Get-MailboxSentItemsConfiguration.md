@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-MailboxSentItemsConfiguration
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxSentItemsConfiguration [-DomainController <Fqdn>] [-Identity <MailboxIdParameter>]
+Get-MailboxSentItemsConfiguration [-DomainController <Fqdn>]
+ [-Identity <MailboxIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -62,23 +62,14 @@ Accept wildcard characters: False
 The Identity parameter specifies the mailbox whose Sent Items configuration you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MailTrafficATPReport
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Advanced Threat Protection (ATP) detections in your cloud-based organization for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -179,43 +178,28 @@ The EventType parameter filters the report by the event type. Valid values are:
 Email phish EventTypes:
 
 - Advanced phish filter (Indicates a message caught by the machine learning model.)
-
 - Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
-
 - Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
-
 - Dmarc (Indicates a message for which the sender was marked as not authenticated by DMARC.)
-
 - Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
-
 - User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
-
 - Brand impersonation (Indicates a message caught by phish filters as impersonating a known brand.)
-
 - General phish filter (Indicates a message caught by basic phish protection.)
-
 - Malicious URL reputation (Indicates a message with a known malicious URL caught by phish filters.)
-
 - Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
 
 Email malware EventTypes:
 
 - Anti-malware engine (Indicates a message caught by the anti-malware engine.)
-
 - ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
-
 - ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
-
 - ZAP (Indicates a message with malware detected and auto-purged after delivery.)
-
 - Office 365 file reputation (Indicates a message with a known malicious file blocked.)
-
 - Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
 
 Content malware EventTypes:
 
 - AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
-
 - AvDocumentMalware (Indicates malware found by the anti-malware engine. Reporting requires ATP/E5.)
 
 \* These features require an E5 subscription or an Office 365 ATP add-on.

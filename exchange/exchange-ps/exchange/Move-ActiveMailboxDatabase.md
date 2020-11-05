@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Move-ActiveMailboxDatabase
@@ -36,7 +35,8 @@ Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParamete
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -54,12 +54,14 @@ Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [[-ActivateOnServer
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
-Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>] [-MoveAllDatabasesOrNone]
+Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>]
+ [-MoveAllDatabasesOrNone]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <DatabaseMountDialOverride>]
@@ -72,12 +74,14 @@ Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnSer
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SkipAllChecks
 ```
-Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer] <MailboxServerIdParameter> [-SkipAllChecks]
+Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer] <MailboxServerIdParameter>
+ [-SkipAllChecks]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <DatabaseMountDialOverride>]
@@ -90,7 +94,8 @@ Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer]
  [-SkipMaximumActiveDatabasesChecks]
  [-SkipMoveSuppressionChecks]
  [-TerminateOnWarning]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,9 +137,7 @@ This example performs a server switchover for the Mailbox server MBX1. All activ
 The Identity parameter specifies the mailbox database that you want to activate. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Server parameter
@@ -156,11 +159,8 @@ Accept wildcard characters: False
 The Server parameter specifies the server that you want to move all active mailbox databases from. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 You can't use this parameter with the Identity parameter
@@ -182,11 +182,8 @@ Accept wildcard characters: False
 The ActivatePreferredOnServer parameter specifies the Mailbox server where you want to activate all mailbox databases that have copies with an ActivationPreference value of 1. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
-
 - GUID
 
 You can use this parameter as part of ending maintenance mode on a Mailbox server.
@@ -199,6 +196,22 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ActivateOnServer
+The ActivateOnServer parameter specifies the name of the Mailbox server on which the mailbox database copy should be activated.
+
+```yaml
+Type: MailboxServerIdParameter
+Parameter Sets: Identity, Server
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
@@ -224,27 +237,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ActivateOnServer
-The ActivateOnServer parameter specifies the name of the Mailbox server on which the mailbox database copy should be activated.
-
-```yaml
-Type: MailboxServerIdParameter
-Parameter Sets: Identity, Server
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -280,13 +276,9 @@ Accept wildcard characters: False
 The MountDialOverride parameter is used to override the auto database mount dial (AutoDatabaseMountDial) setting for the target server and specify an alternate setting. The following are possible values:
 
 - None: When using this value, the currently configured auto database mount dial setting on the target server will be used.
-
 - Lossless: This is the default value. When using this value, the database doesn't automatically mount until all log files that were generated on the original active copy have been copied to the passive copy.
-
 - GoodAvailability: If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 6. If the copy queue length is greater than 6, the database doesn't automatically mount. When the copy queue length is less than or equal to 6, Microsoft Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
-
 - BestEffort: If you specify this value, the database automatically mounts regardless of the size of the copy queue length. Because the database will mount with any amount of log loss, using this value could result in a large amount of data loss.
-
 - BestAvailability: If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
 
 ```yaml

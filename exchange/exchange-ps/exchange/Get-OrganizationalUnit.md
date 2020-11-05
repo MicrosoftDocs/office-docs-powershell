@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-OrganizationalUnit
@@ -23,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-OrganizationalUnit [[-Identity] <ExtendedOrganizationalUnitIdParameter>] [-SingleNodeOnly]
+Get-OrganizationalUnit [[-Identity] <ExtendedOrganizationalUnitIdParameter>]
+ [-SingleNodeOnly]
  [-DomainController <Fqdn>]
  [-IncludeContainers]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Search
@@ -34,7 +35,8 @@ Get-OrganizationalUnit [[-Identity] <ExtendedOrganizationalUnitIdParameter>] [-S
 Get-OrganizationalUnit [-SearchText <String>]
  [-DomainController <Fqdn>]
  [-IncludeContainers]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,11 +70,8 @@ For more information about pipelining and the Format-Table cmdlet, see [About Pi
 The Identity parameter specifies the OU or domain that you want to view. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can use this parameter with the SearchText parameter.

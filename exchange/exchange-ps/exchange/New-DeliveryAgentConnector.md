@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-DeliveryAgentConnector
@@ -23,9 +22,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DeliveryAgentConnector [-Name] <String> -AddressSpaces <MultiValuedProperty> -DeliveryProtocol <String>
- [-Comment <String>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
- [-IsScopedConnector <Boolean>] [-MaxConcurrentConnections <Int32>] [-MaxMessageSize <Unlimited>]
- [-MaxMessagesPerConnection <Int32>] [-SourceTransportServers <MultiValuedProperty>] [-WhatIf]
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-IsScopedConnector <Boolean>]
+ [-MaxConcurrentConnections <Int32>]
+ [-MaxMessageSize <Unlimited>]
+ [-MaxMessagesPerConnection <Int32>]
+ [-SourceTransportServers <MultiValuedProperty>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -46,9 +52,7 @@ This example creates a delivery agent connector named Contoso X.400 Connector wi
 The delivery agent connector is hosted on the following servers:
 
 - Hub01
-
 - Hub02
-
 - Hub05
 
 The delivery agent connector is designed to handle X.400 connections to a company called Contoso that uses the carrier Fabrikam.
@@ -124,8 +128,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -213,11 +216,8 @@ Accept wildcard characters: False
 The MaxMessageSize parameter specifies the maximum size of a message that's allowed to pass through this connector. When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are treated as bytes. The valid input range for this parameter is from 65536 through 2147483647 bytes. The default value is unlimited.

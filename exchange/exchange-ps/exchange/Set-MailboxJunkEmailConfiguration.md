@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-MailboxJunkEmailConfiguration
@@ -34,14 +33,14 @@ Set-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
  [-TrustedListsOnly <Boolean>]
  [-TrustedRecipientsAndDomains <MultiValuedProperty>]
  [-TrustedSendersAndDomains <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This cmdlet controls the following junk email settings on the mailbox:
 
 - Enable or disable the junk email rule: The junk email rule (a hidden Inbox rule named Junk E-mail Rule) controls the delivery of messages to the Junk Email folder or the Inbox based on the SCL Junk Email Folder threshold (for the organization or the mailbox) and the safelist collection on the mailbox. Users can enable or disable the junk email rule in their own mailbox by using Outlook on the web.
-
 - Configure the safelist collection: The safelist collection is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list. Users can configure the safelist collection on their own mailbox by using Microsoft Outlook or Outlook on the web.
 
 For more information, see [Configure Exchange antispam settings on mailboxes](https://docs.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-antispam-settings).
@@ -65,7 +64,6 @@ Set-MailboxJunkEmailConfiguration "Michele Martin" -TrustedSendersAndDomains @{A
 This example makes the following configuration changes to the safelist collection for the user named Michele Martin:
 
 - Adds contoso.com and fabrikam.com to the Safe Senders list without affecting other existing entries.
-
 - Adds jane@fourthcoffee.com to the Blocked senders list without affecting other existing entries.
 
 ### Example 3
@@ -81,23 +79,14 @@ This example identifies mailboxes where contacts are treated as trusted senders 
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -136,8 +125,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -157,7 +145,6 @@ Accept wildcard characters: False
 The ContactsTrusted parameter specifies whether the contacts in the Contacts folder are treated as trusted senders. This parameter corresponds to the Outlook on the web setting: Trust email from my contacts. Valid values are:
 
 - $true: Messages from contacts in the Contacts folder that reach the mailbox are never delivered to the Junk Email folder, regardless of the content.
-
 - $false: Messages from contacts in the Contacts folder aren't treated as trusted senders. The email address is a trusted sender only if it's defined in the Safe Senders list. This is the default value.
 
 ```yaml
@@ -195,13 +182,11 @@ Accept wildcard characters: False
 The Enabled parameter enables or disables the junk email rule on the mailbox (a hidden Inbox rule named Junk E-mail Rule). Valid values are:
 
 - $true: The junk email rule is enabled in the mailbox. This value corresponds to the Outlook on the web setting: Automatically filter junk email. This is the default value. Exchange use the safelist collection of the mailbox (the Safe Senders list, Safe Recipients list, and Blocked Senders list), and the SCL Junk Email folder threshold (for the organization or the mailbox) to deliver messages to the Inbox or the Junk Email folder.
-
 - $false: The junk email rule is disabled in the mailbox. This value corresponds to the Outlook on the web setting: Don't move email to my Junk Email folder. Exchange doesn't use the safelist collection of the mailbox or the SCL Junk Email folder threshold to deliver messages to the Inbox or the Junk Email folder.
 
 You can view the status of the junk email rule by running either of the following commands to find the Enabled property value:
 
 - Get-MailboxJunkEmailConfiguration -Identity \<MailboxIdentity\>
-
 - On-premises Exchange only: Get-InboxRule "Junk E-mail Rule" -Mailbox \<MailboxIdentity\> -IncludeHidden
 
 The state of the junk email rule on the mailbox doesn't affect the client-side junk email settings that are available in the Outlook Junk Email Filter. Even when the junk email rule is disabled in the mailbox, Outlook can still move messages to the Junk Email folder. For example, if Outlook determines the message is spam, or the sender is defined in the Blocked Senders list, Outlook can move the message to the Junk Email folder. For more information, see [Overview of the Junk Email Filter](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089).
@@ -225,7 +210,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -245,7 +229,6 @@ Accept wildcard characters: False
 The TrustedListsOnly parameter specifies that only messages from senders in the Safe Senders list are delivered to the Inbox. All other messages are treated as junk email. This parameter corresponds to the Outlook on the web setting: Don't trust email unless it comes from someone in my Safe Senders and Recipients list. Valid values are:
 
 - $true: Only messages from email address or domain entries in the Safe Senders list and the Safe Recipients list are delivered to the Inbox. All other messages are automatically delivered to the Junk Email folder.
-
 - $false: Messages from other senders, recipients, and domains aren't automatically treated as junk email, and are evaluated individually. This is the default value.
 
 ```yaml
@@ -289,9 +272,7 @@ To empty the list of email addresses and domains, use the value $null.
 Notes:
 
 - All email addresses in the global address list (GAL) are automatically considered as trusted senders, so you don't need to add them to the list.
-
 - You can't directly modify the Safe Recipients list by using this cmdlet. You use this parameter to modify the Safe Senders list, and the email addresses and domains are synchronized to the Safe Recipients list.
-
 - Safe domains aren't recognized in Exchange Online and Exchange Online Protection. For more information, see [KB3019657](https://support.microsoft.com/help/3019657).
 
 ```yaml

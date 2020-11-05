@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MessageTrace
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MessageTrace cmdlet to trace messages as they pass through the cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -247,19 +246,12 @@ Accept wildcard characters: False
 The Status parameter filters the results by the delivery status of the message. Valid values for this parameter are:
 
 - None: The message has no delivery status because it was rejected or redirected to a different recipient.
-
 - GettingStatus: The message is waiting for status update.
-
 - Failed: Message delivery was attempted and it failed or the message was filtered as spam or malware, or by transport rules.
-
 - Pending: Message delivery is underway or was deferred and is being retried.
-
 - Delivered: The message was delivered to its destination.
-
 - Expanded: There was no message delivery because the message was addressed to a distribution group and the membership of the distribution was expanded.
-
 - Quarantined: The message was quarantined.
-
 - FilteredAsSpam: The message was marked as spam.
 
 ```yaml

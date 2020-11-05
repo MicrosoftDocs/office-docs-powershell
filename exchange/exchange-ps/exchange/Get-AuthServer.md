@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-AuthServer
@@ -22,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AuthServer [[-Identity] <AuthServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-AuthServer [[-Identity] <AuthServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,9 +53,7 @@ This example retrieves detailed information for the authorization server named W
 The Identity parameter specifies the authorization server object that you want to view. You can use any value that uniquely identifies the authorization server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

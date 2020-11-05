@@ -289,7 +289,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPODataConnectionSetting](Get-SPODataConnectionSetting.md)
+[Get-SPODataConnectionSetting](xref:SharePointServer.Get-SPODataConnectionSetting)
 
 [New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 

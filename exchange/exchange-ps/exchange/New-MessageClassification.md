@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MessageClassification
@@ -27,7 +26,8 @@ New-MessageClassification [-Name] <String> -DisplayName <String> -Locale <Cultur
  [-Confirm]
  [-DomainController <Fqdn>]
  [-RecipientDescription <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -40,7 +40,8 @@ New-MessageClassification [-Name] <String> -DisplayName <String> -SenderDescript
  [-PermissionMenuVisible <Boolean>]
  [-RecipientDescription <String>]
  [-RetainClassificationEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +61,6 @@ New-MessageClassification -Name "My Message Classification" -DisplayName "New Me
 This example creates the message classification named My Message Classification with the following properties:
 
 - The display name is New Message Classification.
-
 - The sender description is "This is the description text".
 
 ### Example 2
@@ -163,8 +163,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -184,21 +183,13 @@ Accept wildcard characters: False
 The DisplayPrecedence parameter specifies the relative precedence of the message classification to other message classifications that may be applied to a specified message. Valid values are:
 
 - Highest
-
 - Higher
-
 - High
-
 - MediumHigh
-
 - Medium (This is the default value)
-
 - MediumLow
-
 - Low
-
 - Lower
-
 - Lowest
 
 Although Outlook only lets a user specify a single classification for a message, transport rules may apply other classifications to a message. The classification with the highest precedence is shown first and the subsequent classifications, which are those with lesser precedence as defined by this parameter, are appended in the appropriate order thereafter.
@@ -240,7 +231,6 @@ Accept wildcard characters: False
 The PermissionMenuVisible parameter specifies whether the values that you entered for the DisplayName and RecipientDescription parameters are displayed in Outlook as the user composes a message. Valid values are:
 
 - $true: Users can assign the message classification to messages before they're sent, and the classification information is displayed. This is the default value.
-
 - $false: Users can't assign the message classification to messages before they're sent, However, messages received with this message classification still display the classification information.
 
 ```yaml

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-ContentFilterConfig
@@ -23,12 +22,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ContentFilterConfig [-BypassedRecipients <MultiValuedProperty>]
- [-BypassedSenderDomains <MultiValuedProperty>] [-BypassedSenders <MultiValuedProperty>] [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExternalMailEnabled <Boolean>]
- [-InternalMailEnabled <Boolean>] [-OutlookEmailPostmarkValidationEnabled <Boolean>]
- [-QuarantineMailbox <SmtpAddress>] [-RejectionResponse <AsciiString>] [-SCLDeleteEnabled <Boolean>]
- [-SCLDeleteThreshold <Int32>] [-SCLQuarantineEnabled <Boolean>] [-SCLQuarantineThreshold <Int32>]
- [-SCLRejectEnabled <Boolean>] [-SCLRejectThreshold <Int32>] [-WhatIf] [<CommonParameters>]
+ [-BypassedSenderDomains <MultiValuedProperty>]
+ [-BypassedSenders <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExternalMailEnabled <Boolean>]
+ [-InternalMailEnabled <Boolean>]
+ [-OutlookEmailPostmarkValidationEnabled <Boolean>]
+ [-QuarantineMailbox <SmtpAddress>]
+ [-RejectionResponse <AsciiString>]
+ [-SCLDeleteEnabled <Boolean>]
+ [-SCLDeleteThreshold <Int32>]
+ [-SCLQuarantineEnabled <Boolean>]
+ [-SCLQuarantineThreshold <Int32>]
+ [-SCLRejectEnabled <Boolean>]
+ [-SCLRejectThreshold <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -109,8 +120,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -209,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuarantineMailbox
-The QuarantineMailbox parameter specifies an SMTP address to be used as a spam quarantine mailbox. A spam quarantine mailbox is required when you set the SCLQuarantineEnabled parameter to $true. All messages that exceed the value set in the SCLQuarantineThreshold parameter are sent to the SMTP address that you set in this parameter.
+The QuarantineMailbox parameter specifies an SMTP address to be used as a spam quarantine mailbox. A spam quarantine mailbox is required when you set the SCLQuarantineEnabled parameter to $true. All messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the SMTP address that you set in this parameter.
 
 ```yaml
 Type: SmtpAddress
@@ -241,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLDeleteEnabled
-The SCLDeleteEnabled parameter specifies whether all messages that exceed the value set in the SCLDeleteThreshold parameter are deleted. Valid input for the SCLDeleteEnabled parameter is $true or $false. The default setting is $false. When the SCLDeleteEnabled parameter is set to $true, all messages that exceed the value set in the SCLDeleteThreshold parameter are deleted.
+The SCLDeleteEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted. Valid input for the SCLDeleteEnabled parameter is $true or $false. The default setting is $false. When the SCLDeleteEnabled parameter is set to $true, all messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted.
 
 ```yaml
 Type: Boolean
@@ -257,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLDeleteThreshold
-The SCLDeleteThreshold parameter specifies an integer value from 1 through 9. This value represents the SCL rating that a particular message must exceed for the Content Filter agent to delete the message and not send an NDR. To enable this functionality, you must set the SCLDeleteEnabled parameter to $true. The default setting is 9.
+The SCLDeleteThreshold parameter specifies an integer value from 1 through 9. This value represents the SCL rating that a particular message must meet or exceed for the Content Filter agent to delete the message and not send an NDR. To enable this functionality, you must set the SCLDeleteEnabled parameter to $true. The default setting is 9.
 
 ```yaml
 Type: Int32
@@ -273,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLQuarantineEnabled
-The SCLQuarantineEnabled parameter specifies whether all messages that exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter. Valid input for the SCLQuarantineEnabled parameter is $true or $false. The default setting is $false. When the SCLQuarantineEnabled parameter is set to $true, all messages that exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter.
+The SCLQuarantineEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter. Valid input for the SCLQuarantineEnabled parameter is $true or $false. The default setting is $false. When the SCLQuarantineEnabled parameter is set to $true, all messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter.
 
 ```yaml
 Type: Boolean
@@ -289,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLQuarantineThreshold
-The SCLQuarantineThreshold parameter specifies an integer value from 1 through 9. This value represents the SCL rating that a particular message must exceed for the Content Filter agent to quarantine the message. To enable quarantine functionality, you must set the SCLQuarantineEnabled parameter to $true, and provide a valid SMTP address in the QuarantineMailbox parameter. The default setting is 9.
+The SCLQuarantineThreshold parameter specifies an integer value from 1 through 9. This value represents the SCL rating that a particular message must meet or exceed for the Content Filter agent to quarantine the message. To enable quarantine functionality, you must set the SCLQuarantineEnabled parameter to $true, and provide a valid SMTP address in the QuarantineMailbox parameter. The default setting is 9.
 
 ```yaml
 Type: Int32
@@ -305,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLRejectEnabled
-The SCLRejectEnabled parameter specifies whether all messages that exceed the value set in the SCLRejectThreshold parameter are rejected, and an NDR is sent to the sender. Valid input for the SCLRejectEnabled parameter is $true or $false. The default setting is $false. When SCLRejectEnabled parameter is set to $true, all messages that exceed the value set in the SCLRejectThreshold parameter are rejected, and an NDR is sent to the sender.
+The SCLRejectEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected, and an NDR is sent to the sender. Valid input for the SCLRejectEnabled parameter is $true or $false. The default setting is $false. When SCLRejectEnabled parameter is set to $true, all messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected, and an NDR is sent to the sender.
 
 ```yaml
 Type: Boolean
@@ -321,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLRejectThreshold
-The SCLRejectThreshold parameter specifies an integer value from 1 through 9. This value represents the SCL rating that a particular message must exceed for the Content Filter agent to reject the message and send an NDR to the sender. To enable the delete functionality, you must set the SCLDeleteEnabled parameter to $true. Also, you can revise the default NDR message by editing the RejectionResponse parameter. The default setting is 9.
+The SCLRejectThreshold parameter specifies an integer value from 1 through 9. This value represents the SCL rating that a particular message must meet or exceed for the Content Filter agent to reject the message and send an NDR to the sender. To enable the delete functionality, you must set the SCLDeleteEnabled parameter to $true. Also, you can revise the default NDR message by editing the RejectionResponse parameter. The default setting is 7.
 
 ```yaml
 Type: Int32

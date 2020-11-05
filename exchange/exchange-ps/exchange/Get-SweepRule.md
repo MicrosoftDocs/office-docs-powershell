@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-SweepRule
@@ -22,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SweepRule [[-Identity] <SweepRuleIdParameter>] [-BypassScopeCheck] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [-Provider <String>] [<CommonParameters>]
+Get-SweepRule [[-Identity] <SweepRuleIdParameter>]
+ [-BypassScopeCheck]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Provider <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -92,9 +95,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the Sweep rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - RuleId property (for example, x2hlsdpGmUifjFgxxGIOJw==).
-
 - Exchange Online: \<mailbox alias\>\\\<RuleId\> (for example, rzaher\\x2hlsdpGmUifjFgxxGIOJw==.
-
 - On-premises Exchange: \<mailbox canonical name\>\\\<RuleId\> (for example, contoso.com/Users/Rick Zaher\\x2hlsdpGmUifjFgxxGIOJw==.
 
 ```yaml
@@ -114,23 +115,14 @@ Accept wildcard characters: False
 The Mailbox parameter filters the results by the specified mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

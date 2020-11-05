@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Release-QuarantineMessage
@@ -19,7 +18,7 @@ Use the Release-QuarantineMessage cmdlet to release messages from quarantine in 
 
 For files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, you can unblock the files in the respective team sites and document libraries by using the Release-QuarantineMessage cmdlet so users can access, share, and download the files.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -27,33 +26,39 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### OrgReleaseToUser
 ```
-Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>] -User <String[]>
+Release-QuarantineMessage -User <String[]> [-Identities <QuarantineMessageIdentity[]>]
+ [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### OrgReleaseToAll
 ```
-Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>] [-ReleaseToAll]
+Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>]
+ [-ReleaseToAll]
  [-AllowSender]
  [-Confirm]
  [-Delete]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identities
 ```
-Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
+Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
+ [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IdentityOnly
@@ -63,7 +68,8 @@ Release-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -230,8 +236,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

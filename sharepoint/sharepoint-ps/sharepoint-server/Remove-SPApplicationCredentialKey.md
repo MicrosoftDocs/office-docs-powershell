@@ -6,7 +6,7 @@ applicable: SharePoint Server 2019
 title: Remove-SPApplicationCredentialKey
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer: 
 ---
 
@@ -94,7 +94,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 
 ## RELATED LINKS
-
-[Set-ApplicationCredentialKey](Set-ApplicationCredentialKey.md)
-
 

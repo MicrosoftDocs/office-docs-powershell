@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-UrlTrace
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-UrlTrace cmdlet to view the results of Safe Links actions in your cloud-based organization. Currently, the date range can't be more than seven days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,31 +42,18 @@ Safe Links is a feature in Advanced Threat Protection that checks links in email
 For the reporting period you specify, the cmdlet returns the following information:
 
 - Time Clicked: The date/time when the URL in the message body was clicked. Every analyzed URL click is recorded, even when a user clicks a URL in an existing message that's already been scanned.
-
 - Workload
-
 - Application Name
-
 - Message ID
-
 - Message Trace ID
-
 - Source ID
-
 - Source Details
-
 - ClickId: A GUID for each URL that was analyzed in a message.
-
 - Recipient Address
-
 - URL
-
 - User IP Address
-
 - UrlBlocked: The URL was detected as malicious by Safe Links (only the initial block, not subsequent clicks), or the user clicked the URL while the scan in progress (users are taken to a notification page that asks them to try again after the scan is complete).
-
 - UrlClicked: The URL is blocked, but the applicable Safe Links policy has the DoNotAllowClickThrough parameter value $false (click through is allowed). Updated policies aren't applied to existing messages that have already been scanned. New or updated policies are applied to new messages that were received after the policy is applied to the mailbox.
-
 - Click Action: The action of a specific click. Possible values are:
 
 • None: We were unable to capture the verdict for the URL. The user might have clicked through the URL.
@@ -230,9 +216,7 @@ Accept wildcard characters: False
 The Workloads parameter filters the results by the specified workload. Valid values are:
 
 - Mail
-
 - OfficeClient
-
 - Other
 
 ```yaml

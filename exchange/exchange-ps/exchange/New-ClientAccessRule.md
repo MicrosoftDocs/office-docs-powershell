@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-ClientAccessRule
@@ -33,10 +32,12 @@ New-ClientAccessRule [-Name] <String> -Action <ClientAccessRulesAction>
  [-ExceptAnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-ExceptAnyOfProtocols <MultiValuedProperty>]
  [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
- [-Priority <Int32>] [-Scope <ClientAccessRulesScope>]
+ [-Priority <Int32>]
+ [-Scope <ClientAccessRulesScope>]
  [-UsernameMatchesAnyOfPatterns <MultiValuedProperty>]
  [-UserRecipientFilter <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,13 +45,12 @@ Client access rules are like mail flow rules (also known as transport rules) for
 
 Note: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
-- OutlookWebApp: BasicAuthentication and AdfsAuthentication.
-
-- ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
-
-- RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
-
 - ExchangeActiveSync: BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
+- ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
+- IMAP4: BasicAuthentication and OAuthAuthentication.
+- OutlookWebApp: BasicAuthentication and AdfsAuthentication.
+- POP3: BasicAuthentication and OAuthAuthentication.
+- RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -112,13 +112,9 @@ The AnyOfAuthenticationTypes parameter specifies a condition for the client acce
 Valid values for this parameter are:
 
 - AdfsAuthentication
-
 - BasicAuthentication
-
 - CertificateBasedAuthentication
-
 - NonBasicAuthentication
-
 - OAuthAuthentication
 
 You can enter multiple values separated by commas. Don't use quotation marks.
@@ -140,9 +136,7 @@ Accept wildcard characters: False
 The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IP address. Valid values for this parameter are:
 
 - A single IP address: For example, 192.168.1.1.
-
 - An IP address range: For example, 192.168.0.1-192.168.0.254.
-
 - Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24.
 
 You can enter multiple values separated by commas.
@@ -166,27 +160,16 @@ The AnyOfProtocols parameter specifies a condition for the client access rule th
 Valid values for this parameter are:
 
 - ExchangeActiveSync
-
 - ExchangeAdminCenter
-
 - ExchangeWebServices
-
 - IMAP4
-
 - OfflineAddressBook
-
 - OutlookAnywhere
-
 - OutlookWebApp
-
 - POP3
-
 - PowerShellWebServices
-
 - RemotePowerShell
-
 - REST
-
 - UniversalOutlook (Mail and Calendar app)
 
 **Note**: In Exchange 2019, the only supported values are ExchangeAdminCenter and RemotePowerShell.
@@ -209,8 +192,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -268,13 +250,9 @@ The ExceptAnyOfAuthenticationTypes parameter specifies an exception for the clie
 Valid values for this parameter are:
 
 - AdfsAuthentication
-
 - BasicAuthentication
-
 - CertificateBasedAuthentication
-
 - NonBasicAuthentication
-
 - OAuthAuthentication
 
 You can enter multiple values separated by commas. Don't use quotation marks.
@@ -296,9 +274,7 @@ Accept wildcard characters: False
 The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IP address. Valid values for this parameter are:
 
 - A single IP address: For example, 192.168.1.1.
-
 - An IP address range: For example, 192.168.0.1-192.168.0.254.
-
 - Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24.
 
 You can enter multiple values separated by commas.
@@ -324,27 +300,16 @@ The ExceptAnyOfProtocols parameter specifies an exception for the client access 
 Valid values for this parameter are:
 
 - ExchangeActiveSync
-
 - ExchangeAdminCenter
-
 - ExchangeWebServices
-
 - IMAP4
-
 - OfflineAddressBook
-
 - OutlookAnywhere
-
 - OutlookWebApp
-
 - POP3
-
 - PowerShellWebServices
-
 - RemotePowerShell
-
 - REST
-
 - UniversalOutlook (Mail and Calendar app)
 
 You can enter multiple values separated by commas. Don't use quotation marks.
@@ -388,9 +353,7 @@ The Priority parameter specifies a priority value for the rule that determines t
 Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
 
 - Valid priority values for the existing 8 rules are from 0 through 7.
-
 - Valid priority values for a new rule (the 9th rule) are from 0 through 8.
-
 - The default value for a new rule (the 9th rule) is 8.
 
 If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
@@ -412,7 +375,6 @@ Accept wildcard characters: False
 The Scope parameter specifies the scope of the client access rule. Valid values are:
 
 - Users: The rule only applies to end-user connections.
-
 - All: The rule applies to all connections (end-users and middle-tier apps).
 
 ```yaml
@@ -454,11 +416,8 @@ This parameter is available only in the cloud-based service.
 The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPath filter syntax to identify the user. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"City -eq 'Redmond'"`).
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
-- Property is a filterable property. For filterable recipient properties, see 
-
+- Property is a filterable property. For filterable recipient properties, see [Filterable properties for the RecipientFilter parameter on Exchange cmdlets](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
@@ -468,21 +427,13 @@ For detailed information about OPath filters in Exchange, see [Additional OPATH 
 The filterable properties that you can use with this parameter are:
 
 - City
-
 - Company
-
 - CountryOrRegion
-
 - CustomAttribute1 to CustomAttribute15
-
 - Department
-
 - Office
-
 - PostalCode
-
 - StateOrProvince
-
 - StreetAddress
 
 ```yaml

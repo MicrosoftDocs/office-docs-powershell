@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxRestoreRequest
@@ -25,14 +24,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MailboxRestoreRequest [[-Identity] <MailboxRestoreRequestIdParameter>]
  [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Filtering
 ```
-Get-MailboxRestoreRequest [-BatchName <String>] [-HighPriority <Boolean>] [-Name <String>] [-RequestQueue <DatabaseIdParameter>] [-SourceDatabase <DatabaseIdParameter>] [-Status <RequestStatus>] [-Suspend <Boolean>] [-TargetDatabase <DatabaseIdParameter>] [-TargetMailbox <MailboxOrMailUserIdParameter>]
+Get-MailboxRestoreRequest [-BatchName <String>]
+ [-HighPriority <Boolean>]
+ [-Name <String>]
+ [-RequestQueue <DatabaseIdParameter>]
+ [-SourceDatabase <DatabaseIdParameter>]
+ [-Status <RequestStatus>]
+ [-Suspend <Boolean>]
+ [-TargetDatabase <DatabaseIdParameter>]
+ [-TargetMailbox <MailboxOrMailUserIdParameter>]
  [-DomainController <Fqdn>]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -130,7 +139,6 @@ Accept wildcard characters: False
 The HighPriority parameter filters the results based on the Priority value that was assigned when the request was created. Valid input for this parameter is $true or $false. Here's how these values filter the results:
 
 - $true Returns requests that were created with the Priority value High, Higher, Highest or Emergency.
-
 - $false Returns requests that were created with the Priority value Normal, Low, Lower or Lowest.
 
 You can't use this parameter with the Identity parameter.
@@ -176,9 +184,7 @@ This parameter is available only in on-premises Exchange.
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -218,9 +224,7 @@ This parameter is available only in on-premises Exchange.
 The SourceDatabase parameter specifies that the cmdlet should only return restore requests for mailboxes that are being restored from the specified source database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -242,23 +246,14 @@ Accept wildcard characters: False
 The Status parameter filters the results based on status. You can use the following values:
 
 - AutoSuspended
-
 - Completed
-
 - CompletedWithWarning
-
 - CompletionInProgress
-
 - Failed
-
 - InProgress
-
 - Queued
-
 - Retrying
-
 - Suspended
-
 - Synced
 
 You can't use this parameter with the Identity parameter.
@@ -300,9 +295,7 @@ This parameter is available or functional only in Exchange Server 2010.
 The TargetDatabase parameter specifies that the cmdlet should only return restore requests for mailboxes that reside on the target database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -324,17 +317,11 @@ Accept wildcard characters: False
 The TargetMailbox parameter specifies the identity of the target mailbox. You can use the following values:
 
 - GUID
-
 - Distinguished name (DN)
-
 - Domain\\Account
-
 - User principal name (UPN)
-
 - Legacy Exchange DN
-
 - SMTP address
-
 - Alias
 
 You can't use this parameter with the Identity parameter.

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ReceiveConnector
@@ -24,13 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Get-ReceiveConnector [[-Identity] <ReceiveConnectorIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
 Get-ReceiveConnector [-Server <ServerIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,11 +79,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the Receive connector that you want to view. You can use any value that uniquely identifies the Receive connector. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - \<ServerName\>\\\<Name\>
 
 You can't use this parameter with the Server parameter.
@@ -104,11 +102,8 @@ Accept wildcard characters: False
 The Server parameter filters the results by the specified Mailbox server or Edge Transport server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can't use this parameter with the Identity parameter.

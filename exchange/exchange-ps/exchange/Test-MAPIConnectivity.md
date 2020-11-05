@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Test-MAPIConnectivity
@@ -31,7 +30,8 @@ Test-MAPIConnectivity -Database <DatabaseIdParameter>
  [-DomainController <Fqdn>]
  [-MonitoringContext <Boolean>]
  [-PerConnectionTimeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -45,7 +45,8 @@ Test-MAPIConnectivity [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-MonitoringContext <Boolean>]
  [-PerConnectionTimeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Server
@@ -58,7 +59,8 @@ Test-MAPIConnectivity [-Server <ServerIdParameter>]
  [-IncludePassive]
  [-MonitoringContext <Boolean>]
  [-PerConnectionTimeout <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,9 +71,7 @@ The cmdlet logs on to the mailbox that you specify using the credentials of the 
 There are three distinct parameters that you can use with the command: Database, Identity and Server:
 
 - The Database parameter takes a database identity and tests the ability to log on to the system mailbox on the specified database.
-
 - The Identity parameter takes a mailbox identity and tests the ability to log on to a specific mailbox.
-
 - The Server parameter takes a server identity and tests the ability to log on to each system mailbox on the specified server.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -94,55 +94,18 @@ This example tests connectivity to a mailbox, specified as a domain name and use
 
 ## PARAMETERS
 
-### -Database
-This parameter is available only in on-premises Exchange.
-
-The Database parameter specifies the database on which to test the connectivity to the system mailbox. You can use any value that uniquely identifies the database. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-If you don't use this parameter or the Identity parameter, the command tests the SystemMailbox on each active database on the Exchange server (the local Exchange server or the server you specify with the Server parameter).
-
-You can't use the Identity, Database, or Server parameters in the same command.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies a mailbox to test. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 This cmdlet accepts pipeline input from the Get-Mailbox or Get-Recipient cmdlet. If you pipe the identify from the Get-Mailbox or Get-Recipient cmdlets, you don't need to use this parameter.
@@ -159,6 +122,32 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Database
+This parameter is available only in on-premises Exchange.
+
+The Database parameter specifies the database on which to test the connectivity to the system mailbox. You can use any value that uniquely identifies the database. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+If you don't use this parameter or the Identity parameter, the command tests the SystemMailbox on each active database on the Exchange server (the local Exchange server or the server you specify with the Server parameter).
+
+You can't use the Identity, Database, or Server parameters in the same command.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
@@ -219,8 +208,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -242,11 +230,8 @@ This parameter is available only in on-premises Exchange.
 The CopyOnServer parameter specifies the Mailbox server that holds the specific database copy to test. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can only use this parameter with the Server parameter, not the Identify or Database parameters.
@@ -342,11 +327,8 @@ This parameter is available only in on-premises Exchange.
 The Server parameter specifies the server on which you will test the MAPI connectivity. The command tests the MAPI connectivity to each system mailbox hosted on active databases on the specified server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't specify this parameter, the command tests the mailbox on the local server.

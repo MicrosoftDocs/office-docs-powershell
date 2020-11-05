@@ -20,19 +20,7 @@ description: "Learn about using the Exchange Online V2 module in scripts and oth
 # App-only authentication for unattended scripts in the EXO V2 module
 
 > [!NOTE]
-> This feature is currently in Public Preview, and is available in the Preview release of Exchange Online PowerShell V2 Module.
-
-To install the Preview release of the EXO V2 module, run the same [steps to install the stable version](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-v2-module) but instead step 4 run the following command:
-
-```powershell
-Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
-```
-
-To update from an earlier version of the of the EXO V2 module, run the following command:
-
-```powershell
-Update-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3-Preview -AllowPrerelease
-```
+> This feature and the required `2.0.3` version of the EXO V2 module are now Generally Available. For instructions on how to install or update to this version of the module, see [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
 
 Auditing and reporting scenarios in Exchange Online often involve scripts that run unattended. In most cases, these unattended scripts access Exchange Online PowerShell using Basic authentication (a username and password). Even when the connection to Exchange Online PowerShell uses modern authentication, the credentials are stored in a local file or a secret vault that's accessed at run-time.
 
@@ -53,6 +41,14 @@ The following examples show how to use the Exchange Online PowerShell V2 module 
   ```
 
   When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
+  
+- Connect using a certificate object:
+
+  ```powershell
+  Connect-ExchangeOnline -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+  ```
+
+  When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
 
 ## How does it work?
 
@@ -109,7 +105,7 @@ If you encounter problems, check the [required permssions](https://docs.microsof
 
    - **Name**: Enter something descriptive.
 
-   - **Supported account types**: Select **Accounts in this organizational directory only (Microsoft)**.
+   - **Supported account types**: Select **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)**.
 
    - **Redirect URI (optional)**: In the first box, select **Web**. In the second box, enter the URI where the access token is sent.
 
@@ -137,11 +133,11 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 5. In the **Select permissions** section that appears on the page, expand **Exchange** and select **Exchange.ManageAsApp**
 
-   ![Select Exchange API permssions](media/app-only-auth-exchange-manageasapp.png)
+   ![Select Exchange.ManageAsApp permssions](media/app-only-auth-exchange-manageasapp.png)
 
    When you're finished, click **Add permissions**.
 
-6. Back on the **Configured permissions** page that appears, click **Grant admin consent for <\tenant name\>**, and select **Yes** in the dialog that appears.
+6. Back on the **Configured permissions** page that appears, click **Grant admin consent for \<tenant name\>**, and select **Yes** in the dialog that appears.
 
 7. Close the flyout when you're finished.
 
@@ -149,17 +145,28 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1):
+- (Recommended) Use the [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate), [Export-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/export-certificate) and [Export-PfxCertificate](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate) cmdlets to request a self-signed certificate and export it to `.cer` and `.pfx`.
+
+```powershell
+# Create certificate
+$mycert = New-SelfSignedCertificate -DnsName "example.com" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1)
+
+# Export certificate to .pfx file
+$mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "1234" -Force -AsPlainText)
+
+# Export certificate to .cer file
+$mycert | Export-Certificate -FilePath mycert.cer
+```
+
+- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1). Note that this script generates SHA1 certificates.
 
   ```powershell
   .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2020-04-01 -EndDate 2022-04-01
   ```
 
-- Use the **makecert.exe** tool from the Windows SDK.
-
 ## Step 4: Attach the certificate to the Azure AD application
 
-After you register the certificate with your application, you can use the public key (.pfx file) or the thumbprint for authentication.
+After you register the certificate with your application, you can use the public key (`.pfx` file) or the thumbprint for authentication.
 
 1. In the Azure AD portal under **Manage Azure Active Directory**, click **View**.
 
@@ -173,7 +180,7 @@ After you register the certificate with your application, you can use the public
 
    ![Click Upload certificate](media/app-only-auth-upload-cert.png)
 
-6. In the dialog that appears, browse to the self-signed certificate you created in the previous Step, and then click **Add**.
+6. In the dialog that appears, browse to the self-signed certificate (`.cer` file) you created in the previous step, and then click **Add**.
 
 ## Step 5: Assign a role to the application
 

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-TransportAgent
@@ -22,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-TransportAgent [[-Identity] <TransportAgentObjectId>] [-DomainController <Fqdn>]
- [-TransportService <TransportService>] [<CommonParameters>]
+Get-TransportAgent [[-Identity] <TransportAgentObjectId>]
+ [-DomainController <Fqdn>]
+ [-TransportService <TransportService>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,13 +86,9 @@ Accept wildcard characters: False
 The TransportService parameter specifies the transport service that you want to view or modify. Valid values for this parameter are:
 
 - Hub for the Transport service on Mailbox servers.
-
 - MailboxSubmission for the Mailbox Transport Submission service on Mailbox servers.
-
 - MailboxDelivery for the Mailbox Transport Delivery service on Mailbox servers.
-
 - FrontEnd for the Front End Transport service on Mailbox servers.
-
 - Edge on Edge Transport servers.
 
 ```yaml

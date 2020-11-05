@@ -1,10 +1,9 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-regulatorycomplianceui
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-RegulatoryComplianceUI
 schema: 2.0.0
-monikerRange: "o365scc-ps"
 ---
 
 # Get-RegulatoryComplianceUI

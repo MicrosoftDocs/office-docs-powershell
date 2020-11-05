@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-SpoofMailReport
@@ -19,37 +18,36 @@ Use the Get-SpoofMailReport cmdlet to view information about insider spoofing in
 
 This cmdlet is only available in Microsoft 365 Enterprise E5, or with Advanced Threat Protection licenses.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-SpoofMailReport [-Action <MultiValuedProperty>] [-Direction <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-Page <Int32>] [-PageSize <Int32>]
- [-ProbeTag <String>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-SpoofMailReport [-Action <MultiValuedProperty>]
+ [-Direction <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The spoof mail report is a feature in Advanced Threat Protection that you can use to query information about insider spoofing detections in the last 30 days. For the reporting period you specify, the Get-SpoofMailReport cmdlet returns the following information:
 
 - Date: Date the message was sent.
-
 - Event Type: Typically, this value is SpoofMail.
-
 - Direction: This value is Inbound.
-
 - Domain: The sender domain. This corresponds to one of your organization's accepted domains.
-
 - Action: Typically, this value is GoodMail or CaughtAsSpam.
-
 - Spoofed Sender: The spoofed email address or domain in your organization from which the messages appear to be coming.
-
 - True Sender: The organizational domain of the PTR record, or pointer record, of the sending IP address, also known as the reverse DNS address. If the sending IP address does not have a PTR record, this field will be blank and the Sender IP column will be filled in. Both columns will not be filled in at the same time.
-
 - Sender IP: The IP address or address range of the source messaging server. If the sending IP address does have a PTR record, this field will be blank and the True Sender column will be filled in. Both columns will not be filled in at the same time.
-
 - Count: The number of spoofed messages that were sent to your organization from the source messaging server during the specified time period.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).

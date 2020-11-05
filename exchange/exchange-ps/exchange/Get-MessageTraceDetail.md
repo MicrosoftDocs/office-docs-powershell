@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-MessageTraceDetail
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message. Note that these detailed results are returned less quickly than the Get-MessageTrace results.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,11 +33,14 @@ Get-MessageTraceDetail -MessageTraceId <Guid> -RecipientAddress <String>
  [-PageSize <Int32>]
  [-ProbeTag <String>]
  [-SenderAddress <String>]
- [-StartDate <DateTime>] [<CommonParameters>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to search message data for the last 30 days. If you enter a time period that's older than 30 days, you won't receive an error, but the command will return no results.
+You can use this cmdlet to search message data for the last 10 days. If you enter a time period that's older than 10 days, you will receive an error and the command will return no results.
+
+To search for message data that is greater than 10 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -132,17 +134,11 @@ Accept wildcard characters: False
 The Event parameter filters the report by the message event. The following are examples of common events:
 
 - RECEIVE: The message was received by the service.
-
 - SEND: The message was sent by the service.
-
 - FAIL: The message failed to be delivered.
-
 - DELIVER: The message was delivered to a mailbox.
-
 - EXPAND: The message was sent to a distribution group that was expanded.
-
 - TRANSFER: Recipients were moved to a bifurcated message because of content conversion, message recipient limits, or agents.
-
 - DEFER: The message delivery was postponed and may be re-attempted later.
 
 You can specify multiple values separated by commas.

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Remove-AttachmentFilterEntry
@@ -22,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-AttachmentFilterEntry [-Identity] <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Remove-AttachmentFilterEntry [-Identity] <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -53,7 +55,6 @@ This example removes the attachment filter entry that filters attachments that h
 The Identity parameter specifies the type of attachment that this filter entry removes. The Identity parameter accepts values in the format Type:Name, where Type is one of the following two values:
 
 - ContentType: This value matches the attachment filter entry against the MIME content type.
-
 - FileName: This value matches the attachment filter entry against the simple file name.
 
 In Type:Name, Name can be either the file name of the attachment filter entry to be removed, or the content type of the attachment filter entry to be removed.
@@ -74,8 +75,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

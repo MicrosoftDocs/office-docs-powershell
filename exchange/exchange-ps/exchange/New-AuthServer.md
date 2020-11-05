@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-AuthServer
@@ -23,20 +22,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AuthMetadataUrl
 ```
-New-AuthServer [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
+New-AuthServer [-Name] <String> -AuthMetadataUrl <String>
+ [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### NativeClientAuthServer
 ```
-New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <AuthServerType> [-TrustAnySSLCertificate]
+New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <AuthServerType>
+ [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AppSecret
@@ -45,7 +48,8 @@ New-AuthServer [-Name] <String> -Type <AuthServerType>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,13 +104,9 @@ Accept wildcard characters: False
 The Type parameter specifies the type of authorization tokens that are issued by the authorization server. Valid values are:
 
 - ADFS
-
 - AzureAD
-
 - Facebook
-
 - LinkedIn
-
 - MicrosoftACS
 
 ```yaml
@@ -125,8 +125,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -162,7 +161,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the authorization server is enabled. Valid values are:
 
 - $true: Authorization tokens that are issued by the authorization server are accepted. This is the default value
-
 - $false: Authorization tokens that are issued by the authorization server are are not accepted.
 
 ```yaml

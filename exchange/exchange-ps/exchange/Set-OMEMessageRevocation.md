@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-OMEMessageRevocation
@@ -17,14 +16,15 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-OMEMessageRevocation cmdlet to revoke Microsoft 365 Message Encryption (OME) for a message. Revoking encryption prevents the recipient from viewing the message in the Office 365 Message Encryption portal.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-OMEMessageRevocation -MessageId <String> -Revoke <Boolean> [<CommonParameters>]
+Set-OMEMessageRevocation -MessageId <String> -Revoke <Boolean>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +67,6 @@ Accept wildcard characters: False
 The Revoke parameter specifies whether to revoke encryption for the message. Valid values are:
 
 - $true: Encryption for the specified message is revoked. The recipient will get an error when they try to view the encrypted message in the Office 365 Message Encryption portal
-
 - $false: Encryption for the specified message isn't revoked. This is the default value.
 
 ```yaml

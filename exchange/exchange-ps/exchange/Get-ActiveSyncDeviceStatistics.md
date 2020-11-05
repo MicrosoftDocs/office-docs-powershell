@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-ActiveSyncDeviceStatistics
@@ -29,7 +28,8 @@ Get-ActiveSyncDeviceStatistics [-Identity] <ActiveSyncDeviceIdParameter>
  [-DomainController <Fqdn>]
  [-GetMailboxLog]
  [-NotificationEmailAddresses <MultiValuedProperty>]
- [-ShowRecoveryPassword] [<CommonParameters>]
+ [-ShowRecoveryPassword]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
@@ -38,7 +38,8 @@ Get-ActiveSyncDeviceStatistics -Mailbox <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-GetMailboxLog]
  [-NotificationEmailAddresses <MultiValuedProperty>]
- [-ShowRecoveryPassword] [<CommonParameters>]
+ [-ShowRecoveryPassword]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,23 +94,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the user mailbox for which you want to retrieve the mobile phone statistics. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

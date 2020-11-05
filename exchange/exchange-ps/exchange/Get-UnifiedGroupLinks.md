@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-UnifiedGroupLinks
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-UnifiedGroupLinks cmdlet to view membership and ownership information for Microsoft 365 Groups in your cloud-based organization. To view other properties for Microsoft 365 Groups, use the Get-UnifiedGroup cmdlet.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -49,15 +48,10 @@ This example show the members of the Microsoft 365 Group named Human Resources D
 The Identity parameter specifies the Microsoft 365 Group that you want to view. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -77,13 +71,9 @@ Accept wildcard characters: False
 The LinkType parameter specifies the Microsoft 365 Group property that you want to view. Valid values are:
 
 - Members
-
 - Owners
-
 - Subscribers
-
 - Aggregators
-
 - EventSubscribers
 
 ```yaml

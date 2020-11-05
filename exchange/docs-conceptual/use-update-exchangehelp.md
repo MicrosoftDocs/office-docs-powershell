@@ -6,7 +6,7 @@ manager: dansimp
 ms.date:
 ms.audience: ITPro
 ms.topic: article
-ms.prod: exchange-server-itpro
+ms.service: exchange-powershell
 localization_priority: Normal
 ms.assetid: 219f78a3-f0e5-4dc6-9787-9a0b9756ee09
 description: "Administrators can learn how to use Update-ExchangeHelp to update Exchange cmdlet reference topics that are available in Exchange Management Shell in Exchange 2016"
@@ -39,7 +39,7 @@ This method requires that the Exchange server has direct access to the internet.
 
 Run the following command in the Exchange Management Shell:
 
-```PowerShell
+```powershell
 Update-ExchangeHelp -Verbose
 ```
 
@@ -139,13 +139,13 @@ If you want to identify only the update packages that apply to you, follow these
 
    To find the version details on a single Exchange server, run the following command:
 
-   ```PowerShell
+   ```powershell
    Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
    ```
 
    To find the version details for all Exchange servers in your organization, run the following command:
 
-   ```PowerShell
+   ```powershell
    Get-ExchangeServer | Sort-Object Name | ForEach {Invoke-Command -ComputerName $_.Name -ScriptBlock {Get-Command ExSetup.exe | ForEach{$_.FileVersionInfo}}} | Format-Table -Auto
    ```
 

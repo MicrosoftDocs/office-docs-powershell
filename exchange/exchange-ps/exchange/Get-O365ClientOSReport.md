@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-O365ClientOSReport
@@ -19,29 +18,28 @@ This cmdlet was deprecated in January, 2018. For information about the available
 
 Use the Get-O365ClientOSReport cmdlet to get a summary report of client operating system use.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-O365ClientOSReport [-EndDate <DateTime>] [-OS <String>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-O365ClientOSReport [-EndDate <DateTime>]
+ [-OS <String>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The report displays the client use statistics for the five most recent versions of the operating systems named in the OS parameter description. All previous operating system versions are combined into a sixth category named Others. The following list describes the properties that are returned in the results.
 
 - TenantGuid: Unique identifier of the tenant.
-
 - TenantName: Tenant name.
-
 - Date: Last time the line item data was aggregated.
-
 - OperatingSystem: Operating system name.
-
 - Version: Operating system version.
-
 - OperatingSystemUsageCount: Number of times a given operating system and version combination connected to the service during the reporting period.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -86,11 +84,8 @@ Accept wildcard characters: False
 The OS parameter filters the report by operating system. If you don't use this parameter, all operating systems will be included. The accepted values for this parameter are:
 
 - Windows
-
 - Android
-
 - iOS
-
 - "Mac OS"
 
 ```yaml

@@ -68,6 +68,7 @@ All other policy properties will be left as previously assigned.
 
 ### -AllowGiphy
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
+Note: [Optional Connected Experiences](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for Giphys to be allowed.
 
 ```yaml
 Type: Boolean
@@ -142,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSmartReply
-Determines whether a user is allowed to use smart replies. Set this to TRUE to allow. Set this to FALSE to prohibit. 
+Turn this setting on to enable suggested replies for chat messages. Set this to TRUE to allow. Set this to FALSE to prohibit. 
 
 ```yaml
 Type: Boolean
@@ -248,6 +249,7 @@ Accept wildcard characters: False
 
 ### -AllowUrlPreviews
 Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
+Note: [Optional Connected Experiences](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
 
 ```yaml
 Type: Boolean
@@ -277,6 +279,8 @@ Accept wildcard characters: False
 ```
 
 ### -ChannelsInChatListEnabledType
+On mobile devices, enable to display favorite channels above recent chats.
+
 Possible values are: DisabledUserOverride, EnabledUserOverride.
 
 ```yaml

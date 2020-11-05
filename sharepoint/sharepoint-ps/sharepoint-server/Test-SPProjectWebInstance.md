@@ -6,7 +6,7 @@ applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Test-SPProjectWebInstance
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 
@@ -105,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Mount-SPProjectWebInstance](Mount-SPProjectWebInstance.md)

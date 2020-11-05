@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 # Get-RecoverableItems
 
@@ -77,23 +76,14 @@ This example returns all of the available recoverable deleted messages with the 
 The Identity parameter specifies the mailbox that contains the deleted items that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name>\<account name>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 In tExchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>",..."\<ValueX>".
@@ -143,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilterEndTime
-The FilterEndTime specifies the end date/time of the date range.
+The FilterEndTime specifies the end date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
@@ -164,13 +154,9 @@ Accept wildcard characters: False
 The FilterItemType parameter filters the results by the specified MessageClass (ItemClass) property value of the deleted item. For example:
 
 - IPM.Appointment (Meetings and appointments)
-
 - IPM.Contact
-
 - IPM.File
-
 - IPM.Note
-
 - IPM.Task
 
 ```yaml
@@ -187,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilterStartTime
-The FilterStartTime specifies the start date/time of the date range.
+The FilterStartTime specifies the start date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
@@ -260,9 +246,7 @@ Accept wildcard characters: False
 The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
 - DeletedItems: The Deleted Items folder.
-
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
-
 - PurgedItems: (Cloud only) The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
 If you don't use this parameter, the command will search all of these folders.

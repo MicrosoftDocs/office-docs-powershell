@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-AccessToCustomerDataRequest
@@ -19,14 +18,16 @@ Use the Get-AccessToCustomerDataRequest cmdlet to view Microsoft 365 customer lo
 
 Note: Customer lockbox is included in the Microsoft 365 E5 plan. If you don't have a Microsoft 365 E5 plan, you can buy a separate customer lockbox subscription with any Microsoft 365 Enterprise plan.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-AccessToCustomerDataRequest [-ApprovalStatus <String>] [-CreatedAfter <ExDateTime>] [-RequestId <String>]
+Get-AccessToCustomerDataRequest [-ApprovalStatus <String>]
+ [-CreatedAfter <ExDateTime>]
+ [-RequestId <String>]
  [<CommonParameters>]
 ```
 
@@ -62,11 +63,8 @@ This example returns detailed information the customer lockbox request EXSR12345
 The ApprovalStatus parameter filters the results by approval status. Valid values are:
 
 - Approved
-
 - Canceled
-
 - Denied
-
 - Pending
 
 ```yaml
@@ -88,7 +86,6 @@ The CreatedAfter parameter filters the results by the creation date in Coordinat
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml

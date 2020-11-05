@@ -2,7 +2,6 @@
 Module Name: Exchange PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: exchange
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Exchange PowerShell
@@ -10,11 +9,8 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 Exchange PowerShell is built on Windows PowerShell technology and provides a powerful command-line interface that enables automation of administrative tasks. The following PowerShell environments are available in Exchange:
 
 - [Exchange Server PowerShell (Exchange Management Shell)](https://docs.microsoft.com/powershell/exchange/exchange-management-shell)
-
 - [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell)
-
 - [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
-
 - [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
 ## active-directory Cmdlets
@@ -1571,6 +1567,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AdministrativeUnit](Get-AdministrativeUnit.md)
 
+### [Get-AutoSensitivityLabelPolicy](Get-AutoSensitivityLabelPolicy.md)
+
+### [Get-AutoSensitivityLabelRule](Get-AutoSensitivityLabelRule.md)
+
 ### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
 
 ### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
@@ -1609,6 +1609,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-ActivityAlert](New-ActivityAlert.md)
 
+### [New-AutoSensitivityLabelPolicy](New-AutoSensitivityLabelPolicy.md)
+
+### [New-AutoSensitivityLabelRule](New-AutoSensitivityLabelRule.md)
+
 ### [New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
 
 ### [New-JournalRule](New-JournalRule.md)
@@ -1633,6 +1637,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ActivityAlert](Remove-ActivityAlert.md)
 
+### [Remove-AutoSensitivityLabelPolicy](Remove-AutoSensitivityLabelPolicy.md)
+
+### [Remove-AutoSensitivityLabelRule](Remove-AutoSensitivityLabelRule.md)
+
 ### [Remove-InformationBarrierPolicy](Remove-InformationBarrierPolicy.md)
 
 ### [Remove-JournalRule](Remove-JournalRule.md)
@@ -1656,6 +1664,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-TransportRule](Remove-TransportRule.md)
 
 ### [Set-ActivityAlert](Set-ActivityAlert.md)
+
+### [Set-AutoSensitivityLabelPolicy](Set-AutoSensitivityLabelPolicy.md)
+
+### [Set-AutoSensitivityLabelRule](Set-AutoSensitivityLabelRule.md)
 
 ### [Set-InformationBarrierPolicy](Set-InformationBarrierPolicy.md)
 
@@ -2059,9 +2071,13 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EXORecipientPermission](Get-EXORecipientPermission.md)
 
+### [Get-MyAnalyticsFeatureConfig](Get-MyAnalyticsFeatureConfig.md)
+
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
+
+### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
 
 ## reporting Cmdlets
 ### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)
