@@ -23,9 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-FederatedOrganizationIdentifier [[-Identity] <OrganizationIdParameter>] [-AccountNamespace <SmtpDomain>]
- [-Confirm] [-DelegationFederationTrust <FederationTrustIdParameter>] [-DomainController <Fqdn>]
- [-Enabled <Boolean>] [-OrganizationContact <SmtpAddress>] [-WhatIf] [-DefaultDomain <SmtpDomain>]
+Set-FederatedOrganizationIdentifier [[-Identity] <OrganizationIdParameter>]
+ [-AccountNamespace <SmtpDomain>]
+ [-Confirm]
+ [-DefaultDomain <SmtpDomain>]
+ [-DelegationFederationTrust <FederationTrustIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-OrganizationContact <SmtpAddress>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -61,6 +67,22 @@ This example enables the organization identifier. This enables federation for th
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the federated organization identifier.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AccountNamespace
 The AccountNamespace parameter specifies the federated domain to be used to establish the organization identifier with the Microsoft Federation Gateway.
 
@@ -80,8 +102,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -89,6 +110,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultDomain
+The DefaultDomain parameter specifies the federated domain used for delegation tokens issued by the Microsoft Federation Gateway for user accounts in the Exchange organization. If the DefaultDomain parameter isn't set, the primary SMTP domain for each user account is used in delegation tokens issued by the Microsoft Federation Gateway. Only a single domain or subdomain for the Exchange organization should be configured, and it applies to all delegation tokens issued for the Exchange organization, for example, contoso.com.
+
+```yaml
+Type: SmtpDomain
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -149,22 +186,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the federated organization identifier.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -OrganizationContact
 The OrganizationContact parameter specifies the SMTP address of the federation contact.
 
@@ -189,22 +210,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultDomain
-The DefaultDomain parameter specifies the federated domain used for delegation tokens issued by the Microsoft Federation Gateway for user accounts in the Exchange organization. If the DefaultDomain parameter isn't set, the primary SMTP domain for each user account is used in delegation tokens issued by the Microsoft Federation Gateway. Only a single domain or subdomain for the Exchange organization should be configured, and it applies to all delegation tokens issued for the Exchange organization, for example, contoso.com.
-
-```yaml
-Type: SmtpDomain
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceCaseMember -Case <String> [-DomainController <Fqdn>] [-ResultSize <Unlimited>] [-ShowCaseAdmin]
+Get-ComplianceCaseMember -Case <String>
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-ShowCaseAdmin]
  [<CommonParameters>]
 ```
 

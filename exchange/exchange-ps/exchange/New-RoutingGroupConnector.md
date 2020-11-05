@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-RoutingGroupConnector [-Name] <String> -SourceTransportServers <MultiValuedProperty>
- -TargetTransportServers <MultiValuedProperty> [-BiDirectional <Boolean>] [-Confirm] [-Cost <Int32>]
- [-DomainController <Fqdn>] [-PublicFolderReferralsEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
+New-RoutingGroupConnector [-Name] <String> -SourceTransportServers <MultiValuedProperty> -TargetTransportServers <MultiValuedProperty>
+ [-BiDirectional <Boolean>]
+ [-Confirm]
+ [-Cost <Int32>]
+ [-DomainController <Fqdn>]
+ [-PublicFolderReferralsEnabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,11 +48,8 @@ New-RoutingGroupConnector -Name "Interop RGC" -SourceTransportServers "Hub2010.c
 This example creates the routing group connector Interop RGC with the following properties:
 
 - The Exchange 2010 server is Hub2010.contoso.com.
-
 - The Exchange 2003 bridgehead server is Bridgehead2003.contoso.com.
-
 - The routing group connector is a two-way connector between the Exchange 2010 routing group and the routing group associated with the specified Exchange 2003 server.
-
 - The cost is 100.
 
 ## PARAMETERS
@@ -119,8 +121,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

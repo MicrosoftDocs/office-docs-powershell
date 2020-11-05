@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ServiceDeliveryReport [-Expression <Expression>] [-ProbeTag <String>] [-Recipient <SmtpAddress>]
+Get-ServiceDeliveryReport [-Expression <Expression>]
+ [-ProbeTag <String>]
+ [-Recipient <SmtpAddress>]
  [<CommonParameters>]
 ```
 

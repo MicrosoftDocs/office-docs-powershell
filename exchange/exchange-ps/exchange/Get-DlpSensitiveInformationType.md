@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParameter>] [<CommonParameters>]
+Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +52,6 @@ This example lists all the properties of the sensitive information type named "C
 The Identity parameter specifies the sensitive information type that you want to view. Valid values are:
 
 - Name
-
 - Id (GUID value)
 
 ```yaml

@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OnPremisesOrganization [[-Identity] <OnPremisesOrganizationIdParameter>] [<CommonParameters>]
+Get-OnPremisesOrganization [[-Identity] <OnPremisesOrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,9 +56,7 @@ This example retrieves the on-premises organization settings by using the FQDN o
 The Identity parameter specifies the identity of the on-premises organization object. You can use the following values:
 
 - Canonical name
-
 - GUID
-
 - Name
 
 ```yaml

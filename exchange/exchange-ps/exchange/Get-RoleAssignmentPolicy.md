@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RoleAssignmentPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-RoleAssignmentPolicy [[-Identity] <MailboxPolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

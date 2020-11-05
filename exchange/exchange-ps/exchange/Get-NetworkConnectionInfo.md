@@ -21,20 +21,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-NetworkConnectionInfo [[-Identity] <ServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-NetworkConnectionInfo [[-Identity] <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This cmdlet retrieves the following configuration information for each network adapter configured on the server:
 
 - Name: This field displays the name of the network adapter. This name indicates the manufacturer and model of the network adapter or the administrator-specified name of the network adapter.
-
 - DnsServers: This field displays the DNS servers used by the network adapter. The server names are separated by commas.
-
 - IPAddresses: This field displays the IP addresses used by the network adapter. The IP addresses are separated by commas.
-
 - AdapterGuid: This field displays the GUID assigned to the network adapter by Windows.
-
 - MacAddress: This field displays the media access control (MAC) address of the network adapter.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -72,11 +70,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the server you want to query. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use the Identity parameter, the command is run on the local server.
