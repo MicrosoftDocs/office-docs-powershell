@@ -26,7 +26,8 @@ Export-MigrationReport [-Identity] <MigrationReportIdParameter> -CsvStream <Stre
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Partition <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Paged
@@ -35,7 +36,8 @@ Export-MigrationReport [-Identity] <MigrationReportIdParameter> -RowCount <Int32
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Partition <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,22 +54,6 @@ There are no examples for using this cmdlet because the values used for the requ
 
 ## PARAMETERS
 
-### -CsvStream
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Stream
-Parameter Sets: StreamBased
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 This parameter is reserved for internal Microsoft use.
 
@@ -81,6 +67,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -CsvStream
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Stream
+Parameter Sets: StreamBased
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -119,8 +121,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

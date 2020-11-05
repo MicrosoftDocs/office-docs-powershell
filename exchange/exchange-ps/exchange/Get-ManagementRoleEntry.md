@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-DomainController <Fqdn>] [-Parameters <String[]>]
- [-PSSnapinName <String>] [-Type <ManagementRoleEntryType[]>] [<CommonParameters>]
+Get-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
+ [-DomainController <Fqdn>]
+ [-Parameters <String[]>]
+ [-PSSnapinName <String>]
+ [-Type <ManagementRoleEntryType[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

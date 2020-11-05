@@ -102,7 +102,6 @@ Accept wildcard characters: False
 The HighPriority parameter filters the results based on the Priority value that was assigned when the request was created. Valid input for this parameter is $true or $false. Here's how these values filter the results:
 
 - $true Returns requests that were created with the Priority value High, Higher, Highest or Emergency.
-
 - $false Returns requests that were created with the Priority value Normal, Low, Lower or Lowest.
 
 You can't use this parameter with the Identity parameter.
@@ -126,15 +125,10 @@ The Identity parameter specifies the identity of the public folder move request.
 You can't use this parameter with the following parameters:
 
 - BatchName
-
 - HighPriority
-
 - Name
-
 - RequestQueue
-
 - Suspend
-
 - Status
 
 ```yaml
@@ -172,9 +166,7 @@ Accept wildcard characters: False
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -212,23 +204,14 @@ Accept wildcard characters: False
 The Status parameter filters the results based on status. You can use the following values:
 
 - AutoSuspended
-
 - Completed
-
 - CompletedWithWarning
-
 - CompletionInProgress
-
 - Failed
-
 - InProgress
-
 - Queued
-
 - Retrying
-
 - Suspended
-
 - Synced
 
 You can't use this parameter with the Identity parameter.

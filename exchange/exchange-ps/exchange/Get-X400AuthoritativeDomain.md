@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-X400AuthoritativeDomain [[-Identity] <X400AuthoritativeDomainIdParameter>] [-DomainController <Fqdn>]
+Get-X400AuthoritativeDomain [[-Identity] <X400AuthoritativeDomainIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

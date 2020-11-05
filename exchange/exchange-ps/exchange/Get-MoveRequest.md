@@ -90,45 +90,27 @@ This example retrieves the status of move requests in the FromDB01ToDB02 batch t
 The Identity parameter specifies the identity of the move request, which is the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 You can use this parameter with the following parameters:
 
 - BatchName
-
 - HighPriority
-
 - MoveStatus
-
 - Offline
-
 - Protect
-
 - RemoteHostName
-
 - SourceDatabase
-
 - Suspend
-
 - SuspendWhenReadyToComplete
-
 - TargetDatabase
 
 ```yaml
@@ -204,35 +186,20 @@ Accept wildcard characters: False
 The Flags parameter specifies the move type to retrieve information for. The following values may be used:
 
 - CrossOrg
-
 - HighPriority
-
 - IntraOrg
-
 - Join
-
 - MoveOnlyArchiveMailbox
-
 - MoveOnlyPrimaryMailbox
-
 - None
-
 - Offline
-
 - Protected
-
 - Pull
-
 - Push
-
 - RemoteLegacy
-
 - Split
-
 - Suspend
-
 - SuspendWhenReadyToComplete
-
 - TargetIsAggregatedMailbox
 
 ```yaml
@@ -290,21 +257,13 @@ Accept wildcard characters: False
 The MoveStatus parameter returns move requests in the specified status. You can use the following values:
 
 - AutoSuspended
-
 - Completed
-
 - CompletedWithWarning
-
 - CompletionInProgress
-
 - Failed
-
 - InProgress
-
 - Queued
-
 - Retrying
-
 - Suspended
 
 You can't use this parameter with the Identity parameter.
@@ -344,11 +303,8 @@ Accept wildcard characters: False
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
-
 - Canonical name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -390,23 +346,14 @@ This parameter is available only in the cloud-based service.
 The ProxyToMailbox parameter filters the results by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -464,9 +411,7 @@ If the default view doesn't include the property you're sorting by, you can appe
 You can sort by the following properties:
 
 - Name
-
 - DisplayName
-
 - Alias
 
 ```yaml
@@ -488,9 +433,7 @@ This parameter is available only in on-premises Exchange.
 The SourceDatabase parameter returns all mailboxes that are being moved from the specified source mailbox database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.
@@ -550,9 +493,7 @@ This parameter is available only in on-premises Exchange.
 The TargetDatabase parameter returns all mailboxes that are being moved to the specified target mailbox database. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity parameter.

@@ -35,13 +35,9 @@ Get-DataRetentionReport
 The following properties are returned by this cmdlet:
 
 - Organization
-
 - Date
-
 - Action
-
 - DataSource
-
 - MessageCount
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).

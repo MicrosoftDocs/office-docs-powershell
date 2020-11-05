@@ -22,23 +22,29 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Database
 ```
-Get-StoreUsageStatistics -Database <DatabaseIdParameter> [-CopyOnServer <ServerIdParameter>]
+Get-StoreUsageStatistics -Database <DatabaseIdParameter>
+ [-CopyOnServer <ServerIdParameter>]
  [-DomainController <Fqdn>]
- [-Filter <String>] [<CommonParameters>]
+ [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-StoreUsageStatistics [-Identity] <GeneralMailboxIdParameter> [-CopyOnServer <ServerIdParameter>]
+Get-StoreUsageStatistics [-Identity] <GeneralMailboxIdParameter>
+ [-CopyOnServer <ServerIdParameter>]
  [-DomainController <Fqdn>]
- [-Filter <String>] [<CommonParameters>]
+ [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
-Get-StoreUsageStatistics -Server <ServerIdParameter> [-IncludePassive]
+Get-StoreUsageStatistics -Server <ServerIdParameter>
+ [-IncludePassive]
  [-DomainController <Fqdn>]
- [-Filter <String>] [<CommonParameters>]
+ [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,9 +81,7 @@ This example retrieves store usage statistics for database DB1 and sorts the out
 The Database parameter specifies the name of the mailbox database to get usage statistics from (the top 25 largest mailboxes on the specified mailbox database). You can use any value that uniquely identifies the mailbox database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can't use this parameter with the Identity or Server parameters.
@@ -99,17 +103,11 @@ Accept wildcard characters: False
 The Identity parameter specifies the mailbox to get usage statistics from. You can use one of the following values to identify the mailbox:
 
 - GUID
-
 - Distinguished name (DN)
-
 - Domain\\Account
-
 - User principal name (UPN)
-
 - Legacy Exchange DN
-
 - SMTP address
-
 - Alias
 
 The command returns results for the mailbox only if it's one of the top 25 users of store resources.
@@ -133,7 +131,6 @@ Accept wildcard characters: False
 The Server parameter specifies the Mailbox server to get usage statistics from (the top 25 mailboxes on all active databases on the specified server). You can use one of the following values to identify the server:
 
 - Fully qualified domain name (FQDN)
-
 - NetBIOS name
 
 You can't use this parameter with the Database or Identity parameters.
@@ -155,9 +152,7 @@ Accept wildcard characters: False
 The CopyOnServer parameter specifies the mailbox database copy to get usage statistics from. You can use any value that uniquely identifies the mailbox database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You use this parameter with the Server or Identity parameters.
@@ -195,11 +190,8 @@ Accept wildcard characters: False
 The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property.
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.

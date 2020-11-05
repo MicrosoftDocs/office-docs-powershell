@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-Clutter -Identity <MailboxIdParameter> [<CommonParameters>]
+Get-Clutter -Identity <MailboxIdParameter>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,23 +45,14 @@ This example returns the Clutter settings for the user Constancia Pena.
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name>\\\<account name>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

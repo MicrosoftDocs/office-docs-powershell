@@ -77,7 +77,8 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SubscriptionEnabled]
  [-UnifiedGroupWelcomeMessageEnabled]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,7 +98,6 @@ Set-UnifiedGroup -Identity "Marketing Department" -PrimarySmtpAddress marketing@
 This example makes the following changes to the Microsoft 365 Group named Marketing Department:
 
 - The primary email address is changed to marketing@contoso.com.
-
 - The Microsoft 365 Group is allowed to receive mail from unauthenticated (external) senders.
 
 ### Example 2
@@ -113,15 +113,10 @@ This example changes the Microsoft 365 Group named Legal Department from a publi
 The Identity parameter specifies the Microsoft 365 Group that you want to modify. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -145,15 +140,10 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -177,7 +167,6 @@ Accept wildcard characters: False
 The AccessType parameter specifies the privacy type for the Microsoft 365 Group. Valid values are:
 
 - Public: The group content and conversations are available to everyone, and anyone can join the group without approval from a group owner.
-
 - Private: The group content and conversations are only available to members of the group, and joining the group requires approval from a group owner.
 
 Note: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
@@ -217,7 +206,6 @@ Accept wildcard characters: False
 The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group. Changing this setting doesn't affect existing group members.
 
 - If you use this switch without a value, all future members that are added to the group will have their subscriptions set to ReplyAndEvents. Previous events are not automatically added to their calendars.
-
 - If you use this exact syntax: `-AlwaysSubscribeMembersToCalendarEvents:$false,` all future members that are added to the group will have their subscriptions set to ReplyOnly.
 
 Group members can change their own subscription settings, which can override your intended use of this switch.
@@ -261,7 +249,6 @@ Accept wildcard characters: False
 The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Microsoft 365 Group to conversations and calendar events. Only users that are added to the group after you enable this setting are automatically subscribed to the group..
 
 - To subscribe new members to conversations and calendar events, use the AutoSubscribeNewMembers switch without a value.
-
 - If you don't want to subscribe new members to conversations and calendar events, use this exact syntax: -AutoSubscribeNewMembers:$false.
 
 ```yaml
@@ -281,7 +268,6 @@ Accept wildcard characters: False
 The CalendarMemberReadOnly switch specifies whether to set read-only Calendar permissions to the Microsoft 365 Group for members of the group.
 
 - To set read-only Calendar permissions, use the CalendarMemberReadOnly switch without a value.
-
 - To remove read-only Calendar permissions, use this exact syntax: -CalendarMemberReadOnly:$false.
 
 To view the current value of the CalendarMemberReadOnly property on a Microsoft 365 Group, replace \<EmailAddress\> with the email address of the group, and run this command: Get-UnifiedGroup -Identity \<EmailAddress\> -IncludeAllProperties | Format-List \*Calendar\*.
@@ -318,8 +304,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -339,7 +324,6 @@ Accept wildcard characters: False
 The ConnectorsEnabled specifies whether to enable the ability to use connectors for the Microsoft 365 Group.
 
 - To enable connectors, use the ConnectorsEnabled switch without a value.
-
 - To disable connectors, use this exact syntax: -ConnectorsEnabled:$false.
 
 To use this switch, the value of the ConnectorsEnabled parameter on the Set-OrganizationConfig cmdlet must be set to $true (which is the default value).
@@ -603,9 +587,7 @@ Accept wildcard characters: False
 The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Microsoft 365 Group. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 To remove an existing policy, use the value $null.
@@ -645,11 +627,8 @@ The EmailAddresses parameter specifies all the email addresses (proxy addresses)
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
-
 - smtp: Other SMTP email addresses.
-
 - X400: X.400 addresses in on-premises Exchange.
-
 - X500: X.500 addresses in on-premises Exchange.
 
 If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
@@ -657,9 +636,7 @@ If you don't include a \<Type\> value for an email address, the value smtp is as
 To specify the primary SMTP email address, you can use any of the following methods:
 
 - Use the \<Type\> value SMTP on the address.
-
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
-
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
@@ -801,23 +778,14 @@ The GrantSendOnBehalfTo parameter specifies who can send on behalf of this Micro
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
@@ -843,7 +811,6 @@ Accept wildcard characters: False
 The HiddenFromAddressListsEnabled parameter specifies whether the Microsoft 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
 
 - $true: The Microsoft 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Microsoft 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is **NOT** enabled.
-
 - $false: The Microsoft 365 Group is visible in the GAL and other address lists. This is the default value.
 
 ```yaml
@@ -863,7 +830,6 @@ Accept wildcard characters: False
 The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 Group is hidden from Outlook clients connected to Microsoft 365.
 
 - To enable this setting, you don't need to specify a value with this switch. The Microsoft 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't be visible in the global address list (GAL). The group name won't resolve during the creation a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. Additionally, the HiddenFromAddressListsEnabled property will also be set to true to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
-
 - To disable this setting, use this exact syntax: -HiddenFromExchangeClientsEnabled:$false. The Microsoft 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
 
 ```yaml
@@ -919,7 +885,6 @@ The MailTip parameter specifies the custom MailTip text for this recipient. The 
 When you add a MailTip to a recipient, two things happen:
 
 - HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: \<html\>\<body\>This mailbox is not monitored\</body\>\</html\>. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
-
 - The text is automatically added to the MailTipTranslations property of the recipient as the default value: default:\<MailTip text\>. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
 
 ```yaml
@@ -965,11 +930,8 @@ The MaxReceiveSize parameter specifies the maximum size of an email message that
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -997,11 +959,8 @@ The MaxSendSize parameter specifies the maximum size of an email message that ca
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1027,15 +986,10 @@ Accept wildcard characters: False
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -1059,7 +1013,6 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
@@ -1117,15 +1070,10 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -1153,7 +1101,6 @@ Accept wildcard characters: False
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
 - $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
-
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml
@@ -1173,7 +1120,6 @@ Accept wildcard characters: False
 The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Microsoft 365 Group.
 
 - To change the value to $true, use this switch without a value.
-
 - To change the value to $false, use this exact syntax: -SubscriptionEnabled:$false.
 
 ```yaml
@@ -1193,7 +1139,6 @@ Accept wildcard characters: False
 The UnifiedGroupWelcomeMessageEnabled switch specifies whether to enable or disable sending system-generated welcome messages to users who are added as members to the Microsoft 365 Group.
 
 - To enable this setting, you don't need to specify a value with this switch.
-
 - To disable this setting, use this exact syntax: -UnifiedGroupWelcomeMessageEnabled:$false.
 
 This setting is enabled by default.

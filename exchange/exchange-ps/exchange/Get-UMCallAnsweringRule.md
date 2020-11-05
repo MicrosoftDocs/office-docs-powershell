@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMCallAnsweringRule [[-Identity] <UMCallAnsweringRuleIdParameter>] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
+Get-UMCallAnsweringRule [[-Identity] <UMCallAnsweringRuleIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,23 +90,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the UM-enabled mailbox that contains the UM call answering rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 If you don't use this parameter, the mailbox of the user who is running the command is used.

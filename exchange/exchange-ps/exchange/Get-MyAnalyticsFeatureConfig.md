@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MyAnalyticsFeatureConfig -Identity <String> [-ResultSize <unlimited>] [<CommonParameters>]
+Get-MyAnalyticsFeatureConfig -Identity <String>
+ [-ResultSize <unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
