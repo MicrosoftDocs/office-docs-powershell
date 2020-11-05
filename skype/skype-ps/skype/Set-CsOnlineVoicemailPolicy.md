@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscription
-Allows you to disable or enable transcription for this policy. Possible values are $true or $false.
+Allows you to disable or enable voicemail transcription. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscriptionTranslation
-Allows you to disable or enable voicemail transcription translation for this policy. Possible values are $true or $false.
+Allows you to disable or enable translation for the voicemail transcriptions. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEditingCallAnswerRulesSetting
-Allows you to disable or enable the ability to edit call answering rules setting. Possible values are $true or $false.
+Controls if editing call answer rule settings are enabled or disabled for a user. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
