@@ -22,28 +22,37 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GetChildren
 ```
-Get-ManagementRole [-Identity] <RoleIdParameter> [-GetChildren]
+Get-ManagementRole [-Identity] <RoleIdParameter>
+ [-GetChildren]
  [-DomainController <Fqdn>]
- [-RoleType <RoleType>] [<CommonParameters>]
+ [-RoleType <RoleType>]
+ [<CommonParameters>]
 ```
 
 ### Recurse
 ```
-Get-ManagementRole [-Identity] <RoleIdParameter> [-Recurse]
+Get-ManagementRole [-Identity] <RoleIdParameter>
+ [-Recurse]
  [-DomainController <Fqdn>]
- [-RoleType <RoleType>] [<CommonParameters>]
+ [-RoleType <RoleType>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-ManagementRole [[-Identity] <RoleIdParameter>] [-Cmdlet <String>] [-CmdletParameters <String[]>]
+Get-ManagementRole [[-Identity] <RoleIdParameter>]
+ [-Cmdlet <String>]
+ [-CmdletParameters <String[]>]
  [-DomainController <Fqdn>]
- [-RoleType <RoleType>] [<CommonParameters>]
+ [-RoleType <RoleType>]
+ [<CommonParameters>]
 ```
 
 ### Script
 ```
-Get-ManagementRole [[-Identity] <RoleIdParameter>] [-Script <String>] [-ScriptParameters <String[]>]
+Get-ManagementRole [[-Identity] <RoleIdParameter>]
+ [-Script <String>]
+ [-ScriptParameters <String[]>]
  [-DomainController <Fqdn>]
  [-RoleType <RoleType>]
  [<CommonParameters>]

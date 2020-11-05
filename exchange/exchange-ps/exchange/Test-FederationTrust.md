@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-FederationTrust [-Confirm] [-DomainController <Fqdn>] [-MonitoringContext <Boolean>]
- [-UserIdentity <RecipientIdParameter>] [-WhatIf] [<CommonParameters>]
+Test-FederationTrust [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MonitoringContext <Boolean>]
+ [-UserIdentity <RecipientIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,9 +39,7 @@ You can run the Test-FederationTrust cmdlet from the Exchange Management Shell, 
 The Test-FederationTrust cmdlet runs the following series of tests to ensure that federation is working as expected:
 
 - A connection to the Microsoft Federation Gateway is established. This test ensures that communication between the local Exchange server and the Microsoft Federation Gateway is working correctly.
-
 - Certificates are checked to ensure they're valid and can be used with the Microsoft Federation Gateway.
-
 - A security token is requested from the Microsoft Federation Gateway. This test ensures that a token can be properly retrieved and used.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -56,8 +58,7 @@ This example validates the federation trust deployed in the Exchange organizatio
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -109,15 +110,10 @@ Accept wildcard characters: False
 The UserIdentity parameter specifies a mailbox user to request a token for. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 If you don't specify a mailbox, the command uses the default test mailbox.

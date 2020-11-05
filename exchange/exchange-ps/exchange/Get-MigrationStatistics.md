@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MigrationStatistics [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-DomainController <Fqdn>]
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Get-MigrationStatistics [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

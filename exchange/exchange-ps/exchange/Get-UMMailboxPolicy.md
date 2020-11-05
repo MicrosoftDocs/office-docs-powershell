@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>]
- [-UMDialPlan <UMDialPlanIdParameter>] [<CommonParameters>]
+Get-UMMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [-UMDialPlan <UMDialPlanIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-PerimeterConfig [[-Identity] <OrganizationIdParameter>] [<CommonParameters>]
+Get-PerimeterConfig [[-Identity] <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

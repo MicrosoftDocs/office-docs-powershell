@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AdSite [-Identity] <AdSiteIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-HubSiteEnabled <Boolean>] [-PartnerId <Int32>]
- [-WhatIf] [-InboundMailEnabled <Boolean>] [<CommonParameters>]
+Set-AdSite [-Identity] <AdSiteIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-HubSiteEnabled <Boolean>]
+ [-InboundMailEnabled <Boolean>]
+ [-PartnerId <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,8 +64,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -108,6 +112,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InboundMailEnabled
+The InboundMailEnabled parameter enables or disables receiving incoming messages for all the Exchange located in the Active Directory site. Typically, this parameter is used after Active Directory site failover or maintenance.
+
+Valid input for this parameter is $true or $false. The default value is $true. If you set the value to $false, none of the Exchange servers in the Active Directory site will be able to receive incoming messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PartnerId
 This parameter is reserved for internal Microsoft use.
 
@@ -132,24 +154,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InboundMailEnabled
-The InboundMailEnabled parameter enables or disables receiving incoming messages for all the Exchange located in the Active Directory site. Typically, this parameter is used after Active Directory site failover or maintenance.
-
-Valid input for this parameter is $true or $false. The default value is $true. If you set the value to $false, none of the Exchange servers in the Active Directory site will be able to receive incoming messages.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

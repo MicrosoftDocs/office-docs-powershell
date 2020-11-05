@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Validate-RetentionRuleQuery -KqlQueryString <String> [<CommonParameters>]
+Validate-RetentionRuleQuery -KqlQueryString <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-HostedConnectionFilterPolicy [[-Identity] <HostedConnectionFilterPolicyIdParameter>] [<CommonParameters>]
+Get-HostedConnectionFilterPolicy [[-Identity] <HostedConnectionFilterPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,9 +52,7 @@ This example returns detailed information about the connection filter policy nam
 The Identity parameter specifies the connection filter policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Typically, you only have one connection filter policy: the default policy named Default.

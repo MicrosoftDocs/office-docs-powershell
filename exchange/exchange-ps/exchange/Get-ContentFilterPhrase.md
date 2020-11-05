@@ -23,13 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Get-ContentFilterPhrase [[-Identity] <ContentFilterPhraseIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Phrase
 ```
 Get-ContentFilterPhrase [-Phrase <ContentFilterPhraseIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

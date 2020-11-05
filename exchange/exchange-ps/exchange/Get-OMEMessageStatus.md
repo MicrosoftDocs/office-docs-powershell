@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OMEMessageStatus -MessageId <String> [<CommonParameters>]
+Get-OMEMessageStatus -MessageId <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
