@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-Force the cmdlet to run. This ignores all warings blocks and validations. It is only recommended if the administrator only wishes to preserve data and is not intersted in checks for applications, Business Connectivity Services, or other functionalities. 
+Force the cmdlet to run. This ignores all warning blocks and validations. It is only recommended if the administrator only wishes to preserve data and is not interested in checks for applications, Business Connectivity Services, or other functionalities. 
 
 ```yaml
 Type: SwitchParameter
