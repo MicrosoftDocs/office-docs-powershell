@@ -310,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -SafeTransferEnabled
-Teams users will be able to transfer a call safely, between Teams and Skype For Business.  If the target user does not answer the call, it will ring back to the transferrer.  The person transferring the call must be a Teams user.  The person the call is being transferred to must be either a Teams or Skype for Business user in the same tenant or in a federated tenant.
+Teams users will be able to transfer a call safely, between Teams and Skype For Business. If the target user does not answer the call, it will ring back to the transferrer. The person transferring the call must be a Teams user. The person the call is being transferred to must be either a Teams or Skype for Business user in the same tenant or in a federated tenant.
 
 Possible values
 - Enabled
