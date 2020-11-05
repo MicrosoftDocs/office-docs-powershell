@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-MobileDeviceMailboxPolicy [-Name] <String> [-AllowApplePushNotifications <Boolean>]
+New-MobileDeviceMailboxPolicy [-Name] <String>
+ [-AllowApplePushNotifications <Boolean>]
  [-AllowBluetooth <BluetoothType>]
  [-AllowBrowser <Boolean>]
  [-AllowCamera <Boolean>]

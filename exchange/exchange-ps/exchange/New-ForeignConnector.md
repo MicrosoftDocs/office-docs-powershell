@@ -21,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ForeignConnector [-Name] <String> -AddressSpaces <MultiValuedProperty> [-Confirm]
- [-DomainController <Fqdn>] [-IsScopedConnector <Boolean>]
- [-SourceTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+New-ForeignConnector [-Name] <String> -AddressSpaces <MultiValuedProperty>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IsScopedConnector <Boolean>]
+ [-SourceTransportServers <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

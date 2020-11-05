@@ -22,15 +22,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CancelSeed
 ```
-Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-CancelSeed]
+Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
+ [-CancelSeed]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-BeginSeed] [-Force] [-Network <DatabaseAvailabilityGroupNetworkIdParameter>] [-SecondaryDatabasePartitionOnly] [-SourceServer <ServerIdParameter>]
+Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
+ [-BeginSeed]
+ [-Force]
+ [-Network <DatabaseAvailabilityGroupNetworkIdParameter>]
+ [-SecondaryDatabasePartitionOnly]
+ [-SourceServer <ServerIdParameter>]
  [-CatalogOnly]
  [-Confirm]
  [-DatabaseOnly]
@@ -42,12 +49,14 @@ Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-BeginSeed] [-
  [-NoThrottle]
  [-PrimaryDatabasePartitionOnly]
  [-SafeDeleteExistingFiles]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExplicitServer
 ```
-Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter> [-MaximumSeedsInParallel <Int32>]
+Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter>
+ [-MaximumSeedsInParallel <Int32>]
  [-CatalogOnly]
  [-Confirm]
  [-DatabaseOnly]
@@ -59,7 +68,8 @@ Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter> [-MaximumSeedsInPa
  [-NoThrottle]
  [-PrimaryDatabasePartitionOnly]
  [-SafeDeleteExistingFiles]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,22 +120,6 @@ This example performs a full server reseed of all of the databases on the Mailbo
 
 ## PARAMETERS
 
-### -CancelSeed
-The CancelSeed switch specifies whether to cancel an in-progress seeding operation. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: CancelSeed
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the name or GUID of the mailbox database whose copy is being seeded.
 
@@ -139,6 +133,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -CancelSeed
+The CancelSeed switch specifies whether to cancel an in-progress seeding operation. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CancelSeed
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-AddressList [-Identity] <AddressListIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Update-AddressList [-Identity] <AddressListIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

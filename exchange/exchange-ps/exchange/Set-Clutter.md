@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-Clutter -Identity <MailboxIdParameter> [-Enable <Boolean>] [<CommonParameters>]
+Set-Clutter -Identity <MailboxIdParameter>
+ [-Enable <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

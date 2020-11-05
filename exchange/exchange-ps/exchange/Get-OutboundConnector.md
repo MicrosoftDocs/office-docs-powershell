@@ -24,7 +24,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-OutboundConnector [[-Identity] <OutboundConnectorIdParameter>]
- [-IncludeTestModeConnectors <Boolean>] [-IsTransportRuleScoped <Boolean>] [<CommonParameters>]
+ [-IncludeTestModeConnectors <Boolean>]
+ [-IsTransportRuleScoped <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

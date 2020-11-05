@@ -43,7 +43,8 @@ Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter>
  [-TlsSettings <TlsAuthLevel>]
  [-UseMXRecord <Boolean>]
  [-ValidationRecipients <String[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

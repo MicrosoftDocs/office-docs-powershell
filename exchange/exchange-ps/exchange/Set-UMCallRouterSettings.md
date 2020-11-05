@@ -31,7 +31,8 @@ Set-UMCallRouterSettings [[-Server] <ServerIdParameter>]
  [-SipTcpListeningPort <Int32>]
  [-SipTlsListeningPort <Int32>]
  [-UMStartupMode <UMStartupMode>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

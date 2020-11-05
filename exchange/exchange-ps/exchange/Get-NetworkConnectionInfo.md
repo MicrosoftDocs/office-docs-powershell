@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-NetworkConnectionInfo [[-Identity] <ServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-NetworkConnectionInfo [[-Identity] <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

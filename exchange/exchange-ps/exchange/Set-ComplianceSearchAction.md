@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ComplianceSearchAction [-Identity] <ComplianceSearchActionIdParameter> [-ChangeExportKey] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Set-ComplianceSearchAction [-Identity] <ComplianceSearchActionIdParameter>
+ [-ChangeExportKey]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

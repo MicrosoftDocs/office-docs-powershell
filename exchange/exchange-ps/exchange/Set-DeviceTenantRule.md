@@ -23,8 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-DeviceTenantRule [-Identity] <ComplianceRuleIdParameter>
  [-ApplyPolicyTo <PolicyResourceScope>]
- [-BlockUnsupportedDevices <Boolean>] [-Confirm] [-DomainController <Fqdn>]
- [-ExclusionList <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-BlockUnsupportedDevices <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExclusionList <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <Boolean> -Language <CultureInfo> -Text <String>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Quota
@@ -33,7 +34,8 @@ New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <Boolean> -Language <C
 New-SystemMessage -Language <CultureInfo> -QuotaMessageType <QuotaMessageType> -Text <String>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

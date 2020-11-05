@@ -23,15 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SettingOverride [-Name] <String> -Component <String> -Parameters <MultiValuedProperty> -Reason <String>
- -Section <String>
+New-SettingOverride [-Name] <String> -Component <String> -Parameters <MultiValuedProperty> -Reason <String> -Section <String>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
  [-MaxVersion <Version>]
  [-MinVersion <Version>]
  [-Server <String[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

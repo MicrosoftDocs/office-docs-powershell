@@ -22,14 +22,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Parameters
 ```
-Get-PolicyTipConfig [-Action <PolicyTipMessageConfigAction>] [-Locale <CultureInfo>] [-Original]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-PolicyTipConfig [-Action <PolicyTipMessageConfigAction>]
+ [-Locale <CultureInfo>]
+ [-Original]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-PolicyTipConfig [[-Identity] <PolicyTipConfigIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

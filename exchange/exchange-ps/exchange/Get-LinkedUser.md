@@ -28,17 +28,18 @@ Get-LinkedUser [-Anr <String>]
  [-Filter <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-LinkedUser [[-Identity]
- <UserIdParameter>]
+Get-LinkedUser [[-Identity] <UserIdParameter>]
  [-Filter <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

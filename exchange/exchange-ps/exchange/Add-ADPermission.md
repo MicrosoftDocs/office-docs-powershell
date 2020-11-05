@@ -32,7 +32,8 @@ Add-ADPermission [-Identity] <ADRawEntryIdParameter> -User <SecurityPrincipalIdP
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Owner
@@ -40,24 +41,25 @@ Add-ADPermission [-Identity] <ADRawEntryIdParameter> -User <SecurityPrincipalIdP
 Add-ADPermission [-Identity] <ADRawEntryIdParameter> -Owner <SecurityPrincipalIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Add-ADPermission -Instance <ADAcePresentationObject>
+Add-ADPermission [[-Identity] <ADRawEntryIdParameter>] -Instance <ADAcePresentationObject>
  [-AccessRights <ActiveDirectoryRights[]>]
  [-ChildObjectTypes <ADSchemaObjectIdParameter[]>]
  [-Confirm]
  [-Deny]
  [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
- [[-Identity] <ADRawEntryIdParameter>]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-InheritedObjectType <ADSchemaObjectIdParameter>]
  [-Properties <ADSchemaObjectIdParameter[]>]
  [-User <SecurityPrincipalIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

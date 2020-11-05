@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DeviceConditionalAccessPolicy [-Name] <String> [-Comment <String>] [-Confirm] [-Enabled <Boolean>]
- [-Force] [-WhatIf] [<CommonParameters>]
+New-DeviceConditionalAccessPolicy [-Name] <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

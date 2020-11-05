@@ -21,8 +21,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SharingPolicy [-Identity] <SharingPolicyIdParameter> [-Confirm] [-Default] [-DomainController <Fqdn>]
- [-Domains <MultiValuedProperty>] [-Enabled <Boolean>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-SharingPolicy [-Identity] <SharingPolicyIdParameter>
+ [-Confirm]
+ [-Default]
+ [-DomainController <Fqdn>]
+ [-Domains <MultiValuedProperty>]
+ [-Enabled <Boolean>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

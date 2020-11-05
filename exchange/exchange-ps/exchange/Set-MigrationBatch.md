@@ -43,7 +43,8 @@ Set-MigrationBatch [-Identity] <MigrationBatchIdParameter>
  [-StartAfter <DateTime>]
  [-SyncNow]
  [-Update]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

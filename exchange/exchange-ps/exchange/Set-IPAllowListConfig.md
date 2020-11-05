@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-IPAllowListConfig [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
- [-ExternalMailEnabled <Boolean>] [-InternalMailEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
+Set-IPAllowListConfig [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExternalMailEnabled <Boolean>]
+ [-InternalMailEnabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

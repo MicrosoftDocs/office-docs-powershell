@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Stop-ManagedFolderAssistant [[-Identity] <ServerIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Stop-ManagedFolderAssistant [[-Identity] <ServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -47,6 +50,29 @@ Stop-ManagedFolderAssistant -Identity ExchSrvr1, Exchsrvr2
 This example stops the Managed Folder Assistant on the servers ExchSrvr1 and Exchsrvr2.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+- FQDN
+- Distinguished name (DN)
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -80,29 +106,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-- FQDN
-- Distinguished name (DN)
-- Exchange Legacy DN
-
-If you don't use this parameter, the command is run on the local server.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -21,9 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AuditConfigurationPolicy
- -Workload <Workload>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+New-AuditConfigurationPolicy -Workload <Workload>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ComplianceCaseMember [-Case] <String> -Member <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-ComplianceCaseMember [-Case] <String> -Member <String>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

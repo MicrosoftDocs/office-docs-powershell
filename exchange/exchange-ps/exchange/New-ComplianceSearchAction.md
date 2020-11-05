@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Export
 ```
-New-ComplianceSearchAction [-SearchName] <String[]> [-Export]
+New-ComplianceSearchAction [-SearchName] <String[]>
+ [-Export]
  [-ActionName <String>]
  [-ArchiveFormat <ComplianceExportArchiveFormat>]
  [-Confirm]
@@ -46,29 +47,35 @@ New-ComplianceSearchAction [-SearchName] <String[]> [-Export]
  [-SearchNames <String[]>]
  [-SharePointArchiveFormat <ComplianceExportArchiveFormat>]
  [-Version <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Preview
 ```
-New-ComplianceSearchAction [-SearchName] <String[]> [-Preview]
+New-ComplianceSearchAction [-SearchName] <String[]>
+ [-Preview]
  [-ActionName <String>]
  [-Confirm]
  [-Force]
  [-Format <ComplianceDataTransferFormat>]
- [-IncludeCredential] [-JobOptions <Int32>]
+ [-IncludeCredential]
+ [-JobOptions <Int32>]
  [-ReferenceActionName <String>]
  [-Region <String>]
  [-RetryOnError]
  [-Scenario <ComplianceSearchActionScenario>]
  [-SearchNames <String[]>]
  [-Version <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Purge
 ```
-New-ComplianceSearchAction [-SearchName] <String[]> [-Purge] [-PurgeType <ComplianceDestroyType>]
+New-ComplianceSearchAction [-SearchName] <String[]>
+ [-Purge]
+ [-PurgeType <ComplianceDestroyType>]
  [-ActionName <String>]
  [-Confirm]
  [-Force]
@@ -81,7 +88,8 @@ New-ComplianceSearchAction [-SearchName] <String[]> [-Purge] [-PurgeType <Compli
  [-Scenario <ComplianceSearchActionScenario>]
  [-SearchNames <String[]>]
  [-Version <String>]
- [-WhatIf]] [<CommonParameters>]
+ [-WhatIf]]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

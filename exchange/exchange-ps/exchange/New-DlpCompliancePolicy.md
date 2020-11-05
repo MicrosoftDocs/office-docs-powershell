@@ -38,7 +38,8 @@ New-DlpCompliancePolicy [-Name] <String>
  [-SharePointServerLocation <MultiValuedProperty>]
  [-TeamsLocation <MultiValuedProperty>]
  [-TeamsLocationException <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,18 +22,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### EnableReplayLag
 ```
-Suspend-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-EnableReplayLag]
+Suspend-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
+ [-EnableReplayLag]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Suspend-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationOnly] [-SuspendComment <String>]
+Suspend-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
+ [-ActivationOnly]
+ [-SuspendComment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

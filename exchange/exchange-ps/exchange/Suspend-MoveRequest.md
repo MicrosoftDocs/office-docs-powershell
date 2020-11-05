@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Suspend-MoveRequest [-Identity] <MoveRequestIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-SuspendComment <String>] [-WhatIf] [-ProxyToMailbox <MailboxIdParameter>] [<CommonParameters>]
+Suspend-MoveRequest [-Identity] <MoveRequestIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-SuspendComment <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -107,6 +112,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProxyToMailbox
+This parameter is available only in the cloud-based service.
+
+The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SuspendComment
 The SuspendComment parameter specifies a description as to why the request was suspended.
 
@@ -131,35 +165,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyToMailbox
-This parameter is available only in the cloud-based service.
-
-The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named

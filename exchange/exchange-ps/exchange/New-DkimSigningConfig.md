@@ -29,7 +29,8 @@ New-DkimSigningConfig [-DomainName] <SmtpDomainWithSubdomains> [-Enabled] <Boole
  [-Confirm]
  [-HeaderCanonicalization <CanonicalizationType>]
  [-KeySize <UInt16>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

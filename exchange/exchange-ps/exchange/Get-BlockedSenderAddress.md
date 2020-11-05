@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-BlockedSenderAddress [-SenderAddress <SmtpAddress>] [<CommonParameters>]
+Get-BlockedSenderAddress [-SenderAddress <SmtpAddress>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

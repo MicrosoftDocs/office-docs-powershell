@@ -21,10 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-ClientAccessRule
- -AuthenticationType <ClientAccessAuthenticationMethod>
- -Protocol <ClientAccessProtocol> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter> [-Confirm]
- [-OAuthClaims <Hashtable>] [-WhatIf] [<CommonParameters>]
+Test-ClientAccessRule -AuthenticationType <ClientAccessAuthenticationMethod> -Protocol <ClientAccessProtocol> -RemoteAddress <IPAddress> -RemotePort <Int32> -User <MailboxIdParameter>
+ [-Confirm]
+ [-OAuthClaims <Hashtable>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

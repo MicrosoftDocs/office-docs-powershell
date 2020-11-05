@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ResubmitRequest [-Identity] <ResubmitRequestIdentityParameter> -Enabled <Boolean> [-Confirm]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Set-ResubmitRequest [-Identity] <ResubmitRequestIdentityParameter> -Enabled <Boolean>
+ [-Confirm]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,22 +42,6 @@ This example disables the resubmit request with the identity 8.
 
 ## PARAMETERS
 
-### -Enabled
-The Enabled parameter enables or disables an active resubmit request. Valid input for this parameter is $true or $false. Setting the value to $false disables the resubmit request.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the resubmit request you want to modify. Each resubmit request is identified by an incremented integer value.
 
@@ -68,6 +55,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Enabled
+The Enabled parameter enables or disables an active resubmit request. Valid input for this parameter is $true or $false. Setting the value to $false disables the resubmit request.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -32,7 +32,8 @@ Get-MobileDeviceStatistics [-Identity] <MobileDeviceIdParameter>
  [-OWAforDevices]
  [-ShowRecoveryPassword]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
@@ -45,7 +46,8 @@ Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter>
  [-OWAforDevices]
  [-ShowRecoveryPassword]
  [-RestApi]
- [-UniversalOutlook] [<CommonParameters>]
+ [-UniversalOutlook]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

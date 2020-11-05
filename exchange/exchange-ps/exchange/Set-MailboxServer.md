@@ -124,7 +124,8 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-UMReportingWorkCycle <EnhancedTimeSpan>]
  [-UMReportingWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-WacDiscoveryEndpoint <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

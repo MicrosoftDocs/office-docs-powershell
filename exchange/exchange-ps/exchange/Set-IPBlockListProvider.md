@@ -21,10 +21,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-IPBlockListProvider [-Identity] <IPBlockListProviderIdParameter> [-AnyMatch <Boolean>]
- [-BitmaskMatch <IPAddress>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
- [-IPAddressesMatch <MultiValuedProperty>] [-LookupDomain <SmtpDomain>] [-Name <String>] [-Priority <Int32>]
- [-RejectionResponse <AsciiString>] [-WhatIf] [<CommonParameters>]
+Set-IPBlockListProvider [-Identity] <IPBlockListProviderIdParameter>
+ [-AnyMatch <Boolean>]
+ [-BitmaskMatch <IPAddress>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-IPAddressesMatch <MultiValuedProperty>]
+ [-LookupDomain <SmtpDomain>]
+ [-Name <String>]
+ [-Priority <Int32>]
+ [-RejectionResponse <AsciiString>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

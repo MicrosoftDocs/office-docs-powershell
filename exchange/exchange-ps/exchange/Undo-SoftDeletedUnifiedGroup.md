@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Undo-SoftDeletedUnifiedGroup [-SoftDeletedObject] <UnifiedGroupIdParameter> [-Confirm] [-WhatIf]
+Undo-SoftDeletedUnifiedGroup [-SoftDeletedObject] <UnifiedGroupIdParameter>
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

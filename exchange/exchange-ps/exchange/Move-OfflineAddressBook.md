@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Move-OfflineAddressBook [-Identity] <OfflineAddressBookIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Move-OfflineAddressBook [-Identity] <OfflineAddressBookIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

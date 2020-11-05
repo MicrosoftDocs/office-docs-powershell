@@ -29,12 +29,14 @@ Set-SafeAttachmentRule [-Identity] <RuleIdParameter>
  [-ExceptIfRecipientDomainIs <Word[]>]
  [-ExceptIfSentTo <RecipientIdParameter[]>]
  [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
- [-Name <String>] [-Priority <Int32>]
+ [-Name <String>]
+ [-Priority <Int32>]
  [-RecipientDomainIs <Word[]>]
  [-SafeAttachmentPolicy <SafeAttachmentPolicyIdParameter>]
  [-SentTo <RecipientIdParameter[]>]
  [-SentToMemberOf <RecipientIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OutlookProvider [[-Identity] <OutlookProviderIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-OutlookProvider [[-Identity] <OutlookProviderIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

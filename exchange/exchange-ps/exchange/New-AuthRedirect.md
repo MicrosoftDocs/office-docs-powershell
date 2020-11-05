@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AuthRedirect -AuthScheme <AuthScheme> -TargetUrl <String> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+New-AuthRedirect -AuthScheme <AuthScheme> -TargetUrl <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

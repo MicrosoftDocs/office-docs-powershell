@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AutoSensitivityLabelRule [-Name] <String> -Workload <Workload>
+New-AutoSensitivityLabelRule [-Name] <String> -Policy <PolicyIdParameter> -Workload <Workload>
  [-AccessScope <AccessScope>]
  [-ActivationDate <System.DateTime>]
  [-Comment <String>]
@@ -45,7 +45,7 @@ New-AutoSensitivityLabelRule [-Name] <String> -Workload <Workload>
  [-ExpiryDate <System.DateTime>]
  [-From <RecipientIdParameter[]>]
  [-FromMemberOf <SmtpAddress[]>]
- [-ImmutableId <System.Guid>] -Policy <PolicyIdParameter>
+ [-ImmutableId <System.Guid>]
  [-Priority <System.Int32>]
  [-ProcessingLimitExceeded <Boolean>]
  [-RecipientDomainIs <MultiValuedProperty>]

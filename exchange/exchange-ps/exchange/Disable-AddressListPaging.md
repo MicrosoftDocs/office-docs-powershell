@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-AddressListPaging [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+Disable-AddressListPaging [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

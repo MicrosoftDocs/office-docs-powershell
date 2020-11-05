@@ -26,7 +26,8 @@ Test-IRMConfiguration [[-Identity] <OrganizationIdParameter>] -Sender <SmtpAddre
  [-DomainController <Fqdn>]
  [-Recipient <SmtpAddress[]>]
  [-RMSOnline]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +45,24 @@ Test-IRMConfiguration -Sender adams@contoso.com
 This example tests the IRM configuration for messages sent from the sender adams@contoso.com.
 
 ## PARAMETERS
+
+### -Identity
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Sender
 The Sender parameter specifies the SMTP address of the sender to be tested. The cmdlet tests prelicensing and journal report decryption for the sender.
@@ -95,24 +114,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This parameter is available only in on-premises Exchange.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

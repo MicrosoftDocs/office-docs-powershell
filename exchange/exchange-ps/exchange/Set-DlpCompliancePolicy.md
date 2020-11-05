@@ -48,14 +48,17 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveSharePointLocationException <MultiValuedProperty>]
  [-RemoveTeamsLocation <MultiValuedProperty>]
  [-RemoveTeamsLocationException <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RetryDistribution
 ```
-Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-RetryDistribution]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

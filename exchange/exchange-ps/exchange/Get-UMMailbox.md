@@ -30,7 +30,8 @@ Get-UMMailbox [-Anr <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -43,7 +44,8 @@ Get-UMMailbox [[-Identity] <MailboxIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

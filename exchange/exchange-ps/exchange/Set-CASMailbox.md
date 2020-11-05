@@ -75,7 +75,8 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-ShowGalAsDefaultView <Boolean>]
  [-SmtpClientAuthenticationDisabled <Boolean>]
  [-UniversalOutlookEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

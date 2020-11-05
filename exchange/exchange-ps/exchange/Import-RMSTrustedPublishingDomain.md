@@ -27,31 +27,40 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString>
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ImportFromFile
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString> [-ExtranetCertificationUrl <Uri>] [-IntranetCertificationUrl <Uri>]
+Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString>
+ [-ExtranetCertificationUrl <Uri>]
+ [-IntranetCertificationUrl <Uri>]
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RefreshTemplates
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString> [-RefreshTemplates]
+Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString>
+ [-RefreshTemplates]
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RMSOnline
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> [-RMSOnline] [-RefreshTemplates]
+Import-RMSTrustedPublishingDomain [-Name] <String>
+ [-RMSOnline]
+ [-RefreshTemplates]
  [-Confirm]
  [-Default]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

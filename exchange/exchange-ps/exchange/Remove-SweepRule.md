@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SweepRule [-Identity] <SweepRuleIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
+Remove-SweepRule [-Identity] <SweepRuleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

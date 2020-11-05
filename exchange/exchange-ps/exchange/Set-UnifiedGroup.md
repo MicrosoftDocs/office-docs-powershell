@@ -77,7 +77,8 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SubscriptionEnabled]
  [-UnifiedGroupWelcomeMessageEnabled]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

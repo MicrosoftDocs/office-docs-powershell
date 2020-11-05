@@ -32,7 +32,8 @@ Set-CalendarNotification [-Identity] <MailboxIdParameter>
  [-MeetingReminderNotification <Boolean>]
  [-MeetingReminderSendDuringWorkHour <Boolean>]
  [-NextDays <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

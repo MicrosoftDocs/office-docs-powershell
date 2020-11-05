@@ -27,7 +27,8 @@ New-PublicFolderDatabase [-Name] <String> -Server <ServerIdParameter>
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
  [-Organization <OrganizationIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

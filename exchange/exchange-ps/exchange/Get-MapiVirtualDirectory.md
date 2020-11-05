@@ -24,14 +24,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MapiVirtualDirectory -Server <ServerIdParameter>
  [-ADPropertiesOnly]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-MapiVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
  [-ADPropertiesOnly]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

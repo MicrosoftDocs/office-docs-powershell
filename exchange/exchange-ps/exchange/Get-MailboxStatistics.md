@@ -31,12 +31,14 @@ Get-MailboxStatistics -Database <DatabaseIdParameter> [[-StoreMailboxIdentity] <
  [-IncludeMoveHistory]
  [-IncludeMoveReport]
  [-IncludeQuarantineDetails]
- [-NoADLookup] [<CommonParameters>]
+ [-NoADLookup]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive]
+Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-Archive]
  [-CopyOnServer <ServerIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludeMoveHistory]
@@ -56,7 +58,8 @@ Get-MailboxStatistics -Server <ServerIdParameter>
  [-IncludeMoveReport]
  [-IncludePassive]
  [-IncludeQuarantineDetails]
- [-NoADLookup] [<CommonParameters>]
+ [-NoADLookup]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -158,6 +161,29 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -StoreMailboxIdentity
+This parameter is available only in on-premises Exchange.
+
+The StoreMailboxIdentity parameter specifies the mailbox identity when used with the Database parameter to return statistics for a single mailbox on the specified database. You can use one of the following values:
+
+- MailboxGuid
+- LegacyDN
+
+Use this syntax to retrieve information about disconnected mailboxes, which don't have a corresponding Active Directory object or that has a corresponding Active Directory object that doesn't point to the disconnected mailbox in the mailbox database.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
@@ -407,29 +433,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -StoreMailboxIdentity
-This parameter is available only in on-premises Exchange.
-
-The StoreMailboxIdentity parameter specifies the mailbox identity when used with the Database parameter to return statistics for a single mailbox on the specified database. You can use one of the following values:
-
-- MailboxGuid
-- LegacyDN
-
-Use this syntax to retrieve information about disconnected mailboxes, which don't have a corresponding Active Directory object or that has a corresponding Active Directory object that doesn't point to the disconnected mailbox in the mailbox database.
-
-```yaml
-Type: StoreMailboxIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

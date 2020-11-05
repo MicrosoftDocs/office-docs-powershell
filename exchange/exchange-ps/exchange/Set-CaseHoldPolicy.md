@@ -22,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### RetryDistribution
 ```
-Set-CaseHoldPolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+Set-CaseHoldPolicy [-Identity] <PolicyIdParameter>
+ [-RetryDistribution]
  [-Confirm]
  [-UpdateStatistics]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -36,12 +38,14 @@ Set-CaseHoldPolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocation <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
- [-Enabled <Boolean>] [-Force]
+ [-Enabled <Boolean>]
+ [-Force]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemovePublicFolderLocation <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-UpdateStatistics]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

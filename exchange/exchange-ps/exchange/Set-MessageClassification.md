@@ -32,7 +32,8 @@ Set-MessageClassification [-Identity] <MessageClassificationIdParameter>
  [-RecipientDescription <String>]
  [-RetainClassificationEnabled <Boolean>]
  [-SenderDescription <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

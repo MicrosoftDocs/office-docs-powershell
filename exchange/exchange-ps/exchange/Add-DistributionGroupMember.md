@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-DistributionGroupMember [-Identity] <DistributionGroupIdParameter> [-BypassSecurityGroupManagerCheck]
- [-Confirm] [-DomainController <Fqdn>] [-Member <RecipientWithAdUserGroupIdParameter>] [-WhatIf]
+Add-DistributionGroupMember [-Identity] <DistributionGroupIdParameter>
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Member <RecipientWithAdUserGroupIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

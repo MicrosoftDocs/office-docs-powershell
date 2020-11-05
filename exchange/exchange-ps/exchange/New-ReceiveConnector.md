@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Custom
 ```
-New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty> [-Custom]
+New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty>
+ [-Custom]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -74,12 +75,14 @@ New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPR
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Internet
 ```
-New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> [-Internet]
+New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty>
+ [-Internet]
  [-RemoteIPRanges <MultiValuedProperty>]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
@@ -132,12 +135,14 @@ New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> [-Internet
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Partner
 ```
-New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty> [-Partner]
+New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty>
+ [-Partner]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -189,12 +194,15 @@ New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPR
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Internal
 ```
-New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bindings <MultiValuedProperty>] [-Internal]
+New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty>
+ [-Bindings <MultiValuedProperty>]
+ [-Internal]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -246,12 +254,15 @@ New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bi
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Client
 ```
-New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bindings <MultiValuedProperty>] [-Client]
+New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty>
+ [-Bindings <MultiValuedProperty>]
+ [-Client]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -303,12 +314,15 @@ New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bi
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UsageType
 ```
-New-ReceiveConnector [-Name] <String> -Usage <UsageType> [-Bindings <MultiValuedProperty>] [-RemoteIPRanges <MultiValuedProperty>]
+New-ReceiveConnector [-Name] <String> -Usage <UsageType>
+ [-Bindings <MultiValuedProperty>]
+ [-RemoteIPRanges <MultiValuedProperty>]
  [AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -360,7 +374,8 @@ New-ReceiveConnector [-Name] <String> -Usage <UsageType> [-Bindings <MultiValued
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

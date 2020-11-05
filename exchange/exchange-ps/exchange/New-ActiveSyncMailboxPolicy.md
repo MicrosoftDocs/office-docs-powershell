@@ -80,7 +80,8 @@ New-ActiveSyncMailboxPolicy [-Name] <String>
  [-UNCAccessEnabled <Boolean>]
  [-UnapprovedInROMApplicationList <MultiValuedProperty>]
  [-WSSAccessEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

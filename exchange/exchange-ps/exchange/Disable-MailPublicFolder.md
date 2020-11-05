@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-MailPublicFolder [-Identity] <PublicFolderIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Disable-MailPublicFolder [-Identity] <PublicFolderIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

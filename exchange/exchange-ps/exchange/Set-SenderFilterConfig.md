@@ -21,11 +21,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SenderFilterConfig [-Action <BlockedSenderAction>] [-BlankSenderBlockingEnabled <Boolean>]
- [-BlockedDomains <MultiValuedProperty>] [-BlockedDomainsAndSubdomains <MultiValuedProperty>]
- [-BlockedSenders <MultiValuedProperty>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
- [-ExternalMailEnabled <Boolean>] [-InternalMailEnabled <Boolean>]
- [-RecipientBlockedSenderAction <RecipientBlockedSenderAction>] [-WhatIf] [<CommonParameters>]
+Set-SenderFilterConfig [-Action <BlockedSenderAction>]
+ [-BlankSenderBlockingEnabled <Boolean>]
+ [-BlockedDomains <MultiValuedProperty>]
+ [-BlockedDomainsAndSubdomains <MultiValuedProperty>]
+ [-BlockedSenders <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExternalMailEnabled <Boolean>]
+ [-InternalMailEnabled <Boolean>]
+ [-RecipientBlockedSenderAction <RecipientBlockedSenderAction>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

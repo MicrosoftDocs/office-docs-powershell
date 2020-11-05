@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Test-IPBlockListProvider [-Identity] <IPBlockListProviderIdParameter> -IPAddress <IPAddress> [-Confirm]
- [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Test-IPBlockListProvider [-Identity] <IPBlockListProviderIdParameter> -IPAddress <IPAddress>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

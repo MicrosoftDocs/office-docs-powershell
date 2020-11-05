@@ -33,7 +33,8 @@ New-MapiVirtualDirectory
  [-Role <VirtualDirectoryRole>]
  [-Server <ServerIdParameter>]
  [-WebSiteName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

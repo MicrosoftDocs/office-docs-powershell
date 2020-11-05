@@ -22,10 +22,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Remove-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-Force]
+Remove-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
+ [-Force]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
@@ -33,7 +35,8 @@ Remove-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-Fo
 Remove-MailboxRestoreRequest -RequestGuid <Guid> -RequestQueue <DatabaseIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

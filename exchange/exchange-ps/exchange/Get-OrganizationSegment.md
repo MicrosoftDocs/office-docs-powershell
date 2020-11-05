@@ -27,7 +27,8 @@ Get-OrganizationSegment [<CommonParameters>]
 
 ### Identity
 ```
-Get-OrganizationSegment [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-OrganizationSegment [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

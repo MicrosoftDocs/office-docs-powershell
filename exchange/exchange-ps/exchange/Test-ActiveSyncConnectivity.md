@@ -24,10 +24,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Test-ActiveSyncConnectivity [[-ClientAccessServer] <ServerIdParameter>] [[-URL] <String>]
- [-AllowUnsecureAccess] [-Confirm] [-DomainController <Fqdn>] [-LightMode] [-MailboxCredential <PSCredential>]
- [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-MonitoringInstance <String>]
- [-ResetTestAccountCredentials] [-Timeout <UInt32>] [-TrustAnySSLCertificate]
- [-UseAutodiscoverForClientAccessServer] [-WhatIf] [<CommonParameters>]
+ [-AllowUnsecureAccess]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-MailboxCredential <PSCredential>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-MonitoringInstance <String>]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-UseAutodiscoverForClientAccessServer]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,22 +80,6 @@ This example tests the Exchange ActiveSync connectivity for the mailbox PaulS us
 
 ## PARAMETERS
 
-### -AllowUnsecureAccess
-The AllowUnsecureAccess switch allows the test to continue over an unsecured channel that doesn't require Secure Sockets Layer (SSL). You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ClientAccessServer
 The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed and is responsible for accepting client connections.
 
@@ -108,6 +102,40 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -URL
+The URL parameter specifies the URL that's used to connect to the Exchange ActiveSync virtual directory.
+
+You can't use this parameter with the ClientAccessServer parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUnsecureAccess
+The AllowUnsecureAccess switch allows the test to continue over an unsecured channel that doesn't require Secure Sockets Layer (SSL). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -286,24 +314,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -URL
-The URL parameter specifies the URL that's used to connect to the Exchange ActiveSync virtual directory.
-
-You can't use this parameter with the ClientAccessServer parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

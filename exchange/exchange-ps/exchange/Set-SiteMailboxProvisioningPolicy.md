@@ -33,7 +33,8 @@ Set-SiteMailboxProvisioningPolicy [-Identity] <MailboxPolicyIdParameter>
  [-MaxReceiveSize <ByteQuantifiedSize>]
  [-Name <String>]
  [-ProhibitSendReceiveQuota <ByteQuantifiedSize>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

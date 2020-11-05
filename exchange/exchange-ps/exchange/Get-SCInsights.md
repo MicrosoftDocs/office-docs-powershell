@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SCInsights [-EndDate <DateTime>] [<CommonParameters>]
+Get-SCInsights [-EndDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

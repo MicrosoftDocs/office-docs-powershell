@@ -22,9 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ActiveSyncDeviceAutoblockThreshold [-Identity] <ActiveSyncDeviceAutoblockThresholdIdParameter>
- [-AdminEmailInsert <String>] [-BehaviorTypeIncidenceDuration <EnhancedTimeSpan>]
- [-BehaviorTypeIncidenceLimit <Int32>] [-Confirm] [-DeviceBlockDuration <EnhancedTimeSpan>]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ [-AdminEmailInsert <String>]
+ [-BehaviorTypeIncidenceDuration <EnhancedTimeSpan>]
+ [-BehaviorTypeIncidenceLimit <Int32>]
+ [-Confirm]
+ [-DeviceBlockDuration <EnhancedTimeSpan>]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

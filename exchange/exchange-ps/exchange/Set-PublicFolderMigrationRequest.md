@@ -40,7 +40,8 @@ Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdPara
  [-RemoteMailboxServerLegacyDN <String>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMerging <SkippableMergeComponent[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Rehome
@@ -50,7 +51,8 @@ Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdPara
  [-DomainController <Fqdn>]
  [-PreventCompletion <Boolean>]
  [-RequestExpiryInterval <Unlimited>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

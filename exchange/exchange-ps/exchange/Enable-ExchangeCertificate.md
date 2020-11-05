@@ -31,7 +31,8 @@ Enable-ExchangeCertificate [-Thumbprint] <String> -Services <AllowedServices>
  [-Force]
  [-NetworkServiceAllowed]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -42,7 +43,8 @@ Enable-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>] -Servi
  [-DoNotRequireSsl]
  [-Force]
  [-NetworkServiceAllowed]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,6 +68,49 @@ Enable-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e 
 This example enables a certificate for POP, IMAP, SMTP and IIS services.
 
 ## PARAMETERS
+
+### -Thumbprint
+The Thumbprint parameter specifies the certificate that you want to configure. You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
+
+The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+```yaml
+Type: String
+Parameter Sets: Thumbprint
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the certificate that you want to configure. Valid values are:
+
+- \<ServerNameOrFQDN\>\\\<Thumbprint\>
+- \<Thumbprint\>
+
+You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
+
+You can't use this parameter with the Server parameter.
+
+The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+```yaml
+Type: ExchangeCertificateIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Services
 The Services parameter specifies the Exchange services that the certificate is enabled for. Valid values are:
@@ -94,24 +139,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Thumbprint
-The Thumbprint parameter specifies the certificate that you want to configure. You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
-
-The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-```yaml
-Type: String
-Parameter Sets: Thumbprint
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -183,31 +210,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the certificate that you want to configure. Valid values are:
-
-- \<ServerNameOrFQDN\>\\\<Thumbprint\>
-- \<Thumbprint\>
-
-You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
-
-You can't use this parameter with the Server parameter.
-
-The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-```yaml
-Type: ExchangeCertificateIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

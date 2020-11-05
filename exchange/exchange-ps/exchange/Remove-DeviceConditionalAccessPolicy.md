@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-DeviceConditionalAccessPolicy [-Identity] <PolicyIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-DeviceConditionalAccessPolicy [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-Category <AlertRuleCategory>]
- [-Condition <String>] [-Confirm]
+ [-Condition <String>]
+ [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
  [-DomainController <Fqdn>]
@@ -38,7 +39,8 @@ Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

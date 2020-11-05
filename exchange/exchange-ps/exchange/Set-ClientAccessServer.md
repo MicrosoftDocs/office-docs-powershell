@@ -36,7 +36,8 @@ Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
  [-IrmLogPath <LocalLongFullPath>]
  [-IsOutOfService <Boolean>]
  [-RemoveAlternateServiceAccountCredentials]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -53,7 +54,8 @@ Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
  [-IrmLogPath <LocalLongFullPath>]
  [-IsOutOfService <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

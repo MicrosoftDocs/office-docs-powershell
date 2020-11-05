@@ -45,7 +45,8 @@ New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress>
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-UsePreferMessageFormat <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EnabledUser
@@ -73,12 +74,14 @@ New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress> -Password <Se
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-UsePreferMessageFormat <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesID
 ```
-New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Password <SecureString> [-ExternalEmailAddress <ProxyAddress>]
+New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Password <SecureString>
+ [-ExternalEmailAddress <ProxyAddress>]
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
@@ -97,12 +100,14 @@ New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Passwo
  [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FederatedUser
 ```
-New-MailUser [-Name] <String> -FederatedIdentity <String> [-ExternalEmailAddress <ProxyAddress>]
+New-MailUser [-Name] <String> -FederatedIdentity <String>
+ [-ExternalEmailAddress <ProxyAddress>]
  [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
@@ -121,7 +126,8 @@ New-MailUser [-Name] <String> -FederatedIdentity <String> [-ExternalEmailAddress
  [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesFederatedUser
@@ -145,12 +151,14 @@ New-MailUser [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServic
  [-ResetPasswordOnNextLogon <Boolean>]
  [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EnableRoomMailboxAccount
 ```
-New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>]
+New-MailUser [-Name] <String>
+ [-MicrosoftOnlineServicesID <WindowsLiveId>]
  [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
@@ -164,7 +172,8 @@ New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-RemotePowerShellEnabled <Boolean>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

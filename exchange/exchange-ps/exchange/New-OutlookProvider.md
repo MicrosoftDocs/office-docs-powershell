@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-OutlookProvider [-Name] <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+New-OutlookProvider [-Name] <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -26,11 +26,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-HostedConnectionFilterPolicy [-Identity] <HostedConnectionFilterPolicyIdParameter>
  [-AdminDisplayName <String>]
  [-ConfigurationXmlRaw <String>]
- [-Confirm] [-EnableSafeList <Boolean>]
+ [-Confirm]
+ [-EnableSafeList <Boolean>]
  [-IPAllowList <MultiValuedProperty>]
  [-IPBlockList <MultiValuedProperty>]
  [-MakeDefault]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

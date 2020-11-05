@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ManagedFolderMailboxPolicy [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
- [-ManagedFolderLinks <ELCFolderIdParameter[]>] [-Organization <OrganizationIdParameter>] [-WhatIf]
+New-ManagedFolderMailboxPolicy [-Name] <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ManagedFolderLinks <ELCFolderIdParameter[]>]
+ [-Organization <OrganizationIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

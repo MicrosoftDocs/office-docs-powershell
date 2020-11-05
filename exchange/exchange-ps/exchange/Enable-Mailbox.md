@@ -24,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Arbitration
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Arbitration]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -37,7 +38,8 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemoteArchive
@@ -55,12 +57,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
  [-RemoteArchive]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Discovery
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Discovery]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Discovery]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -73,12 +77,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Discovery]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Equipment
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Equipment]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Equipment]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -91,12 +97,15 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Equipment]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LinkedRoomMailbox
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [-LinkedRoom]
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
+ [-LinkedCredential <PSCredential>]
+ [-LinkedRoom]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Archive]
@@ -113,12 +122,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -L
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Linked
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>]
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -LinkedMasterAccount <UserIdParameter>
+ [-LinkedCredential <PSCredential>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -131,12 +142,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-PublicFolder]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-PublicFolder]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -150,12 +163,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-PublicFolder]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Room
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Room]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Room]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -168,12 +183,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Room]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Shared
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-Shared]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-Shared]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -186,7 +203,8 @@ Enable-Mailbox [-Identity] <UserIdParameter> [-Shared]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### User
@@ -205,12 +223,16 @@ Enable-Mailbox [-Identity] <UserIdParameter>
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Archive
 ```
-Enable-Mailbox [-Identity] <UserIdParameter>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>  [-ArchiveGuid <Guid>] [-ArchiveName <MultiValuedProperty>]
+Enable-Mailbox [-Identity] <UserIdParameter>]
+ [-Archive]
+ [-ArchiveDatabase <DatabaseIdParameter>  [-ArchiveGuid <Guid>]
+ [-ArchiveName <MultiValuedProperty>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>
  [-Confirm]
@@ -220,12 +242,14 @@ Enable-Mailbox [-Identity] <UserIdParameter>] [-Archive] [-ArchiveDatabase <Data
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuditLog
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [AuditLog]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [AuditLog]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
  [-Confirm]
@@ -236,12 +260,14 @@ Enable-Mailbox [-Identity] <UserIdParameter> [AuditLog]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AutoExpandingArchive
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> [-AutoExpandingArchive]
+Enable-Mailbox [-Identity] <UserIdParameter>
+ [-AutoExpandingArchive]
  [-Confirm]
  [-Force]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]

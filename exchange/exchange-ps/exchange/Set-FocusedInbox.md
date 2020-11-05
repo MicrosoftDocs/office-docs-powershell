@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-FocusedInbox -Identity <MailboxIdParameter> [-FocusedInboxOn <Boolean>] [<CommonParameters>]
+Set-FocusedInbox -Identity <MailboxIdParameter>
+ [-FocusedInboxOn <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

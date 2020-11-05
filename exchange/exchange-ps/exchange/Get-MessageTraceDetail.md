@@ -33,7 +33,8 @@ Get-MessageTraceDetail -MessageTraceId <Guid> -RecipientAddress <String>
  [-PageSize <Int32>]
  [-ProbeTag <String>]
  [-SenderAddress <String>]
- [-StartDate <DateTime>] [<CommonParameters>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

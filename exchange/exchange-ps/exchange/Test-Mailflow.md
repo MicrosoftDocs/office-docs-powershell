@@ -22,25 +22,31 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AutoDiscoverTargetMailboxServer
 ```
-Test-Mailflow [[-Identity] <ServerIdParameter>] [-AutoDiscoverTargetMailboxServer]
+Test-Mailflow [[-Identity] <ServerIdParameter>]
+ [-AutoDiscoverTargetMailboxServer]
  [-ActiveDirectoryTimeout <Int32>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CrossPremises
 ```
-Test-Mailflow -CrossPremises <Boolean> [-ActiveDirectoryTimeout <Int32>] [-CrossPremisesExpirationTimeout <EnhancedTimeSpan>] [-CrossPremisesPendingErrorCount <Int32>]
+Test-Mailflow -CrossPremises <Boolean>
+ [-ActiveDirectoryTimeout <Int32>]
+ [-CrossPremisesExpirationTimeout <EnhancedTimeSpan>]
+ [-CrossPremisesPendingErrorCount <Int32>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TargetDatabase
@@ -52,19 +58,22 @@ Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetDatabase <DatabaseIdParam
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TargetEmailAddress
 ```
-Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetEmailAddress <String> [-TargetEmailAddressDisplayName <String>]
+Test-Mailflow [[-Identity] <ServerIdParameter>] -TargetEmailAddress <String>
+ [-TargetEmailAddressDisplayName <String>]
  [-ActiveDirectoryTimeout <Int32>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### TargetMailboxServer
@@ -89,7 +98,8 @@ Test-Mailflow [[-Identity] <ServerIdParameter>]
  [-ErrorLatency <Int32>]
  [-ExecutionTimeout <Int32>]
  [-MonitoringContext <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -123,6 +133,29 @@ Test-Mailflow -TargetEmailAddress john@contoso.com
 This example tests message flow from the local Mailbox server where you're running this command to the email address john@contoso.com.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the source Mailbox server name from which a test message is sent. You can use any value that uniquely identifies the server. For example:
+
+- Name
+- FQDN
+- Distinguished name (DN)
+- Exchange Legacy DN
+
+If you don't use this parameter, the local Mailbox server is used.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: AutoDiscoverTargetMailboxServer, TargetDatabase, TargetEmailAddress, TargetMailboxServer, SourceServer
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -AutoDiscoverTargetMailboxServer
 The AutoDiscoverTargetMailboxServer switch specifies whether to automatically populate a list of target Mailbox servers to which to send a test message. The task queries Active Directory to discover all Mailbox servers and then sends each server a test message.
@@ -337,29 +370,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the source Mailbox server name from which a test message is sent. You can use any value that uniquely identifies the server. For example:
-
-- Name
-- FQDN
-- Distinguished name (DN)
-- Exchange Legacy DN
-
-If you don't use this parameter, the local Mailbox server is used.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: AutoDiscoverTargetMailboxServer, TargetDatabase, TargetEmailAddress, TargetMailboxServer, SourceServer
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

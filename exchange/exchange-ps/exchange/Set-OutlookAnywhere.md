@@ -38,7 +38,8 @@ Set-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter>
  [-InternalHostname <String>]
  [-Name <String>]
  [-SSLOffloading <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

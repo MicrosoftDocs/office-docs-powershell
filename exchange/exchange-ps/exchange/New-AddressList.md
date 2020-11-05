@@ -48,7 +48,8 @@ New-AddressList [-Name] <String> -IncludedRecipients <WellKnownRecipientType>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### CustomFilter
@@ -59,7 +60,8 @@ New-AddressList [-Name] <String> -RecipientFilter <String>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

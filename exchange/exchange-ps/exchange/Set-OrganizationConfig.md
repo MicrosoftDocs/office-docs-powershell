@@ -102,7 +102,8 @@ Set-OrganizationConfig
  [-VisibleMeetingUpdateProperties <String>]
  [-WebPushNotificationsDisabled <Boolean>]
  [-WebSuggestedRepliesDisabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AdfsAuthenticationRawConfiguration
@@ -180,12 +181,16 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
  [-WACDiscoveryEndpoint <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AdfsAuthenticationParameter
 ```
-Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>] [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
+Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
+ [-AdfsEncryptCertificateThumbprint <String>]
+ [-AdfsIssuer <Uri>]
+ [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
  [-ACLableSyncedObjectEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -260,7 +265,8 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
  [-WACDiscoveryEndpoint <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -497,8 +503,7 @@ This parameter is available only in the cloud-based service.
 
 The AllowPlusAddressInRecipients parameter enables or disables dynamic, disposable subaddressing as defined in RFC 5233. Valid values are:
 
-- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to jane+exampletag@contoso.com is delivered to jane@contoso.com. For customers who enrolled in Exchange Online after September 2020, this is the default value. 
-- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to jane+exampletag@contoso.com is delivered only if jane+exampletag@contoso.com is configured as the primary address or a proxy address on an existing recipient. For customers who enrolled in Exchange Online before September 2020, this is the default value.
+- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to jane+exampletag@contoso.com is delivered to jane@contoso.com. For customers who enrolled in Exchange Online after September 2020, this is the default value.- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to jane+exampletag@contoso.com is delivered only if jane+exampletag@contoso.com is configured as the primary address or a proxy address on an existing recipient. For customers who enrolled in Exchange Online before September 2020, this is the default value.
 
 ```yaml
 Type: Boolean
@@ -1229,8 +1234,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableAuthAdminReadSession 
-This parameter is available only in on-premises Exchange.
+### -EnableAuthAdminReadSessionThis parameter is available only in on-premises Exchange.
 
 The EnableAuthAdminReadSession switch enables a recipient read session in Exchange 2016 CU17 or later, or in Exchange 2019 CU6 or later. You don't need to specify a value with this switch.
 

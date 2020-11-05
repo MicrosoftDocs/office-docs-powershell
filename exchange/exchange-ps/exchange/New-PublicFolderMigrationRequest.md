@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-PublicFolderMigrationRequest -SourceDatabase <DatabaseIdParameter>
+New-PublicFolderMigrationRequest [[-Name] <String>] -SourceDatabase <DatabaseIdParameter>
  [-AcceptLargeDataLoss]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
@@ -34,7 +34,6 @@ New-PublicFolderMigrationRequest -SourceDatabase <DatabaseIdParameter>
  [-DomainController <Fqdn>]
  [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>]
- [[-Name] <String>]
  [-MigrationMailbox <MailboxIdParameter>]
  [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
@@ -62,6 +61,22 @@ New-PublicFolderMigrationRequest -SourceDatabase PFDB01 -CSVData (Get-Content C:
 This example creates a public folder migration request from the Exchange 2010 source public folder database PFDB01 and uses the CSVData.csv file that was created using the Export-PublicFolderStatistics.ps1 script. For more information, see [Use serial migration to migrate public folders to Exchange 2013 from previous versions](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
 
 ## PARAMETERS
+
+### -Name
+The Name parameter specifies the name of the public folder migration request. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -SourceDatabase
 The SourceDatabase parameter specifies the target database for the public folders. You can use any value that uniquely identifies the database. For example:
@@ -278,22 +293,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the name of the public folder migration request. If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

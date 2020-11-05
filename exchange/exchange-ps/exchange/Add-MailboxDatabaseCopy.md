@@ -22,9 +22,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Add-MailboxDatabaseCopy [-Identity] <DatabaseIdParameter> [-MailboxServer] <MailboxServerIdParameter>
- [-ActivationPreference <UInt32>] [-Confirm] [-DomainController <Fqdn>] [-ReplayLagTime <EnhancedTimeSpan>]
- [-SeedingPostponed] [-TruncationLagTime <EnhancedTimeSpan>] [-WhatIf] [-ConfigurationOnly]
- [-ReplayLagMaxDelay <EnhancedTimeSpan>] [<CommonParameters>]
+ [-ActivationPreference <UInt32>]
+ [-ConfigurationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ReplayLagMaxDelay <EnhancedTimeSpan>]
+ [-ReplayLagTime <EnhancedTimeSpan>]
+ [-SeedingPostponed]
+ [-TruncationLagTime <EnhancedTimeSpan>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -116,6 +123,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ConfigurationOnly
+The ConfigurationOnly switch allows database copies to be added without invoking automatic seeding. You don't need to specify a value with this switch.
+
+The source database does not need to be online or present when using this parameter. It will create a new database in Active Directory without contacting the target server. This parameter may be useful in situations where the target server is down for maintenance and the new database copy does not yet exist on the target server.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -143,6 +168,28 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplayLagMaxDelay
+The ReplayLagMaxDelay parameter specifies the maximum delay for lagged database copy play down (also known as deferred lagged copy play down). If the disk read IO latency is greater than 25 ms, lagged copy play down is delayed up to the value of this parameter.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
+
+The default value is 24:00:00 (24 hours). To disable deferred lagged copy play down, specify the value 00:00:00.
+
+Note that when the disk is running out of space, the value of this parameter is ignored and lagged copy play down occurs without delay.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -215,46 +262,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConfigurationOnly
-The ConfigurationOnly switch allows database copies to be added without invoking automatic seeding. You don't need to specify a value with this switch.
-
-The source database does not need to be online or present when using this parameter. It will create a new database in Active Directory without contacting the target server. This parameter may be useful in situations where the target server is down for maintenance and the new database copy does not yet exist on the target server.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplayLagMaxDelay
-The ReplayLagMaxDelay parameter specifies the maximum delay for lagged database copy play down (also known as deferred lagged copy play down). If the disk read IO latency is greater than 25 ms, lagged copy play down is delayed up to the value of this parameter.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
-
-The default value is 24:00:00 (24 hours). To disable deferred lagged copy play down, specify the value 00:00:00.
-
-Note that when the disk is running out of space, the value of this parameter is ignored and lagged copy play down occurs without delay.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

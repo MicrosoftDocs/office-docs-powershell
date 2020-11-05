@@ -33,7 +33,8 @@ New-ManagementRoleAssignment [[-Name] <String>] -Computer <ComputerIdParameter> 
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Policy
@@ -50,12 +51,14 @@ New-ManagementRoleAssignment [[-Name] <String>] -Policy <MailboxPolicyIdParamete
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SecurityGroup
 ```
-New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -SecurityGroup <SecurityGroupIdParameter> [-Delegating]
+New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -SecurityGroup <SecurityGroupIdParameter>
+ [-Delegating]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
@@ -67,12 +70,14 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -Securit
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### User
 ```
-New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <UserIdParameter> [-Delegating]
+New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <UserIdParameter>
+ [-Delegating]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
@@ -84,7 +89,8 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <U
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

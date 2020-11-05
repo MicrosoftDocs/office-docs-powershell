@@ -107,7 +107,7 @@ In Exchange Online, after using the Get-RecoverableItems cmdlet to verify the ex
 
 ### Example 4
 ```powershell
-Get-RecoverableItems administrator | Restore-RecoverableItems 
+Get-RecoverableItems administrator | Restore-RecoverableItems
 ```
 
 This example bulk restores all the recoverable items for administrator.

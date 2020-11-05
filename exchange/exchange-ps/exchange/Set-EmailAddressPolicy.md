@@ -51,7 +51,8 @@ Set-EmailAddressPolicy [-Identity] <EmailAddressPolicyIdParameter>
  [-Priority <EmailAddressPolicyPriority>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
  [-RecipientFilter <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

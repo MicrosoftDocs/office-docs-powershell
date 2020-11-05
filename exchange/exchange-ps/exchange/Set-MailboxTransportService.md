@@ -64,7 +64,8 @@ Set-MailboxTransportService [-Identity] <MailboxTransportServerIdParameter>
  [-SendProtocolLogMaxDirectorySize <Unlimited>]
  [-SendProtocolLogMaxFileSize <Unlimited>]
  [-SendProtocolLogPath <LocalLongFullPath>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

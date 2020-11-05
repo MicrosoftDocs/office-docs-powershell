@@ -55,7 +55,8 @@ New-Mailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesID
@@ -94,7 +95,8 @@ New-Mailbox [-Name] <String> -Password <SecureString> -MicrosoftOnlineServicesID
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Arbitration
@@ -125,7 +127,8 @@ New-Mailbox [-Name] [-Arbitration] <String> [-Password <SecureString>] [-UserPri
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuditLog
@@ -154,7 +157,8 @@ New-Mailbox [-Name] <String> -UserPrincipalName <String> [-AuditLog]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AuxAuditLog
@@ -183,7 +187,8 @@ New-Mailbox [-Name] <String> [-AuxAuditLog] [-UserPrincipalName <String>]
  [-SamAccountName <String>]
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DisabledUser
@@ -222,7 +227,8 @@ New-Mailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-Use
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Discovery
@@ -255,7 +261,8 @@ New-Mailbox [-Name] <String> [-Discovery] [-Password <SecureString>] [-UserPrinc
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### EnableRoomMailboxAccount
@@ -286,7 +293,8 @@ New-Mailbox [-Name] <String> -EnableRoomMailboxAccount <Boolean> [-MicrosoftOnli
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Equipment
@@ -321,7 +329,8 @@ New-Mailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrinc
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FederatedUser
@@ -348,7 +357,8 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> [-RemovedMailbox <Remov
  [-ResetPasswordOnNextLogon <Boolean>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-TargetAllMDBs]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### InactiveMailbox
@@ -386,7 +396,8 @@ New-Mailbox [-Name] <String> -InactiveMailbox <MailboxIdParameter> [-Password <S
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Linked
@@ -424,12 +435,19 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LinkedRoomMailbox
 ```
-New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>] [-LinkedRoom] [-Office <String>] [-Password <SecureString>] [-Phone <String>] [-UserPrincipalName <String>]
+New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
+ [-LinkedCredential <PSCredential>]
+ [-LinkedRoom]
+ [-Office <String>]
+ [-Password <SecureString>]
+ [-Phone <String>]
+ [-UserPrincipalName <String>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -462,7 +480,8 @@ New-Mailbox [-Name] <String> -LinkedDomainController <String> -LinkedMasterAccou
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MicrosoftOnlineServicesFederatedUser
@@ -488,7 +507,8 @@ New-Mailbox [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineService
  [-ResetPasswordOnNextLogon <Boolean>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
  [-TargetAllMDBs]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Migration
@@ -519,7 +539,8 @@ New-Mailbox [-Name] <String> [-Arbitration] [-Migration] [-Password <SecureStrin
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
@@ -550,7 +571,8 @@ New-Mailbox [-Name] <String> [-PublicFolder] [-HoldForMigration] [-IsExcludedFro
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemoteArchive
@@ -589,7 +611,8 @@ New-Mailbox [-Name] <String> -ArchiveDomain <SmtpDomain> -Password <SecureString
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### RemovedMailbox
@@ -627,7 +650,8 @@ New-Mailbox [-Name] <String> -RemovedMailbox <RemovedMailboxIdParameter> [-Passw
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Room
@@ -666,7 +690,8 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-ResourceCapacity <Int3
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Scheduling
@@ -697,7 +722,8 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalName <Str
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Shared
@@ -732,7 +758,8 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipa
  [-SharingPolicy <SharingPolicyIdParameter>]
  [-TargetAllMDBs]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,10 +21,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ManagedFolder [-Identity] <ELCFolderIdParameter> [-BaseFolderOnly <Boolean>] [-Comment <String>]
- [-Confirm] [-DomainController <Fqdn>] [-FolderName <String>] [-LocalizedComment <MultiValuedProperty>]
- [-LocalizedFolderName <MultiValuedProperty>] [-MustDisplayCommentEnabled <Boolean>] [-Name <String>]
- [-StorageQuota <Unlimited>] [-WhatIf] [<CommonParameters>]
+Set-ManagedFolder [-Identity] <ELCFolderIdParameter>
+ [-BaseFolderOnly <Boolean>]
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FolderName <String>]
+ [-LocalizedComment <MultiValuedProperty>]
+ [-LocalizedFolderName <MultiValuedProperty>]
+ [-MustDisplayCommentEnabled <Boolean>]
+ [-Name <String>]
+ [-StorageQuota <Unlimited>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

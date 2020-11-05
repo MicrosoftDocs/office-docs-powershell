@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ResubmitRequest [-Identity] <ResubmitRequestIdentityParameter> [-Confirm] [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+Remove-ResubmitRequest [-Identity] <ResubmitRequestIdentityParameter>
+ [-Confirm]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

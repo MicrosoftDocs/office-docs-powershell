@@ -22,8 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-UMHuntGroup [-Name] <String> -UMDialPlan <UMDialPlanIdParameter> -UMIPGateway <UMIPGatewayIdParameter>
- [-Confirm] [-DomainController <Fqdn>] [-PilotIdentifier <String>]
- [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-PilotIdentifier <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

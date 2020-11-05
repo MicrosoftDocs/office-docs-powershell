@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ComplianceRetentionEventType -Identity <ComplianceRuleIdParameter> [-Comment <String>] [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-ComplianceRetentionEventType -Identity <ComplianceRuleIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

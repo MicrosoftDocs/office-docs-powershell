@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-DistributionGroupMember [-Identity] <DistributionGroupIdParameter> [-BypassSecurityGroupManagerCheck]
- [-Confirm] [-DomainController <Fqdn>] [-Members <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Update-DistributionGroupMember [-Identity] <DistributionGroupIdParameter>
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Members <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -21,9 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMMailboxPIN [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-LockedOut <Boolean>] [-NotifyEmail <String>] [-Pin <String>] [-PINExpired <Boolean>]
- [-SendEmail <Boolean>] [-WhatIf] [<CommonParameters>]
+Set-UMMailboxPIN [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-LockedOut <Boolean>]
+ [-NotifyEmail <String>]
+ [-Pin <String>]
+ [-PINExpired <Boolean>]
+ [-SendEmail <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
