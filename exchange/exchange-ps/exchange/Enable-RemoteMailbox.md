@@ -89,7 +89,7 @@ Enable-RemoteMailbox [-Identity] <UserIdParameter>
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf]]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
