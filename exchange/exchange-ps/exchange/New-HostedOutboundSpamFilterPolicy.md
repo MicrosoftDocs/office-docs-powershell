@@ -52,7 +52,6 @@ New-HostedOutboundSpamFilterPolicy -Name "Contoso Executives" -RecipientLimitExt
 This example creates a new outbound spam filter policy named Contoso Executives with the following settings:
 
 - The recipient rate limits are restricted to smaller values that the service defaults.
-
 - After one of the limits is reached, the user is prevented from sending messages (added to the Restricted Users portal).
 
 ## PARAMETERS
@@ -77,9 +76,7 @@ Accept wildcard characters: False
 The ActionWhenThresholdReach parameter specifies the action to take when any of the limits specified in the policy are reached. Valid values are:
 
 - Alert: No action, alert only.
-
 - BlockUser: Prevent the user from sending email messages.
-
 - BlockUserForToday: Prevent the user from sending email messages until the following day. This is the default value.
 
 ```yaml
@@ -159,7 +156,6 @@ Accept wildcard characters: False
 The BccSuspiciousOutboundMail parameter specifies whether to add recipients to the Bcc field of outgoing spam messages. Valid values are:
 
 - $true: The recipients specified by the BccSuspiciousOutboundAdditionalRecipients parameter are added to outgoing spam messages.
-
 - $false: No additional messages are added to outgoing spam messages. This is the default value.
 
 ```yaml
@@ -181,7 +177,6 @@ Accept wildcard characters: False
 The NotifyOutboundSpam parameter specify whether to notify admins when outgoing spam is detected. Valid values are:
 
 - $true: Notify the admins specified by the NotifyOutboundSpamRecipients parameter.
-
 - $false: Don't send notifications. This is the default value.
 
 ```yaml

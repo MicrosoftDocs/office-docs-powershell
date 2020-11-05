@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AvailabilityReportOutage [[-Identity] <AvailabilityReportOutageIdParameter>] [-ReportDate <ExDateTime>]
- [-ReportingDatabase <String>] [-ReportingServer <Fqdn>] [<CommonParameters>]
+Get-AvailabilityReportOutage [[-Identity] <AvailabilityReportOutageIdParameter>]
+ [-ReportDate <ExDateTime>]
+ [-ReportingDatabase <String>]
+ [-ReportingServer <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

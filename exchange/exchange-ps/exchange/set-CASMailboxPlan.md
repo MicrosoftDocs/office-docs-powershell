@@ -52,9 +52,7 @@ This example disables Exchange ActiveSync and POP3 access to mailboxes in the CA
 The Identity parameter specifies the CAS mailbox plan that you want to modify. You can use any value that uniquely identifies the CAS mailbox plan. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise and ExchangeOnlineEnterprise-\<GUID\>, respectively).
@@ -76,7 +74,6 @@ Accept wildcard characters: False
 The ActiveSyncEnabled parameter enables or disables access to the mailbox by using Exchange Active Sync (EAS). Valid values are:
 
 - $true: ActiveSync access to the mailbox is enabled. This is the default value.
-
 - $false: ActiveSync access to the mailbox is disabled.
 
 ```yaml
@@ -95,8 +92,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -116,7 +112,6 @@ Accept wildcard characters: False
 The ImapEnabled parameter enables or disables access to the mailbox by using IMAP4 clients. Valid values are:
 
 - $true: IMAP4 access to the mailbox is enabled. This is default value for all CAS mailbox plans except ExchangeOnlineDeskless.
-
 - $false: IMAP4 access to the mailbox is disabled. This is default value for ExchangeOnlineDeskless.
 
 ```yaml
@@ -136,9 +131,7 @@ Accept wildcard characters: False
 The OwaMailboxPolicy parameter specifies the Outlook on the web (formerly known as Outlook Web App) mailbox policy for the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The default value is OwaMailboxPolicy-Default.
@@ -162,7 +155,6 @@ Accept wildcard characters: False
 The PopEnabled parameter enables or disables access to the mailbox by using POP3 clients. Valid values are:
 
 - $true: POP3 access to the mailbox is enabled. This is the default value.
-
 - $false: POP3 access to the mailbox is disabled.
 
 ```yaml

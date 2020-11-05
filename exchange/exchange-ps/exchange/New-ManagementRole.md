@@ -22,22 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### NewDerivedRole
 ```
-New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-EnabledCmdlets <String[]>]
+New-ManagementRole [-Name] <String> -Parent <RoleIdParameter>
+ [-EnabledCmdlets <String[]>]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UnScopedTopLevelRole
 ```
-New-ManagementRole [-Name] <String> [-UnScopedTopLevel]
+New-ManagementRole [-Name] <String>
+ [-UnScopedTopLevel]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +71,6 @@ After the role is created, the Remove-ManagementRoleEntry cmdlet is used along w
 For more information about pipelining and the Where cmdlet, see the following topics:
 
 - [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
-
 - [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help)
 
 ### Example 2
@@ -138,8 +141,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

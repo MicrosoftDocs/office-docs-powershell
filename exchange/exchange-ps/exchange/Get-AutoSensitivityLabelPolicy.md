@@ -45,9 +45,7 @@ This example returns detailed information about the autosensitivity label policy
 The Identity parameter specifies the auto-labeling policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -83,7 +81,6 @@ Accept wildcard characters: False
 The IncludeTestModeResults parameter specifies whether to include the status of test mode in the policy details. Valid values are:
 
 - $true: Include the status of test mode in the policy details.
-
 - $false: Don't include the status of test mode in the policy details.
 
 ```yaml

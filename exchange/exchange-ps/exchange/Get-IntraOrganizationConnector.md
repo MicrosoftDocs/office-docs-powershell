@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-IntraOrganizationConnector [[-Identity] <IntraOrganizationConnectorIdParameter>] [-DomainController <Fqdn>]
+Get-IntraOrganizationConnector [[-Identity] <IntraOrganizationConnectorIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
@@ -70,9 +71,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the Intra-Organization connector that you want to view. You can use any value that uniquely identifies the connector. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

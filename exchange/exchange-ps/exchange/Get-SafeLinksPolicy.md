@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SafeLinksPolicy [[-Identity] <SafeLinksPolicyIdParameter>] [<CommonParameters>]
+Get-SafeLinksPolicy [[-Identity] <SafeLinksPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,9 +56,7 @@ The Identity parameter specifies the Safe Links policy that you want to view.
 You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DeliveryAgentConnector [[-Identity] <DeliveryAgentConnectorIdParameter>] [-DomainController <Fqdn>]
+Get-DeliveryAgentConnector [[-Identity] <DeliveryAgentConnectorIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

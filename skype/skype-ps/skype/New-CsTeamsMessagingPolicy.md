@@ -18,7 +18,7 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 ## SYNTAX
 
 ```
-New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-Description <String>]
+New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-AllowSmartReply <Boolean>] [-Description <String>]
  [-AllowUserChat <Boolean>] [[-Identity] <XdsIdentity>] [-InMemory] [-AllowUserDeleteMessage <Boolean>]
  [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>] [-Force] [-AllowStickers <Boolean>] [-AllowUrlPreviews <Boolean>]
  [-Tenant <Guid>] [-AllowImmersiveReader <Boolean>] [-AllowUserTranslation <Boolean>]
@@ -276,6 +276,8 @@ Accept wildcard characters: False
 ```
 
 ### -ChannelsInChatListEnabledType
+On mobile devices, enable to display favorite channels above recent chats.
+
 Possible values are: DisabledUserOverride,EnabledUserOverride.
 
 ```yaml
@@ -331,6 +333,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSmartReply
+Turn this setting on to enable suggested replies for chat messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

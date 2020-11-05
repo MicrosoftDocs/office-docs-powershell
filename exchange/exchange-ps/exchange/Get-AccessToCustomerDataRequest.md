@@ -25,7 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AccessToCustomerDataRequest [-ApprovalStatus <String>] [-CreatedAfter <ExDateTime>] [-RequestId <String>]
+Get-AccessToCustomerDataRequest [-ApprovalStatus <String>]
+ [-CreatedAfter <ExDateTime>]
+ [-RequestId <String>]
  [<CommonParameters>]
 ```
 
@@ -61,11 +63,8 @@ This example returns detailed information the customer lockbox request EXSR12345
 The ApprovalStatus parameter filters the results by approval status. Valid values are:
 
 - Approved
-
 - Canceled
-
 - Denied
-
 - Pending
 
 ```yaml
@@ -87,7 +86,6 @@ The CreatedAfter parameter filters the results by the creation date in Coordinat
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml

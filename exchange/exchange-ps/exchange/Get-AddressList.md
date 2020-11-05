@@ -25,19 +25,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Container
 ```
 Get-AddressList -Container <AddressListIdParameter>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-AddressList [[-Identity] <AddressListIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### SearchSet
 ```
 Get-AddressList [-SearchText <String>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,15 +66,35 @@ This example returns detailed information for the address list named building4th
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the address list that you want to view. You can use any value that uniquely identifies the address list. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+
+You can't use this parameter with the Container or SearchText parameters.
+
+```yaml
+Type: AddressListIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Container
 The Container parameter filters the results based on the location of the address list. Only address lists under the specified path are returned. Valid input for this parameter is the root "\\" (also known as All Address Lists) or an existing address list. You can use any value that uniquely identifies the address list. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
-
 - Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
 
 You can't use this parameter with the Identity or SearchText parameters.
@@ -104,32 +127,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the address list that you want to view. You can use any value that uniquely identifies the address list. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
-
-You can't use this parameter with the Container or SearchText parameters.
-
-```yaml
-Type: AddressListIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

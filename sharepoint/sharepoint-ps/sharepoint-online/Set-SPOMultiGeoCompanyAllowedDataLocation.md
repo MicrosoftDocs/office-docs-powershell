@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Set-SPOMultiGeoCompanyAllowedDataLocation
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 ---
 

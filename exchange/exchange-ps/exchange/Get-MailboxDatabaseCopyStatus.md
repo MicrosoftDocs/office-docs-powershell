@@ -27,17 +27,20 @@ Get-MailboxDatabaseCopyStatus -Server <MailboxServerIdParameter>
  [-ConnectionStatus]
  [-DomainController <Fqdn>]
  [-ExtendedErrorInfo]
- [-UseServerCache] [<CommonParameters>]
+ [-UseServerCache]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>] [-Local]
+Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>]
+ [-Local]
  [-Active]
  [-ConnectionStatus]
  [-DomainController <Fqdn>]
  [-ExtendedErrorInfo]
- [-UseServerCache] [<CommonParameters>]
+ [-UseServerCache]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,22 +22,30 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### DialPlan
 ```
-Get-UMActiveCalls -DialPlan <UMDialPlanIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMActiveCalls -DialPlan <UMDialPlanIdParameter>
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### ServerInstance
 ```
-Get-UMActiveCalls -InstanceServer <UMServer> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMActiveCalls -InstanceServer <UMServer>
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### UMIPGateway
 ```
-Get-UMActiveCalls -IPGateway <UMIPGatewayIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMActiveCalls -IPGateway <UMIPGatewayIdParameter>
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Server
 ```
-Get-UMActiveCalls [-Server <ServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMActiveCalls [-Server <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -156,11 +164,8 @@ Accept wildcard characters: False
 The Server parameter filters the results by the specified Unified Messaging server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can't use the DialPlan, InstanceServer, IPGateway, or Server parameters in the same command.

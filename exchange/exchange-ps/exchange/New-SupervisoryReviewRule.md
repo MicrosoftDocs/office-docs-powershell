@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter> [-Condition <String>] [-Confirm]
- [-SamplingRate <Int32>] [-WhatIf] [<CommonParameters>]
+New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter>
+ [-Condition <String>]
+ [-Confirm]
+ [-SamplingRate <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,11 +42,8 @@ New-SupervisoryReviewRule -Name "EU Brokers Rule" -Policy "EU Brokers Policy" -S
 This example creates a new supervisory review rule named EU Brokers Rule with the following settings:
 
 - Policy: EU Brokers Policy
-
 - Sampling rate: 100%
-
 - Conditions: Supervise inbound and outbound communications for members of the EU Brokers group that contain the words trade or insider trading.
-
 - Exceptions: Exclude supervision for members of the EU Compliance group, or messages that contain the phrase "approved by the Contoso financial team".
 
 ## PARAMETERS
@@ -67,9 +68,7 @@ Accept wildcard characters: False
 The Policy parameter specifies the supervisory review policy that's assigned to the rule. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -89,21 +88,13 @@ Accept wildcard characters: False
 The Condition parameter specifies the conditions and exceptions for the rule. This parameter uses the following syntax:
 
 - User or group communications to supervise: "((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...)". Exceptions use the syntax "(NOT((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...))".
-
 - Direction: "((Direction:Inbound) -OR (Direction:Outbound) -OR (Direction:Internal))".
-
 - Message contains words: "((\<Word1orPhrase1\>) -OR (\<Word2orPhrase2\>)...)". Exceptions use the syntax "(NOT((\<Word1orPhrase1\>)-OR (\<Word2orPhrase2\>)...))".
-
 - Any attachment contains words: "((Attachment:\<word1\>) -OR (Attachment:\<word2\>)...)". Exceptions use the syntax "(NOT((Attachment:\<word1\>)-OR (Attachment:\<word2\>)...))".
-
 - Any attachment has the extension: "((AttachmentName:.\<extension1\>) -OR (AttachmentName:.\<extension2\>)...)". Exceptions use the syntax "(NOT((AttachmentName:.\<extension1\>)-OR (AttachmentName:.\<extension2\>)...))".
-
 - Message size is larger than: "(MessageSize:\<size in B, KB, MB or GB\>)". For example "(MessageSize:300KB)". Exceptions use the syntax "(NOT(MessageSize:\<size in B, KB, MB or GB\>))".
-
 - Any attachment is larger than: "(AttachmentSize:\<size in B, KB, MB or GB\>)". For example "(AttachmentSize:3MB)". Exceptions use the syntax "(NOT(AttachmentSize:\<size in B, KB, MB or GB\>))".
-
 - Parentheses ( ) are required around the whole filter.
-
 - Separate multiple conditions or exception types with the -AND operator. For example, "((Reviewee:chris@contoso.com) -AND (AttachmentSize:3MB))".
 
 ```yaml
@@ -122,8 +113,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

@@ -35,7 +35,8 @@ Set-MailboxPlan [-Identity] <MailboxPlanIdParameter>
  [-RetainDeletedItemsFor <EnhancedTimeSpan>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,13 +63,9 @@ This example lowers the default mailbox quotas in the mailbox plan named Exchang
 The Identity parameter specifies the mailbox plan that you want to modify. You can use any value that uniquely identifies the mailbox plan. For example:
 
 - Name
-
 - Alias
-
 - Display name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -87,8 +84,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -144,13 +140,9 @@ The IssueWarningQuota parameter specifies the warning threshold for the size of 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -178,18 +170,18 @@ The MaxReceiveSize parameter specifies the maximum size of a message that can be
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 150 MB. The default value is 36 MB.
 
-The maximum value is determined by the mailbox plan. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
+The maximum value is determined by the mailbox plan (subscriptions and licenses). You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
-For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
+Use this parameter to change the MaxReceiveSize value for new mailboxes that you create. Use the MaxReceiveSize parameter on the Set-Mailbox cmdlet to configure the value on existing mailboxes.
+
+Base64 encoding increases the size of messages by approximately 33%, so specify a value that's 33% larger than the actual maximum message size that you want to enforce. For example, the value 64 MB results in a maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
@@ -210,18 +202,18 @@ The MaxSendSize parameter specifies the maximum size of a message that can be se
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 150 MB. The default value is 35 MB.
 
-The maximum value is determined by the mailbox plan. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
+The maximum value is determined by the mailbox plan (subscriptions and licenses). You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
-For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
+Use this parameter to change the MaxSendSize value for new mailboxes that you create. Use the MaxSendSize parameter on the Set-Mailbox cmdlet to configure the value on existing mailboxes.
+
+Base64 encoding increases the size of messages by approximately 33%, so specify a value that's 33% larger than the actual maximum message size that you want to enforce. For example, the value 64 MB results in a maximum message size of approximately 48 MB.
 
 ```yaml
 Type: Unlimited
@@ -242,13 +234,9 @@ The ProhibitSendQuota parameter specifies a size limit for the mailbox. If the m
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -276,13 +264,9 @@ The ProhibitSendReceiveQuota parameter specifies a size limit for the mailbox. I
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -308,9 +292,7 @@ Accept wildcard characters: False
 The RetainDeletedItemsFor parameter specifies the length of time to keep soft-deleted items for the mailbox. Soft-deleted items are items that have been deleted by using any of these methods:
 
 - Deleting items from the Deleted Items folder.
-
 - Selecting the Empty Deleted Items Folder action.
-
 - Deleting items using Shift + Delete.
 
 These actions move the items to the Recoverable Items folder, into a subfolder named Deletions.
@@ -338,9 +320,7 @@ Accept wildcard characters: False
 The RetentionPolicy parameter specifies the retention policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished Name (DN)
-
 - GUID
 
 Retention policies consist of tags that are applied to mailbox folders and mail items to determine the period of time that the items should be retained. The default value is Default MRM Policy.
@@ -364,9 +344,7 @@ Accept wildcard characters: False
 The RoleAssignmentPolicy parameter specifies the role assignment policy that's applied to the mailbox. You can use any value that uniquely identifies the role assignment policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The default value is Default Role Assignment Policy.
