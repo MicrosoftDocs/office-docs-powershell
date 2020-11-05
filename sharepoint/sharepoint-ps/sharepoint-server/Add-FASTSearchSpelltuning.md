@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/a
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
-ms.author: kirks
+ms.author: pamgreen
 ms.reviewer:
 title: Add-FASTSearchSpelltuning
 ---
@@ -51,6 +51,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-FASTSearchSpelltuningStatus](Get-FASTSearchSpelltuningStatus.md)
 
 [Remove-FASTSearchSpelltuning](Remove-FASTSearchSpelltuning.md)
-
-[Reset-FASTSearchSpelltuning](Reset-FASTSearchSpelltuning.md)
 

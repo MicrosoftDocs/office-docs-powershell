@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-OrganizationRelationship
@@ -22,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,9 +69,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the identity of the organizational relationship. You can use the following values:
 
 - Canonical name
-
 - GUID
-
 - Name
 
 ```yaml

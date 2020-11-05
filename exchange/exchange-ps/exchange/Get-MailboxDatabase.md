@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxDatabase
@@ -29,7 +28,8 @@ Get-MailboxDatabase -Server <ServerIdParameter>
  [-IncludeCorrupted]
  [-IncludePreExchange2010]
  [-IncludePreExchange2013]
- [-Status] [<CommonParameters>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -40,7 +40,8 @@ Get-MailboxDatabase [[-Identity] <DatabaseIdParameter>]
  [-IncludeCorrupted]
  [-IncludePreExchange2010]
  [-IncludePreExchange2013]
- [-Status] [<CommonParameters>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,11 +50,8 @@ If you use the Get-MailboxDatabase cmdlet with no parameters, it retrieves infor
 The following list describes the properties that are returned in the results.
 
 - Name: Name of the database.
-
 - Server: Server hosting the database.
-
 - Recovery: Specifies whether the new database is designated as a recovery database.
-
 - ReplicationType: Replication type of the database.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -78,11 +76,8 @@ This example returns detailed information about the mailbox database named Mailb
 The Server parameter filters the results by the specified Mailbox server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 You can't use this parameter with the Identity parameter.
@@ -136,9 +131,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the mailbox database that you want to view. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
@@ -210,9 +203,7 @@ Accept wildcard characters: False
 The Status switch specifies whether to retrieve the available free space in the database root and information about the following attributes:
 
 - BackupInProgress
-
 - Mounted
-
 - OnlineMaintenanceInProgress
 
 You don't need to specify a value with this switch.

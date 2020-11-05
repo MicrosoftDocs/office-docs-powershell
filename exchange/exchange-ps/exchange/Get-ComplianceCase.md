@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancecase
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-ComplianceCase
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-ComplianceCase
@@ -66,32 +65,42 @@ This example returns a summary list of all DSR cases that the custom role group 
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the compliance case that you want to view. You can use any value that uniquely identifies the case. For example:
+
+- Name
+- Identity (GUID value)
+
+```yaml
+Type: ComplianceCaseIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -CaseType
 The CaseType parameter specifies the type of compliance case that you want to view. Valid values are:
 
-- AdvancedEdiscovery: Advanced eDiscovery cases are used to manage legal or other types of investigations. In the Security & Compliance Center, Advanced eDiscovery cases are displayed under eDiscovery > Advanced eDiscovery.
-
-- ComplianceClassifier: This type of case corresponds to a trainable classifier. In the Microsoft 365 compliance center, trainable classifiers are displayed under Data classification > Trainable classifiers.
-
-- ComplianceWorkspace: This value is reserved for internal Microsoft use. 
-
-- DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Security & Compliance Center, Data investigation cases are displayed on the Data investigations page.
-
-- DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Security & Compliance Center, DSR cases are displayed under Data privacy > Data subject requests.
-
-- eDiscovery: eDiscovery (also called core eDiscovery) cases are used to manage legal or other types of investigations. In the Security & Compliance Center, core eDiscovery cases are displayed under eDiscovery > eDiscovery. This is the default value.
-
-- InsiderRisk: Insider risk cases are use to manage insider risk management cases. In the Microsoft 365 compliance center, insider risk cases are displayed under Insider risk management > Cases. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on an risk alert.
-
+- AdvancedEdiscovery: Advanced eDiscovery cases are used to manage legal or other types of investigations. In the Security & Compliance Center, Advanced eDiscovery cases are displayed under eDiscovery \> Advanced eDiscovery.
+- ComplianceClassifier: This type of case corresponds to a trainable classifier. In the Microsoft 365 compliance center, trainable classifiers are displayed under Data classification \> Trainable classifiers.
+- ComplianceWorkspace: This value is reserved for internal Microsoft use.- DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Security & Compliance Center, Data investigation cases are displayed on the Data investigations page.
+- DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Security & Compliance Center, DSR cases are displayed under Data privacy \> Data subject requests.
+- eDiscovery: eDiscovery (also called core eDiscovery) cases are used to manage legal or other types of investigations. In the Security & Compliance Center, core eDiscovery cases are displayed under eDiscovery \> eDiscovery. This is the default value.
+- InsiderRisk: Insider risk cases are use to manage insider risk management cases. In the Microsoft 365 compliance center, insider risk cases are displayed under Insider risk management \> Cases. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on an risk alert.
 - InternalInvestigation: This value is reserved for internal Microsoft use.
-
-- SupervisionPolicy: This type of case corresponds to communication compliance policy. In the Microsoft 365 compliance center, communication compliance policies are displayed under Communication compliance > Policies.
+- SupervisionPolicy: This type of case corresponds to communication compliance policy. In the Microsoft 365 Compliance center, communication compliance policies are displayed under Communication compliance \> Policies.
 
 ```yaml
 Type: ComplianceCaseType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -107,32 +116,12 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the compliance case that you want to view. You can use any value that uniquely identifies the case. For example:
-
-- Name
-
-- Identity (GUID value)
-
-```yaml
-Type: ComplianceCaseIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -143,7 +132,7 @@ The RecentOnly switch returns a list of the most recently modified cases of the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -159,7 +148,7 @@ The RoleGroup parameter returns a list of compliance cases that the specified ro
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

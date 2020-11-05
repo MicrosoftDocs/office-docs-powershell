@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Export-QuarantineMessage
@@ -19,14 +18,15 @@ Use the Export-QuarantineMessage cmdlet to export quarantined messages and files
 
 For files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, the files are exported in Base64 format.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Export-QuarantineMessage -Identity <QuarantineMessageIdentity> [<CommonParameters>]
+Export-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +48,6 @@ The third command exports the message to the specified file using the message en
 Notes:
 
 - The `| select -ExpandProperty Eml`" part of the command specifies the whole message, including attachments.
-
 - You need to use the Out-File cmdlet to write the .eml message file with the required encoding. If you use the default PowerShell redirection operator ">" to write the output file, the default encoding is Unicode, which might not match the actual message encoding.
 
 ### Example 2

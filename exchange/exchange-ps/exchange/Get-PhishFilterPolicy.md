@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-PhishFilterPolicy
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-PhishFilterPolicy cmdlet to view the spoof intelligence policy and detected spoofed sending activities in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -38,21 +37,13 @@ Get-PhishFilterPolicy [[-Identity] <HostedConnectionFilterPolicyIdParameter>]
 The Get-PhishFilterPolicy cmdlet returns the following information:
 
 - Sender: The true sending domain that's found in the DNS record of the source email server. If no domain is found, the source email server's IP address is shown.
-
 - SpoofedUser: The sending email address if the domain is one of your organization's domains, or the sending domain if the domain is external.
-
 - NumberOfMessages: The number of messages.
-
 - NumberOfUserComplaints: The number of user complaints.
-
 - AuthenticationResult: Indicates whether the message has passed any type of email authentication (SPF, DKIM, or DMARC) (explicit or implicit).
-
 - LastSeen: The date when the sending email address or domain was last seen by Microsoft 365.
-
 - DecisionSetBy: Specifies whether Microsoft 365 set the spoofing policy as allowed or not allowed to spoof, or if it was set by an admin.
-
 - AllowedToSpoof: The three possible values are Yes (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server), No (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server), and Partial (messages that contain some spoofed sender email addresses in your organization are allowed from the source email server).
-
 - SpoofType: Indicates whether the domain is internal to your organization or external.
 
 For more information about spoof intelligence, see [Configure spoof intelligence in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).

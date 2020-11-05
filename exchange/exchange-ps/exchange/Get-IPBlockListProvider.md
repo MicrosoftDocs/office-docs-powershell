@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-IPBlockListProvider
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-IPBlockListProvider [[-Identity] <IPBlockListProviderIdParameter>] [-DomainController <Fqdn>]
+Get-IPBlockListProvider [[-Identity] <IPBlockListProviderIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
@@ -69,9 +69,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the IP Block list provider that you want to view. You can use any value that uniquely identifies the IP Block list provider. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

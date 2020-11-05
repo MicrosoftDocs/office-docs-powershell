@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-OutlookProvider
@@ -22,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OutlookProvider [[-Identity] <OutlookProviderIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-OutlookProvider [[-Identity] <OutlookProviderIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,9 +69,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the ADIDParameter value of the MAPI protocol that you want to view. Typical values are:
 
 - EXCH
-
 - EXPR
-
 - WEB
 
 ```yaml

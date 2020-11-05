@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsipphonepolicy
 applicable: Skype for Business Online
-title: New-CSTeamsIPPhonePolicy
+title: New-CsTeamsIPPhonePolicy
 author: tonywoodruff
 ms.author: anwoodru
 ms.reviewer: kponnus
@@ -15,12 +15,12 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-New-CSTeamsIPPhonePolicy allows you to create a policy to manage features related to Teams phone experiences. Teams phone policies determine the features that are available to users.
+New-CsTeamsIPPhonePolicy allows you to create a policy to manage features related to Teams phone experiences. Teams phone policies determine the features that are available to users.
 
 ## SYNTAX
 
 ```
-New-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>]
+New-CsTeamsIPPhonePolicy [-AllowHomeScreen <String>] [-AllowBetterTogether <String>] [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>]
 
  [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-InMemory] [-SignInMode <String>]
 
@@ -29,7 +29,7 @@ New-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinute
 
 ## DESCRIPTION
 
-The New-CSTeamsIPPhonePolicy cmdlet allows you to create a policy to manage features related to Teams phone experiences assigned to a user account used to sign into a Teams phone. 
+The New-CsTeamsIPPhonePolicy cmdlet allows you to create a policy to manage features related to Teams phone experiences assigned to a user account used to sign into a Teams phone. 
 
 ## EXAMPLES
 
@@ -40,6 +40,45 @@ PS C:\> New-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAre
 This example shows a new policy being created called "CommonAreaPhone" setting the SignInMode as "CommonAreaPhoneSignIn".
 
 ## PARAMETERS
+
+### -AllowBetterTogether
+Determines whether Better Together mode is enabled, phones can lock and unlock in an integrated fashion when connected to their Windows PC running a 64-bit Teams desktop client.
+Possible values this parameter can take:
+
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowHomeScreen
+Determines whether the Home Screen feature of the Teams IP Phones is enabled.
+Possible values this parameter can take:
+
+- Enabled
+- EnabledUserOverride
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledUserOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowHotDesking
 Determines whether hot desking mode is enabled. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode. 

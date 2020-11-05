@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/execute-azureadlabelsync
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Execute-AzureADLabelSync
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Execute-AzureADLabelSync

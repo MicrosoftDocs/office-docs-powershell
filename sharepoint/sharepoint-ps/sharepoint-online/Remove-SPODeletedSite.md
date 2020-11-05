@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -NoWait
 
-PARAMVALUE: SwitchParameter
+Continues without the status being polled. Polling the action can slow it's progress.
 
 ```yaml
 Type: SwitchParameter

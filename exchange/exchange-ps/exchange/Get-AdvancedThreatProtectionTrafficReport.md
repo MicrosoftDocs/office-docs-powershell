@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-AdvancedThreatProtectionTrafficReport
@@ -17,17 +16,27 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-AdvancedThreatProtectionTrafficReport cmdlet to view the results of Safe Attachments and Safe Links actions in your cloud-based organization for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-AdvancedThreatProtectionTrafficReport [-Action <MultiValuedProperty>] [-AggregateBy <String>]
- [-Direction <MultiValuedProperty>] [-DisplayBy <String>] [-Domain <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-MalwareName <MultiValuedProperty>]
- [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-AdvancedThreatProtectionTrafficReport [-Action <MultiValuedProperty>]
+ [-AggregateBy <String>]
+ [-Direction <MultiValuedProperty>]
+ [-DisplayBy <String>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-MalwareName <MultiValuedProperty>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,21 +70,13 @@ This example returns the results of Safe Attachments and Safe Links actions duri
 The Action parameter filters the results by the action taken on the attachment or link. Valid values are:
 
 - Allow
-
 - AllowRedirect
-
 - BlockAccess
-
 - BlockRedirect
-
 - BypassMessage
-
 - BypassMessageSystem
-
 - ContentReplaced
-
 - InfectedAllowed
-
 - ReplaceRedirect
 
 ```yaml
@@ -127,7 +128,6 @@ Accept wildcard characters: False
 The DisplayBy parameter specifies how the information in the report is organized. Valid values are:
 
 - Action (This is the default value)
-
 - MalwareName
 
 ```yaml
@@ -215,17 +215,11 @@ Accept wildcard characters: False
 The MalwareName parameter filters the results by malware payload. Valid values are:
 
 - Excel
-
 - EXE
-
 - Flash
-
 - Others
-
 - PDF
-
 - PowerPoint
-
 - URL
 
 You can specify multiple values separated by commas.

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Enable-AntispamUpdates
@@ -20,8 +19,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-AntispamUpdates [[-Identity] <ServerIdParameter>] [-Confirm]
- [-SpamSignatureUpdatesEnabled <Boolean>] [-WhatIf] [<CommonParameters>]
+Enable-AntispamUpdates [[-Identity] <ServerIdParameter>]
+ [-Confirm]
+ [-SpamSignatureUpdatesEnabled <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,22 +40,6 @@ This cmdlet was deprecated in Microsoft Exchange Server 2010 Service Pack 1 and 
 
 ## PARAMETERS
 
-### -Confirm
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 This parameter is reserved for internal Microsoft use.
 
@@ -67,6 +53,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Confirm
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

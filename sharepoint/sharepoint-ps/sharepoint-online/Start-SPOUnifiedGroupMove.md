@@ -118,6 +118,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Reserved
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SuppressAllWarnings
 
 Suppress all warning messages.

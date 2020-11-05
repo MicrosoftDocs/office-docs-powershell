@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-UMAutoAttendant
@@ -66,7 +65,8 @@ Set-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter>
  [-Timezone <String>]
  [-TimeZoneName <UMTimeZone>]
  [-WeekStartDay <DayOfWeek>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -381,9 +381,7 @@ The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Min
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -395,11 +393,8 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (From Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
-
 - "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
 
 ```yaml
@@ -514,8 +509,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -633,9 +627,7 @@ Accept wildcard characters: False
 The HolidaySchedule parameter specifies the holiday schedule for the organization. The schedule is formatted as an array of strings. Each string contains three parts:
 
 - Name, which is limited to 64 characters
-
 - File name for the audio prompt, which is in the .wav format
-
 - Day (date) of the holiday
 
 The following is an example:
@@ -707,15 +699,10 @@ Accept wildcard characters: False
 The MatchedNameSelectionMethod parameter specifies the selection to use to differentiate between users who have names that match the touchtone or speech input. This setting can be set to the following:
 
 - Department
-
 - Title
-
 - Location
-
 - None
-
 - Prompt for alias
-
 - Inherited from UM dial plan
 
 ```yaml

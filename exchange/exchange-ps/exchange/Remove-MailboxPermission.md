@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Remove-MailboxPermission
@@ -29,21 +28,23 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <Mailbox
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Remove-MailboxPermission -Instance <MailboxAcePresentationObject>
+Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePresentationObject>
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
  [-Deny]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [[-Identity] <MailboxIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-ResetDefault]
  [-User <SecurityPrincipalIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Owner
@@ -52,12 +53,14 @@ Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ClearAutoMapping
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
+Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-ClearAutoMapping]
  [-AccessRights <MailboxRights[]>]
  [-Confirm]
  [-Deny]
@@ -65,16 +68,19 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
  [-IgnoreDefaultScope]
  [-InheritanceType <ActiveDirectorySecurityInheritance>]
  [-User <SecurityPrincipalIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ResetDefault
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ResetDefault]
+Remove-MailboxPermission [-Identity] <MailboxIdParameter>
+ [-ResetDefault]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,21 +99,42 @@ This example removes user Test2's full access rights to Test1's mailbox.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mailbox where you are removing permissions. You can use any value that uniquely identifies the mailbox: For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: AccessRights, Owner, ClearAutoMapping, ResetDefault
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -AccessRights
 The AccessRights parameter specifies the rights required to perform the operation. You can use the following values:
 
 - FullAccess
-
 - SendAs
-
 - ExternalAccount
-
 - DeleteItem
-
 - ReadPermission
-
 - ChangePermission
-
 - ChangeOwner
 
 ```yaml
@@ -133,42 +160,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox where you are removing permissions. You can use any value that uniquely identifies the mailbox: For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: AccessRights, Owner, ClearAutoMapping, ResetDefault
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -255,8 +246,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -312,7 +302,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -350,9 +339,7 @@ This parameter is available only in the cloud-based service.
 The ResetDefault switch resets the default security descriptor of the mailbox. Permissions on the mailbox are reset so only the mailbox owner has FullAccess permission to the mailbox. The following types of permissions are not affected:
 
 - Recipient permissions (for example, SendAs, SendOnBehalf and delegates).
-
 - Mailbox folder permissions assigned using the MailboxFolderPermission cmdlets.
-
 - Mailbox folder permissions assigned using Outlook or other MAPI clients.
 
 Also, because this switch removes FullAccess permission from other users on the mailbox, the mailbox is no longer auto-mapped by Autodiscover into the Outlook profiles of other users.

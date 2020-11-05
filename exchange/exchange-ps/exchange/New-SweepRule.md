@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-SweepRule
@@ -22,12 +21,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-SweepRule [-Name] <String> -Provider <String> [-Confirm] [-DestinationFolder <MailboxFolderIdParameter>]
- [-DomainController <Fqdn>] [-Enabled <Boolean>] [-ExceptIfFlagged <Boolean>]
- [-ExceptIfPinned <Boolean>] [-KeepForDays <Int32>] [-KeepLatest <Int32>]
- [-Mailbox <MailboxIdParameter>] [-Sender <RecipientIdParameter>] [-SourceFolder <MailboxFolderIdParameter>]
+New-SweepRule [-Name] <String> -Provider <String>
+ [-Confirm]
+ [-DestinationFolder <MailboxFolderIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-ExceptIfFlagged <Boolean>]
+ [-ExceptIfPinned <Boolean>]
+ [-KeepForDays <Int32>]
+ [-KeepLatest <Int32>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Sender <RecipientIdParameter>]
+ [-SourceFolder <MailboxFolderIdParameter>]
  [-SystemCategory <SystemCategoryType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,8 +102,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -117,23 +124,14 @@ The DestinationFolder parameter specifies an action for the Sweep rule that move
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 Example values for this parameter are `john@contoso.com:\Unimportant` or `John:\Inbox\Misc`. The default value is `MailboxID:\Deleted Items`.
@@ -173,7 +171,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether the Sweep rule is enabled or disabled. Valid values are:
 
 - $true: The rule is enabled. This is the default value.
-
 - $false: The rule is disabled.
 
 After you create the rule, you can enable or disable it by using the Enable-SweepRule and Disable-SweepRule cmdlets.
@@ -195,31 +192,20 @@ Accept wildcard characters: False
 The ExceptIfFlagged parameter specifies an exception for the Sweep rule that looks messages with a message flag applied. Valid values are:
 
 - $true: The rule action isn't applied to messages that have a message flag applied.
-
 - $false: The exception isn't used.
 
 The typical message flag values are:
 
 - Any
-
 - Call
-
 - DoNotForward
-
 - FollowUp
-
 - ForYourInformation
-
 - Forward
-
 - NoResponseNecessary
-
 - Read
-
 - Reply
-
 - ReplyToAll
-
 - Review
 
 ```yaml
@@ -239,7 +225,6 @@ Accept wildcard characters: False
 The PinMessage parameter specifies an exception for the Sweep rule that looks for pinned messages. Valid values are:
 
 - $true: The rule action isn't applied to messages that are pinned to the top of the Inbox.
-
 - $false: The exception isn't used.
 
 ```yaml
@@ -295,23 +280,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox where you want to create the Sweep rule. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -331,15 +307,10 @@ Accept wildcard characters: False
 The Sender parameter specifies a condition for the Sweep rule that looks for the specified sender in messages. For internal senders, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 For external senders, use their email address.
@@ -363,23 +334,14 @@ The SourceFolder parameter specifies a condition for the Sweep rule that looks f
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 Example values for this parameter are `john@contoso.com:\Marketing` or `John:\Inbox\Reports`. The default value is `MailboxID:\Inbox`.
@@ -401,51 +363,28 @@ Accept wildcard characters: False
 The SystemCategory parameter specifies a condition for the sweep rule that looks for messages with the specified system category. System categories are available to all mailboxes in the organization. Valid values are:
 
 - NotDefined
-
 - Bills
-
 - Document
-
 - DocumentPlus
-
 - Event
-
 - Family
-
 - File
-
 - Flight
-
 - FromContact
-
 - Important
-
 - LiveView
-
 - Lodging
-
 - MailingList
-
 - Newsletter
-
 - Photo
-
 - Purchase
-
 - RentalCar
-
 - RestaurantReservation
-
 - RetiredPromotion
-
 - ShippingNotification
-
 - Shopping
-
 - SocialUpdate
-
 - Travel
-
 - Video
 
 ```yaml

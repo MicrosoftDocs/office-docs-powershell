@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MailTrafficReport
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficReport cmdlet to view details about message traffic in your organization for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -56,77 +55,49 @@ You can use the EventType values from the Get-MailTrafficReport cmdlet to analyz
 Mail traffic summary
 
 - AdvancedProtectionMalware: Messages that were marked as malware by the Office 365 Advanced Threat Protection service. For details about the Advanced Threat Protection service, see [Office 365 Advanced Threat Protection service description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
-
 - AtpGoodMail: Messages that were delivered after passing through the Office 365 Advanced Threat Protection service. This count shows the number of unique messages. If a message was delivered to multiple recipients, it would still count as a single message.
-
 - DLPMessages: Messages that matched a data loss prevention (DLP) policy. For details about data loss prevention, see [Overview of data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies).
-
 - Expire: Messages that cannot be delivered, stuck in a queue, and after some time expired.
-
 - GoodMail: Messages that were delivered after passing through the malware and spam filters. This count shows the number of unique messages. If a message was delivered to multiple recipients, it would still count as a single message.
-
 - Malware: Messages that were marked as malware.
-
 - Receive: Messages successfully received by the service.
-
 - SpoofMail: Messages that were marked as spoofed by anti-spoofing protection.
-
 - TransportRuleHits: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
-
 - TransportRuleMessages: Messages that matched a transport rule. If a message matched multiple rules, this event type would show each of the rule matches.
 
 Spam detections
 
 - SpamIPBlock: Messages that were blocked based on the sender IP.
-
 - SpamDBEBFilter: Messages that were blocked based on checking the recipient against the directory. This happens when a message is addressed to an unknown recipient.
-
 - SpamEnvelopeBlock: Messages that were blocked based on SMTP.
-
 - SpamContentFiltered: Messages that passed the initial IP and SMTP filters and were filtered based on content, rules or other spam configurations.
 
 Spam analysis - content-filtered spam
-
 - Spam\_AdditionalSpamFiltered: Messages filtered based on advanced spam filters that have been enabled. For details about the advanced spam filter, see [Advanced spam filtering options](https://docs.microsoft.com/microsoft-365/security/office-365-security/advanced-spam-filtering-asf-options).
-
 - Spam\_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see [Configure your spam filter policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies).
-
 - Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see [What's the difference between junk email and bulk email?](https://docs.microsoft.com/microsoft-365/security/office-365-security/what-s-the-difference-between-junk-email-and-bulk-email).
-
 - Spam\_ContentScanFiltered: Messages that were filtered based on the message content.
-
 - Spam\_ETRFiltered: Messages that were filtered due to a transport rule.
-
 - Spam\_SenderBlocked: Messages that were filtered because the sender was on a block list.
 
 Spam analysis - non-spam messages
-
 - NonSpam\_AdditionalSpamFilterPassed: Messages that were passed based on advanced spam filters that have been enabled. For details about the advanced spam filters, see [Advanced spam filtering options](https://docs.microsoft.com/microsoft-365/security/office-365-security/advanced-spam-filtering-asf-options).
-
 - NonSpam\_AllowList: Messages that were passed because the sender was on a spam filter allow list. For more details on how to configure these lists, see [Configure your spam filter policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies).
-
 - NonSpam\_BulkPassed: Messages that were determined not to be bulk mail.
-
 - NonSpam\_ContentScanPassed: Messages that were passed by the content scan.
-
 - NonSpam\_ETRPassed: Messages that passed based on a transport rule.
-
 - NonSpam\_IntraOrg: Messages that were deemed as low risk of spam based on factors such as intra-organizational mail.
-
 - NonSpam\_IPAllowed: Messages that were passed because the sending IP was on the IP allow list.
-
 - NonSpam\_SafeSender: Messages that were passed because the sender was marked as safe.
 
 Bulk mail
 
 - BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see [Use mail flow rules to configure bulk email filtering in Exchange Online Protection](https://docs.microsoft.com/microsoft-365/security/office-365-security/use-transport-rules-to-configure-bulk-email-filtering).
-
 - BCL1 through BCL9: Messages with BCL rating of 1 through 9.
 
 Encryption
 
 - EncryptionManual: Messages manually encrypted by users.
-
 - EncryptionPolicy: Messages that matched a rule for encrypting email messages using the latest Office 365 Message Encryption (OME) capabilities.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -214,7 +185,6 @@ If you don't use the Domain parameter, the message count for your entire organiz
 Notes:
 
 - Messages that are sent to recipients in multiple domains are counted differently at the domain level versus the organizational level. At the domain level, the message is counted for each different domain. At the organizational level, the message is counted only once. Therefore, if you add up the total number of received messages for each domain, the value might not match the total number of received messages for the organization.
-
 - The Domain value is Others for messages that were sent from or to unregistered domains that are attributed to your organization (messages in domains that aren't configured as accepted domains in your organization).
 
 ```yaml

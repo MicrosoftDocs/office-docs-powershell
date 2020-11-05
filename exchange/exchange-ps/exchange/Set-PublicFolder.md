@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-PublicFolder
@@ -46,7 +45,8 @@ Set-PublicFolder [-Identity] <PublicFolderIdParameter>
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseReplicationSchedule <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -114,8 +114,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -207,13 +206,9 @@ The default value is unlimited, which is 2 terabytes.
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -293,13 +288,9 @@ The MaxItemSize parameter specifies the maximum size for posted items. Items lar
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -341,23 +332,14 @@ This parameter is available only in on-premises Exchange.
 The OverrideContentMailbox parameter specifies the target public folder mailbox whereyou want to move this public folder's content to. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -411,13 +393,9 @@ The ProhibitPostQuota parameter specifies the size of a public folder at which u
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -443,9 +421,7 @@ This parameter is available or functional only in Exchange Server 2010
 The Replicas parameter specifies a list of public folder databases with which to replicate this public folder. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
@@ -473,9 +449,7 @@ The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Min
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -487,9 +461,7 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
 
 ```yaml
@@ -529,11 +501,8 @@ This parameter is available or functional only in Exchange Server 2010
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

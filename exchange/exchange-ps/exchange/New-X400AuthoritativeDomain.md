@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-X400AuthoritativeDomain
@@ -22,19 +21,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-X400AuthoritativeDomain [-Name] <String> -X400DomainName <X400Domain> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [-X400ExternalRelay <Boolean>] [<CommonParameters>]
+New-X400AuthoritativeDomain [-Name] <String> -X400DomainName <X400Domain>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [-X400ExternalRelay <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 X.400 domain names can only include the following ASCII characters:
 
 - A to Z
-
 - a to z
-
 - 0-9
-
 - These punctuation and special characters: (space) ' () + , - . / : = ?
 
 You can use the following X.400 attributes (one each per address):
@@ -42,31 +42,26 @@ You can use the following X.400 attributes (one each per address):
 country
 
 - Abbreviation: C
-
 - Maximum character length: 2
 
 administrative domain
 
 - Abbreviation: A
-
 - Maximum character length: 16
 
 private domain
 
 - Abbreviation: P
-
 - Maximum character length: 16
 
 organization name
 
 - Abbreviation: O
-
 - Maximum character length: 64
 
 organizational unit name
 
 - Abbreviation: OU1 to OU4
-
 - Maximum character length: 32
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -109,19 +104,12 @@ Accept wildcard characters: False
 The X400DomainName parameter specifies the X.400 namespace, which can only include the X.400 organizational components. Specifically, only the following attribute types are supported:
 
 - C (Country)
-
 - A (ADMD)
-
 - P (PRMD)
-
 - O (Organization)
-
 - OU1 (Organization unit 1)
-
 - OU2 (Organization unit 2)
-
 - OU3 (Organization unit 3)
-
 - OU4 (Organization unit 4)
 
 Separate the address attributes with semicolons and enclose the entire address in quotation marks (for example, "C=US;A=att;P=Contoso;O=Sales").
@@ -142,8 +130,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

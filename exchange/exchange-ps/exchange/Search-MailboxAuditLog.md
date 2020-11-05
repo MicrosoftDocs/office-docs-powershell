@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Search-MailboxAuditLog
@@ -23,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>] [-ShowDetails]
+Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>]
+ [-ShowDetails]
  [-DomainController <Fqdn>]
  [-EndDate <ExDateTime>]
  [-ExternalAccess <Boolean>]
@@ -56,6 +56,8 @@ Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
 ## DESCRIPTION
 The Search-MailboxAuditLog cmdlet performs a synchronous search of mailbox audit logs for one or more specified mailboxes and displays search results in the Exchange Management Shell window. To search mailbox audit logs for multiple mailboxes and have the results sent by email to specified recipients, use the New-MailboxAuditLogSearch cmdlet instead. To learn more about mailbox audit logging, see [Mailbox audit logging in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/mailbox-audit-logging/mailbox-audit-logging).
 
+This cmdlet is available in Office 365 operated by 21Vianet, but it won't return any results.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -87,23 +89,14 @@ This example retrieves mailbox audit log entries for Ken Kwok's mailbox for acti
 The Identity parameter specifies a single mailbox to retrieve mailbox audit log entries from. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -197,7 +190,6 @@ Accept wildcard characters: False
 The HasAttachments parameter filters the search by messages that have attachments. Valid values are:
 
 - $true: Only messages with attachments are included in the search.
-
 - $false: Messages with and without attachments are included in the search.
 
 ```yaml
@@ -237,11 +229,7 @@ Accept wildcard characters: False
 The LogonTypes parameter specifies the type of logons. Valid values are:
 
 - Admin: Audit log entries for mailbox access by administrator logons are returned.
-
 - Delegate: Audit log entries for mailbox access by delegates are returned, including access by users with Full Mailbox Access permission.
-
-- External: For Exchange Online mailboxes, audit log entries for mailbox access by Microsoft datacenter administrators are returned.
-
 - Owner: Audit log entries for mailbox access by the primary mailbox owner are returned. This value requires the ShowDetails switch.
 
 ```yaml
@@ -281,49 +269,27 @@ Accept wildcard characters: False
 The Operations parameter filters the search results by the mailbox actions that are logged by mailbox audit logging. Valid values are:
 
 - AddFolderPermissions (Exchange 2019 and Exchange Online only. Although this value is accepted, it's already included in the UpdateFolderPermissions action and isn't audited separately.)
-
 - ApplyRecord (Exchange Online only)
-
 - Copy
-
 - Create
-
 - Default (Exchange Online only)
-
 - FolderBind
-
 - HardDelete
-
 - MailboxLogin
-
 - MailItemsAccessed (Exchange Online only and only for E5 or E5 Compliance add-on subscription users.)
-
 - MessageBind (Although this value is accepted, these actions are no longer logged.)
-
 - ModifyFolderPermissions (Exchange 2019 and Exchange Online only. Although this value is accepted, it's already included in the UpdateFolderPermissions action and isn't audited separately.)
-
 - Move
-
 - MoveToDeletedItems
-
 - RecordDelete (Exchange Online only)
-
 - RemoveFolderPermissions (Exchange 2019 and Exchange Online only. Although this value is accepted, it's already included in the UpdateFolderPermissions action and isn't audited separately.)
-
 - SendAs
-
 - SendOnBehalf
-
 - SoftDelete
-
 - Update
-
 - UpdateCalendarDelegation (Exchange 2019 and Exchange Online only)
-
 - UpdateComplianceTag (Exchange Online only)
-
 - UpdateFolderPermissions (Exchange 2019 and Exchange Online only)
-
 - UpdateInboxRules (Exchange 2019 and Exchange Online only)
 
 You can enter multiple values separated by commas.

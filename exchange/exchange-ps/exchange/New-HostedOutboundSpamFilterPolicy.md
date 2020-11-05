@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # New-HostedOutboundSpamFilterPolicy
@@ -17,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-HostedOutboundSpamFilterPolicy cmdlet to create outbound spam filter policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -27,6 +26,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-HostedOutboundSpamFilterPolicy [-Name] <String>
  [-ActionWhenThresholdReached <OutboundRecipientLimitsExceededAction>]
  [-AdminDisplayName <String>]
+ [-AutoForwardingMode <AutoForwardingMode>]
  [-BccSuspiciousOutboundAdditionalRecipients <MultiValuedProperty>]
  [-BccSuspiciousOutboundMail <Boolean>]
  [-NotifyOutboundSpam <Boolean>]
@@ -38,6 +38,8 @@ New-HostedOutboundSpamFilterPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
+New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the HostedOutboundSpamFilterPolicy parameter on the New-HostedOutboundSpamFilterRule or Set-HostedOutboundSpamFilterRule cmdlets to associate the policy with a rule.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -50,7 +52,6 @@ New-HostedOutboundSpamFilterPolicy -Name "Contoso Executives" -RecipientLimitExt
 This example creates a new outbound spam filter policy named Contoso Executives with the following settings:
 
 - The recipient rate limits are restricted to smaller values that the service defaults.
-
 - After one of the limits is reached, the user is prevented from sending messages (added to the Restricted Users portal).
 
 ## PARAMETERS
@@ -75,9 +76,7 @@ Accept wildcard characters: False
 The ActionWhenThresholdReach parameter specifies the action to take when any of the limits specified in the policy are reached. Valid values are:
 
 - Alert: No action, alert only.
-
 - BlockUser: Prevent the user from sending email messages.
-
 - BlockUserForToday: Prevent the user from sending email messages until the following day. This is the default value.
 
 ```yaml
@@ -110,6 +109,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoForwardingMode
+**Note**: Before September 2020, this setting is available but not enforced.
+
+The AutoForwardingMode specifies how the policy controls automatic email forwarding to outbound recipients. Valid values are:
+
+- Automatic: Automatic external email forwarding is blocked by the system. This is the default value.
+- On: Automatic external email forwarding is not restricted.
+- Off: Automatic external email forwarding is disabled and will result in a non-delivery report (also known as an NDR or bounce message) to the sender.
+
+This setting applies only to cloud-based mailboxes, and automatic forwarding to internal recipients is not affected by this setting.
+
+```yaml
+Type: AutoForwardingMode
+Parameter Sets: (All)
+Aliases:
+Accepted values: Automatic, Off, On
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BccSuspiciousOutboundAdditionalRecipients
 The BccSuspiciousOutboundAdditionalRecipients parameter specifies an email address to add to the Bcc field of outgoing spam messages. You can specify multiple email addresses separated by commas.
 
@@ -132,7 +156,6 @@ Accept wildcard characters: False
 The BccSuspiciousOutboundMail parameter specifies whether to add recipients to the Bcc field of outgoing spam messages. Valid values are:
 
 - $true: The recipients specified by the BccSuspiciousOutboundAdditionalRecipients parameter are added to outgoing spam messages.
-
 - $false: No additional messages are added to outgoing spam messages. This is the default value.
 
 ```yaml
@@ -149,12 +172,11 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyOutboundSpam
-**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://docs.microsoft.com/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam.md#verify-the-alert-settings-for-restricted-users).
+**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://docs.microsoft.com/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam#verify-the-alert-settings-for-restricted-users).
 
 The NotifyOutboundSpam parameter specify whether to notify admins when outgoing spam is detected. Valid values are:
 
 - $true: Notify the admins specified by the NotifyOutboundSpamRecipients parameter.
-
 - $false: Don't send notifications. This is the default value.
 
 ```yaml

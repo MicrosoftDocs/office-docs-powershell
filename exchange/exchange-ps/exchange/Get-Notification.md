@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-Notification
@@ -24,19 +23,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Settings
 ```
 Get-Notification [-Settings] -ProcessType <AsyncOperationType>
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-Notification [[-Identity] <EwsStoreObjectIdParameter>] [-Summary]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-Notification [[-Identity] <EwsStoreObjectIdParameter>]
+ [-Summary]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-Notification [-ProcessType <AsyncOperationType>] [-ResultSize <Unlimited>] [-StartDate <ExDateTime>] [-Summary]
- [-DomainController <Fqdn>] [<CommonParameters>]
+Get-Notification [-ProcessType <AsyncOperationType>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <ExDateTime>]
+ [-Summary]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -127,13 +133,9 @@ Accept wildcard characters: False
 The ProcessType parameter filters the results by the type of notification event. Valid values are:
 
 - CertExpiry
-
 - ExportPST
-
 - ImportPST
-
 - MailboxRestore
-
 - Migration
 
 ```yaml

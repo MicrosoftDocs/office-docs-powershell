@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MessageCategory
@@ -22,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MessageCategory [[-Identity] <MessageCategoryIdParameter>] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
+Get-MessageCategory [[-Identity] <MessageCategoryIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,23 +81,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/Get-ComplianceRetentionEventType
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-ComplianceRetentionEventType
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-ComplianceRetentionEventType
@@ -22,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceRetentionEventType [-Identity <ComplianceRuleIdParameter>] [-LoadTag] [<CommonParameters>]
+Get-ComplianceRetentionEventType [-Identity <ComplianceRuleIdParameter>]
+ [-LoadTag]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,16 +51,14 @@ This example returns detailed information for the retention event type named Fab
 The Identity parameter specifies the retention event type that you want to view. You can use any value that uniquely identifies the retention event type. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 1
@@ -77,7 +76,7 @@ If you don't use this switch, the ComplianceTag property will always appear empt
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

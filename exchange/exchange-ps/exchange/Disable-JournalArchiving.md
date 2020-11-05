@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Disable-JournalArchiving
@@ -17,14 +16,17 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Disable-JournalArchiving cmdlet to disable journal archiving for specific users. Microsoft 365 journal archiving uses mailboxes in Exchange Online to record or journal messages for mailboxes in on-premises organizations.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Disable-JournalArchiving [-Identity] <MailboxIdParameter> [-Confirm] [-PreserveMailUser] [-WhatIf]
+Disable-JournalArchiving [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-PreserveMailUser]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -52,23 +54,14 @@ This example disables the journal archiving for the user named Timothy Amaral. T
 The Identity parameter specifies the identity of the user's journal archive mailbox in Exchange Online. You can use any value that uniquely identifies the journal archive mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

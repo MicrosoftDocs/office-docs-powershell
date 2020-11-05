@@ -7,13 +7,14 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-SiteMailboxProvisioningPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
+
+Site mailboxes were deprecated in Exchange Online and SharePoint Online in 2017. For more information, see [Deprecation of Site Mailboxes](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028).
 
 Use the New-SiteMailboxProvisioningPolicy cmdlet to create provisioning policies for site mailboxes.
 
@@ -31,7 +32,8 @@ New-SiteMailboxProvisioningPolicy [-Name] <String>
  [-IssueWarningQuota <ByteQuantifiedSize>]
  [-MaxReceiveSize <ByteQuantifiedSize>]
  [-ProhibitSendReceiveQuota <ByteQuantifiedSize>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,9 +51,7 @@ New-SiteMailboxProvisioningPolicy -Name SM_ProvisioningPolicy -IsDefault -IssueW
 This example creates the default provisioning policy named SM\_ProvisioningPolicy that has the following settings:
 
 - The warning quota for the site mailboxes is 9 GB.
-
 - The site mailboxes are prohibited from receiving messages when the mailbox size reaches 10 GB.
-
 - The maximum size of email messages that can be sent to site mailboxes is 50 MB.
 
 ### Example 2
@@ -90,7 +90,6 @@ Accept wildcard characters: False
 The AliasPrefix parameter specifies the custom text prefix to add to the aliases of new site mailboxes. Valid values are:
 
 - A text string that's 8 characters or less. When you specify a text value, the value of the DefaultAliasPrefixEnabled parameter ignored and aliases get the text prefix you specified.
-
 - The value $null. This is the default value. The results of this value depend on the DefaultAliasPrefixEnabled parameter value. When it's $true, aliases get the default prefix text. When it's $false, aliases don't get any prefix text.
 
 ```yaml
@@ -109,8 +108,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -130,7 +128,6 @@ Accept wildcard characters: False
 The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes have the default prefix text added to the alias. Valid values are:
 
 - $true: Aliases get the default prefix text. This is the default value. In Microsoft 365, the default prefix text is SMO- (for example, the alias value BugBash\_2016 becomes SMO-BugBash\_2016). In on-premises Exchange, the default prefix text is SM- (for example, the alias value BugBash\_2016 becomes SM-BugBash\_2016).
-
 - $false: Aliases don't get the default prefix text.
 
 The value of this parameter is related to the value of the AliasPrefix parameter. If you specify a text string for AliasPrefix, the DefaultAliasPrefixEnabled value is ignored. Specifying a text value for AliasPrefix automatically sets the value to $false, but even if you set it to $true, the default alias prefix text isn't used.
@@ -188,13 +185,9 @@ The IssueWarningQuota parameter specifies the warning threshold for the size of 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -222,11 +215,8 @@ The MaxReceiveSize parameter specifies the maximum size of a message that can be
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -252,13 +242,9 @@ The ProhibitSendReceiveQuota parameter specifies a size limit for the mailbox. I
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.

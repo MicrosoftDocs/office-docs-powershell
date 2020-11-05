@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Enable-ExchangeCertificate
@@ -32,7 +31,8 @@ Enable-ExchangeCertificate [-Thumbprint] <String> -Services <AllowedServices>
  [-Force]
  [-NetworkServiceAllowed]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -43,7 +43,8 @@ Enable-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>] -Servi
  [-DoNotRequireSsl]
  [-Force]
  [-NetworkServiceAllowed]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,21 +69,58 @@ This example enables a certificate for POP, IMAP, SMTP and IIS services.
 
 ## PARAMETERS
 
+### -Thumbprint
+The Thumbprint parameter specifies the certificate that you want to configure. You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
+
+The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+```yaml
+Type: String
+Parameter Sets: Thumbprint
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the certificate that you want to configure. Valid values are:
+
+- \<ServerNameOrFQDN\>\\\<Thumbprint\>
+- \<Thumbprint\>
+
+You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
+
+You can't use this parameter with the Server parameter.
+
+The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+```yaml
+Type: ExchangeCertificateIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Services
 The Services parameter specifies the Exchange services that the certificate is enabled for. Valid values are:
 
 - Federation: Don't use this command to enable a certificate for federation. Creating or modifying a federation trust enables or modifies how certificates are used for federation. You manage the certificates that used for federation trusts with the New-FederationTrust and Set-FederationTrust cmdlets.
-
 - IIS: By default, when you enable a certificate for IIS, the "require SSL" setting is configured on the default web site in IIS. To prevent this change, use the DoNotRequireSsl switch.
-
 - IMAP: Don't enable a wildcard certificate for the IMAP4 service. Instead, use the Set-ImapSettings cmdlet to configure the FQDN that clients use to connect to the IMAP4 service.
-
 - POP: Don't enable a wildcard certificate for the POP3 service. Instead, use the Set-PopSettings cmdlet to configure the FQDN that clients use to connect to the POP3 service.
-
 - SMTP: When you enable a certificate for SMTP, you're prompted to replace the default Exchange self-signed certificate that's used to encrypt SMTP traffic between internal Exchange. Typically, you don't need to replace the default certificate with a certificate from a commercial CA for the purpose of encrypting internal SMTP traffic. If you want to replace the default certificate without the confirmation prompt, use the Force switch.
-
 - UM: You can only enable a certificate for the UM service when the UMStartupMode parameter on the Set-UMService cmdlet is set to TLS or Dual. If the UMStartupMode parameter is set to the default value TCP, you can't enable the certificate for the UM service.
-
 - UMCallRouter: You can only enable a certificate for the UM Call Router service when the UMStartupMode parameter on the Set-UMCallRouterService cmdlet is set to TLS or Dual. If the UMStartupMode parameter is set to the default value TCP, you can't enable the certificate for the UM Call Router service.
 
 You can specify multiple values separated by commas.
@@ -104,29 +142,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Thumbprint
-The Thumbprint parameter specifies the certificate that you want to configure. You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
-
-The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-```yaml
-Type: String
-Parameter Sets: Thumbprint
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -196,32 +215,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the certificate that you want to configure. Valid values are:
-
-- \<ServerNameOrFQDN\>\\\<Thumbprint\>
-
-- \<Thumbprint\>
-
-You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
-
-You can't use this parameter with the Server parameter.
-
-The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-```yaml
-Type: ExchangeCertificateIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NetworkServiceAllowed
 The NetworkServiceAllowed switch gives the built-in Network Service account permission to read the certificate's private key without enabling the certificate for SMTP. You don't need to specify a value with this switch.
 
@@ -242,11 +235,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

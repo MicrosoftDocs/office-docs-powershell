@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-HostedContentFilterRule
@@ -17,14 +16,16 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-HostedContentFilterRule cmdlet to view spam filter rules (content filter rules) in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-HostedContentFilterRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
+Get-HostedContentFilterRule [[-Identity] <RuleIdParameter>]
+ [-State <RuleState>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,9 +53,7 @@ This example retrieves details about the spam filter rule named Contoso Recipien
 The Identity parameter specifies the spam filter rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -74,7 +73,6 @@ Accept wildcard characters: False
 The State parameter filters the results by the state of the rule. Valid values are:
 
 - Enabled: The command returns only enabled rules.
-
 - Disabled: The command returns only disabled rules.
 
 ```yaml

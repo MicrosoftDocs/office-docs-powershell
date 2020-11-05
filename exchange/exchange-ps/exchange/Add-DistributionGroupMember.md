@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Add-DistributionGroupMember
@@ -22,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-DistributionGroupMember [-Identity] <DistributionGroupIdParameter> [-BypassSecurityGroupManagerCheck]
- [-Confirm] [-DomainController <Fqdn>] [-Member <RecipientWithAdUserGroupIdParameter>] [-WhatIf]
+Add-DistributionGroupMember [-Identity] <DistributionGroupIdParameter>
+ [-BypassSecurityGroupManagerCheck]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Member <RecipientWithAdUserGroupIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -45,15 +48,10 @@ This example adds John Evans to the distribution group named Staff.
 The Identity parameter specifies the group that you want to modify. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -73,7 +71,6 @@ Accept wildcard characters: False
 The BypassSecurityGroupManagerCheck switch specifies whether to allow a user who isn't an owner of the group to modify or delete the group. If you aren't defined in the ManagedBy property of the group, you need to use this switch in commands that modify or delete the group. To use this switch, your account requires specific permissions based on the group type:
 
 - Distribution groups or mail-enabled security groups: You need to be a member of the Organization Management role group or have the Security Group Creation and Membership role assigned.
-
 - Role groups: You need to be a member of the Organization Management role group or have the Role Management role assigned.
 
 You don't need to specify a value with this switch.
@@ -94,8 +91,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -133,15 +129,10 @@ Accept wildcard characters: False
 The Member parameter specifies the recipient that you want to add to the group. A member can be any mail-enabled recipient in your organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 Although it isn't required, it's a good idea to add only security principals (for example, mailboxes and mail users with user accounts or other mail-enabled security groups) to mail-enabled security groups. If you assign permissions to a mail-enabled security group, any members that aren't security principals (for example, mail contacts or distribution groups) won't have the permissions assigned.

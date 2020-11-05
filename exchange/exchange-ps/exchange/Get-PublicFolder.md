@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-PublicFolder
@@ -23,24 +22,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GetChildren
 ```
-Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-GetChildren]
+Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
+ [-GetChildren]
  [-DomainController <Fqdn>]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
  [-ResultSize <Unlimited>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Recurse
 ```
-Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-Recurse]
+Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
+ [-Recurse]
  [-DomainController <Fqdn>]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
  [-ResultSize <Unlimited>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### LostAndFound
@@ -50,7 +53,8 @@ Get-PublicFolder [-LostAndFound]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -60,7 +64,8 @@ Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -206,23 +211,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the identity of the hierarchy public folder mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -294,11 +290,8 @@ This parameter is available or functional only in Exchange Server 2010.
 The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 ```yaml

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-RetentionPolicyTag
@@ -29,7 +28,8 @@ New-RetentionPolicyTag [-Name] <String>
  [-AddressForJournaling <RecipientIdParameter>]
  [-AgeLimitForRetention <EnhancedTimeSpan>]
  [-Comment <String>]
- [-Confirm] [-DomainController <Fqdn>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-IsDefaultAutoGroupPolicyTag]
  [-IsDefaultModeratedRecipientsPolicyTag]
  [-JournalingEnabled <Boolean>]
@@ -44,12 +44,14 @@ New-RetentionPolicyTag [-Name] <String>
  [-RetentionId <Guid>]
  [-SystemTag <Boolean>]
  [-Type <ElcFolderType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UpgradeManagedFolder
 ```
-New-RetentionPolicyTag [-Name] <String> [-ManagedFolderToUpgrade <ELCFolderIdParameter>]
+New-RetentionPolicyTag [-Name] <String>
+ [-ManagedFolderToUpgrade <ELCFolderIdParameter>]
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -60,7 +62,8 @@ New-RetentionPolicyTag [-Name] <String> [-ManagedFolderToUpgrade <ELCFolderIdPar
  [-MustDisplayCommentEnabled <Boolean>]
  [-SystemTag <Boolean>]
  [-Type <ElcFolderType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -164,8 +167,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -377,11 +379,8 @@ Accept wildcard characters: False
 The RetentionAction parameter specifies the action for the retention policy. Valid values are:
 
 - DeleteAndAllowRecovery: Deletes a message and allows recovery from the Recoverable Items folder.
-
 - MarkAsPastRetentionLimit: Messages are marked as past the retention limit.
-
 - MoveToArchive: Moves a message to the user's archive mailbox. You can use this action for retention tags of type All, Personal and RecoverableItems.
-
 - PermanentlyDelete: Permanently deletes a message. A message that has been permanently deleted can't be recovered using the Recoverable Items folder. Permanently deleted messages aren't returned in a Discovery search, unless litigation hold is enabled for the mailbox.
 
 The MoveToDeletedItems and MoveToFolder actions are available, but don't work. These actions are available for upgrades from messaging records management (MRM) 1.0 (managed folders) to MRM 2.0 (retention policies). MRM 2.0 was introduced in Exchange 2010 Service Pack 1 (SP1).
@@ -457,45 +456,25 @@ Accept wildcard characters: False
 The Type parameter specifies the type of retention tag being created. Valid values include:
 
 - All
-
 - Archive
-
 - Calendar
-
 - Clutter: Available in Exchange Online only.
-
 - Contacts
-
 - ConversationHistory
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - Journal
-
 - JunkEmail
-
 - LegacyArchiveJournals
-
 - ManagedCustomFolder
-
 - Notes
-
 - Outbox
-
 - Personal
-
 - RecoverableItems
-
 - RssSubscriptions
-
 - SentItems
-
 - SyncIssues
-
 - Tasks
 
 To create a default policy tag (DPT), specify type All. For tags of type RecoverableItems, the only valid retention action is MoveToArchive.

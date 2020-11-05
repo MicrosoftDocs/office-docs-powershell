@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Update-PublicFolderHierarchy
@@ -22,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-PublicFolderHierarchy -Server <ServerIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Update-PublicFolderHierarchy -Server <ServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -44,11 +46,8 @@ This example pipes the output of the Get-MailboxServer command to the Update-Pub
 The Server parameter specifies the Mailbox server that holds the source public folder database for replication. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 ```yaml
@@ -67,8 +66,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

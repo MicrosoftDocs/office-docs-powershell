@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-InformationBarrierPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # New-InformationBarrierPolicy
@@ -27,7 +26,8 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String>
  [-Comment <String>]
  [-Confirm]
  [-State <EopInformationBarrierPolicyState>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### OrganizationSegmentsAllowed
@@ -35,7 +35,8 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String>
 New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsAllowed <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### OrganizationSegmentsBlocked
@@ -43,7 +44,8 @@ New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -Segment
 New-InformationBarrierPolicy [-Name] <String> -AssignedSegment <String> -SegmentsBlocked <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,7 +90,7 @@ The Name parameter specifies a unique name for the information barrier policy th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: 0
@@ -104,7 +106,7 @@ The AssignedSegment parameter specifies the Name value of segment that you want 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -120,7 +122,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: OrganizationSegmentAllowedFilter
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -140,7 +142,7 @@ You can't use this parameter with the SegmentsBlocked parameter.
 Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsAllowed
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -160,7 +162,7 @@ You can't use this parameter with the SegmentsAllowed parameter.
 Type: MultiValuedProperty
 Parameter Sets: OrganizationSegmentsBlocked
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -176,7 +178,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -188,15 +190,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -209,7 +210,6 @@ Accept wildcard characters: False
 The State parameter specifies whether the information barrier policy is active or inactive. Valid values are:
 
 - Active
-
 - Inactive (This is the default value.)
 
 ```yaml
@@ -217,7 +217,7 @@ Type: EopInformationBarrierPolicyState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Inactive, Active
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

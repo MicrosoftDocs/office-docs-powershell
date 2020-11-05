@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Enable-OutlookAnywhere
@@ -23,28 +22,29 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CustomIdentity
 ```
-Enable-OutlookAnywhere -ClientAuthenticationMethod <AuthenticationMethod>
- -ExternalHostname <Hostname> -SSLOffloading <Boolean> [-IISAuthenticationMethods <MultiValuedProperty>]
+Enable-OutlookAnywhere -ClientAuthenticationMethod <AuthenticationMethod> -ExternalHostname <Hostname> -SSLOffloading <Boolean>
+ [-IISAuthenticationMethods <MultiValuedProperty>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
  [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DefaultIdentity
 ```
-Enable-OutlookAnywhere -DefaultAuthenticationMethod <AuthenticationMethod>
- -ExternalHostname <Hostname> -SSLOffloading <Boolean>
+Enable-OutlookAnywhere -DefaultAuthenticationMethod <AuthenticationMethod> -ExternalHostname <Hostname> -SSLOffloading <Boolean>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExtendedProtectionFlags <MultiValuedProperty>]
  [-ExtendedProtectionSPNList <MultiValuedProperty>]
  [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,6 +53,8 @@ Enabling Outlook Anywhere on the Client Access server allows the server to accep
 This cmdlet can be successfully run only if the RPC over HTTP proxy Windows networking component is already installed.
 
 When you run this cmdlet, it can take as long as an hour for the settings to become effective, depending on how long it takes for Active Directory to replicate.
+
+For more information about the different authentication methods that you can see in this article, see [Understanding HTTP Authentication](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/understanding-http-authentication).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -85,7 +87,6 @@ This example enables the Exchange Client Access server for Outlook Anywhere. The
 The ClientAuthenticationMethod parameter specifies the authentication method that the Autodiscover service provides to the Outlook Anywhere clients to authenticate to the Client Access server. Valid values are:
 
 - Basic
-
 - Ntlm
 
 This parameter must be specified if you don't use the DefaultAuthenticationMethod parameter. When you use this parameter without specifying the IISAuthenticationMethods parameter, IISAuthenticationMethods parameter is set to both NTLM and Basic.
@@ -111,7 +112,6 @@ The DefaultAuthenticationMethod parameter specifies whether to set both the Clie
 When you set an authentication value by using the DefaultAuthenticationMethod parameter, you force the specified authentication method to be used on the /rpc virtual directory in Internet Information Services (IIS). Valid values are:
 
 - Basic
-
 - Ntlm
 
 If the DefaultAuthenticationMethod parameter is specified, neither the ClientAuthenticationMethod nor the IISAuthenticationMethods parameter can be used.
@@ -164,8 +164,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -200,15 +199,11 @@ Accept wildcard characters: False
 ### -ExtendedProtectionFlags
 The ExtendedProtectionFlags parameter is used to customize the options you use if you're using Extended Protection for Authentication. The possible values are:
 
-- None Default setting.
-
-- Proxy Specifies that a proxy is terminating the SSL channel. A Service Principal Name (SPN) must be registered in the ExtendedProtectionSPNList parameter if proxy mode is configured.
-
-- ProxyCoHosting Specifies that both HTTP and HTTPS traffic may be accessing the Client Access server and that a proxy is located between at least some of the clients and the Client Access server.
-
-- AllowDotlessSPN Specifies whether you want to support valid SPNs that aren't in the fully qualified domain name (FQDN) format, for example ContosoMail. You specify valid SPNs with the ExtendedProtectionSPNList parameter. This option makes extended protection less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
-
-- NoServiceNameCheck Specifies that the SPN list won't be checked to validate a channel binding token. This option makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
+- None: Default setting.
+- Proxy: Specifies that a proxy is terminating the SSL channel. A Service Principal Name (SPN) must be registered in the ExtendedProtectionSPNList parameter if proxy mode is configured.
+- ProxyCoHosting: Specifies that both HTTP and HTTPS traffic may be accessing the Client Access server and that a proxy is located between at least some of the clients and the Client Access server.
+- AllowDotlessSPN: Specifies whether you want to support valid SPNs that aren't in the fully qualified domain name (FQDN) format, for example ContosoMail. You specify valid SPNs with the ExtendedProtectionSPNList parameter. This option makes extended protection less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
+- NoServiceNameCheck: Specifies that the SPN list won't be checked to validate a channel binding token. This option makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
 
 ```yaml
 Type: MultiValuedProperty
@@ -229,7 +224,6 @@ The ExtendedProtectionSPNList parameter specifies a list of valid Service Princi
 The possible values are:
 
 - Null This is the default value.
-
 - Single SPN or comma delimited list of valid SPNs By default, you must specify the fully qualified domain name (FQDN) (for example mail.contoso.com) for each SPN. If you want to add an SPN that's not an FQDN (for example, ContosoMail), you must also use the ExtendedProtectionTokenChecking parameter with the AllowDotlessSPN value. You specify the domain in SPN format. The SPN format is \<protocol\>/\<FQDN\>. For example, a valid entry could be HTTP/mail.contoso.com.
 
 ```yaml
@@ -249,7 +243,6 @@ Accept wildcard characters: False
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the specified Exchange virtual directory. Extended Protection for Authentication isn't enabled by default. The available settings are:
 
 - None Extended Protection for Authentication won't be used. Connections between the client and Exchange won't use Extended Protection for Authentication on this virtual directory. This is the default setting.
-
 - Allow Extended Protection for Authentication will be used for connections between the client and Exchange on this virtual directory if both the client and server support Extended Protection for Authentication. Connections that don't support Extended Protection for Authentication on the client and server will work, but may not be as secure as a connection using Extended Protection for Authentication.
 
 If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
@@ -299,11 +292,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 ```yaml

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-RemoteMailbox
@@ -117,19 +116,12 @@ This example configures delivery restrictions for the mailbox in the service tha
 The Identity parameter specifies the remote mailbox (mail user) that you want to modify. You can use any value that uniquely identifies the mail user. For example:
 
 - ADObjectID
-
 - GUID
-
 - Distinguished name (DN)
-
-- Domain\\SamAccountName
-
+- Domain\\Username
 - User principal name (UPN)
-
 - Legacy DN
-
 - Email address
-
 - User alias
 
 ```yaml
@@ -151,15 +143,10 @@ The AcceptMessagesOnlyFrom parameter specifies who is allowed to send messages t
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -189,15 +176,10 @@ The AcceptMessagesOnlyFromDLMembers parameter specifies who is allowed to send m
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group are allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: \<group1\>,\<group2\>,...\<groupN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<group1\>","\<group2\>",..."\<groupN\>".
@@ -229,15 +211,10 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -287,7 +264,6 @@ When you create a recipient without specifying an email address, the Alias value
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
-
 - Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
@@ -345,15 +321,10 @@ The BypassModerationFromSendersOrMembers parameter specifies who is allowed to s
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple senders and overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -378,8 +349,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -673,11 +643,8 @@ The EmailAddresses parameter specifies all the email addresses (proxy addresses)
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
-
 - smtp: Other SMTP email addresses.
-
 - X400: X.400 addresses in on-premises Exchange.
-
 - X500: X.500 addresses in on-premises Exchange.
 
 If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
@@ -685,9 +652,7 @@ If you don't include a \<Type\> value for an email address, the value smtp is as
 To specify the primary SMTP email address, you can use any of the following methods:
 
 - Use the \<Type\> value SMTP on the address.
-
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
-
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
@@ -713,7 +678,6 @@ Accept wildcard characters: False
 The EmailAddressPolicyEnabled parameter specifies whether to apply email address policies to this recipient. Valid values are:
 
 - $true: Email address policies are applied to this recipient. This is the default value.
-
 - $false: Email address policies aren't applied to this recipient.
 
 ```yaml
@@ -877,7 +841,6 @@ Accept wildcard characters: False
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
 - $true: The recipient isn't visible in address lists.
-
 - $false: The recipient is visible in address lists. This is the default value.
 
 ```yaml
@@ -899,7 +862,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml
@@ -939,7 +901,6 @@ The MailTip parameter specifies the custom MailTip text for this recipient. The 
 When you add a MailTip to a recipient, two things happen:
 
 - HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: \<html\>\<body\>This mailbox is not monitored\</body\>\</html\>. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
-
 - The text is automatically added to the MailTipTranslations property of the recipient as the default value: default:\<MailTip text\>. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
 
 ```yaml
@@ -983,15 +944,10 @@ Accept wildcard characters: False
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
@@ -1017,7 +973,6 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
@@ -1079,13 +1034,9 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1113,13 +1064,9 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 When you enter a number, you can qualify it with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1145,15 +1092,10 @@ The RejectMessagesFrom parameter specifies who isn't allowed to send messages to
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -1183,15 +1125,10 @@ The RejectMessagesFromDLMembers parameter specifies who isn't allowed to send me
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group aren't allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: \<group1\>,\<group2\>,...\<groupN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<group1\>","\<group2\>",..."\<groupN\>".
@@ -1223,15 +1160,10 @@ Valid values for this parameter are individual senders and groups in your organi
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
@@ -1313,7 +1245,6 @@ Accept wildcard characters: False
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
 - $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
-
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 The default value is $false.
@@ -1335,7 +1266,6 @@ Accept wildcard characters: False
 The ResetPasswordOnNextLogon parameter specifies whether the user must change their password the next time they log on. Valid values are:
 
 - $true: The user is required to change their password the next time they log on.
-
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
 
 ```yaml
@@ -1371,9 +1301,7 @@ Accept wildcard characters: False
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
-
 - Internal: Notify senders in the organization when their messages aren't approved.
-
 - Never: Don't notify anyone when a message isn't approved.
 
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
@@ -1397,19 +1325,14 @@ Accept wildcard characters: False
 The Type parameter specifies the type for the mailbox in the service. Valid values are:
 
 - Regular
-
 - Room
-
 - Equipment
-
 - Shared
 
 Notes on the value Shared:
 
 - Shared is available only in Exchange 2013 CU21 or later, Exchange 2016 CU10 or later, and Exchange 2019. In Exchange 2013 and Exchange 2016, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605).
-
 - If you tried to convert a migrated remote mailbox to a shared remote mailbox, you would receive the following error: `remoteMailbox.RemoteRecipientType must include ProvisionMailbox`. This issue was fixed in Exchange 2016 CU14 and Exchange 2019 CU3, but not in Exchange 2013. For more information, see [KB4515271](https://support.microsoft.com/help/4515271).
-
 - If directory synchronization unexpectedly converts shared mailboxes in Exchange Online back into user mailboxes, or if you continue to receive the `remoteMailbox.RemoteRecipientType must include ProvisionMailbox` error when you use the value Shared, take the action described in Step 3 in the Resolution section in [KB2710029](https://support.microsoft.com/help/2710029).
 
 ```yaml
@@ -1461,7 +1384,6 @@ Accept wildcard characters: False
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 
 - In environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is set to the value True for the recipient), the WindowsEmailAddress parameter has no effect on the WindowsEmailAddress property or the primary email address value.
-
 - In environments where the recipient isn't subject to email address policies (the EmailAddressPolicyEnabled property is set to the value False for the recipient), the WindowsEmailAddress parameter updates the WindowsEmailAddress property and the primary email address to the same value.
 
 The WindowsEmailAddress property is visible for the recipient in Active Directory Users and Computers in the E-mail attribute. The attribute common name is E-mail-Addresses, and the Ldap-Display-Name is mail. If you modify this attribute in Active Directory, the recipient's primary email address is not updated to the same value.

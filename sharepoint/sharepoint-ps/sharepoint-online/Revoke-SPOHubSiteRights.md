@@ -61,7 +61,7 @@ Accept wildcard characters: False
 
 ### -Principals
 
-One or more principles to revoke the permissions for.
+One or more principals to revoke the permissions for.
 
 ```yaml
 Type: String[]

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-AtpPolicyForO365
@@ -18,19 +17,18 @@ This cmdlet is available only in the cloud-based service.
 Use the Get-AtpPolicyForO365 cmdlet to view the Advanced Threat Protection (ATP) policy in Office 365. The ATP policy enables the following protections:
 
 - Safe Links for Office 365 ProPlus desktop clients and Office Mobile apps.
-
 - Safe Documents: Before a user is allowed to trust a file open in Office 365 ProPlus, the file will be verified by Microsoft Defender ATP.
-
 - ATP to protect files in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>] [<CommonParameters>]
+Get-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

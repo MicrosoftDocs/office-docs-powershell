@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-UserPhoto
@@ -23,13 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CancelPhoto
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-Cancel]
+Set-UserPhoto [-Identity] <MailboxIdParameter>
+ [-Cancel]
  [-Confirm]
  [-GroupMailbox]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadPhotoData
@@ -40,18 +41,23 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureData <Byte[]>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadPreview
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-PictureData <Byte[]>] [-PictureStream <Stream>] [-Preview]
+Set-UserPhoto [-Identity] <MailboxIdParameter>
+ [-PictureData <Byte[]>]
+ [-PictureStream <Stream>]
+ [-Preview]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadPhotoStream
@@ -62,18 +68,21 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureStream <Stream>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SavePhoto
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-Save]
+Set-UserPhoto [-Identity] <MailboxIdParameter>
+ [-Save]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -108,6 +117,33 @@ This example deletes the preview photo that was uploaded in the previous example
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Cancel
 The Cancel switch parameter deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
 
@@ -123,42 +159,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user. For example:
-
-- Name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -259,8 +259,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -316,7 +315,6 @@ The IgnoreDefaultScope switch tells the command to ignore the default recipient 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
 
 ```yaml

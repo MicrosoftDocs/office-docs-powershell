@@ -7,13 +7,14 @@ title: Get-UserBriefingConfig
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-monikerRange: "exchonline-ps"
 ---
 
 # Get-UserBriefingConfig
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+
+**Note**: This cmdlet is being replaced by the [Get-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig) cmdlet.
 
 Use the Get-UserBriefingConfig cmdlet to get the current state of the Briefing email flag for the specified user. For more details about configuring the Briefing email, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin).
 
@@ -22,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UserBriefingConfig -Identity <string> [-ResultSize <Unlimited>]
+Get-UserBriefingConfig -Identity <string>
+ [-ResultSize <Unlimited>]
 ```
 
 ## DESCRIPTION
@@ -79,6 +81,8 @@ Accept wildcard characters: False
 
 ###  
 
-## Related links
+## NOTES
+
+## RELATED LINKS
 
 [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin)

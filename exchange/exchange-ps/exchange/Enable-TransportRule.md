@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Enable-TransportRule
@@ -22,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-TransportRule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-Mode <RuleMode>] [<CommonParameters>]
+Enable-TransportRule [-Identity] <RuleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Mode <RuleMode>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,9 +56,7 @@ This example enables the transport rule named "Require approval of messages to c
 The Identity parameter specifies the rule that you want to enable. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -74,8 +75,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -111,14 +111,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+### -Mode
+The Mode parameter specifies how the rule operates after it's enabled. Valid values are:
+
+- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
+- AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
+- Enforce: All actions specified in the rule are taken. This is the default value.
 
 ```yaml
-Type: SwitchParameter
+Type: RuleMode
 Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -127,20 +131,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Mode
-The Mode parameter specifies how the rule operates after it's enabled. Valid values are:
-
-- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
-
-- AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
-
-- Enforce: All actions specified in the rule are taken. This is the default value.
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
-Type: RuleMode
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

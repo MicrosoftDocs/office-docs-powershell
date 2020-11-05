@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-QuarantineMessage
@@ -19,7 +18,7 @@ Use the Get-QuarantineMessage cmdlet to view quarantined messages and files in y
 
 **Note**: Quarantined files are files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -27,7 +26,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Details
 ```
-Get-QuarantineMessage -Identity <QuarantineMessageIdentity> [-SenderAddress <String[]>]
+Get-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-SenderAddress <String[]>]
  [<CommonParameters>]
 ```
 
@@ -250,17 +250,11 @@ Accept wildcard characters: False
 The QuarantineTypes parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-
 - HighConfPhish
-
 - Malware
-
 - Phish
-
 - Spam
-
 - SPOMalware (ATP only)
-
 - TransportRule
 
 You can specify multiple values separated by commas.
@@ -302,7 +296,6 @@ Accept wildcard characters: False
 The Reported parameter filters the results by messages that have already been reported as false positives. Valid values are:
 
 - $true: The command only returns quarantined messages that have already been reported as false positives.
-
 - $false: The command only returns quarantined messages that haven't been reported as false positives.
 
 ```yaml
@@ -392,15 +385,10 @@ Accept wildcard characters: False
 The Type parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-
 - HighConfPhish
-
 - Phish
-
 - Spam
-
 - SPOMalware (ATP only)
-
 - TransportRule
 
 You don't need to use this parameter with the QuarantineTypes parameter.

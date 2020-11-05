@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "eop-ps"
 ---
 
 # Set-EOPMailUser
@@ -52,23 +51,14 @@ This example changes the display name for the mail user Edward Meadows to "Ed Me
 The Identity parameter specifies the mail user that you want to modify. You can use any value that uniquely identifies the mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

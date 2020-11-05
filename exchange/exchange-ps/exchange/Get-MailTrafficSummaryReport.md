@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-MailTrafficSummaryReport
@@ -17,16 +16,23 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficSummaryReport cmdlet to view summary information about message traffic in your organization for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MailTrafficSummaryReport [-Category <String>] [-DlpPolicy <MultiValuedProperty>]
- [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-Expression <Expression>] [-Page <Int32>]
- [-PageSize <Int32>] [-ProbeTag <String>] [-StartDate <DateTime>] [-TransportRule <MultiValuedProperty>]
+Get-MailTrafficSummaryReport [-Category <String>]
+ [-DlpPolicy <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-Expression <Expression>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-StartDate <DateTime>]
+ [-TransportRule <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
@@ -34,9 +40,7 @@ Get-MailTrafficSummaryReport [-Category <String>] [-DlpPolicy <MultiValuedProper
 This cmdlet has C1, C2 and C3 as header names and the meaning of them depends on the category you choose. Next you can see an explanation about each category:
 
 - InboundTransportRuleHits and OutboundTransportRuleHits: C1 is the transport rule name, C2 the audit level and C3 the hits.
-
 - TopSpamRecipient, TopMailSender, TopMailRecipient and TopMalwareRecipient: C1 is the recipient or sender and C2 the quantity of email messages.
-
 - TopMalware: C1 is the malware name and C2 the quantity of appearances.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).

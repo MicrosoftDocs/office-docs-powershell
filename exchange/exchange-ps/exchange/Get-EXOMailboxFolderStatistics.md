@@ -8,13 +8,12 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer: navgupta
-monikerRange: "exchonline-ps"
 ---
 
 # Get-EXOMailboxFolderStatistics
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 Use the Get-EXOMailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
 
@@ -96,47 +95,26 @@ Accept wildcard characters: False
 The FolderScope parameter specifies the scope of the search by folder type. Valid values include:
 
 - All
-
 - Archive
-
 - Calendar
-
 - Clutter
-
 - Contacts
-
 - ConversationHistory
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - Journal
-
 - JunkEmail
-
 - LegacyArchiveJournals
-
 - ManagedCustomFolder
-
 - NonIpmRoot
-
 - Notes
-
 - Outbox
-
 - Personal
-
 - RecoverableItems
-
 - RssSubscriptions
-
 - SentItems
-
 - SyncIssues
-
 - Tasks
 
 ```yaml
@@ -158,13 +136,9 @@ The Identity parameter specifies the identity of the mailbox or mail user. For t
 Otherwise, you can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - LegacyExchangeDN
-
 - SamAccountName
 
 ```yaml

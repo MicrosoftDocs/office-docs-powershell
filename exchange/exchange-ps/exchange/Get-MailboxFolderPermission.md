@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxFolderPermission
@@ -17,15 +16,18 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxFolderPermission cmdlet to view folder-level permissions in mailboxes.
 
-**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderPermission cmdlet instead of this cmdlet. For more information, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderPermission cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-DomainController <Fqdn>]
- [-User <MailboxFolderUserIdParameter>] [-GroupMailbox] [<CommonParameters>]
+Get-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter>
+ [-DomainController <Fqdn>]
+ [-User <MailboxFolderUserIdParameter>]
+ [-GroupMailbox]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,23 +64,14 @@ The Identity parameter specifies the mailbox folder that you want to view. The s
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Inbox\Reports`.
@@ -118,15 +111,10 @@ Accept wildcard characters: False
 The User parameter filters the results by the specified mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -174,3 +162,11 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
+
+[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+
+[Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+
+[Get-EXOMailboxFolderPermission](Get-EXOMailboxFolderPermission.md)

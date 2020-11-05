@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-ForeignConnector
@@ -22,9 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ForeignConnector [-Name] <String> -AddressSpaces <MultiValuedProperty> [-Confirm]
- [-DomainController <Fqdn>] [-IsScopedConnector <Boolean>]
- [-SourceTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+New-ForeignConnector [-Name] <String> -AddressSpaces <MultiValuedProperty>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IsScopedConnector <Boolean>]
+ [-SourceTransportServers <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,13 +45,9 @@ New-ForeignConnector -Name "Contoso Foreign Connector" -AddressSpaces "X400:c=US
 This example creates a Foreign connector with the following properties:
 
 - Connector name: Contoso Foreign Connector
-
 - Address space: "c=US;a=Fabrikam;P=Contoso"
-
 - Address space type: X.400
-
 - Address space cost: 5
-
 - Source transport servers: Hub01 and Hub02
 
 ## PARAMETERS
@@ -57,19 +56,14 @@ This example creates a Foreign connector with the following properties:
 The AddressSpaces parameter specifies the domain names to which the Foreign connector sends messages. The complete syntax for entering each address space is as follows: \<AddressSpaceType\>:\<AddressSpace\>;\<AddressSpaceCost\>
 
 - AddressSpaceType: The address space type may be SMTP, X400, or any other text string. If you omit the address space type, an SMTP address space type is assumed.
-
 - AddressSpace: For SMTP address space types, the address space that you enter must be RFC 1035-compliant. For example, \*, \*.com, and \*.contoso.com are permitted, but \*contoso.com isn't permitted. For X.400 address space types, the address space that you enter must be RFC 1685-compliant, such as o=MySite;p=MyOrg;a=adatum;c=us. For all other values of an address type, you can enter any text for the address space.
-
 - AddressSpaceCost: The valid input range for the cost is from 1 through 100. A lower cost indicates a better route. If you omit the address space cost, a cost of 1 is assumed. If you enter a non-SMTP address space that contains the semicolon character (;), you must specify the address space cost.
 
 If you specify the address space type or the address space cost, you must enclose the address space in quotation marks ("). For example, the following address space entries are equivalent:
 
 - "SMTP:contoso.com;1"
-
 - "contoso.com;1"
-
 - "SMTP:contoso.com"
-
 - contoso.com
 
 You may specify multiple address spaces by separating the address spaces with commas, for example: contoso.com,fabrikam.com. If you specify the address space type or the address space cost, you must enclose the address space in quotation marks ("), for example: "contoso.com;2","fabrikam.com;3".
@@ -106,8 +100,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

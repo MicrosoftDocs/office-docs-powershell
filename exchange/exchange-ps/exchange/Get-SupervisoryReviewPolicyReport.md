@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewpolicyreport
-applicable: Exchange Online, Office 365 Security & Compliance Center
+applicable: Exchange Online, Security & Compliance Center
 title: Get-SupervisoryReviewPolicyReport
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Get-SupervisoryReviewPolicyReport
@@ -17,30 +16,29 @@ This cmdlet is available only in Security & Compliance Center PowerShell. For mo
 
 Use the Get-SupervisoryReviewPolicyReport cmdlet to view supervisory review policy events in the Security & Compliance Center.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewPolicyReport [-EndDate <DateTime>] [-Page <Int32>] [-PageSize <Int32>]
- [-Policies <MultiValuedProperty>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-SupervisoryReviewPolicyReport [-EndDate <DateTime>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-Policies <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 For the reporting period you specify, the Get-SupervisoryReviewPolicyReport cmdlet returns the following information:
 
 - Organization
-
 - Date
-
 - Policy
-
 - Message Type
-
 - Tag Type: Messages that are eligible for evaluation by the policy are `InPurview`. Messages that match the conditions of the policy are `HitPolicy`. Classifications that are manually assigned to messages by the designated reviewers using the Supervision add-in for Outlook web app are `Compliant`, `Non-compliant`, `Questionable`, and `Resolved`. Messages that match the conditions of a policy but haven't been reviewed by a designated reviewer are `Not-Reviewed`. Messages that match the conditions of a policy and have been reviewed by a designated reviewer are `New-Reviewed`.
-
 - Item Count
 
 You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
@@ -72,7 +70,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -88,7 +86,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -104,7 +102,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -122,7 +120,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named
@@ -140,7 +138,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Office 365 Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance Center
 
 Required: False
 Position: Named

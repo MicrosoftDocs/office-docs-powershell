@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-MailboxActivityReport
@@ -19,14 +18,18 @@ This cmdlet was deprecated in January, 2018. For information about the available
 
 Use the Get-MailboxActivityReport cmdlet to view the number of mailboxes created and deleted in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MailboxActivityReport [-EndDate <DateTime>] [-ReportType <ReportType>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-MailboxActivityReport [-EndDate <DateTime>]
+ [-ReportType <ReportType>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-UMCallRouterSettings
@@ -22,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMCallRouterSettings [[-Server] <ServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-UMCallRouterSettings [[-Server] <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,11 +53,8 @@ This example displays detailed information for the Microsoft Exchange Unified Me
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

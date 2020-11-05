@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-MailboxServer
@@ -125,7 +124,8 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-UMReportingWorkCycle <EnhancedTimeSpan>]
  [-UMReportingWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-WacDiscoveryEndpoint <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -195,9 +195,7 @@ In Exchange 2010, this example throttles the TopN Words Assistant and the Unifie
 The Identity parameter specifies the Mailbox server that you want to modify. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -233,9 +231,7 @@ Accept wildcard characters: False
 The AutoDatabaseMountDial parameter specifies the automatic database mount behavior for a continuous replication environment after a database failover on the Mailbox server. You can use the following values:
 
 - BestAvailability: The database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and mounts the database.
-
 - GoodAvailability: The database automatically mounts immediately after a failover if the copy queue length is less than or equal to six. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than six, the database doesn't automatically mount. When the copy queue length is less than or equal to six, Exchange attempts to replicate the remaining logs to the passive copy and mounts the database.
-
 - Lossless: The database doesn't automatically mount until all logs that were generated on the active copy have been copied to the passive copy. This setting also causes Active Manager's best copy selection algorithm to sort potential candidates for activation based on the database copy's activation preference value and not its copy queue length.
 
 The default value is GoodAvailability. If you specify either BestAvailability or GoodAvailability, and all of the logs from the active copy haven't been replicated to the passive copy, you may lose some mailbox data. However, the Safety Net feature, (which is enabled by default) helps protect against data loss by resubmitting messages that are in Safety Net.
@@ -279,13 +275,9 @@ The default value is 500 megabytes (MB).
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -313,11 +305,8 @@ Valid input for this parameter is $true or $false. The default value is $true.
 The value of this parameter affects the following parameters:
 
 - CalendarRepairLogDirectorySizeLimit
-
 - CalendarRepairLogFileAgeLimit
-
 - CalendarRepairLogPath
-
 - CalendarRepairLogSubjectLoggingEnabled
 
 ```yaml
@@ -427,9 +416,7 @@ The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Min
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -441,11 +428,8 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
-
 - "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
 
 ```yaml
@@ -510,8 +494,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -587,9 +570,7 @@ Accept wildcard characters: False
 The DatabaseCopyAutoActivationPolicy parameter specifies the type of automatic activation available for mailbox database copies on the specified Mailbox server. Valid values for this parameter are:
 
 - Blocked: Databases can't be automatically activated on the specified Mailbox server. In Exchange 2013 prior to Cumulative Update 7 (CU7), this setting stops server locator requests to the specified server, which prevents all client access to manually activated databases on the server if all DAG members are configured with a value of Blocked. In Exchange 2013 CU7 or later versions of Exchange, server locator requests are sent to a blocked server if no other Mailbox servers are available, thus client access is not impacted.
-
 - IntrasiteOnly: The database copy is allowed to be activated only on Mailbox servers in the same Active Directory site. This prevents cross-site failover and activation.
-
 - Unrestricted: There are no special restrictions on activating mailbox database copies on the specified Mailbox server. This is the default value.
 
 ```yaml
@@ -683,17 +664,11 @@ If you specify $true, managed folder logging is enabled. Message activity in fol
 The value of this parameter affects the following parameters:
 
 - JournalingLogForManagedFoldersEnabled
-
 - LogDirectorySizeLimitForManagedFolders
-
 - LogFileAgeLimitForManagedFolders
-
 - LogFileSizeLimitForManagedFolders
-
 - LogPathForManagedFolders
-
 - RetentionLogForManagedFoldersEnabled
-
 - SubjectLogForManagedFoldersEnabled
 
 ```yaml
@@ -859,7 +834,6 @@ This parameter is available or functional only in Exchange Server 2010.
 The IrmLogEnabled parameter enables or disables logging of Information Rights Management (IRM) transactions. IRM logging is enabled by default. Values include:
 
 - $true Enable IRM logging
-
 - $false Disable IRM logging
 
 ```yaml
@@ -903,13 +877,9 @@ This parameter is available or functional only in Exchange Server 2010.
 The IrmLogMaxDirectorySize parameter specifies the maximum size of all IRM logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 megabytes (MB). When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are treated as bytes. The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter.
@@ -935,13 +905,9 @@ This parameter is available or functional only in Exchange Server 2010.
 The IrmLogMaxFileSize parameter specifies the maximum size of each IRM log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are treated as bytes. The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the IRM log files.
@@ -1037,9 +1003,7 @@ Accept wildcard characters: False
 The Locale parameter specifies the locale of the Mailbox server. A locale is a collection of language-related user preferences such as writing system, calendar, and date format. The following are examples:
 
 - en-US (English - United States)
-
 - de-AT (German - Austria)
-
 - es-CL (Spanish - Chile)
 
 For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
@@ -1071,13 +1035,9 @@ Every mailbox database on the server uses a different log file name prefix (for 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1127,13 +1087,9 @@ The LogFileSizeLimitForManagedFolders parameter specifies the maximum size for e
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1237,9 +1193,7 @@ The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Min
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -1251,11 +1205,8 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
-
 - "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
 
 If the Managed Folder Assistant doesn't finish processing the mailboxes on the server during the time that you've scheduled, it automatically resumes processing where it left off the next time it runs.
@@ -1427,13 +1378,9 @@ When the Hub Transport server role and the Mailbox server role are installed on 
 The default value is 250 MB. When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are treated as bytes. The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes.
@@ -1457,11 +1404,8 @@ This parameter is available or functional only in Exchange Server 2010.
 The MessageTrackingLogMaxFileSize parameter specifies the maximum size of the message tracking log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are treated as bytes. The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 4294967296 bytes (4 GB).
@@ -1887,9 +1831,7 @@ The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Min
 You can use the following values for days:
 
 - Full name of the day.
-
 - Abbreviated name of the day.
-
 - Integer from 0 through 6, where 0 = Sunday.
 
 You can enter the time in 24 hour format and omit the AM/PM value. If you enter the time in 12 time hour format, include a space between the time and the AM/PM value.
@@ -1901,11 +1843,8 @@ The start time and end time must be at least 15 minutes apart. Minutes are round
 Here are some examples:
 
 - "Sun.11:30 PM-Mon.1:30 AM"
-
 - "6.22:00-6.22:15" (Run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
 - "Sun.1:15 AM-Monday.23:00"
-
 - "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (Run on Monday and Wednesday mornings from 4:30 until 5:30.)
 
 ```yaml
@@ -2374,7 +2313,7 @@ Accept wildcard characters: False
 ```
 
 ### -WacDiscoveryEndpoint
-The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes on the server. For example, https://oos.internal.contoso.com/hosting/discovery.
+The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes on the server. For example, `https://oos.internal.contoso.com/hosting/discovery`.
 
 Office Online Server enables users to view supported file attachments in Outlook on the web (formerly known as Outlook Web App).
 
