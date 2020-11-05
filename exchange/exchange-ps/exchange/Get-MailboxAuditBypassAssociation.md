@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-MailboxAuditBypassAssociation [[-Identity] <MailboxAuditBypassAssociationIdParameter>]
- [-DomainController <Fqdn>] [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

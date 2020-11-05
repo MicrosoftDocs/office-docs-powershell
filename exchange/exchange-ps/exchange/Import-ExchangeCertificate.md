@@ -29,7 +29,8 @@ Import-ExchangeCertificate -FileData <Byte[]>
  [-Password <SecureString>]
  [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### FileName
@@ -41,7 +42,8 @@ Import-ExchangeCertificate -Instance <String[]>
  [-Password <SecureString>]
  [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
@@ -53,14 +55,14 @@ Import-ExchangeCertificate -FileName <String>
  [-Password <SecureString>]
  [-PrivateKeyExportable <Boolean>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use the Import-ExchangeCertificate cmdlet to import the following types of certificate files on an Exchange server:
 
 - APKCS #7 certificate or chain of certificates file (.p7b or .p7c) that was issued by a certification authority (CA). PKCS #7 is the Cryptographic Message Syntax Standard, a syntax used for digitally signing or encrypting data using public key cryptography, including certificates. For more information, see [PKCS #7 Cryptographic Messaging Syntax Concepts](https://docs.microsoft.com/windows/win32/seccrypto/pkcs--7-concepts).
-
 - A PKCS #12 certificate file (.cer, .crt, .der, .p12, or .pfx) that contains the private key. PKCS #12 is the Personal Information Exchange Syntax Standard, a file format used to store certificates with corresponding private keys that are protected by a password. For more information, see [PKCS #12: Personal Information Exchange Syntax v1.1](https://tools.ietf.org/html/rfc7292).
 
 After you import a certificate on an Exchange server, you need to assign the certificate to one or more Exchange services by using the Enable-ExchangeCertificate cmdlet.
@@ -130,8 +132,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -205,7 +206,6 @@ Accept wildcard characters: False
 The PrivateKeyExportable parameter specifies whether the certificate has an exportable private key and controls whether you can export the certificate from this server. Valid values are:
 
 - $true: The private key is exportable, so you can export the certificate from this server.
-
 - $false: The private key isn't exportable, so you can't export the certificate from this server. This is the default value.
 
 ```yaml
@@ -225,11 +225,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

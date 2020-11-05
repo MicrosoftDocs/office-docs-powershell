@@ -26,16 +26,20 @@ Add-GlobalMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemT
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Roles <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Duration
 ```
-Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String> [-BuildRange <String>] [-Duration <EnhancedTimeSpan>]
+Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeEnum> -PropertyName <String> -PropertyValue <String>
+ [-BuildRange <String>]
+ [-Duration <EnhancedTimeSpan>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Roles <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,6 +63,22 @@ This example adds a global monitoring override that disables the StorageLogicalD
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the identity of the probe, monitor, or responder. This parameter uses the syntax \<HealthSetName\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. Note that the values are case sensitive. For example, use "AD\\ActiveDirectoryConnectivityServerReboot", not "ad\\activedirectoryconnectivityserverreboot".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplyVersion
 The ApplyVersion parameter specifies the version of Exchange that gets the override. If an Exchange server is older or newer than the version you specify, the override isn't applied to the server. Typically, you increase the Exchange version by applying Cumulative Updates or Service Packs.
 
@@ -79,29 +99,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the identity of the probe, monitor, or responder. This parameter uses the syntax \<HealthSetName\>\\\<MonitoringItemName\>[\\\<TargetResource\>]. Note that the values are case sensitive. For example, use "AD\\ActiveDirectoryConnectivityServerReboot", not "ad\\activedirectoryconnectivityserverreboot".
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ItemType
 The ItemType parameter specifies the item type for the property that you want to override. Valid values are:
 
 - Probe
-
 - Monitor
-
 - Responder
 
 ```yaml
@@ -152,8 +154,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

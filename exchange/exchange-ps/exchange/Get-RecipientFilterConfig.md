@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RecipientFilterConfig [[-Identity] <OrganizationIdParameter>] [-DomainController <Fqdn>]
+Get-RecipientFilterConfig [[-Identity] <OrganizationIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

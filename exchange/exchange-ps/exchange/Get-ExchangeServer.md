@@ -26,14 +26,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-ExchangeServer -Domain <Fqdn>
  [-DomainController <Fqdn>]
- [-Status] [<CommonParameters>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-ExchangeServer [[-Identity] <ServerIdParameter>]
  [-DomainController <Fqdn>]
- [-Status] [<CommonParameters>]
+ [-Status]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,11 +101,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the Exchange server that you want to view. You can use any value that uniquely identifies the Exchange server. For example:
 
 - Name
-
 - GUID
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 You can't use this parameter with the Domain parameter.

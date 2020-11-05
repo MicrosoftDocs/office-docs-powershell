@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewRule [[-Identity] <ComplianceRuleIdParameter>] [-Policy <PolicyIdParameter>]
+Get-SupervisoryReviewRule [[-Identity] <ComplianceRuleIdParameter>]
+ [-Policy <PolicyIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -57,9 +58,7 @@ This example returns the rule that assigned to the supervisory review policy nam
 The Identity parameter specifies the supervisory review rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -79,9 +78,7 @@ Accept wildcard characters: False
 The Policy parameter filters the results by supervisory review policy that's assigned to the rule. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

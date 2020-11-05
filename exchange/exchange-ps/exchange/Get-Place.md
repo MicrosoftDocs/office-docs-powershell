@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-Place [-Identity] <RecipientIdParameter> [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-Place [-Identity] <RecipientIdParameter>
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,15 +53,10 @@ This example returns detailed metadata for Conference Room 1.
 The Identity parameter specifies the room mailbox that you want to view. You can use any value that uniquely identifies the room. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml

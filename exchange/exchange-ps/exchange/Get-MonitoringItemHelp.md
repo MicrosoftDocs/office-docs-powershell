@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MonitoringItemHelp [-Identity] <String> -Server <ServerIdParameter> [<CommonParameters>]
+Get-MonitoringItemHelp [-Identity] <String> -Server <ServerIdParameter>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,11 +59,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server that contains the monitoring item. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 ```yaml

@@ -35,7 +35,8 @@ Set-HostedOutboundSpamFilterPolicy [-Identity] <HostedOutboundSpamFilterPolicyId
  [-RecipientLimitExternalPerHour <UInt32>]
  [-RecipientLimitInternalPerHour <UInt32>]
  [-RecipientLimitPerDay <UInt32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +52,6 @@ Set-HostedOutboundSpamFilterPolicy -Identity Default -RecipientLimitExternalPerH
 This example configures the following settings in the outbound spam filter policy named Default:
 
 - The recipient rate limits are restricted to smaller values that the service defaults.
-
 - After one of the limits is reached, the user is prevented from sending messages (added to the Restricted Users portal).
 
 ## PARAMETERS
@@ -60,9 +60,7 @@ This example configures the following settings in the outbound spam filter polic
 The Identity parameter specifies the outbound spam filter policy you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -82,9 +80,7 @@ Accept wildcard characters: False
 The ActionWhenThresholdReach parameter specifies the action to take when any of the limits specified in the policy are reached. Valid values are:
 
 - Alert: No action, alert only.
-
 - BlockUser: Prevent the user from sending email messages.
-
 - BlockUserForToday: Prevent the user from sending email messages until the following day. This is the default value.
 
 ```yaml
@@ -164,7 +160,6 @@ Accept wildcard characters: False
 The BccSuspiciousOutboundMail parameter specifies whether to add recipients to the Bcc field of outgoing spam messages. Valid values are:
 
 - $true: The recipients specified by the BccSuspiciousOutboundAdditionalRecipients parameter are added to outgoing spam messages.
-
 - $false: No additional messages are added to outgoing spam messages. This is the default value.
 
 ```yaml
@@ -183,8 +178,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -206,7 +200,6 @@ Accept wildcard characters: False
 The NotifyOutboundSpam parameter specify whether to notify admins when outgoing spam is detected. Valid values are:
 
 - $true: Notify the admins specified by the NotifyOutboundSpamRecipients parameter.
-
 - $false: Don't send notifications. This is the default value.
 
 ```yaml

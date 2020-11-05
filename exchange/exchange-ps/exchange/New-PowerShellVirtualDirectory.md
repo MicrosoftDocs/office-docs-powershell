@@ -21,10 +21,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-PowerShellVirtualDirectory [-Name] <String> [-BasicAuthentication <Boolean>] [-Confirm]
- [-DomainController <Fqdn>] [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-RequireSSL <Boolean>]
- [-Role <VirtualDirectoryRole>] [-Server <ServerIdParameter>] [-WhatIf]
- [-WindowsAuthentication <Boolean>] [<CommonParameters>]
+New-PowerShellVirtualDirectory [-Name] <String>
+ [-BasicAuthentication <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-RequireSSL <Boolean>]
+ [-Role <VirtualDirectoryRole>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [-WindowsAuthentication <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,8 +86,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -163,7 +170,6 @@ Accept wildcard characters: False
 The Role parameter species the configuration for the virtual directory. Valid values are:
 
 - ClientAccess: Configure the virtual directory for the Client Access (frontend) services on the Mailbox server.
-
 - Mailbox: Configure the virtual directory for the backend services on the Mailbox server.
 
 Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
@@ -185,11 +191,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 ```yaml

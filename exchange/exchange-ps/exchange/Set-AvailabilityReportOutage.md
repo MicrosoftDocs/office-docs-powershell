@@ -22,22 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity (Default)
 ```
-Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -Comment <String> -ReportDate <ExDateTime> [-DowntimeMinutes <Double>]
+Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -Comment <String> -ReportDate <ExDateTime>
+ [-DowntimeMinutes <Double>]
  [-Confirm]
  [-Force]
  [-ReportingDatabase <String>]
  [-ReportingServer <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ResetToOriginal
 ```
-Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -ReportDate <ExDateTime> [-ResetToOriginal]
+Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -ReportDate <ExDateTime>
+ [-ResetToOriginal]
  [-Confirm]
  [-Force]
  [-ReportingDatabase <String>]
  [-ReportingServer <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,22 +58,6 @@ This example overrides the specified outage with a new downtime value of 40 minu
 
 ## PARAMETERS
 
-### -Comment
-The Comment parameter describes the outage that was inserted.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the outage to add to the outage reporting.
 
@@ -83,6 +71,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Comment
+The Comment parameter describes the outage that was inserted.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -121,8 +125,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

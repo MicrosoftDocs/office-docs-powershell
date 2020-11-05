@@ -95,47 +95,26 @@ Accept wildcard characters: False
 The FolderScope parameter specifies the scope of the search by folder type. Valid values include:
 
 - All
-
 - Archive
-
 - Calendar
-
 - Clutter
-
 - Contacts
-
 - ConversationHistory
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - Journal
-
 - JunkEmail
-
 - LegacyArchiveJournals
-
 - ManagedCustomFolder
-
 - NonIpmRoot
-
 - Notes
-
 - Outbox
-
 - Personal
-
 - RecoverableItems
-
 - RssSubscriptions
-
 - SentItems
-
 - SyncIssues
-
 - Tasks
 
 ```yaml
@@ -157,13 +136,9 @@ The Identity parameter specifies the identity of the mailbox or mail user. For t
 Otherwise, you can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - LegacyExchangeDN
-
 - SamAccountName
 
 ```yaml

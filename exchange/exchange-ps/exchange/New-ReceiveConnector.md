@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Custom
 ```
-New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty> [-Custom]
+New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty>
+ [-Custom]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -74,12 +75,14 @@ New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPR
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Internet
 ```
-New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> [-Internet]
+New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty>
+ [-Internet]
  [-RemoteIPRanges <MultiValuedProperty>]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
@@ -132,12 +135,14 @@ New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> [-Internet
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Partner
 ```
-New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty> [-Partner]
+New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty>
+ [-Partner]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -189,12 +194,15 @@ New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPR
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Internal
 ```
-New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bindings <MultiValuedProperty>] [-Internal]
+New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty>
+ [-Bindings <MultiValuedProperty>]
+ [-Internal]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -246,12 +254,15 @@ New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bi
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Client
 ```
-New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bindings <MultiValuedProperty>] [-Client]
+New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty>
+ [-Bindings <MultiValuedProperty>]
+ [-Client]
  [-AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -303,12 +314,15 @@ New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bi
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UsageType
 ```
-New-ReceiveConnector [-Name] <String> -Usage <UsageType> [-Bindings <MultiValuedProperty>] [-RemoteIPRanges <MultiValuedProperty>]
+New-ReceiveConnector [-Name] <String> -Usage <UsageType>
+ [-Bindings <MultiValuedProperty>]
+ [-RemoteIPRanges <MultiValuedProperty>]
  [AdvertiseClientSettings <Boolean>]
  [-AuthMechanism <AuthMechanisms>]
  [-AuthTarpitInterval <EnhancedTimeSpan>]
@@ -360,7 +374,8 @@ New-ReceiveConnector [-Name] <String> -Usage <UsageType> [-Bindings <MultiValued
  [-TlsCertificateName <SmtpX509Identifier>]
  [-TlsDomainCapabilities <MultiValuedProperty>]
  [-TransportRole <ServerRole>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -409,21 +424,17 @@ You need to specify a valid local IP address from the network adapters of the Ex
 You need to use this parameter when you use these usage type parameters:
 
 - The Internet switch (or the Usage parameter with the value Internet).
-
 - The Partner switch (or the Usage parameter with the value Partner).
-
 - The Custom switch (or the Usage parameter with the value Custom).
 
 You can't use this parameter when you use the following usage type parameters:
 
 - The Client switch (or the Usage parameter with the value Client. The default value is 0.0.0.0:587.
-
 - The Internal switch (or Usage parameter with the value Internal). The default value is 0.0.0.0:25.
 
 The values for this parameter must satisfy one of the following uniqueness requirements:
 
 - The combination of IP address and TCP port doesn't conflict with the IP address and TCP port that's used on another Receive connector on the server.
-
 - You use an existing combination of IP address and TCP port that's configured on another Receive connector on the server, but you restrict the remote IP addresses by using the RemoteIPRanges parameter. When you create a Receive connector, you can only use the RemoteIPRanges and Bindings parameters together with the Custom and Partner switches (or the Usage parameter with the value Custom or Partner).
 
 ```yaml
@@ -458,7 +469,6 @@ The Client switch specifies the Client usage type for the Receive connector. You
 This usage type assigns the following default permission groups and authentication methods:
 
 - Permission groups:ExchangeUsers
-
 - Authentication methods:TLS, BasicAuth, BasicAuthRequireTLS, and Integrated.
 
 When you use this switch, you also need to use the RemoteIPRanges parameter, and you can't use the Bindings parameter (the default value is 0.0.0.0:587).
@@ -484,7 +494,6 @@ The Internal switch specifies the Internal usage type for the Receive connector.
 This usage type assigns the following default permission groups and authentication methods:
 
 - Permission groups:ExchangeLegacyServers and ExchangeServers.
-
 - Authentication methods:TLS and ExchangeServers.
 
 When you use this switch, you also need to use the RemoteIPRanges parameter, and you can't use the Bindings parameter (the default value is 0.0.0.0:25).
@@ -510,7 +519,6 @@ The Internet switch specifies the Internet usage type for the Receive connector.
 This usage type assigns the following default permission groups and authentication methods:
 
 - Permission groups:AnonymousUsers
-
 - Authentication methods:TLS
 
 When you use this switch, you also need to use the Bindings parameter, and you can't use the RemoteIPRanges parameter (the default value is 0.0.0.0-255.255.255.255).
@@ -536,7 +544,6 @@ The Partner switch specifies the Partner usage type for the Receive connector. Y
 This usage type assigns the following default permission groups and authentication methods:
 
 - Permission groups:Partners
-
 - Authentication methods:TLS
 
 When you use this switch, you also need to use the Bindings and RemoteIPRanges parameters.
@@ -560,9 +567,7 @@ Accept wildcard characters: False
 The RemoteIPRanges parameter specifies the remote IP addresses that the Receive connector accepts messages from. Valid values are:
 
 - Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.
-
 - IP address range: For example, 192.168.1.1-192.168.1.254.
-
 - Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.1.1/24 or 2001:0DB8::CD3/60.
 
 You can specify multiple value separated by commas ("\<value1\>","\<value2\>"...).
@@ -570,9 +575,7 @@ You can specify multiple value separated by commas ("\<value1\>","\<value2\>"...
 Multiple Receive connectors on the same server can have overlapping remote IP address ranges as long as one IP address range is completely overlapped by another. For example, you can configure the following remote IP address ranges on different Receive connectors on the same server:
 
 - 0.0.0.0
-
 - 192.168.1.1/24
-
 - 192.168.1.10
 
 When remote IP address ranges overlap, the Receive connector with the most specific match to the IP address of the connecting server is used.
@@ -580,11 +583,8 @@ When remote IP address ranges overlap, the Receive connector with the most speci
 You need to use this parameter with the following usage type parameters:
 
 - The Client switch (or the Usage parameter with the value Client).
-
 - The Internal switch (or the Usage parameter with the value Internal).
-
 - The Partner switch (or the Usage parameter with the value Partner).
-
 - The Custom switch (or the Usage parameter with the value Custom).
 
 You can't use this parameter with the Internet usage type (the default value is 0.0.0.0-255.255.255.255).
@@ -619,31 +619,22 @@ Accept wildcard characters: False
 The Usage parameter specifies the default permission groups and authentication methods that are assigned to the Receive connector. Valid values are:
 
 - Client
-
 - Custom
-
 - Internal
-
 - Internet
-
 - Partner
 
 The following values for this parameter also require the Bindings parameter:
 
 - Internet
-
 - Partner
-
 - Custom
 
 The following values for this parameter also require the RemoteIPRanges parameter:
 
 - Client
-
 - Internal
-
 - Partner
-
 - Custom
 
 For a description of the default permission groups and authentication methods that are assigned for each value, see the corresponding usage type switch descriptions.
@@ -667,7 +658,6 @@ Accept wildcard characters: False
 The AdvertiseClientSettings parameter specifies whether the SMTP server name, port number, and authentication settings for the Receive connector are displayed to users in the options of Outlook on the web. Valid values are:
 
 - $true: The SMTP values are displayed in Outlook on the web. Typically, you would only use this setting for a Receive connector with the usage type Client (authenticated SMTP connections on TCP port 587 for POP3 and IMAP4 clients).
-
 - $false: The SMTP values are displayed in Outlook on the web. This is the default value.
 
 ```yaml
@@ -687,29 +677,19 @@ Accept wildcard characters: False
 The AuthMechanism parameter specifies the advertised and accepted authentication mechanisms for the Receive connector. Valid values are:
 
 - None
-
 - Tls
-
 - Integrated
-
 - BasicAuth
-
 - BasicAuthRequireTLS
-
 - ExchangeServer
-
 - ExternalAuthoritative
 
 You can specify multiple values separated by commas, but some values have dependencies and exclusions:
 
 - You can only use the value None by itself.
-
 - The value BasicAuthRequireTLS also requires the values BasicAuth and Tls.
-
 - The only other value that you can use with ExternalAuthoritative is Tls.
-
 - The value Tls is required when the value of the RequireTLS parameter is $true.
-
 - The value ExternalAuthoritative requires you to set the value of the PermissionGroups parameter to ExchangeServers.
 
 ```yaml
@@ -771,7 +751,6 @@ Accept wildcard characters: False
 The BinaryMimeEnabled parameter specifies whether the BINARYMIME Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: BINARYMIME is enabled and is advertised in the EHLO response. This setting requires that the ChunkingEnabled parameter is also set to the value $true. This is the default value.
-
 - $false: BINARYMIME is disabled and isn't advertised in the EHLO response.
 
 The binary MIME extension is defined in RFC 3030.
@@ -793,7 +772,6 @@ Accept wildcard characters: False
 The ChunkingEnabled parameter specifies whether the CHUNKING Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: CHUNKING is enabled and is advertised in the EHLO response. This is the default value.
-
 - $false: CHUNKING is disabled and isn't advertised in the EHLO response.
 
 Chunking is defined in RFC 3030.
@@ -830,8 +808,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -901,7 +878,6 @@ The Custom switch specifies the Custom usage type for the Receive connector. You
 This usage type assigns the following default permission groups and authentication methods:
 
 - Permission groups:None
-
 - Authentication methods:TLS
 
 When you use this switch, you also need to use the Bindings and RemoteIPRanges parameters.
@@ -927,17 +903,13 @@ Accept wildcard characters: False
 The DefaultDomain parameter specifies the default accepted domain to use for the Exchange organization. You can use any value that uniquely identifies the accepted domain. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 Although you can configure any accepted domain as the default domain, you typically specify an authoritative domain. The default domain is used by:
 
 - The external postmaster address: postmaster@\<default domain\>.
-
 - Encapsulated non-SMTP email addresses (Internet Mail Connector Encapsulated Address or IMCEA encapsulation).
-
 - The primary address for all recipients in the default email address policy. If you configure another accepted domain as the default domain, the default email address policy isn't automatically updated.
 
 ```yaml
@@ -957,7 +929,6 @@ Accept wildcard characters: False
 The DeliveryStatusNotificationEnabled parameter specifies whether the DSN (delivery status notification) Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: DSN is enabled and is advertised in the EHLO response. This is the default value.
-
 - $false: DSN is disabled and isn't advertised in the EHLO response.
 
 Delivery status notifications are defined in RFC 3461.
@@ -997,19 +968,14 @@ Accept wildcard characters: False
 The DomainSecureEnabled parameter specifies whether to enable or disable mutual Transport Layer Security (TLS) authentication (also known as Domain Secure) for the domains that are serviced by the Receive connector. Valid values are:
 
 - $true: Mutual TLS authentication is enabled.
-
 - $false: Mutual TLS authentication is disabled.
 
 Note that setting this parameter to the value $true is only part of the requirements for enabling mutual TLS authentication:
 
 - The AuthMechanism parameter must contain the value Tls, and can't contain the value ExternalAuthoritative.
-
 - The domain that's used for mutual TLS authentication must be configured in the following locations:
-
 - The TLSReceiveDomainSecureList parameter on the Set-TransportConfig cmdlet.
-
 - The AddressSpaces parameter on the Set-SendConnector cmdlet for the corresponding Send connector.
-
 - The TLSSendDomainSecureList parameter on the Set-TransportConfig cmdlet.
 
 ```yaml
@@ -1029,7 +995,6 @@ Accept wildcard characters: False
 The EightBitMimeEnabled parameter specifies whether the 8BITMIME Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: 8BITMIME is enabled and is advertised in the EHLO response. This is the default value.
-
 - $false: 8BITMIME is disabled and isn't advertised in the EHLO response.
 
 8-bit data transmission is defined in RFC 6152.
@@ -1051,7 +1016,6 @@ Accept wildcard characters: False
 The EnableAuthGSSAPI parameter enables or disables Kerberos when Integrated Windows authentication is available on the Receive connector (the AuthMechanism parameter contains the value Integrated). Valid values are:
 
 - $true: Kerberos is enabled. The Extended SMTP keyword AUTH GSSAPI NTLM is advertised in the EHLO response. Clients can use Kerberos or NTLM for Integrated Windows authentication.
-
 - $false: Kerberos is disabled. The Extended SMTP keyword AUTH NTLM is advertised in the EHLO response. Clients can only use NTLM for Integrated Windows authentication.
 
 The Generic Security Services application programming interface (GSSAPI) is an IETF standard for accessing security services.
@@ -1073,7 +1037,6 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether to enable or disable the Receive connector. Valid values are:
 
 - $true: The Receive connector is enabled. This is the default value.
-
 - $false: The Receive connector is disabled.
 
 ```yaml
@@ -1093,7 +1056,6 @@ Accept wildcard characters: False
 The EnhancedStatusCodesEnabled parameter specifies whether the ENHANCEDSTATUSCODES Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: ENHANCEDSTATUSCODES is enabled and is advertised in the EHLO response. This is the default value.
-
 - $false: ENHANCEDSTATUSCODES is disabled and isn't advertised in the EHLO response.
 
 Enhanced status codes are defined in RFC 2034.
@@ -1115,9 +1077,7 @@ Accept wildcard characters: False
 The ExtendedProtectionPolicy parameter specifies how Extended Protection for Authentication is implemented on the Receive connector. Valid values are:
 
 - None: Extended Protection for Authentication isn't used. This is the default value.
-
 - Allow: Extended Protection for Authentication is used only if the connecting host supports it. Otherwise, connections are established without Extended Protection for Authentication.
-
 - Require: Extended Protection for Authentication is required for all incoming connections to this Receive connector. If the connecting host doesn't support Extended Protection for Authentication, the connection is rejected.
 
 Extended Protection for Authentication enhances the protection and handling of credentials when authenticating network connections using Integrated Windows authentication. Integrated Windows authentication is also known as NTLM. We strongly recommend that you use Extended Protection for Authentication if you are using Integrated Windows authentication.
@@ -1139,11 +1099,8 @@ Accept wildcard characters: False
 The Fqdn parameter specifies the destination FQDN that's shown to connected messaging servers. This value is used in the following locations:
 
 - In the default SMTP banner of the Receive connector.
-
 - In the EHLO/HELO response of the Receive connector.
-
 - In the most recent Received header field in the incoming message when.
-
 - During TLS authentication.
 
 The default value is the FQDN of theExchange server that contains the Receive connector (for example edge01.contoso.com). You can specify a different FQDN (for example, mail.contoso.com).
@@ -1165,15 +1122,12 @@ Accept wildcard characters: False
 The LongAddressesEnabled parameter specifies whether the Receive connector accepts long X.400 email addresses. The X.400 email addresses are encapsulated in SMTP email addresses by using the Internet Mail Connector Encapsulated Address (IMCEA) encapsulation method. Valid values are
 
 - $true: X.400 email addresses can be up to 1,860 characters long after IMCEA encapsulation.
-
 - $false: The maximum length of a complete SMTP email address is 571 characters. This is the default value.
 
 When you set this parameter to the value $true, the following changes are made to the Receive connector:
 
 - The XLONGADDR Extended SMTP extension is enabled and is advertised in the EHLO response.
-
 - The accepted line length of an SMTP session is increased to 8,000 characters.
-
 - Valid long addresses are accepted by the MAIL FROM and RCPT TO SMTP commands.
 
 You can only configure this parameter on Receive connectors in the Transport service on Mailbox servers.
@@ -1219,11 +1173,8 @@ The MaxHeaderSize parameter specifies the maximum size of the SMTP message heade
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1365,18 +1316,15 @@ The MaxMessageSize parameter specifies the maximum size of a message that's allo
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 A valid value for this parameter is from 65536 to 2147483647 bytes.
 
-For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
+Base64 encoding increases the size of messages by approximately 33%, so specify a value that's 33% larger than the actual maximum message size that you want to enforce. For example, the value 64 MB results in a maximum message size of approximately 48 MB.
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -1455,11 +1403,8 @@ Accept wildcard characters: False
 The MessageRateSource parameter specifies how the message submission rate is calculated. Valid values are:
 
 - None: The message submission rate isn't calculated.
-
 - User: The message submission rate is calculated for sending users (specified with the MAIL FROM SMTP command).
-
 - IPAddress: The message submission rate is calculated for sending hosts.
-
 - All: The message submission rate is calculated for both sending users and sending hosts.
 
 ```yaml
@@ -1479,7 +1424,6 @@ Accept wildcard characters: False
 The OrarEnabled parameter enables or disables Originator Requested Alternate Recipient (ORAR) on the Receive connector. Valid values are:
 
 - $true: ORAR is enabled and is advertised in the XORAR keyword in the EHLO response. The actual ORAR information is transmitted in the RCPT TO SMTP command.
-
 - $false: ORAR is disabled and is isn't advertised in the EHLO response. This is the default value.
 
 If the email address specified in the ORAR information is a long X.400 email address, you need to set the LongAddressesEnabled parameter to the value $true.
@@ -1501,17 +1445,11 @@ Accept wildcard characters: False
 The PermissionGroups parameter specifies the well-known security principals who are authorized to use the Receive connector, and the permissions that are assigned to them. Valid values are:
 
 - None
-
 - AnonymousUsers
-
 - ExchangeUsers
-
 - ExchangeServers
-
 - ExchangeLegacyServers
-
 - Partners
-
 - Custom
 
 The default permission groups that are assigned to a Receive connector depend on the connector usage type parameter that was used when the connector was created (Client, Internal, Internet, Partner, or Usage).
@@ -1537,7 +1475,6 @@ Accept wildcard characters: False
 The PipeliningEnabled parameter specifies whether the PIPELINING Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: PIPELINING is enabled and is advertised in the EHLO response. This is the default value.
-
 - $false: PIPELINING is disabled and isn't advertised in the EHLO response.
 
 Pipelining is defined in RFC 2920.
@@ -1559,7 +1496,6 @@ Accept wildcard characters: False
 The ProtocolLoggingLevel parameter specifies whether to enable or disable protocol logging for the Receive connector. Valid values are:
 
 - None: Protocol logging is disabled on the Receive connector. This is the default value.
-
 - Verbose: Protocol logging is enabled on the Receive connector.
 
 For more information about protocol logging, see [Protocol logging](https://docs.microsoft.com/Exchange/mail-flow/connectors/protocol-logging).
@@ -1581,7 +1517,6 @@ Accept wildcard characters: False
 The RejectReservedSecondLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved second-level domains as specified in RFC 2606 (example.com, example.net, or example.org). Valid value are:
 
 - $true: RCPT TO commands that contain reserved second-level domains are rejected.
-
 - $false: RCPT TO commands that contain reserved second-level domains aren't rejected. This is the default value.
 
 ```yaml
@@ -1601,7 +1536,6 @@ Accept wildcard characters: False
 The RejectReservedTopLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved top-level domains (TLDs) as specified in RFC 2606 (.test, .example, .invalid, or .localhost). Valid value are:
 
 - $true: RCPT TO commands that contain reserved TLDs are rejected.
-
 - $false: RCPT TO commands that contain reserved TLDs aren't rejected. This is the default value.
 
 ```yaml
@@ -1621,7 +1555,6 @@ Accept wildcard characters: False
 The RejectSingleLabelRecipientDomains parameter specifies whether to reject connections that contain recipients in single-label domains (for example, chris@contoso instead of chris@contoso.com). Valid values are:
 
 - $true: RCPT TO commands that contain single-label domains are rejected.
-
 - $false: RCPT TO commands that contain single-label domains aren't rejected. This is the default value.
 
 ```yaml
@@ -1641,7 +1574,6 @@ Accept wildcard characters: False
 The RequireEHLODomain parameter specifies whether the client must provide a domain name in the EHLO handshake after the SMTP connection is established. Valid values are:
 
 - $true: The client must provide a domain name in the EHLO handshake. If it doesn't, the SMTP connection is closed.
-
 - $false: The client isn't required to provide a domain name in the EHLO handshake. This is the default value.
 
 ```yaml
@@ -1661,7 +1593,6 @@ Accept wildcard characters: False
 The RequireTLS parameter specifies whether to require TLS transmission for inbound messages on the Receive connector. Valid values are:
 
 - $true: Inbound messages on the Receive connector require TLS transmission.
-
 - $false: Inbound messages on the Receive connector don't require TLS transmission. This is the default value.
 
 ```yaml
@@ -1681,11 +1612,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
@@ -1723,9 +1651,7 @@ Accept wildcard characters: False
 The SizeEnabled parameter specifies how the SIZE Extended SMTP extension is used on the Receive connector. Valid values are:
 
 - Enabled: SIZE is enabled and is advertised in the EHLO response along with the value of the MaxMessageSize parameter. If the size of the inbound message exceeds the specified value, the Receive connector closes the connection with an error code. This is the default value.
-
 - Disabled: SIZE is disabled and isn't advertised in the EHLO response.
-
 - EnabledwithoutValue: SIZE is enabled and is advertised in the EHLO response, but the value of the MaxMessageSize parameter isn't disclosed in the EHLO response. This setting allows messages to bypass message size checks for authenticated connections between Mailbox servers.
 
 SIZE is defined in RFC 1870.
@@ -1747,7 +1673,6 @@ Accept wildcard characters: False
 The SuppressXAnonymousTls parameter specifies whether the X-ANONYMOUSTLS Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: X-ANONYMOUSTLS is disabled and isn't advertised in the EHLO response. This setting also requires that you set the UseDownGradedExchangeServerAuth parameter to the value $true on the Set-TransportService cmdlet on the server.
-
 - $false: X-ANONYMOUSTLS is enabled and is advertised in the EHLO response. This is the default value.
 
 The X-ANONYMOUSTLS extension is important when the AuthMechanism parameter contains the value ExchangeServer.
@@ -1813,7 +1738,6 @@ This parameter uses the following syntax:
 At the moment, this parameter can only be used in Exchange hybrid deployments and the available \<capability\> values for this scenario are:
 
 - AcceptCloudServicesMail (Exchange 2013 or later)
-
 - AcceptOorgProtocol (Exchange 2010)
 
 There are more available values but there is no scenario to use them. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
@@ -1839,7 +1763,6 @@ Accept wildcard characters: False
 The TransportRole parameter specifies the transport service on the Mailbox server where the Receive connector is created.. Valid values are:
 
 - FrontendTransport: The Front End Transport service where client or external SMTP connections occur.
-
 - HubTransport: The Transport service where Exchange server and proxied client SMTP connections occur.
 
 ```yaml

@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ComplianceRetentionEvent [-Identity <PolicyIdParameter>] [<CommonParameters>]
+Get-ComplianceRetentionEvent [-Identity <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,9 +50,7 @@ This example returns detailed information about the compliance retention event n
 The Identity parameter specifies the compliance retention event that you want to view. You can use any value that uniquely identifies the event. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

@@ -28,7 +28,8 @@ Get-CASMailboxPlan [[-Identity] <MailboxPlanIdParameter>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,9 +59,7 @@ This example returns detailed information about the specified CAS mailbox plan.
 The Identity parameter specifies the CAS mailbox plan that you want to view. You can use any value that uniquely identifies the CAS mailbox plan. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise and ExchangeOnlineEnterprise-\<GUID\>).
@@ -100,11 +99,8 @@ Accept wildcard characters: False
 The Filter parameter uses OPath syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-
 - Property is a filterable property.
-
 - ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
@@ -164,7 +160,6 @@ If the default view doesn't include the property you're sorting by, you can appe
 You can sort by the following attributes:
 
 - DisplayName
-
 - Name
 
 The results are sorted in ascending order.

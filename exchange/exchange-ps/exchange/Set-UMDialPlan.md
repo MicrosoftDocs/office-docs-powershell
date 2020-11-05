@@ -21,31 +21,59 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMDialPlan [-Identity] <UMDialPlanIdParameter> [-AccessTelephoneNumbers <MultiValuedProperty>]
- [-AllowDialPlanSubscribers <Boolean>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
- [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <Boolean>]
- [-AllowHeuristicADCallingLineIdResolution <Boolean>] [-AudioCodec <AudioCodecEnum>]
- [-AutomaticSpeechRecognitionEnabled <Boolean>] [-CallAnsweringRulesEnabled <Boolean>]
- [-CallSomeoneEnabled <Boolean>] [-ConfiguredInCountryOrRegionGroups <MultiValuedProperty>]
- [-ConfiguredInternationalGroups <MultiValuedProperty>] [-Confirm]
- [-ContactAddressList <AddressListIdParameter>] [-ContactRecipientContainer <OrganizationalUnitIdParameter>]
+Set-UMDialPlan [-Identity] <UMDialPlanIdParameter>
+ [-AccessTelephoneNumbers <MultiValuedProperty>]
+ [-AllowDialPlanSubscribers <Boolean>]
+ [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
+ [-AllowedInternationalGroups <MultiValuedProperty>]
+ [-AllowExtensions <Boolean>]
+ [-AllowHeuristicADCallingLineIdResolution <Boolean>]
+ [-AudioCodec <AudioCodecEnum>]
+ [-AutomaticSpeechRecognitionEnabled <Boolean>]
+ [-CallAnsweringRulesEnabled <Boolean>]
+ [-CallSomeoneEnabled <Boolean>]
+ [-ConfiguredInCountryOrRegionGroups <MultiValuedProperty>]
+ [-ConfiguredInternationalGroups <MultiValuedProperty>]
+ [-Confirm]
+ [-ContactAddressList <AddressListIdParameter>]
+ [-ContactRecipientContainer <OrganizationalUnitIdParameter>]
  [-ContactScope <CallSomeoneScopeEnum>]
- [-CountryOrRegionCode <String>] [-DefaultLanguage <UMLanguage>] [-DefaultOutboundCallingLineId <String>]
+ [-CountryOrRegionCode <String>]
+ [-DefaultLanguage <UMLanguage>]
+ [-DefaultOutboundCallingLineId <String>]
  [-DialByNamePrimary <DialByNamePrimaryEnum>]
- [-DialByNameSecondary <DialByNameSecondaryEnum>] [-DomainController <Fqdn>]
- [-EquivalentDialPlanPhoneContexts <MultiValuedProperty>] [-Extension <String>] [-FaxEnabled <Boolean>]
- [-ForceUpgrade] [-InCountryOrRegionNumberFormat <NumberFormat>]
- [-InfoAnnouncementEnabled <InfoAnnouncementEnabledEnum>] [-InfoAnnouncementFilename <String>]
- [-InputFailuresBeforeDisconnect <Int32>] [-InternationalAccessCode <String>]
- [-InternationalNumberFormat <NumberFormat>] [-LegacyPromptPublishingPoint <String>]
+ [-DialByNameSecondary <DialByNameSecondaryEnum>]
+ [-DomainController <Fqdn>]
+ [-EquivalentDialPlanPhoneContexts <MultiValuedProperty>]
+ [-Extension <String>]
+ [-FaxEnabled <Boolean>]
+ [-ForceUpgrade]
+ [-InCountryOrRegionNumberFormat <NumberFormat>]
+ [-InfoAnnouncementEnabled <InfoAnnouncementEnabledEnum>]
+ [-InfoAnnouncementFilename <String>]
+ [-InputFailuresBeforeDisconnect <Int32>]
+ [-InternationalAccessCode <String>]
+ [-InternationalNumberFormat <NumberFormat>]
+ [-LegacyPromptPublishingPoint <String>]
  [-LogonFailuresBeforeDisconnect <Int32>]
  [-MatchedNameSelectionMethod <DisambiguationFieldEnum>]
- [-MaxCallDuration <Int32>] [-MaxRecordingDuration <Int32>] [-Name <String>] [-NationalNumberPrefix <String>]
- [-NumberingPlanFormats <MultiValuedProperty>] [-OperatorExtension <String>] [-OutsideLineAccessCode <String>]
- [-PilotIdentifierList <MultiValuedProperty>] [-RecordingIdleTimeout <Int32>]
- [-SendVoiceMsgEnabled <Boolean>] [-TUIPromptEditingEnabled <Boolean>]
- [-UMAutoAttendant <UMAutoAttendantIdParameter>] [-VoIPSecurity <UMVoIPSecurityType>]
- [-WelcomeGreetingEnabled <Boolean>] [-WelcomeGreetingFilename <String>] [-WhatIf] [<CommonParameters>]
+ [-MaxCallDuration <Int32>]
+ [-MaxRecordingDuration <Int32>]
+ [-Name <String>]
+ [-NationalNumberPrefix <String>]
+ [-NumberingPlanFormats <MultiValuedProperty>]
+ [-OperatorExtension <String>]
+ [-OutsideLineAccessCode <String>]
+ [-PilotIdentifierList <MultiValuedProperty>]
+ [-RecordingIdleTimeout <Int32>]
+ [-SendVoiceMsgEnabled <Boolean>]
+ [-TUIPromptEditingEnabled <Boolean>]
+ [-UMAutoAttendant <UMAutoAttendantIdParameter>]
+ [-VoIPSecurity <UMVoIPSecurityType>]
+ [-WelcomeGreetingEnabled <Boolean>]
+ [-WelcomeGreetingFilename <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -262,11 +290,8 @@ Accept wildcard characters: False
 The ConfiguredInCountryOrRegionGroups parameter specifies the in-country groups that can be used. Each string consists of four parts:
 
 - Group name (up to 32 characters)
-
 - AllowedNumberString
-
 - DialNumberString
-
 - TextComment
 
 ```yaml
@@ -286,11 +311,8 @@ Accept wildcard characters: False
 The ConfiguredInternationalGroups parameter specifies the international groups that can be used. Each string consists of four parts:
 
 - Group name (up to 32 characters)
-
 - AllowedNumberString
-
 - DialNumberString
-
 - TextComment
 
 ```yaml
@@ -309,8 +331,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -670,13 +691,9 @@ Accept wildcard characters: False
 The MatchedNameSelectionMethod parameter specifies the selection to use to differentiate between users who have names that match the touchtone or speech input. This setting can be set to the following:
 
 - Title
-
 - Department
-
 - Location
-
 - None
-
 - PromptForAlias
 
 ```yaml

@@ -27,7 +27,8 @@ Get-OrganizationSegment [<CommonParameters>]
 
 ### Identity
 ```
-Get-OrganizationSegment [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-OrganizationSegment [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,9 +58,7 @@ This example returns detailed information about the organization segment named E
 The Identity parameter specifies the organization segment that you want to view. You can use any value that uniquely identifies the segment. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

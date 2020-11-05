@@ -27,7 +27,8 @@ Add-IPAllowListEntry -IPAddress <IPAddress>
  [-Confirm]
  [-ExpirationTime <DateTime>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IPRange
@@ -37,7 +38,8 @@ Add-IPAllowListEntry -IPRange <IPRange>
  [-Confirm]
  [-ExpirationTime <DateTime>]
  [-Server <ServerIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +84,6 @@ Accept wildcard characters: False
 The IPRange parameter specifies a range of IP addresses to add to the IP Allow list. You can use the following formats:
 
 - CIDR IP:192.168.0.1/24
-
 - IP address range:192.168.0.1-192.168.0.254.
 
 ```yaml
@@ -117,8 +118,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -156,11 +156,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

@@ -46,7 +46,8 @@ New-UnifiedGroup [-DisplayName <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ProvisioningOptions
@@ -72,12 +73,14 @@ New-UnifiedGroup [-DisplayName <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SegmentationOption
 ```
-New-UnifiedGroup [-DisplayName <String>] [-SubscriptionEnabled]
+New-UnifiedGroup [-DisplayName <String>]
+ [-SubscriptionEnabled]
  [-AccessType <ModernGroupTypeInfo>]
  [-Alias <String>]
  [-AlwaysSubscribeMembersToCalendarEvents]
@@ -98,18 +101,22 @@ New-UnifiedGroup [-DisplayName <String>] [-SubscriptionEnabled]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-SuppressWarmupMessage]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DlMigration
 ```
-New-UnifiedGroup -DlIdentity <DistributionGroupIdParameter> [-ConvertClosedDlToPrivateGroup] [-DeleteDlAfterMigration]
+New-UnifiedGroup -DlIdentity <DistributionGroupIdParameter>
+ [-ConvertClosedDlToPrivateGroup]
+ [-DeleteDlAfterMigration]
  [-Confirm]
  [-ExecutingUser <RecipientIdParameter>]
  [-ManagedBy <RecipientIdParameter[]>]
  [-Members <RecipientIdParameter[]>]
  [-Owner <RecipientIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -150,15 +157,10 @@ Accept wildcard characters: False
 The DlIdentity parameter specifies the distribution group (also known as a distribution list or DL) that you want to migrate to a Microsoft 365 Group. The distribution group must be a universal distribution group (the RecipientTypeDetails property value is MailUniversalDistributionGroup). You can use any value that uniquely identifies the distribution group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 All the properties and membership of the distribution group are copied to the Microsoft 365 Group.
@@ -184,7 +186,6 @@ Accept wildcard characters: False
 The AccessType parameter specifies the privacy type for the Microsoft 365 Group. Valid values are:
 
 - Public: The group content and conversations are available to everyone, and anyone can join the group without approval from a group owner. This is the default value.
-
 - Private: The group content and conversations are only available to members of the group, and joining the group requires approval from a group owner.
 
 You can change the privacy type at any point in the lifecycle of the group.
@@ -232,7 +233,6 @@ Accept wildcard characters: False
 The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group.
 
 - If you use this switch without a value, all future members that are added to the group will have their subscriptions set to ReplyAndEvents.
-
 - If you use this exact syntax: -AlwaysSubscribeMembersToCalendarEvents:$false, all future members that are added to the group will have their subscriptions set to ReplyOnly.
 
 Group members can change their own subscription settings, which can override your intended use of this switch.
@@ -289,8 +289,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -332,9 +331,7 @@ Accept wildcard characters: False
 The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Microsoft 365 Group. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -374,11 +371,8 @@ The EmailAddresses parameter specifies all the email addresses (proxy addresses)
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
-
 - smtp: Other SMTP email addresses.
-
 - X400: X.400 addresses in on-premises Exchange.
-
 - X500: X.500 addresses in on-premises Exchange.
 
 If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
@@ -386,9 +380,7 @@ If you don't include a \<Type\> value for an email address, the value smtp is as
 To specify the primary SMTP email address, you can use any of the following methods:
 
 - Use the \<Type\> value SMTP on the address.
-
 - The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
-
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
@@ -514,15 +506,10 @@ Accept wildcard characters: False
 The Members parameter specifies the recipients (mail-enabled objects) that are members of the Microsoft 365 Group. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
@@ -580,15 +567,10 @@ The Owner parameter specifies the for the Microsoft 365 Group. An owner is a gro
 The owner you specify for this parameter must be a mailbox or mail user (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -624,7 +606,6 @@ Accept wildcard characters: False
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
 - $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
-
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 ```yaml

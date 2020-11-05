@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RetentionEvent [[-Identity] <EwsStoreObjectIdParameter>] [-AllStatus] [<CommonParameters>]
+Get-RetentionEvent [[-Identity] <EwsStoreObjectIdParameter>]
+ [-AllStatus]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

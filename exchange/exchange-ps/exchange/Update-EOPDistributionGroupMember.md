@@ -59,15 +59,10 @@ This example adds a new user named Tyson Fawcett to the distribution group named
 The Identity parameter specifies the distribution group or mail-enabled security group that you want to update. You can use any value that uniquely identifies the group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -103,23 +98,16 @@ Accept wildcard characters: False
 The Members parameter specifies the list of recipients (mail-enabled objects) in the distribution group or mail-enabled security group. In Exchange Online Protection, the valid recipient types are:
 
 - Mail users
-
 - Distribution groups
-
 - Mail-enabled security groups
 
 You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 To replace the current members of the group with the recipients that you specify, use the syntax @("\<recipient1\>","\<recipient2\>"...). To add new group members without affecting the existing members, see Example 2 in the Examples section.

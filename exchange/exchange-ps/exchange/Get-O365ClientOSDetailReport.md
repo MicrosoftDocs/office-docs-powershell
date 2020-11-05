@@ -25,30 +25,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-O365ClientOSDetailReport [-EndDate <DateTime>] [-OperatingSystem <String>] [-OperatingSystemVersion <String>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [-WindowsLiveID <String>] [<CommonParameters>]
+Get-O365ClientOSDetailReport [-EndDate <DateTime>]
+ [-OperatingSystem <String>]
+ [-OperatingSystemVersion <String>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-WindowsLiveID <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This report provides operating system details for all active users. The data contains a maximum of four operating systems per user, are aggregated daily and retained for 5 days. The properties that are returned in the results are described in the following list.
 
 - TenantGuid: Unique identifier of the tenant.
-
 - TenantName: Tenant name.
-
 - Date: The timestamp for the connection for the operating system and version combination.
-
 - WindowsLiveID: User ID in the format user@domain.
-
 - DisplayName: User name.
-
 - LastAccessTime: Last date the user connected with this operating system and version combination.
-
 - ObjectId: User object ID.
-
 - OperatingSystem: Operating system name.
-
 - Version: Operating system version.
-
 - OperatingSystemUsageCount: Number of days this operating system and version combination was used during the period of the report
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -93,11 +90,8 @@ Accept wildcard characters: False
 The OS parameter filters the report by operating system. If you don't use this parameter, all operating systems will be included. The accepted values for this parameter are:
 
 - Windows
-
 - Android
-
 - iOS
-
 - "Mac OS"
 
 ```yaml

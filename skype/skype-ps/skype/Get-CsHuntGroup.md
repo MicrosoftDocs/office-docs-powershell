@@ -28,6 +28,9 @@ If called without parameters, Get-CsHuntgroup returns a collection of all Call Q
 
 The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the Call Queue setup.
 
+Please Note: This cmdlet is part of the first generation provisioning and is no longer supported. Please use the cmdlets which follow this format "*-CsCallQueue*" instead.
+
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------

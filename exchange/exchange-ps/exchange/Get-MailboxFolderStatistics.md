@@ -24,17 +24,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive] [-DiagnosticInfo <String>]
- [-DomainController <Fqdn>] [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
- [-IncludeAnalysis] [-IncludeOldestAndNewestItems] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-Archive]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ### AuditLog
 ```
-Get-MailboxFolderStatistics [-AuditLog] [-DomainController <Fqdn>]
+Get-MailboxFolderStatistics [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-AuditLog]
+ [-DomainController <Fqdn>]
  [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
- [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-IncludeAnalysis]
- [-IncludeOldestAndNewestItems] [-DiagnosticInfo <String>] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
+ [-DiagnosticInfo <String>]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,23 +90,14 @@ This example uses the IncludeAnalysis switch to view the statistics of Tony's Re
 The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

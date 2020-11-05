@@ -34,7 +34,8 @@ Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-RetentionComplianceAction <String>]
  [-RetentionDuration <Unlimited>]
  [-RetentionDurationDisplayHint <HoldDurationHint>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,9 +56,7 @@ This example changes the hold duration for the existing retention rule named "In
 The Identity parameter specifies the retention rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -112,8 +111,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -207,19 +205,12 @@ Accept wildcard characters: False
 The ExcludedItemClasses parameter specifies the types of messages to exclude from the rule. You can use this parameter only to exclude items from a hold policy, which excludes the specified item class from being held. Using this parameter won't exclude items from deletion policies. Typically, you use this parameter to exclude voicemail messages, IM conversations, and other Skype for Business Online content from being held by a hold policy. Common Skype for Business values include:
 
 - IPM.Note.Microsoft.Conversation
-
 - IPM.Note.Microsoft.Conversation.Voice
-
 - IPM.Note.Microsoft.Missed
-
 - IPM.Note.Microsoft.Missed.Voice
-
 - IPM.Note.Microsoft.Voicemail
-
 - IPM.Note.Microsoft.VoiceMessage.UA
-
 - IPM.Note.Microsoft.Voicemail.UM
-
 - IPM.Note.Microsoft.Voicemail.UM.CA
 
 Additionally, you can specify [message classes for Exchange items](https://docs.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or third-party message classes. Note that the values you specify aren't validated, so the parameter accepts any text value.
@@ -243,7 +234,6 @@ Accept wildcard characters: False
 The ExpirationDateOption parameter specifies whether the expiration date is calculated from the content creation date or last modification date. Valid values are:
 
 - CreationAgeInDays
-
 - ModificationAgeInDays
 
 ```yaml
@@ -263,9 +253,7 @@ Accept wildcard characters: False
 The RetentionComplianceAction parameter specifies the retention action for the rule. Valid values are:
 
 - Delete
-
 - Keep
-
 - KeepAndDelete
 
 ```yaml
@@ -285,7 +273,6 @@ Accept wildcard characters: False
 The RetentionDuration parameter specifies the hold duration for the retention rule. Valid values are:
 
 - An integer: The hold duration in days.
-
 - Unlimited: The content is held indefinitely.
 
 ```yaml
@@ -305,9 +292,7 @@ Accept wildcard characters: False
 The RetentionDurationDisplayHint parameter specifies the units that are used to display the retention duration in the Security & Compliance Center. Valid values are Days, Months or Years.
 
 - Days
-
 - Months
-
 - Years
 
 For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Security & Compliance Center will display 1 year as the content hold duration.

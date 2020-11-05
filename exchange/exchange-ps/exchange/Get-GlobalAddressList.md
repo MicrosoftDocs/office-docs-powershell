@@ -25,13 +25,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### DefaultOnly
 ```
 Get-GlobalAddressList [-DefaultOnly]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Get-GlobalAddressList [[-Identity] <GlobalAddressListIdParameter>]
- [-DomainController <Fqdn>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,9 +97,7 @@ Accept wildcard characters: False
 The Identity parameter specifies the global address list that you want to view. You can use any value that uniquely identifies the GAL. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

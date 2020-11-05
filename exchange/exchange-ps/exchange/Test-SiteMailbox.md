@@ -29,7 +29,8 @@ Test-SiteMailbox [[-Identity] <RecipientIdParameter>]
  [-RequestorIdentity <RecipientIdParameter>]
  [-SharePointUrl <Uri>]
  [-UseAppTokenOnly]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,15 +67,10 @@ This example tests a specific user's ability to access a SharePoint site by usin
 The Identity parameter specifies the site mailbox that you want to test. You can use any value that uniquely identifies the site mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can't use this parameter with the SharePointUrl parameter.
@@ -113,8 +109,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -134,15 +129,10 @@ Accept wildcard characters: False
 The RequestorIdentity parameter specifies the user to test for correct permissions to the SharePoint site mailbox. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can't use this parameter with the UseAppTokenOnly parameter.

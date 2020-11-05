@@ -48,7 +48,8 @@ Set-MoveRequest [-Identity] <MoveRequestIdParameter>
  [-StartAfter <DateTime>]
  [-SuspendWhenReadyToComplete <Boolean>]
  [-TargetDatabase <DatabaseIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,17 +79,11 @@ This example changes the move request for Sruthi to approve all skipped items en
 The Identity parameter specifies the identity of the mailbox or mail user. You can use the following values:
 
 - GUID
-
 - Distinguished name (DN)
-
 - Domain\\Account
-
 - User principal name (UPN)
-
 - LegacyExchangeDN
-
 - SMTP address
-
 - Alias
 
 ```yaml
@@ -130,9 +125,7 @@ This parameter is available only in on-premises Exchange.
 The ArchiveTargetDatabase parameter specifies the target mailbox database for the personal archive. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.
@@ -199,7 +192,6 @@ In Exchange Online PowerShell, if you specify a date/time value without a time z
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
@@ -234,8 +226,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -329,7 +320,6 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 For more information about maximum message size values, see the following topics:
 
 - Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-
 - Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
@@ -373,7 +363,6 @@ Accept wildcard characters: False
 The PreventCompletion parameter specifies whether to run the move request, but not allow it to complete. Valid values are:
 
 - $true: The move request is run, but is not allowed to complete. Instead of this value, we recommend using the CompleteAfter parameter.
-
 - $false: This is the default value. The move request is run and allowed to complete. If you created the move request with the SuspendWhenReadyToComplete or PreventCompletion switches, set this parameter to $false before you run the Resume-MoveRequest cmdlet to complete the move request.
 
 ```yaml
@@ -395,19 +384,12 @@ This parameter is available only in on-premises Exchange.
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
 
 - Lowest
-
 - Lower
-
 - Low
-
 - Normal: This is the default value.
-
 - High
-
 - Higher
-
 - Highest
-
 - Emergency
 
 ```yaml
@@ -447,23 +429,14 @@ This parameter is available only in the cloud-based service.
 The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -533,7 +506,6 @@ Accept wildcard characters: False
 The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
 
 - The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
-
 - If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -581,7 +553,6 @@ In Exchange Online PowerShell, if you specify a date/time value without a time z
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
@@ -607,7 +578,6 @@ For more information about maximum message size values, see the following topic 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2016 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
@@ -645,9 +615,7 @@ This parameter is available only in on-premises Exchange.
 The TargetDatabase parameter specifies the target mailbox database for the mailbox. You can use any value that uniquely identifies the database. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 You can use this parameter to change the target database only if the move request has a MoveStatus value of Queued.

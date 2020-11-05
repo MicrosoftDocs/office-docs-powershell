@@ -35,6 +35,8 @@ The New-CsHuntGroup cmdlet may suggest additional steps required to complete the
 
 The following parameters are not applicable to Skype for Business Online: ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, PipelineVariable, and Ring.
 
+Please Note: This cmdlet is part of the first generation provisioning and is no longer supported. Please use the cmdlets which follow this format "*-CsCallQueue*" instead.
+
 
 ## EXAMPLES
 

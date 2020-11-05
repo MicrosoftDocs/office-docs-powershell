@@ -54,9 +54,7 @@ This example returns detailed information for the sensitive information type rul
 The Identity parameter specifies the sensitive information type rule package that you want to view. You can use any value that uniquely identifies the rule package. For example:
 
 - RuleCollectionName
-
 - LocalizedName
-
 - GUID (from the Identity value)
 
 ```yaml

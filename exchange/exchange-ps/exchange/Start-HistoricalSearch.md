@@ -23,8 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType>
- -StartDate <DateTime> [-DeliveryStatus <String>]
+Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType> -StartDate <DateTime>
+ [-DeliveryStatus <String>]
  [-Direction <MessageDirection>]
  [-DLPPolicy <MultiValuedProperty>]
  [-Locale <CultureInfo>]
@@ -54,11 +54,8 @@ Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2018 -EndDa
 This example starts a new historical search named "Fabrikam Search" that has the following properties:
 
 - Date range: January 1, 2018 to January 7, 2018
-
 - Report type: Message trace
-
 - Sender address: michelle@fabrikam.com
-
 - Internal notification email address: chris@contoso.com
 
 ## PARAMETERS
@@ -105,27 +102,16 @@ Accept wildcard characters: False
 The ReportType parameter specifies the type of historical search that you want to perform. You can use one of the following values:
 
 - ATPReport: Advanced Threat Protection File Types Report and Advanced Threat Protection Message Disposition Report
-
 - ATPV2: Exchange Online Protection and Advanced Threat Protection E-mail Malware Report.
-
 - ATPDocument: Advanced Threat Protection Content Malware Report for files in SharePoint, OneDrive and Microsoft Teams.
-
 - DLP: Data Loss Prevention Report.
-
 - Malware: Malware Detections Report.
-
 - MessageTrace: Message Trace Report.
-
 - MessageTraceDetail: Message Trace Details Report.
-
 - Phish: Exchange Online Protection and Advanced Threat Protection E-mail Phish Report.
-
 - SPAM: SPAM Detections Report.
-
 - Spoof: Spoof Mail Report.
-
 - TransportRule: Transport or Mail FLow Rules Report.
-
 - UnifiedDLP: Unified Data Loss Prevention Report.
 
 You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
@@ -165,9 +151,7 @@ Accept wildcard characters: False
 The DeliveryStatus parameter filters the results by the delivery status of the message. You can use one of the following values:
 
 - Delivered
-
 - Expanded
-
 - Failed
 
 ```yaml
@@ -187,9 +171,7 @@ Accept wildcard characters: False
 The Direction parameter filters the results by the direction of the message. Valid values are:
 
 - All: Incoming and outgoing messages.
-
 - Received: Ingoing messages only.
-
 - Sent: Outgoing messages only.
 
 ```yaml

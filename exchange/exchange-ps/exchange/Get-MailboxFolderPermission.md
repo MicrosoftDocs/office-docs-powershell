@@ -23,8 +23,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-DomainController <Fqdn>]
- [-User <MailboxFolderUserIdParameter>] [-GroupMailbox] [<CommonParameters>]
+Get-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter>
+ [-DomainController <Fqdn>]
+ [-User <MailboxFolderUserIdParameter>]
+ [-GroupMailbox]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,23 +64,14 @@ The Identity parameter specifies the mailbox folder that you want to view. The s
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Inbox\Reports`.
@@ -117,15 +111,10 @@ Accept wildcard characters: False
 The User parameter filters the results by the specified mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
