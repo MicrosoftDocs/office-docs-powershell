@@ -389,13 +389,12 @@ Accept wildcard characters: False
 
 ### -BlockDownloadLinksFileType
 
-The valid values are:  
+The valid values are:
 
 - WebPreviewableFiles
 - ServerRenderedFilesOnly
 
-> [!NOTE]
-> ServerRendered (Office Only) and WebPreviewable (All supported files). 
+**Note**: ServerRendered (Office Only) and WebPreviewable (All supported files).
 
 The site's value is compared with the tenant level setting and the stricter one wins. For example, if the tenant is set to ServerRenderedFilesOnly then that will be used even if the site is set to WebPreviewableFiles.
 
