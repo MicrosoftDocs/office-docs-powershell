@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ROBOTS: NOINDEX, NOFOLLOW
 ---
 
@@ -27,7 +26,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType> [-OutputJson] [<CommonParameters>]
+Remove-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
+ [-OutputJson]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

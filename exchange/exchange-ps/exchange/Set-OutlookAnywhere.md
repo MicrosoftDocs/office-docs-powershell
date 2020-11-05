@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-OutlookAnywhere
@@ -39,7 +38,8 @@ Set-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter>
  [-InternalHostname <String>]
  [-Name <String>]
  [-SSLOffloading <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,9 +90,7 @@ In Exchange 2010 and Exchange 2013, this example sets the available authenticati
 The Identity parameter specifies the Outlook Anywhere virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
@@ -116,7 +114,6 @@ This parameter is available or functional only in Exchange Server 2010.
 The ClientAuthenticationMethod parameter specifies the authentication method that the Autodiscover service provides to the Outlook Anywhere clients to authenticate to the Client Access server. Valid values are:
 
 - Basic
-
 - Ntlm
 
 Although you can use this parameter to set only one authentication method, the command won't return an error if you include multiple values.
@@ -137,8 +134,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -158,9 +154,7 @@ Accept wildcard characters: False
 The DefaultAuthenticationMethod parameter specifies the default authentication method for Outlook Anywhere. This parameter replaces the existing ExternalClientAuthenticationMethod, InternalClientAuthenticationMethod and IISAuthenticationMethods property values with the value you specify. Valid values are:
 
 - Basic
-
 - Ntlm
-
 - Negotiate
 
 You can't use this parameter with the ExternalClientAuthenticationMethod, InternalClientAuthenticationMethod and IISAuthenticationMethods parameters.
@@ -198,13 +192,9 @@ Accept wildcard characters: False
 The ExtendedProtectionFlags parameter specifies custom settings for Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - None: This is the default setting.
-
 - AllowDotlessSPN: Required if you want to use Service Principal Name (SPN) values that don't contain FQDNs (for example, HTTP/ContosoMail instead of HTTP/mail.contoso.com). You specify SPNs with the ExtendedProtectionSPNList parameter. This setting makes Extended Protection for Authentication less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
-
 - NoServiceNameCheck: The SPN list isn't checked to validate a channel binding token. This setting makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
-
 - Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
-
 - ProxyCoHosting: HTTP and HTTPS traffic may be accessing the virtual directory and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
 
 ```yaml
@@ -224,7 +214,6 @@ Accept wildcard characters: False
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - $null: This is the default value.
-
 - Single SPN or comma delimited list of valid SPNs: The SPN value format is \<protocol\>/\<FQDN\>. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
 
 ```yaml
@@ -244,9 +233,7 @@ Accept wildcard characters: False
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
 
 - None: Extended Protection for Authentication isn't be used on the virtual directory. This is the default value.
-
 - Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication will work, but may not be as secure as connections that use Extended Protection for Authentication.
-
 - Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
 
 Note:
@@ -270,9 +257,7 @@ Accept wildcard characters: False
 The ExternalClientAuthenticationMethod parameter specifies the authentication method that's used to authenticate external Outlook Anywhere clients. Valid values are:
 
 - Basic
-
 - Ntlm
-
 - Negotiate (This is the default value)
 
 You can't use this parameter with the DefaultAuthenticationMethods parameter.
@@ -294,7 +279,6 @@ Accept wildcard characters: False
 The ExternalClientsRequireSsl parameter specifies whether external Outlook Anywhere clients are required to use Secure Sockets Layer (SSL). Valid values are:
 
 - $true: Clients connecting via Outlook Anywhere from outside the organization are required to use SSL.
-
 - $false: Clients connecting via Outlook Anywhere from outside the organization aren't required to use SSL. This is the default value.
 
 The value of this parameter is related to the value of the SSLOffloading parameter.
@@ -332,9 +316,7 @@ Accept wildcard characters: False
 The IISAuthenticationMethods parameter specifies the authentication method that's used on the Outlook Anywhere virtual directory in IIS. Valid values are:
 
 - Basic
-
 - Ntlm
-
 - Negotiate
 
 You can specify multiple value separated by commas. By default, all values are used.
@@ -358,9 +340,7 @@ Accept wildcard characters: False
 The InternalClientAuthenticationMethod parameter specifies the authentication method that's used to authenticate internal Outlook Anywhere clients. Valid values are:
 
 - Basic
-
 - Ntlm (This is the default value)
-
 - Negotiate
 
 You can't use this parameter with the DefaultAuthenticationMethods parameter.
@@ -382,7 +362,6 @@ Accept wildcard characters: False
 The InternalClientsRequireSsl parameter specifies whether internal Outlook Anywhere clients are required to use SSL. Valid values are:
 
 - $true: Clients connecting via Outlook Anywhere from inside the organization are required to use SSL.
-
 - $false: Clients connecting via Outlook Anywhere from inside the organization aren't required to use SSL. This is the default value.
 
 The value of this parameter is related to the value of the SSLOffloading parameter.
@@ -436,7 +415,6 @@ Accept wildcard characters: False
 The SSLOffloading parameter specifies whether a network device accepts SSL connections and decrypts them before proxying the connections to the Outlook Anywhere virtual directory on the Exchange server. Valid values are:
 
 - $true: Outlook Anywhere clients using SSL don't maintain an SSL connection along the entire network path to the Exchange server. A network device in front of the server decrypts the SSL connections and proxies the unencrypted (HTTP) client connections to the Outlook Anywhere virtual directory. The network segment where HTTP is used should be a secured network. This is the default value.
-
 - $false: Outlook Anywhere clients using SSL maintain an SSL connection along the entire network path to the Exchange server. Only SSL connections are allowed to the Outlook Anywhere virtual directory.
 
 This parameter configures the Require SSL value on the Outlook Anywhere virtual directory. When you set this parameter to $true, Require SSL is disabled. When you set this parameter to $fase, Require SSL is enabled. However, it may take several minutes before the change is visible in IIS Manager.

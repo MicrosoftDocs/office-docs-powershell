@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-QueueDigest
@@ -30,7 +29,8 @@ Get-QueueDigest -Dag <MultiValuedProperty>
  [-Filter <String>]
  [-GroupBy <QueueDigestGroupBy>]
  [-ResultSize <Unlimited>]
- [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-Timeout <EnhancedTimeSpan>]
+ [<CommonParameters>]
 ```
 
 ### Forest
@@ -40,7 +40,8 @@ Get-QueueDigest [-Forest]
  [-Filter <String>]
  [-GroupBy <QueueDigestGroupBy>]
  [-ResultSize <Unlimited>]
- [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-Timeout <EnhancedTimeSpan>]
+ [<CommonParameters>]
 ```
 
 ### Server
@@ -51,7 +52,8 @@ Get-QueueDigest -Server <MultiValuedProperty>
  [-GroupBy <QueueDigestGroupBy>]
  [-IncludeE14Servers]
  [-ResultSize <Unlimited>]
- [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-Timeout <EnhancedTimeSpan>]
+ [<CommonParameters>]
 ```
 
 ### Site
@@ -62,7 +64,8 @@ Get-QueueDigest -Site <MultiValuedProperty>
  [-GroupBy <QueueDigestGroupBy>]
  [-IncludeE14Servers]
  [-ResultSize <Unlimited>]
- [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-Timeout <EnhancedTimeSpan>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -196,21 +199,13 @@ Accept wildcard characters: False
 The GroupedBy parameter sorts the messages in the delivery queue results. Valid values are:
 
 - DeliveryType
-
 - LastError
-
 - NextHopCategory
-
 - NextHopDomain (this is the default value)
-
 - NextHopKey
-
 - RiskLevel
-
 - Status
-
 - ServerName
-
 - OutboundIPPool
 
 ```yaml

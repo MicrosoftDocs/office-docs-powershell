@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MigrationEndpoint
@@ -23,19 +22,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ExchangeRemoteMoveAutoDiscover
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeRemoteMove]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress>
+ [-Autodiscover]
+ [-ExchangeRemoteMove]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhereAutoDiscover
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeOutlookAnywhere]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress>
+ [-Autodiscover]
+ [-ExchangeOutlookAnywhere]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
@@ -44,12 +48,16 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <
  [-SkipVerification]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhere
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> [-EmailAddress <SmtpAddress>] [-ExchangeOutlookAnywhere] [-ExchangeServer <String>]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential>
+ [-EmailAddress <SmtpAddress>]
+ [-ExchangeOutlookAnywhere]
+ [-ExchangeServer <String>]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -62,36 +70,46 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> [-EmailAddress 
  [-SkipVerification]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ExchangeRemoteMove
 ```
-New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-Credentials <PSCredential>] [-ExchangeRemoteMove]
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
+ [-Credentials <PSCredential>]
+ [-ExchangeRemoteMove]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PSTImport
 ```
-New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-Credentials <PSCredential>] [-PSTImport]
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
+ [-Credentials <PSCredential>]
+ [-PSTImport]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IMAP
 ```
-New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-IMAP] [-Port <Int32>] [-Security <IMAPSecurityMechanism>]
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
+ [-IMAP]
+ [-Port <Int32>]
+ [-Security <IMAPSecurityMechanism>]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -99,24 +117,29 @@ New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-IMAP] [-Port <Int32>
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Gmail
 ```
-New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]> [-Gmail] [-EmailAddress <SmtpAddress>]
+New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]>
+ [-Gmail]
+ [-EmailAddress <SmtpAddress>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+ [-PublicFolder]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -125,24 +148,28 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDa
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Compliance
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn> [-Compliance]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-Compliance]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MrsProxyPublicFolderToUnifiedGroup
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolderToUnifiedGroup]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-PublicFolderToUnifiedGroup]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
@@ -150,24 +177,28 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### MrsProxyPublicFolder
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolder]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn>
+ [-PublicFolder]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LegacyPublicFolderToUnifiedGroup
 ```
-New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolderToUnifiedGroup]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+ [-PublicFolderToUnifiedGroup]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -176,22 +207,18 @@ New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDa
  [-Partition <MailboxIdParameter>]
  [-SkipVerification]
  [-TestMailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-MigrationEndpoint cmdlet configures the connection settings for different types of migrations:
 
 - Cross-forest move: Move mailboxes between two different on-premises Exchange forests. Cross-forest moves require the use of a Remote Move endpoint.
-
 - Remote move migration: In a hybrid deployment, a remote move migration involves onboarding or offboarding migrations. Remote move migrations also require the use of an Exchange remote move endpoint. Onboarding moves mailboxes from an on-premises Exchange organization to Exchange Online, and uses a remote move endpoint as the source endpoint of the migration batch. Offboarding moves mailboxes from Exchange Online to an on-premises Exchange organization and uses a remote move endpoint as the target endpoint of the migration batch.
-
 - Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online. A cutover Exchange migration requires the use of an Outlook Anywhere migration endpoint.
-
 - Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. A staged Exchange migration requires the use of an Outlook Anywhere migration endpoint.
-
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
-
 - G Suite migration: Migration mailbox data from a G Suite tenant to Exchange Online.  For a G Suite migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data.  G Suite migrations require the use of a Gmail endpoint.
 
 Moving mailboxes between different servers or databases within a single on-premises Exchange forest (called a local move) doesn't require a migration endpoint.
@@ -496,7 +523,6 @@ Accept wildcard characters: False
 The RemoteServer parameter specifies the FQDN of the remote server, which depends on the protocol type for moves:
 
 - For cross-forest moves and remote move migrations, this parameter refers to the Exchange server in the on-premises organization that has the Client Access server role installed that directly accepts and proxies client connections.
-
 - For IMAP migrations, this parameter refers to the IMAP server.
 
 ```yaml
@@ -617,8 +643,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -680,7 +705,6 @@ The MailboxPermission parameter specifies what permissions to use to access the 
 The migration administrator account specified for the endpoint must have one of the following permissions:
 
 - Admin: The account is a domain administrator who can access any mailbox they want to migrate.
-
 - FullAccess: The account is assigned either the Full Access permission to the mailboxes they want to migrate or the Receive As permission to the mailbox database that hosts the mailboxes that will be migrated.
 
 If this parameter isn't specified, the cmdlet tries to access source mailboxes using the domain administrator permission and if that fails, it then tries to access the source mailboxes using the Full Access or Receive As permissions.
@@ -826,23 +850,14 @@ This parameter is available only in the cloud-based service.
 The TestMailbox parameter specifies an Exchange Online mailbox used as the target by the migration service to verify the connection using this endpoint. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 If you don't use this parameter, the migration service uses the migration arbitration mailbox in the Exchange Online organization to verify the connection.

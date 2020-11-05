@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-CsUserActivitiesReport
@@ -26,70 +25,45 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CsUserActivitiesReport [-EndDate <DateTime>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [-UserName <String>] [<CommonParameters>]
+Get-CsUserActivitiesReport [-EndDate <DateTime>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-UserName <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use the Get-CsUserActivitiesReport to query information about activities in Skype for Business Online by all users or a specified user for the last 3 months. For the reporting period you specify, the cmdlet returns the following information:
 
 - UserName
-
 - LastLogonTime
-
 - LastActivityTime
-
 - TotalP2PSessions
-
 - TotalP2PIMSessions
-
 - TotalP2PAudioSessions
-
 - TotalP2PVideoSessions
-
 - TotalP2PApplicationSharingSessions
-
 - TotalP2PAudioSessionMinutes
-
 - TotalP2PVideoSessionMinutes
-
 - TotalOrganizedConferences
-
 - TotalOrganizedIMConferences
-
 - TotalOrganizedAVConferences
-
 - TotalOrganizedApplicationSharingConferences
-
 - TotalOrganizedWebConferences
-
 - TotalOrganizedDialInConferences
-
 - TotalOrganizedAVConferenceMinutes
-
 - TotalParticipatedConferences
-
 - TotalParticipatedIMConferences
-
 - TotalParticipatedAVConferences
-
 - TotalParticipatedApplicationSharingConferences
-
 - TotalParticipatedWebConferences
-
 - TotalParticipatedDialInConferences
-
 - TotalParticipatedAVConferenceMinutes
-
 - TotalPlacedPSTNCalls
-
 - TotalReceivedPSTNCalls
-
 - TotalPlacedPSTNCallMinutes
-
 - TotalReceivedPSTNCallMinutes
-
 - TotalMessages
-
 - TotalTransferredFiles
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).

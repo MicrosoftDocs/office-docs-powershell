@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-ManagedFolder
@@ -25,23 +24,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-ManagedFolder [[-Identity] <ELCFolderIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Mailbox
 ```
 Get-ManagedFolder [-Mailbox <MailboxIdParameter>]
  [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Get-ManagedFolder cmdlet retrieves the specified managed folder attributes:
 
 - If only an Identity parameter value is present, the command retrieves the specified folder and all associated attributes.
-
 - If a Mailbox parameter value is present, the command retrieves all managed folders that apply to that user by means of a managed folder mailbox policy applied by an administrator. Managed folders that users add by means of an organization's managed folder opt-in Web site aren't displayed by this command.
-
 - If no parameter values are specified, the command retrieves all the folder objects and their associated attributes.
 
 The Get-ManagedFolder cmdlet accepts a ManagedFolder object or an identity string as pipelined input.
@@ -95,23 +94,14 @@ Accept wildcard characters: False
 The Mailbox parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 This cmdlet retrieves all the folders that apply to the specified mailbox.

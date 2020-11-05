@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MobileDeviceMailboxPolicy
@@ -22,34 +21,65 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-MobileDeviceMailboxPolicy [-Name] <String> [-AllowApplePushNotifications <Boolean>]
- [-AllowBluetooth <BluetoothType>] [-AllowBrowser <Boolean>]
- [-AllowCamera <Boolean>] [-AllowConsumerEmail <Boolean>] [-AllowDesktopSync <Boolean>]
- [-AllowExternalDeviceManagement <Boolean>] [-AllowGooglePushNotifications <Boolean>]
- [-AllowHTMLEmail <Boolean>] [-AllowInternetSharing <Boolean>] [-AllowIrDA <Boolean>]
- [-AllowMicrosoftPushNotifications <Boolean>] [-AllowMobileOTAUpdate <Boolean>]
- [-AllowNonProvisionableDevices <Boolean>] [-AllowPOPIMAPEmail <Boolean>]
- [-AllowRemoteDesktop <Boolean>] [-AllowSimplePassword <Boolean>]
+New-MobileDeviceMailboxPolicy [-Name] <String>
+ [-AllowApplePushNotifications <Boolean>]
+ [-AllowBluetooth <BluetoothType>]
+ [-AllowBrowser <Boolean>]
+ [-AllowCamera <Boolean>]
+ [-AllowConsumerEmail <Boolean>]
+ [-AllowDesktopSync <Boolean>]
+ [-AllowExternalDeviceManagement <Boolean>]
+ [-AllowGooglePushNotifications <Boolean>]
+ [-AllowHTMLEmail <Boolean>]
+ [-AllowInternetSharing <Boolean>]
+ [-AllowIrDA <Boolean>]
+ [-AllowMicrosoftPushNotifications <Boolean>]
+ [-AllowMobileOTAUpdate <Boolean>]
+ [-AllowNonProvisionableDevices <Boolean>]
+ [-AllowPOPIMAPEmail <Boolean>]
+ [-AllowRemoteDesktop <Boolean>]
+ [-AllowSimplePassword <Boolean>]
  [-AllowSMIMEEncryptionAlgorithmNegotiation <SMIMEEncryptionAlgorithmNegotiationType>]
- [-AllowSMIMESoftCerts <Boolean>] [-AllowStorageCard <Boolean>]
- [-AllowTextMessaging <Boolean>] [-AllowUnsignedApplications <Boolean>]
- [-AllowUnsignedInstallationPackages <Boolean>] [-AllowWiFi <Boolean>]
- [-AlphanumericPasswordRequired <Boolean>] [-ApprovedApplicationList <ApprovedApplicationCollection>]
- [-AttachmentsEnabled <Boolean>] [-Confirm] [-DeviceEncryptionEnabled <Boolean>]
- [-DevicePolicyRefreshInterval <Unlimited>] [-DomainController <Fqdn>] [-IrmEnabled <Boolean>]
- [-IsDefault <Boolean>] [-MaxAttachmentSize <Unlimited>]
+ [-AllowSMIMESoftCerts <Boolean>]
+ [-AllowStorageCard <Boolean>]
+ [-AllowTextMessaging <Boolean>]
+ [-AllowUnsignedApplications <Boolean>]
+ [-AllowUnsignedInstallationPackages <Boolean>]
+ [-AllowWiFi <Boolean>]
+ [-AlphanumericPasswordRequired <Boolean>]
+ [-ApprovedApplicationList <ApprovedApplicationCollection>]
+ [-AttachmentsEnabled <Boolean>]
+ [-Confirm]
+ [-DeviceEncryptionEnabled <Boolean>]
+ [-DevicePolicyRefreshInterval <Unlimited>]
+ [-DomainController <Fqdn>]
+ [-IrmEnabled <Boolean>]
+ [-IsDefault <Boolean>]
+ [-MaxAttachmentSize <Unlimited>]
  [-MaxCalendarAgeFilter <CalendarAgeFilterType>]
  [-MaxEmailAgeFilter <EmailAgeFilterType>]
- [-MaxEmailBodyTruncationSize <Unlimited>] [-MaxEmailHTMLBodyTruncationSize <Unlimited>]
- [-MaxInactivityTimeLock <Unlimited>] [-MaxPasswordFailedAttempts <Unlimited>]
- [-MinPasswordComplexCharacters <Int32>] [-MinPasswordLength <Int32>] [-PasswordEnabled <Boolean>]
- [-PasswordExpiration <Unlimited>] [-PasswordHistory <Int32>] [-PasswordRecoveryEnabled <Boolean>]
- [-RequireDeviceEncryption <Boolean>] [-RequireEncryptedSMIMEMessages <Boolean>]
+ [-MaxEmailBodyTruncationSize <Unlimited>]
+ [-MaxEmailHTMLBodyTruncationSize <Unlimited>]
+ [-MaxInactivityTimeLock <Unlimited>]
+ [-MaxPasswordFailedAttempts <Unlimited>]
+ [-MinPasswordComplexCharacters <Int32>]
+ [-MinPasswordLength <Int32>]
+ [-PasswordEnabled <Boolean>]
+ [-PasswordExpiration <Unlimited>]
+ [-PasswordHistory <Int32>]
+ [-PasswordRecoveryEnabled <Boolean>]
+ [-RequireDeviceEncryption <Boolean>]
+ [-RequireEncryptedSMIMEMessages <Boolean>]
  [-RequireEncryptionSMIMEAlgorithm <EncryptionSMIMEAlgorithmType>]
- [-RequireManualSyncWhenRoaming <Boolean>] [-RequireSignedSMIMEAlgorithm <SignedSMIMEAlgorithmType>]
- [-RequireSignedSMIMEMessages <Boolean>] [-RequireStorageCardEncryption <Boolean>]
- [-UnapprovedInROMApplicationList <MultiValuedProperty>] [-UNCAccessEnabled <Boolean>] [-WhatIf]
- [-WSSAccessEnabled <Boolean>] [<CommonParameters>]
+ [-RequireManualSyncWhenRoaming <Boolean>]
+ [-RequireSignedSMIMEAlgorithm <SignedSMIMEAlgorithmType>]
+ [-RequireSignedSMIMEMessages <Boolean>]
+ [-RequireStorageCardEncryption <Boolean>]
+ [-UnapprovedInROMApplicationList <MultiValuedProperty>]
+ [-UNCAccessEnabled <Boolean>]
+ [-WhatIf]
+ [-WSSAccessEnabled <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,9 +118,7 @@ This example creates the mobile device mailbox policy Contoso Policy that has se
 The Name parameter specifies the name of the mobile device mailbox policy. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The name of the built-in mobile device mailbox policy is Default.
@@ -392,9 +420,7 @@ Accept wildcard characters: False
 The AllowSMIMEEncryptionAlgorithmNegotiation parameter specifies whether the messaging application on the mobile device can negotiate the encryption algorithm if a recipient's certificate doesn't support the specified encryption algorithm. Valid values for this parameter are:
 
 - AllowAnyAlgorithmNegotiation
-
 - BlockNegotiation
-
 - OnlyStrongAlgorithmNegotiation
 
 The default value is AllowAnyAlgorithmNegotiation.
@@ -561,8 +587,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -676,9 +701,7 @@ Unqualified values are treated as bytes. You can qualify the value with KB (kilo
 The maximum value is 1024 bytes (one kilobyte) less than two gigabytes (2\*1024^3), so these are the maximum qualified values you can use with this parameter.
 
 - 2097151KB
-
 - 2047.999024MB
-
 - 1.999999047GB
 
 ```yaml
@@ -698,13 +721,9 @@ Accept wildcard characters: False
 The MaxCalendarAgeFilter parameter specifies the maximum range of calendar days that can be synchronized to the mobile device. Valid values for this parameter are:
 
 - All
-
 - TwoWeeks
-
 - OneMonth
-
 - ThreeMonths
-
 - SixMonths
 
 The default value is All.
@@ -726,15 +745,10 @@ Accept wildcard characters: False
 The MaxEmailAgeFilter parameter specifies the maximum number of days of email items to synchronize to the mobile device. Valid values for this parameter are:
 
 - All
-
 - OneDay
-
 - ThreeDays
-
 - OneWeek
-
 - TwoWeeks
-
 - OneMonth
 
 The default value is All.
@@ -792,7 +806,6 @@ Accept wildcard characters: False
 The MaxInactivityTimeLock parameter specifies the length of time that the mobile device can be inactive before the password is required to reactivate it. Valid values are:
 
 - A timespan: hh:mm:ss, where hh = hours, mm = minutes and ss= seconds. The valid input range is 00:01:00 to 01:00:00 (one minute to one hour).
-
 - The value Unlimited. This is the default value.
 
 ```yaml
@@ -830,11 +843,8 @@ Accept wildcard characters: False
 The MinPasswordComplexCharacters parameter specifies the character sets that are required in the password of the mobile device. The character sets are:
 
 - Lower case letters.
-
 - Upper case letters.
-
 - Digits 0 through 9.
-
 - Special characters (for example, exclamation marks).
 
 A valid value for this parameter is an integer from 1 through 4. The default value is 1.
@@ -844,11 +854,8 @@ For Windows Phone 8 devices, the value specifies the number of character sets th
 For Windows Phone 10 devices, the value specifies the following password complexity requirements:
 
 - Digits only.
-
 - Digits and lower case letters.
-
 - Digits, lower case letters, and upper case letters.
-
 - Digits, lower case letters, upper case letters, and special characters.
 
 ```yaml
@@ -904,7 +911,6 @@ Accept wildcard characters: False
 The PasswordExpiration parameter specifies how long a password can be used on a mobile device before the user is forced to change the password. Valid values are:
 
 - A timespan: ddd.hh:mm:ss, where ddd = days, hh = hours, mm = minutes and ss= seconds. The valid input range is 1.00:00:00 to 730.00:00:00 (one day to two years).
-
 - The value Unlimited. This is the default value
 
 ```yaml
@@ -992,13 +998,9 @@ Accept wildcard characters: False
 The RequireEncryptionSMIMEAlgorithm parameter specifies the algorithm that's required to encrypt S/MIME messages on a mobile device. The valid values for this parameter are:
 
 - DES
-
 - TripleDES
-
 - RC240bit
-
 - RC264bit
-
 - RC2128bit
 
 The default value is TripleDES.

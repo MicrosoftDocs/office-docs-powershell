@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-SiteMailboxProvisioningPolicy
@@ -24,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SiteMailboxProvisioningPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>]
+Get-SiteMailboxProvisioningPolicy [[-Identity] <MailboxPolicyIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
@@ -55,9 +55,7 @@ This example returns detailed information about the site mailbox provisioning po
 The Identity parameter specifies the site mailbox provisioning policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml

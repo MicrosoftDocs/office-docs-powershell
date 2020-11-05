@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-activityalert
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: New-ActivityAlert
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # New-ActivityAlert
@@ -23,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### AnomalousOperationAuditAlert
 ```
-New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Type <AlertType>
+New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedProperty> -Type <AlertType>
+ [-Operation <MultiValuedProperty>]
  [-Category <AlertRuleCategory>]
  [-Condition <String>]
  [-Confirm]
@@ -35,12 +35,14 @@ New-ActivityAlert -Multiplier <Double> -Name <String> -NotifyUser <MultiValuedPr
  [-ScopeLevel <AlertScopeLevel>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SimpleAggregationAuditAlert
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <MultiValuedProperty>] -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Threshold <Int32> -TimeWindow <Int32> -Type <AlertType>
+ [-Operation <MultiValuedProperty>]
  [-Category <AlertRuleCategory>]
  [-Condition <String>]
  [-Confirm]
@@ -52,12 +54,14 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> [-Operation <
  [-ScopeLevel <AlertScopeLevel>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
 ```
-New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty> [-Type <AlertType>]
+New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <MultiValuedProperty>
+ [-Type <AlertType>]
  [-Category <AlertRuleCategory>]
  [-Confirm]
  [-Description <String>]
@@ -67,7 +71,8 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <M
  [-RecordType <AuditRecordType>]
  [-Severity <RuleSeverity>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,11 +88,8 @@ New-ActivityAlert -Name "External Sharing Alert" -Operation sharinginvitationcre
 This example creates a new activity alert named External Sharing Alert that has the following properties:
 
 - Operation: sharinginvitationcreated.
-
 - NotifyUser: chrisda@contoso.com and michelle@contoso.com.
-
 - UserId: laura@contoso.com and julia@contoso.com.
-
 - Description: Notification for external sharing events by laura@contoso.com and julia@contoso.com.
 
 ## PARAMETERS
@@ -101,7 +103,7 @@ You can only use this parameter with the Type parameter value AnomalousAggregati
 Type: Double
 Parameter Sets: AnomalousOperationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -117,7 +119,7 @@ The Name parameter specifies the unique name of the activity alert. The maximum 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -135,7 +137,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -157,7 +159,7 @@ You can't use this parameter if the Type parameter value is ElevationOfPrivilege
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -170,7 +172,7 @@ Accept wildcard characters: False
 Type: MultiValuedProperty
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -188,7 +190,7 @@ You can only use this parameter with the Type parameter value SimpleAggregation.
 Type: Int32
 Parameter Sets: SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -206,7 +208,7 @@ You can only use this parameter with the Type parameter value SimpleAggregation.
 Type: Int32
 Parameter Sets: SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -219,11 +221,8 @@ Accept wildcard characters: False
 The Type parameter specifies the type alert. Valid values are:
 
 - Custom: An alert is created for the activities you specify with the Operation parameter. Typically, you don't need to use this value (if you don't use the Type parameter, and you specify the activities with the Operations parameter, the value Custom is automatically added to the Type property).
-
 - ElevationOfPrivilege: This value is being retired.
-
 - SimpleAggregation: An alert is created based on the activities defined by the Operation and Condition parameters, the number of activities specified by the Threshold parameter, and the time period specified by the TimeWindow parameter.
-
 - AnomalousAggregation: An alert is created based the activities defined by the Operation and Condition parameters, and the number of activities specified by the Multiplier parameter.
 
 Note: You can't change the Type value in an existing activity alert.
@@ -232,7 +231,7 @@ Note: You can't change the Type value in an existing activity alert.
 Type: AlertType
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: True
 Position: Named
@@ -245,7 +244,7 @@ Accept wildcard characters: False
 Type: AlertType
 Parameter Sets: Default
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -258,22 +257,17 @@ Accept wildcard characters: False
 The Category parameter specifies a category for the activity alert. Valid values are:
 
 - None (This is the default value)
-
 - DataLossPrevention
-
 - ThreatManagement
-
 - DataGovernance
-
 - AccessGovernance
-
 - Others
 
 ```yaml
 Type: AlertRuleCategory
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -289,7 +283,7 @@ The Condition parameter specifies filter conditions for event aggregation.
 Type: String
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -301,15 +295,14 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -325,7 +318,7 @@ The Description parameter specifies an optional description for the activity ale
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -338,14 +331,13 @@ Accept wildcard characters: False
 The Disabled parameter specifies whether the activity alert is enabled or disabled. Valid values are:
 
 - $true: The activity alert is disabled.
-
 - $false: The activity alert is enabled. This is the default value.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -361,7 +353,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -379,7 +371,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -392,65 +384,35 @@ Accept wildcard characters: False
 The RecordType parameter specifies a record type label for the activity alert. Valid values are:
 
 - AeD
-
 - AzureActiveDirectory
-
 - AzureActiveDirectoryAccountLogon
-
 - AzureActiveDirectoryStsLogon
-
 - ComplianceDLPExchange
-
 - ComplianceDLPSharePoint
-
 - CRM
-
 - DataCenterSecurityCmdlet
-
 - Discovery
-
 - ExchangeAdmin
-
 - ExchangeAggregatedOperation
-
 - ExchangeItem
-
 - ExchangeItemGroup
-
 - MicrosoftTeams
-
 - OneDrive
-
 - PowerBIAudit
-
 - SecurityComplianceAlerts
-
 - SecurityComplianceCenterEOPCmdlet
-
 - SecurityComplianceInsights
-
 - SharePoint
-
 - SharePointFileOperation
-
 - SharePointListOperation
-
 - SharePointSharingOperation
-
 - SkypeForBusinessCmdlets
-
 - SkypeForBusinessPSTNUsage
-
 - SkypeForBusinessUsersBlocked
-
 - ThreatIntelligence
-
 - ThreatIntelligenceAtpContent
-
 - ThreatIntelligenceUrl
-
 - WorkplaceAnalytics
-
 - Yammer
 
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
@@ -459,7 +421,7 @@ You can't use this parameter when the value of the Type parameter is ElevationOf
 Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -472,14 +434,13 @@ Accept wildcard characters: False
 The ScopeLevel parameter specifies the scope for activity alerts that use the Type parameter values SimpleAggregation or AnomalousAggregation. Valid values are:
 
 - SingleUser (This is the default value)
-
 - AllUsers
 
 ```yaml
 Type: AlertScopeLevel
 Parameter Sets: AnomalousOperationAuditAlert, SimpleAggregationAuditAlert
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -492,18 +453,15 @@ Accept wildcard characters: False
 The Severity parameter specifies a severity level for the activity alert. Valid values are:
 
 - None
-
 - Low (This is the default value)
-
 - Medium
-
 - High
 
 ```yaml
 Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -516,7 +474,6 @@ Accept wildcard characters: False
 The UserId parameter specifies who you want to monitor.
 
 - If you specify a user's email address, you'll receive an email notification when the user performs the specified activity. You can specify multiple email addresses separated by commas.
-
 - If this parameter is blank ($null), you'll receive an email notification when any user in your organization performs the specified activity.
 
 You can only use this parameter with the Type parameter values Custom or ElevationOfPrivilege.
@@ -525,7 +482,7 @@ You can only use this parameter with the Type parameter values Custom or Elevati
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named
@@ -541,7 +498,7 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: Named

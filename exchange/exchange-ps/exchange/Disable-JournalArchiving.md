@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Disable-JournalArchiving
@@ -24,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-JournalArchiving [-Identity] <MailboxIdParameter> [-Confirm] [-PreserveMailUser] [-WhatIf]
+Disable-JournalArchiving [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-PreserveMailUser]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -52,23 +54,14 @@ This example disables the journal archiving for the user named Timothy Amaral. T
 The Identity parameter specifies the identity of the user's journal archive mailbox in Exchange Online. You can use any value that uniquely identifies the journal archive mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

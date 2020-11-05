@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-ActiveSyncMailboxPolicy
@@ -25,37 +24,64 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
- [-AllowBluetooth <BluetoothType>] [-AllowBrowser <Boolean>]
- [-AllowCamera <Boolean>] [-AllowConsumerEmail <Boolean>] [-AllowDesktopSync <Boolean>]
- [-AllowExternalDeviceManagement <Boolean>] [-AllowHTMLEmail <Boolean>]
- [-AllowInternetSharing <Boolean>] [-AllowIrDA <Boolean>]
- [-AllowMobileOTAUpdate <Boolean>] [-AllowNonProvisionableDevices <Boolean>]
- [-AllowPOPIMAPEmail <Boolean>] [-AllowRemoteDesktop <Boolean>]
+ [-AllowApplePushNotifications <Boolean>]
+ [-AllowBluetooth <BluetoothType>]
+ [-AllowBrowser <Boolean>]
+ [-AllowCamera <Boolean>]
+ [-AllowConsumerEmail <Boolean>]
+ [-AllowDesktopSync <Boolean>]
+ [-AllowExternalDeviceManagement <Boolean>]
+ [-AllowHTMLEmail <Boolean>]
+ [-AllowInternetSharing <Boolean>]
+ [-AllowIrDA <Boolean>]
+ [-AllowMobileOTAUpdate <Boolean>]
+ [-AllowNonProvisionableDevices <Boolean>]
+ [-AllowPOPIMAPEmail <Boolean>]
+ [-AllowRemoteDesktop <Boolean>]
  [-AllowSimpleDevicePassword <Boolean>]
  [-AllowSMIMEEncryptionAlgorithmNegotiation <SMIMEEncryptionAlgorithmNegotiationType>]
- [-AllowSMIMESoftCerts <Boolean>] [-AllowStorageCard <Boolean>]
- [-AllowTextMessaging <Boolean>] [-AllowUnsignedApplications <Boolean>]
- [-AllowUnsignedInstallationPackages <Boolean>] [-AllowWiFi <Boolean>]
+ [-AllowSMIMESoftCerts <Boolean>]
+ [-AllowStorageCard <Boolean>]
+ [-AllowTextMessaging <Boolean>]
+ [-AllowUnsignedApplications <Boolean>]
+ [-AllowUnsignedInstallationPackages <Boolean>]
+ [-AllowWiFi <Boolean>]
  [-AlphanumericDevicePasswordRequired <Boolean>]
- [-ApprovedApplicationList <ApprovedApplicationCollection>] [-AttachmentsEnabled <Boolean>] [-Confirm]
- [-DeviceEncryptionEnabled <Boolean>] [-DevicePasswordEnabled <Boolean>]
- [-DevicePasswordExpiration <Unlimited>] [-DevicePasswordHistory <Int32>]
- [-DevicePolicyRefreshInterval <Unlimited>] [-DomainController <Fqdn>] [-IrmEnabled <Boolean>]
- [-IsDefaultPolicy <Boolean>] [-MaxAttachmentSize <Unlimited>]
+ [-ApprovedApplicationList <ApprovedApplicationCollection>]
+ [-AttachmentsEnabled <Boolean>]
+ [-Confirm]
+ [-DeviceEncryptionEnabled <Boolean>]
+ [-DevicePasswordEnabled <Boolean>]
+ [-DevicePasswordExpiration <Unlimited>]
+ [-DevicePasswordHistory <Int32>]
+ [-DevicePolicyRefreshInterval <Unlimited>]
+ [-DomainController <Fqdn>]
+ [-IrmEnabled <Boolean>]
+ [-IsDefault <Boolean>]
+ [-IsDefaultPolicy <Boolean>]
+ [-MaxAttachmentSize <Unlimited>]
  [-MaxCalendarAgeFilter <CalendarAgeFilterType>]
  [-MaxDevicePasswordFailedAttempts <Unlimited>]
  [-MaxEmailAgeFilter <EmailAgeFilterType>]
- [-MaxEmailBodyTruncationSize <Unlimited>] [-MaxEmailHTMLBodyTruncationSize <Unlimited>]
- [-MaxInactivityTimeDeviceLock <Unlimited>] [-MinDevicePasswordComplexCharacters <Int32>]
+ [-MaxEmailBodyTruncationSize <Unlimited>]
+ [-MaxEmailHTMLBodyTruncationSize <Unlimited>]
+ [-MaxInactivityTimeDeviceLock <Unlimited>]
+ [-MinDevicePasswordComplexCharacters <Int32>]
  [-MinDevicePasswordLength <Int32>]
- [-Name <String>] [-PasswordRecoveryEnabled <Boolean>] [-RequireDeviceEncryption <Boolean>]
+ [-Name <String>]
+ [-PasswordRecoveryEnabled <Boolean>]
+ [-RequireDeviceEncryption <Boolean>]
  [-RequireEncryptedSMIMEMessages <Boolean>]
  [-RequireEncryptionSMIMEAlgorithm <EncryptionSMIMEAlgorithmType>]
- [-RequireManualSyncWhenRoaming <Boolean>] [-RequireSignedSMIMEAlgorithm <SignedSMIMEAlgorithmType>]
- [-RequireSignedSMIMEMessages <Boolean>] [-RequireStorageCardEncryption <Boolean>]
- [-UnapprovedInROMApplicationList <MultiValuedProperty>] [-UNCAccessEnabled <Boolean>] [-WhatIf]
- [-WSSAccessEnabled <Boolean>] [-AllowApplePushNotifications <Boolean>]
- [-IsDefault <Boolean>] [<CommonParameters>]
+ [-RequireManualSyncWhenRoaming <Boolean>]
+ [-RequireSignedSMIMEAlgorithm <SignedSMIMEAlgorithmType>]
+ [-RequireSignedSMIMEMessages <Boolean>]
+ [-RequireStorageCardEncryption <Boolean>]
+ [-UnapprovedInROMApplicationList <MultiValuedProperty>]
+ [-UNCAccessEnabled <Boolean>]
+ [-WhatIf]
+ [-WSSAccessEnabled <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -103,6 +129,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AllowApplePushNotifications
+This parameter is available only in the cloud-based service.
+
+The AllowApplePushNotifications parameter specifies whether push notifications are allowed to Apple mobile devices.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -493,8 +537,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -624,6 +667,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsDefault
+The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IsDefaultPolicy
 The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
 
@@ -660,15 +719,10 @@ Accept wildcard characters: False
 The MaxCalendarAgeFilter parameter specifies the maximum range of calendar days that can be synchronized to the device. The value is specified by entering one of the following values:
 
 - All
-
 - OneDay
-
 - ThreeDays
-
 - OneWeek
-
 - TwoWeeks
-
 - OneMonth
 
 ```yaml
@@ -704,15 +758,10 @@ Accept wildcard characters: False
 The MaxEmailAgeFilter parameter specifies the maximum number of days of email items to synchronize to the mobile phone. The value is specified by entering one of the following values.
 
 - All
-
 - OneDay
-
 - ThreeDays
-
 - OneWeek
-
 - TwoWeeks
-
 - OneMonth
 
 ```yaml
@@ -1008,40 +1057,6 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowApplePushNotifications
-This parameter is available only in the cloud-based service.
-
-The AllowApplePushNotifications parameter specifies whether push notifications are allowed to Apple mobile devices.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefault
-The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

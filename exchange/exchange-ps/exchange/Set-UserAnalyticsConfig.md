@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-UserAnalyticsConfig
@@ -55,15 +54,10 @@ This example sets the MyAnalytics privacy setting to OptIn for the user named Ka
 The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example: For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -83,9 +77,7 @@ Accept wildcard characters: False
 The PrivacyMode parameter specifies the MyAnalytics privacy setting for the user. Valid values are:
 
 - Excluded
-
 - Opt-In
-
 - Opt-Out
 
 ```yaml

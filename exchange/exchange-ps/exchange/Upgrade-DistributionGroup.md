@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Upgrade-DistributionGroup
@@ -26,8 +25,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Upgrade-DistributionGroup [-DlIdentities] <MultiValuedProperty> [-ActionType <String>]
- [-ExecutingUser <RecipientIdParameter>] [<CommonParameters>]
+Upgrade-DistributionGroup [-DlIdentities] <MultiValuedProperty>
+ [-ActionType <String>]
+ [-ExecutingUser <RecipientIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

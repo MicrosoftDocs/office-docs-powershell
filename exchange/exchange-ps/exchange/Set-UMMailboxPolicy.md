@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-UMMailboxPolicy
@@ -22,27 +21,56 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-UMMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-AllowAutomaticSpeechRecognition <Boolean>]
- [-AllowCallAnsweringRules <Boolean>] [-AllowCommonPatterns <Boolean>]
- [-AllowDialPlanSubscribers <Boolean>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
- [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <Boolean>]
- [-AllowFax <Boolean>] [-AllowMessageWaitingIndicator <Boolean>]
- [-AllowMissedCallNotifications <Boolean>] [-AllowPinlessVoiceMailAccess <Boolean>]
- [-AllowPlayOnPhone <Boolean>] [-AllowSMSNotification <Boolean>]
- [-AllowSubscriberAccess <Boolean>] [-AllowTUIAccessToCalendar <Boolean>]
- [-AllowTUIAccessToDirectory <Boolean>] [-AllowTUIAccessToEmail <Boolean>]
- [-AllowTUIAccessToPersonalContacts <Boolean>] [-AllowVoiceMailAnalysis <Boolean>]
- [-AllowVoiceMailPreview <Boolean>] [-AllowVoiceResponseToOtherMessageTypes <Boolean>] [-Confirm]
- [-DomainController <Fqdn>] [-FaxMessageText <String>] [-FaxServerURI <String>] [-ForceUpgrade]
- [-InformCallerOfVoiceMailAnalysis <Boolean>] [-LogonFailuresBeforePINReset <Unlimited>]
- [-MaxGreetingDuration <Int32>] [-MaxLogonAttempts <Unlimited>] [-MinPINLength <Int32>] [-Name <String>]
- [-PINHistoryCount <Int32>] [-PINLifetime <Unlimited>] [-ProtectAuthenticatedVoiceMail <DRMProtectionOptions>]
- [-ProtectedVoiceMailText <String>] [-ProtectUnauthenticatedVoiceMail <DRMProtectionOptions>]
- [-RequireProtectedPlayOnPhone <Boolean>] [-ResetPINText <String>]
- [-SourceForestPolicyNames <MultiValuedProperty>] [-UMDialPlan <UMDialPlanIdParameter>]
- [-UMEnabledText <String>] [-VoiceMailPreviewPartnerAddress <SmtpAddress>]
- [-VoiceMailPreviewPartnerAssignedID <String>] [-VoiceMailPreviewPartnerMaxDeliveryDelay <Int32>]
- [-VoiceMailPreviewPartnerMaxMessageDuration <Int32>] [-VoiceMailText <String>] [-WhatIf] [<CommonParameters>]
+Set-UMMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-AllowAutomaticSpeechRecognition <Boolean>]
+ [-AllowCallAnsweringRules <Boolean>]
+ [-AllowCommonPatterns <Boolean>]
+ [-AllowDialPlanSubscribers <Boolean>]
+ [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
+ [-AllowedInternationalGroups <MultiValuedProperty>]
+ [-AllowExtensions <Boolean>]
+ [-AllowFax <Boolean>]
+ [-AllowMessageWaitingIndicator <Boolean>]
+ [-AllowMissedCallNotifications <Boolean>]
+ [-AllowPinlessVoiceMailAccess <Boolean>]
+ [-AllowPlayOnPhone <Boolean>]
+ [-AllowSMSNotification <Boolean>]
+ [-AllowSubscriberAccess <Boolean>]
+ [-AllowTUIAccessToCalendar <Boolean>]
+ [-AllowTUIAccessToDirectory <Boolean>]
+ [-AllowTUIAccessToEmail <Boolean>]
+ [-AllowTUIAccessToPersonalContacts <Boolean>]
+ [-AllowVoiceMailAnalysis <Boolean>]
+ [-AllowVoiceMailPreview <Boolean>]
+ [-AllowVoiceResponseToOtherMessageTypes <Boolean>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FaxMessageText <String>]
+ [-FaxServerURI <String>]
+ [-ForceUpgrade]
+ [-InformCallerOfVoiceMailAnalysis <Boolean>]
+ [-LogonFailuresBeforePINReset <Unlimited>]
+ [-MaxGreetingDuration <Int32>]
+ [-MaxLogonAttempts <Unlimited>]
+ [-MinPINLength <Int32>]
+ [-Name <String>]
+ [-PINHistoryCount <Int32>]
+ [-PINLifetime <Unlimited>]
+ [-ProtectAuthenticatedVoiceMail <DRMProtectionOptions>]
+ [-ProtectedVoiceMailText <String>]
+ [-ProtectUnauthenticatedVoiceMail <DRMProtectionOptions>]
+ [-RequireProtectedPlayOnPhone <Boolean>]
+ [-ResetPINText <String>]
+ [-SourceForestPolicyNames <MultiValuedProperty>]
+ [-UMDialPlan <UMDialPlanIdParameter>]
+ [-UMEnabledText <String>]
+ [-VoiceMailPreviewPartnerAddress <SmtpAddress>]
+ [-VoiceMailPreviewPartnerAssignedID <String>]
+ [-VoiceMailPreviewPartnerMaxDeliveryDelay <Int32>]
+ [-VoiceMailPreviewPartnerMaxMessageDuration <Int32>]
+ [-VoiceMailText <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -434,8 +462,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

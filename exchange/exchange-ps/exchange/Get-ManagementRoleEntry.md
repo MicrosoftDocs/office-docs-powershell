@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Get-ManagementRoleEntry
@@ -22,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-DomainController <Fqdn>] [-Parameters <String[]>]
- [-PSSnapinName <String>] [-Type <ManagementRoleEntryType[]>] [<CommonParameters>]
+Get-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
+ [-DomainController <Fqdn>]
+ [-Parameters <String[]>]
+ [-PSSnapinName <String>]
+ [-Type <ManagementRoleEntryType[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

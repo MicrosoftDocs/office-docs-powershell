@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ActiveSyncVirtualDirectory
@@ -26,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-ActiveSyncVirtualDirectory -Server <ServerIdParameter>
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
- [-ShowMailboxVirtualDirectories] [<CommonParameters>]
+ [-ShowMailboxVirtualDirectories]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -34,7 +34,8 @@ Get-ActiveSyncVirtualDirectory -Server <ServerIdParameter>
 Get-ActiveSyncVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
- [-ShowMailboxVirtualDirectories] [<CommonParameters>]
+ [-ShowMailboxVirtualDirectories]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,9 +72,7 @@ This example returns a summary list of all Exchange ActiveSync virtual directori
 The Identity parameter specifies the ActiveSync virtual directory that you want to view. You can use any value that uniquely identifies the virtual directory. For example:
 
 - Name or \<Server\>\\Name
-
 - Distinguished name (DN)
-
 - GUID
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
@@ -97,11 +96,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 You can't use the Server and Identity parameters in the same command.

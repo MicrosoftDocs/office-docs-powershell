@@ -1,13 +1,12 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/Get-DlpEdmSchema
-applicable: Office 365 Security & Compliance Center
+applicable: Security & Compliance Center
 title: Get-DlpEdmSchema
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpEdmSchema
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DlpEdmSchema [[-Identity] <EdmStorageIdParameter>] [<CommonParameters>]
+Get-DlpEdmSchema [[-Identity] <EdmStorageIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,14 +50,13 @@ This example returns detailed information for the DLP EDM schema named Schema fo
 The Identity parameter specifies the DLP EDM schema that you want to view. You can use any value that uniquely identifies the schema. For example:
 
 - Name
-
 - Distinguished name (DN)
 
 ```yaml
 Type: EdmStorageIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Office 365 Security & Compliance Center
+Applicable: Security & Compliance Center
 
 Required: False
 Position: 0

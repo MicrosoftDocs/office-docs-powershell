@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxTransportService
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxTransportService [[-Identity] <MailboxTransportServerIdParameter>] [-DomainController <Fqdn>]
+Get-MailboxTransportService [[-Identity] <MailboxTransportServerIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

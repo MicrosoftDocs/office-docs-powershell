@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-SafeLinksDetailReport
@@ -37,8 +36,7 @@ Get-SafeLinksDetailReport [-Action <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-The Get-SafeLinksDetailReport cmdlet returns information about URL clicks for the last 7 days. 
-
+The Get-SafeLinksDetailReport cmdlet returns information about URL clicks for the last 7 days.
 Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites.
 
 This cmdlet returns the following information:

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-ApplicationAccessPolicy
@@ -25,7 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Set1
 ```
-Get-ApplicationAccessPolicy [[-Identity] <ApplicationAccessPolicyIdParameter>] [<CommonParameters>]
+Get-ApplicationAccessPolicy [[-Identity] <ApplicationAccessPolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

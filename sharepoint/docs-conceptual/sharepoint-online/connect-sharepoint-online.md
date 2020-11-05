@@ -1,5 +1,6 @@
 ---
 title: Get started with the SharePoint Online Management Shell
+ms.service: sharepoint-powershell
 ---
 
 # Get started with SharePoint Online Management Shell #
@@ -34,12 +35,12 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 
 1. Fill in the values for the **$adminUPN** and **$orgName** variables (replacing all the text between the quotes, including the < and > characters), and then run the following commands at the SharePoint Online Management Shell command prompt:
 
-```powershell
-$adminUPN="<the full email address of a SharePoint administrator account, example: jdoe@contosotoycompany.onmicrosoft.com>"
-$orgName="<name of your Office 365 organization, example: contosotoycompany>"
-$userCredential = Get-Credential -UserName $adminUPN -Message "Type the password."
-Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $userCredential
-```
+   ```powershell
+   $adminUPN="<the full email address of a SharePoint administrator account, example: jdoe@contosotoycompany.onmicrosoft.com>"
+   $orgName="<name of your Office 365 organization, example: contosotoycompany>"
+   $userCredential = Get-Credential -UserName $adminUPN -Message "Type the password."
+   Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $userCredential
+   ```
 
 2. When prompted with the Windows PowerShell credential request dialog box, type the password for the SharePoint admin account.
 
@@ -61,4 +62,7 @@ To assign a user the SharePoint admin role, see [Assign admin roles](https://doc
 You are now ready to use SharePoint Online commands.
 
 > [!NOTE]
-> If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](https://docs.microsoft.com/sharepoint/troubleshoot/security/cannot-force-modern-authentication).
+>
+> - If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](https://docs.microsoft.com/sharepoint/troubleshoot/security/cannot-force-modern-authentication).
+>
+> - There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer. If you encounter this issue, uninstall the SharePoint Client Components SDK.

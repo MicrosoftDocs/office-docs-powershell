@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010"
 ---
 
 # Set-RoutingGroupConnector
@@ -22,10 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-RoutingGroupConnector [-Identity] <RoutingGroupConnectorIdParameter> [-Confirm] [-Cost <Int32>]
- [-DomainController <Fqdn>] [-MaxMessageSize <Unlimited>] [-Name <String>]
- [-PublicFolderReferralsEnabled <Boolean>] [-SourceTransportServers <MultiValuedProperty>]
- [-TargetTransportServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-RoutingGroupConnector [-Identity] <RoutingGroupConnectorIdParameter>
+ [-Confirm]
+ [-Cost <Int32>]
+ [-DomainController <Fqdn>]
+ [-MaxMessageSize <Unlimited>]
+ [-Name <String>]
+ [-PublicFolderReferralsEnabled <Boolean>]
+ [-SourceTransportServers <MultiValuedProperty>]
+ [-TargetTransportServers <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,9 +51,7 @@ Set-RoutingGroupConnector -Identity "Exchange Administrative Group (FYDIBOHF23SP
 This example makes the following configuration changes to the routing group connector Ex2010 to Ex2003 RGC:
 
 - Sets the cost to 70.
-
 - Sets a maximum message size limit of 10 MB.
-
 - Specifies new source and target servers for the connector.
 
 ## PARAMETERS
@@ -71,8 +75,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -124,11 +127,8 @@ Accept wildcard characters: False
 The MaxMessageSize parameter specifies the maximum size of a message that can pass through a routing group connector. The default value is unlimited. When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
 
 Unqualified values are treated as bytes. The valid input range for this parameter is from 64KB through Int64. To remove the message size limit on a Send connector, enter a value of unlimited.

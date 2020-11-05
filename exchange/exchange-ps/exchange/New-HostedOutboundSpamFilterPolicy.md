@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # New-HostedOutboundSpamFilterPolicy
@@ -53,7 +52,6 @@ New-HostedOutboundSpamFilterPolicy -Name "Contoso Executives" -RecipientLimitExt
 This example creates a new outbound spam filter policy named Contoso Executives with the following settings:
 
 - The recipient rate limits are restricted to smaller values that the service defaults.
-
 - After one of the limits is reached, the user is prevented from sending messages (added to the Restricted Users portal).
 
 ## PARAMETERS
@@ -78,9 +76,7 @@ Accept wildcard characters: False
 The ActionWhenThresholdReach parameter specifies the action to take when any of the limits specified in the policy are reached. Valid values are:
 
 - Alert: No action, alert only.
-
 - BlockUser: Prevent the user from sending email messages.
-
 - BlockUserForToday: Prevent the user from sending email messages until the following day. This is the default value.
 
 ```yaml
@@ -118,9 +114,9 @@ Accept wildcard characters: False
 
 The AutoForwardingMode specifies how the policy controls automatic email forwarding to outbound recipients. Valid values are:
 
-- Automatic: Allows outbound spam filtering to control automatic external email forwarding. This is the default value.
-- On: Automatic external email forwarding is not disabled by the policy.
-- Off: All automatic external email forwarding is disabled by the policy.
+- Automatic: Automatic external email forwarding is blocked by the system. This is the default value.
+- On: Automatic external email forwarding is not restricted.
+- Off: Automatic external email forwarding is disabled and will result in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
 This setting applies only to cloud-based mailboxes, and automatic forwarding to internal recipients is not affected by this setting.
 
@@ -160,7 +156,6 @@ Accept wildcard characters: False
 The BccSuspiciousOutboundMail parameter specifies whether to add recipients to the Bcc field of outgoing spam messages. Valid values are:
 
 - $true: The recipients specified by the BccSuspiciousOutboundAdditionalRecipients parameter are added to outgoing spam messages.
-
 - $false: No additional messages are added to outgoing spam messages. This is the default value.
 
 ```yaml
@@ -177,12 +172,11 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyOutboundSpam
-**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://docs.microsoft.com/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam.md#verify-the-alert-settings-for-restricted-users).
+**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://docs.microsoft.com/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam#verify-the-alert-settings-for-restricted-users).
 
 The NotifyOutboundSpam parameter specify whether to notify admins when outgoing spam is detected. Valid values are:
 
 - $true: Notify the admins specified by the NotifyOutboundSpamRecipients parameter.
-
 - $false: Don't send notifications. This is the default value.
 
 ```yaml

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxSpellingConfiguration
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter> [-DomainController <Fqdn>]
+Get-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter>
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
@@ -30,11 +30,8 @@ Get-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter> [-DomainContro
 The Get-MailboxSpellingConfiguration cmdlet is primarily used to populate the spelling checker settings for end users in Outlook on the web. Administrators can also view users' settings by running this cmdlet. The following spelling checker settings are retrieved by the cmdlet for the specified mailbox:
 
 - Identity: This setting specifies the mailbox identity.
-
 - CheckBeforeSend: This setting specifies whether Outlook on the web checks the spelling of every message when the user clicks Send in the new message form.
-
 - DictionaryLanguage: This setting specifies the dictionary language used when the spelling checker checks the spelling in messages.
-
 - IgnoreMixedDigits: This setting specifies whether the spelling checker ignores words that contain numbers.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -68,23 +65,14 @@ This example returns the Outlook on the web spelling checker options for Tony's 
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-DlpPolicy
@@ -22,9 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DlpPolicy [[-Name] <String>] [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-Mode <RuleMode>] [-Parameters <Hashtable>] [-State <RuleState>]
- [-Template <String>] [-TemplateData <Byte[]>] [-WhatIf] [<CommonParameters>]
+New-DlpPolicy [[-Name] <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Mode <RuleMode>]
+ [-Parameters <Hashtable>]
+ [-State <RuleState>]
+ [-Template <String>]
+ [-TemplateData <Byte[]>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +47,6 @@ New-DlpPolicy -Name "Contoso PII" -Template "U.S. Personally Identifiable Inform
 This example creates a new DLP policy named Contoso PII with the following values:
 
 - The DLP policy is enabled and set to audit only.
-
 - The DLP policy is based on the existing "U.S. Personally Identifiable Information (PII) Data" DLP policy template.
 
 ## PARAMETERS
@@ -48,8 +54,7 @@ This example creates a new DLP policy named Contoso PII with the following value
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -103,9 +108,7 @@ Accept wildcard characters: False
 The Mode parameter specifies the action and notification level of the DLP policy. Valid values for this parameter are:
 
 - Audit: The actions specified by the DLP policy aren't enforced when a message matches the conditions specified by the policy, and the Policy Tip isn't displayed to the user.
-
 - AuditAndNotify: The actions specified by the DLP policy aren't enforced when a message matches the conditions specified by the policy, but the Policy Tip is displayed to the user in a supported email client.
-
 - Enforce: The actions specified by the DLP policy are enforced when a message matches the conditions specified by the policy, and the Policy Tip is displayed to the user in a supported email client.
 
 By default, the value of this parameter is set to Audit when you create a new DLP policy. If the State parameter is set to Disabled, the value of the Mode parameter is irrelevant.

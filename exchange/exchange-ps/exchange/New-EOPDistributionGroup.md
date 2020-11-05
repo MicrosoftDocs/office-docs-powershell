@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "eop-ps"
 ---
 
 # New-EOPDistributionGroup
@@ -40,7 +39,6 @@ New-EOPDistributionGroup -Name <String> -ManagedBy <String[]>
 You can use the New-EOPDistributionGroup cmdlet to create the following types of groups:
 
 - Mail-enabled universal security group (USG)
-
 - Universal distribution group
 
 Distribution groups are used to consolidate groups of recipients into a single point of contact for email messages. Security groups are used to grant permissions to multiple users.
@@ -87,15 +85,10 @@ Accept wildcard characters: False
 The ManagedBy parameter specifies a user who owns the group. You need to use this parameter to specify at least one group owner. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can specify multiple owners by using the following syntax: @("\<user1\>","\<user2\>"...).
@@ -155,23 +148,16 @@ Accept wildcard characters: False
 The Members parameter specifies the initial list of recipients (mail-enabled objects) in the distribution group. In Exchange Online Protection, the valid recipient types are:
 
 - Mail users
-
 - Distribution groups
-
 - Mail-enabled security groups
 
 You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 You can specify multiple recipients by using the following syntax: @("\<recipient1\>","\<recipient2\>"...).
@@ -225,7 +211,6 @@ Accept wildcard characters: False
 The Type parameter specifies the group type. Valid values are:
 
 - Distribution (This is the default value).
-
 - Security
 
 ```yaml

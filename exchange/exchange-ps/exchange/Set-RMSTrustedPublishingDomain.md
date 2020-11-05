@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Set-RMSTrustedPublishingDomain
@@ -32,7 +31,8 @@ Set-RMSTrustedPublishingDomain [-Identity] <RmsTrustedPublishingDomainIdParamete
  [-IntranetCertificationUrl <Uri>]
  [-IntranetLicensingUrl <Uri>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,9 +48,7 @@ Set-RMSTrustedPublishingDomain "Contoso TPD" -Default -ExtranetLicensingUrl http
 This example makes the following changes to the existing TPD Contoso TPD:
 
 - Sets Contoso TPD as the default TPD for the organization.
-
 - Sets the external licensing URL to https://rms.contoso.com/\_wmcs/licensing.
-
 - Sets the external certification URL to https://rms.contoso.com/\_wmcs/certification/servercertification.asmx
 
 ## PARAMETERS
@@ -59,9 +57,7 @@ This example makes the following changes to the existing TPD Contoso TPD:
 The Identity parameter specifies the TPD. You can use any value that uniquely identifies the TPD, for example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -80,8 +76,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

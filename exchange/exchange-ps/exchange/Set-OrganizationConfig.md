@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-OrganizationConfig
@@ -27,6 +26,7 @@ Set-OrganizationConfig
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
+ [-AllowPlusAddressInRecipients <Boolean>]
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
  [-AuditDisabled <Boolean>]
@@ -59,7 +59,6 @@ Set-OrganizationConfig
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-ElcProcessingDisabled <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
- [-ExternalInOutlookEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -103,7 +102,8 @@ Set-OrganizationConfig
  [-VisibleMeetingUpdateProperties <String>]
  [-WebPushNotificationsDisabled <Boolean>]
  [-WebSuggestedRepliesDisabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AdfsAuthenticationRawConfiguration
@@ -181,12 +181,16 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
  [-WACDiscoveryEndpoint <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### AdfsAuthenticationParameter
 ```
-Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>] [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
+Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
+ [-AdfsEncryptCertificateThumbprint <String>]
+ [-AdfsIssuer <Uri>]
+ [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
  [-ACLableSyncedObjectEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -261,7 +265,8 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
  [-WACDiscoveryEndpoint <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -493,6 +498,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowPlusAddressInRecipients
+This parameter is available only in the cloud-based service.
+
+The AllowPlusAddressInRecipients parameter enables or disables dynamic, disposable subaddressing as defined in RFC 5233. Valid values are:
+
+- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to jane+exampletag@contoso.com is delivered to jane@contoso.com. For customers who enrolled in Exchange Online after September 2020, this is the default value.- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to jane+exampletag@contoso.com is delivered only if jane+exampletag@contoso.com is configured as the primary address or a proxy address on an existing recipient. For customers who enrolled in Exchange Online before September 2020, this is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AppsForOfficeEnabled
 The AppsForOfficeEnabled parameter specifies whether to enable apps for Outlook features. By default, the parameter is set to $true. If the flag is set to $false, no new apps can be activated for any user in the organization.
 
@@ -513,7 +538,6 @@ Accept wildcard characters: False
 The AsyncSendEnabled parameter specifies whether to enable or disable async send in Outlook on the web. Valid values are:
 
 - $true: Async send is enabled. This is the default value.
-
 - $false: Async send is disabled.
 
 ```yaml
@@ -535,7 +559,6 @@ This parameter is available only in the cloud-based service.
 The AuditDisabled parameter specifies whether to disable or enable mailbox auditing for the organization. Valid values are:
 
 - $true: Mailbox auditing is disabled for the organization.
-
 - $false: Allow mailbox auditing in the organization. This is the default value.
 
 ```yaml
@@ -615,7 +638,6 @@ This parameter is available only in the cloud-based service.
 The BookingsEnabled parameter specifies whether to enable Microsoft Bookings in an Exchange Online organization. Valid values are:
 
 - $true: Bookings are enabled.
-
 - $false: Bookings are disabled. This is the default value.
 
 Microsoft Bookings is an online and mobile app for small businesses who provide services to customers on an appointment basis.
@@ -639,7 +661,6 @@ This parameter is available only in the cloud-based service.
 The BookingsPaymentsEnabled parameter specifies whether to enable online payment node inside Bookings. Valid values are:
 
 - $true: Online payments are enabled.
-
 - $false: Online payments are disabled. This is the default value.
 
 ```yaml
@@ -661,7 +682,6 @@ This parameter is available only in the cloud-based service.
 The BookingsSocialSharingRestricted parameter allows you to control whether, or not, your users can see social sharing options inside Bookings. Valid values are:
 
 - $true: Social sharing options are restricted.
-
 - $false: Users can see social sharing options inside Bookings. This is the default value.
 
 ```yaml
@@ -681,17 +701,11 @@ Accept wildcard characters: False
 The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encoding method for MIME format for messages sent to this remote domain. The valid values for this parameter are:
 
 - 0: Always use default 7-bit transfer encoding for HTML and plain text.
-
 - 1: Always use QP (quoted-printable) encoding for HTML and plain text.
-
 - 2: Always use Base64 encoding for HTML and plain text.
-
 - 5: Use QP encoding for HTML and plain text unless line wrapping is enabled in plain text. If line wrapping is enabled, use 7-bit encoding for plain text.
-
 - 6: Use Base64 encoding for HTML and plain text, unless line wrapping is enabled in plain text. If line wrapping is enabled in plain text, use Base64 encoding for HTML, and use 7-bit encoding for plain text.
-
 - 13: Always use QP encoding for HTML. Always use 7-bit encoding for plain text.
-
 - 14: Always use Base64 encoding for HTML. Always use 7-bit encoding for plain text.
 
 If no value is specified, Exchange always uses QP encoding for HTML and plain text.
@@ -730,8 +744,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -751,7 +764,6 @@ Accept wildcard characters: False
 The ConnectorsActionableMessagesEnabled parameter specifies whether to enable or disable actionable buttons in messages (connector cards) from connected apps on Outlook on the web. Valid values are:
 
 - $true: Action buttons in connector cards are enabled, which allows you to take quick actions directly from Outlook on the web (for example, Like or Comment). This is the default value.
-
 - $false: Action buttons in connector cards are disabled.
 
 For more information about actionable messages in connected apps, see [Connect apps to your inbox in Outlook on the web](https://support.microsoft.com/office/3d41b99c-bf8d-47d4-bc7a-97758b74689d).
@@ -773,7 +785,6 @@ Accept wildcard characters: False
 The ConnectorsEnabled parameter specifies whether to enable or disable all connected apps in organization. Valid values are:
 
 - $true: Connectors are enabled. This is the default value.
-
 - $false: Connectors are disabled.
 
 The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Yammer.
@@ -797,7 +808,6 @@ This parameter is available only in the cloud-based service.
 The ConnectorsEnabledForOutlook parameter specifies whether to enable or disable connected apps in Outlook on the web. Valid values are:
 
 - $true: Connectors are enabled. This is the default value.
-
 - $false: Connectors are disabled.
 
 To enable and disable the ability to use connectors on specific Microsoft 365 Groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
@@ -823,7 +833,6 @@ This parameter is available only in the cloud-based service.
 The ConnectorsEnabledForSharepoint parameter specifies whether to enable or disable connected apps on Sharepoint. Valid values are:
 
 - $true: Connectors are enabled. This is the default value.
-
 - $false: Connectors are disabled.
 
 ```yaml
@@ -845,7 +854,6 @@ This parameter is available only in the cloud-based service.
 The ConnectorsEnabledForTeams parameter specifies whether to enable or disable connected apps on Teams. Valid values are:
 
 - $true: Connectors are enabled. This is the default value.
-
 - $false: Connectors are disabled.
 
 ```yaml
@@ -867,7 +875,6 @@ This parameter is available only in the cloud-based service.
 The ConnectorsEnabledForYammer parameter specifies whether to enable or disable connected apps on Yammer. Valid values are:
 
 - $true: Connectors are enabled. This is the default value.
-
 - $false: Connectors are disabled.
 
 ```yaml
@@ -923,9 +930,7 @@ Accept wildcard characters: False
 The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 To remove the default policy assignment for the organization, use the value $null.
@@ -951,7 +956,6 @@ This parameter is available only in the cloud-based service.
 The DefaultGroupAccessType parameter specifies the default access type for Microsoft 365 Groups. Valid values are:
 
 - Public
-
 - Private (this is the default value)
 
 ```yaml
@@ -1007,13 +1011,9 @@ The DefaultPublicFolderIssueWarningQuota parameter specifies the default value a
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1039,13 +1039,9 @@ The DefaultPublicFolderMaxItemSize parameter specifies the default maximum size 
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1089,13 +1085,9 @@ The DefaultPublicFolderProhibitPostQuota parameter specifies the size of a publi
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -1121,7 +1113,6 @@ This parameter is available only in the cloud-based service.
 The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Microsoft 365 Groups. Valid values are:
 
 - $true: The automatic creation of direct report Microsoft 365 Groups is enabled.
-
 - $false: The automatic creation of direct report Microsoft 365 Groups is disabled. This is the default value.
 
 ```yaml
@@ -1177,23 +1168,14 @@ The basic syntax for this parameter is `"prefix<GroupName>suffix"`. The value `<
 You can use the following user attributes. The actual values are determined by the user who creates the group:
 
 - `<City>`
-
 - `<Company>`
-
 - `<CountryCode>`
-
 - `<CountryOrRegion>
-
 - `<CustomAttribute1>` to `<CustomAttribute15>`
-
 - `<Department>`
-
 - `<ExtensionCustomAttribute1>` to `<ExtensionCustomAttribute5>`
-
 - `<Office>`
-
 - `<StateOrProvince>`
-
 - `<Title>`
 
 For example: `"DL_<StateOrProvince>_<GroupName>"`, `"<StateOrProvince>-<City>-<Office>-<GroupName>"` or `"<GroupName> <CustomAttribute1>"`.
@@ -1237,7 +1219,6 @@ This parameter is available only in the cloud-based service.
 The ElcProcessingDisabled parameter specifies whether to enable or disable the processing of mailboxes by the Managed Folder Assistant. Valid values are:
 
 - $true: The Managed Folder Assistant isn't allowed to process mailboxes in the organization. Note that this setting will be ignored on a mailbox if a retention policy that has Preservation Lock enabled is applied to that mailbox.
-
 - $false: The Managed Folder Assistant is allowed to process mailboxes in the organization. This is the default value.
 
 ```yaml
@@ -1253,8 +1234,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableAuthAdminReadSession 
-This parameter is available only in on-premises Exchange.
+### -EnableAuthAdminReadSessionThis parameter is available only in on-premises Exchange.
 
 The EnableAuthAdminReadSession switch enables a recipient read session in Exchange 2016 CU17 or later, or in Exchange 2019 CU6 or later. You don't need to specify a value with this switch.
 
@@ -1277,7 +1257,6 @@ This parameter is available only in the cloud-based service.
 The EndUserDLUpgradeFlowsDisabled parameter specifies whether to prevent users from upgrading their own distribution groups to Microsoft 365 Groups in an Exchange Online organization. Valid values are:
 
 - $true: Users can upgrade distribution groups that they own to Microsoft 365 Groups.
-
 - $false: Users can't upgrade distribution groups that they own to Microsoft 365 Groups. This is the default value.
 
 ```yaml
@@ -1365,7 +1344,6 @@ Accept wildcard characters: False
 The EwsApplicationAccessPolicy parameter specifies the client applications that have access to EWS and REST. Valid values are:
 
 - EnforceAllowList: Only applications specified by the EwsAllowList parameter are allowed to access EWS and REST. Access by other applications is blocked.
-
 - EnforceBlockList: All applications are allowed to access EWS and REST, except for the applications specified by the EwsBlockList parameter.
 
 Note that if the EwsAllowEntourage, EwsAllowMacOutlook or EwsAllowOutlook parameters are set to a true or false value, they take precedence for access to EWS by Entourage, Mac Outlook, or Outlook, respectively.
@@ -1407,9 +1385,7 @@ Accept wildcard characters: False
 The EwsEnabled parameter specifies whether to globally enable or disable EWS access for the entire organization, regardless of what application is making the request. Valid values are:
 
 - $true: All EWS access is enabled.
-
 - $false: All EWS access is disabled.
-
 - $null (blank): The setting isn't configured. Access to EWS is controlled individually by the related EWS parameters (for example EwsAllowEntourage). This is the default value.
 
 This parameter has no affect on access to REST.
@@ -1463,17 +1439,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalInOutlookEnabled
-This parameter is available only in the cloud-based service.
-
-The ExternalInOutlookEnabled parameter specifies whether to add identifiers to messages from external senders in Outlook on the web (formerly known as Outlook Web App). Valid values are:
-
-- $true: External senders are identified as external in list view and the reading pane.
-
-- $false: External senders are not identified as external. This is the default value.
-
-Whether the sender's domain is considered internal or external is controlled by the Set-AcceptedDomain cmdlet.
-
 ```yaml
 Type: Boolean
 Parameter Sets: Default
@@ -1493,7 +1458,6 @@ This parameter is available only in the cloud-based service.
 The FocusedInboxOn parameter enables or disables Focused Inbox for the organization. Valid values are:
 
 - $true: Focused Inbox is enabled.
-
 - $false: Focused Inbox is disabled.
 
 To disable Focused Inbox on specific mailboxes, enable Focused Inbox for the organization, and then use the Set-FocusedInbox cmdlet.
@@ -1535,11 +1499,8 @@ Accept wildcard characters: False
 The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - GUID
 
 Setting a value for this parameter enables the hierarchical address book to be automatically displayed in Outlook for the organization.
@@ -1585,11 +1546,8 @@ The IPListBlocked parameter specifies the blocked IP addresses that aren't allow
 This parameter accepts IPv4 or IPv6 addresses in the following formats:
 
 - Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.
-
 - IP address range high-low: For example, 192.168.0.1-192.168.0.254.
-
 - IP address range with subnet mask: For example, 192.168.8.2(255.255.255.0).
-
 - Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:0DB8::CD3/60.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
@@ -1685,13 +1643,11 @@ Accept wildcard characters: False
 The LeanPopoutEnabled parameter specifies whether to enable faster loading of pop-out messages in Outlook on the web for Internet Explorer and Microsoft Edge. Valid values are:
 
 - $true: Lean pop-outs are enabled.
-
 - $false: Lean pop-outs are disabled. This is the default value.
 
 Notes:
 
 - Lean pop-outs aren't available for messages that contain attachments or information rights management (IRM) restrictions.
-
 - Outlook add-ins and Skype for Business Online presence aren't available with lean pop-outs.
 
 ```yaml
@@ -1711,7 +1667,6 @@ Accept wildcard characters: False
 The LinkPreviewEnabled parameter specifies whether link preview of URLs in email messages is allowed for the organization. Valid values are:
 
 - $true: Link preview of URLs in email messages is allowed. Users can enable or disable link preview in their Outlook on the web settings. This is the default value.
-
 - $false: Link preview of URLs in email messages is not allowed. Users can't enable link preview in their Outlook on the web settings.
 
 ```yaml
@@ -1831,7 +1786,6 @@ This parameter is available only in on-premises Exchange.
 The MapiHttpEnabled parameter enables or disables access to mailboxes in Outlook by using MAPI over HTTP. Valid values are:
 
 - $true: Access to mailboxes by using MAPI over HTTP is enabled. This is the default value.
-
 - $false: Access to mailboxes by using MAPI over HTTP is disabled.
 
 You can use the MapiHttpEnabled parameter on the Set-CASMailbox cmdlet to override the global MAPI over HTTP settings for individual users.
@@ -1935,15 +1889,10 @@ This parameter is available only in on-premises Exchange.
 The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient that should receive messages sent to the Exchange recipient. Typically, you would configure a mailbox to receive the messages sent to the Exchange recipient. You can use any value that uniquely identifies the recipient: For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml
@@ -1965,7 +1914,6 @@ This parameter is available only in the cloud-based service.
 The MobileAppEducationEnabled specifies whether to show or hide the Outlook for iOS and Android education reminder in Outlook on the web (formerly known as Outlook Web App). Valid values are:
 
 - $true: Outlook on the web and Outlook desktop will show the education reminder to users who aren't using Outlook for iOS and Android to check their company email and calendar events. This is the default value.
-
 - $false: The Outlook for iOS and Android education reminder is disabled.
 
 This setting will affect Outlook desktop at some point in the future.
@@ -1987,7 +1935,6 @@ Accept wildcard characters: False
 The OAuth2ClientProfileEnabled parameter enables or disables modern authentication in the Exchange organization. Valid values are:
 
 - $true: modern authentication is enabled.
-
 - $false: modern authentication is disabled.
 
 modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
@@ -2013,7 +1960,6 @@ This parameter is available only in the cloud-based service.
 The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
 
 - $true: All meetings are online by default.
-
 - $false: All meetings are not online by default. This is the default value.
 
 You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
@@ -2057,7 +2003,6 @@ This feature is currently in Preview, is not available everywhere, and is subjec
 The OutlookGifPickerDisabled parameter disables the GIF Search (powered by Bing) feature that's built into the Compose page in Outlook on the web. Valid values are:
 
 - $true: GIF Search in Outlook on the web is disabled.
-
 - $false: GIF Search in Outlook on the web is enabled. This is the default value.
 
 ```yaml
@@ -2079,17 +2024,13 @@ This parameter is available only in the cloud-based service.
 The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Microsoft 365 US Government Community Cloud (GCC) customers. Valid values are:
 
 - $true: Disable features that aren't FedRAMP compliant for GCC customers. This is the default value for all GCC customers.
-
 - $false: Enable features that aren't FedRAMP compliant for GCC customers.
 
 The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Microsoft 365 US Government customers include:
 
 - Multi-account support
-
 - Third-party services
-
 - HelpShift and in-app support
-
 - Any Microsoft services that are outside the Microsoft 365 US Government Community Cloud (for example, Bing and Cortana).
 
  For a full list of Features and services that are not FedRAMP compliant for GCC customers, see [Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
@@ -2146,10 +2087,9 @@ Accept wildcard characters: False
 ### -OutlookPayEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookPayEnabled parameter enables or disables [Pay bills and invoices in Outlook using Microsoft Pay](https://support.microsoft.com/office/1196e7e6-c096-44f1-a18a-9df3af832a48) in the Microsoft 365 organization. Valid values are:
+The OutlookPayEnabled parameter enables or disables Microsoft Pay in the Microsoft 365 organization. Valid values are:
 
 - $true: Payments in Outlook are enabled.
-
 - $False: Payments in Outlook are disabled.
 
 ```yaml
@@ -2171,7 +2111,6 @@ This parameter is available or functional only in Exchange Server 2010.
 The PermanentlyDeleteDisabled parameter specifies whether to disable the PermanentlyDelete retention action for messaging records management (MRM). Valid values are:
 
 - $true The PermanentlyDelete retention action is disabled. This setting only prevents items from being permanently deleted. It doesn't modify existing polices, block the creation of policies with the PermanentlyDelete action or notify users that thePermanentlyDelete action won't actually take effect.
-
 - $false The PermanentlyDelete retention action is enabled. This is the default value.
 
 A message that's permanently deleted can't be recovered by using the Recoverable Items folder. Additionally, permanently deleted messages aren't returned by a Discovery search, unless litigation hold or single item recovery is enabled for the mailbox.
@@ -2263,7 +2202,6 @@ This parameter is available only in on-premises Exchange.
 The PublicFolderMailboxesLockedForNewConnections parameter specifies whether users are allowed to make new connections to public folder mailboxes. Valid values are:
 
 - $true: Users aren't allowed to make new connections to public folder mailboxes. You use this setting during the final stages of public folder migrations.
-
 - $false: Users are allowed to make new connections to public folder mailboxes. This is the default value.
 
 ```yaml
@@ -2285,7 +2223,6 @@ This parameter is available only in on-premises Exchange.
 The PublicFolderMailboxesMigrationComplete parameter is used during public folder migration.
 
 - $true: Queued messages are rerouted to the new destination.
-
 - $false (This is the default value)
 
 ```yaml
@@ -2323,9 +2260,7 @@ Accept wildcard characters: False
 The PublicFoldersEnabled parameter specifies how public folders are deployed in your organization. This parameter uses one of the following values.
 
 - Local: The public folders are deployed locally in your organization.
-
 - Remote: The public folders are deployed in the remote forest.
-
 - None: No public folders are deployed for this organization.
 
 ```yaml
@@ -2342,19 +2277,16 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderShowClientControl
-This parameter is available only in the cloud-based service.
-
 The PublicFolderShowClientControl parameter enables or disables access to public folders in Microsoft Outlook. Valid values are:
 
 - $true: Users can access public folders in Outlook if the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet is set to the value $true (the default value is $false).
-
 - $false: User can't access public folders in Outlook. This is the default value.
 
 ```yaml
 Type: Boolean
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -2483,7 +2415,6 @@ Accept wildcard characters: False
 The SmtpActionableMessagesEnabled parameter specifies whether to enable or disable action buttons in email messages in Outlook on the web. Valid values are:
 
 - $true: Action buttons in email messages are enabled. This is the default value.
-
 - $false: Action buttons in email messages are disabled.
 
 ```yaml
@@ -2543,25 +2474,15 @@ This parameter uses the syntax: `"MeetingProperty1:MeetingStartTimeWithinXMinute
 The valid meeting properties to monitor for updates are:
 
 - Location: The meeting location field.
-
 - Subject: The meeting subject or title.
-
 - Sensitivity: The sensitivity (privacy) of the event.
-
 - Body: The meeting body or description.
-
 - OnlineMeetingLinks: The meeting join URL.
-
 - AllowForwarding: The option to allow or prevent forwarding of meetings.
-
 - RequestResponses: The option on whether responses are requested.
-
 - AllowNewTimeProposals: The option to allow or prevent new time proposals.
-
 - ShowAs: The free/busy state of the meeting: Free, Tentative, Busy, Working elsewhere, or Away/Out of office.
-
 - Reminder: The reminder time.
-
 - AllProperties: Any meeting change.
 
 If you don't specify a MeetingStartTimeWithinXMinutes value for the meeting property, any change to the meeting property will result in visible meeting update messages (regardless of how soon or how far away the meeting is). For updates to recurring meetings, the meeting start time is the start time of the next occurrence in the series.
@@ -2571,11 +2492,8 @@ The default value is `"Location,AllProperties:15"`: changes to the meeting locat
 There are three scenarios where meeting update messages are not auto-processed regardless of the values specified in this parameter (in these scenarios, attendees will always see meeting update messages in their Inbox):
 
 - The update contains a change to the meeting date, time, or recurrence pattern.
-
 - The meeting message is received for a delegated shared calendar.
-
 - The receiving attendee is @ mentioned in the meeting body.
-
 - The attendee has not yet responded to the meeting.
 
 ```yaml
@@ -2594,7 +2512,7 @@ Accept wildcard characters: False
 ### -WACDiscoveryEndpoint
 This parameter is available only in on-premises Exchange.
 
-The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes in the organization. For example, https://oos.internal.contoso.com/hosting/discovery.
+The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes in the organization. For example, `https://oos.internal.contoso.com/hosting/discovery`.
 
 Office Online Server enables users to view supported file attachments in Outlook on the web (formerly known as Outlook Web App).
 
@@ -2617,7 +2535,6 @@ This parameter is available only in the cloud-based service.
 The WebPushNotificationsDisabled parameter specifies whether to enable or disable Web Push Notifications in Outlook on the Web. This feature provides web push notifications which appear on a user's desktop while the user is not using Outlook on the Web. This brings awareness of incoming messages while they are working elsewhere on their computer. Valid values are:
 
 - $true: Web Push Notifications are disabled.
-
 - $false: Web Push Notifications are enabled. This is the default value.
 
 ```yaml
@@ -2639,7 +2556,6 @@ This parameter is available only in the cloud-based service.
 The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web. This feature provides suggested replies to emails so users can easily and quickly respond to messages. Valid values are:
 
 - $true: Suggested Replies are disabled.
-
 - $false: Suggested Replies are enabled. This is the default value.
 
 ```yaml

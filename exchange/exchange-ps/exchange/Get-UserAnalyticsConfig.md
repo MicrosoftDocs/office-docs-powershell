@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-UserAnalyticsConfig
@@ -24,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UserAnalyticsConfig -Identity <RecipientIdParameter> [<CommonParameters>]
+Get-UserAnalyticsConfig -Identity <RecipientIdParameter>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,15 +45,10 @@ This example returns the MyAnalytics privacy setting for the user with email add
 The Identity parameter specifies the user that you want to view. You can use any value that uniquely identifies the user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
 - Email address
-
 - GUID
 
 ```yaml

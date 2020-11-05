@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-MailDetailDlpPolicyReport
@@ -24,12 +23,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailDetailDlpPolicyReport [-Action <MultiValuedProperty>] [-Direction <MultiValuedProperty>]
- [-DlpPolicy <MultiValuedProperty>] [-Domain <MultiValuedProperty>] [-EndDate <DateTime>]
- [-EventType <MultiValuedProperty>] [-Expression <Expression>] [-MessageId <MultiValuedProperty>]
- [-MessageTraceId <MultiValuedProperty>] [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>]
- [-RecipientAddress <MultiValuedProperty>] [-SenderAddress <MultiValuedProperty>] [-StartDate <DateTime>]
- [-TransportRule <MultiValuedProperty>] [<CommonParameters>]
+Get-MailDetailDlpPolicyReport [-Action <MultiValuedProperty>]
+ [-Direction <MultiValuedProperty>]
+ [-DlpPolicy <MultiValuedProperty>]
+ [-Domain <MultiValuedProperty>]
+ [-EndDate <DateTime>]
+ [-EventType <MultiValuedProperty>]
+ [-Expression <Expression>]
+ [-MessageId <MultiValuedProperty>]
+ [-MessageTraceId <MultiValuedProperty>]
+ [-Page <Int32>]
+ [-PageSize <Int32>]
+ [-ProbeTag <String>]
+ [-RecipientAddress <MultiValuedProperty>]
+ [-SenderAddress <MultiValuedProperty>]
+ [-StartDate <DateTime>]
+ [-TransportRule <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxFolderStatistics
@@ -25,17 +24,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity
 ```
-Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive] [-DiagnosticInfo <String>]
- [-DomainController <Fqdn>] [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
- [-IncludeAnalysis] [-IncludeOldestAndNewestItems] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
+ [-Archive]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ### AuditLog
 ```
-Get-MailboxFolderStatistics [-AuditLog] [-DomainController <Fqdn>]
+Get-MailboxFolderStatistics [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-AuditLog]
+ [-DomainController <Fqdn>]
  [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
- [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-IncludeAnalysis]
- [-IncludeOldestAndNewestItems] [-DiagnosticInfo <String>] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems]
+ [-DiagnosticInfo <String>]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,23 +90,14 @@ This example uses the IncludeAnalysis switch to view the statistics of Tony's Re
 The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -200,48 +200,26 @@ Accept wildcard characters: False
 The FolderScope parameter specifies the scope of the search by folder type. Valid parameter values include:
 
 - All
-
-- Archive
-
+- Archive: Exchange 2016 or later.
 - Calendar
-
 - Contacts
-
 - ConversationHistory
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - JunkEmail
-
 - Journal
-
-- LegacyArchiveJournals
-
-- ManagedCustomFolder
-
-- NonIpmRoot
-
+- LegacyArchiveJournals: Exchange 2013 or later.
+- ManagedCustomFolder: Returns output for all managed custom folders.
+- NonIpmRoot: Exchange 2013 or later.
 - Notes
-
 - Outbox
-
 - Personal
-
-- RecoverableItems
-
+- RecoverableItems: Returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
 - RssSubscriptions
-
 - SentItems
-
 - SyncIssues
-
 - Tasks
-
-The ManagedCustomFolder value returns output for all managed custom folders. The RecoverableItems value returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
 
 ```yaml
 Type: Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType

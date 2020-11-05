@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxDatabaseCopyStatus
@@ -28,17 +27,20 @@ Get-MailboxDatabaseCopyStatus -Server <MailboxServerIdParameter>
  [-ConnectionStatus]
  [-DomainController <Fqdn>]
  [-ExtendedErrorInfo]
- [-UseServerCache] [<CommonParameters>]
+ [-UseServerCache]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>] [-Local]
+Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>]
+ [-Local]
  [-Active]
  [-ConnectionStatus]
  [-DomainController <Fqdn>]
  [-ExtendedErrorInfo]
- [-UseServerCache] [<CommonParameters>]
+ [-UseServerCache]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

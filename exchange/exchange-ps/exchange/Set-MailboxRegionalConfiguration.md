@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-MailboxRegionalConfiguration
@@ -23,17 +22,19 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter>
- [-Confirm] [-DateFormat <String>]
+ [-Confirm]
+ [-DateFormat <String>]
  [-DomainController <Fqdn>]
  [-Language <CultureInfo>]
  [-LocalizeDefaultFolderName]
  [-TimeFormat <String>]
  [-TimeZone <ExTimeZoneValue>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-As shown in Example 5, you might need to set the DateFormat and TimeFormat parameter values to $null when you change the Language parameter value and you recieve an error about invalid DateFormat values.
+As shown in Example 5, you might need to set the DateFormat and TimeFormat parameter values to $null when you change the Language parameter value and you receive an error about invalid DateFormat values.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -81,23 +82,14 @@ This example sets Megan Bowen mailbox language to Spanish Argentina, sets the da
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -116,8 +108,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -137,17 +128,11 @@ Accept wildcard characters: False
 The DateFormat parameter specifies a valid date format based on the current or specified language for the mailbox. For example, if the language is set to en-US, valid DateFormat parameter values include:
 
 - M/d/yyyy: This is the default value for en-US.
-
 - M/d/yy
-
 - MM/dd/yy
-
 - MM/dd/yyyy
-
 - yy/MM/dd
-
 - yyyy-MM-dd
-
 - dd-MMM-yy
 
 For more information about the date format strings, see [Standard Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings).
@@ -221,11 +206,8 @@ Accept wildcard characters: False
 The TimeFormat parameter specifies a valid time format based on the current or specified language value for the mailbox. For example, if the language is set to en-us, valid TimeFormat parameter values include:
 
 - h:mm tt: This is the default value for en-US.
-
 - hh:mm tt
-
 - H:mm
-
 - HH:mm
 
 For more information about the time format strings, see [Standard Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings).

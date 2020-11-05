@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-SendConnector
@@ -61,12 +60,14 @@ New-SendConnector -Name <String> -AddressSpaces <MultiValuedProperty>
  [-TlsDomain <SmtpDomainWithSubdomains>]
  [-Usage <UsageType>]
  [-UseExternalDNSServersEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### LinkedReceiveConnector
 ```
-New-SendConnector [-Name] <String> [-LinkedReceiveConnector <ReceiveConnectorIdParameter>]
+New-SendConnector [-Name] <String>
+ [-LinkedReceiveConnector <ReceiveConnectorIdParameter>]
  [-AuthenticationCredential <PSCredential>]
  [-Comment <String>]
  [-Confirm]
@@ -99,7 +100,8 @@ New-SendConnector [-Name] <String> [-LinkedReceiveConnector <ReceiveConnectorIdP
  [-TlsDomain <SmtpDomainWithSubdomains>]
  [-Usage <UsageType>]
  [-UseExternalDNSServersEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -115,7 +117,6 @@ New-SendConnector -Internet -Name MySendConnector -AddressSpaces contoso.com,fab
 This example creates the Send connector named MySendConnector with the following properties:
 
 - It sends email messages over the Internet.
-
 - It processes messages addressed only to Contoso.com and Fabrikam.com domains.
 
 ### Example 2
@@ -126,9 +127,7 @@ $CredentialObject = Get-Credential; New-SendConnector -Name "Secure Email to Con
 This example creates the Send connector Secure Email to Contoso.com with the following properties:
 
 - It processes messages only for the Contoso.com domain.
-
 - It uses Basic authentication.
-
 - It uses a specific authentication credential.
 
 To assign a specific authentication credential for the Send connector, you must first run the Get-Credential command and store the user input in a temporary variable. When you run the Get-Credential command, the command asks for the username and password of the account used during authentication with the Contoso.com email server. The temporary variable can then be used in the New-SendConnector cmdlet to create the new connector.
@@ -155,19 +154,14 @@ Accept wildcard characters: False
 The AddressSpaces parameter specifies the domain names to which the Send connector routes mail. The complete syntax for entering each address space is as follows: \<AddressSpaceType\>:\<AddressSpace\>;\<AddressSpaceCost\>
 
 - AddressSpaceType: On an Edge server, the address space type must be SMTP. In the Transport service on a Mailbox server, the address space type may be SMTP, X400, or any other text string. If you omit the address space type, SMTP is assumed.
-
 - AddressSpace: For SMTP address space types, the address space that you enter must be RFC 1035-compliant. For example, \*, \*.com, and \*.contoso.com are permitted, but \*contoso.com is not. For X.400 address space types, the address space that you enter must be RFC 1685-compliant, such as o=MySite;p=MyOrg;a=adatum;c=us. For all other values of address space type, you can enter any text for the address space.
-
 - AddressSpaceCost: The valid input range for the cost is from 1 through 100. A lower cost indicates a better route. This parameter is optional. If you omit the address space cost, a cost of 1 is assumed. If you enter a non-SMTP address space that contains the semicolon character (;), you must specify the address space cost.
 
 If you specify the address space type or the address space cost, you must enclose the address space in quotation marks ("). For example, the following address space entries are equivalent:
 
 - "SMTP:contoso.com;1"
-
 - "contoso.com;1"
-
 - "SMTP:contoso.com"
-
 - contoso.com
 
 You may specify multiple address spaces by separating the address spaces with commas, for example: contoso.com,fabrikam.com. If you specify the address space type or the address space cost, enclose the address space in quotation marks ("), for example: "contoso.com;2","fabrikam.com;3".
@@ -175,7 +169,6 @@ You may specify multiple address spaces by separating the address spaces with co
 If you specify a non-SMTP address space type on a Send connector configured in the Transport service on a Mailbox server, you must configure the following parameters:
 
 - The SmartHosts parameter must be set to a value that specifies a smart host.
-
 - The DNSRoutingEnabled parameter must be set to $false.
 
 Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see [Foreign connectors](https://docs.microsoft.com/exchange/foreign-connectors-exchange-2013-help).
@@ -219,7 +212,6 @@ The CloudServicesMailEnabled parameter specifies whether the connector is used f
 Valid values are:
 
 - $true: The connector is used for mail flow in hybrid organizations, so cross-premises headers are preserved or promoted in messages that flow through the connector. This is the default value for connectors that are created by the Hybrid Configuration wizard. Certain X-MS-Exchange-Organization-\* headers in outbound messages that are sent from one side of the hybrid organization to the other are converted to X-MS-Exchange-CrossPremises-\* headers and are thereby preserved in messages. X-MS-Exchange-CrossPremises-\* headers in inbound messages that are received on one side of the hybrid organization from the other are promoted to X-MS-Exchange-Organization-\* headers. These promoted headers replace any instances of the same X-MS-Exchange-Organization-\* headers that already exist in messages.
-
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
@@ -254,8 +246,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -295,7 +286,6 @@ Accept wildcard characters: False
 The ConnectorType parameter specifies whether the connector is used in hybrid deployments to send messages to Microsoft 365. Valid values are:
 
 - Default: The connector isn't used to send messages to Microsoft 365. This is the default value.
-
 - XPremises: The connector is used to send messages to Microsoft 365.
 
 ```yaml
@@ -315,11 +305,8 @@ Accept wildcard characters: False
 The Custom parameter specifies the Custom usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Custom parameter, you can't use any of the following parameters:
 
 - Internal
-
 - Internet
-
 - Partner
-
 - Usage
 
 For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
@@ -375,9 +362,7 @@ Accept wildcard characters: False
 The DomainSecureEnabled parameter enables mutual Transport Layer Security (TLS) authentication for the domains serviced by the Send connector when set to $true. Mutual TLS authentication functions correctly only if the following conditions are met:
 
 - DomainSecureEnabled is set to $true.
-
 - DNSRoutingEnabled is set to $true.
-
 - IgnoreSTARTTLS is set to $false.
 
 The wildcard character (\*) isn't supported in domains configured for mutual TLS authentication. The same domain must also be defined on the corresponding Receive connector, and in the value of the TLSReceiveDomainSecureList attribute of the transport configuration.
@@ -385,7 +370,6 @@ The wildcard character (\*) isn't supported in domains configured for mutual TLS
 The default value for the DomainSecureEnabled parameter is $false for the following types of Send connectors:
 
 - Those defined in the Transport service on a Mailbox server.
-
 - User-created Send connectors defined on an Edge server.
 
 The default value is $true for a default Send connector defined on an Edge server.
@@ -423,11 +407,8 @@ Accept wildcard characters: False
 The ErrorPolicies parameter specifies how communication errors are treated. Possible values are the following:
 
 - Default: A non-delivery report (NDR) is generated for communication errors.
-
 - DowngradeDnsFailures: All DNS errors are treated as transient.
-
 - DowngradeCustomFailures: Particular SMTP errors are treated as transient.
-
 - UpgradeCustomFailures Custom transient failures are upgraded and treated as permanent failures.
 
 Multiple values can be specified for this parameter, separated by commas.
@@ -483,9 +464,7 @@ Accept wildcard characters: False
 The Fqdn parameter specifies the FQDN used as the source server for connected messaging servers that use the Send connector to receive outgoing messages. The value of this parameter is displayed to connected messaging servers whenever a source server name is required, as in the following examples:
 
 - In the EHLO/HELO command when the Send connector communicates with the next hop messaging server
-
 - In the most recent Received header field added to the message by the next hop messaging server after the message leaves the Transport service on a Mailbox server or an Edge server
-
 - During TLS authentication
 
 The default value of the Fqdn parameter is $null. This means the default FQDN value is the FQDN of the Mailbox server or Edge server that contains the Send connector.
@@ -539,11 +518,8 @@ Accept wildcard characters: False
 The Internal parameter specifies the Internal usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internal parameter, you can't use any of the following parameters:
 
 - Custom
-
 - Internet
-
 - Partner
-
 - Usage
 
 For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
@@ -565,11 +541,8 @@ Accept wildcard characters: False
 The Internet parameter specifies the Internet usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internet parameter, you can't use any of the following parameters:
 
 - Custom
-
 - Internal
-
 - Partner
-
 - Usage
 
 For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
@@ -627,19 +600,14 @@ This parameter is available or functional only in Exchange Server 2010.
 The LinkedReceiveConnector parameter specifies whether to force all messages received by the specified Receive connector out through this Send connector. The value of LinkedReceivedConnector can use any of the following identifiers to specify the Receive connector:
 
 - GUID
-
 - Distinguished name (DN)
-
 - Servername\\ConnectorName
 
 When you use the LinkReceiveConnector parameter with this command, you must also use the following parameters with the specified values:
 
 - DNSRoutingEnabled $false
-
 - MaxMessageSize unlimited
-
 - Smarthosts \<SmarthostID\>
-
 - SmarthostAuthMechanism \<AuthMechanism\>
 
 When you use the LinkedReceiveConnector parameter, you can't use the AddressSpaces parameter.
@@ -663,13 +631,9 @@ The MaxMessageSize parameter specifies the maximum size of a message that can pa
 When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
-
 - KB (kilobytes)
-
 - MB (megabytes)
-
 - GB (gigabytes)
-
 - TB (terabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
@@ -693,11 +657,8 @@ Accept wildcard characters: False
 The Partner parameter specifies the Partner usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Partner parameter, you can't use any of the following parameters:
 
 - Custom
-
 - Internal
-
 - Internet
-
 - Usage
 
 For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
@@ -867,9 +828,7 @@ Accept wildcard characters: False
 The TlsAuthLevel parameter specifies the TLS authentication level that is used for outbound TLS connections established by this Send connector. Valid values are:
 
 - EncryptionOnly: TLS is used only to encrypt the communication channel. No certificate authentication is performed.
-
 - CertificateValidation: TLS is used to encrypt the channel and certificate chain validation and revocation lists checks are performed.
-
 - DomainValidation: In addition to channel encryption and certificate validation, the Send connector also verifies that the FQDN of the target certificate matches the domain specified in the TlsDomain parameter. If no domain is specified in the TlsDomain parameter, the FQDN on the certificate is compared with the recipient's domain.
 
 You can't specify a value for this parameter if the IgnoreSTARTTLS parameter is set to $true, or if the RequireTLS parameter is set to $false.
@@ -911,7 +870,6 @@ This parameter is used only if the TlsAuthLevel parameter is set to DomainValida
 A value for this parameter is required if:
 
 - The TLSAuthLevel parameter is set to DomainValidation.
-
 - The DNSRoutingEnabled parameter is set to $false (smart host Send connector).
 
 ```yaml
@@ -933,11 +891,8 @@ The Usage parameter specifies the default permissions and authentication methods
 If you use the Usage parameter, you can't use any of the following parameters:
 
 - Custom
-
 - Internal
-
 - Internet
-
 - Partner
 
 For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).

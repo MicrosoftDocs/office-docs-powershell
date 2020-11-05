@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-AvailabilityAddressSpace
@@ -22,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AvailabilityAddressSpace [[-Identity] <AvailabilityAddressSpaceIdParameter>] [-DomainController <Fqdn>]
+Get-AvailabilityAddressSpace [[-Identity] <AvailabilityAddressSpaceIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
@@ -49,6 +49,26 @@ This example returns details information for the availability address space obje
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the availability address space that you want to view. You can use any value that uniquely identifies the object. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: AvailabilityAddressSpaceIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -64,28 +84,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the availability address space that you want to view. You can use any value that uniquely identifies the object. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-```yaml
-Type: AvailabilityAddressSpaceIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

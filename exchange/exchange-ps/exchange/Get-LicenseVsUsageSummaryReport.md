@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps"
 ---
 
 # Get-LicenseVsUsageSummaryReport
@@ -33,15 +32,10 @@ Get-LicenseVsUsageSummaryReport [<CommonParameters>]
 This cmdlet produces a report that is intended to enable clients to track and manage the use of contracted software licenses. The output contains the following properties.
 
 - Date: The period being measured.
-
 - TenantGuid: The unique identifier for the Exchange Online tenant.
-
 - Workload: The workload whose users are being counted. The current workloads include: Exchange Online, SharePoint Online, Skype for Business Online, and Microsoft Yammer.
-
 - NonTrialEntitlements: The number of entitled users for the workload.
-
 - TrialEntitlements: The number of provisionally entitled (trial) users for the workload.
-
 - ActiveUsers: The count of active users for the workload.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).

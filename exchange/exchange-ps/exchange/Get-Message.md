@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-Message
@@ -33,7 +32,8 @@ Get-Message [-Filter <String>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
  [-Server <ServerIdParameter>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -47,7 +47,8 @@ Get-Message [[-Identity] <MessageIdentity>]
  [-ResultSize <Unlimited>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ### Queue
@@ -61,7 +62,8 @@ Get-Message [-Queue <QueueIdentity>]
  [-ResultSize <Unlimited>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -198,13 +200,9 @@ The IncludeRecipientInfo switch specifies whether to display the message recipie
 Storing the results of a Get-Message -IncludeRecipientInfo command in a variable allows you to display additional properties for the message recipients. The following list describes the available recipient properties:
 
 - Address: The email address of the recipient.
-
 - Type: The recipient type, which may be External, Mailbox or Distribution Group. Distribution Group is used when the destination is an expansion server.
-
 - FinalDestination: The distinguished name (DN) of the object used to route the message.
-
 - Status: The recipient status may be Complete, Ready or Retry.
-
 - LastError: The SMTP response after the last delivery attempt or a localized error message if the message is placed in the unreachable queue.
 
 For example, to store the recipient information of a message in the contoso.com remote delivery queue that has the MessageIdentity value of 1234 to a variable named $x, use the following command: $x=Get-Message -Identity "contoso.com\\1234" -IncludeRecipientInfo.
@@ -294,11 +292,8 @@ Accept wildcard characters: False
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - FQDN
-
 - Distinguished name (DN)
-
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.

@@ -7,7 +7,6 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-OutboundConnectorReport
@@ -24,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-OutboundConnectorReport [-Domain <Fqdn>] [-Expression <Expression>] [-ProbeTag <String>]
+Get-OutboundConnectorReport [-Domain <Fqdn>]
+ [-Expression <Expression>]
+ [-ProbeTag <String>]
  [<CommonParameters>]
 ```
 
