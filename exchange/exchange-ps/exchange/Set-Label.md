@@ -90,13 +90,6 @@ Set-Label -Identity "Label1" -LocaleSettings '{"localeKey":"DisplayName","Settin
 
 This example removes the localized label name and label Tooltips for "Label1" in different languages (English, German, and Spanish).
 
-### Example 3
-```powershell
-Set-Label -Identity "Client Label" -AdvancedSettings @{PFileSupportedExtensions=""}
-```
-
-This example removes the PFileSupportedExtensions property from the sensitivity label named Client Label.
-
 ## PARAMETERS
 
 ### -Identity
