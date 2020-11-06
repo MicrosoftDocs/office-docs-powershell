@@ -70,9 +70,6 @@
       },
       "ms.prod":{
         "sharepoint-ps/sharepoint-server/*.yml":"sharepoint-2016-powershell"
-      },
-      "ms.service":{
-        "sharepoint-ps/sharepoint-pnp/*.yml":"sharepoint-pnp-powershell"
       }
     },
     "template": [],
