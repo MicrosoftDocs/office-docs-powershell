@@ -48,7 +48,7 @@ Set-PnPTeamsTeam -Identity <TeamsTeamPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPTeamsChannel -Team "MyTeam" -DisplayName "My Team"
+Set-PnPTeamsTeam -Team "MyTeam" -DisplayName "My Team"
 ```
 
 Updates the team called 'MyTeam' to have the display name set to 'My Team'
