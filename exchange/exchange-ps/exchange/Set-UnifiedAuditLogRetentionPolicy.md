@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordTypes
-The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. For details about the available values, see the RecordType property description in [Detailed properties in the audit log](https://docs.microsoft.com/microsoft-365/compliance/detailed-properties-in-the-office-365-audit-log).
+The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 You can specify multiple values separated by commas. The values you specify will overwrite any existing entries.
 

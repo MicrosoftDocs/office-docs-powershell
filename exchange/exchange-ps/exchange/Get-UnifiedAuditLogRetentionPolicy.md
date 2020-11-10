@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter filters the results by the record types that are defined in the policy. For details about the available values, see the RecordType property description in [Detailed properties in the audit log](https://docs.microsoft.com/microsoft-365/compliance/detailed-properties-in-the-office-365-audit-log).
+The RecordType parameter filters the results by the record types that are defined in the policy. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 ```yaml
 Type: AuditRecordType
