@@ -115,6 +115,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ReportSeverityLevel <RuleSeverity>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
  [-WhatIf]
+ [-WithImportance <WithImportance>]
  [<CommonParameters>]
 ```
 
