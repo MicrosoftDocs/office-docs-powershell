@@ -27,6 +27,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-AddRecipients <PswsHashtable>]
  [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
+ [-ApplyHtmlDisclaimer <PswsHashtable>]
  [-BlockAccess <Boolean>]
  [-BlockAccessScope <BlockAccessScope>]
  [-Comment <String>]
@@ -72,6 +73,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ExceptIfSubjectMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
  [-ExceptIfSubjectOrBodyMatchesPatterns <MultiValuedProperty>]
+ [-ExceptIfWithImportance <WithImportance>]
  [-ExpiryDate <DateTime>]
  [-From <RecipientIdParameter[]>]
  [-FromAddressContainsWords <MultiValuedProperty>]
@@ -92,6 +94,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyUser <MultiValuedProperty>]
+ [-PrependSubject <String>]
  [-Priority <Int32>]
  [-ProcessingLimitExceeded <Boolean>]
  [-RecipientDomainIs <MultiValuedProperty>]
@@ -110,6 +113,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
  [-WhatIf]
+ [-WithImportance <WithImportance>]
  [<CommonParameters>]
 ```
 
@@ -267,6 +271,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplyHtmlDisclaimer
+The ApplyHtmlDisclaimer parameter specifies an action for the rule that adds disclaimer text to messages.This parameter uses the syntax: `@{Text = "Disclaimer text"; Location = <Append | Prepend>; FallbackAction = <Wrap | Ignore | Reject> }`.
+
+- Text: Specifies the disclaimer text to add. Disclaimer text can include HTML tags and inline cascading style sheet (CSS) tags. You can add images using the IMG tag.
+- Location: Specifies where to insert the HTML disclaimer text in the body of messages. Append = Add to the end of the message body. Prepend = Insert at the beginning of the message body.
+- FallbackAction: Specifies what to do if the HTML disclaimer can't be added to a message. Wrap = The original message is wrapped in a new message envelope, and the disclaimer is used as the message body for the new message. Ignore = The rule is ignored and the message is delivered without the disclaimer. Reject = The message is rejected.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockAccess
 The BlockAccess parameter specifies an action for the DLP rule that blocks access to the source item when the conditions of the rule are met. Valid values are:
 
@@ -342,9 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCharacterSetContainsWords
-The ContentCharacterSetContainsWords parameter specifies a condition for the rule that looks for character set names in messages.
-
-To specify multiple words, this parameter uses the syntax: `Word1,word2,...wordN`. Don't use leading or trailing spaces. 
+The ContentCharacterSetContainsWords parameter specifies a condition for the rule that looks for character set names in messages. You can specify multiple values separated by commas.
 
 Supported character sets are `big5, din_66003, euc-jp, euc-kr, gb18030, gb2312, hz-gb-2312, iso-2022-jp, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, koi8-r, koi8-u, ks_c_5601-1987, ns_4551-1, sen_850200_b, shift_jis, utf-7, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-874`.
 
@@ -1164,6 +1188,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfWithImportance
+The ExceptIfWithImportance parameter specifies an exception for the rule that looks for messages with the specified importance level. Valid values are:
+
+- Low
+- Normal
+- High
+
+You can use this exception in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: WithImportance
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExpiryDate
 This parameter is reserved for internal Microsoft use.
 
@@ -1581,6 +1627,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrependSubject
+The PrependSubject parameter specifies an action for the rule that adds text to add to the beginning of the Subject field of messages. The value for this parameter is the text that you want to add. If the text contains spaces, enclose the value in quotation marks (").
+
+Consider ending the value for this parameter with a colon (:) and a space, or at least a space, to separate it from the original subject.
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Priority
 The Priority parameter specifies a priority value for the rule that determines the order of rule processing within the policy. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
@@ -1922,6 +1988,28 @@ The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Security & Compliance Center
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WithImportance
+The WithImportance parameter specifies a condition for the rule that looks for messages with the specified importance level. Valid values are:
+
+- Low
+- Normal
+- High
+
+You can use this condition in DLP policies that are scoped only to Exchange.
+
+```yaml
+Type: WithImportance
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance Center
 
 Required: False
