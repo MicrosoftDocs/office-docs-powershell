@@ -68,6 +68,9 @@
       "ms.service":{
         "sharepoint-ps/sharepoint-online/*.yml":"sharepoint-powershell"
       },
+      "ms.service":{
+        "sharepoint-ps/sharepoint-pnp/*.yml":"sharepoint-powershell"
+      },
       "ms.prod":{
         "sharepoint-ps/sharepoint-server/*.yml":"sharepoint-2016-powershell"
       }
