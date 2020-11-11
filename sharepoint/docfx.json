@@ -66,9 +66,7 @@
     },
     "fileMetadata": {
       "ms.service":{
-        "sharepoint-ps/sharepoint-online/*.yml":"sharepoint-powershell"
-      },
-      "ms.service":{
+        "sharepoint-ps/sharepoint-online/*.yml":"sharepoint-powershell",
         "sharepoint-ps/sharepoint-pnp/*.yml":"sharepoint-powershell"
       },
       "ms.prod":{
