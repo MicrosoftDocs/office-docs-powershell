@@ -26,7 +26,8 @@ Get-PublicFolderDatabase -Server <ServerIdParameter>
  [-DomainController <Fqdn>]
  [-IncludePreExchange2010]
  [-Status]
- [-IncludeCorrupted] [<CommonParameters>]
+ [-IncludeCorrupted]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -35,7 +36,8 @@ Get-PublicFolderDatabase [[-Identity] <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludePreExchange2010]
  [-Status]
- [-IncludeCorrupted] [<CommonParameters>]
+ [-IncludeCorrupted]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

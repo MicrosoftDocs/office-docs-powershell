@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ManagementRole [-Identity] <RoleIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force] [-Recurse]
- [-UnScopedTopLevel] [-WhatIf] [<CommonParameters>]
+Remove-ManagementRole [-Identity] <RoleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Recurse]
+ [-UnScopedTopLevel]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

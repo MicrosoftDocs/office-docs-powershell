@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMCallAnsweringRule [[-Identity] <UMCallAnsweringRuleIdParameter>] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
+Get-UMCallAnsweringRule [[-Identity] <UMCallAnsweringRuleIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

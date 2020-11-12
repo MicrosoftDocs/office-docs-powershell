@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ClientAccessService [[-Identity] <ClientAccessServerIdParameter>] [-DomainController <Fqdn>]
- [-IncludeAlternateServiceAccountCredentialPassword] [-IncludeAlternateServiceAccountCredentialStatus]
+Get-ClientAccessService [[-Identity] <ClientAccessServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IncludeAlternateServiceAccountCredentialPassword]
+ [-IncludeAlternateServiceAccountCredentialStatus]
  [<CommonParameters>]
 ```
 
@@ -47,22 +49,6 @@ This example returns detailed information for the server mail.contoso.com.
 
 ## PARAMETERS
 
-### -DomainController
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the server with the Client Access server role installed that you want to view.
 
@@ -83,6 +69,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DomainController
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

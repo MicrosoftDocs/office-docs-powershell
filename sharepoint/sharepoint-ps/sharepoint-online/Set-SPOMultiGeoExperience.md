@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-.
+Used to set a geo location into SPO mode.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ ms.reviewer:
 
 ## DESCRIPTION
 
-Use this cmdlet to set a get location into SPO mode. This upgrade action is not reversible. For more information see [Enabling SharePoint Multi-Geo in your satellite geo location](https://docs.microsoft.com/office365/enterprise/enabling-sp-multigeo-satellite-geolocation)
+Use this cmdlet to set a geo location into SPO mode. This upgrade action is not reversible. For more information see [Enabling SharePoint Multi-Geo in your satellite geo location](https://docs.microsoft.com/office365/enterprise/enabling-sp-multigeo-satellite-geolocation)
 
 ## EXAMPLES
 

@@ -21,10 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-JournalRule -Name <String> -JournalEmailAddress <RecipientIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <Boolean>]
+New-JournalRule -Name <String> -JournalEmailAddress <RecipientIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
  [-Recipient <SmtpAddress>]
- [-Scope <JournalRuleScope>] [-WhatIf] [<CommonParameters>]
+ [-Scope <JournalRuleScope>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

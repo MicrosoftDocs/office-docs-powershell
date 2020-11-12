@@ -21,11 +21,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-OabVirtualDirectory [-Confirm] [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
- [-ExternalUrl <Uri>] [-InternalUrl <Uri>] [-Path <String>] [-PollInterval <Int32>] [-Recovery]
- [-RequireSSL <Boolean>] [-Server <ServerIdParameter>] [-WebSiteName <String>] [-WhatIf]
- [-Role <VirtualDirectoryRole>] [<CommonParameters>]
+New-OabVirtualDirectory [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
+ [-ExternalUrl <Uri>]
+ [-InternalUrl <Uri>]
+ [-Path <String>]
+ [-PollInterval <Int32>]
+ [-Recovery]
+ [-RequireSSL <Boolean>]
+ [-Role <VirtualDirectoryRole>]
+ [-Server <ServerIdParameter>]
+ [-WebSiteName <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -245,6 +256,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Role
+The Role parameter species the configuration for the virtual directory. Valid values are:
+
+- ClientAccess: Configure the virtual directory for the Client Access (frontend) services on the Mailbox server.
+- Mailbox: Configure the virtual directory for the backend services on the Mailbox server.
+
+Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
+
+```yaml
+Type: VirtualDirectoryRole
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Server
 The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
 
@@ -290,27 +322,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Role
-The Role parameter species the configuration for the virtual directory. Valid values are:
-
-- ClientAccess: Configure the virtual directory for the Client Access (frontend) services on the Mailbox server.
-- Mailbox: Configure the virtual directory for the backend services on the Mailbox server.
-
-Client connections are proxied from the Client Access services to the backend services on local or remote Mailbox servers. Clients don't connect directly to the backend services.
-
-```yaml
-Type: VirtualDirectoryRole
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

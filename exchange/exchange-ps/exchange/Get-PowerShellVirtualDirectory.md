@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-PowerShellVirtualDirectory -Server <ServerIdParameter>
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
- [-ShowMailboxVirtualDirectories] [<CommonParameters>]
+ [-ShowMailboxVirtualDirectories]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -33,7 +34,8 @@ Get-PowerShellVirtualDirectory -Server <ServerIdParameter>
 Get-PowerShellVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
- [-ShowMailboxVirtualDirectories] [<CommonParameters>]
+ [-ShowMailboxVirtualDirectories]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

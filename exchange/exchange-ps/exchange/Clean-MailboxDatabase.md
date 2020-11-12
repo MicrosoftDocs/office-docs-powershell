@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Clean-MailboxDatabase [-Identity] <DatabaseIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Clean-MailboxDatabase [-Identity] <DatabaseIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

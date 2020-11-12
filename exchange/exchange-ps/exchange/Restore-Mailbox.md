@@ -23,13 +23,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdParameter>
- -RecoveryMailbox <StoreMailboxIdParameter> -TargetFolder <String> [-AllowDuplicates]
- [-AllContentKeywords <String[]>] [-AttachmentFilenames <String[]>] [-BadItemLimit <Int32>] [-Confirm]
- [-ContentKeywords <String[]>] [-EndDate <DateTime>] [-ExcludeFolders <MapiFolderPath[]>]
- [-GlobalCatalog <Fqdn>] [-IncludeFolders <MapiFolderPath[]>] [-Locale <CultureInfo>] [-MaxThreads <Int32>]
- [-RecipientKeywords <String[]>] [-SenderKeywords <String[]>] [-StartDate <DateTime>]
- [-SubjectKeywords <String[]>] [-ValidateOnly] [-WhatIf] [<CommonParameters>]
+Restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdParameter> -RecoveryMailbox <StoreMailboxIdParameter> -TargetFolder <String>
+ [-AllowDuplicates]
+ [-AllContentKeywords <String[]>]
+ [-AttachmentFilenames <String[]>]
+ [-BadItemLimit <Int32>]
+ [-Confirm]
+ [-ContentKeywords <String[]>]
+ [-EndDate <DateTime>]
+ [-ExcludeFolders <MapiFolderPath[]>]
+ [-GlobalCatalog <Fqdn>]
+ [-IncludeFolders <MapiFolderPath[]>]
+ [-Locale <CultureInfo>]
+ [-MaxThreads <Int32>]
+ [-RecipientKeywords <String[]>]
+ [-SenderKeywords <String[]>]
+ [-StartDate <DateTime>]
+ [-SubjectKeywords <String[]>]
+ [-ValidateOnly]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

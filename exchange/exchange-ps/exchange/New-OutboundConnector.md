@@ -40,7 +40,8 @@ New-OutboundConnector [-Name] <String>
  [-TlsDomain <SmtpDomainWithSubdomains>]
  [-TlsSettings <TlsAuthLevel>]
  [-UseMXRecord <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

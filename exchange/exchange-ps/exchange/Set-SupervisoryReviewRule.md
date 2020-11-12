@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-SupervisoryReviewRule [-Identity] <ComplianceRuleIdParameter> [-Condition <String>] [-Confirm]
- [-SamplingRate <Int32>] [-WhatIf] [<CommonParameters>]
+Set-SupervisoryReviewRule [-Identity] <ComplianceRuleIdParameter>
+ [-Condition <String>]
+ [-Confirm]
+ [-SamplingRate <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

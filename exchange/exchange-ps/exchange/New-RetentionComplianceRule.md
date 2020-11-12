@@ -22,30 +22,39 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ComplianceTag
 ```
-New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParameter> [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParameter>
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
  [-RetentionComplianceAction <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Default
 ```
-New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-ExcludedItemClasses <MultiValuedProperty>] [-RetentionDuration <Unlimited>] [-RetentionDurationDisplayHint <HoldDurationHint>]
+New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
+ [-Comment <String>]
+ [-ExcludedItemClasses <MultiValuedProperty>]
+ [-RetentionDuration <Unlimited>]
+ [-RetentionDurationDisplayHint <HoldDurationHint>]
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
  [-RetentionComplianceAction <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PublishComplianceTag
 ```
-New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <String> [-Confirm]
+New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <String>
+ [-Confirm]
  [-ExpirationDateOption <String>]
  [-RetentionComplianceAction <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

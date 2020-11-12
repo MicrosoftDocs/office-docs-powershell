@@ -44,7 +44,8 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-Street <String>]
  [-Tags <String[]>]
  [-VideoDeviceName <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

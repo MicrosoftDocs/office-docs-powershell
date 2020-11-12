@@ -38,7 +38,8 @@ New-OfflineAddressBook [-Name] <String> -AddressLists <AddressBookBaseIdParamete
  [-SkipPublicFolderInitialization]
  [-Versions <MultiValuedProperty>]
  [-VirtualDirectories <VirtualDirectoryIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

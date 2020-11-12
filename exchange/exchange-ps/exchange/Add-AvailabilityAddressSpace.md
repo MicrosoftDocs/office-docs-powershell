@@ -23,9 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-AvailabilityAddressSpace -AccessMethod <AvailabilityAccessMethod>
- -ForestName <String> [-Confirm] [-Credentials <PSCredential>] [-DomainController <Fqdn>] [-ProxyUrl <Uri>]
- [-UseServiceAccount <Boolean>] [-WhatIf] [-TargetAutodiscoverEpr <Uri>] [<CommonParameters>]
+Add-AvailabilityAddressSpace -AccessMethod <AvailabilityAccessMethod> -ForestName <String>
+ [-Confirm]
+ [-Credentials <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ProxyUrl <Uri>]
+ [-TargetAutodiscoverEpr <Uri>]
+ [-UseServiceAccount <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -171,6 +177,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TargetAutodiscoverEpr
+The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, `https://contoso.com/autodiscover/autodiscover.xml`. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseServiceAccount
 This parameter is available only in on-premises Exchange.
 
@@ -200,22 +222,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TargetAutodiscoverEpr
-The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, `https://contoso.com/autodiscover/autodiscover.xml`. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

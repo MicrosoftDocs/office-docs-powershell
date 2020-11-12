@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-EventsFromEmailConfiguration [-Identity] <RecipientIdParameter> [<CommonParameters>]
+Get-EventsFromEmailConfiguration [-Identity] <RecipientIdParameter>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,10 +34,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-EventsFromEmailConfiguration –Identity peter@contoso.com
+Get-EventsFromEmailConfiguration -Identity peter@contoso.com
 ```
 
-This example retrieves all events from email settings for peter@contoso.com’s mailbox.
+This example retrieves all events from email settings for peter@contoso.com's mailbox.
 
 ## PARAMETERS
 

@@ -25,8 +25,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Suspend-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-SuspendComment <String>] [-WhatIf] [<CommonParameters>]
+Suspend-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-SuspendComment <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

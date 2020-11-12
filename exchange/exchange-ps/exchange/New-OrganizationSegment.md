@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-OrganizationSegment [-Name] <String> -UserGroupFilter <String>
  [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

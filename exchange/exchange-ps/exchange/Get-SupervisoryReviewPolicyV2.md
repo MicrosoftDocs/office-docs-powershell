@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SupervisoryReviewPolicyV2 [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-SupervisoryReviewPolicyV2 [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -27,7 +27,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-EcpVirtualDirectory -Server <ServerIdParameter>
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
- [-ShowMailboxVirtualDirectories] [<CommonParameters>]
+ [-ShowMailboxVirtualDirectories]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -35,7 +36,8 @@ Get-EcpVirtualDirectory -Server <ServerIdParameter>
 Get-EcpVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
  [-ADPropertiesOnly]
  [-DomainController <Fqdn>]
- [-ShowMailboxVirtualDirectories] [<CommonParameters>]
+ [-ShowMailboxVirtualDirectories]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -25,7 +25,8 @@ Remove-WebServicesVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

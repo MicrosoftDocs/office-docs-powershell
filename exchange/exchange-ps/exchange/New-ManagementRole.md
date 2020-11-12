@@ -22,22 +22,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### NewDerivedRole
 ```
-New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-EnabledCmdlets <String[]>]
+New-ManagementRole [-Name] <String> -Parent <RoleIdParameter>
+ [-EnabledCmdlets <String[]>]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UnScopedTopLevelRole
 ```
-New-ManagementRole [-Name] <String> [-UnScopedTopLevel]
+New-ManagementRole [-Name] <String>
+ [-UnScopedTopLevel]
  [-Confirm]
  [-Description <String>]
  [-DomainController <Fqdn>]
  [-Force]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

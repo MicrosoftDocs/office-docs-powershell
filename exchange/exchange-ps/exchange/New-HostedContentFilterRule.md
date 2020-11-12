@@ -34,7 +34,8 @@ New-HostedContentFilterRule [-Name] <String> -HostedContentFilterPolicy <HostedC
  [-RecipientDomainIs <Word[]>]
  [-SentTo <RecipientIdParameter[]>]
  [-SentToMemberOf <RecipientIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

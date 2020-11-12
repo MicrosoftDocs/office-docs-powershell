@@ -21,10 +21,20 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ExchangeSettings [[-Identity] <ExchangeSettingsIdParameter>] [-ConfigName <String>]
- [-Database <DatabaseIdParameter>] [-Diagnostic] [-DiagnosticArgument <String>] [-DomainController <Fqdn>]
- [-Force] [-GenericScopeName <String>] [-GenericScopes <String[]>] [-GenericScopeValue <String>]
- [-Organization <OrganizationIdParameter>] [-Process <String>] [-Server <ServerIdParameter>] [-User <Guid>]
+Get-ExchangeSettings [[-Identity] <ExchangeSettingsIdParameter>]
+ [-ConfigName <String>]
+ [-Database <DatabaseIdParameter>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-GenericScopeName <String>]
+ [-GenericScopes <String[]>]
+ [-GenericScopeValue <String>]
+ [-Organization <OrganizationIdParameter>]
+ [-Process <String>]
+ [-Server <ServerIdParameter>]
+ [-User <Guid>]
  [<CommonParameters>]
 ```
 

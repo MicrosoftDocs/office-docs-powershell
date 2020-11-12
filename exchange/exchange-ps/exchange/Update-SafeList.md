@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Update-SafeList [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-EnsureJunkEmailRule]
- [-IncludeDomains] [-Type <UpdateType>] [-WhatIf]
+Update-SafeList [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EnsureJunkEmailRule]
+ [-IncludeDomains]
+ [-Type <UpdateType>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-SafeAttachmentRule [-Identity] <RuleIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Enable-SafeAttachmentRule [-Identity] <RuleIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

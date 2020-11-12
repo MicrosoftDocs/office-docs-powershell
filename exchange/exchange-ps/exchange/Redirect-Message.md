@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Redirect-Message -Server <ServerIdParameter> -Target <MultiValuedProperty>
- [-Confirm] [-WhatIf]
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

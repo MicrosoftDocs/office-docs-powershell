@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DistributionGroupMember [-Identity] <DistributionGroupMemberIdParameter> [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-ReadFromDomainController] [-ResultSize <Unlimited>]
+Get-DistributionGroupMember [-Identity] <DistributionGroupMemberIdParameter>
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 

@@ -26,33 +26,39 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### OrgReleaseToUser
 ```
-Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>] -User <String[]>
+Release-QuarantineMessage -User <String[]> [-Identities <QuarantineMessageIdentity[]>]
+ [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### OrgReleaseToAll
 ```
-Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>] [-ReleaseToAll]
+Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity <QuarantineMessageIdentity>]
+ [-ReleaseToAll]
  [-AllowSender]
  [-Confirm]
  [-Delete]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identities
 ```
-Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
+Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
+ [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### IdentityOnly
@@ -62,7 +68,8 @@ Release-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-Confirm]
  [-Force]
  [-ReportFalsePositive]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -30,10 +30,12 @@ New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String>
  [-ExceptIfRecipientDomainIs <Word[]>]
  [-ExceptIfSentTo <RecipientIdParameter[]>]
  [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
- [-Priority <Int32>] [-RecipientDomainIs <Word[]>]
+ [-Priority <Int32>]
+ [-RecipientDomainIs <Word[]>]
  [-SentTo <RecipientIdParameter[]>]
  [-SentToMemberOf <RecipientIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

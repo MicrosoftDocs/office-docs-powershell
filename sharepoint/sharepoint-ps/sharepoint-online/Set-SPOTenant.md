@@ -97,6 +97,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EmailAttestationRequired <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
  [-BlockUserInfoVisibility]
+ [-IncludeAtAGlanceInShareEmails]
  [<CommonParameters>]
 ```
 
@@ -262,6 +263,8 @@ The valid values are:
 
 - WebPreviewableFiles
 - ServerRenderedFilesOnly
+
+**Note**: ServerRendered (Office Only) and WebPreviewable (All supported files). 
 
 ```yaml
 Type: BlockDownloadLinksFileTypes

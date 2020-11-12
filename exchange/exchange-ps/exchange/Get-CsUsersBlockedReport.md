@@ -25,7 +25,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CsUsersBlockedReport [-EndDate <DateTime>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-CsUsersBlockedReport [-EndDate <DateTime>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

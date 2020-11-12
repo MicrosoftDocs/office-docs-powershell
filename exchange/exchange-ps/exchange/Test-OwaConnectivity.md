@@ -30,12 +30,18 @@ Test-OwaConnectivity [-URL] <String> -MailboxCredential <PSCredential>
  [-ResetTestAccountCredentials]
  [-Timeout <UInt32>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-RSTEndpoint <String>] [-TestType <OwaConnectivityTestType>] [-VirtualDirectoryName <String>]
+Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-RSTEndpoint <String>]
+ [-TestType <OwaConnectivityTestType>]
+ [-VirtualDirectoryName <String>]
  [-AllowUnsecureAccess]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -43,7 +49,8 @@ Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-MailboxServer
  [-ResetTestAccountCredentials]
  [-Timeout <UInt32>]
  [-TrustAnySSLCertificate]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

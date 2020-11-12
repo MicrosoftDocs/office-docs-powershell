@@ -42,7 +42,8 @@ Get-Recipient [-Anr <String>]
  [-Capabilities <MultiValuedProperty>]
  [-Database <DatabaseIdParameter>]
  [-Properties <String[]>]
- [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -64,7 +65,8 @@ Get-Recipient [[-Identity] <RecipientIdParameter>]
  [-SortBy <String>]
  [-Capabilities <MultiValuedProperty>]
  [-Properties <String[]>]
- [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
 ```
 
 ### DatabaseSet
@@ -82,7 +84,8 @@ Get-Recipient [-Database <DatabaseIdParameter>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [-IncludeSoftDeletedRecipients]
+ [<CommonParameters>]
  [<CommonParameters>]
 ```
 
@@ -102,7 +105,9 @@ Get-Recipient [-RecipientPreviewFilter <String>]
  [-ReadFromDomainController]
  [-RecipientType <RecipientType[]>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
- [-ResultSize <Unlimited>] [-SortBy <String>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

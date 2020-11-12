@@ -21,7 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-ActivityAlert [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf] [<CommonParameters>]
+Remove-ActivityAlert [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-ForceDeletion]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -28,7 +28,8 @@ New-RetentionPolicyTag [-Name] <String>
  [-AddressForJournaling <RecipientIdParameter>]
  [-AgeLimitForRetention <EnhancedTimeSpan>]
  [-Comment <String>]
- [-Confirm] [-DomainController <Fqdn>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-IsDefaultAutoGroupPolicyTag]
  [-IsDefaultModeratedRecipientsPolicyTag]
  [-JournalingEnabled <Boolean>]
@@ -43,12 +44,14 @@ New-RetentionPolicyTag [-Name] <String>
  [-RetentionId <Guid>]
  [-SystemTag <Boolean>]
  [-Type <ElcFolderType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UpgradeManagedFolder
 ```
-New-RetentionPolicyTag [-Name] <String> [-ManagedFolderToUpgrade <ELCFolderIdParameter>]
+New-RetentionPolicyTag [-Name] <String>
+ [-ManagedFolderToUpgrade <ELCFolderIdParameter>]
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -59,7 +62,8 @@ New-RetentionPolicyTag [-Name] <String> [-ManagedFolderToUpgrade <ELCFolderIdPar
  [-MustDisplayCommentEnabled <Boolean>]
  [-SystemTag <Boolean>]
  [-Type <ElcFolderType>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -25,7 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AccessToCustomerDataRequest [-ApprovalStatus <String>] [-CreatedAfter <ExDateTime>] [-RequestId <String>]
+Get-AccessToCustomerDataRequest [-ApprovalStatus <String>]
+ [-CreatedAfter <ExDateTime>]
+ [-RequestId <String>]
  [<CommonParameters>]
 ```
 

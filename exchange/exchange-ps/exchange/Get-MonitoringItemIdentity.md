@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MonitoringItemIdentity [-Identity] <String> -Server <ServerIdParameter> [<CommonParameters>]
+Get-MonitoringItemIdentity [-Identity] <String> -Server <ServerIdParameter>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

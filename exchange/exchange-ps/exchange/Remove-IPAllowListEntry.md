@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-IPAllowListEntry [-Identity] <IPListEntryIdentity> [-Confirm] [-Server <ServerIdParameter>] [-WhatIf]
+Remove-IPAllowListEntry [-Identity] <IPListEntryIdentity>
+ [-Confirm]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

@@ -21,15 +21,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ProtectionAlert
- -Category <AlertRuleCategory>
- -Name <String> -NotifyUser <MultiValuedProperty> -ThreatType <ThreatAlertType>
- [-AggregationType <AlertAggregationType>] [-AlertBy <MultiValuedProperty>]
- [-AlertFor <MultiValuedProperty>] [-Comment <String>] [-Confirm] [-Description <String>]
- [-Disabled <Boolean>] [-Filter <String>] [-NotificationCulture <CultureInfo>]
- [-NotifyUserOnFilterMatch <Boolean>] [-NotifyUserSuppressionExpiryDate <DateTime>]
- [-NotifyUserThrottleThreshold <Int32>] [-NotifyUserThrottleWindow <Int32>] [-Operation <MultiValuedProperty>]
- [-Severity <RuleSeverity>] [-Threshold <Int32>] [-TimeWindow <Int32>] [-WhatIf]
+New-ProtectionAlert -Category <AlertRuleCategory> -Name <String> -NotifyUser <MultiValuedProperty> -ThreatType <ThreatAlertType>
+ [-AggregationType <AlertAggregationType>]
+ [-AlertBy <MultiValuedProperty>]
+ [-AlertFor <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Disabled <Boolean>]
+ [-Filter <String>]
+ [-NotificationCulture <CultureInfo>]
+ [-NotifyUserOnFilterMatch <Boolean>]
+ [-NotifyUserSuppressionExpiryDate <DateTime>]
+ [-NotifyUserThrottleThreshold <Int32>]
+ [-NotifyUserThrottleWindow <Int32>]
+ [-Operation <MultiValuedProperty>]
+ [-Severity <RuleSeverity>]
+ [-Threshold <Int32>]
+ [-TimeWindow <Int32>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxServer [[-Identity] <MailboxServerIdParameter>] [-DomainController <Fqdn>] [-Status]
+Get-MailboxServer [[-Identity] <MailboxServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Status]
  [<CommonParameters>]
 ```
 

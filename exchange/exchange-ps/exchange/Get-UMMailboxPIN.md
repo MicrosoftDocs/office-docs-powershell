@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-UMMailboxPin [[-Identity] <MailboxIdParameter>] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-IgnoreErrors] [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-UMMailboxPin [[-Identity] <MailboxIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-IgnoreErrors]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

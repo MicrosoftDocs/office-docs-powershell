@@ -22,7 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ActiveSyncDeviceAccessRule [-Identity] <ActiveSyncDeviceAccessRuleIdParameter>
- [-AccessLevel <DeviceAccessLevel>] [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+ [-AccessLevel <DeviceAccessLevel>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

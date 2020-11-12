@@ -77,7 +77,8 @@ Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "Unified
 
 This example searches the unified audit log for all events from May 1, 2018 to May 8, 2018. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
-> [!NOTE]
+>
+ [!NOTE]
 > If you use the SessionCommand value ReturnLargeSet, and then you use the value ReturnNextPreviewPage for the same session ID, the results are limited to 10,000 records (not 50,000).
 
 ### Example 4
@@ -231,79 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter filters the log entries by record type. Valid values are:
-
-- AeD
-- AirInvestigation
-- ApplicationAudit
-- AzureActiveDirectory
-- AzureActiveDirectoryAccountLogon
-- AzureActiveDirectoryStsLogon
-- Campaign
-- ComplianceDLPExchange
-- ComplianceDLPSharePoint
-- ComplianceDLPSharePointClassification
-- ComplianceSupervisionExchange
-- CustomerKeyServiceEncryption
-- CRM
-- DataCenterSecurityCmdlet
-- DataGovernance
-- DataInsightsRestApiAudit
-- Discovery
-- DLPEndpoint
-- ExchangeAdmin
-- ExchangeAggregatedOperation
-- ExchangeItem
-- ExchangeItemAggregated
-- ExchangeItemGroup
-- HRSignal
-- HygieneEvent
-- InformationWorkerProtection
-- InformationBarrierPolicyApplication
-- Kaizala
-- LabelContentExplorer
-- MailSubmission
-- MicrosoftFlow
-- MicrosoftForms
-- MicrosoftTeamsAnalytics
-- MicrosoftTeams
-- MicrosoftTeamsAdmin
-- MicrosoftTeamsDevice
-- MicrosoftTeamsAddOns
-- MicrosoftStream
-- MicrosoftTeamsSettingsOperation
-- MipAutoLabelSharePointItem
-- MipAutoLabelSharePointPolicyLocation
-- MIPLabel
-- OfficeNative
-- OneDrive
-- PowerBIAudit
-- Project
-- PowerAppsApp
-- PowerAppsPlan
-- Quarantine
-- SecurityComplianceAlerts
-- SecurityComplianceCenterEOPCmdlet
-- SecurityComplianceInsights
-- SharePoint
-- SharePointCommentOperation
-- SharePointContentTypeOperation
-- SharePointFileOperation
-- SharePointFieldOperation
-- SharePointListOperation
-- SharePointListItemOperation
-- SharePointSharingOperation
-- SkypeForBusinessCmdlets
-- SkypeForBusinessPSTNUsage
-- SkypeForBusinessUsersBlocked
-- SyntheticProbe
-- ThreatFinder
-- ThreatIntelligence
-- ThreatIntelligenceAtpContent
-- ThreatIntelligenceUrl
-- TeamsHealthcare
-- WorkplaceAnalytics
-- Yammer
+The RecordType parameter filters the log entries by record type. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 ```yaml
 Type: AuditRecordType

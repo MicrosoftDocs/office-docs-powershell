@@ -21,8 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-DistributionGroup [-Identity] <GroupIdParameter> [-Alias <String>] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>] [-WhatIf] [<CommonParameters>]
+Enable-DistributionGroup [-Identity] <GroupIdParameter>
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

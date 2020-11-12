@@ -29,7 +29,8 @@ Get-UnifiedGroup [[-Identity] <UnifiedGroupIdParameter>]
  [-IncludeAllProperties]
  [-IncludeSoftDeletedGroups]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ### AnrSet
@@ -39,7 +40,8 @@ Get-UnifiedGroup [-Anr <String>]
  [-IncludeAllProperties]
  [-IncludeSoftDeletedGroups]
  [-ResultSize <Unlimited>]
- [-SortBy <String>] [<CommonParameters>]
+ [-SortBy <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

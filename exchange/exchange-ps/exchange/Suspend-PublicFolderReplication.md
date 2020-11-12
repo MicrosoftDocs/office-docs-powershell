@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Suspend-PublicFolderReplication [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Suspend-PublicFolderReplication [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

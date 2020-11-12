@@ -25,7 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Export-UMPrompt -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### DPCustomGreeting
@@ -33,7 +34,8 @@ Export-UMPrompt -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdPara
 Export-UMPrompt -PromptFileName <String> -UMDialPlan <UMDialPlanIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

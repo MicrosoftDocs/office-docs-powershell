@@ -30,12 +30,14 @@ Enable-RemoteMailbox [-Identity] <UserIdParameter>
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Room
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-Room]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
  [-Confirm]
@@ -43,12 +45,14 @@ Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Equipment
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-Equipment]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
  [-Confirm]
@@ -56,31 +60,37 @@ Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Archive
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Archive] [-ArchiveName <MultiValuedProperty>]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-Archive]
+ [-ArchiveName <MultiValuedProperty>]
  [-ACLableSyncedObjectEnabled]
  [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Shared
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Shared]
+Enable-RemoteMailbox [-Identity] <UserIdParameter>
+ [-Shared]
  [-ACLableSyncedObjectEnabled [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf]] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

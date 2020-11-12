@@ -30,7 +30,8 @@ Set-RetentionPolicy [-Identity] <MailboxPolicyIdParameter>
  [-Name <String>]
  [-RetentionId <Guid>]
  [-RetentionPolicyTagLinks <RetentionPolicyTagIdParameter[]>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

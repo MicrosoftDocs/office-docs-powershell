@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-Confirm] [-WhatIf]
+Remove-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

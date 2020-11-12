@@ -27,7 +27,8 @@ Set-UnifiedAuditLogRetentionPolicy [-Identity] <PolicyIdParameter> -Priority <In
  [-Operations <MultiValuedProperty>]
  [-RecordTypes <MultiValuedProperty>]
  [-UserIds <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -174,81 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecordTypes
-The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. The values you specify will overwrite any existing entries. Valid values are:
+The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
-- AeD
-- AirInvestigation
-- ApplicationAudit
-- AzureActiveDirectory
-- AzureActiveDirectoryAccountLogon
-- AzureActiveDirectoryStsLogon
-- CRM
-- Campaign
-- ComplianceDLPExchange
-- ComplianceDLPSharePoint
-- ComplianceDLPSharePointClassification
-- ComplianceSupervisionExchange
-- CustomerKeyServiceEncryption
-- DLPEndpoint
-- DataCenterSecurityCmdlet
-- DataGovernance
-- DataInsightsRestApiAudit
-- Discovery
-- ExchangeAdmin
-- ExchangeAggregatedOperation
-- ExchangeItem
-- ExchangeItemAggregated
-- ExchangeItemGroup
-- HRSignal
-- HygieneEvent
-- InformationBarrierPolicyApplication
-- InformationWorkerProtection
-- Kaizala
-- LabelContentExplorer
-- MIPLabel
-- MailSubmission
-- MicrosoftFlow
-- MicrosoftForms
-- MicrosoftStream
-- MicrosoftTeams
-- MicrosoftTeamsAdmin
-- MicrosoftTeamsAnalytics
-- MicrosoftTeamsDevice
-- MicrosoftTeamsShifts
-- MipAutoLabelExchangeItem
-- MipAutoLabelSharePointItem
-- MipAutoLabelSharePointPolicyLocation
-- OfficeNative
-- OneDrive
-- PowerAppsApp
-- PowerAppsPlan
-- PowerBIAudit
-- Project
-- Quarantine
-- SecurityComplianceAlerts
-- SecurityComplianceCenterEOPCmdlet
-- SecurityComplianceInsights
-- SharePoint
-- SharePointCommentOperation
-- SharePointContentTypeOperation
-- SharePointFieldOperation
-- SharePointFileOperation
-- SharePointListItemOperation
-- SharePointListOperation
-- SharePointSharingOperation
-- SkypeForBusinessCmdlets
-- SkypeForBusinessPSTNUsage
-- SkypeForBusinessUsersBlocked
-- SyntheticProbe
-- TeamsHealthcare
-- ThreatFinder
-- ThreatIntelligence
-- ThreatIntelligenceAtpContent
-- ThreatIntelligenceUrl
-- WorkplaceAnalytics
-- Yammer
-
-You can specify multiple values separated by commas.
+You can specify multiple values separated by commas. The values you specify will overwrite any existing entries.
 
 ```yaml
 Type: MultiValuedProperty

@@ -21,7 +21,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>] [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <Boolean>] [-AllowRMSSupportForUnenlightenedApps <Boolean>] [-Confirm] [-DefaultAccessLevel <DeviceAccessLevel>] [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf] [<CommonParameters>]
+Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>]
+ [-AdminMailRecipients <MultiValuedProperty>]
+ [-AllowAccessForUnSupportedPlatform <Boolean>]
+ [-AllowRMSSupportForUnenlightenedApps <Boolean>]
+ [-Confirm]
+ [-DefaultAccessLevel <DeviceAccessLevel>]
+ [-DomainController <Fqdn>]
+ [-OtaNotificationMailInsert <String>]
+ [-UserMailInsert <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,6 +47,22 @@ Set-ActiveSyncOrganizationSettings -DefaultAccessLevel Quarantine -AdminMailReci
 This example sets the default access level to quarantine and sets two administrative email addresses.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the ActiveSync organization settings object that you want to modify. The default name of this object is Mobile Mailbox Settings.
+
+```yaml
+Type: ActiveSyncOrganizationSettingsIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -AdminMailRecipients
 The AdminMailRecipients parameter specifies the email addresses of the administrators for reporting purposes.
@@ -149,22 +175,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the ActiveSync organization settings object that you want to modify. The default name of this object is Mobile Mailbox Settings.
-
-```yaml
-Type: ActiveSyncOrganizationSettingsIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

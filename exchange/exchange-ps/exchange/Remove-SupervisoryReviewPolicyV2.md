@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-SupervisoryReviewPolicyV2 [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf]
+Remove-SupervisoryReviewPolicyV2 [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-ForceDeletion]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 

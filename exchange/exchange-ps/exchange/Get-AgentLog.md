@@ -21,8 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AgentLog [-EndDate <DateTime>] [-Location <LocalLongFullPath>] [-StartDate <DateTime>]
- [-TransportService <TransportService>] [<CommonParameters>]
+Get-AgentLog [-EndDate <DateTime>]
+ [-Location <LocalLongFullPath>]
+ [-StartDate <DateTime>]
+ [-TransportService <TransportService>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

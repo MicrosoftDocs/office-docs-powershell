@@ -21,8 +21,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SweepRule [[-Identity] <SweepRuleIdParameter>] [-BypassScopeCheck] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [-Provider <String>] [<CommonParameters>]
+Get-SweepRule [[-Identity] <SweepRuleIdParameter>]
+ [-BypassScopeCheck]
+ [-DomainController <Fqdn>]
+ [-Mailbox <MailboxIdParameter>]
+ [-Provider <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Remove-DlpSensitiveInformationTypeRulePackage [-Identity] <SensitiveInformationTypeRuleCollectionIdParameter>
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

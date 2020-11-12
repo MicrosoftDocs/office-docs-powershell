@@ -25,8 +25,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Upgrade-DistributionGroup [-DlIdentities] <MultiValuedProperty> [-ActionType <String>]
- [-ExecutingUser <RecipientIdParameter>] [<CommonParameters>]
+Upgrade-DistributionGroup [-DlIdentities] <MultiValuedProperty>
+ [-ActionType <String>]
+ [-ExecutingUser <RecipientIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

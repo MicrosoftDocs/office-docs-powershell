@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-RoutingGroupConnector [[-Identity] <RoutingGroupConnectorIdParameter>] [-DomainController <Fqdn>]
+Get-RoutingGroupConnector [[-Identity] <RoutingGroupConnectorIdParameter>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 

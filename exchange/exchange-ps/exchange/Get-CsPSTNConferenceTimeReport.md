@@ -25,7 +25,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CsPSTNConferenceTimeReport [-EndDate <DateTime>] [-ReportType <ReportType>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-CsPSTNConferenceTimeReport [-EndDate <DateTime>]
+ [-ReportType <ReportType>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

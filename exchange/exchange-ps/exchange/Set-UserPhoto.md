@@ -22,13 +22,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### CancelPhoto
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-Cancel]
+Set-UserPhoto [-Identity] <MailboxIdParameter>
+ [-Cancel]
  [-Confirm]
  [-GroupMailbox]
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadPhotoData
@@ -39,18 +41,23 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureData <Byte[]>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadPreview
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-PictureData <Byte[]>] [-PictureStream <Stream>] [-Preview]
+Set-UserPhoto [-Identity] <MailboxIdParameter>
+ [-PictureData <Byte[]>]
+ [-PictureStream <Stream>]
+ [-Preview]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### UploadPhotoStream
@@ -61,18 +68,21 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureStream <Stream>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### SavePhoto
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-Save]
+Set-UserPhoto [-Identity] <MailboxIdParameter>
+ [-Save]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -107,24 +117,6 @@ This example deletes the preview photo that was uploaded in the previous example
 
 ## PARAMETERS
 
-### -Cancel
-The Cancel switch parameter deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
-
-To delete the photo that's currently associated with a user's account, use the Remove-UserPhoto cmdlet. The Cancel switch only deletes the preview photo.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: CancelPhoto
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user. For example:
 
@@ -149,6 +141,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Cancel
+The Cancel switch parameter deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
+
+To delete the photo that's currently associated with a user's account, use the Remove-UserPhoto cmdlet. The Cancel switch only deletes the preview photo.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CancelPhoto
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

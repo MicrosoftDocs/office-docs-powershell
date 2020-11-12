@@ -23,7 +23,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-HostedContentFilterRule [-Identity] <RuleIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Disable-HostedContentFilterRule [-Identity] <RuleIdParameter>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

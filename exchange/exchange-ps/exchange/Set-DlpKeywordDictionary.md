@@ -21,8 +21,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter> [-Confirm] [-Description <String>]
- [-FileData <Byte[]>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter>
+ [-Confirm]
+ [-Description <String>]
+ [-FileData <Byte[]>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

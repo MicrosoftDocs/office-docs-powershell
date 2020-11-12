@@ -21,13 +21,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ActiveSyncVirtualDirectory [-ApplicationRoot <String>] [-AppPoolId <String>] [-Confirm]
- [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
- [-ExternalAuthenticationMethods <MultiValuedProperty>] [-ExternalUrl <Uri>]
- [-InstallProxySubDirectory <Boolean>] [-InternalAuthenticationMethods <MultiValuedProperty>]
- [-InternalUrl <Uri>] [-Path <String>] [-WebSiteName <String>] [-WhatIf] [-Role <VirtualDirectoryRole>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+New-ActiveSyncVirtualDirectory [-ApplicationRoot <String>]
+ [-AppPoolId <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
+ [-ExternalAuthenticationMethods <MultiValuedProperty>]
+ [-ExternalUrl <Uri>]
+ [-InstallProxySubDirectory <Boolean>]
+ [-InternalAuthenticationMethods <MultiValuedProperty>]
+ [-InternalUrl <Uri>]
+ [-Path <String>]
+ [-Role <VirtualDirectoryRole>]
+ [-Server <ServerIdParameter>]
+ [-WebSiteName <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -338,38 +349,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WebSiteName
-The WebSiteName parameter specifies the name of the IIS website under which the virtual directory is created. You don't need to use this parameter to create the virtual directory under the default website.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Role
 The Role parameter species the configuration for the virtual directory. Valid values are:
 
@@ -409,6 +388,38 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -WebSiteName
+The WebSiteName parameter specifies the name of the IIS website under which the virtual directory is created. You don't need to use this parameter to create the virtual directory under the default website.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

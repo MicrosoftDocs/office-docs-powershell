@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-Message [-Identity] <MessageIdentity> [-Confirm] [-WhatIf] [<CommonParameters>]
+Export-Message [-Identity] <MessageIdentity>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -31,7 +31,8 @@ Set-RMSTrustedPublishingDomain [-Identity] <RmsTrustedPublishingDomainIdParamete
  [-IntranetCertificationUrl <Uri>]
  [-IntranetLicensingUrl <Uri>]
  [-Name <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

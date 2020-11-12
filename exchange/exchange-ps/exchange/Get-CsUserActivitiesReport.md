@@ -25,7 +25,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-CsUserActivitiesReport [-EndDate <DateTime>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [-UserName <String>] [<CommonParameters>]
+Get-CsUserActivitiesReport [-EndDate <DateTime>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-UserName <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

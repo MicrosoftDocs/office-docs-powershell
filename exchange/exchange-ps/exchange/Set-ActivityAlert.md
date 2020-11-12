@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-Category <AlertRuleCategory>]
- [-Condition <String>] [-Confirm]
+ [-Condition <String>]
+ [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
  [-DomainController <Fqdn>]
@@ -38,7 +39,8 @@ Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -288,39 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter specifies a record type label for the activity alert. Valid values are:
-
-- AeD
-- AzureActiveDirectory
-- AzureActiveDirectoryAccountLogon
-- AzureActiveDirectoryStsLogon
-- ComplianceDLPExchange
-- ComplianceDLPSharePoint
-- CRM
-- DataCenterSecurityCmdlet
-- Discovery
-- ExchangeAdmin
-- ExchangeAggregatedOperation
-- ExchangeItem
-- ExchangeItemGroup
-- MicrosoftTeams
-- OneDrive
-- PowerBIAudit
-- SecurityComplianceAlerts
-- SecurityComplianceCenterEOPCmdlet
-- SecurityComplianceInsights
-- SharePoint
-- SharePointFileOperation
-- SharePointListOperation
-- SharePointSharingOperation
-- SkypeForBusinessCmdlets
-- SkypeForBusinessPSTNUsage
-- SkypeForBusinessUsersBlocked
-- ThreatIntelligence
-- ThreatIntelligenceAtpContent
-- ThreatIntelligenceUrl
-- WorkplaceAnalytics
-- Yammer
+The RecordType parameter specifies a record type label for the activity alert.  For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
 

@@ -21,9 +21,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-IPBlockListProvider [-Name] <String> -LookupDomain <SmtpDomain> [-AnyMatch <Boolean>]
- [-BitmaskMatch <IPAddress>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <Boolean>]
- [-IPAddressesMatch <MultiValuedProperty>] [-Priority <Int32>] [-RejectionResponse <AsciiString>] [-WhatIf]
+Add-IPBlockListProvider [-Name] <String> -LookupDomain <SmtpDomain>
+ [-AnyMatch <Boolean>]
+ [-BitmaskMatch <IPAddress>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-IPAddressesMatch <MultiValuedProperty>]
+ [-Priority <Int32>]
+ [-RejectionResponse <AsciiString>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -48,22 +55,6 @@ This example adds an IP Block list provider and configures a bitmask return valu
 
 ## PARAMETERS
 
-### -LookupDomain
-The LookupDomain parameter specifies the host name that's required to use the block list provider. Connection filtering sends the IP address of the connecting SMTP server to the host name value that you specify. An example value is blocklist.spamservice.com. The actual value you need to use is provided by the block list provider.
-
-```yaml
-Type: SmtpDomain
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 The Name parameter specifies a descriptive name for the IP Block list provider.
 
@@ -75,6 +66,22 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LookupDomain
+The LookupDomain parameter specifies the host name that's required to use the block list provider. Connection filtering sends the IP address of the connecting SMTP server to the host name value that you specify. An example value is blocklist.spamservice.com. The actual value you need to use is provided by the block list provider.
+
+```yaml
+Type: SmtpDomain
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

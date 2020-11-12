@@ -21,14 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ServerComponentState [-Identity] <ServerIdParameter> -Component <String> -Requester <String>
- -State <ServiceState>
+Set-ServerComponentState [-Identity] <ServerIdParameter> -Component <String> -Requester <String> -State <ServiceState>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-LocalOnly]
  [-RemoteOnly]
  [-TimeoutInSeconds <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,22 +44,6 @@ Set-ServerComponentState -Component UMCallRouter -Identity MailboxServer01 -Requ
 This example sets the Unified Messaging (UM) component state to Active, as requested by maintenance mode.
 
 ## PARAMETERS
-
-### -Component
-The Component parameter specifies the component or endpoint for which you want to set the state.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
@@ -79,6 +63,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Component
+The Component parameter specifies the component or endpoint for which you want to set the state.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

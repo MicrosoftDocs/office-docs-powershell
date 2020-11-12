@@ -23,8 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty>
- -Trustee <SecurityPrincipalIdParameter> [-SkipDomainValidationForMailContact] [-SkipDomainValidationForMailUser] [-SkipDomainValidationForSharedMailbox] [-Confirm] [-WhatIf] [<CommonParameters>]
+Add-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty> -Trustee <SecurityPrincipalIdParameter>
+ [-SkipDomainValidationForMailContact]
+ [-SkipDomainValidationForMailUser]
+ [-SkipDomainValidationForSharedMailbox]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,22 +47,6 @@ Add-RecipientPermission "Help Desk" -AccessRights SendAs -Trustee "Ayla Kol"
 This example gives the user Ayla Kol SendAs permission for the mailbox Help Desk. Ayla can send messages that appear to come directly from the Help Desk mailbox.
 
 ## PARAMETERS
-
-### -AccessRights
-The AccessRights parameter specifies the permission. The only value for this parameter is SendAs.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the target recipient. The user or group specified by the Trustee parameter receives SendAs permission on this recipient.
@@ -87,6 +76,22 @@ Applicable: Exchange Online
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AccessRights
+The AccessRights parameter specifies the permission. The only value for this parameter is SendAs.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Enable-MailPublicFolder [-Identity] <PublicFolderIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-HiddenFromAddressListsEnabled <Boolean>] [-Server <ServerIdParameter>] [-WhatIf]
- [-OverrideRecipientQuotas] [<CommonParameters>]
+Enable-MailPublicFolder [-Identity] <PublicFolderIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
+ [-OverrideRecipientQuotas]
+ [-Server <ServerIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -118,6 +123,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OverrideRecipientQuotas
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Server
 This parameter is available or functional only in Exchange Server 2010.
 
@@ -151,22 +172,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverrideRecipientQuotas
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

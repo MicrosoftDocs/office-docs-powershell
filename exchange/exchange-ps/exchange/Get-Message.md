@@ -32,7 +32,8 @@ Get-Message [-Filter <String>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
  [-Server <ServerIdParameter>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -46,7 +47,8 @@ Get-Message [[-Identity] <MessageIdentity>]
  [-ResultSize <Unlimited>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ### Queue
@@ -60,7 +62,8 @@ Get-Message [-Queue <QueueIdentity>]
  [-ResultSize <Unlimited>]
  [-ReturnPageInfo <Boolean>]
  [-SearchForward <Boolean>]
- [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

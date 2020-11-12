@@ -22,24 +22,31 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### MDBResubmit
 ```
-Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-Destination <Guid>]
+Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime>
+ [-Destination <Guid>]
  [-Confirm]
  [-CorrelationId <Guid>]
  [-Server <ServerIdParameter>]
  [-TestOnly <Boolean>]
  [-UnresponsivePrimaryServers <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ConditionalResubmit
 ```
-Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-MessageId <String>] [-Recipient <String>] [-ResubmitTo <String>] [-Sender <String>]
+Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime>
+ [-MessageId <String>]
+ [-Recipient <String>]
+ [-ResubmitTo <String>]
+ [-Sender <String>]
  [-Confirm]
  [-CorrelationId <Guid>]
  [-Server <ServerIdParameter>]
  [-TestOnly <Boolean>]
  [-UnresponsivePrimaryServers <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

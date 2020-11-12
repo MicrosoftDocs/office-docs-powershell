@@ -22,24 +22,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GetChildren
 ```
-Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-GetChildren]
+Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
+ [-GetChildren]
  [-DomainController <Fqdn>]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
  [-ResultSize <Unlimited>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### Recurse
 ```
-Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-Recurse]
+Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
+ [-Recurse]
  [-DomainController <Fqdn>]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
  [-ResultSize <Unlimited>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ### LostAndFound
@@ -49,7 +53,8 @@ Get-PublicFolder [-LostAndFound]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
- [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -59,7 +64,8 @@ Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
  [-Mailbox <MailboxIdParameter>]
  [-Organization <OrganizationIdParameter>]
  [-ResidentFolders]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -27,7 +27,8 @@ New-RpcClientAccess -Server <ServerIdParameter>
  [-DomainController <Fqdn>]
  [-EncryptionRequired <Boolean>]
  [-MaximumConnections <Int32>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

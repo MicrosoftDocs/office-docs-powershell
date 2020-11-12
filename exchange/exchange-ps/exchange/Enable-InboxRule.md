@@ -27,7 +27,8 @@ Enable-InboxRule [-Identity] <InboxRuleIdParameter>
  [-DomainController <Fqdn>]
  [-Force]
  [-Mailbox <MailboxIdParameter>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

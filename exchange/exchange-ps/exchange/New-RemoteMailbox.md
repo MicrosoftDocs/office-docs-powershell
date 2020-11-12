@@ -22,66 +22,136 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Default
 ```
-New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String> [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+New-RemoteMailbox [-Name] <String> -Password <SecureString> -UserPrincipalName <String>
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Room
 ```
 New-RemoteMailbox [-Name] <String> [-Password <SecureString>] [-Room] [-UserPrincipalName <String>]
- [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Equipment
 ```
 New-RemoteMailbox [-Name] <String> [-Equipment] [-Password <SecureString>] [-UserPrincipalName <String>]
- [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Shared
 ```
 New-RemoteMailbox [-Name] <String> [-Shared] [-Password <SecureString>] [-UserPrincipalName <String>]
- [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AccountDisabled
 ```
 New-RemoteMailbox [-Name] <String> [-AccountDisabled] [-Password <SecureString>] [-UserPrincipalName <String>]
- [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Archive] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <Boolean>]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <Boolean>] [-RemoteRoutingAddress <ProxyAddress>]
- [-ResetPasswordOnNextLogon <Boolean>] [-SamAccountName <String>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>] [-WhatIf] [-ACLableSyncedObjectEnabled]
+ [-ACLableSyncedObjectEnabled]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Archive]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-RemoteRoutingAddress <ProxyAddress>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -124,6 +194,22 @@ As in Example 1, this example assumes that mail flow and directory synchronizati
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the unique name of the on-premises mail user and the associated mailbox in the service. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AccountDisabled
 The AccountDisabled switch specifies whether to create the mail user in a disabled state. You don't have to specify a value with this switch.
 
@@ -155,22 +241,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the unique name of the on-premises mail user and the associated mailbox in the service. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -268,6 +338,22 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ACLableSyncedObjectEnabled
+The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -658,22 +744,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ACLableSyncedObjectEnabled
-The ACLableSyncedObjectEnabled switch specifies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

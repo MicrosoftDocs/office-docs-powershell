@@ -23,8 +23,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Clear-ActiveSyncDevice [-Identity] <ActiveSyncDeviceIdParameter> [-Cancel] [-Confirm]
- [-DomainController <Fqdn>] [-NotificationEmailAddresses <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Clear-ActiveSyncDevice [-Identity] <ActiveSyncDeviceIdParameter>
+ [-Cancel]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
