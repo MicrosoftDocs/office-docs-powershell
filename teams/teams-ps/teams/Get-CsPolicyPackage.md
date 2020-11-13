@@ -46,6 +46,7 @@ Returns only the Education_PrimaryStudent policy package.
 ```powershell
 PS C:\> $a = Get-CsPolicyPackage -Identity Education_PrimaryStudent
 PS C:\> $a.Policies.AdditionalProperties
+
 Key                         Value
 ---                         -----
 TeamsMessagingPolicy        {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
