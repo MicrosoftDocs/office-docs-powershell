@@ -224,6 +224,8 @@ The EndUserQuarantinePermissionsValue parameter specifies the end-user permissio
 
 A value for this parameter requires the New-QuarantinePermissions cmdlet. Store the results of the New-QuarantinePermissions command in a variable (for example, `$Perms = New-QuarantinePermissions <permissions>`) and then use the variable name (`$Perms`) for this parameter. For more information, see [New-QuarantinePermissions](https://docs.microsoft.com/powershell/module/exchange/new-quarantinepermissions).
 
+Don't use this parameter with the EndUserQuarantinePermissionsValue parameter.
+
 ```yaml
 Type: QuarantinePermissions
 Parameter Sets: (All)
@@ -251,13 +253,15 @@ This parameter uses a decimal value that's converted from a binary value. The bi
 - PermissionToRequestRelease: Don't set this permission and PermissionToRelease to 1. Set one to 1 and the other to 0, or set both to 0.
 - PermissionToViewHeader: Currently, this value is always 0, and doesn't hide the **View message header** button in the details of the quarantined message.
 
-The values for the available preset end-user permissions are described in the following list:
+The values for the preset end-user permission groups are described in the following list:
 
 - No access: Binary = 0000000, so use the decimal value 0.
 - Limited access: Binary = 01101010, so use the decimal value 106.
 - Full access: Binary = 11101100, so use the decimal value 236.
 
 For custom permissions, get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value to use.
+
+Don't use this parameter with the EndUserQuarantinePermissions parameter.
 
 ```yaml
 Type: Int32
