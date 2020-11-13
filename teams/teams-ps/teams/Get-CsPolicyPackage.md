@@ -40,7 +40,29 @@ Returns all policy packages available on the tenant.
 PS C:\> Get-CsPolicyPackage -Identity Education_PrimaryStudent
 ```
 
-Returns the definition of the Education_PrimaryStudent policy package, including the policies applied with the package.
+Returns only the Education_PrimaryStudent policy package.
+
+### Example 3
+```powershell
+PS C:\> $a = Get-CsPolicyPackage -Identity Education_PrimaryStudent
+PS C:\> $a.Policies
+```
+
+Or if using newer versions of the MicrosoftTeams module:
+
+```powershell
+PS C:\> $a = Get-CsPolicyPackage -Identity Education_PrimaryStudent
+PS C:\> $a.Policies.AdditionalProperties
+Key                         Value
+---                         -----
+TeamsMessagingPolicy        {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
+TeamsMeetingPolicy          {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
+TeamsAppSetupPolicy         {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
+TeamsCallingPolicy          {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
+TeamsMeetingBroadcastPolicy {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
+```
+
+Returns the set of policies in the Education_PrimaryStudent policy package.
 
 ## PARAMETERS
 
