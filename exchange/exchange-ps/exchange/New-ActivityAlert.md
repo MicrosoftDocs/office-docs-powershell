@@ -381,39 +381,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter specifies a record type label for the activity alert. Valid values are:
-
-- AeD
-- AzureActiveDirectory
-- AzureActiveDirectoryAccountLogon
-- AzureActiveDirectoryStsLogon
-- ComplianceDLPExchange
-- ComplianceDLPSharePoint
-- CRM
-- DataCenterSecurityCmdlet
-- Discovery
-- ExchangeAdmin
-- ExchangeAggregatedOperation
-- ExchangeItem
-- ExchangeItemGroup
-- MicrosoftTeams
-- OneDrive
-- PowerBIAudit
-- SecurityComplianceAlerts
-- SecurityComplianceCenterEOPCmdlet
-- SecurityComplianceInsights
-- SharePoint
-- SharePointFileOperation
-- SharePointListOperation
-- SharePointSharingOperation
-- SkypeForBusinessCmdlets
-- SkypeForBusinessPSTNUsage
-- SkypeForBusinessUsersBlocked
-- ThreatIntelligence
-- ThreatIntelligenceAtpContent
-- ThreatIntelligenceUrl
-- WorkplaceAnalytics
-- Yammer
+The RecordType parameter specifies a record type label for the activity alert. For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
 
