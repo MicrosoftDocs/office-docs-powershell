@@ -54,28 +54,8 @@ This example lists the users who have SendAs permission on the mailbox Help Desk
 
 ## PARAMETERS
 
-### -AccessRights
-The AccessRights parameter filters the results by permission.
-
-Valid input for this parameter is SendAs.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-The Identity parameter filters the results by the target recipient. The user or group specified by the Trustee parameter can operate on this recipient.
-
-You can specify any type of recipient, for example:
+The Identity parameter identifies the recipient that you want to view. The user or group specified by the Trustee parameter has Send As permissions on this recipient. You can specify any type of recipient, for example:
 
 - Mailboxes
 - Mail users
@@ -102,6 +82,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AccessRights
+The AccessRights parameter filters the results by permission. The only valid value for this parameter is SendAs.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -138,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter filters the results by the user or group to whom you're granting the permission. The user or group can operate on the recipient specified by the Identity parameter.
+The Trustee parameter filters the results by the user or group who has Send As permissions. You can specify the following types of users or groups:
 
 You can specify the following types of users or groups:
 
@@ -158,6 +154,8 @@ You can use any value that uniquely identifies the user or group. For example:
 - LegacyExchangeDN
 - SamAccountName
 - User ID or user principal name (UPN)
+
+You need to use this parameter with the Identity parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
