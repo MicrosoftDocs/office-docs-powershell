@@ -454,7 +454,10 @@ The TreatMessagesAsInternal parameter specifies an alternative method to identif
 
 In hybrid environments, you don't need to use this parameter, because the Hybrid Configuration wizard automatically configures the required settings on the Inbound connector in Microsoft 365 and the Send connector in the on-premises Exchange organization (the CloudServicesMailEnabled parameter).
 
-Note: TreatMessagesAsInternal cannot be set to true if CloudServicesMailEnabled is enabled or if ConnectorType is not OnPremises.
+**Note**: You can't set this parameter to the value $true if either of the following conditions is true:
+
+- The CloudServicesMailEnabled parameter is set to the value $true.
+- The ConnectorType parameter value is not OnPremises.
 
 ```yaml
 Type: Boolean
