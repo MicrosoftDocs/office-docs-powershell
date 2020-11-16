@@ -592,7 +592,7 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 
 The default value is 01:00:00 (1 hour). To disable this feature, specify the value `([System.Threading.Timeout]::InfiniteTimeSpan)`.
 
-**Note**: Don't specify a value larger than 49.7 days. A larger value will cause errors.
+**Important**: Don't specify a value larger than 49.7 days. A larger value will crash MSExchangeRepl.exe with an ArgumentOutOfRangeException error on all DAG members.
 
 ```yaml
 Type: TimeSpan
