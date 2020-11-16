@@ -48,6 +48,7 @@ Get-EXOMobileDeviceStatistics [-Mailbox <String>]
  [-ShowRecoveryPassword]
  [-UniversalOutlook]
  [<CommonParameters>]
+```
 
 ## DESCRIPTION
 This cmdlet returns a list of statistics about each mobile device. Additionally, it allows you to retrieve logs and send those logs to a recipient for troubleshooting purposes.
@@ -58,12 +59,14 @@ This cmdlet returns a list of statistics about each mobile device. Additionally,
 ```powershell
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com
 ```
+
 Above example fetches the statstics of all devices linked to user with email john.doe@contoso.com
 
 ### Example 2
 ```powershell
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com -ActiveSync
 ```
+
 Above example fetches the statstics for active sync devices linked to user with email john.doe@contoso.com
 
 ## PARAMETERS
