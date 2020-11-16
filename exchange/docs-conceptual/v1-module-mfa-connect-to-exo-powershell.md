@@ -78,8 +78,6 @@ You need to do the following steps in a browser that supports ClickOnce (for exa
 
      ![Click Install in the Exchange Online PowerShell Module window](media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
 
-- Windows Remote Management (WinRM) on your computer needs to allow Basic authentication (it's enabled by default). To verify that Basic authentication is enabled, run this command **in a Command Prompt**:
-
 - When you use the Exchange Online Remote PowerShell Module, your session will end after one hour, which can be problematic for long-running scripts or processes. To avoid this issue, use [Trusted IPs](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips) to bypass MFA for connections from your intranet. Trusted IPs allow you to connect to Exchange Online PowerShell from your intranet using the old instructions at [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md). Also, if you have servers in a datacenter, be sure to add their public IP addresses to Trusted IPs as described [here](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-mfasettings#enable-the-trusted-ips-feature-by-using-service-settings).
 
 > [!TIP]
