@@ -62,7 +62,7 @@ This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes th
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the role entry to retrieve. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
+The Identity parameter specifies the role entry that you want to view. This parameter uses the syntax: `<management role>\<role entry name>` (for example, `CustomRole\Set-Mailbox`).
 
 For more information about how management role entries work, see [Understanding management roles](https://docs.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
