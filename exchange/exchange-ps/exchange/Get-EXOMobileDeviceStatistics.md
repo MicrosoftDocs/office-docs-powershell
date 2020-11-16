@@ -21,16 +21,32 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-EXOMobileDeviceStatistics
- [-Mailbox <String>]
+Get-EXOMobileDeviceStatistics [-Identity <String>]
  [-ActiveSync]
+ [-ExternalDirectoryObjectId <Guid>]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <String[]>]
+ [-OWAforDevices]
+ [-PrimarySmtpAddress <String>]
+ [-RestApi]
+ [-ShowRecoveryPassword]
+ [-UniversalOutlook]
+ [-UserPrincipalName <String>]
+ [<CommonParameters>]
+```
+
+### MobileDeviceIdentity
+```
+Get-EXOMobileDeviceStatistics [-Mailbox <String>]
+ [-ActiveSync]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <String[]>]
  [-OWAforDevices]
  [-RestApi]
+ [-ShowRecoveryPassword]
  [-UniversalOutlook]
- [-Identity <String>]
- [-ExternalDirectoryObjectId <Guid>]
- [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
 
@@ -43,25 +59,50 @@ This cmdlet returns a list of statistics about each mobile device. Additionally,
 ```powershell
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com
 ```
+
 Above example fetches the statstics of all devices linked to user with email john.doe@contoso.com
 
 ### Example 2
 ```powershell
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com -ActiveSync
 ```
+
 Above example fetches the statstics for active sync devices linked to user with email john.doe@contoso.com
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
+
+- GUID
+- DeviceID
+
+You can't use this parameter with the ExternalDirectoryObjectId, Mailbox, PrimarySmtpAddress, or UserPrincipalName parameters.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
 ### -Mailbox
-This input parameter acts as Identity filter. The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
+The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
 
 - GUID
 - User ID or user principal name (UPN)
 
+You can't use this parameter with the Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
+
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: MobileDeviceIdentity
 Aliases:
 Applicable: Exchange Online
 
@@ -89,11 +130,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
+The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Azure Active Directory.
+
+You can't use this parameter with the Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -101,6 +144,38 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GetMailboxLog
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationEmailAddresses
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -120,8 +195,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrimarySmtpAddress
+The PrimarySmtpAddress identifies the mailbox that you want to view by primary SMTP email address (for example, navin@contoso.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, or UserPrincipalName parameters.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -RestApi
 The RestApi switch filters the results by REST API devices. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowRecoveryPassword
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -153,11 +262,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
+The UserPrincipalName parameter identifies the mailbox that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Mailbox, Identity, or PrimarySmtpAddress parameters.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
