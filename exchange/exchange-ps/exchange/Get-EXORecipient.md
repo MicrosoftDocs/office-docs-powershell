@@ -24,16 +24,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity (Default)
 ```
 Get-EXORecipient [[-Identity] <String>]
+ [-ExternalDirectoryObjectId <Guid>]
  [-Filter <String>]
+ [-IncludeSoftDeletedRecipients]
  [-OrganizationalUnit <String>]
+ [-PrimarySmtpAddress <String>]
  [-Properties <String[]>]
  [-PropertySets <PropertySet[]>]
- [-IncludeSoftDeletedRecipients]
+ [-RecipientPreviewFilter <String>]
  [-RecipientType <String[]>]
  [-RecipientTypeDetails <String[]>]
- [-ExternalDirectoryObjectId <Guid>]
- [-UserPrincipalName <String>]
  [-ResultSize <Unlimited>]
+ [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
 
@@ -41,10 +43,11 @@ Get-EXORecipient [[-Identity] <String>]
 ```
 Get-EXORecipient [-Anr <String>]
  [-Filter <String>]
+ [-IncludeSoftDeletedRecipients]
  [-OrganizationalUnit <String>]
  [-Properties <String[]>]
  [-PropertySets <PropertySet[]>]
- [-IncludeSoftDeletedRecipients]
+ [-RecipientPreviewFilter <String>]
  [-RecipientType <String[]>]
  [-RecipientTypeDetails <String[]>]
  [-ResultSize <Unlimited>]
@@ -88,6 +91,8 @@ Otherwise, you can use any value that uniquely identifies the recipient. For exa
 - LegacyExchangeDN
 - SamAccountName
 
+You can't use this parameter with the Anr, ExternalDirectoryObjectId, PrimarySmtpAddress, or UserPrincipalName parameters.
+
 ```yaml
 Type: String
 Parameter Sets: Identity
@@ -110,6 +115,8 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 - LastName
 - Alias
 
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
+
 ```yaml
 Type: String
 Parameter Sets: Anr
@@ -124,7 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
+The ExternalDirectoryObjectId parameter identifies the recipient that you want to view by the ObjectId in Azure Active Directory.
+
+You can't use this parameter with the Anr, Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: Guid
@@ -203,6 +212,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrimarySmtpAddress
+The PrimarySmtpAddress identifies the recipient that you want to view by primary SMTP email address (for example, navin@contoso.com).
+
+You can't use this parameter with the Anr, ExternalDirectoryObjectId, Identity or UserPrincipalName parameters.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Properties
 The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas. Wildcards ( * ) are supported.
 
@@ -234,6 +261,22 @@ For more information about the properties that are included in each property set
 
 ```yaml
 Type: PropertySet[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientPreviewFilter
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -337,7 +380,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
+The UserPrincipalName parameter identifies the recipient that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+
+You can't use this parameter with the Anr, ExternalDirectoryObjectId, Identity, or PrimarySmtpAddress parameters.
 
 ```yaml
 Type: String

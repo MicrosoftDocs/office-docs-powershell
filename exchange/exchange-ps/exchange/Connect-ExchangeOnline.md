@@ -47,6 +47,7 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-ShowBanner]
  [-ShowProgress <Boolean>]
+ [-SkipImportSession]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
  [-UserPrincipalName <String>]
@@ -55,6 +56,8 @@ Connect-ExchangeOnline
 
 ## DESCRIPTION
 This cmdlet allows you to create a remote PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for the new REST API-backed cmdlets in the Exchange Online PowerShell V2 module, and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
+
+For details about the current and past public versions of the EXO V2 module, see [Release notes](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2#release-notes). This topic is written for the current public version. Features or parameters that are only available in a Preview version of the module are specifically noted.
 
 ## EXAMPLES
 
@@ -84,21 +87,21 @@ After the command is successful, you can run ExO V2 module cmdlets and older rem
 Connect-ExchangeOnline -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
 ```
 
-Use this syntax to connect to Exchange Online in unattended scripting scenarios using the public key of a certificate.
+This example connects to Exchange Online in an unattended scripting scenario using the public key of a certificate.
 
 ### Example 4
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
-In version 2.0.3 or later, use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate thumbprint.
+This example connects to Exchange Online in an unattended scripting scenario using a certificate thumbprint.
 
 ### Example 5
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
 
-In version 2.0.3 or later, use this syntax to connect to Exchange Online in unattended scripting scenarios using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
+This example connects to Exchange Online in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
 ### Example 6
 ```powershell
@@ -245,8 +248,6 @@ Accept wildcard characters: False
 ```
 
 ### -CommandName
-**Note**: This parameter is available in version 2.0.3 or later.
-
 The CommandName parameter specifies the comma separated list of commands to import into the session. Use this parameter for applications or scripts that use a specific set of cmdlets. Reducing the number of cmdlets in the session helps improve performance and reduces the memory footprint of the application or script.
 
 ```yaml
@@ -279,8 +280,6 @@ Accept wildcard characters: False
 ```
 
 ### -AppId
-**Note**: This parameter is available in version 2.0.3 or later.
-
 The AppId parameter specifies the application ID of the service principal that's used in certificate based authentication (CBA). A valid value is the GUID of the application ID (service principal). For example, `36ee4c6c-0812-40a2-b820-b22ebd02bce3`.
 
 For more information, see [App-only authentication for unattended scripts in the EXO V2 module](https://aka.ms/exov2-cba).
@@ -315,8 +314,6 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
-**Note**: This parameter is available in version 2.0.3 or later.
-
 The Certificate parameter specifies the certificate that's used for CBA. A valid value is the X509Certificate2 object value of the certificate.
 
 Don't use this parameter with the CertificateFilePath or CertificateThumbprint parameters.
@@ -337,8 +334,6 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateFilePath
-**Note**: This parameter is available in version 2.0.3 or later.
-
 The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file.
 
 Don't use this parameter with the Certificate or CertificateThumbprint parameters.
@@ -359,8 +354,6 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
-**Note**: This parameter is available in version 2.0.3 or later.
-
 The CertificatePassword parameter specifies the password that's required to open the certificate file when you use the CertificateFilePath parameter to identify the certificate that's used for CBA.
 
 This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable name (`$password`) for this parameter.
@@ -381,8 +374,6 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateThumbprint
-**Note**: This parameter is available in version 2.0.3 or later.
-
 The CertificateThumbprint parameter specifies the certificate that's used for CBA. A valid value is the thumbprint value of the certificate. For example, `83213AEAC56D61C97AEE5C1528F4AC5EBA7321C1`.
 
 Don't use this parameter with the Certificate or CertificateFilePath parameters.
@@ -513,8 +504,6 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-**Note**: This parameter is available only in the module version 2.0.3 or later.
-
 The Organization parameter specifies the organization that's used in app-only authentication.
 
 ```yaml
@@ -583,6 +572,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipImportSession
+**Note**: This parameter is available only in version 2.0.4-Preview2 or later.
+
+The SkipImportSession switch skips the import of cmdlets from the remote PowerShell session. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TrackPerformance
 The TrackPerformance parameter measures additional events (for example, CPU load and memory consumed). Valid values are:
 
@@ -624,7 +631,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). This parameter allows you to skip the first screen in authentication prompt, and is used for accounts with MFA.
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip the first screen in the authentication prompt.
 
 ```yaml
 Type: String
