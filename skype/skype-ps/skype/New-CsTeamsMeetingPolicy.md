@@ -26,7 +26,10 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowSharedNotes <Boolean>] [-AllowWhiteboard <Boolean>] [-AllowTranscription <Boolean>]
  [-MediaBitRateKb <UInt32>] [-ScreenSharingMode <String>] [-PreferredMeetingProviderForIslandsMode <String>]
  [-VideoFiltersMode <String>] [-Identity] <XdsIdentity> [-AllowEngagementReport <String>]
- [-AllowNDIStreaming <Boolean>] [-DesignatedPresenterRoleMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>]
+ [-AllowNDIStreaming <Boolean>] [-DesignatedPresenterRoleMode <String>] [-AllowPSTNUsersToBypassLobby <Boolean>] 
+ [-AllowIPAudio <Boolean>] [-AllowOrganizersToOverrideLobbySettings <Boolean>]
+[-AllowUserToJoinExternalMeeting <String>] [-EnrollUserOverride <String>] [-StreamingAttendeeMode <String] 
+[-AllowBreakoutRooms <String] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] [-MeetingChatEnabledType <String>]
  [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -551,6 +554,151 @@ Determines whether a PSTN user joining the meeting is allowed or not to bypass t
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowIPAudio
+Determines whether audio is enabled in  a user's meetings or calls. Set this to TRUE to allow the user to share their audio. Set this to FALSE to prohibit the user from sharing their audio.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowOrganizersToOverrideLobbySettings
+Set this parameter to true to enable Organizers to override lobby settings.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUserToJoinExternalMeeting
+Possible values are:
+- Enabled 
+- FederatedOnly
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnrollUserOverride
+Possible values are: 
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StreamingAttendeeMode
+Possible values are: 
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowBreakoutRooms
+Set to true to enable Breakout Rooms, set to false to disable the Breakout Rooms functionality.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsCameraFarEndPTZMode
+Possible values are: 
+- Disabled
+- AutoAcceptInTenant 
+- AutoAcceptAll
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingReactions
+Set to false to disable Meeting Reactions.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingChatEnabledType
+Specify if users will be able to chat in meetings. Possible values are: Disabled, Enabled.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
