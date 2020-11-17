@@ -973,12 +973,12 @@ Accept wildcard characters: False
 ```
 
 ### -PhishZapEnabled
-The PhishZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect phishing messages in delivered messages in Exchange Online mailboxes. Valid values are:
+The PhishZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect phishing in already delivered messages in Exchange Online mailboxes. Valid values are:
 
-- $true: Phish ZAP is enabled. This is the default value. The result depends on the spam filtering verdict action: MoveToJmf = Read and unread phish messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine: Read and unread phish messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
-- $false: Phish ZAP is disabled.
+- $true: ZAP for phishing messages is enabled. This is the default value. The result depends on the spam filtering verdict action for phishing messages: MoveToJmf = Read and unread phishing messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine = Read and unread phishing messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
+- $false: ZAP for phishing messages is disabled.
 
-**Note**: Use this parameter instead of the ZapEnabled parameter. The ZapEnabled parameter will be deprecated in a future release. During the transition, the value of this parameter is inherited from the ZapEnabled parameter. After you use the PhishZapEnabled parameter or the corresponding phish ZAP setting in the admin center on an existing spam filter policy, the ZapEnabled parameter value is ignored for phish ZAP.
+You configure ZAP for spam with the SpamZapEnabled parameter.
 
 ```yaml
 Type: Boolean
@@ -1092,12 +1092,12 @@ Accept wildcard characters: False
 ```
 
 ### -SpamZapEnabled
-The SpamZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect spam in delivered messages in Exchange Online mailboxes. Valid values are:
+The SpamZapEnabled parameter enables or disables zero-hour auto purge (ZAP) to detect spam in already delivered messages in Exchange Online mailboxes. Valid values are:
 
-- $true: Spam ZAP is enabled. This is the default value. The result depends on the spam filtering verdict action: MoveToJmf = Unread spam messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine: Unread spam messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
-- $false: Spam ZAP is disabled.
+- $true: ZAP for spam is enabled. This is the default value. The result depends on the spam filtering verdict action for spam messages: MoveToJmf = Unread spam messages are moved to the Junk Email folder. Delete, Redirect, or Quarantine = Unread spam messages are quarantined. AddXHeader or ModifySubject = no action is taken on the message.
+- $false: ZAP for spam is disabled.
 
-**Note**: Use this parameter instead of the ZapEnabled parameter. The ZapEnabled parameter will be deprecated in a future release. During the transition, the value of this parameter is inherited from the ZapEnabled parameter. After you use the SpamZapEnabled parameter or the corresponding spam ZAP setting in the admin center on an existing spam filter policy, the ZapEnabled parameter value is ignored for spam ZAP.
+You configure ZAP for phishing messages with the PhishZapEnabled parameter.
 
 ```yaml
 Type: Boolean
@@ -1173,12 +1173,7 @@ Accept wildcard characters: False
 ```
 
 ### -ZapEnabled
-**Note**: This parameter will be deprecated in a future release. Use the PhishZapEnabled and SpamZapEnabled parameters instead. After you use these parameters or configure the phish ZAP or spam ZAP settings in the admin center, the value of this parameter is ignored.
-
-The ZapEnabled parameter specifies whether to enable ZAP for phish and spam in Exchange Online mailboxes. Valid values are:
-
-- $true: ZAP for phish and spam is enabled. This is the default value.
-- $false: ZAP for phish and spam is disabled.
+This parameter has been deprecated and is no longer used. Use the PhishZapEnabled and SpamZapEnabled parameters instead.
 
 ```yaml
 Type: Boolean
