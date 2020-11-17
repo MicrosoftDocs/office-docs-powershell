@@ -197,10 +197,10 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligence
 This setting is part of impersonation protection and is only available in Advanced Threat Protection.
 
-The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph) in domain and user impersonation protection. Valid values are:
+The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph). Valid values are:
 
-- $true: Use mailbox intelligence in domain and user impersonation protection.
-- $false: Don't use mailbox intelligence in domain and user impersonation protection. This is the default value.
+- $true: Mailbox intelligence is enabled. This is the default value.
+- $false: Mailbox intelligence is disabled.
 
 ```yaml
 Type: Boolean
