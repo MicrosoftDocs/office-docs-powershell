@@ -70,14 +70,13 @@ This example modifies the default antiphish policy named Office365 AntiPhish Def
 
 ### Example 2
 ```powershell
-Set-AntiPhishPolicy -Identity "Office365 AntiPhish Default" -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainsToProtect fabrikam.com -TargetedDomainProtectionAction Quarantine -EnableTargetedUserProtection $true -TargetedUsersToProtect "Mai Fujito;mfujito@fabrikam.com" -TargetedUserProtectionAction Quarantine -EnableMailboxIntelligence $true -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -EnableSimilarUsersSafetyTips $true -EnableSimilarDomainsSafetyTips $true -EnableUnusualCharactersSafetyTips $true
+Set-AntiPhishPolicy -Identity "Office365 AntiPhish Default" -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainsToProtect fabrikam.com -TargetedDomainProtectionAction Quarantine -EnableTargetedUserProtection $true -TargetedUsersToProtect "Mai Fujito;mfujito@fabrikam.com" -TargetedUserProtectionAction Quarantine -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -EnableSimilarUsersSafetyTips $true -EnableSimilarDomainsSafetyTips $true -EnableUnusualCharactersSafetyTips $true
 ```
 
 In Advanced Threat Protection, this example modifies the default antiphish policy named Office365 AntiPhish Default with the following settings:
 
 - Enables organization domains protection for all accepted domains, and targeted domains protection for fabrikam.com.
 - Specifies Mai Fujito (mfujito@fabrikam.com) as a user to protect from impersonation.
-- Enables mailbox intelligence.
 - Enables mailbox intelligence protection, and specifies the quarantine action.
 - Enables impersonation safety tips (impersonated domains, impersonated users, and unusual characters).
 
@@ -203,7 +202,7 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligence
 This setting is part of impersonation protection and is only available in Advanced Threat Protection.
 
-The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph). Valid values are:
+The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (artificial intelligence that determines user email patterns with their frequent contacts). Valid values are::
 
 - $true: Mailbox intelligence is enabled. This is the default value.
 - $false: Mailbox intelligence is disabled.
@@ -224,10 +223,10 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligenceProtection
 This setting is part of impersonation protection and is only available in Advanced Threat Protection.
 
-The EnableMailboxIntelligenceProtection specifies whether to enable or disable intelligence based impersonation protection. Valid values are:
+The EnableMailboxIntelligenceProtection specifies whether to enable or disable enhanced impersonation results based on each user's individual sender map. This intelligence allows Microsoft 365 to customize user impersonation detection and better handle false positives. Valid values are:
 
-- $true: Enable intelligence based impersonation protection.
-- $false: Don't enable intelligence based impersonation protection. This is the default value.
+- $true: Enable mailbox intelligence based impersonation protection.
+- $false: Don't enable mailbox intelligence based impersonation protection. This is the default value.
 
 ```yaml
 Type: Boolean

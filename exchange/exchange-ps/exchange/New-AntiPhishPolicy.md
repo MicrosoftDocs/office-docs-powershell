@@ -68,7 +68,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-AntiPhishPolicy -Name "Research Quarantine" -AdminDisplayName "Research department policy" -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainsToProtect fabrikam.com -TargetedDomainProtectionAction Quarantine -EnableTargetedUserProtection $true -TargetedUsersToProtect "Mai Fujito;mfujito@fabrikam.com" -TargetedUserProtectionAction Quarantine -EnableMailboxIntelligence $true -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -EnableSimilarUsersSafetyTips $true -EnableSimilarDomainsSafetyTips $true -EnableUnusualCharactersSafetyTips $true
+New-AntiPhishPolicy -Name "Research Quarantine" -AdminDisplayName "Research department policy" -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainsToProtect fabrikam.com -TargetedDomainProtectionAction Quarantine -EnableTargetedUserProtection $true -TargetedUsersToProtect "Mai Fujito;mfujito@fabrikam.com" -TargetedUserProtectionAction Quarantine  -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -EnableSimilarUsersSafetyTips $true -EnableSimilarDomainsSafetyTips $true -EnableUnusualCharactersSafetyTips $true
 ```
 
 In Advanced Threat Protection, this example creates and enables an antiphish policy named Research Quarantine with the following settings:
@@ -76,7 +76,6 @@ In Advanced Threat Protection, this example creates and enables an antiphish pol
 - The description is: Research department policy.
 - Enables organization domains protection for all accepted domains, and targeted domains protection for fabrikam.com.
 - Specifies Mai Fujito (mfujito@fabrikam.com) as a user to protect from impersonation.
-- Enables mailbox intelligence.
 - Enables mailbox intelligence protection, and specifies the quarantine action.
 - Enables impersonation safety tips (impersonated domains, impersonated users, and unusual characters).
 
@@ -197,7 +196,7 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligence
 This setting is part of impersonation protection and is only available in Advanced Threat Protection.
 
-The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph). Valid values are:
+The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (artificial intelligence that determines user email patterns with their frequent contacts). Valid values are:
 
 - $true: Mailbox intelligence is enabled. This is the default value.
 - $false: Mailbox intelligence is disabled.
@@ -218,7 +217,7 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligenceProtection
 This setting is part of impersonation protection and is only available in Advanced Threat Protection.
 
-The EnableMailboxIntelligenceProtection specifies whether to enable or disable intelligence based impersonation protection. Valid values are:
+The EnableMailboxIntelligenceProtection specifies whether to enable or disable enhanced impersonation results based on each user's individual sender map. This intelligence allows Microsoft 365 to customize user impersonation detection and better handle false positives. Valid values are:
 
 - $true: Enable intelligence based impersonation protection.
 - $false: Don't enable intelligence based impersonation protection. This is the default value.
