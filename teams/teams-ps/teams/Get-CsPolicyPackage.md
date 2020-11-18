@@ -45,6 +45,10 @@ Returns only the Education_PrimaryStudent policy package.
 ### Example 3
 ```powershell
 PS C:\> $a = Get-CsPolicyPackage -Identity Education_PrimaryStudent
+PS C:\> $a.Policies
+
+# In module versions 1.1.x+
+PS C:\> $a = Get-CsPolicyPackage -Identity Education_PrimaryStudent
 PS C:\> $a.Policies.AdditionalProperties
 
 Key                         Value
