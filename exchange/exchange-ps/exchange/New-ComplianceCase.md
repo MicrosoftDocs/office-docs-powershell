@@ -29,7 +29,8 @@ New-ComplianceCase [-Name] <String>
  [-ExternalId <String>]
  [-SecondaryCaseType <String>]
  [-SourceCaseType <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,21 +74,13 @@ Accept wildcard characters: False
 The CaseType parameter specifies the type of compliance case that you want to create. Valid values are:
 
 - AdvancedEdiscovery: Advanced eDiscovery cases are used to manage legal or other types of investigations. In the Security & Compliance Center, Advanced eDiscovery cases are displayed under eDiscovery > Advanced eDiscovery.
-
 - ComplianceClassifier: This type of case corresponds to a trainable classifier. In the Microsoft 365 compliance center, trainable classifiers are displayed under Data classification > Trainable classifiers.
-
-- ComplianceWorkspace: This value is reserved for internal Microsoft use. 
-
+- ComplianceWorkspace: This value is reserved for internal Microsoft use.
 - DataInvestigation: Data investigation cases are used to investigate data spillage incidents. In the Security & Compliance Center, Data investigation cases are displayed on the Data investigations page.
-
 - DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations. In the Security & Compliance Center, DSR cases are displayed under Data privacy > Data subject requests.
-
 - eDiscovery: eDiscovery (also called core eDiscovery) cases are used to manage legal or other types of investigations. In the Security & Compliance Center, core eDiscovery cases are displayed under eDiscovery > eDiscovery. This is the default value.
-
 - InsiderRisk: Insider risk cases are use to manage insider risk management cases. In the Microsoft 365 compliance center, insider risk cases are displayed under Insider risk management > Cases. Typically, insider risk management cases are manually created in the compliance center to further investigate activity based on an risk alert.
-
 - InternalInvestigation: This value is reserved for internal Microsoft use.
-
 - SupervisionPolicy: This type of case corresponds to communication compliance policy. In the Microsoft 365 compliance center, communication compliance policies are displayed under Communication compliance > Policies.
 
 ```yaml
@@ -106,8 +99,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

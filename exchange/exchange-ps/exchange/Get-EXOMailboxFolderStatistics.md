@@ -24,12 +24,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-EXOMailboxFolderStatistics
  [-Archive]
+ [-DiagnosticInfo <String>]
  [-ExternalDirectoryObjectId <Guid>]
  [-Folderscope <ElcFolderType>]
  [-Identity <String>]
+ [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
- [-ResultSize <Unlimited>]
+ [-PrimarySmtpAddress <String>]
  [-UserPrincipalName <String>]
  [<CommonParameters>]
 ```
@@ -50,7 +52,7 @@ This example returns statistics for all mailbox folders. Default is FolderScope 
 
 ### Example 2
 ```powershell
-Get-EXOMailboxFolderStatistics -Identity admin@contoso.com -FolderScope Calendar -IncludeAnalysis -IncludeOldestAndNewestItems
+Get-EXOMailboxFolderStatistics -Identity admin@contoso.com -FolderScope Calendar -IncludeOldestAndNewestItems
 ```
 
 This example returns statistics only for calendar folders.
@@ -75,8 +77,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DiagnosticInfo
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
+The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Azure Active Directory.
+
+You can't use this parameter with the Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: Guid
@@ -95,47 +115,26 @@ Accept wildcard characters: False
 The FolderScope parameter specifies the scope of the search by folder type. Valid values include:
 
 - All
-
 - Archive
-
 - Calendar
-
 - Clutter
-
 - Contacts
-
 - ConversationHistory
-
 - DeletedItems
-
 - Drafts
-
 - Inbox
-
 - Journal
-
 - JunkEmail
-
 - LegacyArchiveJournals
-
 - ManagedCustomFolder
-
 - NonIpmRoot
-
 - Notes
-
 - Outbox
-
 - Personal
-
 - RecoverableItems
-
 - RssSubscriptions
-
 - SentItems
-
 - SyncIssues
-
 - Tasks
 
 ```yaml
@@ -157,14 +156,12 @@ The Identity parameter specifies the identity of the mailbox or mail user. For t
 Otherwise, you can use any value that uniquely identifies the mailbox or mail user. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - LegacyExchangeDN
-
 - SamAccountName
+
+You can't use this parameter with the ExternalDirectoryObjectId, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
@@ -176,6 +173,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IncludeAnalysis
+This parameter is reserved for internal Microsoft use
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -213,8 +226,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrimarySmtpAddress
+The PrimarySmtpAddress identifies the mailbox that you want to view by primary SMTP email address (for example, navin@contoso.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, or UserPrincipalName parameters.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
+The UserPrincipalName parameter identifies the mailbox that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, or PrimarySmtpAddress parameters.
 
 ```yaml
 Type: String

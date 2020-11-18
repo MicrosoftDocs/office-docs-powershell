@@ -23,7 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-Category <AlertRuleCategory>]
- [-Condition <String>] [-Confirm]
+ [-Condition <String>]
+ [-Confirm]
  [-Description <String>]
  [-Disabled <Boolean>]
  [-DomainController <Fqdn>]
@@ -38,7 +39,8 @@ Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
  [-UserId <MultiValuedProperty>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,9 +70,7 @@ This example disables the existing activity alert named External Sharing Alert.
 The Identity parameter specifies the activity alert that you want to modify. You can use any value that uniquely identifies the activity alert. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -90,15 +90,10 @@ Accept wildcard characters: False
 The Category parameter specifies a category for the activity alert. Valid values are:
 
 - None (This is the default value)
-
 - DataLossPrevention
-
 - ThreatManagement
-
 - DataGovernance
-
 - AccessGovernance
-
 - Others
 
 ```yaml
@@ -133,8 +128,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -170,7 +164,6 @@ Accept wildcard characters: False
 The Disabled parameter specifies whether the activity alert is enabled or disabled. Valid values are:
 
 - $true: The activity alert is disabled.
-
 - $false: The activity alert is enabled. This is the default value.
 
 ```yaml
@@ -297,69 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter specifies a record type label for the activity alert. Valid values are:
-
-- AeD
-
-- AzureActiveDirectory
-
-- AzureActiveDirectoryAccountLogon
-
-- AzureActiveDirectoryStsLogon
-
-- ComplianceDLPExchange
-
-- ComplianceDLPSharePoint
-
-- CRM
-
-- DataCenterSecurityCmdlet
-
-- Discovery
-
-- ExchangeAdmin
-
-- ExchangeAggregatedOperation
-
-- ExchangeItem
-
-- ExchangeItemGroup
-
-- MicrosoftTeams
-
-- OneDrive
-
-- PowerBIAudit
-
-- SecurityComplianceAlerts
-
-- SecurityComplianceCenterEOPCmdlet
-
-- SecurityComplianceInsights
-
-- SharePoint
-
-- SharePointFileOperation
-
-- SharePointListOperation
-
-- SharePointSharingOperation
-
-- SkypeForBusinessCmdlets
-
-- SkypeForBusinessPSTNUsage
-
-- SkypeForBusinessUsersBlocked
-
-- ThreatIntelligence
-
-- ThreatIntelligenceAtpContent
-
-- ThreatIntelligenceUrl
-
-- WorkplaceAnalytics
-
-- Yammer
+The RecordType parameter specifies a record type label for the activity alert.  For details about the available values, see [AuditLogRecordType](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
 
@@ -380,7 +311,6 @@ Accept wildcard characters: False
 The ScopeLevel parameter specifies the scope for activity alerts that use the Type parameter values SimpleAggregation or AnomalousAggregation. Valid values are:
 
 - SingleUser (This is the default value)
-
 - AllUsers
 
 ```yaml
@@ -400,11 +330,8 @@ Accept wildcard characters: False
 The Severity parameter specifies a severity level for the activity alert. Valid values are:
 
 - None
-
 - Low (This is the default value)
-
 - Medium
-
 - High
 
 ```yaml
@@ -460,7 +387,6 @@ Accept wildcard characters: False
 The UserId parameter specifies who you want to monitor.
 
 - If you specify a user's email address, you'll receive an email notification when the user performs the specified activity. You can specify multiple email addresses separated by commas.
-
 - If this parameter is blank ($null), you'll receive an email notification when any user in your organization performs the specified activity.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".

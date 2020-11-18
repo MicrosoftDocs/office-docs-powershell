@@ -21,23 +21,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter> [-Confirm]
- [-DetailLevel <DetailLevelEnumType>] [-DomainController <Fqdn>]
+Set-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter>
+ [-Confirm]
+ [-DetailLevel <DetailLevelEnumType>]
+ [-DomainController <Fqdn>]
  [-PublishDateRangeFrom <DateRangeEnumType>]
  [-PublishDateRangeTo <DateRangeEnumType>]
- [-PublishEnabled <Boolean>] [-ResetUrl] [-SearchableUrlEnabled <Boolean>] [-WhatIf]
- [-SetAsSharingSource] [-UseHttps] [<CommonParameters>]
+ [-PublishEnabled <Boolean>]
+ [-ResetUrl]
+ [-SearchableUrlEnabled <Boolean>]
+ [-SetAsSharingSource]
+ [-UseHttps]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-MailboxCalendarFolder cmdlet configures publishing information. The calendar folder can be configured as follows:
+The Set-MailboxCalendarFolder cmdlet configures calendar publishing information. The calendar folder can be configured as follows:
 
 - Whether the calendar folder is enabled for publishing
-
 - Range of start and end calendar days to publish
-
 - Level of detail to publish for the calendar
-
 - Whether the published URL of the calendar is enabled for search on the web
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
@@ -66,23 +70,14 @@ The Identity parameter specifies the calendar folder that you want to modify. Th
 For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Calendar`
@@ -103,8 +98,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -121,17 +115,14 @@ Accept wildcard characters: False
 ```
 
 ### -DetailLevel
-The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. You can use the following values:
+The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. Valid values are:
 
-- AvailabilityOnly
-
+- AvailabilityOnly (This is the default value)
 - LimitedDetails
-
 - FullDetails
-
 - Editor
 
-The default value is AvailabilityOnly.
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: DetailLevelEnumType
@@ -165,23 +156,17 @@ Accept wildcard characters: False
 ```
 
 ### -PublishDateRangeFrom
-The PublishDateRangeFrom parameter specifies the number of days of calendar information to publish before the current date. You can use the following values:
+The PublishDateRangeFrom parameter specifies the start date of calendar information to publish (past information). Valid values are:
 
 - OneDay
-
 - ThreeDays
-
 - OneWeek
-
 - OneMonth
-
-- ThreeMonths
-
+- ThreeMonths (This is the default value)
 - SixMonths
-
 - OneYear
 
-The default value is ThreeMonths.
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: DateRangeEnumType
@@ -197,23 +182,17 @@ Accept wildcard characters: False
 ```
 
 ### -PublishDateRangeTo
-The PublishDateRangeTo parameter specifies the number of days of calendar information to publish after the current date. You can use the following values:
+The PublishDateRangeTo parameter specifies the end date of calendar information to publish (future information). Valid values are:
 
 - OneDay
-
 - ThreeDays
-
 - OneWeek
-
 - OneMonth
-
-- ThreeMonths
-
+- ThreeMonths (This is the default value)
 - SixMonths
-
 - OneYear
 
-The default value is ThreeMonths.
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: DateRangeEnumType
@@ -229,7 +208,10 @@ Accept wildcard characters: False
 ```
 
 ### -PublishEnabled
-The PublishEnabled parameter specifies whether the specified calendar should be enabled for publishing. The default value is $true.
+The PublishEnabled parameter specifies whether to publish the specified calendar information. Valid values are:
+
+- $true: The calendar information is published.
+- $false: The calendar information is not published. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -245,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetUrl
-The ResetUrl parameter replaces the existing non-public URL with a new URL for a calendar that has been published without being publicly searchable.
+The ResetUrl switch replaces the existing non-public URL with a new URL for a calendar that has been published without being publicly searchable. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -261,28 +243,17 @@ Accept wildcard characters: False
 ```
 
 ### -SearchableUrlEnabled
-The SearchableUrlEnabled parameter specifies whether the published calendar URL can be searched on the web. The default value is $false.
+The SearchableUrlEnabled parameter specifies whether the published calendar URL is discoverable on the web.
+
+- $true: The published calendar URL is discoverable on the web.
+- $false: The published calendar URL is not discoverable on the web. This is the default value.
+
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
@@ -311,11 +282,29 @@ Accept wildcard characters: False
 ### -UseHttps
 The UseHttps switch specifies whether to use HTTPS for the published URL of the calendar folder. You don't need to specify a value with this switch.
 
+This parameter is meaningful only when the PublishEnabled parameter value is $true.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

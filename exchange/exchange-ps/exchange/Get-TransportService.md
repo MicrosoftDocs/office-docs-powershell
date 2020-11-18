@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-TransportService [[-Identity] <TransportServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-TransportService [[-Identity] <TransportServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,11 +69,8 @@ Accept wildcard characters: False
 The Identity parameter specifies the Mailbox server that hosts the Transport service configuration you want to view. You can use any value that uniquely identifies the server. For example:
 
 - Name
-
 - GUID
-
 - Distinguished name (DN)
-
 - ExchangeLegacyDN
 
 You can't use this parameter on an Edge Transport server.

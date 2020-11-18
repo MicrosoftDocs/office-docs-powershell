@@ -22,14 +22,17 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### GlobalCatalog
 ```
-Get-DomainController [-GlobalCatalog] [-Forest <Fqdn>]
- [-Credential <NetworkCredential>] [<CommonParameters>]
+Get-DomainController [-GlobalCatalog]
+ [-Forest <Fqdn>]
+ [-Credential <NetworkCredential>]
+ [<CommonParameters>]
 ```
 
 ### DomainController
 ```
 Get-DomainController [-DomainName <Fqdn>]
- [-Credential <NetworkCredential>] [<CommonParameters>]
+ [-Credential <NetworkCredential>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -75,7 +75,8 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-ShowGalAsDefaultView <Boolean>]
  [-SmtpClientAuthenticationDisabled <Boolean>]
  [-UniversalOutlookEnabled <Boolean>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -113,7 +114,7 @@ The Identity parameter specifies the mailbox that you want to configure. You can
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- \<domain name\>\\\<account name\>
+- Domain\\Username
 - Email address
 - GUID
 - LegacyExchangeDN
@@ -200,7 +201,6 @@ Accept wildcard characters: False
 The ActiveSyncEnabled parameter enables or disables access to the mailbox using Exchange ActiveSync. Valid values are:
 
 - $true: Access to the mailbox using ActiveSync is enabled. This is the default value.
-
 - $false. Access to the mailbox using ActiveSync is disabled. Other ActiveSync settings in this cmdlet are ignored.
 
 For more information, see [Enable or disable Exchange ActiveSync for a mailbox in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync), or [Enable or disable Exchange ActiveSync access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/exchange-activesync/activesync-mailbox-access).
@@ -262,8 +262,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -439,7 +438,6 @@ Accept wildcard characters: False
 The EwsAllowMacOutlook parameter enables or disables access to the mailbox by Outlook for Mac clients that use Exchange Web Services (for example, Outlook for Mac 2011 or later). Valid values are:
 
 - $true: Outlook for Mac clients that use EWS are allowed to access the mailbox. This is the default value.
-
 - $false: Outlook for Mac clients that use EWS are not allowed to access the mailbox.
 
 In the cloud-based service, access for Outlook for Mac clients that use Microsoft Sync technology is controlled by the MacOutlookEnabled parameter.
@@ -749,7 +747,6 @@ This parameter is available only in the cloud-based service.
 The MacOutlookEnabled parameter enables or disables access to the mailbox using Outlook for Mac clients that use Microsoft Sync technology. Valid values are:
 
 - $true: Access to the mailbox using Outlook for Mac clients is enabled. This is the default value.
-
 - $false: Access to the mailbox using Outlook for Mac clients is disabled..
 
 Access for older Outlook for Mac clients that use Exchange Web Services is controlled by the EwsAllowMacOutlook parameter.

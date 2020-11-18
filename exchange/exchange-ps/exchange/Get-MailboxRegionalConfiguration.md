@@ -21,8 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter> [-DomainController <Fqdn>]
- [-VerifyDefaultFolderNameLanguage] [<CommonParameters>]
+Get-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter>
+ [-DomainController <Fqdn>]
+ [-VerifyDefaultFolderNameLanguage]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,23 +61,14 @@ This example returns the regional settings for Alice Jakobsen's mailbox and also
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml

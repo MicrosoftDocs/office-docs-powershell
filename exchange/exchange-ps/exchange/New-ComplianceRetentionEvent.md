@@ -30,7 +30,8 @@ New-ComplianceRetentionEvent -Name <String>
  [-EventType <ComplianceRuleIdParameter>]
  [-ExchangeAssetIdQuery <String>]
  [-SharePointAssetIdQuery <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,9 +47,7 @@ New-ComplianceRetentionEvent -Name "Research Project Employees" -EventTag 80e0d6
 This example creates a compliance retention event named Research Project Employees with the following settings:
 
 - EventTag: 80e0d620-13ea-4ed9-b6a6-aa883278bcca
-
 - EventTpe: e823b782-9a07-4e30-8091-034fc01f9347
-
 - SharePointAssetIDQuery: EmployeeNumber:123456 EmployeeNumber:456789
 
 ## PARAMETERS
@@ -73,9 +72,7 @@ Accept wildcard characters: False
 The AssetId parameter specifies the Property:Value pair found in the properties of SharePoint or OneDrive for Business documents that's used for retention. For example:
 
 - Product codes that you can use to retain content for only a specific product.
-
 - Project codes that you can use to retain content for only a specific project.
-
 - Employee IDs that you can use to retain content for only a specific person.
 
 ```yaml
@@ -110,8 +107,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml

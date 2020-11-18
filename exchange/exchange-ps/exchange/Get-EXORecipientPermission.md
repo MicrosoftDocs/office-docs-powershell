@@ -26,6 +26,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-EXORecipientPermission
  [-AccessRights <MultiValuedProperty>]
  [-ResultSize <Unlimited>]
+ [-Trustee <String>]
  [<CommonParameters>]
 ```
 
@@ -34,7 +35,7 @@ Get-EXORecipientPermission
 Get-EXORecipientPermission [[-Identity] <String>]
  [-AccessRights <MultiValuedProperty>]
  [-ExternalDirectoryObjectId <Guid>]
- [-PrimarySmtpAddress <String>
+ [-PrimarySmtpAddress <String>]
  [-ResultSize <Unlimited>]
  [-Trustee <String>]
  [-UserPrincipalName <String>]
@@ -55,41 +56,30 @@ Above example returns recipient permission for first 100 mailbox users in the na
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter filters the results by the target recipient. The user or group specified by the Trustee parameter can operate on this recipient.
-
-You can specify any type of recipient, for example:
+The Identity parameter identifies the recipient that you want to view. The user or group specified by the Trustee parameter has Send As permissions on this recipient. You can specify any type of recipient, for example:
 
 - Mailboxes
-
 - Mail users
-
-- External contacts
-
+- Mail contacts
 - Distribution groups
-
 - Dynamic distribution groups
 
 For the best performance, we recommend using the following values to identify the recipient:
 
 - User ID or user principal name (UPN)
-
 - GUID
 
 Otherwise, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - LegacyExchangeDN
-
 - SamAccountName
+
+You can't use this parameter with the ExternalDirectoryObjectId, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
@@ -105,9 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-The AccessRights parameter filters the results by permission.
-
-The only valid value for this parameter is SendAs.
+The AccessRights parameter filters the results by permission. The only valid value for this parameter is SendAs.
 
 ```yaml
 Type: MultiValuedProperty
@@ -123,7 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox you want to view by using the ObjectId of the mailbox in Azure Active Directory. You can use this value instead of the Identity parameter.
+The ExternalDirectoryObjectId parameter identifies the recipient that you want to view by the ObjectId in Azure Active Directory.
+
+You can't use this parameter with the Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: Guid
@@ -139,7 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-This parameter is reserved for internal Microsoft use.
+The PrimarySmtpAddress identifies the recipient that you want to view by primary SMTP email address (for example, navin@contoso.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
@@ -171,33 +163,23 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter filters the results by the user or group to whom you're granting the permission. The user or group can operate on the recipient specified by the Identity, UserPrincipalName, or ExternalDirectoryObjectId parameters (and you can only use the Trustee parameter with those parameters).
-
-**Note**: Trustee parameter can be specified only with Identity, UserPrincipalName, ExternalDirectoryObjectId parameters
-
-You can specify the following types of users or groups:
+The Trustee parameter filters the results by the user or group who has Send As permissions. You can specify the following types of users or groups:
 
 - Mailbox users
-
 - Mail users with a Microsoft account (formerly known as a Windows Live ID)
-
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - User Principal name (UPN)
+
+You need to use this parameter with the Identity, PrimarySmtpAddress, UserPrincipalName, or ExternalDirectoryObjectId parameters.
 
 ```yaml
 Type: String
@@ -213,7 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
+The UserPrincipalName parameter identifies the recipient that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, or PrimarySmtpAddress parameters.
 
 ```yaml
 Type: String

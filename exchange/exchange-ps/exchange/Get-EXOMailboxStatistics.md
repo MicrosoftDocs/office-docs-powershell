@@ -27,7 +27,10 @@ Get-EXOMailboxStatistics
  [-DatabaseGuid <Guid>]
  [-ExchangeGuid <Guid>]
  [-Identity <String>]
+ [-IncludeMoveHistory]
+ [-IncludeMoveReport]
  [-IncludeSoftDeletedRecipients]
+ [-PrimarySmtpAddress <String>]
  [-Properties <String[]>]
  [-PropertySets <PropertySet[]>]
  [-UserPrincipalName <String>]
@@ -106,27 +109,19 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox you want to return statistics for. For the best performance, we recommend using the following values to identify the mailbox:
-
-- User ID or user principal name (UPN)
-
-- GUID
+The Identity parameter specifies the mailbox you want to view. For the best performance, we recommend using the user ID or user principal name (UPN) to identify the mailbox.
 
 Otherwise, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - LegacyExchangeDN
-
 - SamAccountName
+
+You can't use this parameter with the ExternalDirectoryObjectId, PrimarySmtpAddress, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
@@ -138,6 +133,38 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IncludeMoveHistory
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeMoveReport
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -156,6 +183,24 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrimarySmtpAddress
+The PrimarySmtpAddress identifies the mailbox that you want to view by primary SMTP email address (for example, navin@contoso.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, or UserPrincipalName parameters.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -181,7 +226,6 @@ Accept wildcard characters: False
 The PropertySets parameter specifies a logical grouping of properties that are returned in the output of this cmdlet. Valid values are:
 
 - Minimum (this is the default value)
-
 - All
 
 You can specify multiple values separated by commas.
@@ -202,7 +246,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the UPN for the mailbox you want to view (for example, navin.contoso.com).
+The UserPrincipalName parameter identifies the mailbox that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+
+You can't use this parameter with the ExternalDirectoryObjectId, Identity, or PrimarySmtpAddress parameters.
 
 ```yaml
 Type: String

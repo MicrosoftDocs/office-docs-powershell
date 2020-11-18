@@ -24,12 +24,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-PublicFolderMoveRequest -Folders <PublicFolderIdParameter[]> -TargetMailbox <MailboxIdParameter>
- [-AcceptLargeDataLoss] [-AllowLargeItems] [-BadItemLimit <Unlimited>] [-CompletedRequestAgeLimit <Unlimited>]
- [-Confirm] [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>] [-Name <String>]
- [-Priority <RequestPriority>] [-Suspend]
- [-SuspendComment <String>] [-SuspendWhenReadyToComplete] [-WhatIf]
+ [-AcceptLargeDataLoss]
+ [-AllowLargeItems]
+ [-BadItemLimit <Unlimited>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-Name <String>]
+ [-Priority <RequestPriority>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-SuspendWhenReadyToComplete]
+ [-WhatIf]
  [-WorkloadType <RequestWorkloadType>]
- [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,23 +96,14 @@ Accept wildcard characters: False
 The TargetMailbox parameter specifies the target public folder mailbox that you want to move the public folders to. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
-
 - Alias
-
 - Distinguished name (DN)
-
 - Canonical DN
-
-- \<domain name\>\\\<account name\>
-
+- Domain\\Username
 - Email address
-
 - GUID
-
 - LegacyExchangeDN
-
 - SamAccountName
-
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -189,8 +190,7 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
@@ -258,19 +258,12 @@ Accept wildcard characters: False
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
 
 - Lowest
-
 - Lower
-
 - Low
-
 - Normal: This is the default value.
-
 - High
-
 - Higher
-
 - Highest
-
 - Emergency
 
 ```yaml
@@ -278,6 +271,29 @@ Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestExpiryInterval
+The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
+
+- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
+- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+When you use the value Unlimited, the completed request isn't automatically removed.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -358,30 +374,6 @@ Type: RequestWorkloadType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestExpiryInterval
-The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
-
-- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
-
-- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-When you use the value Unlimited, the completed request isn't automatically removed.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

@@ -23,7 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-HostedContentFilterRule [[-Identity] <RuleIdParameter>] [-State <RuleState>] [<CommonParameters>]
+Get-HostedContentFilterRule [[-Identity] <RuleIdParameter>]
+ [-State <RuleState>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,9 +53,7 @@ This example retrieves details about the spam filter rule named Contoso Recipien
 The Identity parameter specifies the spam filter rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
-
 - Distinguished name (DN)
-
 - GUID
 
 ```yaml
@@ -73,7 +73,6 @@ Accept wildcard characters: False
 The State parameter filters the results by the state of the rule. Valid values are:
 
 - Enabled: The command returns only enabled rules.
-
 - Disabled: The command returns only disabled rules.
 
 ```yaml
