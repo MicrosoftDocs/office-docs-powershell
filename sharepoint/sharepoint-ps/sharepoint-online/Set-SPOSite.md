@@ -36,6 +36,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>][<CommonParameters>]
+ [-RemoveLabel]
 ```
 
 ### ParamSet2
@@ -888,6 +889,16 @@ This parameter allows you to remove a segment from a SharePoint site. This param
 
 ```yaml
 Type: GUID
+Required: False
+Position: Named
+Default value: None
+```
+
+### -RemoveLabel
+This parameter allows you to remove the assigned sensitivity label on a site.
+
+```yaml
+Type: None
 Required: False
 Position: Named
 Default value: None
