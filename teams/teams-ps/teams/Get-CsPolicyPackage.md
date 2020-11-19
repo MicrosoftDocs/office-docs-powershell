@@ -47,7 +47,7 @@ Returns only the Education_PrimaryStudent policy package.
 PS C:\> $a = Get-CsPolicyPackage -Identity Education_PrimaryStudent
 PS C:\> $a.Policies
 
-# In module versions 1.1.x+
+# In module versions 1.1.9+
 PS C:\> $a = Get-CsPolicyPackage -Identity Education_PrimaryStudent
 PS C:\> $a.Policies.AdditionalProperties
 
