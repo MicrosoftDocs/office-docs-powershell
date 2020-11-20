@@ -4,40 +4,50 @@ Module Name: MicrosoftTeams
 title: Update-CsCustomPolicyPackage
 author: sunguchuan
 ms.author: gucsun
-manager: amitar
-online version: https://docs.microsoft.com/powershell/module/teams/update-CsCustomPolicyPackage
+manager: dasosby
+online version: https://docs.microsoft.com/powershell/module/teams/update-cscustompolicypackage
 schema: 2.0.0
 ---
 
 # Update-CsCustomPolicyPackage
 
 ## SYNOPSIS
-This cmdlet submits an operation that updates a custom policy package with new package settings.
+
+**Note:** This cmdlet is currently in private preview.
+
+This cmdlet updates a custom policy package.
 
 ## SYNTAX
 
 ```
-Update-CsCustomPolicyPackage -Identity <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
+Update-CsCustomPolicyPackage -Identity <String> -PolicyList <PolicyTypeAndName[]> [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet submits an operation that updates a custom policy package with new package settings. For more information on available policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+This cmdlet updates a custom policy package with new package settings. For more information on policy packages and the policy types available, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Update-CsCustomPolicyPackage -Identity myCustomPackage -PolicyList "TeamsMeetingPolicy, Education_Teacher" , "TeamsMessagingPolicy, Firstline_Manager"
+PS C:\> Update-CsCustomPolicyPackage -Identity "MyPackage" -PolicyList @{ PolicyType = "TeamsMessagingPolicy"; PolicyName = "MyMessagingPolicy" }
 ```
 
-Updates the custom package named "myCustomPackage" with a new list of policies: TeamsMeeting policy named "Education_Teacher" and TeamsMessaging policy named "Firstline_Manager".
+Updates the custom package named "MyPackage" to have one policy in the package: a messaging policy of name "MyMessagingPolicy".
+### Example 2
+```powershell
+PS C:\> $policyList = @(@{ PolicyType = "TeamsMessagingPolicy"; PolicyName = "MyMessagingPolicy" }, @{ PolicyType = "TeamsMeetingPolicy"; PolicyName = "MyMeetingPolicy" })
+PS C:\> Update-CsCustomPolicyPackage -Identity "MyPackage" -PolicyList $policyList -Description "My package"
+```
+
+Updates the custom package named "MyPackage" to have a description of "My package" and two policies in the package: a messaging policy of name "MyMessagingPolicy" and a meeting policy of name "MyMeetingPolicy".
 
 ## PARAMETERS
 
 ### -Identity
 
-The name of the custom package that the user wants to update.
+The name of the custom package.
 
 ```yaml
 Type: String
@@ -45,7 +55,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: True
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -53,15 +63,15 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies included in the new policy list. For each policy in the list, the form is "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed in this [link](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-policy-packages#supported-policy-types). To get the full list of available policy names, please refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMeetingPolicy.md) and [Get-CsTeamsMessagingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMessagingPolicy.md)
+A list of one or more policies to be included in the updated package. It should be constructed as an array of hash tables containing a policy type and a policy name. Supported policy types are listed [here](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, please use the SkypeForBusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy?view=skype-ps) and [Get-CsTeamsMessagingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamsmessagingpolicy?view=skype-ps).
 
 ```yaml
-Type: String[]
+Type: PolicyTypeAndName[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -77,7 +87,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: False
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -91,12 +101,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-As a result, the policy list of the custom package will be REPLACED by the new one instead of a union. The user is not allowed to update the default packages created by Microsoft. 
+The resulting custom package's contents will be replaced by the new one instead of a union. Default packages created by Microsoft cannot be updated.
 
 ## RELATED LINKS
 
 [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 
-[Get-CsTeamsMeetingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMeetingPolicy.md)
+[New-CsCustomPolicyPackage](New-CsCustomPolicyPackage.md)
 
-[Get-CsTeamsMessagingPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsMessagingPolicy.md)
+[Remove-CsCustomPolicyPackage](Remove-CsCustomPolicyPackage.md)
