@@ -898,7 +898,9 @@ Default value: None
 This parameter allows you to remove the assigned sensitivity label on a site.
 
 ```yaml
-Type: None
+Type: SwitchParameter
+Parameter Sets: ParamSet5
+Aliases:
 Required: False
 Position: Named
 Default value: None
