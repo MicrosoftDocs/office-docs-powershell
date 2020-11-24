@@ -36,7 +36,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>] [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-SensitivityLabel <String>][<CommonParameters>]
- [-RemoveLabel]
+ [-RemoveLabel] [<CommonParameters>]
 ```
 
 ### ParamSet2
