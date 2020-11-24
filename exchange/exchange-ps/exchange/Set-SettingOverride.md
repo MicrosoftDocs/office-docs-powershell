@@ -45,7 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-SettingOverride -Identity "Change OAB Generation" -Server Mailbox01 -Component TimeBasedAssistants -Section OABGeneratorAssistant -Parameters @("WorkCycle=03:00:00")
+Set-SettingOverride -Identity "Change OAB Generation" -Server Mailbox01 -Parameters @("WorkCycle=03:00:00")
 ```
 
 This example modifies the setting override named Change OAB Generation on the server named Mailbox01 by changing the OAB generation interval to 3 hours.
