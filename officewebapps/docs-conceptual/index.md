@@ -1,5 +1,5 @@
 ---
-title: Office Online Server cmdlet reference
+title: Office Online Server cmdlet reference suite
 ---
 
 # Office Online Server cmdlet reference
