@@ -1,6 +1,6 @@
 ---
 localization_priority: Normal
-title: Skype for Business cmdlet help references
+title: Skype for Business cmdlet help reference
 ---
 
 # Skype for Business cmdlet help reference
