@@ -1,9 +1,9 @@
 ---
 localization_priority: Normal
-title: Skype for Business cmdlet reference topics suite
+title: Skype for Business cmdlet help references
 ---
 
-# Skype for Business cmdlet references suite
+# Skype for Business cmdlet help reference
 
 Welcome to the Skype for Business PowerShell cmdlet **Help** references. The Skype for Business cmdlets provide the command line interface for server and service administration and management.
 
