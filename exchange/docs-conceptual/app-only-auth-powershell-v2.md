@@ -123,25 +123,25 @@ You need to assign the API permission `Exchange.ManageAsApp` so the application 
 
 1. Select **Manifest** in the left-hand navigation under **Manage**.
 
-1. Locate the `requiredResourceAccess` property in the manifest, and add the following inside the square brackets (`[]`):
+2. Locate the `requiredResourceAccess` property in the manifest, and add the following inside the square brackets (`[]`):
 
-    ```json
-    {
-        "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
-        "resourceAccess": [
-            {
-                "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
-                "type": "Role"
-            }
-        ]
-    }
-    ```
+   ```json
+   {
+       "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
+       "resourceAccess": [
+           {
+               "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
+               "type": "Role"
+           }
+       ]
+   }
+   ```
 
-1. Select **Save**.
+3. Select **Save**.
 
-1. Select **API permissions** under **Manage**. Confirm that the **Exchange.ManageAsApp** permission is listed.
+4. Select **API permissions** under **Manage**. Confirm that the **Exchange.ManageAsApp** permission is listed.
 
-1. Select **Grant admin consent for org** and accept the consent dialog.
+5. Select **Grant admin consent for org** and accept the consent dialog.
 
 ## Step 3: Generate a self-signed certificate
 
