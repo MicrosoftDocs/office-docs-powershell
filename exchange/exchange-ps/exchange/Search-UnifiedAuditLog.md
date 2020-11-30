@@ -58,7 +58,7 @@ Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/2/2018
 
 This example searches the unified audit log for all events from May 1, 201812:00AM to May 2, 2018 12:00AM.
 
-Note: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
+**Note**: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
 
 ### Example 2
 ```powershell
@@ -67,8 +67,7 @@ Search-UnifiedAuditLog -StartDate "6/1/2018 8:00 AM" -EndDate "6/1/2018 6:00 PM"
 
 This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2018.
 
->[!NOTE]
-> If you use the same date for the StartDate and EndDate parameters, you have to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
+**Note** If you use the same date for the StartDate and EndDate parameters, you need to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
 
 ### Example 3
 ```powershell
@@ -77,8 +76,7 @@ Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "Unified
 
 This example searches the unified audit log for all events from May 1, 2018 to May 8, 2018. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
->[!NOTE]
-> If you use the SessionCommand value ReturnLargeSet, and then you use the value ReturnNextPreviewPage for the same session ID, the results are limited to 10,000 records (not 50,000).
+**Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID. Otherwise, the output is limited to 10,000 results.
 
 ### Example 4
 ```powershell
@@ -268,7 +266,7 @@ The SessionCommand parameter specifies how much information is returned and how 
 - ReturnNextPreviewPage: This value causes the cmdlet to return data sorted on date. The maximum number of records returned through use of either paging or the ResultSize parameter is 5,000 records.
 - ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results.
 
-**Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID.
+**Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID. Otherwise, the output is limited to 10,000 results.
 
 ```yaml
 Type: UnifiedAuditSessionCommand
@@ -347,7 +345,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ###  
+
 The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
+
 ```powershell
 $start = (Get-Date).AddDays(-1)
 $end = (Get-Date).AddDays(-0.5)
