@@ -47,6 +47,10 @@ If you want to programmatically download data from the Microsoft 365 audit log, 
 
 This cmdlet is available in Office 365 operated by 21Vianet, but it won't return any results.
 
+The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
+
+`$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null`
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -345,15 +349,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ###  
-
-The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
-
-```powershell
-$start = (Get-Date).AddDays(-1)
-$end = (Get-Date).AddDays(-0.5)
-$auditData = New-Object System.Collections.ArrayList
-Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
-```
 
 ## NOTES
 
