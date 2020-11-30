@@ -121,25 +121,27 @@ If you encounter problems, check the [required permssions](https://docs.microsof
 
 You need to assign the API permission `Exchange.ManageAsApp` so the application can manage Exchange Online. API permissions are required because they have consent flow enabled, which allows auditing (directory roles don't have consent flow).
 
-1. Select **API permissions**.
+1. Select **Manifest** in the left-hand navigation under **Manage**.
 
-2. In the **Configured permissions** page that appears, click **Add permission**.
+2. Locate the `requiredResourceAccess` property in the manifest, and add the following inside the square brackets (`[]`):
 
-3. In the flyout that appears, select **Exchange**.
+   ```json
+   {
+       "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
+       "resourceAccess": [
+           {
+               "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
+               "type": "Role"
+           }
+       ]
+   }
+   ```
 
-   ![Select Exchange API permssions](media/app-only-auth-exchange-api-perms.png)
+3. Select **Save**.
 
-4. In the flyout that appears, click **Application permissions**.
+4. Select **API permissions** under **Manage**. Confirm that the **Exchange.ManageAsApp** permission is listed.
 
-5. In the **Select permissions** section that appears on the page, expand **Exchange** and select **Exchange.ManageAsApp**
-
-   ![Select Exchange.ManageAsApp permssions](media/app-only-auth-exchange-manageasapp.png)
-
-   When you're finished, click **Add permissions**.
-
-6. Back on the **Configured permissions** page that appears, click **Grant admin consent for \<tenant name\>**, and select **Yes** in the dialog that appears.
-
-7. Close the flyout when you're finished.
+5. Select **Grant admin consent for org** and accept the consent dialog.
 
 ## Step 3: Generate a self-signed certificate
 
