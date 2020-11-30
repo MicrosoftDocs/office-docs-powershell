@@ -77,8 +77,7 @@ Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "Unified
 
 This example searches the unified audit log for all events from May 1, 2018 to May 8, 2018. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
->
- [!NOTE]
+>[!NOTE]
 > If you use the SessionCommand value ReturnLargeSet, and then you use the value ReturnNextPreviewPage for the same session ID, the results are limited to 10,000 records (not 50,000).
 
 ### Example 4
@@ -349,8 +348,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
-
-$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
+```powershell
+$start = (Get-Date).AddDays(-1)
+$end = (Get-Date).AddDays(-0.5)
+$auditData = New-Object System.Collections.ArrayList
+Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null
+```
 
 ## NOTES
 
