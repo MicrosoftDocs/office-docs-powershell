@@ -43,10 +43,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-UserAnalyticsConfig -Identity "Kathleen Reiter" -PrivacyMode OptIn
+Set-UserAnalyticsConfig -Identity "Kathleen Reiter" -PrivacyMode Opt-In
 ```
 
-This example sets the MyAnalytics privacy setting to OptIn for the user named Kathleen Reiter.
+This example sets the MyAnalytics privacy setting to Opt-In for the user named Kathleen Reiter.
 
 ## PARAMETERS
 
