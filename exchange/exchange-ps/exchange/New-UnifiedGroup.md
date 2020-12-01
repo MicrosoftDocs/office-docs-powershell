@@ -128,7 +128,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-UnifiedGroup -DisplayName "Engineering Department" -Alias engineering
+New-UnifiedGroup -DisplayName "Engineering Department" -Alias "engineering"
 ```
 
 This example creates a new Microsoft 365 Group named Engineering Department.
