@@ -14,9 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Set-CsTeamsMeetingBroadcastPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowBroadcastScheduling \<bool\>\] \[-AllowBroadcastTranscription \<bool\>\] \[-BroadcastAttendeeVisibilityMode \<string\>\] \[-BroadcastRecordingMode \<string\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsTeamsMeetingBroadcastPolicy \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowBroadcastScheduling \<bool\>\] \[-AllowBroadcastTranscription \<bool\>\] \[-BroadcastAttendeeVisibilityMode \<string\>\] \[-BroadcastRecordingMode \<string\>\] \[-Instance \<psobject\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.
 
 ## SYNTAX
 
@@ -87,6 +85,13 @@ Accept wildcard characters: False
 ### -BroadcastAttendeeVisibilityMode
 Specifies the attendee visibility mode of the broadcast events created by this user.  This setting controls who can watch the broadcast event - e.g. anyone can watch this event including anonymous users or only authenticated users in my company can watch the event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
+Possible values:
+- Everyone 
+- EveryoneInCompany
+- InvitedUsersInCompany
+- EveryoneInCompanyAndExternal
+- InvitedUsersInCompanyAndExternal
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -100,7 +105,12 @@ Accept wildcard characters: False
 ```
 
 ### -BroadcastRecordingMode
-Specifies whether broadcast events created by this user are always recorded, never recorded or user can choose whether to record or not.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+Specifies whether broadcast events created by this user are always recorded (AlwaysEnabled), never recorded (AlwaysDisabled) or user can choose whether to record or not (UserOverride).  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+
+Possible values:
+- AlwaysEnabled
+- AlwaysDisabled
+- UserOverride
 
 ```yaml
 Type: String
