@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Export-QuarantineMessage cmdlet to export quarantined messages and files from your cloud-based organization. Messages are exported to .eml message files so you can open them in Outlook.
 
-For files that are protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, the files are exported in Base64 format.
+For files that were quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the files are exported in Base64 format.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
