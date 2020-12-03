@@ -50,7 +50,8 @@ This example creates the Edge Subscription file. It should be run on your Edge T
 
 ### Example 2
 ```powershell
-[byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0; New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
+[byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0
+New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
 ```
 
 This example imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name. Importing the Edge Subscription file completes the Edge Subscription process. You must run this command on the Mailbox server.

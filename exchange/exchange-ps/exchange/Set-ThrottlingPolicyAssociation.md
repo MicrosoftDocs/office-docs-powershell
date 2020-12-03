@@ -50,7 +50,7 @@ This example associates a user with a username of tonysmith to the throttling po
 
 ### Example 2
 ```powershell
-$b = Get-ThrottlingPolicy ITStaffPolicy;
+$b = Get-ThrottlingPolicy ITStaffPolicy
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
 

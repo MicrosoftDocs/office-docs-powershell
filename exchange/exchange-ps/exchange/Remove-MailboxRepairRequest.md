@@ -44,14 +44,16 @@ This example removes all mailbox repair requests for the mailbox database EXCH-M
 
 ### Example 2
 ```powershell
-Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity; Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5
+Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity
+Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5
 ```
 
 This example removes all related mailbox repair requests that have the same \<DatabaseGuid\>\\\<RequestGuid\>. The example uses the Get-MailboxRepairRequest cmdlet to display the value of the Identity parameter for all mailbox repair request for EXCH-MBX-02 mailbox database.
 
 ### Example 3
 ```powershell
-Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity; Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\189c7852-49bd-4737-a53e-6e6caa5a183c\1d8ca58a-186f-4dc6-b481-f835b548a929
+Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity
+Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\189c7852-49bd-4737-a53e-6e6caa5a183c\1d8ca58a-186f-4dc6-b481-f835b548a929
 ```
 
 This example deletes a specific mailbox repair request by specifying the unique \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\> identity value. The example also uses the Get-MailboxRepairRequest cmdlet to display the identities of all mailbox repair request for the EXCH-MBX-02 mailbox database.
