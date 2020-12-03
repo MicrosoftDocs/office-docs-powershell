@@ -36,21 +36,82 @@ Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join T
 
 The Grant-CsTeamsVideoInteropServicePolicy cmdlet allows you to assign a pre-constructed policy across your whole organization or only  to specific users.
 
+User needs to be assigned one policy from admin to create a CVI meeting. There could be multiple provides in a tenant, but user can only be assigned only one policy(provide).
+
+**FAQ:**
+
+*
+    Q: After running ***Grant-CsTeamsVideoInteropServicePolicy -PolicyName <Identity of the Policy>*** to assign a policy to the whole tenant, the result of ***Get-CsOnlineUser -Identity {User Identity} | fl TeamsVideoInteropServicePolicy*** that checking the User Policy is empty.
+
+    A: Global/Tenant level Policy Assignment can be checked by
+    ***Get-CsTeamsVideoInteropServicePolicy Global***
+
+*
+    Q: I assigned CVI policy to a user, but cannot create a VTC meeting with that policy.
+
+    Q: I made changes to policy assignment, but it didn't reflect on new meetings I created.
+
+    A: The policy get cached for 6 hours, changes to policy will get updated after cache expires. Please make sure check your changes after 6 hours.
+
+
 ## EXAMPLES
 
-### Example 1
+### Example 1: The whole tenant has the same provider
+
+In tenant remote PS, run following cmdlet.
 ```powershell
-PS C:\> Grant-CsTeamsVideoInteropServicePolicy -PolicyName ServiceProviderDisabled
+Grant-CsTeamsVideoInteropServicePolicy -PolicyName <Identity of the Policy>
+```
+To remove the tenant level provider and let the whole tenant fallback to Global policy, run following cmdlet.
+```powershell
+Grant-CsTeamsVideoInteropServicePolicy -PolicyName $null
 ```
 
-In this example, Cloud Video Interop has been disabled for the entire tenant, except for those users that have an explicit policy assigned to them.
+### Example 2: The tenant has two (or three) interop service provider
 
-### Example 2
+Identify which users are associated with Provider-1 or Provider-2.
+Run following cmdlet for each of the users with provider1 or provider2 in the PolicyName.
 ```powershell
-PS C:\> Grant-CsTeamsVideoInteropServicePolicy -PolicyName ServiceProviderDisabled -Identity bob@contoso.com
+Grant-CsTeamsVideoInteropServicePolicy -PolicyName <Identity of the Policy> -Identity <UserId>
+```
+To remove the provider to a user and let it fall back to Global policy, run following cmdlet.
+```powershell
+Grant-CsTeamsVideoInteropServicePolicy -PolicyName $null -Identity <UserId>
 ```
 
-In this example, Cloud Video Interop has been disabled only for one user - Bob - but the default tenant policy has been left on for all other users who do not have an explicit assignment.
+### Example 3: The tenant has a default Interop service provider for all of its tenant, but specific users (say IT folks) want to pilot out another interop provider.
+
+In tenant remote PS, run following cmdlet.
+```powershell
+Grant-CsTeamsVideoInteropServicePolicy  -PolicyName <Identity of the Policy (Provider-1)>
+```
+For the specific users trying out Provider-2, run following cmdlet for each of the users with provider1 or provider2 in the PolicyName.
+```powershell
+Grant-CsTeamsVideoInteropServicePolicy -PolicyName <Identity of the Policy (Provider-2)> -Identity <UserId>
+```
+For the specific users need to disable CVI feature, run following cmdlet for each of the users.
+```powershell
+Grant-CsTeamsVideoInteropServicePolicy -PolicyName ServiceProviderDisabled -Identity <UserId>
+```
+
+### Example 4: Cloud Video Interop has been disabled for the entire tenant, except for those users that have an explicit policy assigned to them.
+
+In tenant remote PS, run following cmdlet.
+```powershell
+Grant-CsTeamsVideoInteropServicePolicy -PolicyName ServiceProviderDisabled
+```
+
+### Frequently used cmdlets that can help identity policy assignment:
+
+1. Cmdlet to get full list of user along with their CVI policy:
+    ```powershell
+    Get-CsOnlineUser | fl UserPrincipalName,TeamsVideoInteropServicePolicy
+    ```
+
+2. Cmdlet to get the policy assigned to the whole tenant:
+    ```powershell
+    Get-CsTeamsVideoInteropServicePolicy Global
+    ```
 
 ## PARAMETERS
 
