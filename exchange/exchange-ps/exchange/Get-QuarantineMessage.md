@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-QuarantineMessage cmdlet to view quarantined messages and files in your cloud-based organization.
-
-**Note**: Quarantined files are files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams.
+Use the Get-QuarantineMessage cmdlet to view quarantined messages and files in your cloud-based organization. Files are quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
 **Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -90,7 +88,7 @@ This example returns detailed information for the quarantined message with the s
 Get-QuarantineMessage -QuarantineTypes SPOMalware | Format-List
 ```
 
-This example returns detailed information for the files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams.
+This example returns detailed information for the files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
 ## PARAMETERS
 
@@ -254,14 +252,14 @@ The QuarantineTypes parameter filters the results by what caused the message to 
 - Malware
 - Phish
 - Spam
-- SPOMalware (ATP only)
+- SPOMalware (Microsoft Defender for Office 365 only)
 - TransportRule
 
 You can specify multiple values separated by commas.
 
 You don't need to use this parameter with the Type parameter.
 
-For files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, the detection information can be found in CustomData field in the output.
+For files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
 
 ```yaml
 Type: QuarantineMessageTypeEnum[]
@@ -388,12 +386,12 @@ The Type parameter filters the results by what caused the message to be quaranti
 - HighConfPhish
 - Phish
 - Spam
-- SPOMalware (ATP only)
+- SPOMalware (Microsoft Defender for Office 365 only)
 - TransportRule
 
 You don't need to use this parameter with the QuarantineTypes parameter.
 
-For files protected by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business and Microsoft Teams, the detection information can be found in CustomData field in the output.
+For files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
 
 ```yaml
 Type: QuarantineMessageTypeEnum

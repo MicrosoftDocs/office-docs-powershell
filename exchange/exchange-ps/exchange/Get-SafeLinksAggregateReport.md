@@ -33,7 +33,7 @@ Get-SafeLinksAggregateReport
 ```
 
 ## DESCRIPTION
-Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites.
+Safe Links is a feature in Microsoft Defender for Office 365 that checks links in email messages to see if they lead to malicious web sites. When a user clicks a link in a message, the URL is temporarily rewritten and checked against a list of known, malicious web sites.
 
 For the reporting period you specify, the cmdlet returns the following information:
 
