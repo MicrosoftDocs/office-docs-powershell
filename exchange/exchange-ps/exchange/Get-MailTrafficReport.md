@@ -54,8 +54,8 @@ You can use the EventType values from the Get-MailTrafficReport cmdlet to analyz
 
 Mail traffic summary
 
-- AdvancedProtectionMalware: Messages that were marked as malware by the Office 365 Advanced Threat Protection service. For details about the Advanced Threat Protection service, see [Office 365 Advanced Threat Protection service description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
-- AtpGoodMail: Messages that were delivered after passing through the Office 365 Advanced Threat Protection service. This count shows the number of unique messages. If a message was delivered to multiple recipients, it would still count as a single message.
+- AdvancedProtectionMalware: Messages that were marked as malware by Microsoft Defender for Office 365. For details about Defender for Office 365, see [Microsoft Defender for Office 365 service description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+- AtpGoodMail: Messages that were delivered after passing through Defender for Office 365. This count shows the number of unique messages. If a message was delivered to multiple recipients, it would still count as a single message.
 - DLPMessages: Messages that matched a data loss prevention (DLP) policy. For details about data loss prevention, see [Overview of data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies).
 - Expire: Messages that cannot be delivered, stuck in a queue, and after some time expired.
 - GoodMail: Messages that were delivered after passing through the malware and spam filters. This count shows the number of unique messages. If a message was delivered to multiple recipients, it would still count as a single message.
