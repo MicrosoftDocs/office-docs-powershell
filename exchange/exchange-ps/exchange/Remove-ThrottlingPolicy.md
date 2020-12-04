@@ -47,7 +47,11 @@ This example removes the user throttling policy ClientThrottlingPolicy2.
 
 ### Example 2
 ```powershell
-$policy = Get-ThrottlingPolicy ClientThrottlingPolicy2; $mailboxes = Get-Mailbox | where-object {$_.ThrottlingPolicy -eq $policy.Identity}; $defaultPolicy = Get-ThrottlingPolicy | where-object {$_.IsDefault -eq $true}; foreach ($mailbox in $mailboxes) {Set-Mailbox -Identity $mailbox.Identity -ThrottlingPolicy $defaultPolicy}; Remove-ThrottlingPolicy ClientThrottlingPolicy2
+$policy = Get-ThrottlingPolicy ClientThrottlingPolicy2
+$mailboxes = Get-Mailbox | where-object {$_.ThrottlingPolicy -eq $policy.Identity}
+$defaultPolicy = Get-ThrottlingPolicy | where-object {$_.IsDefault -eq $true}
+foreach ($mailbox in $mailboxes) {Set-Mailbox -Identity $mailbox.Identity -ThrottlingPolicy $defaultPolicy}
+Remove-ThrottlingPolicy ClientThrottlingPolicy2
 ```
 
 You can't remove a policy that's associated with any users. This example reassigns the users subject to ClientThrottlingPolicy2 to the default policy. Then, it removes ClientThrottlingPolicy2.

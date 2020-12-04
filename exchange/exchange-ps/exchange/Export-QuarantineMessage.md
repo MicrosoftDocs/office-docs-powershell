@@ -36,7 +36,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$e = Export-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7; $e.BodyEncoding; $e | select -ExpandProperty Eml | Out-File "C:\My Documents\Export1_ascii.eml" -Encoding ascii
+$e = Export-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7
+$e.BodyEncoding
+$e | select -ExpandProperty Eml | Out-File "C:\My Documents\Export1_ascii.eml" -Encoding ascii
 ```
 
 This example exports the quarantined message with the specified Identity value.
@@ -52,7 +54,9 @@ Notes:
 
 ### Example 2
 ```powershell
-$e = Export-QuarantineMessage -Identity 9c6bb3e8-db9e-4823-9759-08d594179bd3\7fec89fe-41b0-ae67-4887-5bede017d111; $bytes = [Convert]::FromBase64String($e.eml); [IO.File]::WriteAllBytes("C:\My Documents\Export1.txt", $bytes)
+$e = Export-QuarantineMessage -Identity 9c6bb3e8-db9e-4823-9759-08d594179bd3\7fec89fe-41b0-ae67-4887-5bede017d111
+$bytes = [Convert]::FromBase64String($e.eml)
+[IO.File]::WriteAllBytes("C:\My Documents\Export1.txt", $bytes)
 ```
 
 This example exports the quarantined file with the specified Identity value. The first command exports the file to a Base 64 string. The next two commands convert the string to byte format and write it to the output file.

@@ -108,7 +108,8 @@ This example creates the Executive Mailboxes scope. Only mailboxes located withi
 
 ### Example 4
 ```powershell
-New-ManagementScope -Name "Protected Exec Users" -RecipientRestrictionFilter "Title -like 'VP*'" -Exclusive; New-ManagementRoleAssignment -SecurityGroup "Executive Administrators" -Role "Mail Recipients" -CustomRecipientWriteScope "Protected Exec Users"
+New-ManagementScope -Name "Protected Exec Users" -RecipientRestrictionFilter "Title -like 'VP*'" -Exclusive
+New-ManagementRoleAssignment -SecurityGroup "Executive Administrators" -Role "Mail Recipients" -CustomRecipientWriteScope "Protected Exec Users"
 ```
 
 This example creates the Protected Exec Users exclusive scope. Users that contain the string "VP" in their title match the recipient filter for the scope. When the exclusive scope is created, all users are immediately blocked from modifying the recipients that match the exclusive scope until the scope is associated with a management role assignment. If other role assignments are associated with other exclusive scopes that match the same recipients, those assignments can still modify the recipients.

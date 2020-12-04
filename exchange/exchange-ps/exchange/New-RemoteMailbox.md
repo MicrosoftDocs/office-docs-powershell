@@ -168,7 +168,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
+$Credentials = Get-Credential
+New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
 ```
 
 This example creates an on-premises mail user and its associated mailbox in the service. The remote routing address doesn't need to be specified because mail flow between the on-premises organization and the service has been configured. Using this configuration, the New-RemoteMailbox cmdlet automatically calculates the SMTP address of the mailbox to be used with the RemoteRoutingAddress parameter. This example also assumes directory synchronization has been configured.
@@ -179,7 +180,8 @@ After the new mail user is created, directory synchronization synchronizes the n
 
 ### Example 2
 ```powershell
-$Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
+$Credentials = Get-Credential
+New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
 ```
 
 This example does the following steps:

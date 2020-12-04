@@ -70,7 +70,8 @@ The command completed successfully
 
 ### Example 3
 ```powershell
-$LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog; $LogEntries | ForEach { $_.CmdletParameters }
+$LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog
+$LogEntries | ForEach { $_.CmdletParameters }
 ```
 
 This example displays all the comments written to the administrator audit log by the Write-AdminAuditLog cmdlet.

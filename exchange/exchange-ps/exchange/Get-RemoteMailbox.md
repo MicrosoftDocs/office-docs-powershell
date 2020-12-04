@@ -71,7 +71,8 @@ This example returns a detailed information for the remote mailbox for the user 
 
 ### Example 3
 ```powershell
-$Credentials = Get-Credential; Get-RemoteMailbox -Credential $Credentials
+$Credentials = Get-Credential
+Get-RemoteMailbox -Credential $Credentials
 ```
 
 This example uses alternate credentials to retrieve a list of one or more mail-enabled users with mailboxes in the service. This is useful if the account you typically use doesn't have administrative permissions. The credentials are used to access the on-premises Active Directory domain controllers.

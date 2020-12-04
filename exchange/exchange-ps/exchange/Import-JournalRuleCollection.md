@@ -43,7 +43,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-[Byte[]]$Data = Get-Content -Path "C:\JournalRules\ExportedJournalRules.xml" -Encoding Byte -ReadCount 0; Import-JournalRuleCollection -FileData $Data
+[Byte[]]$Data = Get-Content -Path "C:\JournalRules\ExportedJournalRules.xml" -Encoding Byte -ReadCount 0
+Import-JournalRuleCollection -FileData $Data
 ```
 
 This example imports journal rules from the XML file ExportedJournalRules.xml in a two-step process.

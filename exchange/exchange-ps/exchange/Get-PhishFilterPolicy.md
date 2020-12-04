@@ -61,7 +61,8 @@ This example returns the list of senders that appear to be sending spoofed email
 
 ### Example 2
 ```powershell
-$file = "C:\My Documents\Summary Spoofed Internal Domains and Senders.csv"; Get-PhishFilterPolicy -Detailed -SpoofType Internal | Export-CSV $file
+$file = "C:\My Documents\Summary Spoofed Internal Domains and Senders.csv"
+Get-PhishFilterPolicy -Detailed -SpoofType Internal | Export-CSV $file
 ```
 
 This example exports the same list of spoofed senders to a CSV file.

@@ -44,7 +44,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-RoleAssignmentPolicy -Name "End User Policy"; Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
+New-RoleAssignmentPolicy -Name "End User Policy"
+Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
 ```
 
 This example creates an assignment policy. After the assignment policy is created, you can assign the assignment policy to a mailbox using the Set-Mailbox cmdlet.
@@ -58,7 +59,8 @@ This example creates an assignment policy using the IsDefault switch.
 
 ### Example 3
 ```powershell
-New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault; Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
+New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault
+Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
 ```
 
 This example creates an assignment policy that enables users to modify their personal information, manage their distribution group membership, and manage their voice mail. The new assignment policy is created as the new default assignment policy. Then, all existing mailboxes are configured to use the new assignment policy.
