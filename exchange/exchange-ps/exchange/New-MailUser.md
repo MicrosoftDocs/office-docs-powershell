@@ -190,7 +190,8 @@ This example creates a new mail user for Ed Meadows in the contoso.com cloud-bas
 
 ### Example 2
 ```powershell
-$password = Read-Host "Enter password" -AsSecureString; New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -Password $password
+$password = Read-Host "Enter password" -AsSecureString
+New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -Password $password
 ```
 
 This example is similar to the first, except contoso.com is now an on-premises Exchange organization, and you use a separate command to enter the password so it isn't stored in clear text.

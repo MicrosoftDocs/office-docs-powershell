@@ -1100,14 +1100,16 @@ This example sets the MailTip translation in French and Chinese.
 
 ### Example 5
 ```powershell
-$password = Read-Host "Enter password" -AsSecureString; Set-Mailbox florencef -Password $password -ResetPasswordOnNextLogon $true
+$password = Read-Host "Enter password" -AsSecureString
+Set-Mailbox florencef -Password $password -ResetPasswordOnNextLogon $true
 ```
 
 In on-premises Exchange, this example resets the password for Florence Flipo's mailbox. The next time she signs in to her mailbox, she'll have to change her password.
 
 ### Example 6
 ```powershell
-Set-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -MessageTracking $false; Set-Mailbox -Arbitration -Identity "SystemMailbox{1f05a927-b864-48a7-984d-95b1adfbfe2d}" -MessageTracking $true
+Set-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -MessageTracking $false
+Set-Mailbox -Arbitration -Identity "SystemMailbox{1f05a927-b864-48a7-984d-95b1adfbfe2d}" -MessageTracking $true
 ```
 
 This example removes the message tracking organization capability from the arbitration mailbox named SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c} and assigns it to an arbitration mailbox named SystemMailbox{1f05a927-b864-48a7-984d-95b1adfbfe2d}.

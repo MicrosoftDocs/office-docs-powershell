@@ -37,7 +37,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$OnPremisesCreds = Get-Credential; $TenantCreds = Get-Credential; Update-HybridConfiguration -OnPremisesCredentials $OnPremisesCreds -TenantCredentials $TenantCreds
+$OnPremisesCreds = Get-Credential
+$TenantCreds = Get-Credential; Update-HybridConfiguration -OnPremisesCredentials $OnPremisesCreds -TenantCredentials $TenantCreds
 ```
 
 This example defines the credentials that are used to update the hybrid configuration object and connect to the Microsoft 365 for enterprises organization.

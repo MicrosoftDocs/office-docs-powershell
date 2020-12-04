@@ -76,7 +76,8 @@ This example sets the role group managers list to the Seattle Role Administrator
 
 ### Example 3
 ```powershell
-$Credentials = Get-Credential; Set-RoleGroup "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Tier 2 Administrators"
+$Credentials = Get-Credential
+Set-RoleGroup "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Tier 2 Administrators"
 ```
 
 This example modifies the linked foreign USG on the existing linked role group ContosoUsers: Toronto Recipient Admins. The foreign USG that should be linked is Toronto Tier 2 Administrators.

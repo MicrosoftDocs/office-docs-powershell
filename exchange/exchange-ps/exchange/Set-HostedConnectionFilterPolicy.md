@@ -52,7 +52,7 @@ This example modifies the connection filter policy named Default with the follow
 
 ### Example 2
 ```powershell
-Set-HostedConnectionFilterPolicy "Default" -IPAllowList @{Add="192.168.2.10","192.169.3.0/24","192.168.4.1-192.168.4.5";Remove="192.168.1.10"}
+Set-HostedConnectionFilterPolicy "Default" -IPAllowList @{Add="192.168.2.10","192.169.3.0/24","192.168.4.1-192.168.4.5"; Remove="192.168.1.10"}
 ```
 
 This example modifies the connection filter policy named Default with the following settings:

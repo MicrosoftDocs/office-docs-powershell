@@ -71,7 +71,8 @@ The Identity parameter is a positional parameter. Positional parameters can be u
 
 ### Example 3
 ```powershell
-(Get-Mailbox Mark).InPlaceHolds; Get-MailboxSearch -InPlaceHoldIdentity 9953d0f0fd03415e949d4b41c5a28cbb
+(Get-Mailbox Mark).InPlaceHolds
+Get-MailboxSearch -InPlaceHoldIdentity 9953d0f0fd03415e949d4b41c5a28cbb
 ```
 
 This example retrieves the In-Place Holds that a user is placed on. The first command outputs GUIDs of In-Place Holds. The last command retrieves a mailbox search based on the GUID of the In-Place Hold that the user is placed on.
