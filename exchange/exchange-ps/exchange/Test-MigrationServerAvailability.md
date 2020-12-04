@@ -208,7 +208,7 @@ This example verifies the connection settings to a remote server using the setti
 
 ### Example 5
 ```powershell
-$MRSEndpoints = (Get-MigrationEndpoint).RemoteServer
+$MRSEndpoints = (Get-MigrationEndpoint).Identity
 Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
 ```
 
