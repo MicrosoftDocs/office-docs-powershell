@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the alias of the mail user.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters: ``! # $ % & ' * + - / = ? ^ _ ` { | } ~``. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 If you don't use the Alias parameter when you create a mail user, the left side of the MicrosoftOnlineServicesID parameter value is used. For example, helpdesk@contoso.onmicrosoft.com results in the Alias value helpdesk.
 

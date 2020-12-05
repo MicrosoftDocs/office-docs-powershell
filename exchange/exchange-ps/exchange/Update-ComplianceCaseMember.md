@@ -75,7 +75,7 @@ The Members parameter specifies the users that will replace the current eDiscove
 - Canonical DN
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: String[]

@@ -110,7 +110,7 @@ The AddressLists parameter specifies the address lists or global address lists t
 - Distinguished name (DN)
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 You can find the identify values of address lists and global address lists by using the Get-AddressList and Get-GlobalAddressList cmdlets.
 
@@ -431,11 +431,11 @@ The VirtualDirectories parameter specifies the OAB virtual directories that acce
 
 You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
+- Name or Server\\Name
 - Distinguished name (DN)
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
 
 The default value of this parameter is the Client Access services (frontend) and backend OAB virtual directories on the Mailbox server that holds the OAB generation mailbox (the GeneratingMailbox parameter or SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}). For example, Mailbox01\\OAB (Default Web Site),Mailbox01\\OAB (Exchange Back End.
 

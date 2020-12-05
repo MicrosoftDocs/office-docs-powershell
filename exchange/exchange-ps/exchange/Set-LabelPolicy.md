@@ -115,7 +115,7 @@ To specify the mailbox, you can use any value that uniquely identifies it. For e
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -140,7 +140,7 @@ To specify the mailbox, you can use any value that uniquely identifies it. For e
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -162,7 +162,7 @@ The AddLabels parameter specifies the sensitivity labels that you want to add to
 - Distinguished name (DN)
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ### -AddModernGroupLocation
 The AddModernGroupLocation parameter specifies the Microsoft 365 Groups to add to the list of included Microsoft 365 Groups. To identify the Microsoft 365 Group, you must use the primary SMTP address.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -339,7 +339,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -367,7 +367,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -389,7 +389,7 @@ The RemoveLabels parameter specifies the sensitivity labels that you want to rem
 - Distinguished name (DN)
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -407,7 +407,7 @@ Accept wildcard characters: False
 ### -RemoveModernGroupLocation
 The RemoveModernGroupLocation parameter specifies the Microsoft 365 Groups to remove from the list of included groups. To identify the Microsoft 365 Group, you must use the primary SMTP address.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty

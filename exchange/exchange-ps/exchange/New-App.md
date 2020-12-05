@@ -476,7 +476,7 @@ The UserList parameter specifies who can use an organizational app. Valid values
 - SamAccountName
 - User ID or user principal name (UPN)
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 You use this parameter with the OrganizationApp switch.
 

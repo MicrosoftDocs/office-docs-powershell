@@ -91,7 +91,7 @@ The AppNameList parameter filters the results by the app where the link was foun
 - Visio
 - Word
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty

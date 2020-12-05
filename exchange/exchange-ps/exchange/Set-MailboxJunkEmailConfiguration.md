@@ -105,9 +105,9 @@ Accept wildcard characters: False
 ### -BlockedSendersAndDomains
 The BlockedSendersAndDomains parameter specifies the Blocked Senders list, which is a list of sender email addresses and domains whose messages are automatically sent to the Junk Email folder. This parameter corresponds to the Outlook on the web setting: Move email from these senders or domains to my Junk Email folder.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -263,9 +263,9 @@ Accept wildcard characters: False
 ### -TrustedSendersAndDomains
 The TrustedSendersAndDomains parameter specifies the Safe Senders list and Safe Recipients list, which are lists of email addresses and domains. Messages from these senders that reach the mailbox are never delivered to the Junk Email folder, regardless of the content. This parameter corresponds to the Outlook on the web setting: Don't move email from these senders or domains to my Junk Email folder.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To empty the list of email addresses and domains, use the value $null.
 

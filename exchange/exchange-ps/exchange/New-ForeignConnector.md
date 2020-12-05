@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ### -SourceTransportServers
 The SourceTransportServers parameter specifies the names of the Mailbox servers that use this Foreign connector. Having a single Foreign connector homed on multiple servers provides fault tolerance and high availability if one of the Mailbox servers fails. The default value of this parameter is the name of the server on which this Foreign connector is first installed.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `Value1,Value2,...ValueX`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueX"`.
 
 ```yaml
 Type: MultiValuedProperty

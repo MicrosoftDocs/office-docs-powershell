@@ -316,7 +316,8 @@ The SimpleDisplayName parameter is used to display an alternative description of
 - a - z
 - A - Z
 - 0 - 9
-- "\<space\>", """, "'", "(", ")", "+", ",", "-", ".", "/", ":" and "?".
+- space
+- `" ' ( ) + , - . / : ?`
 
 This parameter is meaningful only if the group is mail-enabled.
 
