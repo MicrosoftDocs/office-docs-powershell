@@ -79,7 +79,7 @@ This example finds all import requests that have a status of Suspended, and then
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you specified a name for the import request with the New-MailboxImportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the import request. By default, import requests are named `<alias>\MailboxImportX` (where X = 0-9). If you specified a name for the import request with the New-MailboxImportRequest cmdlet, use the following syntax: `Alias\Name`.
 
 ```yaml
 Type: MailboxImportRequestIdParameter

@@ -129,7 +129,7 @@ The Identity parameter specifies the mailbox that contains the deleted items tha
 - SamAccountName
 - User ID or user principal name (UPN)
 
-In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>",..."\<ValueX>".
+In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter

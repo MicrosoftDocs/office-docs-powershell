@@ -69,7 +69,7 @@ The Labels parameter specifies the sensitivity labels that are associated with t
 - Distinguished name (DN)
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -145,7 +145,7 @@ To specify the mailbox, you can use any value that uniquely identifies it. For e
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -170,7 +170,7 @@ To specify the mailbox, you can use any value that uniquely identifies it. For e
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ### -ModernGroupLocation
 The ModernGroupLocation parameter specifies the Microsoft 365 Groups to include in the policy. To identify the Microsoft 365 Group, you must use the primary SMTP address.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty

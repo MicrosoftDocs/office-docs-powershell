@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the alias of the distribution group.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters: ``! # $ % & ' * + - / = ? ^ _ ` { | } ~``. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 ```yaml
 Type: String
@@ -135,7 +135,7 @@ The ManagedBy parameter specifies one or more group owners. A group must have at
 - SamAccountName
 - User ID or user principal name (UPN)
 
-You can specify multiple owners by using the following syntax: @("\<user1\>","\<user2\>"...). The values that you specify will overwrite the current list of owners.
+You can specify multiple owners by using the following syntax: `@("Owner1","Owner2",..."OwnerN")`. The values that you specify will overwrite the current list of owners.
 
 The users specified with the ManagedBy parameter aren't automatically members of the distribution group. If you want any of the owners to be added as members of the distribution group, you need to add them by using the Update-EOPDistributionGroupMember cmdlet.
 

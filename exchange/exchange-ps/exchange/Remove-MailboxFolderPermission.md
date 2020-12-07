@@ -45,7 +45,7 @@ This example removes John's permissions to the Training folder in Kim's mailbox.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the target mailbox and folder. The syntax is `Mailbox:\Folder`. For the value of Mailbox, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias
@@ -58,7 +58,7 @@ The Identity parameter specifies the target mailbox and folder. The syntax is \<
 - SamAccountName
 - User ID or user principal name (UPN)
 
-Example values for the Identity parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
+Example values for the Identity parameter are `john@contoso.com:\Calendar` or `John:\Marketing\Reports`.
 
 ```yaml
 Type: MailboxFolderIdParameter

@@ -193,6 +193,8 @@ The user that you specify for this parameter must be a user or security group (a
 - Canonical DN
 - GUID
 
+**Note**: Currently, the value that you provide for this parameter is case sensitive.
+
 ```yaml
 Type: String
 Parameter Sets: Identity

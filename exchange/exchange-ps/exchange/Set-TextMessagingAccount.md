@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationPhoneNumber
-The NotificationPhoneNumber parameter specifies the telephone number to use for your text messaging notifications. This parameter uses the E.164 format: +\<CountryCode\>\<CompleteTelephoneNumber\> (for example, +15551234567).
+The NotificationPhoneNumber parameter specifies the telephone number to use for your text messaging notifications. This parameter uses the E.164 format: `+<CountryCode><CompleteTelephoneNumber>` (for example, `+15551234567`).
 
 ```yaml
 Type: E164Number

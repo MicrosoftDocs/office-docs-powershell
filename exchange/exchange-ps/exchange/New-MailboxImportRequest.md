@@ -160,7 +160,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -RemoteFilePath
 ```
 
 ## DESCRIPTION
-You can create more than one mailbox import request per mailbox and each mailbox import request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox import request. However, to create more than 10 import requests for a mailbox, you need to specify a unique name when creating the import request, or you can remove existing import requests with the Remove-MailboxExportRequest cmdlet before starting a new import request with the default request \<Alias\>\\MailboxImportX (where X = 0-9).
+You can create more than one mailbox import request per mailbox and each mailbox import request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox import request. However, to create more than 10 import requests for a mailbox, you need to specify a unique name when creating the import request, or you can remove existing import requests with the Remove-MailboxExportRequest cmdlet before starting a new import request with the default request `<Alias>\MailboxImportX` (where X = 0-9).
 
 By default, the import checks for duplication of items and doesn't copy the data from the .pst file into the mailbox or archive if a matching item exists in the target mailbox or target archive.
 
@@ -561,9 +561,9 @@ The ExcludeFolders parameter specifies the list of folders to exclude during the
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
-\<FolderName\>/\*: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
 
-\#\<FolderName\>\#/\*: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, `#Inbox#` denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
 - Inbox
 - SentItems
@@ -583,7 +583,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 - LocalFailures
 - ServerFailures
 
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
+If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a backslash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
 
@@ -607,9 +607,9 @@ The IncludeFolders parameter specifies the list of folders to include during the
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
 
-\<FolderName\>/\*: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
+`<FolderName>/*`: Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
 
-\#\<FolderName\>\#/\*: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
+`#<FolderName>#/*`: Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, `#Inbox#` denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
 
 - Inbox
 - SentItems
@@ -629,7 +629,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 - LocalFailures
 - ServerFailures
 
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
+If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a backslash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder instead of the well-known Notes folder, use the following syntax: `\#Notes\#`.
 
 Wildcard characters can't be used in folder names.
 
@@ -760,7 +760,7 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies the name of the specific request for tracking and display purposes. Because you can have multiple import requests per mailbox, Exchange precedes the name with the mailbox's alias. For example, if you create an import request for a user's mailbox that has the alias Kweku and specify the value of this parameter as PC1toArchive, the identity of this import request is Kweku\\PC1toArchive.
 
-If you don't specify a name using this parameter, Exchange generates up to 10 request names per mailbox, which is MailboxImportX (where X = 0-9). The identity of the request is displayed and searchable as \<alias\>\\MailboxImportX.
+If you don't specify a name using this parameter, Exchange generates up to 10 request names per mailbox, which is MailboxImportX (where X = 0-9). The identity of the request is displayed and searchable as `<alias>\MailboxImportX`.
 
 ```yaml
 Type: String
