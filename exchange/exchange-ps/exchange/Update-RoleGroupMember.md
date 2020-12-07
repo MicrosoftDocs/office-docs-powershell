@@ -61,7 +61,8 @@ This example sets the Recipient Administrators role group membership list to Mar
 
 ### Example 3
 ```powershell
-Update-RoleGroupMember "Organization Management" -Members @{Add=(Get-Mailbox David).Identity, (Get-Group "Help Desk Managers").Identity; Remove=(Get-Mailbox "Christine").Identity, (Get-Mailbox "Isabel").Identity}
+Update-RoleGroupMember "Organization Management" -Members @{Add=(Get-Mailbox David).Identity, (Get-Group "Help Desk Managers").Identity
+Remove=(Get-Mailbox "Christine").Identity, (Get-Mailbox "Isabel").Identity}
 ```
 
 This example adds multiple members to, and removes multiple members from, a role group without replacing all the existing members on the role group. This example makes use of multivalued property syntax that's described in the topic [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help). When you use this multivalued property syntax, you must manually retrieve the Identity of the mailbox or mail-enabled security group that you want to add to or remove from the role group. Use the syntax that matches the type of object you want to add or remove:

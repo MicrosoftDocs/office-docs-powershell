@@ -61,7 +61,9 @@ Sets the maximum concurrent connections to 10.
 
 ### Example 2
 ```powershell
-$ConnectorConfig = Get-DeliveryAgentConnector "Contoso X.400 Connector"; $ConnectorConfig.AddressSpaces += "X400:c=US;p=Fabrikam;a=Contoso;o=Sales;1"; $ConnectorConfig.SourceTransportServers += Hub04; Set-DeliveryAgentConnector "Contoso X.400 Connector" -AddressSpaces $ConnectorConfig.AddressSpaces -SourceTransportServers $ConnectorConfig.SourceTransportServers
+$ConnectorConfig = Get-DeliveryAgentConnector "Contoso X.400 Connector"
+$ConnectorConfig.AddressSpaces += "X400:c=US;p=Fabrikam;a=Contoso;o=Sales;1"
+$ConnectorConfig.SourceTransportServers += Hub04; Set-DeliveryAgentConnector "Contoso X.400 Connector" -AddressSpaces $ConnectorConfig.AddressSpaces -SourceTransportServers $ConnectorConfig.SourceTransportServers
 ```
 
 This example uses the temporary variable $ConnectorConfig to add the address space c=US;p=Fabrikam;a=Contoso;o=Sales to the delivery agent connector Contoso X.400 Connector and also adds the server Hub04 to the list of servers that host the connector.

@@ -12,8 +12,6 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview. 
-
 This cmdlet is used to return the policy assignments for a user, both directly assigned and inherited from a group.
 
 ## SYNTAX

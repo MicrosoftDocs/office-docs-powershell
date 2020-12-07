@@ -68,7 +68,9 @@ This example retrieves the calendar diagnostic logs from Pedro Pizarro's mailbox
 
 ### Example 2
 ```powershell
-$A = Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Meeting" -ExactMatch $true; $A | Select-Object *,@{n='OLMT'; e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
+$A = Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Meeting" -ExactMatch $true
+$A | Select-Object *,@{n='OLMT'
+e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
 ```
 
 This is the same as the previous example, but now the results are sorted by original last modified time.

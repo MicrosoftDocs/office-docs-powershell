@@ -769,7 +769,8 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$password = Read-Host "Enter password" -AsSecureString; New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
+$password = Read-Host "Enter password" -AsSecureString
+New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
 ```
 
 This example creates a user Chris Ashton in Active Directory and creates a mailbox for the user. The mailbox is located on Mailbox Database 1. The password must be reset at the next logon. To set the initial value of the password, this example creates a variable ($password), prompts you to enter a password, and assigns that password to the variable as a SecureString object.
@@ -790,7 +791,9 @@ This example creates an enabled user account in Active Directory and a room mail
 
 ### Example 4
 ```powershell
-New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales; Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG; Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
+New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales
+Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG
+Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
 ```
 
 This example creates the shared mailbox "Sales Department" and grants Full Access and Send on Behalf permissions for the security group "MarketingSG". Users who are members of the security group will be granted the permissions to the mailbox.
@@ -1693,7 +1696,11 @@ Accept wildcard characters: False
 ### -MailboxRegion
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The MailboxRegion parameter specifies the geo location for the mailbox in multi-geo environments.
+
+To see the list of configured geo locations in Microsoft 365 Multi-Geo, run the following command: `Get-OrganizationConfig | Select -ExpandProperty AllowedMailboxRegions | Format-Table`. To view your central geo location, run the following command: `Get-OrganizationConfig | Select DefaultMailboxRegion`.
+
+ For more information, see [Administering Exchange Online mailboxes in a multi-geo environment](https://docs.microsoft.com/microsoft-365/enterprise/administering-exchange-online-multi-geo).
 
 ```yaml
 Type: String

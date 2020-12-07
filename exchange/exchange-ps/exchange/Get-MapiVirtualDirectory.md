@@ -50,7 +50,9 @@ This example returns a summary list of the MAPI virtual directories on the serve
 
 ### Example 2
 ```powershell
-Get-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory ContosoMai\mapi* | Format-List
+Get-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" | Format-List
+Get-MapiVirtualDirectory "ContosoMail\mapi (Default Web Site)" | Format-List
+Get-MapiVirtualDirectory ContosoMai\mapi* | Format-List
 ```
 
 These examples return detailed information for the MAPI virtual directory named "mapi (Default Web Site)" on the server named ContosoMail. All three commands do the same thing.
